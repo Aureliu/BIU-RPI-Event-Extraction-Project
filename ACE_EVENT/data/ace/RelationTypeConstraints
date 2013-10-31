@@ -1,0 +1,34 @@
+PHYS	Located	Arg-1	PER
+PHYS	Located	Arg-2	FAC	LOC	GPE
+PHYS	Near	Arg-1	PER	FAC	GPE	LOC
+PHYS	Near	Arg-2	FAC	LOC	GPE
+PART-WHOLE	Geographical	Arg-1	FAC	LOC	GPE
+PART-WHOLE	Geographical	Arg-2	FAC	LOC	GPE
+PART-WHOLE	Subsidiary	Arg-1	ORG
+PART-WHOLE	Subsidiary	Arg-2	ORG	GPE
+PER-SOC	Business	Arg-1	PER
+PER-SOC	Business	Arg-2	PER
+PER-SOC	Family	Arg-1	PER
+PER-SOC	Family	Arg-2	PER
+PER-SOC	Lasting-Personal	Arg-1	PER
+PER-SOC	Lasting-Personal	Arg-2	PER
+ORG-AFF	Employment	Arg-1	PER
+ORG-AFF	Employment	Arg-2	ORG	GPE
+ORG-AFF	Ownership	Arg-1	PER
+ORG-AFF	Ownership	Arg-2	ORG
+ORG-AFF	Founder	Arg-1	PER	ORG
+ORG-AFF	Founder	Arg-2	ORG	GPE
+ORG-AFF	Student-Alum	Arg-1	PER
+ORG-AFF	Student-Alum	Arg-2	ORG
+ORG-AFF	Sports-Affiliation	Arg-1	PER
+ORG-AFF	Sports-Affiliation	Arg-2	ORG
+ORG-AFF	Investor-Shareholder	Arg-1	PER	ORG	GPE
+ORG-AFF	Investor-Shareholder	Arg-2	ORG	GPE
+ORG-AFF	Membership	Arg-1	PER	ORG	GPE
+ORG-AFF	Membership	Arg-2	ORG
+ART	User-Owner-Inventor-Manufacturer	Arg-1	PER	ORG	GPE
+ART	User-Owner-Inventor-Manufacturer	Arg-2	FAC
+GEN-AFF	Citizen-Resident-Religion-Ethnicity	Arg-1	PER
+GEN-AFF	Citizen-Resident-Religion-Ethnicity	Arg-2	PER	LOC	GPE	ORG
+GEN-AFF	Org-Location	Arg-1	ORG
+GEN-AFF	Org-Location	Arg-2	LOC	GPE

@@ -78,7 +78,7 @@ public class EvaluatorFinal extends Evaluator
 					eventMentions_gold.addAll(event.mentions);
 				}
 			}
-			Scorer.evaluate(stats, eventMentions_ans, eventMentions_gold);
+			Scorer.evaluate(stats, eventMentions_ans, eventMentions_gold, System.out);
 		}
 		
 		stats.calc();

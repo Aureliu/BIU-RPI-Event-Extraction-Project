@@ -226,6 +226,8 @@ public class Pipeline
 		File modelFile = new File(args[2]);
 		File devFileList = new File(args[3]);
 		
+		PrintStream out = new PrintStream(modelFile.getAbsoluteFile() + ".weights");
+
 		// set settings
 		Controller controller = new Controller();
 		String[] settings = Arrays.copyOfRange(args, 4, args.length);
@@ -236,7 +238,6 @@ public class Pipeline
 		Perceptron model = trainPerceptron(srcDir, trainingFileList, modelFile, devFileList, controller);
 		
 		// print out weights
-		PrintStream out = new PrintStream(modelFile.getAbsoluteFile() + ".weights");
 		if(model.controller.avgArguments)
 		{
 			out.println(model.getAvg_weights());

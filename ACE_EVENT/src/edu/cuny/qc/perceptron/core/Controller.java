@@ -32,7 +32,8 @@ public class Controller implements java.io.Serializable
 	
 	public Controller()
 	{
-		;
+		System.out.printf("\n******** Controller() **********\n");
+		System.out.printf("******** %s **********\n", this);
 	}
 	
 	/**

@@ -504,10 +504,10 @@ public class Analysis
 
 	static public void main(String[] args) throws DocumentException, IOException
 	{
-		File srcDir = new File("/Users/che/Data/ACE/ACE2005-TrainingData-V6.0/English/");
-		File file_list = new File("/Users/che/Data/ACE/filelist_ACE_nw_test");
+		File srcDir = new File(args[0]);
+		File file_list = new File(args[1]);
 		
-		PrintStream out = new PrintStream("/Users/che/event_analysis_2");
+		PrintStream out = new PrintStream(args[2]);
 		doAnalysis(srcDir, file_list, out);
 	
 		out.close();

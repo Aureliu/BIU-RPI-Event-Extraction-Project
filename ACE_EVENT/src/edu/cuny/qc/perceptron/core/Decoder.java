@@ -26,6 +26,8 @@ import edu.cuny.qc.perceptron.types.SentenceInstance;
 
 public class Decoder
 {
+	public static String OPTION_NO_SCORING = "-n"; 
+	
 	static public void writeEntities (PrintWriter w, AceDocument aceDoc, List<AceEvent> events) {
 		w.println ("<?xml version=\"1.0\"?>");
 		w.println ("<!DOCTYPE source_file SYSTEM \"apf.v5.1.1.dtd\">");
@@ -59,13 +61,14 @@ public class Decoder
 	
 	static public void main(String[] args) throws IOException, DocumentException
 	{
-		if(args.length < 3)
+		if((args.length < 4) || (args.length>=5 && !args[4].equals(OPTION_NO_SCORING)))
 		{
 			System.out.println("Usage:");
 			System.out.println("args[0]: model");
 			System.out.println("args[1]: src dir");
 			System.out.println("args[2]: file list");
 			System.out.println("args[3]: output dir");
+			System.out.printf("oprional args[4]: '%s' to not perform scoring\n", OPTION_NO_SCORING);
 			System.exit(-1);
 		}
 		
@@ -74,6 +77,7 @@ public class Decoder
 		Alphabet nodeTargetAlphabet = perceptron.nodeTargetAlphabet;
 		Alphabet edgeTargetAlphabet = perceptron.edgeTargetAlphabet;
 		Alphabet featureAlphabet = perceptron.featureAlphabet;
+		System.out.printf("--------------\nPerceptron.controller =\n%s\n\n--------------------------\n\n", perceptron.controller);
 		
 		File srcDir = new File(args[1]);
 		File fileList = new File(args[2]);
@@ -139,8 +143,14 @@ public class Decoder
 			out.close();
 		}
 		
+		if (args[4].equals(OPTION_NO_SCORING)) {
+			return;
+		}
+		
 		// get score
 		File outputFile = new File(outDir + File.separator + "Score");
 		Scorer.main(new String[]{args[1], args[3], args[2], outputFile.getAbsolutePath()});
+		System.out.printf("--------------\nPerceptron.controller =\n%s\n\n--------------------------\n\n", perceptron.controller);
+
 	}
 }

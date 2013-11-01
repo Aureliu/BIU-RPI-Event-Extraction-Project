@@ -93,15 +93,15 @@ public class AnalysisPlaceAndTime
 
 	public static void main(String[] args) throws IOException, DocumentException
 	{
-		File src = new File("/Users/XX/Data/ACE/ACE2005-TrainingData-V6.0/English");
-		File filelist = new File("/Users/XX/Data/ACE/filelist_ACE_training");
+		File src = new File(args[0]);
+		File filelist = new File(args[1]);
 		
 		Alphabet nodeTargetAlphabet = new Alphabet();
 		Alphabet edgeTargetAlphabet = new Alphabet();
 		Alphabet featureAlphabet = new Alphabet();
 		Controller controller = new Controller();
 		
-		PrintStream out = new PrintStream(new File("/Users/XX/Analysis_Arguments"));
+		PrintStream out = new PrintStream(new File(args[2]));
 		readInstanceList(src, filelist, nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet, controller, true, out);
 		out.close();
 	}

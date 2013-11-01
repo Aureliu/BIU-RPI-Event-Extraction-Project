@@ -7,6 +7,8 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.dom4j.DocumentException;
 import edu.cuny.qc.util.Span;
@@ -110,7 +112,9 @@ public class Scorer
 			}
 			AceDocument doc_ans = new AceDocument(textFile.getAbsolutePath(), apf_ans.getAbsolutePath());
 			AceDocument doc_gold = new AceDocument(textFile.getAbsolutePath(), apf_gold.getAbsolutePath());
-			doAnalysisForFile(doc_ans, doc_gold, stats);
+			out.printf("----------------\n%s\n", line);
+			doAnalysisForFile(doc_ans, doc_gold, stats, out);
+			out.printf("----------------\n\n");
 		}
 		
 		stats.calc();
@@ -120,34 +124,55 @@ public class Scorer
 		out.println(stats);
 	}
 	
-	private static void doAnalysisForFile(AceDocument doc_ans, AceDocument doc_gold, Stats stats)
+	private static void doAnalysisForFile(AceDocument doc_ans, AceDocument doc_gold, Stats stats, PrintStream out)
 	{
 		List<AceEventMention> mentions_ans = doc_ans.eventMentions;
 		List<AceEventMention> mentions_gold = doc_gold.eventMentions;
 		
-		evaluate(stats, mentions_ans, mentions_gold);
+		evaluate(stats, mentions_ans, mentions_gold, out);
 	}
 
 	public static void evaluate(Stats stats,
 			List<AceEventMention> mentions_ans,
-			List<AceEventMention> mentions_gold)
+			List<AceEventMention> mentions_gold,
+			PrintStream out)
 	{
 		// evalute triggers
 		stats.num_trigger_ans += mentions_ans.size();
 		stats.num_trigger_gold += mentions_gold.size();
+		out.printf("   Num Trigger Gold: %d, Num Trigger Ans: %d\n", mentions_gold.size(), mentions_ans.size());
+		int i=0;
 		for(AceEventMention mention : mentions_ans)
 		{
 			for(AceEventMention mention_gold : mentions_gold)
 			{
 				if(mention.anchorExtent.overlap(mention_gold.anchorExtent))
 				{
+
+					// for identification scoring
+					stats.num_trigger_idt_correct++;
+					i++;
+					
+					String equals = "!~!";
+					if (mention.anchorExtent.equals(mention_gold.anchorExtent)) {
+						equals = " = ";
+					}
+					
+					out.printf("   %02d. Trigger Id: GOLD %-10s(%-18s):'%-14s'[%04d:%04d] %s ANS %-10s(%-18s):'%-14s'[%04d:%04d]", i, 
+						minimizeMentionAndArgumentMentionID(mention_gold.id), mention_gold.getSubType(), mention_gold.anchorText, mention_gold.anchorExtent.start(), mention_gold.anchorExtent.end(),
+						equals,
+						minimizeMentionAndArgumentMentionID(mention.id), mention.getSubType(), mention.anchorText, mention.anchorExtent.start(), mention.anchorExtent.end());
+
 					if(mention.getSubType().equals(mention_gold.getSubType()))
 					{
 						stats.num_trigger_correct++;
+						out.printf("   + REGULAR");
+					}
+					else {
+						out.printf("      (only id)");
 					}
 					
-					// for identification scoring
-					stats.num_trigger_idt_correct++;
+					out.printf("\n");
 					
 					break;
 				}
@@ -159,6 +184,8 @@ public class Scorer
 		List<AceEventMentionArgument> args_gold = getArguments(mentions_gold);
 		stats.num_arg_ans += args_ans.size();
 		stats.num_arg_gold += args_gold.size();
+		out.printf("\n       Num Arg Gold: %d, Num Arg Ans: %d\n", args_gold.size(), args_ans.size());
+		i=0;
 		
 		// check number of correct
 		for(AceEventMentionArgument arg : args_ans)
@@ -169,6 +196,17 @@ public class Scorer
 				{
 					if(headCorrrect(arg.value, temp.value))
 					{
+						i++;
+						String equals = "!~!";
+						if (realHead(arg.value).equals(realHead(temp.value))) {
+							equals = " = ";
+						}
+						
+						out.printf("       %02d. Arg Reg: GOLD %-10s(%-18s)\\%-12s:'%-22s'[%04d:%04d] %s ANS %-10s(%-18s)\\%-12s:'%-22s'[%04d:%04d]\n", i, 
+								minimizeMentionAndArgumentMentionID(temp.value.id), temp.mention.getSubType(), temp.role, realHeadText(temp.value), realHead(temp.value).start(), realHead(temp.value).end(),
+								equals,
+								minimizeMentionAndArgumentMentionID(arg.value.id), arg.mention.getSubType(), arg.role, realHeadText(arg.value), realHead(arg.value).start(), realHead(arg.value).end());
+						
 						stats.num_arg_correct++;
 						break;
 					}
@@ -176,8 +214,10 @@ public class Scorer
 				
 			}
 		}
+		out.printf("\n");
 		
 		// check number of correct in terms of identification
+		i=0;
 		for(AceEventMentionArgument arg : args_ans)
 		{
 			for(AceEventMentionArgument temp : args_gold)
@@ -186,12 +226,49 @@ public class Scorer
 				{
 					if(headCorrrect(arg.value, temp.value))
 					{
+						i++;
+						String equals = "!~!";
+						if (realHead(arg.value).equals(realHead(temp.value))) {
+							equals = " = ";
+						}
+						
+						out.printf("           %02d. Arg Id: GOLD %-10s(%-18s)\\%-12s:'%-22s'[%04d:%04d] %s ANS %-10s(%-18s)\\%-12s:'%-22s'[%04d:%04d]\n", i, 
+								minimizeMentionAndArgumentMentionID(temp.value.id), temp.mention.getSubType(), temp.role, realHeadText(temp.value), realHead(temp.value).start(), realHead(temp.value).end(),
+								equals,
+								minimizeMentionAndArgumentMentionID(arg.value.id), arg.mention.getSubType(), arg.role, realHeadText(arg.value), realHead(arg.value).start(), realHead(arg.value).end());
+
 						stats.num_arg_idt_correct++;
 						break;
 					}
 				}
 				
 			}
+		}
+	}
+	
+	private static String minimizeMentionAndArgumentMentionID(String longID) {
+		Matcher m = Pattern.compile("-(\\w*\\d+\\-\\d+)$").matcher(longID);
+		m.find();
+		return m.group(1);
+	}
+	
+	private static Span realHead(AceMention value) {
+		if (value instanceof AceEntityMention)
+		{
+			return ((AceEntityMention) value).head;
+		}
+		else {
+			return value.extent;
+		}
+	}
+	
+	private static String realHeadText(AceMention value) {
+		if (value instanceof AceEntityMention)
+		{
+			return ((AceEntityMention) value).headText;
+		}
+		else {
+			return value.text;
 		}
 	}
 	
@@ -207,16 +284,8 @@ public class Scorer
 		{
 			return false;
 		}
-		Span head = value.extent;
-		Span head2 = value2.extent;
-		if(value instanceof AceEntityMention)
-		{
-			head = ((AceEntityMention) value).head;
-		}
-		if(value2 instanceof AceEntityMention)
-		{
-			head2 = ((AceEntityMention) value2).head;
-		}
+		Span head = realHead(value);
+		Span head2 = realHead(value2);
 		
 		if(head.equals(head2))
 		{

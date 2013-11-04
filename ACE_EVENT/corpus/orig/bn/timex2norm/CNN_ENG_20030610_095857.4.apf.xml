@@ -1,0 +1,277 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030610_095857.4.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030610_095857.4">
+<entity ID="CNN_ENG_20030610_095857.4-E1" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_095857.4-E1-3" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="134" END="143">sam
+waksal</charseq>
+    </extent>
+    <head>
+      <charseq START="134" END="143">sam
+waksal</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_095857.4-E1-4" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="146" END="196">the man at the center of the martha stewart scandal</charseq>
+    </extent>
+    <head>
+      <charseq START="150" END="152">man</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_095857.4-E1-6" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="199" END="200">he</charseq>
+    </extent>
+    <head>
+      <charseq START="199" END="200">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_095857.4-E1-7" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="215" END="302">the highest ranking executive to go to prison in the recent
+series of corporate scandals</charseq>
+    </extent>
+    <head>
+      <charseq START="235" END="243">executive</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="sam waksal">
+      <charseq START="134" END="143">sam
+waksal</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030610_095857.4-E3" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_095857.4-E3-5" TYPE="NAM" LDCTYPE="NAMPRE">
+    <extent>
+      <charseq START="175" END="188">martha stewart</charseq>
+    </extent>
+    <head>
+      <charseq START="175" END="188">martha stewart</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="martha stewart">
+      <charseq START="175" END="188">martha stewart</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030610_095857.4-E5" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030610_095857.4-E5-8" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="254" END="259">prison</charseq>
+    </extent>
+    <head>
+      <charseq START="254" END="259">prison</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030610_095857.4-E6" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_095857.4-E6-9" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="305" END="353">cnn financial news correspondent chris
+huntington</charseq>
+    </extent>
+    <head>
+      <charseq START="338" END="353">chris
+huntington</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_095857.4-E6-12" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="419" END="423">chris</charseq>
+    </extent>
+    <head>
+      <charseq START="419" END="423">chris</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_095857.4-E6-13" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="305" END="336">cnn financial news correspondent</charseq>
+    </extent>
+    <head>
+      <charseq START="309" END="336">financial news correspondent</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="chris huntington">
+      <charseq START="338" END="353">chris
+huntington</charseq>
+    </name>
+    <name NAME="chris">
+      <charseq START="419" END="423">chris</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030610_095857.4-E7" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_095857.4-E7-10" TYPE="NAM" LDCTYPE="NAMPRE">
+    <extent>
+      <charseq START="305" END="307">cnn</charseq>
+    </extent>
+    <head>
+      <charseq START="305" END="307">cnn</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="cnn">
+      <charseq START="305" END="307">cnn</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030610_095857.4-E8" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_095857.4-E8-1" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="389" END="393">where</charseq>
+    </extent>
+    <head>
+      <charseq START="389" END="393">where</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_095857.4-E8-11" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="366" END="387">the federal courthouse</charseq>
+    </extent>
+    <head>
+      <charseq START="378" END="387">courthouse</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<timex2 ID="CNN_ENG_20030610_095857.4-T1" VAL="2003-06-10T10:08:55">
+  <timex2_mention ID="CNN_ENG_20030610_095857.4-T1-1">
+    <extent>
+      <charseq START="43" END="61">2003-06-10 10:08:55</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030610_095857.4-T2" VAL="2003-06-10T10">
+  <timex2_mention ID="CNN_ENG_20030610_095857.4-T2-1">
+    <extent>
+      <charseq START="109" END="117">this hour</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030610_095857.4-T3" VAL="2003-06-10T10:08:55" ANCHOR_VAL="2003-06-10T10:08:55" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="CNN_ENG_20030610_095857.4-T3-1">
+    <extent>
+      <charseq START="268" END="273">recent</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030610_095857.4-R1" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030610_095857.4-E6" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030610_095857.4-E7" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030610_095857.4-R1-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="305" END="353">cnn financial news correspondent chris
+huntington</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030610_095857.4-E6-13" ROLE="Arg-1">
+      <extent>
+        <charseq START="305" END="336">cnn financial news correspondent</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030610_095857.4-E7-10" ROLE="Arg-2">
+      <extent>
+        <charseq START="305" END="307">cnn</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030610_095857.4-R2" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="CNN_ENG_20030610_095857.4-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030610_095857.4-E5" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030610_095857.4-R2-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="215" END="302">the highest ranking executive to go to prison in the recent
+series of corporate scandals</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030610_095857.4-E1-7" ROLE="Arg-1">
+      <extent>
+        <charseq START="215" END="302">the highest ranking executive to go to prison in the recent
+series of corporate scandals</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030610_095857.4-E5-8" ROLE="Arg-2">
+      <extent>
+        <charseq START="254" END="259">prison</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030610_095857.4-R3" TYPE="PHYS" SUBTYPE="Located" TENSE="Present" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030610_095857.4-E6" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030610_095857.4-E8" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030610_095857.4-R3-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="305" END="416">cnn financial news correspondent chris
+huntington is outside the federal courthouse where sentencing is
+underway</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030610_095857.4-E6-9" ROLE="Arg-1">
+      <extent>
+        <charseq START="305" END="353">cnn financial news correspondent chris
+huntington</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030610_095857.4-E8-11" ROLE="Arg-2">
+      <extent>
+        <charseq START="366" END="387">the federal courthouse</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030610_095857.4-EV1" TYPE="Justice" SUBTYPE="Sentence" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030610_095857.4-E1" ROLE="Defendant"/>
+  <event_argument REFID="CNN_ENG_20030610_095857.4-T2" ROLE="Time-Within"/>
+  <event_mention ID="CNN_ENG_20030610_095857.4-EV1-1">
+    <extent>
+      <charseq START="98" END="143">sentencing this hour in the case of sam
+waksal</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="67" END="196">up first, on "cnn live today", sentencing this hour in the case of sam
+waksal, the man at the center of the martha stewart scandal</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="98" END="107">sentencing</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030610_095857.4-E1-3" ROLE="Defendant">
+      <extent>
+        <charseq START="134" END="143">sam
+waksal</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030610_095857.4-T2-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="109" END="117">this hour</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030610_095857.4-EV2" TYPE="Justice" SUBTYPE="Sentence" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Present">
+  <event_argument REFID="CNN_ENG_20030610_095857.4-E8" ROLE="Place"/>
+  <event_mention ID="CNN_ENG_20030610_095857.4-EV2-1">
+    <extent>
+      <charseq START="389" END="404">where sentencing</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="305" END="416">cnn financial news correspondent chris
+huntington is outside the federal courthouse where sentencing is
+underway</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="395" END="404">sentencing</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030610_095857.4-E8-1" ROLE="Place">
+      <extent>
+        <charseq START="389" END="393">where</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

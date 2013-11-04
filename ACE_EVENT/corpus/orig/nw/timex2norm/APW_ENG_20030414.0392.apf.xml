@@ -1,0 +1,653 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="APW_ENG_20030414.0392.sgm" SOURCE="newswire" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="APW_ENG_20030414.0392">
+<entity ID="APW_ENG_20030414.0392-E1" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="APW_ENG_20030414.0392-E1-23" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="182" END="188">Temelin</charseq>
+    </extent>
+    <head>
+      <charseq START="182" END="188">Temelin</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="APW_ENG_20030414.0392-E1-36" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="580" END="586">Temelin</charseq>
+    </extent>
+    <head>
+      <charseq START="580" END="586">Temelin</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Temelin">
+      <charseq START="182" END="188">Temelin</charseq>
+    </name>
+    <name NAME="Temelin">
+      <charseq START="580" END="586">Temelin</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="APW_ENG_20030414.0392-E2" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="APW_ENG_20030414.0392-E2-4" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="595" END="607">Milan Nebesar</charseq>
+    </extent>
+    <head>
+      <charseq START="595" END="607">Milan Nebesar</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="APW_ENG_20030414.0392-E2-5" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="558" END="592">The spokesman for the Temelin plant</charseq>
+    </extent>
+    <head>
+      <charseq START="562" END="570">spokesman</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Milan Nebesar">
+      <charseq START="595" END="607">Milan Nebesar</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="APW_ENG_20030414.0392-E4" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="APW_ENG_20030414.0392-E4-7" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="787" END="793">Russian</charseq>
+    </extent>
+    <head>
+      <charseq START="787" END="793">Russian</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Russian">
+      <charseq START="787" END="793">Russian</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="APW_ENG_20030414.0392-E5" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="APW_ENG_20030414.0392-E5-8" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="820" END="822">U.S</charseq>
+    </extent>
+    <head>
+      <charseq START="820" END="822">U.S</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="U.S">
+      <charseq START="820" END="822">U.S</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="APW_ENG_20030414.0392-E6" TYPE="LOC" SUBTYPE="Boundary" CLASS="SPC">
+  <entity_mention ID="APW_ENG_20030414.0392-E6-9" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="978" END="996">the Austrian border</charseq>
+    </extent>
+    <head>
+      <charseq START="991" END="996">border</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="APW_ENG_20030414.0392-E7" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="APW_ENG_20030414.0392-E7-10" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="982" END="989">Austrian</charseq>
+    </extent>
+    <head>
+      <charseq START="982" END="989">Austrian</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="APW_ENG_20030414.0392-E7-14" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="1071" END="1089">non-nuclear Austria</charseq>
+    </extent>
+    <head>
+      <charseq START="1083" END="1089">Austria</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Austrian">
+      <charseq START="982" END="989">Austrian</charseq>
+    </name>
+    <name NAME="Austria">
+      <charseq START="1083" END="1089">Austria</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="APW_ENG_20030414.0392-E9" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="APW_ENG_20030414.0392-E9-12" TYPE="NOM" LDCTYPE="NOM" ROLE="GPE">
+    <extent>
+      <charseq START="1040" END="1056">the two countries</charseq>
+    </extent>
+    <head>
+      <charseq START="1048" END="1056">countries</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="APW_ENG_20030414.0392-E10" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="APW_ENG_20030414.0392-E10-13" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1060" END="1089">Critics in non-nuclear Austria</charseq>
+    </extent>
+    <head>
+      <charseq START="1060" END="1066">Critics</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="APW_ENG_20030414.0392-E11" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="APW_ENG_20030414.0392-E11-17" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1154" END="1170">Czech authorities</charseq>
+    </extent>
+    <head>
+      <charseq START="1160" END="1170">authorities</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="APW_ENG_20030414.0392-E12" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="APW_ENG_20030414.0392-E12-1" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="117" END="138">PRAGUE, Czech Republic</charseq>
+    </extent>
+    <head>
+      <charseq START="117" END="122">PRAGUE</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="PRAGUE">
+      <charseq START="117" END="122">PRAGUE</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="APW_ENG_20030414.0392-E13" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="APW_ENG_20030414.0392-E13-20" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="125" END="138">Czech Republic</charseq>
+    </extent>
+    <head>
+      <charseq START="125" END="138">Czech Republic</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="APW_ENG_20030414.0392-E13-30" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1154" END="1158">Czech</charseq>
+    </extent>
+    <head>
+      <charseq START="1154" END="1158">Czech</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Czech Republic">
+      <charseq START="125" END="138">Czech Republic</charseq>
+    </name>
+    <name NAME="Czech">
+      <charseq START="1154" END="1158">Czech</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="APW_ENG_20030414.0392-E14" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="APW_ENG_20030414.0392-E14-21" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="141" END="142">AP</charseq>
+    </extent>
+    <head>
+      <charseq START="141" END="142">AP</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="AP">
+      <charseq START="141" END="142">AP</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="APW_ENG_20030414.0392-E15" TYPE="FAC" SUBTYPE="Plant" CLASS="SPC">
+  <entity_mention ID="APW_ENG_20030414.0392-E15-2" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="462" END="470">The plant</charseq>
+    </extent>
+    <head>
+      <charseq START="466" END="470">plant</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="APW_ENG_20030414.0392-E15-6" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="767" END="834">The plant, based on Russian design and upgraded with U.S. technology</charseq>
+    </extent>
+    <head>
+      <charseq START="771" END="775">plant</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="APW_ENG_20030414.0392-E15-11" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="999" END="1000">it</charseq>
+    </extent>
+    <head>
+      <charseq START="999" END="1000">it</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="APW_ENG_20030414.0392-E15-15" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1097" END="1105">the plant</charseq>
+    </extent>
+    <head>
+      <charseq START="1101" END="1105">plant</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="APW_ENG_20030414.0392-E15-16" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1133" END="1134">it</charseq>
+    </extent>
+    <head>
+      <charseq START="1133" END="1134">it</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="APW_ENG_20030414.0392-E15-18" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1179" END="1187">the plant</charseq>
+    </extent>
+    <head>
+      <charseq START="1183" END="1187">plant</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="APW_ENG_20030414.0392-E15-19" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1199" END="1207">The plant</charseq>
+    </extent>
+    <head>
+      <charseq START="1203" END="1207">plant</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="APW_ENG_20030414.0392-E15-22" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="146" END="188">The troubled nuclear power plant in Temelin</charseq>
+    </extent>
+    <head>
+      <charseq START="173" END="177">plant</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="APW_ENG_20030414.0392-E15-34" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="378" END="386">the plant</charseq>
+    </extent>
+    <head>
+      <charseq START="382" END="386">plant</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="APW_ENG_20030414.0392-E15-35" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="406" END="408">its</charseq>
+    </extent>
+    <head>
+      <charseq START="406" END="408">its</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="APW_ENG_20030414.0392-E17" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="APW_ENG_20030414.0392-E17-24" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="215" END="231">state authorities</charseq>
+    </extent>
+    <head>
+      <charseq START="221" END="231">authorities</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="APW_ENG_20030414.0392-E18" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="APW_ENG_20030414.0392-E18-27" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="285" END="299">Pavel Pitterman</charseq>
+    </extent>
+    <head>
+      <charseq START="285" END="299">Pavel Pitterman</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="APW_ENG_20030414.0392-E18-28" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="302" END="354">the spokesman for the State Office for Nuclear
+Safety</charseq>
+    </extent>
+    <head>
+      <charseq START="306" END="314">spokesman</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="APW_ENG_20030414.0392-E18-32" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="362" END="364">his</charseq>
+    </extent>
+    <head>
+      <charseq START="362" END="364">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Pavel Pitterman">
+      <charseq START="285" END="299">Pavel Pitterman</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="APW_ENG_20030414.0392-E20" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="APW_ENG_20030414.0392-E20-29" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="320" END="354">the State Office for Nuclear
+Safety</charseq>
+    </extent>
+    <head>
+      <charseq START="324" END="354">State Office for Nuclear
+Safety</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="APW_ENG_20030414.0392-E20-33" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="362" END="371">his office</charseq>
+    </extent>
+    <head>
+      <charseq START="366" END="371">office</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="State Office for Nuclear Safety">
+      <charseq START="324" END="354">State Office for Nuclear
+Safety</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="APW_ENG_20030414.0392-E21" TYPE="ORG" SUBTYPE="Government" CLASS="USP">
+  <entity_mention ID="APW_ENG_20030414.0392-E21-31" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="215" END="219">state</charseq>
+    </extent>
+    <head>
+      <charseq START="215" END="219">state</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="APW_ENG_20030414.0392-E22" TYPE="ORG" SUBTYPE="Medical-Science" CLASS="SPC">
+  <entity_mention ID="APW_ENG_20030414.0392-E22-25" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="576" END="592">the Temelin plant</charseq>
+    </extent>
+    <head>
+      <charseq START="588" END="592">plant</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<timex2 ID="APW_ENG_20030414.0392-T1" VAL="PAST_REF" ANCHOR_VAL="2003-04-14" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="APW_ENG_20030414.0392-T1-1">
+    <extent>
+      <charseq START="545" END="548">past</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="APW_ENG_20030414.0392-T2" VAL="PRESENT_REF" ANCHOR_VAL="2003-04-14" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="APW_ENG_20030414.0392-T2-1">
+    <extent>
+      <charseq START="1223" END="1231">currently</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="APW_ENG_20030414.0392-T3" VAL="2003-04-14">
+  <timex2_mention ID="APW_ENG_20030414.0392-T3-1">
+    <extent>
+      <charseq START="39" END="46">20030414</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="APW_ENG_20030414.0392-T4" VAL="2003-04-14">
+  <timex2_mention ID="APW_ENG_20030414.0392-T4-1">
+    <extent>
+      <charseq START="233" END="238">Monday</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="APW_ENG_20030414.0392-T5" VAL="P18M" ANCHOR_VAL="2003-04-18" ANCHOR_DIR="STARTING">
+  <timex2_mention ID="APW_ENG_20030414.0392-T5-1">
+    <extent>
+      <charseq START="623" END="630">18-month</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="APW_ENG_20030414.0392-T6" VAL="2003-04-18">
+  <timex2_mention ID="APW_ENG_20030414.0392-T6-1">
+    <extent>
+      <charseq START="758" END="763">Friday</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="APW_ENG_20030414.0392-T7" VAL="2000-11">
+  <timex2_mention ID="APW_ENG_20030414.0392-T7-1">
+    <extent>
+      <charseq START="915" END="927">November 2000</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="APW_ENG_20030414.0392-T8" VAL="P2M" ANCHOR_VAL="2003" ANCHOR_DIR="WITHIN">
+  <timex2_mention ID="APW_ENG_20030414.0392-T8-1">
+    <extent>
+      <charseq START="1285" END="1294">two months</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="APW_ENG_20030414.0392-T9" VAL="2003-H2">
+  <timex2_mention ID="APW_ENG_20030414.0392-T9-1">
+    <extent>
+      <charseq START="1383" END="1397">the end of 2003</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="APW_ENG_20030414.0392-R1" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="APW_ENG_20030414.0392-E17" ROLE="Arg-1"/>
+  <relation_argument REFID="APW_ENG_20030414.0392-E21" ROLE="Arg-2"/>
+  <relation_mention ID="APW_ENG_20030414.0392-R1-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="215" END="231">state authorities</charseq>
+    </extent>
+    <relation_mention_argument REFID="APW_ENG_20030414.0392-E17-24" ROLE="Arg-1">
+      <extent>
+        <charseq START="215" END="231">state authorities</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="APW_ENG_20030414.0392-E21-31" ROLE="Arg-2">
+      <extent>
+        <charseq START="215" END="219">state</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="APW_ENG_20030414.0392-R2" TYPE="METONYMY">
+  <relation_argument REFID="APW_ENG_20030414.0392-E15" ROLE="Arg-1"/>
+  <relation_argument REFID="APW_ENG_20030414.0392-E22" ROLE="Arg-2"/>
+</relation>
+<relation ID="APW_ENG_20030414.0392-R3" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="APW_ENG_20030414.0392-E1" ROLE="Arg-2"/>
+  <relation_argument REFID="APW_ENG_20030414.0392-E22" ROLE="Arg-1"/>
+  <relation_mention ID="APW_ENG_20030414.0392-R3-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="576" END="592">the Temelin plant</charseq>
+    </extent>
+    <relation_mention_argument REFID="APW_ENG_20030414.0392-E1-36" ROLE="Arg-2">
+      <extent>
+        <charseq START="580" END="586">Temelin</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="APW_ENG_20030414.0392-E22-25" ROLE="Arg-1">
+      <extent>
+        <charseq START="576" END="592">the Temelin plant</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="APW_ENG_20030414.0392-R4" TYPE="PHYS" SUBTYPE="Near" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="APW_ENG_20030414.0392-E15" ROLE="Arg-1"/>
+  <relation_argument REFID="APW_ENG_20030414.0392-E6" ROLE="Arg-2"/>
+  <relation_mention ID="APW_ENG_20030414.0392-R4-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="931" END="1056">Located just 60 kilometers (35 miles) north of the Austrian border,
+it has been a source of friction between the two countries</charseq>
+    </extent>
+    <relation_mention_argument REFID="APW_ENG_20030414.0392-E15-11" ROLE="Arg-1">
+      <extent>
+        <charseq START="999" END="1000">it</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="APW_ENG_20030414.0392-E6-9" ROLE="Arg-2">
+      <extent>
+        <charseq START="978" END="996">the Austrian border</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="APW_ENG_20030414.0392-R5" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="APW_ENG_20030414.0392-E12" ROLE="Arg-1"/>
+  <relation_argument REFID="APW_ENG_20030414.0392-E13" ROLE="Arg-2"/>
+  <relation_mention ID="APW_ENG_20030414.0392-R5-1" LEXICALCONDITION="Formulaic">
+    <extent>
+      <charseq START="117" END="138">PRAGUE, Czech Republic</charseq>
+    </extent>
+    <relation_mention_argument REFID="APW_ENG_20030414.0392-E12-1" ROLE="Arg-1">
+      <extent>
+        <charseq START="117" END="138">PRAGUE, Czech Republic</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="APW_ENG_20030414.0392-E13-20" ROLE="Arg-2">
+      <extent>
+        <charseq START="125" END="138">Czech Republic</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="APW_ENG_20030414.0392-R6" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="APW_ENG_20030414.0392-E15" ROLE="Arg-1"/>
+  <relation_argument REFID="APW_ENG_20030414.0392-E1" ROLE="Arg-2"/>
+  <relation_mention ID="APW_ENG_20030414.0392-R6-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="146" END="188">The troubled nuclear power plant in Temelin</charseq>
+    </extent>
+    <relation_mention_argument REFID="APW_ENG_20030414.0392-E15-22" ROLE="Arg-1">
+      <extent>
+        <charseq START="146" END="188">The troubled nuclear power plant in Temelin</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="APW_ENG_20030414.0392-E1-23" ROLE="Arg-2">
+      <extent>
+        <charseq START="182" END="188">Temelin</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="APW_ENG_20030414.0392-R7" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="APW_ENG_20030414.0392-E18" ROLE="Arg-1"/>
+  <relation_argument REFID="APW_ENG_20030414.0392-E20" ROLE="Arg-2"/>
+  <relation_mention ID="APW_ENG_20030414.0392-R7-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="302" END="354">the spokesman for the State Office for Nuclear
+Safety</charseq>
+    </extent>
+    <relation_mention_argument REFID="APW_ENG_20030414.0392-E18-28" ROLE="Arg-1">
+      <extent>
+        <charseq START="302" END="354">the spokesman for the State Office for Nuclear
+Safety</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="APW_ENG_20030414.0392-E20-29" ROLE="Arg-2">
+      <extent>
+        <charseq START="320" END="354">the State Office for Nuclear
+Safety</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="APW_ENG_20030414.0392-R7-2" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="362" END="371">his office</charseq>
+    </extent>
+    <relation_mention_argument REFID="APW_ENG_20030414.0392-E18-32" ROLE="Arg-1">
+      <extent>
+        <charseq START="362" END="364">his</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="APW_ENG_20030414.0392-E20-33" ROLE="Arg-2">
+      <extent>
+        <charseq START="362" END="371">his office</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="APW_ENG_20030414.0392-R9" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="APW_ENG_20030414.0392-E2" ROLE="Arg-1"/>
+  <relation_argument REFID="APW_ENG_20030414.0392-E22" ROLE="Arg-2"/>
+  <relation_mention ID="APW_ENG_20030414.0392-R9-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="558" END="592">The spokesman for the Temelin plant</charseq>
+    </extent>
+    <relation_mention_argument REFID="APW_ENG_20030414.0392-E2-5" ROLE="Arg-1">
+      <extent>
+        <charseq START="558" END="592">The spokesman for the Temelin plant</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="APW_ENG_20030414.0392-E22-25" ROLE="Arg-2">
+      <extent>
+        <charseq START="576" END="592">the Temelin plant</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="APW_ENG_20030414.0392-R10" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="APW_ENG_20030414.0392-E6" ROLE="Arg-1"/>
+  <relation_argument REFID="APW_ENG_20030414.0392-E7" ROLE="Arg-2"/>
+  <relation_mention ID="APW_ENG_20030414.0392-R10-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="978" END="996">the Austrian border</charseq>
+    </extent>
+    <relation_mention_argument REFID="APW_ENG_20030414.0392-E6-9" ROLE="Arg-1">
+      <extent>
+        <charseq START="978" END="996">the Austrian border</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="APW_ENG_20030414.0392-E7-10" ROLE="Arg-2">
+      <extent>
+        <charseq START="982" END="989">Austrian</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="APW_ENG_20030414.0392-R11" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="APW_ENG_20030414.0392-E10" ROLE="Arg-1"/>
+  <relation_argument REFID="APW_ENG_20030414.0392-E7" ROLE="Arg-2"/>
+  <relation_mention ID="APW_ENG_20030414.0392-R11-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="1060" END="1089">Critics in non-nuclear Austria</charseq>
+    </extent>
+    <relation_mention_argument REFID="APW_ENG_20030414.0392-E10-13" ROLE="Arg-1">
+      <extent>
+        <charseq START="1060" END="1089">Critics in non-nuclear Austria</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="APW_ENG_20030414.0392-E7-14" ROLE="Arg-2">
+      <extent>
+        <charseq START="1071" END="1089">non-nuclear Austria</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="APW_ENG_20030414.0392-R12" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="APW_ENG_20030414.0392-E11" ROLE="Arg-1"/>
+  <relation_argument REFID="APW_ENG_20030414.0392-E13" ROLE="Arg-2"/>
+  <relation_mention ID="APW_ENG_20030414.0392-R12-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="1154" END="1170">Czech authorities</charseq>
+    </extent>
+    <relation_mention_argument REFID="APW_ENG_20030414.0392-E11-17" ROLE="Arg-1">
+      <extent>
+        <charseq START="1154" END="1170">Czech authorities</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="APW_ENG_20030414.0392-E13-30" ROLE="Arg-2">
+      <extent>
+        <charseq START="1154" END="1158">Czech</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+</document>
+</source_file>

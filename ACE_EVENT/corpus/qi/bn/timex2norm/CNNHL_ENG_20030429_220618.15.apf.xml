@@ -1,0 +1,300 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNNHL_ENG_20030429_220618.15.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNNHL_ENG_20030429_220618.15">
+<entity ID="CNNHL_ENG_20030429_220618.15-E1" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030429_220618.15-E1-1" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="70" END="83">president bush</charseq>
+    </extent>
+    <head>
+      <charseq START="80" END="83">bush</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030429_220618.15-E1-2" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="70" END="78">president</charseq>
+    </extent>
+    <head>
+      <charseq START="70" END="78">president</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030429_220618.15-E1-4" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="113" END="115">his</charseq>
+    </extent>
+    <head>
+      <charseq START="113" END="115">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030429_220618.15-E1-9" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="248" END="260">the president</charseq>
+    </extent>
+    <head>
+      <charseq START="252" END="260">president</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030429_220618.15-E1-10" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="267" END="269">hir</charseq>
+    </extent>
+    <head>
+      <charseq START="267" END="269">hir</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="bush">
+      <charseq START="80" END="83">bush</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030429_220618.15-E3" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030429_220618.15-E3-3" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="96" END="103">congress</charseq>
+    </extent>
+    <head>
+      <charseq START="96" END="103">congress</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="congress">
+      <charseq START="96" END="103">congress</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030429_220618.15-E4" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030429_220618.15-E4-5" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="171" END="181">white house</charseq>
+    </extent>
+    <head>
+      <charseq START="171" END="181">white house</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="white house">
+      <charseq START="171" END="181">white house</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030429_220618.15-E5" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNNHL_ENG_20030429_220618.15-E5-6" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="196" END="245">aids
+activists and lawmakers from around the world</charseq>
+    </extent>
+    <head>
+      <charseq START="201" END="209">activists</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030429_220618.15-E6" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNNHL_ENG_20030429_220618.15-E6-7" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="196" END="245">aids
+activists and lawmakers from around the world</charseq>
+    </extent>
+    <head>
+      <charseq START="215" END="223">lawmakers</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030429_220618.15-E7" TYPE="LOC" SUBTYPE="Celestial" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030429_220618.15-E7-8" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="237" END="245">the world</charseq>
+    </extent>
+    <head>
+      <charseq START="241" END="245">world</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030429_220618.15-E8" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNNHL_ENG_20030429_220618.15-E8-11" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="332" END="356">at least
+2 million people</charseq>
+    </extent>
+    <head>
+      <charseq START="351" END="356">people</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<value ID="CNNHL_ENG_20030429_220618.15-V1" TYPE="Numeric" SUBTYPE="Money">
+  <value_mention ID="CNNHL_ENG_20030429_220618.15-V1-1">
+    <extent>
+      <charseq START="117" END="127">$15 billion</charseq>
+    </extent>
+  </value_mention>
+</value>
+<timex2 ID="CNNHL_ENG_20030429_220618.15-T1" VAL="P10Y" ANCHOR_VAL="2003" ANCHOR_DIR="STARTING">
+  <timex2_mention ID="CNNHL_ENG_20030429_220618.15-T1-1">
+    <extent>
+      <charseq START="363" END="377">the next decade</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNNHL_ENG_20030429_220618.15-T2" VAL="2003-04-29T23:13:52">
+  <timex2_mention ID="CNNHL_ENG_20030429_220618.15-T2-1">
+    <extent>
+      <charseq START="46" END="64">2003-04-29 23:13:52</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNNHL_ENG_20030429_220618.15-R1" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030429_220618.15-E6" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030429_220618.15-E7" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030429_220618.15-R1-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="196" END="245">aids
+activists and lawmakers from around the world</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030429_220618.15-E6-7" ROLE="Arg-1">
+      <extent>
+        <charseq START="196" END="245">aids
+activists and lawmakers from around the world</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030429_220618.15-E7-8" ROLE="Arg-2">
+      <extent>
+        <charseq START="237" END="245">the world</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030429_220618.15-R2" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030429_220618.15-E6" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030429_220618.15-E4" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030429_220618.15-R2-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="166" END="377">at a white house gathering of aids
+activists and lawmakers from around the world, the president said hir
+plan could prevent 7 million new hiv infections -- and treat at least
+2 million people over the next decade</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030429_220618.15-E6-7" ROLE="Arg-1">
+      <extent>
+        <charseq START="196" END="245">aids
+activists and lawmakers from around the world</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030429_220618.15-E4-5" ROLE="Arg-2">
+      <extent>
+        <charseq START="171" END="181">white house</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030429_220618.15-R3" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030429_220618.15-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030429_220618.15-E4" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030429_220618.15-R3-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="166" END="377">at a white house gathering of aids
+activists and lawmakers from around the world, the president said hir
+plan could prevent 7 million new hiv infections -- and treat at least
+2 million people over the next decade</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030429_220618.15-E1-9" ROLE="Arg-1">
+      <extent>
+        <charseq START="248" END="260">the president</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030429_220618.15-E4-5" ROLE="Arg-2">
+      <extent>
+        <charseq START="171" END="181">white house</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030429_220618.15-R4" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030429_220618.15-E5" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030429_220618.15-E7" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030429_220618.15-R4-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="196" END="245">aids
+activists and lawmakers from around the world</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030429_220618.15-E5-6" ROLE="Arg-1">
+      <extent>
+        <charseq START="196" END="245">aids
+activists and lawmakers from around the world</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030429_220618.15-E7-8" ROLE="Arg-2">
+      <extent>
+        <charseq START="237" END="245">the world</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030429_220618.15-R5" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030429_220618.15-E5" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030429_220618.15-E4" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030429_220618.15-R5-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="166" END="377">at a white house gathering of aids
+activists and lawmakers from around the world, the president said hir
+plan could prevent 7 million new hiv infections -- and treat at least
+2 million people over the next decade</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030429_220618.15-E5-6" ROLE="Arg-1">
+      <extent>
+        <charseq START="196" END="245">aids
+activists and lawmakers from around the world</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030429_220618.15-E4-5" ROLE="Arg-2">
+      <extent>
+        <charseq START="171" END="181">white house</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNNHL_ENG_20030429_220618.15-EV1" TYPE="Contact" SUBTYPE="Meet" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNNHL_ENG_20030429_220618.15-E4" ROLE="Place"/>
+  <event_argument REFID="CNNHL_ENG_20030429_220618.15-E5" ROLE="Entity"/>
+  <event_argument REFID="CNNHL_ENG_20030429_220618.15-E6" ROLE="Entity"/>
+  <event_argument REFID="CNNHL_ENG_20030429_220618.15-E1" ROLE="Entity"/>
+  <event_mention ID="CNNHL_ENG_20030429_220618.15-EV1-1">
+    <extent>
+      <charseq START="171" END="260">white house gathering of aids
+activists and lawmakers from around the world, the president</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="166" END="377">at a white house gathering of aids
+activists and lawmakers from around the world, the president said hir
+plan could prevent 7 million new hiv infections -- and treat at least
+2 million people over the next decade</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="183" END="191">gathering</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030429_220618.15-E4-5" ROLE="Place">
+      <extent>
+        <charseq START="171" END="181">white house</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030429_220618.15-E5-6" ROLE="Entity">
+      <extent>
+        <charseq START="196" END="245">aids
+activists and lawmakers from around the world</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030429_220618.15-E6-7" ROLE="Entity">
+      <extent>
+        <charseq START="196" END="245">aids
+activists and lawmakers from around the world</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030429_220618.15-E1-9" ROLE="Entity">
+      <extent>
+        <charseq START="248" END="260">the president</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

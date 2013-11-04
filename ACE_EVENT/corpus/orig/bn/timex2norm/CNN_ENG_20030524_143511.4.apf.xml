@@ -1,0 +1,274 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030524_143511.4.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030524_143511.4">
+<entity ID="CNN_ENG_20030524_143511.4-E1" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030524_143511.4-E1-1" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="67" END="79">judith nathan</charseq>
+    </extent>
+    <head>
+      <charseq START="67" END="79">judith nathan</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030524_143511.4-E1-2" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="103" END="127">the wife of rudy giuliani</charseq>
+    </extent>
+    <head>
+      <charseq START="107" END="110">wife</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="judith nathan">
+      <charseq START="67" END="79">judith nathan</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030524_143511.4-E3" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030524_143511.4-E3-3" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="115" END="127">rudy giuliani</charseq>
+    </extent>
+    <head>
+      <charseq START="115" END="127">rudy giuliani</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="rudy giuliani">
+      <charseq START="115" END="127">rudy giuliani</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030524_143511.4-E4" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030524_143511.4-E4-4" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="130" END="139">the
+couple</charseq>
+    </extent>
+    <head>
+      <charseq START="134" END="139">couple</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030524_143511.4-E5" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030524_143511.4-E5-5" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="173" END="198">gracie mansion in new york</charseq>
+    </extent>
+    <head>
+      <charseq START="173" END="186">gracie mansion</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="gracie mansion">
+      <charseq START="173" END="186">gracie mansion</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030524_143511.4-E6" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030524_143511.4-E6-6" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="191" END="198">new york</charseq>
+    </extent>
+    <head>
+      <charseq START="191" END="198">new york</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="new york">
+      <charseq START="191" END="198">new york</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030524_143511.4-E7" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030524_143511.4-E7-7" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="209" END="231">mayor michael bloomberg</charseq>
+    </extent>
+    <head>
+      <charseq START="215" END="231">michael bloomberg</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030524_143511.4-E7-8" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="209" END="213">mayor</charseq>
+    </extent>
+    <head>
+      <charseq START="209" END="213">mayor</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="michael bloomberg">
+      <charseq START="215" END="231">michael bloomberg</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030524_143511.4-E9" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030524_143511.4-E9-9" TYPE="PRO" LDCTYPE="HLS">
+    <extent>
+      <charseq START="260" END="267">hundreds</charseq>
+    </extent>
+    <head>
+      <charseq START="260" END="267">hundreds</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030524_143511.4-E10" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030524_143511.4-E10-10" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="291" END="303">placido domgo</charseq>
+    </extent>
+    <head>
+      <charseq START="291" END="303">placido domgo</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="placido domgo">
+      <charseq START="291" END="303">placido domgo</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<timex2 ID="CNN_ENG_20030524_143511.4-T1" VAL="2003-05-24T15:38:18">
+  <timex2_mention ID="CNN_ENG_20030524_143511.4-T1-1">
+    <extent>
+      <charseq START="43" END="61">2003-05-24 15:38:18</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030524_143511.4-T2" VAL="2003-05-25">
+  <timex2_mention ID="CNN_ENG_20030524_143511.4-T2-1">
+    <extent>
+      <charseq START="94" END="101">tomorrow</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030524_143511.4-T3" VAL="2003-05-24TNI">
+  <timex2_mention ID="CNN_ENG_20030524_143511.4-T3-1">
+    <extent>
+      <charseq START="200" END="206">tonight</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030524_143511.4-T4" VAL="2003-05-24T16" MOD="START">
+  <timex2_mention ID="CNN_ENG_20030524_143511.4-T4-1">
+    <extent>
+      <charseq START="349" END="367">the top of the hour</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030524_143511.4-R1" TYPE="PHYS" SUBTYPE="Located" TENSE="Future" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030524_143511.4-E4" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030524_143511.4-E5" ROLE="Arg-2"/>
+  <relation_argument REFID="CNN_ENG_20030524_143511.4-T3" ROLE="Time-Within"/>
+  <relation_mention ID="CNN_ENG_20030524_143511.4-R1-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="130" END="206">the
+couple is preparing to tie the knot at gracie mansion in new york
+tonight</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030524_143511.4-E4-4" ROLE="Arg-1">
+      <extent>
+        <charseq START="130" END="139">the
+couple</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030524_143511.4-E5-5" ROLE="Arg-2">
+      <extent>
+        <charseq START="173" END="198">gracie mansion in new york</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030524_143511.4-T3-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="200" END="206">tonight</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030524_143511.4-R2" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030524_143511.4-E5" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030524_143511.4-E6" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030524_143511.4-R2-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="173" END="198">gracie mansion in new york</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030524_143511.4-E5-5" ROLE="Arg-1">
+      <extent>
+        <charseq START="173" END="198">gracie mansion in new york</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030524_143511.4-E6-6" ROLE="Arg-2">
+      <extent>
+        <charseq START="191" END="198">new york</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030524_143511.4-R3" TYPE="PER-SOC" SUBTYPE="Family" TENSE="Future" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030524_143511.4-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030524_143511.4-E3" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030524_143511.4-R3-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="103" END="127">the wife of rudy giuliani</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030524_143511.4-E1-2" ROLE="Arg-1">
+      <extent>
+        <charseq START="103" END="127">the wife of rudy giuliani</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030524_143511.4-E3-3" ROLE="Arg-2">
+      <extent>
+        <charseq START="115" END="127">rudy giuliani</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030524_143511.4-EV1" TYPE="Life" SUBTYPE="Marry" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Future">
+  <event_argument REFID="CNN_ENG_20030524_143511.4-E4" ROLE="Person"/>
+  <event_argument REFID="CNN_ENG_20030524_143511.4-E5" ROLE="Place"/>
+  <event_argument REFID="CNN_ENG_20030524_143511.4-T3" ROLE="Time-Within"/>
+  <event_mention ID="CNN_ENG_20030524_143511.4-EV1-1">
+    <extent>
+      <charseq START="130" END="206">the
+couple is preparing to tie the knot at gracie mansion in new york
+tonight</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="130" END="206">the
+couple is preparing to tie the knot at gracie mansion in new york
+tonight</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="157" END="168">tie the knot</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030524_143511.4-E4-4" ROLE="Person">
+      <extent>
+        <charseq START="130" END="139">the
+couple</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030524_143511.4-E5-5" ROLE="Place">
+      <extent>
+        <charseq START="173" END="198">gracie mansion in new york</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030524_143511.4-T3-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="200" END="206">tonight</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030524_143511.4-EV1-2">
+    <extent>
+      <charseq START="250" END="257">ceremony</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="209" END="257">mayor michael bloomberg will perform the ceremony</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="250" END="257">ceremony</charseq>
+    </anchor>
+  </event_mention>
+</event>
+</document>
+</source_file>

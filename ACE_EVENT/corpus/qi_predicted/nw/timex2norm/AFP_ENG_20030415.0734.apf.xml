@@ -1,0 +1,716 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="AFP_ENG_20030415.0734.sgm" SOURCE="newswire" TYPE="text">
+<document DOCID="nw/timex2norm/AFP_ENG_20030415.0734">
+  <entity ID="nw/timex2norm/AFP_ENG_20030415.0734-1" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+    <entity_mention TYPE="NAM" ID="nw/timex2norm/AFP_ENG_20030415.0734-1-0" ROLE="LOC">
+      <extent>
+			<charseq START="153" END="158">BEIRUT</charseq>
+      </extent>
+      <head>
+			<charseq START="153" END="158">BEIRUT</charseq>
+      </head>
+    </entity_mention>
+    <entity_attributes>
+      <name NAME="BEIRUT">
+			<charseq START="153" END="158">BEIRUT</charseq>
+      </name>
+    </entity_attributes>
+  </entity>
+  <entity ID="nw/timex2norm/AFP_ENG_20030415.0734-2" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+    <entity_mention TYPE="NAM" ID="nw/timex2norm/AFP_ENG_20030415.0734-2-0">
+      <extent>
+			<charseq START="171" END="173">AFP</charseq>
+      </extent>
+      <head>
+			<charseq START="171" END="173">AFP</charseq>
+      </head>
+    </entity_mention>
+    <entity_attributes>
+      <name NAME="AFP">
+			<charseq START="171" END="173">AFP</charseq>
+      </name>
+    </entity_attributes>
+  </entity>
+  <entity ID="nw/timex2norm/AFP_ENG_20030415.0734-3" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+    <entity_mention TYPE="NAM" ID="nw/timex2norm/AFP_ENG_20030415.0734-3-0" ROLE="GPE">
+      <extent>
+			<charseq START="177" END="184">Lebanese</charseq>
+      </extent>
+      <head>
+			<charseq START="177" END="184">Lebanese</charseq>
+      </head>
+    </entity_mention>
+    <entity_mention TYPE="NAM" ID="nw/timex2norm/AFP_ENG_20030415.0734-3-1" ROLE="GPE">
+      <extent>
+			<charseq START="941" END="947">Lebanon</charseq>
+      </extent>
+      <head>
+			<charseq START="941" END="947">Lebanon</charseq>
+      </head>
+    </entity_mention>
+    <entity_attributes>
+      <name NAME="Lebanese">
+			<charseq START="177" END="184">Lebanese</charseq>
+      </name>
+      <name NAME="Lebanon">
+			<charseq START="941" END="947">Lebanon</charseq>
+      </name>
+    </entity_attributes>
+  </entity>
+  <entity ID="nw/timex2norm/AFP_ENG_20030415.0734-4" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+    <entity_mention TYPE="NAM" ID="nw/timex2norm/AFP_ENG_20030415.0734-4-0">
+      <extent>
+			<charseq START="177" END="212">Lebanese Prime Minister Rafiq Hariri</charseq>
+      </extent>
+      <head>
+			<charseq START="201" END="212">Rafiq Hariri</charseq>
+      </head>
+    </entity_mention>
+    <entity_mention TYPE="NOM" ID="nw/timex2norm/AFP_ENG_20030415.0734-4-1">
+      <extent>
+			<charseq START="186" END="199">Prime Minister</charseq>
+      </extent>
+      <head>
+			<charseq START="186" END="199">Prime Minister</charseq>
+      </head>
+    </entity_mention>
+    <entity_mention TYPE="NAM" ID="nw/timex2norm/AFP_ENG_20030415.0734-4-2">
+      <extent>
+			<charseq START="378" END="383">Hariri</charseq>
+      </extent>
+      <head>
+			<charseq START="378" END="383">Hariri</charseq>
+      </head>
+    </entity_mention>
+    <entity_mention TYPE="PRO" ID="nw/timex2norm/AFP_ENG_20030415.0734-4-3">
+      <extent>
+			<charseq START="395" END="397">his</charseq>
+      </extent>
+      <head>
+			<charseq START="395" END="397">his</charseq>
+      </head>
+    </entity_mention>
+    <entity_mention TYPE="NAM" ID="nw/timex2norm/AFP_ENG_20030415.0734-4-4">
+      <extent>
+			<charseq START="667" END="672">Hariri</charseq>
+      </extent>
+      <head>
+			<charseq START="667" END="672">Hariri</charseq>
+      </head>
+    </entity_mention>
+    <entity_mention TYPE="PRO" ID="nw/timex2norm/AFP_ENG_20030415.0734-4-5">
+      <extent>
+			<charseq START="785" END="786">he</charseq>
+      </extent>
+      <head>
+			<charseq START="785" END="786">he</charseq>
+      </head>
+    </entity_mention>
+    <entity_mention TYPE="NAM" ID="nw/timex2norm/AFP_ENG_20030415.0734-4-6">
+      <extent>
+			<charseq START="1112" END="1117">Hariri</charseq>
+      </extent>
+      <head>
+			<charseq START="1112" END="1117">Hariri</charseq>
+      </head>
+    </entity_mention>
+    <entity_attributes>
+      <name NAME="Rafiq Hariri">
+			<charseq START="201" END="212">Rafiq Hariri</charseq>
+      </name>
+      <name NAME="Hariri">
+			<charseq START="378" END="383">Hariri</charseq>
+      </name>
+      <name NAME="Hariri">
+			<charseq START="667" END="672">Hariri</charseq>
+      </name>
+      <name NAME="Hariri">
+			<charseq START="1112" END="1117">Hariri</charseq>
+      </name>
+    </entity_attributes>
+  </entity>
+  <entity ID="nw/timex2norm/AFP_ENG_20030415.0734-5" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+    <entity_mention TYPE="NOM" ID="nw/timex2norm/AFP_ENG_20030415.0734-5-0">
+      <extent>
+			<charseq START="271" END="279">President</charseq>
+      </extent>
+      <head>
+			<charseq START="271" END="279">President</charseq>
+      </head>
+    </entity_mention>
+    <entity_attributes>
+    </entity_attributes>
+  </entity>
+  <entity ID="nw/timex2norm/AFP_ENG_20030415.0734-6" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+    <entity_mention TYPE="NAM" ID="nw/timex2norm/AFP_ENG_20030415.0734-6-0">
+      <extent>
+			<charseq START="271" END="307">President Emile Lahoud, who asked him</charseq>
+      </extent>
+      <head>
+			<charseq START="281" END="292">Emile Lahoud</charseq>
+      </head>
+    </entity_mention>
+    <entity_mention TYPE="PRO" ID="nw/timex2norm/AFP_ENG_20030415.0734-6-1">
+      <extent>
+			<charseq START="305" END="307">him</charseq>
+      </extent>
+      <head>
+			<charseq START="305" END="307">him</charseq>
+      </head>
+    </entity_mention>
+    <entity_mention TYPE="NAM" ID="nw/timex2norm/AFP_ENG_20030415.0734-6-2">
+      <extent>
+			<charseq START="579" END="584">Lahoud</charseq>
+      </extent>
+      <head>
+			<charseq START="579" END="584">Lahoud</charseq>
+      </head>
+    </entity_mention>
+    <entity_attributes>
+      <name NAME="Emile Lahoud">
+			<charseq START="281" END="292">Emile Lahoud</charseq>
+      </name>
+      <name NAME="Lahoud">
+			<charseq START="579" END="584">Lahoud</charseq>
+      </name>
+    </entity_attributes>
+  </entity>
+  <entity ID="nw/timex2norm/AFP_ENG_20030415.0734-7" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+    <entity_mention TYPE="NOM" ID="nw/timex2norm/AFP_ENG_20030415.0734-7-0">
+      <extent>
+			<charseq START="464" END="493">the Baabda presidential palace</charseq>
+      </extent>
+      <head>
+			<charseq START="488" END="493">palace</charseq>
+      </head>
+    </entity_mention>
+    <entity_attributes>
+    </entity_attributes>
+  </entity>
+  <entity ID="nw/timex2norm/AFP_ENG_20030415.0734-8" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+    <entity_mention TYPE="NAM" ID="nw/timex2norm/AFP_ENG_20030415.0734-8-0" ROLE="GPE">
+      <extent>
+			<charseq START="468" END="473">Baabda</charseq>
+      </extent>
+      <head>
+			<charseq START="468" END="473">Baabda</charseq>
+      </head>
+    </entity_mention>
+    <entity_mention TYPE="NOM" ID="nw/timex2norm/AFP_ENG_20030415.0734-8-1" ROLE="GPE">
+      <extent>
+			<charseq START="504" END="514">the capital</charseq>
+      </extent>
+      <head>
+			<charseq START="508" END="514">capital</charseq>
+      </head>
+    </entity_mention>
+    <entity_attributes>
+      <name NAME="Baabda">
+			<charseq START="468" END="473">Baabda</charseq>
+      </name>
+    </entity_attributes>
+  </entity>
+  <entity ID="nw/timex2norm/AFP_ENG_20030415.0734-9" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+    <entity_mention TYPE="NOM" ID="nw/timex2norm/AFP_ENG_20030415.0734-9-0" ROLE="GPE">
+      <extent>
+			<charseq START="648" END="663">a new
+government</charseq>
+      </extent>
+      <head>
+			<charseq START="654" END="663">government</charseq>
+      </head>
+    </entity_mention>
+    <entity_attributes>
+    </entity_attributes>
+  </entity>
+  <entity ID="nw/timex2norm/AFP_ENG_20030415.0734-10" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+    <entity_mention TYPE="NOM" ID="nw/timex2norm/AFP_ENG_20030415.0734-10-0" ROLE="GPE">
+      <extent>
+			<charseq START="685" END="695">the country</charseq>
+      </extent>
+      <head>
+			<charseq START="689" END="695">country</charseq>
+      </head>
+    </entity_mention>
+    <entity_attributes>
+    </entity_attributes>
+  </entity>
+  <entity ID="nw/timex2norm/AFP_ENG_20030415.0734-11" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+    <entity_mention TYPE="NOM" ID="nw/timex2norm/AFP_ENG_20030415.0734-11-0" ROLE="GPE">
+      <extent>
+			<charseq START="685" END="708">the country&apos;s government</charseq>
+      </extent>
+      <head>
+			<charseq START="699" END="708">government</charseq>
+      </head>
+    </entity_mention>
+    <entity_attributes>
+    </entity_attributes>
+  </entity>
+  <entity ID="nw/timex2norm/AFP_ENG_20030415.0734-12" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+    <entity_mention TYPE="NOM" ID="nw/timex2norm/AFP_ENG_20030415.0734-12-0">
+      <extent>
+			<charseq START="759" END="778">governmental sources</charseq>
+      </extent>
+      <head>
+			<charseq START="772" END="778">sources</charseq>
+      </head>
+    </entity_mention>
+    <entity_attributes>
+    </entity_attributes>
+  </entity>
+  <entity ID="nw/timex2norm/AFP_ENG_20030415.0734-13" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+    <entity_mention TYPE="NOM" ID="nw/timex2norm/AFP_ENG_20030415.0734-13-0" ROLE="GPE">
+      <extent>
+			<charseq START="824" END="845">The current government</charseq>
+      </extent>
+      <head>
+			<charseq START="836" END="845">government</charseq>
+      </head>
+    </entity_mention>
+    <entity_attributes>
+    </entity_attributes>
+  </entity>
+  <entity ID="nw/timex2norm/AFP_ENG_20030415.0734-14" TYPE="ORG" SUBTYPE="Non-Governmental" CLASS="SPC">
+    <entity_mention TYPE="NAM" ID="nw/timex2norm/AFP_ENG_20030415.0734-14-0">
+      <extent>
+			<charseq START="1023" END="1036">a Sunni Muslim</charseq>
+      </extent>
+      <head>
+			<charseq START="1025" END="1036">Sunni Muslim</charseq>
+      </head>
+    </entity_mention>
+    <entity_attributes>
+      <name NAME="Sunni Muslim">
+			<charseq START="1025" END="1036">Sunni Muslim</charseq>
+      </name>
+    </entity_attributes>
+  </entity>
+  <entity ID="nw/timex2norm/AFP_ENG_20030415.0734-15" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+    <entity_mention TYPE="NOM" ID="nw/timex2norm/AFP_ENG_20030415.0734-15-0">
+      <extent>
+			<charseq START="1123" END="1135">five children</charseq>
+      </extent>
+      <head>
+			<charseq START="1128" END="1135">children</charseq>
+      </head>
+    </entity_mention>
+    <entity_attributes>
+    </entity_attributes>
+  </entity>
+  <entity ID="nw/timex2norm/AFP_ENG_20030415.0734-16" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+    <entity_mention TYPE="NOM" ID="nw/timex2norm/AFP_ENG_20030415.0734-16-0">
+      <extent>
+			<charseq START="1138" END="1150">A businessman</charseq>
+      </extent>
+      <head>
+			<charseq START="1140" END="1150">businessman</charseq>
+      </head>
+    </entity_mention>
+    <entity_mention TYPE="PRO" ID="nw/timex2norm/AFP_ENG_20030415.0734-16-1">
+      <extent>
+			<charseq START="1201" END="1202">he</charseq>
+      </extent>
+      <head>
+			<charseq START="1201" END="1202">he</charseq>
+      </head>
+    </entity_mention>
+    <entity_mention TYPE="PRO" ID="nw/timex2norm/AFP_ENG_20030415.0734-16-2">
+      <extent>
+			<charseq START="1266" END="1267">He</charseq>
+      </extent>
+      <head>
+			<charseq START="1266" END="1267">He</charseq>
+      </head>
+    </entity_mention>
+    <entity_attributes>
+    </entity_attributes>
+  </entity>
+  <entity ID="nw/timex2norm/AFP_ENG_20030415.0734-17" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+    <entity_mention TYPE="NOM" ID="nw/timex2norm/AFP_ENG_20030415.0734-17-0">
+      <extent>
+			<charseq START="1296" END="1310">a radio station</charseq>
+      </extent>
+      <head>
+			<charseq START="1304" END="1310">station</charseq>
+      </head>
+    </entity_mention>
+    <entity_attributes>
+    </entity_attributes>
+  </entity>
+  <entity ID="nw/timex2norm/AFP_ENG_20030415.0734-18" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+    <entity_mention TYPE="NOM" ID="nw/timex2norm/AFP_ENG_20030415.0734-18-0">
+      <extent>
+			<charseq START="1316" END="1326">a newspaper</charseq>
+      </extent>
+      <head>
+			<charseq START="1318" END="1326">newspaper</charseq>
+      </head>
+    </entity_mention>
+    <entity_attributes>
+    </entity_attributes>
+  </entity>
+  <value ID="nw/timex2norm/AFP_ENG_20030415.0734-V1" TYPE="Job-Title">
+    <value_mention ID="nw/timex2norm/AFP_ENG_20030415.0734-V1-1">
+      <extent>
+			<charseq START="271" END="279">President</charseq>
+      </extent>
+    </value_mention>
+  </value>
+  <value ID="nw/timex2norm/AFP_ENG_20030415.0734-V2" TYPE="Job-Title">
+    <value_mention ID="nw/timex2norm/AFP_ENG_20030415.0734-V2-1">
+      <extent>
+			<charseq START="443" END="459">the
+head of state</charseq>
+      </extent>
+    </value_mention>
+  </value>
+  <value ID="nw/timex2norm/AFP_ENG_20030415.0734-V3" TYPE="Sentence ">
+    <value_mention ID="nw/timex2norm/AFP_ENG_20030415.0734-V3-1">
+      <extent>
+			<charseq START="722" END="738">the past 11
+years</charseq>
+      </extent>
+    </value_mention>
+  </value>
+  <value ID="nw/timex2norm/AFP_ENG_20030415.0734-V4" TYPE="Job-Title">
+    <value_mention ID="nw/timex2norm/AFP_ENG_20030415.0734-V4-1">
+      <extent>
+			<charseq START="814" END="820">the job</charseq>
+      </extent>
+    </value_mention>
+  </value>
+  <value ID="nw/timex2norm/AFP_ENG_20030415.0734-V5" TYPE="Job-Title">
+    <value_mention ID="nw/timex2norm/AFP_ENG_20030415.0734-V5-1">
+      <extent>
+			<charseq START="978" END="1003">the prime ministerial post</charseq>
+      </extent>
+    </value_mention>
+  </value>
+  <value ID="nw/timex2norm/AFP_ENG_20030415.0734-V6" TYPE="Sentence ">
+    <value_mention ID="nw/timex2norm/AFP_ENG_20030415.0734-V6-1">
+      <extent>
+			<charseq START="1095" END="1109">the second time</charseq>
+      </extent>
+    </value_mention>
+  </value>
+  <value ID="nw/timex2norm/AFP_ENG_20030415.0734-V7" TYPE="Numeric" SUBTYPE="Money">
+    <value_mention ID="nw/timex2norm/AFP_ENG_20030415.0734-V7-1">
+      <extent>
+			<charseq START="1181" END="1198">10 billion dollars</charseq>
+      </extent>
+    </value_mention>
+  </value>
+  <timex2 ID="nw/timex2norm/AFP_ENG_20030415.0734-T0" VAL="2003-04-15">
+    <timex2_mention ID="nw/timex2norm/AFP_ENG_20030415.0734-T0-1">
+      <extent>
+			<charseq START="39" END="46">20030415</charseq>
+      </extent>
+    </timex2_mention>
+  </timex2>
+  <timex2 ID="nw/timex2norm/AFP_ENG_20030415.0734-T1" VAL="2003-04-15">
+    <timex2_mention ID="nw/timex2norm/AFP_ENG_20030415.0734-T1-1">
+      <extent>
+			<charseq START="161" END="168">April 15</charseq>
+      </extent>
+    </timex2_mention>
+  </timex2>
+  <timex2 ID="nw/timex2norm/AFP_ENG_20030415.0734-T2" VAL="2003-04-15">
+    <timex2_mention ID="nw/timex2norm/AFP_ENG_20030415.0734-T2-1">
+      <extent>
+			<charseq START="240" END="246">Tuesday</charseq>
+      </extent>
+    </timex2_mention>
+  </timex2>
+  <timex2 ID="nw/timex2norm/AFP_ENG_20030415.0734-T3" VAL="2003-04-09">
+    <timex2_mention ID="nw/timex2norm/AFP_ENG_20030415.0734-T3-1">
+      <extent>
+			<charseq START="612" END="620">Wednesday</charseq>
+      </extent>
+    </timex2_mention>
+  </timex2>
+  <timex2 ID="nw/timex2norm/AFP_ENG_20030415.0734-T4" VAL="2000-10">
+    <timex2_mention ID="nw/timex2norm/AFP_ENG_20030415.0734-T4-1">
+      <extent>
+			<charseq START="861" END="872">October 2000</charseq>
+      </extent>
+    </timex2_mention>
+  </timex2>
+  <timex2 ID="nw/timex2norm/AFP_ENG_20030415.0734-T5" VAL="1990">
+    <timex2_mention ID="nw/timex2norm/AFP_ENG_20030415.0734-T5-1">
+      <extent>
+			<charseq START="972" END="975">1990</charseq>
+      </extent>
+    </timex2_mention>
+  </timex2>
+  <timex2 ID="nw/timex2norm/AFP_ENG_20030415.0734-T6" VAL="P11Y">
+    <timex2_mention ID="nw/timex2norm/AFP_ENG_20030415.0734-T6-1">
+      <extent>
+			<charseq START="722" END="738">the past 11
+years</charseq>
+      </extent>
+    </timex2_mention>
+  </timex2>
+  <relation ID="nw/timex2norm/AFP_ENG_20030415.0734-R1" TYPE="ORG-AFF" SUBTYPE="Employment">    <relation_argument REFID="nw/timex2norm/AFP_ENG_20030415.0734-4" ROLE="Arg-1" />
+    <relation_argument REFID="nw/timex2norm/AFP_ENG_20030415.0734-3" ROLE="Arg-2" />
+      <relation_mention ID="nw/timex2norm/AFP_ENG_20030415.0734-R1-1" p="0.697">
+      <extent>
+			<charseq START="177" END="212">Lebanese Prime Minister Rafiq Hariri</charseq>
+      </extent>
+        <relation_mention_argument REFID="nw/timex2norm/AFP_ENG_20030415.0734-4-0" ROLE="Arg-1">
+          <extent>
+            <charseq START="177" END="212">Lebanese Prime Minister Rafiq Hariri</charseq>
+          </extent>
+        </relation_mention_argument>
+        <relation_mention_argument REFID="nw/timex2norm/AFP_ENG_20030415.0734-3-0" ROLE="Arg-2">
+          <extent>
+            <charseq START="177" END="184">Lebanese</charseq>
+          </extent>
+        </relation_mention_argument>
+      </relation_mention>
+  </relation>
+  <relation ID="nw/timex2norm/AFP_ENG_20030415.0734-R2" TYPE="ORG-AFF" SUBTYPE="Employment">    <relation_argument REFID="nw/timex2norm/AFP_ENG_20030415.0734-4" ROLE="Arg-1" />
+    <relation_argument REFID="nw/timex2norm/AFP_ENG_20030415.0734-4" ROLE="Arg-2" />
+      <relation_mention ID="nw/timex2norm/AFP_ENG_20030415.0734-R2-1" p="0.337">
+      <extent>
+			<charseq START="177" END="212">Lebanese Prime Minister Rafiq Hariri</charseq>
+      </extent>
+        <relation_mention_argument REFID="nw/timex2norm/AFP_ENG_20030415.0734-4-0" ROLE="Arg-1">
+          <extent>
+            <charseq START="177" END="212">Lebanese Prime Minister Rafiq Hariri</charseq>
+          </extent>
+        </relation_mention_argument>
+        <relation_mention_argument REFID="nw/timex2norm/AFP_ENG_20030415.0734-4-1" ROLE="Arg-2">
+          <extent>
+            <charseq START="186" END="199">Prime Minister</charseq>
+          </extent>
+        </relation_mention_argument>
+      </relation_mention>
+  </relation>
+  <relation ID="nw/timex2norm/AFP_ENG_20030415.0734-R3" TYPE="PHYS" SUBTYPE="Located">    <relation_argument REFID="nw/timex2norm/AFP_ENG_20030415.0734-4" ROLE="Arg-1" />
+    <relation_argument REFID="nw/timex2norm/AFP_ENG_20030415.0734-7" ROLE="Arg-2" />
+      <relation_mention ID="nw/timex2norm/AFP_ENG_20030415.0734-R3-1" p="0.982">
+      <extent>
+			<charseq START="378" END="493">Hariri submitted his resignation during a 10-minute meeting with the
+head of state at the Baabda presidential palace</charseq>
+      </extent>
+        <relation_mention_argument REFID="nw/timex2norm/AFP_ENG_20030415.0734-4-2" ROLE="Arg-1">
+          <extent>
+            <charseq START="378" END="383">Hariri</charseq>
+          </extent>
+        </relation_mention_argument>
+        <relation_mention_argument REFID="nw/timex2norm/AFP_ENG_20030415.0734-7-0" ROLE="Arg-2">
+          <extent>
+            <charseq START="464" END="493">the Baabda presidential palace</charseq>
+          </extent>
+        </relation_mention_argument>
+      </relation_mention>
+  </relation>
+  <relation ID="nw/timex2norm/AFP_ENG_20030415.0734-R4" TYPE="PHYS" SUBTYPE="Located">    <relation_argument REFID="nw/timex2norm/AFP_ENG_20030415.0734-4" ROLE="Arg-1" />
+    <relation_argument REFID="nw/timex2norm/AFP_ENG_20030415.0734-8" ROLE="Arg-2" />
+      <relation_mention ID="nw/timex2norm/AFP_ENG_20030415.0734-R4-1" p="0.739">
+      <extent>
+			<charseq START="378" END="514">Hariri submitted his resignation during a 10-minute meeting with the
+head of state at the Baabda presidential palace, outside the capital</charseq>
+      </extent>
+        <relation_mention_argument REFID="nw/timex2norm/AFP_ENG_20030415.0734-4-2" ROLE="Arg-1">
+          <extent>
+            <charseq START="378" END="383">Hariri</charseq>
+          </extent>
+        </relation_mention_argument>
+        <relation_mention_argument REFID="nw/timex2norm/AFP_ENG_20030415.0734-8-1" ROLE="Arg-2">
+          <extent>
+            <charseq START="504" END="514">the capital</charseq>
+          </extent>
+        </relation_mention_argument>
+      </relation_mention>
+  </relation>
+  <relation ID="nw/timex2norm/AFP_ENG_20030415.0734-R5" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer">    <relation_argument REFID="nw/timex2norm/AFP_ENG_20030415.0734-8" ROLE="Arg-1" />
+    <relation_argument REFID="nw/timex2norm/AFP_ENG_20030415.0734-7" ROLE="Arg-2" />
+      <relation_mention ID="nw/timex2norm/AFP_ENG_20030415.0734-R5-1" p="0.862">
+      <extent>
+			<charseq START="464" END="493">the Baabda presidential palace</charseq>
+      </extent>
+        <relation_mention_argument REFID="nw/timex2norm/AFP_ENG_20030415.0734-8-0" ROLE="Arg-1">
+          <extent>
+            <charseq START="468" END="473">Baabda</charseq>
+          </extent>
+        </relation_mention_argument>
+        <relation_mention_argument REFID="nw/timex2norm/AFP_ENG_20030415.0734-7-0" ROLE="Arg-2">
+          <extent>
+            <charseq START="464" END="493">the Baabda presidential palace</charseq>
+          </extent>
+        </relation_mention_argument>
+      </relation_mention>
+  </relation>
+  <relation ID="nw/timex2norm/AFP_ENG_20030415.0734-R6" TYPE="PHYS" SUBTYPE="Located">    <relation_argument REFID="nw/timex2norm/AFP_ENG_20030415.0734-4" ROLE="Arg-1" />
+    <relation_argument REFID="nw/timex2norm/AFP_ENG_20030415.0734-10" ROLE="Arg-2" />
+      <relation_mention ID="nw/timex2norm/AFP_ENG_20030415.0734-R6-1" p="0.468">
+      <extent>
+			<charseq START="667" END="695">Hariri has headed the country</charseq>
+      </extent>
+        <relation_mention_argument REFID="nw/timex2norm/AFP_ENG_20030415.0734-4-4" ROLE="Arg-1">
+          <extent>
+            <charseq START="667" END="672">Hariri</charseq>
+          </extent>
+        </relation_mention_argument>
+        <relation_mention_argument REFID="nw/timex2norm/AFP_ENG_20030415.0734-10-0" ROLE="Arg-2">
+          <extent>
+            <charseq START="685" END="695">the country</charseq>
+          </extent>
+        </relation_mention_argument>
+      </relation_mention>
+  </relation>
+  <relation ID="nw/timex2norm/AFP_ENG_20030415.0734-R7" TYPE="PER-SOC" SUBTYPE="Family">    <relation_argument REFID="nw/timex2norm/AFP_ENG_20030415.0734-4" ROLE="Arg-1" />
+    <relation_argument REFID="nw/timex2norm/AFP_ENG_20030415.0734-15" ROLE="Arg-2" />
+      <relation_mention ID="nw/timex2norm/AFP_ENG_20030415.0734-R7-1" p="0.477">
+      <extent>
+			<charseq START="1112" END="1135">Hariri has five children</charseq>
+      </extent>
+        <relation_mention_argument REFID="nw/timex2norm/AFP_ENG_20030415.0734-4-6" ROLE="Arg-1">
+          <extent>
+            <charseq START="1112" END="1117">Hariri</charseq>
+          </extent>
+        </relation_mention_argument>
+        <relation_mention_argument REFID="nw/timex2norm/AFP_ENG_20030415.0734-15-0" ROLE="Arg-2">
+          <extent>
+            <charseq START="1123" END="1135">five children</charseq>
+          </extent>
+        </relation_mention_argument>
+      </relation_mention>
+  </relation>
+  <relation ID="nw/timex2norm/AFP_ENG_20030415.0734-R8" TYPE="ORG-AFF" SUBTYPE="Ownership">    <relation_argument REFID="nw/timex2norm/AFP_ENG_20030415.0734-16" ROLE="Arg-1" />
+    <relation_argument REFID="nw/timex2norm/AFP_ENG_20030415.0734-18" ROLE="Arg-2" />
+      <relation_mention ID="nw/timex2norm/AFP_ENG_20030415.0734-R8-1" p="0.584">
+      <extent>
+			<charseq START="1266" END="1326">He also owns a
+television and a radio station and a newspaper</charseq>
+      </extent>
+        <relation_mention_argument REFID="nw/timex2norm/AFP_ENG_20030415.0734-16-2" ROLE="Arg-1">
+          <extent>
+            <charseq START="1266" END="1267">He</charseq>
+          </extent>
+        </relation_mention_argument>
+        <relation_mention_argument REFID="nw/timex2norm/AFP_ENG_20030415.0734-18-0" ROLE="Arg-2">
+          <extent>
+            <charseq START="1316" END="1326">a newspaper</charseq>
+          </extent>
+        </relation_mention_argument>
+      </relation_mention>
+  </relation>
+  <event ID="nw/timex2norm/AFP_ENG_20030415.0734-EV1" TYPE="Personnel" SUBTYPE="End-Position" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past" MODPROB="1.0" POLPROB="1.0" GENPROB="1.0" TENPROB="1.0">
+    <event_argument REFID="nw/timex2norm/AFP_ENG_20030415.0734-4" ROLE="Person" p="1.0"/>
+    <event_argument REFID="nw/timex2norm/AFP_ENG_20030415.0734-8" ROLE="Place" p="0.09788119600211793"/>
+    <event_argument REFID="nw/timex2norm/AFP_ENG_20030415.0734-T2" ROLE="Time-Within" p="0.7525934499203394"/>
+    <event_argument REFID="nw/timex2norm/AFP_ENG_20030415.0734-V1" ROLE="Position" p="0.14024036616270213"/>
+    <event_mention ID="nw/timex2norm/AFP_ENG_20030415.0734-EV1-1" p="1.000">
+      <extent>
+			<charseq START="177" END="238">Lebanese Prime Minister Rafiq Hariri submitted his resignation</charseq>
+      </extent>
+      <anchor>
+			<charseq START="228" END="238">resignation</charseq>
+      </anchor>
+      <event_mention_argument REFID="nw/timex2norm/AFP_ENG_20030415.0734-4-0" ROLE="Person" p="1.000" pRole="1.000">
+      	<extent>
+			<charseq START="177" END="212">Lebanese Prime Minister Rafiq Hariri</charseq>
+      	</extent>
+      </event_mention_argument>
+      <event_mention_argument REFID="nw/timex2norm/AFP_ENG_20030415.0734-T2-1" ROLE="Time-Within" p="0.898" pRole="0.838">
+      	<extent>
+			<charseq START="240" END="246">Tuesday</charseq>
+      	</extent>
+      </event_mention_argument>
+      <event_mention_argument REFID="nw/timex2norm/AFP_ENG_20030415.0734-V1-1" ROLE="Position" p="0.222" pRole="0.631">
+      	<extent>
+			<charseq START="271" END="279">President</charseq>
+      	</extent>
+      </event_mention_argument>
+    </event_mention>
+    <event_mention ID="nw/timex2norm/AFP_ENG_20030415.0734-EV1-2" p="1.000">
+      <extent>
+			<charseq START="378" END="409">Hariri submitted his resignation</charseq>
+      </extent>
+      <anchor>
+			<charseq START="399" END="409">resignation</charseq>
+      </anchor>
+      <event_mention_argument REFID="nw/timex2norm/AFP_ENG_20030415.0734-4-2" ROLE="Person" p="1.000" pRole="1.000">
+      	<extent>
+			<charseq START="378" END="383">Hariri</charseq>
+      	</extent>
+      </event_mention_argument>
+      <event_mention_argument REFID="nw/timex2norm/AFP_ENG_20030415.0734-8-1" ROLE="Place" p="0.122" pRole="0.802">
+      	<extent>
+			<charseq START="504" END="514">the capital</charseq>
+      	</extent>
+      </event_mention_argument>
+    </event_mention>
+  </event>
+  <event ID="nw/timex2norm/AFP_ENG_20030415.0734-EV2" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past" MODPROB="1.0" POLPROB="1.0" GENPROB="1.0" TENPROB="1.0">
+    <event_argument REFID="nw/timex2norm/AFP_ENG_20030415.0734-11" ROLE="Destination" p="1.0"/>
+    <event_argument REFID="nw/timex2norm/AFP_ENG_20030415.0734-4" ROLE="Artifact" p="0.6800893963998814"/>
+    <event_argument REFID="nw/timex2norm/AFP_ENG_20030415.0734-10" ROLE="Origin" p="0.695217606903787"/>
+    <event_mention ID="nw/timex2norm/AFP_ENG_20030415.0734-EV2-1" p="1.000">
+      <extent>
+			<charseq START="678" END="708">headed the country&apos;s government</charseq>
+      </extent>
+      <anchor>
+			<charseq START="678" END="683">headed</charseq>
+      </anchor>
+      <event_mention_argument REFID="nw/timex2norm/AFP_ENG_20030415.0734-11-0" ROLE="Destination" p="1.000" pRole="1.000">
+      	<extent>
+			<charseq START="685" END="708">the country&apos;s government</charseq>
+      	</extent>
+      </event_mention_argument>
+      <event_mention_argument REFID="nw/timex2norm/AFP_ENG_20030415.0734-4-4" ROLE="Artifact" p="0.997" pRole="0.682">
+      	<extent>
+			<charseq START="667" END="672">Hariri</charseq>
+      	</extent>
+      </event_mention_argument>
+      <event_mention_argument REFID="nw/timex2norm/AFP_ENG_20030415.0734-10-0" ROLE="Origin" p="0.945" pRole="0.735">
+      	<extent>
+			<charseq START="685" END="695">the country</charseq>
+      	</extent>
+      </event_mention_argument>
+    </event_mention>
+  </event>
+  <event ID="nw/timex2norm/AFP_ENG_20030415.0734-EV3" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past" MODPROB="1.0" POLPROB="1.0" GENPROB="1.0" TENPROB="1.0">
+    <event_argument REFID="nw/timex2norm/AFP_ENG_20030415.0734-3" ROLE="Place" p="1.0"/>
+    <event_argument REFID="nw/timex2norm/AFP_ENG_20030415.0734-T5" ROLE="Time-Ending" p="0.3198860296156032"/>
+    <event_mention ID="nw/timex2norm/AFP_ENG_20030415.0734-EV3-1" p="1.000">
+      <extent>
+			<charseq START="941" END="967">Lebanon&apos;s 15-year civil war</charseq>
+      </extent>
+      <anchor>
+			<charseq START="965" END="967">war</charseq>
+      </anchor>
+      <event_mention_argument REFID="nw/timex2norm/AFP_ENG_20030415.0734-3-1" ROLE="Place" p="1.000" pRole="1.000">
+      	<extent>
+			<charseq START="941" END="947">Lebanon</charseq>
+      	</extent>
+      </event_mention_argument>
+      <event_mention_argument REFID="nw/timex2norm/AFP_ENG_20030415.0734-T5-1" ROLE="Time-Ending" p="0.927" pRole="0.345">
+      	<extent>
+			<charseq START="972" END="975">1990</charseq>
+      	</extent>
+      </event_mention_argument>
+    </event_mention>
+  </event>
+  <event ID="nw/timex2norm/AFP_ENG_20030415.0734-EV4" TYPE="Business" SUBTYPE="Start-Org" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past" MODPROB="1.0" POLPROB="1.0" GENPROB="1.0" TENPROB="1.0">
+    <event_argument REFID="nw/timex2norm/AFP_ENG_20030415.0734-T4" ROLE="Time-Within" p="1.0"/>
+    <event_mention ID="nw/timex2norm/AFP_ENG_20030415.0734-EV4-1" p="1.000">
+      <extent>
+			<charseq START="851" END="872">formed in October 2000</charseq>
+      </extent>
+      <anchor>
+			<charseq START="851" END="856">formed</charseq>
+      </anchor>
+      <event_mention_argument REFID="nw/timex2norm/AFP_ENG_20030415.0734-T4-1" ROLE="Time-Within" p="1.000" pRole="1.000">
+      	<extent>
+			<charseq START="861" END="872">October 2000</charseq>
+      	</extent>
+      </event_mention_argument>
+    </event_mention>
+  </event>
+</document>
+</source_file>

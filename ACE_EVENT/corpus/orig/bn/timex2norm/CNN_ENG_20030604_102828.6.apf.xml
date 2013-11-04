@@ -1,0 +1,735 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030604_102828.6.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030604_102828.6">
+<entity ID="CNN_ENG_20030604_102828.6-E1" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030604_102828.6-E1-8" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="839" END="839">i</charseq>
+    </extent>
+    <head>
+      <charseq START="839" END="839">i</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030604_102828.6-E2" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030604_102828.6-E2-1" TYPE="NOM" LDCTYPE="NOM" ROLE="LOC">
+    <extent>
+      <charseq START="70" END="98">the african nation of nigeria</charseq>
+    </extent>
+    <head>
+      <charseq START="82" END="87">nation</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030604_102828.6-E2-13" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="92" END="98">nigeria</charseq>
+    </extent>
+    <head>
+      <charseq START="92" END="98">nigeria</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="nigeria">
+      <charseq START="92" END="98">nigeria</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030604_102828.6-E3" TYPE="GPE" SUBTYPE="Continent" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030604_102828.6-E3-14" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="74" END="80">african</charseq>
+    </extent>
+    <head>
+      <charseq START="74" END="80">african</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="african">
+      <charseq START="74" END="80">african</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030604_102828.6-E4" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030604_102828.6-E4-12" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="194" END="195">it</charseq>
+    </extent>
+    <head>
+      <charseq START="194" END="195">it</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030604_102828.6-E4-15" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="101" END="116">an islamic court</charseq>
+    </extent>
+    <head>
+      <charseq START="112" END="116">court</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030604_102828.6-E4-18" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="179" END="187">the
+court</charseq>
+    </extent>
+    <head>
+      <charseq START="183" END="187">court</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030604_102828.6-E5" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030604_102828.6-E5-16" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="104" END="110">islamic</charseq>
+    </extent>
+    <head>
+      <charseq START="104" END="110">islamic</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030604_102828.6-E6" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030604_102828.6-E6-17" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="140" END="176">a woman condemned to death by stoning</charseq>
+    </extent>
+    <head>
+      <charseq START="142" END="146">woman</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030604_102828.6-E6-19" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="240" END="270">the 31-year-old mother of three</charseq>
+    </extent>
+    <head>
+      <charseq START="256" END="261">mother</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030604_102828.6-E7" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030604_102828.6-E7-20" TYPE="PRO" LDCTYPE="HLS">
+    <extent>
+      <charseq START="266" END="270">three</charseq>
+    </extent>
+    <head>
+      <charseq START="266" END="270">three</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030604_102828.6-E8" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030604_102828.6-E8-21" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="330" END="350">three other nigerians</charseq>
+    </extent>
+    <head>
+      <charseq START="342" END="350">nigerians</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030604_102828.6-E9" TYPE="PER" SUBTYPE="Indeterminate" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030604_102828.6-E9-22" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="471" END="473">you</charseq>
+    </extent>
+    <head>
+      <charseq START="471" END="473">you</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030604_102828.6-E10" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030604_102828.6-E10-5" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="767" END="768">us</charseq>
+    </extent>
+    <head>
+      <charseq START="767" END="768">us</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030604_102828.6-E10-7" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="832" END="833">us</charseq>
+    </extent>
+    <head>
+      <charseq START="832" END="833">us</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030604_102828.6-E10-23" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="488" END="490">our</charseq>
+    </extent>
+    <head>
+      <charseq START="488" END="490">our</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030604_102828.6-E11" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030604_102828.6-E11-2" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="650" END="652">her</charseq>
+    </extent>
+    <head>
+      <charseq START="650" END="652">her</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030604_102828.6-E11-3" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="723" END="755">a traveling reporter now on leave</charseq>
+    </extent>
+    <head>
+      <charseq START="735" END="742">reporter</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030604_102828.6-E11-4" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="778" END="780">her</charseq>
+    </extent>
+    <head>
+      <charseq START="778" END="780">her</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030604_102828.6-E11-6" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="795" END="797">you</charseq>
+    </extent>
+    <head>
+      <charseq START="795" END="797">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030604_102828.6-E11-9" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="856" END="858">you</charseq>
+    </extent>
+    <head>
+      <charseq START="856" END="858">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030604_102828.6-E11-10" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="864" END="866">you</charseq>
+    </extent>
+    <head>
+      <charseq START="864" END="866">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030604_102828.6-E11-24" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="488" END="514">our next guest this morning</charseq>
+    </extent>
+    <head>
+      <charseq START="497" END="501">guest</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030604_102828.6-E11-26" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="565" END="567">she</charseq>
+    </extent>
+    <head>
+      <charseq START="565" END="567">she</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030604_102828.6-E11-27" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="582" END="593">a
+journalist</charseq>
+    </extent>
+    <head>
+      <charseq START="584" END="593">journalist</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030604_102828.6-E11-28" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="628" END="630">she</charseq>
+    </extent>
+    <head>
+      <charseq START="628" END="630">she</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030604_102828.6-E12" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030604_102828.6-E12-11" TYPE="PRO" LDCTYPE="PRO" ROLE="LOC">
+    <extent>
+      <charseq START="573" END="577">there</charseq>
+    </extent>
+    <head>
+      <charseq START="573" END="577">there</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030604_102828.6-E12-25" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="555" END="562">pakistan</charseq>
+    </extent>
+    <head>
+      <charseq START="555" END="562">pakistan</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="pakistan">
+      <charseq START="555" END="562">pakistan</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<value ID="CNN_ENG_20030604_102828.6-V1" TYPE="Sentence">
+  <value_mention ID="CNN_ENG_20030604_102828.6-V1-1">
+    <extent>
+      <charseq START="161" END="176">death by stoning</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_ENG_20030604_102828.6-V2" TYPE="Crime">
+  <value_mention ID="CNN_ENG_20030604_102828.6-V2-1">
+    <extent>
+      <charseq START="298" END="327">having sex outside of marriage</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_ENG_20030604_102828.6-V3" TYPE="Sentence">
+  <value_mention ID="CNN_ENG_20030604_102828.6-V3-1">
+    <extent>
+      <charseq START="362" END="375">stoning deaths</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_ENG_20030604_102828.6-V4" TYPE="Crime">
+  <value_mention ID="CNN_ENG_20030604_102828.6-V4-1">
+    <extent>
+      <charseq START="381" END="394">the same crime</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_ENG_20030604_102828.6-V5" TYPE="Crime">
+  <value_mention ID="CNN_ENG_20030604_102828.6-V5-1">
+    <extent>
+      <charseq START="416" END="445">premarital or extramarital sex</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_ENG_20030604_102828.6-V6" TYPE="Sentence">
+  <value_mention ID="CNN_ENG_20030604_102828.6-V6-1">
+    <extent>
+      <charseq START="522" END="531">100 lashes</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_ENG_20030604_102828.6-V7" TYPE="Crime">
+  <value_mention ID="CNN_ENG_20030604_102828.6-V7-1">
+    <extent>
+      <charseq START="537" END="550">premarital sex</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_ENG_20030604_102828.6-V8" TYPE="Sentence">
+  <value_mention ID="CNN_ENG_20030604_102828.6-V8-1">
+    <extent>
+      <charseq START="894" END="903">100 lashes</charseq>
+    </extent>
+  </value_mention>
+</value>
+<timex2 ID="CNN_ENG_20030604_102828.6-T1" VAL="2003-06-04T10:40:48">
+  <timex2_mention ID="CNN_ENG_20030604_102828.6-T1-1">
+    <extent>
+      <charseq START="43" END="61">2003-06-04 10:40:48</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030604_102828.6-T2" VAL="2003-08">
+  <timex2_mention ID="CNN_ENG_20030604_102828.6-T2-1">
+    <extent>
+      <charseq START="227" END="237">late august</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030604_102828.6-T3" VAL="2003-03">
+  <timex2_mention ID="CNN_ENG_20030604_102828.6-T3-1">
+    <extent>
+      <charseq START="289" END="293">march</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030604_102828.6-T4" VAL="XXXX-09-11">
+  <timex2_mention ID="CNN_ENG_20030604_102828.6-T4-1">
+    <extent>
+      <charseq START="614" END="617">9/11</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030604_102828.6-T5" VAL="2003-06-04T10:40:48">
+  <timex2_mention ID="CNN_ENG_20030604_102828.6-T5-1">
+    <extent>
+      <charseq START="744" END="746">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030604_102828.6-T6" VAL="P31Y" ANCHOR_VAL="2003-06-04" ANCHOR_DIR="ENDING">
+  <timex2_mention ID="CNN_ENG_20030604_102828.6-T6-1">
+    <extent>
+      <charseq START="244" END="254">31-year-old</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030604_102828.6-T7" VAL="2003-06-04TMO">
+  <timex2_mention ID="CNN_ENG_20030604_102828.6-T7-1">
+    <extent>
+      <charseq START="503" END="514">this morning</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030604_102828.6-R1" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030604_102828.6-E2" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030604_102828.6-E3" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030604_102828.6-R1-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="70" END="98">the african nation of nigeria</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030604_102828.6-E2-1" ROLE="Arg-1">
+      <extent>
+        <charseq START="70" END="98">the african nation of nigeria</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030604_102828.6-E3-14" ROLE="Arg-2">
+      <extent>
+        <charseq START="74" END="80">african</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030604_102828.6-R2" TYPE="PER-SOC" SUBTYPE="Family" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030604_102828.6-E6" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030604_102828.6-E7" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030604_102828.6-R2-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="240" END="270">the 31-year-old mother of three</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030604_102828.6-E6-19" ROLE="Arg-1">
+      <extent>
+        <charseq START="240" END="270">the 31-year-old mother of three</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030604_102828.6-E7-20" ROLE="Arg-2">
+      <extent>
+        <charseq START="266" END="270">three</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030604_102828.6-R3" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030604_102828.6-E11" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030604_102828.6-E12" ROLE="Arg-2"/>
+  <relation_argument REFID="CNN_ENG_20030604_102828.6-T4" ROLE="Time-After"/>
+  <relation_mention ID="CNN_ENG_20030604_102828.6-R3-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="488" END="562">our next guest this morning faced 100 lashes
+for premarital sex in pakistan</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030604_102828.6-E11-24" ROLE="Arg-1">
+      <extent>
+        <charseq START="488" END="514">our next guest this morning</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030604_102828.6-E12-25" ROLE="Arg-2">
+      <extent>
+        <charseq START="555" END="562">pakistan</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_ENG_20030604_102828.6-R3-2" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="565" END="625">she was there as a
+journalist in the wake of the 9/11 attacks</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030604_102828.6-E11-26" ROLE="Arg-1">
+      <extent>
+        <charseq START="565" END="567">she</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030604_102828.6-E12-11" ROLE="Arg-2">
+      <extent>
+        <charseq START="573" END="577">there</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030604_102828.6-T4-1" ROLE="Time-After">
+      <extent>
+        <charseq START="614" END="617">9/11</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030604_102828.6-EV1" TYPE="Justice" SUBTYPE="Trial-Hearing" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Future">
+  <event_argument REFID="CNN_ENG_20030604_102828.6-E4" ROLE="Adjudicator"/>
+  <event_argument REFID="CNN_ENG_20030604_102828.6-T2" ROLE="Time-Within"/>
+  <event_mention ID="CNN_ENG_20030604_102828.6-EV1-1">
+    <extent>
+      <charseq START="194" END="237">it will not hear this case until late august</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="179" END="237">the
+court says it will not hear this case until late august</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="206" END="209">hear</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030604_102828.6-E4-12" ROLE="Adjudicator">
+      <extent>
+        <charseq START="194" END="195">it</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030604_102828.6-T2-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="227" END="237">late august</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030604_102828.6-EV2" TYPE="Justice" SUBTYPE="Convict" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030604_102828.6-E6" ROLE="Defendant"/>
+  <event_argument REFID="CNN_ENG_20030604_102828.6-V2" ROLE="Crime"/>
+  <event_argument REFID="CNN_ENG_20030604_102828.6-T3" ROLE="Time-Within"/>
+  <event_mention ID="CNN_ENG_20030604_102828.6-EV2-1">
+    <extent>
+      <charseq START="240" END="327">the 31-year-old mother of three was convicted in march of
+having sex outside of marriage</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="240" END="327">the 31-year-old mother of three was convicted in march of
+having sex outside of marriage</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="276" END="284">convicted</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030604_102828.6-E6-19" ROLE="Defendant">
+      <extent>
+        <charseq START="240" END="270">the 31-year-old mother of three</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030604_102828.6-V2-1" ROLE="Crime">
+      <extent>
+        <charseq START="298" END="327">having sex outside of marriage</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030604_102828.6-T3-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="289" END="293">march</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030604_102828.6-EV3" TYPE="Justice" SUBTYPE="Sentence" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030604_102828.6-E8" ROLE="Defendant"/>
+  <event_argument REFID="CNN_ENG_20030604_102828.6-V3" ROLE="Sentence"/>
+  <event_argument REFID="CNN_ENG_20030604_102828.6-V4" ROLE="Crime"/>
+  <event_mention ID="CNN_ENG_20030604_102828.6-EV3-1">
+    <extent>
+      <charseq START="330" END="394">three other nigerians also
+face stoning deaths for the same crime</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="330" END="394">three other nigerians also
+face stoning deaths for the same crime</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="357" END="360">face</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030604_102828.6-E8-21" ROLE="Defendant">
+      <extent>
+        <charseq START="330" END="350">three other nigerians</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030604_102828.6-V3-1" ROLE="Sentence">
+      <extent>
+        <charseq START="362" END="375">stoning deaths</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030604_102828.6-V4-1" ROLE="Crime">
+      <extent>
+        <charseq START="381" END="394">the same crime</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030604_102828.6-EV4" TYPE="Justice" SUBTYPE="Sentence" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030604_102828.6-E11" ROLE="Defendant"/>
+  <event_argument REFID="CNN_ENG_20030604_102828.6-E12" ROLE="Place"/>
+  <event_argument REFID="CNN_ENG_20030604_102828.6-V6" ROLE="Sentence"/>
+  <event_argument REFID="CNN_ENG_20030604_102828.6-V7" ROLE="Crime"/>
+  <event_argument REFID="CNN_ENG_20030604_102828.6-V8" ROLE="Sentence"/>
+  <event_mention ID="CNN_ENG_20030604_102828.6-EV4-1">
+    <extent>
+      <charseq START="488" END="562">our next guest this morning faced 100 lashes
+for premarital sex in pakistan</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="488" END="562">our next guest this morning faced 100 lashes
+for premarital sex in pakistan</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="516" END="520">faced</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030604_102828.6-E11-24" ROLE="Defendant">
+      <extent>
+        <charseq START="488" END="514">our next guest this morning</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030604_102828.6-E12-25" ROLE="Place">
+      <extent>
+        <charseq START="555" END="562">pakistan</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030604_102828.6-V6-1" ROLE="Sentence">
+      <extent>
+        <charseq START="522" END="531">100 lashes</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030604_102828.6-V7-1" ROLE="Crime">
+      <extent>
+        <charseq START="537" END="550">premarital sex</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030604_102828.6-EV4-2">
+    <extent>
+      <charseq START="864" END="903">you were
+facing a sentence of 100 lashes</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="836" END="936">as i understand it, you say you were
+facing a sentence of 100 lashes, had not yet been sentenced
+that</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="882" END="889">sentence</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030604_102828.6-E11-10" ROLE="Defendant">
+      <extent>
+        <charseq START="864" END="866">you</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030604_102828.6-V8-1" ROLE="Sentence">
+      <extent>
+        <charseq START="894" END="903">100 lashes</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030604_102828.6-EV5" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030604_102828.6-T4" ROLE="Time-Within"/>
+  <event_mention ID="CNN_ENG_20030604_102828.6-EV5-1">
+    <extent>
+      <charseq START="614" END="625">9/11 attacks</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="565" END="625">she was there as a
+journalist in the wake of the 9/11 attacks</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="619" END="625">attacks</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030604_102828.6-T4-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="614" END="617">9/11</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030604_102828.6-EV6" TYPE="Justice" SUBTYPE="Appeal" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030604_102828.6-E2" ROLE="Place"/>
+  <event_argument REFID="CNN_ENG_20030604_102828.6-E4" ROLE="Adjudicator"/>
+  <event_argument REFID="CNN_ENG_20030604_102828.6-E6" ROLE="Plaintiff"/>
+  <event_mention ID="CNN_ENG_20030604_102828.6-EV6-1">
+    <extent>
+      <charseq START="70" END="176">the african nation of nigeria, an islamic court delayed
+the appeal of a woman condemned to death by stoning</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="67" END="176">in the african nation of nigeria, an islamic court delayed
+the appeal of a woman condemned to death by stoning</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="130" END="135">appeal</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030604_102828.6-E2-1" ROLE="Place">
+      <extent>
+        <charseq START="70" END="98">the african nation of nigeria</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030604_102828.6-E4-15" ROLE="Adjudicator">
+      <extent>
+        <charseq START="101" END="116">an islamic court</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030604_102828.6-E6-17" ROLE="Plaintiff">
+      <extent>
+        <charseq START="140" END="176">a woman condemned to death by stoning</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030604_102828.6-EV7" TYPE="Justice" SUBTYPE="Sentence" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030604_102828.6-E6" ROLE="Defendant"/>
+  <event_argument REFID="CNN_ENG_20030604_102828.6-V1" ROLE="Sentence"/>
+  <event_mention ID="CNN_ENG_20030604_102828.6-EV7-1">
+    <extent>
+      <charseq START="140" END="176">a woman condemned to death by stoning</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="67" END="176">in the african nation of nigeria, an islamic court delayed
+the appeal of a woman condemned to death by stoning</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="148" END="156">condemned</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030604_102828.6-E6-17" ROLE="Defendant">
+      <extent>
+        <charseq START="140" END="176">a woman condemned to death by stoning</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030604_102828.6-V1-1" ROLE="Sentence">
+      <extent>
+        <charseq START="161" END="176">death by stoning</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030604_102828.6-EV8" TYPE="Justice" SUBTYPE="Charge-Indict" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030604_102828.6-V5" ROLE="Crime"/>
+  <event_mention ID="CNN_ENG_20030604_102828.6-EV8-1">
+    <extent>
+      <charseq START="401" END="445">prosecution of
+premarital or extramarital sex</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="397" END="485">the prosecution of
+premarital or extramarital sex is not quite as rare as you
+might think</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="401" END="411">prosecution</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030604_102828.6-V5-1" ROLE="Crime">
+      <extent>
+        <charseq START="416" END="445">premarital or extramarital sex</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030604_102828.6-EV9" TYPE="Justice" SUBTYPE="Sentence" MODALITY="Asserted" POLARITY="Negative" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030604_102828.6-E11" ROLE="Defendant"/>
+  <event_mention ID="CNN_ENG_20030604_102828.6-EV9-1">
+    <extent>
+      <charseq START="864" END="931">you were
+facing a sentence of 100 lashes, had not yet been sentenced</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="836" END="936">as i understand it, you say you were
+facing a sentence of 100 lashes, had not yet been sentenced
+that</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="923" END="931">sentenced</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030604_102828.6-E11-10" ROLE="Defendant">
+      <extent>
+        <charseq START="864" END="866">you</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

@@ -1,0 +1,1119 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030619_115954.4.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030619_115954.4">
+<entity ID="CNN_ENG_20030619_115954.4-E1" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030619_115954.4-E1-1" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="411" END="423">more israelis</charseq>
+    </extent>
+    <head>
+      <charseq START="416" END="423">israelis</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030619_115954.4-E2" TYPE="PER" SUBTYPE="Group" CLASS="NEG">
+  <entity_mention ID="CNN_ENG_20030619_115954.4-E2-2" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="457" END="474">any other
+israelis</charseq>
+    </extent>
+    <head>
+      <charseq START="467" END="474">israelis</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030619_115954.4-E3" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030619_115954.4-E3-8" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="616" END="646">secretary of state colin powell</charseq>
+    </extent>
+    <head>
+      <charseq START="635" END="646">colin powell</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030619_115954.4-E3-9" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="616" END="633">secretary of state</charseq>
+    </extent>
+    <head>
+      <charseq START="616" END="624">secretary</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030619_115954.4-E3-13" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="751" END="756">powell</charseq>
+    </extent>
+    <head>
+      <charseq START="751" END="756">powell</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030619_115954.4-E3-15" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="799" END="800">he</charseq>
+    </extent>
+    <head>
+      <charseq START="799" END="800">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030619_115954.4-E3-21" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="918" END="919">he</charseq>
+    </extent>
+    <head>
+      <charseq START="918" END="919">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="colin powell">
+      <charseq START="635" END="646">colin powell</charseq>
+    </name>
+    <name NAME="powell">
+      <charseq START="751" END="756">powell</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030619_115954.4-E5" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030619_115954.4-E5-10" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="629" END="633">state</charseq>
+    </extent>
+    <head>
+      <charseq START="629" END="633">state</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030619_115954.4-E6" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030619_115954.4-E6-11" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="728" END="748">palestinian militants</charseq>
+    </extent>
+    <head>
+      <charseq START="740" END="748">militants</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030619_115954.4-E7" TYPE="GPE" SUBTYPE="Special" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030619_115954.4-E7-12" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="728" END="738">palestinian</charseq>
+    </extent>
+    <head>
+      <charseq START="728" END="738">palestinian</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030619_115954.4-E7-26" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="991" END="1001">palestinian</charseq>
+    </extent>
+    <head>
+      <charseq START="991" END="1001">palestinian</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030619_115954.4-E7-35" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="239" END="249">palestinian</charseq>
+    </extent>
+    <head>
+      <charseq START="239" END="249">palestinian</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030619_115954.4-E7-40" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="371" END="381">palestinian</charseq>
+    </extent>
+    <head>
+      <charseq START="371" END="381">palestinian</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="palestinian">
+      <charseq START="728" END="738">palestinian</charseq>
+    </name>
+    <name NAME="palestinian">
+      <charseq START="991" END="1001">palestinian</charseq>
+    </name>
+    <name NAME="palestinian">
+      <charseq START="239" END="249">palestinian</charseq>
+    </name>
+    <name NAME="palestinian">
+      <charseq START="371" END="381">palestinian</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030619_115954.4-E8" TYPE="GPE" SUBTYPE="GPE-Cluster" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030619_115954.4-E8-14" TYPE="NOM" LDCTYPE="BAR" ROLE="LOC">
+    <extent>
+      <charseq START="783" END="796">southeast asia</charseq>
+    </extent>
+    <head>
+      <charseq START="793" END="796">asia</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030619_115954.4-E9" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030619_115954.4-E9-16" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="816" END="824">jerusalem</charseq>
+    </extent>
+    <head>
+      <charseq START="816" END="824">jerusalem</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030619_115954.4-E9-17" TYPE="PRO" LDCTYPE="PRO" ROLE="LOC">
+    <extent>
+      <charseq START="808" END="811">here</charseq>
+    </extent>
+    <head>
+      <charseq START="808" END="811">here</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="jerusalem">
+      <charseq START="816" END="824">jerusalem</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030619_115954.4-E10" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030619_115954.4-E10-18" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="858" END="883">the israeli
+prime minister</charseq>
+    </extent>
+    <head>
+      <charseq START="876" END="883">minister</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030619_115954.4-E11" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030619_115954.4-E11-19" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="862" END="868">israeli</charseq>
+    </extent>
+    <head>
+      <charseq START="862" END="868">israeli</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030619_115954.4-E11-28" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="150" END="156">israeli</charseq>
+    </extent>
+    <head>
+      <charseq START="150" END="156">israeli</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030619_115954.4-E11-29" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="TRUE">
+    <extent>
+      <charseq START="175" END="180">israel</charseq>
+    </extent>
+    <head>
+      <charseq START="175" END="180">israel</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="israeli">
+      <charseq START="862" END="868">israeli</charseq>
+    </name>
+    <name NAME="israeli">
+      <charseq START="150" END="156">israeli</charseq>
+    </name>
+    <name NAME="israel">
+      <charseq START="175" END="180">israel</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030619_115954.4-E12" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030619_115954.4-E12-20" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="889" END="908">the foreign minister</charseq>
+    </extent>
+    <head>
+      <charseq START="901" END="908">minister</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030619_115954.4-E13" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030619_115954.4-E13-22" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="949" END="955">jericho</charseq>
+    </extent>
+    <head>
+      <charseq START="949" END="955">jericho</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="jericho">
+      <charseq START="949" END="955">jericho</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030619_115954.4-E14" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030619_115954.4-E14-24" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="987" END="1030">the palestinian
+prime minister mahmoud abbas</charseq>
+    </extent>
+    <head>
+      <charseq START="1018" END="1030">mahmoud abbas</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030619_115954.4-E14-25" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="991" END="1016">palestinian
+prime minister</charseq>
+    </extent>
+    <head>
+      <charseq START="1009" END="1016">minister</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="mahmoud abbas">
+      <charseq START="1018" END="1030">mahmoud abbas</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030619_115954.4-E17" TYPE="ORG" SUBTYPE="Non-Governmental" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030619_115954.4-E17-6" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="78" END="90">islamic jihad</charseq>
+    </extent>
+    <head>
+      <charseq START="78" END="90">islamic jihad</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030619_115954.4-E17-7" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="558" END="570">islamic jihad</charseq>
+    </extent>
+    <head>
+      <charseq START="558" END="570">islamic jihad</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="islamic jihad">
+      <charseq START="78" END="90">islamic jihad</charseq>
+    </name>
+    <name NAME="islamic jihad">
+      <charseq START="558" END="570">islamic jihad</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030619_115954.4-E18" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030619_115954.4-E18-3" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="476" END="480">there</charseq>
+    </extent>
+    <head>
+      <charseq START="476" END="480">there</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030619_115954.4-E18-27" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="142" END="180">a small israeli grocery store in israel</charseq>
+    </extent>
+    <head>
+      <charseq START="166" END="170">store</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030619_115954.4-E18-33" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="213" END="221">the store</charseq>
+    </extent>
+    <head>
+      <charseq START="217" END="221">store</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030619_115954.4-E18-36" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="271" END="279">the store</charseq>
+    </extent>
+    <head>
+      <charseq START="275" END="279">store</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030619_115954.4-E18-38" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="332" END="340">the
+store</charseq>
+    </extent>
+    <head>
+      <charseq START="336" END="340">store</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030619_115954.4-E21" TYPE="LOC" SUBTYPE="Boundary" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030619_115954.4-E21-30" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="192" END="210">the west
+bank board</charseq>
+    </extent>
+    <head>
+      <charseq START="206" END="210">board</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030619_115954.4-E22" TYPE="LOC" SUBTYPE="Region-General" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030619_115954.4-E22-23" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="960" END="972">the west bank</charseq>
+    </extent>
+    <head>
+      <charseq START="964" END="972">west bank</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030619_115954.4-E22-31" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="196" END="204">west
+bank</charseq>
+    </extent>
+    <head>
+      <charseq START="196" END="204">west
+bank</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="west bank">
+      <charseq START="964" END="972">west bank</charseq>
+    </name>
+    <name NAME="west bank">
+      <charseq START="196" END="204">west
+bank</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030619_115954.4-E24" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030619_115954.4-E24-32" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="213" END="229">the store's owner</charseq>
+    </extent>
+    <head>
+      <charseq START="225" END="229">owner</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030619_115954.4-E24-37" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="298" END="309">the israelis</charseq>
+    </extent>
+    <head>
+      <charseq START="302" END="309">israelis</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030619_115954.4-E25" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030619_115954.4-E25-4" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="482" END="483">he</charseq>
+    </extent>
+    <head>
+      <charseq START="482" END="483">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030619_115954.4-E25-5" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="490" END="496">himself</charseq>
+    </extent>
+    <head>
+      <charseq START="490" END="496">himself</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030619_115954.4-E25-34" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="235" END="256">the palestinian bomber</charseq>
+    </extent>
+    <head>
+      <charseq START="251" END="256">bomber</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030619_115954.4-E25-39" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="367" END="396">the palestinian suicide bomber</charseq>
+    </extent>
+    <head>
+      <charseq START="391" END="396">bomber</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<timex2 ID="CNN_ENG_20030619_115954.4-T1" VAL="2003-06-19">
+  <timex2_mention ID="CNN_ENG_20030619_115954.4-T1-1">
+    <extent>
+      <charseq START="133" END="137">today</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030619_115954.4-T2" VAL="P63Y" ANCHOR_VAL="2003" ANCHOR_DIR="ENDING">
+  <timex2_mention ID="CNN_ENG_20030619_115954.4-T2-1">
+    <extent>
+      <charseq START="312" END="319">63 years</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030619_115954.4-T3" VAL="2003-06-20TMO">
+  <timex2_mention ID="CNN_ENG_20030619_115954.4-T3-1">
+    <extent>
+      <charseq START="826" END="841">tomorrow morning</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030619_115954.4-T4" VAL="2003-06-19T12:20:57">
+  <timex2_mention ID="CNN_ENG_20030619_115954.4-T4-1">
+    <extent>
+      <charseq START="43" END="61">2003-06-19 12:20:57</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030619_115954.4-R1" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030619_115954.4-E11" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030619_115954.4-E18" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030619_115954.4-R1-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="142" END="180">a small israeli grocery store in israel</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030619_115954.4-E11-28" ROLE="Arg-1">
+      <extent>
+        <charseq START="150" END="156">israeli</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030619_115954.4-E18-27" ROLE="Arg-2">
+      <extent>
+        <charseq START="142" END="180">a small israeli grocery store in israel</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030619_115954.4-R2" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030619_115954.4-E18" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030619_115954.4-E11" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030619_115954.4-R2-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="142" END="180">a small israeli grocery store in israel</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030619_115954.4-E18-27" ROLE="Arg-1">
+      <extent>
+        <charseq START="142" END="180">a small israeli grocery store in israel</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030619_115954.4-E11-29" ROLE="Arg-2">
+      <extent>
+        <charseq START="175" END="180">israel</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030619_115954.4-R3" TYPE="PHYS" SUBTYPE="Near" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030619_115954.4-E18" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030619_115954.4-E21" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030619_115954.4-R3-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="142" END="210">a small israeli grocery store in israel, but near the west
+bank board</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030619_115954.4-E18-27" ROLE="Arg-1">
+      <extent>
+        <charseq START="142" END="180">a small israeli grocery store in israel</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030619_115954.4-E21-30" ROLE="Arg-2">
+      <extent>
+        <charseq START="192" END="210">the west
+bank board</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030619_115954.4-R4" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030619_115954.4-E21" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030619_115954.4-E22" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030619_115954.4-R4-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="192" END="210">the west
+bank board</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030619_115954.4-E21-30" ROLE="Arg-1">
+      <extent>
+        <charseq START="192" END="210">the west
+bank board</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030619_115954.4-E22-31" ROLE="Arg-2">
+      <extent>
+        <charseq START="196" END="204">west
+bank</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030619_115954.4-R5" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030619_115954.4-E24" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030619_115954.4-E18" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030619_115954.4-R5-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="213" END="229">the store's owner</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030619_115954.4-E24-32" ROLE="Arg-1">
+      <extent>
+        <charseq START="213" END="229">the store's owner</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030619_115954.4-E18-33" ROLE="Arg-2">
+      <extent>
+        <charseq START="213" END="221">the store</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030619_115954.4-R6" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030619_115954.4-E25" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030619_115954.4-E7" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030619_115954.4-R6-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="367" END="396">the palestinian suicide bomber</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030619_115954.4-E25-39" ROLE="Arg-1">
+      <extent>
+        <charseq START="367" END="396">the palestinian suicide bomber</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030619_115954.4-E7-40" ROLE="Arg-2">
+      <extent>
+        <charseq START="371" END="381">palestinian</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_ENG_20030619_115954.4-R6-2" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="235" END="256">the palestinian bomber</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030619_115954.4-E25-34" ROLE="Arg-1">
+      <extent>
+        <charseq START="235" END="256">the palestinian bomber</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030619_115954.4-E7-35" ROLE="Arg-2">
+      <extent>
+        <charseq START="239" END="249">palestinian</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030619_115954.4-R7" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030619_115954.4-E24" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030619_115954.4-E18" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030619_115954.4-R7-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="298" END="555">the israelis, 63 years old was in the
+store, there's some indication the palestinian suicide bomber had
+expected more israelis to be inside, but there weren't any other
+israelis there he blew himself up apparently as a result, the
+investigation is continuing</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030619_115954.4-E24-37" ROLE="Arg-1">
+      <extent>
+        <charseq START="298" END="309">the israelis</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030619_115954.4-E18-38" ROLE="Arg-2">
+      <extent>
+        <charseq START="332" END="340">the
+store</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030619_115954.4-R8" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030619_115954.4-E3" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030619_115954.4-E5" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030619_115954.4-R8-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="616" END="633">secretary of state</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030619_115954.4-E3-9" ROLE="Arg-1">
+      <extent>
+        <charseq START="616" END="633">secretary of state</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030619_115954.4-E5-10" ROLE="Arg-2">
+      <extent>
+        <charseq START="629" END="633">state</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030619_115954.4-R9" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030619_115954.4-E6" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030619_115954.4-E7" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030619_115954.4-R9-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="728" END="748">palestinian militants</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030619_115954.4-E6-11" ROLE="Arg-1">
+      <extent>
+        <charseq START="728" END="748">palestinian militants</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030619_115954.4-E7-12" ROLE="Arg-2">
+      <extent>
+        <charseq START="728" END="738">palestinian</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030619_115954.4-R10" TYPE="PHYS" SUBTYPE="Located" TENSE="Present" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030619_115954.4-E3" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030619_115954.4-E8" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030619_115954.4-R10-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="751" END="908">powell is wrapping up a trip to southeast asia,
+he's due here in jerusalem tomorrow morning for talks with the israeli
+prime minister and the foreign minister</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030619_115954.4-E3-13" ROLE="Arg-1">
+      <extent>
+        <charseq START="751" END="756">powell</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030619_115954.4-E8-14" ROLE="Arg-2">
+      <extent>
+        <charseq START="783" END="796">southeast asia</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030619_115954.4-R11" TYPE="PHYS" SUBTYPE="Located" TENSE="Future" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030619_115954.4-E3" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030619_115954.4-E9" ROLE="Arg-2"/>
+  <relation_argument REFID="CNN_ENG_20030619_115954.4-T3" ROLE="Time-Within"/>
+  <relation_mention ID="CNN_ENG_20030619_115954.4-R11-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="751" END="908">powell is wrapping up a trip to southeast asia,
+he's due here in jerusalem tomorrow morning for talks with the israeli
+prime minister and the foreign minister</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030619_115954.4-E3-13" ROLE="Arg-1">
+      <extent>
+        <charseq START="751" END="756">powell</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030619_115954.4-E9-16" ROLE="Arg-2">
+      <extent>
+        <charseq START="816" END="824">jerusalem</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030619_115954.4-T3-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="826" END="841">tomorrow morning</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030619_115954.4-R12" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="CNN_ENG_20030619_115954.4-E3" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030619_115954.4-E13" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030619_115954.4-R12-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="911" END="1030">later, he's supposed to
+helicopter to jericho on the west bank to meet with the palestinian
+prime minister mahmoud abbas</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030619_115954.4-E3-21" ROLE="Arg-1">
+      <extent>
+        <charseq START="918" END="919">he</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030619_115954.4-E13-22" ROLE="Arg-2">
+      <extent>
+        <charseq START="949" END="955">jericho</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030619_115954.4-R13" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030619_115954.4-E10" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030619_115954.4-E11" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030619_115954.4-R13-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="858" END="883">the israeli
+prime minister</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030619_115954.4-E10-18" ROLE="Arg-1">
+      <extent>
+        <charseq START="858" END="883">the israeli
+prime minister</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030619_115954.4-E11-19" ROLE="Arg-2">
+      <extent>
+        <charseq START="862" END="868">israeli</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030619_115954.4-R14" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030619_115954.4-E14" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030619_115954.4-E7" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030619_115954.4-R14-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="987" END="1016">the palestinian
+prime minister</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030619_115954.4-E14-25" ROLE="Arg-1">
+      <extent>
+        <charseq START="991" END="1016">palestinian
+prime minister</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030619_115954.4-E7-26" ROLE="Arg-2">
+      <extent>
+        <charseq START="991" END="1001">palestinian</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030619_115954.4-R16" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="CNN_ENG_20030619_115954.4-E2" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030619_115954.4-E18" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030619_115954.4-R16-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="457" END="480">any other
+israelis there</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030619_115954.4-E2-2" ROLE="Arg-1">
+      <extent>
+        <charseq START="457" END="474">any other
+israelis</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030619_115954.4-E18-3" ROLE="Arg-2">
+      <extent>
+        <charseq START="476" END="480">there</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030619_115954.4-EV1" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030619_115954.4-E17" ROLE="Attacker"/>
+  <event_argument REFID="CNN_ENG_20030619_115954.4-E21" ROLE="Place"/>
+  <event_argument REFID="CNN_ENG_20030619_115954.4-E18" ROLE="Target"/>
+  <event_argument REFID="CNN_ENG_20030619_115954.4-T1" ROLE="Time-Within"/>
+  <event_mention ID="CNN_ENG_20030619_115954.4-EV1-1">
+    <extent>
+      <charseq START="78" END="210">islamic jihad is claiming responsibility for a bombing
+today at a small israeli grocery store in israel, but near the west
+bank board</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="67" END="210">meanwhile, islamic jihad is claiming responsibility for a bombing
+today at a small israeli grocery store in israel, but near the west
+bank board</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="125" END="131">bombing</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030619_115954.4-E17-6" ROLE="Attacker">
+      <extent>
+        <charseq START="78" END="90">islamic jihad</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030619_115954.4-E21-30" ROLE="Place">
+      <extent>
+        <charseq START="192" END="210">the west
+bank board</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030619_115954.4-E18-27" ROLE="Target">
+      <extent>
+        <charseq START="142" END="180">a small israeli grocery store in israel</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030619_115954.4-T1-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="133" END="137">today</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030619_115954.4-EV2" TYPE="Life" SUBTYPE="Die" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030619_115954.4-E25" ROLE="Agent"/>
+  <event_argument REFID="CNN_ENG_20030619_115954.4-E18" ROLE="Place"/>
+  <event_argument REFID="CNN_ENG_20030619_115954.4-E24" ROLE="Victim"/>
+  <event_argument REFID="CNN_ENG_20030619_115954.4-E25" ROLE="Victim"/>
+  <event_mention ID="CNN_ENG_20030619_115954.4-EV2-1">
+    <extent>
+      <charseq START="213" END="268">the store's owner and the palestinian bomber were killed</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="213" END="268">the store's owner and the palestinian bomber were killed</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="263" END="268">killed</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030619_115954.4-E25-34" ROLE="Agent">
+      <extent>
+        <charseq START="235" END="256">the palestinian bomber</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030619_115954.4-E18-33" ROLE="Place">
+      <extent>
+        <charseq START="213" END="221">the store</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030619_115954.4-E24-32" ROLE="Victim">
+      <extent>
+        <charseq START="213" END="229">the store's owner</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030619_115954.4-E25-34" ROLE="Victim">
+      <extent>
+        <charseq START="235" END="256">the palestinian bomber</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030619_115954.4-EV3" TYPE="Life" SUBTYPE="Die" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030619_115954.4-E24" ROLE="Victim"/>
+  <event_argument REFID="CNN_ENG_20030619_115954.4-E25" ROLE="Victim"/>
+  <event_argument REFID="CNN_ENG_20030619_115954.4-E25" ROLE="Agent"/>
+  <event_argument REFID="CNN_ENG_20030619_115954.4-E18" ROLE="Place"/>
+  <event_mention ID="CNN_ENG_20030619_115954.4-EV3-1">
+    <extent>
+      <charseq START="298" END="396">the israelis, 63 years old was in the
+store, there's some indication the palestinian suicide bomber</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="298" END="555">the israelis, 63 years old was in the
+store, there's some indication the palestinian suicide bomber had
+expected more israelis to be inside, but there weren't any other
+israelis there he blew himself up apparently as a result, the
+investigation is continuing</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="383" END="389">suicide</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030619_115954.4-E24-37" ROLE="Victim">
+      <extent>
+        <charseq START="298" END="309">the israelis</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030619_115954.4-E25-39" ROLE="Victim">
+      <extent>
+        <charseq START="367" END="396">the palestinian suicide bomber</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030619_115954.4-E25-39" ROLE="Agent">
+      <extent>
+        <charseq START="367" END="396">the palestinian suicide bomber</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030619_115954.4-E18-38" ROLE="Place">
+      <extent>
+        <charseq START="332" END="340">the
+store</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030619_115954.4-EV4" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030619_115954.4-E25" ROLE="Attacker"/>
+  <event_mention ID="CNN_ENG_20030619_115954.4-EV4-1">
+    <extent>
+      <charseq START="367" END="488">the palestinian suicide bomber had
+expected more israelis to be inside, but there weren't any other
+israelis there he blew</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="298" END="555">the israelis, 63 years old was in the
+store, there's some indication the palestinian suicide bomber had
+expected more israelis to be inside, but there weren't any other
+israelis there he blew himself up apparently as a result, the
+investigation is continuing</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="485" END="488">blew</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030619_115954.4-E25-39" ROLE="Attacker">
+      <extent>
+        <charseq START="367" END="396">the palestinian suicide bomber</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030619_115954.4-EV5" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030619_115954.4-E3" ROLE="Artifact"/>
+  <event_argument REFID="CNN_ENG_20030619_115954.4-E8" ROLE="Destination"/>
+  <event_mention ID="CNN_ENG_20030619_115954.4-EV5-1">
+    <extent>
+      <charseq START="751" END="796">powell is wrapping up a trip to southeast asia</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="751" END="908">powell is wrapping up a trip to southeast asia,
+he's due here in jerusalem tomorrow morning for talks with the israeli
+prime minister and the foreign minister</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="775" END="778">trip</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030619_115954.4-E3-13" ROLE="Artifact">
+      <extent>
+        <charseq START="751" END="756">powell</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030619_115954.4-E8-14" ROLE="Destination">
+      <extent>
+        <charseq START="783" END="796">southeast asia</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030619_115954.4-EV6" TYPE="Movement" SUBTYPE="Transport" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Future">
+  <event_argument REFID="CNN_ENG_20030619_115954.4-E3" ROLE="Artifact"/>
+  <event_argument REFID="CNN_ENG_20030619_115954.4-E8" ROLE="Origin"/>
+  <event_argument REFID="CNN_ENG_20030619_115954.4-E9" ROLE="Destination"/>
+  <event_argument REFID="CNN_ENG_20030619_115954.4-T3" ROLE="Time-At-Beginning"/>
+  <event_mention ID="CNN_ENG_20030619_115954.4-EV6-1">
+    <extent>
+      <charseq START="751" END="841">powell is wrapping up a trip to southeast asia,
+he's due here in jerusalem tomorrow morning</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="751" END="908">powell is wrapping up a trip to southeast asia,
+he's due here in jerusalem tomorrow morning for talks with the israeli
+prime minister and the foreign minister</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="804" END="806">due</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030619_115954.4-E3-13" ROLE="Artifact">
+      <extent>
+        <charseq START="751" END="756">powell</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030619_115954.4-E8-14" ROLE="Origin">
+      <extent>
+        <charseq START="783" END="796">southeast asia</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030619_115954.4-E9-16" ROLE="Destination">
+      <extent>
+        <charseq START="816" END="824">jerusalem</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030619_115954.4-T3-1" ROLE="Time-At-Beginning">
+      <extent>
+        <charseq START="826" END="841">tomorrow morning</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030619_115954.4-EV7" TYPE="Movement" SUBTYPE="Transport" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Future">
+  <event_argument REFID="CNN_ENG_20030619_115954.4-E3" ROLE="Artifact"/>
+  <event_argument REFID="CNN_ENG_20030619_115954.4-E13" ROLE="Destination"/>
+  <event_mention ID="CNN_ENG_20030619_115954.4-EV7-1">
+    <extent>
+      <charseq START="918" END="955">he's supposed to
+helicopter to jericho</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="911" END="1030">later, he's supposed to
+helicopter to jericho on the west bank to meet with the palestinian
+prime minister mahmoud abbas</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="935" END="944">helicopter</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030619_115954.4-E3-21" ROLE="Artifact">
+      <extent>
+        <charseq START="918" END="919">he</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030619_115954.4-E13-22" ROLE="Destination">
+      <extent>
+        <charseq START="949" END="955">jericho</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030619_115954.4-EV8" TYPE="Contact" SUBTYPE="Meet" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Future">
+  <event_argument REFID="CNN_ENG_20030619_115954.4-E13" ROLE="Place"/>
+  <event_argument REFID="CNN_ENG_20030619_115954.4-E3" ROLE="Entity"/>
+  <event_argument REFID="CNN_ENG_20030619_115954.4-E14" ROLE="Entity"/>
+  <event_mention ID="CNN_ENG_20030619_115954.4-EV8-1">
+    <extent>
+      <charseq START="918" END="1030">he's supposed to
+helicopter to jericho on the west bank to meet with the palestinian
+prime minister mahmoud abbas</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="911" END="1030">later, he's supposed to
+helicopter to jericho on the west bank to meet with the palestinian
+prime minister mahmoud abbas</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="977" END="980">meet</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030619_115954.4-E13-22" ROLE="Place">
+      <extent>
+        <charseq START="949" END="955">jericho</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030619_115954.4-E3-21" ROLE="Entity">
+      <extent>
+        <charseq START="918" END="919">he</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030619_115954.4-E14-24" ROLE="Entity">
+      <extent>
+        <charseq START="987" END="1030">the palestinian
+prime minister mahmoud abbas</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030619_115954.4-EV9" TYPE="Contact" SUBTYPE="Meet" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030619_115954.4-E9" ROLE="Place"/>
+  <event_argument REFID="CNN_ENG_20030619_115954.4-E3" ROLE="Entity"/>
+  <event_argument REFID="CNN_ENG_20030619_115954.4-E10" ROLE="Entity"/>
+  <event_argument REFID="CNN_ENG_20030619_115954.4-E12" ROLE="Entity"/>
+  <event_argument REFID="CNN_ENG_20030619_115954.4-T3" ROLE="Time-Within"/>
+  <event_mention ID="CNN_ENG_20030619_115954.4-EV9-1">
+    <extent>
+      <charseq START="751" END="908">powell is wrapping up a trip to southeast asia,
+he's due here in jerusalem tomorrow morning for talks with the israeli
+prime minister and the foreign minister</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="751" END="908">powell is wrapping up a trip to southeast asia,
+he's due here in jerusalem tomorrow morning for talks with the israeli
+prime minister and the foreign minister</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="847" END="851">talks</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030619_115954.4-E9-16" ROLE="Place">
+      <extent>
+        <charseq START="816" END="824">jerusalem</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030619_115954.4-E3-13" ROLE="Entity">
+      <extent>
+        <charseq START="751" END="756">powell</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030619_115954.4-E10-18" ROLE="Entity">
+      <extent>
+        <charseq START="858" END="883">the israeli
+prime minister</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030619_115954.4-E12-20" ROLE="Entity">
+      <extent>
+        <charseq START="889" END="908">the foreign minister</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030619_115954.4-T3-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="826" END="841">tomorrow morning</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

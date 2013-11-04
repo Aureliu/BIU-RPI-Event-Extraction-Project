@@ -1,0 +1,348 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="MARKETVIEW_20050204.1322.sgm" SOURCE="weblog" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="MARKETVIEW_20050204.1322">
+<entity ID="MARKETVIEW_20050204.1322-E1" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="MARKETVIEW_20050204.1322-E1-2" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1276" END="1284">consumers</charseq>
+    </extent>
+    <head>
+      <charseq START="1276" END="1284">consumers</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050204.1322-E2" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="MARKETVIEW_20050204.1322-E2-3" TYPE="NAM" LDCTYPE="NAMPRE">
+    <extent>
+      <charseq START="643" END="644">GM</charseq>
+    </extent>
+    <head>
+      <charseq START="643" END="644">GM</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="GM">
+      <charseq START="643" END="644">GM</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKETVIEW_20050204.1322-E3" TYPE="ORG" SUBTYPE="Commercial" CLASS="GEN">
+  <entity_mention ID="MARKETVIEW_20050204.1322-E3-13" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="350" END="366">computer industry</charseq>
+    </extent>
+    <head>
+      <charseq START="359" END="366">industry</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050204.1322-E4" TYPE="VEH" SUBTYPE="Land" CLASS="GEN">
+  <entity_mention ID="MARKETVIEW_20050204.1322-E4-4" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="336" END="339">auto</charseq>
+    </extent>
+    <head>
+      <charseq START="336" END="339">auto</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050204.1322-E4-8" TYPE="NOM" LDCTYPE="BAR" LDCATR="FALSE">
+    <extent>
+      <charseq START="479" END="482">cars</charseq>
+    </extent>
+    <head>
+      <charseq START="479" END="482">cars</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050204.1322-E4-15" TYPE="NOM" LDCTYPE="BAR" LDCATR="FALSE">
+    <extent>
+      <charseq START="691" END="694">cars</charseq>
+    </extent>
+    <head>
+      <charseq START="691" END="694">cars</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050204.1322-E4-16" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="697" END="700">they</charseq>
+    </extent>
+    <head>
+      <charseq START="697" END="700">they</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050204.1322-E6" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="MARKETVIEW_20050204.1322-E6-5" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="84" END="88">Byrne</charseq>
+    </extent>
+    <head>
+      <charseq START="84" END="88">Byrne</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Byrne">
+      <charseq START="84" END="88">Byrne</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKETVIEW_20050204.1322-E7" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="MARKETVIEW_20050204.1322-E7-6" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="436" END="445">Bill Gates</charseq>
+    </extent>
+    <head>
+      <charseq START="436" END="445">Bill Gates</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Bill Gates">
+      <charseq START="436" END="445">Bill Gates</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKETVIEW_20050204.1322-E8" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="MARKETVIEW_20050204.1322-E8-7" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="462" END="463">we</charseq>
+    </extent>
+    <head>
+      <charseq START="462" END="463">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050204.1322-E8-14" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="676" END="684">Microsoft</charseq>
+    </extent>
+    <head>
+      <charseq START="676" END="684">Microsoft</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Microsoft">
+      <charseq START="676" END="684">Microsoft</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKETVIEW_20050204.1322-E9" TYPE="PER" SUBTYPE="Indeterminate" CLASS="USP">
+  <entity_mention ID="MARKETVIEW_20050204.1322-E9-9" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="505" END="507">you</charseq>
+    </extent>
+    <head>
+      <charseq START="505" END="507">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050204.1322-E9-11" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="603" END="606">your</charseq>
+    </extent>
+    <head>
+      <charseq START="603" END="606">your</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050204.1322-E10" TYPE="VEH" SUBTYPE="Land" CLASS="GEN">
+  <entity_mention ID="MARKETVIEW_20050204.1322-E10-10" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="603" END="610">your car</charseq>
+    </extent>
+    <head>
+      <charseq START="608" END="610">car</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050204.1322-E11" TYPE="PER" SUBTYPE="Individual" CLASS="USP">
+  <entity_mention ID="MARKETVIEW_20050204.1322-E11-12" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="632" END="654">a mythical GM executive</charseq>
+    </extent>
+    <head>
+      <charseq START="646" END="654">executive</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050204.1322-E12" TYPE="ORG" SUBTYPE="Commercial" CLASS="GEN">
+  <entity_mention ID="MARKETVIEW_20050204.1322-E12-1" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="336" END="348">auto industry</charseq>
+    </extent>
+    <head>
+      <charseq START="341" END="348">industry</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050204.1322-E13" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="MARKETVIEW_20050204.1322-E13-17" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="890" END="904">Hewlett-Packard</charseq>
+    </extent>
+    <head>
+      <charseq START="890" END="904">Hewlett-Packard</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Hewlett-Packard">
+      <charseq START="890" END="904">Hewlett-Packard</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKETVIEW_20050204.1322-E14" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="MARKETVIEW_20050204.1322-E14-18" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="963" END="996">a consortium of software companies</charseq>
+    </extent>
+    <head>
+      <charseq START="965" END="974">consortium</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050204.1322-E15" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="MARKETVIEW_20050204.1322-E15-19" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="979" END="996">software companies</charseq>
+    </extent>
+    <head>
+      <charseq START="988" END="996">companies</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<value ID="MARKETVIEW_20050204.1322-V1" TYPE="Numeric" SUBTYPE="Money">
+  <value_mention ID="MARKETVIEW_20050204.1322-V1-1">
+    <extent>
+      <charseq START="616" END="619">$200</charseq>
+    </extent>
+  </value_mention>
+</value>
+<timex2 ID="MARKETVIEW_20050204.1322-T1" VAL="2005-02-04T13:22:00">
+  <timex2_mention ID="MARKETVIEW_20050204.1322-T1-1">
+    <extent>
+      <charseq START="40" END="58">2005-02-04T13:22:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKETVIEW_20050204.1322-T2" VAL="2005-02-04T13:22:00">
+  <timex2_mention ID="MARKETVIEW_20050204.1322-T2-1">
+    <extent>
+      <charseq START="92" END="110">2005-02-04T13:22:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKETVIEW_20050204.1322-T3" VAL="PRESENT_REF" ANCHOR_VAL="2005-02-04T13:22:00" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="MARKETVIEW_20050204.1322-T3-1">
+    <extent>
+      <charseq START="172" END="177">modern</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKETVIEW_20050204.1322-T4" VAL="P2D" ANCHOR_VAL="2005-02-04T13:22:00" ANCHOR_DIR="ENDING">
+  <timex2_mention ID="MARKETVIEW_20050204.1322-T4-1">
+    <extent>
+      <charseq START="773" END="789">the last two days</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKETVIEW_20050204.1322-T5" VAL="XXXX-XX-XX" SET="YES">
+  <timex2_mention ID="MARKETVIEW_20050204.1322-T5-1">
+    <extent>
+      <charseq START="722" END="726">a day</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="MARKETVIEW_20050204.1322-R1" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="MARKETVIEW_20050204.1322-E9" ROLE="Arg-1"/>
+  <relation_argument REFID="MARKETVIEW_20050204.1322-E10" ROLE="Arg-2"/>
+  <relation_mention ID="MARKETVIEW_20050204.1322-R1-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="603" END="610">your car</charseq>
+    </extent>
+    <relation_mention_argument REFID="MARKETVIEW_20050204.1322-E9-11" ROLE="Arg-1">
+      <extent>
+        <charseq START="603" END="606">your</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="MARKETVIEW_20050204.1322-E10-10" ROLE="Arg-2">
+      <extent>
+        <charseq START="603" END="610">your car</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="MARKETVIEW_20050204.1322-R2" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="MARKETVIEW_20050204.1322-E11" ROLE="Arg-1"/>
+  <relation_argument REFID="MARKETVIEW_20050204.1322-E2" ROLE="Arg-2"/>
+  <relation_mention ID="MARKETVIEW_20050204.1322-R2-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="632" END="654">a mythical GM executive</charseq>
+    </extent>
+    <relation_mention_argument REFID="MARKETVIEW_20050204.1322-E11-12" ROLE="Arg-1">
+      <extent>
+        <charseq START="632" END="654">a mythical GM executive</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="MARKETVIEW_20050204.1322-E2-3" ROLE="Arg-2">
+      <extent>
+        <charseq START="643" END="644">GM</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="MARKETVIEW_20050204.1322-R3" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="MARKETVIEW_20050204.1322-E8" ROLE="Arg-1"/>
+  <relation_argument REFID="MARKETVIEW_20050204.1322-E4" ROLE="Arg-2"/>
+  <relation_mention ID="MARKETVIEW_20050204.1322-R3-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="665" END="731">Ah, but if Microsoft made cars, they'd crash three times a day, too</charseq>
+    </extent>
+    <relation_mention_argument REFID="MARKETVIEW_20050204.1322-E8-14" ROLE="Arg-1">
+      <extent>
+        <charseq START="676" END="684">Microsoft</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="MARKETVIEW_20050204.1322-E4-15" ROLE="Arg-2">
+      <extent>
+        <charseq START="691" END="694">cars</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="MARKETVIEW_20050204.1322-R3-2" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="396" END="731">According to the standard urban legend, Bill Gates
+notes that "If we'd been making cars instead of software, you'd get 500
+miles to the gallon, need an oil change every 250,000 miles, and be able
+to replace your car for $200," to which a mythical GM executive replies
+"Ah, but if Microsoft made cars, they'd crash three times a day, too</charseq>
+    </extent>
+    <relation_mention_argument REFID="MARKETVIEW_20050204.1322-E8-7" ROLE="Arg-1">
+      <extent>
+        <charseq START="462" END="463">we</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="MARKETVIEW_20050204.1322-E4-8" ROLE="Arg-2">
+      <extent>
+        <charseq START="479" END="482">cars</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="MARKETVIEW_20050204.1322-R4" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="MARKETVIEW_20050204.1322-E12" ROLE="Arg-1"/>
+  <relation_argument REFID="MARKETVIEW_20050204.1322-E4" ROLE="Arg-2"/>
+  <relation_mention ID="MARKETVIEW_20050204.1322-R4-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="336" END="348">auto industry</charseq>
+    </extent>
+    <relation_mention_argument REFID="MARKETVIEW_20050204.1322-E12-1" ROLE="Arg-1">
+      <extent>
+        <charseq START="336" END="348">auto industry</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="MARKETVIEW_20050204.1322-E4-4" ROLE="Arg-2">
+      <extent>
+        <charseq START="336" END="339">auto</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+</document>
+</source_file>

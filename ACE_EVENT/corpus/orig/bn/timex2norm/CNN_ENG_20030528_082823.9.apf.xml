@@ -1,0 +1,750 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030528_082823.9.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030528_082823.9">
+<entity ID="CNN_ENG_20030528_082823.9-E1" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030528_082823.9-E1-2" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="508" END="510">who</charseq>
+    </extent>
+    <head>
+      <charseq START="508" END="510">who</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030528_082823.9-E1-46" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="502" END="506">those</charseq>
+    </extent>
+    <head>
+      <charseq START="502" END="506">those</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030528_082823.9-E2" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030528_082823.9-E2-4" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="651" END="652">us</charseq>
+    </extent>
+    <head>
+      <charseq START="651" END="652">us</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030528_082823.9-E2-10" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="720" END="721">us</charseq>
+    </extent>
+    <head>
+      <charseq START="720" END="721">us</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030528_082823.9-E2-20" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="884" END="885">us</charseq>
+    </extent>
+    <head>
+      <charseq START="884" END="885">us</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030528_082823.9-E3" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030528_082823.9-E3-5" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="659" END="665">atlanta</charseq>
+    </extent>
+    <head>
+      <charseq START="659" END="665">atlanta</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030528_082823.9-E3-8" TYPE="PRO" LDCTYPE="PRO" ROLE="LOC">
+    <extent>
+      <charseq START="693" END="697">there</charseq>
+    </extent>
+    <head>
+      <charseq START="693" END="697">there</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="atlanta">
+      <charseq START="659" END="665">atlanta</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030528_082823.9-E4" TYPE="PER" SUBTYPE="Indeterminate" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030528_082823.9-E4-6" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="681" END="683">you</charseq>
+    </extent>
+    <head>
+      <charseq START="681" END="683">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030528_082823.9-E4-30" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1061" END="1063">you</charseq>
+    </extent>
+    <head>
+      <charseq START="1061" END="1063">you</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030528_082823.9-E5" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030528_082823.9-E5-9" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="703" END="712">washington</charseq>
+    </extent>
+    <head>
+      <charseq START="703" END="712">washington</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="washington">
+      <charseq START="703" END="712">washington</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030528_082823.9-E6" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030528_082823.9-E6-32" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="103" END="107">women</charseq>
+    </extent>
+    <head>
+      <charseq START="103" END="107">women</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030528_082823.9-E6-38" TYPE="NOM" LDCTYPE="BAR" LDCATR="FALSE">
+    <extent>
+      <charseq START="314" END="318">women</charseq>
+    </extent>
+    <head>
+      <charseq START="314" END="318">women</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030528_082823.9-E7" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030528_082823.9-E7-12" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="730" END="737">mia hamm</charseq>
+    </extent>
+    <head>
+      <charseq START="730" END="737">mia hamm</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030528_082823.9-E7-13" TYPE="PRO" LDCTYPE="PTV" LDCATR="TRUE">
+    <extent>
+      <charseq START="740" END="776">one of the stars of
+the '99 u.s. team</charseq>
+    </extent>
+    <head>
+      <charseq START="740" END="742">one</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030528_082823.9-E7-16" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="779" END="781">she</charseq>
+    </extent>
+    <head>
+      <charseq START="779" END="781">she</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030528_082823.9-E7-21" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="901" END="903">mia</charseq>
+    </extent>
+    <head>
+      <charseq START="901" END="903">mia</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030528_082823.9-E7-22" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="911" END="913">you</charseq>
+    </extent>
+    <head>
+      <charseq START="911" END="913">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030528_082823.9-E7-26" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1000" END="1002">you</charseq>
+    </extent>
+    <head>
+      <charseq START="1000" END="1002">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030528_082823.9-E7-27" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1020" END="1022">you</charseq>
+    </extent>
+    <head>
+      <charseq START="1020" END="1022">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030528_082823.9-E7-37" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="264" END="271">mia hamm</charseq>
+    </extent>
+    <head>
+      <charseq START="264" END="271">mia hamm</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="mia hamm">
+      <charseq START="730" END="737">mia hamm</charseq>
+    </name>
+    <name NAME="mia">
+      <charseq START="901" END="903">mia</charseq>
+    </name>
+    <name NAME="mia hamm">
+      <charseq START="264" END="271">mia hamm</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030528_082823.9-E8" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030528_082823.9-E8-14" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="747" END="776">the stars of
+the '99 u.s. team</charseq>
+    </extent>
+    <head>
+      <charseq START="751" END="755">stars</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030528_082823.9-E9" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030528_082823.9-E9-15" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="768" END="770">u.s</charseq>
+    </extent>
+    <head>
+      <charseq START="768" END="770">u.s</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030528_082823.9-E9-25" TYPE="NAM" LDCTYPE="NAM" ROLE="ORG" LDCATR="TRUE">
+    <extent>
+      <charseq START="963" END="969">the u.s</charseq>
+    </extent>
+    <head>
+      <charseq START="967" END="969">u.s</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030528_082823.9-E9-31" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="98" END="100">u.s</charseq>
+    </extent>
+    <head>
+      <charseq START="98" END="100">u.s</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030528_082823.9-E9-39" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="TRUE">
+    <extent>
+      <charseq START="345" END="351">the u.s</charseq>
+    </extent>
+    <head>
+      <charseq START="349" END="351">u.s</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="u.s">
+      <charseq START="768" END="770">u.s</charseq>
+    </name>
+    <name NAME="u.s">
+      <charseq START="967" END="969">u.s</charseq>
+    </name>
+    <name NAME="u.s">
+      <charseq START="98" END="100">u.s</charseq>
+    </name>
+    <name NAME="u.s">
+      <charseq START="349" END="351">u.s</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030528_082823.9-E10" TYPE="ORG" SUBTYPE="Sports" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030528_082823.9-E10-17" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="801" END="834">the washington
+freedom of the wusa</charseq>
+    </extent>
+    <head>
+      <charseq START="805" END="822">washington
+freedom</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="washington freedom">
+      <charseq START="805" END="822">washington
+freedom</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030528_082823.9-E11" TYPE="ORG" SUBTYPE="Sports" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030528_082823.9-E11-18" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="827" END="834">the wusa</charseq>
+    </extent>
+    <head>
+      <charseq START="831" END="834">wusa</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="wusa">
+      <charseq START="831" END="834">wusa</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030528_082823.9-E12" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030528_082823.9-E12-19" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="837" END="842">ladies</charseq>
+    </extent>
+    <head>
+      <charseq START="837" END="842">ladies</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030528_082823.9-E13" TYPE="ORG" SUBTYPE="Sports" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030528_082823.9-E13-1" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="94" END="121">the u.s. women's soccer team</charseq>
+    </extent>
+    <head>
+      <charseq START="118" END="121">team</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030528_082823.9-E13-29" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="760" END="776">the '99 u.s. team</charseq>
+    </extent>
+    <head>
+      <charseq START="773" END="776">team</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030528_082823.9-E14" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030528_082823.9-E14-28" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="410" END="414">venue</charseq>
+    </extent>
+    <head>
+      <charseq START="410" END="414">venue</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030528_082823.9-E18" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030528_082823.9-E18-33" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="165" END="185">more than 90,000
+fans</charseq>
+    </extent>
+    <head>
+      <charseq START="182" END="185">fans</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030528_082823.9-E19" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030528_082823.9-E19-34" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="190" END="202">the rose bowl</charseq>
+    </extent>
+    <head>
+      <charseq START="194" END="202">rose bowl</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="rose bowl">
+      <charseq START="194" END="202">rose bowl</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030528_082823.9-E20" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030528_082823.9-E20-35" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="205" END="213">everybody</charseq>
+    </extent>
+    <head>
+      <charseq START="205" END="213">everybody</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030528_082823.9-E21" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030528_082823.9-E21-36" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="237" END="251">brandy chastain</charseq>
+    </extent>
+    <head>
+      <charseq START="237" END="251">brandy chastain</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="brandy chastain">
+      <charseq START="237" END="251">brandy chastain</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030528_082823.9-E23" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030528_082823.9-E23-23" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE">
+    <extent>
+      <charseq START="936" END="940">china</charseq>
+    </extent>
+    <head>
+      <charseq START="936" END="940">china</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030528_082823.9-E23-24" TYPE="PRO" LDCTYPE="PRO" ROLE="ORG">
+    <extent>
+      <charseq START="953" END="956">they</charseq>
+    </extent>
+    <head>
+      <charseq START="953" END="956">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030528_082823.9-E23-40" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="383" END="387">china</charseq>
+    </extent>
+    <head>
+      <charseq START="383" END="387">china</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="china">
+      <charseq START="936" END="940">china</charseq>
+    </name>
+    <name NAME="china">
+      <charseq START="383" END="387">china</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030528_082823.9-E24" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030528_082823.9-E24-3" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="641" END="643">she</charseq>
+    </extent>
+    <head>
+      <charseq START="641" END="643">she</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030528_082823.9-E24-7" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="689" END="691">her</charseq>
+    </extent>
+    <head>
+      <charseq START="689" END="691">her</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030528_082823.9-E24-42" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="444" END="454">lynn morgan</charseq>
+    </extent>
+    <head>
+      <charseq START="444" END="454">lynn morgan</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030528_082823.9-E24-43" TYPE="NOM" LDCTYPE="BAR" LDCATR="FALSE">
+    <extent>
+      <charseq START="456" END="490">president of
+the soccer association</charseq>
+    </extent>
+    <head>
+      <charseq START="456" END="464">president</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030528_082823.9-E24-45" TYPE="PRO" LDCTYPE="PTV" LDCATR="TRUE">
+    <extent>
+      <charseq START="495" END="506">one of those</charseq>
+    </extent>
+    <head>
+      <charseq START="495" END="497">one</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="lynn morgan">
+      <charseq START="444" END="454">lynn morgan</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030528_082823.9-E26" TYPE="ORG" SUBTYPE="Sports" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030528_082823.9-E26-44" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="469" END="490">the soccer association</charseq>
+    </extent>
+    <head>
+      <charseq START="473" END="490">soccer association</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="soccer association">
+      <charseq START="473" END="490">soccer association</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<timex2 ID="CNN_ENG_20030528_082823.9-T1" VAL="PRESENT_REF" ANCHOR_VAL="2003-05-28T08:41:38" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_ENG_20030528_082823.9-T1-1">
+    <extent>
+      <charseq START="723" END="725">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030528_082823.9-T2" VAL="2003-05-28T08:41:38">
+  <timex2_mention ID="CNN_ENG_20030528_082823.9-T2-1">
+    <extent>
+      <charseq START="43" END="61">2003-05-28 08:41:38</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030528_082823.9-T3" VAL="1999">
+  <timex2_mention ID="CNN_ENG_20030528_082823.9-T3-1">
+    <extent>
+      <charseq START="77" END="92">four years since</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030528_082823.9-T4" VAL="2003">
+  <timex2_mention ID="CNN_ENG_20030528_082823.9-T4-1">
+    <extent>
+      <charseq START="420" END="428">this year</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030528_082823.9-T5" VAL="P4M" ANCHOR_VAL="2003-05" ANCHOR_DIR="STARTING">
+  <timex2_mention ID="CNN_ENG_20030528_082823.9-T5-1">
+    <extent>
+      <charseq START="574" END="584">four months</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030528_082823.9-T6" VAL="P4Y" ANCHOR_VAL="1999" ANCHOR_DIR="STARTING">
+  <timex2_mention ID="CNN_ENG_20030528_082823.9-T6-1">
+    <extent>
+      <charseq START="617" END="626">four years</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030528_082823.9-T7" VAL="2003-05-28TMO">
+  <timex2_mention ID="CNN_ENG_20030528_082823.9-T7-1">
+    <extent>
+      <charseq START="667" END="678">this morning</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030528_082823.9-T8" VAL="1999">
+  <timex2_mention ID="CNN_ENG_20030528_082823.9-T8-1">
+    <extent>
+      <charseq START="765" END="766">99</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030528_082823.9-T9" VAL="PRESENT_REF" ANCHOR_VAL="2003-05-28-T08:41:38" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_ENG_20030528_082823.9-T9-1">
+    <extent>
+      <charseq START="785" END="787">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030528_082823.9-T10" VAL="2003-05-28TMO">
+  <timex2_mention ID="CNN_ENG_20030528_082823.9-T10-1">
+    <extent>
+      <charseq START="887" END="898">this morning</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030528_082823.9-T11" VAL="PRESENT_REF" ANCHOR_VAL="2003-05-28-T08:41:38" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_ENG_20030528_082823.9-T11-1">
+    <extent>
+      <charseq START="942" END="944">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030528_082823.9-R1" TYPE="GEN-AFF" SUBTYPE="Org-Location" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030528_082823.9-E13" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030528_082823.9-E9" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030528_082823.9-R1-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="94" END="121">the u.s. women's soccer team</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030528_082823.9-E13-1" ROLE="Arg-1">
+      <extent>
+        <charseq START="94" END="121">the u.s. women's soccer team</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030528_082823.9-E9-31" ROLE="Arg-2">
+      <extent>
+        <charseq START="98" END="100">u.s</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030528_082823.9-R2" TYPE="ORG-AFF" SUBTYPE="Membership" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030528_082823.9-E13" ROLE="Arg-2"/>
+  <relation_argument REFID="CNN_ENG_20030528_082823.9-E6" ROLE="Arg-1"/>
+  <relation_mention ID="CNN_ENG_20030528_082823.9-R2-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="94" END="121">the u.s. women's soccer team</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030528_082823.9-E13-1" ROLE="Arg-2">
+      <extent>
+        <charseq START="94" END="121">the u.s. women's soccer team</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030528_082823.9-E6-32" ROLE="Arg-1">
+      <extent>
+        <charseq START="103" END="107">women</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030528_082823.9-R3" TYPE="ORG-AFF" SUBTYPE="Membership" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030528_082823.9-E24" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030528_082823.9-E26" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030528_082823.9-R3-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="456" END="490">president of
+the soccer association</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030528_082823.9-E24-43" ROLE="Arg-1">
+      <extent>
+        <charseq START="456" END="490">president of
+the soccer association</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030528_082823.9-E26-44" ROLE="Arg-2">
+      <extent>
+        <charseq START="469" END="490">the soccer association</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030528_082823.9-R4" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030528_082823.9-E24" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030528_082823.9-E3" ROLE="Arg-2"/>
+  <relation_argument REFID="CNN_ENG_20030528_082823.9-T7" ROLE="Time-Within"/>
+  <relation_mention ID="CNN_ENG_20030528_082823.9-R4-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="444" END="678">lynn morgan president of
+the soccer association is one of those who has the job of
+organizing this global event that has only got four months
+to get put together instead of four years as usual and she
+joins us from atlanta this morning</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030528_082823.9-E24-42" ROLE="Arg-1">
+      <extent>
+        <charseq START="444" END="454">lynn morgan</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030528_082823.9-E3-5" ROLE="Arg-2">
+      <extent>
+        <charseq START="659" END="665">atlanta</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030528_082823.9-T7-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="667" END="678">this morning</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030528_082823.9-R5" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030528_082823.9-E7" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030528_082823.9-E5" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030528_082823.9-R5-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="700" END="776">in
+washington, with us now is mia hamm, one of the stars of
+the '99 u.s. team</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030528_082823.9-E7-12" ROLE="Arg-1">
+      <extent>
+        <charseq START="730" END="737">mia hamm</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030528_082823.9-E5-9" ROLE="Arg-2">
+      <extent>
+        <charseq START="703" END="712">washington</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030528_082823.9-R6" TYPE="ORG-AFF" SUBTYPE="Sports-Affiliation" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030528_082823.9-E7" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030528_082823.9-E10" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030528_082823.9-R6-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="779" END="834">she's now playing for the washington
+freedom of the wusa</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030528_082823.9-E7-16" ROLE="Arg-1">
+      <extent>
+        <charseq START="779" END="781">she</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030528_082823.9-E10-17" ROLE="Arg-2">
+      <extent>
+        <charseq START="801" END="834">the washington
+freedom of the wusa</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030528_082823.9-R7" TYPE="PART-WHOLE" SUBTYPE="Subsidiary" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030528_082823.9-E10" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030528_082823.9-E11" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030528_082823.9-R7-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="801" END="834">the washington
+freedom of the wusa</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030528_082823.9-E10-17" ROLE="Arg-1">
+      <extent>
+        <charseq START="801" END="834">the washington
+freedom of the wusa</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030528_082823.9-E11-18" ROLE="Arg-2">
+      <extent>
+        <charseq START="827" END="834">the wusa</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030528_082823.9-R8" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030528_082823.9-E18" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030528_082823.9-E19" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030528_082823.9-R8-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="165" END="202">more than 90,000
+fans at the rose bowl</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030528_082823.9-E18-33" ROLE="Arg-1">
+      <extent>
+        <charseq START="165" END="185">more than 90,000
+fans</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030528_082823.9-E19-34" ROLE="Arg-2">
+      <extent>
+        <charseq START="190" END="202">the rose bowl</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030528_082823.9-R9" TYPE="ORG-AFF" SUBTYPE="Sports-Affiliation" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030528_082823.9-E8" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030528_082823.9-E13" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030528_082823.9-R9-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="740" END="776">one of the stars of
+the '99 u.s. team</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030528_082823.9-E8-14" ROLE="Arg-1">
+      <extent>
+        <charseq START="747" END="776">the stars of
+the '99 u.s. team</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030528_082823.9-E13-29" ROLE="Arg-2">
+      <extent>
+        <charseq START="760" END="776">the '99 u.s. team</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+</document>
+</source_file>

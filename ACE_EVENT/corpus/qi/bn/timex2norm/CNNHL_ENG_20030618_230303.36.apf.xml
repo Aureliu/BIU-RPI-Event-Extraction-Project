@@ -1,0 +1,691 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNNHL_ENG_20030618_230303.36.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNNHL_ENG_20030618_230303.36">
+<entity ID="CNNHL_ENG_20030618_230303.36-E1" TYPE="ORG" SUBTYPE="Commercial" CLASS="GEN">
+  <entity_mention ID="CNNHL_ENG_20030618_230303.36-E1-52" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="782" END="801">the record companies</charseq>
+    </extent>
+    <head>
+      <charseq START="793" END="801">companies</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030618_230303.36-E2" TYPE="ORG" SUBTYPE="Entertainment" CLASS="GEN">
+  <entity_mention ID="CNNHL_ENG_20030618_230303.36-E2-2" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="807" END="824">the music business</charseq>
+    </extent>
+    <head>
+      <charseq START="817" END="824">business</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030618_230303.36-E3" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030618_230303.36-E3-3" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="955" END="961">america</charseq>
+    </extent>
+    <head>
+      <charseq START="955" END="961">america</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030618_230303.36-E3-24" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1594" END="1601">american</charseq>
+    </extent>
+    <head>
+      <charseq START="1594" END="1601">american</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="america">
+      <charseq START="955" END="961">america</charseq>
+    </name>
+    <name NAME="american">
+      <charseq START="1594" END="1601">american</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030618_230303.36-E4" TYPE="GPE" SUBTYPE="Population-Center" CLASS="USP">
+  <entity_mention ID="CNNHL_ENG_20030618_230303.36-E4-4" TYPE="NOM" LDCTYPE="NOM" ROLE="LOC">
+    <extent>
+      <charseq START="1053" END="1062">100 cities</charseq>
+    </extent>
+    <head>
+      <charseq START="1057" END="1062">cities</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030618_230303.36-E5" TYPE="GPE" SUBTYPE="Continent" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030618_230303.36-E5-5" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="1103" END="1108">europe</charseq>
+    </extent>
+    <head>
+      <charseq START="1103" END="1108">europe</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="europe">
+      <charseq START="1103" END="1108">europe</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030618_230303.36-E6" TYPE="PER" SUBTYPE="Indeterminate" CLASS="USP">
+  <entity_mention ID="CNNHL_ENG_20030618_230303.36-E6-6" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1151" END="1153">you</charseq>
+    </extent>
+    <head>
+      <charseq START="1151" END="1153">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030618_230303.36-E6-17" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1392" END="1394">you</charseq>
+    </extent>
+    <head>
+      <charseq START="1392" END="1394">you</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030618_230303.36-E7" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030618_230303.36-E7-7" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="1164" END="1176">a music
+lover</charseq>
+    </extent>
+    <head>
+      <charseq START="1172" END="1176">lover</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030618_230303.36-E7-8" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1113" END="1114">my</charseq>
+    </extent>
+    <head>
+      <charseq START="1113" END="1114">my</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030618_230303.36-E7-9" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1183" END="1183">i</charseq>
+    </extent>
+    <head>
+      <charseq START="1183" END="1183">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030618_230303.36-E7-13" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1266" END="1266">i</charseq>
+    </extent>
+    <head>
+      <charseq START="1266" END="1266">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030618_230303.36-E7-21" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="915" END="915">i</charseq>
+    </extent>
+    <head>
+      <charseq START="915" END="915">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030618_230303.36-E7-22" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="387" END="387">i</charseq>
+    </extent>
+    <head>
+      <charseq START="387" END="387">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030618_230303.36-E7-32" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1877" END="1878">me</charseq>
+    </extent>
+    <head>
+      <charseq START="1877" END="1878">me</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030618_230303.36-E7-35" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="652" END="652">i</charseq>
+    </extent>
+    <head>
+      <charseq START="652" END="652">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030618_230303.36-E7-36" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1905" END="1907">you</charseq>
+    </extent>
+    <head>
+      <charseq START="1905" END="1907">you</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030618_230303.36-E9" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNNHL_ENG_20030618_230303.36-E9-11" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1197" END="1278">five acts all playing at the same
+time on five different stages that i want to see</charseq>
+    </extent>
+    <head>
+      <charseq START="1202" END="1205">acts</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030618_230303.36-E9-37" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="1261" END="1264">that</charseq>
+    </extent>
+    <head>
+      <charseq START="1261" END="1264">that</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030618_230303.36-E10" TYPE="FAC" SUBTYPE="Subarea-Facility" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030618_230303.36-E10-12" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1239" END="1259">five different stages</charseq>
+    </extent>
+    <head>
+      <charseq START="1254" END="1259">stages</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030618_230303.36-E11" TYPE="ORG" SUBTYPE="Entertainment" CLASS="USP">
+  <entity_mention ID="CNNHL_ENG_20030618_230303.36-E11-14" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1304" END="1319">the actual bands</charseq>
+    </extent>
+    <head>
+      <charseq START="1315" END="1319">bands</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030618_230303.36-E12" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNNHL_ENG_20030618_230303.36-E12-15" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1347" END="1389">this grassroots following that's been there</charseq>
+    </extent>
+    <head>
+      <charseq START="1363" END="1371">following</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030618_230303.36-E12-16" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="1373" END="1376">that</charseq>
+    </extent>
+    <head>
+      <charseq START="1373" END="1376">that</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030618_230303.36-E13" TYPE="ORG" SUBTYPE="Entertainment" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030618_230303.36-E13-18" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1440" END="1456">the grateful
+dead</charseq>
+    </extent>
+    <head>
+      <charseq START="1444" END="1456">grateful
+dead</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030618_230303.36-E13-19" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1482" END="1498">the grateful dead</charseq>
+    </extent>
+    <head>
+      <charseq START="1486" END="1498">grateful dead</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="grateful dead">
+      <charseq START="1444" END="1456">grateful
+dead</charseq>
+    </name>
+    <name NAME="grateful dead">
+      <charseq START="1486" END="1498">grateful dead</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030618_230303.36-E15" TYPE="PER" SUBTYPE="Indeterminate" CLASS="GEN">
+  <entity_mention ID="CNNHL_ENG_20030618_230303.36-E15-25" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1714" END="1716">you</charseq>
+    </extent>
+    <head>
+      <charseq START="1714" END="1716">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030618_230303.36-E15-27" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1796" END="1798">you</charseq>
+    </extent>
+    <head>
+      <charseq START="1796" END="1798">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030618_230303.36-E15-28" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1808" END="1810">you</charseq>
+    </extent>
+    <head>
+      <charseq START="1808" END="1810">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030618_230303.36-E15-30" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1825" END="1827">you</charseq>
+    </extent>
+    <head>
+      <charseq START="1825" END="1827">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030618_230303.36-E15-31" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1848" END="1850">you</charseq>
+    </extent>
+    <head>
+      <charseq START="1848" END="1850">you</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030618_230303.36-E16" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNNHL_ENG_20030618_230303.36-E16-26" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1781" END="1793">the community</charseq>
+    </extent>
+    <head>
+      <charseq START="1785" END="1793">community</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030618_230303.36-E17" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="CNNHL_ENG_20030618_230303.36-E17-29" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1816" END="1822">someone</charseq>
+    </extent>
+    <head>
+      <charseq START="1816" END="1822">someone</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030618_230303.36-E18" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNNHL_ENG_20030618_230303.36-E18-33" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1897" END="1898">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1897" END="1898">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030618_230303.36-E18-34" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1910" END="1911">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1910" END="1911">we</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030618_230303.36-E19" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNNHL_ENG_20030618_230303.36-E19-1" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="117" END="157">80,000
+people with a shared love of music</charseq>
+    </extent>
+    <head>
+      <charseq START="124" END="129">people</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030618_230303.36-E20" TYPE="LOC" SUBTYPE="Land-Region-Natural" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030618_230303.36-E20-38" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="171" END="189">a tennessee
+pasture</charseq>
+    </extent>
+    <head>
+      <charseq START="183" END="189">pasture</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030618_230303.36-E21" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030618_230303.36-E21-39" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="173" END="181">tennessee</charseq>
+    </extent>
+    <head>
+      <charseq START="173" END="181">tennessee</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="tennessee">
+      <charseq START="173" END="181">tennessee</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030618_230303.36-E22" TYPE="PER" SUBTYPE="Indeterminate" CLASS="USP">
+  <entity_mention ID="CNNHL_ENG_20030618_230303.36-E22-40" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="224" END="226">who</charseq>
+    </extent>
+    <head>
+      <charseq START="224" END="226">who</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030618_230303.36-E23" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNNHL_ENG_20030618_230303.36-E23-10" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1501" END="1502">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1501" END="1502">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030618_230303.36-E23-20" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1517" END="1518">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1517" END="1518">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030618_230303.36-E23-41" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="330" END="357">the whole
+jam band community</charseq>
+    </extent>
+    <head>
+      <charseq START="349" END="357">community</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030618_230303.36-E23-43" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="407" END="423">the jam community</charseq>
+    </extent>
+    <head>
+      <charseq START="415" END="423">community</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030618_230303.36-E24" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNNHL_ENG_20030618_230303.36-E24-42" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="762" END="776">a huge audience</charseq>
+    </extent>
+    <head>
+      <charseq START="769" END="776">audience</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030618_230303.36-E25" TYPE="LOC" SUBTYPE="Region-General" CLASS="USP">
+  <entity_mention ID="CNNHL_ENG_20030618_230303.36-E25-44" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="477" END="491">whatever
+region</charseq>
+    </extent>
+    <head>
+      <charseq START="486" END="491">region</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030618_230303.36-E26" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNNHL_ENG_20030618_230303.36-E26-23" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1535" END="1536">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1535" END="1536">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030618_230303.36-E26-45" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="579" END="580">we</charseq>
+    </extent>
+    <head>
+      <charseq START="579" END="580">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030618_230303.36-E26-46" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="614" END="616">our</charseq>
+    </extent>
+    <head>
+      <charseq START="614" END="616">our</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030618_230303.36-E26-47" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="628" END="629">we</charseq>
+    </extent>
+    <head>
+      <charseq START="628" END="629">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030618_230303.36-E26-48" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="682" END="683">we</charseq>
+    </extent>
+    <head>
+      <charseq START="682" END="683">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030618_230303.36-E26-49" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="720" END="721">we</charseq>
+    </extent>
+    <head>
+      <charseq START="720" END="721">we</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030618_230303.36-E27" TYPE="ORG" SUBTYPE="Entertainment" CLASS="USP">
+  <entity_mention ID="CNNHL_ENG_20030618_230303.36-E27-50" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="727" END="741">all these bands</charseq>
+    </extent>
+    <head>
+      <charseq START="737" END="741">bands</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030618_230303.36-E28" TYPE="ORG" SUBTYPE="Entertainment" CLASS="GEN">
+  <entity_mention ID="CNNHL_ENG_20030618_230303.36-E28-51" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="340" END="347">jam band</charseq>
+    </extent>
+    <head>
+      <charseq START="344" END="347">band</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<timex2 ID="CNNHL_ENG_20030618_230303.36-T1" VAL="2003-06-18T23:32:01">
+  <timex2_mention ID="CNNHL_ENG_20030618_230303.36-T1-1">
+    <extent>
+      <charseq START="46" END="64">2003-06-18 23:32:01</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNNHL_ENG_20030618_230303.36-T2" VAL="PXY" ANCHOR_VAL="2003" ANCHOR_DIR="AS_OF" SET="YES">
+  <timex2_mention ID="CNNHL_ENG_20030618_230303.36-T2-1">
+    <extent>
+      <charseq START="87" END="92">annual</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNNHL_ENG_20030618_230303.36-T3" VAL="P3D" ANCHOR_VAL="2003" ANCHOR_DIR="WITHIN">
+  <timex2_mention ID="CNNHL_ENG_20030618_230303.36-T3-1">
+    <extent>
+      <charseq START="195" END="204">three days</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNNHL_ENG_20030618_230303.36-T4" VAL="P16D" ANCHOR_VAL="2003" ANCHOR_DIR="WITHIN">
+  <timex2_mention ID="CNNHL_ENG_20030618_230303.36-T4-1">
+    <extent>
+      <charseq START="643" END="649">16 days</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNNHL_ENG_20030618_230303.36-T5" VAL="2003-XX-XXTXX:XX:XX">
+  <timex2_mention ID="CNNHL_ENG_20030618_230303.36-T5-1">
+    <extent>
+      <charseq START="1222" END="1234">the same
+time</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNNHL_ENG_20030618_230303.36-T6" VAL="PXY" ANCHOR_VAL="2003-06-18" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNNHL_ENG_20030618_230303.36-T6-1">
+    <extent>
+      <charseq START="1406" END="1416">a long time</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNNHL_ENG_20030618_230303.36-T7" VAL="FUTURE_REF" ANCHOR_VAL="2003-06-18" ANCHOR_DIR="AFTER">
+  <timex2_mention ID="CNNHL_ENG_20030618_230303.36-T7-1">
+    <extent>
+      <charseq START="1468" END="1477">the future</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNNHL_ENG_20030618_230303.36-T8" VAL="PXY" ANCHOR_VAL="2003-06-18" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNNHL_ENG_20030618_230303.36-T8-1">
+    <extent>
+      <charseq START="1578" END="1588">a long time</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNNHL_ENG_20030618_230303.36-T9" VAL="XXXX-SU" SET="YES">
+  <timex2_mention ID="CNNHL_ENG_20030618_230303.36-T9-1">
+    <extent>
+      <charseq START="1064" END="1075">every summer</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNNHL_ENG_20030618_230303.36-R1" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030618_230303.36-E19" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030618_230303.36-E20" ROLE="Arg-2"/>
+  <relation_argument REFID="CNNHL_ENG_20030618_230303.36-T3" ROLE="Time-Holds"/>
+  <relation_mention ID="CNNHL_ENG_20030618_230303.36-R1-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="117" END="242">80,000
+people with a shared love of music converge on a tennessee
+pasture for three days of good vibes and who knows what
+else</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030618_230303.36-E19-1" ROLE="Arg-1">
+      <extent>
+        <charseq START="117" END="157">80,000
+people with a shared love of music</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030618_230303.36-E20-38" ROLE="Arg-2">
+      <extent>
+        <charseq START="171" END="189">a tennessee
+pasture</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030618_230303.36-T3-1" ROLE="Time-Holds">
+      <extent>
+        <charseq START="195" END="204">three days</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030618_230303.36-R2" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030618_230303.36-E20" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030618_230303.36-E21" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030618_230303.36-R2-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="171" END="189">a tennessee
+pasture</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030618_230303.36-E20-38" ROLE="Arg-1">
+      <extent>
+        <charseq START="171" END="189">a tennessee
+pasture</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030618_230303.36-E21-39" ROLE="Arg-2">
+      <extent>
+        <charseq START="173" END="181">tennessee</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030618_230303.36-R3" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030618_230303.36-E9" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030618_230303.36-E10" ROLE="Arg-2"/>
+  <relation_argument REFID="CNNHL_ENG_20030618_230303.36-T5" ROLE="Time-Within"/>
+  <relation_mention ID="CNNHL_ENG_20030618_230303.36-R3-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="1151" END="1278">you know, as a music
+lover that i am, there's five acts all playing at the same
+time on five different stages that i want to see</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030618_230303.36-E9-11" ROLE="Arg-1">
+      <extent>
+        <charseq START="1197" END="1278">five acts all playing at the same
+time on five different stages that i want to see</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030618_230303.36-E10-12" ROLE="Arg-2">
+      <extent>
+        <charseq START="1239" END="1259">five different stages</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030618_230303.36-T5-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="1222" END="1234">the same
+time</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNNHL_ENG_20030618_230303.36-EV1" TYPE="Contact" SUBTYPE="Meet" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNNHL_ENG_20030618_230303.36-E20" ROLE="Place"/>
+  <event_argument REFID="CNNHL_ENG_20030618_230303.36-E19" ROLE="Entity"/>
+  <event_argument REFID="CNNHL_ENG_20030618_230303.36-T3" ROLE="Time-Holds"/>
+  <event_mention ID="CNNHL_ENG_20030618_230303.36-EV1-1">
+    <extent>
+      <charseq START="117" END="204">80,000
+people with a shared love of music converge on a tennessee
+pasture for three days</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="117" END="242">80,000
+people with a shared love of music converge on a tennessee
+pasture for three days of good vibes and who knows what
+else</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="159" END="166">converge</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030618_230303.36-E20-38" ROLE="Place">
+      <extent>
+        <charseq START="171" END="189">a tennessee
+pasture</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030618_230303.36-E19-1" ROLE="Entity">
+      <extent>
+        <charseq START="117" END="157">80,000
+people with a shared love of music</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030618_230303.36-T3-1" ROLE="Time-Holds">
+      <extent>
+        <charseq START="195" END="204">three days</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

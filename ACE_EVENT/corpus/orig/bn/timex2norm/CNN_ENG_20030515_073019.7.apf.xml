@@ -1,0 +1,572 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030515_073019.7.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030515_073019.7">
+<entity ID="CNN_ENG_20030515_073019.7-E1" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030515_073019.7-E1-2" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="500" END="502">d.c</charseq>
+    </extent>
+    <head>
+      <charseq START="500" END="502">d.c</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="d.c">
+      <charseq START="500" END="502">d.c</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030515_073019.7-E2" TYPE="LOC" SUBTYPE="Region-General" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030515_073019.7-E2-9" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="623" END="641">the upper east side</charseq>
+    </extent>
+    <head>
+      <charseq START="627" END="641">upper east side</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="upper east side">
+      <charseq START="627" END="641">upper east side</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030515_073019.7-E3" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030515_073019.7-E3-10" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="680" END="700">two
+married daughters</charseq>
+    </extent>
+    <head>
+      <charseq START="692" END="700">daughters</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030515_073019.7-E4" TYPE="ORG" SUBTYPE="Religious" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030515_073019.7-E4-13" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="653" END="673">a presbyterian church</charseq>
+    </extent>
+    <head>
+      <charseq START="668" END="673">church</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030515_073019.7-E5" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030515_073019.7-E5-14" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="75" END="76">we</charseq>
+    </extent>
+    <head>
+      <charseq START="75" END="76">we</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030515_073019.7-E6" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030515_073019.7-E6-15" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="114" END="135">president john kennedy</charseq>
+    </extent>
+    <head>
+      <charseq START="124" END="135">john kennedy</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030515_073019.7-E6-16" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="FALSE">
+    <extent>
+      <charseq START="114" END="122">president</charseq>
+    </extent>
+    <head>
+      <charseq START="114" END="122">president</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030515_073019.7-E6-20" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="192" END="198">kennedy</charseq>
+    </extent>
+    <head>
+      <charseq START="192" END="198">kennedy</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="john kennedy">
+      <charseq START="124" END="135">john kennedy</charseq>
+    </name>
+    <name NAME="kennedy">
+      <charseq START="192" END="198">kennedy</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030515_073019.7-E8" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030515_073019.7-E8-1" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="465" END="467">she</charseq>
+    </extent>
+    <head>
+      <charseq START="465" END="467">she</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030515_073019.7-E8-3" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="537" END="539">she</charseq>
+    </extent>
+    <head>
+      <charseq START="537" END="539">she</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030515_073019.7-E8-4" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="574" END="576">her</charseq>
+    </extent>
+    <head>
+      <charseq START="574" END="576">her</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030515_073019.7-E8-5" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="610" END="612">she</charseq>
+    </extent>
+    <head>
+      <charseq START="610" END="612">she</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030515_073019.7-E8-6" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="761" END="763">she</charseq>
+    </extent>
+    <head>
+      <charseq START="761" END="763">she</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030515_073019.7-E8-7" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="867" END="876">this woman</charseq>
+    </extent>
+    <head>
+      <charseq START="872" END="876">woman</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030515_073019.7-E8-8" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="922" END="924">she</charseq>
+    </extent>
+    <head>
+      <charseq START="922" END="924">she</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030515_073019.7-E8-17" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="156" END="175">a white house intern</charseq>
+    </extent>
+    <head>
+      <charseq START="170" END="175">intern</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030515_073019.7-E8-23" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="269" END="277">the woman</charseq>
+    </extent>
+    <head>
+      <charseq START="273" END="277">woman</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030515_073019.7-E8-24" TYPE="PRO" LDCTYPE="HLS">
+    <extent>
+      <charseq START="308" END="322">the 60-year-old</charseq>
+    </extent>
+    <head>
+      <charseq START="312" END="322">60-year-old</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030515_073019.7-E8-26" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="369" END="371">she</charseq>
+    </extent>
+    <head>
+      <charseq START="369" END="371">she</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030515_073019.7-E8-28" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="400" END="402">she</charseq>
+    </extent>
+    <head>
+      <charseq START="400" END="402">she</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030515_073019.7-E8-29" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="441" END="443">her</charseq>
+    </extent>
+    <head>
+      <charseq START="441" END="443">her</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030515_073019.7-E8-30" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="456" END="458">she</charseq>
+    </extent>
+    <head>
+      <charseq START="456" END="458">she</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030515_073019.7-E9" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030515_073019.7-E9-12" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="508" END="522">the white house</charseq>
+    </extent>
+    <head>
+      <charseq START="512" END="522">white house</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030515_073019.7-E9-18" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE" METONYMY_MENTION="TRUE">
+    <extent>
+      <charseq START="158" END="168">white house</charseq>
+    </extent>
+    <head>
+      <charseq START="158" END="168">white house</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="white house">
+      <charseq START="512" END="522">white house</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030515_073019.7-E11" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030515_073019.7-E11-11" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="819" END="831">robert dallek</charseq>
+    </extent>
+    <head>
+      <charseq START="819" END="831">robert dallek</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030515_073019.7-E11-19" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="190" END="209">a kennedy
+biographer</charseq>
+    </extent>
+    <head>
+      <charseq START="200" END="209">biographer</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030515_073019.7-E11-21" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="211" END="223">robert dallek</charseq>
+    </extent>
+    <head>
+      <charseq START="211" END="223">robert dallek</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="robert dallek">
+      <charseq START="819" END="831">robert dallek</charseq>
+    </name>
+    <name NAME="robert dallek">
+      <charseq START="211" END="223">robert dallek</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030515_073019.7-E14" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030515_073019.7-E14-25" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="330" END="352">the new
+york daily news</charseq>
+    </extent>
+    <head>
+      <charseq START="334" END="352">new
+york daily news</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="new york daily news">
+      <charseq START="334" END="352">new
+york daily news</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030515_073019.7-E15" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030515_073019.7-E15-27" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="358" END="363">others</charseq>
+    </extent>
+    <head>
+      <charseq START="358" END="363">others</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<timex2 ID="CNN_ENG_20030515_073019.7-T1" VAL="PRESENT_REF" ANCHOR_VAL="2003-05-15T09:52:27" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_ENG_20030515_073019.7-T1-1">
+    <extent>
+      <charseq START="918" END="920">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030515_073019.7-T2" VAL="196" MOD="START">
+  <timex2_mention ID="CNN_ENG_20030515_073019.7-T2-1">
+    <extent>
+      <charseq START="177" END="187">early 1960s</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030515_073019.7-T3" VAL="P41Y" ANCHOR_VAL="2003" ANCHOR_DIR="ENDING">
+  <timex2_mention ID="CNN_ENG_20030515_073019.7-T3-1">
+    <extent>
+      <charseq START="424" END="435">41 years now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030515_073019.7-T4" VAL="1962">
+  <timex2_mention ID="CNN_ENG_20030515_073019.7-T4-1">
+    <extent>
+      <charseq START="473" END="474">19</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030515_073019.7-T5" VAL="1962">
+  <timex2_mention ID="CNN_ENG_20030515_073019.7-T5-1">
+    <extent>
+      <charseq START="525" END="528">1962</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030515_073019.7-T6" VAL="1963">
+  <timex2_mention ID="CNN_ENG_20030515_073019.7-T6-1">
+    <extent>
+      <charseq START="531" END="534">1963</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030515_073019.7-T7" VAL="2003-05-15">
+  <timex2_mention ID="CNN_ENG_20030515_073019.7-T7-1">
+    <extent>
+      <charseq START="546" END="550">today</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030515_073019.7-T8" VAL="P41Y" ANCHOR_VAL="2003" ANCHOR_DIR="ENDING">
+  <timex2_mention ID="CNN_ENG_20030515_073019.7-T8-1">
+    <extent>
+      <charseq START="751" END="758">41
+years</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030515_073019.7-T9" VAL="2003-05-15">
+  <timex2_mention ID="CNN_ENG_20030515_073019.7-T9-1">
+    <extent>
+      <charseq START="812" END="816">today</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030515_073019.7-T10" VAL="2003-05-15T09:52:27">
+  <timex2_mention ID="CNN_ENG_20030515_073019.7-T10-1">
+    <extent>
+      <charseq START="43" END="61">2003-05-15 09:52:27</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030515_073019.7-T11" VAL="2003-05-15T09:52:27">
+  <timex2_mention ID="CNN_ENG_20030515_073019.7-T11-1">
+    <extent>
+      <charseq START="600" END="608">right now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030515_073019.7-T12" VAL="1943" MOD="START">
+  <timex2_mention ID="CNN_ENG_20030515_073019.7-T12-1">
+    <extent>
+      <charseq START="312" END="322">60-year-old</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030515_073019.7-R1" TYPE="PER-SOC" SUBTYPE="Lasting-Personal" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="CNN_ENG_20030515_073019.7-E6" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030515_073019.7-E8" ROLE="Arg-2"/>
+  <relation_argument REFID="CNN_ENG_20030515_073019.7-T2" ROLE="Time-Within"/>
+  <relation_mention ID="CNN_ENG_20030515_073019.7-R1-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="67" END="187">earlier we talk about a new book claiming that president john kennedy
+had an affair with a white house intern early 1960s</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030515_073019.7-E6-15" ROLE="Arg-1">
+      <extent>
+        <charseq START="114" END="135">president john kennedy</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030515_073019.7-E8-17" ROLE="Arg-2">
+      <extent>
+        <charseq START="156" END="175">a white house intern</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030515_073019.7-T2-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="177" END="187">early 1960s</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030515_073019.7-R2" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030515_073019.7-E9" ROLE="Arg-2"/>
+  <relation_argument REFID="CNN_ENG_20030515_073019.7-T6" ROLE="Time-Within"/>
+  <relation_argument REFID="CNN_ENG_20030515_073019.7-T5" ROLE="Time-Starting"/>
+  <relation_argument REFID="CNN_ENG_20030515_073019.7-E8" ROLE="Arg-1"/>
+  <relation_mention ID="CNN_ENG_20030515_073019.7-R2-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="156" END="175">a white house intern</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030515_073019.7-E8-17" ROLE="Arg-1">
+      <extent>
+        <charseq START="156" END="175">a white house intern</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030515_073019.7-E9-18" ROLE="Arg-2">
+      <extent>
+        <charseq START="158" END="168">white house</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_ENG_20030515_073019.7-R2-2" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="456" END="597">she says she was 19
+at the time, working in d.c. at the white house, 1962, 1963, she says
+today the allegations about her affair are the truth</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030515_073019.7-E9-12" ROLE="Arg-2">
+      <extent>
+        <charseq START="508" END="522">the white house</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030515_073019.7-T6-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="531" END="534">1963</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030515_073019.7-T5-1" ROLE="Time-Starting">
+      <extent>
+        <charseq START="525" END="528">1962</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030515_073019.7-E8-1" ROLE="Arg-1">
+      <extent>
+        <charseq START="465" END="467">she</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030515_073019.7-R3" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030515_073019.7-E8" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030515_073019.7-E1" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030515_073019.7-R3-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="456" END="597">she says she was 19
+at the time, working in d.c. at the white house, 1962, 1963, she says
+today the allegations about her affair are the truth</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030515_073019.7-E8-30" ROLE="Arg-1">
+      <extent>
+        <charseq START="456" END="458">she</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030515_073019.7-E1-2" ROLE="Arg-2">
+      <extent>
+        <charseq START="500" END="502">d.c</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030515_073019.7-R5" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Present" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030515_073019.7-E8" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030515_073019.7-E2" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030515_073019.7-R5-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="600" END="785">right now she
+lives on the upper east side, works at a presbyterian church, has two
+married daughters and after the news is out, after carrying it for 41
+years, she feels better about it</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030515_073019.7-E8-5" ROLE="Arg-1">
+      <extent>
+        <charseq START="610" END="612">she</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030515_073019.7-E2-9" ROLE="Arg-2">
+      <extent>
+        <charseq START="623" END="641">the upper east side</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030515_073019.7-R6" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Present" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030515_073019.7-E8" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030515_073019.7-E4" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030515_073019.7-R6-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="600" END="785">right now she
+lives on the upper east side, works at a presbyterian church, has two
+married daughters and after the news is out, after carrying it for 41
+years, she feels better about it</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030515_073019.7-E8-5" ROLE="Arg-1">
+      <extent>
+        <charseq START="610" END="612">she</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030515_073019.7-E4-13" ROLE="Arg-2">
+      <extent>
+        <charseq START="653" END="673">a presbyterian church</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030515_073019.7-R7" TYPE="PER-SOC" SUBTYPE="Family" TENSE="Present" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030515_073019.7-E8" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030515_073019.7-E3" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030515_073019.7-R7-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="600" END="785">right now she
+lives on the upper east side, works at a presbyterian church, has two
+married daughters and after the news is out, after carrying it for 41
+years, she feels better about it</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030515_073019.7-E8-5" ROLE="Arg-1">
+      <extent>
+        <charseq START="610" END="612">she</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030515_073019.7-E3-10" ROLE="Arg-2">
+      <extent>
+        <charseq START="680" END="700">two
+married daughters</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030515_073019.7-EV1" TYPE="Life" SUBTYPE="Marry" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030515_073019.7-E3" ROLE="Person"/>
+  <event_mention ID="CNN_ENG_20030515_073019.7-EV1-1">
+    <extent>
+      <charseq START="680" END="700">two
+married daughters</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="600" END="785">right now she
+lives on the upper east side, works at a presbyterian church, has two
+married daughters and after the news is out, after carrying it for 41
+years, she feels better about it</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="684" END="690">married</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030515_073019.7-E3-10" ROLE="Person">
+      <extent>
+        <charseq START="680" END="700">two
+married daughters</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

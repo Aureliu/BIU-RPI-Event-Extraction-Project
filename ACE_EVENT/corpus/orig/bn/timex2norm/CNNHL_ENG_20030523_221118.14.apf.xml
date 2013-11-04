@@ -1,0 +1,453 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNNHL_ENG_20030523_221118.14.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNNHL_ENG_20030523_221118.14">
+<entity ID="CNNHL_ENG_20030523_221118.14-E1" TYPE="VEH" SUBTYPE="Water" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030523_221118.14-E1-2" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="293" END="303">the "truman</charseq>
+    </extent>
+    <head>
+      <charseq START="298" END="303">truman</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030523_221118.14-E1-3" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="309" END="365">the first east coast-based carrier
+to return from the war</charseq>
+    </extent>
+    <head>
+      <charseq START="336" END="342">carrier</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030523_221118.14-E1-9" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="156" END="179">the "uss harry s. truman</charseq>
+    </extent>
+    <head>
+      <charseq START="161" END="179">uss harry s. truman</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030523_221118.14-E1-16" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="238" END="259">the aircraft carrier's</charseq>
+    </extent>
+    <head>
+      <charseq START="251" END="257">carrier</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="truman">
+      <charseq START="298" END="303">truman</charseq>
+    </name>
+    <name NAME="uss harry s. truman">
+      <charseq START="161" END="179">uss harry s. truman</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030523_221118.14-E2" TYPE="LOC" SUBTYPE="Region-General" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030523_221118.14-E2-4" TYPE="NAM" LDCTYPE="NAMPRE">
+    <extent>
+      <charseq START="319" END="328">east coast</charseq>
+    </extent>
+    <head>
+      <charseq START="319" END="328">east coast</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="east coast">
+      <charseq START="319" END="328">east coast</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030523_221118.14-E3" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030523_221118.14-E3-1" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="70" END="94">5,400 sailors and marines</charseq>
+    </extent>
+    <head>
+      <charseq START="76" END="82">sailors</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030523_221118.14-E4" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030523_221118.14-E4-5" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="70" END="94">5,400 sailors and marines</charseq>
+    </extent>
+    <head>
+      <charseq START="88" END="94">marines</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030523_221118.14-E5" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030523_221118.14-E5-6" TYPE="NOM" LDCTYPE="BAR" ROLE="LOC">
+    <extent>
+      <charseq START="108" END="111">home</charseq>
+    </extent>
+    <head>
+      <charseq START="108" END="111">home</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030523_221118.14-E6" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030523_221118.14-E6-7" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="130" END="133">iraq</charseq>
+    </extent>
+    <head>
+      <charseq START="130" END="133">iraq</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="iraq">
+      <charseq START="130" END="133">iraq</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030523_221118.14-E7" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030523_221118.14-E7-8" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="136" END="139">they</charseq>
+    </extent>
+    <head>
+      <charseq START="136" END="139">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030523_221118.14-E7-10" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="144" END="179">the crew of the "uss harry s. truman</charseq>
+    </extent>
+    <head>
+      <charseq START="148" END="151">crew</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030523_221118.14-E7-11" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="183" END="186">they</charseq>
+    </extent>
+    <head>
+      <charseq START="183" END="186">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030523_221118.14-E7-12" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="207" END="211">their</charseq>
+    </extent>
+    <head>
+      <charseq START="207" END="211">their</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030523_221118.14-E10" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030523_221118.14-E10-13" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="207" END="232">their families and friends</charseq>
+    </extent>
+    <head>
+      <charseq START="213" END="220">families</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030523_221118.14-E11" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030523_221118.14-E11-14" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="207" END="232">their families and friends</charseq>
+    </extent>
+    <head>
+      <charseq START="226" END="232">friends</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030523_221118.14-E12" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030523_221118.14-E12-15" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="238" END="290">the aircraft carrier's home port in
+norfolk, virginia</charseq>
+    </extent>
+    <head>
+      <charseq START="266" END="269">port</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030523_221118.14-E13" TYPE="VEH" SUBTYPE="Air" CLASS="GEN">
+  <entity_mention ID="CNNHL_ENG_20030523_221118.14-E13-17" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="242" END="249">aircraft</charseq>
+    </extent>
+    <head>
+      <charseq START="242" END="249">aircraft</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030523_221118.14-E14" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030523_221118.14-E14-18" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="274" END="290">norfolk, virginia</charseq>
+    </extent>
+    <head>
+      <charseq START="274" END="280">norfolk</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="norfolk">
+      <charseq START="274" END="280">norfolk</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030523_221118.14-E15" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030523_221118.14-E15-19" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="283" END="290">virginia</charseq>
+    </extent>
+    <head>
+      <charseq START="283" END="290">virginia</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="virginia">
+      <charseq START="283" END="290">virginia</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<timex2 ID="CNNHL_ENG_20030523_221118.14-T1" VAL="2003-05-23T23:13:27">
+  <timex2_mention ID="CNNHL_ENG_20030523_221118.14-T1-1">
+    <extent>
+      <charseq START="46" END="64">2003-05-23 23:13:27</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNNHL_ENG_20030523_221118.14-R1" TYPE="PHYS" SUBTYPE="Located" TENSE="Present" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030523_221118.14-E4" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030523_221118.14-E5" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030523_221118.14-R1-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="70" END="133">5,400 sailors and marines are back at home after serving in iraq</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030523_221118.14-E4-5" ROLE="Arg-1">
+      <extent>
+        <charseq START="70" END="94">5,400 sailors and marines</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030523_221118.14-E5-6" ROLE="Arg-2">
+      <extent>
+        <charseq START="108" END="111">home</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030523_221118.14-R2" TYPE="PHYS" SUBTYPE="Located" TENSE="Present" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030523_221118.14-E3" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030523_221118.14-E5" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030523_221118.14-R2-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="70" END="133">5,400 sailors and marines are back at home after serving in iraq</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030523_221118.14-E3-1" ROLE="Arg-1">
+      <extent>
+        <charseq START="70" END="94">5,400 sailors and marines</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030523_221118.14-E5-6" ROLE="Arg-2">
+      <extent>
+        <charseq START="108" END="111">home</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030523_221118.14-R3" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030523_221118.14-E4" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030523_221118.14-E6" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030523_221118.14-R3-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="70" END="133">5,400 sailors and marines are back at home after serving in iraq</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030523_221118.14-E4-5" ROLE="Arg-1">
+      <extent>
+        <charseq START="70" END="94">5,400 sailors and marines</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030523_221118.14-E6-7" ROLE="Arg-2">
+      <extent>
+        <charseq START="130" END="133">iraq</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030523_221118.14-R4" TYPE="PER-SOC" SUBTYPE="Family" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030523_221118.14-E7" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030523_221118.14-E10" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030523_221118.14-R4-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="207" END="232">their families and friends</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030523_221118.14-E7-12" ROLE="Arg-1">
+      <extent>
+        <charseq START="207" END="211">their</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030523_221118.14-E10-13" ROLE="Arg-2">
+      <extent>
+        <charseq START="207" END="232">their families and friends</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030523_221118.14-R5" TYPE="PER-SOC" SUBTYPE="Lasting-Personal" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030523_221118.14-E7" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030523_221118.14-E11" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030523_221118.14-R5-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="207" END="232">their families and friends</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030523_221118.14-E7-12" ROLE="Arg-1">
+      <extent>
+        <charseq START="207" END="211">their</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030523_221118.14-E11-14" ROLE="Arg-2">
+      <extent>
+        <charseq START="207" END="232">their families and friends</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030523_221118.14-R6" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030523_221118.14-E12" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030523_221118.14-E14" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030523_221118.14-R6-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="238" END="290">the aircraft carrier's home port in
+norfolk, virginia</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030523_221118.14-E12-15" ROLE="Arg-1">
+      <extent>
+        <charseq START="238" END="290">the aircraft carrier's home port in
+norfolk, virginia</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030523_221118.14-E14-18" ROLE="Arg-2">
+      <extent>
+        <charseq START="274" END="290">norfolk, virginia</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030523_221118.14-R7" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030523_221118.14-E14" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030523_221118.14-E15" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030523_221118.14-R7-1" LEXICALCONDITION="Formulaic">
+    <extent>
+      <charseq START="274" END="290">norfolk, virginia</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030523_221118.14-E14-18" ROLE="Arg-1">
+      <extent>
+        <charseq START="274" END="290">norfolk, virginia</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030523_221118.14-E15-19" ROLE="Arg-2">
+      <extent>
+        <charseq START="283" END="290">virginia</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030523_221118.14-R8" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030523_221118.14-E12" ROLE="Arg-2"/>
+  <relation_argument REFID="CNNHL_ENG_20030523_221118.14-E7" ROLE="Arg-1"/>
+  <relation_mention ID="CNNHL_ENG_20030523_221118.14-R8-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="183" END="290">they have reunited with
+their families and friends, at the aircraft carrier's home port in
+norfolk, virginia</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030523_221118.14-E12-15" ROLE="Arg-2">
+      <extent>
+        <charseq START="238" END="290">the aircraft carrier's home port in
+norfolk, virginia</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030523_221118.14-E7-11" ROLE="Arg-1">
+      <extent>
+        <charseq START="183" END="186">they</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030523_221118.14-R9" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030523_221118.14-E3" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030523_221118.14-E6" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030523_221118.14-R9-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="70" END="133">5,400 sailors and marines are back at home after serving in iraq</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030523_221118.14-E3-1" ROLE="Arg-1">
+      <extent>
+        <charseq START="70" END="94">5,400 sailors and marines</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030523_221118.14-E6-7" ROLE="Arg-2">
+      <extent>
+        <charseq START="130" END="133">iraq</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNNHL_ENG_20030523_221118.14-EV1" TYPE="Contact" SUBTYPE="Meet" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNNHL_ENG_20030523_221118.14-E12" ROLE="Place"/>
+  <event_argument REFID="CNNHL_ENG_20030523_221118.14-E7" ROLE="Entity"/>
+  <event_argument REFID="CNNHL_ENG_20030523_221118.14-E10" ROLE="Entity"/>
+  <event_argument REFID="CNNHL_ENG_20030523_221118.14-E11" ROLE="Entity"/>
+  <event_mention ID="CNNHL_ENG_20030523_221118.14-EV1-1">
+    <extent>
+      <charseq START="183" END="290">they have reunited with
+their families and friends, at the aircraft carrier's home port in
+norfolk, virginia</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="183" END="290">they have reunited with
+their families and friends, at the aircraft carrier's home port in
+norfolk, virginia</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="193" END="200">reunited</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030523_221118.14-E12-15" ROLE="Place">
+      <extent>
+        <charseq START="238" END="290">the aircraft carrier's home port in
+norfolk, virginia</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030523_221118.14-E7-11" ROLE="Entity">
+      <extent>
+        <charseq START="183" END="186">they</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030523_221118.14-E10-13" ROLE="Entity">
+      <extent>
+        <charseq START="207" END="232">their families and friends</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030523_221118.14-E11-14" ROLE="Entity">
+      <extent>
+        <charseq START="207" END="232">their families and friends</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNNHL_ENG_20030523_221118.14-EV2" TYPE="Contact" SUBTYPE="Meet" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_mention ID="CNNHL_ENG_20030523_221118.14-EV2-1">
+    <extent>
+      <charseq START="363" END="365">war</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="293" END="365">the "truman" is the first east coast-based carrier
+to return from the war</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="363" END="365">war</charseq>
+    </anchor>
+  </event_mention>
+</event>
+</document>
+</source_file>

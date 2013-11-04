@@ -1,0 +1,2862 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_CF_20030303.1900.00.sgm" SOURCE="broadcast conversation" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_CF_20030303.1900.00">
+<entity ID="CNN_CF_20030303.1900.00-E1" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E1-2" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="490" END="498">Secretary</charseq>
+    </extent>
+    <head>
+      <charseq START="490" END="498">Secretary</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E1-14" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="754" END="793">Secretary of Homeland Security Tom Ridge</charseq>
+    </extent>
+    <head>
+      <charseq START="785" END="793">Tom Ridge</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E1-15" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="754" END="783">Secretary of Homeland Security</charseq>
+    </extent>
+    <head>
+      <charseq START="754" END="762">Secretary</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E1-17" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="798" END="878">another career politician who was passed over by Mr. Bush for the vice
+presidency</charseq>
+    </extent>
+    <head>
+      <charseq START="813" END="822">politician</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E1-18" TYPE="PRO" LDCTYPE="WHQ" LDCATR="TRUE">
+    <extent>
+      <charseq START="824" END="826">who</charseq>
+    </extent>
+    <head>
+      <charseq START="824" END="826">who</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E1-117" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="3104" END="3112">Tom Ridge</charseq>
+    </extent>
+    <head>
+      <charseq START="3104" END="3112">Tom Ridge</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E1-188" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="285" END="318">the
+secretary of homeland security</charseq>
+    </extent>
+    <head>
+      <charseq START="289" END="297">secretary</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E1-190" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="332" END="334">his</charseq>
+    </extent>
+    <head>
+      <charseq START="332" END="334">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E1-198" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="490" END="504">Secretary Ridge</charseq>
+    </extent>
+    <head>
+      <charseq START="500" END="504">Ridge</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Tom Ridge">
+      <charseq START="785" END="793">Tom Ridge</charseq>
+    </name>
+    <name NAME="Tom Ridge">
+      <charseq START="3104" END="3112">Tom Ridge</charseq>
+    </name>
+    <name NAME="Ridge">
+      <charseq START="500" END="504">Ridge</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E2" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E2-3" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="530" END="542">our president</charseq>
+    </extent>
+    <head>
+      <charseq START="534" END="542">president</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E2-19" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="847" END="854">Mr. Bush</charseq>
+    </extent>
+    <head>
+      <charseq START="851" END="854">Bush</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E2-20" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="FALSE">
+    <extent>
+      <charseq START="847" END="848">Mr</charseq>
+    </extent>
+    <head>
+      <charseq START="847" END="848">Mr</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E2-27" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1039" END="1046">Mr. Bush</charseq>
+    </extent>
+    <head>
+      <charseq START="1043" END="1046">Bush</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E2-28" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="FALSE">
+    <extent>
+      <charseq START="1039" END="1040">Mr</charseq>
+    </extent>
+    <head>
+      <charseq START="1039" END="1040">Mr</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E2-74" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1936" END="1948">Our president</charseq>
+    </extent>
+    <head>
+      <charseq START="1940" END="1948">president</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E2-80" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2037" END="2049">Mr. President</charseq>
+    </extent>
+    <head>
+      <charseq START="2041" END="2049">President</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E2-81" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="FALSE">
+    <extent>
+      <charseq START="2037" END="2038">Mr</charseq>
+    </extent>
+    <head>
+      <charseq START="2037" END="2038">Mr</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E2-118" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="3149" END="3162">President
+Bush</charseq>
+    </extent>
+    <head>
+      <charseq START="3159" END="3162">Bush</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E2-119" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="FALSE">
+    <extent>
+      <charseq START="3149" END="3157">President</charseq>
+    </extent>
+    <head>
+      <charseq START="3149" END="3157">President</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E2-124" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="3625" END="3638">President Bush</charseq>
+    </extent>
+    <head>
+      <charseq START="3635" END="3638">Bush</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E2-125" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="FALSE">
+    <extent>
+      <charseq START="3625" END="3633">President</charseq>
+    </extent>
+    <head>
+      <charseq START="3625" END="3633">President</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E2-130" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3708" END="3710">his</charseq>
+    </extent>
+    <head>
+      <charseq START="3708" END="3710">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E2-131" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="3838" END="3845">Mr. Bush</charseq>
+    </extent>
+    <head>
+      <charseq START="3842" END="3845">Bush</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E2-132" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="FALSE">
+    <extent>
+      <charseq START="3838" END="3839">Mr</charseq>
+    </extent>
+    <head>
+      <charseq START="3838" END="3839">Mr</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E2-133" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3904" END="3906">his</charseq>
+    </extent>
+    <head>
+      <charseq START="3904" END="3906">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E2-134" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="4080" END="4087">Mr. Bush</charseq>
+    </extent>
+    <head>
+      <charseq START="4084" END="4087">Bush</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E2-135" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="4080" END="4081">Mr</charseq>
+    </extent>
+    <head>
+      <charseq START="4080" END="4081">Mr</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E2-136" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="4180" END="4193">George W. Bush</charseq>
+    </extent>
+    <head>
+      <charseq START="4180" END="4193">George W. Bush</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E2-137" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="4212" END="4213">he</charseq>
+    </extent>
+    <head>
+      <charseq START="4212" END="4213">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E2-138" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="4252" END="4254">his</charseq>
+    </extent>
+    <head>
+      <charseq START="4252" END="4254">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E2-152" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="4600" END="4603">Bush</charseq>
+    </extent>
+    <head>
+      <charseq START="4600" END="4603">Bush</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E2-153" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="4622" END="4624">his</charseq>
+    </extent>
+    <head>
+      <charseq START="4622" END="4624">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Bush">
+      <charseq START="851" END="854">Bush</charseq>
+    </name>
+    <name NAME="Bush">
+      <charseq START="1043" END="1046">Bush</charseq>
+    </name>
+    <name NAME="Bush">
+      <charseq START="3159" END="3162">Bush</charseq>
+    </name>
+    <name NAME="Bush">
+      <charseq START="3635" END="3638">Bush</charseq>
+    </name>
+    <name NAME="Bush">
+      <charseq START="3842" END="3845">Bush</charseq>
+    </name>
+    <name NAME="Bush">
+      <charseq START="4084" END="4087">Bush</charseq>
+    </name>
+    <name NAME="George W. Bush">
+      <charseq START="4180" END="4193">George W. Bush</charseq>
+    </name>
+    <name NAME="Bush">
+      <charseq START="4600" END="4603">Bush</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E3" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E3-4" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="530" END="532">our</charseq>
+    </extent>
+    <head>
+      <charseq START="530" END="532">our</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E3-5" TYPE="NOM" LDCTYPE="NOMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="551" END="558">homeland</charseq>
+    </extent>
+    <head>
+      <charseq START="551" END="558">homeland</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E3-67" TYPE="NOM" LDCTYPE="NOM" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1814" END="1824">our country</charseq>
+    </extent>
+    <head>
+      <charseq START="1818" END="1824">country</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E3-68" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1814" END="1816">our</charseq>
+    </extent>
+    <head>
+      <charseq START="1814" END="1816">our</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E3-72" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1873" END="1875">our</charseq>
+    </extent>
+    <head>
+      <charseq START="1873" END="1875">our</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E3-75" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1936" END="1938">Our</charseq>
+    </extent>
+    <head>
+      <charseq START="1936" END="1938">Our</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E3-76" TYPE="NOM" LDCTYPE="NOMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1958" END="1965">homeland</charseq>
+    </extent>
+    <head>
+      <charseq START="1958" END="1965">homeland</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E3-115" TYPE="NOM" LDCTYPE="NOMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="3018" END="3025">homeland</charseq>
+    </extent>
+    <head>
+      <charseq START="3018" END="3025">homeland</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E3-141" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="3816" END="3817">we</charseq>
+    </extent>
+    <head>
+      <charseq START="3816" END="3817">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E3-145" TYPE="PRO" LDCTYPE="PRO" ROLE="PER" LDCATR="TRUE">
+    <extent>
+      <charseq START="4147" END="4148">we</charseq>
+    </extent>
+    <head>
+      <charseq START="4147" END="4148">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E3-196" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="435" END="442">American</charseq>
+    </extent>
+    <head>
+      <charseq START="435" END="442">American</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="American">
+      <charseq START="435" END="442">American</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E4" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E4-6" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="585" END="610">Republican political hacks</charseq>
+    </extent>
+    <head>
+      <charseq START="606" END="610">hacks</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E4-69" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1831" END="1841">these
+bozos</charseq>
+    </extent>
+    <head>
+      <charseq START="1837" END="1841">bozos</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E4-73" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1889" END="1892">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1889" END="1892">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E4-77" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1992" END="2014">failed Republican hacks</charseq>
+    </extent>
+    <head>
+      <charseq START="2010" END="2014">hacks</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E5" TYPE="ORG" SUBTYPE="Non-Governmental" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E5-7" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="585" END="594">Republican</charseq>
+    </extent>
+    <head>
+      <charseq START="585" END="594">Republican</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E5-78" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1999" END="2008">Republican</charseq>
+    </extent>
+    <head>
+      <charseq START="1999" END="2008">Republican</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Republican">
+      <charseq START="585" END="594">Republican</charseq>
+    </name>
+    <name NAME="Republican">
+      <charseq START="1999" END="2008">Republican</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E6" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E6-8" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="623" END="635">professionals</charseq>
+    </extent>
+    <head>
+      <charseq START="623" END="635">professionals</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E6-29" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1062" END="1074">professionals</charseq>
+    </extent>
+    <head>
+      <charseq START="1062" END="1074">professionals</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E6-79" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="2022" END="2034">professionals</charseq>
+    </extent>
+    <head>
+      <charseq START="2022" END="2034">professionals</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E7" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E7-9" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="650" END="679">Attorney General John Ashcroft</charseq>
+    </extent>
+    <head>
+      <charseq START="667" END="679">John Ashcroft</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E7-10" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="FALSE">
+    <extent>
+      <charseq START="650" END="665">Attorney General</charseq>
+    </extent>
+    <head>
+      <charseq START="650" END="657">Attorney</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E7-11" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="698" END="716">a career politician</charseq>
+    </extent>
+    <head>
+      <charseq START="707" END="716">politician</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E7-12" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="719" END="720">He</charseq>
+    </extent>
+    <head>
+      <charseq START="719" END="720">He</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E7-98" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2518" END="2530">John Ashcroft</charseq>
+    </extent>
+    <head>
+      <charseq START="2518" END="2530">John Ashcroft</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="John Ashcroft">
+      <charseq START="667" END="679">John Ashcroft</charseq>
+    </name>
+    <name NAME="John Ashcroft">
+      <charseq START="2518" END="2530">John Ashcroft</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E10" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E10-13" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="742" END="751">a dead man</charseq>
+    </extent>
+    <head>
+      <charseq START="749" END="751">man</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E15" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E15-21" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="885" END="936">Deputy Secretary of Homeland Security Asa Hutchinson</charseq>
+    </extent>
+    <head>
+      <charseq START="923" END="936">Asa Hutchinson</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E15-22" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="FALSE">
+    <extent>
+      <charseq START="885" END="921">Deputy Secretary of Homeland Security</charseq>
+    </extent>
+    <head>
+      <charseq START="892" END="900">Secretary</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E15-24" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="941" END="969">yet another career politician</charseq>
+    </extent>
+    <head>
+      <charseq START="960" END="969">politician</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E15-25" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="975" END="1024">a graduate of the disgraceful Bob Jones
+University</charseq>
+    </extent>
+    <head>
+      <charseq START="977" END="984">graduate</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Asa Hutchinson">
+      <charseq START="923" END="936">Asa Hutchinson</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E17" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E17-23" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE">
+    <extent>
+      <charseq START="2763" END="2773">Connecticut</charseq>
+    </extent>
+    <head>
+      <charseq START="2763" END="2773">Connecticut</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Connecticut">
+      <charseq START="2763" END="2773">Connecticut</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E20" TYPE="ORG" SUBTYPE="Educational" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E20-26" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="989" END="1024">the disgraceful Bob Jones
+University</charseq>
+    </extent>
+    <head>
+      <charseq START="1005" END="1024">Bob Jones
+University</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Bob Jones University">
+      <charseq START="1005" END="1024">Bob Jones
+University</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E22" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E22-30" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1182" END="1224">a political -- of a professional
+politician</charseq>
+    </extent>
+    <head>
+      <charseq START="1215" END="1224">politician</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E22-31" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1243" END="1282">somebody who is elected to public office</charseq>
+    </extent>
+    <head>
+      <charseq START="1243" END="1250">somebody</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E22-36" TYPE="PRO" LDCTYPE="WHQ" LDCATR="TRUE">
+    <extent>
+      <charseq START="1252" END="1254">who</charseq>
+    </extent>
+    <head>
+      <charseq START="1252" END="1254">who</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E25" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E25-38" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1292" END="1310">your administration</charseq>
+    </extent>
+    <head>
+      <charseq START="1297" END="1310">administration</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E25-39" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="1313" END="1338">the Clinton administration</charseq>
+    </extent>
+    <head>
+      <charseq START="1325" END="1338">administration</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E27" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E27-40" TYPE="NAM" LDCTYPE="NAMPRE">
+    <extent>
+      <charseq START="1317" END="1323">Clinton</charseq>
+    </extent>
+    <head>
+      <charseq START="1317" END="1323">Clinton</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Clinton">
+      <charseq START="1317" END="1323">Clinton</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E28" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E28-1" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="155" END="156">we</charseq>
+    </extent>
+    <head>
+      <charseq START="155" END="156">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E28-170" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="195" END="196">We</charseq>
+    </extent>
+    <head>
+      <charseq START="195" END="196">We</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E29" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E29-42" TYPE="PRO" LDCTYPE="WHQ" LDCATR="FALSE">
+    <extent>
+      <charseq START="1381" END="1383">who</charseq>
+    </extent>
+    <head>
+      <charseq START="1381" END="1383">who</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E29-43" TYPE="NOM" LDCTYPE="BAR" LDCATR="TRUE">
+    <extent>
+      <charseq START="1409" END="1432">professional
+politicians</charseq>
+    </extent>
+    <head>
+      <charseq START="1422" END="1432">politicians</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E29-56" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1352" END="1608">these
+members of the cabinet who by your definition were professional
+politicians -- Lloyd Bentsen, Les Aspin, William S. Cohen, Janet Reno,
+Bruce Babbitt, Mike Espy, Dan Glickman, Norman Mineta, Henry Cisneros,
+Federico Pena, Bill Richardson, Richard Riley</charseq>
+    </extent>
+    <head>
+      <charseq START="1358" END="1364">members</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E29-66" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1785" END="1788">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1785" END="1788">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E29-154" TYPE="PRO" LDCTYPE="PTV" LDCATR="FALSE">
+    <extent>
+      <charseq START="1611" END="1620">12 of them</charseq>
+    </extent>
+    <head>
+      <charseq START="1611" END="1612">12</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E29-181" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1611" END="1620">12 of them</charseq>
+    </extent>
+    <head>
+      <charseq START="1617" END="1620">them</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E31" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E31-44" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1437" END="1449">Lloyd Bentsen</charseq>
+    </extent>
+    <head>
+      <charseq START="1437" END="1449">Lloyd Bentsen</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Lloyd Bentsen">
+      <charseq START="1437" END="1449">Lloyd Bentsen</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E32" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E32-45" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1452" END="1460">Les Aspin</charseq>
+    </extent>
+    <head>
+      <charseq START="1452" END="1460">Les Aspin</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Les Aspin">
+      <charseq START="1452" END="1460">Les Aspin</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E33" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E33-46" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1463" END="1478">William S. Cohen</charseq>
+    </extent>
+    <head>
+      <charseq START="1463" END="1478">William S. Cohen</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="William S. Cohen">
+      <charseq START="1463" END="1478">William S. Cohen</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E34" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E34-47" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1481" END="1490">Janet Reno</charseq>
+    </extent>
+    <head>
+      <charseq START="1481" END="1490">Janet Reno</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E34-86" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2174" END="2183">Janet Reno</charseq>
+    </extent>
+    <head>
+      <charseq START="2174" END="2183">Janet Reno</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E34-87" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2189" END="2207">a career prosecutor</charseq>
+    </extent>
+    <head>
+      <charseq START="2198" END="2207">prosecutor</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E34-94" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2459" END="2468">Janet Reno</charseq>
+    </extent>
+    <head>
+      <charseq START="2459" END="2468">Janet Reno</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E34-95" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="2474" END="2492">a career prosecutor</charseq>
+    </extent>
+    <head>
+      <charseq START="2483" END="2492">prosecutor</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E34-96" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2559" END="2568">Janet Reno</charseq>
+    </extent>
+    <head>
+      <charseq START="2559" END="2568">Janet Reno</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E34-178" TYPE="PRO" LDCTYPE="WHQ" LDCATR="FALSE">
+    <extent>
+      <charseq START="2554" END="2557">that</charseq>
+    </extent>
+    <head>
+      <charseq START="2554" END="2557">that</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Janet Reno">
+      <charseq START="1481" END="1490">Janet Reno</charseq>
+    </name>
+    <name NAME="Janet Reno">
+      <charseq START="2174" END="2183">Janet Reno</charseq>
+    </name>
+    <name NAME="Janet Reno">
+      <charseq START="2459" END="2468">Janet Reno</charseq>
+    </name>
+    <name NAME="Janet Reno">
+      <charseq START="2559" END="2568">Janet Reno</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E35" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E35-48" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1493" END="1505">Bruce Babbitt</charseq>
+    </extent>
+    <head>
+      <charseq START="1493" END="1505">Bruce Babbitt</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Bruce Babbitt">
+      <charseq START="1493" END="1505">Bruce Babbitt</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E36" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E36-49" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1508" END="1516">Mike Espy</charseq>
+    </extent>
+    <head>
+      <charseq START="1508" END="1516">Mike Espy</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Mike Espy">
+      <charseq START="1508" END="1516">Mike Espy</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E37" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E37-50" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1519" END="1530">Dan Glickman</charseq>
+    </extent>
+    <head>
+      <charseq START="1519" END="1530">Dan Glickman</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Dan Glickman">
+      <charseq START="1519" END="1530">Dan Glickman</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E38" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E38-51" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1533" END="1545">Norman Mineta</charseq>
+    </extent>
+    <head>
+      <charseq START="1533" END="1545">Norman Mineta</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Norman Mineta">
+      <charseq START="1533" END="1545">Norman Mineta</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E39" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E39-52" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1548" END="1561">Henry Cisneros</charseq>
+    </extent>
+    <head>
+      <charseq START="1548" END="1561">Henry Cisneros</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Henry Cisneros">
+      <charseq START="1548" END="1561">Henry Cisneros</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E40" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E40-53" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1564" END="1576">Federico Pena</charseq>
+    </extent>
+    <head>
+      <charseq START="1564" END="1576">Federico Pena</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Federico Pena">
+      <charseq START="1564" END="1576">Federico Pena</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E41" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E41-54" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1579" END="1593">Bill Richardson</charseq>
+    </extent>
+    <head>
+      <charseq START="1579" END="1593">Bill Richardson</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Bill Richardson">
+      <charseq START="1579" END="1593">Bill Richardson</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E42" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E42-55" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1596" END="1608">Richard Riley</charseq>
+    </extent>
+    <head>
+      <charseq START="1596" END="1608">Richard Riley</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Richard Riley">
+      <charseq START="1596" END="1608">Richard Riley</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E43" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E43-59" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1638" END="1682">former Democratic National Chairman Ron Brown</charseq>
+    </extent>
+    <head>
+      <charseq START="1674" END="1682">Ron Brown</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E43-60" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1638" END="1672">former Democratic National Chairman</charseq>
+    </extent>
+    <head>
+      <charseq START="1665" END="1672">Chairman</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Ron Brown">
+      <charseq START="1674" END="1682">Ron Brown</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E45" TYPE="ORG" SUBTYPE="Non-Governmental" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E45-61" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1645" END="1654">Democratic</charseq>
+    </extent>
+    <head>
+      <charseq START="1645" END="1654">Democratic</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E45-91" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="2285" END="2294">Democratic</charseq>
+    </extent>
+    <head>
+      <charseq START="2285" END="2294">Democratic</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E45-100" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="2603" END="2612">Democratic</charseq>
+    </extent>
+    <head>
+      <charseq START="2603" END="2612">Democratic</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Democratic">
+      <charseq START="1645" END="1654">Democratic</charseq>
+    </name>
+    <name NAME="Democratic">
+      <charseq START="2285" END="2294">Democratic</charseq>
+    </name>
+    <name NAME="Democratic">
+      <charseq START="2603" END="2612">Democratic</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E46" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E46-63" TYPE="PRO" LDCTYPE="PTV" LDCATR="FALSE">
+    <extent>
+      <charseq START="1689" END="1741">one of the great
+professional politicians of all time</charseq>
+    </extent>
+    <head>
+      <charseq START="1689" END="1691">one</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E46-64" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="1744" END="1752">Bill Daly</charseq>
+    </extent>
+    <head>
+      <charseq START="1744" END="1752">Bill Daly</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Bill Daly">
+      <charseq START="1744" END="1752">Bill Daly</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E48" TYPE="PER" SUBTYPE="Indeterminate" CLASS="USP">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E48-65" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1770" END="1772">you</charseq>
+    </extent>
+    <head>
+      <charseq START="1770" END="1772">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E48-139" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="4268" END="4270">you</charseq>
+    </extent>
+    <head>
+      <charseq START="4268" END="4270">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E48-140" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="4137" END="4139">You</charseq>
+    </extent>
+    <head>
+      <charseq START="4137" END="4139">You</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E52" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E52-82" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="2092" END="2115">professional politicians</charseq>
+    </extent>
+    <head>
+      <charseq START="2105" END="2115">politicians</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E53" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E53-83" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2120" END="2141">the Justice
+Department</charseq>
+    </extent>
+    <head>
+      <charseq START="2124" END="2141">Justice
+Department</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E53-93" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2335" END="2356">the Justice Department</charseq>
+    </extent>
+    <head>
+      <charseq START="2339" END="2356">Justice Department</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Justice Department">
+      <charseq START="2124" END="2141">Justice
+Department</charseq>
+    </name>
+    <name NAME="Justice Department">
+      <charseq START="2339" END="2356">Justice Department</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E54" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E54-84" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2147" END="2158">the Pentagon</charseq>
+    </extent>
+    <head>
+      <charseq START="2151" END="2158">Pentagon</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E54-92" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2318" END="2329">the Pentagon</charseq>
+    </extent>
+    <head>
+      <charseq START="2322" END="2329">Pentagon</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Pentagon">
+      <charseq START="2151" END="2158">Pentagon</charseq>
+    </name>
+    <name NAME="Pentagon">
+      <charseq START="2322" END="2329">Pentagon</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E55" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E55-85" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="905" END="921">Homeland Security</charseq>
+    </extent>
+    <head>
+      <charseq START="905" END="921">Homeland Security</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E55-161" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="767" END="783">Homeland Security</charseq>
+    </extent>
+    <head>
+      <charseq START="767" END="783">Homeland Security</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E55-162" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="302" END="318">homeland security</charseq>
+    </extent>
+    <head>
+      <charseq START="302" END="318">homeland security</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Homeland Security">
+      <charseq START="905" END="921">Homeland Security</charseq>
+    </name>
+    <name NAME="Homeland Security">
+      <charseq START="767" END="783">Homeland Security</charseq>
+    </name>
+    <name NAME="homeland security">
+      <charseq START="302" END="318">homeland security</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E57" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E57-90" TYPE="NOM" LDCTYPE="BAR" LDCATR="FALSE">
+    <extent>
+      <charseq START="2285" END="2313">Democratic career politicians</charseq>
+    </extent>
+    <head>
+      <charseq START="2303" END="2313">politicians</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E57-174" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2361" END="2364">they</charseq>
+    </extent>
+    <head>
+      <charseq START="2361" END="2364">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E57-175" TYPE="NOM" LDCTYPE="BAR" LDCATR="TRUE">
+    <extent>
+      <charseq START="2369" END="2377">Democrats</charseq>
+    </extent>
+    <head>
+      <charseq START="2369" END="2377">Democrats</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E60" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E60-97" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2824" END="2860">the 10th candidate for the nomination</charseq>
+    </extent>
+    <head>
+      <charseq START="2833" END="2841">candidate</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E61" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E61-41" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2808" END="2809">he</charseq>
+    </extent>
+    <head>
+      <charseq START="2808" END="2809">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E61-99" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2585" END="2635">Another potential Democratic presidential candidate</charseq>
+    </extent>
+    <head>
+      <charseq START="2627" END="2635">candidate</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E61-101" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2666" END="2667">he</charseq>
+    </extent>
+    <head>
+      <charseq START="2666" END="2667">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E61-102" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2879" END="2888">Chris Dodd</charseq>
+    </extent>
+    <head>
+      <charseq START="2879" END="2888">Chris Dodd</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E61-103" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2674" END="2676">his</charseq>
+    </extent>
+    <head>
+      <charseq START="2674" END="2676">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E61-104" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2735" END="2773">Senator Christopher Dodd of Connecticut</charseq>
+    </extent>
+    <head>
+      <charseq START="2743" END="2758">Christopher Dodd</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E61-105" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="FALSE">
+    <extent>
+      <charseq START="2735" END="2741">Senator</charseq>
+    </extent>
+    <head>
+      <charseq START="2735" END="2741">Senator</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E61-106" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2961" END="2962">He</charseq>
+    </extent>
+    <head>
+      <charseq START="2961" END="2962">He</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E61-107" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2974" END="2975">he</charseq>
+    </extent>
+    <head>
+      <charseq START="2974" END="2975">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E61-108" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="3265" END="3276">Senator Dodd</charseq>
+    </extent>
+    <head>
+      <charseq START="3273" END="3276">Dodd</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E61-109" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="3265" END="3271">Senator</charseq>
+    </extent>
+    <head>
+      <charseq START="3265" END="3271">Senator</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E61-110" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3279" END="3280">He</charseq>
+    </extent>
+    <head>
+      <charseq START="3279" END="3280">He</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E61-111" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3320" END="3321">He</charseq>
+    </extent>
+    <head>
+      <charseq START="3320" END="3321">He</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E61-112" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3387" END="3388">he</charseq>
+    </extent>
+    <head>
+      <charseq START="3387" END="3388">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Chris Dodd">
+      <charseq START="2879" END="2888">Chris Dodd</charseq>
+    </name>
+    <name NAME="Christopher Dodd">
+      <charseq START="2743" END="2758">Christopher Dodd</charseq>
+    </name>
+    <name NAME="Dodd">
+      <charseq START="3273" END="3276">Dodd</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E65" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E65-113" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2921" END="2939">Carol Moseley-Braun</charseq>
+    </extent>
+    <head>
+      <charseq START="2921" END="2939">Carol Moseley-Braun</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Carol Moseley-Braun">
+      <charseq START="2921" END="2939">Carol Moseley-Braun</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E66" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E66-114" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2944" END="2958">Dennis Kucinich</charseq>
+    </extent>
+    <head>
+      <charseq START="2944" END="2958">Dennis Kucinich</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Dennis Kucinich">
+      <charseq START="2944" END="2958">Dennis Kucinich</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E70" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E70-126" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="3576" END="3596">two
+million Americans</charseq>
+    </extent>
+    <head>
+      <charseq START="3588" END="3596">Americans</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E70-127" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3608" END="3612">their</charseq>
+    </extent>
+    <head>
+      <charseq START="3608" END="3612">their</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E71" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E71-128" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3663" END="3675">three of them</charseq>
+    </extent>
+    <head>
+      <charseq START="3672" END="3675">them</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E71-129" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="3683" END="3724">the top three leaders of his economic
+team</charseq>
+    </extent>
+    <head>
+      <charseq START="3697" END="3703">leaders</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E75" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E75-142" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="3832" END="3835">Iraq</charseq>
+    </extent>
+    <head>
+      <charseq START="3832" END="3835">Iraq</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Iraq">
+      <charseq START="3832" END="3835">Iraq</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E76" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E76-143" TYPE="PRO" LDCTYPE="PTV">
+    <extent>
+      <charseq START="3897" END="3912">One of his aides</charseq>
+    </extent>
+    <head>
+      <charseq START="3897" END="3899">One</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E77" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E77-144" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="3942" END="3956">TIME," magazine</charseq>
+    </extent>
+    <head>
+      <charseq START="3942" END="3956">TIME," magazine</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="TIME, magazine">
+      <charseq START="3942" END="3956">TIME," magazine</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E78" TYPE="PER" SUBTYPE="Indeterminate" CLASS="GEN">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E78-155" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="1919" END="1927">terrorist</charseq>
+    </extent>
+    <head>
+      <charseq START="1919" END="1927">terrorist</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E79" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E79-156" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="3339" END="3348">the Senate</charseq>
+    </extent>
+    <head>
+      <charseq START="3343" END="3348">Senate</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Senate">
+      <charseq START="3343" END="3348">Senate</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E80" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E80-157" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="3433" END="3455">the Commerce Department</charseq>
+    </extent>
+    <head>
+      <charseq START="3437" END="3455">Commerce Department</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Commerce Department">
+      <charseq START="3437" END="3455">Commerce Department</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E81" TYPE="PER" SUBTYPE="Indeterminate" CLASS="GEN">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E81-158" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="3476" END="3483">consumer</charseq>
+    </extent>
+    <head>
+      <charseq START="3476" END="3483">consumer</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E82" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E82-163" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1369" END="1379">the cabinet</charseq>
+    </extent>
+    <head>
+      <charseq START="1373" END="1379">cabinet</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E83" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E83-166" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="3708" END="3724">his economic
+team</charseq>
+    </extent>
+    <head>
+      <charseq START="3721" END="3724">team</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E84" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E84-167" TYPE="PRO" LDCTYPE="PTV">
+    <extent>
+      <charseq START="206" END="224">a couple of
+experts</charseq>
+    </extent>
+    <head>
+      <charseq START="208" END="213">couple</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E85" TYPE="ORG" SUBTYPE="Commercial" CLASS="USP">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E85-151" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="3523" END="3546">the manufacturing sector</charseq>
+    </extent>
+    <head>
+      <charseq START="3541" END="3546">sector</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E86" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E86-16" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="141" END="146">BEGALA</charseq>
+    </extent>
+    <head>
+      <charseq START="141" END="146">BEGALA</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E86-32" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1141" END="1144">Paul</charseq>
+    </extent>
+    <head>
+      <charseq START="1141" END="1144">Paul</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E86-33" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1163" END="1166">your</charseq>
+    </extent>
+    <head>
+      <charseq START="1163" END="1166">your</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E86-34" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1292" END="1295">your</charseq>
+    </extent>
+    <head>
+      <charseq START="1292" END="1295">your</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E86-35" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1388" END="1391">your</charseq>
+    </extent>
+    <head>
+      <charseq START="1388" END="1391">your</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E86-57" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1758" END="1763">BEGALA</charseq>
+    </extent>
+    <head>
+      <charseq START="1758" END="1763">BEGALA</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E86-120" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3225" END="3225">I</charseq>
+    </extent>
+    <head>
+      <charseq START="3225" END="3225">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E86-121" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3247" END="3247">I</charseq>
+    </extent>
+    <head>
+      <charseq START="3247" END="3247">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E86-122" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3258" END="3258">I</charseq>
+    </extent>
+    <head>
+      <charseq START="3258" END="3258">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E86-123" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3373" END="3373">I</charseq>
+    </extent>
+    <head>
+      <charseq START="3373" END="3373">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E86-147" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="4300" END="4302">you</charseq>
+    </extent>
+    <head>
+      <charseq START="4300" END="4302">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E86-148" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="4338" END="4340">you</charseq>
+    </extent>
+    <head>
+      <charseq START="4338" END="4340">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E86-149" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="4363" END="4365">you</charseq>
+    </extent>
+    <head>
+      <charseq START="4363" END="4365">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E86-150" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="4549" END="4556">Virginia</charseq>
+    </extent>
+    <head>
+      <charseq START="4549" END="4556">Virginia</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E86-159" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2166" END="2171">BEGALA</charseq>
+    </extent>
+    <head>
+      <charseq START="2166" END="2171">BEGALA</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E86-160" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="239" END="239">I</charseq>
+    </extent>
+    <head>
+      <charseq START="239" END="239">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E86-164" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2429" END="2434">BEGALA</charseq>
+    </extent>
+    <head>
+      <charseq START="2429" END="2434">BEGALA</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E86-165" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2510" END="2515">BEGALA</charseq>
+    </extent>
+    <head>
+      <charseq START="2510" END="2515">BEGALA</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E86-169" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="3212" END="3217">BEGALA</charseq>
+    </extent>
+    <head>
+      <charseq START="3212" END="3217">BEGALA</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E86-172" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="4584" END="4589">BEGALA</charseq>
+    </extent>
+    <head>
+      <charseq START="4584" END="4589">BEGALA</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E86-173" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="4675" END="4680">BEGALA</charseq>
+    </extent>
+    <head>
+      <charseq START="4675" END="4680">BEGALA</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E86-187" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="253" END="254">my</charseq>
+    </extent>
+    <head>
+      <charseq START="253" END="254">my</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="BEGALA">
+      <charseq START="141" END="146">BEGALA</charseq>
+    </name>
+    <name NAME="Paul">
+      <charseq START="1141" END="1144">Paul</charseq>
+    </name>
+    <name NAME="BEGALA">
+      <charseq START="1758" END="1763">BEGALA</charseq>
+    </name>
+    <name NAME="Virginia">
+      <charseq START="4549" END="4556">Virginia</charseq>
+    </name>
+    <name NAME="BEGALA">
+      <charseq START="2166" END="2171">BEGALA</charseq>
+    </name>
+    <name NAME="BEGALA">
+      <charseq START="2429" END="2434">BEGALA</charseq>
+    </name>
+    <name NAME="BEGALA">
+      <charseq START="2510" END="2515">BEGALA</charseq>
+    </name>
+    <name NAME="BEGALA">
+      <charseq START="3212" END="3217">BEGALA</charseq>
+    </name>
+    <name NAME="BEGALA">
+      <charseq START="4584" END="4589">BEGALA</charseq>
+    </name>
+    <name NAME="BEGALA">
+      <charseq START="4675" END="4680">BEGALA</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E87" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E87-168" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="3904" END="3912">his aides</charseq>
+    </extent>
+    <head>
+      <charseq START="3908" END="3912">aides</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E88" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E88-171" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="332" END="341">his people</charseq>
+    </extent>
+    <head>
+      <charseq START="336" END="341">people</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E90" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E90-176" TYPE="NOM" LDCTYPE="BAR" LDCATR="TRUE">
+    <extent>
+      <charseq START="2398" END="2408">Republicans</charseq>
+    </extent>
+    <head>
+      <charseq START="2398" END="2408">Republicans</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E90-177" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2390" END="2393">they</charseq>
+    </extent>
+    <head>
+      <charseq START="2390" END="2393">they</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E92" TYPE="PER" SUBTYPE="Individual" CLASS="USP">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E92-179" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2539" END="2572">half the woman that Janet Reno was</charseq>
+    </extent>
+    <head>
+      <charseq START="2548" END="2552">woman</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E95" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E95-189" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="206" END="224">a couple of
+experts</charseq>
+    </extent>
+    <head>
+      <charseq START="218" END="224">experts</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E96" TYPE="VEH" SUBTYPE="Water" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E96-192" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="369" END="423">a 30-foot Cuban patrol boat with four heavily armed men</charseq>
+    </extent>
+    <head>
+      <charseq START="392" END="395">boat</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E97" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E97-193" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="379" END="383">Cuban</charseq>
+    </extent>
+    <head>
+      <charseq START="379" END="383">Cuban</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Cuban">
+      <charseq START="379" END="383">Cuban</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E98" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E98-70" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1847" END="1863">four armed Cubans</charseq>
+    </extent>
+    <head>
+      <charseq START="1858" END="1863">Cubans</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E98-194" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="402" END="423">four heavily armed men</charseq>
+    </extent>
+    <head>
+      <charseq START="421" END="423">men</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E99" TYPE="LOC" SUBTYPE="Region-General" CLASS="USP">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E99-71" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1873" END="1882">our shores</charseq>
+    </extent>
+    <head>
+      <charseq START="1877" END="1882">shores</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E99-195" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="435" END="449">American shores</charseq>
+    </extent>
+    <head>
+      <charseq START="444" END="449">shores</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E101" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E101-88" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2239" END="2240">me</charseq>
+    </extent>
+    <head>
+      <charseq START="2239" END="2240">me</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E101-89" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2249" END="2250">my</charseq>
+    </extent>
+    <head>
+      <charseq START="2249" END="2250">my</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E101-116" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3075" END="3075">I</charseq>
+    </extent>
+    <head>
+      <charseq START="3075" END="3075">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E101-146" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="4292" END="4293">me</charseq>
+    </extent>
+    <head>
+      <charseq START="4292" END="4293">me</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E101-180" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1134" END="1138">NOVAK</charseq>
+    </extent>
+    <head>
+      <charseq START="1134" END="1138">NOVAK</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E101-182" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2055" END="2059">NOVAK</charseq>
+    </extent>
+    <head>
+      <charseq START="2055" END="2059">NOVAK</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E101-183" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2213" END="2217">NOVAK</charseq>
+    </extent>
+    <head>
+      <charseq START="2213" END="2217">NOVAK</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E101-184" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2578" END="2582">NOVAK</charseq>
+    </extent>
+    <head>
+      <charseq START="2578" END="2582">NOVAK</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E101-185" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="4281" END="4285">NOVAK</charseq>
+    </extent>
+    <head>
+      <charseq START="4281" END="4285">NOVAK</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E101-186" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="4639" END="4643">NOVAK</charseq>
+    </extent>
+    <head>
+      <charseq START="4639" END="4643">NOVAK</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030303.1900.00-E101-191" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1150" END="1150">I</charseq>
+    </extent>
+    <head>
+      <charseq START="1150" END="1150">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="NOVAK">
+      <charseq START="1134" END="1138">NOVAK</charseq>
+    </name>
+    <name NAME="NOVAK">
+      <charseq START="2055" END="2059">NOVAK</charseq>
+    </name>
+    <name NAME="NOVAK">
+      <charseq START="2213" END="2217">NOVAK</charseq>
+    </name>
+    <name NAME="NOVAK">
+      <charseq START="2578" END="2582">NOVAK</charseq>
+    </name>
+    <name NAME="NOVAK">
+      <charseq START="4281" END="4285">NOVAK</charseq>
+    </name>
+    <name NAME="NOVAK">
+      <charseq START="4639" END="4643">NOVAK</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030303.1900.00-E102" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030303.1900.00-E102-197" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="474" END="488">the Coast Guard</charseq>
+    </extent>
+    <head>
+      <charseq START="478" END="488">Coast Guard</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Coast Guard">
+      <charseq START="478" END="488">Coast Guard</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<value ID="CNN_CF_20030303.1900.00-V1" TYPE="Job-Title">
+  <value_mention ID="CNN_CF_20030303.1900.00-V1-1">
+    <extent>
+      <charseq START="1645" END="1672">Democratic National Chairman</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_CF_20030303.1900.00-V2" TYPE="Job-Title">
+  <value_mention ID="CNN_CF_20030303.1900.00-V2-1">
+    <extent>
+      <charseq START="1270" END="1282">public office</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_CF_20030303.1900.00-V3" TYPE="Numeric" SUBTYPE="Money">
+  <value_mention ID="CNN_CF_20030303.1900.00-V3-1">
+    <extent>
+      <charseq START="3757" END="3768">$300 billion</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_CF_20030303.1900.00-V4" TYPE="Numeric" SUBTYPE="Money">
+  <value_mention ID="CNN_CF_20030303.1900.00-V4-1">
+    <extent>
+      <charseq START="3800" END="3811">$500 billion</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_CF_20030303.1900.00-V5" TYPE="Numeric" SUBTYPE="Money">
+  <value_mention ID="CNN_CF_20030303.1900.00-V5-1">
+    <extent>
+      <charseq START="3980" END="3991">$500 billion</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_CF_20030303.1900.00-V6" TYPE="Numeric" SUBTYPE="Money">
+  <value_mention ID="CNN_CF_20030303.1900.00-V6-1">
+    <extent>
+      <charseq START="4022" END="4033">$500 billion</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_CF_20030303.1900.00-V7" TYPE="Numeric" SUBTYPE="Money">
+  <value_mention ID="CNN_CF_20030303.1900.00-V7-1">
+    <extent>
+      <charseq START="4068" END="4078">$3
+trillion</charseq>
+    </extent>
+  </value_mention>
+</value>
+<timex2 ID="CNN_CF_20030303.1900.00-T1" VAL="PRESENT_REF" ANCHOR_VAL="2003-03-03T19:00:00" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_CF_20030303.1900.00-T1-1">
+    <extent>
+      <charseq START="3750" END="3752">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_CF_20030303.1900.00-T2" VAL="PRESENT_REF" ANCHOR_VAL="2003-03-03-T19:00:00" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_CF_20030303.1900.00-T2-1">
+    <extent>
+      <charseq START="1285" END="1287">Now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_CF_20030303.1900.00-T3" VAL="FUTURE_REF" ANCHOR_VAL="2003-03-03-T19:00:00" ANCHOR_DIR="AFTER">
+  <timex2_mention ID="CNN_CF_20030303.1900.00-T3-1">
+    <extent>
+      <charseq START="271" END="274">then</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_CF_20030303.1900.00-T4" VAL="2003-02">
+  <timex2_mention ID="CNN_CF_20030303.1900.00-T4-1">
+    <extent>
+      <charseq START="357" END="366">last
+month</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_CF_20030303.1900.00-T5" VAL="2003-03-03T19:00:00">
+  <timex2_mention ID="CNN_CF_20030303.1900.00-T5-1">
+    <extent>
+      <charseq START="506" END="508">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_CF_20030303.1900.00-T6" VAL="2003-03-03T19:00:00-05">
+  <timex2_mention ID="CNN_CF_20030303.1900.00-T6-1">
+    <extent>
+      <charseq START="36" END="60">2003-03-03T19:00:00-05:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_CF_20030303.1900.00-T7" VAL="PAST_REF" ANCHOR_VAL="2003-03-03-T19:00:00" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="CNN_CF_20030303.1900.00-T7-1">
+    <extent>
+      <charseq START="1638" END="1643">former</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_CF_20030303.1900.00-T8" VAL="2003-03-03">
+  <timex2_mention ID="CNN_CF_20030303.1900.00-T8-1">
+    <extent>
+      <charseq START="2797" END="2801">today</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_CF_20030303.1900.00-T9" VAL="P2Y" ANCHOR_VAL="2003" ANCHOR_DIR="STARTING">
+  <timex2_mention ID="CNN_CF_20030303.1900.00-T9-1">
+    <extent>
+      <charseq START="2996" END="3013">the next two years</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_CF_20030303.1900.00-T10" VAL="P2Y" ANCHOR_VAL="2003" ANCHOR_DIR="STARTING">
+  <timex2_mention ID="CNN_CF_20030303.1900.00-T10-1">
+    <extent>
+      <charseq START="3198" END="3206">two years</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_CF_20030303.1900.00-T11" VAL="2003-03-03">
+  <timex2_mention ID="CNN_CF_20030303.1900.00-T11-1">
+    <extent>
+      <charseq START="3465" END="3469">today</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_CF_20030303.1900.00-T12" VAL="2003-01">
+  <timex2_mention ID="CNN_CF_20030303.1900.00-T12-1">
+    <extent>
+      <charseq START="3506" END="3512">January</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_CF_20030303.1900.00-T13" VAL="2003-02">
+  <timex2_mention ID="CNN_CF_20030303.1900.00-T13-1">
+    <extent>
+      <charseq START="3558" END="3565">February</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_CF_20030303.1900.00-T14" VAL="PRESENT_REF" ANCHOR_VAL="2003-03-03-T19:00:00" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_CF_20030303.1900.00-T14-1">
+    <extent>
+      <charseq START="3924" END="3930">current</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_CF_20030303.1900.00-T15" VAL="P60Y" ANCHOR_VAL="2003-03-03" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="CNN_CF_20030303.1900.00-T15-1">
+    <extent>
+      <charseq START="4706" END="4713">60 years</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_CF_20030303.1900.00-R2" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030303.1900.00-E99" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030303.1900.00-E3" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030303.1900.00-R2-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="1873" END="1882">our shores</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030303.1900.00-E99-71" ROLE="Arg-1">
+      <extent>
+        <charseq START="1873" END="1882">our shores</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030303.1900.00-E3-72" ROLE="Arg-2">
+      <extent>
+        <charseq START="1873" END="1875">our</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_CF_20030303.1900.00-R2-2" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="435" END="449">American shores</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030303.1900.00-E99-195" ROLE="Arg-1">
+      <extent>
+        <charseq START="435" END="449">American shores</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030303.1900.00-E3-196" ROLE="Arg-2">
+      <extent>
+        <charseq START="435" END="442">American</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030303.1900.00-R3" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030303.1900.00-E2" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030303.1900.00-E3" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030303.1900.00-R3-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="1936" END="1948">Our president</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030303.1900.00-E2-74" ROLE="Arg-1">
+      <extent>
+        <charseq START="1936" END="1948">Our president</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030303.1900.00-E3-75" ROLE="Arg-2">
+      <extent>
+        <charseq START="1936" END="1938">Our</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_CF_20030303.1900.00-R3-2" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="530" END="542">our president</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030303.1900.00-E2-3" ROLE="Arg-1">
+      <extent>
+        <charseq START="530" END="542">our president</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030303.1900.00-E3-4" ROLE="Arg-2">
+      <extent>
+        <charseq START="530" END="532">our</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030303.1900.00-R4" TYPE="ORG-AFF" SUBTYPE="Membership" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030303.1900.00-E4" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030303.1900.00-E5" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030303.1900.00-R4-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="1992" END="2014">failed Republican hacks</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030303.1900.00-E4-77" ROLE="Arg-1">
+      <extent>
+        <charseq START="1992" END="2014">failed Republican hacks</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030303.1900.00-E5-78" ROLE="Arg-2">
+      <extent>
+        <charseq START="1999" END="2008">Republican</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_CF_20030303.1900.00-R4-2" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="585" END="610">Republican political hacks</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030303.1900.00-E4-6" ROLE="Arg-1">
+      <extent>
+        <charseq START="585" END="610">Republican political hacks</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030303.1900.00-E5-7" ROLE="Arg-2">
+      <extent>
+        <charseq START="585" END="594">Republican</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030303.1900.00-R5" TYPE="PER-SOC" SUBTYPE="Business" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030303.1900.00-E2" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030303.1900.00-E83" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030303.1900.00-R5-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="3708" END="3724">his economic
+team</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030303.1900.00-E2-130" ROLE="Arg-1">
+      <extent>
+        <charseq START="3708" END="3710">his</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030303.1900.00-E83-166" ROLE="Arg-2">
+      <extent>
+        <charseq START="3708" END="3724">his economic
+team</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030303.1900.00-R6" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030303.1900.00-E97" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030303.1900.00-E96" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030303.1900.00-R6-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="369" END="423">a 30-foot Cuban patrol boat with four heavily armed men</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030303.1900.00-E97-193" ROLE="Arg-1">
+      <extent>
+        <charseq START="379" END="383">Cuban</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030303.1900.00-E96-192" ROLE="Arg-2">
+      <extent>
+        <charseq START="369" END="423">a 30-foot Cuban patrol boat with four heavily armed men</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030303.1900.00-R7" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030303.1900.00-E98" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030303.1900.00-E96" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030303.1900.00-R7-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="369" END="423">a 30-foot Cuban patrol boat with four heavily armed men</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030303.1900.00-E98-194" ROLE="Arg-1">
+      <extent>
+        <charseq START="402" END="423">four heavily armed men</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030303.1900.00-E96-192" ROLE="Arg-2">
+      <extent>
+        <charseq START="369" END="423">a 30-foot Cuban patrol boat with four heavily armed men</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030303.1900.00-R10" TYPE="ORG-AFF" SUBTYPE="Membership" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030303.1900.00-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030303.1900.00-E55" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030303.1900.00-R10-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="754" END="783">Secretary of Homeland Security</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030303.1900.00-E1-15" ROLE="Arg-1">
+      <extent>
+        <charseq START="754" END="783">Secretary of Homeland Security</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030303.1900.00-E55-161" ROLE="Arg-2">
+      <extent>
+        <charseq START="767" END="783">Homeland Security</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_CF_20030303.1900.00-R10-2" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="285" END="318">the
+secretary of homeland security</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030303.1900.00-E1-188" ROLE="Arg-1">
+      <extent>
+        <charseq START="285" END="318">the
+secretary of homeland security</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030303.1900.00-E55-162" ROLE="Arg-2">
+      <extent>
+        <charseq START="302" END="318">homeland security</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030303.1900.00-R11" TYPE="ORG-AFF" SUBTYPE="Membership" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030303.1900.00-E15" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030303.1900.00-E55" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030303.1900.00-R11-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="885" END="921">Deputy Secretary of Homeland Security</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030303.1900.00-E15-22" ROLE="Arg-1">
+      <extent>
+        <charseq START="885" END="921">Deputy Secretary of Homeland Security</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030303.1900.00-E55-85" ROLE="Arg-2">
+      <extent>
+        <charseq START="905" END="921">Homeland Security</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030303.1900.00-R12" TYPE="ORG-AFF" SUBTYPE="Student-Alum" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030303.1900.00-E15" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030303.1900.00-E20" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030303.1900.00-R12-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="975" END="1024">a graduate of the disgraceful Bob Jones
+University</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030303.1900.00-E15-25" ROLE="Arg-1">
+      <extent>
+        <charseq START="975" END="1024">a graduate of the disgraceful Bob Jones
+University</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030303.1900.00-E20-26" ROLE="Arg-2">
+      <extent>
+        <charseq START="989" END="1024">the disgraceful Bob Jones
+University</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030303.1900.00-R13" TYPE="ORG-AFF" SUBTYPE="Membership" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030303.1900.00-E27" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030303.1900.00-E25" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030303.1900.00-R13-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="1313" END="1338">the Clinton administration</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030303.1900.00-E27-40" ROLE="Arg-1">
+      <extent>
+        <charseq START="1317" END="1323">Clinton</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030303.1900.00-E25-39" ROLE="Arg-2">
+      <extent>
+        <charseq START="1313" END="1338">the Clinton administration</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030303.1900.00-R14" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030303.1900.00-E98" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030303.1900.00-E99" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030303.1900.00-R14-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="1827" END="1933">And these
+bozos let four armed Cubans land on our shores when they're trying to
+make a high terrorist alert</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030303.1900.00-E98-70" ROLE="Arg-1">
+      <extent>
+        <charseq START="1847" END="1863">four armed Cubans</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030303.1900.00-E99-71" ROLE="Arg-2">
+      <extent>
+        <charseq START="1873" END="1882">our shores</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030303.1900.00-R15" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="CNN_CF_20030303.1900.00-E52" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030303.1900.00-E53" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030303.1900.00-R15-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="2062" END="2158">So it's OK -- it's OK to have professional politicians at the Justice
+Department and the Pentagon</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030303.1900.00-E52-82" ROLE="Arg-1">
+      <extent>
+        <charseq START="2092" END="2115">professional politicians</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030303.1900.00-E53-83" ROLE="Arg-2">
+      <extent>
+        <charseq START="2120" END="2141">the Justice
+Department</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030303.1900.00-R16" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="CNN_CF_20030303.1900.00-E52" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030303.1900.00-E54" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030303.1900.00-R16-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="2062" END="2158">So it's OK -- it's OK to have professional politicians at the Justice
+Department and the Pentagon</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030303.1900.00-E52-82" ROLE="Arg-1">
+      <extent>
+        <charseq START="2092" END="2115">professional politicians</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030303.1900.00-E54-84" ROLE="Arg-2">
+      <extent>
+        <charseq START="2147" END="2158">the Pentagon</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030303.1900.00-R17" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="CNN_CF_20030303.1900.00-E57" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030303.1900.00-E54" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030303.1900.00-R17-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="2270" END="2423">It's OK to put
+Democratic career politicians at the Pentagon and the Justice Department
+if they're Democrats but not if they're Republicans, is that right</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030303.1900.00-E57-90" ROLE="Arg-1">
+      <extent>
+        <charseq START="2285" END="2313">Democratic career politicians</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030303.1900.00-E54-92" ROLE="Arg-2">
+      <extent>
+        <charseq START="2318" END="2329">the Pentagon</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030303.1900.00-R18" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="CNN_CF_20030303.1900.00-E57" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030303.1900.00-E53" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030303.1900.00-R18-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="2270" END="2423">It's OK to put
+Democratic career politicians at the Pentagon and the Justice Department
+if they're Democrats but not if they're Republicans, is that right</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030303.1900.00-E57-90" ROLE="Arg-1">
+      <extent>
+        <charseq START="2285" END="2313">Democratic career politicians</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030303.1900.00-E53-93" ROLE="Arg-2">
+      <extent>
+        <charseq START="2335" END="2356">the Justice Department</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030303.1900.00-R19" TYPE="ORG-AFF" SUBTYPE="Membership" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030303.1900.00-E61" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030303.1900.00-E45" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030303.1900.00-R19-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="2585" END="2635">Another potential Democratic presidential candidate</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030303.1900.00-E61-99" ROLE="Arg-1">
+      <extent>
+        <charseq START="2585" END="2635">Another potential Democratic presidential candidate</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030303.1900.00-E45-100" ROLE="Arg-2">
+      <extent>
+        <charseq START="2603" END="2612">Democratic</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030303.1900.00-R20" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030303.1900.00-E61" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030303.1900.00-E17" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030303.1900.00-R20-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="2735" END="2773">Senator Christopher Dodd of Connecticut</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030303.1900.00-E61-104" ROLE="Arg-1">
+      <extent>
+        <charseq START="2735" END="2773">Senator Christopher Dodd of Connecticut</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030303.1900.00-E17-23" ROLE="Arg-2">
+      <extent>
+        <charseq START="2763" END="2773">Connecticut</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030303.1900.00-R21" TYPE="PER-SOC" SUBTYPE="Business" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030303.1900.00-E87" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030303.1900.00-E2" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030303.1900.00-R21-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="3904" END="3912">his aides</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030303.1900.00-E87-168" ROLE="Arg-1">
+      <extent>
+        <charseq START="3904" END="3912">his aides</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030303.1900.00-E2-133" ROLE="Arg-2">
+      <extent>
+        <charseq START="3904" END="3906">his</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030303.1900.00-R22" TYPE="PER-SOC" SUBTYPE="Business" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030303.1900.00-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030303.1900.00-E88" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030303.1900.00-R22-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="332" END="341">his people</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030303.1900.00-E1-190" ROLE="Arg-1">
+      <extent>
+        <charseq START="332" END="334">his</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030303.1900.00-E88-171" ROLE="Arg-2">
+      <extent>
+        <charseq START="332" END="341">his people</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_CF_20030303.1900.00-EV1" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_CF_20030303.1900.00-E96" ROLE="Vehicle"/>
+  <event_argument REFID="CNN_CF_20030303.1900.00-E98" ROLE="Artifact"/>
+  <event_argument REFID="CNN_CF_20030303.1900.00-E99" ROLE="Destination"/>
+  <event_argument REFID="CNN_CF_20030303.1900.00-E4" ROLE="Agent"/>
+  <event_mention ID="CNN_CF_20030303.1900.00-EV1-1">
+    <extent>
+      <charseq START="369" END="449">a 30-foot Cuban patrol boat with four heavily armed men landed on
+American shores</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="277" END="514">Even as the
+secretary of homeland security was putting his people on high alert last
+month, a 30-foot Cuban patrol boat with four heavily armed men landed on
+American shores, utterly undetected by the Coast Guard Secretary Ridge
+now leads</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="425" END="430">landed</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_CF_20030303.1900.00-E96-192" ROLE="Vehicle">
+      <extent>
+        <charseq START="369" END="423">a 30-foot Cuban patrol boat with four heavily armed men</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_CF_20030303.1900.00-E98-194" ROLE="Artifact">
+      <extent>
+        <charseq START="402" END="423">four heavily armed men</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_CF_20030303.1900.00-E99-195" ROLE="Destination">
+      <extent>
+        <charseq START="435" END="449">American shores</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_CF_20030303.1900.00-EV1-2">
+    <extent>
+      <charseq START="1831" END="1882">these
+bozos let four armed Cubans land on our shores</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1827" END="1933">And these
+bozos let four armed Cubans land on our shores when they're trying to
+make a high terrorist alert</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1865" END="1868">land</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_CF_20030303.1900.00-E98-70" ROLE="Artifact">
+      <extent>
+        <charseq START="1847" END="1863">four armed Cubans</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_CF_20030303.1900.00-E4-69" ROLE="Agent">
+      <extent>
+        <charseq START="1831" END="1841">these
+bozos</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_CF_20030303.1900.00-E99-71" ROLE="Destination">
+      <extent>
+        <charseq START="1873" END="1882">our shores</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_CF_20030303.1900.00-EV2" TYPE="Personnel" SUBTYPE="Elect" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_CF_20030303.1900.00-E10" ROLE="Person"/>
+  <event_mention ID="CNN_CF_20030303.1900.00-EV2-1">
+    <extent>
+      <charseq START="730" END="751">election to a dead man</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="719" END="751">He
+lost an election to a dead man</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="730" END="737">election</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_CF_20030303.1900.00-E10-13" ROLE="Person">
+      <extent>
+        <charseq START="742" END="751">a dead man</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_CF_20030303.1900.00-EV3" TYPE="Personnel" SUBTYPE="Elect" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="CNN_CF_20030303.1900.00-E22" ROLE="Person"/>
+  <event_argument REFID="CNN_CF_20030303.1900.00-V2" ROLE="Position"/>
+  <event_mention ID="CNN_CF_20030303.1900.00-EV3-1">
+    <extent>
+      <charseq START="1252" END="1282">who is elected to public office</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1141" END="1282">Paul, as I understand your definition of a political -- of a professional
+politician based on that is somebody who is elected to public office</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1259" END="1265">elected</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_CF_20030303.1900.00-E22-36" ROLE="Person">
+      <extent>
+        <charseq START="1252" END="1254">who</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_CF_20030303.1900.00-V2-1" ROLE="Position">
+      <extent>
+        <charseq START="1270" END="1282">public office</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_CF_20030303.1900.00-EV4" TYPE="Personnel" SUBTYPE="Start-Position" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="CNN_CF_20030303.1900.00-E6" ROLE="Person"/>
+  <event_mention ID="CNN_CF_20030303.1900.00-EV4-1">
+    <extent>
+      <charseq START="2017" END="2034">Hire professionals</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2017" END="2049">Hire professionals, Mr. President</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2017" END="2020">Hire</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_CF_20030303.1900.00-E6-79" ROLE="Person">
+      <extent>
+        <charseq START="2022" END="2034">professionals</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_CF_20030303.1900.00-EV5" TYPE="Personnel" SUBTYPE="Start-Position" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="CNN_CF_20030303.1900.00-E57" ROLE="Person"/>
+  <event_argument REFID="CNN_CF_20030303.1900.00-E54" ROLE="Entity"/>
+  <event_argument REFID="CNN_CF_20030303.1900.00-E53" ROLE="Entity"/>
+  <event_mention ID="CNN_CF_20030303.1900.00-EV5-1">
+    <extent>
+      <charseq START="2281" END="2356">put
+Democratic career politicians at the Pentagon and the Justice Department</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2270" END="2423">It's OK to put
+Democratic career politicians at the Pentagon and the Justice Department
+if they're Democrats but not if they're Republicans, is that right</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2281" END="2283">put</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_CF_20030303.1900.00-E57-90" ROLE="Person">
+      <extent>
+        <charseq START="2285" END="2313">Democratic career politicians</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_CF_20030303.1900.00-E54-92" ROLE="Entity">
+      <extent>
+        <charseq START="2318" END="2329">the Pentagon</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_CF_20030303.1900.00-E53-93" ROLE="Entity">
+      <extent>
+        <charseq START="2335" END="2356">the Justice Department</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_CF_20030303.1900.00-EV6" TYPE="Personnel" SUBTYPE="Nominate" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_CF_20030303.1900.00-E60" ROLE="Person"/>
+  <event_mention ID="CNN_CF_20030303.1900.00-EV6-1">
+    <extent>
+      <charseq START="2824" END="2860">the 10th candidate for the nomination</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2735" END="2860">Senator Christopher Dodd of Connecticut made the announcement today
+that he would not be the 10th candidate for the nomination</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2851" END="2860">nomination</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_CF_20030303.1900.00-E60-97" ROLE="Person">
+      <extent>
+        <charseq START="2824" END="2860">the 10th candidate for the nomination</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_CF_20030303.1900.00-EV7" TYPE="Personnel" SUBTYPE="Nominate" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_mention ID="CNN_CF_20030303.1900.00-EV7-1">
+    <extent>
+      <charseq START="3062" END="3072">nominations</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2961" END="3072">He explained he could better spend the next two years on
+homeland security, the economy and judicial nominations</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="3062" END="3072">nominations</charseq>
+    </anchor>
+  </event_mention>
+</event>
+<event ID="CNN_CF_20030303.1900.00-EV8" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Future">
+  <event_argument REFID="CNN_CF_20030303.1900.00-E3" ROLE="Attacker"/>
+  <event_argument REFID="CNN_CF_20030303.1900.00-E75" ROLE="Place"/>
+  <event_mention ID="CNN_CF_20030303.1900.00-EV8-1">
+    <extent>
+      <charseq START="3816" END="3835">we go to war in Iraq</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="3771" END="3835">It could swell to as
+much as $500 billion if we go to war in Iraq</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="3825" END="3827">war</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_CF_20030303.1900.00-E3-141" ROLE="Attacker">
+      <extent>
+        <charseq START="3816" END="3817">we</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_CF_20030303.1900.00-E75-142" ROLE="Place">
+      <extent>
+        <charseq START="3832" END="3835">Iraq</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_CF_20030303.1900.00-EV9" TYPE="Personnel" SUBTYPE="End-Position" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_CF_20030303.1900.00-E70" ROLE="Person"/>
+  <event_mention ID="CNN_CF_20030303.1900.00-EV9-1">
+    <extent>
+      <charseq START="3576" END="3608">two
+million Americans have lost t</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="3568" END="3724">In all, two
+million Americans have lost their jobs under President Bush so far, not
+to mention three of them being the top three leaders of his economic
+team</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="3603" END="3608">lost t</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_CF_20030303.1900.00-E70-126" ROLE="Person">
+      <extent>
+        <charseq START="3576" END="3596">two
+million Americans</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

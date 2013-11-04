@@ -1,0 +1,260 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030409_180633.8.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030409_180633.8">
+<entity ID="CNN_ENG_20030409_180633.8-E1" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030409_180633.8-E1-1" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="67" END="89">a federal appeals court</charseq>
+    </extent>
+    <head>
+      <charseq START="85" END="89">court</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030409_180633.8-E2" TYPE="WEA" SUBTYPE="Exploding" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030409_180633.8-E2-2" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="112" END="121">dirty bomb</charseq>
+    </extent>
+    <head>
+      <charseq START="118" END="121">bomb</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030409_180633.8-E2-12" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="321" END="332">a dirty bomb</charseq>
+    </extent>
+    <head>
+      <charseq START="329" END="332">bomb</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030409_180633.8-E4" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030409_180633.8-E4-3" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="112" END="142">dirty bomb suspect jose
+padilla</charseq>
+    </extent>
+    <head>
+      <charseq START="131" END="142">jose
+padilla</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030409_180633.8-E4-4" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="FALSE">
+    <extent>
+      <charseq START="112" END="129">dirty bomb suspect</charseq>
+    </extent>
+    <head>
+      <charseq START="123" END="129">suspect</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030409_180633.8-E4-5" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="172" END="173">he</charseq>
+    </extent>
+    <head>
+      <charseq START="172" END="173">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030409_180633.8-E4-9" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="223" END="229">padilla</charseq>
+    </extent>
+    <head>
+      <charseq START="223" END="229">padilla</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030409_180633.8-E4-10" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="234" END="252">an enemy combattant</charseq>
+    </extent>
+    <head>
+      <charseq START="243" END="252">combattant</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030409_180633.8-E4-11" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="283" END="284">he</charseq>
+    </extent>
+    <head>
+      <charseq START="283" END="284">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="jose padilla">
+      <charseq START="131" END="142">jose
+padilla</charseq>
+    </name>
+    <name NAME="padilla">
+      <charseq START="223" END="229">padilla</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030409_180633.8-E6" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030409_180633.8-E6-6" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="189" END="197">attorneys</charseq>
+    </extent>
+    <head>
+      <charseq START="189" END="197">attorneys</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030409_180633.8-E7" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030409_180633.8-E7-7" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="200" END="216">the
+u.s. attorney</charseq>
+    </extent>
+    <head>
+      <charseq START="209" END="216">attorney</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030409_180633.8-E8" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030409_180633.8-E8-8" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="204" END="206">u.s</charseq>
+    </extent>
+    <head>
+      <charseq START="204" END="206">u.s</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030409_180633.8-E8-13" TYPE="NOM" LDCTYPE="NOM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="337" END="348">this
+country</charseq>
+    </extent>
+    <head>
+      <charseq START="342" END="348">country</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="u.s">
+      <charseq START="204" END="206">u.s</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<value ID="CNN_ENG_20030409_180633.8-V1" TYPE="Crime">
+  <value_mention ID="CNN_ENG_20030409_180633.8-V1-1">
+    <extent>
+      <charseq START="300" END="348">attempting to ignite a dirty bomb in this
+country</charseq>
+    </extent>
+  </value_mention>
+</value>
+<timex2 ID="CNN_ENG_20030409_180633.8-T1" VAL="2003-04-09T18:06:58">
+  <timex2_mention ID="CNN_ENG_20030409_180633.8-T1-1">
+    <extent>
+      <charseq START="43" END="61">2003-04-09 18:06:58</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030409_180633.8-R1" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030409_180633.8-E4" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030409_180633.8-E8" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030409_180633.8-R1-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="283" END="348">he is accused of attempting to ignite a dirty bomb in this
+country</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030409_180633.8-E4-11" ROLE="Arg-1">
+      <extent>
+        <charseq START="283" END="284">he</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030409_180633.8-E8-13" ROLE="Arg-2">
+      <extent>
+        <charseq START="337" END="348">this
+country</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030409_180633.8-R2" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030409_180633.8-E7" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030409_180633.8-E8" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030409_180633.8-R2-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="200" END="216">the
+u.s. attorney</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030409_180633.8-E7-7" ROLE="Arg-1">
+      <extent>
+        <charseq START="200" END="216">the
+u.s. attorney</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030409_180633.8-E8-8" ROLE="Arg-2">
+      <extent>
+        <charseq START="204" END="206">u.s</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030409_180633.8-EV1" TYPE="Justice" SUBTYPE="Charge-Indict" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030409_180633.8-V1" ROLE="Crime"/>
+  <event_argument REFID="CNN_ENG_20030409_180633.8-E4" ROLE="Defendant"/>
+  <event_argument REFID="CNN_ENG_20030409_180633.8-E8" ROLE="Place"/>
+  <event_mention ID="CNN_ENG_20030409_180633.8-EV1-1">
+    <extent>
+      <charseq START="283" END="348">he is accused of attempting to ignite a dirty bomb in this
+country</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="283" END="348">he is accused of attempting to ignite a dirty bomb in this
+country</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="289" END="295">accused</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030409_180633.8-E4-11" ROLE="Defendant">
+      <extent>
+        <charseq START="283" END="284">he</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030409_180633.8-E8-13" ROLE="Place">
+      <extent>
+        <charseq START="337" END="348">this
+country</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030409_180633.8-V1-1" ROLE="Crime">
+      <extent>
+        <charseq START="300" END="348">attempting to ignite a dirty bomb in this
+country</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030409_180633.8-EV2" TYPE="Contact" SUBTYPE="Meet" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Future">
+  <event_argument REFID="CNN_ENG_20030409_180633.8-E4" ROLE="Entity"/>
+  <event_argument REFID="CNN_ENG_20030409_180633.8-E6" ROLE="Entity"/>
+  <event_mention ID="CNN_ENG_20030409_180633.8-EV2-1">
+    <extent>
+      <charseq START="112" END="197">dirty bomb suspect jose
+padilla can be retained and whether he can meet with attorneys</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="67" END="197">a federal appeals court will decide how long dirty bomb suspect jose
+padilla can be retained and whether he can meet with attorneys</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="179" END="182">meet</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030409_180633.8-E4-3" ROLE="Entity">
+      <extent>
+        <charseq START="112" END="142">dirty bomb suspect jose
+padilla</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030409_180633.8-E6-6" ROLE="Entity">
+      <extent>
+        <charseq START="189" END="197">attorneys</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

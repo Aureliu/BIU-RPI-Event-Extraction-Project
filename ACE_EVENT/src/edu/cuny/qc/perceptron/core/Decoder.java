@@ -143,7 +143,7 @@ public class Decoder
 			out.close();
 		}
 		
-		if (args[4].equals(OPTION_NO_SCORING)) {
+		if (args.length>=5 && args[4].equals(OPTION_NO_SCORING)) {
 			return;
 		}
 		

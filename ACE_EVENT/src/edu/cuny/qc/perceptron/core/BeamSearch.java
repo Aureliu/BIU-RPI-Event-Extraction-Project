@@ -173,7 +173,7 @@ public class BeamSearch
 		
 		System.out.printf("Beam at the end:\n");
 		for (int i=0; i<beam.size(); i++) {
-			System.out.printf("%d. %s\n", i, beam.get(i));
+			System.out.printf("%d. [%f] %s\n", i, beam.get(i).getScore(), beam.get(i));
 		}
 		return beam.get(0);
 	}

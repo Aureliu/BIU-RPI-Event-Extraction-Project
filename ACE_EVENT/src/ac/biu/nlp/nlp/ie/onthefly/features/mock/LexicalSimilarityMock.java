@@ -15,14 +15,19 @@ public class LexicalSimilarityMock {
 		return result;
 	}
 	
-	private static final Double DEFAULT_RETURN_VALUE = -0.05;//0.1;
+	private static final Double DEFAULT_RETURN_VALUE = -3.0;//0.1;
 	private static Map<Entry<String, String>, Double> map = new HashMap<Entry<String, String>, Double>();
 	static {
 		map.put(new SimpleEntry<String, String>("forced", "remove"), 0.8);
 		map.put(new SimpleEntry<String, String>("bombarded", "bomb"), 0.9);
 		map.put(new SimpleEntry<String, String>("people", "people"), 1.0);
-		map.put(new SimpleEntry<String, String>("homes", "house"), 0.95);
-		map.put(new SimpleEntry<String, String>("consume", "house"), 0.95);
+		map.put(new SimpleEntry<String, String>("home", "house"), 0.95);
+		map.put(new SimpleEntry<String, String>("their homes", "house"), 0.9); //not needed!
+		map.put(new SimpleEntry<String, String>("consumed", "remove"), 0.4);
+		map.put(new SimpleEntry<String, String>("acres", "people"), 0.25);
+		map.put(new SimpleEntry<String, String>("today", "yesterday"), 0.85);
+		map.put(new SimpleEntry<String, String>("started", "remove"), 0.3);
+		map.put(new SimpleEntry<String, String>("pickup", "people"), 0.2);
 	}
 	
 	/**

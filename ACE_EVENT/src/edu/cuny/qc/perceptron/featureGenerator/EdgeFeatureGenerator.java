@@ -296,6 +296,12 @@ public class EdgeFeatureGenerator
 			featureLine.add(feature);
 		}
 		
+		for (String f: featureLine) {
+			if (f.contains("home")) {
+				int e = 8;
+				int x = e-5;
+			}
+		}
 		return featureLine;
 	}
 	

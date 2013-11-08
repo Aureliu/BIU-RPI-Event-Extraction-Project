@@ -100,33 +100,58 @@ public class FeatureVector implements Serializable
 		
 		final String INPUT_OFERMOVE_SEED1 = "remove";
 		final String INPUT_OFERMOVE_PATH1 = "cool-path";
+		final Map<String, String> INPUT_OFERMOVE_ROLE_TO_ARGEXAMPLE = new HashMap<String, String>(){{
+			put("OferArtifact", "people");
+			put("OferOrigin", "house");
+			put("OferFakeRole", "today");
+		}};
+
 		final Double SCORER_WEIGHT_LEX_SIM = 0.6;
 		final Double SCORER_WEIGHT_PATH_SIM = 0.4;
 		
 		for (Object o : map.keySet()) {
 			String feature = (String) o;
+			Pattern pattern;
+			Matcher m;
 			
-			if (feature.contains("\tW=")) {
-				Pattern pattern = Pattern.compile("\tW=([^\t]*)\t");
-				Matcher m = pattern.matcher(feature);
-				if (m.find()) {
-					String word = m.group(1);
-					LexicalSimilarityMock mock = new LexicalSimilarityMock();
-					Double score = mock.apply(word, INPUT_OFERMOVE_SEED1);
-					ret += score*SCORER_WEIGHT_LEX_SIM;
-				}
+			pattern = Pattern.compile("\\tW=([^\\t]*)\\t");
+			m = pattern.matcher(feature);
+			if (m.find()) {
+				String word = m.group(1);
+				LexicalSimilarityMock mock = new LexicalSimilarityMock();
+				Double score = mock.apply(word, INPUT_OFERMOVE_SEED1);
+				ret += score*SCORER_WEIGHT_LEX_SIM;
 			}
 			
-			if (feature.contains("\tPath=")) {
-				Pattern pattern = Pattern.compile("\tPath=([^\t]*)\t");
-				Matcher m = pattern.matcher(feature);
-				if (m.find()) {
-					String path = m.group(1);
-					PathSimilarityMock mock = new PathSimilarityMock();
-					Double score = mock.apply(path, INPUT_OFERMOVE_PATH1);
-					ret += score*SCORER_WEIGHT_PATH_SIM;
-				}
+			if (feature.contains("home") && feature.contains("Head")) {
+				int y = 98;
+				int t = y+5;
 			}
+			
+			pattern = Pattern.compile("\\tHead=([^\\t]*)\\t.*?\\tArgRole:([^\\t ]+)");
+			m = pattern.matcher(feature);
+			if (m.find()) {
+				String word = m.group(1);
+				String role = m.group(2);
+				if (word.equals("home") /*|| role.equals("OferOrigin")*/) {
+					int x = 8;
+					int c = x+3;
+				}
+				LexicalSimilarityMock mock = new LexicalSimilarityMock();
+				Double score = mock.apply(word, INPUT_OFERMOVE_ROLE_TO_ARGEXAMPLE.get(role));
+				ret += score*SCORER_WEIGHT_LEX_SIM;
+			}
+
+			
+			pattern = Pattern.compile("\\tPath=([^\\t]*)\\t");
+			m = pattern.matcher(feature);
+			if (m.find()) {
+				String path = m.group(1);
+				PathSimilarityMock mock = new PathSimilarityMock();
+				Double score = mock.apply(path, INPUT_OFERMOVE_PATH1);
+				ret += score*SCORER_WEIGHT_PATH_SIM;
+			}
+
 		}
 		
 		// TODO ofer1-orig

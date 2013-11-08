@@ -1,8 +1,21 @@
 package edu.cuny.qc.perceptron.types;
 
+import java.io.File;
+import java.io.PrintStream;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
+import java.util.Random;
+import java.util.Set;
+
+import javax.management.RuntimeErrorException;
+
+import edu.cuny.qc.perceptron.core.Decoder;
 
 public class FeatureVector implements Serializable
 {	
@@ -89,8 +102,63 @@ public class FeatureVector implements Serializable
 				ret += value1 * value2;
 			}
 		}
+		
+		////
+		//TODO DEBUG
+		if (PRINT_FEATURE_VECTORS && numWrittenOutputFiles < MAX_OUTPUT_FILES) {
+			try {
+				double d = random.nextDouble();
+				final FeatureVector fv1 = fv; // in order to use fv in the Comparable object, we need a "final" reference to it
+				if (d<PROB_FOR_OUTPUT_FILE) {
+					// Output!
+					numWrittenOutputFiles++;
+					PrintStream vectorsOut = new PrintStream(new File(String.format("%s%sRandomlyChosenDotProduct.%02d.txt", Decoder.outDir, File.separator, numWrittenOutputFiles)));
+					vectorsOut.printf("%-110s\tSentenceAssignment(%d)\t\tWeights(%d)\t\tdotProduct=%f\n", " ", map.size(), fv.map.size(), ret);
+					vectorsOut.printf("%-110s\t----------------------\t\t-----------\n", " ");
+					Set<Object> allKeysSet = new HashSet<Object>(map.keySet());
+					allKeysSet.addAll(fv.map.keySet());
+					List<Object> allKeys = new ArrayList<Object>(allKeysSet);
+					Collections.sort(allKeys, new Comparator<Object>() {
+						@Override
+						public int compare(Object o1, Object o2) {
+//							if (((String) o1).equals((String) o2)) {
+//								return 0;
+//							}
+//							if (map.containsKey(o1) && !fv1.map.containsKey(o2)) {
+//								return -1;
+//							}
+//							if (!map.containsKey(o1) && fv1.map.containsKey(o2)) {
+//								return 1;
+//							}
+							return ((String) o1).compareTo((String) o2);
+						}
+						
+					});
+					for (Object key : allKeys) {
+						Double m1 = map.get(key);
+						Double m2 = fv.map.get(key);
+						String str1 = (m1==null? "-" : m1.toString());
+						String str2 = (m2==null? "-" : m2.toString());
+						vectorsOut.printf("%-110s\t%s\t\t%s\n", key, str1, str2);
+					}
+					vectorsOut.close();
+				}
+			}
+			catch (Exception e) {
+				throw new RuntimeException(e);
+			}
+		}
+		////
 		return ret;
 	}
+	////
+	//TODO DEBUG
+	private static final boolean PRINT_FEATURE_VECTORS = false; // This ability is now turned off! Put "true" here to turn on!
+	private static final int MAX_OUTPUT_FILES = 10;
+	private static final double PROB_FOR_OUTPUT_FILE = 0.001;
+	private static int numWrittenOutputFiles = 0;
+	private static Random random = new Random();
+	////
 
 	/**
 	 * this = this + (fv1 - fv2) * factor

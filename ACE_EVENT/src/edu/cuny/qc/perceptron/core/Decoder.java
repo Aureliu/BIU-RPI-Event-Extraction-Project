@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
@@ -27,6 +28,7 @@ import edu.cuny.qc.perceptron.types.SentenceInstance;
 public class Decoder
 {
 	public static String OPTION_NO_SCORING = "-n"; 
+	public static File outDir = null; //TODO DEBUG
 	
 	static public void writeEntities (PrintWriter w, AceDocument aceDoc, List<AceEvent> events) {
 		w.println ("<?xml version=\"1.0\"?>");
@@ -72,20 +74,39 @@ public class Decoder
 			System.exit(-1);
 		}
 		
+		File srcDir = new File(args[1]);
+		File fileList = new File(args[2]);
+		outDir = new File(args[3]);   //TODO DEBUG
+		//File outDir = new File(args[3]);
+		if(!outDir.exists())
+		{
+			outDir.mkdirs();
+		}
+		
 		// Perceptron read model from the serialized file
 		Perceptron perceptron = Perceptron.deserializeObject(new File(args[0]));
 		Alphabet nodeTargetAlphabet = perceptron.nodeTargetAlphabet;
 		Alphabet edgeTargetAlphabet = perceptron.edgeTargetAlphabet;
 		Alphabet featureAlphabet = perceptron.featureAlphabet;
-		System.out.printf("--------------\nPerceptron.controller =\n%s\n\n--------------------------\n\n", perceptron.controller);
 		
-		File srcDir = new File(args[1]);
-		File fileList = new File(args[2]);
-		File outDir = new File(args[3]);
-		if(!outDir.exists())
-		{
-			outDir.mkdirs();
+		//Intermediate output - all features+weights to text files
+		String s;
+		PrintStream featuresOut = new PrintStream(new File(outDir + File.separator + "FeatureAlphabet.txt"));
+		for (Object o : featureAlphabet.toArray()) {
+			s = (String) o;
+			featuresOut.printf("%s\n", s);
 		}
+		featuresOut.close();
+		
+		PrintStream weightsOut = new PrintStream(new File(outDir + File.separator + "Weights.txt"));
+		weightsOut.printf("%s", perceptron.getWeights().toString());
+		weightsOut.close();
+		
+		PrintStream avgWeightsOut = new PrintStream(new File(outDir + File.separator + "AvgWeights.txt"));
+		avgWeightsOut.printf("%s", perceptron.getAvg_weights().toString());
+		avgWeightsOut.close();
+				
+		System.out.printf("--------------\nPerceptron.controller =\n%s\n\n--------------------------\n\n", perceptron.controller);
 		
 		BufferedReader reader = new BufferedReader(new FileReader(fileList));
 		String line = "";
@@ -148,7 +169,7 @@ public class Decoder
 		}
 		
 		// get score
-		File outputFile = new File(outDir + File.separator + "Score");
+		File outputFile = new File(outDir + File.separator + "Score.txt");
 		Scorer.main(new String[]{args[1], args[3], args[2], outputFile.getAbsolutePath()});
 		System.out.printf("--------------\nPerceptron.controller =\n%s\n\n--------------------------\n\n", perceptron.controller);
 

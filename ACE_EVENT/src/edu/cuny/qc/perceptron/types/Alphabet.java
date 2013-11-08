@@ -20,6 +20,8 @@ import java.util.ArrayList;
 import java.io.*;
 import java.util.Iterator;
 
+import javax.management.RuntimeErrorException;
+
 /**
  *  A mapping between integers and objects where the mapping in each
  * direction is efficient.  Integers are assigned consecutively, starting
@@ -158,12 +160,15 @@ public class Alphabet implements Serializable
 	separated by a newline. */
 	public String toString()
 	{
-		StringBuffer sb = new StringBuffer();
-		for (int i = 0; i < entries.size(); i++) {
-			sb.append (entries.get(i).toString());
-			sb.append ('\n');
-		}
-		return sb.toString();
+		// To avoid freezing of debugger whenever displaying this object
+		return String.format("Alphabet (%d entries)", entries.size());
+		
+//		StringBuffer sb = new StringBuffer();
+//		for (int i = 0; i < entries.size(); i++) {
+//			sb.append (entries.get(i).toString());
+//			sb.append ('\n');
+//		}
+//		return sb.toString();
 	}
 
 	public void dump () { dump (System.out); }

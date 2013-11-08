@@ -156,7 +156,7 @@ public class FeatureVector implements Serializable
 				if (d<PROB_FOR_OUTPUT_FILE) {
 					// Output!
 					numWrittenOutputFiles++;
-					PrintStream vectorsOut = new PrintStream(new File(String.format("%s%sRandomlyChosenDotProduct.%02d.txt", Decoder.outDir, File.separator, numWrittenOutputFiles)));
+					PrintStream vectorsOut = new PrintStream(new File(String.format("%s%sRandomlyChosenDotProduct.%02d__%f.txt", Decoder.outDir, File.separator, numWrittenOutputFiles, ret)));
 					vectorsOut.printf("%-110s\tSentenceAssignment(%d)\t\tWeights(%d)\t\tdotProduct=%f\n", " ", map.size(), fv.map.size(), ret);
 					vectorsOut.printf("%-110s\t----------------------\t\t-----------\n", " ");
 					Set<Object> allKeysSet = new HashSet<Object>(map.keySet());
@@ -198,8 +198,8 @@ public class FeatureVector implements Serializable
 	////
 	//TODO DEBUG
 	private static final boolean PRINT_FEATURE_VECTORS = false; // This ability is now turned off! Put "true" here to turn on!
-	private static final int MAX_OUTPUT_FILES = 15;//10;
-	private static final double PROB_FOR_OUTPUT_FILE = 0.1;//0.004;
+	private static final int MAX_OUTPUT_FILES = 20;//10;
+	private static final double PROB_FOR_OUTPUT_FILE = 0.01;//0.001;
 	private static int numWrittenOutputFiles = 0;
 	private static Random random = new Random();
 	////

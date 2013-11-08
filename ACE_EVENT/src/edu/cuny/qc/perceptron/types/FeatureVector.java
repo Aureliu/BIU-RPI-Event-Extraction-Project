@@ -12,8 +12,13 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 import java.util.Set;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import javax.management.RuntimeErrorException;
+
+import ac.biu.nlp.nlp.ie.onthefly.features.mock.LexicalSimilarityMock;
+import ac.biu.nlp.nlp.ie.onthefly.features.mock.PathSimilarityMock;
 
 import edu.cuny.qc.perceptron.core.Decoder;
 
@@ -86,22 +91,61 @@ public class FeatureVector implements Serializable
 	public final double dotProduct (FeatureVector fv) 
 	{
 		double ret = 0.0;
-		Map<Object, Double> map1 = map;
-		Map<Object, Double> map2 = fv.map;
-		if(map2.size() < map1.size())
-		{
-			map1 = fv.map;
-			map2 = map;
-		}
-		for(Object key : map1.keySet())
-		{
-			Double value2 = map2.get(key);
-			if(value2 != null)
-			{
-				Double value1 = map1.get(key);
-				ret += value1 * value2;
+		
+		//TODO ofer1
+		// Instead of doing a dot product, I will inspect the actual feature values (Strings), extract relevant
+		// info from relevant features (discarding all other features), calling appropriate scorers, and aggregate
+		// Their results
+		// I'm also ignoring fv, which contained the weights learned in training
+		
+		final String INPUT_OFERMOVE_SEED1 = "remove";
+		final String INPUT_OFERMOVE_PATH1 = "cool-path";
+		final Double SCORER_WEIGHT_LEX_SIM = 0.6;
+		final Double SCORER_WEIGHT_PATH_SIM = 0.4;
+		
+		for (Object o : map.keySet()) {
+			String feature = (String) o;
+			
+			if (feature.contains("\tW=")) {
+				Pattern pattern = Pattern.compile("\tW=([^\t]*)\t");
+				Matcher m = pattern.matcher(feature);
+				if (m.find()) {
+					String word = m.group(1);
+					LexicalSimilarityMock mock = new LexicalSimilarityMock();
+					Double score = mock.apply(word, INPUT_OFERMOVE_SEED1);
+					ret += score*SCORER_WEIGHT_LEX_SIM;
+				}
+			}
+			
+			if (feature.contains("\tPath=")) {
+				Pattern pattern = Pattern.compile("\tPath=([^\t]*)\t");
+				Matcher m = pattern.matcher(feature);
+				if (m.find()) {
+					String path = m.group(1);
+					PathSimilarityMock mock = new PathSimilarityMock();
+					Double score = mock.apply(path, INPUT_OFERMOVE_PATH1);
+					ret += score*SCORER_WEIGHT_PATH_SIM;
+				}
 			}
 		}
+		
+		// TODO ofer1-orig
+//		Map<Object, Double> map1 = map;
+//		Map<Object, Double> map2 = fv.map;
+//		if(map2.size() < map1.size())
+//		{
+//			map1 = fv.map;
+//			map2 = map;
+//		}
+//		for(Object key : map1.keySet())
+//		{
+//			Double value2 = map2.get(key);
+//			if(value2 != null)
+//			{
+//				Double value1 = map1.get(key);
+//				ret += value1 * value2;
+//			}
+//		}
 		
 		////
 		//TODO DEBUG
@@ -154,8 +198,8 @@ public class FeatureVector implements Serializable
 	////
 	//TODO DEBUG
 	private static final boolean PRINT_FEATURE_VECTORS = false; // This ability is now turned off! Put "true" here to turn on!
-	private static final int MAX_OUTPUT_FILES = 10;
-	private static final double PROB_FOR_OUTPUT_FILE = 0.001;
+	private static final int MAX_OUTPUT_FILES = 15;//10;
+	private static final double PROB_FOR_OUTPUT_FILE = 0.1;//0.004;
 	private static int numWrittenOutputFiles = 0;
 	private static Random random = new Random();
 	////

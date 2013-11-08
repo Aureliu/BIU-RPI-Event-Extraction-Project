@@ -1,6 +1,7 @@
 package edu.cuny.qc.perceptron.core;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -193,6 +194,7 @@ public class BeamSearch
 		{
 			return null;
 		}
+		//System.out.printf("currentNodeLabel=%s\tcandidate=%s\n", currentNodeLabel, mention);
 		// for a compatible mention, create an individual labeling
 		for(int l=0; l<problem.edgeTargetAlphabet.size(); l++)
 		{	
@@ -277,7 +279,9 @@ public class BeamSearch
 	 */
 	protected List<String> nextLabels(String previousLabel)
 	{
-		return model.getLabelBigram().get(previousLabel);
+		//TODO ofer1
+		return Arrays.asList(new String[] {"O", "OferMove"});
+		//return model.getLabelBigram().get(previousLabel);
 	}
 	
 	/**

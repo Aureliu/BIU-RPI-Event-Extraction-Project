@@ -38,6 +38,9 @@ public class TypeConstraints
 	
 	static
 	{
+		//TODOD ofer1
+		eventTypeMap.put("OferMove","OferSuperType");
+		
 		eventTypeMap.put("Be-Born","Life");
 		eventTypeMap.put("Marry","Life");
 		eventTypeMap.put("Divorce","Life");
@@ -71,6 +74,9 @@ public class TypeConstraints
 		eventTypeMap.put("Acquit","Justice");
 		eventTypeMap.put("Appeal","Justice");
 		eventTypeMap.put("Pardon","Justice");
+		
+		//TODOD ofer1
+		eventTypeMapModified.put("OferMove","OferSuperType");
 		
 		eventTypeMapModified.put("Be-Born","Life");
 		eventTypeMapModified.put("Marry","Life");
@@ -116,7 +122,9 @@ public class TypeConstraints
 			independentRoles.add("Time");
 			
 			// read argument role mapping
-			BufferedReader reader = new BufferedReader(new FileReader("data/ace/argumentRoles"));
+			// TODO ofer1
+			BufferedReader reader = new BufferedReader(new FileReader("data/ace/argumentRoles-Ofer"));
+			//BufferedReader reader = new BufferedReader(new FileReader("data/ace/argumentRoles"));
 			String line = "";
 			while((line = reader.readLine()) != null)
 			{

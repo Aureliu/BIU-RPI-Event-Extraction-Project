@@ -7,11 +7,12 @@
 	<classpathentry kind="lib" path="lib/edu.mit.jwi_2.2.3_jdk.jar"/>
 	<classpathentry kind="lib" path="lib/opennlp-maxent-3.0.2-incubating.jar"/>
 	<classpathentry kind="lib" path="lib/opennlp-tools-1.5.2-incubating.jar"/>
-	<classpathentry kind="lib" path="lib/commons-lang3-3.1.jar"/>
+	<classpathentry kind="lib" path="lib/commons-lang3-3.1.jar" sourcepath="C:/Users/think/.m2/repository/org/apache/commons/commons-lang3/3.1/commons-lang3-3.1-sources.jar"/>
 	<classpathentry kind="lib" path="lib/stanford-corenlp-2012-07-09.jar"/>
 	<classpathentry kind="lib" path="lib/trove-3.0.3.jar"/>
 	<classpathentry kind="lib" path="lib/mallet-deps.jar"/>
 	<classpathentry kind="lib" path="lib/mallet.jar"/>
+	<classpathentry kind="lib" path="lib/log4j.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

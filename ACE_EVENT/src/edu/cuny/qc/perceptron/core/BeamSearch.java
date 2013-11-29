@@ -25,6 +25,8 @@ public class BeamSearch
 	Perceptron model;
 	boolean isTraining = true;
 	
+	private static final boolean PRINT_BEAM = false;
+	
 	protected FeatureVector getWeights()
 	{
 		if(!isTraining && model.controller.avgArguments)
@@ -171,9 +173,11 @@ public class BeamSearch
 			beam.get(0).setViolate(true);
 		}
 		
-		System.out.printf("Beam at the end:\n");
-		for (int i=0; i<beam.size(); i++) {
-			System.out.printf("%d. [%f] %s\n", i, beam.get(i).getScore(), beam.get(i));
+		if (PRINT_BEAM) {
+			System.out.printf("Beam at the end:\n");
+			for (int i=0; i<beam.size(); i++) {
+				System.out.printf("%d. [%f] %s\n", i, beam.get(i).getScore(), beam.get(i));
+			}
 		}
 		return beam.get(0);
 	}

@@ -1,5 +1,7 @@
 package edu.cuny.qc.perceptron.core;
 
+import java.util.Date;
+
 // This is a controller of the settings in percetpron
 public class Controller implements java.io.Serializable
 {
@@ -32,7 +34,7 @@ public class Controller implements java.io.Serializable
 	
 	public Controller()
 	{
-		System.out.printf("\n******** Controller() **********\n");
+		System.out.printf("\n[%s] ******** Controller() **********\n", new Date());
 		System.out.printf("******** %s **********\n", this);
 	}
 	

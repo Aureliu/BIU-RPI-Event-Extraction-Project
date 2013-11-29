@@ -211,6 +211,7 @@ public class Pipeline
 	 */
 	static public void main(String[] args) throws IOException
 	{
+		System.out.printf("Args:\n%s\n\n", new ArrayList<String>(Arrays.asList(args)));
 		if(args.length < 4)
 		{
 			System.out.println("Training perceptron Usage:");
@@ -232,7 +233,7 @@ public class Pipeline
 		Controller controller = new Controller();
 		String[] settings = Arrays.copyOfRange(args, 4, args.length);
 		controller.setValueFromArguments(settings);
-		System.out.println(controller.toString());
+		System.out.println("\n" + controller.toString() + "\n");
 		
 		// train model
 		Perceptron model = trainPerceptron(srcDir, trainingFileList, modelFile, devFileList, controller);

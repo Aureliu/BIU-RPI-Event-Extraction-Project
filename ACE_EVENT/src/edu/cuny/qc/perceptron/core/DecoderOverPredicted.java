@@ -3,6 +3,8 @@ package edu.cuny.qc.perceptron.core;
 import java.io.File;
 import java.io.FileFilter;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 import org.dom4j.DocumentException;
 
@@ -26,6 +28,7 @@ public class DecoderOverPredicted {
 	public static String EXTENSION_NEW =  ".apf.xml";
 
 	public static void main(String[] args) throws IOException, DocumentException, InstantiationException {
+		System.out.printf("Args:\n%s\n\n", new ArrayList<String>(Arrays.asList(args)));
 		if(args.length < 5)	{
 			System.out.println("Usage:");
 			System.out.println("args[0]: model");

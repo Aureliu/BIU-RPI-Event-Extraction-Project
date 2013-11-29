@@ -7,6 +7,8 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 import org.dom4j.DocumentException;
@@ -63,6 +65,7 @@ public class Decoder
 	
 	static public void main(String[] args) throws IOException, DocumentException
 	{
+		System.out.printf("Args:\n%s\n\n", new ArrayList<String>(Arrays.asList(args)));
 		if((args.length < 4) || (args.length>=5 && !args[4].equals(OPTION_NO_SCORING)))
 		{
 			System.out.println("Usage:");
@@ -171,7 +174,7 @@ public class Decoder
 		// get score
 		File outputFile = new File(outDir + File.separator + "Score.txt");
 		Scorer.main(new String[]{args[1], args[3], args[2], outputFile.getAbsolutePath()});
-		System.out.printf("--------------\nPerceptron.controller =\n%s\n\n--------------------------\n\n", perceptron.controller);
+		System.out.printf("[%s] --------------\nPerceptron.controller =\n%s\n\n--------------------------\n\n", new Date(), perceptron.controller);
 
 	}
 }

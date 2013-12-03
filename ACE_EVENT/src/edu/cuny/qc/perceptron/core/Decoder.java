@@ -20,6 +20,7 @@ import edu.cuny.qc.ace.acetypes.AceRelation;
 import edu.cuny.qc.ace.acetypes.AceTimex;
 import edu.cuny.qc.ace.acetypes.AceValue;
 import edu.cuny.qc.ace.acetypes.Scorer;
+import edu.cuny.qc.ace.acetypes.Scorer.Stats;
 import edu.cuny.qc.perceptron.featureGenerator.TextFeatureGenerator;
 import edu.cuny.qc.perceptron.types.Alphabet;
 import edu.cuny.qc.perceptron.types.Document;
@@ -63,17 +64,18 @@ public class Decoder
 		w.close();
 	}
 	
-	static public void main(String[] args) throws IOException, DocumentException
+	static public Stats mainReturningStats(String[] args) throws IOException, DocumentException
 	{
 		System.out.printf("Args:\n%s\n\n", new ArrayList<String>(Arrays.asList(args)));
-		if((args.length < 4) || (args.length>=5 && !args[4].equals(OPTION_NO_SCORING)))
+		//if((args.length < 4) || (args.length>=5 && !args[4].equals(OPTION_NO_SCORING)))
+		if((args.length < 4) || (args.length>5))
 		{
 			System.out.println("Usage:");
 			System.out.println("args[0]: model");
 			System.out.println("args[1]: src dir");
 			System.out.println("args[2]: file list");
 			System.out.println("args[3]: output dir");
-			System.out.printf("oprional args[4]: '%s' to not perform scoring\n", OPTION_NO_SCORING);
+			System.out.printf("optional args[4]: '%s' to not perform scoring, or anything else as a suffix for file names of intermediate output files\n", OPTION_NO_SCORING);
 			System.exit(-1);
 		}
 		
@@ -86,6 +88,18 @@ public class Decoder
 			outDir.mkdirs();
 		}
 		
+		boolean noScoring = false;
+		String filenameSuffix = ".txt";
+		if (args.length>=5) {
+			if (args[4].equals(OPTION_NO_SCORING)) {
+				noScoring = true;
+			}
+			else {
+				filenameSuffix = args[4];
+			}
+		}
+		
+		
 		// Perceptron read model from the serialized file
 		Perceptron perceptron = Perceptron.deserializeObject(new File(args[0]));
 		Alphabet nodeTargetAlphabet = perceptron.nodeTargetAlphabet;
@@ -94,18 +108,18 @@ public class Decoder
 		
 		//Intermediate output - all features+weights to text files
 		String s;
-		PrintStream featuresOut = new PrintStream(new File(outDir + File.separator + "FeatureAlphabet.txt"));
+		PrintStream featuresOut = new PrintStream(new File(outDir + File.separator + "FeatureAlphabet" + filenameSuffix));
 		for (Object o : featureAlphabet.toArray()) {
 			s = (String) o;
 			featuresOut.printf("%s\n", s);
 		}
 		featuresOut.close();
 		
-		PrintStream weightsOut = new PrintStream(new File(outDir + File.separator + "Weights.txt"));
+		PrintStream weightsOut = new PrintStream(new File(outDir + File.separator + "Weights" + filenameSuffix));
 		weightsOut.printf("%s", perceptron.getWeights().toString());
 		weightsOut.close();
 		
-		PrintStream avgWeightsOut = new PrintStream(new File(outDir + File.separator + "AvgWeights.txt"));
+		PrintStream avgWeightsOut = new PrintStream(new File(outDir + File.separator + "AvgWeights" + filenameSuffix));
 		avgWeightsOut.printf("%s", perceptron.getAvg_weights().toString());
 		avgWeightsOut.close();
 				
@@ -167,14 +181,19 @@ public class Decoder
 			out.close();
 		}
 		
-		if (args.length>=5 && args[4].equals(OPTION_NO_SCORING)) {
-			return;
+		if (noScoring) {
+			return null;
 		}
 		
 		// get score
-		File outputFile = new File(outDir + File.separator + "Score.txt");
-		Scorer.main(new String[]{args[1], args[3], args[2], outputFile.getAbsolutePath()});
+		File outputFile = new File(outDir + File.separator + "Score" + filenameSuffix);
+		Stats stats = Scorer.mainReturningStats(new String[]{args[1], args[3], args[2], outputFile.getAbsolutePath()});
 		System.out.printf("[%s] --------------\nPerceptron.controller =\n%s\n\n--------------------------\n\n", new Date(), perceptron.controller);
 
+		return stats;
+	}
+	
+	static public void main(String[] args) throws IOException, DocumentException {
+		mainReturningStats(args);
 	}
 }

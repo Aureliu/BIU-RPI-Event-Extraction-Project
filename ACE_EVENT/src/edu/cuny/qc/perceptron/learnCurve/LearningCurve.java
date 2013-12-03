@@ -3,6 +3,7 @@ package edu.cuny.qc.perceptron.learnCurve;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintStream;
@@ -19,8 +20,11 @@ import java.util.regex.Pattern;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
+import org.dom4j.DocumentException;
 
 import edu.cuny.qc.ace.acetypes.AceDocument;
+import edu.cuny.qc.ace.acetypes.Scorer.Stats;
+import edu.cuny.qc.perceptron.core.Decoder;
 import edu.cuny.qc.perceptron.core.Pipeline;
 import edu.cuny.qc.util.LoggerUtils;
 
@@ -46,17 +50,19 @@ public class LearningCurve {
 	public static final String ACE_PATH = "C:\\Lab\\Datasets\\Ace\\Files\\qi\\";
 	//public static final String TRAINING_LIST = "C:\\Java\\Git\\breep\\ACE_EVENT\\run\\input\\new_filelist_ACE_training.txt";
 	//public static final String DEV_LIST = "C:\\Java\\Git\\breep\\ACE_EVENT\\run\\input\\new_filelist_ACE_dev.txt";
-	public static final String OTHER_ARGS_STR = "beamSize=4 maxIterNum=20 skipNonEventSent=true avgArguments=true skipNonArgument=true useGlobalFeature=true addNeverSeenFeatures=true crossSent=false crossSentReranking=false order=0 evaluatorType=1";
-	public static final String[] OTHER_ARGS_ARR = OTHER_ARGS_STR.split(" ");
+	public static final String TRAIN_OTHER_ARGS_STR = "beamSize=4 maxIterNum=20 skipNonEventSent=true avgArguments=true skipNonArgument=true useGlobalFeature=true addNeverSeenFeatures=true crossSent=false crossSentReranking=false order=0 evaluatorType=1";
+	public static final String[] TRAIN_OTHER_ARGS_ARR = TRAIN_OTHER_ARGS_STR.split(" ");
 	//public static final List<String> OTHER_ARGS_LIST = Arrays.asList(OTHER_ARGS_STR.split(" "));
 	
 	public static final String FILENAME_PATTERN = "__iter%02d_chunk%03d_docs%03d_mentions%04d.txt";
-	public static final String MODEL_FILENAME =       "%s\\Model" + FILENAME_PATTERN;
-	public static final String TRAIN_LIST_FILENAME =  "%s\\TrainList" + FILENAME_PATTERN;
-	public static final String OUT_FILENAME =         "%s\\Out" + FILENAME_PATTERN;
-	public static final String ERR_FILENAME =         "%s\\Err" + FILENAME_PATTERN;
+	public static final String MODEL_FILENAME =       "%s/Model" + FILENAME_PATTERN;
+	public static final String TRAIN_LIST_FILENAME =  "%s/TrainList" + FILENAME_PATTERN;
+	public static final String OUT_TRAIN_FILENAME =   "%s/OutTrain" + FILENAME_PATTERN;
+	public static final String OUT_DECODE_FILENAME =  "%s/OutDecode" + FILENAME_PATTERN;
+	public static final String ERR_TRAIN_FILENAME =   "%s/ErrTrain" + FILENAME_PATTERN;
+	public static final String ERR_DECODE_FILENAME =  "%s/ErrDecode" + FILENAME_PATTERN;
 
-	public static final String FILENAME_PREFIX = "learning_curve_";
+	public static final String FILENAME_PREFIX = "^learning_curve_";
 	public static final String FILENAME_RUN_SPEC =        FILENAME_PREFIX + "run_spec.txt";
 	public static final String FILENAME_POINTER_TRAIN =   FILENAME_PREFIX + "last_completed_training.txt";
 	public static final String FILENAME_POINTER_DECODE =  FILENAME_PREFIX + "last_completed_decoding.txt";
@@ -90,20 +96,13 @@ public class LearningCurve {
 	}
 
 	protected void loadRunSpec(String[] args) throws IOException {
-		outputFolder = args[0];
-		fileRunSpec = new File(outputFolder, FILENAME_RUN_SPEC);
-		filePointerTrain = new File(outputFolder, FILENAME_POINTER_TRAIN);
-		filePointerDecode = new File(outputFolder, FILENAME_POINTER_DECODE);
-		fileDecodeResults = new File(outputFolder, FILENAME_DECODE_RESULTS);
-		fileDone = new File(outputFolder, FILENAME_DONE);
-
 		if (fileRunSpec.isFile()) {
 			assert args.length==0 : "Run spec already exist, resuming existing run: command line arguments must not be passed";
 			
 			List<String> lines = loadFileToList(fileRunSpec);
 			
 			// Get params from first line
-			Pattern pattern = Pattern.compile("numIterations=(\\d+),\\s*chunkSize=(\\d+),\\s*trainDocsList=(.+?),\\s*devDocsList=(.+?),\\s*testDocsList=(.+?)\\s*outputFolder=(.+?)\\s*");
+			Pattern pattern = Pattern.compile("numIterations=(\\d+),\\s*chunkSize=(\\d+),\\s*trainDocsList=(.+?),\\s*devDocsList=(.+?),\\s*testDocsList=(.+?)");
 			Matcher m = pattern.matcher(lines.get(0));
 			m.matches();
 			numIterations = Integer.parseInt(m.group(1));
@@ -111,7 +110,7 @@ public class LearningCurve {
 			trainDocsList = m.group(3);
 			devDocsList = m.group(4);
 			testDocsList = m.group(5);
-			outputFolder = m.group(6);
+			//outputFolder = m.group(6);
 			//numChunks = Integer.parseInt(m.group(3));
 			
 			assert lines.get(1).trim().isEmpty() : "Run Spec File: Second line must be empty!";
@@ -216,30 +215,41 @@ public class LearningCurve {
 		return result;
 	}
 	
-	protected void doTraining() throws IOException {
-		if (filePointerTrain.isFile()) {
-			List<Integer> content = readPointerFile(filePointerTrain);
-			lastTrainIteration = content.get(0);
-			lastTrainChunk = content.get(1);
-			logger.info(String.format("Loaded pointer from file: last completed train iteration=%s, last completed train chunk=%s", lastTrainIteration, lastTrainChunk));
+	protected void doTraining() throws IOException, DocumentException {
+		doAction("train", new TrainAction(), filePointerTrain, lastTrainIteration, lastTrainChunk, OUT_TRAIN_FILENAME, ERR_TRAIN_FILENAME);
+	}
+	
+	protected void doDecoding() throws IOException, DocumentException {
+		doAction("decode", new DecodeAction(), filePointerDecode, lastDecodeIteration, lastDecodeChunk, OUT_DECODE_FILENAME, ERR_DECODE_FILENAME);
+	}
+	
+	protected void doAction(String actionLabel, Action action, File filePointer, Integer lastIteration, Integer lastChunk, String outFileName, String errFileName) throws IOException, DocumentException {
+		logger.info(String.format("##### Starting %s", actionLabel));
+		if (filePointer.isFile()) {
+			List<Integer> content = readPointerFile(filePointer);
+			lastIteration = content.get(0);
+			lastChunk = content.get(1);
+			logger.info(String.format("Loaded %s pointer from file: last completed train iteration=%s, last completed train chunk=%s", actionLabel, lastIteration, lastChunk));
 		}
 		else {
-			lastTrainIteration = -1;
-			lastTrainChunk = -1;
-			logger.info(String.format("No train pointer file found, starting from iteration 0, chunk 0."));
+			lastIteration = -1;
+			lastChunk = -1;
+			logger.info(String.format("No %s pointer file found, starting from iteration 0, chunk 0.", actionLabel));
 		}
 		
 		// This has to be outside of the loop, as it should only effect the first iteration we process 
-		int j = lastTrainChunk+1;
+		//int j = lastChunk+1;
 		
 		// Note that if we've completed the training before, as indicated in
 		// the pointer file - we ever enter this loop
-		for (int i=lastTrainIteration+1; i<allChunks.size(); i++) {
+		//for (int i=lastIteration+1; i<allChunks.size(); i++) {
+		for (int i=0; i<allChunks.size(); i++) {
 			List<List<String>> iteration = allChunks.get(i);
 			List<String> trainSet = new ArrayList<String>();
 			int mentionsInTrainSet = 0;
 			logger.info(String.format("Starting iteration %s", i));
-			for (; j<iteration.size(); j++) {
+			//for (; j<iteration.size(); j++) {
+			for (int j=0; j<iteration.size(); j++) {
 				List<String> chunk = iteration.get(j);
 				trainSet.addAll(chunk);
 				
@@ -249,64 +259,138 @@ public class LearningCurve {
 					mentionsInChunk += doc.eventMentions.size();
 				}
 				mentionsInTrainSet += mentionsInChunk;
-				logger.info(String.format("Starting chunk %s, has %s event mentions. Total of %s event mention in this train set.",
-						j, mentionsInChunk, mentionsInTrainSet));
 				
-				String tempTrainDocList = String.format(TRAIN_LIST_FILENAME, outputFolder, i, j, trainSet.size(), mentionsInTrainSet);
-				PrintWriter f = null;
-				try {
-					f = new PrintWriter(tempTrainDocList);
-					f.write(StringUtils.join(trainSet, "\n") + "\n");
-				}
-				finally {
-					f.close();
-				}
-				
-				String[] args = new String[] {
-						ACE_PATH,
-						tempTrainDocList,
-						String.format(MODEL_FILENAME, outputFolder, i, j, trainSet.size(), mentionsInTrainSet),
-						devDocsList,
-				};
-				ArrayUtils.addAll(args, OTHER_ARGS_ARR);
-				//args.addAll(OTHER_ARGS_LIST);
-				//String[] argsArray = (String[]) args.<String>toArray();
+				// OK, changing strategy - we check if we need to do the action only HERE, not before.
+				// This is since we anyway need to go through all the training documents from the top,
+				// to collect stats of total number of docs and total number of mentions.
+				if ( (i == lastIteration) && (j >= lastChunk+1) ||
+					 (i > lastIteration) )
+				{
+					logger.info(String.format("Starting chunk %s, has %s event mentions. Total of %s event mention in this train set.",
+							j, mentionsInChunk, mentionsInTrainSet));
+					
+					System.setOut(new PrintStream(String.format(outFileName, outputFolder, i, j, trainSet.size(), mentionsInTrainSet)));
+					System.setErr(new PrintStream(String.format(errFileName, outputFolder, i, j, trainSet.size(), mentionsInTrainSet)));
 
-				logger.info(String.format("Running training with args: " + args));
-				System.setOut(new PrintStream(String.format(OUT_FILENAME, outputFolder, i, j, trainSet.size(), mentionsInTrainSet)));
-				System.setErr(new PrintStream(String.format(ERR_FILENAME, outputFolder, i, j, trainSet.size(), mentionsInTrainSet)));
-				Pipeline.main(args);
-				logger.info("Returned from training");
-				
-				try {
-					f = new PrintWriter(filePointerTrain);
-					f.printf("%s,%s", i, j);
+					action.go(outputFolder, i, j, trainSet, mentionsInTrainSet, devDocsList, testDocsList);
+					
+					PrintWriter f = null;
+					try {
+						f = new PrintWriter(filePointer);
+						f.printf("%s,%s", i, j);
+					}
+					finally {
+						f.close();
+					}
+					logger.info(String.format("Updated %s pointer: %s,%s", actionLabel, i, j));
 				}
-				finally {
-					f.close();
-				}
-				logger.info(String.format("Updated train pointer: %s,%s", i, j));
 			}
-			j=0;
+			//j=0;
 		}
+		logger.info(String.format("##### Finished %s", actionLabel));
 	}
 		
 	public void run(String[] args) {
 		try {
 			logger.info(String.format("Starting learning curve, with args: %s", Arrays.asList(args)));
-			
+
+			// using given output folder
+			outputFolder = args[0];
+			fileRunSpec = new File(outputFolder, FILENAME_RUN_SPEC);
+			filePointerTrain = new File(outputFolder, FILENAME_POINTER_TRAIN);
+			filePointerDecode = new File(outputFolder, FILENAME_POINTER_DECODE);
+			fileDecodeResults = new File(outputFolder, FILENAME_DECODE_RESULTS);
+			fileDone = new File(outputFolder, FILENAME_DONE);
+
 			// Understand current state and prepare
-			if (fileDone.isFile()) {
-				logger.info("This run is already done from before! Nothing to do! Exiting.");
-				return;
-			}
+//			if (fileDone.isFile()) {
+//				logger.info("This run is already done from before! Nothing to do! Exiting.");
+//				return;
+//			}
 			
 			loadRunSpec(args);
 			doTraining();
-
+			doDecoding();
 		}
 		catch (Exception e) {
 			logger.error("", e);
+		}
+	}
+	
+	private interface Action {
+		public void go(String outputFolder, int i, int j, List<String> trainSet, int mentionsInTrainSet, String devDocsList, String testDocsList) throws IOException, DocumentException;
+	}
+	
+	private class TrainAction implements Action {
+		@Override
+		public void go(String outputFolder, int i, int j, List<String> trainSet, int mentionsInTrainSet, String devDocsList, String testDocsList) throws IOException {
+			String tempTrainDocList = String.format(TRAIN_LIST_FILENAME, outputFolder, i, j, trainSet.size(), mentionsInTrainSet);
+			PrintWriter f = null;
+			try {
+				f = new PrintWriter(tempTrainDocList);
+				f.write(StringUtils.join(trainSet, "\n") + "\n");
+			}
+			finally {
+				f.close();
+			}
+			
+			String[] args = new String[] {
+					ACE_PATH,
+					tempTrainDocList,
+					String.format(MODEL_FILENAME, outputFolder, i, j, trainSet.size(), mentionsInTrainSet),
+					devDocsList,
+			};
+			ArrayUtils.addAll(args, TRAIN_OTHER_ARGS_ARR);
+			//args.addAll(OTHER_ARGS_LIST);
+			//String[] argsArray = (String[]) args.<String>toArray();
+
+			logger.info(String.format("Running training with args: " + Arrays.asList(args)));
+			Pipeline.main(args);
+			logger.info("Returned from training");		}
+		
+	}
+	
+	private class DecodeAction implements Action {
+		@Override
+		public void go(String outputFolder, int i, int j, List<String> trainSet, int mentionsInTrainSet, String devDocsList, String testDocsList) throws IOException, DocumentException {			
+			String[] args = new String[] {
+					String.format(MODEL_FILENAME, outputFolder, i, j, trainSet.size(), mentionsInTrainSet),
+					ACE_PATH,
+					testDocsList,
+					outputFolder,
+					String.format(FILENAME_PATTERN, i, j, trainSet.size(), mentionsInTrainSet),
+			};
+
+			logger.info(String.format("Running decoding with args: " + Arrays.asList(args)));
+			Stats stats = Decoder.mainReturningStats(args);
+			logger.info("Returned from decoding");
+			
+			boolean exists = fileDecodeResults.isFile();
+			FileOutputStream decodeResultsOut = new FileOutputStream(fileDecodeResults, true);
+			PrintWriter f = null;
+			try {
+				f = new PrintWriter(decodeResultsOut);
+				if (!exists) {
+					logger.info("Cannot find decode results file, creating it: " + FILENAME_DECODE_RESULTS);
+					f.printf("Iteration,NumChunks,NumDocs,NumMentions,Trigger-Id-Prec,Trigger-Id-Rec,Trigger-Id-F1,Trigger-Total-Prec,Trigger-Total-Rec,Trigger-Total-F1,Arg-Id-Prec,Arg-Id-Rec,Arg-Id-F1,Arg-Total-Prec,Arg-Total-Rec,Arg-Total-F1\n");
+				}
+				logger.info(String.format("Updating decode results file. Trigger id F1=%f, Arg id F1=%f", stats.f1_trigger_idt, stats.f1_arg_idt));
+				f.printf("%02d,%03d,%03d,%03d,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f\n",
+						
+						i, j, trainSet.size(), mentionsInTrainSet,
+						
+						stats.prec_trigger_idt, stats.recall_trigger_idt, stats.f1_trigger_idt,
+						stats.prec_trigger, stats.recall_trigger, stats.f1_trigger,
+						
+						stats.prec_arg_idt, stats.recall_arg_idt, stats.f1_arg_idt,
+						stats.prec_arg, stats.recall_arg, stats.f1_arg
+
+						
+						);
+			}
+			finally {
+				f.close();
+			}
 		}
 	}
 	

@@ -85,7 +85,7 @@ public class Scorer
 		}
 	}
 	
-	public static void doAnalysis(File goldDir, File ansDir, File file_list, PrintStream out) throws IOException, DocumentException
+	public static Stats doAnalysis(File goldDir, File ansDir, File file_list, PrintStream out) throws IOException, DocumentException
 	{
 		Stats stats = new Stats();
 		BufferedReader reader = new BufferedReader(new FileReader(file_list));
@@ -122,6 +122,8 @@ public class Scorer
 		out.println("\n\n---------------------------");
 		out.println("Summary:\n");
 		out.println(stats);
+		
+		return stats;
 	}
 	
 	private static void doAnalysisForFile(AceDocument doc_ans, AceDocument doc_gold, Stats stats, PrintStream out)
@@ -248,8 +250,18 @@ public class Scorer
 	
 	private static String minimizeMentionAndArgumentMentionID(String longID) {
 		Matcher m = Pattern.compile("-(\\w*\\d+\\-\\d+)$").matcher(longID);
-		m.find();
-		return m.group(1);
+		if (m.find()) {
+			return m.group(1);
+		}
+		else {
+			return longID;
+		}
+//		try {
+//			return m.group(1);
+//		}
+//		catch (IllegalStateException e) {
+//			throw e;
+//		}
 	}
 	
 	private static Span realHead(AceMention value) {
@@ -324,7 +336,7 @@ public class Scorer
 		return ret;
 	}
 
-	static public void main(String[] args) throws DocumentException, IOException
+	static public Stats mainReturningStats(String[] args) throws DocumentException, IOException
 	{	
 		if(args.length < 3)
 		{
@@ -346,10 +358,16 @@ public class Scorer
 			File output = new File(args[3]);
 			out = new PrintStream(output);
 		}
-		doAnalysis(goldDir, ansDir, filelist, out);
+		Stats stats = doAnalysis(goldDir, ansDir, filelist, out);
 		if(out != System.out)
 		{
 			out.close();
 		}
+		
+		return stats;
+	}
+	
+	static public void main(String[] args) throws DocumentException, IOException {
+		mainReturningStats(args);
 	}
 }

@@ -47,7 +47,7 @@ public class LearningCurve {
 	//protected Boolean shouldDecode=false;
 
 	// Args for training
-	public static final String ACE_PATH = "C:\\Lab\\Datasets\\Ace\\Files\\qi\\";
+	public static final String ACE_PATH = "corpus/qi";
 	//public static final String TRAINING_LIST = "C:\\Java\\Git\\breep\\ACE_EVENT\\run\\input\\new_filelist_ACE_training.txt";
 	//public static final String DEV_LIST = "C:\\Java\\Git\\breep\\ACE_EVENT\\run\\input\\new_filelist_ACE_dev.txt";
 	public static final String TRAIN_OTHER_ARGS_STR = "beamSize=4 maxIterNum=20 skipNonEventSent=true avgArguments=true skipNonArgument=true useGlobalFeature=true addNeverSeenFeatures=true crossSent=false crossSentReranking=false order=0 evaluatorType=1";

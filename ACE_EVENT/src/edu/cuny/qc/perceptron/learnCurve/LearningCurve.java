@@ -53,6 +53,7 @@ public class LearningCurve {
 	public static final String TRAIN_OTHER_ARGS_STR = "beamSize=4 maxIterNum=20 skipNonEventSent=true avgArguments=true skipNonArgument=true useGlobalFeature=true addNeverSeenFeatures=true crossSent=false crossSentReranking=false order=0 evaluatorType=1";
 	public static final String[] TRAIN_OTHER_ARGS_ARR = TRAIN_OTHER_ARGS_STR.split(" ");
 	//public static final List<String> OTHER_ARGS_LIST = Arrays.asList(OTHER_ARGS_STR.split(" "));
+
 	
 	public static final String FILENAME_PATTERN = "__iter%02d_chunk%03d_docs%03d_mentions%04d.txt";
 	public static final String MODEL_FILENAME =       "%s/Model" + FILENAME_PATTERN;
@@ -87,7 +88,7 @@ public class LearningCurve {
 		try {
 			while ((line = bufferedReader.readLine()) != null) 
 				outList.add(line);
-			logger.info(String.format("Reading %d lines from: %s", outList.size(), f.getAbsolutePath()));
+			logger.info(String.format("Reading %d lines from: %s", outList.size(), f.getCanonicalPath()));
 			return outList;
 		}
 		finally {
@@ -398,5 +399,4 @@ public class LearningCurve {
 		LearningCurve prog = new LearningCurve();
 		prog.run(args);
 	}
-
 }

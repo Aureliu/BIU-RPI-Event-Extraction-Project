@@ -23,6 +23,7 @@ import org.apache.log4j.Logger;
 import org.dom4j.DocumentException;
 
 import edu.cuny.qc.ace.acetypes.AceDocument;
+import edu.cuny.qc.ace.acetypes.Scorer;
 import edu.cuny.qc.ace.acetypes.Scorer.Stats;
 import edu.cuny.qc.perceptron.core.Decoder;
 import edu.cuny.qc.perceptron.core.Pipeline;
@@ -42,6 +43,8 @@ public class LearningCurve {
 	protected Integer lastTrainChunk=-1;
 	protected Integer lastDecodeIteration=-1;
 	protected Integer lastDecodeChunk=-1;
+	protected Integer lastScoreIteration=-1;
+	protected Integer lastScoreChunk=-1;
 	//protected Boolean shouldChunkify=false;
 	//protected Boolean shouldTrain=false;
 	//protected Boolean shouldDecode=false;
@@ -56,22 +59,28 @@ public class LearningCurve {
 
 	
 	public static final String FILENAME_PATTERN = "__iter%02d_chunk%03d_docs%03d_mentions%04d.txt";
+	public static final String FOLDERNAME_PATTERN = "DIR__iter%02d_chunk%03d_docs%03d_mentions%04d.txt.";
 	public static final String MODEL_FILENAME =       "%s/Model" + FILENAME_PATTERN;
 	public static final String TRAIN_LIST_FILENAME =  "%s/TrainList" + FILENAME_PATTERN;
-	public static final String OUT_TRAIN_FILENAME =   "%s/OutTrain" + FILENAME_PATTERN;
-	public static final String OUT_DECODE_FILENAME =  "%s/OutDecode" + FILENAME_PATTERN;
-	public static final String ERR_TRAIN_FILENAME =   "%s/ErrTrain" + FILENAME_PATTERN;
-	public static final String ERR_DECODE_FILENAME =  "%s/ErrDecode" + FILENAME_PATTERN;
+//	public static final String OUT_TRAIN_FILENAME =   "%s/OutTrain" + FILENAME_PATTERN;
+//	public static final String OUT_DECODE_FILENAME =  "%s/OutDecode" + FILENAME_PATTERN;
+//	public static final String ERR_TRAIN_FILENAME =   "%s/ErrTrain" + FILENAME_PATTERN;
+//	public static final String ERR_DECODE_FILENAME =  "%s/ErrDecode" + FILENAME_PATTERN;
+	public static final String OUT_ALL_FILENAME =     "%s/OutAll" + FILENAME_PATTERN;
+	public static final String ERR_ALL_FILENAME =     "%s/ErrAll" + FILENAME_PATTERN;
+	public static final String SCORE_FILENAME =       "%s/Score" + FILENAME_PATTERN;
 
 	public static final String FILENAME_PREFIX = "^learning_curve_";
 	public static final String FILENAME_RUN_SPEC =        FILENAME_PREFIX + "run_spec.txt";
 	public static final String FILENAME_POINTER_TRAIN =   FILENAME_PREFIX + "last_completed_training.txt";
 	public static final String FILENAME_POINTER_DECODE =  FILENAME_PREFIX + "last_completed_decoding.txt";
+	public static final String FILENAME_POINTER_SCORE =   FILENAME_PREFIX + "last_completed_scoring.txt";
 	public static final String FILENAME_DECODE_RESULTS =  FILENAME_PREFIX + "decoding_results.txt";
 	public static final String FILENAME_DONE =            FILENAME_PREFIX + "DONE";
 	protected File fileRunSpec;
 	protected File filePointerTrain;
 	protected File filePointerDecode;
+	protected File filePointerScore;
 	protected File fileDecodeResults;
 	protected File fileDone;
 	
@@ -217,11 +226,15 @@ public class LearningCurve {
 	}
 	
 	protected void doTraining() throws IOException, DocumentException {
-		doAction("train", new TrainAction(), filePointerTrain, lastTrainIteration, lastTrainChunk, OUT_TRAIN_FILENAME, ERR_TRAIN_FILENAME);
+		doAction("train", new TrainAction(), filePointerTrain, lastTrainIteration, lastTrainChunk, OUT_ALL_FILENAME, ERR_ALL_FILENAME);
 	}
 	
 	protected void doDecoding() throws IOException, DocumentException {
-		doAction("decode", new DecodeAction(), filePointerDecode, lastDecodeIteration, lastDecodeChunk, OUT_DECODE_FILENAME, ERR_DECODE_FILENAME);
+		doAction("decode", new DecodeAction(), filePointerDecode, lastDecodeIteration, lastDecodeChunk, OUT_ALL_FILENAME, ERR_ALL_FILENAME);
+	}
+	
+	protected void doScoring() throws IOException, DocumentException {
+		doAction("score", new ScoreAction(), filePointerScore, lastScoreIteration, lastScoreChunk, OUT_ALL_FILENAME, ERR_ALL_FILENAME);
 	}
 	
 	protected void doAction(String actionLabel, Action action, File filePointer, Integer lastIteration, Integer lastChunk, String outFileName, String errFileName) throws IOException, DocumentException {
@@ -270,8 +283,11 @@ public class LearningCurve {
 					logger.info(String.format("Starting chunk %s, has %s event mentions. Total of %s event mention in this train set.",
 							j, mentionsInChunk, mentionsInTrainSet));
 					
-					System.setOut(new PrintStream(String.format(outFileName, outputFolder, i, j, trainSet.size(), mentionsInTrainSet)));
-					System.setErr(new PrintStream(String.format(errFileName, outputFolder, i, j, trainSet.size(), mentionsInTrainSet)));
+					// Set output and error stream - appending to an existing file, if exists
+					FileOutputStream outStream = new FileOutputStream(String.format(outFileName, outputFolder, i, j, trainSet.size(), mentionsInTrainSet), true);
+					FileOutputStream errStream = new FileOutputStream(String.format(errFileName, outputFolder, i, j, trainSet.size(), mentionsInTrainSet), true);
+					System.setOut(new PrintStream(outStream));
+					System.setErr(new PrintStream(errStream));
 
 					action.go(outputFolder, i, j, trainSet, mentionsInTrainSet, devDocsList, testDocsList);
 					
@@ -300,6 +316,7 @@ public class LearningCurve {
 			fileRunSpec = new File(outputFolder, FILENAME_RUN_SPEC);
 			filePointerTrain = new File(outputFolder, FILENAME_POINTER_TRAIN);
 			filePointerDecode = new File(outputFolder, FILENAME_POINTER_DECODE);
+			filePointerScore = new File(outputFolder, FILENAME_POINTER_SCORE);
 			fileDecodeResults = new File(outputFolder, FILENAME_DECODE_RESULTS);
 			fileDone = new File(outputFolder, FILENAME_DONE);
 
@@ -312,6 +329,7 @@ public class LearningCurve {
 			loadRunSpec(args);
 			doTraining();
 			doDecoding();
+			doScoring();
 		}
 		catch (Exception e) {
 			logger.error("", e);
@@ -359,12 +377,30 @@ public class LearningCurve {
 					ACE_PATH,
 					testDocsList,
 					outputFolder,
-					String.format(FILENAME_PATTERN, i, j, trainSet.size(), mentionsInTrainSet),
 			};
+			String filenameSuffix = String.format(FILENAME_PATTERN, i, j, trainSet.size(), mentionsInTrainSet);
+			String folderNamePrefix = String.format(FOLDERNAME_PATTERN, i, j, trainSet.size(), mentionsInTrainSet);
 
-			logger.info(String.format("Running decoding with args: " + Arrays.asList(args)));
-			Stats stats = Decoder.mainReturningStats(args);
+			logger.info(String.format("Running decoding (no scoring) with args: " + Arrays.asList(args)));
+			Decoder.mainNoScoring(args, filenameSuffix, folderNamePrefix);
 			logger.info("Returned from decoding");
+		}
+	}
+	
+	private class ScoreAction implements Action {
+		@Override
+		public void go(String outputFolder, int i, int j, List<String> trainSet, int mentionsInTrainSet, String devDocsList, String testDocsList) throws IOException, DocumentException {
+			String[] args = new String[] {
+					ACE_PATH,
+					outputFolder,
+					testDocsList,
+					String.format(SCORE_FILENAME, outputFolder, i, j, trainSet.size(), mentionsInTrainSet),
+			};
+			String folderNamePrefix = String.format(FOLDERNAME_PATTERN, i, j, trainSet.size(), mentionsInTrainSet);
+
+			logger.info(String.format("Running scoring with args: " + Arrays.asList(args)));
+			Stats stats = Scorer.mainMultiRunReturningStats(folderNamePrefix, args);
+			logger.info("Returned from scoring");
 			
 			boolean exists = fileDecodeResults.isFile();
 			FileOutputStream decodeResultsOut = new FileOutputStream(fileDecodeResults, true);
@@ -376,7 +412,7 @@ public class LearningCurve {
 					f.printf("Iteration,NumChunks,NumDocs,NumMentions,Trigger-Id-Prec,Trigger-Id-Rec,Trigger-Id-F1,Trigger-Total-Prec,Trigger-Total-Rec,Trigger-Total-F1,Arg-Id-Prec,Arg-Id-Rec,Arg-Id-F1,Arg-Total-Prec,Arg-Total-Rec,Arg-Total-F1\n");
 				}
 				logger.info(String.format("Updating decode results file. Trigger id F1=%f, Arg id F1=%f", stats.f1_trigger_idt, stats.f1_arg_idt));
-				f.printf("%02d,%03d,%03d,%03d,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f\n",
+				f.printf("%02d,%03d,%03d,%03d,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f\r\n",
 						
 						i, j, trainSet.size(), mentionsInTrainSet,
 						

@@ -33,7 +33,7 @@ public class Decoder
 	public static String OPTION_NO_SCORING = "-n"; 
 	public static File outDir = null; //TODO DEBUG
 	
-	static public void writeEntities (PrintWriter w, AceDocument aceDoc, List<AceEvent> events) {
+	public static void writeEntities (PrintWriter w, AceDocument aceDoc, List<AceEvent> events) {
 		w.println ("<?xml version=\"1.0\"?>");
 		w.println ("<!DOCTYPE source_file SYSTEM \"apf.v5.1.1.dtd\">");
 		w.print   ("<source_file URI=\"" + aceDoc.sourceFile + "\"");
@@ -64,7 +64,7 @@ public class Decoder
 		w.close();
 	}
 	
-	static public Stats mainReturningStats(String[] args) throws IOException, DocumentException
+	public static void mainNoScoring(String[] args, String filenameSuffix, String folderNamePrefix) throws IOException, DocumentException
 	{
 		System.out.printf("Args:\n%s\n\n", new ArrayList<String>(Arrays.asList(args)));
 		//if((args.length < 4) || (args.length>=5 && !args[4].equals(OPTION_NO_SCORING)))
@@ -79,6 +79,8 @@ public class Decoder
 			System.exit(-1);
 		}
 		
+		System.err.println("(Decoding err stream)");
+		
 		File srcDir = new File(args[1]);
 		File fileList = new File(args[2]);
 		outDir = new File(args[3]);   //TODO DEBUG
@@ -87,18 +89,6 @@ public class Decoder
 		{
 			outDir.mkdirs();
 		}
-		
-		boolean noScoring = false;
-		String filenameSuffix = ".txt";
-		if (args.length>=5) {
-			if (args[4].equals(OPTION_NO_SCORING)) {
-				noScoring = true;
-			}
-			else {
-				filenameSuffix = args[4];
-			}
-		}
-		
 		
 		// Perceptron read model from the serialized file
 		Perceptron perceptron = Perceptron.deserializeObject(new File(args[0]));
@@ -123,7 +113,7 @@ public class Decoder
 		avgWeightsOut.printf("%s", perceptron.getAvg_weights().toString());
 		avgWeightsOut.close();
 				
-		System.out.printf("--------------\nPerceptron.controller =\n%s\n\n--------------------------\n\n", perceptron.controller);
+		System.out.printf("--------------\nPerceptron.controller =\n%s\r\n\r\n--------------------------\r\n\r\n", perceptron.controller);
 		
 		BufferedReader reader = new BufferedReader(new FileReader(fileList));
 		String line = "";
@@ -155,7 +145,7 @@ public class Decoder
 			List<SentenceAssignment> localResults = perceptron.decoding(localInstanceList);
 			
 			// print to docs
-			File outputFile = new File(outDir + File.separator + line);
+			File outputFile = new File(outDir + File.separator + folderNamePrefix + line);
 			if(!outputFile.getParentFile().exists())
 			{
 				outputFile.getParentFile().mkdirs();
@@ -181,19 +171,32 @@ public class Decoder
 			out.close();
 		}
 		
-		if (noScoring) {
-			return null;
-		}
-		
-		// get score
-		File outputFile = new File(outDir + File.separator + "Score" + filenameSuffix);
-		Stats stats = Scorer.mainReturningStats(new String[]{args[1], args[3], args[2], outputFile.getAbsolutePath()});
-		System.out.printf("[%s] --------------\nPerceptron.controller =\n%s\n\n--------------------------\n\n", new Date(), perceptron.controller);
-
-		return stats;
+		System.out.printf("[%s] --------------\r\nPerceptron.controller =\r\n%s\r\n\r\n--------------------------\r\n\r\n", new Date(), perceptron.controller);
 	}
 	
-	static public void main(String[] args) throws IOException, DocumentException {
-		mainReturningStats(args);
+	public static Stats mainWithScoring(String[] args, String filenameSuffix, String folderNamePrefix) throws IOException, DocumentException {
+		mainNoScoring(args, filenameSuffix, folderNamePrefix);
+		
+		File outputFile = new File(outDir + File.separator + "Score" + filenameSuffix);
+		Stats stats = Scorer.mainMultiRunReturningStats(folderNamePrefix, new String[]{args[1], args[3], args[2], outputFile.getAbsolutePath()});
+		return stats;
+	}
+
+	public static void main(String[] args) throws IOException, DocumentException {
+		//TODO the organization here is bad, should be improved:
+		// 1. there's no way to specify both a filenameSufix and NO_SCORING
+		// 2. The check for enough args is only done later, so we'll get an exception
+		String filenameSuffix = ".txt";
+		String folderNamePrefix = "";
+		if (args.length>=5) {
+			if (args[4].equals(OPTION_NO_SCORING)) {
+				mainNoScoring(args, filenameSuffix, folderNamePrefix);
+			}
+			else {
+				filenameSuffix = args[4];
+				folderNamePrefix = "DIR" + args[4] + "."; //yes, I know it's silly it has ".txt" in it, maybe should fix later
+				mainWithScoring(args, filenameSuffix, folderNamePrefix);
+			}
+		}
 	}
 }

@@ -222,6 +222,9 @@ public class Pipeline
 			System.out.println("args[4+]: controller arguments");
 			System.exit(-1);
 		}
+		
+		System.err.println("(Training err stream)");
+
 		File srcDir = new File(args[0]);
 		File trainingFileList = new File(args[1]);
 		File modelFile = new File(args[2]);

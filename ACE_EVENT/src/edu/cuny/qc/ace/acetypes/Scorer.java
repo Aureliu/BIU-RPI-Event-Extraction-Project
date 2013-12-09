@@ -85,21 +85,21 @@ public class Scorer
 		}
 	}
 	
-	public static Stats doAnalysis(File goldDir, File ansDir, File file_list, PrintStream out) throws IOException, DocumentException
+	public static Stats doAnalysis(File goldDir, File ansDir, File file_list, PrintStream out, String dirNamePrefix) throws IOException, DocumentException
 	{
 		Stats stats = new Stats();
 		BufferedReader reader = new BufferedReader(new FileReader(file_list));
 		String line = "";
 		while((line = reader.readLine()) != null)
 		{
-			File apf_ans = new File(ansDir + File.separator + line + ".sgm.apf");
+			File apf_ans = new File(ansDir + File.separator + dirNamePrefix + line + ".sgm.apf");
 			if(!apf_ans.exists())
 			{
-				apf_ans = new File(ansDir + File.separator + line);
+				apf_ans = new File(ansDir + File.separator + dirNamePrefix + line);
 			}
 			if(!apf_ans.exists())
 			{
-				apf_ans = new File(ansDir + File.separator + line + ".apf.xml");
+				apf_ans = new File(ansDir + File.separator + dirNamePrefix + line + ".apf.xml");
 			}
 			int idx = line.indexOf("/");
 			String new_line = line.substring(0, idx+1) + "timex2norm" + File.separator + line.substring(idx+1);
@@ -337,6 +337,11 @@ public class Scorer
 	}
 
 	static public Stats mainReturningStats(String[] args) throws DocumentException, IOException
+	{
+		return mainMultiRunReturningStats("", args);
+	}
+	
+	static public Stats mainMultiRunReturningStats(String dirNamePrefix, String[] args) throws DocumentException, IOException
 	{	
 		if(args.length < 3)
 		{
@@ -358,7 +363,7 @@ public class Scorer
 			File output = new File(args[3]);
 			out = new PrintStream(output);
 		}
-		Stats stats = doAnalysis(goldDir, ansDir, filelist, out);
+		Stats stats = doAnalysis(goldDir, ansDir, filelist, out, dirNamePrefix);
 		if(out != System.out)
 		{
 			out.close();

@@ -607,7 +607,7 @@ public class Document
 		{
 			Span token = tokenSpans[i];
 			boolean flag = false;
-			for(AceMention mention : this.aceAnnotations.allMentionsList)
+			for(AceMention mention : this.aceAnnotations.allMentionsListFull)
 			{
 				if(flag)
 				{
@@ -724,7 +724,7 @@ public class Document
 		{
 			Span sent_before = sentSpans[i];
 			Span sent_after = sentSpans[i+1];
-			for(AceMention mention : this.aceAnnotations.allMentionsList)
+			for(AceMention mention : this.aceAnnotations.allMentionsListFull)
 			{
 				Span extent = mention.extent;
 				if(extent.overlap(sent_before) && extent.overlap(sent_after))

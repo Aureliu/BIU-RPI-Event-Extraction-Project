@@ -11,6 +11,7 @@ import java.io.PrintWriter;
 import java.io.Reader;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
@@ -28,26 +29,26 @@ import edu.cuny.qc.ace.acetypes.Scorer.Stats;
 import edu.cuny.qc.perceptron.core.Decoder;
 import edu.cuny.qc.perceptron.core.Pipeline;
 import edu.cuny.qc.util.LoggerUtils;
+import edu.cuny.qc.util.TypeConstraints;
 
 
 public class LearningCurve {
 	protected List<List<List<String>>> allChunks = new ArrayList<List<List<String>>>();
+	protected List<String> allEventTypes = null;
 	protected String trainDocsList;
 	protected String devDocsList;
 	protected String testDocsList;
 	protected String outputFolder;
 	protected Integer numIterations=null;
 	protected Integer chunkSize=null;
-	//protected Integer numChunks=null;
-	protected Integer lastTrainIteration=-1;
-	protected Integer lastTrainChunk=-1;
-	protected Integer lastDecodeIteration=-1;
-	protected Integer lastDecodeChunk=-1;
-	protected Integer lastScoreIteration=-1;
-	protected Integer lastScoreChunk=-1;
-	//protected Boolean shouldChunkify=false;
-	//protected Boolean shouldTrain=false;
-	//protected Boolean shouldDecode=false;
+	protected Boolean singleTypes=null;
+	protected Integer maxType=null;
+//	protected Integer lastTrainIteration=-1;
+//	protected Integer lastTrainChunk=-1;
+//	protected Integer lastDecodeIteration=-1;
+//	protected Integer lastDecodeChunk=-1;
+//	protected Integer lastScoreIteration=-1;
+//	protected Integer lastScoreChunk=-1;
 
 	// Args for training
 	public static final String ACE_PATH = "corpus/qi/";
@@ -58,7 +59,7 @@ public class LearningCurve {
 	//public static final List<String> OTHER_ARGS_LIST = Arrays.asList(OTHER_ARGS_STR.split(" "));
 
 	
-	public static final String FILENAME_PATTERN = "__iter%02d_chunk%03d_docs%03d_mentions%04d.txt";
+	public static final String FILENAME_PATTERN = "__iter%02d_type%02d_chunk%03d_docs%03d_mentions%04d.txt";
 	public static final String FOLDERNAME_PATTERN = "DIR__iter%02d_chunk%03d_docs%03d_mentions%04d.txt.";
 	public static final String MODEL_FILENAME =       "%s/Model" + FILENAME_PATTERN;
 	public static final String TRAIN_LIST_FILENAME =  "%s/TrainList" + FILENAME_PATTERN;
@@ -85,6 +86,8 @@ public class LearningCurve {
 	protected File fileDone;
 	
 	public static final String CHUNK_SEP = "===";
+	public static final int JOKER_TYPE_NUM = -2;
+	public static final String JOKER_TYPE_NAME = "#ALL";
 
 	protected static final Random RANDOM = new Random();
 	protected static Logger logger = LoggerUtils.initLog(LearningCurve.class);
@@ -112,14 +115,16 @@ public class LearningCurve {
 			List<String> lines = loadFileToList(fileRunSpec);
 			
 			// Get params from first line
-			Pattern pattern = Pattern.compile("numIterations=(\\d+),\\s*chunkSize=(\\d+),\\s*trainDocsList=(.+?),\\s*devDocsList=(.+?),\\s*testDocsList=(.+?)");
+			Pattern pattern = Pattern.compile("numIterations=(\\d+),\\s*chunkSize=(\\d+),\\s*singleTypes=(\\w+),\\s*maxType=(\\d+),\\s*trainDocsList=(.+?),\\s*devDocsList=(.+?),\\s*testDocsList=(.+?)");
 			Matcher m = pattern.matcher(lines.get(0));
 			m.matches();
 			numIterations = Integer.parseInt(m.group(1));
 			chunkSize = Integer.parseInt(m.group(2));
-			trainDocsList = m.group(3);
-			devDocsList = m.group(4);
-			testDocsList = m.group(5);
+			singleTypes = Boolean.parseBoolean(m.group(3));
+			maxType = Integer.parseInt(m.group(4));
+			trainDocsList = m.group(5);
+			devDocsList = m.group(6);
+			testDocsList = m.group(7);
 			//outputFolder = m.group(6);
 			//numChunks = Integer.parseInt(m.group(3));
 			
@@ -137,23 +142,36 @@ public class LearningCurve {
 					iteration.add(Arrays.asList(chunks));
 				}
 			}
+			populateTypes();
 		}
 		else { // meaning that the file doesn't exist
-			if (args.length != 6) {
-				throw new IllegalArgumentException("Usage: <output folder> <train docs list> <dev docs list> <test doc list> <num iterations> <chunk size>");
+			if (args.length != 7) {
+				throw new IllegalArgumentException("Usage: <output folder> <train docs list> <dev docs list> <test doc list> <num iterations> <chunk size> <singleTypes>");
 			}
 			trainDocsList = args[1];
 			devDocsList = args[2];
 			testDocsList = args[3];
 			numIterations = Integer.parseInt(args[4]);
 			chunkSize = Integer.parseInt(args[5]);
+			singleTypes = Boolean.parseBoolean(args[6]);
 			buildChunks();
+			populateTypes();
+			maxType = allEventTypes.size()-1;
 			dumpSpecToFile();
 		}
 
 		logChunks();
 	}
 	
+	protected void populateTypes() {
+		if (singleTypes) {
+			allEventTypes = new ArrayList<String>(TypeConstraints.eventTypeMap.keySet());
+			Collections.sort(allEventTypes); // Alphabetically!
+		}
+//		else {
+//			allEventTypes = Arrays.asList(new String[] {ITERATING_ALL_TYPES});
+//		}
+	}
 	protected void buildChunks() throws IOException {
 		List<String> lines = loadFileToList(new File(trainDocsList));
 		for (int i=0; i<numIterations; i++) {
@@ -179,8 +197,8 @@ public class LearningCurve {
 		PrintWriter out = null;
 		try {
 			out = new PrintWriter(fileRunSpec);
-			out.printf("numIterations=%s,chunkSize=%s,trainDocsList=%s,devDocsList=%s,testDocsList=%s\n\n",
-					numIterations, chunkSize, trainDocsList, devDocsList, testDocsList);
+			out.printf("numIterations=%s,chunkSize=%s,singleTypes=%s,maxType=%s,trainDocsList=%s,devDocsList=%s,testDocsList=%s\n\n",
+					numIterations, chunkSize, singleTypes, maxType, trainDocsList, devDocsList, testDocsList);
 			for (List<List<String>> iteration : allChunks) {
 				out.printf(CHUNK_SEP + "\n");
 				for (List<String> chunk : iteration) {
@@ -218,37 +236,74 @@ public class LearningCurve {
 		List<String> lines = loadFileToList(f);
 		assert lines.size()==1 : "File should have exactly one line: " + f;
 		String[] line = lines.get(0).split(",");
-		assert line.length==2 : "Line should have exactly two elements, got: " + line;
+		assert line.length==3 : "Line should have exactly three elements, got: " + line;
 		List<Integer> result = new ArrayList<Integer>();
 		result.add(Integer.parseInt(line[0]));
 		result.add(Integer.parseInt(line[1]));
+		result.add(Integer.parseInt(line[2]));
 		return result;
 	}
 	
+	protected String getEventTypeName(int t) {
+		if (t==JOKER_TYPE_NUM) {
+			return JOKER_TYPE_NAME;
+		}
+		else {
+			return allEventTypes.get(t);
+		}
+	}
+	
 	protected void doTraining() throws IOException, DocumentException {
-		doAction("train", new TrainAction(), filePointerTrain, lastTrainIteration, lastTrainChunk, OUT_ALL_FILENAME, ERR_ALL_FILENAME);
+		//doAction("train", new TrainAction(), filePointerTrain, lastTrainIteration, lastTrainChunk, OUT_ALL_FILENAME, ERR_ALL_FILENAME);
+		doAction("train", new TrainAction(), filePointerTrain, OUT_ALL_FILENAME, ERR_ALL_FILENAME);
 	}
 	
 	protected void doDecoding() throws IOException, DocumentException {
-		doAction("decode", new DecodeAction(), filePointerDecode, lastDecodeIteration, lastDecodeChunk, OUT_ALL_FILENAME, ERR_ALL_FILENAME);
+		//doAction("decode", new DecodeAction(), filePointerDecode, lastDecodeIteration, lastDecodeChunk, OUT_ALL_FILENAME, ERR_ALL_FILENAME);
+		doAction("decode", new DecodeAction(), filePointerDecode, OUT_ALL_FILENAME, ERR_ALL_FILENAME);
 	}
 	
 	protected void doScoring() throws IOException, DocumentException {
-		doAction("score", new ScoreAction(), filePointerScore, lastScoreIteration, lastScoreChunk, OUT_ALL_FILENAME, ERR_ALL_FILENAME);
+		//doAction("score", new ScoreAction(), filePointerScore, lastScoreIteration, lastScoreChunk, OUT_ALL_FILENAME, ERR_ALL_FILENAME);
+		doAction("score", new ScoreAction(), filePointerScore, OUT_ALL_FILENAME, ERR_ALL_FILENAME);
 	}
 	
-	protected void doAction(String actionLabel, Action action, File filePointer, Integer lastIteration, Integer lastChunk, String outFileName, String errFileName) throws IOException, DocumentException {
+	protected void doAction(String actionLabel, Action action, File filePointer, String outFileName, String errFileName) throws IOException, DocumentException {
 		logger.info(String.format("##### Starting %s", actionLabel));
+		int tFirst = -800;
+		int tLast = -800;
+		Integer lastIteration = null;
+		Integer lastType = null;
+		Integer lastChunk = null; 
 		if (filePointer.isFile()) {
 			List<Integer> content = readPointerFile(filePointer);
 			lastIteration = content.get(0);
-			lastChunk = content.get(1);
-			logger.info(String.format("Loaded %s pointer from file: last completed train iteration=%s, last completed train chunk=%s", actionLabel, lastIteration, lastChunk));
+			lastType = content.get(1);
+			lastChunk = content.get(2);
+			logger.info(String.format("Loaded %s pointer from file: last completed train iteration=%s, last completed type=%s, last completed train chunk=%s", actionLabel, lastIteration, lastType, lastChunk));
 		}
 		else {
 			lastIteration = -1;
 			lastChunk = -1;
-			logger.info(String.format("No %s pointer file found, starting from iteration 0, chunk 0.", actionLabel));
+			String logType;
+			if (singleTypes) {
+				lastType = -1;
+				logType = "type 0";
+			}
+			else {
+				lastType = JOKER_TYPE_NUM;
+				logType = "not iterating types";
+			}
+			logger.info(String.format("No %s pointer file found, starting from iteration 0, %s, chunk 0.", actionLabel, logType));
+		}
+		
+		if (lastType == JOKER_TYPE_NUM) {
+			tFirst = JOKER_TYPE_NUM;
+			tLast = JOKER_TYPE_NUM+1;
+		}
+		else {
+			tFirst = 0;
+			tLast = maxType+1;
 		}
 		
 		// This has to be outside of the loop, as it should only effect the first iteration we process 
@@ -258,48 +313,62 @@ public class LearningCurve {
 		// the pointer file - we ever enter this loop
 		//for (int i=lastIteration+1; i<allChunks.size(); i++) {
 		for (int i=0; i<allChunks.size(); i++) {
-			List<List<String>> iteration = allChunks.get(i);
-			List<String> trainSet = new ArrayList<String>();
-			int mentionsInTrainSet = 0;
 			logger.info(String.format("Starting iteration %s", i));
-			//for (; j<iteration.size(); j++) {
-			for (int j=0; j<iteration.size(); j++) {
-				List<String> chunk = iteration.get(j);
-				trainSet.addAll(chunk);
-				
-				int mentionsInChunk = 0;
-				for (String docname : chunk) {
-					AceDocument doc = new AceDocument(ACE_PATH + docname + ".sgm", ACE_PATH + docname + ".apf.xml");
-					mentionsInChunk += doc.eventMentions.size();
+			List<List<String>> iteration = allChunks.get(i);
+			
+			//for (String eventType: allEventTypes) {
+			for (int t=tFirst; t<tLast; t++) {
+				String eventType = getEventTypeName(t);
+				if (eventType != JOKER_TYPE_NAME) {
+					AceDocument.onlyThisEventType = eventType;
 				}
-				mentionsInTrainSet += mentionsInChunk;
-				
-				// OK, changing strategy - we check if we need to do the action only HERE, not before.
-				// This is since we anyway need to go through all the training documents from the top,
-				// to collect stats of total number of docs and total number of mentions.
-				if ( (i == lastIteration) && (j >= lastChunk+1) ||
-					 (i > lastIteration) )
-				{
-					logger.info(String.format("Starting chunk %s, has %s event mentions. Total of %s event mention in this train set.",
-							j, mentionsInChunk, mentionsInTrainSet));
+			
+				List<String> trainSet = new ArrayList<String>();
+				int mentionsInTrainSet = 0;
+				logger.info(String.format("Iteration %s: starting type %s (%s)", i, t, eventType));
+				//for (; j<iteration.size(); j++) {
+				for (int j=0; j<iteration.size(); j++) {
+					List<String> chunk = iteration.get(j);
+					trainSet.addAll(chunk);
 					
-					// Set output and error stream - appending to an existing file, if exists
-					FileOutputStream outStream = new FileOutputStream(String.format(outFileName, outputFolder, i, j, trainSet.size(), mentionsInTrainSet), true);
-					FileOutputStream errStream = new FileOutputStream(String.format(errFileName, outputFolder, i, j, trainSet.size(), mentionsInTrainSet), true);
-					System.setOut(new PrintStream(outStream));
-					System.setErr(new PrintStream(errStream));
-
-					action.go(outputFolder, i, j, trainSet, mentionsInTrainSet, devDocsList, testDocsList);
+					int mentionsInChunk = 0;
+					for (String docname : chunk) {
+						if (docname.contains("APW_ENG_20030603.0303")) {
+							int u = 98;
+						}
+						AceDocument doc = new AceDocument(ACE_PATH + docname + ".sgm", ACE_PATH + docname + ".apf.xml");
+						mentionsInChunk += doc.eventMentions.size();
+					}
+					mentionsInTrainSet += mentionsInChunk;
 					
-					PrintWriter f = null;
-					try {
-						f = new PrintWriter(filePointer);
-						f.printf("%s,%s", i, j);
+					// OK, changing strategy - we check if we need to do the action only HERE, not before.
+					// This is since we anyway need to go through all the training documents from the top,
+					// to collect stats of total number of docs and total number of mentions.
+					if ( (i == lastIteration) && (t == lastType) && (j > lastChunk) ||
+						 (i == lastIteration) && (t > lastType) ||
+						 (i > lastIteration) )
+					{
+						logger.info(String.format("Starting chunk %s, event type %s (%s), has %s event mentions. Total of %s event mentions in this train set.",
+								j, t, eventType, mentionsInChunk, mentionsInTrainSet));
+						
+						// Set output and error stream - appending to an existing file, if exists
+						FileOutputStream outStream = new FileOutputStream(String.format(outFileName, outputFolder, i, t, j, trainSet.size(), mentionsInTrainSet), true);
+						FileOutputStream errStream = new FileOutputStream(String.format(errFileName, outputFolder, i, t, j, trainSet.size(), mentionsInTrainSet), true);
+						System.setOut(new PrintStream(outStream));
+						System.setErr(new PrintStream(errStream));
+	
+						action.go(outputFolder, i, t, j, eventType, trainSet, mentionsInTrainSet, devDocsList, testDocsList);
+						
+						PrintWriter f = null;
+						try {
+							f = new PrintWriter(filePointer);
+							f.printf("%s,%s,%s", i, t, j);
+						}
+						finally {
+							f.close();
+						}
+						logger.info(String.format("Updated %s pointer: %s,%s,%s", actionLabel, i, t, j));
 					}
-					finally {
-						f.close();
-					}
-					logger.info(String.format("Updated %s pointer: %s,%s", actionLabel, i, j));
 				}
 			}
 			//j=0;
@@ -337,13 +406,13 @@ public class LearningCurve {
 	}
 	
 	private interface Action {
-		public void go(String outputFolder, int i, int j, List<String> trainSet, int mentionsInTrainSet, String devDocsList, String testDocsList) throws IOException, DocumentException;
+		public void go(String outputFolder, int i, int t, int j, String eventType, List<String> trainSet, int mentionsInTrainSet, String devDocsList, String testDocsList) throws IOException, DocumentException;
 	}
 	
 	private class TrainAction implements Action {
 		@Override
-		public void go(String outputFolder, int i, int j, List<String> trainSet, int mentionsInTrainSet, String devDocsList, String testDocsList) throws IOException {
-			String tempTrainDocList = String.format(TRAIN_LIST_FILENAME, outputFolder, i, j, trainSet.size(), mentionsInTrainSet);
+		public void go(String outputFolder, int i, int t, int j, String eventType, List<String> trainSet, int mentionsInTrainSet, String devDocsList, String testDocsList) throws IOException {
+			String tempTrainDocList = String.format(TRAIN_LIST_FILENAME, outputFolder, i, t, j, trainSet.size(), mentionsInTrainSet);
 			PrintWriter f = null;
 			try {
 				f = new PrintWriter(tempTrainDocList);
@@ -356,7 +425,7 @@ public class LearningCurve {
 			String[] args = new String[] {
 					ACE_PATH,
 					tempTrainDocList,
-					String.format(MODEL_FILENAME, outputFolder, i, j, trainSet.size(), mentionsInTrainSet),
+					String.format(MODEL_FILENAME, outputFolder, i, t, j, trainSet.size(), mentionsInTrainSet),
 					devDocsList,
 			};
 			ArrayUtils.addAll(args, TRAIN_OTHER_ARGS_ARR);
@@ -371,15 +440,15 @@ public class LearningCurve {
 	
 	private class DecodeAction implements Action {
 		@Override
-		public void go(String outputFolder, int i, int j, List<String> trainSet, int mentionsInTrainSet, String devDocsList, String testDocsList) throws IOException, DocumentException {			
+		public void go(String outputFolder, int i, int t, int j, String eventType, List<String> trainSet, int mentionsInTrainSet, String devDocsList, String testDocsList) throws IOException, DocumentException {			
 			String[] args = new String[] {
-					String.format(MODEL_FILENAME, outputFolder, i, j, trainSet.size(), mentionsInTrainSet),
+					String.format(MODEL_FILENAME, outputFolder, i, t, j, trainSet.size(), mentionsInTrainSet),
 					ACE_PATH,
 					testDocsList,
 					outputFolder,
 			};
-			String filenameSuffix = String.format(FILENAME_PATTERN, i, j, trainSet.size(), mentionsInTrainSet);
-			String folderNamePrefix = String.format(FOLDERNAME_PATTERN, i, j, trainSet.size(), mentionsInTrainSet);
+			String filenameSuffix = String.format(FILENAME_PATTERN, i, t, j, trainSet.size(), mentionsInTrainSet);
+			String folderNamePrefix = String.format(FOLDERNAME_PATTERN, i, t, j, trainSet.size(), mentionsInTrainSet);
 
 			logger.info(String.format("Running decoding (no scoring) with args: " + Arrays.asList(args)));
 			Decoder.mainNoScoring(args, filenameSuffix, folderNamePrefix);
@@ -389,14 +458,14 @@ public class LearningCurve {
 	
 	private class ScoreAction implements Action {
 		@Override
-		public void go(String outputFolder, int i, int j, List<String> trainSet, int mentionsInTrainSet, String devDocsList, String testDocsList) throws IOException, DocumentException {
+		public void go(String outputFolder, int i, int t, int j, String eventType, List<String> trainSet, int mentionsInTrainSet, String devDocsList, String testDocsList) throws IOException, DocumentException {
 			String[] args = new String[] {
 					ACE_PATH,
 					outputFolder,
 					testDocsList,
-					String.format(SCORE_FILENAME, outputFolder, i, j, trainSet.size(), mentionsInTrainSet),
+					String.format(SCORE_FILENAME, outputFolder, i, t, j, trainSet.size(), mentionsInTrainSet),
 			};
-			String folderNamePrefix = String.format(FOLDERNAME_PATTERN, i, j, trainSet.size(), mentionsInTrainSet);
+			String folderNamePrefix = String.format(FOLDERNAME_PATTERN, i, t, j, trainSet.size(), mentionsInTrainSet);
 
 			logger.info(String.format("Running scoring with args: " + Arrays.asList(args)));
 			Stats stats = Scorer.mainMultiRunReturningStats(folderNamePrefix, args);
@@ -409,12 +478,12 @@ public class LearningCurve {
 				f = new PrintWriter(decodeResultsOut);
 				if (!exists) {
 					logger.info("Cannot find decode results file, creating it: " + FILENAME_DECODE_RESULTS);
-					f.printf("Iteration,NumChunks,NumDocs,NumMentions,Trigger-Id-Prec,Trigger-Id-Rec,Trigger-Id-F1,Trigger-Total-Prec,Trigger-Total-Rec,Trigger-Total-F1,Arg-Id-Prec,Arg-Id-Rec,Arg-Id-F1,Arg-Total-Prec,Arg-Total-Rec,Arg-Total-F1\n");
+					f.printf("Iteration,TypeNum,TypeName,NumChunks,NumDocs,NumMentions,Trigger-Id-Prec,Trigger-Id-Rec,Trigger-Id-F1,Trigger-Total-Prec,Trigger-Total-Rec,Trigger-Total-F1,Arg-Id-Prec,Arg-Id-Rec,Arg-Id-F1,Arg-Total-Prec,Arg-Total-Rec,Arg-Total-F1\n");
 				}
 				logger.info(String.format("Updating decode results file. Trigger id F1=%f, Arg id F1=%f", stats.f1_trigger_idt, stats.f1_arg_idt));
-				f.printf("%02d,%03d,%03d,%03d,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f\r\n",
+				f.printf("%02d,%02d,%s,%03d,%03d,%03d,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f\r\n",
 						
-						i, j, trainSet.size(), mentionsInTrainSet,
+						i, t, eventType, j, trainSet.size(), mentionsInTrainSet,
 						
 						stats.prec_trigger_idt, stats.recall_trigger_idt, stats.f1_trigger_idt,
 						stats.prec_trigger, stats.recall_trigger, stats.f1_trigger,

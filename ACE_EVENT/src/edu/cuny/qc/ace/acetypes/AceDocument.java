@@ -33,7 +33,11 @@ public class AceDocument {
 	 *  true for 2005 APF format
 	 */
 	public static boolean ace2005 = true;
-
+	
+	/**
+	 * Ofer: when this is not null, only this type will be read from the XML and stored in the document.
+	 */
+	public static String onlyThisEventType = null;
 
 	private static DocumentBuilder builder = null;
 	private String fileText;
@@ -91,6 +95,12 @@ public class AceDocument {
 	 */
 	public List<AceMention> allMentionsList = new ArrayList<AceMention>();
 	
+	// Ofer: Stores all mentions, when "allMentionsList" stores only mentions of one type,
+	// as specified by "onlyThisEventType"
+	// These two "Full" variables are needed as there are places that we still need all the full mentions, even in a single-type scenario
+	public List<AceMention> allMentionsListFull = new ArrayList<AceMention>(); 
+	public List<AceEventMention> eventMentionsFull = new ArrayList<AceEventMention>();
+
 	private static final String encoding = "UTF-8";//"ISO-8859-1";  // default:  ISO-LATIN-1
 
 	public AceDocument (String sourceFile, String sourceType, String docID, String docText) {
@@ -191,6 +201,7 @@ public class AceDocument {
 						// remove value2
 						this.valueMentions.remove(value2);
 						this.allMentionsList.remove(value2);
+						this.allMentionsListFull.remove(value2); //TODO Ofer: probably shouldn't remove from allMentionsListFull as well, as it could help boundary fixes later. But we're doing it now to comply with Qi. Same thing in the other removeDuplicates method.
 						this.values.remove(value2.getParent());
 						System.err.println("duplicate values " + this.docID + "\t" + value1);
 						j--;
@@ -244,7 +255,7 @@ public class AceDocument {
 	 */
 	private void removeArg(AceValueMention value1, AceValueMention value2)
 	{
-		for(AceEventMention event : this.eventMentions)
+		for(AceEventMention event : this.eventMentionsFull)
 		{
 			if(event.arguments == null)
 			{
@@ -294,6 +305,7 @@ public class AceDocument {
 						// remove value2
 						this.entityMentions.remove(value2);
 						this.allMentionsList.remove(value2);
+						this.allMentionsListFull.remove(value2); //TODO Ofer: probably shouldn't remove from allMentionsListFull as well, as it could help boundary fixes later. But we're doing it now to comply with Qi. Same thing in the other removeDuplicates method.
 						this.entities.remove(value2.getParent());
 						System.err.println("duplicate" + this.docID + "\t" + value1);
 						j--;
@@ -304,6 +316,7 @@ public class AceDocument {
 						// remove value1
 						this.entityMentions.remove(value1);
 						this.allMentionsList.remove(value1);
+						this.allMentionsListFull.remove(value1);
 						this.entities.remove(value1.getParent());
 						i--;
 						System.err.println("duplicate" + this.docID + "\t" + value2);
@@ -314,6 +327,7 @@ public class AceDocument {
 						// remove value1
 						this.entityMentions.remove(value1);
 						this.allMentionsList.remove(value1);
+						this.allMentionsListFull.remove(value1);
 						this.entities.remove(value1.getParent());
 						i--;
 						System.err.println("duplicate" + this.docID + "\t" + value1 + "\t" + value2);
@@ -324,6 +338,7 @@ public class AceDocument {
 						// remove value1
 						this.entityMentions.remove(value1);
 						this.allMentionsList.remove(value1);
+						this.allMentionsListFull.remove(value1);
 						this.entities.remove(value1.getParent());
 						i--;
 						System.err.println("duplicate" + this.docID + "\t" + value1 + "\t" + value2);
@@ -340,7 +355,7 @@ public class AceDocument {
 	
 	private boolean isSameArgument(AceMention value1, AceMention value2)
 	{
-		for(AceEventMention event : this.eventMentions)
+		for(AceEventMention event : this.eventMentionsFull)
 		{
 			if(event.arguments == null)
 			{
@@ -373,7 +388,7 @@ public class AceDocument {
 
 	private boolean isArgument(AceMention value)
 	{
-		for(AceEventMention event : this.eventMentions)
+		for(AceEventMention event : this.eventMentionsFull)
 		{
 			if(event.arguments == null)
 			{
@@ -445,38 +460,57 @@ public class AceDocument {
 		for (int i=0; i<eventElements.getLength(); i++) {
 			Element eventElement = (Element) eventElements.item(i);
 			AceEvent event = new AceEvent (eventElement, this, fileText);
-			addEvent(event);
+			
+			// if onlyThisEventType was set, we add the event only if it corresponds to this var's value
+			if ((onlyThisEventType == null) ||
+				(onlyThisEventType != null && event.subtype.equals(onlyThisEventType))) {
+				addEvent(event);
+			}
 		}
 	}
 
 	public void addEntity (AceEntity entity) {
 		entities.add(entity);
 		allMentionsList.addAll(entity.mentions);
+		allMentionsListFull.addAll(entity.mentions);
 		this.entityMentions.addAll(entity.mentions);
 	}
 
 	public void addValue (AceValue value) {
 		values.add(value);
 		allMentionsList.addAll(value.mentions);
+		allMentionsListFull.addAll(value.mentions);
 		this.valueMentions.addAll(value.mentions);
 	}
 
 	public void addTimeExpression (AceTimex timex) {
 		timeExpressions.add(timex);
 		allMentionsList.addAll(timex.mentions);
+		allMentionsListFull.addAll(timex.mentions);
 		this.timexMentions.addAll(timex.mentions);
 	}
 
 	public void addRelation (AceRelation relation) {
 		relations.add(relation);
 		allMentionsList.addAll(relation.mentions);
+		allMentionsListFull.addAll(relation.mentions);
 		this.relationMentions.addAll(relation.mentions);
 	}
 
 	public void addEvent (AceEvent event) {
-		events.add(event);
-		allMentionsList.addAll(event.mentions);
-		this.eventMentions.addAll(event.mentions);
+		allMentionsListFull.addAll(event.mentions);
+		this.eventMentionsFull.addAll(event.mentions);
+		eventMentions.addAll(event.mentions);
+		
+		// if onlyThisEventType was set, we add the event only if it corresponds to this var's value
+		if ((onlyThisEventType == null) ||
+			(onlyThisEventType != null && event.subtype.equals(onlyThisEventType))) {
+			
+			events.add(event);
+			allMentionsList.addAll(event.mentions);
+			this.eventMentions.addAll(event.mentions);
+		}
+		XXX
 	}
 
 	/*  assumes elementType is a leaf element type */
@@ -488,24 +522,24 @@ public class AceDocument {
 		return text;
 	}
 
-	void readPerfectMentions (Document apfDoc, String fileText) {
-		NodeList mentionElements = apfDoc.getElementsByTagName("entity_mention");
-		for (int i=0; i<mentionElements.getLength(); i++) {
-			Element mentionElement = (Element) mentionElements.item(i);
-			String entityId = "E" + mentionElement.getAttribute("ID");
-			String type = mentionElement.getAttribute("ENTITY_TYPE");
-			if (AceEntity.standardType.containsKey(type))
-					type = (String) AceEntity.standardType.get(type);
-			String subtype = mentionElement.getAttribute("ENTITY_SUBTYPE");
-			// adjust for missing subtypes in training data
-			if ((!type.equals("PERSON")) && (!type.equals("")) && subtype.equals(""))
-				subtype = "Other";
-			AceEntityMention mention = new AceEntityMention (mentionElement, fileText);
-			AceEntity entity = new AceEntity (entityId, type, subtype, false);
-			entity.addMention(mention);
-			addEntity(entity);
-		}
-	}
+//	void readPerfectMentions (Document apfDoc, String fileText) {
+//		NodeList mentionElements = apfDoc.getElementsByTagName("entity_mention");
+//		for (int i=0; i<mentionElements.getLength(); i++) {
+//			Element mentionElement = (Element) mentionElements.item(i);
+//			String entityId = "E" + mentionElement.getAttribute("ID");
+//			String type = mentionElement.getAttribute("ENTITY_TYPE");
+//			if (AceEntity.standardType.containsKey(type))
+//					type = (String) AceEntity.standardType.get(type);
+//			String subtype = mentionElement.getAttribute("ENTITY_SUBTYPE");
+//			// adjust for missing subtypes in training data
+//			if ((!type.equals("PERSON")) && (!type.equals("")) && subtype.equals(""))
+//				subtype = "Other";
+//			AceEntityMention mention = new AceEntityMention (mentionElement, fileText);
+//			AceEntity entity = new AceEntity (entityId, type, subtype, false);
+//			entity.addMention(mention);
+//			addEntity(entity);
+//		}
+//	}
 
 	/**
 	 *  read file 'fileName' and return its contents as a StringBuffer
@@ -622,9 +656,9 @@ public class AceDocument {
 	 *  addTimeExpression.
 	 */
 
-	List<AceMention> getAllMentions () {
-		return allMentionsList;
-	}
+//	List<AceMention> getAllMentions () {
+//		return allMentionsList;
+//	}
 
 	/**
 	 *  writes the AceDocument to 'w' in APF format.

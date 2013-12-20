@@ -54,7 +54,7 @@ public class LearningCurve {
 	public static final String ACE_PATH = "corpus/qi/";
 	//public static final String TRAINING_LIST = "C:\\Java\\Git\\breep\\ACE_EVENT\\run\\input\\new_filelist_ACE_training.txt";
 	//public static final String DEV_LIST = "C:\\Java\\Git\\breep\\ACE_EVENT\\run\\input\\new_filelist_ACE_dev.txt";
-	public static final String TRAIN_OTHER_ARGS_STR = "beamSize=4 maxIterNum=20 skipNonEventSent=true avgArguments=true skipNonArgument=true useGlobalFeature=true addNeverSeenFeatures=true crossSent=false crossSentReranking=false order=0 evaluatorType=1";
+	public static final String TRAIN_OTHER_ARGS_STR = "beamSize=4 maxIterNum=20 skipNonEventSent=true avgArguments=true skipNonArgument=true useGlobalFeature=true addNeverSeenFeatures=true crossSent=false crossSentReranking=false order=0 evaluatorType=1 learnBigrams=true";
 	public static final String[] TRAIN_OTHER_ARGS_ARR = TRAIN_OTHER_ARGS_STR.split(" ");
 	//public static final List<String> OTHER_ARGS_LIST = Arrays.asList(OTHER_ARGS_STR.split(" "));
 
@@ -319,9 +319,6 @@ public class LearningCurve {
 			//for (String eventType: allEventTypes) {
 			for (int t=tFirst; t<tLast; t++) {
 				String eventType = getEventTypeName(t);
-				if (eventType != JOKER_TYPE_NAME) {
-					AceDocument.onlyThisEventType = eventType;
-				}
 			
 				List<String> trainSet = new ArrayList<String>();
 				int mentionsInTrainSet = 0;
@@ -333,10 +330,13 @@ public class LearningCurve {
 					
 					int mentionsInChunk = 0;
 					for (String docname : chunk) {
-						if (docname.contains("APW_ENG_20030603.0303")) {
-							int u = 98;
-						}
+//						if (docname.contains("APW_ENG_20030603.0303")) {
+//							int u = 98;
+//						}
 						AceDocument doc = new AceDocument(ACE_PATH + docname + ".sgm", ACE_PATH + docname + ".apf.xml");
+						if (!eventType.equals(JOKER_TYPE_NAME)) {
+							doc.setSingleEventType(eventType);
+						}
 						mentionsInChunk += doc.eventMentions.size();
 					}
 					mentionsInTrainSet += mentionsInChunk;
@@ -428,12 +428,15 @@ public class LearningCurve {
 					String.format(MODEL_FILENAME, outputFolder, i, t, j, trainSet.size(), mentionsInTrainSet),
 					devDocsList,
 			};
-			ArrayUtils.addAll(args, TRAIN_OTHER_ARGS_ARR);
-			//args.addAll(OTHER_ARGS_LIST);
-			//String[] argsArray = (String[]) args.<String>toArray();
+			String singleEventType = null;
+			if (!eventType.equals(JOKER_TYPE_NAME)) {
+				singleEventType = eventType;
+				TRAIN_OTHER_ARGS_ARR[TRAIN_OTHER_ARGS_ARR.length-1] = "learnBigrams=false"; //in a single type scenario, bigrams must include just the single type, and not be learned.
+			}
+			args = ArrayUtils.addAll(args, TRAIN_OTHER_ARGS_ARR);
 
 			logger.info(String.format("Running training with args: " + Arrays.asList(args)));
-			Pipeline.main(args);
+			Pipeline.mainWithSingleEventType(args, singleEventType);
 			logger.info("Returned from training");		}
 		
 	}
@@ -449,9 +452,13 @@ public class LearningCurve {
 			};
 			String filenameSuffix = String.format(FILENAME_PATTERN, i, t, j, trainSet.size(), mentionsInTrainSet);
 			String folderNamePrefix = String.format(FOLDERNAME_PATTERN, i, t, j, trainSet.size(), mentionsInTrainSet);
+			String singleEventType = null;
+			if (!eventType.equals(JOKER_TYPE_NAME)) {
+				singleEventType = eventType;
+			}
 
 			logger.info(String.format("Running decoding (no scoring) with args: " + Arrays.asList(args)));
-			Decoder.mainNoScoring(args, filenameSuffix, folderNamePrefix);
+			Decoder.mainNoScoring(args, filenameSuffix, folderNamePrefix, singleEventType);
 			logger.info("Returned from decoding");
 		}
 	}

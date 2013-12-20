@@ -194,13 +194,20 @@ public class TextFeatureGenerator
 					
 					tokenFeatureMaps.add(map);
 				}
-				// fill in ace annotations such as event/relation/entity mentions
-				sent.fillAceAnnotaions();
+				
 			} 
 			catch (IOException e)
 			{
 				e.printStackTrace();
+				return;
 			}
+		}
+	}
+	
+	public static void fillAceAnnotations(Document doc) {
+		for(Sentence sent : doc.getSentences()) {
+			// fill in ace annotations such as event/relation/entity mentions
+			sent.fillAceAnnotaions();
 		}
 	}
 	
@@ -520,6 +527,11 @@ public class TextFeatureGenerator
 	public void fillTextFeatures(Document doc) throws IOException
 	{
 		doPreprocess(doc);
+		fillTextFeatures_NoPreprocessing(doc);
+	}
+	
+	public void fillTextFeatures_NoPreprocessing(Document doc) throws IOException {
+		fillAceAnnotations(doc);
 		fillFeatures_local(doc);
 		fillEntityInformation(doc);
 		fillDependencyFeatures(doc);

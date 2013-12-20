@@ -32,6 +32,9 @@ public class Controller implements java.io.Serializable
 	// standard (1) or early-update (0). Default is early-update
 	public int updateType = 0;
 	
+	// Should labelBigrams be learned from training data. Otherwise, all possible bigrams are considered by default.
+	public boolean learnBigrams = true;
+	
 	public Controller()
 	{
 		System.out.printf("\n[%s] ******** Controller() **********\n", new Date());
@@ -99,6 +102,10 @@ public class Controller implements java.io.Serializable
 			else if(fields[0].equalsIgnoreCase("updateType"))
 			{
 				updateType = Integer.parseInt(fields[1]);
+			}
+			else if(fields[0].equalsIgnoreCase("learnBigrams"))
+			{
+				learnBigrams = Boolean.parseBoolean(fields[1]);
 			}
 		}
 	}

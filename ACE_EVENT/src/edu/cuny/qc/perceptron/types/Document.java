@@ -2,10 +2,16 @@ package edu.cuny.qc.perceptron.types;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.io.PrintStream;
 import java.nio.charset.Charset;
+import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -14,6 +20,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import org.apache.commons.lang3.SerializationException;
+import org.apache.commons.lang3.SerializationUtils;
 
 import opennlp.tools.util.InvalidFormatException;
 
@@ -36,11 +45,14 @@ import edu.cuny.qc.util.TypeConstraints;
  * @author che
  *
  */
-public class Document 
+public class Document implements java.io.Serializable
 {
+	private static final long serialVersionUID = 2307017698146800811L;
+	
 	// file extentions
 	static public final String textFileExt = ".sgm";
 	static public final String apfFileExt = ".apf.xml";
+	static public final String preprocessedFileExt = ".preprocessed";
 	
 	// the id (base file name) of the document
 	public String docID;
@@ -301,22 +313,22 @@ public class Document
 	 * @param hasLabel if this document has .extent/.tlink annotations (ground truth)
 	 * @throws Exception 
 	 */
-	public Document(String baseFileName, boolean hasLabel, boolean monoCase, String year) throws IOException
-	{
-		this.monoCase = monoCase;
-		docID = baseFileName;
-		File txtFile = new File(baseFileName + textFileExt);
-		
-		this.setHasLabel(hasLabel);
-		if(this.isHasLabel())
-		{
-			String apfFile = baseFileName + apfFileExt;
-			setAceAnnotations(new AceDocument(txtFile.getAbsolutePath(), apfFile, year));
-		}
-		
-		sentences = new ArrayList<Sentence>();
-		readDoc(txtFile, this.monoCase);
-	}
+//	public Document(String baseFileName, boolean hasLabel, boolean monoCase, String year) throws IOException
+//	{
+//		this.monoCase = monoCase;
+//		docID = baseFileName;
+//		File txtFile = new File(baseFileName + textFileExt);
+//		
+//		this.setHasLabel(hasLabel);
+//		if(this.isHasLabel())
+//		{
+//			String apfFile = baseFileName + apfFileExt;
+//			setAceAnnotations(new AceDocument(txtFile.getAbsolutePath(), apfFile, year));
+//		}
+//		
+//		sentences = new ArrayList<Sentence>();
+//		readDoc(txtFile, this.monoCase);
+//	}
 	
 	/**
 	 * Note: this function assume the *.sgm files and *.apf file are in the same folder
@@ -339,6 +351,39 @@ public class Document
 		
 		sentences = new ArrayList<Sentence>();
 		readDoc(txtFile, this.monoCase);
+	}
+	
+	public static Document createAndPreprocess(String baseFileName, boolean hasLabel, boolean monoCase, boolean tryLoadExisting, boolean dumpNewDoc, String singleEventType) throws IOException, SerializationException {
+		Document doc = null;
+		File preprocessed = new File(baseFileName + preprocessedFileExt);
+		if (tryLoadExisting && preprocessed.isFile()) {
+			doc = (Document) SerializationUtils.deserialize(new FileInputStream(preprocessed));
+			if (singleEventType != null) {
+				doc.aceAnnotations.setSingleEventType(singleEventType);
+			}
+		}
+		if (doc==null) {
+			doc = new Document(baseFileName, hasLabel, monoCase);
+			TextFeatureGenerator.doPreprocess(doc);
+			
+			if (dumpNewDoc) {
+				try {
+					SerializationUtils.serialize(doc, new FileOutputStream(preprocessed));
+				}
+				catch (IOException e) {
+					Files.deleteIfExists(preprocessed.toPath());
+					throw e;
+				}
+				catch (SerializationException e) {
+					Files.deleteIfExists(preprocessed.toPath());
+					throw e;
+				}
+			}
+			if (singleEventType != null) {
+				doc.aceAnnotations.setSingleEventType(singleEventType);
+			}
+		}
+		return doc;
 	}
 	
 	/**
@@ -607,7 +652,7 @@ public class Document
 		{
 			Span token = tokenSpans[i];
 			boolean flag = false;
-			for(AceMention mention : this.aceAnnotations.allMentionsListFull)
+			for(AceMention mention : this.aceAnnotations.allMentionsList)
 			{
 				if(flag)
 				{
@@ -724,7 +769,7 @@ public class Document
 		{
 			Span sent_before = sentSpans[i];
 			Span sent_after = sentSpans[i+1];
-			for(AceMention mention : this.aceAnnotations.allMentionsListFull)
+			for(AceMention mention : this.aceAnnotations.allMentionsList)
 			{
 				Span extent = mention.extent;
 				if(extent.overlap(sent_before) && extent.overlap(sent_after))

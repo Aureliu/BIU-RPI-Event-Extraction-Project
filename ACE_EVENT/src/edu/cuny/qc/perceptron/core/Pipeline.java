@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 import org.dom4j.DocumentException;
@@ -27,7 +28,7 @@ public class Pipeline
 	 * @param trainingFileList
 	 * @param modelFile
 	 */
-	public static Perceptron trainPerceptron(File srcDir, File trainingFileList, File modelFile, File devFileList, Controller controller)
+	public static Perceptron trainPerceptron(File srcDir, File trainingFileList, File modelFile, File devFileList, Controller controller, String singleEventType)
 	{
 		Alphabet nodeTargetAlphabet = new Alphabet();
 		Alphabet edgeTargetAlphabet = new Alphabet();
@@ -41,10 +42,16 @@ public class Pipeline
 			
 			if(!controller.crossSent)
 			{
-				trainInstanceList = readInstanceList(srcDir, trainingFileList, nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet, controller, true);
-				devInstanceList = readInstanceList(srcDir, devFileList, nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet, controller, false);
+				System.out.printf("[%s] Reading instance list of train...\n", new Date());
+				trainInstanceList = readInstanceList(srcDir, trainingFileList, nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet, controller, true, singleEventType);
+				System.out.printf("[%s] Finished reading instance list of train, got %d instances\n", new Date(), trainInstanceList.size());
+				System.out.printf("[%s] Reading instance list of dev\n", new Date());
+				devInstanceList = readInstanceList(srcDir, devFileList, nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet, controller, false, singleEventType);
+				System.out.printf("[%s] Finished reading instance list of dev, got %d instances\n", new Date(), devInstanceList.size());
 				// perceptron training
+				System.out.printf("[%s] Building perceptron...\n", new Date());
 				model = new Perceptron(nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet);
+				System.out.printf("[%s] Finished building perceptron. It's LabelBigramis: %s\n", new Date(), model.getLabelBigram());
 			}
 			else
 			{
@@ -65,7 +72,7 @@ public class Pipeline
 			
 			model.controller = controller;
 			// learning
-			model.learning(trainInstanceList, devInstanceList, 0);
+			model.learning(trainInstanceList, devInstanceList, 0, singleEventType);
 			// save learned perceptron to file
 			Perceptron.serializeObject(model, modelFile);
 			
@@ -91,7 +98,7 @@ public class Pipeline
 	 */
 	public static List<SentenceInstance> readInstanceList(File srcDir, File file_list, 
 			Alphabet nodeTargetAlphabet, Alphabet edgeTargetAlphabet, Alphabet featureAlphabet, 
-			Controller controller, boolean learnable) throws IOException, DocumentException
+			Controller controller, boolean learnable, String singleEventType) throws IOException, DocumentException
 	{
 		System.out.println("Reading training instance ...");
 		
@@ -106,9 +113,9 @@ public class Pipeline
 			
 			System.out.println(fileName);
 			
-			Document doc = new Document(fileName, true, monoCase);
+			Document doc = Document.createAndPreprocess(fileName, true, monoCase, true, true, singleEventType);
 			// fill in text feature vector for each token
-			featGen.fillTextFeatures(doc);
+			featGen.fillTextFeatures_NoPreprocessing(doc);
 			for(int sent_id=0 ; sent_id<doc.getSentences().size(); sent_id++)
 			{
 				Sentence sent = doc.getSentences().get(sent_id);
@@ -211,6 +218,10 @@ public class Pipeline
 	 */
 	static public void main(String[] args) throws IOException
 	{
+		mainWithSingleEventType(args, null);
+	}
+	
+	public static void mainWithSingleEventType(String[] args, String singleEventType) throws IOException {
 		System.out.printf("Args:\n%s\n\n", new ArrayList<String>(Arrays.asList(args)));
 		if(args.length < 4)
 		{
@@ -239,7 +250,7 @@ public class Pipeline
 		System.out.println("\n" + controller.toString() + "\n");
 		
 		// train model
-		Perceptron model = trainPerceptron(srcDir, trainingFileList, modelFile, devFileList, controller);
+		Perceptron model = trainPerceptron(srcDir, trainingFileList, modelFile, devFileList, controller, singleEventType);
 		
 		// print out weights
 		if(model.controller.avgArguments)

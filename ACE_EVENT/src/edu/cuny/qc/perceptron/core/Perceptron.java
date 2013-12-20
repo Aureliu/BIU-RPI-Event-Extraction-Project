@@ -8,9 +8,11 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.apache.commons.lang3.SerializationUtils;
 
@@ -18,6 +20,7 @@ import edu.cuny.qc.perceptron.types.Alphabet;
 import edu.cuny.qc.perceptron.types.FeatureVector;
 import edu.cuny.qc.perceptron.types.SentenceAssignment;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
+import edu.cuny.qc.util.TypeConstraints;
 
 
 /**
@@ -106,9 +109,13 @@ public class Perceptron implements java.io.Serializable
 		return ret;
 	}
 	
-	public void learning(List<SentenceInstance> trainingList, int maxIter)
-	{
-		learning(trainingList, null, 0);
+//	public void learning(List<SentenceInstance> trainingList, int maxIter)
+//	{
+//		learning(trainingList, null, 0);
+//	}
+	
+	public void learning(List<SentenceInstance> trainingList, List<SentenceInstance> devList, int cutoff) {
+		learning(trainingList, devList, cutoff, null);
 	}
 	
 	/**
@@ -117,7 +124,7 @@ public class Perceptron implements java.io.Serializable
 	 * @param trainingList
 	 * @param maxIter
 	 */
-	public void learning(List<SentenceInstance> trainingList, List<SentenceInstance> devList, int cutoff)
+	public void learning(List<SentenceInstance> trainingList, List<SentenceInstance> devList, int cutoff, String singleEventType)
 	{	
 		// the evaluator for dev set
 		Evaluator evaluator = null;
@@ -130,8 +137,14 @@ public class Perceptron implements java.io.Serializable
 			evaluator = new EvaluatorLoose();
 		}
 		
-		// traverse the training instance to get the trigger label bigram
-		extractTriggerLabelBigrams(trainingList);
+		if (controller.learnBigrams) {
+			// traverse the training instance to get the trigger label bigram
+			extractTriggerLabelBigrams(trainingList);
+		}
+		else {
+			fillDefaultLabelBigrams(singleEventType);
+		}
+		
 		BeamSearch beamSearcher = createBeamSearcher(this, true);
 		
 		System.out.print("Alphabet size: " + this.featureAlphabet.size() + "\t");
@@ -329,6 +342,25 @@ public class Perceptron implements java.io.Serializable
 			inst.target.featureAlphabet = newFeatAlphabet;
 		}
 	}
+
+	private void fillDefaultLabelBigrams(String singleEventType) {
+		if (singleEventType != null) {
+			getLabelBigram().put(singleEventType,                      Arrays.asList(new String[] {SentenceAssignment.PAD_Trigger_Label, singleEventType}));
+			getLabelBigram().put(SentenceAssignment.PAD_Trigger_Label, Arrays.asList(new String[] {SentenceAssignment.PAD_Trigger_Label, singleEventType}));
+		}
+		else {
+			List<String> allTypes = new ArrayList<String>(TypeConstraints.eventTypeMap.keySet());
+			allTypes.add(0, SentenceAssignment.PAD_Trigger_Label);
+			String currType = null;
+			for (int i=0; i<allTypes.size(); i++) {
+				currType = allTypes.get(i);
+				List<String> list = new ArrayList<String>(allTypes);
+				list.remove(i);
+				getLabelBigram().put(currType, list);
+			}
+		}
+	}
+
 
 	protected void extractTriggerLabelBigrams(List<SentenceInstance> traininglist)
 	{

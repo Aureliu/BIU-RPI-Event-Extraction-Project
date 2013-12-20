@@ -64,7 +64,7 @@ public class Decoder
 		w.close();
 	}
 	
-	public static void mainNoScoring(String[] args, String filenameSuffix, String folderNamePrefix) throws IOException, DocumentException
+	public static void mainNoScoring(String[] args, String filenameSuffix, String folderNamePrefix, String singleEventType) throws IOException, DocumentException
 	{
 		System.out.printf("Args:\n%s\n\n", new ArrayList<String>(Arrays.asList(args)));
 		//if((args.length < 4) || (args.length>=5 && !args[4].equals(OPTION_NO_SCORING)))
@@ -134,9 +134,9 @@ public class Decoder
 			}
 			else
 			{
-				doc = new Document(fileName, true, monoCase);
+				doc = Document.createAndPreprocess(fileName, true, monoCase, true, true, singleEventType);
 				// fill in text feature vector for each token
-				featGen.fillTextFeatures(doc);
+				featGen.fillTextFeatures_NoPreprocessing(doc);
 			}
 			localInstanceList = doc.getInstanceList(nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet, 
 					perceptron.controller, true);
@@ -174,8 +174,8 @@ public class Decoder
 		System.out.printf("[%s] --------------\r\nPerceptron.controller =\r\n%s\r\n\r\n--------------------------\r\n\r\n", new Date(), perceptron.controller);
 	}
 	
-	public static Stats mainWithScoring(String[] args, String filenameSuffix, String folderNamePrefix) throws IOException, DocumentException {
-		mainNoScoring(args, filenameSuffix, folderNamePrefix);
+	public static Stats mainWithScoring(String[] args, String filenameSuffix, String folderNamePrefix, String singleEventType) throws IOException, DocumentException {
+		mainNoScoring(args, filenameSuffix, folderNamePrefix, singleEventType);
 		
 		File outputFile = new File(outDir + File.separator + "Score" + filenameSuffix);
 		Stats stats = Scorer.mainMultiRunReturningStats(folderNamePrefix, new String[]{args[1], args[3], args[2], outputFile.getAbsolutePath()});
@@ -190,12 +190,12 @@ public class Decoder
 		String folderNamePrefix = "";
 		if (args.length>=5) {
 			if (args[4].equals(OPTION_NO_SCORING)) {
-				mainNoScoring(args, filenameSuffix, folderNamePrefix);
+				mainNoScoring(args, filenameSuffix, folderNamePrefix, null); //no singleEventType
 			}
 			else {
 				filenameSuffix = args[4];
 				folderNamePrefix = "DIR" + args[4] + "."; //yes, I know it's silly it has ".txt" in it, maybe should fix later
-				mainWithScoring(args, filenameSuffix, folderNamePrefix);
+				mainWithScoring(args, filenameSuffix, folderNamePrefix, null); //no singleEventType
 			}
 		}
 	}

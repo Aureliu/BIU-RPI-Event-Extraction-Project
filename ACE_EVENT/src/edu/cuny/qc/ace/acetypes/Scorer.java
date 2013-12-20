@@ -112,6 +112,8 @@ public class Scorer
 			}
 			AceDocument doc_ans = new AceDocument(textFile.getAbsolutePath(), apf_ans.getAbsolutePath());
 			AceDocument doc_gold = new AceDocument(textFile.getAbsolutePath(), apf_gold.getAbsolutePath());
+			// There no need to call setSingleEventType, as the files already have just the single type (if indeed only one is required)
+
 			out.printf("----------------\n%s\n", line);
 			doAnalysisForFile(doc_ans, doc_gold, stats, out);
 			out.printf("----------------\n\n");

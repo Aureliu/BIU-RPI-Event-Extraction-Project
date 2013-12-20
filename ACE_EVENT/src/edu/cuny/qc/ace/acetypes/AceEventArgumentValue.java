@@ -11,7 +11,7 @@ package edu.cuny.qc.ace.acetypes;
  *  the value of an AceEvent argument:  either a AceEntity, AceValue, or AceTimex.
  */
 
-public abstract class AceEventArgumentValue {
+public abstract class AceEventArgumentValue implements java.io.Serializable {
 
 	public String id;
 

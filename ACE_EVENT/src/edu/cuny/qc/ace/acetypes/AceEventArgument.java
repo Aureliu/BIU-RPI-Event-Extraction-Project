@@ -12,7 +12,7 @@ import javax.xml.parsers.*;
  *  an Ace Event Argument, with information from the ACE key.
  */
 
-public class AceEventArgument {
+public class AceEventArgument implements java.io.Serializable {
 
 	/**
 	 *  the role of the argument in the event

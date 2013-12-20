@@ -17,7 +17,7 @@ import edu.cuny.qc.util.Span;
  *  AceEntityMention, an AceTimexMention, an AceValueMention, or an AceEventAnchor.
  */
 
-public abstract class AceMention implements Comparable {
+public abstract class AceMention implements Comparable, java.io.Serializable {
 
 	/**
 	 * Qi: indices of head tokens in the sentence

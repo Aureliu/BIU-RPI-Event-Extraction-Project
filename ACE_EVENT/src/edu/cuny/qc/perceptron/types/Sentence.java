@@ -24,7 +24,7 @@ import edu.cuny.qc.util.Span;
  * @author che
  *
  */
-public class Sentence
+public class Sentence implements java.io.Serializable
 {
 	/**
 	 * defines the sentence attributes types

@@ -13,7 +13,7 @@ package edu.cuny.qc.util;
  * This start and end offests are consistent with ACE apf file, the end point is the index of the last character
  */
 
-public class Span implements Comparable {
+public class Span implements Comparable, java.io.Serializable {
 	int start;
 	int end;
 

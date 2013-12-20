@@ -13,7 +13,7 @@ import org.w3c.dom.*;
 
 import edu.cuny.qc.util.Span;
 
-public class AceEventMentionArgument {
+public class AceEventMentionArgument implements java.io.Serializable {
 
 	/**
 	 *  the role of the argument in the event

@@ -156,7 +156,6 @@ public class LearningCurve {
 			singleTypes = Boolean.parseBoolean(args[6]);
 			buildChunks();
 			populateTypes();
-			maxType = allEventTypes.size()-1;
 			dumpSpecToFile();
 		}
 
@@ -167,6 +166,7 @@ public class LearningCurve {
 		if (singleTypes) {
 			allEventTypes = new ArrayList<String>(TypeConstraints.eventTypeMap.keySet());
 			Collections.sort(allEventTypes); // Alphabetically!
+			maxType = allEventTypes.size()-1;
 		}
 //		else {
 //			allEventTypes = Arrays.asList(new String[] {ITERATING_ALL_TYPES});

@@ -115,7 +115,8 @@ public class Controller implements java.io.Serializable
 		String ret = "beam size: " + beamSize + " max iter: " + maxIterNum + " skipNonEventSent: " + skipNonEventSent
 		+ " averaged weights: " + avgArguments + " skipNonArgument: " + skipNonArgument
 		+ " useGlobalFeature:" + useGlobalFeature + " addNeverSeenFeatures: " + addNeverSeenFeatures
-		+ " crossSent:" + crossSent + " crossSentReranking:" + crossSentReranking + " order:" + order +" evaluatorType:" + evaluatorType;
+		+ " crossSent:" + crossSent + " crossSentReranking:" + crossSentReranking + " order:" + order +
+		" evaluatorType:" + evaluatorType + " learnBigrams: " + learnBigrams;
 		return ret;
 	}
 	

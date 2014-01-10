@@ -346,7 +346,9 @@ public class LearningCurve {
 				
 				List<String> devDocs = loadFileToList(new File(devDocsList));
 				int devMentions = countMentions(devDocs, eventType);
-				logger.info(String.format("Total of %d mentions in dev documents", devMentions));
+				List<String> testDocs = loadFileToList(new File(testDocsList));
+				int testMentions = countMentions(testDocs, eventType);
+				logger.info(String.format("Total of %d mentions in dev documents, total of %d mentions in test documents", devMentions, testMentions));
 
 				//for (; j<iteration.size(); j++) {
 				for (int j=0; j<iteration.size(); j++) {
@@ -389,7 +391,7 @@ public class LearningCurve {
 							System.setOut(new PrintStream(outStream));
 							System.setErr(new PrintStream(errStream));
 		
-							action.go(outputFolder, i, t, j, eventType, trainSet, mentionsInTrainSet, devDocsList, testDocsList, devMentions);
+							action.go(outputFolder, i, t, j, eventType, trainSet, mentionsInTrainSet, devDocsList, testDocsList, devMentions, testMentions);
 						}
 						
 						PrintWriter f = null;
@@ -439,12 +441,12 @@ public class LearningCurve {
 	}
 	
 	private interface Action {
-		public void go(String outputFolder, int i, int t, int j, String eventType, List<String> trainSet, int mentionsInTrainSet, String devDocsList, String testDocsList, int devMentions) throws IOException, DocumentException;
+		public void go(String outputFolder, int i, int t, int j, String eventType, List<String> trainSet, int mentionsInTrainSet, String devDocsList, String testDocsList, int devMentions, int testMentions) throws IOException, DocumentException;
 	}
 	
 	private class TrainAction implements Action {
 		@Override
-		public void go(String outputFolder, int i, int t, int j, String eventType, List<String> trainSet, int mentionsInTrainSet, String devDocsList, String testDocsList, int devMentions) throws IOException {
+		public void go(String outputFolder, int i, int t, int j, String eventType, List<String> trainSet, int mentionsInTrainSet, String devDocsList, String testDocsList, int devMentions, int testMentions) throws IOException {
 			String tempTrainDocList = String.format(TRAIN_LIST_FILENAME, outputFolder, i, t, j, trainSet.size(), mentionsInTrainSet);
 			PrintWriter f = null;
 			try {
@@ -476,7 +478,7 @@ public class LearningCurve {
 	
 	private class DecodeAction implements Action {
 		@Override
-		public void go(String outputFolder, int i, int t, int j, String eventType, List<String> trainSet, int mentionsInTrainSet, String devDocsList, String testDocsList, int devMentions) throws IOException, DocumentException {			
+		public void go(String outputFolder, int i, int t, int j, String eventType, List<String> trainSet, int mentionsInTrainSet, String devDocsList, String testDocsList, int devMentions, int testMentions) throws IOException, DocumentException {			
 			String[] args = new String[] {
 					String.format(MODEL_FILENAME, outputFolder, i, t, j, trainSet.size(), mentionsInTrainSet),
 					ACE_PATH,
@@ -498,7 +500,7 @@ public class LearningCurve {
 	
 	private class ScoreAction implements Action {
 		@Override
-		public void go(String outputFolder, int i, int t, int j, String eventType, List<String> trainSet, int mentionsInTrainSet, String devDocsList, String testDocsList, int devMentions) throws IOException, DocumentException {
+		public void go(String outputFolder, int i, int t, int j, String eventType, List<String> trainSet, int mentionsInTrainSet, String devDocsList, String testDocsList, int devMentions, int testMentions) throws IOException, DocumentException {
 			String[] args = new String[] {
 					ACE_PATH,
 					outputFolder,
@@ -523,20 +525,26 @@ public class LearningCurve {
 				f = new PrintWriter(decodeResultsOut);
 				if (!exists) {
 					logger.info("Cannot find decode results file, creating it: " + FILENAME_DECODE_RESULTS);
-					f.printf("Iteration,TypeNum,TypeName,DevMentions,NumChunks,NumDocs,NumMentions,Trigger-Id-Prec,Trigger-Id-Rec,Trigger-Id-F1,Trigger-Total-Prec,Trigger-Total-Rec,Trigger-Total-F1,Arg-Id-Prec,Arg-Id-Rec,Arg-Id-F1,Arg-Total-Prec,Arg-Total-Rec,Arg-Total-F1\r\n");
+					f.printf("Iteration,TypeNum,TypeName,DevMentions,TestMentions,TrainChunks,TrainDocs,TrainMentions," +
+							 "Trigger-Id-Prec,Trigger-Id-Rec,Trigger-Id-F1,Trigger-Total-Prec,Trigger-Total-Rec,Trigger-Total-F1,Arg-Id-Prec,Arg-Id-Rec,Arg-Id-F1,Arg-Total-Prec,Arg-Total-Rec,Arg-Total-F1" +
+							 "TriggersGold,TriggersAns,TriggersIdCorrect,TriggersTotalCorrect,ArgGold,ArgAns,ArgIdCorrect,ArgTotalCorrect\r\n");
 				}
 				logger.info(String.format("Updating decode results file. Trigger id F1=%f, Arg id F1=%f", stats.f1_trigger_idt, stats.f1_arg_idt));
-				f.printf("%02d,%02d,%s,%03d,%03d,%03d,%03d,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f\r\n",
+				f.printf("%02d,%02d,%s,%03d,%03d,%03d,%03d,%03d," +
+						 "%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f," +
+						 "%04d,%04d,%04d,%04d,%04d,%04d,%04d,%04d\r\n",
 						
-						i, t, eventType, devMentions, j, trainSet.size(), mentionsInTrainSet,
+						i, t, eventType, devMentions, testMentions, j, trainSet.size(), mentionsInTrainSet,
 						
 						stats.prec_trigger_idt, stats.recall_trigger_idt, stats.f1_trigger_idt,
 						stats.prec_trigger, stats.recall_trigger, stats.f1_trigger,
 						
 						stats.prec_arg_idt, stats.recall_arg_idt, stats.f1_arg_idt,
-						stats.prec_arg, stats.recall_arg, stats.f1_arg
+						stats.prec_arg, stats.recall_arg, stats.f1_arg,
 
-						
+						stats.num_trigger_gold, stats.num_trigger_ans, stats.num_trigger_idt_correct, stats.num_trigger_correct,
+						stats.num_arg_gold, stats.num_arg_ans, stats.num_arg_idt_correct, stats.num_arg_correct
+
 						);
 			}
 			finally {

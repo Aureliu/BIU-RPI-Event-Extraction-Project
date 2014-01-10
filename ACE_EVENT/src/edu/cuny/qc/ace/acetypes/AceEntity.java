@@ -174,6 +174,20 @@ public class AceEntity extends AceEventArgumentValue {
 					+ (generic ? "TRUE" : "FALSE") + "\">" + type
 					+ "</entity_type>");
 		}
+		
+		//Ofer: have mentions sorted by ID, to be like gold files
+		Collections.sort(mentions, new Comparator<AceEntityMention>() {
+			@Override
+			public int compare(AceEntityMention o1, AceEntityMention o2) {
+				String[] split1 = o1.id.split("-");
+				int id1 = Integer.parseInt(split1[split1.length-1]);
+				String[] split2 = o2.id.split("-");
+				int id2 = Integer.parseInt(split1[split2.length-1]);
+				return id1-id2;
+			}
+		});
+
+		
 		for (int i = 0; i < mentions.size(); i++) {
 			AceEntityMention mention = (AceEntityMention) mentions.get(i);
 			mention.write(w);

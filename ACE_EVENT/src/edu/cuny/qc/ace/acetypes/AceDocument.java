@@ -21,7 +21,9 @@ import javax.xml.parsers.*;
  *  system.
  */
 
-public class AceDocument {
+public class AceDocument implements java.io.Serializable {
+
+	private static final long serialVersionUID = -4776730511018454749L;
 
 	/**
 	 *  true for 2004 or 2005 APF format
@@ -90,6 +92,11 @@ public class AceDocument {
 	 * all mentions including events and relations
 	 */
 	public List<AceMention> allMentionsList = new ArrayList<AceMention>();
+	
+	/**
+	 * This has a value when only one event type should be present in the document.
+	 */
+	private String singleEventType = null;
 	
 	private static final String encoding = "UTF-8";//"ISO-8859-1";  // default:  ISO-LATIN-1
 
@@ -479,6 +486,37 @@ public class AceDocument {
 		this.eventMentions.addAll(event.mentions);
 	}
 
+	public void setSingleEventType(String eventType) {
+		if (singleEventType != null) {
+			throw new IllegalStateException("Can only set singleEventType once in an AceDocument, current AceDocument already has: " + singleEventType);
+		}
+		this.singleEventType = eventType;
+		AceEvent e = null;
+		for (Iterator<AceEvent> eventIter = events.iterator(); eventIter.hasNext();) {
+			e = eventIter.next();
+			if (!e.subtype.equals(singleEventType)) {
+				eventIter.remove();
+			}
+		}
+		AceEventMention em = null;
+		for (Iterator<AceEventMention> eventMentionIter = eventMentions.iterator(); eventMentionIter.hasNext();) {
+			em = eventMentionIter.next();
+			if (!em.event.subtype.equals(singleEventType)) {
+				eventMentionIter.remove();
+			}
+		}
+		AceMention m = null;
+		for (Iterator<AceMention> mentionIter = allMentionsList.iterator(); mentionIter.hasNext();) {
+			m = mentionIter.next();
+			if (m instanceof AceEventMention) {
+				em = (AceEventMention) m;
+				if (!em.event.subtype.equals(singleEventType)) {
+					mentionIter.remove();
+				}
+			}
+		}
+	}
+	
 	/*  assumes elementType is a leaf element type */
 
 	static String getElementText (Element e, String elementType) {

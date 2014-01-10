@@ -16,7 +16,7 @@ import javax.xml.parsers.*;
  *  an Ace Entity Name, with information from the APF ACE key.
  */
 
-public class AceEntityName {
+public class AceEntityName implements java.io.Serializable {
 	/**
 	 *  the extent of the mention, with start and end positions based on
 	 *  ACE offsets (excluding XML tags).

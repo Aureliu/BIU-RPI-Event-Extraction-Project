@@ -1,5 +1,7 @@
 package edu.cuny.qc.perceptron.core;
 
+import java.util.Date;
+
 // This is a controller of the settings in percetpron
 public class Controller implements java.io.Serializable
 {
@@ -30,9 +32,12 @@ public class Controller implements java.io.Serializable
 	// standard (1) or early-update (0). Default is early-update
 	public int updateType = 0;
 	
+	// Should labelBigrams be learned from training data. Otherwise, all possible bigrams are considered by default.
+	public boolean learnBigrams = true;
+	
 	public Controller()
 	{
-		System.out.printf("\n******** Controller() **********\n");
+		System.out.printf("\n[%s] ******** Controller() **********\n", new Date());
 		System.out.printf("******** %s **********\n", this);
 	}
 	
@@ -98,6 +103,10 @@ public class Controller implements java.io.Serializable
 			{
 				updateType = Integer.parseInt(fields[1]);
 			}
+			else if(fields[0].equalsIgnoreCase("learnBigrams"))
+			{
+				learnBigrams = Boolean.parseBoolean(fields[1]);
+			}
 		}
 	}
 	
@@ -106,7 +115,8 @@ public class Controller implements java.io.Serializable
 		String ret = "beam size: " + beamSize + " max iter: " + maxIterNum + " skipNonEventSent: " + skipNonEventSent
 		+ " averaged weights: " + avgArguments + " skipNonArgument: " + skipNonArgument
 		+ " useGlobalFeature:" + useGlobalFeature + " addNeverSeenFeatures: " + addNeverSeenFeatures
-		+ " crossSent:" + crossSent + " crossSentReranking:" + crossSentReranking + " order:" + order +" evaluatorType:" + evaluatorType;
+		+ " crossSent:" + crossSent + " crossSentReranking:" + crossSentReranking + " order:" + order +
+		" evaluatorType:" + evaluatorType + " learnBigrams: " + learnBigrams;
 		return ret;
 	}
 	

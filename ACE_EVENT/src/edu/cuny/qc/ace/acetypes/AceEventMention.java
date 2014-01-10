@@ -210,7 +210,7 @@ public class AceEventMention extends AceMention{
 	 
 	public void write (PrintWriter w) {
 		w.print  ("    <event_mention ID=\"" + id + "\"");
-		w.format(" p=\"%5.3f\"", confidence);
+		//w.format(" p=\"%5.3f\"", confidence);
 	/*	if (Ace.writeEventConfidence)
 			w.format(" p=\"%5.3f\"", confidence);*/
 		w.println(">");

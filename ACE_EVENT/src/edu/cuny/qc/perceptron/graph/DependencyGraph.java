@@ -12,7 +12,7 @@ import edu.stanford.nlp.trees.TypedDependency;
  * @author che
  *
  */
-public class DependencyGraph 
+public class DependencyGraph implements java.io.Serializable
 {
 	static final String TYPE_EXTENSION_FORWORD = "->";
  	static final String TYPE_EXTENSION_BACKWORD = "<-";

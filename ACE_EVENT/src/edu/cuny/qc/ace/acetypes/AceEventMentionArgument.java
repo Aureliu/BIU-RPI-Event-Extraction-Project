@@ -13,7 +13,7 @@ import org.w3c.dom.*;
 
 import edu.cuny.qc.util.Span;
 
-public class AceEventMentionArgument {
+public class AceEventMentionArgument implements java.io.Serializable {
 
 	/**
 	 *  the role of the argument in the event
@@ -70,8 +70,8 @@ public class AceEventMentionArgument {
 	public void write (PrintWriter w) {
 		w.print  ("      <event_mention_argument REFID=\"" + value.id + "\" ROLE=\"" + role + "\"");
 		//if (Ace.writeEventConfidence) {
-			w.format(" p=\"%5.3f\"", confidence);
-			w.format(" pRole=\"%5.3f\"", roleConfidence);
+			//w.format(" p=\"%5.3f\"", confidence);
+			//w.format(" pRole=\"%5.3f\"", roleConfidence);
 			w.println(">");
 		//}
 			w.println("      	<extent>");

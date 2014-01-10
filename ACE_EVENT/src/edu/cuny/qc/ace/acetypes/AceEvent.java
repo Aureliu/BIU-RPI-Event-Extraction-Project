@@ -176,10 +176,10 @@ public class AceEvent extends AceEventArgumentValue{
 		w.print (" POLARITY=\"" + polarity + "\"");
 		w.print (" GENERICITY=\"" + genericity + "\"");
 		w.print (" TENSE=\"" + tense + "\"");
-		w.print (" MODPROB=\"" + modProb + "\"");
-		w.print (" POLPROB=\"" + polProb + "\"");
-		w.print (" GENPROB=\"" + genProb + "\"");
-		w.print (" TENPROB=\"" + tenProb + "\"");
+		//w.print (" MODPROB=\"" + modProb + "\"");
+		//w.print (" POLPROB=\"" + polProb + "\"");
+		//w.print (" GENPROB=\"" + genProb + "\"");
+		//	w.print (" TENPROB=\"" + tenProb + "\"");
 		w.println (">");
 		for (int i=0; i<arguments.size(); i++) {
 			AceEventArgument argument = (AceEventArgument) arguments.get(i);

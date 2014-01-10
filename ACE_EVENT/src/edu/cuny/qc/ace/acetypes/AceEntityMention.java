@@ -218,7 +218,7 @@ public class AceEntityMention extends AceMention {
 
 	public void write (PrintWriter w) {
 		String apfType = AceDocument.ace2004 ? type.substring(0,3) : type;
-		w.print   ("    <entity_mention TYPE=\"" + apfType + "\" ID=\"" + id + "\"");
+		w.print   ("    <entity_mention ID=\"" + id + "\" TYPE=\"" + apfType + "\"");
 		if (role != null && !role.equals(""))
 			w.print (" ROLE=\"" + role + "\"");
 		w.println (">");
@@ -255,7 +255,7 @@ public class AceEntityMention extends AceMention {
 
 	static void writeCharseq (PrintWriter w, Span s, String txt) {
 		if (AceDocument.ace2004) {
-			w.print   ("			<charseq START=\"" + s.start() + "\"" +
+			w.print   ("        <charseq START=\"" + s.start() + "\"" +
 			                             " END=\"" + s.end() + "\">");
 			txt = txt.replaceAll("&", "&amp;");
       txt = txt.replaceAll("<", "&lt;");

@@ -494,14 +494,14 @@ public class AceDocument implements java.io.Serializable {
 		AceEvent e = null;
 		for (Iterator<AceEvent> eventIter = events.iterator(); eventIter.hasNext();) {
 			e = eventIter.next();
-			if (!e.type.equals(singleEventType)) {
+			if (!e.subtype.equals(singleEventType)) {
 				eventIter.remove();
 			}
 		}
 		AceEventMention em = null;
 		for (Iterator<AceEventMention> eventMentionIter = eventMentions.iterator(); eventMentionIter.hasNext();) {
 			em = eventMentionIter.next();
-			if (!em.event.type.equals(singleEventType)) {
+			if (!em.event.subtype.equals(singleEventType)) {
 				eventMentionIter.remove();
 			}
 		}
@@ -510,7 +510,7 @@ public class AceDocument implements java.io.Serializable {
 			m = mentionIter.next();
 			if (m instanceof AceEventMention) {
 				em = (AceEventMention) m;
-				if (!em.event.type.equals(singleEventType)) {
+				if (!em.event.subtype.equals(singleEventType)) {
 					mentionIter.remove();
 				}
 			}

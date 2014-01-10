@@ -1,5 +1,0 @@
-INFO  19:06:18.884 [main LearningCurve]: Starting learning curve, with args: [C:\lab\runs\Research\2013.11.28..1__LearningCurve_QiACE__pilot, C:\Java\Git\breep\ACE_EVENT\run\input\new_filelist_ACE_tiny.txt, C:\Java\Git\breep\ACE_EVENT\run\input\new_filelist_ACE_dev.txt, C:\Java\Git\breep\ACE_EVENT\run\input\new_filelist_ACE_test.txt, 3, 2]
-ERROR 19:06:18.886 [main LearningCurve]: 
-java.lang.NullPointerException
-	at edu.cuny.qc.perceptron.learnCurve.LearningCurve.run(LearningCurve.java:299)
-	at edu.cuny.qc.perceptron.learnCurve.LearningCurve.main(LearningCurve.java:315)

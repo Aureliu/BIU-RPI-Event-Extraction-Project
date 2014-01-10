@@ -12,7 +12,6 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 import org.apache.commons.lang3.SerializationUtils;
 
@@ -197,6 +196,13 @@ public class Perceptron implements java.io.Serializable
 			{
 				makeAveragedWeights(c);
 				
+				//TODO DEBUG
+				List<SentenceAssignment> goldAssignments = new ArrayList<SentenceAssignment>(devList.size());
+				for (SentenceInstance instance : devList) {
+					goldAssignments.add(instance.target);
+				}
+				/// TODO END DEBUG
+				
 				List<SentenceAssignment> devResult = decoding(devList);
 				Evaluator.Score dev_score = evaluator.evaluate(devResult, getCanonicalInstanceList(devList));
 				
@@ -240,7 +246,7 @@ public class Perceptron implements java.io.Serializable
 			System.out.println("Stop without convergency" + "\t time:" + totalTime);
 		}
 		
-		if(devList != null)
+		if(devList != null && best_weights != null)
 		{
 			this.weights = best_weights;
 			if(this.controller.avgArguments)

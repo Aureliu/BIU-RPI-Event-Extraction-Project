@@ -85,7 +85,7 @@ public class Scorer
 		}
 	}
 	
-	public static Stats doAnalysis(File goldDir, File ansDir, File file_list, PrintStream out, String dirNamePrefix) throws IOException, DocumentException
+	public static Stats doAnalysis(File goldDir, File ansDir, File file_list, PrintStream out, String dirNamePrefix, String singleEventType) throws IOException, DocumentException
 	{
 		Stats stats = new Stats();
 		BufferedReader reader = new BufferedReader(new FileReader(file_list));
@@ -112,7 +112,10 @@ public class Scorer
 			}
 			AceDocument doc_ans = new AceDocument(textFile.getAbsolutePath(), apf_ans.getAbsolutePath());
 			AceDocument doc_gold = new AceDocument(textFile.getAbsolutePath(), apf_gold.getAbsolutePath());
-			// There no need to call setSingleEventType, as the files already have just the single type (if indeed only one is required)
+			if (singleEventType != null) {
+				doc_gold.setSingleEventType(singleEventType);
+			}
+			// There no need to call setSingleEventType on doc_gold, as it already has just the single type (if indeed only one is required)
 
 			out.printf("----------------\n%s\n", line);
 			doAnalysisForFile(doc_ans, doc_gold, stats, out);
@@ -122,6 +125,9 @@ public class Scorer
 		stats.calc();
 		
 		out.println("\n\n---------------------------");
+		out.printf("num_trigger_gold=%d, num_trigger_ans=%d  /  num_trigger_correct=%d, num_trigger_idt_correct=%d\n", stats.num_trigger_gold, stats.num_trigger_ans, stats.num_trigger_correct, stats.num_trigger_idt_correct);
+		out.printf("num_arg_gold=%d, num_arg_ans=%d  /  num_arg_correct=%d, num_arg_idt_correct=%d\n", stats.num_arg_gold, stats.num_arg_ans, stats.num_arg_correct, stats.num_arg_idt_correct);
+		out.println("\n---------------------------");
 		out.println("Summary:\n");
 		out.println(stats);
 		
@@ -207,9 +213,9 @@ public class Scorer
 						}
 						
 						out.printf("       %02d. Arg Reg: GOLD %-10s(%-18s)\\%-12s:'%-22s'[%04d:%04d] %s ANS %-10s(%-18s)\\%-12s:'%-22s'[%04d:%04d]\n", i, 
-								minimizeMentionAndArgumentMentionID(temp.value.id), temp.mention.getSubType(), temp.role, realHeadText(temp.value), realHead(temp.value).start(), realHead(temp.value).end(),
+								minimizeMentionAndArgumentMentionID(temp.value.id), temp.mention.getSubType(), temp.role, normalizedRealHeadText(temp.value), realHead(temp.value).start(), realHead(temp.value).end(),
 								equals,
-								minimizeMentionAndArgumentMentionID(arg.value.id), arg.mention.getSubType(), arg.role, realHeadText(arg.value), realHead(arg.value).start(), realHead(arg.value).end());
+								minimizeMentionAndArgumentMentionID(arg.value.id), arg.mention.getSubType(), arg.role, normalizedRealHeadText(arg.value), realHead(arg.value).start(), realHead(arg.value).end());
 						
 						stats.num_arg_correct++;
 						break;
@@ -237,9 +243,9 @@ public class Scorer
 						}
 						
 						out.printf("           %02d. Arg Id: GOLD %-10s(%-18s)\\%-12s:'%-22s'[%04d:%04d] %s ANS %-10s(%-18s)\\%-12s:'%-22s'[%04d:%04d]\n", i, 
-								minimizeMentionAndArgumentMentionID(temp.value.id), temp.mention.getSubType(), temp.role, realHeadText(temp.value), realHead(temp.value).start(), realHead(temp.value).end(),
+								minimizeMentionAndArgumentMentionID(temp.value.id), temp.mention.getSubType(), temp.role, normalizedRealHeadText(temp.value), realHead(temp.value).start(), realHead(temp.value).end(),
 								equals,
-								minimizeMentionAndArgumentMentionID(arg.value.id), arg.mention.getSubType(), arg.role, realHeadText(arg.value), realHead(arg.value).start(), realHead(arg.value).end());
+								minimizeMentionAndArgumentMentionID(arg.value.id), arg.mention.getSubType(), arg.role, normalizedRealHeadText(arg.value), realHead(arg.value).start(), realHead(arg.value).end());
 
 						stats.num_arg_idt_correct++;
 						break;
@@ -284,6 +290,10 @@ public class Scorer
 		else {
 			return value.text;
 		}
+	}
+	
+	private static String normalizedRealHeadText(AceMention value) {
+		return realHeadText(value).replace('\n', ' ');
 	}
 	
 	/**
@@ -340,10 +350,10 @@ public class Scorer
 
 	static public Stats mainReturningStats(String[] args) throws DocumentException, IOException
 	{
-		return mainMultiRunReturningStats("", args);
+		return mainMultiRunReturningStats("", null, args);
 	}
 	
-	static public Stats mainMultiRunReturningStats(String dirNamePrefix, String[] args) throws DocumentException, IOException
+	static public Stats mainMultiRunReturningStats(String dirNamePrefix, String singleEventType, String[] args) throws DocumentException, IOException
 	{	
 		if(args.length < 3)
 		{
@@ -365,7 +375,7 @@ public class Scorer
 			File output = new File(args[3]);
 			out = new PrintStream(output);
 		}
-		Stats stats = doAnalysis(goldDir, ansDir, filelist, out, dirNamePrefix);
+		Stats stats = doAnalysis(goldDir, ansDir, filelist, out, dirNamePrefix, singleEventType);
 		if(out != System.out)
 		{
 			out.close();

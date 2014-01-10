@@ -37,7 +37,7 @@ public class Decoder
 		w.println ("<?xml version=\"1.0\"?>");
 		w.println ("<!DOCTYPE source_file SYSTEM \"apf.v5.1.1.dtd\">");
 		w.print   ("<source_file URI=\"" + aceDoc.sourceFile + "\"");
-		w.println (" SOURCE=\"" + aceDoc.sourceType + "\" TYPE=\"text\">");
+		w.println (" SOURCE=\"" + aceDoc.sourceType + "\" TYPE=\"text\" AUTHOR=\"LDC\" ENCODING=\"UTF-8\">");
 		w.println ("<document DOCID=\"" + aceDoc.docID + "\">");
 		for (int i=0; i<aceDoc.entities.size(); i++) {
 			AceEntity entity = (AceEntity) aceDoc.entities.get(i);
@@ -109,9 +109,10 @@ public class Decoder
 		weightsOut.printf("%s", perceptron.getWeights().toString());
 		weightsOut.close();
 		
-		PrintStream avgWeightsOut = new PrintStream(new File(outDir + File.separator + "AvgWeights" + filenameSuffix));
-		avgWeightsOut.printf("%s", perceptron.getAvg_weights().toString());
-		avgWeightsOut.close();
+		// no need in printing that - we have the model.weights file! With exact same data!!! :)
+		//PrintStream avgWeightsOut = new PrintStream(new File(outDir + File.separator + "AvgWeights" + filenameSuffix));
+		//avgWeightsOut.printf("%s", perceptron.getAvg_weights().toString());
+		//avgWeightsOut.close();
 				
 		System.out.printf("--------------\nPerceptron.controller =\n%s\r\n\r\n--------------------------\r\n\r\n", perceptron.controller);
 		
@@ -145,7 +146,7 @@ public class Decoder
 			List<SentenceAssignment> localResults = perceptron.decoding(localInstanceList);
 			
 			// print to docs
-			File outputFile = new File(outDir + File.separator + folderNamePrefix + line);
+			File outputFile = new File(outDir + File.separator + folderNamePrefix + line + ".apf.xml");
 			if(!outputFile.getParentFile().exists())
 			{
 				outputFile.getParentFile().mkdirs();
@@ -178,7 +179,7 @@ public class Decoder
 		mainNoScoring(args, filenameSuffix, folderNamePrefix, singleEventType);
 		
 		File outputFile = new File(outDir + File.separator + "Score" + filenameSuffix);
-		Stats stats = Scorer.mainMultiRunReturningStats(folderNamePrefix, new String[]{args[1], args[3], args[2], outputFile.getAbsolutePath()});
+		Stats stats = Scorer.mainMultiRunReturningStats(folderNamePrefix, singleEventType, new String[]{args[1], args[3], args[2], outputFile.getAbsolutePath()});
 		return stats;
 	}
 

@@ -1,0 +1,176 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="MARKETVIEW_20050222.1919.sgm" SOURCE="weblog" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="MARKETVIEW_20050222.1919">
+<entity ID="MARKETVIEW_20050222.1919-E1" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="MARKETVIEW_20050222.1919-E1-1" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="123" END="123">I</charseq>
+    </extent>
+    <head>
+      <charseq START="123" END="123">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050222.1919-E1-2" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="94" END="98">Byrne</charseq>
+    </extent>
+    <head>
+      <charseq START="94" END="98">Byrne</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Byrne">
+      <charseq START="94" END="98">Byrne</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKETVIEW_20050222.1919-E2" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="MARKETVIEW_20050222.1919-E2-3" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="189" END="209">Martha Stewart Living</charseq>
+    </extent>
+    <head>
+      <charseq START="189" END="209">Martha Stewart Living</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050222.1919-E2-5" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="279" END="299">Martha Stewart Living</charseq>
+    </extent>
+    <head>
+      <charseq START="279" END="299">Martha Stewart Living</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050222.1919-E2-8" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="408" END="418">the company</charseq>
+    </extent>
+    <head>
+      <charseq START="412" END="418">company</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Martha Stewart Living">
+      <charseq START="189" END="209">Martha Stewart Living</charseq>
+    </name>
+    <name NAME="Martha Stewart Living">
+      <charseq START="279" END="299">Martha Stewart Living</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKETVIEW_20050222.1919-E3" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="MARKETVIEW_20050222.1919-E3-4" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="227" END="243">so many investors</charseq>
+    </extent>
+    <head>
+      <charseq START="235" END="243">investors</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050222.1919-E4" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="MARKETVIEW_20050222.1919-E4-6" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="307" END="307">s</charseq>
+    </extent>
+    <head>
+      <charseq START="307" END="307">s</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050222.1919-E5" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="MARKETVIEW_20050222.1919-E5-7" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="370" END="418">the namesake and guiding force
+behind the company</charseq>
+    </extent>
+    <head>
+      <charseq START="395" END="399">force</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050222.1919-E5-10" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="449" END="451">she</charseq>
+    </extent>
+    <head>
+      <charseq START="449" END="451">she</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050222.1919-E5-11" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="370" END="418">the namesake and guiding force
+behind the company</charseq>
+    </extent>
+    <head>
+      <charseq START="374" END="381">namesake</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050222.1919-E6" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="GEN">
+  <entity_mention ID="MARKETVIEW_20050222.1919-E6-9" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="426" END="431">prison</charseq>
+    </extent>
+    <head>
+      <charseq START="426" END="431">prison</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<timex2 ID="MARKETVIEW_20050222.1919-T1" VAL="2005-02-22T19:19:00">
+  <timex2_mention ID="MARKETVIEW_20050222.1919-T1-1">
+    <extent>
+      <charseq START="40" END="58">2005-02-22T19:19:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKETVIEW_20050222.1919-T2" VAL="2005-02-22T19:19:00">
+  <timex2_mention ID="MARKETVIEW_20050222.1919-T2-1">
+    <extent>
+      <charseq START="102" END="120">2005-02-22T19:19:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="MARKETVIEW_20050222.1919-R1" TYPE="ORG-AFF" SUBTYPE="Investor-Shareholder" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="MARKETVIEW_20050222.1919-E3" ROLE="Arg-1"/>
+  <relation_argument REFID="MARKETVIEW_20050222.1919-E2" ROLE="Arg-2"/>
+  <relation_mention ID="MARKETVIEW_20050222.1919-R1-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="213" END="299">The fact that so many investors are so clearly
+enthusiastic about Martha Stewart Living</charseq>
+    </extent>
+    <relation_mention_argument REFID="MARKETVIEW_20050222.1919-E3-4" ROLE="Arg-1">
+      <extent>
+        <charseq START="227" END="243">so many investors</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="MARKETVIEW_20050222.1919-E2-5" ROLE="Arg-2">
+      <extent>
+        <charseq START="279" END="299">Martha Stewart Living</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="MARKETVIEW_20050222.1919-R2" TYPE="ORG-AFF" SUBTYPE="Membership" TENSE="Present" MODALITY="Asserted">
+  <relation_argument REFID="MARKETVIEW_20050222.1919-E5" ROLE="Arg-1"/>
+  <relation_argument REFID="MARKETVIEW_20050222.1919-E2" ROLE="Arg-2"/>
+  <relation_mention ID="MARKETVIEW_20050222.1919-R2-1" LEXICALCONDITION="Participial">
+    <extent>
+      <charseq START="370" END="418">the namesake and guiding force
+behind the company</charseq>
+    </extent>
+    <relation_mention_argument REFID="MARKETVIEW_20050222.1919-E5-11" ROLE="Arg-1">
+      <extent>
+        <charseq START="370" END="418">the namesake and guiding force
+behind the company</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="MARKETVIEW_20050222.1919-E2-8" ROLE="Arg-2">
+      <extent>
+        <charseq START="408" END="418">the company</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+</document>
+</source_file>

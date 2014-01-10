@@ -1,0 +1,460 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030627_130145.6.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030627_130145.6">
+<entity ID="CNN_ENG_20030627_130145.6-E1" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030627_130145.6-E1-17" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="434" END="462">former president bill clinton</charseq>
+    </extent>
+    <head>
+      <charseq START="451" END="462">bill clinton</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030627_130145.6-E1-18" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="434" END="449">former president</charseq>
+    </extent>
+    <head>
+      <charseq START="441" END="449">president</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="bill clinton">
+      <charseq START="451" END="462">bill clinton</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030627_130145.6-E2" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030627_130145.6-E2-2" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="227" END="247">a restaurant he owned</charseq>
+    </extent>
+    <head>
+      <charseq START="229" END="238">restaurant</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030627_130145.6-E3" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030627_130145.6-E3-1" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="93" END="113">two political figures</charseq>
+    </extent>
+    <head>
+      <charseq START="107" END="113">figures</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030627_130145.6-E3-3" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="115" END="117">who</charseq>
+    </extent>
+    <head>
+      <charseq START="115" END="117">who</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030627_130145.6-E4" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030627_130145.6-E4-4" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="155" END="167">lester maddox</charseq>
+    </extent>
+    <head>
+      <charseq START="155" END="167">lester maddox</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030627_130145.6-E4-5" TYPE="PRO" LDCTYPE="WHQ" LDCATR="FALSE">
+    <extent>
+      <charseq START="169" END="171">who</charseq>
+    </extent>
+    <head>
+      <charseq START="169" END="171">who</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030627_130145.6-E4-6" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="189" END="190">he</charseq>
+    </extent>
+    <head>
+      <charseq START="189" END="190">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030627_130145.6-E4-7" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="196" END="209">a
+segrationist</charseq>
+    </extent>
+    <head>
+      <charseq START="198" END="209">segrationist</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030627_130145.6-E4-8" TYPE="PRO" LDCTYPE="WHQ" LDCATR="TRUE">
+    <extent>
+      <charseq START="211" END="213">who</charseq>
+    </extent>
+    <head>
+      <charseq START="211" END="213">who</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030627_130145.6-E4-9" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="240" END="241">he</charseq>
+    </extent>
+    <head>
+      <charseq START="240" END="241">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="lester maddox">
+      <charseq START="155" END="167">lester maddox</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030627_130145.6-E7" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030627_130145.6-E7-10" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="266" END="282">african-americans</charseq>
+    </extent>
+    <head>
+      <charseq START="266" END="282">african-americans</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030627_130145.6-E8" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030627_130145.6-E8-11" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="289" END="303">maynard jackson</charseq>
+    </extent>
+    <head>
+      <charseq START="289" END="303">maynard jackson</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030627_130145.6-E8-13" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="328" END="330">his</charseq>
+    </extent>
+    <head>
+      <charseq START="328" END="330">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030627_130145.6-E8-14" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="346" END="347">he</charseq>
+    </extent>
+    <head>
+      <charseq START="346" END="347">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030627_130145.6-E8-16" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="425" END="431">jackson</charseq>
+    </extent>
+    <head>
+      <charseq START="425" END="431">jackson</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="maynard jackson">
+      <charseq START="289" END="303">maynard jackson</charseq>
+    </name>
+    <name NAME="jackson">
+      <charseq START="425" END="431">jackson</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030627_130145.6-E9" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030627_130145.6-E9-12" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="328" END="343">his
+allah matter</charseq>
+    </extent>
+    <head>
+      <charseq START="332" END="343">allah matter</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030627_130145.6-E10" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030627_130145.6-E10-15" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="379" END="390">jimmy carter</charseq>
+    </extent>
+    <head>
+      <charseq START="379" END="390">jimmy carter</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="jimmy carter">
+      <charseq START="379" END="390">jimmy carter</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<value ID="CNN_ENG_20030627_130145.6-V1" TYPE="Job-Title">
+  <value_mention ID="CNN_ENG_20030627_130145.6-V1-1">
+    <extent>
+      <charseq START="441" END="449">president</charseq>
+    </extent>
+  </value_mention>
+</value>
+<timex2 ID="CNN_ENG_20030627_130145.6-T1" VAL="2003-06-27T13:12:37">
+  <timex2_mention ID="CNN_ENG_20030627_130145.6-T1-1">
+    <extent>
+      <charseq START="43" END="61">2003-06-27 13:12:37</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030627_130145.6-T2" VAL="2003-W26">
+  <timex2_mention ID="CNN_ENG_20030627_130145.6-T2-1">
+    <extent>
+      <charseq START="124" END="132">this week</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030627_130145.6-T3" VAL="2003-06-27">
+  <timex2_mention ID="CNN_ENG_20030627_130145.6-T3-1">
+    <extent>
+      <charseq START="145" END="149">today</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030627_130145.6-T4" VAL="2003-06-25">
+  <timex2_mention ID="CNN_ENG_20030627_130145.6-T4-1">
+    <extent>
+      <charseq START="178" END="186">wednesday</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030627_130145.6-T5" VAL="2003-06-27">
+  <timex2_mention ID="CNN_ENG_20030627_130145.6-T5-1">
+    <extent>
+      <charseq START="319" END="323">today</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030627_130145.6-T6" VAL="2003-06-23">
+  <timex2_mention ID="CNN_ENG_20030627_130145.6-T6-1">
+    <extent>
+      <charseq START="354" END="359">monday</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030627_130145.6-T7" VAL="P65Y" ANCHOR_VAL="2003-06-23" ANCHOR_DIR="ENDING">
+  <timex2_mention ID="CNN_ENG_20030627_130145.6-T7-1">
+    <extent>
+      <charseq START="364" END="376">the age of 65</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030627_130145.6-T8" VAL="2003-06-28">
+  <timex2_mention ID="CNN_ENG_20030627_130145.6-T8-1">
+    <extent>
+      <charseq START="493" END="500">tomorrow</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030627_130145.6-T9">
+  <timex2_mention ID="CNN_ENG_20030627_130145.6-T9-1">
+    <extent>
+      <charseq START="434" END="439">former</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030627_130145.6-T10" VAL="2003-06-26">
+  <timex2_mention ID="CNN_ENG_20030627_130145.6-T10-1">
+    <extent>
+      <charseq START="398" END="406">yesterday</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030627_130145.6-R1" TYPE="ORG-AFF" SUBTYPE="Ownership" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030627_130145.6-E4" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030627_130145.6-E2" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030627_130145.6-R1-1" LEXICALCONDITION="Participial">
+    <extent>
+      <charseq START="227" END="247">a restaurant he owned</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030627_130145.6-E4-9" ROLE="Arg-1">
+      <extent>
+        <charseq START="240" END="241">he</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030627_130145.6-E2-2" ROLE="Arg-2">
+      <extent>
+        <charseq START="227" END="247">a restaurant he owned</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030627_130145.6-R2" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030627_130145.6-E8" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030627_130145.6-E9" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030627_130145.6-R2-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="328" END="343">his
+allah matter</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030627_130145.6-E8-13" ROLE="Arg-1">
+      <extent>
+        <charseq START="328" END="330">his</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030627_130145.6-E9-12" ROLE="Arg-2">
+      <extent>
+        <charseq START="328" END="343">his
+allah matter</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030627_130145.6-EV1" TYPE="Life" SUBTYPE="Die" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030627_130145.6-E3" ROLE="Victim"/>
+  <event_argument REFID="CNN_ENG_20030627_130145.6-T2" ROLE="Time-Within"/>
+  <event_mention ID="CNN_ENG_20030627_130145.6-EV1-1">
+    <extent>
+      <charseq START="115" END="132">who died this week</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="67" END="132">services and tributes for two political figures who died this week</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="119" END="122">died</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030627_130145.6-E3-3" ROLE="Victim">
+      <extent>
+        <charseq START="115" END="117">who</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030627_130145.6-T2-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="124" END="132">this week</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030627_130145.6-EV2" TYPE="Life" SUBTYPE="Die" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030627_130145.6-E4" ROLE="Victim"/>
+  <event_argument REFID="CNN_ENG_20030627_130145.6-T4" ROLE="Time-Within"/>
+  <event_mention ID="CNN_ENG_20030627_130145.6-EV2-1">
+    <extent>
+      <charseq START="169" END="186">who died wednesday</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="135" END="186">a
+funeral today for lester maddox who died wednesday</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="173" END="176">died</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030627_130145.6-E4-5" ROLE="Victim">
+      <extent>
+        <charseq START="169" END="171">who</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030627_130145.6-T4-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="178" END="186">wednesday</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030627_130145.6-EV3" TYPE="Business" SUBTYPE="End-Org" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030627_130145.6-E2" ROLE="Org"/>
+  <event_mention ID="CNN_ENG_20030627_130145.6-EV3-1">
+    <extent>
+      <charseq START="220" END="247">closed a restaurant he owned</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="189" END="282">he was a
+segrationist who once closed a restaurant he owned rather han serve
+african-americans</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="220" END="225">closed</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030627_130145.6-E2-2" ROLE="Org">
+      <extent>
+        <charseq START="227" END="247">a restaurant he owned</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030627_130145.6-EV4" TYPE="Life" SUBTYPE="Die" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030627_130145.6-E8" ROLE="Victim"/>
+  <event_argument REFID="CNN_ENG_20030627_130145.6-T6" ROLE="Time-Within"/>
+  <event_mention ID="CNN_ENG_20030627_130145.6-EV4-1">
+    <extent>
+      <charseq START="289" END="317">maynard jackson lies in state</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="285" END="343">and maynard jackson lies in state today at his
+allah matter</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="305" END="317">lies in state</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030627_130145.6-E8-11" ROLE="Victim">
+      <extent>
+        <charseq START="289" END="303">maynard jackson</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030627_130145.6-EV4-2">
+    <extent>
+      <charseq START="346" END="359">he died monday</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="346" END="376">he died monday at the age of 65</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="349" END="352">died</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030627_130145.6-E8-14" ROLE="Victim">
+      <extent>
+        <charseq START="346" END="347">he</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030627_130145.6-T6-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="354" END="359">monday</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030627_130145.6-EV4-3">
+    <extent>
+      <charseq START="485" END="491">funeral</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="434" END="500">former president bill clinton
+expect to attend the funeral tomorrow</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="485" END="491">funeral</charseq>
+    </anchor>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030627_130145.6-EV5" TYPE="Personnel" SUBTYPE="End-Position" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030627_130145.6-E1" ROLE="Person"/>
+  <event_argument REFID="CNN_ENG_20030627_130145.6-V1" ROLE="Position"/>
+  <event_mention ID="CNN_ENG_20030627_130145.6-EV5-1">
+    <extent>
+      <charseq START="434" END="462">former president bill clinton</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="434" END="500">former president bill clinton
+expect to attend the funeral tomorrow</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="434" END="439">former</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030627_130145.6-E1-17" ROLE="Person">
+      <extent>
+        <charseq START="434" END="462">former president bill clinton</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030627_130145.6-V1-1" ROLE="Position">
+      <extent>
+        <charseq START="441" END="449">president</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

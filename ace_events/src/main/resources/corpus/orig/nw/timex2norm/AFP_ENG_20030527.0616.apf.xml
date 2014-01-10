@@ -1,0 +1,963 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="AFP_ENG_20030527.0616.sgm" SOURCE="newswire" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="AFP_ENG_20030527.0616">
+<entity ID="AFP_ENG_20030527.0616-E1" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="AFP_ENG_20030527.0616-E1-40" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="125" END="126">US</charseq>
+    </extent>
+    <head>
+      <charseq START="125" END="126">US</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030527.0616-E1-49" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="404" END="405">US</charseq>
+    </extent>
+    <head>
+      <charseq START="404" END="405">US</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="US">
+      <charseq START="125" END="126">US</charseq>
+    </name>
+    <name NAME="US">
+      <charseq START="404" END="405">US</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AFP_ENG_20030527.0616-E2" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="AFP_ENG_20030527.0616-E2-2" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="407" END="412">Canada</charseq>
+    </extent>
+    <head>
+      <charseq START="407" END="412">Canada</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030527.0616-E2-13" TYPE="NAM" LDCTYPE="NAM" ROLE="ORG" LDCATR="TRUE">
+    <extent>
+      <charseq START="803" END="808">Canada</charseq>
+    </extent>
+    <head>
+      <charseq START="803" END="808">Canada</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030527.0616-E2-15" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="TRUE">
+    <extent>
+      <charseq START="858" END="863">Canada</charseq>
+    </extent>
+    <head>
+      <charseq START="858" END="863">Canada</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030527.0616-E2-31" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1259" END="1266">Canadian</charseq>
+    </extent>
+    <head>
+      <charseq START="1259" END="1266">Canadian</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030527.0616-E2-42" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="158" END="165">Canadian</charseq>
+    </extent>
+    <head>
+      <charseq START="158" END="165">Canadian</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Canada">
+      <charseq START="407" END="412">Canada</charseq>
+    </name>
+    <name NAME="Canada">
+      <charseq START="803" END="808">Canada</charseq>
+    </name>
+    <name NAME="Canada">
+      <charseq START="858" END="863">Canada</charseq>
+    </name>
+    <name NAME="Canadian">
+      <charseq START="1259" END="1266">Canadian</charseq>
+    </name>
+    <name NAME="Canadian">
+      <charseq START="158" END="165">Canadian</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AFP_ENG_20030527.0616-E3" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="AFP_ENG_20030527.0616-E3-3" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="470" END="497">Bush
+spokesman Ari Fleischer</charseq>
+    </extent>
+    <head>
+      <charseq START="485" END="497">Ari Fleischer</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030527.0616-E3-4" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="470" END="483">Bush
+spokesman</charseq>
+    </extent>
+    <head>
+      <charseq START="475" END="483">spokesman</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030527.0616-E3-11" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="737" END="745">Fleischer</charseq>
+    </extent>
+    <head>
+      <charseq START="737" END="745">Fleischer</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Ari Fleischer">
+      <charseq START="485" END="497">Ari Fleischer</charseq>
+    </name>
+    <name NAME="Fleischer">
+      <charseq START="737" END="745">Fleischer</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AFP_ENG_20030527.0616-E5" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="AFP_ENG_20030527.0616-E5-5" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="470" END="473">Bush</charseq>
+    </extent>
+    <head>
+      <charseq START="470" END="473">Bush</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030527.0616-E5-14" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="819" END="822">Bush</charseq>
+    </extent>
+    <head>
+      <charseq START="819" END="822">Bush</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030527.0616-E5-24" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="1014" END="1017">Bush</charseq>
+    </extent>
+    <head>
+      <charseq START="1014" END="1017">Bush</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030527.0616-E5-38" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="125" END="151">US President George W. Bush</charseq>
+    </extent>
+    <head>
+      <charseq START="138" END="151">George W. Bush</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030527.0616-E5-39" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="125" END="136">US President</charseq>
+    </extent>
+    <head>
+      <charseq START="128" END="136">President</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030527.0616-E5-44" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="221" END="222">he</charseq>
+    </extent>
+    <head>
+      <charseq START="221" END="222">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Bush">
+      <charseq START="470" END="473">Bush</charseq>
+    </name>
+    <name NAME="Bush">
+      <charseq START="819" END="822">Bush</charseq>
+    </name>
+    <name NAME="Bush">
+      <charseq START="1014" END="1017">Bush</charseq>
+    </name>
+    <name NAME="George W. Bush">
+      <charseq START="138" END="151">George W. Bush</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AFP_ENG_20030527.0616-E6" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="AFP_ENG_20030527.0616-E6-6" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="551" END="556">France</charseq>
+    </extent>
+    <head>
+      <charseq START="551" END="556">France</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="France">
+      <charseq START="551" END="556">France</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AFP_ENG_20030527.0616-E7" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="AFP_ENG_20030527.0616-E7-9" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="613" END="617">Evian</charseq>
+    </extent>
+    <head>
+      <charseq START="613" END="617">Evian</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Evian">
+      <charseq START="613" END="617">Evian</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AFP_ENG_20030527.0616-E8" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="AFP_ENG_20030527.0616-E8-10" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE">
+    <extent>
+      <charseq START="641" END="651">Afghanistan</charseq>
+    </extent>
+    <head>
+      <charseq START="641" END="651">Afghanistan</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Afghanistan">
+      <charseq START="641" END="651">Afghanistan</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AFP_ENG_20030527.0616-E9" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="AFP_ENG_20030527.0616-E9-12" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="791" END="794">Iraq</charseq>
+    </extent>
+    <head>
+      <charseq START="791" END="794">Iraq</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030527.0616-E9-26" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE">
+    <extent>
+      <charseq START="1104" END="1107">Iraq</charseq>
+    </extent>
+    <head>
+      <charseq START="1104" END="1107">Iraq</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Iraq">
+      <charseq START="791" END="794">Iraq</charseq>
+    </name>
+    <name NAME="Iraq">
+      <charseq START="1104" END="1107">Iraq</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AFP_ENG_20030527.0616-E10" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="AFP_ENG_20030527.0616-E10-16" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="891" END="963">Australian Prime Minster John Howard, who endorsed that military
+campaign</charseq>
+    </extent>
+    <head>
+      <charseq START="916" END="926">John Howard</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030527.0616-E10-17" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="891" END="914">Australian Prime Minster</charseq>
+    </extent>
+    <head>
+      <charseq START="902" END="914">Prime Minster</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030527.0616-E10-19" TYPE="PRO" LDCTYPE="WHQ" LDCATR="FALSE">
+    <extent>
+      <charseq START="929" END="931">who</charseq>
+    </extent>
+    <head>
+      <charseq START="929" END="931">who</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="John Howard">
+      <charseq START="916" END="926">John Howard</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AFP_ENG_20030527.0616-E12" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="AFP_ENG_20030527.0616-E12-18" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="891" END="900">Australian</charseq>
+    </extent>
+    <head>
+      <charseq START="891" END="900">Australian</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Australian">
+      <charseq START="891" END="900">Australian</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AFP_ENG_20030527.0616-E13" TYPE="ORG" SUBTYPE="Government" CLASS="GEN">
+  <entity_mention ID="AFP_ENG_20030527.0616-E13-20" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="947" END="954">military</charseq>
+    </extent>
+    <head>
+      <charseq START="947" END="954">military</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AFP_ENG_20030527.0616-E14" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="AFP_ENG_20030527.0616-E14-22" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="992" END="1000">reporters</charseq>
+    </extent>
+    <head>
+      <charseq START="992" END="1000">reporters</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AFP_ENG_20030527.0616-E15" TYPE="GPE" SUBTYPE="Continent" CLASS="SPC">
+  <entity_mention ID="AFP_ENG_20030527.0616-E15-27" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE">
+    <extent>
+      <charseq START="1181" END="1186">Africa</charseq>
+    </extent>
+    <head>
+      <charseq START="1181" END="1186">Africa</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Africa">
+      <charseq START="1181" END="1186">Africa</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AFP_ENG_20030527.0616-E17" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="AFP_ENG_20030527.0616-E17-1" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="99" END="108">WASHINGTON</charseq>
+    </extent>
+    <head>
+      <charseq START="99" END="108">WASHINGTON</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="WASHINGTON">
+      <charseq START="99" END="108">WASHINGTON</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AFP_ENG_20030527.0616-E18" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="AFP_ENG_20030527.0616-E18-32" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="671" END="702">the Democratic Republic of
+Congo</charseq>
+    </extent>
+    <head>
+      <charseq START="675" END="702">Democratic Republic of
+Congo</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Democratic Republic of Congo">
+      <charseq START="675" END="702">Democratic Republic of
+Congo</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AFP_ENG_20030527.0616-E19" TYPE="GPE" SUBTYPE="GPE-Cluster" CLASS="SPC">
+  <entity_mention ID="AFP_ENG_20030527.0616-E19-33" TYPE="NAM" LDCTYPE="NAM" ROLE="ORG" LDCATR="FALSE">
+    <extent>
+      <charseq START="1133" END="1168">the Group of Eight industrial
+powers</charseq>
+    </extent>
+    <head>
+      <charseq START="1137" END="1168">Group of Eight industrial
+powers</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030527.0616-E19-35" TYPE="NOM" LDCTYPE="BAR" ROLE="ORG" LDCATR="FALSE">
+    <extent>
+      <charseq START="279" END="306">major industrialized nations</charseq>
+    </extent>
+    <head>
+      <charseq START="300" END="306">nations</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030527.0616-E19-36" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="391" END="393">G-8</charseq>
+    </extent>
+    <head>
+      <charseq START="391" END="393">G-8</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Group of Eight industrial powers">
+      <charseq START="1137" END="1168">Group of Eight industrial
+powers</charseq>
+    </name>
+    <name NAME="G-8">
+      <charseq START="391" END="393">G-8</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AFP_ENG_20030527.0616-E20" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="AFP_ENG_20030527.0616-E20-21" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="978" END="985">Chretien</charseq>
+    </extent>
+    <head>
+      <charseq START="978" END="985">Chretien</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030527.0616-E20-23" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1007" END="1008">he</charseq>
+    </extent>
+    <head>
+      <charseq START="1007" END="1008">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030527.0616-E20-30" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1255" END="1273">the
+Canadian leader</charseq>
+    </extent>
+    <head>
+      <charseq START="1268" END="1273">leader</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030527.0616-E20-34" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="158" END="180">Canadian Prime Minister</charseq>
+    </extent>
+    <head>
+      <charseq START="167" END="180">Prime Minister</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030527.0616-E20-41" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="158" END="194">Canadian Prime Minister Jean
+Chretien</charseq>
+    </extent>
+    <head>
+      <charseq START="182" END="194">Jean
+Chretien</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030527.0616-E20-45" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="249" END="251">him</charseq>
+    </extent>
+    <head>
+      <charseq START="249" END="251">him</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Chretien">
+      <charseq START="978" END="985">Chretien</charseq>
+    </name>
+    <name NAME="Jean Chretien">
+      <charseq START="182" END="194">Jean
+Chretien</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AFP_ENG_20030527.0616-E28" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="AFP_ENG_20030527.0616-E28-43" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="119" END="121">AFP</charseq>
+    </extent>
+    <head>
+      <charseq START="119" END="121">AFP</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="AFP">
+      <charseq START="119" END="121">AFP</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AFP_ENG_20030527.0616-E29" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="AFP_ENG_20030527.0616-E29-46" TYPE="NAM" LDCTYPE="NAM" ROLE="ORG">
+    <extent>
+      <charseq START="312" END="317">Russia</charseq>
+    </extent>
+    <head>
+      <charseq START="312" END="317">Russia</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Russia">
+      <charseq START="312" END="317">Russia</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AFP_ENG_20030527.0616-E30" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="AFP_ENG_20030527.0616-E30-47" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="320" END="334">the
+White House</charseq>
+    </extent>
+    <head>
+      <charseq START="324" END="334">White House</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="White House">
+      <charseq START="324" END="334">White House</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AFP_ENG_20030527.0616-E31" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="AFP_ENG_20030527.0616-E31-7" TYPE="PRO" LDCTYPE="HLS">
+    <extent>
+      <charseq START="561" END="564">Both</charseq>
+    </extent>
+    <head>
+      <charseq START="561" END="564">Both</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030527.0616-E31-8" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="571" END="574">they</charseq>
+    </extent>
+    <head>
+      <charseq START="571" END="574">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030527.0616-E31-25" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="1020" END="1022">who</charseq>
+    </extent>
+    <head>
+      <charseq START="1020" END="1022">who</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030527.0616-E31-28" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1191" END="1192">We</charseq>
+    </extent>
+    <head>
+      <charseq START="1191" END="1192">We</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030527.0616-E31-29" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1224" END="1225">We</charseq>
+    </extent>
+    <head>
+      <charseq START="1224" END="1225">We</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030527.0616-E31-37" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="620" END="623">They</charseq>
+    </extent>
+    <head>
+      <charseq START="620" END="623">They</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030527.0616-E31-48" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="352" END="366">The two leaders</charseq>
+    </extent>
+    <head>
+      <charseq START="360" END="366">leaders</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<timex2 ID="AFP_ENG_20030527.0616-T1" VAL="2003-05-27">
+  <timex2_mention ID="AFP_ENG_20030527.0616-T1-1">
+    <extent>
+      <charseq START="39" END="46">20030527</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AFP_ENG_20030527.0616-T2" VAL="2003-05-27">
+  <timex2_mention ID="AFP_ENG_20030527.0616-T2-1">
+    <extent>
+      <charseq START="111" END="116">May 27</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AFP_ENG_20030527.0616-T3" VAL="2003-W22-1">
+  <timex2_mention ID="AFP_ENG_20030527.0616-T3-1">
+    <extent>
+      <charseq START="209" END="214">Monday</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AFP_ENG_20030527.0616-T4" VAL="2003-W22-2">
+  <timex2_mention ID="AFP_ENG_20030527.0616-T4-1">
+    <extent>
+      <charseq START="341" END="347">Tuesday</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AFP_ENG_20030527.0616-T5" VAL="2003-W22-1">
+  <timex2_mention ID="AFP_ENG_20030527.0616-T5-1">
+    <extent>
+      <charseq START="970" END="975">Monday</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AFP_ENG_20030527.0616-T6" VAL="2003-02">
+  <timex2_mention ID="AFP_ENG_20030527.0616-T6-1">
+    <extent>
+      <charseq START="1045" END="1057">late February</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AFP_ENG_20030527.0616-T7" VAL="2003-06-1" MOD="BEFORE">
+  <timex2_mention ID="AFP_ENG_20030527.0616-T7-1">
+    <extent>
+      <charseq START="504" END="534">days before the June 1-3 summit</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="AFP_ENG_20030527.0616-R1" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="AFP_ENG_20030527.0616-E5" ROLE="Arg-1"/>
+  <relation_argument REFID="AFP_ENG_20030527.0616-E1" ROLE="Arg-2"/>
+  <relation_mention ID="AFP_ENG_20030527.0616-R1-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="125" END="136">US President</charseq>
+    </extent>
+    <relation_mention_argument REFID="AFP_ENG_20030527.0616-E5-39" ROLE="Arg-1">
+      <extent>
+        <charseq START="125" END="136">US President</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="AFP_ENG_20030527.0616-E1-40" ROLE="Arg-2">
+      <extent>
+        <charseq START="125" END="126">US</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="AFP_ENG_20030527.0616-R2" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="AFP_ENG_20030527.0616-E20" ROLE="Arg-1"/>
+  <relation_argument REFID="AFP_ENG_20030527.0616-E2" ROLE="Arg-2"/>
+  <relation_mention ID="AFP_ENG_20030527.0616-R2-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="158" END="180">Canadian Prime Minister</charseq>
+    </extent>
+    <relation_mention_argument REFID="AFP_ENG_20030527.0616-E20-34" ROLE="Arg-1">
+      <extent>
+        <charseq START="158" END="180">Canadian Prime Minister</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="AFP_ENG_20030527.0616-E2-42" ROLE="Arg-2">
+      <extent>
+        <charseq START="158" END="165">Canadian</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="AFP_ENG_20030527.0616-R2-2" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="1255" END="1273">the
+Canadian leader</charseq>
+    </extent>
+    <relation_mention_argument REFID="AFP_ENG_20030527.0616-E20-30" ROLE="Arg-1">
+      <extent>
+        <charseq START="1255" END="1273">the
+Canadian leader</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="AFP_ENG_20030527.0616-E2-31" ROLE="Arg-2">
+      <extent>
+        <charseq START="1259" END="1266">Canadian</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="AFP_ENG_20030527.0616-R3" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="AFP_ENG_20030527.0616-E10" ROLE="Arg-1"/>
+  <relation_argument REFID="AFP_ENG_20030527.0616-E12" ROLE="Arg-2"/>
+  <relation_mention ID="AFP_ENG_20030527.0616-R3-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="891" END="926">Australian Prime Minster John Howard</charseq>
+    </extent>
+    <relation_mention_argument REFID="AFP_ENG_20030527.0616-E10-17" ROLE="Arg-1">
+      <extent>
+        <charseq START="891" END="914">Australian Prime Minster</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="AFP_ENG_20030527.0616-E12-18" ROLE="Arg-2">
+      <extent>
+        <charseq START="891" END="900">Australian</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="AFP_ENG_20030527.0616-R5" TYPE="PHYS" SUBTYPE="Located" TENSE="Future" MODALITY="Asserted">
+  <relation_argument REFID="AFP_ENG_20030527.0616-E31" ROLE="Arg-1"/>
+  <relation_argument REFID="AFP_ENG_20030527.0616-E7" ROLE="Arg-2"/>
+  <relation_mention ID="AFP_ENG_20030527.0616-R5-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="561" END="617">Both said they look forward to seeing each other in Evian</charseq>
+    </extent>
+    <relation_mention_argument REFID="AFP_ENG_20030527.0616-E31-7" ROLE="Arg-1">
+      <extent>
+        <charseq START="561" END="564">Both</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="AFP_ENG_20030527.0616-E7-9" ROLE="Arg-2">
+      <extent>
+        <charseq START="613" END="617">Evian</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="AFP_ENG_20030527.0616-EV1" TYPE="Contact" SUBTYPE="Meet" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Future">
+  <event_argument REFID="AFP_ENG_20030527.0616-E29" ROLE="Entity"/>
+  <event_argument REFID="AFP_ENG_20030527.0616-E6" ROLE="Place"/>
+  <event_argument REFID="AFP_ENG_20030527.0616-E19" ROLE="Entity"/>
+  <event_mention ID="AFP_ENG_20030527.0616-EV1-1">
+    <extent>
+      <charseq START="269" END="317">summit of major industrialized nations and Russia</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="125" END="347">US President George W. Bush told Canadian Prime Minister Jean
+Chretien by telephone Monday that he looked forward to seeing him at
+the upcoming summit of major industrialized nations and Russia, the
+White House said Tuesday</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="269" END="274">summit</charseq>
+    </anchor>
+    <event_mention_argument REFID="AFP_ENG_20030527.0616-E29-46" ROLE="Entity">
+      <extent>
+        <charseq START="312" END="317">Russia</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AFP_ENG_20030527.0616-E19-35" ROLE="Entity">
+      <extent>
+        <charseq START="279" END="306">major industrialized nations</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="AFP_ENG_20030527.0616-EV1-2">
+    <extent>
+      <charseq START="391" END="556">G-8 meeting, US-Canada
+(relations) and other international issues of concern," Bush
+spokesman Ari Fleischer said days before the June 1-3 summit, to be
+held in France</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="352" END="556">The two leaders discussed the upcoming G-8 meeting, US-Canada
+(relations) and other international issues of concern," Bush
+spokesman Ari Fleischer said days before the June 1-3 summit, to be
+held in France</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="529" END="534">summit</charseq>
+    </anchor>
+    <event_mention_argument REFID="AFP_ENG_20030527.0616-E6-6" ROLE="Place">
+      <extent>
+        <charseq START="551" END="556">France</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AFP_ENG_20030527.0616-E19-36" ROLE="Entity">
+      <extent>
+        <charseq START="391" END="393">G-8</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="AFP_ENG_20030527.0616-EV1-3">
+    <extent>
+      <charseq START="391" END="556">G-8 meeting, US-Canada
+(relations) and other international issues of concern," Bush
+spokesman Ari Fleischer said days before the June 1-3 summit, to be
+held in France</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="352" END="556">The two leaders discussed the upcoming G-8 meeting, US-Canada
+(relations) and other international issues of concern," Bush
+spokesman Ari Fleischer said days before the June 1-3 summit, to be
+held in France</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="395" END="401">meeting</charseq>
+    </anchor>
+    <event_mention_argument REFID="AFP_ENG_20030527.0616-E6-6" ROLE="Place">
+      <extent>
+        <charseq START="551" END="556">France</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AFP_ENG_20030527.0616-E19-36" ROLE="Entity">
+      <extent>
+        <charseq START="391" END="393">G-8</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="AFP_ENG_20030527.0616-EV1-4">
+    <extent>
+      <charseq START="1123" END="1168">summit of the Group of Eight industrial
+powers</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="967" END="1186">On Monday, Chretien told reporters that he and Bush, who had not
+spoken since late February, discussed a wide range of issues,
+including Iraq, the upcoming summit of the Group of Eight industrial
+powers and aid to Africa</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1123" END="1128">summit</charseq>
+    </anchor>
+    <event_mention_argument REFID="AFP_ENG_20030527.0616-E19-33" ROLE="Entity">
+      <extent>
+        <charseq START="1133" END="1168">the Group of Eight industrial
+powers</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="AFP_ENG_20030527.0616-EV2" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="AFP_ENG_20030527.0616-E9" ROLE="Place"/>
+  <event_mention ID="AFP_ENG_20030527.0616-EV2-1">
+    <extent>
+      <charseq START="784" END="794">war in Iraq</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="749" END="963">Amid a chill in relations over the war in Iraq, which Canada opposed,
+Bush indefinitely postponed a visit to Canada, instead choosing to
+host Australian Prime Minster John Howard, who endorsed that military
+campaign</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="784" END="786">war</charseq>
+    </anchor>
+    <event_mention_argument REFID="AFP_ENG_20030527.0616-E9-12" ROLE="Place">
+      <extent>
+        <charseq START="791" END="794">Iraq</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="AFP_ENG_20030527.0616-EV3" TYPE="Movement" SUBTYPE="Transport" MODALITY="Other" POLARITY="Negative" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="AFP_ENG_20030527.0616-E5" ROLE="Artifact"/>
+  <event_argument REFID="AFP_ENG_20030527.0616-E2" ROLE="Destination"/>
+  <event_mention ID="AFP_ENG_20030527.0616-EV3-1">
+    <extent>
+      <charseq START="819" END="863">Bush indefinitely postponed a visit to Canada</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="749" END="963">Amid a chill in relations over the war in Iraq, which Canada opposed,
+Bush indefinitely postponed a visit to Canada, instead choosing to
+host Australian Prime Minster John Howard, who endorsed that military
+campaign</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="849" END="853">visit</charseq>
+    </anchor>
+    <event_mention_argument REFID="AFP_ENG_20030527.0616-E5-14" ROLE="Artifact">
+      <extent>
+        <charseq START="819" END="822">Bush</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AFP_ENG_20030527.0616-E2-15" ROLE="Destination">
+      <extent>
+        <charseq START="858" END="863">Canada</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="AFP_ENG_20030527.0616-EV4" TYPE="Contact" SUBTYPE="Phone-Write" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="AFP_ENG_20030527.0616-E5" ROLE="Entity"/>
+  <event_argument REFID="AFP_ENG_20030527.0616-E20" ROLE="Entity"/>
+  <event_argument REFID="AFP_ENG_20030527.0616-T3" ROLE="Time-Within"/>
+  <event_argument REFID="AFP_ENG_20030527.0616-E31" ROLE="Entity"/>
+  <event_argument REFID="AFP_ENG_20030527.0616-T5" ROLE="Time-Within"/>
+  <event_mention ID="AFP_ENG_20030527.0616-EV4-1">
+    <extent>
+      <charseq START="125" END="214">US President George W. Bush told Canadian Prime Minister Jean
+Chretien by telephone Monday</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="125" END="347">US President George W. Bush told Canadian Prime Minister Jean
+Chretien by telephone Monday that he looked forward to seeing him at
+the upcoming summit of major industrialized nations and Russia, the
+White House said Tuesday</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="153" END="156">told</charseq>
+    </anchor>
+    <event_mention_argument REFID="AFP_ENG_20030527.0616-E5-38" ROLE="Entity">
+      <extent>
+        <charseq START="125" END="151">US President George W. Bush</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AFP_ENG_20030527.0616-E20-41" ROLE="Entity">
+      <extent>
+        <charseq START="158" END="194">Canadian Prime Minister Jean
+Chretien</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AFP_ENG_20030527.0616-T3-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="209" END="214">Monday</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="AFP_ENG_20030527.0616-EV4-2">
+    <extent>
+      <charseq START="352" END="376">The two leaders discussed</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="352" END="556">The two leaders discussed the upcoming G-8 meeting, US-Canada
+(relations) and other international issues of concern," Bush
+spokesman Ari Fleischer said days before the June 1-3 summit, to be
+held in France</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="368" END="376">discussed</charseq>
+    </anchor>
+    <event_mention_argument REFID="AFP_ENG_20030527.0616-E31-48" ROLE="Entity">
+      <extent>
+        <charseq START="352" END="366">The two leaders</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="AFP_ENG_20030527.0616-EV4-3">
+    <extent>
+      <charseq START="970" END="1068">Monday, Chretien told reporters that he and Bush, who had not
+spoken since late February, discussed</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="967" END="1186">On Monday, Chretien told reporters that he and Bush, who had not
+spoken since late February, discussed a wide range of issues,
+including Iraq, the upcoming summit of the Group of Eight industrial
+powers and aid to Africa</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1060" END="1068">discussed</charseq>
+    </anchor>
+    <event_mention_argument REFID="AFP_ENG_20030527.0616-E20-23" ROLE="Entity">
+      <extent>
+        <charseq START="1007" END="1008">he</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AFP_ENG_20030527.0616-E5-24" ROLE="Entity">
+      <extent>
+        <charseq START="1014" END="1017">Bush</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AFP_ENG_20030527.0616-T5-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="970" END="975">Monday</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

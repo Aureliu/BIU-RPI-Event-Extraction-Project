@@ -1,0 +1,804 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="APW_ENG_20030310.0719.sgm" SOURCE="newswire" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="APW_ENG_20030310.0719">
+<entity ID="APW_ENG_20030310.0719-E1" TYPE="ORG" SUBTYPE="Sports" CLASS="SPC">
+  <entity_mention ID="APW_ENG_20030310.0719-E1-2" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="444" END="462">a charitable entity</charseq>
+    </extent>
+    <head>
+      <charseq START="457" END="462">entity</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="APW_ENG_20030310.0719-E1-38" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="301" END="321">Hong Kong Jockey Club</charseq>
+    </extent>
+    <head>
+      <charseq START="301" END="321">Hong Kong Jockey Club</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="APW_ENG_20030310.0719-E1-39" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="689" END="713">the
+Hong Kong Jockey Club</charseq>
+    </extent>
+    <head>
+      <charseq START="693" END="713">Hong Kong Jockey Club</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="APW_ENG_20030310.0719-E1-40" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="135" END="159">The Hong Kong Jockey Club</charseq>
+    </extent>
+    <head>
+      <charseq START="139" END="159">Hong Kong Jockey Club</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="APW_ENG_20030310.0719-E1-47" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="422" END="439">The Hong Kong club</charseq>
+    </extent>
+    <head>
+      <charseq START="436" END="439">club</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Hong Kong Jockey Club">
+      <charseq START="301" END="321">Hong Kong Jockey Club</charseq>
+    </name>
+    <name NAME="Hong Kong Jockey Club">
+      <charseq START="693" END="713">Hong Kong Jockey Club</charseq>
+    </name>
+    <name NAME="Hong Kong Jockey Club">
+      <charseq START="139" END="159">Hong Kong Jockey Club</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="APW_ENG_20030310.0719-E2" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="APW_ENG_20030310.0719-E2-1" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="119" END="127">HONG KONG</charseq>
+    </extent>
+    <head>
+      <charseq START="119" END="127">HONG KONG</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="APW_ENG_20030310.0719-E2-3" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="426" END="434">Hong Kong</charseq>
+    </extent>
+    <head>
+      <charseq START="426" END="434">Hong Kong</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="APW_ENG_20030310.0719-E2-7" TYPE="NAM" LDCTYPE="NAM" ROLE="ORG" LDCATR="FALSE">
+    <extent>
+      <charseq START="560" END="568">Hong Kong</charseq>
+    </extent>
+    <head>
+      <charseq START="560" END="568">Hong Kong</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="APW_ENG_20030310.0719-E2-9" TYPE="PRO" LDCTYPE="PRO" ROLE="ORG" LDCATR="FALSE">
+    <extent>
+      <charseq START="617" END="618">it</charseq>
+    </extent>
+    <head>
+      <charseq START="617" END="618">it</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="APW_ENG_20030310.0719-E2-12" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="768" END="776">Hong Kong</charseq>
+    </extent>
+    <head>
+      <charseq START="768" END="776">Hong Kong</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="APW_ENG_20030310.0719-E2-15" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="889" END="897">Hong Kong</charseq>
+    </extent>
+    <head>
+      <charseq START="889" END="897">Hong Kong</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="APW_ENG_20030310.0719-E2-21" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="1183" END="1191">Hong
+Kong</charseq>
+    </extent>
+    <head>
+      <charseq START="1183" END="1191">Hong
+Kong</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="APW_ENG_20030310.0719-E2-27" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="1309" END="1317">Hong Kong</charseq>
+    </extent>
+    <head>
+      <charseq START="1309" END="1317">Hong Kong</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="APW_ENG_20030310.0719-E2-28" TYPE="NOM" LDCTYPE="NOM" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1320" END="1342">a
+former British colony</charseq>
+    </extent>
+    <head>
+      <charseq START="1337" END="1342">colony</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="APW_ENG_20030310.0719-E2-41" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="639" END="647">Hong Kong</charseq>
+    </extent>
+    <head>
+      <charseq START="639" END="647">Hong Kong</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Hong Kong">
+      <charseq START="639" END="647">Hong Kong</charseq>
+    </name>
+    <name NAME="HONG KONG">
+      <charseq START="119" END="127">HONG KONG</charseq>
+    </name>
+    <name NAME="Hong Kong">
+      <charseq START="426" END="434">Hong Kong</charseq>
+    </name>
+    <name NAME="Hong Kong">
+      <charseq START="560" END="568">Hong Kong</charseq>
+    </name>
+    <name NAME="Hong Kong">
+      <charseq START="768" END="776">Hong Kong</charseq>
+    </name>
+    <name NAME="Hong Kong">
+      <charseq START="889" END="897">Hong Kong</charseq>
+    </name>
+    <name NAME="Hong Kong">
+      <charseq START="1183" END="1191">Hong
+Kong</charseq>
+    </name>
+    <name NAME="Hong Kong">
+      <charseq START="1309" END="1317">Hong Kong</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="APW_ENG_20030310.0719-E3" TYPE="ORG" SUBTYPE="Sports" CLASS="SPC">
+  <entity_mention ID="APW_ENG_20030310.0719-E3-4" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="496" END="556">a for-profit concern controlled by gambling tycoon Stanley
+Ho</charseq>
+    </extent>
+    <head>
+      <charseq START="509" END="515">concern</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="APW_ENG_20030310.0719-E3-13" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="831" END="844">The Macau club</charseq>
+    </extent>
+    <head>
+      <charseq START="841" END="844">club</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="APW_ENG_20030310.0719-E3-33" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="471" END="491">the Macau Jockey
+Club</charseq>
+    </extent>
+    <head>
+      <charseq START="475" END="491">Macau Jockey
+Club</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="APW_ENG_20030310.0719-E3-43" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="190" END="231">the horse
+racing club in neighboring Macau</charseq>
+    </extent>
+    <head>
+      <charseq START="207" END="210">club</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Macau Jockey Club">
+      <charseq START="475" END="491">Macau Jockey
+Club</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="APW_ENG_20030310.0719-E4" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="APW_ENG_20030310.0719-E4-5" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="531" END="556">gambling tycoon Stanley
+Ho</charseq>
+    </extent>
+    <head>
+      <charseq START="547" END="556">Stanley
+Ho</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="APW_ENG_20030310.0719-E4-6" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="531" END="545">gambling tycoon</charseq>
+    </extent>
+    <head>
+      <charseq START="540" END="545">tycoon</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Stanley Ho">
+      <charseq START="547" END="556">Stanley
+Ho</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="APW_ENG_20030310.0719-E6" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="APW_ENG_20030310.0719-E6-11" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="758" END="776">people in Hong Kong</charseq>
+    </extent>
+    <head>
+      <charseq START="758" END="763">people</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="APW_ENG_20030310.0719-E6-35" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="627" END="647">gamblers in Hong Kong</charseq>
+    </extent>
+    <head>
+      <charseq START="627" END="634">gamblers</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="APW_ENG_20030310.0719-E7" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="APW_ENG_20030310.0719-E7-8" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="578" END="582">Macau</charseq>
+    </extent>
+    <head>
+      <charseq START="578" END="582">Macau</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="APW_ENG_20030310.0719-E7-10" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="716" END="720">Macau</charseq>
+    </extent>
+    <head>
+      <charseq START="716" END="720">Macau</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="APW_ENG_20030310.0719-E7-14" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="835" END="839">Macau</charseq>
+    </extent>
+    <head>
+      <charseq START="835" END="839">Macau</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="APW_ENG_20030310.0719-E7-16" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="908" END="912">Macau</charseq>
+    </extent>
+    <head>
+      <charseq START="908" END="912">Macau</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="APW_ENG_20030310.0719-E7-19" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="1122" END="1126">Macau</charseq>
+    </extent>
+    <head>
+      <charseq START="1122" END="1126">Macau</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="APW_ENG_20030310.0719-E7-20" TYPE="NOM" LDCTYPE="NOM" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1131" END="1306">a gambling enclave 60 kilometers (40 miles) west of Hong
+Kong that was governed by the Portuguese for more than four centuries
+before it returned to Chinese sovereignty in 1999</charseq>
+    </extent>
+    <head>
+      <charseq START="1142" END="1148">enclave</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="APW_ENG_20030310.0719-E7-22" TYPE="PRO" LDCTYPE="WHQ" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="1193" END="1196">that</charseq>
+    </extent>
+    <head>
+      <charseq START="1193" END="1196">that</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="APW_ENG_20030310.0719-E7-24" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="1265" END="1266">it</charseq>
+    </extent>
+    <head>
+      <charseq START="1265" END="1266">it</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="APW_ENG_20030310.0719-E7-44" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="215" END="231">neighboring Macau</charseq>
+    </extent>
+    <head>
+      <charseq START="227" END="231">Macau</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Macau">
+      <charseq START="227" END="231">Macau</charseq>
+    </name>
+    <name NAME="Macau">
+      <charseq START="578" END="582">Macau</charseq>
+    </name>
+    <name NAME="Macau">
+      <charseq START="716" END="720">Macau</charseq>
+    </name>
+    <name NAME="Macau">
+      <charseq START="835" END="839">Macau</charseq>
+    </name>
+    <name NAME="Macau">
+      <charseq START="908" END="912">Macau</charseq>
+    </name>
+    <name NAME="Macau">
+      <charseq START="1122" END="1126">Macau</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="APW_ENG_20030310.0719-E9" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="APW_ENG_20030310.0719-E9-17" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="937" END="944">gamblers</charseq>
+    </extent>
+    <head>
+      <charseq START="937" END="944">gamblers</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="APW_ENG_20030310.0719-E10" TYPE="ORG" SUBTYPE="Sports" CLASS="NEG">
+  <entity_mention ID="APW_ENG_20030310.0719-E10-18" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1014" END="1025">Neither club</charseq>
+    </extent>
+    <head>
+      <charseq START="1022" END="1025">club</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="APW_ENG_20030310.0719-E12" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="APW_ENG_20030310.0719-E12-23" TYPE="NOM" LDCTYPE="NOM" ROLE="ORG">
+    <extent>
+      <charseq START="1214" END="1227">the Portuguese</charseq>
+    </extent>
+    <head>
+      <charseq START="1218" END="1227">Portuguese</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="APW_ENG_20030310.0719-E13" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="APW_ENG_20030310.0719-E13-25" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1280" END="1286">Chinese</charseq>
+    </extent>
+    <head>
+      <charseq START="1280" END="1286">Chinese</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="APW_ENG_20030310.0719-E13-30" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1357" END="1363">Chinese</charseq>
+    </extent>
+    <head>
+      <charseq START="1357" END="1363">Chinese</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Chinese">
+      <charseq START="1280" END="1286">Chinese</charseq>
+    </name>
+    <name NAME="Chinese">
+      <charseq START="1357" END="1363">Chinese</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="APW_ENG_20030310.0719-E15" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="APW_ENG_20030310.0719-E15-29" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="1329" END="1335">British</charseq>
+    </extent>
+    <head>
+      <charseq START="1329" END="1335">British</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="British">
+      <charseq START="1329" END="1335">British</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="APW_ENG_20030310.0719-E18" TYPE="ORG" SUBTYPE="Commercial" CLASS="GEN">
+  <entity_mention ID="APW_ENG_20030310.0719-E18-31" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="578" END="600">Macau's gaming industry</charseq>
+    </extent>
+    <head>
+      <charseq START="593" END="600">industry</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="APW_ENG_20030310.0719-E19" TYPE="ORG" SUBTYPE="Sports" CLASS="GEN">
+  <entity_mention ID="APW_ENG_20030310.0719-E19-32" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="678" END="713">anyone but the
+Hong Kong Jockey Club</charseq>
+    </extent>
+    <head>
+      <charseq START="678" END="683">anyone</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="APW_ENG_20030310.0719-E20" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="APW_ENG_20030310.0719-E20-36" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="301" END="337">Hong Kong Jockey Club Chief
+Executive</charseq>
+    </extent>
+    <head>
+      <charseq START="323" END="337">Chief
+Executive</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="APW_ENG_20030310.0719-E20-46" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="301" END="351">Hong Kong Jockey Club Chief
+Executive Lawrence Wong</charseq>
+    </extent>
+    <head>
+      <charseq START="339" END="351">Lawrence Wong</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Lawrence Wong">
+      <charseq START="339" END="351">Lawrence Wong</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="APW_ENG_20030310.0719-E22" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="APW_ENG_20030310.0719-E22-37" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1065" END="1084">The Associated
+Press</charseq>
+    </extent>
+    <head>
+      <charseq START="1069" END="1084">Associated
+Press</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="APW_ENG_20030310.0719-E22-42" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="130" END="131">AP</charseq>
+    </extent>
+    <head>
+      <charseq START="130" END="131">AP</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Associated Press">
+      <charseq START="1069" END="1084">Associated
+Press</charseq>
+    </name>
+    <name NAME="AP">
+      <charseq START="130" END="131">AP</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="APW_ENG_20030310.0719-E26" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="APW_ENG_20030310.0719-E26-34" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="265" END="292">The South China Morning Post</charseq>
+    </extent>
+    <head>
+      <charseq START="269" END="292">South China Morning Post</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="APW_ENG_20030310.0719-E26-45" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="234" END="244">a newspaper</charseq>
+    </extent>
+    <head>
+      <charseq START="236" END="244">newspaper</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="South China Morning Post">
+      <charseq START="269" END="292">South China Morning Post</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<timex2 ID="APW_ENG_20030310.0719-T1" VAL="2003-03-10">
+  <timex2_mention ID="APW_ENG_20030310.0719-T1-1">
+    <extent>
+      <charseq START="39" END="46">20030310</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="APW_ENG_20030310.0719-T2" VAL="2003-03-04">
+  <timex2_mention ID="APW_ENG_20030310.0719-T2-1">
+    <extent>
+      <charseq START="255" END="261">Tuesday</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="APW_ENG_20030310.0719-T3" VAL="2002">
+  <timex2_mention ID="APW_ENG_20030310.0719-T3-1">
+    <extent>
+      <charseq START="602" END="610">last year</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="APW_ENG_20030310.0719-T4" VAL="P400Y" MOD="MORE_THAN" ANCHOR_VAL="1999" ANCHOR_DIR="ENDING">
+  <timex2_mention ID="APW_ENG_20030310.0719-T4-1">
+    <extent>
+      <charseq START="1233" END="1256">more than four centuries</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="APW_ENG_20030310.0719-T5" VAL="1999">
+  <timex2_mention ID="APW_ENG_20030310.0719-T5-1">
+    <extent>
+      <charseq START="1303" END="1306">1999</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="APW_ENG_20030310.0719-T6" VAL="1997">
+  <timex2_mention ID="APW_ENG_20030310.0719-T6-1">
+    <extent>
+      <charseq START="1373" END="1376">1997</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="APW_ENG_20030310.0719-T7" VAL="2002" MOD="AFTER">
+  <timex2_mention ID="APW_ENG_20030310.0719-T7-1">
+    <extent>
+      <charseq START="846" END="850">later</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="APW_ENG_20030310.0719-T8" VAL="PXY" ANCHOR_VAL="1997" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="APW_ENG_20030310.0719-T8-1">
+    <extent>
+      <charseq START="1322" END="1327">former</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="APW_ENG_20030310.0719-R1" TYPE="GEN-AFF" SUBTYPE="Org-Location" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="APW_ENG_20030310.0719-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="APW_ENG_20030310.0719-E2" ROLE="Arg-2"/>
+  <relation_mention ID="APW_ENG_20030310.0719-R1-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="422" END="439">The Hong Kong club</charseq>
+    </extent>
+    <relation_mention_argument REFID="APW_ENG_20030310.0719-E1-47" ROLE="Arg-1">
+      <extent>
+        <charseq START="422" END="439">The Hong Kong club</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="APW_ENG_20030310.0719-E2-3" ROLE="Arg-2">
+      <extent>
+        <charseq START="426" END="434">Hong Kong</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="APW_ENG_20030310.0719-R2" TYPE="GEN-AFF" SUBTYPE="Org-Location" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="APW_ENG_20030310.0719-E3" ROLE="Arg-1"/>
+  <relation_argument REFID="APW_ENG_20030310.0719-E7" ROLE="Arg-2"/>
+  <relation_mention ID="APW_ENG_20030310.0719-R2-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="190" END="231">the horse
+racing club in neighboring Macau</charseq>
+    </extent>
+    <relation_mention_argument REFID="APW_ENG_20030310.0719-E3-43" ROLE="Arg-1">
+      <extent>
+        <charseq START="190" END="231">the horse
+racing club in neighboring Macau</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="APW_ENG_20030310.0719-E7-44" ROLE="Arg-2">
+      <extent>
+        <charseq START="215" END="231">neighboring Macau</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="APW_ENG_20030310.0719-R2-2" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="831" END="844">The Macau club</charseq>
+    </extent>
+    <relation_mention_argument REFID="APW_ENG_20030310.0719-E3-13" ROLE="Arg-1">
+      <extent>
+        <charseq START="831" END="844">The Macau club</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="APW_ENG_20030310.0719-E7-14" ROLE="Arg-2">
+      <extent>
+        <charseq START="835" END="839">Macau</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="APW_ENG_20030310.0719-R3" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="APW_ENG_20030310.0719-E20" ROLE="Arg-1"/>
+  <relation_argument REFID="APW_ENG_20030310.0719-E1" ROLE="Arg-2"/>
+  <relation_mention ID="APW_ENG_20030310.0719-R3-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="301" END="337">Hong Kong Jockey Club Chief
+Executive</charseq>
+    </extent>
+    <relation_mention_argument REFID="APW_ENG_20030310.0719-E20-36" ROLE="Arg-1">
+      <extent>
+        <charseq START="301" END="337">Hong Kong Jockey Club Chief
+Executive</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="APW_ENG_20030310.0719-E1-38" ROLE="Arg-2">
+      <extent>
+        <charseq START="301" END="321">Hong Kong Jockey Club</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="APW_ENG_20030310.0719-R4" TYPE="ORG-AFF" SUBTYPE="Ownership" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="APW_ENG_20030310.0719-E4" ROLE="Arg-1"/>
+  <relation_argument REFID="APW_ENG_20030310.0719-E3" ROLE="Arg-2"/>
+  <relation_mention ID="APW_ENG_20030310.0719-R4-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="422" END="556">The Hong Kong club is a charitable entity, while the Macau Jockey
+Club is a for-profit concern controlled by gambling tycoon Stanley
+Ho</charseq>
+    </extent>
+    <relation_mention_argument REFID="APW_ENG_20030310.0719-E4-5" ROLE="Arg-1">
+      <extent>
+        <charseq START="531" END="556">gambling tycoon Stanley
+Ho</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="APW_ENG_20030310.0719-E3-4" ROLE="Arg-2">
+      <extent>
+        <charseq START="496" END="556">a for-profit concern controlled by gambling tycoon Stanley
+Ho</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="APW_ENG_20030310.0719-R5" TYPE="PHYS" SUBTYPE="Near" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="APW_ENG_20030310.0719-E7" ROLE="Arg-1"/>
+  <relation_argument REFID="APW_ENG_20030310.0719-E2" ROLE="Arg-2"/>
+  <relation_mention ID="APW_ENG_20030310.0719-R5-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="1122" END="1306">Macau is a gambling enclave 60 kilometers (40 miles) west of Hong
+Kong that was governed by the Portuguese for more than four centuries
+before it returned to Chinese sovereignty in 1999</charseq>
+    </extent>
+    <relation_mention_argument REFID="APW_ENG_20030310.0719-E7-20" ROLE="Arg-1">
+      <extent>
+        <charseq START="1131" END="1306">a gambling enclave 60 kilometers (40 miles) west of Hong
+Kong that was governed by the Portuguese for more than four centuries
+before it returned to Chinese sovereignty in 1999</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="APW_ENG_20030310.0719-E2-21" ROLE="Arg-2">
+      <extent>
+        <charseq START="1183" END="1191">Hong
+Kong</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="APW_ENG_20030310.0719-R6" TYPE="GEN-AFF" SUBTYPE="Org-Location" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="APW_ENG_20030310.0719-E18" ROLE="Arg-1"/>
+  <relation_argument REFID="APW_ENG_20030310.0719-E7" ROLE="Arg-2"/>
+  <relation_mention ID="APW_ENG_20030310.0719-R6-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="578" END="600">Macau's gaming industry</charseq>
+    </extent>
+    <relation_mention_argument REFID="APW_ENG_20030310.0719-E18-31" ROLE="Arg-1">
+      <extent>
+        <charseq START="578" END="600">Macau's gaming industry</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="APW_ENG_20030310.0719-E7-8" ROLE="Arg-2">
+      <extent>
+        <charseq START="578" END="582">Macau</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="APW_ENG_20030310.0719-R7" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="APW_ENG_20030310.0719-E6" ROLE="Arg-1"/>
+  <relation_argument REFID="APW_ENG_20030310.0719-E2" ROLE="Arg-2"/>
+  <relation_mention ID="APW_ENG_20030310.0719-R7-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="758" END="776">people in Hong Kong</charseq>
+    </extent>
+    <relation_mention_argument REFID="APW_ENG_20030310.0719-E6-11" ROLE="Arg-1">
+      <extent>
+        <charseq START="758" END="776">people in Hong Kong</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="APW_ENG_20030310.0719-E2-12" ROLE="Arg-2">
+      <extent>
+        <charseq START="768" END="776">Hong Kong</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="APW_ENG_20030310.0719-R7-2" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="627" END="647">gamblers in Hong Kong</charseq>
+    </extent>
+    <relation_mention_argument REFID="APW_ENG_20030310.0719-E6-35" ROLE="Arg-1">
+      <extent>
+        <charseq START="627" END="647">gamblers in Hong Kong</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="APW_ENG_20030310.0719-E2-41" ROLE="Arg-2">
+      <extent>
+        <charseq START="639" END="647">Hong Kong</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="APW_ENG_20030310.0719-EV1" TYPE="Transaction" SUBTYPE="Transfer-Ownership" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Future">
+  <event_argument REFID="APW_ENG_20030310.0719-E3" ROLE="Artifact"/>
+  <event_argument REFID="APW_ENG_20030310.0719-E7" ROLE="Place"/>
+  <event_argument REFID="APW_ENG_20030310.0719-E1" ROLE="Buyer"/>
+  <event_mention ID="APW_ENG_20030310.0719-EV1-1">
+    <extent>
+      <charseq START="135" END="231">The Hong Kong Jockey Club is in talks about buying out the horse
+racing club in neighboring Macau</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="135" END="261">The Hong Kong Jockey Club is in talks about buying out the horse
+racing club in neighboring Macau, a newspaper reported Tuesday</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="179" END="188">buying out</charseq>
+    </anchor>
+    <event_mention_argument REFID="APW_ENG_20030310.0719-E3-43" ROLE="Artifact">
+      <extent>
+        <charseq START="190" END="231">the horse
+racing club in neighboring Macau</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="APW_ENG_20030310.0719-E7-44" ROLE="Place">
+      <extent>
+        <charseq START="215" END="231">neighboring Macau</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="APW_ENG_20030310.0719-E1-40" ROLE="Buyer">
+      <extent>
+        <charseq START="135" END="159">The Hong Kong Jockey Club</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="APW_ENG_20030310.0719-EV1-2">
+    <extent>
+      <charseq START="1107" END="1112">buyout</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1014" END="1118">Neither club immediately returned phone calls from The Associated
+Press to inquire about the buyout talks</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1107" END="1112">buyout</charseq>
+    </anchor>
+  </event_mention>
+</event>
+</document>
+</source_file>

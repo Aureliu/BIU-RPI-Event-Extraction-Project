@@ -1,0 +1,628 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030610_085833.10.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030610_085833.10">
+<entity ID="CNN_ENG_20030610_085833.10-E1" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_085833.10-E1-4" TYPE="NOM" LDCTYPE="BAR" LDCATR="TRUE">
+    <extent>
+      <charseq START="126" END="166">founder and
+former considers o of imclone</charseq>
+    </extent>
+    <head>
+      <charseq START="145" END="155">considers o</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_085833.10-E1-5" TYPE="NOM" LDCTYPE="BAR" LDCATR="TRUE">
+    <extent>
+      <charseq START="126" END="166">founder and
+former considers o of imclone</charseq>
+    </extent>
+    <head>
+      <charseq START="126" END="132">founder</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_085833.10-E1-8" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="114" END="123">sam waksal</charseq>
+    </extent>
+    <head>
+      <charseq START="114" END="123">sam waksal</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_085833.10-E1-9" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="204" END="205">he</charseq>
+    </extent>
+    <head>
+      <charseq START="204" END="205">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_085833.10-E1-10" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="288" END="293">waksal</charseq>
+    </extent>
+    <head>
+      <charseq START="288" END="293">waksal</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_085833.10-E1-15" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="477" END="479">his</charseq>
+    </extent>
+    <head>
+      <charseq START="477" END="479">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_085833.10-E1-22" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="682" END="691">sam
+waksal</charseq>
+    </extent>
+    <head>
+      <charseq START="682" END="691">sam
+waksal</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="sam waksal">
+      <charseq START="114" END="123">sam waksal</charseq>
+    </name>
+    <name NAME="waksal">
+      <charseq START="288" END="293">waksal</charseq>
+    </name>
+    <name NAME="sam waksal">
+      <charseq START="682" END="691">sam
+waksal</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030610_085833.10-E3" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_085833.10-E3-1" TYPE="NOM" LDCTYPE="NOM" ROLE="LOC">
+    <extent>
+      <charseq START="76" END="84">this city</charseq>
+    </extent>
+    <head>
+      <charseq START="81" END="84">city</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_085833.10-E3-2" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="736" END="743">new york</charseq>
+    </extent>
+    <head>
+      <charseq START="736" END="743">new york</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_085833.10-E3-23" TYPE="PRO" LDCTYPE="PRO" ROLE="LOC">
+    <extent>
+      <charseq START="728" END="743">here in new york</charseq>
+    </extent>
+    <head>
+      <charseq START="728" END="731">here</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="new york">
+      <charseq START="736" END="743">new york</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030610_085833.10-E4" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_085833.10-E4-6" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="87" END="111">a courthouse in manhattan</charseq>
+    </extent>
+    <head>
+      <charseq START="89" END="98">courthouse</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030610_085833.10-E5" TYPE="GPE" SUBTYPE="County-or-District" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_085833.10-E5-7" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="103" END="111">manhattan</charseq>
+    </extent>
+    <head>
+      <charseq START="103" END="111">manhattan</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="manhattan">
+      <charseq START="103" END="111">manhattan</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030610_085833.10-E7" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030610_085833.10-E7-11" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="356" END="361">prison</charseq>
+    </extent>
+    <head>
+      <charseq START="356" END="361">prison</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030610_085833.10-E8" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_085833.10-E8-12" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="447" END="448">we</charseq>
+    </extent>
+    <head>
+      <charseq START="447" END="448">we</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030610_085833.10-E9" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_085833.10-E9-14" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="465" END="479">a friend of his</charseq>
+    </extent>
+    <head>
+      <charseq START="467" END="472">friend</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_085833.10-E9-16" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="482" END="495">martha stewart</charseq>
+    </extent>
+    <head>
+      <charseq START="482" END="495">martha stewart</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_085833.10-E9-17" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="551" END="553">her</charseq>
+    </extent>
+    <head>
+      <charseq START="551" END="553">her</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_085833.10-E9-20" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="578" END="580">she</charseq>
+    </extent>
+    <head>
+      <charseq START="578" END="580">she</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="martha stewart">
+      <charseq START="482" END="495">martha stewart</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030610_085833.10-E11" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_085833.10-E11-18" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="563" END="569">imclone</charseq>
+    </extent>
+    <head>
+      <charseq START="563" END="569">imclone</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_085833.10-E11-19" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="160" END="166">imclone</charseq>
+    </extent>
+    <head>
+      <charseq START="160" END="166">imclone</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_085833.10-E11-21" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="626" END="636">the company</charseq>
+    </extent>
+    <head>
+      <charseq START="630" END="636">company</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="imclone">
+      <charseq START="563" END="569">imclone</charseq>
+    </name>
+    <name NAME="imclone">
+      <charseq START="160" END="166">imclone</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<value ID="CNN_ENG_20030610_085833.10-V1" TYPE="Numeric" SUBTYPE="Money">
+  <value_mention ID="CNN_ENG_20030610_085833.10-V1-1">
+    <extent>
+      <charseq START="310" END="321">$3.5 million</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_ENG_20030610_085833.10-V2" TYPE="Sentence">
+  <value_mention ID="CNN_ENG_20030610_085833.10-V2-1">
+    <extent>
+      <charseq START="393" END="416">about six to seven
+years</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_ENG_20030610_085833.10-V3" TYPE="Crime">
+  <value_mention ID="CNN_ENG_20030610_085833.10-V3-1">
+    <extent>
+      <charseq START="551" END="575">her sale of imclone stock</charseq>
+    </extent>
+  </value_mention>
+</value>
+<timex2 ID="CNN_ENG_20030610_085833.10-T1" VAL="2003-06-10T09:16:58">
+  <timex2_mention ID="CNN_ENG_20030610_085833.10-T1-1">
+    <extent>
+      <charseq START="44" END="62">2003-06-10 09:16:58</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030610_085833.10-T2" VAL="2003-06-10">
+  <timex2_mention ID="CNN_ENG_20030610_085833.10-T2-1">
+    <extent>
+      <charseq START="197" END="201">today</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030610_085833.10-T3" VAL="2003">
+  <timex2_mention ID="CNN_ENG_20030610_085833.10-T3-1">
+    <extent>
+      <charseq START="222" END="238">earlier this year</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030610_085833.10-T4" VAL="PAST_REF" ANCHOR_VAL="2003-06-10T09:16:58" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="CNN_ENG_20030610_085833.10-T4-1">
+    <extent>
+      <charseq START="138" END="143">former</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030610_085833.10-T5" VAL="2003-W23">
+  <timex2_mention ID="CNN_ENG_20030610_085833.10-T5-1">
+    <extent>
+      <charseq START="517" END="525">last week</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030610_085833.10-T6" VAL="PAST_REF" ANCHOR_VAL="2003-06-10-T09:16:58" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="CNN_ENG_20030610_085833.10-T6-1">
+    <extent>
+      <charseq START="597" END="665">as day before bad news
+about the company sent the stock price falling</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030610_085833.10-T7" VAL="2003-06-10T10:00">
+  <timex2_mention ID="CNN_ENG_20030610_085833.10-T7-1">
+    <extent>
+      <charseq START="705" END="743">10:00 a.m., local time here in new york</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030610_085833.10-T8" VAL="P75Y" MOD="EQUAL_OR_LESS" ANCHOR_VAL="2003-06-10-T09:16:58" ANCHOR_DIR="AFTER">
+  <timex2_mention ID="CNN_ENG_20030610_085833.10-T8-1">
+    <extent>
+      <charseq START="344" END="351">75 years</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030610_085833.10-T9" VAL="P6.5Y" MOD="APPROX" ANCHOR_VAL="2003-06-10-T09:16:58" ANCHOR_DIR="AFTER">
+  <timex2_mention ID="CNN_ENG_20030610_085833.10-T9-1">
+    <extent>
+      <charseq START="399" END="416">six to seven
+years</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030610_085833.10-R1" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030610_085833.10-E4" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030610_085833.10-E5" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030610_085833.10-R1-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="87" END="111">a courthouse in manhattan</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030610_085833.10-E4-6" ROLE="Arg-1">
+      <extent>
+        <charseq START="87" END="111">a courthouse in manhattan</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030610_085833.10-E5-7" ROLE="Arg-2">
+      <extent>
+        <charseq START="103" END="111">manhattan</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030610_085833.10-R2" TYPE="ORG-AFF" SUBTYPE="Founder" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030610_085833.10-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030610_085833.10-E11" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030610_085833.10-R2-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="126" END="166">founder and
+former considers o of imclone</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030610_085833.10-E1-5" ROLE="Arg-1">
+      <extent>
+        <charseq START="126" END="166">founder and
+former considers o of imclone</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030610_085833.10-E11-19" ROLE="Arg-2">
+      <extent>
+        <charseq START="160" END="166">imclone</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030610_085833.10-R3" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="CNN_ENG_20030610_085833.10-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030610_085833.10-E7" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030610_085833.10-R3-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="288" END="416">waksal could be fined $3.5 million, facing a maximum of
+75 years in prison, expected, though, to receive about six to seven
+years</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030610_085833.10-E1-10" ROLE="Arg-1">
+      <extent>
+        <charseq START="288" END="293">waksal</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030610_085833.10-E7-11" ROLE="Arg-2">
+      <extent>
+        <charseq START="356" END="361">prison</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030610_085833.10-R4" TYPE="PER-SOC" SUBTYPE="Lasting-Personal" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030610_085833.10-E9" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030610_085833.10-E1" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030610_085833.10-R4-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="465" END="479">a friend of his</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030610_085833.10-E9-14" ROLE="Arg-1">
+      <extent>
+        <charseq START="465" END="479">a friend of his</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030610_085833.10-E1-15" ROLE="Arg-2">
+      <extent>
+        <charseq START="477" END="479">his</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030610_085833.10-R5" TYPE="ORG-AFF" SUBTYPE="Investor-Shareholder" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030610_085833.10-E9" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030610_085833.10-E11" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030610_085833.10-R5-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="528" END="575">the charges related to
+her sale of imclone stock</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030610_085833.10-E9-17" ROLE="Arg-1">
+      <extent>
+        <charseq START="551" END="553">her</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030610_085833.10-E11-18" ROLE="Arg-2">
+      <extent>
+        <charseq START="563" END="569">imclone</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_ENG_20030610_085833.10-R5-2" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="578" END="665">she sold the share as day before bad news
+about the company sent the stock price falling</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030610_085833.10-E9-20" ROLE="Arg-1">
+      <extent>
+        <charseq START="578" END="580">she</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030610_085833.10-E11-21" ROLE="Arg-2">
+      <extent>
+        <charseq START="626" END="636">the company</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030610_085833.10-R7" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030610_085833.10-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030610_085833.10-E3" ROLE="Arg-2"/>
+  <relation_argument REFID="CNN_ENG_20030610_085833.10-T7" ROLE="Time-Within"/>
+  <relation_mention ID="CNN_ENG_20030610_085833.10-R7-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="682" END="743">sam
+waksal, sentenced, 10:00 a.m., local time here in new york</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030610_085833.10-E1-22" ROLE="Arg-1">
+      <extent>
+        <charseq START="682" END="691">sam
+waksal</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030610_085833.10-E3-23" ROLE="Arg-2">
+      <extent>
+        <charseq START="728" END="743">here in new york</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030610_085833.10-T7-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="705" END="743">10:00 a.m., local time here in new york</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030610_085833.10-R8" TYPE="ORG-AFF" SUBTYPE="Membership" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030610_085833.10-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030610_085833.10-E11" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030610_085833.10-R8-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="126" END="166">founder and
+former considers o of imclone</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030610_085833.10-E1-4" ROLE="Arg-1">
+      <extent>
+        <charseq START="126" END="166">founder and
+former considers o of imclone</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030610_085833.10-E11-19" ROLE="Arg-2">
+      <extent>
+        <charseq START="160" END="166">imclone</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030610_085833.10-EV1" TYPE="Justice" SUBTYPE="Sentence" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Future">
+  <event_argument REFID="CNN_ENG_20030610_085833.10-E1" ROLE="Defendant"/>
+  <event_argument REFID="CNN_ENG_20030610_085833.10-E3" ROLE="Place"/>
+  <event_argument REFID="CNN_ENG_20030610_085833.10-T7" ROLE="Time-Within"/>
+  <event_argument REFID="CNN_ENG_20030610_085833.10-T2" ROLE="Time-Within"/>
+  <event_mention ID="CNN_ENG_20030610_085833.10-EV1-1">
+    <extent>
+      <charseq START="114" END="201">sam waksal, founder and
+former considers o of imclone is scheduled to be sentenced today</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="114" END="201">sam waksal, founder and
+former considers o of imclone is scheduled to be sentenced today</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="187" END="195">sentenced</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030610_085833.10-E1-8" ROLE="Defendant">
+      <extent>
+        <charseq START="114" END="123">sam waksal</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030610_085833.10-T2-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="197" END="201">today</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030610_085833.10-EV1-2">
+    <extent>
+      <charseq START="682" END="743">sam
+waksal, sentenced, 10:00 a.m., local time here in new york</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="682" END="743">sam
+waksal, sentenced, 10:00 a.m., local time here in new york</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="694" END="702">sentenced</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030610_085833.10-E1-22" ROLE="Defendant">
+      <extent>
+        <charseq START="682" END="691">sam
+waksal</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030610_085833.10-E3-23" ROLE="Place">
+      <extent>
+        <charseq START="728" END="743">here in new york</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030610_085833.10-T7-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="705" END="743">10:00 a.m., local time here in new york</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030610_085833.10-EV2" TYPE="Justice" SUBTYPE="Fine" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030610_085833.10-E1" ROLE="Entity"/>
+  <event_argument REFID="CNN_ENG_20030610_085833.10-V1" ROLE="Money"/>
+  <event_mention ID="CNN_ENG_20030610_085833.10-EV2-1">
+    <extent>
+      <charseq START="288" END="321">waksal could be fined $3.5 million</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="288" END="416">waksal could be fined $3.5 million, facing a maximum of
+75 years in prison, expected, though, to receive about six to seven
+years</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="304" END="308">fined</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030610_085833.10-E1-10" ROLE="Entity">
+      <extent>
+        <charseq START="288" END="293">waksal</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030610_085833.10-V1-1" ROLE="Money">
+      <extent>
+        <charseq START="310" END="321">$3.5 million</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030610_085833.10-EV3" TYPE="Justice" SUBTYPE="Sentence" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030610_085833.10-E1" ROLE="Defendant"/>
+  <event_argument REFID="CNN_ENG_20030610_085833.10-E7" ROLE="Place"/>
+  <event_argument REFID="CNN_ENG_20030610_085833.10-V2" ROLE="Sentence"/>
+  <event_mention ID="CNN_ENG_20030610_085833.10-EV3-1">
+    <extent>
+      <charseq START="288" END="416">waksal could be fined $3.5 million, facing a maximum of
+75 years in prison, expected, though, to receive about six to seven
+years</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="288" END="416">waksal could be fined $3.5 million, facing a maximum of
+75 years in prison, expected, though, to receive about six to seven
+years</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="385" END="391">receive</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030610_085833.10-E1-10" ROLE="Defendant">
+      <extent>
+        <charseq START="288" END="293">waksal</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030610_085833.10-E7-11" ROLE="Place">
+      <extent>
+        <charseq START="356" END="361">prison</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030610_085833.10-V2-1" ROLE="Sentence">
+      <extent>
+        <charseq START="393" END="416">about six to seven
+years</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030610_085833.10-EV4" TYPE="Justice" SUBTYPE="Charge-Indict" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030610_085833.10-E9" ROLE="Defendant"/>
+  <event_argument REFID="CNN_ENG_20030610_085833.10-V3" ROLE="Crime"/>
+  <event_mention ID="CNN_ENG_20030610_085833.10-EV4-1">
+    <extent>
+      <charseq START="532" END="575">charges related to
+her sale of imclone stock</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="528" END="575">the charges related to
+her sale of imclone stock</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="532" END="538">charges</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030610_085833.10-E9-17" ROLE="Defendant">
+      <extent>
+        <charseq START="551" END="553">her</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030610_085833.10-V3-1" ROLE="Crime">
+      <extent>
+        <charseq START="551" END="575">her sale of imclone stock</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

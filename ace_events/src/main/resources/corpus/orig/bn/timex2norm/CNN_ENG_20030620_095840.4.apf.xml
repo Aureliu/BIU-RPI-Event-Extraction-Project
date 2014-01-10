@@ -1,0 +1,615 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030620_095840.4.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030620_095840.4">
+<entity ID="CNN_ENG_20030620_095840.4-E1" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030620_095840.4-E1-4" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="454" END="460">the fbi</charseq>
+    </extent>
+    <head>
+      <charseq START="458" END="460">fbi</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="fbi">
+      <charseq START="458" END="460">fbi</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030620_095840.4-E2" TYPE="VEH" SUBTYPE="Land" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030620_095840.4-E2-5" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="465" END="517">a van belonging
+to the ventura county sheriff's folks</charseq>
+    </extent>
+    <head>
+      <charseq START="467" END="469">van</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030620_095840.4-E3" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030620_095840.4-E3-6" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="484" END="509">the ventura county sheriff</charseq>
+    </extent>
+    <head>
+      <charseq START="503" END="509">sheriff</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030620_095840.4-E4" TYPE="GPE" SUBTYPE="County-or-District" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030620_095840.4-E4-7" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="488" END="501">ventura county</charseq>
+    </extent>
+    <head>
+      <charseq START="488" END="501">ventura county</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="ventura county">
+      <charseq START="488" END="501">ventura county</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030620_095840.4-E5" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030620_095840.4-E5-15" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="484" END="517">the ventura county sheriff's folks</charseq>
+    </extent>
+    <head>
+      <charseq START="513" END="517">folks</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030620_095840.4-E6" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030620_095840.4-E6-9" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="536" END="642">a prison in
+kearn county, california, about 100 miles from los angeles, a place
+mostly known for its grapes</charseq>
+    </extent>
+    <head>
+      <charseq START="538" END="543">prison</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030620_095840.4-E7" TYPE="GPE" SUBTYPE="County-or-District" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030620_095840.4-E7-10" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="548" END="571">kearn county, california</charseq>
+    </extent>
+    <head>
+      <charseq START="548" END="559">kearn county</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030620_095840.4-E7-13" TYPE="NOM" LDCTYPE="NOM" ROLE="LOC" LDCATR="TRUE">
+    <extent>
+      <charseq START="608" END="642">a place
+mostly known for its grapes</charseq>
+    </extent>
+    <head>
+      <charseq START="610" END="614">place</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030620_095840.4-E7-18" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="633" END="635">its</charseq>
+    </extent>
+    <head>
+      <charseq START="633" END="635">its</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="kearn county">
+      <charseq START="548" END="559">kearn county</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030620_095840.4-E8" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030620_095840.4-E8-11" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="562" END="571">california</charseq>
+    </extent>
+    <head>
+      <charseq START="562" END="571">california</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="california">
+      <charseq START="562" END="571">california</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030620_095840.4-E10" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030620_095840.4-E10-14" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="672" END="676">heidi</charseq>
+    </extent>
+    <head>
+      <charseq START="672" END="676">heidi</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="heidi">
+      <charseq START="672" END="676">heidi</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030620_095840.4-E11" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030620_095840.4-E11-1" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="67" END="77">dog chapman</charseq>
+    </extent>
+    <head>
+      <charseq START="67" END="77">dog chapman</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030620_095840.4-E11-24" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="173" END="190">dwayne dog chapman</charseq>
+    </extent>
+    <head>
+      <charseq START="173" END="190">dwayne dog chapman</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030620_095840.4-E11-28" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="243" END="249">chapman</charseq>
+    </extent>
+    <head>
+      <charseq START="243" END="249">chapman</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="dwayne dog chapman">
+      <charseq START="173" END="190">dwayne dog chapman</charseq>
+    </name>
+    <name NAME="chapman">
+      <charseq START="243" END="249">chapman</charseq>
+    </name>
+    <name NAME="dog chapman">
+      <charseq START="67" END="77">dog chapman</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030620_095840.4-E12" TYPE="VEH" SUBTYPE="Land" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030620_095840.4-E12-19" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="86" END="107">the same truck you saw</charseq>
+    </extent>
+    <head>
+      <charseq START="95" END="99">truck</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030620_095840.4-E13" TYPE="PER" SUBTYPE="Indeterminate" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030620_095840.4-E13-16" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="663" END="665">you</charseq>
+    </extent>
+    <head>
+      <charseq START="663" END="665">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030620_095840.4-E13-20" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="101" END="103">you</charseq>
+    </extent>
+    <head>
+      <charseq START="101" END="103">you</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030620_095840.4-E14" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030620_095840.4-E14-21" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="124" END="141">the mexican
+police</charseq>
+    </extent>
+    <head>
+      <charseq START="136" END="141">police</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030620_095840.4-E15" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030620_095840.4-E15-2" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="399" END="404">mexico</charseq>
+    </extent>
+    <head>
+      <charseq START="399" END="404">mexico</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030620_095840.4-E15-22" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="128" END="134">mexican</charseq>
+    </extent>
+    <head>
+      <charseq START="128" END="134">mexican</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030620_095840.4-E15-27" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="235" END="240">mexico</charseq>
+    </extent>
+    <head>
+      <charseq START="235" END="240">mexico</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030620_095840.4-E15-30" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="286" END="291">mexico</charseq>
+    </extent>
+    <head>
+      <charseq START="286" END="291">mexico</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="mexico">
+      <charseq START="399" END="404">mexico</charseq>
+    </name>
+    <name NAME="mexican">
+      <charseq START="128" END="134">mexican</charseq>
+    </name>
+    <name NAME="mexico">
+      <charseq START="235" END="240">mexico</charseq>
+    </name>
+    <name NAME="mexico">
+      <charseq START="286" END="291">mexico</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030620_095840.4-E17" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030620_095840.4-E17-3" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="418" END="419">he</charseq>
+    </extent>
+    <head>
+      <charseq START="418" END="419">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030620_095840.4-E17-8" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="520" END="521">he</charseq>
+    </extent>
+    <head>
+      <charseq START="520" END="521">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030620_095840.4-E17-23" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="155" END="167">andrew luster</charseq>
+    </extent>
+    <head>
+      <charseq START="155" END="167">andrew luster</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030620_095840.4-E17-31" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="294" END="306">andrew luster</charseq>
+    </extent>
+    <head>
+      <charseq START="294" END="306">andrew luster</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="andrew luster">
+      <charseq START="155" END="167">andrew luster</charseq>
+    </name>
+    <name NAME="andrew luster">
+      <charseq START="294" END="306">andrew luster</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030620_095840.4-E18" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030620_095840.4-E18-25" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="201" END="204">they</charseq>
+    </extent>
+    <head>
+      <charseq START="201" END="204">they</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030620_095840.4-E19" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030620_095840.4-E19-26" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="217" END="230">bounty hunters</charseq>
+    </extent>
+    <head>
+      <charseq START="224" END="230">hunters</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030620_095840.4-E20" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030620_095840.4-E20-29" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="274" END="275">we</charseq>
+    </extent>
+    <head>
+      <charseq START="274" END="275">we</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030620_095840.4-E21" TYPE="FAC" SUBTYPE="Airport" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030620_095840.4-E21-32" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="337" END="369">los
+angeles international airport</charseq>
+    </extent>
+    <head>
+      <charseq START="337" END="369">los
+angeles international airport</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="los angeles international airport">
+      <charseq START="337" END="369">los
+angeles international airport</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030620_095840.4-E22" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030620_095840.4-E22-12" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="595" END="605">los angeles</charseq>
+    </extent>
+    <head>
+      <charseq START="595" END="605">los angeles</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="los angeles">
+      <charseq START="595" END="605">los angeles</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030620_095840.4-E23" TYPE="VEH" SUBTYPE="Air" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030620_095840.4-E23-33" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="374" END="404">a commercial flight from mexico</charseq>
+    </extent>
+    <head>
+      <charseq START="387" END="392">flight</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<timex2 ID="CNN_ENG_20030620_095840.4-T1" VAL="2003-06-20T10:09:05">
+  <timex2_mention ID="CNN_ENG_20030620_095840.4-T1-1">
+    <extent>
+      <charseq START="43" END="61">2003-06-20 10:09:05</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030620_095840.4-T2" VAL="2003-06-19">
+  <timex2_mention ID="CNN_ENG_20030620_095840.4-T2-1">
+    <extent>
+      <charseq START="324" END="332">yesterday</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030620_095840.4-R1" TYPE="PART-WHOLE" SUBTYPE="Subsidiary" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030620_095840.4-E14" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030620_095840.4-E15" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030620_095840.4-R1-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="124" END="141">the mexican
+police</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030620_095840.4-E14-21" ROLE="Arg-1">
+      <extent>
+        <charseq START="124" END="141">the mexican
+police</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030620_095840.4-E15-22" ROLE="Arg-2">
+      <extent>
+        <charseq START="128" END="134">mexican</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030620_095840.4-R2" TYPE="PHYS" SUBTYPE="Located" TENSE="Present" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030620_095840.4-E11" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030620_095840.4-E15" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030620_095840.4-R2-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="243" END="291">chapman remains behind bars as we
+speak in mexico</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030620_095840.4-E11-28" ROLE="Arg-1">
+      <extent>
+        <charseq START="243" END="249">chapman</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030620_095840.4-E15-30" ROLE="Arg-2">
+      <extent>
+        <charseq START="286" END="291">mexico</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030620_095840.4-R3" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030620_095840.4-E17" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030620_095840.4-E21" ROLE="Arg-2"/>
+  <relation_argument REFID="CNN_ENG_20030620_095840.4-T2" ROLE="Time-Within"/>
+  <relation_mention ID="CNN_ENG_20030620_095840.4-R3-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="294" END="404">andrew luster, though arrived yesterday at los
+angeles international airport on a commercial flight from mexico</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030620_095840.4-E17-31" ROLE="Arg-1">
+      <extent>
+        <charseq START="294" END="306">andrew luster</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030620_095840.4-E21-32" ROLE="Arg-2">
+      <extent>
+        <charseq START="337" END="369">los
+angeles international airport</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030620_095840.4-T2-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="324" END="332">yesterday</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030620_095840.4-R4" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030620_095840.4-E5" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030620_095840.4-E2" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030620_095840.4-R4-1" LEXICALCONDITION="Participial">
+    <extent>
+      <charseq START="465" END="517">a van belonging
+to the ventura county sheriff's folks</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030620_095840.4-E5-15" ROLE="Arg-1">
+      <extent>
+        <charseq START="484" END="517">the ventura county sheriff's folks</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030620_095840.4-E2-5" ROLE="Arg-2">
+      <extent>
+        <charseq START="465" END="517">a van belonging
+to the ventura county sheriff's folks</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030620_095840.4-R5" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030620_095840.4-E17" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030620_095840.4-E6" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030620_095840.4-R5-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="520" END="642">he was taken to a prison in
+kearn county, california, about 100 miles from los angeles, a place
+mostly known for its grapes</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030620_095840.4-E17-8" ROLE="Arg-1">
+      <extent>
+        <charseq START="520" END="521">he</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030620_095840.4-E6-9" ROLE="Arg-2">
+      <extent>
+        <charseq START="536" END="642">a prison in
+kearn county, california, about 100 miles from los angeles, a place
+mostly known for its grapes</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030620_095840.4-R6" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030620_095840.4-E3" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030620_095840.4-E4" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030620_095840.4-R6-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="484" END="509">the ventura county sheriff</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030620_095840.4-E3-6" ROLE="Arg-1">
+      <extent>
+        <charseq START="484" END="509">the ventura county sheriff</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030620_095840.4-E4-7" ROLE="Arg-2">
+      <extent>
+        <charseq START="488" END="501">ventura county</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030620_095840.4-R7" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030620_095840.4-E7" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030620_095840.4-E8" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030620_095840.4-R7-1" LEXICALCONDITION="Formulaic">
+    <extent>
+      <charseq START="548" END="571">kearn county, california</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030620_095840.4-E7-10" ROLE="Arg-1">
+      <extent>
+        <charseq START="548" END="571">kearn county, california</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030620_095840.4-E8-11" ROLE="Arg-2">
+      <extent>
+        <charseq START="562" END="571">california</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030620_095840.4-EV1" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030620_095840.4-E23" ROLE="Vehicle"/>
+  <event_argument REFID="CNN_ENG_20030620_095840.4-E17" ROLE="Artifact"/>
+  <event_argument REFID="CNN_ENG_20030620_095840.4-E21" ROLE="Destination"/>
+  <event_argument REFID="CNN_ENG_20030620_095840.4-E15" ROLE="Origin"/>
+  <event_mention ID="CNN_ENG_20030620_095840.4-EV1-1">
+    <extent>
+      <charseq START="294" END="404">andrew luster, though arrived yesterday at los
+angeles international airport on a commercial flight from mexico</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="294" END="404">andrew luster, though arrived yesterday at los
+angeles international airport on a commercial flight from mexico</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="316" END="322">arrived</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030620_095840.4-E23-33" ROLE="Vehicle">
+      <extent>
+        <charseq START="374" END="404">a commercial flight from mexico</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030620_095840.4-E17-31" ROLE="Artifact">
+      <extent>
+        <charseq START="294" END="306">andrew luster</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030620_095840.4-E21-32" ROLE="Destination">
+      <extent>
+        <charseq START="337" END="369">los
+angeles international airport</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030620_095840.4-E15-2" ROLE="Origin">
+      <extent>
+        <charseq START="399" END="404">mexico</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030620_095840.4-EV2" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030620_095840.4-E17" ROLE="Artifact"/>
+  <event_argument REFID="CNN_ENG_20030620_095840.4-E6" ROLE="Destination"/>
+  <event_mention ID="CNN_ENG_20030620_095840.4-EV2-1">
+    <extent>
+      <charseq START="520" END="642">he was taken to a prison in
+kearn county, california, about 100 miles from los angeles, a place
+mostly known for its grapes</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="520" END="642">he was taken to a prison in
+kearn county, california, about 100 miles from los angeles, a place
+mostly known for its grapes</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="527" END="531">taken</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030620_095840.4-E17-8" ROLE="Artifact">
+      <extent>
+        <charseq START="520" END="521">he</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030620_095840.4-E6-9" ROLE="Destination">
+      <extent>
+        <charseq START="536" END="642">a prison in
+kearn county, california, about 100 miles from los angeles, a place
+mostly known for its grapes</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

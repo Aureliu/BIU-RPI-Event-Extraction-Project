@@ -1,0 +1,972 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030417_063039.0.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030417_063039.0">
+<entity ID="CNN_ENG_20030417_063039.0-E1" TYPE="LOC" SUBTYPE="Region-General" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030417_063039.0-E1-2" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="633" END="657">the central part of mosul</charseq>
+    </extent>
+    <head>
+      <charseq START="645" END="648">part</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030417_063039.0-E2" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030417_063039.0-E2-4" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="677" END="712">another
+half-broth of saddam hussein</charseq>
+    </extent>
+    <head>
+      <charseq START="690" END="694">broth</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030417_063039.0-E3" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030417_063039.0-E3-5" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="699" END="712">saddam hussein</charseq>
+    </extent>
+    <head>
+      <charseq START="699" END="712">saddam hussein</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030417_063039.0-E3-13" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="939" END="952">saddam hussein</charseq>
+    </extent>
+    <head>
+      <charseq START="939" END="952">saddam hussein</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="saddam hussein">
+      <charseq START="699" END="712">saddam hussein</charseq>
+    </name>
+    <name NAME="saddam hussein">
+      <charseq START="939" END="952">saddam hussein</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030417_063039.0-E4" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030417_063039.0-E4-6" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="754" END="760">baghdad</charseq>
+    </extent>
+    <head>
+      <charseq START="754" END="760">baghdad</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030417_063039.0-E4-8" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="819" END="825">baghdad</charseq>
+    </extent>
+    <head>
+      <charseq START="819" END="825">baghdad</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="baghdad">
+      <charseq START="754" END="760">baghdad</charseq>
+    </name>
+    <name NAME="baghdad">
+      <charseq START="819" END="825">baghdad</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030417_063039.0-E5" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030417_063039.0-E5-7" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="787" END="798">local iraqis</charseq>
+    </extent>
+    <head>
+      <charseq START="793" END="798">iraqis</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030417_063039.0-E6" TYPE="LOC" SUBTYPE="Region-General" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030417_063039.0-E6-9" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="848" END="878">western neighborhood of mansour</charseq>
+    </extent>
+    <head>
+      <charseq START="856" END="867">neighborhood</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030417_063039.0-E6-10" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="872" END="878">mansour</charseq>
+    </extent>
+    <head>
+      <charseq START="872" END="878">mansour</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="mansour">
+      <charseq START="872" END="878">mansour</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030417_063039.0-E7" TYPE="PER" SUBTYPE="Indeterminate" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030417_063039.0-E7-11" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="881" END="883">you</charseq>
+    </extent>
+    <head>
+      <charseq START="881" END="883">you</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030417_063039.0-E8" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030417_063039.0-E8-12" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="915" END="952">another half-brother of saddam hussein</charseq>
+    </extent>
+    <head>
+      <charseq START="928" END="934">brother</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030417_063039.0-E9" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030417_063039.0-E9-14" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="989" END="993">syria</charseq>
+    </extent>
+    <head>
+      <charseq START="989" END="993">syria</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030417_063039.0-E9-16" TYPE="NAM" LDCTYPE="NAM" ROLE="ORG">
+    <extent>
+      <charseq START="1028" END="1032">syria</charseq>
+    </extent>
+    <head>
+      <charseq START="1028" END="1032">syria</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030417_063039.0-E9-18" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE">
+    <extent>
+      <charseq START="1045" END="1047">its</charseq>
+    </extent>
+    <head>
+      <charseq START="1045" END="1047">its</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="syria">
+      <charseq START="989" END="993">syria</charseq>
+    </name>
+    <name NAME="syria">
+      <charseq START="1028" END="1032">syria</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030417_063039.0-E10" TYPE="LOC" SUBTYPE="Boundary" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030417_063039.0-E10-17" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1045" END="1064">its border with iraq</charseq>
+    </extent>
+    <head>
+      <charseq START="1049" END="1054">border</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030417_063039.0-E11" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030417_063039.0-E11-21" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1166" END="1177">the pentagon</charseq>
+    </extent>
+    <head>
+      <charseq START="1170" END="1177">pentagon</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="pentagon">
+      <charseq START="1170" END="1177">pentagon</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030417_063039.0-E12" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030417_063039.0-E12-22" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1183" END="1195">barbara starr</charseq>
+    </extent>
+    <head>
+      <charseq START="1183" END="1195">barbara starr</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="barbara starr">
+      <charseq START="1183" END="1195">barbara starr</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030417_063039.0-E13" TYPE="PER" SUBTYPE="Indeterminate" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030417_063039.0-E13-35" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="841" END="846">person</charseq>
+    </extent>
+    <head>
+      <charseq START="841" END="846">person</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030417_063039.0-E14" TYPE="LOC" SUBTYPE="Region-General" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030417_063039.0-E14-23" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="202" END="210">the
+north</charseq>
+    </extent>
+    <head>
+      <charseq START="206" END="210">north</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030417_063039.0-E15" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030417_063039.0-E15-24" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="70" END="80">u.s. forces</charseq>
+    </extent>
+    <head>
+      <charseq START="75" END="80">forces</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030417_063039.0-E16" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030417_063039.0-E16-25" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="70" END="72">u.s</charseq>
+    </extent>
+    <head>
+      <charseq START="70" END="72">u.s</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030417_063039.0-E16-36" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="550" END="552">u.s</charseq>
+    </extent>
+    <head>
+      <charseq START="550" END="552">u.s</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="u.s">
+      <charseq START="70" END="72">u.s</charseq>
+    </name>
+    <name NAME="u.s">
+      <charseq START="550" END="552">u.s</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030417_063039.0-E17" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030417_063039.0-E17-1" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="113" END="126">members of the</charseq>
+    </extent>
+    <head>
+      <charseq START="113" END="119">members</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030417_063039.0-E18" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030417_063039.0-E18-19" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="1061" END="1064">iraq</charseq>
+    </extent>
+    <head>
+      <charseq START="1061" END="1064">iraq</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030417_063039.0-E18-26" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="145" END="148">iraq</charseq>
+    </extent>
+    <head>
+      <charseq START="145" END="148">iraq</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="iraq">
+      <charseq START="1061" END="1064">iraq</charseq>
+    </name>
+    <name NAME="iraq">
+      <charseq START="145" END="148">iraq</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030417_063039.0-E19" TYPE="LOC" SUBTYPE="Region-General" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030417_063039.0-E19-27" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="251" END="271">the area around mosul</charseq>
+    </extent>
+    <head>
+      <charseq START="255" END="258">area</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030417_063039.0-E19-29" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="308" END="310">its</charseq>
+    </extent>
+    <head>
+      <charseq START="308" END="310">its</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030417_063039.0-E19-33" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="439" END="443">there</charseq>
+    </extent>
+    <head>
+      <charseq START="439" END="443">there</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030417_063039.0-E20" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030417_063039.0-E20-3" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="653" END="657">mosul</charseq>
+    </extent>
+    <head>
+      <charseq START="653" END="657">mosul</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030417_063039.0-E20-28" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="267" END="271">mosul</charseq>
+    </extent>
+    <head>
+      <charseq START="267" END="271">mosul</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="mosul">
+      <charseq START="653" END="657">mosul</charseq>
+    </name>
+    <name NAME="mosul">
+      <charseq START="267" END="271">mosul</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030417_063039.0-E21" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030417_063039.0-E21-30" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="380" END="393">general brooks</charseq>
+    </extent>
+    <head>
+      <charseq START="388" END="393">brooks</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030417_063039.0-E21-31" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="380" END="386">general</charseq>
+    </extent>
+    <head>
+      <charseq START="380" END="386">general</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="brooks">
+      <charseq START="388" END="393">brooks</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030417_063039.0-E23" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030417_063039.0-E23-15" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1010" END="1011">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1010" END="1011">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030417_063039.0-E23-20" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1098" END="1099">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1098" END="1099">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030417_063039.0-E23-32" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="478" END="479">we</charseq>
+    </extent>
+    <head>
+      <charseq START="478" END="479">we</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030417_063039.0-E24" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030417_063039.0-E24-34" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="513" END="533">at least seven iraqis</charseq>
+    </extent>
+    <head>
+      <charseq START="528" END="533">iraqis</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030417_063039.0-E24-37" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="566" END="569">they</charseq>
+    </extent>
+    <head>
+      <charseq START="566" END="569">they</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030417_063039.0-E26" TYPE="LOC" SUBTYPE="Region-General" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030417_063039.0-E26-38" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="615" END="657">a
+certain part of the central part of mosul</charseq>
+    </extent>
+    <head>
+      <charseq START="625" END="628">part</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<timex2 ID="CNN_ENG_20030417_063039.0-T1" VAL="2003-W15">
+  <timex2_mention ID="CNN_ENG_20030417_063039.0-T1-1">
+    <extent>
+      <charseq START="999" END="1007">that time</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030417_063039.0-T2" VAL="2003-04-17T07:35:06">
+  <timex2_mention ID="CNN_ENG_20030417_063039.0-T2-1">
+    <extent>
+      <charseq START="43" END="61">2003-04-17 07:35:06</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030417_063039.0-T3" VAL="PXW" ANCHOR_VAL="2003-W16" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_ENG_20030417_063039.0-T3-1">
+    <extent>
+      <charseq START="150" END="166">several weeks ago</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030417_063039.0-T4" VAL="PAST_REF" ANCHOR_VAL="2003-04-17T07:35:06" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="CNN_ENG_20030417_063039.0-T4-1">
+    <extent>
+      <charseq START="400" END="415">a short
+time ago</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030417_063039.0-T5" VAL="2003-04-16">
+  <timex2_mention ID="CNN_ENG_20030417_063039.0-T5-1">
+    <extent>
+      <charseq START="494" END="502">yesterday</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030417_063039.0-T6" VAL="2003-04-17T07:35:06">
+  <timex2_mention ID="CNN_ENG_20030417_063039.0-T6-1">
+    <extent>
+      <charseq START="725" END="727">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030417_063039.0-T7" VAL="2003-04-16TNI">
+  <timex2_mention ID="CNN_ENG_20030417_063039.0-T7-1">
+    <extent>
+      <charseq START="741" END="749">overnight</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030417_063039.0-T8" VAL="2003-W15">
+  <timex2_mention ID="CNN_ENG_20030417_063039.0-T8-1">
+    <extent>
+      <charseq START="900" END="908">last week</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030417_063039.0-T9" VAL="2003-04-17TMO">
+  <timex2_mention ID="CNN_ENG_20030417_063039.0-T9-1">
+    <extent>
+      <charseq START="1138" END="1148">the morning</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030417_063039.0-R1" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030417_063039.0-E15" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030417_063039.0-E16" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030417_063039.0-R1-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="70" END="80">u.s. forces</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030417_063039.0-E15-24" ROLE="Arg-1">
+      <extent>
+        <charseq START="70" END="80">u.s. forces</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030417_063039.0-E16-25" ROLE="Arg-2">
+      <extent>
+        <charseq START="70" END="72">u.s</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030417_063039.0-R2" TYPE="PHYS" SUBTYPE="Near" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030417_063039.0-E19" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030417_063039.0-E20" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030417_063039.0-R2-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="251" END="271">the area around mosul</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030417_063039.0-E19-27" ROLE="Arg-1">
+      <extent>
+        <charseq START="251" END="271">the area around mosul</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030417_063039.0-E20-28" ROLE="Arg-2">
+      <extent>
+        <charseq START="267" END="271">mosul</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030417_063039.0-R3" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030417_063039.0-E24" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030417_063039.0-E26" ROLE="Arg-2"/>
+  <relation_argument REFID="CNN_ENG_20030417_063039.0-T5" ROLE="Time-Within"/>
+  <relation_mention ID="CNN_ENG_20030417_063039.0-R3-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="419" END="657">he unrest continues there and this follows up the shooting
+we talked about yesterday in which at least seven iraqis were killed
+by u.s. fire after they apparently came under fire trying to secure a
+certain part of the central part of mosul</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030417_063039.0-E24-37" ROLE="Arg-1">
+      <extent>
+        <charseq START="566" END="569">they</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030417_063039.0-E26-38" ROLE="Arg-2">
+      <extent>
+        <charseq START="615" END="657">a
+certain part of the central part of mosul</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030417_063039.0-T5-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="494" END="502">yesterday</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030417_063039.0-R4" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030417_063039.0-E26" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030417_063039.0-E1" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030417_063039.0-R4-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="615" END="657">a
+certain part of the central part of mosul</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030417_063039.0-E26-38" ROLE="Arg-1">
+      <extent>
+        <charseq START="615" END="657">a
+certain part of the central part of mosul</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030417_063039.0-E1-2" ROLE="Arg-2">
+      <extent>
+        <charseq START="633" END="657">the central part of mosul</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030417_063039.0-R5" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030417_063039.0-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030417_063039.0-E20" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030417_063039.0-R5-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="633" END="657">the central part of mosul</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030417_063039.0-E1-2" ROLE="Arg-1">
+      <extent>
+        <charseq START="633" END="657">the central part of mosul</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030417_063039.0-E20-3" ROLE="Arg-2">
+      <extent>
+        <charseq START="653" END="657">mosul</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030417_063039.0-R6" TYPE="PER-SOC" SUBTYPE="Family" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030417_063039.0-E2" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030417_063039.0-E3" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030417_063039.0-R6-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="677" END="712">another
+half-broth of saddam hussein</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030417_063039.0-E2-4" ROLE="Arg-1">
+      <extent>
+        <charseq START="677" END="712">another
+half-broth of saddam hussein</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030417_063039.0-E3-5" ROLE="Arg-2">
+      <extent>
+        <charseq START="699" END="712">saddam hussein</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030417_063039.0-R7" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030417_063039.0-E2" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030417_063039.0-E4" ROLE="Arg-2"/>
+  <relation_argument REFID="CNN_ENG_20030417_063039.0-T7" ROLE="Time-Within"/>
+  <relation_mention ID="CNN_ENG_20030417_063039.0-R7-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="660" END="798">also, news about another
+half-broth of saddam hussein apparently now apprehended overnight in
+baghdad with the i assistance of local iraqis</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030417_063039.0-E2-4" ROLE="Arg-1">
+      <extent>
+        <charseq START="677" END="712">another
+half-broth of saddam hussein</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030417_063039.0-E4-6" ROLE="Arg-2">
+      <extent>
+        <charseq START="754" END="760">baghdad</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030417_063039.0-T7-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="741" END="749">overnight</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030417_063039.0-R8" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030417_063039.0-E5" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030417_063039.0-E4" ROLE="Arg-2"/>
+  <relation_argument REFID="CNN_ENG_20030417_063039.0-T7" ROLE="Time-Within"/>
+  <relation_mention ID="CNN_ENG_20030417_063039.0-R8-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="660" END="798">also, news about another
+half-broth of saddam hussein apparently now apprehended overnight in
+baghdad with the i assistance of local iraqis</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030417_063039.0-E5-7" ROLE="Arg-1">
+      <extent>
+        <charseq START="787" END="798">local iraqis</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030417_063039.0-E4-6" ROLE="Arg-2">
+      <extent>
+        <charseq START="754" END="760">baghdad</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030417_063039.0-T7-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="741" END="749">overnight</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030417_063039.0-R9" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030417_063039.0-E6" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030417_063039.0-E4" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030417_063039.0-R9-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="801" END="878">not sure where in
+baghdad, personal the person western neighborhood of mansour</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030417_063039.0-E6-9" ROLE="Arg-1">
+      <extent>
+        <charseq START="848" END="878">western neighborhood of mansour</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030417_063039.0-E4-8" ROLE="Arg-2">
+      <extent>
+        <charseq START="819" END="825">baghdad</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030417_063039.0-R10" TYPE="PER-SOC" SUBTYPE="Family" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030417_063039.0-E8" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030417_063039.0-E3" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030417_063039.0-R10-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="915" END="952">another half-brother of saddam hussein</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030417_063039.0-E8-12" ROLE="Arg-1">
+      <extent>
+        <charseq START="915" END="952">another half-brother of saddam hussein</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030417_063039.0-E3-13" ROLE="Arg-2">
+      <extent>
+        <charseq START="939" END="952">saddam hussein</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030417_063039.0-R11" TYPE="PHYS" SUBTYPE="Near" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030417_063039.0-E8" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030417_063039.0-E9" ROLE="Arg-2"/>
+  <relation_argument REFID="CNN_ENG_20030417_063039.0-T8" ROLE="Time-Within"/>
+  <relation_mention ID="CNN_ENG_20030417_063039.0-R11-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="881" END="1095">you
+might remember last week when another half-brother of saddam hussein
+was picked up trying to cross into syria and that time, we have been
+told syria has closed its border with iraq to prevent any of that
+ongoing</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030417_063039.0-E8-12" ROLE="Arg-1">
+      <extent>
+        <charseq START="915" END="952">another half-brother of saddam hussein</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030417_063039.0-E9-14" ROLE="Arg-2">
+      <extent>
+        <charseq START="989" END="993">syria</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030417_063039.0-T8-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="900" END="908">last week</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030417_063039.0-R12" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030417_063039.0-E10" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030417_063039.0-E9" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030417_063039.0-R12-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="1045" END="1064">its border with iraq</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030417_063039.0-E10-17" ROLE="Arg-1">
+      <extent>
+        <charseq START="1045" END="1064">its border with iraq</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030417_063039.0-E9-18" ROLE="Arg-2">
+      <extent>
+        <charseq START="1045" END="1047">its</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030417_063039.0-R13" TYPE="PHYS" SUBTYPE="Near" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030417_063039.0-E10" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030417_063039.0-E18" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030417_063039.0-R13-1" LEXICALCONDITION="Coordination">
+    <extent>
+      <charseq START="1045" END="1064">its border with iraq</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030417_063039.0-E10-17" ROLE="Arg-1">
+      <extent>
+        <charseq START="1045" END="1064">its border with iraq</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030417_063039.0-E18-19" ROLE="Arg-2">
+      <extent>
+        <charseq START="1061" END="1064">iraq</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030417_063039.0-R14" TYPE="PHYS" SUBTYPE="Located" TENSE="Present" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030417_063039.0-E12" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030417_063039.0-E11" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030417_063039.0-R14-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="1156" END="1223">first, to the pentagon and barbara starr to pick up what's happening</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030417_063039.0-E12-22" ROLE="Arg-1">
+      <extent>
+        <charseq START="1183" END="1195">barbara starr</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030417_063039.0-E11-21" ROLE="Arg-2">
+      <extent>
+        <charseq START="1166" END="1177">the pentagon</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030417_063039.0-EV1" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030417_063039.0-E18" ROLE="Place"/>
+  <event_argument REFID="CNN_ENG_20030417_063039.0-T3" ROLE="Time-Starting"/>
+  <event_mention ID="CNN_ENG_20030417_063039.0-EV1-1">
+    <extent>
+      <charseq START="132" END="166">war
+began in iraq several weeks ago</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="67" END="166">by u.s. forces and which appears to be run by members of the the war
+began in iraq several weeks ago</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="132" END="134">war</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030417_063039.0-E18-26" ROLE="Place">
+      <extent>
+        <charseq START="145" END="148">iraq</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030417_063039.0-T3-1" ROLE="Time-Starting">
+      <extent>
+        <charseq START="150" END="166">several weeks ago</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030417_063039.0-EV2" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030417_063039.0-E26" ROLE="Place"/>
+  <event_argument REFID="CNN_ENG_20030417_063039.0-E24" ROLE="Target"/>
+  <event_argument REFID="CNN_ENG_20030417_063039.0-E16" ROLE="Attacker"/>
+  <event_mention ID="CNN_ENG_20030417_063039.0-EV2-1">
+    <extent>
+      <charseq START="469" END="657">shooting
+we talked about yesterday in which at least seven iraqis were killed
+by u.s. fire after they apparently came under fire trying to secure a
+certain part of the central part of mosul</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="418" END="657">the unrest continues there and this follows up the shooting
+we talked about yesterday in which at least seven iraqis were killed
+by u.s. fire after they apparently came under fire trying to secure a
+certain part of the central part of mosul</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="469" END="476">shooting</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030417_063039.0-E16-36" ROLE="Attacker">
+      <extent>
+        <charseq START="550" END="552">u.s</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030417_063039.0-E26-38" ROLE="Place">
+      <extent>
+        <charseq START="615" END="657">a
+certain part of the central part of mosul</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030417_063039.0-E24-34" ROLE="Target">
+      <extent>
+        <charseq START="513" END="533">at least seven iraqis</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030417_063039.0-EV2-2">
+    <extent>
+      <charseq START="513" END="657">at least seven iraqis were killed
+by u.s. fire after they apparently came under fire trying to secure a
+certain part of the central part of mosul</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="418" END="657">the unrest continues there and this follows up the shooting
+we talked about yesterday in which at least seven iraqis were killed
+by u.s. fire after they apparently came under fire trying to secure a
+certain part of the central part of mosul</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="593" END="596">fire</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030417_063039.0-E26-38" ROLE="Place">
+      <extent>
+        <charseq START="615" END="657">a
+certain part of the central part of mosul</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030417_063039.0-E24-34" ROLE="Target">
+      <extent>
+        <charseq START="513" END="533">at least seven iraqis</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030417_063039.0-E16-36" ROLE="Attacker">
+      <extent>
+        <charseq START="550" END="552">u.s</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030417_063039.0-EV3" TYPE="Life" SUBTYPE="Die" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030417_063039.0-E24" ROLE="Victim"/>
+  <event_argument REFID="CNN_ENG_20030417_063039.0-E26" ROLE="Place"/>
+  <event_mention ID="CNN_ENG_20030417_063039.0-EV3-1">
+    <extent>
+      <charseq START="513" END="657">at least seven iraqis were killed
+by u.s. fire after they apparently came under fire trying to secure a
+certain part of the central part of mosul</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="418" END="657">the unrest continues there and this follows up the shooting
+we talked about yesterday in which at least seven iraqis were killed
+by u.s. fire after they apparently came under fire trying to secure a
+certain part of the central part of mosul</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="540" END="545">killed</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030417_063039.0-E24-34" ROLE="Victim">
+      <extent>
+        <charseq START="513" END="533">at least seven iraqis</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030417_063039.0-E26-38" ROLE="Place">
+      <extent>
+        <charseq START="615" END="657">a
+certain part of the central part of mosul</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030417_063039.0-EV4" TYPE="Movement" SUBTYPE="Transport" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030417_063039.0-E8" ROLE="Artifact"/>
+  <event_argument REFID="CNN_ENG_20030417_063039.0-E9" ROLE="Destination"/>
+  <event_argument REFID="CNN_ENG_20030417_063039.0-E18" ROLE="Origin"/>
+  <event_argument REFID="CNN_ENG_20030417_063039.0-T8" ROLE="Time-Within"/>
+  <event_mention ID="CNN_ENG_20030417_063039.0-EV4-1">
+    <extent>
+      <charseq START="900" END="1064">last week when another half-brother of saddam hussein
+was picked up trying to cross into syria and that time, we have been
+told syria has closed its border with iraq</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="881" END="1095">you
+might remember last week when another half-brother of saddam hussein
+was picked up trying to cross into syria and that time, we have been
+told syria has closed its border with iraq to prevent any of that
+ongoing</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="978" END="982">cross</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030417_063039.0-E8-12" ROLE="Artifact">
+      <extent>
+        <charseq START="915" END="952">another half-brother of saddam hussein</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030417_063039.0-E9-14" ROLE="Destination">
+      <extent>
+        <charseq START="989" END="993">syria</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030417_063039.0-E18-19" ROLE="Origin">
+      <extent>
+        <charseq START="1061" END="1064">iraq</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030417_063039.0-T8-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="900" END="908">last week</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

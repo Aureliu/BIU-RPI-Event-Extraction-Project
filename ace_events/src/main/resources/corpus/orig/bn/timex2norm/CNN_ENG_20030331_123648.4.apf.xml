@@ -1,0 +1,518 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030331_123648.4.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030331_123648.4">
+<entity ID="CNN_ENG_20030331_123648.4-E1" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030331_123648.4-E1-2" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="782" END="793">don shepperd</charseq>
+    </extent>
+    <head>
+      <charseq START="782" END="793">don shepperd</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030331_123648.4-E1-4" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="840" END="841">he</charseq>
+    </extent>
+    <head>
+      <charseq START="840" END="841">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="don shepperd">
+      <charseq START="782" END="793">don shepperd</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030331_123648.4-E2" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030331_123648.4-E2-6" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="895" END="906">wolf blitzer</charseq>
+    </extent>
+    <head>
+      <charseq START="895" END="906">wolf blitzer</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="wolf blitzer">
+      <charseq START="895" END="906">wolf blitzer</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030331_123648.4-E3" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030331_123648.4-E3-7" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="911" END="921">kuwait city</charseq>
+    </extent>
+    <head>
+      <charseq START="911" END="921">kuwait city</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="kuwait city">
+      <charseq START="911" END="921">kuwait city</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030331_123648.4-E4" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030331_123648.4-E4-1" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="67" END="75">usairways</charseq>
+    </extent>
+    <head>
+      <charseq START="67" END="75">usairways</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030331_123648.4-E4-9" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="87" END="89">its</charseq>
+    </extent>
+    <head>
+      <charseq START="87" END="89">its</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030331_123648.4-E4-10" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="114" END="177">the company
+which lost nearly $4 billion over the past two years</charseq>
+    </extent>
+    <head>
+      <charseq START="118" END="124">company</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030331_123648.4-E4-11" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="126" END="130">which</charseq>
+    </extent>
+    <head>
+      <charseq START="126" END="130">which</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030331_123648.4-E4-12" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="187" END="189">its</charseq>
+    </extent>
+    <head>
+      <charseq START="187" END="189">its</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="usairways">
+      <charseq START="67" END="75">usairways</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030331_123648.4-E5" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030331_123648.4-E5-13" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="260" END="267">employee</charseq>
+    </extent>
+    <head>
+      <charseq START="260" END="267">employee</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030331_123648.4-E6" TYPE="PER" SUBTYPE="Indeterminate" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030331_123648.4-E6-3" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="822" END="825">your</charseq>
+    </extent>
+    <head>
+      <charseq START="822" END="825">your</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030331_123648.4-E6-14" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="306" END="308">you</charseq>
+    </extent>
+    <head>
+      <charseq START="306" END="308">you</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030331_123648.4-E7" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030331_123648.4-E7-5" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="882" END="882">s</charseq>
+    </extent>
+    <head>
+      <charseq START="882" END="882">s</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030331_123648.4-E7-15" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="467" END="468">we</charseq>
+    </extent>
+    <head>
+      <charseq START="467" END="468">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030331_123648.4-E7-16" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="478" END="480">our</charseq>
+    </extent>
+    <head>
+      <charseq START="478" END="480">our</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030331_123648.4-E7-18" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="613" END="614">we</charseq>
+    </extent>
+    <head>
+      <charseq START="613" END="614">we</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030331_123648.4-E8" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030331_123648.4-E8-8" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="963" END="966">iraq</charseq>
+    </extent>
+    <head>
+      <charseq START="963" END="966">iraq</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030331_123648.4-E8-17" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="607" END="610">iraq</charseq>
+    </extent>
+    <head>
+      <charseq START="607" END="610">iraq</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030331_123648.4-E8-21" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="661" END="665">iraqi</charseq>
+    </extent>
+    <head>
+      <charseq START="661" END="665">iraqi</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="iraq">
+      <charseq START="963" END="966">iraq</charseq>
+    </name>
+    <name NAME="iraq">
+      <charseq START="607" END="610">iraq</charseq>
+    </name>
+    <name NAME="iraqi">
+      <charseq START="661" END="665">iraqi</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030331_123648.4-E9" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030331_123648.4-E9-19" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="629" END="643">a terror expert</charseq>
+    </extent>
+    <head>
+      <charseq START="638" END="643">expert</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030331_123648.4-E10" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030331_123648.4-E10-20" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="661" END="697">iraqi deserters on the northern front</charseq>
+    </extent>
+    <head>
+      <charseq START="667" END="675">deserters</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030331_123648.4-E10-24" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="716" END="720">their</charseq>
+    </extent>
+    <head>
+      <charseq START="716" END="720">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030331_123648.4-E10-25" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="732" END="735">they</charseq>
+    </extent>
+    <head>
+      <charseq START="732" END="735">they</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030331_123648.4-E12" TYPE="LOC" SUBTYPE="Region-General" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030331_123648.4-E12-22" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="680" END="697">the northern front</charseq>
+    </extent>
+    <head>
+      <charseq START="693" END="697">front</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030331_123648.4-E13" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030331_123648.4-E13-23" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="700" END="710">ben
+wedeman</charseq>
+    </extent>
+    <head>
+      <charseq START="700" END="710">ben
+wedeman</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="ben wedeman">
+      <charseq START="700" END="710">ben
+wedeman</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030331_123648.4-E14" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030331_123648.4-E14-26" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="763" END="776">saddam hussein</charseq>
+    </extent>
+    <head>
+      <charseq START="763" END="776">saddam hussein</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="saddam hussein">
+      <charseq START="763" END="776">saddam hussein</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<value ID="CNN_ENG_20030331_123648.4-V1" TYPE="Numeric" SUBTYPE="Money">
+  <value_mention ID="CNN_ENG_20030331_123648.4-V1-1">
+    <extent>
+      <charseq START="137" END="153">nearly $4 billion</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_ENG_20030331_123648.4-V2" TYPE="Numeric" SUBTYPE="Money">
+  <value_mention ID="CNN_ENG_20030331_123648.4-V2-1">
+    <extent>
+      <charseq START="207" END="223">nearly $2 billion</charseq>
+    </extent>
+  </value_mention>
+</value>
+<timex2 ID="CNN_ENG_20030331_123648.4-T1" VAL="PRESENT_REF" ANCHOR_VAL="2003-03-31T12:35:45" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_ENG_20030331_123648.4-T1-1">
+    <extent>
+      <charseq START="874" END="876">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030331_123648.4-T2" VAL="2003-03-31T12:35:45">
+  <timex2_mention ID="CNN_ENG_20030331_123648.4-T2-1">
+    <extent>
+      <charseq START="43" END="61">2003-03-31 12:35:45</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030331_123648.4-T3" VAL="P2Y" ANCHOR_VAL="2003" ANCHOR_DIR="ENDING">
+  <timex2_mention ID="CNN_ENG_20030331_123648.4-T3-1">
+    <extent>
+      <charseq START="160" END="177">the past two years</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030331_123648.4-T4" VAL="P1Y" SET="YES">
+  <timex2_mention ID="CNN_ENG_20030331_123648.4-T4-1">
+    <extent>
+      <charseq START="191" END="196">annual</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030331_123648.4-T5" VAL="2003-W13">
+  <timex2_mention ID="CNN_ENG_20030331_123648.4-T5-1">
+    <extent>
+      <charseq START="456" END="464">last week</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030331_123648.4-T6" VAL="2003-03-31T13">
+  <timex2_mention ID="CNN_ENG_20030331_123648.4-T6-1">
+    <extent>
+      <charseq START="515" END="523">next hour</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030331_123648.4-R1" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030331_123648.4-E10" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030331_123648.4-E8" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030331_123648.4-R1-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="661" END="697">iraqi deserters on the northern front</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030331_123648.4-E10-20" ROLE="Arg-1">
+      <extent>
+        <charseq START="661" END="697">iraqi deserters on the northern front</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030331_123648.4-E8-21" ROLE="Arg-2">
+      <extent>
+        <charseq START="661" END="665">iraqi</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030331_123648.4-R2" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030331_123648.4-E10" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030331_123648.4-E12" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030331_123648.4-R2-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="661" END="697">iraqi deserters on the northern front</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030331_123648.4-E10-20" ROLE="Arg-1">
+      <extent>
+        <charseq START="661" END="697">iraqi deserters on the northern front</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030331_123648.4-E12-22" ROLE="Arg-2">
+      <extent>
+        <charseq START="680" END="697">the northern front</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030331_123648.4-R3" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030331_123648.4-E2" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030331_123648.4-E3" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030331_123648.4-R3-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="895" END="921">wolf blitzer in kuwait city</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030331_123648.4-E2-6" ROLE="Arg-1">
+      <extent>
+        <charseq START="895" END="906">wolf blitzer</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030331_123648.4-E3-7" ROLE="Arg-2">
+      <extent>
+        <charseq START="911" END="921">kuwait city</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030331_123648.4-EV1" TYPE="Business" SUBTYPE="Declare-Bankruptcy" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030331_123648.4-E4" ROLE="Org"/>
+  <event_mention ID="CNN_ENG_20030331_123648.4-EV1-1">
+    <extent>
+      <charseq START="67" END="111">usairways is flying its way out of bankruptcy</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="67" END="111">usairways is flying its way out of bankruptcy</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="102" END="111">bankruptcy</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030331_123648.4-E4-1" ROLE="Org">
+      <extent>
+        <charseq START="67" END="75">usairways</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030331_123648.4-EV2" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Negative" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030331_123648.4-E10" ROLE="Attacker"/>
+  <event_mention ID="CNN_ENG_20030331_123648.4-EV2-1">
+    <extent>
+      <charseq START="732" END="757">they're no longer fighting</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="700" END="871">ben
+wedeman has their story why they're no longer fighting for
+saddam hussein and don shepperd is going to answer some of
+your questions as he looks at the battle hot spots</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="750" END="757">fighting</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030331_123648.4-E10-25" ROLE="Attacker">
+      <extent>
+        <charseq START="732" END="735">they</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030331_123648.4-EV3" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030331_123648.4-E8" ROLE="Place"/>
+  <event_mention ID="CNN_ENG_20030331_123648.4-EV3-1">
+    <extent>
+      <charseq START="956" END="966">war in iraq</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="874" END="966">now
+let's go back to wolf blitzer in kuwait city for more
+special coverage of the war in iraq</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="956" END="958">war</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030331_123648.4-E8-8" ROLE="Place">
+      <extent>
+        <charseq START="963" END="966">iraq</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030331_123648.4-EV4" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_mention ID="CNN_ENG_20030331_123648.4-EV4-1">
+    <extent>
+      <charseq START="539" END="544">terror</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="493" END="571">coming up right here, next hour on live
+from, terror tactics on the battlefield</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="539" END="544">terror</charseq>
+    </anchor>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030331_123648.4-EV5" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_mention ID="CNN_ENG_20030331_123648.4-EV5-1">
+    <extent>
+      <charseq START="561" END="571">battlefield</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="493" END="571">coming up right here, next hour on live
+from, terror tactics on the battlefield</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="561" END="571">battlefield</charseq>
+    </anchor>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030331_123648.4-EV6" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_mention ID="CNN_ENG_20030331_123648.4-EV6-1">
+    <extent>
+      <charseq START="631" END="636">terror</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="613" END="697">we'll talk with a terror expert about
+that, and iraqi deserters on the northern front</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="631" END="636">terror</charseq>
+    </anchor>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030331_123648.4-EV7" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_mention ID="CNN_ENG_20030331_123648.4-EV7-1">
+    <extent>
+      <charseq START="856" END="861">battle</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="700" END="871">ben
+wedeman has their story why they're no longer fighting for
+saddam hussein and don shepperd is going to answer some of
+your questions as he looks at the battle hot spots</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="856" END="861">battle</charseq>
+    </anchor>
+  </event_mention>
+</event>
+</document>
+</source_file>

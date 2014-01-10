@@ -1,0 +1,1323 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030306_070606.18.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030306_070606.18">
+<entity ID="CNN_ENG_20030306_070606.18-E1" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030306_070606.18-E1-48" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="759" END="774">these two people</charseq>
+    </extent>
+    <head>
+      <charseq START="769" END="774">people</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030306_070606.18-E2" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030306_070606.18-E2-3" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="802" END="812">7000 people</charseq>
+    </extent>
+    <head>
+      <charseq START="807" END="812">people</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030306_070606.18-E2-5" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="890" END="893">them</charseq>
+    </extent>
+    <head>
+      <charseq START="890" END="893">them</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030306_070606.18-E2-7" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="915" END="918">them</charseq>
+    </extent>
+    <head>
+      <charseq START="915" END="918">them</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030306_070606.18-E3" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030306_070606.18-E3-4" TYPE="PRO" LDCTYPE="PTV">
+    <extent>
+      <charseq START="877" END="893">one-third of them</charseq>
+    </extent>
+    <head>
+      <charseq START="881" END="885">third</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030306_070606.18-E4" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030306_070606.18-E4-6" TYPE="PRO" LDCTYPE="PTV">
+    <extent>
+      <charseq START="908" END="918">300 of them</charseq>
+    </extent>
+    <head>
+      <charseq START="908" END="910">300</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030306_070606.18-E5" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030306_070606.18-E5-8" TYPE="NOM" LDCTYPE="NOM" ROLE="GPE">
+    <extent>
+      <charseq START="962" END="1008">25 other states that
+have the three strikes law</charseq>
+    </extent>
+    <head>
+      <charseq START="971" END="976">states</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030306_070606.18-E5-9" TYPE="PRO" LDCTYPE="WHQ" ROLE="GPE">
+    <extent>
+      <charseq START="978" END="981">that</charseq>
+    </extent>
+    <head>
+      <charseq START="978" END="981">that</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030306_070606.18-E6" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030306_070606.18-E6-10" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1027" END="1028">us</charseq>
+    </extent>
+    <head>
+      <charseq START="1027" END="1028">us</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030306_070606.18-E7" TYPE="PER" SUBTYPE="Indeterminate" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030306_070606.18-E7-12" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1127" END="1129">you</charseq>
+    </extent>
+    <head>
+      <charseq START="1127" END="1129">you</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030306_070606.18-E8" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030306_070606.18-E8-13" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1142" END="1143">us</charseq>
+    </extent>
+    <head>
+      <charseq START="1142" END="1143">us</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030306_070606.18-E9" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030306_070606.18-E9-14" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1208" END="1208">i</charseq>
+    </extent>
+    <head>
+      <charseq START="1208" END="1208">i</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030306_070606.18-E10" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030306_070606.18-E10-15" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="1223" END="1230">new york</charseq>
+    </extent>
+    <head>
+      <charseq START="1223" END="1230">new york</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="new york">
+      <charseq START="1223" END="1230">new york</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030306_070606.18-E11" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030306_070606.18-E11-16" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1261" END="1325">a
+brooklyn woman who scalded her 4-year-old to death in a
+bathtub</charseq>
+    </extent>
+    <head>
+      <charseq START="1272" END="1276">woman</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030306_070606.18-E11-17" TYPE="PRO" LDCTYPE="WHQ" LDCATR="FALSE">
+    <extent>
+      <charseq START="1278" END="1280">who</charseq>
+    </extent>
+    <head>
+      <charseq START="1278" END="1280">who</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030306_070606.18-E11-18" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1290" END="1292">her</charseq>
+    </extent>
+    <head>
+      <charseq START="1290" END="1292">her</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030306_070606.18-E11-19" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="1348" END="1359">a free woman</charseq>
+    </extent>
+    <head>
+      <charseq START="1355" END="1359">woman</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030306_070606.18-E11-27" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1517" END="1526">its mother</charseq>
+    </extent>
+    <head>
+      <charseq START="1521" END="1526">mother</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030306_070606.18-E11-28" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1532" END="1534">she</charseq>
+    </extent>
+    <head>
+      <charseq START="1532" END="1534">she</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030306_070606.18-E11-29" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1577" END="1579">her</charseq>
+    </extent>
+    <head>
+      <charseq START="1577" END="1579">her</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030306_070606.18-E13" TYPE="LOC" SUBTYPE="Region-General" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030306_070606.18-E13-20" TYPE="NAM" LDCTYPE="NAMPRE">
+    <extent>
+      <charseq START="1263" END="1270">brooklyn</charseq>
+    </extent>
+    <head>
+      <charseq START="1263" END="1270">brooklyn</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="brooklyn">
+      <charseq START="1263" END="1270">brooklyn</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030306_070606.18-E14" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030306_070606.18-E14-21" TYPE="PRO" LDCTYPE="HLS">
+    <extent>
+      <charseq START="1290" END="1303">her 4-year-old</charseq>
+    </extent>
+    <head>
+      <charseq START="1294" END="1303">4-year-old</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030306_070606.18-E14-23" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1414" END="1422">the child</charseq>
+    </extent>
+    <head>
+      <charseq START="1418" END="1422">child</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030306_070606.18-E14-25" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1489" END="1490">it</charseq>
+    </extent>
+    <head>
+      <charseq START="1489" END="1490">it</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030306_070606.18-E14-26" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1517" END="1519">its</charseq>
+    </extent>
+    <head>
+      <charseq START="1517" END="1519">its</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030306_070606.18-E14-30" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1577" END="1590">her 4-year-old</charseq>
+    </extent>
+    <head>
+      <charseq START="1581" END="1590">4-year-old</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030306_070606.18-E14-31" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1604" END="1605">it</charseq>
+    </extent>
+    <head>
+      <charseq START="1604" END="1605">it</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030306_070606.18-E15" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030306_070606.18-E15-22" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1342" END="1346">court</charseq>
+    </extent>
+    <head>
+      <charseq START="1342" END="1346">court</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030306_070606.18-E16" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030306_070606.18-E16-24" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1446" END="1469">the hot from -- hospital</charseq>
+    </extent>
+    <head>
+      <charseq START="1462" END="1469">hospital</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030306_070606.18-E17" TYPE="LOC" SUBTYPE="Celestial" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030306_070606.18-E17-1" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="153" END="165">a crazy world</charseq>
+    </extent>
+    <head>
+      <charseq START="161" END="165">world</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030306_070606.18-E18" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030306_070606.18-E18-32" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="927" END="931">there</charseq>
+    </extent>
+    <head>
+      <charseq START="927" END="931">there</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030306_070606.18-E19" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030306_070606.18-E19-33" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="167" END="168">we</charseq>
+    </extent>
+    <head>
+      <charseq START="167" END="168">we</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030306_070606.18-E20" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030306_070606.18-E20-11" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1075" END="1091">the supreme court</charseq>
+    </extent>
+    <head>
+      <charseq START="1079" END="1091">supreme court</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030306_070606.18-E20-34" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="179" END="216">the supreme court
+of the united states</charseq>
+    </extent>
+    <head>
+      <charseq START="183" END="216">supreme court
+of the united states</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030306_070606.18-E20-37" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="303" END="306">they</charseq>
+    </extent>
+    <head>
+      <charseq START="303" END="306">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030306_070606.18-E20-47" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="728" END="744">the supreme court</charseq>
+    </extent>
+    <head>
+      <charseq START="732" END="744">supreme court</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="supreme court">
+      <charseq START="1079" END="1091">supreme court</charseq>
+    </name>
+    <name NAME="supreme court of the united states">
+      <charseq START="183" END="216">supreme court
+of the united states</charseq>
+    </name>
+    <name NAME="supreme court">
+      <charseq START="732" END="744">supreme court</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030306_070606.18-E21" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030306_070606.18-E21-35" TYPE="NOM" LDCTYPE="NOM" ROLE="GPE">
+    <extent>
+      <charseq START="259" END="269">the country</charseq>
+    </extent>
+    <head>
+      <charseq START="263" END="269">country</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030306_070606.18-E22" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030306_070606.18-E22-2" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="790" END="799">california</charseq>
+    </extent>
+    <head>
+      <charseq START="790" END="799">california</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030306_070606.18-E22-36" TYPE="NAM" LDCTYPE="NAM" ROLE="ORG">
+    <extent>
+      <charseq START="289" END="298">california</charseq>
+    </extent>
+    <head>
+      <charseq START="289" END="298">california</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="california">
+      <charseq START="790" END="799">california</charseq>
+    </name>
+    <name NAME="california">
+      <charseq START="289" END="298">california</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030306_070606.18-E23" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030306_070606.18-E23-38" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="391" END="433">a man convicted of stealing some
+golf clubs</charseq>
+    </extent>
+    <head>
+      <charseq START="393" END="395">man</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030306_070606.18-E24" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030306_070606.18-E24-39" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="452" END="482">a man who stole some
+videotapes</charseq>
+    </extent>
+    <head>
+      <charseq START="454" END="456">man</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030306_070606.18-E24-40" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="458" END="460">who</charseq>
+    </extent>
+    <head>
+      <charseq START="458" END="460">who</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030306_070606.18-E25" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030306_070606.18-E25-41" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="500" END="502">you</charseq>
+    </extent>
+    <head>
+      <charseq START="500" END="502">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030306_070606.18-E25-42" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="535" END="537">you</charseq>
+    </extent>
+    <head>
+      <charseq START="535" END="537">you</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030306_070606.18-E26" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030306_070606.18-E26-43" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="555" END="564">the voters</charseq>
+    </extent>
+    <head>
+      <charseq START="559" END="564">voters</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030306_070606.18-E27" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030306_070606.18-E27-44" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="614" END="643">the liberal and lenient
+judges</charseq>
+    </extent>
+    <head>
+      <charseq START="638" END="643">judges</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030306_070606.18-E28" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030306_070606.18-E28-45" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="652" END="661">bad people</charseq>
+    </extent>
+    <head>
+      <charseq START="656" END="661">people</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030306_070606.18-E29" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030306_070606.18-E29-46" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="711" END="714">they</charseq>
+    </extent>
+    <head>
+      <charseq START="711" END="714">they</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<value ID="CNN_ENG_20030306_070606.18-V1" TYPE="Crime">
+  <value_mention ID="CNN_ENG_20030306_070606.18-V1-1">
+    <extent>
+      <charseq START="1282" END="1325">scalded her 4-year-old to death in a
+bathtub</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_ENG_20030306_070606.18-V2" TYPE="Crime">
+  <value_mention ID="CNN_ENG_20030306_070606.18-V2-1">
+    <extent>
+      <charseq START="1569" END="1629">killing her 4-year-old by scalding it
+to death in the bathtub</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_ENG_20030306_070606.18-V3" TYPE="Sentence">
+  <value_mention ID="CNN_ENG_20030306_070606.18-V3-1">
+    <extent>
+      <charseq START="355" END="385">25 years to
+life without parole</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_ENG_20030306_070606.18-V4" TYPE="Sentence">
+  <value_mention ID="CNN_ENG_20030306_070606.18-V4-1">
+    <extent>
+      <charseq START="439" END="446">50 years</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_ENG_20030306_070606.18-V5" TYPE="Crime">
+  <value_mention ID="CNN_ENG_20030306_070606.18-V5-1">
+    <extent>
+      <charseq START="515" END="520">felony</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_ENG_20030306_070606.18-V6" TYPE="Crime">
+  <value_mention ID="CNN_ENG_20030306_070606.18-V6-1">
+    <extent>
+      <charseq START="410" END="433">stealing some
+golf clubs</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_ENG_20030306_070606.18-V7" TYPE="Sentence">
+  <value_mention ID="CNN_ENG_20030306_070606.18-V7-1">
+    <extent>
+      <charseq START="822" END="836">25 to year life</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_ENG_20030306_070606.18-V8" TYPE="Contact-Info" SUBTYPE="E-Mail">
+  <value_mention ID="CNN_ENG_20030306_070606.18-V8-1">
+    <extent>
+      <charseq START="1148" END="1157">am@cnn.com</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_ENG_20030306_070606.18-V9" TYPE="Sentence">
+  <value_mention ID="CNN_ENG_20030306_070606.18-V9-1">
+    <extent>
+      <charseq START="1384" END="1403">five years probation</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_ENG_20030306_070606.18-V10" TYPE="Sentence">
+  <value_mention ID="CNN_ENG_20030306_070606.18-V10-1">
+    <extent>
+      <charseq START="1544" END="1563">five
+years probation</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_ENG_20030306_070606.18-V11" TYPE="Crime">
+  <value_mention ID="CNN_ENG_20030306_070606.18-V11-1">
+    <extent>
+      <charseq START="462" END="482">stole some
+videotapes</charseq>
+    </extent>
+  </value_mention>
+</value>
+<timex2 ID="CNN_ENG_20030306_070606.18-T1" VAL="P4Y" ANCHOR_VAL="2003-03-05" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="CNN_ENG_20030306_070606.18-T1-1">
+    <extent>
+      <charseq START="1294" END="1303">4-year-old</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030306_070606.18-T2" VAL="P5Y" ANCHOR_VAL="2003-03-05" ANCHOR_DIR="STARTING">
+  <timex2_mention ID="CNN_ENG_20030306_070606.18-T2-1">
+    <extent>
+      <charseq START="1384" END="1393">five years</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030306_070606.18-T3" VAL="2003-03-06T07:25:00">
+  <timex2_mention ID="CNN_ENG_20030306_070606.18-T3-1">
+    <extent>
+      <charseq START="82" END="106">25 minutes after the hour</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030306_070606.18-T4" VAL="2003-03-06T07:29:01">
+  <timex2_mention ID="CNN_ENG_20030306_070606.18-T4-1">
+    <extent>
+      <charseq START="44" END="62">2003-03-06 07:29:01</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030306_070606.18-T5" VAL="2003-03-05">
+  <timex2_mention ID="CNN_ENG_20030306_070606.18-T5-1">
+    <extent>
+      <charseq START="271" END="279">yesterday</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030306_070606.18-T6" VAL="P5Y" ANCHOR_VAL="2003-03-05" ANCHOR_DIR="STARTING">
+  <timex2_mention ID="CNN_ENG_20030306_070606.18-T6-1">
+    <extent>
+      <charseq START="1544" END="1553">five
+years</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030306_070606.18-T7" VAL="2003-03-06TMO">
+  <timex2_mention ID="CNN_ENG_20030306_070606.18-T7-1">
+    <extent>
+      <charseq START="1242" END="1253">this morning</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030306_070606.18-T8" VAL="2003-03-05">
+  <timex2_mention ID="CNN_ENG_20030306_070606.18-T8-1">
+    <extent>
+      <charseq START="1361" END="1369">yesterday</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030306_070606.18-T9" VAL="P3W" ANCHOR_VAL="2003-03-05" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="CNN_ENG_20030306_070606.18-T9-1">
+    <extent>
+      <charseq START="1424" END="1434">three
+weeks</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030306_070606.18-T10" VAL="1994">
+  <timex2_mention ID="CNN_ENG_20030306_070606.18-T10-1">
+    <extent>
+      <charseq START="599" END="602">1994</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030306_070606.18-T11" ANCHOR_VAL="2003-03-06-T07:29:01" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_ENG_20030306_070606.18-T11-1">
+    <extent>
+      <charseq START="777" END="785">currently</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030306_070606.18-T12" VAL="2003-03-06">
+  <timex2_mention ID="CNN_ENG_20030306_070606.18-T12-1">
+    <extent>
+      <charseq START="1122" END="1124">day</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030306_070606.18-T13" VAL="2003-03-06TMO">
+  <timex2_mention ID="CNN_ENG_20030306_070606.18-T13-1">
+    <extent>
+      <charseq START="144" END="150">morning</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030306_070606.18-R1" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030306_070606.18-E19" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030306_070606.18-E17" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030306_070606.18-R1-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="153" END="176">a crazy world we live in</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030306_070606.18-E19-33" ROLE="Arg-1">
+      <extent>
+        <charseq START="167" END="168">we</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030306_070606.18-E17-1" ROLE="Arg-2">
+      <extent>
+        <charseq START="153" END="165">a crazy world</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030306_070606.18-R2" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030306_070606.18-E11" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030306_070606.18-E15" ROLE="Arg-2"/>
+  <relation_argument REFID="CNN_ENG_20030306_070606.18-T8" ROLE="Time-Within"/>
+  <relation_mention ID="CNN_ENG_20030306_070606.18-R2-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="1160" END="1403">it's designed to counter the kind of thing that
+i found in the new york newspaper this morning where a
+brooklyn woman who scalded her 4-year-old to death in a
+bathtub, walked out of court a free woman yesterday
+sentenced to five years probation</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030306_070606.18-E11-16" ROLE="Arg-1">
+      <extent>
+        <charseq START="1261" END="1325">a
+brooklyn woman who scalded her 4-year-old to death in a
+bathtub</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030306_070606.18-E15-22" ROLE="Arg-2">
+      <extent>
+        <charseq START="1342" END="1346">court</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030306_070606.18-T8-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="1361" END="1369">yesterday</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030306_070606.18-R3" TYPE="PHYS" SUBTYPE="Located" TENSE="Present" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030306_070606.18-E2" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030306_070606.18-E22" ROLE="Arg-2"/>
+  <relation_argument REFID="CNN_ENG_20030306_070606.18-T11" ROLE="Time-Within"/>
+  <relation_mention ID="CNN_ENG_20030306_070606.18-R3-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="777" END="874">currently in california, 7000 people
+serving 25 to year life sentences under the three strikes
+law</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030306_070606.18-E2-3" ROLE="Arg-1">
+      <extent>
+        <charseq START="802" END="812">7000 people</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030306_070606.18-E22-2" ROLE="Arg-2">
+      <extent>
+        <charseq START="790" END="799">california</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030306_070606.18-T11-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="777" END="785">currently</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030306_070606.18-R4" TYPE="PHYS" SUBTYPE="Located" TENSE="Present" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030306_070606.18-E4" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030306_070606.18-E18" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030306_070606.18-R4-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="908" END="959">300 of them are in
+there for things like petty theft</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030306_070606.18-E4-6" ROLE="Arg-1">
+      <extent>
+        <charseq START="908" END="918">300 of them</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030306_070606.18-E18-32" ROLE="Arg-2">
+      <extent>
+        <charseq START="927" END="931">there</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030306_070606.18-R5" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030306_070606.18-E11" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030306_070606.18-E13" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030306_070606.18-R5-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="1261" END="1325">a
+brooklyn woman who scalded her 4-year-old to death in a
+bathtub</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030306_070606.18-E11-16" ROLE="Arg-1">
+      <extent>
+        <charseq START="1261" END="1325">a
+brooklyn woman who scalded her 4-year-old to death in a
+bathtub</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030306_070606.18-E13-20" ROLE="Arg-2">
+      <extent>
+        <charseq START="1263" END="1270">brooklyn</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030306_070606.18-R7" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030306_070606.18-E14" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030306_070606.18-E16" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030306_070606.18-R7-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="1406" END="1541">it took the child three
+weeks to die in the hot from -- hospital from the injuries
+it suffered at the hands of its mother and she's free</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030306_070606.18-E14-23" ROLE="Arg-1">
+      <extent>
+        <charseq START="1414" END="1422">the child</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030306_070606.18-E16-24" ROLE="Arg-2">
+      <extent>
+        <charseq START="1446" END="1469">the hot from -- hospital</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030306_070606.18-R8" TYPE="PER-SOC" SUBTYPE="Family" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030306_070606.18-E14" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030306_070606.18-E11" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030306_070606.18-R8-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="1517" END="1526">its mother</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030306_070606.18-E14-26" ROLE="Arg-1">
+      <extent>
+        <charseq START="1517" END="1519">its</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030306_070606.18-E11-27" ROLE="Arg-2">
+      <extent>
+        <charseq START="1517" END="1526">its mother</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_ENG_20030306_070606.18-R8-2" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="1290" END="1303">her 4-year-old</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030306_070606.18-E11-18" ROLE="Arg-2">
+      <extent>
+        <charseq START="1290" END="1292">her</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030306_070606.18-E14-21" ROLE="Arg-1">
+      <extent>
+        <charseq START="1290" END="1303">her 4-year-old</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_ENG_20030306_070606.18-R8-3" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="1577" END="1590">her 4-year-old</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030306_070606.18-E11-29" ROLE="Arg-2">
+      <extent>
+        <charseq START="1577" END="1579">her</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030306_070606.18-E14-30" ROLE="Arg-1">
+      <extent>
+        <charseq START="1577" END="1590">her 4-year-old</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030306_070606.18-EV1" TYPE="Life" SUBTYPE="Injure" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030306_070606.18-E14" ROLE="Victim"/>
+  <event_argument REFID="CNN_ENG_20030306_070606.18-E11" ROLE="Agent"/>
+  <event_mention ID="CNN_ENG_20030306_070606.18-EV1-1">
+    <extent>
+      <charseq START="1480" END="1526">injuries
+it suffered at the hands of its mother</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1406" END="1541">it took the child three
+weeks to die in the hot from -- hospital from the injuries
+it suffered at the hands of its mother and she's free</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1480" END="1487">injuries</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030306_070606.18-E14-25" ROLE="Victim">
+      <extent>
+        <charseq START="1489" END="1490">it</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030306_070606.18-E11-27" ROLE="Agent">
+      <extent>
+        <charseq START="1517" END="1526">its mother</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030306_070606.18-EV2" TYPE="Justice" SUBTYPE="Sentence" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030306_070606.18-E23" ROLE="Defendant"/>
+  <event_argument REFID="CNN_ENG_20030306_070606.18-E24" ROLE="Defendant"/>
+  <event_argument REFID="CNN_ENG_20030306_070606.18-V3" ROLE="Sentence"/>
+  <event_argument REFID="CNN_ENG_20030306_070606.18-V4" ROLE="Sentence"/>
+  <event_argument REFID="CNN_ENG_20030306_070606.18-V6" ROLE="Crime"/>
+  <event_argument REFID="CNN_ENG_20030306_070606.18-V11" ROLE="Crime"/>
+  <event_mention ID="CNN_ENG_20030306_070606.18-EV2-1">
+    <extent>
+      <charseq START="342" END="482">sentences of 25 years to
+life without parole for a man convicted of stealing some
+golf clubs and 50 years for a man who stole some
+videotapes</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="303" END="482">they
+rejected challenges to the law of sentences of 25 years to
+life without parole for a man convicted of stealing some
+golf clubs and 50 years for a man who stole some
+videotapes</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="342" END="350">sentences</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030306_070606.18-E23-38" ROLE="Defendant">
+      <extent>
+        <charseq START="391" END="433">a man convicted of stealing some
+golf clubs</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030306_070606.18-E24-39" ROLE="Defendant">
+      <extent>
+        <charseq START="452" END="482">a man who stole some
+videotapes</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030306_070606.18-V3-1" ROLE="Sentence">
+      <extent>
+        <charseq START="355" END="385">25 years to
+life without parole</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030306_070606.18-V4-1" ROLE="Sentence">
+      <extent>
+        <charseq START="439" END="446">50 years</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030306_070606.18-V6-1" ROLE="Crime">
+      <extent>
+        <charseq START="410" END="433">stealing some
+golf clubs</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030306_070606.18-V11-1" ROLE="Crime">
+      <extent>
+        <charseq START="462" END="482">stole some
+videotapes</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030306_070606.18-EV3" TYPE="Justice" SUBTYPE="Convict" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030306_070606.18-E25" ROLE="Defendant"/>
+  <event_argument REFID="CNN_ENG_20030306_070606.18-V5" ROLE="Crime"/>
+  <event_mention ID="CNN_ENG_20030306_070606.18-EV3-1">
+    <extent>
+      <charseq START="500" END="532">you have three felony
+convictions</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="485" END="552">the idea is if you have three felony
+convictions, you're out of here</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="522" END="532">convictions</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030306_070606.18-E25-41" ROLE="Defendant">
+      <extent>
+        <charseq START="500" END="502">you</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030306_070606.18-V5-1" ROLE="Crime">
+      <extent>
+        <charseq START="515" END="520">felony</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030306_070606.18-EV4" TYPE="Justice" SUBTYPE="Appeal" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030306_070606.18-E20" ROLE="Adjudicator"/>
+  <event_argument REFID="CNN_ENG_20030306_070606.18-E29" ROLE="Plaintiff"/>
+  <event_argument REFID="CNN_ENG_20030306_070606.18-E1" ROLE="Plaintiff"/>
+  <event_mention ID="CNN_ENG_20030306_070606.18-EV4-1">
+    <extent>
+      <charseq START="711" END="774">they appealed to the supreme court on behalf
+of these two people</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="711" END="774">they appealed to the supreme court on behalf
+of these two people</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="716" END="723">appealed</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030306_070606.18-E20-47" ROLE="Adjudicator">
+      <extent>
+        <charseq START="728" END="744">the supreme court</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030306_070606.18-E29-46" ROLE="Plaintiff">
+      <extent>
+        <charseq START="711" END="714">they</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030306_070606.18-E1-48" ROLE="Plaintiff">
+      <extent>
+        <charseq START="759" END="774">these two people</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030306_070606.18-EV5" TYPE="Justice" SUBTYPE="Arrest-Jail" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Present">
+  <event_argument REFID="CNN_ENG_20030306_070606.18-E2" ROLE="Person"/>
+  <event_argument REFID="CNN_ENG_20030306_070606.18-E22" ROLE="Place"/>
+  <event_argument REFID="CNN_ENG_20030306_070606.18-T11" ROLE="Time-Holds"/>
+  <event_mention ID="CNN_ENG_20030306_070606.18-EV5-1">
+    <extent>
+      <charseq START="777" END="820">currently in california, 7000 people
+serving</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="777" END="874">currently in california, 7000 people
+serving 25 to year life sentences under the three strikes
+law</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="814" END="820">serving</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030306_070606.18-E2-3" ROLE="Person">
+      <extent>
+        <charseq START="802" END="812">7000 people</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030306_070606.18-E22-2" ROLE="Place">
+      <extent>
+        <charseq START="790" END="799">california</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030306_070606.18-T11-1" ROLE="Time-Holds">
+      <extent>
+        <charseq START="777" END="785">currently</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030306_070606.18-EV6" TYPE="Justice" SUBTYPE="Sentence" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Generic" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030306_070606.18-E2" ROLE="Defendant"/>
+  <event_argument REFID="CNN_ENG_20030306_070606.18-V7" ROLE="Sentence"/>
+  <event_mention ID="CNN_ENG_20030306_070606.18-EV6-1">
+    <extent>
+      <charseq START="802" END="846">7000 people
+serving 25 to year life sentences</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="777" END="874">currently in california, 7000 people
+serving 25 to year life sentences under the three strikes
+law</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="838" END="846">sentences</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030306_070606.18-E2-3" ROLE="Defendant">
+      <extent>
+        <charseq START="802" END="812">7000 people</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030306_070606.18-V7-1" ROLE="Sentence">
+      <extent>
+        <charseq START="822" END="836">25 to year life</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030306_070606.18-EV7" TYPE="Contact" SUBTYPE="Phone-Write" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030306_070606.18-E7" ROLE="Entity"/>
+  <event_argument REFID="CNN_ENG_20030306_070606.18-E8" ROLE="Entity"/>
+  <event_mention ID="CNN_ENG_20030306_070606.18-EV7-1">
+    <extent>
+      <charseq START="1127" END="1143">you can e-mail us</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1127" END="1157">you can e-mail us at
+am@cnn.com</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1135" END="1140">e-mail</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030306_070606.18-E7-12" ROLE="Entity">
+      <extent>
+        <charseq START="1127" END="1129">you</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030306_070606.18-E8-13" ROLE="Entity">
+      <extent>
+        <charseq START="1142" END="1143">us</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030306_070606.18-EV8" TYPE="Life" SUBTYPE="Die" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030306_070606.18-E14" ROLE="Victim"/>
+  <event_argument REFID="CNN_ENG_20030306_070606.18-E11" ROLE="Agent"/>
+  <event_argument REFID="CNN_ENG_20030306_070606.18-E13" ROLE="Place"/>
+  <event_argument REFID="CNN_ENG_20030306_070606.18-E16" ROLE="Place"/>
+  <event_argument REFID="CNN_ENG_20030306_070606.18-T1" ROLE="Time-After"/>
+  <event_mention ID="CNN_ENG_20030306_070606.18-EV8-1">
+    <extent>
+      <charseq START="1263" END="1312">brooklyn woman who scalded her 4-year-old to death</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1160" END="1403">it's designed to counter the kind of thing that
+i found in the new york newspaper this morning where a
+brooklyn woman who scalded her 4-year-old to death in a
+bathtub, walked out of court a free woman yesterday
+sentenced to five years probation</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1308" END="1312">death</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030306_070606.18-E14-21" ROLE="Victim">
+      <extent>
+        <charseq START="1290" END="1303">her 4-year-old</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030306_070606.18-E11-17" ROLE="Agent">
+      <extent>
+        <charseq START="1278" END="1280">who</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030306_070606.18-E13-20" ROLE="Place">
+      <extent>
+        <charseq START="1263" END="1270">brooklyn</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030306_070606.18-T1-1" ROLE="Time-After">
+      <extent>
+        <charseq START="1294" END="1303">4-year-old</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030306_070606.18-EV8-2">
+    <extent>
+      <charseq START="1414" END="1526">the child three
+weeks to die in the hot from -- hospital from the injuries
+it suffered at the hands of its mother</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1406" END="1541">it took the child three
+weeks to die in the hot from -- hospital from the injuries
+it suffered at the hands of its mother and she's free</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1439" END="1441">die</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030306_070606.18-E14-23" ROLE="Victim">
+      <extent>
+        <charseq START="1414" END="1422">the child</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030306_070606.18-E11-27" ROLE="Agent">
+      <extent>
+        <charseq START="1517" END="1526">its mother</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030306_070606.18-E16-24" ROLE="Place">
+      <extent>
+        <charseq START="1446" END="1469">the hot from -- hospital</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030306_070606.18-EV8-3">
+    <extent>
+      <charseq START="1569" END="1590">killing her 4-year-old</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1544" END="1629">five
+years probation for killing her 4-year-old by scalding it
+to death in the bathtub</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1569" END="1575">killing</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030306_070606.18-E14-30" ROLE="Victim">
+      <extent>
+        <charseq START="1577" END="1590">her 4-year-old</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030306_070606.18-E11-29" ROLE="Agent">
+      <extent>
+        <charseq START="1577" END="1579">her</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030306_070606.18-EV8-4">
+    <extent>
+      <charseq START="1577" END="1614">her 4-year-old by scalding it
+to death</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1544" END="1629">five
+years probation for killing her 4-year-old by scalding it
+to death in the bathtub</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1610" END="1614">death</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030306_070606.18-E14-31" ROLE="Victim">
+      <extent>
+        <charseq START="1604" END="1605">it</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030306_070606.18-E11-29" ROLE="Agent">
+      <extent>
+        <charseq START="1577" END="1579">her</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030306_070606.18-EV9" TYPE="Justice" SUBTYPE="Sentence" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030306_070606.18-E11" ROLE="Defendant"/>
+  <event_argument REFID="CNN_ENG_20030306_070606.18-E15" ROLE="Place"/>
+  <event_argument REFID="CNN_ENG_20030306_070606.18-V9" ROLE="Sentence"/>
+  <event_argument REFID="CNN_ENG_20030306_070606.18-V1" ROLE="Crime"/>
+  <event_argument REFID="CNN_ENG_20030306_070606.18-T8" ROLE="Time-Within"/>
+  <event_mention ID="CNN_ENG_20030306_070606.18-EV9-1">
+    <extent>
+      <charseq START="1261" END="1403">a
+brooklyn woman who scalded her 4-year-old to death in a
+bathtub, walked out of court a free woman yesterday
+sentenced to five years probation</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1160" END="1403">it's designed to counter the kind of thing that
+i found in the new york newspaper this morning where a
+brooklyn woman who scalded her 4-year-old to death in a
+bathtub, walked out of court a free woman yesterday
+sentenced to five years probation</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1371" END="1379">sentenced</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030306_070606.18-E11-16" ROLE="Defendant">
+      <extent>
+        <charseq START="1261" END="1325">a
+brooklyn woman who scalded her 4-year-old to death in a
+bathtub</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030306_070606.18-E15-22" ROLE="Place">
+      <extent>
+        <charseq START="1342" END="1346">court</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030306_070606.18-V9-1" ROLE="Sentence">
+      <extent>
+        <charseq START="1384" END="1403">five years probation</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030306_070606.18-V1-1" ROLE="Crime">
+      <extent>
+        <charseq START="1282" END="1325">scalded her 4-year-old to death in a
+bathtub</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030306_070606.18-T8-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="1361" END="1369">yesterday</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030306_070606.18-EV10" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030306_070606.18-E11" ROLE="Attacker"/>
+  <event_argument REFID="CNN_ENG_20030306_070606.18-E13" ROLE="Place"/>
+  <event_argument REFID="CNN_ENG_20030306_070606.18-E14" ROLE="Target"/>
+  <event_argument REFID="CNN_ENG_20030306_070606.18-T1" ROLE="Time-After"/>
+  <event_mention ID="CNN_ENG_20030306_070606.18-EV10-1">
+    <extent>
+      <charseq START="1263" END="1303">brooklyn woman who scalded her 4-year-old</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1160" END="1403">it's designed to counter the kind of thing that
+i found in the new york newspaper this morning where a
+brooklyn woman who scalded her 4-year-old to death in a
+bathtub, walked out of court a free woman yesterday
+sentenced to five years probation</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1282" END="1288">scalded</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030306_070606.18-E11-17" ROLE="Attacker">
+      <extent>
+        <charseq START="1278" END="1280">who</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030306_070606.18-E13-20" ROLE="Place">
+      <extent>
+        <charseq START="1263" END="1270">brooklyn</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030306_070606.18-E14-21" ROLE="Target">
+      <extent>
+        <charseq START="1290" END="1303">her 4-year-old</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030306_070606.18-T1-1" ROLE="Time-After">
+      <extent>
+        <charseq START="1294" END="1303">4-year-old</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030306_070606.18-EV10-2">
+    <extent>
+      <charseq START="1577" END="1602">her 4-year-old by scalding</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1544" END="1629">five
+years probation for killing her 4-year-old by scalding it
+to death in the bathtub</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1595" END="1602">scalding</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030306_070606.18-E11-29" ROLE="Attacker">
+      <extent>
+        <charseq START="1577" END="1579">her</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030306_070606.18-E14-30" ROLE="Target">
+      <extent>
+        <charseq START="1577" END="1590">her 4-year-old</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

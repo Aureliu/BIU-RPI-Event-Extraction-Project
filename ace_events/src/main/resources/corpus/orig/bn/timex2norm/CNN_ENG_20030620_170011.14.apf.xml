@@ -1,0 +1,194 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030620_170011.14.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030620_170011.14">
+<entity ID="CNN_ENG_20030620_170011.14-E1" TYPE="VEH" SUBTYPE="Land" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030620_170011.14-E1-1" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="82" END="83">it</charseq>
+    </extent>
+    <head>
+      <charseq START="82" END="83">it</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030620_170011.14-E1-4" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="141" END="161">a runaway fragt train</charseq>
+    </extent>
+    <head>
+      <charseq START="157" END="161">train</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030620_170011.14-E1-6" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="209" END="211">its</charseq>
+    </extent>
+    <head>
+      <charseq START="209" END="211">its</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030620_170011.14-E2" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030620_170011.14-E2-2" TYPE="PRO" LDCTYPE="PRO" ROLE="LOC">
+    <extent>
+      <charseq START="299" END="303">there</charseq>
+    </extent>
+    <head>
+      <charseq START="299" END="303">there</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030620_170011.14-E2-3" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="175" END="194">commerce, california</charseq>
+    </extent>
+    <head>
+      <charseq START="175" END="182">commerce</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="commerce">
+      <charseq START="175" END="182">commerce</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030620_170011.14-E3" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030620_170011.14-E3-5" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="185" END="194">california</charseq>
+    </extent>
+    <head>
+      <charseq START="185" END="194">california</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="california">
+      <charseq START="185" END="194">california</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030620_170011.14-E4" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030620_170011.14-E4-7" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="229" END="268">our national correspondent frank
+buckley</charseq>
+    </extent>
+    <head>
+      <charseq START="256" END="268">frank
+buckley</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030620_170011.14-E4-8" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="229" END="254">our national correspondent</charseq>
+    </extent>
+    <head>
+      <charseq START="242" END="254">correspondent</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030620_170011.14-E4-11" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="294" END="295">he</charseq>
+    </extent>
+    <head>
+      <charseq START="294" END="295">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="frank buckley">
+      <charseq START="256" END="268">frank
+buckley</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030620_170011.14-E6" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030620_170011.14-E6-9" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="229" END="231">our</charseq>
+    </extent>
+    <head>
+      <charseq START="229" END="231">our</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030620_170011.14-E6-10" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="290" END="291">us</charseq>
+    </extent>
+    <head>
+      <charseq START="290" END="291">us</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030620_170011.14-E6-12" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="317" END="318">us</charseq>
+    </extent>
+    <head>
+      <charseq START="317" END="318">us</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<timex2 ID="CNN_ENG_20030620_170011.14-T1" VAL="2003-06-20T17:20:34">
+  <timex2_mention ID="CNN_ENG_20030620_170011.14-T1-1">
+    <extent>
+      <charseq START="44" END="62">2003-06-20 17:20:34</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030620_170011.14-R1" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030620_170011.14-E4" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030620_170011.14-E2" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030620_170011.14-R1-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="294" END="303">he's there</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030620_170011.14-E4-11" ROLE="Arg-1">
+      <extent>
+        <charseq START="294" END="295">he</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030620_170011.14-E2-2" ROLE="Arg-2">
+      <extent>
+        <charseq START="299" END="303">there</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030620_170011.14-R2" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030620_170011.14-E2" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030620_170011.14-E3" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030620_170011.14-R2-1" LEXICALCONDITION="Formulaic">
+    <extent>
+      <charseq START="175" END="194">commerce, california</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030620_170011.14-E2-3" ROLE="Arg-1">
+      <extent>
+        <charseq START="175" END="194">commerce, california</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030620_170011.14-E3-5" ROLE="Arg-2">
+      <extent>
+        <charseq START="185" END="194">california</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030620_170011.14-R3" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030620_170011.14-E4" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030620_170011.14-E6" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030620_170011.14-R3-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="229" END="254">our national correspondent</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030620_170011.14-E4-8" ROLE="Arg-1">
+      <extent>
+        <charseq START="229" END="254">our national correspondent</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030620_170011.14-E6-9" ROLE="Arg-2">
+      <extent>
+        <charseq START="229" END="231">our</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+</document>
+</source_file>

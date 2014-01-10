@@ -1,0 +1,206 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNNHL_ENG_20030416_193742.26.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNNHL_ENG_20030416_193742.26">
+<entity ID="CNNHL_ENG_20030416_193742.26-E1" TYPE="ORG" SUBTYPE="Sports" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030416_193742.26-E1-1" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="70" END="90">major league baseball</charseq>
+    </extent>
+    <head>
+      <charseq START="70" END="90">major league baseball</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030416_193742.26-E1-3" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="97" END="99">its</charseq>
+    </extent>
+    <head>
+      <charseq START="97" END="99">its</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030416_193742.26-E1-6" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="211" END="220">the league</charseq>
+    </extent>
+    <head>
+      <charseq START="215" END="220">league</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="major league baseball">
+      <charseq START="70" END="90">major league baseball</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030416_193742.26-E2" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030416_193742.26-E2-2" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="97" END="116">its head of security</charseq>
+    </extent>
+    <head>
+      <charseq START="101" END="104">head</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030416_193742.26-E3" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030416_193742.26-E3-4" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="121" END="127">chicago</charseq>
+    </extent>
+    <head>
+      <charseq START="121" END="127">chicago</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="chicago">
+      <charseq START="121" END="127">chicago</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030416_193742.26-E4" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="CNNHL_ENG_20030416_193742.26-E4-5" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="174" END="176">fan</charseq>
+    </extent>
+    <head>
+      <charseq START="174" END="176">fan</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030416_193742.26-E5" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030416_193742.26-E5-7" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="247" END="259">all ballparks</charseq>
+    </extent>
+    <head>
+      <charseq START="251" END="259">ballparks</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030416_193742.26-E6" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="CNNHL_ENG_20030416_193742.26-E6-8" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="278" END="286">spectator</charseq>
+    </extent>
+    <head>
+      <charseq START="278" END="286">spectator</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030416_193742.26-E7" TYPE="ORG" SUBTYPE="Sports" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030416_193742.26-E7-9" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="298" END="319">the kansas city royals</charseq>
+    </extent>
+    <head>
+      <charseq START="302" END="319">kansas city royals</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030416_193742.26-E7-10" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="359" END="366">the team</charseq>
+    </extent>
+    <head>
+      <charseq START="363" END="366">team</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="kansas city royals">
+      <charseq START="302" END="319">kansas city royals</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<timex2 ID="CNNHL_ENG_20030416_193742.26-T1" VAL="2003-04-16T19:49:36">
+  <timex2_mention ID="CNNHL_ENG_20030416_193742.26-T1-1">
+    <extent>
+      <charseq START="46" END="64">2003-04-16 19:49:36</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNNHL_ENG_20030416_193742.26-T2" VAL="P7M" ANCHOR_VAL="2003-04" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="CNNHL_ENG_20030416_193742.26-T2-1">
+    <extent>
+      <charseq START="188" END="208">the last seven
+months</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNNHL_ENG_20030416_193742.26-T3" VAL="2003-04-16TNI">
+  <timex2_mention ID="CNNHL_ENG_20030416_193742.26-T3-1">
+    <extent>
+      <charseq START="344" END="350">tonight</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNNHL_ENG_20030416_193742.26-R1" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030416_193742.26-E2" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030416_193742.26-E1" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030416_193742.26-R1-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="97" END="116">its head of security</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030416_193742.26-E2-2" ROLE="Arg-1">
+      <extent>
+        <charseq START="97" END="116">its head of security</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030416_193742.26-E1-3" ROLE="Arg-2">
+      <extent>
+        <charseq START="97" END="99">its</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030416_193742.26-R2" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030416_193742.26-E2" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030416_193742.26-E3" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030416_193742.26-R2-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="70" END="208">major league baseball sent its head of security to chicago to review
+the second incident of an on-field fan attack in the last seven
+months</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030416_193742.26-E2-2" ROLE="Arg-1">
+      <extent>
+        <charseq START="97" END="116">its head of security</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030416_193742.26-E3-4" ROLE="Arg-2">
+      <extent>
+        <charseq START="121" END="127">chicago</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNNHL_ENG_20030416_193742.26-EV1" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNNHL_ENG_20030416_193742.26-E4" ROLE="Attacker"/>
+  <event_argument REFID="CNNHL_ENG_20030416_193742.26-T2" ROLE="Time-Within"/>
+  <event_mention ID="CNNHL_ENG_20030416_193742.26-EV1-1">
+    <extent>
+      <charseq START="174" END="208">fan attack in the last seven
+months</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="70" END="208">major league baseball sent its head of security to chicago to review
+the second incident of an on-field fan attack in the last seven
+months</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="178" END="183">attack</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030416_193742.26-E4-5" ROLE="Attacker">
+      <extent>
+        <charseq START="174" END="176">fan</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030416_193742.26-T2-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="188" END="208">the last seven
+months</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

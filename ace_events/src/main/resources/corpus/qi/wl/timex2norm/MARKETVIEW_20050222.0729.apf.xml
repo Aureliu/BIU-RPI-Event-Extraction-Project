@@ -1,0 +1,238 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="MARKETVIEW_20050222.0729.sgm" SOURCE="weblog" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="MARKETVIEW_20050222.0729">
+<entity ID="MARKETVIEW_20050222.0729-E1" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="MARKETVIEW_20050222.0729-E1-4" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="266" END="269">They</charseq>
+    </extent>
+    <head>
+      <charseq START="266" END="269">They</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050222.0729-E1-5" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="325" END="329">their</charseq>
+    </extent>
+    <head>
+      <charseq START="325" END="329">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050222.0729-E1-7" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="362" END="366">their</charseq>
+    </extent>
+    <head>
+      <charseq START="362" END="366">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050222.0729-E1-9" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="431" END="434">They</charseq>
+    </extent>
+    <head>
+      <charseq START="431" END="434">They</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050222.0729-E1-11" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="519" END="523">their</charseq>
+    </extent>
+    <head>
+      <charseq START="519" END="523">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050222.0729-E1-16" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="706" END="709">they</charseq>
+    </extent>
+    <head>
+      <charseq START="706" END="709">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050222.0729-E1-17" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="739" END="742">they</charseq>
+    </extent>
+    <head>
+      <charseq START="739" END="742">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050222.0729-E1-19" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="174" END="179">Russia</charseq>
+    </extent>
+    <head>
+      <charseq START="174" END="179">Russia</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050222.0729-E1-20" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="249" END="255">Russian</charseq>
+    </extent>
+    <head>
+      <charseq START="249" END="255">Russian</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Russia">
+      <charseq START="174" END="179">Russia</charseq>
+    </name>
+    <name NAME="Russian">
+      <charseq START="249" END="255">Russian</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKETVIEW_20050222.0729-E2" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="MARKETVIEW_20050222.0729-E2-1" TYPE="NAM" LDCTYPE="NAMPRE">
+    <extent>
+      <charseq START="605" END="609">Putin</charseq>
+    </extent>
+    <head>
+      <charseq START="605" END="609">Putin</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Putin">
+      <charseq START="605" END="609">Putin</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKETVIEW_20050222.0729-E3" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="MARKETVIEW_20050222.0729-E3-2" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="666" END="688">too attractive a target</charseq>
+    </extent>
+    <head>
+      <charseq START="683" END="688">target</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050222.0729-E3-14" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="659" END="660">it</charseq>
+    </extent>
+    <head>
+      <charseq START="659" END="660">it</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050222.0729-E3-15" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="633" END="637">Yukos</charseq>
+    </extent>
+    <head>
+      <charseq START="633" END="637">Yukos</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Yukos">
+      <charseq START="633" END="637">Yukos</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKETVIEW_20050222.0729-E4" TYPE="PER" SUBTYPE="Indeterminate" CLASS="USP">
+  <entity_mention ID="MARKETVIEW_20050222.0729-E4-3" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="488" END="490">who</charseq>
+    </extent>
+    <head>
+      <charseq START="488" END="490">who</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050222.0729-E5" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="MARKETVIEW_20050222.0729-E5-6" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="116" END="120">Byrne</charseq>
+    </extent>
+    <head>
+      <charseq START="116" END="120">Byrne</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Byrne">
+      <charseq START="116" END="120">Byrne</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKETVIEW_20050222.0729-E7" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="MARKETVIEW_20050222.0729-E7-8" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE">
+    <extent>
+      <charseq START="410" END="414">India</charseq>
+    </extent>
+    <head>
+      <charseq START="410" END="414">India</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="India">
+      <charseq START="410" END="414">India</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKETVIEW_20050222.0729-E8" TYPE="PER" SUBTYPE="Indeterminate" CLASS="NEG">
+  <entity_mention ID="MARKETVIEW_20050222.0729-E8-10" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="472" END="477">nobody</charseq>
+    </extent>
+    <head>
+      <charseq START="472" END="477">nobody</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050222.0729-E9" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="MARKETVIEW_20050222.0729-E9-12" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE">
+    <extent>
+      <charseq START="584" END="588">China</charseq>
+    </extent>
+    <head>
+      <charseq START="584" END="588">China</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="China">
+      <charseq START="584" END="588">China</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKETVIEW_20050222.0729-E10" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="MARKETVIEW_20050222.0729-E10-13" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="601" END="624">the Putin administration</charseq>
+    </extent>
+    <head>
+      <charseq START="611" END="624">administration</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050222.0729-E12" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="MARKETVIEW_20050222.0729-E12-18" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="169" END="171">U.S</charseq>
+    </extent>
+    <head>
+      <charseq START="169" END="171">U.S</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="U.S">
+      <charseq START="169" END="171">U.S</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<timex2 ID="MARKETVIEW_20050222.0729-T1" VAL="2005-02-22T07:29:00">
+  <timex2_mention ID="MARKETVIEW_20050222.0729-T1-1">
+    <extent>
+      <charseq START="40" END="58">2005-02-22T07:29:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKETVIEW_20050222.0729-T2">
+  <timex2_mention ID="MARKETVIEW_20050222.0729-T2-1">
+    <extent>
+      <charseq START="124" END="142">2005-02-22T07:29:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+</document>
+</source_file>

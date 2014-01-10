@@ -1,0 +1,1509 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030325_220534.6.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030325_220534.6">
+<entity ID="CNN_ENG_20030325_220534.6-E1" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E1-11" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="878" END="880">u.s</charseq>
+    </extent>
+    <head>
+      <charseq START="878" END="880">u.s</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E1-15" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="931" END="933">u.s</charseq>
+    </extent>
+    <head>
+      <charseq START="931" END="933">u.s</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E1-24" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1093" END="1095">u.s</charseq>
+    </extent>
+    <head>
+      <charseq START="1093" END="1095">u.s</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E1-52" TYPE="NAM" LDCTYPE="NAM" ROLE="ORG" LDCATR="FALSE">
+    <extent>
+      <charseq START="2047" END="2053">the u.s</charseq>
+    </extent>
+    <head>
+      <charseq START="2051" END="2053">u.s</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E1-70" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="576" END="578">u.s</charseq>
+    </extent>
+    <head>
+      <charseq START="576" END="578">u.s</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="u.s">
+      <charseq START="878" END="880">u.s</charseq>
+    </name>
+    <name NAME="u.s">
+      <charseq START="931" END="933">u.s</charseq>
+    </name>
+    <name NAME="u.s">
+      <charseq START="1093" END="1095">u.s</charseq>
+    </name>
+    <name NAME="u.s">
+      <charseq START="2051" END="2053">u.s</charseq>
+    </name>
+    <name NAME="u.s">
+      <charseq START="576" END="578">u.s</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030325_220534.6-E3" TYPE="WEA" SUBTYPE="Underspecified" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E3-1" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="595" END="601">weapons</charseq>
+    </extent>
+    <head>
+      <charseq START="595" END="601">weapons</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030325_220534.6-E4" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E4-3" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="726" END="739">iraqi military</charseq>
+    </extent>
+    <head>
+      <charseq START="732" END="739">military</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030325_220534.6-E5" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E5-5" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="726" END="730">iraqi</charseq>
+    </extent>
+    <head>
+      <charseq START="726" END="730">iraqi</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E5-9" TYPE="NOM" LDCTYPE="NOM" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="854" END="863">the iraqis</charseq>
+    </extent>
+    <head>
+      <charseq START="858" END="863">iraqis</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E5-37" TYPE="NOM" LDCTYPE="NOM" ROLE="ORG" LDCATR="FALSE">
+    <extent>
+      <charseq START="1600" END="1613">his government</charseq>
+    </extent>
+    <head>
+      <charseq START="1604" END="1613">government</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E5-39" TYPE="PRO" LDCTYPE="PRO" ROLE="ORG" LDCATR="FALSE">
+    <extent>
+      <charseq START="1626" END="1627">it</charseq>
+    </extent>
+    <head>
+      <charseq START="1626" END="1627">it</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E5-49" TYPE="NOM" LDCTYPE="NOM" ROLE="ORG" LDCATR="FALSE">
+    <extent>
+      <charseq START="1964" END="1977">his government</charseq>
+    </extent>
+    <head>
+      <charseq START="1968" END="1977">government</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E5-51" TYPE="PRO" LDCTYPE="PRO" ROLE="ORG" LDCATR="FALSE">
+    <extent>
+      <charseq START="1987" END="1988">it</charseq>
+    </extent>
+    <head>
+      <charseq START="1987" END="1988">it</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E5-64" TYPE="NAM" LDCTYPE="NAM" ROLE="ORG" LDCATR="FALSE">
+    <extent>
+      <charseq START="438" END="441">iraq</charseq>
+    </extent>
+    <head>
+      <charseq START="438" END="441">iraq</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="iraqi">
+      <charseq START="726" END="730">iraqi</charseq>
+    </name>
+    <name NAME="iraq">
+      <charseq START="438" END="441">iraq</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030325_220534.6-E6" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E6-6" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="807" END="842">coalition forces approaching baghdad</charseq>
+    </extent>
+    <head>
+      <charseq START="817" END="822">forces</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E6-20" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="171" END="186">coalition forces</charseq>
+    </extent>
+    <head>
+      <charseq START="181" END="186">forces</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E6-23" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1394" END="1409">coalition forces</charseq>
+    </extent>
+    <head>
+      <charseq START="1404" END="1409">forces</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030325_220534.6-E7" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E7-7" TYPE="NOM" LDCTYPE="NOMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="807" END="815">coalition</charseq>
+    </extent>
+    <head>
+      <charseq START="807" END="815">coalition</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E7-31" TYPE="NOM" LDCTYPE="NOMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1394" END="1402">coalition</charseq>
+    </extent>
+    <head>
+      <charseq START="1394" END="1402">coalition</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E7-59" TYPE="NOM" LDCTYPE="NOMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="171" END="179">coalition</charseq>
+    </extent>
+    <head>
+      <charseq START="171" END="179">coalition</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030325_220534.6-E8" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E8-8" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="836" END="842">baghdad</charseq>
+    </extent>
+    <head>
+      <charseq START="836" END="842">baghdad</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E8-16" TYPE="NOM" LDCTYPE="NOM" ROLE="LOC">
+    <extent>
+      <charseq START="1016" END="1026">the capital</charseq>
+    </extent>
+    <head>
+      <charseq START="1020" END="1026">capital</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E8-32" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="1418" END="1424">baghdad</charseq>
+    </extent>
+    <head>
+      <charseq START="1418" END="1424">baghdad</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E8-34" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="1550" END="1556">baghdad</charseq>
+    </extent>
+    <head>
+      <charseq START="1550" END="1556">baghdad</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E8-48" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="1906" END="1912">baghdad</charseq>
+    </extent>
+    <head>
+      <charseq START="1906" END="1912">baghdad</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="baghdad">
+      <charseq START="836" END="842">baghdad</charseq>
+    </name>
+    <name NAME="baghdad">
+      <charseq START="1418" END="1424">baghdad</charseq>
+    </name>
+    <name NAME="baghdad">
+      <charseq START="1550" END="1556">baghdad</charseq>
+    </name>
+    <name NAME="baghdad">
+      <charseq START="1906" END="1912">baghdad</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030325_220534.6-E9" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E9-10" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="878" END="900">u.s. and british forces</charseq>
+    </extent>
+    <head>
+      <charseq START="895" END="900">forces</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030325_220534.6-E11" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E11-12" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="887" END="893">british</charseq>
+    </extent>
+    <head>
+      <charseq START="887" END="893">british</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E11-53" TYPE="NAM" LDCTYPE="NAM" ROLE="ORG" LDCATR="FALSE">
+    <extent>
+      <charseq START="2060" END="2066">britain</charseq>
+    </extent>
+    <head>
+      <charseq START="2060" END="2066">britain</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="british">
+      <charseq START="887" END="893">british</charseq>
+    </name>
+    <name NAME="britain">
+      <charseq START="2060" END="2066">britain</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030325_220534.6-E13" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E13-14" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="931" END="944">u.s. officials</charseq>
+    </extent>
+    <head>
+      <charseq START="936" END="944">officials</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E13-25" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1154" END="1162">officials</charseq>
+    </extent>
+    <head>
+      <charseq START="1154" END="1162">officials</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030325_220534.6-E15" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E15-17" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1033" END="1054">republican guard units</charseq>
+    </extent>
+    <head>
+      <charseq START="1050" END="1054">units</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E15-57" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1180" END="1201">republican guard
+units</charseq>
+    </extent>
+    <head>
+      <charseq START="1197" END="1201">units</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030325_220534.6-E16" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E16-19" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1033" END="1048">republican guard</charseq>
+    </extent>
+    <head>
+      <charseq START="1033" END="1048">republican guard</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E16-26" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1180" END="1195">republican guard</charseq>
+    </extent>
+    <head>
+      <charseq START="1180" END="1195">republican guard</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="republican guard">
+      <charseq START="1033" END="1048">republican guard</charseq>
+    </name>
+    <name NAME="republican guard">
+      <charseq START="1180" END="1195">republican guard</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030325_220534.6-E17" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E17-22" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1093" END="1114">u.s. and allied troops</charseq>
+    </extent>
+    <head>
+      <charseq START="1109" END="1114">troops</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030325_220534.6-E19" TYPE="WEA" SUBTYPE="Shooting" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E19-21" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="1220" END="1228">artillery</charseq>
+    </extent>
+    <head>
+      <charseq START="1220" END="1228">artillery</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030325_220534.6-E21" TYPE="WEA" SUBTYPE="Projectile" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E21-27" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1220" END="1262">artillery shells containing chemical
+agents</charseq>
+    </extent>
+    <head>
+      <charseq START="1230" END="1235">shells</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030325_220534.6-E22" TYPE="WEA" SUBTYPE="Chemical" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E22-28" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1248" END="1262">chemical
+agents</charseq>
+    </extent>
+    <head>
+      <charseq START="1257" END="1262">agents</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030325_220534.6-E23" TYPE="PER" SUBTYPE="Indeterminate" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E23-29" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1303" END="1305">who</charseq>
+    </extent>
+    <head>
+      <charseq START="1303" END="1305">who</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030325_220534.6-E25" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E25-33" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="1430" END="1435">tikrit</charseq>
+    </extent>
+    <head>
+      <charseq START="1430" END="1435">tikrit</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="tikrit">
+      <charseq START="1430" END="1435">tikrit</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030325_220534.6-E26" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E26-35" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1558" END="1589">deputy prime minister tariq aziz</charseq>
+    </extent>
+    <head>
+      <charseq START="1580" END="1589">tariq aziz</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E26-36" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1558" END="1578">deputy prime minister</charseq>
+    </extent>
+    <head>
+      <charseq START="1571" END="1578">minister</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E26-38" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1600" END="1602">his</charseq>
+    </extent>
+    <head>
+      <charseq START="1600" END="1602">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="tariq aziz">
+      <charseq START="1580" END="1589">tariq aziz</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030325_220534.6-E28" TYPE="WEA" SUBTYPE="Underspecified" CLASS="NEG">
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E28-40" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1643" END="1681">any
+kind of weapons of mass destruction</charseq>
+    </extent>
+    <head>
+      <charseq START="1655" END="1661">weapons</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E28-58" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1952" END="2002">the weapons his government insists it does not have</charseq>
+    </extent>
+    <head>
+      <charseq START="1956" END="1962">weapons</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030325_220534.6-E29" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E29-41" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1703" END="1706">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1703" END="1706">they</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030325_220534.6-E30" TYPE="WEA" SUBTYPE="Underspecified" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E30-42" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1730" END="1760">the weapons of
+mass destruction</charseq>
+    </extent>
+    <head>
+      <charseq START="1734" END="1740">weapons</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030325_220534.6-E31" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E31-43" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1763" END="1764">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1763" END="1764">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E31-44" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1775" END="1776">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1775" END="1776">we</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030325_220534.6-E32" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E32-45" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1839" END="1845">experts</charseq>
+    </extent>
+    <head>
+      <charseq START="1839" END="1845">experts</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030325_220534.6-E33" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E33-46" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1851" END="1873">saddam hussein's forces</charseq>
+    </extent>
+    <head>
+      <charseq START="1868" END="1873">forces</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030325_220534.6-E34" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E34-47" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1851" END="1864">saddam hussein</charseq>
+    </extent>
+    <head>
+      <charseq START="1851" END="1864">saddam hussein</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E34-50" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1964" END="1966">his</charseq>
+    </extent>
+    <head>
+      <charseq START="1964" END="1966">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E34-56" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2156" END="2161">saddam</charseq>
+    </extent>
+    <head>
+      <charseq START="2156" END="2161">saddam</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="saddam hussein">
+      <charseq START="1851" END="1864">saddam hussein</charseq>
+    </name>
+    <name NAME="saddam">
+      <charseq START="2156" END="2161">saddam</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030325_220534.6-E36" TYPE="WEA" SUBTYPE="Chemical" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E36-4" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="913" END="928">chemical
+weapons</charseq>
+    </extent>
+    <head>
+      <charseq START="922" END="928">weapons</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E36-13" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1071" END="1086">chemical weapons</charseq>
+    </extent>
+    <head>
+      <charseq START="1080" END="1086">weapons</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E36-18" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="2109" END="2124">chemical weapons</charseq>
+    </extent>
+    <head>
+      <charseq START="2118" END="2124">weapons</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E36-60" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="218" END="233">chemical
+weapons</charseq>
+    </extent>
+    <head>
+      <charseq START="227" END="233">weapons</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E36-65" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="466" END="481">chemical weapons</charseq>
+    </extent>
+    <head>
+      <charseq START="475" END="481">weapons</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030325_220534.6-E37" TYPE="PER" SUBTYPE="Indeterminate" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E37-61" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="291" END="295">enemy</charseq>
+    </extent>
+    <head>
+      <charseq START="291" END="295">enemy</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030325_220534.6-E38" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E38-62" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="373" END="389">cnn's david ensor</charseq>
+    </extent>
+    <head>
+      <charseq START="379" END="389">david ensor</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="david ensor">
+      <charseq START="379" END="389">david ensor</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030325_220534.6-E39" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E39-30" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="70" END="71">we</charseq>
+    </extent>
+    <head>
+      <charseq START="70" END="71">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E39-54" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="140" END="141">we</charseq>
+    </extent>
+    <head>
+      <charseq START="140" END="141">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E39-55" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="369" END="370">us</charseq>
+    </extent>
+    <head>
+      <charseq START="369" END="370">us</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E39-63" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="373" END="375">cnn</charseq>
+    </extent>
+    <head>
+      <charseq START="373" END="375">cnn</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="cnn">
+      <charseq START="373" END="375">cnn</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030325_220534.6-E41" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E41-66" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="531" END="539">nasiriyah</charseq>
+    </extent>
+    <head>
+      <charseq START="531" END="539">nasiriyah</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="nasiriyah">
+      <charseq START="531" END="539">nasiriyah</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030325_220534.6-E42" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E42-67" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="544" END="574">a building marked as a
+hospital</charseq>
+    </extent>
+    <head>
+      <charseq START="546" END="553">building</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E42-68" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="565" END="574">a
+hospital</charseq>
+    </extent>
+    <head>
+      <charseq START="567" END="574">hospital</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030325_220534.6-E44" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E44-2" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="652" END="655">they</charseq>
+    </extent>
+    <head>
+      <charseq START="652" END="655">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030325_220534.6-E44-69" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="576" END="587">u.s. marines</charseq>
+    </extent>
+    <head>
+      <charseq START="581" END="587">marines</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<timex2 ID="CNN_ENG_20030325_220534.6-T1" VAL="FUTURE_REF" ANCHOR_VAL="2003-03-25T22:28:57" ANCHOR_DIR="AFTER">
+  <timex2_mention ID="CNN_ENG_20030325_220534.6-T1-1">
+    <extent>
+      <charseq START="1088" END="1091">once</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030325_220534.6-T2" VAL="2003-03-25T22:28:57">
+  <timex2_mention ID="CNN_ENG_20030325_220534.6-T2-1">
+    <extent>
+      <charseq START="43" END="61">2003-03-25 22:28:57</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030325_220534.6-T3" VAL="2003-03-25">
+  <timex2_mention ID="CNN_ENG_20030325_220534.6-T3-1">
+    <extent>
+      <charseq START="100" END="104">today</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030325_220534.6-T4" VAL="2003-03-24">
+  <timex2_mention ID="CNN_ENG_20030325_220534.6-T4-1">
+    <extent>
+      <charseq START="236" END="244">yesterday</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030325_220534.6-T5" VAL="2003-03-25">
+  <timex2_mention ID="CNN_ENG_20030325_220534.6-T5-1">
+    <extent>
+      <charseq START="309" END="313">today</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030325_220534.6-R1" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030325_220534.6-E6" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030325_220534.6-E7" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030325_220534.6-R1-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="171" END="186">coalition forces</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030325_220534.6-E6-20" ROLE="Arg-1">
+      <extent>
+        <charseq START="171" END="186">coalition forces</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030325_220534.6-E7-59" ROLE="Arg-2">
+      <extent>
+        <charseq START="171" END="179">coalition</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_ENG_20030325_220534.6-R1-2" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="807" END="842">coalition forces approaching baghdad</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030325_220534.6-E6-6" ROLE="Arg-1">
+      <extent>
+        <charseq START="807" END="842">coalition forces approaching baghdad</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030325_220534.6-E7-7" ROLE="Arg-2">
+      <extent>
+        <charseq START="807" END="815">coalition</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_ENG_20030325_220534.6-R1-3" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="1394" END="1409">coalition forces</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030325_220534.6-E6-23" ROLE="Arg-1">
+      <extent>
+        <charseq START="1394" END="1409">coalition forces</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030325_220534.6-E7-31" ROLE="Arg-2">
+      <extent>
+        <charseq START="1394" END="1402">coalition</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030325_220534.6-R2" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030325_220534.6-E38" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030325_220534.6-E39" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030325_220534.6-R2-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="373" END="389">cnn's david ensor</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030325_220534.6-E38-62" ROLE="Arg-1">
+      <extent>
+        <charseq START="373" END="389">cnn's david ensor</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030325_220534.6-E39-63" ROLE="Arg-2">
+      <extent>
+        <charseq START="373" END="375">cnn</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030325_220534.6-R3" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="CNN_ENG_20030325_220534.6-E5" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030325_220534.6-E36" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030325_220534.6-R3-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="404" END="481">the evidence is accumulating that iraq may be
+planning to use chemical weapons</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030325_220534.6-E5-64" ROLE="Arg-1">
+      <extent>
+        <charseq START="438" END="441">iraq</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030325_220534.6-E36-65" ROLE="Arg-2">
+      <extent>
+        <charseq START="466" END="481">chemical weapons</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030325_220534.6-R4" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030325_220534.6-E42" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030325_220534.6-E41" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030325_220534.6-R4-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="528" END="574">in nasiriyah in a building marked as a
+hospital</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030325_220534.6-E42-67" ROLE="Arg-1">
+      <extent>
+        <charseq START="544" END="574">a building marked as a
+hospital</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030325_220534.6-E41-66" ROLE="Arg-2">
+      <extent>
+        <charseq START="531" END="539">nasiriyah</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030325_220534.6-R5" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030325_220534.6-E44" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030325_220534.6-E42" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030325_220534.6-R5-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="528" END="647">in nasiriyah in a building marked as a
+hospital u.s. marines found weapons, atropine antidote
+kits, and that was not all</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030325_220534.6-E44-69" ROLE="Arg-1">
+      <extent>
+        <charseq START="576" END="587">u.s. marines</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030325_220534.6-E42-67" ROLE="Arg-2">
+      <extent>
+        <charseq START="544" END="574">a building marked as a
+hospital</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030325_220534.6-R6" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030325_220534.6-E44" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030325_220534.6-E1" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030325_220534.6-R6-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="576" END="587">u.s. marines</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030325_220534.6-E44-69" ROLE="Arg-1">
+      <extent>
+        <charseq START="576" END="587">u.s. marines</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030325_220534.6-E1-70" ROLE="Arg-2">
+      <extent>
+        <charseq START="576" END="578">u.s</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030325_220534.6-R7" TYPE="PART-WHOLE" SUBTYPE="Subsidiary" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030325_220534.6-E4" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030325_220534.6-E5" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030325_220534.6-R7-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="726" END="739">iraqi military</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030325_220534.6-E4-3" ROLE="Arg-1">
+      <extent>
+        <charseq START="726" END="739">iraqi military</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030325_220534.6-E5-5" ROLE="Arg-2">
+      <extent>
+        <charseq START="726" END="730">iraqi</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030325_220534.6-R9" TYPE="PHYS" SUBTYPE="Near" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030325_220534.6-E6" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030325_220534.6-E8" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030325_220534.6-R9-1" LEXICALCONDITION="Participial">
+    <extent>
+      <charseq START="807" END="842">coalition forces approaching baghdad</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030325_220534.6-E6-6" ROLE="Arg-1">
+      <extent>
+        <charseq START="807" END="842">coalition forces approaching baghdad</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030325_220534.6-E8-8" ROLE="Arg-2">
+      <extent>
+        <charseq START="836" END="842">baghdad</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_ENG_20030325_220534.6-R9-2" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="1267" END="1532">there has been intelligence scraps, who knows how accurate
+they are, chatter in the system, that suggests that the
+closer that coalition forces get to baghdad and tikrit the
+greater the likelihood and that some command and control
+arrangements have been put in place</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030325_220534.6-E6-23" ROLE="Arg-1">
+      <extent>
+        <charseq START="1394" END="1409">coalition forces</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030325_220534.6-E8-32" ROLE="Arg-2">
+      <extent>
+        <charseq START="1418" END="1424">baghdad</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030325_220534.6-R10" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030325_220534.6-E9" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030325_220534.6-E1" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030325_220534.6-R10-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="878" END="900">u.s. and british forces</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030325_220534.6-E9-10" ROLE="Arg-1">
+      <extent>
+        <charseq START="878" END="900">u.s. and british forces</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030325_220534.6-E1-11" ROLE="Arg-2">
+      <extent>
+        <charseq START="878" END="880">u.s</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030325_220534.6-R11" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030325_220534.6-E9" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030325_220534.6-E11" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030325_220534.6-R11-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="878" END="900">u.s. and british forces</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030325_220534.6-E9-10" ROLE="Arg-1">
+      <extent>
+        <charseq START="878" END="900">u.s. and british forces</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030325_220534.6-E11-12" ROLE="Arg-2">
+      <extent>
+        <charseq START="887" END="893">british</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030325_220534.6-R12" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030325_220534.6-E13" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030325_220534.6-E1" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030325_220534.6-R12-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="931" END="944">u.s. officials</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030325_220534.6-E13-14" ROLE="Arg-1">
+      <extent>
+        <charseq START="931" END="944">u.s. officials</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030325_220534.6-E1-15" ROLE="Arg-2">
+      <extent>
+        <charseq START="931" END="933">u.s</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030325_220534.6-R13" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030325_220534.6-E15" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030325_220534.6-E16" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030325_220534.6-R13-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="1033" END="1054">republican guard units</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030325_220534.6-E15-17" ROLE="Arg-1">
+      <extent>
+        <charseq START="1033" END="1054">republican guard units</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030325_220534.6-E16-19" ROLE="Arg-2">
+      <extent>
+        <charseq START="1033" END="1048">republican guard</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_ENG_20030325_220534.6-R13-2" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="1180" END="1201">republican guard
+units</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030325_220534.6-E15-57" ROLE="Arg-1">
+      <extent>
+        <charseq START="1180" END="1201">republican guard
+units</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030325_220534.6-E16-26" ROLE="Arg-2">
+      <extent>
+        <charseq START="1180" END="1195">republican guard</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030325_220534.6-R14" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="CNN_ENG_20030325_220534.6-E15" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030325_220534.6-E36" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030325_220534.6-R14-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="931" END="1123">u.s. officials say some intelligence indicates a
+red line may have been drawn around the capital with
+republican guard units ordered to use chemical weapons once
+u.s. and allied troops cross it</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030325_220534.6-E15-17" ROLE="Arg-1">
+      <extent>
+        <charseq START="1033" END="1054">republican guard units</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030325_220534.6-E36-13" ROLE="Arg-2">
+      <extent>
+        <charseq START="1071" END="1086">chemical weapons</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030325_220534.6-R15" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="CNN_ENG_20030325_220534.6-E15" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030325_220534.6-E8" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030325_220534.6-R15-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="931" END="1123">u.s. officials say some intelligence indicates a
+red line may have been drawn around the capital with
+republican guard units ordered to use chemical weapons once
+u.s. and allied troops cross it</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030325_220534.6-E15-17" ROLE="Arg-1">
+      <extent>
+        <charseq START="1033" END="1054">republican guard units</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030325_220534.6-E8-16" ROLE="Arg-2">
+      <extent>
+        <charseq START="1016" END="1026">the capital</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030325_220534.6-R16" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="CNN_ENG_20030325_220534.6-E17" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030325_220534.6-E8" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030325_220534.6-R16-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="931" END="1123">u.s. officials say some intelligence indicates a
+red line may have been drawn around the capital with
+republican guard units ordered to use chemical weapons once
+u.s. and allied troops cross it</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030325_220534.6-E17-22" ROLE="Arg-1">
+      <extent>
+        <charseq START="1093" END="1114">u.s. and allied troops</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030325_220534.6-E8-16" ROLE="Arg-2">
+      <extent>
+        <charseq START="1016" END="1026">the capital</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030325_220534.6-R17" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030325_220534.6-E17" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030325_220534.6-E1" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030325_220534.6-R17-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="1093" END="1114">u.s. and allied troops</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030325_220534.6-E17-22" ROLE="Arg-1">
+      <extent>
+        <charseq START="1093" END="1114">u.s. and allied troops</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030325_220534.6-E1-24" ROLE="Arg-2">
+      <extent>
+        <charseq START="1093" END="1095">u.s</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030325_220534.6-R19" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="CNN_ENG_20030325_220534.6-E15" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030325_220534.6-E21" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030325_220534.6-R19-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="1126" END="1262">there is also
+intelligence, officials say, suggesting republican guard
+units have been issued artillery shells containing chemical
+agents</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030325_220534.6-E15-57" ROLE="Arg-1">
+      <extent>
+        <charseq START="1180" END="1201">republican guard
+units</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030325_220534.6-E21-27" ROLE="Arg-2">
+      <extent>
+        <charseq START="1220" END="1262">artillery shells containing chemical
+agents</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030325_220534.6-R22" TYPE="PHYS" SUBTYPE="Near" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="CNN_ENG_20030325_220534.6-E6" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030325_220534.6-E25" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030325_220534.6-R22-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="1267" END="1532">there has been intelligence scraps, who knows how accurate
+they are, chatter in the system, that suggests that the
+closer that coalition forces get to baghdad and tikrit the
+greater the likelihood and that some command and control
+arrangements have been put in place</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030325_220534.6-E6-23" ROLE="Arg-1">
+      <extent>
+        <charseq START="1394" END="1409">coalition forces</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030325_220534.6-E25-33" ROLE="Arg-2">
+      <extent>
+        <charseq START="1430" END="1435">tikrit</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030325_220534.6-R23" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030325_220534.6-E26" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030325_220534.6-E8" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030325_220534.6-R23-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="1547" END="1681">in baghdad deputy prime minister tariq aziz
+repeated his government's stand -- it does not have any
+kind of weapons of mass destruction</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030325_220534.6-E26-35" ROLE="Arg-1">
+      <extent>
+        <charseq START="1558" END="1589">deputy prime minister tariq aziz</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030325_220534.6-E8-34" ROLE="Arg-2">
+      <extent>
+        <charseq START="1550" END="1556">baghdad</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030325_220534.6-R24" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030325_220534.6-E26" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030325_220534.6-E5" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030325_220534.6-R24-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="1600" END="1613">his government</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030325_220534.6-E26-38" ROLE="Arg-1">
+      <extent>
+        <charseq START="1600" END="1602">his</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030325_220534.6-E5-37" ROLE="Arg-2">
+      <extent>
+        <charseq START="1600" END="1613">his government</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030325_220534.6-R25" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="CNN_ENG_20030325_220534.6-E33" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030325_220534.6-E8" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030325_220534.6-R25-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="1839" END="2079">experts say saddam hussein's forces will likely
+try to hold out in baghdad for as long as possible without
+using the weapons his government insists it does not have,
+hoping to build international pressure on the u.s. and
+britain to back down</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030325_220534.6-E33-46" ROLE="Arg-1">
+      <extent>
+        <charseq START="1851" END="1873">saddam hussein's forces</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030325_220534.6-E8-48" ROLE="Arg-2">
+      <extent>
+        <charseq START="1906" END="1912">baghdad</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030325_220534.6-R26" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030325_220534.6-E34" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030325_220534.6-E5" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030325_220534.6-R26-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="1964" END="1977">his government</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030325_220534.6-E34-50" ROLE="Arg-1">
+      <extent>
+        <charseq START="1964" END="1966">his</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030325_220534.6-E5-49" ROLE="Arg-2">
+      <extent>
+        <charseq START="1964" END="1977">his government</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030325_220534.6-EV1" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Future">
+  <event_argument REFID="CNN_ENG_20030325_220534.6-E36" ROLE="Instrument"/>
+  <event_argument REFID="CNN_ENG_20030325_220534.6-E6" ROLE="Target"/>
+  <event_mention ID="CNN_ENG_20030325_220534.6-EV1-1">
+    <extent>
+      <charseq START="171" END="233">coalition forces may soon face an attack using chemical
+weapons</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="93" END="233">again, today, there were
+disturbing hints, and we underscore hints here, that
+coalition forces may soon face an attack using chemical
+weapons</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="205" END="210">attack</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030325_220534.6-E36-60" ROLE="Instrument">
+      <extent>
+        <charseq START="218" END="233">chemical
+weapons</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030325_220534.6-E6-20" ROLE="Target">
+      <extent>
+        <charseq START="171" END="186">coalition forces</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030325_220534.6-EV2" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030325_220534.6-E6" ROLE="Artifact"/>
+  <event_argument REFID="CNN_ENG_20030325_220534.6-E8" ROLE="Destination"/>
+  <event_argument REFID="CNN_ENG_20030325_220534.6-E17" ROLE="Artifact"/>
+  <event_mention ID="CNN_ENG_20030325_220534.6-EV2-1">
+    <extent>
+      <charseq START="807" END="842">coalition forces approaching baghdad</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="763" END="928">the findings are heightening concerns among
+coalition forces approaching baghdad since, as the iraqis
+should know, u.s. and british forces do not use chemical
+weapons</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="824" END="834">approaching</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030325_220534.6-E6-6" ROLE="Artifact">
+      <extent>
+        <charseq START="807" END="842">coalition forces approaching baghdad</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030325_220534.6-E8-8" ROLE="Destination">
+      <extent>
+        <charseq START="836" END="842">baghdad</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030325_220534.6-EV2-2">
+    <extent>
+      <charseq START="1016" END="1120">the capital with
+republican guard units ordered to use chemical weapons once
+u.s. and allied troops cross</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="931" END="1123">u.s. officials say some intelligence indicates a
+red line may have been drawn around the capital with
+republican guard units ordered to use chemical weapons once
+u.s. and allied troops cross it</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1116" END="1120">cross</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030325_220534.6-E17-22" ROLE="Artifact">
+      <extent>
+        <charseq START="1093" END="1114">u.s. and allied troops</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030325_220534.6-E8-16" ROLE="Destination">
+      <extent>
+        <charseq START="1016" END="1026">the capital</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030325_220534.6-EV2-3">
+    <extent>
+      <charseq START="1394" END="1424">coalition forces get to baghdad</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1267" END="1532">there has been intelligence scraps, who knows how accurate
+they are, chatter in the system, that suggests that the
+closer that coalition forces get to baghdad and tikrit the
+greater the likelihood and that some command and control
+arrangements have been put in place</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1411" END="1413">get</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030325_220534.6-E8-32" ROLE="Destination">
+      <extent>
+        <charseq START="1418" END="1424">baghdad</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030325_220534.6-E6-23" ROLE="Artifact">
+      <extent>
+        <charseq START="1394" END="1409">coalition forces</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030325_220534.6-EV3" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Future">
+  <event_argument REFID="CNN_ENG_20030325_220534.6-E36" ROLE="Instrument"/>
+  <event_argument REFID="CNN_ENG_20030325_220534.6-E15" ROLE="Attacker"/>
+  <event_argument REFID="CNN_ENG_20030325_220534.6-E8" ROLE="Place"/>
+  <event_argument REFID="CNN_ENG_20030325_220534.6-E17" ROLE="Target"/>
+  <event_argument REFID="CNN_ENG_20030325_220534.6-E34" ROLE="Attacker"/>
+  <event_mention ID="CNN_ENG_20030325_220534.6-EV3-1">
+    <extent>
+      <charseq START="462" END="481">use chemical weapons</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="404" END="481">the evidence is accumulating that iraq may be
+planning to use chemical weapons</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="462" END="464">use</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030325_220534.6-E36-65" ROLE="Instrument">
+      <extent>
+        <charseq START="466" END="481">chemical weapons</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030325_220534.6-EV3-2">
+    <extent>
+      <charseq START="1016" END="1114">the capital with
+republican guard units ordered to use chemical weapons once
+u.s. and allied troops</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="931" END="1123">u.s. officials say some intelligence indicates a
+red line may have been drawn around the capital with
+republican guard units ordered to use chemical weapons once
+u.s. and allied troops cross it</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1067" END="1069">use</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030325_220534.6-E36-13" ROLE="Instrument">
+      <extent>
+        <charseq START="1071" END="1086">chemical weapons</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030325_220534.6-E15-17" ROLE="Attacker">
+      <extent>
+        <charseq START="1033" END="1054">republican guard units</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030325_220534.6-E8-16" ROLE="Place">
+      <extent>
+        <charseq START="1016" END="1026">the capital</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030325_220534.6-E17-22" ROLE="Target">
+      <extent>
+        <charseq START="1093" END="1114">u.s. and allied troops</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030325_220534.6-EV3-3">
+    <extent>
+      <charseq START="2102" END="2161">use of chemical weapons would be
+counterproductive to saddam</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2084" END="2208">in that sense any use of chemical weapons would be
+counterproductive to saddam, because it would only
+galvanize international</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2102" END="2104">use</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030325_220534.6-E36-18" ROLE="Instrument">
+      <extent>
+        <charseq START="2109" END="2124">chemical weapons</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030325_220534.6-E34-56" ROLE="Attacker">
+      <extent>
+        <charseq START="2156" END="2161">saddam</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030325_220534.6-EV4" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Other" POLARITY="Negative" GENERICITY="Generic" TENSE="Future">
+  <event_argument REFID="CNN_ENG_20030325_220534.6-E28" ROLE="Instrument"/>
+  <event_argument REFID="CNN_ENG_20030325_220534.6-E33" ROLE="Attacker"/>
+  <event_argument REFID="CNN_ENG_20030325_220534.6-E8" ROLE="Place"/>
+  <event_mention ID="CNN_ENG_20030325_220534.6-EV4-1">
+    <extent>
+      <charseq START="1851" END="2002">saddam hussein's forces will likely
+try to hold out in baghdad for as long as possible without
+using the weapons his government insists it does not have</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1839" END="2079">experts say saddam hussein's forces will likely
+try to hold out in baghdad for as long as possible without
+using the weapons his government insists it does not have,
+hoping to build international pressure on the u.s. and
+britain to back down</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1946" END="1950">using</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030325_220534.6-E28-58" ROLE="Instrument">
+      <extent>
+        <charseq START="1952" END="2002">the weapons his government insists it does not have</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030325_220534.6-E33-46" ROLE="Attacker">
+      <extent>
+        <charseq START="1851" END="1873">saddam hussein's forces</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030325_220534.6-E8-48" ROLE="Place">
+      <extent>
+        <charseq START="1906" END="1912">baghdad</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

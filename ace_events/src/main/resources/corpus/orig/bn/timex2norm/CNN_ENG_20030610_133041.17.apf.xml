@@ -1,0 +1,708 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030610_133041.17.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030610_133041.17">
+<entity ID="CNN_ENG_20030610_133041.17-E1" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_133041.17-E1-6" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="984" END="1006">the people of
+the earth</charseq>
+    </extent>
+    <head>
+      <charseq START="988" END="993">people</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030610_133041.17-E2" TYPE="LOC" SUBTYPE="Land-Region-Natural" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030610_133041.17-E2-21" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1367" END="1390">the rust-colored surface</charseq>
+    </extent>
+    <head>
+      <charseq START="1384" END="1390">surface</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030610_133041.17-E3" TYPE="LOC" SUBTYPE="Celestial" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_133041.17-E3-5" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="971" END="974">mars</charseq>
+    </extent>
+    <head>
+      <charseq START="971" END="974">mars</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_133041.17-E3-8" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1174" END="1183">red planet</charseq>
+    </extent>
+    <head>
+      <charseq START="1174" END="1183">red planet</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_133041.17-E3-13" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="1277" END="1286">the planet</charseq>
+    </extent>
+    <head>
+      <charseq START="1281" END="1286">planet</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_133041.17-E3-15" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1406" END="1409">mars</charseq>
+    </extent>
+    <head>
+      <charseq START="1406" END="1409">mars</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_133041.17-E3-17" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="463" END="476">the
+red planet</charseq>
+    </extent>
+    <head>
+      <charseq START="471" END="476">planet</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_133041.17-E3-18" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="86" END="89">mars</charseq>
+    </extent>
+    <head>
+      <charseq START="86" END="89">mars</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_133041.17-E3-20" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="178" END="181">mars</charseq>
+    </extent>
+    <head>
+      <charseq START="178" END="181">mars</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_133041.17-E3-25" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="305" END="318">the red planet</charseq>
+    </extent>
+    <head>
+      <charseq START="313" END="318">planet</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_133041.17-E3-33" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="621" END="624">mars</charseq>
+    </extent>
+    <head>
+      <charseq START="621" END="624">mars</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_133041.17-E3-35" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="696" END="709">the
+red planet</charseq>
+    </extent>
+    <head>
+      <charseq START="704" END="709">planet</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_133041.17-E3-36" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="735" END="738">mars</charseq>
+    </extent>
+    <head>
+      <charseq START="735" END="738">mars</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="mars">
+      <charseq START="971" END="974">mars</charseq>
+    </name>
+    <name NAME="mars">
+      <charseq START="1406" END="1409">mars</charseq>
+    </name>
+    <name NAME="mars">
+      <charseq START="86" END="89">mars</charseq>
+    </name>
+    <name NAME="mars">
+      <charseq START="178" END="181">mars</charseq>
+    </name>
+    <name NAME="mars">
+      <charseq START="621" END="624">mars</charseq>
+    </name>
+    <name NAME="mars">
+      <charseq START="735" END="738">mars</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030610_133041.17-E5" TYPE="VEH" SUBTYPE="Land" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_133041.17-E5-16" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1402" END="1422">the mars polar lander</charseq>
+    </extent>
+    <head>
+      <charseq START="1417" END="1422">lander</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="lander">
+      <charseq START="1417" END="1422">lander</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030610_133041.17-E6" TYPE="PER" SUBTYPE="Indeterminate" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030610_133041.17-E6-1" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="68" END="70">you</charseq>
+    </extent>
+    <head>
+      <charseq START="68" END="70">you</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030610_133041.17-E8" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030610_133041.17-E8-19" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="130" END="139">scientists</charseq>
+    </extent>
+    <head>
+      <charseq START="130" END="139">scientists</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030610_133041.17-E10" TYPE="VEH" SUBTYPE="Air" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_133041.17-E10-22" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="174" END="197">the
+mars global surveyer</charseq>
+    </extent>
+    <head>
+      <charseq START="190" END="197">surveyer</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_133041.17-E10-23" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="200" END="204">which</charseq>
+    </extent>
+    <head>
+      <charseq START="200" END="204">which</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030610_133041.17-E11" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_133041.17-E11-2" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="821" END="822">we</charseq>
+    </extent>
+    <head>
+      <charseq START="821" END="822">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_133041.17-E11-3" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="872" END="873">we</charseq>
+    </extent>
+    <head>
+      <charseq START="872" END="873">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_133041.17-E11-4" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="920" END="921">we</charseq>
+    </extent>
+    <head>
+      <charseq START="920" END="921">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_133041.17-E11-24" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="281" END="284">nasa</charseq>
+    </extent>
+    <head>
+      <charseq START="281" END="284">nasa</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_133041.17-E11-26" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="361" END="364">nasa</charseq>
+    </extent>
+    <head>
+      <charseq START="361" END="364">nasa</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_133041.17-E11-27" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="372" END="375">they</charseq>
+    </extent>
+    <head>
+      <charseq START="372" END="375">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="nasa">
+      <charseq START="281" END="284">nasa</charseq>
+    </name>
+    <name NAME="nasa">
+      <charseq START="361" END="364">nasa</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030610_133041.17-E12" TYPE="VEH" SUBTYPE="Land" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_133041.17-E12-28" TYPE="PRO" LDCTYPE="PTV">
+    <extent>
+      <charseq START="413" END="476">the first of a pair of identical rovers headed to the
+red planet</charseq>
+    </extent>
+    <head>
+      <charseq START="417" END="421">first</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030610_133041.17-E13" TYPE="VEH" SUBTYPE="Land" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_133041.17-E13-9" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1164" END="1190">identical red planet rovers</charseq>
+    </extent>
+    <head>
+      <charseq START="1185" END="1190">rovers</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_133041.17-E13-10" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1193" END="1196">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1193" END="1196">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_133041.17-E13-12" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1225" END="1228">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1225" END="1228">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_133041.17-E13-14" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1350" END="1354">their</charseq>
+    </extent>
+    <head>
+      <charseq START="1350" END="1354">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_133041.17-E13-29" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="426" END="476">a pair of identical rovers headed to the
+red planet</charseq>
+    </extent>
+    <head>
+      <charseq START="446" END="451">rovers</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_133041.17-E13-30" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="479" END="482">they</charseq>
+    </extent>
+    <head>
+      <charseq START="479" END="482">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_133041.17-E13-32" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="537" END="540">they</charseq>
+    </extent>
+    <head>
+      <charseq START="537" END="540">they</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030610_133041.17-E14" TYPE="VEH" SUBTYPE="Land" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030610_133041.17-E14-11" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1213" END="1222">golf
+carts</charseq>
+    </extent>
+    <head>
+      <charseq START="1213" END="1222">golf
+carts</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_133041.17-E14-31" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="524" END="534">a
+golf cart</charseq>
+    </extent>
+    <head>
+      <charseq START="531" END="534">cart</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030610_133041.17-E15" TYPE="LOC" SUBTYPE="Celestial" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_133041.17-E15-7" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="998" END="1006">the earth</charseq>
+    </extent>
+    <head>
+      <charseq START="1002" END="1006">earth</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_133041.17-E15-34" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="630" END="634">earth</charseq>
+    </extent>
+    <head>
+      <charseq START="630" END="634">earth</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="earth">
+      <charseq START="630" END="634">earth</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<timex2 ID="CNN_ENG_20030610_133041.17-T1" VAL="2003-06-10T14:02:51">
+  <timex2_mention ID="CNN_ENG_20030610_133041.17-T1-1">
+    <extent>
+      <charseq START="44" END="62">2003-06-10 14:02:51</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030610_133041.17-T2" VAL="1999-03">
+  <timex2_mention ID="CNN_ENG_20030610_133041.17-T2-1">
+    <extent>
+      <charseq START="230" END="242">march
+of 1999</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030610_133041.17-T3" VAL="2003-06-10">
+  <timex2_mention ID="CNN_ENG_20030610_133041.17-T3-1">
+    <extent>
+      <charseq START="388" END="392">today</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030610_133041.17-T4" VAL="2004-01">
+  <timex2_mention ID="CNN_ENG_20030610_133041.17-T4-1">
+    <extent>
+      <charseq START="497" END="503">january</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030610_133041.17-T5" VAL="PAST_REF" ANCHOR_VAL="2003-06-10" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="CNN_ENG_20030610_133041.17-T5-1">
+    <extent>
+      <charseq START="587" END="590">past</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030610_133041.17-T6" VAL="PRESENT_REF" ANCHOR_VAL="2003-06-10" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_ENG_20030610_133041.17-T6-1">
+    <extent>
+      <charseq START="595" END="601">present</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030610_133041.17-T7" VAL="XXXX-XX" SET="YES">
+  <timex2_mention ID="CNN_ENG_20030610_133041.17-T7-1">
+    <extent>
+      <charseq START="604" END="618">every 26 months</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030610_133041.17-T8" VAL="2004-01">
+  <timex2_mention ID="CNN_ENG_20030610_133041.17-T8-1">
+    <extent>
+      <charseq START="1291" END="1297">january</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030610_133041.17-T9" VAL="1999">
+  <timex2_mention ID="CNN_ENG_20030610_133041.17-T9-1">
+    <extent>
+      <charseq START="1396" END="1399">1999</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030610_133041.17-R1" TYPE="PHYS" SUBTYPE="Near" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030610_133041.17-E3" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030610_133041.17-E15" ROLE="Arg-2"/>
+  <relation_argument REFID="CNN_ENG_20030610_133041.17-T7" ROLE="Time-Within"/>
+  <relation_mention ID="CNN_ENG_20030610_133041.17-R1-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="604" END="665">every 26 months, mars and earth fly
+in close orbital formation</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030610_133041.17-E3-33" ROLE="Arg-1">
+      <extent>
+        <charseq START="621" END="624">mars</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030610_133041.17-E15-34" ROLE="Arg-2">
+      <extent>
+        <charseq START="630" END="634">earth</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030610_133041.17-T7-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="604" END="618">every 26 months</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030610_133041.17-R2" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030610_133041.17-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030610_133041.17-E15" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030610_133041.17-R2-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="984" END="1006">the people of
+the earth</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030610_133041.17-E1-6" ROLE="Arg-1">
+      <extent>
+        <charseq START="984" END="1006">the people of
+the earth</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030610_133041.17-E15-7" ROLE="Arg-2">
+      <extent>
+        <charseq START="998" END="1006">the earth</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030610_133041.17-EV1" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030610_133041.17-E11" ROLE="Agent"/>
+  <event_argument REFID="CNN_ENG_20030610_133041.17-E3" ROLE="Destination"/>
+  <event_mention ID="CNN_ENG_20030610_133041.17-EV1-1">
+    <extent>
+      <charseq START="272" END="318">missions nasa has ever
+staged to the red planet</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="68" END="318">you're looking at mars. this shows some of the layers
+effects scientists find so interesting, captured by the
+mars global surveyer, which has been in orbit since march
+of 1999, one of the more successful missions nasa has ever
+staged to the red planet</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="272" END="279">missions</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030610_133041.17-E11-24" ROLE="Agent">
+      <extent>
+        <charseq START="281" END="284">nasa</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030610_133041.17-E3-25" ROLE="Destination">
+      <extent>
+        <charseq START="305" END="318">the red planet</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030610_133041.17-EV2" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030610_133041.17-E12" ROLE="Artifact"/>
+  <event_argument REFID="CNN_ENG_20030610_133041.17-E11" ROLE="Agent"/>
+  <event_argument REFID="CNN_ENG_20030610_133041.17-E3" ROLE="Destination"/>
+  <event_argument REFID="CNN_ENG_20030610_133041.17-T3" ROLE="Time-Starting"/>
+  <event_mention ID="CNN_ENG_20030610_133041.17-EV2-1">
+    <extent>
+      <charseq START="361" END="476">nasa hopes they'll do well today with the launch
+of the first of a pair of identical rovers headed to the
+red planet</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="361" END="476">nasa hopes they'll do well today with the launch
+of the first of a pair of identical rovers headed to the
+red planet</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="403" END="408">launch</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030610_133041.17-E12-28" ROLE="Artifact">
+      <extent>
+        <charseq START="413" END="476">the first of a pair of identical rovers headed to the
+red planet</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030610_133041.17-E11-26" ROLE="Agent">
+      <extent>
+        <charseq START="361" END="364">nasa</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030610_133041.17-E3-17" ROLE="Destination">
+      <extent>
+        <charseq START="463" END="476">the
+red planet</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030610_133041.17-T3-1" ROLE="Time-Starting">
+      <extent>
+        <charseq START="388" END="392">today</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030610_133041.17-EV3" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030610_133041.17-E13" ROLE="Artifact"/>
+  <event_argument REFID="CNN_ENG_20030610_133041.17-E11" ROLE="Agent"/>
+  <event_argument REFID="CNN_ENG_20030610_133041.17-E3" ROLE="Destination"/>
+  <event_argument REFID="CNN_ENG_20030610_133041.17-T4" ROLE="Time-Within"/>
+  <event_argument REFID="CNN_ENG_20030610_133041.17-E13" ROLE="Vehicle"/>
+  <event_argument REFID="CNN_ENG_20030610_133041.17-E2" ROLE="Destination"/>
+  <event_argument REFID="CNN_ENG_20030610_133041.17-T8" ROLE="Time-Within"/>
+  <event_mention ID="CNN_ENG_20030610_133041.17-EV3-1">
+    <extent>
+      <charseq START="361" END="476">nasa hopes they'll do well today with the launch
+of the first of a pair of identical rovers headed to the
+red planet</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="361" END="476">nasa hopes they'll do well today with the launch
+of the first of a pair of identical rovers headed to the
+red planet</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="453" END="458">headed</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030610_133041.17-E13-29" ROLE="Artifact">
+      <extent>
+        <charseq START="426" END="476">a pair of identical rovers headed to the
+red planet</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030610_133041.17-E11-26" ROLE="Agent">
+      <extent>
+        <charseq START="361" END="364">nasa</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030610_133041.17-E3-17" ROLE="Destination">
+      <extent>
+        <charseq START="463" END="476">the
+red planet</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030610_133041.17-EV3-2">
+    <extent>
+      <charseq START="479" END="503">they'll arrive in january</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="479" END="503">they'll arrive in january</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="487" END="492">arrive</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030610_133041.17-E13-30" ROLE="Artifact">
+      <extent>
+        <charseq START="479" END="482">they</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030610_133041.17-T4-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="497" END="503">january</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030610_133041.17-EV3-3">
+    <extent>
+      <charseq START="1119" END="1190">journey of a quarter billion miles, carrying
+identical red planet rovers</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1051" END="1190">reporter: the twin missions to hunt for signs of life are
+set for a journey of a quarter billion miles, carrying
+identical red planet rovers</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1119" END="1125">journey</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030610_133041.17-E13-9" ROLE="Artifact">
+      <extent>
+        <charseq START="1164" END="1190">identical red planet rovers</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030610_133041.17-EV3-4">
+    <extent>
+      <charseq START="1225" END="1390">they will enter the atmosphere on opposite sides of
+the planet in january and then deploy parachutes and air
+bags to cushion their arrival on the rust-colored surface</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1225" END="1390">they will enter the atmosphere on opposite sides of
+the planet in january and then deploy parachutes and air
+bags to cushion their arrival on the rust-colored surface</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1356" END="1362">arrival</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030610_133041.17-E13-12" ROLE="Vehicle">
+      <extent>
+        <charseq START="1225" END="1228">they</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030610_133041.17-E2-21" ROLE="Destination">
+      <extent>
+        <charseq START="1367" END="1390">the rust-colored surface</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030610_133041.17-T8-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="1291" END="1297">january</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030610_133041.17-EV4" TYPE="Movement" SUBTYPE="Transport" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030610_133041.17-E3" ROLE="Destination"/>
+  <event_mention ID="CNN_ENG_20030610_133041.17-EV4-1">
+    <extent>
+      <charseq START="685" END="709">mission to the
+red planet</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="668" END="721">it's only then a mission to the
+red planet is possible</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="685" END="691">mission</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030610_133041.17-E3-35" ROLE="Destination">
+      <extent>
+        <charseq START="696" END="709">the
+red planet</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030610_133041.17-EV5" TYPE="Movement" SUBTYPE="Transport" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030610_133041.17-E5" ROLE="Artifact"/>
+  <event_argument REFID="CNN_ENG_20030610_133041.17-T9" ROLE="Time-Within"/>
+  <event_mention ID="CNN_ENG_20030610_133041.17-EV5-1">
+    <extent>
+      <charseq START="1396" END="1445">1999, the mars polar lander was supposed to arrive</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1393" END="1460">in 1999, the mars polar lander was supposed to arrive alive
+by using</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1440" END="1445">arrive</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030610_133041.17-E5-16" ROLE="Artifact">
+      <extent>
+        <charseq START="1402" END="1422">the mars polar lander</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030610_133041.17-T9-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="1396" END="1399">1999</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

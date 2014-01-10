@@ -1,0 +1,584 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="BACONSREBELLION_20050218.0848.sgm" SOURCE="weblog" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="BACONSREBELLION_20050218.0848">
+<entity ID="BACONSREBELLION_20050218.0848-E1" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="BACONSREBELLION_20050218.0848-E1-3" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="863" END="880">a certified rodent</charseq>
+    </extent>
+    <head>
+      <charseq START="875" END="880">rodent</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="BACONSREBELLION_20050218.0848-E2" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="BACONSREBELLION_20050218.0848-E2-4" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="920" END="920">I</charseq>
+    </extent>
+    <head>
+      <charseq START="920" END="920">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="BACONSREBELLION_20050218.0848-E2-14" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1185" END="1187">Jim</charseq>
+    </extent>
+    <head>
+      <charseq START="1185" END="1187">Jim</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="BACONSREBELLION_20050218.0848-E2-19" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="887" END="895">Jim Bacon</charseq>
+    </extent>
+    <head>
+      <charseq START="887" END="895">Jim Bacon</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Jim">
+      <charseq START="1185" END="1187">Jim</charseq>
+    </name>
+    <name NAME="Jim Bacon">
+      <charseq START="887" END="895">Jim Bacon</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="BACONSREBELLION_20050218.0848-E3" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="BACONSREBELLION_20050218.0848-E3-5" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="931" END="936">John K</charseq>
+    </extent>
+    <head>
+      <charseq START="931" END="936">John K</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="BACONSREBELLION_20050218.0848-E3-17" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="702" END="707">John K</charseq>
+    </extent>
+    <head>
+      <charseq START="702" END="707">John K</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="BACONSREBELLION_20050218.0848-E3-18" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="943" END="972">Virginia's first poet laureate</charseq>
+    </extent>
+    <head>
+      <charseq START="960" END="963">poet</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="John K">
+      <charseq START="931" END="936">John K</charseq>
+    </name>
+    <name NAME="John K">
+      <charseq START="702" END="707">John K</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="BACONSREBELLION_20050218.0848-E4" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="BACONSREBELLION_20050218.0848-E4-7" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1015" END="1027">Governor Mark</charseq>
+    </extent>
+    <head>
+      <charseq START="1024" END="1027">Mark</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="BACONSREBELLION_20050218.0848-E4-8" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="FALSE">
+    <extent>
+      <charseq START="1015" END="1022">Governor</charseq>
+    </extent>
+    <head>
+      <charseq START="1015" END="1022">Governor</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="BACONSREBELLION_20050218.0848-E4-12" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1124" END="1136">Governor Mark</charseq>
+    </extent>
+    <head>
+      <charseq START="1133" END="1136">Mark</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="BACONSREBELLION_20050218.0848-E4-13" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1124" END="1131">Governor</charseq>
+    </extent>
+    <head>
+      <charseq START="1124" END="1131">Governor</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Mark">
+      <charseq START="1024" END="1027">Mark</charseq>
+    </name>
+    <name NAME="Mark">
+      <charseq START="1133" END="1136">Mark</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="BACONSREBELLION_20050218.0848-E6" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="BACONSREBELLION_20050218.0848-E6-9" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1051" END="1064">those citizens</charseq>
+    </extent>
+    <head>
+      <charseq START="1057" END="1064">citizens</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="BACONSREBELLION_20050218.0848-E6-10" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1075" END="1078">them</charseq>
+    </extent>
+    <head>
+      <charseq START="1075" END="1078">them</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="BACONSREBELLION_20050218.0848-E6-23" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="740" END="748">taxpayers</charseq>
+    </extent>
+    <head>
+      <charseq START="740" END="748">taxpayers</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="BACONSREBELLION_20050218.0848-E7" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="BACONSREBELLION_20050218.0848-E7-11" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1090" END="1104">the anti-taxers</charseq>
+    </extent>
+    <head>
+      <charseq START="1094" END="1104">anti-taxers</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="BACONSREBELLION_20050218.0848-E9" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="BACONSREBELLION_20050218.0848-E9-6" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="943" END="950">Virginia</charseq>
+    </extent>
+    <head>
+      <charseq START="943" END="950">Virginia</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="BACONSREBELLION_20050218.0848-E9-15" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="643" END="650">Virginia</charseq>
+    </extent>
+    <head>
+      <charseq START="643" END="650">Virginia</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="BACONSREBELLION_20050218.0848-E9-26" TYPE="NOM" LDCTYPE="NOM" ROLE="ORG" LDCATR="FALSE">
+    <extent>
+      <charseq START="377" END="385">the state</charseq>
+    </extent>
+    <head>
+      <charseq START="381" END="385">state</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Virginia">
+      <charseq START="943" END="950">Virginia</charseq>
+    </name>
+    <name NAME="Virginia">
+      <charseq START="643" END="650">Virginia</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="BACONSREBELLION_20050218.0848-E10" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="BACONSREBELLION_20050218.0848-E10-16" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="96" END="105">Will Vehrs</charseq>
+    </extent>
+    <head>
+      <charseq START="96" END="105">Will Vehrs</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="BACONSREBELLION_20050218.0848-E10-21" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1151" END="1160">Will Vehrs</charseq>
+    </extent>
+    <head>
+      <charseq START="1151" END="1160">Will Vehrs</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Will Vehrs">
+      <charseq START="96" END="105">Will Vehrs</charseq>
+    </name>
+    <name NAME="Will Vehrs">
+      <charseq START="1151" END="1160">Will Vehrs</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="BACONSREBELLION_20050218.0848-E12" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="BACONSREBELLION_20050218.0848-E12-20" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="978" END="990">Steven Sisson</charseq>
+    </extent>
+    <head>
+      <charseq START="978" END="990">Steven Sisson</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Steven Sisson">
+      <charseq START="978" END="990">Steven Sisson</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="BACONSREBELLION_20050218.0848-E13" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="BACONSREBELLION_20050218.0848-E13-22" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="329" END="337">Jamestown</charseq>
+    </extent>
+    <head>
+      <charseq START="329" END="337">Jamestown</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Jamestown">
+      <charseq START="329" END="337">Jamestown</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="BACONSREBELLION_20050218.0848-E14" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="BACONSREBELLION_20050218.0848-E14-24" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="217" END="235">the Virginian-Pilot</charseq>
+    </extent>
+    <head>
+      <charseq START="221" END="235">Virginian-Pilot</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Virginian-Pilot">
+      <charseq START="221" END="235">Virginian-Pilot</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="BACONSREBELLION_20050218.0848-E15" TYPE="PER" SUBTYPE="Indeterminate" CLASS="USP">
+  <entity_mention ID="BACONSREBELLION_20050218.0848-E15-25" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="367" END="369">who</charseq>
+    </extent>
+    <head>
+      <charseq START="367" END="369">who</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="BACONSREBELLION_20050218.0848-E17" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="BACONSREBELLION_20050218.0848-E17-27" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="422" END="449">The last State Archaeologist</charseq>
+    </extent>
+    <head>
+      <charseq START="437" END="449">Archaeologist</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="BACONSREBELLION_20050218.0848-E17-28" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="452" END="468">Catherine Slusser</charseq>
+    </extent>
+    <head>
+      <charseq START="452" END="468">Catherine Slusser</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="BACONSREBELLION_20050218.0848-E17-31" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="562" END="564">She</charseq>
+    </extent>
+    <head>
+      <charseq START="562" END="564">She</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Catherine Slusser">
+      <charseq START="452" END="468">Catherine Slusser</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="BACONSREBELLION_20050218.0848-E19" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="BACONSREBELLION_20050218.0848-E19-30" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="522" END="559">the Department of Historical
+Resources</charseq>
+    </extent>
+    <head>
+      <charseq START="526" END="559">Department of Historical
+Resources</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Department of Historical Resources">
+      <charseq START="526" END="559">Department of Historical
+Resources</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="BACONSREBELLION_20050218.0848-E20" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="BACONSREBELLION_20050218.0848-E20-32" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="639" END="660">Few Virginia employees</charseq>
+    </extent>
+    <head>
+      <charseq START="652" END="660">employees</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="BACONSREBELLION_20050218.0848-E21" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="BACONSREBELLION_20050218.0848-E21-2" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="860" END="861">us</charseq>
+    </extent>
+    <head>
+      <charseq START="860" END="861">us</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="BACONSREBELLION_20050218.0848-E22" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="BACONSREBELLION_20050218.0848-E22-1" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="826" END="829">They</charseq>
+    </extent>
+    <head>
+      <charseq START="826" END="829">They</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="BACONSREBELLION_20050218.0848-E22-33" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="767" END="778">The Assembly</charseq>
+    </extent>
+    <head>
+      <charseq START="771" END="778">Assembly</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<value ID="BACONSREBELLION_20050218.0848-V1" TYPE="Job-Title">
+  <value_mention ID="BACONSREBELLION_20050218.0848-V1-1">
+    <extent>
+      <charseq START="431" END="449">State Archaeologist</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="BACONSREBELLION_20050218.0848-V2" TYPE="Job-Title">
+  <value_mention ID="BACONSREBELLION_20050218.0848-V2-1">
+    <extent>
+      <charseq START="943" END="972">Virginia's first poet laureate</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="BACONSREBELLION_20050218.0848-V3" TYPE="Job-Title">
+  <value_mention ID="BACONSREBELLION_20050218.0848-V3-1">
+    <extent>
+      <charseq START="167" END="196">the job of State Archaeologist</charseq>
+    </extent>
+  </value_mention>
+</value>
+<timex2 ID="BACONSREBELLION_20050218.0848-T1" VAL="2005-02-18T08:48:00">
+  <timex2_mention ID="BACONSREBELLION_20050218.0848-T1-1">
+    <extent>
+      <charseq START="45" END="63">2005-02-18T08:48:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="BACONSREBELLION_20050218.0848-T2" VAL="2005-02-18T08:48:00">
+  <timex2_mention ID="BACONSREBELLION_20050218.0848-T2-1">
+    <extent>
+      <charseq START="109" END="127">2005-02-18T08:48:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="BACONSREBELLION_20050218.0848-T3" VAL="2007">
+  <timex2_mention ID="BACONSREBELLION_20050218.0848-T3-1">
+    <extent>
+      <charseq START="339" END="342">2007</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="BACONSREBELLION_20050218.0848-T4" VAL="T11:44:00">
+  <timex2_mention ID="BACONSREBELLION_20050218.0848-T4-1">
+    <extent>
+      <charseq START="722" END="730">T11:44:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="BACONSREBELLION_20050218.0848-T5" VAL="T12:35:00">
+  <timex2_mention ID="BACONSREBELLION_20050218.0848-T5-1">
+    <extent>
+      <charseq START="909" END="917">T12:35:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="BACONSREBELLION_20050218.0848-T6" VAL="T15:27:00">
+  <timex2_mention ID="BACONSREBELLION_20050218.0848-T6-1">
+    <extent>
+      <charseq START="1004" END="1012">T15:27:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="BACONSREBELLION_20050218.0848-T7" VAL="T17:51:00">
+  <timex2_mention ID="BACONSREBELLION_20050218.0848-T7-1">
+    <extent>
+      <charseq START="1174" END="1182">T17:51:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="BACONSREBELLION_20050218.0848-T8" VAL="1996">
+  <timex2_mention ID="BACONSREBELLION_20050218.0848-T8-1">
+    <extent>
+      <charseq START="138" END="141">1996</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="BACONSREBELLION_20050218.0848-R1" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="BACONSREBELLION_20050218.0848-E17" ROLE="Arg-1"/>
+  <relation_argument REFID="BACONSREBELLION_20050218.0848-E19" ROLE="Arg-2"/>
+  <relation_mention ID="BACONSREBELLION_20050218.0848-R1-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="422" END="559">The last State Archaeologist, Catherine Slusser, is still around,
+according to the article, serving the Department of Historical
+Resources</charseq>
+    </extent>
+    <relation_mention_argument REFID="BACONSREBELLION_20050218.0848-E17-27" ROLE="Arg-1">
+      <extent>
+        <charseq START="422" END="449">The last State Archaeologist</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="BACONSREBELLION_20050218.0848-E19-30" ROLE="Arg-2">
+      <extent>
+        <charseq START="522" END="559">the Department of Historical
+Resources</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="BACONSREBELLION_20050218.0848-R2" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="BACONSREBELLION_20050218.0848-E20" ROLE="Arg-1"/>
+  <relation_argument REFID="BACONSREBELLION_20050218.0848-E9" ROLE="Arg-2"/>
+  <relation_mention ID="BACONSREBELLION_20050218.0848-R2-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="639" END="660">Few Virginia employees</charseq>
+    </extent>
+    <relation_mention_argument REFID="BACONSREBELLION_20050218.0848-E20-32" ROLE="Arg-1">
+      <extent>
+        <charseq START="639" END="660">Few Virginia employees</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="BACONSREBELLION_20050218.0848-E9-15" ROLE="Arg-2">
+      <extent>
+        <charseq START="643" END="650">Virginia</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="BACONSREBELLION_20050218.0848-R3" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="BACONSREBELLION_20050218.0848-E9" ROLE="Arg-2"/>
+  <relation_argument REFID="BACONSREBELLION_20050218.0848-E3" ROLE="Arg-1"/>
+  <relation_mention ID="BACONSREBELLION_20050218.0848-R3-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="943" END="972">Virginia's first poet laureate</charseq>
+    </extent>
+    <relation_mention_argument REFID="BACONSREBELLION_20050218.0848-E9-6" ROLE="Arg-2">
+      <extent>
+        <charseq START="943" END="950">Virginia</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="BACONSREBELLION_20050218.0848-E3-18" ROLE="Arg-1">
+      <extent>
+        <charseq START="943" END="972">Virginia's first poet laureate</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="BACONSREBELLION_20050218.0848-EV1" TYPE="Personnel" SUBTYPE="Nominate" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="BACONSREBELLION_20050218.0848-E3" ROLE="Person"/>
+  <event_argument REFID="BACONSREBELLION_20050218.0848-E2" ROLE="Agent"/>
+  <event_argument REFID="BACONSREBELLION_20050218.0848-V2" ROLE="Position"/>
+  <event_mention ID="BACONSREBELLION_20050218.0848-EV1-1">
+    <extent>
+      <charseq START="920" END="972">I nominate John K. for Virginia's first poet laureate</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="920" END="972">I nominate John K. for Virginia's first poet laureate</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="922" END="929">nominate</charseq>
+    </anchor>
+    <event_mention_argument REFID="BACONSREBELLION_20050218.0848-E3-5" ROLE="Person">
+      <extent>
+        <charseq START="931" END="936">John K</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="BACONSREBELLION_20050218.0848-E2-4" ROLE="Agent">
+      <extent>
+        <charseq START="920" END="920">I</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="BACONSREBELLION_20050218.0848-V2-1" ROLE="Position">
+      <extent>
+        <charseq START="943" END="972">Virginia's first poet laureate</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="BACONSREBELLION_20050218.0848-EV2" TYPE="Personnel" SUBTYPE="End-Position" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="BACONSREBELLION_20050218.0848-V3" ROLE="Position"/>
+  <event_argument REFID="BACONSREBELLION_20050218.0848-T8" ROLE="Time-Within"/>
+  <event_mention ID="BACONSREBELLION_20050218.0848-EV2-1">
+    <extent>
+      <charseq START="138" END="196">1996, budget cuts eliminated the job of State Archaeologist</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="130" END="196">Back in 1996, budget cuts eliminated the job of State Archaeologist</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="156" END="165">eliminated</charseq>
+    </anchor>
+    <event_mention_argument REFID="BACONSREBELLION_20050218.0848-V3-1" ROLE="Position">
+      <extent>
+        <charseq START="167" END="196">the job of State Archaeologist</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="BACONSREBELLION_20050218.0848-T8-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="138" END="141">1996</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="BACONSREBELLION_20050218.0848-EV3" TYPE="Personnel" SUBTYPE="End-Position" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="BACONSREBELLION_20050218.0848-E17" ROLE="Person"/>
+  <event_argument REFID="BACONSREBELLION_20050218.0848-V1" ROLE="Position"/>
+  <event_mention ID="BACONSREBELLION_20050218.0848-EV3-1">
+    <extent>
+      <charseq START="426" END="468">last State Archaeologist, Catherine Slusser</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="422" END="559">The last State Archaeologist, Catherine Slusser, is still around,
+according to the article, serving the Department of Historical
+Resources</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="426" END="429">last</charseq>
+    </anchor>
+    <event_mention_argument REFID="BACONSREBELLION_20050218.0848-E17-28" ROLE="Person">
+      <extent>
+        <charseq START="452" END="468">Catherine Slusser</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="BACONSREBELLION_20050218.0848-V1-1" ROLE="Position">
+      <extent>
+        <charseq START="431" END="449">State Archaeologist</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

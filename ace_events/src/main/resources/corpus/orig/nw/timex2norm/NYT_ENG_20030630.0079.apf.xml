@@ -1,0 +1,2715 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="NYT_ENG_20030630.0079.sgm" SOURCE="newswire" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="NYT_ENG_20030630.0079">
+<entity ID="NYT_ENG_20030630.0079-E1" TYPE="GPE" SUBTYPE="Nation" CLASS="USP">
+  <entity_mention ID="NYT_ENG_20030630.0079-E1-168" TYPE="NOM" LDCTYPE="NOM" ROLE="ORG">
+    <extent>
+      <charseq START="509" END="520">other allies</charseq>
+    </extent>
+    <head>
+      <charseq START="515" END="520">allies</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E2" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="NYT_ENG_20030630.0079-E2-3" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="552" END="582">the Central Intelligence
+Agency</charseq>
+    </extent>
+    <head>
+      <charseq START="556" END="582">Central Intelligence
+Agency</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E2-85" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2112" END="2118">the
+CIA</charseq>
+    </extent>
+    <head>
+      <charseq START="2116" END="2118">CIA</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E2-87" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="FALSE">
+    <extent>
+      <charseq START="131" END="147">U.S. intelligence</charseq>
+    </extent>
+    <head>
+      <charseq START="136" END="147">intelligence</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E2-88" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="FALSE">
+    <extent>
+      <charseq START="862" END="873">intelligence</charseq>
+    </extent>
+    <head>
+      <charseq START="862" END="873">intelligence</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E2-89" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="3594" END="3605">intelligence</charseq>
+    </extent>
+    <head>
+      <charseq START="3594" END="3605">intelligence</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Central Intelligence Agency">
+      <charseq START="556" END="582">Central Intelligence
+Agency</charseq>
+    </name>
+    <name NAME="CIA">
+      <charseq START="2116" END="2118">CIA</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E3" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="NYT_ENG_20030630.0079-E3-4" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="594" END="596">U.S</charseq>
+    </extent>
+    <head>
+      <charseq START="594" END="596">U.S</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E3-17" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1124" END="1126">U.S</charseq>
+    </extent>
+    <head>
+      <charseq START="1124" END="1126">U.S</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E3-37" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1899" END="1901">U.S</charseq>
+    </extent>
+    <head>
+      <charseq START="1899" END="1901">U.S</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E3-62" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="2637" END="2639">U.S</charseq>
+    </extent>
+    <head>
+      <charseq START="2637" END="2639">U.S</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E3-70" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="2989" END="2991">U.S</charseq>
+    </extent>
+    <head>
+      <charseq START="2989" END="2991">U.S</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E3-80" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="3471" END="3473">U.S</charseq>
+    </extent>
+    <head>
+      <charseq START="3471" END="3473">U.S</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E3-103" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="4252" END="4254">U.S</charseq>
+    </extent>
+    <head>
+      <charseq START="4252" END="4254">U.S</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E3-108" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="4415" END="4417">U.S</charseq>
+    </extent>
+    <head>
+      <charseq START="4415" END="4417">U.S</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E3-118" TYPE="NAM" LDCTYPE="NAM" ROLE="ORG" LDCATR="TRUE">
+    <extent>
+      <charseq START="4875" END="4891">the United States</charseq>
+    </extent>
+    <head>
+      <charseq START="4879" END="4891">United States</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E3-145" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="131" END="133">U.S</charseq>
+    </extent>
+    <head>
+      <charseq START="131" END="133">U.S</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E3-147" TYPE="PRO" LDCTYPE="PRO" ROLE="ORG" LDCATR="TRUE">
+    <extent>
+      <charseq START="4948" END="4949">We</charseq>
+    </extent>
+    <head>
+      <charseq START="4948" END="4949">We</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E3-153" TYPE="NAM" LDCTYPE="NAM" ROLE="ORG" LDCATR="TRUE">
+    <extent>
+      <charseq START="1616" END="1625">Washington</charseq>
+    </extent>
+    <head>
+      <charseq START="1616" END="1625">Washington</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E3-156" TYPE="PRO" LDCTYPE="PRO" ROLE="ORG" LDCATR="TRUE">
+    <extent>
+      <charseq START="1669" END="1670">it</charseq>
+    </extent>
+    <head>
+      <charseq START="1669" END="1670">it</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E3-161" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="335" END="337">U.S</charseq>
+    </extent>
+    <head>
+      <charseq START="335" END="337">U.S</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="U.S">
+      <charseq START="594" END="596">U.S</charseq>
+    </name>
+    <name NAME="U.S">
+      <charseq START="1124" END="1126">U.S</charseq>
+    </name>
+    <name NAME="U.S">
+      <charseq START="1899" END="1901">U.S</charseq>
+    </name>
+    <name NAME="U.S">
+      <charseq START="2637" END="2639">U.S</charseq>
+    </name>
+    <name NAME="U.S">
+      <charseq START="2989" END="2991">U.S</charseq>
+    </name>
+    <name NAME="U.S">
+      <charseq START="3471" END="3473">U.S</charseq>
+    </name>
+    <name NAME="U.S">
+      <charseq START="4252" END="4254">U.S</charseq>
+    </name>
+    <name NAME="U.S">
+      <charseq START="4415" END="4417">U.S</charseq>
+    </name>
+    <name NAME="United States">
+      <charseq START="4879" END="4891">United States</charseq>
+    </name>
+    <name NAME="U.S">
+      <charseq START="131" END="133">U.S</charseq>
+    </name>
+    <name NAME="Washington">
+      <charseq START="1616" END="1625">Washington</charseq>
+    </name>
+    <name NAME="U.S">
+      <charseq START="335" END="337">U.S</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E4" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="NYT_ENG_20030630.0079-E4-5" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="626" END="696">a sophisticated new
+nuclear testing site in an area called Youngdoktong</charseq>
+    </extent>
+    <head>
+      <charseq START="662" END="665">site</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E4-7" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="702" END="709">the site</charseq>
+    </extent>
+    <head>
+      <charseq START="706" END="709">site</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E4-10" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="915" END="931">the testing
+range</charseq>
+    </extent>
+    <head>
+      <charseq START="927" END="931">range</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E4-163" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1990" END="2055">the testing site, which is near North Korea's main nuclear
+complex</charseq>
+    </extent>
+    <head>
+      <charseq START="2002" END="2005">site</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E4-164" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="2008" END="2012">which</charseq>
+    </extent>
+    <head>
+      <charseq START="2008" END="2012">which</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E5" TYPE="LOC" SUBTYPE="Region-General" CLASS="SPC">
+  <entity_mention ID="NYT_ENG_20030630.0079-E5-6" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="670" END="696">an area called Youngdoktong</charseq>
+    </extent>
+    <head>
+      <charseq START="673" END="676">area</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E5-152" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="685" END="696">Youngdoktong</charseq>
+    </extent>
+    <head>
+      <charseq START="685" END="696">Youngdoktong</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Youngdoktong">
+      <charseq START="685" END="696">Youngdoktong</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E6" TYPE="WEA" SUBTYPE="Exploding" CLASS="USP">
+  <entity_mention ID="NYT_ENG_20030630.0079-E6-8" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="746" END="853">conventional explosives that, when
+detonated, could compress a plutonium core and set onfe nuclear
+explosion</charseq>
+    </extent>
+    <head>
+      <charseq START="759" END="768">explosives</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E6-9" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="770" END="773">that</charseq>
+    </extent>
+    <head>
+      <charseq START="770" END="773">that</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E8" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="NYT_ENG_20030630.0079-E8-18" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2022" END="2055">North Korea's main nuclear
+complex</charseq>
+    </extent>
+    <head>
+      <charseq START="2049" END="2055">complex</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E9" TYPE="WEA" SUBTYPE="Underspecified" CLASS="GEN">
+  <entity_mention ID="NYT_ENG_20030630.0079-E9-30" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1740" END="1750">its weapons</charseq>
+    </extent>
+    <head>
+      <charseq START="1744" END="1750">weapons</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E10" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="NYT_ENG_20030630.0079-E10-32" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1860" END="1910">officials who have been briefed on the U.S. reports</charseq>
+    </extent>
+    <head>
+      <charseq START="1860" END="1868">officials</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E10-33" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="1870" END="1872">who</charseq>
+    </extent>
+    <head>
+      <charseq START="1870" END="1872">who</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E12" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="USP">
+  <entity_mention ID="NYT_ENG_20030630.0079-E12-28" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="594" END="608">U.S. satellites</charseq>
+    </extent>
+    <head>
+      <charseq START="599" END="608">satellites</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E12-84" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="2989" END="3003">U.S. satellites</charseq>
+    </extent>
+    <head>
+      <charseq START="2994" END="3003">satellites</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E13" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="NYT_ENG_20030630.0079-E13-1" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="118" END="127">WASHINGTON</charseq>
+    </extent>
+    <head>
+      <charseq START="118" END="127">WASHINGTON</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="WASHINGTON">
+      <charseq START="118" END="127">WASHINGTON</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E14" TYPE="WEA" SUBTYPE="Projectile" CLASS="USP">
+  <entity_mention ID="NYT_ENG_20030630.0079-E14-40" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1056" END="1109">its
+growing arsenal of medium- and long-range missiles</charseq>
+    </extent>
+    <head>
+      <charseq START="1068" END="1074">arsenal</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E14-148" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="262" END="302">the
+country's growing arsenal of missideS</charseq>
+    </extent>
+    <head>
+      <charseq START="284" END="290">arsenal</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E15" TYPE="WEA" SUBTYPE="Nuclear" CLASS="SPC">
+  <entity_mention ID="NYT_ENG_20030630.0079-E15-38" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2160" END="2176">two crude devices</charseq>
+    </extent>
+    <head>
+      <charseq START="2170" END="2176">devices</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E16" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="NYT_ENG_20030630.0079-E16-45" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1815" END="1832">the administration</charseq>
+    </extent>
+    <head>
+      <charseq START="1819" END="1832">administration</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E16-46" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="FALSE">
+    <extent>
+      <charseq START="1582" END="1595">administration</charseq>
+    </extent>
+    <head>
+      <charseq START="1582" END="1595">administration</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E16-49" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="FALSE">
+    <extent>
+      <charseq START="2303" END="2316">administration</charseq>
+    </extent>
+    <head>
+      <charseq START="2303" END="2316">administration</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E16-122" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="5041" END="5054">administration</charseq>
+    </extent>
+    <head>
+      <charseq START="5041" END="5054">administration</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E18" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="NYT_ENG_20030630.0079-E18-42" TYPE="NAM" LDCTYPE="NAM" ROLE="ORG">
+    <extent>
+      <charseq START="2233" END="2236">Iraq</charseq>
+    </extent>
+    <head>
+      <charseq START="2233" END="2236">Iraq</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E18-98" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE">
+    <extent>
+      <charseq START="4081" END="4084">Iraq</charseq>
+    </extent>
+    <head>
+      <charseq START="4081" END="4084">Iraq</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E18-101" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="4180" END="4183">Iraq</charseq>
+    </extent>
+    <head>
+      <charseq START="4180" END="4183">Iraq</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E18-105" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE">
+    <extent>
+      <charseq START="4323" END="4326">Iraq</charseq>
+    </extent>
+    <head>
+      <charseq START="4323" END="4326">Iraq</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E18-126" TYPE="NAM" LDCTYPE="NAM" ROLE="ORG">
+    <extent>
+      <charseq START="5236" END="5239">Iraq</charseq>
+    </extent>
+    <head>
+      <charseq START="5236" END="5239">Iraq</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Iraq">
+      <charseq START="2233" END="2236">Iraq</charseq>
+    </name>
+    <name NAME="Iraq">
+      <charseq START="4081" END="4084">Iraq</charseq>
+    </name>
+    <name NAME="Iraq">
+      <charseq START="4180" END="4183">Iraq</charseq>
+    </name>
+    <name NAME="Iraq">
+      <charseq START="4323" END="4326">Iraq</charseq>
+    </name>
+    <name NAME="Iraq">
+      <charseq START="5236" END="5239">Iraq</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E20" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="NYT_ENG_20030630.0079-E20-50" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="2303" END="2326">administration officials</charseq>
+    </extent>
+    <head>
+      <charseq START="2318" END="2326">officials</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E20-51" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2332" END="2335">they</charseq>
+    </extent>
+    <head>
+      <charseq START="2332" END="2335">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E20-149" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1575" END="1605">Senior administration officials</charseq>
+    </extent>
+    <head>
+      <charseq START="1597" END="1605">officials</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E21" TYPE="WEA" SUBTYPE="Underspecified" CLASS="USP">
+  <entity_mention ID="NYT_ENG_20030630.0079-E21-53" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2388" END="2447">five or six new weapons, some of
+which might be miniaturized</charseq>
+    </extent>
+    <head>
+      <charseq START="2404" END="2410">weapons</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E21-55" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="2421" END="2425">which</charseq>
+    </extent>
+    <head>
+      <charseq START="2421" END="2425">which</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E22" TYPE="WEA" SUBTYPE="Underspecified" CLASS="USP">
+  <entity_mention ID="NYT_ENG_20030630.0079-E22-54" TYPE="PRO" LDCTYPE="PTV">
+    <extent>
+      <charseq START="2413" END="2447">some of
+which might be miniaturized</charseq>
+    </extent>
+    <head>
+      <charseq START="2413" END="2416">some</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E23" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="NYT_ENG_20030630.0079-E23-60" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2577" END="2601">one
+senior Asian official</charseq>
+    </extent>
+    <head>
+      <charseq START="2594" END="2601">official</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E24" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="NYT_ENG_20030630.0079-E24-61" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2616" END="2647">approximately 60,000 U.S. troops</charseq>
+    </extent>
+    <head>
+      <charseq START="2642" END="2647">troops</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E26" TYPE="GPE" SUBTYPE="Continent" CLASS="SPC">
+  <entity_mention ID="NYT_ENG_20030630.0079-E26-64" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="2588" END="2592">Asian</charseq>
+    </extent>
+    <head>
+      <charseq START="2588" END="2592">Asian</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E26-65" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="2757" END="2761">Asian</charseq>
+    </extent>
+    <head>
+      <charseq START="2757" END="2761">Asian</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E26-146" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="1655" END="1658">Asia</charseq>
+    </extent>
+    <head>
+      <charseq START="1655" END="1658">Asia</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Asian">
+      <charseq START="2588" END="2592">Asian</charseq>
+    </name>
+    <name NAME="Asian">
+      <charseq START="2757" END="2761">Asian</charseq>
+    </name>
+    <name NAME="Asia">
+      <charseq START="1655" END="1658">Asia</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E28" TYPE="GPE" SUBTYPE="Nation" CLASS="USP">
+  <entity_mention ID="NYT_ENG_20030630.0079-E28-66" TYPE="NOM" LDCTYPE="BAR" ROLE="GPE">
+    <extent>
+      <charseq START="2757" END="2768">Asian allies</charseq>
+    </extent>
+    <head>
+      <charseq START="2763" END="2768">allies</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E30" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="NYT_ENG_20030630.0079-E30-11" TYPE="NOM" LDCTYPE="NOM" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="950" END="960">the country</charseq>
+    </extent>
+    <head>
+      <charseq START="954" END="960">country</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E30-14" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="1056" END="1058">its</charseq>
+    </extent>
+    <head>
+      <charseq START="1056" END="1058">its</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E30-16" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="2022" END="2032">North Korea</charseq>
+    </extent>
+    <head>
+      <charseq START="2022" END="2032">North Korea</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E30-19" TYPE="NAM" LDCTYPE="NAM" ROLE="ORG" LDCATR="FALSE">
+    <extent>
+      <charseq START="1176" END="1186">North Korea</charseq>
+    </extent>
+    <head>
+      <charseq START="1176" END="1186">North Korea</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E30-21" TYPE="NOM" LDCTYPE="NOM" ROLE="ORG" LDCATR="FALSE">
+    <extent>
+      <charseq START="1342" END="1358">the North Koreans</charseq>
+    </extent>
+    <head>
+      <charseq START="1346" END="1358">North Koreans</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E30-23" TYPE="PRO" LDCTYPE="PRO" ROLE="ORG" LDCATR="FALSE">
+    <extent>
+      <charseq START="1431" END="1434">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1431" END="1434">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E30-25" TYPE="PRO" LDCTYPE="PRO" ROLE="ORG" LDCATR="FALSE">
+    <extent>
+      <charseq START="1535" END="1538">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1535" END="1538">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E30-26" TYPE="PRO" LDCTYPE="PRO" ROLE="ORG" LDCATR="FALSE">
+    <extent>
+      <charseq START="1550" END="1553">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1550" END="1553">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E30-27" TYPE="NAM" LDCTYPE="NAM" ROLE="ORG" LDCATR="FALSE">
+    <extent>
+      <charseq START="2058" END="2068">North Korea</charseq>
+    </extent>
+    <head>
+      <charseq START="2058" END="2068">North Korea</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E30-29" TYPE="PRO" LDCTYPE="PRO" ROLE="ORG" LDCATR="FALSE">
+    <extent>
+      <charseq START="1740" END="1742">its</charseq>
+    </extent>
+    <head>
+      <charseq START="1740" END="1742">its</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E30-36" TYPE="PRO" LDCTYPE="PRO" ROLE="ORG" LDCATR="FALSE">
+    <extent>
+      <charseq START="2144" END="2145">it</charseq>
+    </extent>
+    <head>
+      <charseq START="2144" END="2145">it</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E30-41" TYPE="NAM" LDCTYPE="NAM" ROLE="ORG" LDCATR="FALSE">
+    <extent>
+      <charseq START="2213" END="2223">North Korea</charseq>
+    </extent>
+    <head>
+      <charseq START="2213" END="2223">North Korea</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E30-47" TYPE="PRO" LDCTYPE="PRO" ROLE="ORG" LDCATR="FALSE">
+    <extent>
+      <charseq START="2261" END="2263">its</charseq>
+    </extent>
+    <head>
+      <charseq START="2261" END="2263">its</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E30-52" TYPE="NOM" LDCTYPE="NOM" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="2347" END="2357">the
+country</charseq>
+    </extent>
+    <head>
+      <charseq START="2351" END="2357">country</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E30-56" TYPE="PRO" LDCTYPE="PRO" ROLE="ORG" LDCATR="FALSE">
+    <extent>
+      <charseq START="2470" END="2473">them</charseq>
+    </extent>
+    <head>
+      <charseq START="2470" END="2473">them</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E30-57" TYPE="PRO" LDCTYPE="PRO" ROLE="ORG" LDCATR="FALSE">
+    <extent>
+      <charseq START="2485" END="2488">they</charseq>
+    </extent>
+    <head>
+      <charseq START="2485" END="2488">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E30-58" TYPE="PRO" LDCTYPE="PRO" ROLE="ORG" LDCATR="FALSE">
+    <extent>
+      <charseq START="2533" END="2537">their</charseq>
+    </extent>
+    <head>
+      <charseq START="2533" END="2537">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E30-67" TYPE="NOM" LDCTYPE="NOM" ROLE="ORG" LDCATR="FALSE">
+    <extent>
+      <charseq START="2808" END="2816">the North</charseq>
+    </extent>
+    <head>
+      <charseq START="2812" END="2816">North</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E30-69" TYPE="PRO" LDCTYPE="PRO" ROLE="ORG" LDCATR="FALSE">
+    <extent>
+      <charseq START="2900" END="2903">they</charseq>
+    </extent>
+    <head>
+      <charseq START="2900" END="2903">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E30-71" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="3024" END="3035">North Korean</charseq>
+    </extent>
+    <head>
+      <charseq START="3024" END="3035">North Korean</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E30-72" TYPE="NOM" LDCTYPE="NOM" ROLE="ORG" LDCATR="FALSE">
+    <extent>
+      <charseq START="3090" END="3098">the North</charseq>
+    </extent>
+    <head>
+      <charseq START="3094" END="3098">North</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E30-75" TYPE="NOM" LDCTYPE="NOM" ROLE="ORG" LDCATR="FALSE">
+    <extent>
+      <charseq START="3286" END="3296">the country</charseq>
+    </extent>
+    <head>
+      <charseq START="3290" END="3296">country</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E30-76" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="3316" END="3318">its</charseq>
+    </extent>
+    <head>
+      <charseq START="3316" END="3318">its</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E30-81" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="3507" END="3518">North Korean</charseq>
+    </extent>
+    <head>
+      <charseq START="3507" END="3518">North Korean</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E30-104" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="4304" END="4314">North Korea</charseq>
+    </extent>
+    <head>
+      <charseq START="4304" END="4314">North Korea</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E30-107" TYPE="NOM" LDCTYPE="NOM" ROLE="ORG" LDCATR="FALSE">
+    <extent>
+      <charseq START="4635" END="4651">the North Koreans</charseq>
+    </extent>
+    <head>
+      <charseq START="4639" END="4651">North Koreans</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E30-125" TYPE="NAM" LDCTYPE="NAM" ROLE="ORG" LDCATR="FALSE">
+    <extent>
+      <charseq START="5183" END="5193">North Korea</charseq>
+    </extent>
+    <head>
+      <charseq START="5183" END="5193">North Korea</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E30-127" TYPE="NAM" LDCTYPE="NAM" ROLE="ORG" LDCATR="FALSE">
+    <extent>
+      <charseq START="5273" END="5283">North Korea</charseq>
+    </extent>
+    <head>
+      <charseq START="5273" END="5283">North Korea</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E30-142" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="5641" END="5649">the North</charseq>
+    </extent>
+    <head>
+      <charseq START="5645" END="5649">North</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E30-154" TYPE="NAM" LDCTYPE="NAM" ROLE="ORG" LDCATR="FALSE">
+    <extent>
+      <charseq START="171" END="181">North Korea</charseq>
+    </extent>
+    <head>
+      <charseq START="171" END="181">North Korea</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E30-157" TYPE="NOM" LDCTYPE="NOM" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="262" END="272">the
+country</charseq>
+    </extent>
+    <head>
+      <charseq START="266" END="272">country</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E30-158" TYPE="NOM" LDCTYPE="NOM" ROLE="ORG" LDCATR="FALSE">
+    <extent>
+      <charseq START="1717" END="1727">the country</charseq>
+    </extent>
+    <head>
+      <charseq START="1721" END="1727">country</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="North Korea">
+      <charseq START="2022" END="2032">North Korea</charseq>
+    </name>
+    <name NAME="North Korea">
+      <charseq START="1176" END="1186">North Korea</charseq>
+    </name>
+    <name NAME="North Korea">
+      <charseq START="2058" END="2068">North Korea</charseq>
+    </name>
+    <name NAME="North Korea">
+      <charseq START="2213" END="2223">North Korea</charseq>
+    </name>
+    <name NAME="North Korean">
+      <charseq START="3024" END="3035">North Korean</charseq>
+    </name>
+    <name NAME="North Korean">
+      <charseq START="3507" END="3518">North Korean</charseq>
+    </name>
+    <name NAME="North Korea">
+      <charseq START="4304" END="4314">North Korea</charseq>
+    </name>
+    <name NAME="North Korea">
+      <charseq START="5183" END="5193">North Korea</charseq>
+    </name>
+    <name NAME="North Korea">
+      <charseq START="5273" END="5283">North Korea</charseq>
+    </name>
+    <name NAME="North">
+      <charseq START="5645" END="5649">North</charseq>
+    </name>
+    <name NAME="North Korea">
+      <charseq START="171" END="181">North Korea</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E31" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="NYT_ENG_20030630.0079-E31-73" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="3108" END="3131">international
+inspectors</charseq>
+    </extent>
+    <head>
+      <charseq START="3122" END="3131">inspectors</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E31-74" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="3134" END="3149">Those inspectors</charseq>
+    </extent>
+    <head>
+      <charseq START="3140" END="3149">inspectors</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E32" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="NYT_ENG_20030630.0079-E32-78" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="3426" END="3451">the Clinton administration</charseq>
+    </extent>
+    <head>
+      <charseq START="3438" END="3451">administration</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E33" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="NYT_ENG_20030630.0079-E33-79" TYPE="NAM" LDCTYPE="NAMPRE">
+    <extent>
+      <charseq START="3430" END="3436">Clinton</charseq>
+    </extent>
+    <head>
+      <charseq START="3430" END="3436">Clinton</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Clinton">
+      <charseq START="3430" END="3436">Clinton</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E36" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="NYT_ENG_20030630.0079-E36-82" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="3507" END="3528">North Korean engineers</charseq>
+    </extent>
+    <head>
+      <charseq START="3520" END="3528">engineers</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E37" TYPE="FAC" SUBTYPE="Plant" CLASS="USP">
+  <entity_mention ID="NYT_ENG_20030630.0079-E37-83" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="3572" END="3585">the facilities</charseq>
+    </extent>
+    <head>
+      <charseq START="3576" END="3585">facilities</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E41" TYPE="GPE" SUBTYPE="Nation" CLASS="USP">
+  <entity_mention ID="NYT_ENG_20030630.0079-E41-91" TYPE="NOM" LDCTYPE="BAR" ROLE="ORG">
+    <extent>
+      <charseq START="3654" END="3659">allies</charseq>
+    </extent>
+    <head>
+      <charseq START="3654" END="3659">allies</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E42" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="NYT_ENG_20030630.0079-E42-93" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="3840" END="3846">experts</charseq>
+    </extent>
+    <head>
+      <charseq START="3840" END="3846">experts</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E43" TYPE="WEA" SUBTYPE="Projectile" CLASS="SPC">
+  <entity_mention ID="NYT_ENG_20030630.0079-E43-94" TYPE="PRO" LDCTYPE="PTV">
+    <extent>
+      <charseq START="3977" END="3995">one of the
+missiles</charseq>
+    </extent>
+    <head>
+      <charseq START="3977" END="3979">one</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E44" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="NYT_ENG_20030630.0079-E44-96" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="4005" END="4066">one senior official who has recently reviewed the
+intelligence</charseq>
+    </extent>
+    <head>
+      <charseq START="4016" END="4023">official</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E44-97" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="4025" END="4027">who</charseq>
+    </extent>
+    <head>
+      <charseq START="4025" END="4027">who</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E45" TYPE="PER" SUBTYPE="Indeterminate" CLASS="USP">
+  <entity_mention ID="NYT_ENG_20030630.0079-E45-99" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="4087" END="4089">who</charseq>
+    </extent>
+    <head>
+      <charseq START="4087" END="4089">who</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E46" TYPE="WEA" SUBTYPE="Underspecified" CLASS="USP">
+  <entity_mention ID="NYT_ENG_20030630.0079-E46-100" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="4158" END="4217">prohibited weapons in Iraq, which have
+not been found so far</charseq>
+    </extent>
+    <head>
+      <charseq START="4169" END="4175">weapons</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E46-102" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="4186" END="4190">which</charseq>
+    </extent>
+    <head>
+      <charseq START="4186" END="4190">which</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E48" TYPE="PER" SUBTYPE="Indeterminate" CLASS="USP">
+  <entity_mention ID="NYT_ENG_20030630.0079-E48-106" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="4368" END="4372">whose</charseq>
+    </extent>
+    <head>
+      <charseq START="4368" END="4372">whose</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E50" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="NYT_ENG_20030630.0079-E50-109" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="4607" END="4619">some analysts</charseq>
+    </extent>
+    <head>
+      <charseq START="4612" END="4619">analysts</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E51" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="NYT_ENG_20030630.0079-E51-112" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="4727" END="4732">others</charseq>
+    </extent>
+    <head>
+      <charseq START="4727" END="4732">others</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E52" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="NYT_ENG_20030630.0079-E52-2" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="539" END="582">officials at the Central Intelligence
+Agency</charseq>
+    </extent>
+    <head>
+      <charseq START="539" END="547">officials</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E52-22" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1386" END="1394">officials</charseq>
+    </extent>
+    <head>
+      <charseq START="1386" END="1394">officials</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E52-24" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1484" END="1492">officials</charseq>
+    </extent>
+    <head>
+      <charseq START="1484" END="1492">officials</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E52-35" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="384" END="435">officials who have
+received the intelligence reports</charseq>
+    </extent>
+    <head>
+      <charseq START="384" END="392">officials</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E52-39" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="394" END="396">who</charseq>
+    </extent>
+    <head>
+      <charseq START="394" END="396">who</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E52-43" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1124" END="1137">U.S. officials</charseq>
+    </extent>
+    <head>
+      <charseq START="1129" END="1137">officials</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E52-44" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1148" END="1151">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1148" END="1151">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E52-77" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="131" END="157">U.S. intelligence officials</charseq>
+    </extent>
+    <head>
+      <charseq START="149" END="157">officials</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E52-86" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="3594" END="3615">intelligence
+officials</charseq>
+    </extent>
+    <head>
+      <charseq START="3607" END="3615">officials</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E52-90" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3644" END="3647">they</charseq>
+    </extent>
+    <head>
+      <charseq START="3644" END="3647">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E52-110" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="3471" END="3484">U.S.
+officials</charseq>
+    </extent>
+    <head>
+      <charseq START="3476" END="3484">officials</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E52-115" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3862" END="3863">we</charseq>
+    </extent>
+    <head>
+      <charseq START="3862" END="3863">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E52-116" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="2877" END="2885">officials</charseq>
+    </extent>
+    <head>
+      <charseq START="2877" END="2885">officials</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E52-165" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="464" END="467">they</charseq>
+    </extent>
+    <head>
+      <charseq START="464" END="467">they</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E53" TYPE="VEH" SUBTYPE="Land" CLASS="USP">
+  <entity_mention ID="NYT_ENG_20030630.0079-E53-113" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="4744" END="4749">trucks</charseq>
+    </extent>
+    <head>
+      <charseq START="4744" END="4749">trucks</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E54" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="NYT_ENG_20030630.0079-E54-114" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="4786" END="4810">their
+normal storage area</charseq>
+    </extent>
+    <head>
+      <charseq START="4807" END="4810">area</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E55" TYPE="LOC" SUBTYPE="Region-General" CLASS="USP">
+  <entity_mention ID="NYT_ENG_20030630.0079-E55-119" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="4928" END="4942">the
+right place</charseq>
+    </extent>
+    <head>
+      <charseq START="4938" END="4942">place</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E56" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="NYT_ENG_20030630.0079-E56-120" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="4970" END="4999">the main reprocessing facility</charseq>
+    </extent>
+    <head>
+      <charseq START="4992" END="4999">facility</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E57" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="NYT_ENG_20030630.0079-E57-121" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="5030" END="5063">one senior administration official</charseq>
+    </extent>
+    <head>
+      <charseq START="5056" END="5063">official</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E59" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="USP">
+  <entity_mention ID="NYT_ENG_20030630.0079-E59-123" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="5109" END="5128">a second reprocessor</charseq>
+    </extent>
+    <head>
+      <charseq START="5118" END="5128">reprocessor</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E60" TYPE="PER" SUBTYPE="Individual" CLASS="NEG">
+  <entity_mention ID="NYT_ENG_20030630.0079-E60-124" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="5131" END="5136">No one</charseq>
+    </extent>
+    <head>
+      <charseq START="5134" END="5136">one</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E61" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="NYT_ENG_20030630.0079-E61-128" TYPE="NAM" LDCTYPE="NAM" ROLE="ORG">
+    <extent>
+      <charseq START="5330" END="5333">Iran</charseq>
+    </extent>
+    <head>
+      <charseq START="5330" END="5333">Iran</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Iran">
+      <charseq START="5330" END="5333">Iran</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E62" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="NYT_ENG_20030630.0079-E62-129" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="5339" END="5352">President Bush</charseq>
+    </extent>
+    <head>
+      <charseq START="5349" END="5352">Bush</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E62-130" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="5339" END="5347">President</charseq>
+    </extent>
+    <head>
+      <charseq START="5339" END="5347">President</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E62-138" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="5472" END="5475">Bush</charseq>
+    </extent>
+    <head>
+      <charseq START="5472" END="5475">Bush</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E62-139" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="5486" END="5487">he</charseq>
+    </extent>
+    <head>
+      <charseq START="5486" END="5487">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Bush">
+      <charseq START="5349" END="5352">Bush</charseq>
+    </name>
+    <name NAME="Bush">
+      <charseq START="5472" END="5475">Bush</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E64" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="NYT_ENG_20030630.0079-E64-134" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="5358" END="5384">South Korea's new president</charseq>
+    </extent>
+    <head>
+      <charseq START="5376" END="5384">president</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E64-135" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="5387" END="5395">Roh Moo-h</charseq>
+    </extent>
+    <head>
+      <charseq START="5387" END="5395">Roh Moo-h</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E64-141" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="5597" END="5599">Roh</charseq>
+    </extent>
+    <head>
+      <charseq START="5597" END="5599">Roh</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Roh Moo-h">
+      <charseq START="5387" END="5395">Roh Moo-h</charseq>
+    </name>
+    <name NAME="Roh">
+      <charseq START="5597" END="5599">Roh</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E66" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="NYT_ENG_20030630.0079-E66-137" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="5416" END="5419">they</charseq>
+    </extent>
+    <head>
+      <charseq START="5416" END="5419">they</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E67" TYPE="WEA" SUBTYPE="Nuclear" CLASS="USP">
+  <entity_mention ID="NYT_ENG_20030630.0079-E67-12" TYPE="NOM" LDCTYPE="BAR" LDCATR="FALSE">
+    <extent>
+      <charseq START="985" END="1109">much more
+sophisticated weapons that would be light enough to put onto its
+growing arsenal of medium- and long-range missiles</charseq>
+    </extent>
+    <head>
+      <charseq START="1009" END="1015">weapons</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E67-13" TYPE="PRO" LDCTYPE="WHQ" LDCATR="FALSE">
+    <extent>
+      <charseq START="1017" END="1020">that</charseq>
+    </extent>
+    <head>
+      <charseq START="1017" END="1020">that</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E67-20" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1255" END="1293">such a
+``miniaturized'' nuclear warhead</charseq>
+    </extent>
+    <head>
+      <charseq START="1287" END="1293">warhead</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E67-31" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1569" END="1571">one</charseq>
+    </extent>
+    <head>
+      <charseq START="1569" END="1571">one</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E67-34" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2087" END="2102">a nuclear weapon</charseq>
+    </extent>
+    <head>
+      <charseq START="2097" END="2102">weapon</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E67-48" TYPE="NOM" LDCTYPE="BAR" LDCATR="FALSE">
+    <extent>
+      <charseq START="2281" END="2295">nuclear weapons</charseq>
+    </extent>
+    <head>
+      <charseq START="2289" END="2295">weapons</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E67-68" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2832" END="2849">the small
+warheads</charseq>
+    </extent>
+    <head>
+      <charseq START="2842" END="2849">warheads</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E67-92" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="3830" END="3837">a weapon</charseq>
+    </extent>
+    <head>
+      <charseq START="3832" END="3837">weapon</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E67-111" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="4683" END="4690">a weapon</charseq>
+    </extent>
+    <head>
+      <charseq START="4685" END="4690">weapon</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E67-117" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="3937" END="3958">a miniaturized warhead</charseq>
+    </extent>
+    <head>
+      <charseq START="3952" END="3958">warhead</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E67-131" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3969" END="3970">it</charseq>
+    </extent>
+    <head>
+      <charseq START="3969" END="3970">it</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E67-132" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="3249" END="3255">weapons</charseq>
+    </extent>
+    <head>
+      <charseq START="3249" END="3255">weapons</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E67-144" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="4569" END="4575">weapons</charseq>
+    </extent>
+    <head>
+      <charseq START="4569" END="4575">weapons</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E67-155" TYPE="NOM" LDCTYPE="BAR" LDCATR="FALSE">
+    <extent>
+      <charseq START="220" END="302">nuclear warheads small enough to fit atop the
+country's growing arsenal of missideS</charseq>
+    </extent>
+    <head>
+      <charseq START="228" END="235">warheads</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E68" TYPE="ORG" SUBTYPE="Government" CLASS="GEN">
+  <entity_mention ID="NYT_ENG_20030630.0079-E68-140" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="5579" END="5586">military</charseq>
+    </extent>
+    <head>
+      <charseq START="5579" END="5586">military</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E69" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="NYT_ENG_20030630.0079-E69-143" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="5641" END="5670">the North's nuclear facilities</charseq>
+    </extent>
+    <head>
+      <charseq START="5661" END="5670">facilities</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E73" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="NYT_ENG_20030630.0079-E73-150" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="858" END="883">oMa intelligence officials</charseq>
+    </extent>
+    <head>
+      <charseq START="875" END="883">officials</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E74" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="NYT_ENG_20030630.0079-E74-151" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="325" END="329">Tokyo</charseq>
+    </extent>
+    <head>
+      <charseq START="325" END="329">Tokyo</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Tokyo">
+      <charseq START="325" END="329">Tokyo</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E79" TYPE="WEA" SUBTYPE="Projectile" CLASS="GEN">
+  <entity_mention ID="NYT_ENG_20030630.0079-E79-15" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1079" END="1109">medium- and long-range missiles</charseq>
+    </extent>
+    <head>
+      <charseq START="1102" END="1109">missiles</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E79-95" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="3984" END="3995">the
+missiles</charseq>
+    </extent>
+    <head>
+      <charseq START="3988" END="3995">missiles</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E79-159" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="295" END="302">missideS</charseq>
+    </extent>
+    <head>
+      <charseq START="295" END="302">missideS</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E80" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="NYT_ENG_20030630.0079-E80-160" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="335" END="360">U.S. troops based in Japan</charseq>
+    </extent>
+    <head>
+      <charseq START="340" END="345">troops</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E82" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="NYT_ENG_20030630.0079-E82-63" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="2662" END="2666">Japan</charseq>
+    </extent>
+    <head>
+      <charseq START="2662" END="2666">Japan</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E82-162" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="356" END="360">Japan</charseq>
+    </extent>
+    <head>
+      <charseq START="356" END="360">Japan</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E82-166" TYPE="NAM" LDCTYPE="NAM" ROLE="ORG">
+    <extent>
+      <charseq START="486" END="490">Japan</charseq>
+    </extent>
+    <head>
+      <charseq START="486" END="490">Japan</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Japan">
+      <charseq START="2662" END="2666">Japan</charseq>
+    </name>
+    <name NAME="Japan">
+      <charseq START="356" END="360">Japan</charseq>
+    </name>
+    <name NAME="Japan">
+      <charseq START="486" END="490">Japan</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="NYT_ENG_20030630.0079-E83" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="NYT_ENG_20030630.0079-E83-59" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="2557" END="2567">South Korea</charseq>
+    </extent>
+    <head>
+      <charseq START="2557" END="2567">South Korea</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E83-133" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE">
+    <extent>
+      <charseq START="5358" END="5368">South Korea</charseq>
+    </extent>
+    <head>
+      <charseq START="5358" END="5368">South Korea</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="NYT_ENG_20030630.0079-E83-167" TYPE="NAM" LDCTYPE="NAM" ROLE="ORG">
+    <extent>
+      <charseq START="493" END="503">South Korea</charseq>
+    </extent>
+    <head>
+      <charseq START="493" END="503">South Korea</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="South Korea">
+      <charseq START="2557" END="2567">South Korea</charseq>
+    </name>
+    <name NAME="South Korea">
+      <charseq START="5358" END="5368">South Korea</charseq>
+    </name>
+    <name NAME="South Korea">
+      <charseq START="493" END="503">South Korea</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<timex2 ID="NYT_ENG_20030630.0079-T1">
+  <timex2_mention ID="NYT_ENG_20030630.0079-T1-1">
+    <extent>
+      <charseq START="2298" END="2300">Now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="NYT_ENG_20030630.0079-T2">
+  <timex2_mention ID="NYT_ENG_20030630.0079-T2-1">
+    <extent>
+      <charseq START="3490" END="3492">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="NYT_ENG_20030630.0079-T3">
+  <timex2_mention ID="NYT_ENG_20030630.0079-T3-1">
+    <extent>
+      <charseq START="4033" END="4040">recently</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="NYT_ENG_20030630.0079-T4">
+  <timex2_mention ID="NYT_ENG_20030630.0079-T4-1">
+    <extent>
+      <charseq START="5070" END="5075">recent</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="NYT_ENG_20030630.0079-T5">
+  <timex2_mention ID="NYT_ENG_20030630.0079-T5-1">
+    <extent>
+      <charseq START="39" END="46">20030630</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="NYT_ENG_20030630.0079-T6">
+  <timex2_mention ID="NYT_ENG_20030630.0079-T6-1">
+    <extent>
+      <charseq START="525" END="536">recent weeks</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="NYT_ENG_20030630.0079-T7">
+  <timex2_mention ID="NYT_ENG_20030630.0079-T7-1">
+    <extent>
+      <charseq START="1451" END="1477">as little as a
+year or less</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="NYT_ENG_20030630.0079-T8">
+  <timex2_mention ID="NYT_ENG_20030630.0079-T8-1">
+    <extent>
+      <charseq START="2181" END="2194">the
+late 1980s</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="NYT_ENG_20030630.0079-T9">
+  <timex2_mention ID="NYT_ENG_20030630.0079-T9-1">
+    <extent>
+      <charseq START="2199" END="2209">early 1990s</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="NYT_ENG_20030630.0079-T10">
+  <timex2_mention ID="NYT_ENG_20030630.0079-T10-1">
+    <extent>
+      <charseq START="2120" END="2127">long ago</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="NYT_ENG_20030630.0079-T11">
+  <timex2_mention ID="NYT_ENG_20030630.0079-T11-1">
+    <extent>
+      <charseq START="2920" END="2935">less than a year</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="NYT_ENG_20030630.0079-T12">
+  <timex2_mention ID="NYT_ENG_20030630.0079-T12-1">
+    <extent>
+      <charseq START="3069" END="3082">late last year</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="NYT_ENG_20030630.0079-T13">
+  <timex2_mention ID="NYT_ENG_20030630.0079-T13-1">
+    <extent>
+      <charseq START="3278" END="3284">January</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="NYT_ENG_20030630.0079-T14">
+  <timex2_mention ID="NYT_ENG_20030630.0079-T14-1">
+    <extent>
+      <charseq START="3382" END="3396">nearly a decade</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="NYT_ENG_20030630.0079-T15">
+  <timex2_mention ID="NYT_ENG_20030630.0079-T15-1">
+    <extent>
+      <charseq START="3406" END="3409">1994</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="NYT_ENG_20030630.0079-T16">
+  <timex2_mention ID="NYT_ENG_20030630.0079-T16-1">
+    <extent>
+      <charseq START="3661" END="3669">last week</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="NYT_ENG_20030630.0079-T17">
+  <timex2_mention ID="NYT_ENG_20030630.0079-T17-1">
+    <extent>
+      <charseq START="3904" END="3913">six months</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="NYT_ENG_20030630.0079-T18">
+  <timex2_mention ID="NYT_ENG_20030630.0079-T18-1">
+    <extent>
+      <charseq START="4704" END="4719">a few months ago</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="NYT_ENG_20030630.0079-T19">
+  <timex2_mention ID="NYT_ENG_20030630.0079-T19-1">
+    <extent>
+      <charseq START="4812" END="4821">months ago</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="NYT_ENG_20030630.0079-T20">
+  <timex2_mention ID="NYT_ENG_20030630.0079-T20-1">
+    <extent>
+      <charseq START="5252" END="5266">the past decade</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="NYT_ENG_20030630.0079-T21">
+  <timex2_mention ID="NYT_ENG_20030630.0079-T21-1">
+    <extent>
+      <charseq START="5307" END="5319">several years</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="NYT_ENG_20030630.0079-T22">
+  <timex2_mention ID="NYT_ENG_20030630.0079-T22-1">
+    <extent>
+      <charseq START="159" END="161">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="NYT_ENG_20030630.0079-T23">
+  <timex2_mention ID="NYT_ENG_20030630.0079-T23-1">
+    <extent>
+      <charseq START="1381" END="1383">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="NYT_ENG_20030630.0079-R1" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="NYT_ENG_20030630.0079-E3" ROLE="Arg-1"/>
+  <relation_argument REFID="NYT_ENG_20030630.0079-E12" ROLE="Arg-2"/>
+  <relation_mention ID="NYT_ENG_20030630.0079-R1-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="594" END="608">U.S. satellites</charseq>
+    </extent>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E3-4" ROLE="Arg-1">
+      <extent>
+        <charseq START="594" END="596">U.S</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E12-28" ROLE="Arg-2">
+      <extent>
+        <charseq START="594" END="608">U.S. satellites</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="NYT_ENG_20030630.0079-R1-2" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="2989" END="3003">U.S. satellites</charseq>
+    </extent>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E3-70" ROLE="Arg-1">
+      <extent>
+        <charseq START="2989" END="2991">U.S</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E12-84" ROLE="Arg-2">
+      <extent>
+        <charseq START="2989" END="3003">U.S. satellites</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="NYT_ENG_20030630.0079-R2" TYPE="PART-WHOLE" SUBTYPE="Artifact" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="NYT_ENG_20030630.0079-E14" ROLE="Arg-2"/>
+  <relation_argument REFID="NYT_ENG_20030630.0079-E79" ROLE="Arg-1"/>
+  <relation_mention ID="NYT_ENG_20030630.0079-R2-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="1056" END="1109">its
+growing arsenal of medium- and long-range missiles</charseq>
+    </extent>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E14-40" ROLE="Arg-2">
+      <extent>
+        <charseq START="1056" END="1109">its
+growing arsenal of medium- and long-range missiles</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E79-15" ROLE="Arg-1">
+      <extent>
+        <charseq START="1079" END="1109">medium- and long-range missiles</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="NYT_ENG_20030630.0079-R3" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="NYT_ENG_20030630.0079-E30" ROLE="Arg-1"/>
+  <relation_argument REFID="NYT_ENG_20030630.0079-E67" ROLE="Arg-2"/>
+  <relation_mention ID="NYT_ENG_20030630.0079-R3-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="2058" END="2209">North Korea has never tested a nuclear weapon, though the
+CIA long ago estimated that it manufactured two crude devices in the
+late 1980s or early 1990s</charseq>
+    </extent>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E30-27" ROLE="Arg-1">
+      <extent>
+        <charseq START="2058" END="2068">North Korea</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E67-34" ROLE="Arg-2">
+      <extent>
+        <charseq START="2087" END="2102">a nuclear weapon</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="NYT_ENG_20030630.0079-R3-2" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="1112" END="1293">Previously,
+U.S. officials had said they were uncertain whether North Korea had
+received enough outside technical help to even attempt to make such a
+``miniaturized'' nuclear warhead</charseq>
+    </extent>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E30-19" ROLE="Arg-1">
+      <extent>
+        <charseq START="1176" END="1186">North Korea</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E67-20" ROLE="Arg-2">
+      <extent>
+        <charseq START="1255" END="1293">such a
+``miniaturized'' nuclear warhead</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="NYT_ENG_20030630.0079-R3-3" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="858" END="1109">oMa intelligence officials believe that the existence of the testing
+range is evidence that the country intends to manufacture much more
+sophisticated weapons that would be light enough to put onto its
+growing arsenal of medium- and long-range missiles</charseq>
+    </extent>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E30-11" ROLE="Arg-1">
+      <extent>
+        <charseq START="950" END="960">the country</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E67-12" ROLE="Arg-2">
+      <extent>
+        <charseq START="985" END="1109">much more
+sophisticated weapons that would be light enough to put onto its
+growing arsenal of medium- and long-range missiles</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="NYT_ENG_20030630.0079-R3-4" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="131" END="435">U.S. intelligence officials now believe North Korea is developing the
+technology to make nuclear warheads small enough to fit atop the
+country's growing arsenal of missideS( potentially putting Tokyo and
+U.S. troops based in Japan at risk, according to officials who have
+received the intelligence reports</charseq>
+    </extent>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E30-154" ROLE="Arg-1">
+      <extent>
+        <charseq START="171" END="181">North Korea</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E67-155" ROLE="Arg-2">
+      <extent>
+        <charseq START="220" END="302">nuclear warheads small enough to fit atop the
+country's growing arsenal of missideS</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="NYT_ENG_20030630.0079-R3-5" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="2213" END="2295">North Korea, unlike Iraq, has made no secret of its plan to develop
+nuclear weapons</charseq>
+    </extent>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E30-41" ROLE="Arg-1">
+      <extent>
+        <charseq START="2213" END="2223">North Korea</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E67-48" ROLE="Arg-2">
+      <extent>
+        <charseq START="2281" END="2295">nuclear weapons</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="NYT_ENG_20030630.0079-R3-6" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="2714" END="2849">The new intelligence estimates provided to Asian allies, however,
+left it unclear how quickly the North could produce the small
+warheads</charseq>
+    </extent>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E30-67" ROLE="Arg-1">
+      <extent>
+        <charseq START="2808" END="2816">the North</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E67-68" ROLE="Arg-2">
+      <extent>
+        <charseq START="2832" END="2849">the small
+warheads</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="NYT_ENG_20030630.0079-R3-7" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="4594" END="4719">This
+has led some analysts to argue that the North Koreans may be farther
+from producing a weapon than feared a few months ago</charseq>
+    </extent>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E30-107" ROLE="Arg-1">
+      <extent>
+        <charseq START="4635" END="4651">the North Koreans</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E67-111" ROLE="Arg-2">
+      <extent>
+        <charseq START="4683" END="4690">a weapon</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="NYT_ENG_20030630.0079-R5" TYPE="ORG-AFF" SUBTYPE="Membership" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="NYT_ENG_20030630.0079-E33" ROLE="Arg-1"/>
+  <relation_argument REFID="NYT_ENG_20030630.0079-E32" ROLE="Arg-2"/>
+  <relation_mention ID="NYT_ENG_20030630.0079-R5-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="3426" END="3451">the Clinton administration</charseq>
+    </extent>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E33-79" ROLE="Arg-1">
+      <extent>
+        <charseq START="3430" END="3436">Clinton</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E32-78" ROLE="Arg-2">
+      <extent>
+        <charseq START="3426" END="3451">the Clinton administration</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="NYT_ENG_20030630.0079-R6" TYPE="PART-WHOLE" SUBTYPE="Artifact" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="NYT_ENG_20030630.0079-E67" ROLE="Arg-1"/>
+  <relation_argument REFID="NYT_ENG_20030630.0079-E43" ROLE="Arg-2"/>
+  <relation_mention ID="NYT_ENG_20030630.0079-R6-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="3969" END="3995">it into one of the
+missiles</charseq>
+    </extent>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E67-131" ROLE="Arg-1">
+      <extent>
+        <charseq START="3969" END="3970">it</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E43-94" ROLE="Arg-2">
+      <extent>
+        <charseq START="3977" END="3995">one of the
+missiles</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="NYT_ENG_20030630.0079-R7" TYPE="PART-WHOLE" SUBTYPE="Subsidiary" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="NYT_ENG_20030630.0079-E2" ROLE="Arg-1"/>
+  <relation_argument REFID="NYT_ENG_20030630.0079-E3" ROLE="Arg-2"/>
+  <relation_mention ID="NYT_ENG_20030630.0079-R7-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="131" END="147">U.S. intelligence</charseq>
+    </extent>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E2-87" ROLE="Arg-1">
+      <extent>
+        <charseq START="131" END="147">U.S. intelligence</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E3-145" ROLE="Arg-2">
+      <extent>
+        <charseq START="131" END="133">U.S</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="NYT_ENG_20030630.0079-R8" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="NYT_ENG_20030630.0079-E52" ROLE="Arg-1"/>
+  <relation_argument REFID="NYT_ENG_20030630.0079-E2" ROLE="Arg-2"/>
+  <relation_mention ID="NYT_ENG_20030630.0079-R8-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="131" END="157">U.S. intelligence officials</charseq>
+    </extent>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E52-77" ROLE="Arg-1">
+      <extent>
+        <charseq START="131" END="157">U.S. intelligence officials</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E2-87" ROLE="Arg-2">
+      <extent>
+        <charseq START="131" END="147">U.S. intelligence</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="NYT_ENG_20030630.0079-R8-2" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="539" END="582">officials at the Central Intelligence
+Agency</charseq>
+    </extent>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E52-2" ROLE="Arg-1">
+      <extent>
+        <charseq START="539" END="582">officials at the Central Intelligence
+Agency</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E2-3" ROLE="Arg-2">
+      <extent>
+        <charseq START="552" END="582">the Central Intelligence
+Agency</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="NYT_ENG_20030630.0079-R8-3" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="3594" END="3615">intelligence
+officials</charseq>
+    </extent>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E52-86" ROLE="Arg-1">
+      <extent>
+        <charseq START="3594" END="3615">intelligence
+officials</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E2-89" ROLE="Arg-2">
+      <extent>
+        <charseq START="3594" END="3605">intelligence</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="NYT_ENG_20030630.0079-R9" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="NYT_ENG_20030630.0079-E30" ROLE="Arg-1"/>
+  <relation_argument REFID="NYT_ENG_20030630.0079-E14" ROLE="Arg-2"/>
+  <relation_mention ID="NYT_ENG_20030630.0079-R9-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="262" END="302">the
+country's growing arsenal of missideS</charseq>
+    </extent>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E30-157" ROLE="Arg-1">
+      <extent>
+        <charseq START="262" END="272">the
+country</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E14-148" ROLE="Arg-2">
+      <extent>
+        <charseq START="262" END="302">the
+country's growing arsenal of missideS</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="NYT_ENG_20030630.0079-R9-2" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="1056" END="1109">its
+growing arsenal of medium- and long-range missiles</charseq>
+    </extent>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E30-14" ROLE="Arg-1">
+      <extent>
+        <charseq START="1056" END="1058">its</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E14-40" ROLE="Arg-2">
+      <extent>
+        <charseq START="1056" END="1109">its
+growing arsenal of medium- and long-range missiles</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="NYT_ENG_20030630.0079-R10" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="NYT_ENG_20030630.0079-E80" ROLE="Arg-1"/>
+  <relation_argument REFID="NYT_ENG_20030630.0079-E3" ROLE="Arg-2"/>
+  <relation_mention ID="NYT_ENG_20030630.0079-R10-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="325" END="360">Tokyo and
+U.S. troops based in Japan</charseq>
+    </extent>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E80-160" ROLE="Arg-1">
+      <extent>
+        <charseq START="335" END="360">U.S. troops based in Japan</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E3-161" ROLE="Arg-2">
+      <extent>
+        <charseq START="335" END="337">U.S</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="NYT_ENG_20030630.0079-R11" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="NYT_ENG_20030630.0079-E80" ROLE="Arg-1"/>
+  <relation_argument REFID="NYT_ENG_20030630.0079-E82" ROLE="Arg-2"/>
+  <relation_mention ID="NYT_ENG_20030630.0079-R11-1" LEXICALCONDITION="Participial">
+    <extent>
+      <charseq START="325" END="360">Tokyo and
+U.S. troops based in Japan</charseq>
+    </extent>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E80-160" ROLE="Arg-1">
+      <extent>
+        <charseq START="335" END="360">U.S. troops based in Japan</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E82-162" ROLE="Arg-2">
+      <extent>
+        <charseq START="356" END="360">Japan</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="NYT_ENG_20030630.0079-R13" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="NYT_ENG_20030630.0079-E4" ROLE="Arg-1"/>
+  <relation_argument REFID="NYT_ENG_20030630.0079-E5" ROLE="Arg-2"/>
+  <relation_mention ID="NYT_ENG_20030630.0079-R13-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="626" END="696">a sophisticated new
+nuclear testing site in an area called Youngdoktong</charseq>
+    </extent>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E4-5" ROLE="Arg-1">
+      <extent>
+        <charseq START="626" END="696">a sophisticated new
+nuclear testing site in an area called Youngdoktong</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E5-6" ROLE="Arg-2">
+      <extent>
+        <charseq START="670" END="696">an area called Youngdoktong</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="NYT_ENG_20030630.0079-R14" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="NYT_ENG_20030630.0079-E2" ROLE="Arg-2"/>
+  <relation_argument REFID="NYT_ENG_20030630.0079-E73" ROLE="Arg-1"/>
+  <relation_mention ID="NYT_ENG_20030630.0079-R14-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="858" END="883">oMa intelligence officials</charseq>
+    </extent>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E2-88" ROLE="Arg-2">
+      <extent>
+        <charseq START="862" END="873">intelligence</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E73-150" ROLE="Arg-1">
+      <extent>
+        <charseq START="858" END="883">oMa intelligence officials</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="NYT_ENG_20030630.0079-R17" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="NYT_ENG_20030630.0079-E52" ROLE="Arg-1"/>
+  <relation_argument REFID="NYT_ENG_20030630.0079-E3" ROLE="Arg-2"/>
+  <relation_mention ID="NYT_ENG_20030630.0079-R17-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="3471" END="3484">U.S.
+officials</charseq>
+    </extent>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E52-110" ROLE="Arg-1">
+      <extent>
+        <charseq START="3471" END="3484">U.S.
+officials</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E3-80" ROLE="Arg-2">
+      <extent>
+        <charseq START="3471" END="3473">U.S</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="NYT_ENG_20030630.0079-R17-2" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="1124" END="1137">U.S. officials</charseq>
+    </extent>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E52-43" ROLE="Arg-1">
+      <extent>
+        <charseq START="1124" END="1137">U.S. officials</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E3-17" ROLE="Arg-2">
+      <extent>
+        <charseq START="1124" END="1126">U.S</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="NYT_ENG_20030630.0079-R18" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="NYT_ENG_20030630.0079-E16" ROLE="Arg-2"/>
+  <relation_argument REFID="NYT_ENG_20030630.0079-E20" ROLE="Arg-1"/>
+  <relation_mention ID="NYT_ENG_20030630.0079-R18-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="1575" END="1605">Senior administration officials</charseq>
+    </extent>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E16-46" ROLE="Arg-2">
+      <extent>
+        <charseq START="1582" END="1595">administration</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E20-149" ROLE="Arg-1">
+      <extent>
+        <charseq START="1575" END="1605">Senior administration officials</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="NYT_ENG_20030630.0079-R18-2" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="2303" END="2326">administration officials</charseq>
+    </extent>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E20-50" ROLE="Arg-1">
+      <extent>
+        <charseq START="2303" END="2326">administration officials</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E16-49" ROLE="Arg-2">
+      <extent>
+        <charseq START="2303" END="2316">administration</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="NYT_ENG_20030630.0079-R19" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="NYT_ENG_20030630.0079-E30" ROLE="Arg-1"/>
+  <relation_argument REFID="NYT_ENG_20030630.0079-E9" ROLE="Arg-2"/>
+  <relation_mention ID="NYT_ENG_20030630.0079-R19-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="1740" END="1750">its weapons</charseq>
+    </extent>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E30-29" ROLE="Arg-1">
+      <extent>
+        <charseq START="1740" END="1742">its</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E9-30" ROLE="Arg-2">
+      <extent>
+        <charseq START="1740" END="1750">its weapons</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="NYT_ENG_20030630.0079-R20" TYPE="PHYS" SUBTYPE="Near" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="NYT_ENG_20030630.0079-E4" ROLE="Arg-1"/>
+  <relation_argument REFID="NYT_ENG_20030630.0079-E8" ROLE="Arg-2"/>
+  <relation_mention ID="NYT_ENG_20030630.0079-R20-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="1990" END="2055">the testing site, which is near North Korea's main nuclear
+complex</charseq>
+    </extent>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E4-164" ROLE="Arg-1">
+      <extent>
+        <charseq START="2008" END="2012">which</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E8-18" ROLE="Arg-2">
+      <extent>
+        <charseq START="2022" END="2055">North Korea's main nuclear
+complex</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="NYT_ENG_20030630.0079-R21" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="NYT_ENG_20030630.0079-E30" ROLE="Arg-1"/>
+  <relation_argument REFID="NYT_ENG_20030630.0079-E8" ROLE="Arg-2"/>
+  <relation_mention ID="NYT_ENG_20030630.0079-R21-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="2022" END="2055">North Korea's main nuclear
+complex</charseq>
+    </extent>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E30-16" ROLE="Arg-1">
+      <extent>
+        <charseq START="2022" END="2032">North Korea</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E8-18" ROLE="Arg-2">
+      <extent>
+        <charseq START="2022" END="2055">North Korea's main nuclear
+complex</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="NYT_ENG_20030630.0079-R22" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="NYT_ENG_20030630.0079-E30" ROLE="Arg-1"/>
+  <relation_argument REFID="NYT_ENG_20030630.0079-E15" ROLE="Arg-2"/>
+  <relation_argument REFID="NYT_ENG_20030630.0079-T9" ROLE="Time-Within"/>
+  <relation_argument REFID="NYT_ENG_20030630.0079-T8" ROLE="Time-Within"/>
+  <relation_mention ID="NYT_ENG_20030630.0079-R22-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="2058" END="2209">North Korea has never tested a nuclear weapon, though the
+CIA long ago estimated that it manufactured two crude devices in the
+late 1980s or early 1990s</charseq>
+    </extent>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E30-36" ROLE="Arg-1">
+      <extent>
+        <charseq START="2144" END="2145">it</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E15-38" ROLE="Arg-2">
+      <extent>
+        <charseq START="2160" END="2176">two crude devices</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-T9-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="2199" END="2209">early 1990s</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-T8-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="2181" END="2194">the
+late 1980s</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="NYT_ENG_20030630.0079-R28" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="NYT_ENG_20030630.0079-E30" ROLE="Arg-1"/>
+  <relation_argument REFID="NYT_ENG_20030630.0079-E21" ROLE="Arg-2"/>
+  <relation_mention ID="NYT_ENG_20030630.0079-R28-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="2298" END="2447">Now, administration officials say they fear that the
+country is on the verge of producing five or six new weapons, some of
+which might be miniaturized</charseq>
+    </extent>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E30-52" ROLE="Arg-1">
+      <extent>
+        <charseq START="2347" END="2357">the
+country</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E21-53" ROLE="Arg-2">
+      <extent>
+        <charseq START="2388" END="2447">five or six new weapons, some of
+which might be miniaturized</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="NYT_ENG_20030630.0079-R29" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="NYT_ENG_20030630.0079-E23" ROLE="Arg-1"/>
+  <relation_argument REFID="NYT_ENG_20030630.0079-E26" ROLE="Arg-2"/>
+  <relation_mention ID="NYT_ENG_20030630.0079-R29-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="2577" END="2601">one
+senior Asian official</charseq>
+    </extent>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E23-60" ROLE="Arg-1">
+      <extent>
+        <charseq START="2577" END="2601">one
+senior Asian official</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E26-64" ROLE="Arg-2">
+      <extent>
+        <charseq START="2588" END="2592">Asian</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="NYT_ENG_20030630.0079-R30" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="NYT_ENG_20030630.0079-E24" ROLE="Arg-1"/>
+  <relation_argument REFID="NYT_ENG_20030630.0079-E3" ROLE="Arg-2"/>
+  <relation_mention ID="NYT_ENG_20030630.0079-R30-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="2616" END="2647">approximately 60,000 U.S. troops</charseq>
+    </extent>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E24-61" ROLE="Arg-1">
+      <extent>
+        <charseq START="2616" END="2647">approximately 60,000 U.S. troops</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E3-62" ROLE="Arg-2">
+      <extent>
+        <charseq START="2637" END="2639">U.S</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="NYT_ENG_20030630.0079-R31" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="NYT_ENG_20030630.0079-E24" ROLE="Arg-1"/>
+  <relation_argument REFID="NYT_ENG_20030630.0079-E82" ROLE="Arg-2"/>
+  <relation_mention ID="NYT_ENG_20030630.0079-R31-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="2452" END="2666">``This would give them the range they never had before, and the
+chance to spread their threat far beyond South Korea,'' said one
+senior Asian official, noting that approximately 60,000 U.S. troops
+are based in Japan</charseq>
+    </extent>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E24-61" ROLE="Arg-1">
+      <extent>
+        <charseq START="2616" END="2647">approximately 60,000 U.S. troops</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E82-63" ROLE="Arg-2">
+      <extent>
+        <charseq START="2662" END="2666">Japan</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="NYT_ENG_20030630.0079-R32" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="NYT_ENG_20030630.0079-E28" ROLE="Arg-1"/>
+  <relation_argument REFID="NYT_ENG_20030630.0079-E26" ROLE="Arg-2"/>
+  <relation_mention ID="NYT_ENG_20030630.0079-R32-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="2757" END="2768">Asian allies</charseq>
+    </extent>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E28-66" ROLE="Arg-1">
+      <extent>
+        <charseq START="2757" END="2768">Asian allies</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E26-65" ROLE="Arg-2">
+      <extent>
+        <charseq START="2757" END="2761">Asian</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="NYT_ENG_20030630.0079-R34" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="NYT_ENG_20030630.0079-E31" ROLE="Arg-1"/>
+  <relation_argument REFID="NYT_ENG_20030630.0079-E30" ROLE="Arg-2"/>
+  <relation_argument REFID="NYT_ENG_20030630.0079-T12" ROLE="Time-Ending"/>
+  <relation_mention ID="NYT_ENG_20030630.0079-R34-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="2989" END="3131">U.S. satellites have been watching North Korean nuclear activity
+intently since late last year, when the North evicted international
+inspectors</charseq>
+    </extent>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E31-73" ROLE="Arg-1">
+      <extent>
+        <charseq START="3108" END="3131">international
+inspectors</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E30-72" ROLE="Arg-2">
+      <extent>
+        <charseq START="3090" END="3098">the North</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-T12-1" ROLE="Time-Ending">
+      <extent>
+        <charseq START="3069" END="3082">late last year</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="NYT_ENG_20030630.0079-R35" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="NYT_ENG_20030630.0079-E36" ROLE="Arg-1"/>
+  <relation_argument REFID="NYT_ENG_20030630.0079-E30" ROLE="Arg-2"/>
+  <relation_mention ID="NYT_ENG_20030630.0079-R35-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="3507" END="3528">North Korean engineers</charseq>
+    </extent>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E36-82" ROLE="Arg-1">
+      <extent>
+        <charseq START="3507" END="3528">North Korean engineers</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E30-81" ROLE="Arg-2">
+      <extent>
+        <charseq START="3507" END="3518">North Korean</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="NYT_ENG_20030630.0079-R38" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="NYT_ENG_20030630.0079-E57" ROLE="Arg-1"/>
+  <relation_argument REFID="NYT_ENG_20030630.0079-E16" ROLE="Arg-2"/>
+  <relation_mention ID="NYT_ENG_20030630.0079-R38-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="5030" END="5063">one senior administration official</charseq>
+    </extent>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E57-121" ROLE="Arg-1">
+      <extent>
+        <charseq START="5030" END="5063">one senior administration official</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E16-122" ROLE="Arg-2">
+      <extent>
+        <charseq START="5041" END="5054">administration</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="NYT_ENG_20030630.0079-R39" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="NYT_ENG_20030630.0079-E64" ROLE="Arg-1"/>
+  <relation_argument REFID="NYT_ENG_20030630.0079-E83" ROLE="Arg-2"/>
+  <relation_mention ID="NYT_ENG_20030630.0079-R39-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="5358" END="5384">South Korea's new president</charseq>
+    </extent>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E64-134" ROLE="Arg-1">
+      <extent>
+        <charseq START="5358" END="5384">South Korea's new president</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E83-133" ROLE="Arg-2">
+      <extent>
+        <charseq START="5358" END="5368">South Korea</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="NYT_ENG_20030630.0079-R40" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="NYT_ENG_20030630.0079-E30" ROLE="Arg-1"/>
+  <relation_argument REFID="NYT_ENG_20030630.0079-E69" ROLE="Arg-2"/>
+  <relation_mention ID="NYT_ENG_20030630.0079-R40-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="5641" END="5670">the North's nuclear facilities</charseq>
+    </extent>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E30-142" ROLE="Arg-1">
+      <extent>
+        <charseq START="5641" END="5649">the North</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="NYT_ENG_20030630.0079-E69-143" ROLE="Arg-2">
+      <extent>
+        <charseq START="5641" END="5670">the North's nuclear facilities</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="NYT_ENG_20030630.0079-EV1" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="NYT_ENG_20030630.0079-E53" ROLE="Vehicle"/>
+  <event_argument REFID="NYT_ENG_20030630.0079-E54" ROLE="Origin"/>
+  <event_argument REFID="NYT_ENG_20030630.0079-T19" ROLE="Time-Within"/>
+  <event_mention ID="NYT_ENG_20030630.0079-EV1-1">
+    <extent>
+      <charseq START="4744" END="4821">trucks were seen carrying the rods out of their
+normal storage area months ago</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="4723" END="4942">But others note that trucks were seen carrying the rods out of their
+normal storage area months ago, and it is unclear where they are _ or
+even whether the United States is sniffing for the krypton gas in the
+right place</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="4761" END="4768">carrying</charseq>
+    </anchor>
+    <event_mention_argument REFID="NYT_ENG_20030630.0079-E53-113" ROLE="Vehicle">
+      <extent>
+        <charseq START="4744" END="4749">trucks</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="NYT_ENG_20030630.0079-E54-114" ROLE="Origin">
+      <extent>
+        <charseq START="4786" END="4810">their
+normal storage area</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="NYT_ENG_20030630.0079-T19-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="4812" END="4821">months ago</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="NYT_ENG_20030630.0079-EV2" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Future">
+  <event_argument REFID="NYT_ENG_20030630.0079-E30" ROLE="Place"/>
+  <event_argument REFID="NYT_ENG_20030630.0079-E69" ROLE="Target"/>
+  <event_mention ID="NYT_ENG_20030630.0079-EV2-1">
+    <extent>
+      <charseq START="5626" END="5670">strike against the North's nuclear facilities</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="5597" END="5693">Roh has said any
+pre-emptive strike against the North's nuclear facilities could prove
+disastrous</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="5626" END="5631">strike</charseq>
+    </anchor>
+    <event_mention_argument REFID="NYT_ENG_20030630.0079-E30-142" ROLE="Place">
+      <extent>
+        <charseq START="5641" END="5649">the North</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="NYT_ENG_20030630.0079-E69-143" ROLE="Target">
+      <extent>
+        <charseq START="5641" END="5670">the North's nuclear facilities</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="NYT_ENG_20030630.0079-EV3" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="NYT_ENG_20030630.0079-E31" ROLE="Artifact"/>
+  <event_argument REFID="NYT_ENG_20030630.0079-E30" ROLE="Agent"/>
+  <event_argument REFID="NYT_ENG_20030630.0079-T12" ROLE="Time-Within"/>
+  <event_mention ID="NYT_ENG_20030630.0079-EV3-1">
+    <extent>
+      <charseq START="3069" END="3131">late last year, when the North evicted international
+inspectors</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2989" END="3131">U.S. satellites have been watching North Korean nuclear activity
+intently since late last year, when the North evicted international
+inspectors</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="3100" END="3106">evicted</charseq>
+    </anchor>
+    <event_mention_argument REFID="NYT_ENG_20030630.0079-E31-73" ROLE="Artifact">
+      <extent>
+        <charseq START="3108" END="3131">international
+inspectors</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="NYT_ENG_20030630.0079-E30-72" ROLE="Agent">
+      <extent>
+        <charseq START="3090" END="3098">the North</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="NYT_ENG_20030630.0079-T12-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="3069" END="3082">late last year</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

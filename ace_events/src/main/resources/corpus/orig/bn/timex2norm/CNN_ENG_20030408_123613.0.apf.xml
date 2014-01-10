@@ -1,0 +1,598 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030408_123613.0.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030408_123613.0">
+<entity ID="CNN_ENG_20030408_123613.0-E1" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_123613.0-E1-26" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="290" END="292">u.s</charseq>
+    </extent>
+    <head>
+      <charseq START="290" END="292">u.s</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_123613.0-E1-30" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="344" END="346">u.s</charseq>
+    </extent>
+    <head>
+      <charseq START="344" END="346">u.s</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="u.s">
+      <charseq START="290" END="292">u.s</charseq>
+    </name>
+    <name NAME="u.s">
+      <charseq START="344" END="346">u.s</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030408_123613.0-E2" TYPE="LOC" SUBTYPE="Region-General" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_123613.0-E2-2" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="365" END="384">southeastern baghdad</charseq>
+    </extent>
+    <head>
+      <charseq START="378" END="384">baghdad</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030408_123613.0-E3" TYPE="FAC" SUBTYPE="Plant" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_123613.0-E3-3" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="474" END="494">an industrial complex</charseq>
+    </extent>
+    <head>
+      <charseq START="488" END="494">complex</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030408_123613.0-E4" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_123613.0-E4-4" TYPE="NOM" LDCTYPE="NOM" ROLE="ORG">
+    <extent>
+      <charseq START="532" END="551">the iraqi
+government</charseq>
+    </extent>
+    <head>
+      <charseq START="542" END="551">government</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_123613.0-E4-12" TYPE="NOM" LDCTYPE="NOM" ROLE="ORG">
+    <extent>
+      <charseq START="689" END="708">the iraqi government</charseq>
+    </extent>
+    <head>
+      <charseq START="699" END="708">government</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030408_123613.0-E5" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_123613.0-E5-5" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="536" END="540">iraqi</charseq>
+    </extent>
+    <head>
+      <charseq START="536" END="540">iraqi</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_123613.0-E5-13" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="693" END="697">iraqi</charseq>
+    </extent>
+    <head>
+      <charseq START="693" END="697">iraqi</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_123613.0-E5-16" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="841" END="844">iraq</charseq>
+    </extent>
+    <head>
+      <charseq START="841" END="844">iraq</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="iraqi">
+      <charseq START="536" END="540">iraqi</charseq>
+    </name>
+    <name NAME="iraqi">
+      <charseq START="693" END="697">iraqi</charseq>
+    </name>
+    <name NAME="iraq">
+      <charseq START="841" END="844">iraq</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030408_123613.0-E7" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_123613.0-E7-6" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="561" END="574">1252 civilians</charseq>
+    </extent>
+    <head>
+      <charseq START="566" END="574">civilians</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030408_123613.0-E8" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_123613.0-E8-7" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="627" END="628">us</charseq>
+    </extent>
+    <head>
+      <charseq START="627" END="628">us</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_123613.0-E8-9" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="684" END="686">cnn</charseq>
+    </extent>
+    <head>
+      <charseq START="684" END="686">cnn</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_123613.0-E8-15" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="803" END="805">our</charseq>
+    </extent>
+    <head>
+      <charseq START="803" END="805">our</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="cnn">
+      <charseq START="684" END="686">cnn</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030408_123613.0-E9" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_123613.0-E9-8" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="635" END="654">abu dhabi television</charseq>
+    </extent>
+    <head>
+      <charseq START="635" END="654">abu dhabi television</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="abu dhabi television">
+      <charseq START="635" END="654">abu dhabi television</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030408_123613.0-E10" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_123613.0-E10-11" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="262" END="268">baghdad</charseq>
+    </extent>
+    <head>
+      <charseq START="262" END="268">baghdad</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="baghdad">
+      <charseq START="262" END="268">baghdad</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030408_123613.0-E12" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_123613.0-E12-14" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="786" END="797">wolf blitzer</charseq>
+    </extent>
+    <head>
+      <charseq START="786" END="797">wolf blitzer</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="wolf blitzer">
+      <charseq START="786" END="797">wolf blitzer</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030408_123613.0-E13" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_123613.0-E13-1" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="71" END="86">hamburg, germany</charseq>
+    </extent>
+    <head>
+      <charseq START="71" END="77">hamburg</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="hamburg">
+      <charseq START="71" END="77">hamburg</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030408_123613.0-E14" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_123613.0-E14-17" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="80" END="86">germany</charseq>
+    </extent>
+    <head>
+      <charseq START="80" END="86">germany</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="germany">
+      <charseq START="80" END="86">germany</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030408_123613.0-E15" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_123613.0-E15-18" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="89" END="103">central command</charseq>
+    </extent>
+    <head>
+      <charseq START="89" END="103">central command</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="central command">
+      <charseq START="89" END="103">central command</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030408_123613.0-E16" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030408_123613.0-E16-19" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="110" END="119">the iraqis</charseq>
+    </extent>
+    <head>
+      <charseq START="114" END="119">iraqis</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030408_123613.0-E17" TYPE="VEH" SUBTYPE="Air" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_123613.0-E17-20" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="131" END="149">an
+a-10 tank killer</charseq>
+    </extent>
+    <head>
+      <charseq START="144" END="149">killer</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_123613.0-E17-22" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="180" END="188">the plane</charseq>
+    </extent>
+    <head>
+      <charseq START="184" END="188">plane</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030408_123613.0-E18" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_123613.0-E18-21" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="158" END="166">officials</charseq>
+    </extent>
+    <head>
+      <charseq START="158" END="166">officials</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030408_123613.0-E19" TYPE="WEA" SUBTYPE="Exploding" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_123613.0-E19-23" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="215" END="238">a surface to air missile</charseq>
+    </extent>
+    <head>
+      <charseq START="232" END="238">missile</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030408_123613.0-E20" TYPE="FAC" SUBTYPE="Airport" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_123613.0-E20-24" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="258" END="276">the baghdad
+airport</charseq>
+    </extent>
+    <head>
+      <charseq START="270" END="276">airport</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_123613.0-E20-25" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="278" END="282">which</charseq>
+    </extent>
+    <head>
+      <charseq START="278" END="282">which</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030408_123613.0-E22" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_123613.0-E22-27" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="302" END="306">pilot</charseq>
+    </extent>
+    <head>
+      <charseq START="302" END="306">pilot</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_123613.0-E22-28" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="313" END="316">they</charseq>
+    </extent>
+    <head>
+      <charseq START="313" END="316">they</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030408_123613.0-E23" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_123613.0-E23-10" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="457" END="460">they</charseq>
+    </extent>
+    <head>
+      <charseq START="457" END="460">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_123613.0-E23-29" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="344" END="355">u.s. marines</charseq>
+    </extent>
+    <head>
+      <charseq START="349" END="355">marines</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<timex2 ID="CNN_ENG_20030408_123613.0-T1" VAL="2003-04-08T12:34:47">
+  <timex2_mention ID="CNN_ENG_20030408_123613.0-T1-1">
+    <extent>
+      <charseq START="774" END="776">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030408_123613.0-T2" VAL="2003-04-08T12:34:47">
+  <timex2_mention ID="CNN_ENG_20030408_123613.0-T2-1">
+    <extent>
+      <charseq START="43" END="61">2003-04-08 12:34:47</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030408_123613.0-T3" VAL="2003-04-08">
+  <timex2_mention ID="CNN_ENG_20030408_123613.0-T3-1">
+    <extent>
+      <charseq START="151" END="155">today</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030408_123613.0-T4" VAL="2003-04-08">
+  <timex2_mention ID="CNN_ENG_20030408_123613.0-T4-1">
+    <extent>
+      <charseq START="386" END="390">today</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030408_123613.0-R1" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030408_123613.0-E20" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030408_123613.0-E10" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030408_123613.0-R1-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="258" END="276">the baghdad
+airport</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030408_123613.0-E20-24" ROLE="Arg-1">
+      <extent>
+        <charseq START="258" END="276">the baghdad
+airport</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030408_123613.0-E10-11" ROLE="Arg-2">
+      <extent>
+        <charseq START="262" END="268">baghdad</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030408_123613.0-R2" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030408_123613.0-E23" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030408_123613.0-E1" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030408_123613.0-R2-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="344" END="355">u.s. marines</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030408_123613.0-E23-29" ROLE="Arg-1">
+      <extent>
+        <charseq START="344" END="355">u.s. marines</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030408_123613.0-E1-30" ROLE="Arg-2">
+      <extent>
+        <charseq START="344" END="346">u.s</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030408_123613.0-R3" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030408_123613.0-E13" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030408_123613.0-E14" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030408_123613.0-R3-1" LEXICALCONDITION="Formulaic">
+    <extent>
+      <charseq START="71" END="86">hamburg, germany</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030408_123613.0-E13-1" ROLE="Arg-1">
+      <extent>
+        <charseq START="71" END="86">hamburg, germany</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030408_123613.0-E14-17" ROLE="Arg-2">
+      <extent>
+        <charseq START="80" END="86">germany</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030408_123613.0-R4" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030408_123613.0-E23" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030408_123613.0-E2" ROLE="Arg-2"/>
+  <relation_argument REFID="CNN_ENG_20030408_123613.0-T4" ROLE="Time-Within"/>
+  <relation_mention ID="CNN_ENG_20030408_123613.0-R4-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="344" END="454">u.s. marines entered southeastern baghdad today and found
+dozens of chemical suits masks and atropine injecters</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030408_123613.0-E23-29" ROLE="Arg-1">
+      <extent>
+        <charseq START="344" END="355">u.s. marines</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030408_123613.0-E2-2" ROLE="Arg-2">
+      <extent>
+        <charseq START="365" END="384">southeastern baghdad</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030408_123613.0-T4-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="386" END="390">today</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030408_123613.0-EV1" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030408_123613.0-E16" ROLE="Attacker"/>
+  <event_argument REFID="CNN_ENG_20030408_123613.0-E17" ROLE="Target"/>
+  <event_argument REFID="CNN_ENG_20030408_123613.0-T3" ROLE="Time-Within"/>
+  <event_argument REFID="CNN_ENG_20030408_123613.0-E19" ROLE="Instrument"/>
+  <event_mention ID="CNN_ENG_20030408_123613.0-EV1-1">
+    <extent>
+      <charseq START="110" END="155">the iraqis shot down an
+a-10 tank killer today</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="89" END="155">central command says the iraqis shot down an
+a-10 tank killer today</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="121" END="129">shot down</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030408_123613.0-E16-19" ROLE="Attacker">
+      <extent>
+        <charseq START="110" END="119">the iraqis</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030408_123613.0-E17-20" ROLE="Target">
+      <extent>
+        <charseq START="131" END="149">an
+a-10 tank killer</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030408_123613.0-T3-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="151" END="155">today</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030408_123613.0-EV1-2">
+    <extent>
+      <charseq START="180" END="238">the plane was apparently
+down with a surface to air missile</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="158" END="238">officials report that the plane was apparently
+down with a surface to air missile</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="205" END="208">down</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030408_123613.0-E17-22" ROLE="Target">
+      <extent>
+        <charseq START="180" END="188">the plane</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030408_123613.0-E19-23" ROLE="Instrument">
+      <extent>
+        <charseq START="215" END="238">a surface to air missile</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030408_123613.0-EV2" TYPE="Life" SUBTYPE="Die" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030408_123613.0-E7" ROLE="Victim"/>
+  <event_mention ID="CNN_ENG_20030408_123613.0-EV2-1">
+    <extent>
+      <charseq START="561" END="591">1252 civilians have been killed</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="532" END="602">the iraqi
+government reports 1252 civilians have been killed in the war</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="586" END="591">killed</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030408_123613.0-E7-6" ROLE="Victim">
+      <extent>
+        <charseq START="561" END="574">1252 civilians</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030408_123613.0-EV3" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030408_123613.0-E23" ROLE="Artifact"/>
+  <event_argument REFID="CNN_ENG_20030408_123613.0-E2" ROLE="Destination"/>
+  <event_argument REFID="CNN_ENG_20030408_123613.0-T4" ROLE="Time-Within"/>
+  <event_mention ID="CNN_ENG_20030408_123613.0-EV3-1">
+    <extent>
+      <charseq START="344" END="390">u.s. marines entered southeastern baghdad today</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="344" END="454">u.s. marines entered southeastern baghdad today and found
+dozens of chemical suits masks and atropine injecters</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="357" END="363">entered</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030408_123613.0-E23-29" ROLE="Artifact">
+      <extent>
+        <charseq START="344" END="355">u.s. marines</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030408_123613.0-E2-2" ROLE="Destination">
+      <extent>
+        <charseq START="365" END="384">southeastern baghdad</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030408_123613.0-T4-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="386" END="390">today</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030408_123613.0-EV4" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030408_123613.0-E5" ROLE="Place"/>
+  <event_mention ID="CNN_ENG_20030408_123613.0-EV4-1">
+    <extent>
+      <charseq START="598" END="602">e war</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="532" END="602">the iraqi
+government reports 1252 civilians have been killed in the war</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="598" END="602">e war</charseq>
+    </anchor>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030408_123613.0-EV4-2">
+    <extent>
+      <charseq START="834" END="844">war in iraq</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="774" END="844">now back to wolf blitzer and our
+continuing coverage of the war in iraq</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="834" END="836">war</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030408_123613.0-E5-16" ROLE="Place">
+      <extent>
+        <charseq START="841" END="844">iraq</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

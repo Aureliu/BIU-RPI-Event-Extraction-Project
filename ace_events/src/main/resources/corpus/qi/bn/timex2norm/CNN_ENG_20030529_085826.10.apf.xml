@@ -1,0 +1,478 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030529_085826.10.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030529_085826.10">
+<entity ID="CNN_ENG_20030529_085826.10-E1" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030529_085826.10-E1-4" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="417" END="420">mike</charseq>
+    </extent>
+    <head>
+      <charseq START="417" END="420">mike</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030529_085826.10-E1-6" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="351" END="372">jerusalem bureau chief</charseq>
+    </extent>
+    <head>
+      <charseq START="368" END="372">chief</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030529_085826.10-E1-22" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="374" END="383">mike hanna</charseq>
+    </extent>
+    <head>
+      <charseq START="374" END="383">mike hanna</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="mike">
+      <charseq START="417" END="420">mike</charseq>
+    </name>
+    <name NAME="mike hanna">
+      <charseq START="374" END="383">mike hanna</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030529_085826.10-E2" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030529_085826.10-E2-2" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="351" END="359">jerusalem</charseq>
+    </extent>
+    <head>
+      <charseq START="351" END="359">jerusalem</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="jerusalem">
+      <charseq START="351" END="359">jerusalem</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030529_085826.10-E3" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030529_085826.10-E3-3" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="347" END="349">our</charseq>
+    </extent>
+    <head>
+      <charseq START="347" END="349">our</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030529_085826.10-E5" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030529_085826.10-E5-7" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="351" END="366">jerusalem bureau</charseq>
+    </extent>
+    <head>
+      <charseq START="361" END="366">bureau</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030529_085826.10-E6" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030529_085826.10-E6-1" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="68" END="102">israeli prime minister ariel sharon</charseq>
+    </extent>
+    <head>
+      <charseq START="91" END="102">ariel sharon</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030529_085826.10-E6-8" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="68" END="89">israeli prime minister</charseq>
+    </extent>
+    <head>
+      <charseq START="82" END="89">minister</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="ariel sharon">
+      <charseq START="91" END="102">ariel sharon</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030529_085826.10-E8" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030529_085826.10-E8-9" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="68" END="74">israeli</charseq>
+    </extent>
+    <head>
+      <charseq START="68" END="74">israeli</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="israeli">
+      <charseq START="68" END="74">israeli</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030529_085826.10-E9" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030529_085826.10-E9-10" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="108" END="147">palestinian prime minister
+mahmoud abbas</charseq>
+    </extent>
+    <head>
+      <charseq START="135" END="147">mahmoud abbas</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030529_085826.10-E9-11" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="108" END="133">palestinian prime minister</charseq>
+    </extent>
+    <head>
+      <charseq START="126" END="133">minister</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="mahmoud abbas">
+      <charseq START="135" END="147">mahmoud abbas</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030529_085826.10-E11" TYPE="GPE" SUBTYPE="Special" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030529_085826.10-E11-13" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="108" END="118">palestinian</charseq>
+    </extent>
+    <head>
+      <charseq START="108" END="118">palestinian</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="palestinian">
+      <charseq START="108" END="118">palestinian</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030529_085826.10-E12" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030529_085826.10-E12-14" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="174" END="178">their</charseq>
+    </extent>
+    <head>
+      <charseq START="174" END="178">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030529_085826.10-E12-18" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="264" END="273">both
+sides</charseq>
+    </extent>
+    <head>
+      <charseq START="269" END="273">sides</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030529_085826.10-E13" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030529_085826.10-E13-15" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="209" END="231">the bush administration</charseq>
+    </extent>
+    <head>
+      <charseq START="218" END="231">administration</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030529_085826.10-E14" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030529_085826.10-E14-12" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="290" END="303">president bush</charseq>
+    </extent>
+    <head>
+      <charseq START="300" END="303">bush</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030529_085826.10-E14-16" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="FALSE">
+    <extent>
+      <charseq START="213" END="216">bush</charseq>
+    </extent>
+    <head>
+      <charseq START="213" END="216">bush</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030529_085826.10-E14-19" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="290" END="298">president</charseq>
+    </extent>
+    <head>
+      <charseq START="290" END="298">president</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030529_085826.10-E14-20" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="310" END="311">he</charseq>
+    </extent>
+    <head>
+      <charseq START="310" END="311">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="bush">
+      <charseq START="300" END="303">bush</charseq>
+    </name>
+    <name NAME="bush">
+      <charseq START="213" END="216">bush</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030529_085826.10-E16" TYPE="GPE" SUBTYPE="GPE-Cluster" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030529_085826.10-E16-17" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="249" END="255">mideast</charseq>
+    </extent>
+    <head>
+      <charseq START="249" END="255">mideast</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030529_085826.10-E16-21" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="324" END="334">the mideast</charseq>
+    </extent>
+    <head>
+      <charseq START="328" END="334">mideast</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="mideast">
+      <charseq START="249" END="255">mideast</charseq>
+    </name>
+    <name NAME="mideast">
+      <charseq START="328" END="334">mideast</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<timex2 ID="CNN_ENG_20030529_085826.10-T1" VAL="2003-05-29T09:12:46">
+  <timex2_mention ID="CNN_ENG_20030529_085826.10-T1-1">
+    <extent>
+      <charseq START="44" END="62">2003-05-29 09:12:46</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030529_085826.10-T2" VAL="2003-05-29">
+  <timex2_mention ID="CNN_ENG_20030529_085826.10-T2-1">
+    <extent>
+      <charseq START="167" END="171">today</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030529_085826.10-T3" VAL="2003-W23">
+  <timex2_mention ID="CNN_ENG_20030529_085826.10-T3-1">
+    <extent>
+      <charseq START="336" END="344">next week</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030529_085826.10-R1" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030529_085826.10-E6" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030529_085826.10-E8" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030529_085826.10-R1-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="68" END="89">israeli prime minister</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030529_085826.10-E6-8" ROLE="Arg-1">
+      <extent>
+        <charseq START="68" END="89">israeli prime minister</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030529_085826.10-E8-9" ROLE="Arg-2">
+      <extent>
+        <charseq START="68" END="74">israeli</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030529_085826.10-R2" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030529_085826.10-E9" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030529_085826.10-E11" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030529_085826.10-R2-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="108" END="133">palestinian prime minister</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030529_085826.10-E9-11" ROLE="Arg-1">
+      <extent>
+        <charseq START="108" END="133">palestinian prime minister</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030529_085826.10-E11-13" ROLE="Arg-2">
+      <extent>
+        <charseq START="108" END="118">palestinian</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030529_085826.10-R3" TYPE="PHYS" SUBTYPE="Located" TENSE="Future" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030529_085826.10-E14" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030529_085826.10-E16" ROLE="Arg-2"/>
+  <relation_argument REFID="CNN_ENG_20030529_085826.10-T3" ROLE="Time-Within"/>
+  <relation_mention ID="CNN_ENG_20030529_085826.10-R3-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="264" END="344">both
+sides will meet with president bush when he arrives in the mideast
+next week</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030529_085826.10-E14-12" ROLE="Arg-1">
+      <extent>
+        <charseq START="290" END="303">president bush</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030529_085826.10-E16-21" ROLE="Arg-2">
+      <extent>
+        <charseq START="324" END="334">the mideast</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030529_085826.10-T3-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="336" END="344">next week</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030529_085826.10-R4" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030529_085826.10-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030529_085826.10-E3" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030529_085826.10-R4-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="347" END="372">our jerusalem bureau chief</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030529_085826.10-E1-6" ROLE="Arg-1">
+      <extent>
+        <charseq START="351" END="372">jerusalem bureau chief</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030529_085826.10-E3-3" ROLE="Arg-2">
+      <extent>
+        <charseq START="347" END="349">our</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030529_085826.10-R5" TYPE="GEN-AFF" SUBTYPE="Org-Location" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030529_085826.10-E5" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030529_085826.10-E2" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030529_085826.10-R5-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="351" END="366">jerusalem bureau</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030529_085826.10-E5-7" ROLE="Arg-1">
+      <extent>
+        <charseq START="351" END="366">jerusalem bureau</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030529_085826.10-E2-2" ROLE="Arg-2">
+      <extent>
+        <charseq START="351" END="359">jerusalem</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030529_085826.10-EV1" TYPE="Contact" SUBTYPE="Meet" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Future">
+  <event_argument REFID="CNN_ENG_20030529_085826.10-E6" ROLE="Entity"/>
+  <event_argument REFID="CNN_ENG_20030529_085826.10-E9" ROLE="Entity"/>
+  <event_argument REFID="CNN_ENG_20030529_085826.10-T2" ROLE="Time-Within"/>
+  <event_mention ID="CNN_ENG_20030529_085826.10-EV1-1">
+    <extent>
+      <charseq START="68" END="171">israeli prime minister ariel sharon and palestinian prime minister
+mahmoud abbas scheduled to meet today</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="68" END="261">israeli prime minister ariel sharon and palestinian prime minister
+mahmoud abbas scheduled to meet today, their second chance now to
+discuss the bush administration's road map more mideast peace</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="162" END="165">meet</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030529_085826.10-E6-1" ROLE="Entity">
+      <extent>
+        <charseq START="68" END="102">israeli prime minister ariel sharon</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030529_085826.10-E9-10" ROLE="Entity">
+      <extent>
+        <charseq START="108" END="147">palestinian prime minister
+mahmoud abbas</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030529_085826.10-T2-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="167" END="171">today</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030529_085826.10-EV2" TYPE="Contact" SUBTYPE="Meet" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Future">
+  <event_argument REFID="CNN_ENG_20030529_085826.10-E12" ROLE="Entity"/>
+  <event_argument REFID="CNN_ENG_20030529_085826.10-E14" ROLE="Entity"/>
+  <event_argument REFID="CNN_ENG_20030529_085826.10-T3" ROLE="Time-Within"/>
+  <event_mention ID="CNN_ENG_20030529_085826.10-EV2-1">
+    <extent>
+      <charseq START="264" END="344">both
+sides will meet with president bush when he arrives in the mideast
+next week</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="264" END="344">both
+sides will meet with president bush when he arrives in the mideast
+next week</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="280" END="283">meet</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030529_085826.10-E12-18" ROLE="Entity">
+      <extent>
+        <charseq START="264" END="273">both
+sides</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030529_085826.10-E14-12" ROLE="Entity">
+      <extent>
+        <charseq START="290" END="303">president bush</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030529_085826.10-T3-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="336" END="344">next week</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030529_085826.10-EV3" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Future">
+  <event_argument REFID="CNN_ENG_20030529_085826.10-E14" ROLE="Artifact"/>
+  <event_argument REFID="CNN_ENG_20030529_085826.10-E16" ROLE="Destination"/>
+  <event_argument REFID="CNN_ENG_20030529_085826.10-T3" ROLE="Time-Within"/>
+  <event_mention ID="CNN_ENG_20030529_085826.10-EV3-1">
+    <extent>
+      <charseq START="290" END="344">president bush when he arrives in the mideast
+next week</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="264" END="344">both
+sides will meet with president bush when he arrives in the mideast
+next week</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="313" END="319">arrives</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030529_085826.10-E14-12" ROLE="Artifact">
+      <extent>
+        <charseq START="290" END="303">president bush</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030529_085826.10-E16-21" ROLE="Destination">
+      <extent>
+        <charseq START="324" END="334">the mideast</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030529_085826.10-T3-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="336" END="344">next week</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

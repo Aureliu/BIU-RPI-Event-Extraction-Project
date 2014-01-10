@@ -1,0 +1,2598 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030414_130735.7.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030414_130735.7">
+<entity ID="CNN_ENG_20030414_130735.7-E1" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E1-2" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="390" END="415">cnn national
+correspondent</charseq>
+    </extent>
+    <head>
+      <charseq START="403" END="415">correspondent</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E1-14" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="548" END="552">susan</charseq>
+    </extent>
+    <head>
+      <charseq START="548" END="552">susan</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E1-16" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="579" END="581">you</charseq>
+    </extent>
+    <head>
+      <charseq START="579" END="581">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E1-170" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="390" END="431">cnn national
+correspondent susan candiotti</charseq>
+    </extent>
+    <head>
+      <charseq START="417" END="431">susan candiotti</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="susan">
+      <charseq START="548" END="552">susan</charseq>
+    </name>
+    <name NAME="susan candiotti">
+      <charseq START="417" END="431">susan candiotti</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030414_130735.7-E2" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E2-3" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="390" END="392">cnn</charseq>
+    </extent>
+    <head>
+      <charseq START="390" END="392">cnn</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E2-15" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="565" END="566">we</charseq>
+    </extent>
+    <head>
+      <charseq START="565" END="566">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E2-92" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2652" END="2653">we</charseq>
+    </extent>
+    <head>
+      <charseq START="2652" END="2653">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E2-119" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3413" END="3414">us</charseq>
+    </extent>
+    <head>
+      <charseq START="3413" END="3414">us</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E2-153" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2448" END="2449">we</charseq>
+    </extent>
+    <head>
+      <charseq START="2448" END="2449">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E2-154" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2506" END="2506">s</charseq>
+    </extent>
+    <head>
+      <charseq START="2506" END="2506">s</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E2-155" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2987" END="2989">cnn</charseq>
+    </extent>
+    <head>
+      <charseq START="2987" END="2989">cnn</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="cnn">
+      <charseq START="390" END="392">cnn</charseq>
+    </name>
+    <name NAME="cnn">
+      <charseq START="2987" END="2989">cnn</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030414_130735.7-E4" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E4-4" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="441" END="467">the young family in
+georgia</charseq>
+    </extent>
+    <head>
+      <charseq START="451" END="456">family</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E4-19" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="640" END="644">their</charseq>
+    </extent>
+    <head>
+      <charseq START="640" END="644">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E4-22" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="686" END="701">the young family</charseq>
+    </extent>
+    <head>
+      <charseq START="696" END="701">family</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E4-24" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="767" END="771">their</charseq>
+    </extent>
+    <head>
+      <charseq START="767" END="771">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E4-25" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="809" END="818">the family</charseq>
+    </extent>
+    <head>
+      <charseq START="813" END="818">family</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E4-27" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="880" END="883">they</charseq>
+    </extent>
+    <head>
+      <charseq START="880" END="883">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E4-30" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="926" END="930">their</charseq>
+    </extent>
+    <head>
+      <charseq START="926" END="930">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E4-32" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1062" END="1065">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1062" END="1065">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E4-34" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1098" END="1102">their</charseq>
+    </extent>
+    <head>
+      <charseq START="1098" END="1102">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E4-35" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="941" END="944">them</charseq>
+    </extent>
+    <head>
+      <charseq START="941" END="944">them</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E4-42" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1281" END="1285">their</charseq>
+    </extent>
+    <head>
+      <charseq START="1281" END="1285">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E4-48" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1373" END="1377">their</charseq>
+    </extent>
+    <head>
+      <charseq START="1373" END="1377">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E4-52" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1564" END="1587">the young family members</charseq>
+    </extent>
+    <head>
+      <charseq START="1581" END="1587">members</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E4-53" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="FALSE">
+    <extent>
+      <charseq START="1568" END="1579">young family</charseq>
+    </extent>
+    <head>
+      <charseq START="1574" END="1579">family</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E4-72" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2222" END="2226">their</charseq>
+    </extent>
+    <head>
+      <charseq START="2222" END="2226">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E4-73" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2264" END="2267">they</charseq>
+    </extent>
+    <head>
+      <charseq START="2264" END="2267">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E4-152" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1670" END="1675">family</charseq>
+    </extent>
+    <head>
+      <charseq START="1670" END="1675">family</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030414_130735.7-E5" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E5-5" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="461" END="467">georgia</charseq>
+    </extent>
+    <head>
+      <charseq START="461" END="467">georgia</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E5-49" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="1439" END="1445">georgia</charseq>
+    </extent>
+    <head>
+      <charseq START="1439" END="1445">georgia</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E5-50" TYPE="PRO" LDCTYPE="PRO" ROLE="LOC">
+    <extent>
+      <charseq START="1431" END="1434">here</charseq>
+    </extent>
+    <head>
+      <charseq START="1431" END="1434">here</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="georgia">
+      <charseq START="461" END="467">georgia</charseq>
+    </name>
+    <name NAME="georgia">
+      <charseq START="1439" END="1445">georgia</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030414_130735.7-E6" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E6-9" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="510" END="512">she</charseq>
+    </extent>
+    <head>
+      <charseq START="510" END="512">she</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E6-10" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="470" END="479">jamie cole</charseq>
+    </extent>
+    <head>
+      <charseq START="470" END="479">jamie cole</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E6-83" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2516" END="2621">jamie at ft. hood, texas, where she's
+been talking with the family of chief warrant officer david
+williams</charseq>
+    </extent>
+    <head>
+      <charseq START="2516" END="2520">jamie</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E6-87" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2548" END="2550">she</charseq>
+    </extent>
+    <head>
+      <charseq START="2548" END="2550">she</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E6-91" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2634" END="2638">jamie</charseq>
+    </extent>
+    <head>
+      <charseq START="2634" END="2638">jamie</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E6-102" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2897" END="2897">i</charseq>
+    </extent>
+    <head>
+      <charseq START="2897" END="2897">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="jamie cole">
+      <charseq START="470" END="479">jamie cole</charseq>
+    </name>
+    <name NAME="jamie">
+      <charseq START="2516" END="2520">jamie</charseq>
+    </name>
+    <name NAME="jamie">
+      <charseq START="2634" END="2638">jamie</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030414_130735.7-E7" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E7-12" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="523" END="545">williams' wife michelle</charseq>
+    </extent>
+    <head>
+      <charseq START="538" END="545">michelle</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E7-13" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="523" END="536">williams' wife</charseq>
+    </extent>
+    <head>
+      <charseq START="533" END="536">wife</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E7-103" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2921" END="2937">michelle williams</charseq>
+    </extent>
+    <head>
+      <charseq START="2921" END="2937">michelle williams</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E7-104" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2955" END="2957">she</charseq>
+    </extent>
+    <head>
+      <charseq START="2955" END="2957">she</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E7-106" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2994" END="2996">her</charseq>
+    </extent>
+    <head>
+      <charseq START="2994" END="2996">her</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E7-107" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3011" END="3013">she</charseq>
+    </extent>
+    <head>
+      <charseq START="3011" END="3013">she</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E7-108" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3053" END="3055">she</charseq>
+    </extent>
+    <head>
+      <charseq START="3053" END="3055">she</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E7-111" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3147" END="3149">she</charseq>
+    </extent>
+    <head>
+      <charseq START="3147" END="3149">she</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E7-112" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3171" END="3173">she</charseq>
+    </extent>
+    <head>
+      <charseq START="3171" END="3173">she</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E7-116" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3294" END="3296">she</charseq>
+    </extent>
+    <head>
+      <charseq START="3294" END="3296">she</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E7-117" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3354" END="3356">her</charseq>
+    </extent>
+    <head>
+      <charseq START="3354" END="3356">her</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E7-118" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3404" END="3406">she</charseq>
+    </extent>
+    <head>
+      <charseq START="3404" END="3406">she</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E7-120" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3427" END="3429">her</charseq>
+    </extent>
+    <head>
+      <charseq START="3427" END="3429">her</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E7-121" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3449" END="3451">she</charseq>
+    </extent>
+    <head>
+      <charseq START="3449" END="3451">she</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E7-123" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3481" END="3483">her</charseq>
+    </extent>
+    <head>
+      <charseq START="3481" END="3483">her</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E7-124" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3501" END="3501">i</charseq>
+    </extent>
+    <head>
+      <charseq START="3501" END="3501">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E7-126" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3523" END="3523">i</charseq>
+    </extent>
+    <head>
+      <charseq START="3523" END="3523">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E7-127" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3530" END="3530">i</charseq>
+    </extent>
+    <head>
+      <charseq START="3530" END="3530">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E7-133" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3674" END="3675">my</charseq>
+    </extent>
+    <head>
+      <charseq START="3674" END="3675">my</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E7-137" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="3786" END="3793">michelle</charseq>
+    </extent>
+    <head>
+      <charseq START="3786" END="3793">michelle</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E7-144" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="3885" END="3892">michelle</charseq>
+    </extent>
+    <head>
+      <charseq START="3885" END="3892">michelle</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="michelle">
+      <charseq START="538" END="545">michelle</charseq>
+    </name>
+    <name NAME="michelle williams">
+      <charseq START="2921" END="2937">michelle williams</charseq>
+    </name>
+    <name NAME="michelle">
+      <charseq START="3786" END="3793">michelle</charseq>
+    </name>
+    <name NAME="michelle">
+      <charseq START="3885" END="3892">michelle</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030414_130735.7-E8" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E8-158" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="672" END="678">the arm</charseq>
+    </extent>
+    <head>
+      <charseq START="676" END="678">arm</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030414_130735.7-E10" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E10-17" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="603" END="606">judy</charseq>
+    </extent>
+    <head>
+      <charseq START="603" END="606">judy</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E10-81" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2425" END="2427">you</charseq>
+    </extent>
+    <head>
+      <charseq START="2425" END="2427">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E10-82" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2430" END="2433">judy</charseq>
+    </extent>
+    <head>
+      <charseq START="2430" END="2433">judy</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E10-97" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2753" END="2756">judy</charseq>
+    </extent>
+    <head>
+      <charseq START="2753" END="2756">judy</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="judy">
+      <charseq START="603" END="606">judy</charseq>
+    </name>
+    <name NAME="judy">
+      <charseq START="2430" END="2433">judy</charseq>
+    </name>
+    <name NAME="judy">
+      <charseq START="2753" END="2756">judy</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030414_130735.7-E11" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E11-20" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="655" END="660">kuwait</charseq>
+    </extent>
+    <head>
+      <charseq START="655" END="660">kuwait</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E11-46" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="1365" END="1370">kuwait</charseq>
+    </extent>
+    <head>
+      <charseq START="1365" END="1370">kuwait</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="kuwait">
+      <charseq START="655" END="660">kuwait</charseq>
+    </name>
+    <name NAME="kuwait">
+      <charseq START="1365" END="1370">kuwait</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030414_130735.7-E12" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E12-11" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="523" END="530">williams</charseq>
+    </extent>
+    <head>
+      <charseq START="523" END="530">williams</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E12-38" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1166" END="1181">his fellow pilot</charseq>
+    </extent>
+    <head>
+      <charseq START="1177" END="1181">pilot</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E12-39" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1166" END="1196">his fellow pilot david williams</charseq>
+    </extent>
+    <head>
+      <charseq START="1183" END="1196">david williams</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E12-40" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1218" END="1220">his</charseq>
+    </extent>
+    <head>
+      <charseq START="1218" END="1220">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E12-89" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2586" END="2621">chief warrant officer david
+williams</charseq>
+    </extent>
+    <head>
+      <charseq START="2608" END="2621">david
+williams</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E12-90" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="2586" END="2606">chief warrant officer</charseq>
+    </extent>
+    <head>
+      <charseq START="2600" END="2606">officer</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E12-93" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2685" END="2687">his</charseq>
+    </extent>
+    <head>
+      <charseq START="2685" END="2687">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E12-94" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3245" END="3247">his</charseq>
+    </extent>
+    <head>
+      <charseq START="3245" END="3247">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E12-105" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2994" END="3004">her husband</charseq>
+    </extent>
+    <head>
+      <charseq START="2998" END="3004">husband</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E12-110" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3121" END="3123">his</charseq>
+    </extent>
+    <head>
+      <charseq START="3121" END="3123">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E12-122" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="3481" END="3491">her
+husband</charseq>
+    </extent>
+    <head>
+      <charseq START="3485" END="3491">husband</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E12-125" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3517" END="3518">he</charseq>
+    </extent>
+    <head>
+      <charseq START="3517" END="3518">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E12-128" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3553" END="3554">he</charseq>
+    </extent>
+    <head>
+      <charseq START="3553" END="3554">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E12-129" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3582" END="3584">him</charseq>
+    </extent>
+    <head>
+      <charseq START="3582" END="3584">him</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E12-130" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3608" END="3610">his</charseq>
+    </extent>
+    <head>
+      <charseq START="3608" END="3610">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E12-131" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3621" END="3623">his</charseq>
+    </extent>
+    <head>
+      <charseq START="3621" END="3623">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E12-132" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3637" END="3639">his</charseq>
+    </extent>
+    <head>
+      <charseq START="3637" END="3639">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E12-138" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="3799" END="3803">david</charseq>
+    </extent>
+    <head>
+      <charseq START="3799" END="3803">david</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E12-160" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="149" END="162">david williams</charseq>
+    </extent>
+    <head>
+      <charseq START="149" END="162">david williams</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="williams">
+      <charseq START="523" END="530">williams</charseq>
+    </name>
+    <name NAME="david williams">
+      <charseq START="1183" END="1196">david williams</charseq>
+    </name>
+    <name NAME="david williams">
+      <charseq START="2608" END="2621">david
+williams</charseq>
+    </name>
+    <name NAME="david">
+      <charseq START="3799" END="3803">david</charseq>
+    </name>
+    <name NAME="david williams">
+      <charseq START="149" END="162">david williams</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030414_130735.7-E13" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E13-43" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1320" END="1370">the
+washington post", who flew with him into kuwait</charseq>
+    </extent>
+    <head>
+      <charseq START="1324" END="1338">washington post</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E13-44" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="1342" END="1344">who</charseq>
+    </extent>
+    <head>
+      <charseq START="1342" END="1344">who</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="washington post">
+      <charseq START="1324" END="1338">washington post</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030414_130735.7-E15" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E15-54" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1665" END="1683">some
+family members</charseq>
+    </extent>
+    <head>
+      <charseq START="1677" END="1683">members</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030414_130735.7-E16" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E16-55" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1692" END="1694">she</charseq>
+    </extent>
+    <head>
+      <charseq START="1692" END="1694">she</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E16-58" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1760" END="1762">she</charseq>
+    </extent>
+    <head>
+      <charseq START="1760" END="1762">she</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E16-65" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1914" END="1916">she</charseq>
+    </extent>
+    <head>
+      <charseq START="1914" END="1916">she</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E16-67" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2031" END="2031">i</charseq>
+    </extent>
+    <head>
+      <charseq START="2031" END="2031">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E16-70" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2082" END="2082">i</charseq>
+    </extent>
+    <head>
+      <charseq START="2082" END="2082">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E16-74" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2320" END="2333">young's mother</charseq>
+    </extent>
+    <head>
+      <charseq START="2328" END="2333">mother</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E16-76" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2346" END="2348">she</charseq>
+    </extent>
+    <head>
+      <charseq START="2346" END="2348">she</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E16-79" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2355" END="2357">her</charseq>
+    </extent>
+    <head>
+      <charseq START="2355" END="2357">her</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E16-80" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2364" END="2366">she</charseq>
+    </extent>
+    <head>
+      <charseq START="2364" END="2366">she</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030414_130735.7-E17" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E17-56" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1715" END="1715">i</charseq>
+    </extent>
+    <head>
+      <charseq START="1715" END="1715">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E17-57" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1747" END="1747">i</charseq>
+    </extent>
+    <head>
+      <charseq START="1747" END="1747">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E17-60" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1776" END="1776">i</charseq>
+    </extent>
+    <head>
+      <charseq START="1776" END="1776">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E17-61" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1834" END="1834">i</charseq>
+    </extent>
+    <head>
+      <charseq START="1834" END="1834">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E17-62" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1845" END="1845">i</charseq>
+    </extent>
+    <head>
+      <charseq START="1845" END="1845">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E17-63" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1873" END="1873">i</charseq>
+    </extent>
+    <head>
+      <charseq START="1873" END="1873">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E17-64" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1886" END="1886">i</charseq>
+    </extent>
+    <head>
+      <charseq START="1886" END="1886">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E17-66" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1995" END="1996">me</charseq>
+    </extent>
+    <head>
+      <charseq START="1995" END="1996">me</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030414_130735.7-E18" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E18-59" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1754" END="1757">home</charseq>
+    </extent>
+    <head>
+      <charseq START="1754" END="1757">home</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030414_130735.7-E19" TYPE="PER" SUBTYPE="Indeterminate" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E19-68" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2072" END="2074">you</charseq>
+    </extent>
+    <head>
+      <charseq START="2072" END="2074">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E19-96" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2743" END="2745">you</charseq>
+    </extent>
+    <head>
+      <charseq START="2743" END="2745">you</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030414_130735.7-E20" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E20-21" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2628" END="2631">them</charseq>
+    </extent>
+    <head>
+      <charseq START="2628" END="2631">them</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E20-88" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2572" END="2621">the family of chief warrant officer david
+williams</charseq>
+    </extent>
+    <head>
+      <charseq START="2576" END="2581">family</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E20-95" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2697" END="2700">they</charseq>
+    </extent>
+    <head>
+      <charseq START="2697" END="2700">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E20-98" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2759" END="2762">they</charseq>
+    </extent>
+    <head>
+      <charseq START="2759" END="2762">they</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030414_130735.7-E22" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E22-114" TYPE="NAM" LDCTYPE="NAMPRE">
+    <extent>
+      <charseq START="3198" END="3208">1st
+cavalry</charseq>
+    </extent>
+    <head>
+      <charseq START="3198" END="3208">1st
+cavalry</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="1st cavalry">
+      <charseq START="3198" END="3208">1st
+cavalry</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030414_130735.7-E23" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E23-6" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="487" END="545">ft. hood, texas, where she spoke
+to williams' wife michelle</charseq>
+    </extent>
+    <head>
+      <charseq START="487" END="494">ft. hood</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E23-8" TYPE="PRO" LDCTYPE="WHQ" LDCATR="FALSE">
+    <extent>
+      <charseq START="504" END="508">where</charseq>
+    </extent>
+    <head>
+      <charseq START="504" END="508">where</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E23-84" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2525" END="2621">ft. hood, texas, where she's
+been talking with the family of chief warrant officer david
+williams</charseq>
+    </extent>
+    <head>
+      <charseq START="2525" END="2532">ft. hood</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E23-86" TYPE="PRO" LDCTYPE="WHQ" LDCATR="FALSE">
+    <extent>
+      <charseq START="2542" END="2546">where</charseq>
+    </extent>
+    <head>
+      <charseq START="2542" END="2546">where</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E23-141" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="3841" END="3848">ft. hood</charseq>
+    </extent>
+    <head>
+      <charseq START="3841" END="3848">ft. hood</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E23-148" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="100" END="114">ft. hood, texas</charseq>
+    </extent>
+    <head>
+      <charseq START="100" END="107">ft. hood</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E23-157" TYPE="NOM" LDCTYPE="BAR" LDCATR="TRUE">
+    <extent>
+      <charseq START="117" END="179">home base
+to two other p.o.w.s, david williams and ronald young</charseq>
+    </extent>
+    <head>
+      <charseq START="122" END="125">base</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="ft. hood">
+      <charseq START="487" END="494">ft. hood</charseq>
+    </name>
+    <name NAME="ft. hood">
+      <charseq START="2525" END="2532">ft. hood</charseq>
+    </name>
+    <name NAME="ft. hood">
+      <charseq START="3841" END="3848">ft. hood</charseq>
+    </name>
+    <name NAME="ft. hood">
+      <charseq START="100" END="107">ft. hood</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030414_130735.7-E24" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E24-134" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="3724" END="3739">military spouses</charseq>
+    </extent>
+    <head>
+      <charseq START="3733" END="3739">spouses</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030414_130735.7-E25" TYPE="ORG" SUBTYPE="Government" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E25-135" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="3724" END="3731">military</charseq>
+    </extent>
+    <head>
+      <charseq START="3724" END="3731">military</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030414_130735.7-E26" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E26-136" TYPE="PRO" LDCTYPE="HLS" LDCATR="FALSE">
+    <extent>
+      <charseq START="3773" END="3779">the two</charseq>
+    </extent>
+    <head>
+      <charseq START="3777" END="3779">two</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E26-140" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3823" END="3826">they</charseq>
+    </extent>
+    <head>
+      <charseq START="3823" END="3826">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E26-142" TYPE="PRO" LDCTYPE="HLS" LDCATR="FALSE">
+    <extent>
+      <charseq START="3868" END="3871">both</charseq>
+    </extent>
+    <head>
+      <charseq START="3868" END="3871">both</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E26-143" TYPE="NOM" LDCTYPE="BAR" LDCATR="TRUE">
+    <extent>
+      <charseq START="3877" END="3882">pilots</charseq>
+    </extent>
+    <head>
+      <charseq START="3877" END="3882">pilots</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030414_130735.7-E27" TYPE="ORG" SUBTYPE="Educational" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E27-139" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="3808" END="3820">flight school</charseq>
+    </extent>
+    <head>
+      <charseq START="3815" END="3820">school</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030414_130735.7-E29" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E29-145" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="267" END="271">iraqi</charseq>
+    </extent>
+    <head>
+      <charseq START="267" END="271">iraqi</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="iraqi">
+      <charseq START="267" END="271">iraqi</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030414_130735.7-E30" TYPE="WEA" SUBTYPE="Sharp" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E30-146" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1202" END="1208">a knife</charseq>
+    </extent>
+    <head>
+      <charseq START="1204" END="1208">knife</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E30-147" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2672" END="2680">the knife</charseq>
+    </extent>
+    <head>
+      <charseq START="2676" END="2680">knife</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030414_130735.7-E31" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E31-18" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="640" END="648">their
+son</charseq>
+    </extent>
+    <head>
+      <charseq START="646" END="648">son</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E31-23" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="767" END="775">their son</charseq>
+    </extent>
+    <head>
+      <charseq START="773" END="775">son</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E31-26" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="864" END="865">he</charseq>
+    </extent>
+    <head>
+      <charseq START="864" END="865">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E31-28" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="893" END="894">he</charseq>
+    </extent>
+    <head>
+      <charseq START="893" END="894">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E31-29" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="926" END="934">their son</charseq>
+    </extent>
+    <head>
+      <charseq START="932" END="934">son</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E31-31" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="975" END="977">his</charseq>
+    </extent>
+    <head>
+      <charseq START="975" END="977">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E31-33" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1098" END="1106">their
+son</charseq>
+    </extent>
+    <head>
+      <charseq START="1104" END="1106">son</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E31-36" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1144" END="1146">his</charseq>
+    </extent>
+    <head>
+      <charseq START="1144" END="1146">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E31-37" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1166" END="1168">his</charseq>
+    </extent>
+    <head>
+      <charseq START="1166" END="1168">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E31-41" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1281" END="1289">their son</charseq>
+    </extent>
+    <head>
+      <charseq START="1287" END="1289">son</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E31-45" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1356" END="1358">him</charseq>
+    </extent>
+    <head>
+      <charseq START="1356" END="1358">him</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E31-47" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1373" END="1381">their son</charseq>
+    </extent>
+    <head>
+      <charseq START="1379" END="1381">son</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E31-51" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1510" END="1512">him</charseq>
+    </extent>
+    <head>
+      <charseq START="1510" END="1512">him</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E31-71" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2222" END="2230">their son</charseq>
+    </extent>
+    <head>
+      <charseq START="2228" END="2230">son</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E31-75" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2320" END="2324">young</charseq>
+    </extent>
+    <head>
+      <charseq START="2320" END="2324">young</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E31-77" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2355" END="2361">her son</charseq>
+    </extent>
+    <head>
+      <charseq START="2359" END="2361">son</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E31-78" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2385" END="2387">him</charseq>
+    </extent>
+    <head>
+      <charseq START="2385" END="2387">him</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E31-149" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="690" END="694">young</charseq>
+    </extent>
+    <head>
+      <charseq START="690" END="694">young</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E31-150" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1568" END="1572">young</charseq>
+    </extent>
+    <head>
+      <charseq START="1568" END="1572">young</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E31-151" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="445" END="449">young</charseq>
+    </extent>
+    <head>
+      <charseq START="445" END="449">young</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E31-161" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="168" END="179">ronald young</charseq>
+    </extent>
+    <head>
+      <charseq START="168" END="179">ronald young</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="young">
+      <charseq START="2320" END="2324">young</charseq>
+    </name>
+    <name NAME="young">
+      <charseq START="690" END="694">young</charseq>
+    </name>
+    <name NAME="young">
+      <charseq START="1568" END="1572">young</charseq>
+    </name>
+    <name NAME="young">
+      <charseq START="445" END="449">young</charseq>
+    </name>
+    <name NAME="ronald young">
+      <charseq START="168" END="179">ronald young</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030414_130735.7-E35" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E35-7" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="497" END="501">texas</charseq>
+    </extent>
+    <head>
+      <charseq START="497" END="501">texas</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E35-85" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="2535" END="2539">texas</charseq>
+    </extent>
+    <head>
+      <charseq START="2535" END="2539">texas</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E35-156" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="110" END="114">texas</charseq>
+    </extent>
+    <head>
+      <charseq START="110" END="114">texas</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="texas">
+      <charseq START="497" END="501">texas</charseq>
+    </name>
+    <name NAME="texas">
+      <charseq START="2535" END="2539">texas</charseq>
+    </name>
+    <name NAME="texas">
+      <charseq START="110" END="114">texas</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030414_130735.7-E37" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E37-99" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2845" END="2849">their</charseq>
+    </extent>
+    <head>
+      <charseq START="2845" END="2849">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E37-100" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2864" END="2868">their</charseq>
+    </extent>
+    <head>
+      <charseq START="2864" END="2868">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E37-101" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2882" END="2886">their</charseq>
+    </extent>
+    <head>
+      <charseq START="2882" END="2886">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E37-159" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="130" END="146">two other p.o.w.s</charseq>
+    </extent>
+    <head>
+      <charseq START="140" END="146">p.o.w.s</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E37-162" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="182" END="193">those pilots</charseq>
+    </extent>
+    <head>
+      <charseq START="188" END="193">pilots</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E37-163" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="230" END="234">their</charseq>
+    </extent>
+    <head>
+      <charseq START="230" END="234">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E37-167" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="291" END="295">their</charseq>
+    </extent>
+    <head>
+      <charseq START="291" END="295">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E37-169" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="375" END="379">their</charseq>
+    </extent>
+    <head>
+      <charseq START="375" END="379">their</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030414_130735.7-E40" TYPE="VEH" SUBTYPE="Air" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E40-109" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="3121" END="3144">his abandoned helicopter</charseq>
+    </extent>
+    <head>
+      <charseq START="3135" END="3144">helicopter</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E40-113" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3179" END="3180">it</charseq>
+    </extent>
+    <head>
+      <charseq START="3179" END="3180">it</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E40-115" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3238" END="3239">it</charseq>
+    </extent>
+    <head>
+      <charseq START="3238" END="3239">it</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E40-164" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="230" END="252">their
+apache helicopter</charseq>
+    </extent>
+    <head>
+      <charseq START="243" END="252">helicopter</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E40-165" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="236" END="241">apache</charseq>
+    </extent>
+    <head>
+      <charseq START="236" END="241">apache</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="apache">
+      <charseq START="236" END="241">apache</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030414_130735.7-E42" TYPE="LOC" SUBTYPE="Region-General" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E42-166" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="267" END="281">iraqi territory</charseq>
+    </extent>
+    <head>
+      <charseq START="273" END="281">territory</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030414_130735.7-E43" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030414_130735.7-E43-168" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="291" END="304">their families</charseq>
+    </extent>
+    <head>
+      <charseq START="297" END="304">families</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<timex2 ID="CNN_ENG_20030414_130735.7-T1" VAL="2003-04-14">
+  <timex2_mention ID="CNN_ENG_20030414_130735.7-T1-1">
+    <extent>
+      <charseq START="3280" END="3312">today is date she was waiting for</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030414_130735.7-T2" VAL="TMO" SET="YES">
+  <timex2_mention ID="CNN_ENG_20030414_130735.7-T2-1">
+    <extent>
+      <charseq START="3395" END="3401">morning</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030414_130735.7-T3" VAL="2003-04-14T13:27:55">
+  <timex2_mention ID="CNN_ENG_20030414_130735.7-T3-1">
+    <extent>
+      <charseq START="43" END="61">2003-04-14 13:27:55</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030414_130735.7-T4" VAL="2003-03-24T13:27:55">
+  <timex2_mention ID="CNN_ENG_20030414_130735.7-T4-1">
+    <extent>
+      <charseq START="212" END="221">march 24th</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030414_130735.7-T5" VAL="2003-04-14">
+  <timex2_mention ID="CNN_ENG_20030414_130735.7-T5-1">
+    <extent>
+      <charseq START="284" END="288">today</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030414_130735.7-T6" VAL="PXD" ANCHOR_VAL="2003-03-24" ANCHOR_DIR="AFTER">
+  <timex2_mention ID="CNN_ENG_20030414_130735.7-T6-1">
+    <extent>
+      <charseq START="360" END="387">the days after their capture</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030414_130735.7-T7" VAL="PXD" ANCHOR_VAL="2003-03-24" ANCHOR_DIR="AFTER">
+  <timex2_mention ID="CNN_ENG_20030414_130735.7-T7-1">
+    <extent>
+      <charseq START="954" END="985">the last few days of his capture</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030414_130735.7-T8" VAL="P3W" ANCHOR_VAL="2003-W16" ANCHOR_DIR="ENDING">
+  <timex2_mention ID="CNN_ENG_20030414_130735.7-T8-1">
+    <extent>
+      <charseq START="1454" END="1464">three weeks</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030414_130735.7-T9" VAL="2003-04-13TNI">
+  <timex2_mention ID="CNN_ENG_20030414_130735.7-T9-1">
+    <extent>
+      <charseq START="1604" END="1613">last night</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030414_130735.7-T10" VAL="PRESENT_REF" ANCHOR_VAL="2003-04-14T13:27:55" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_ENG_20030414_130735.7-T10-1">
+    <extent>
+      <charseq START="1058" END="1060">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030414_130735.7-T11" VAL="PRESENT_REF" ANCHOR_VAL="2003-04-14T13:27:55" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_ENG_20030414_130735.7-T11-1">
+    <extent>
+      <charseq START="1418" END="1420">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030414_130735.7-T12" VAL="P3W" ANCHOR_VAL="2003-W16" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="CNN_ENG_20030414_130735.7-T12-1">
+    <extent>
+      <charseq START="1551" END="1561">three
+weeks</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030414_130735.7-T13" VAL="PAST_REF" ANCHOR_VAL="2003-04-14T13:27:55" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="CNN_ENG_20030414_130735.7-T13-1">
+    <extent>
+      <charseq START="1637" END="1647">a long time</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030414_130735.7-T14" VAL="PTXH" ANCHOR_VAL="2003-04-13TNI" ANCHOR_DIR="WITHIN">
+  <timex2_mention ID="CNN_ENG_20030414_130735.7-T14-1">
+    <extent>
+      <charseq START="1800" END="1816">a
+couple of hours</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030414_130735.7-T15" VAL="2003-04-13TNI">
+  <timex2_mention ID="CNN_ENG_20030414_130735.7-T15-1">
+    <extent>
+      <charseq START="1864" END="1870">tonight</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030414_130735.7-T16" VAL="PT30M" ANCHOR_VAL="2003-04-14T13:27:55" ANCHOR_DIR="AFTER">
+  <timex2_mention ID="CNN_ENG_20030414_130735.7-T16-1">
+    <extent>
+      <charseq START="2393" END="2414">a good solid half hour</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030414_130735.7-T17" VAL="2003-04-14">
+  <timex2_mention ID="CNN_ENG_20030414_130735.7-T17-1">
+    <extent>
+      <charseq START="2800" END="2806">the day</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030414_130735.7-T18" VAL="2003-04-13T13:27:55">
+  <timex2_mention ID="CNN_ENG_20030414_130735.7-T18-1">
+    <extent>
+      <charseq START="2939" END="2947">yesterday</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030414_130735.7-T19" VAL="P3W" ANCHOR_VAL="2003-W16" ANCHOR_DIR="ENDING">
+  <timex2_mention ID="CNN_ENG_20030414_130735.7-T19-1">
+    <extent>
+      <charseq START="3041" END="3051">three weeks</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030414_130735.7-T20" VAL="P3W" ANCHOR_VAL="2003-W16" ANCHOR_DIR="ENDING">
+  <timex2_mention ID="CNN_ENG_20030414_130735.7-T20-1">
+    <extent>
+      <charseq START="3260" END="3277">a
+long three weeks</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030414_130735.7-T21" VAL="2003-04-13">
+  <timex2_mention ID="CNN_ENG_20030414_130735.7-T21-1">
+    <extent>
+      <charseq START="3358" END="3366">yesterday</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030414_130735.7-T22" VAL="2003-04-13">
+  <timex2_mention ID="CNN_ENG_20030414_130735.7-T22-1">
+    <extent>
+      <charseq START="3339" END="3347">some time</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030414_130735.7-T23" VAL="2003-04-14TMO">
+  <timex2_mention ID="CNN_ENG_20030414_130735.7-T23-1">
+    <extent>
+      <charseq START="3369" END="3380">this
+morning</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030414_130735.7-T24" VAL="PAST_REF" ANCHOR_VAL="2003-04-14T13:27:55" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="CNN_ENG_20030414_130735.7-T24-1">
+    <extent>
+      <charseq START="3854" END="3865">a short
+time</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030414_130735.7-R2" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030414_130735.7-E35" ROLE="Arg-2"/>
+  <relation_argument REFID="CNN_ENG_20030414_130735.7-E23" ROLE="Arg-1"/>
+  <relation_mention ID="CNN_ENG_20030414_130735.7-R2-1" LEXICALCONDITION="Formulaic">
+    <extent>
+      <charseq START="487" END="545">ft. hood, texas, where she spoke
+to williams' wife michelle</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E23-6" ROLE="Arg-1">
+      <extent>
+        <charseq START="487" END="545">ft. hood, texas, where she spoke
+to williams' wife michelle</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E35-7" ROLE="Arg-2">
+      <extent>
+        <charseq START="497" END="501">texas</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_ENG_20030414_130735.7-R2-2" LEXICALCONDITION="Formulaic">
+    <extent>
+      <charseq START="100" END="114">ft. hood, texas</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E35-156" ROLE="Arg-2">
+      <extent>
+        <charseq START="110" END="114">texas</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E23-148" ROLE="Arg-1">
+      <extent>
+        <charseq START="100" END="114">ft. hood, texas</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030414_130735.7-R3" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030414_130735.7-E6" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030414_130735.7-E23" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030414_130735.7-R3-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="390" END="545">cnn national
+correspondent susan candiotti is with the young family in
+georgia, jamie cole by at ft. hood, texas, where she spoke
+to williams' wife michelle</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E6-9" ROLE="Arg-1">
+      <extent>
+        <charseq START="510" END="512">she</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E23-8" ROLE="Arg-2">
+      <extent>
+        <charseq START="504" END="508">where</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_ENG_20030414_130735.7-R3-2" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="2516" END="2621">jamie at ft. hood, texas, where she's
+been talking with the family of chief warrant officer david
+williams</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E6-83" ROLE="Arg-1">
+      <extent>
+        <charseq START="2516" END="2621">jamie at ft. hood, texas, where she's
+been talking with the family of chief warrant officer david
+williams</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E23-84" ROLE="Arg-2">
+      <extent>
+        <charseq START="2525" END="2621">ft. hood, texas, where she's
+been talking with the family of chief warrant officer david
+williams</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030414_130735.7-R4" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030414_130735.7-E31" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030414_130735.7-E11" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030414_130735.7-R4-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="596" END="797">hello, judy. during a brief phone call with their
+son from kuwait on surngd the arm asked the young family
+not to get into any specific details about what happened
+during their son's capture and release</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E31-18" ROLE="Arg-1">
+      <extent>
+        <charseq START="640" END="648">their
+son</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E11-20" ROLE="Arg-2">
+      <extent>
+        <charseq START="655" END="660">kuwait</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_ENG_20030414_130735.7-R4-2" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="1058" END="1370">now they are learning more details that their
+son in fact was kicked and beaten after his capture, and
+that his fellow pilot david williams had a knife held to
+his throat immediately after an tur, according to an
+interview their son was allowed to conduct with "the
+washington post", who flew with him into kuwait</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E31-45" ROLE="Arg-1">
+      <extent>
+        <charseq START="1356" END="1358">him</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E11-46" ROLE="Arg-2">
+      <extent>
+        <charseq START="1365" END="1370">kuwait</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030414_130735.7-R5" TYPE="PER-SOC" SUBTYPE="Family" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030414_130735.7-E7" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030414_130735.7-E12" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030414_130735.7-R5-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="2994" END="3004">her husband</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E7-106" ROLE="Arg-1">
+      <extent>
+        <charseq START="2994" END="2996">her</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E12-105" ROLE="Arg-2">
+      <extent>
+        <charseq START="2994" END="3004">her husband</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_ENG_20030414_130735.7-R5-2" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="3481" END="3491">her
+husband</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E7-123" ROLE="Arg-1">
+      <extent>
+        <charseq START="3481" END="3483">her</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E12-122" ROLE="Arg-2">
+      <extent>
+        <charseq START="3481" END="3491">her
+husband</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_ENG_20030414_130735.7-R5-3" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="523" END="536">williams' wife</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E12-11" ROLE="Arg-2">
+      <extent>
+        <charseq START="523" END="530">williams</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E7-13" ROLE="Arg-1">
+      <extent>
+        <charseq START="523" END="536">williams' wife</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030414_130735.7-R13" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030414_130735.7-E37" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030414_130735.7-E40" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030414_130735.7-R13-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="230" END="252">their
+apache helicopter</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E37-163" ROLE="Arg-1">
+      <extent>
+        <charseq START="230" END="234">their</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E40-164" ROLE="Arg-2">
+      <extent>
+        <charseq START="230" END="252">their
+apache helicopter</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030414_130735.7-R15" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030414_130735.7-E42" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030414_130735.7-E29" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030414_130735.7-R15-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="267" END="281">iraqi territory</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E42-166" ROLE="Arg-1">
+      <extent>
+        <charseq START="267" END="281">iraqi territory</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E29-145" ROLE="Arg-2">
+      <extent>
+        <charseq START="267" END="271">iraqi</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030414_130735.7-R16" TYPE="PER-SOC" SUBTYPE="Family" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030414_130735.7-E37" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030414_130735.7-E43" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030414_130735.7-R16-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="291" END="304">their families</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E37-167" ROLE="Arg-1">
+      <extent>
+        <charseq START="291" END="295">their</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E43-168" ROLE="Arg-2">
+      <extent>
+        <charseq START="291" END="304">their families</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030414_130735.7-R17" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030414_130735.7-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030414_130735.7-E2" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030414_130735.7-R17-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="390" END="415">cnn national
+correspondent</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E1-2" ROLE="Arg-1">
+      <extent>
+        <charseq START="390" END="415">cnn national
+correspondent</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E2-3" ROLE="Arg-2">
+      <extent>
+        <charseq START="390" END="392">cnn</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030414_130735.7-R20" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030414_130735.7-E7" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030414_130735.7-E23" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030414_130735.7-R20-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="390" END="545">cnn national
+correspondent susan candiotti is with the young family in
+georgia, jamie cole by at ft. hood, texas, where she spoke
+to williams' wife michelle</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E7-12" ROLE="Arg-1">
+      <extent>
+        <charseq START="523" END="545">williams' wife michelle</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E23-8" ROLE="Arg-2">
+      <extent>
+        <charseq START="504" END="508">where</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030414_130735.7-R21" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030414_130735.7-E4" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030414_130735.7-E5" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030414_130735.7-R21-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="441" END="467">the young family in
+georgia</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E4-4" ROLE="Arg-1">
+      <extent>
+        <charseq START="441" END="467">the young family in
+georgia</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E5-5" ROLE="Arg-2">
+      <extent>
+        <charseq START="461" END="467">georgia</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030414_130735.7-R22" TYPE="PER-SOC" SUBTYPE="Family" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030414_130735.7-E4" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030414_130735.7-E31" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030414_130735.7-R22-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="640" END="648">their
+son</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E4-19" ROLE="Arg-1">
+      <extent>
+        <charseq START="640" END="644">their</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E31-18" ROLE="Arg-2">
+      <extent>
+        <charseq START="640" END="648">their
+son</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_ENG_20030414_130735.7-R22-2" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="767" END="775">their son</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E4-24" ROLE="Arg-1">
+      <extent>
+        <charseq START="767" END="771">their</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E31-23" ROLE="Arg-2">
+      <extent>
+        <charseq START="767" END="775">their son</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_ENG_20030414_130735.7-R22-3" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="926" END="934">their son</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E4-30" ROLE="Arg-1">
+      <extent>
+        <charseq START="926" END="930">their</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E31-29" ROLE="Arg-2">
+      <extent>
+        <charseq START="926" END="934">their son</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_ENG_20030414_130735.7-R22-4" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="1098" END="1106">their
+son</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E4-34" ROLE="Arg-1">
+      <extent>
+        <charseq START="1098" END="1102">their</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E31-33" ROLE="Arg-2">
+      <extent>
+        <charseq START="1098" END="1106">their
+son</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_ENG_20030414_130735.7-R22-5" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="1281" END="1289">their son</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E4-42" ROLE="Arg-1">
+      <extent>
+        <charseq START="1281" END="1285">their</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E31-41" ROLE="Arg-2">
+      <extent>
+        <charseq START="1281" END="1289">their son</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_ENG_20030414_130735.7-R22-6" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="1373" END="1381">their son</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E4-48" ROLE="Arg-1">
+      <extent>
+        <charseq START="1373" END="1377">their</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E31-47" ROLE="Arg-2">
+      <extent>
+        <charseq START="1373" END="1381">their son</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_ENG_20030414_130735.7-R22-7" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="2222" END="2230">their son</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E4-72" ROLE="Arg-1">
+      <extent>
+        <charseq START="2222" END="2226">their</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E31-71" ROLE="Arg-2">
+      <extent>
+        <charseq START="2222" END="2230">their son</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030414_130735.7-R23" TYPE="PER-SOC" SUBTYPE="Business" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030414_130735.7-E31" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030414_130735.7-E12" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030414_130735.7-R23-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="1166" END="1181">his fellow pilot</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E31-37" ROLE="Arg-1">
+      <extent>
+        <charseq START="1166" END="1168">his</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E12-38" ROLE="Arg-2">
+      <extent>
+        <charseq START="1166" END="1181">his fellow pilot</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030414_130735.7-R25" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030414_130735.7-E17" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030414_130735.7-E18" ROLE="Arg-2"/>
+  <relation_argument REFID="CNN_ENG_20030414_130735.7-T14" ROLE="Time-Within"/>
+  <relation_argument REFID="CNN_ENG_20030414_130735.7-T15" ROLE="Time-Within"/>
+  <relation_mention ID="CNN_ENG_20030414_130735.7-R25-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="1747" END="1883">i came home, she was in bed, i laid on the couch for a
+couple of hours, walked around, i thought, i'm going to
+sleep tonight, i really am</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E17-57" ROLE="Arg-1">
+      <extent>
+        <charseq START="1747" END="1747">i</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E18-59" ROLE="Arg-2">
+      <extent>
+        <charseq START="1754" END="1757">home</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-T14-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="1800" END="1816">a
+couple of hours</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-T15-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="1864" END="1870">tonight</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030414_130735.7-R26" TYPE="PER-SOC" SUBTYPE="Family" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030414_130735.7-E31" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030414_130735.7-E16" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030414_130735.7-R26-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="2320" END="2333">young's mother</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E31-75" ROLE="Arg-1">
+      <extent>
+        <charseq START="2320" END="2324">young</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E16-74" ROLE="Arg-2">
+      <extent>
+        <charseq START="2320" END="2333">young's mother</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_ENG_20030414_130735.7-R26-2" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="2355" END="2361">her son</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E31-77" ROLE="Arg-1">
+      <extent>
+        <charseq START="2355" END="2361">her son</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E16-79" ROLE="Arg-2">
+      <extent>
+        <charseq START="2355" END="2357">her</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030414_130735.7-R27" TYPE="PER-SOC" SUBTYPE="Family" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030414_130735.7-E20" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030414_130735.7-E12" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030414_130735.7-R27-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="2572" END="2621">the family of chief warrant officer david
+williams</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E20-88" ROLE="Arg-1">
+      <extent>
+        <charseq START="2572" END="2621">the family of chief warrant officer david
+williams</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E12-89" ROLE="Arg-2">
+      <extent>
+        <charseq START="2586" END="2621">chief warrant officer david
+williams</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030414_130735.7-R28" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030414_130735.7-E12" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030414_130735.7-E40" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030414_130735.7-R28-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="3121" END="3144">his abandoned helicopter</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E12-110" ROLE="Arg-1">
+      <extent>
+        <charseq START="3121" END="3123">his</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E40-109" ROLE="Arg-2">
+      <extent>
+        <charseq START="3121" END="3144">his abandoned helicopter</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030414_130735.7-R29" TYPE="ORG-AFF" SUBTYPE="Student-Alum" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030414_130735.7-E26" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030414_130735.7-E27" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030414_130735.7-R29-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="3773" END="3820">the two met, michelle and david
+in flight school</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E26-136" ROLE="Arg-1">
+      <extent>
+        <charseq START="3773" END="3779">the two</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E27-139" ROLE="Arg-2">
+      <extent>
+        <charseq START="3808" END="3820">flight school</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030414_130735.7-R30" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030414_130735.7-E26" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030414_130735.7-E23" ROLE="Arg-2"/>
+  <relation_argument REFID="CNN_ENG_20030414_130735.7-T24" ROLE="Time-Holds"/>
+  <relation_mention ID="CNN_ENG_20030414_130735.7-R30-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="3823" END="3865">they have been at ft. hood for a short
+time</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E26-140" ROLE="Arg-1">
+      <extent>
+        <charseq START="3823" END="3826">they</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-E23-141" ROLE="Arg-2">
+      <extent>
+        <charseq START="3841" END="3848">ft. hood</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030414_130735.7-T24-1" ROLE="Time-Holds">
+      <extent>
+        <charseq START="3854" END="3865">a short
+time</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030414_130735.7-EV1" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030414_130735.7-E40" ROLE="Vehicle"/>
+  <event_argument REFID="CNN_ENG_20030414_130735.7-E37" ROLE="Artifact"/>
+  <event_argument REFID="CNN_ENG_20030414_130735.7-E42" ROLE="Destination"/>
+  <event_argument REFID="CNN_ENG_20030414_130735.7-T4" ROLE="Time-Within"/>
+  <event_mention ID="CNN_ENG_20030414_130735.7-EV1-1">
+    <extent>
+      <charseq START="182" END="281">those pilots were captured on march 24th, after their
+apache helicopter went down in iraqi territory</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="182" END="281">those pilots were captured on march 24th, after their
+apache helicopter went down in iraqi territory</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="254" END="262">went down</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030414_130735.7-E40-164" ROLE="Vehicle">
+      <extent>
+        <charseq START="230" END="252">their
+apache helicopter</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030414_130735.7-E37-162" ROLE="Artifact">
+      <extent>
+        <charseq START="182" END="193">those pilots</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030414_130735.7-E42-166" ROLE="Destination">
+      <extent>
+        <charseq START="267" END="281">iraqi territory</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030414_130735.7-T4-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="212" END="221">march 24th</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030414_130735.7-EV2" TYPE="Contact" SUBTYPE="Phone-Write" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030414_130735.7-E31" ROLE="Entity"/>
+  <event_argument REFID="CNN_ENG_20030414_130735.7-E4" ROLE="Entity"/>
+  <event_mention ID="CNN_ENG_20030414_130735.7-EV2-1">
+    <extent>
+      <charseq START="630" END="701">call with their
+son from kuwait on surngd the arm asked the young family</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="609" END="797">during a brief phone call with their
+son from kuwait on surngd the arm asked the young family
+not to get into any specific details about what happened
+during their son's capture and release</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="630" END="633">call</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030414_130735.7-E31-18" ROLE="Entity">
+      <extent>
+        <charseq START="640" END="648">their
+son</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030414_130735.7-E4-22" ROLE="Entity">
+      <extent>
+        <charseq START="686" END="701">the young family</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030414_130735.7-EV3" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030414_130735.7-E31" ROLE="Target"/>
+  <event_mention ID="CNN_ENG_20030414_130735.7-EV3-1">
+    <extent>
+      <charseq START="1098" END="1125">their
+son in fact was kicked</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1058" END="1370">now they are learning more details that their
+son in fact was kicked and beaten after his capture, and
+that his fellow pilot david williams had a knife held to
+his throat immediately after an tur, according to an
+interview their son was allowed to conduct with "the
+washington post", who flew with him into kuwait</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1120" END="1125">kicked</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030414_130735.7-E31-33" ROLE="Target">
+      <extent>
+        <charseq START="1098" END="1106">their
+son</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030414_130735.7-EV4" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030414_130735.7-E31" ROLE="Target"/>
+  <event_mention ID="CNN_ENG_20030414_130735.7-EV4-1">
+    <extent>
+      <charseq START="1098" END="1136">their
+son in fact was kicked and beaten</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1058" END="1370">now they are learning more details that their
+son in fact was kicked and beaten after his capture, and
+that his fellow pilot david williams had a knife held to
+his throat immediately after an tur, according to an
+interview their son was allowed to conduct with "the
+washington post", who flew with him into kuwait</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1131" END="1136">beaten</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030414_130735.7-E31-33" ROLE="Target">
+      <extent>
+        <charseq START="1098" END="1106">their
+son</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030414_130735.7-EV5" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030414_130735.7-E31" ROLE="Artifact"/>
+  <event_argument REFID="CNN_ENG_20030414_130735.7-E11" ROLE="Destination"/>
+  <event_mention ID="CNN_ENG_20030414_130735.7-EV5-1">
+    <extent>
+      <charseq START="1346" END="1370">flew with him into kuwait</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1058" END="1370">now they are learning more details that their
+son in fact was kicked and beaten after his capture, and
+that his fellow pilot david williams had a knife held to
+his throat immediately after an tur, according to an
+interview their son was allowed to conduct with "the
+washington post", who flew with him into kuwait</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1346" END="1349">flew</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030414_130735.7-E31-45" ROLE="Artifact">
+      <extent>
+        <charseq START="1356" END="1358">him</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030414_130735.7-E11-46" ROLE="Destination">
+      <extent>
+        <charseq START="1365" END="1370">kuwait</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030414_130735.7-EV6" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030414_130735.7-E17" ROLE="Artifact"/>
+  <event_argument REFID="CNN_ENG_20030414_130735.7-E18" ROLE="Destination"/>
+  <event_mention ID="CNN_ENG_20030414_130735.7-EV6-1">
+    <extent>
+      <charseq START="1747" END="1757">i came home</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1747" END="1883">i came home, she was in bed, i laid on the couch for a
+couple of hours, walked around, i thought, i'm going to
+sleep tonight, i really am</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1749" END="1752">came</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030414_130735.7-E17-57" ROLE="Artifact">
+      <extent>
+        <charseq START="1747" END="1747">i</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030414_130735.7-E18-59" ROLE="Destination">
+      <extent>
+        <charseq START="1754" END="1757">home</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030414_130735.7-EV7" TYPE="Contact" SUBTYPE="Meet" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Future">
+  <event_argument REFID="CNN_ENG_20030414_130735.7-E16" ROLE="Entity"/>
+  <event_argument REFID="CNN_ENG_20030414_130735.7-E31" ROLE="Entity"/>
+  <event_mention ID="CNN_ENG_20030414_130735.7-EV7-1">
+    <extent>
+      <charseq START="2346" END="2361">she sees her son</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2320" END="2414">young's mother says, when she sees her son, she
+plans on hugging him for a good solid half hour</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2350" END="2353">sees</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030414_130735.7-E16-76" ROLE="Entity">
+      <extent>
+        <charseq START="2346" END="2348">she</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030414_130735.7-E31-77" ROLE="Entity">
+      <extent>
+        <charseq START="2355" END="2361">her son</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030414_130735.7-EV8" TYPE="Contact" SUBTYPE="Phone-Write" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030414_130735.7-E6" ROLE="Entity"/>
+  <event_argument REFID="CNN_ENG_20030414_130735.7-E7" ROLE="Entity"/>
+  <event_argument REFID="CNN_ENG_20030414_130735.7-T18" ROLE="Time-Within"/>
+  <event_mention ID="CNN_ENG_20030414_130735.7-EV8-1">
+    <extent>
+      <charseq START="2897" END="2947">i was on the
+phone with michelle williams yesterday</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2897" END="3034">i was on the
+phone with michelle williams yesterday, when she saw those
+first pictures on cnn of her husband, and she sleeked with
+delight</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2910" END="2914">phone</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030414_130735.7-E6-102" ROLE="Entity">
+      <extent>
+        <charseq START="2897" END="2897">i</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030414_130735.7-E7-103" ROLE="Entity">
+      <extent>
+        <charseq START="2921" END="2937">michelle williams</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030414_130735.7-T18-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="2939" END="2947">yesterday</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030414_130735.7-EV9" TYPE="Contact" SUBTYPE="Meet" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030414_130735.7-E26" ROLE="Entity"/>
+  <event_mention ID="CNN_ENG_20030414_130735.7-EV9-1">
+    <extent>
+      <charseq START="3773" END="3783">the two met</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="3773" END="3820">the two met, michelle and david
+in flight school</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="3781" END="3783">met</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030414_130735.7-E26-136" ROLE="Entity">
+      <extent>
+        <charseq START="3773" END="3779">the two</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

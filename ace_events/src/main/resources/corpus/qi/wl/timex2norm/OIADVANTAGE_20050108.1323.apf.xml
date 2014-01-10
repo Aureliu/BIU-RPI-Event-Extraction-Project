@@ -1,0 +1,461 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="OIADVANTAGE_20050108.1323.sgm" SOURCE="weblog" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="OIADVANTAGE_20050108.1323">
+<entity ID="OIADVANTAGE_20050108.1323-E1" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="OIADVANTAGE_20050108.1323-E1-1" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="170" END="185">Fortune magazine</charseq>
+    </extent>
+    <head>
+      <charseq START="170" END="185">Fortune magazine</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050108.1323-E1-2" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="792" END="798">Fortune</charseq>
+    </extent>
+    <head>
+      <charseq START="792" END="798">Fortune</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050108.1323-E1-21" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="198" END="200">its</charseq>
+    </extent>
+    <head>
+      <charseq START="198" END="200">its</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Fortune magazine">
+      <charseq START="170" END="185">Fortune magazine</charseq>
+    </name>
+    <name NAME="Fortune">
+      <charseq START="792" END="798">Fortune</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="OIADVANTAGE_20050108.1323-E2" TYPE="ORG" SUBTYPE="Commercial" CLASS="USP">
+  <entity_mention ID="OIADVANTAGE_20050108.1323-E2-4" TYPE="PRO" LDCTYPE="PTV">
+    <extent>
+      <charseq START="852" END="876">a matched sample of firms</charseq>
+    </extent>
+    <head>
+      <charseq START="862" END="867">sample</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="OIADVANTAGE_20050108.1323-E3" TYPE="ORG" SUBTYPE="Commercial" CLASS="GEN">
+  <entity_mention ID="OIADVANTAGE_20050108.1323-E3-5" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="872" END="876">firms</charseq>
+    </extent>
+    <head>
+      <charseq START="872" END="876">firms</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="OIADVANTAGE_20050108.1323-E4" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="OIADVANTAGE_20050108.1323-E4-7" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="971" END="981">the authors</charseq>
+    </extent>
+    <head>
+      <charseq START="975" END="981">authors</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="OIADVANTAGE_20050108.1323-E5" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="OIADVANTAGE_20050108.1323-E5-8" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1399" END="1470">companies that have consistently
+made the list in the previous few years</charseq>
+    </extent>
+    <head>
+      <charseq START="1399" END="1407">companies</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050108.1323-E5-9" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="1409" END="1412">that</charseq>
+    </extent>
+    <head>
+      <charseq START="1409" END="1412">that</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050108.1323-E5-10" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1505" END="1509">their</charseq>
+    </extent>
+    <head>
+      <charseq START="1505" END="1509">their</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="OIADVANTAGE_20050108.1323-E6" TYPE="ORG" SUBTYPE="Commercial" CLASS="USP">
+  <entity_mention ID="OIADVANTAGE_20050108.1323-E6-11" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1595" END="1605">the company</charseq>
+    </extent>
+    <head>
+      <charseq START="1599" END="1605">company</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050108.1323-E6-13" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1655" END="1659">their</charseq>
+    </extent>
+    <head>
+      <charseq START="1655" END="1659">their</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="OIADVANTAGE_20050108.1323-E7" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="OIADVANTAGE_20050108.1323-E7-12" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1655" END="1669">their employees</charseq>
+    </extent>
+    <head>
+      <charseq START="1661" END="1669">employees</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="OIADVANTAGE_20050108.1323-E8" TYPE="PER" SUBTYPE="Individual" CLASS="USP">
+  <entity_mention ID="OIADVANTAGE_20050108.1323-E8-15" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1782" END="1788">the CEO</charseq>
+    </extent>
+    <head>
+      <charseq START="1786" END="1788">CEO</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="OIADVANTAGE_20050108.1323-E9" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="OIADVANTAGE_20050108.1323-E9-16" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1793" END="1823">a bunch of other top executives</charseq>
+    </extent>
+    <head>
+      <charseq START="1795" END="1799">bunch</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="OIADVANTAGE_20050108.1323-E10" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="OIADVANTAGE_20050108.1323-E10-17" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1804" END="1823">other top executives</charseq>
+    </extent>
+    <head>
+      <charseq START="1814" END="1823">executives</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="OIADVANTAGE_20050108.1323-E11" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="OIADVANTAGE_20050108.1323-E11-18" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1896" END="1906">a workforce</charseq>
+    </extent>
+    <head>
+      <charseq START="1898" END="1906">workforce</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="OIADVANTAGE_20050108.1323-E12" TYPE="ORG" SUBTYPE="Non-Governmental" CLASS="GEN">
+  <entity_mention ID="OIADVANTAGE_20050108.1323-E12-19" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="1696" END="1700">union</charseq>
+    </extent>
+    <head>
+      <charseq START="1696" END="1700">union</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="OIADVANTAGE_20050108.1323-E14" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="OIADVANTAGE_20050108.1323-E14-3" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="808" END="837">100 Best
+Companies to Work For</charseq>
+    </extent>
+    <head>
+      <charseq START="817" END="825">Companies</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050108.1323-E14-20" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1261" END="1286">Best Companies to Work For</charseq>
+    </extent>
+    <head>
+      <charseq START="1266" END="1274">Companies</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050108.1323-E14-22" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="215" END="244">100 Best Companies to Work For</charseq>
+    </extent>
+    <head>
+      <charseq START="224" END="232">Companies</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050108.1323-E14-32" TYPE="NOM" LDCTYPE="BAR" LDCATR="FALSE">
+    <extent>
+      <charseq START="775" END="837">companies on the Fortune list of 100 Best
+Companies to Work For</charseq>
+    </extent>
+    <head>
+      <charseq START="775" END="783">companies</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="OIADVANTAGE_20050108.1323-E15" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="OIADVANTAGE_20050108.1323-E15-23" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="307" END="308">we</charseq>
+    </extent>
+    <head>
+      <charseq START="307" END="308">we</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="OIADVANTAGE_20050108.1323-E16" TYPE="PER" SUBTYPE="Indeterminate" CLASS="GEN">
+  <entity_mention ID="OIADVANTAGE_20050108.1323-E16-14" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1748" END="1750">You</charseq>
+    </extent>
+    <head>
+      <charseq START="1748" END="1750">You</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050108.1323-E16-24" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="391" END="393">you</charseq>
+    </extent>
+    <head>
+      <charseq START="391" END="393">you</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="OIADVANTAGE_20050108.1323-E17" TYPE="PER" SUBTYPE="Indeterminate" CLASS="USP">
+  <entity_mention ID="OIADVANTAGE_20050108.1323-E17-25" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="434" END="444">anyone else</charseq>
+    </extent>
+    <head>
+      <charseq START="434" END="439">anyone</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="OIADVANTAGE_20050108.1323-E18" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="OIADVANTAGE_20050108.1323-E18-26" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="507" END="507">I</charseq>
+    </extent>
+    <head>
+      <charseq START="507" END="507">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050108.1323-E18-27" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="114" END="119">John A</charseq>
+    </extent>
+    <head>
+      <charseq START="114" END="119">John A</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="John A">
+      <charseq START="114" END="119">John A</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="OIADVANTAGE_20050108.1323-E20" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="OIADVANTAGE_20050108.1323-E20-6" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="953" END="961">investors</charseq>
+    </extent>
+    <head>
+      <charseq START="953" END="961">investors</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050108.1323-E20-28" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="576" END="584">investors</charseq>
+    </extent>
+    <head>
+      <charseq START="576" END="584">investors</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="OIADVANTAGE_20050108.1323-E21" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="OIADVANTAGE_20050108.1323-E21-29" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="664" END="711">the Journal of
+Business Finance &amp; Accounting</charseq>
+    </extent>
+    <head>
+      <charseq START="668" END="711">Journal of
+Business Finance &amp; Accounting</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Journal of Business Finance &amp; Accounting">
+      <charseq START="668" END="711">Journal of
+Business Finance &amp; Accounting</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="OIADVANTAGE_20050108.1323-E22" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="OIADVANTAGE_20050108.1323-E22-30" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="733" END="744">Greg Filbeck</charseq>
+    </extent>
+    <head>
+      <charseq START="733" END="744">Greg Filbeck</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Greg Filbeck">
+      <charseq START="733" END="744">Greg Filbeck</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="OIADVANTAGE_20050108.1323-E23" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="OIADVANTAGE_20050108.1323-E23-31" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="750" END="762">Dianna Preece</charseq>
+    </extent>
+    <head>
+      <charseq START="750" END="762">Dianna Preece</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Dianna Preece">
+      <charseq START="750" END="762">Dianna Preece</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<timex2 ID="OIADVANTAGE_20050108.1323-T1" VAL="2005-01-08T13:23:00">
+  <timex2_mention ID="OIADVANTAGE_20050108.1323-T1-1">
+    <extent>
+      <charseq START="41" END="59">2005-01-08T13:23:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="OIADVANTAGE_20050108.1323-T2" VAL="2005-01-08T13:23:00">
+  <timex2_mention ID="OIADVANTAGE_20050108.1323-T2-1">
+    <extent>
+      <charseq START="123" END="141">2005-01-08T13:23:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="OIADVANTAGE_20050108.1323-T3" VAL="2005">
+  <timex2_mention ID="OIADVANTAGE_20050108.1323-T3-1">
+    <extent>
+      <charseq START="202" END="205">2005</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="OIADVANTAGE_20050108.1323-T4" VAL="2005-01-08T13:23:00">
+  <timex2_mention ID="OIADVANTAGE_20050108.1323-T4-1">
+    <extent>
+      <charseq START="251" END="253">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="OIADVANTAGE_20050108.1323-T5" VAL="2003">
+  <timex2_mention ID="OIADVANTAGE_20050108.1323-T5-1">
+    <extent>
+      <charseq START="714" END="717">2003</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="OIADVANTAGE_20050108.1323-T6" VAL="2005" MOD="BEFORE">
+  <timex2_mention ID="OIADVANTAGE_20050108.1323-T6-1">
+    <extent>
+      <charseq START="1449" END="1470">the previous few years</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="OIADVANTAGE_20050108.1323-T7" VAL="2005">
+  <timex2_mention ID="OIADVANTAGE_20050108.1323-T7-1">
+    <extent>
+      <charseq START="1524" END="1532">this year</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="OIADVANTAGE_20050108.1323-T8" VAL="P1Y" ANCHOR_VAL="2004" ANCHOR_DIR="STARTING">
+  <timex2_mention ID="OIADVANTAGE_20050108.1323-T8-1">
+    <extent>
+      <charseq START="1581" END="1593">the past year</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="OIADVANTAGE_20050108.1323-R1" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="OIADVANTAGE_20050108.1323-E7" ROLE="Arg-1"/>
+  <relation_argument REFID="OIADVANTAGE_20050108.1323-E6" ROLE="Arg-2"/>
+  <relation_mention ID="OIADVANTAGE_20050108.1323-R1-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="1655" END="1669">their employees</charseq>
+    </extent>
+    <relation_mention_argument REFID="OIADVANTAGE_20050108.1323-E7-12" ROLE="Arg-1">
+      <extent>
+        <charseq START="1655" END="1669">their employees</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="OIADVANTAGE_20050108.1323-E6-13" ROLE="Arg-2">
+      <extent>
+        <charseq START="1655" END="1659">their</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="OIADVANTAGE_20050108.1323-EV1" TYPE="Personnel" SUBTYPE="End-Position" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="OIADVANTAGE_20050108.1323-E8" ROLE="Person"/>
+  <event_argument REFID="OIADVANTAGE_20050108.1323-E9" ROLE="Person"/>
+  <event_mention ID="OIADVANTAGE_20050108.1323-EV1-1">
+    <extent>
+      <charseq START="1782" END="1842">the CEO
+or a bunch of other top executives have been replaced</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1748" END="1842">You might also want to be wary if the CEO
+or a bunch of other top executives have been replaced</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1835" END="1842">replaced</charseq>
+    </anchor>
+    <event_mention_argument REFID="OIADVANTAGE_20050108.1323-E8-15" ROLE="Person">
+      <extent>
+        <charseq START="1782" END="1788">the CEO</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="OIADVANTAGE_20050108.1323-E9-16" ROLE="Person">
+      <extent>
+        <charseq START="1793" END="1823">a bunch of other top executives</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="OIADVANTAGE_20050108.1323-EV2" TYPE="Personnel" SUBTYPE="Start-Position" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="OIADVANTAGE_20050108.1323-E16" ROLE="Person"/>
+  <event_mention ID="OIADVANTAGE_20050108.1323-EV2-1">
+    <extent>
+      <charseq START="391" END="420">you are looking for a nice
+new</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="365" END="424">It can also be helpful if you are looking for a nice
+new job</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="418" END="420">new</charseq>
+    </anchor>
+    <event_mention_argument REFID="OIADVANTAGE_20050108.1323-E16-24" ROLE="Person">
+      <extent>
+        <charseq START="391" END="393">you</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

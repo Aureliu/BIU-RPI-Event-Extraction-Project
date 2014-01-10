@@ -1,0 +1,519 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNNHL_ENG_20030331_193419.9.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNNHL_ENG_20030331_193419.9">
+<entity ID="CNNHL_ENG_20030331_193419.9-E1" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030331_193419.9-E1-2" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="364" END="379">kurdish fighters</charseq>
+    </extent>
+    <head>
+      <charseq START="372" END="379">fighters</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030331_193419.9-E2" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030331_193419.9-E2-3" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="364" END="370">kurdish</charseq>
+    </extent>
+    <head>
+      <charseq START="364" END="370">kurdish</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030331_193419.9-E3" TYPE="LOC" SUBTYPE="Region-General" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030331_193419.9-E3-4" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="243" END="265">a site of heavy bombing</charseq>
+    </extent>
+    <head>
+      <charseq START="245" END="248">site</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030331_193419.9-E3-15" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="225" END="237">the same area</charseq>
+    </extent>
+    <head>
+      <charseq START="234" END="237">area</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030331_193419.9-E5" TYPE="LOC" SUBTYPE="Region-General" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030331_193419.9-E5-1" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="72" END="84">northern iraq</charseq>
+    </extent>
+    <head>
+      <charseq START="81" END="84">iraq</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030331_193419.9-E6" TYPE="VEH" SUBTYPE="Air" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030331_193419.9-E6-5" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="87" END="100">u.s. warplanes</charseq>
+    </extent>
+    <head>
+      <charseq START="92" END="100">warplanes</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030331_193419.9-E7" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030331_193419.9-E7-6" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="87" END="89">u.s</charseq>
+    </extent>
+    <head>
+      <charseq START="87" END="89">u.s</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="u.s">
+      <charseq START="87" END="89">u.s</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030331_193419.9-E8" TYPE="LOC" SUBTYPE="Region-General" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030331_193419.9-E8-7" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="106" END="185">targets including a ridge east of
+mosul, where iraqi troops have been entrenched</charseq>
+    </extent>
+    <head>
+      <charseq START="106" END="112">targets</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030331_193419.9-E8-14" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="212" END="222">the targets</charseq>
+    </extent>
+    <head>
+      <charseq START="216" END="222">targets</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030331_193419.9-E9" TYPE="LOC" SUBTYPE="Land-Region-Natural" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030331_193419.9-E9-8" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="124" END="144">a ridge east of
+mosul</charseq>
+    </extent>
+    <head>
+      <charseq START="126" END="130">ridge</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030331_193419.9-E9-10" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="147" END="151">where</charseq>
+    </extent>
+    <head>
+      <charseq START="147" END="151">where</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030331_193419.9-E10" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030331_193419.9-E10-9" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="140" END="144">mosul</charseq>
+    </extent>
+    <head>
+      <charseq START="140" END="144">mosul</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="mosul">
+      <charseq START="140" END="144">mosul</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030331_193419.9-E11" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030331_193419.9-E11-11" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="153" END="164">iraqi troops</charseq>
+    </extent>
+    <head>
+      <charseq START="159" END="164">troops</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030331_193419.9-E12" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030331_193419.9-E12-12" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="153" END="157">iraqi</charseq>
+    </extent>
+    <head>
+      <charseq START="153" END="157">iraqi</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030331_193419.9-E12-17" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="308" END="312">iraqi</charseq>
+    </extent>
+    <head>
+      <charseq START="308" END="312">iraqi</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="iraqi">
+      <charseq START="153" END="157">iraqi</charseq>
+    </name>
+    <name NAME="iraqi">
+      <charseq START="308" END="312">iraqi</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030331_193419.9-E13" TYPE="VEH" SUBTYPE="Air" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030331_193419.9-E13-13" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="188" END="203">two f-14 tomcats</charseq>
+    </extent>
+    <head>
+      <charseq START="197" END="203">tomcats</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030331_193419.9-E14" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030331_193419.9-E14-16" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="305" END="321">13 iraqi soldiers</charseq>
+    </extent>
+    <head>
+      <charseq START="314" END="321">soldiers</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030331_193419.9-E14-18" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="333" END="337">their</charseq>
+    </extent>
+    <head>
+      <charseq START="333" END="337">their</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030331_193419.9-E16" TYPE="FAC" SUBTYPE="Subarea-Facility" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030331_193419.9-E16-19" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="333" END="343">their posts</charseq>
+    </extent>
+    <head>
+      <charseq START="339" END="343">posts</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<timex2 ID="CNNHL_ENG_20030331_193419.9-T1" VAL="2003-03-30">
+  <timex2_mention ID="CNNHL_ENG_20030331_193419.9-T1-1">
+    <extent>
+      <charseq START="267" END="275">yesterday</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNNHL_ENG_20030331_193419.9-T2" VAL="2003-03-31">
+  <timex2_mention ID="CNNHL_ENG_20030331_193419.9-T2-1">
+    <extent>
+      <charseq START="284" END="288">today</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNNHL_ENG_20030331_193419.9-T3" VAL="2003-03-31T19:37:15">
+  <timex2_mention ID="CNNHL_ENG_20030331_193419.9-T3-1">
+    <extent>
+      <charseq START="45" END="63">2003-03-31 19:37:15</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNNHL_ENG_20030331_193419.9-R1" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030331_193419.9-E7" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030331_193419.9-E6" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030331_193419.9-R1-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="87" END="100">u.s. warplanes</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030331_193419.9-E7-6" ROLE="Arg-1">
+      <extent>
+        <charseq START="87" END="89">u.s</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030331_193419.9-E6-5" ROLE="Arg-2">
+      <extent>
+        <charseq START="87" END="100">u.s. warplanes</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030331_193419.9-R2" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030331_193419.9-E11" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030331_193419.9-E12" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030331_193419.9-R2-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="153" END="164">iraqi troops</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030331_193419.9-E11-11" ROLE="Arg-1">
+      <extent>
+        <charseq START="153" END="164">iraqi troops</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030331_193419.9-E12-12" ROLE="Arg-2">
+      <extent>
+        <charseq START="153" END="157">iraqi</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030331_193419.9-R3" TYPE="PHYS" SUBTYPE="Near" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030331_193419.9-E9" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030331_193419.9-E10" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030331_193419.9-R3-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="124" END="144">a ridge east of
+mosul</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030331_193419.9-E9-8" ROLE="Arg-1">
+      <extent>
+        <charseq START="124" END="144">a ridge east of
+mosul</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030331_193419.9-E10-9" ROLE="Arg-2">
+      <extent>
+        <charseq START="140" END="144">mosul</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030331_193419.9-R4" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030331_193419.9-E14" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030331_193419.9-E12" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030331_193419.9-R4-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="305" END="321">13 iraqi soldiers</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030331_193419.9-E14-16" ROLE="Arg-1">
+      <extent>
+        <charseq START="305" END="321">13 iraqi soldiers</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030331_193419.9-E12-17" ROLE="Arg-2">
+      <extent>
+        <charseq START="308" END="312">iraqi</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030331_193419.9-R5" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030331_193419.9-E11" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030331_193419.9-E9" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030331_193419.9-R5-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="69" END="185">in northern iraq, u.s. warplanes hit targets including a ridge east of
+mosul, where iraqi troops have been entrenched</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030331_193419.9-E11-11" ROLE="Arg-1">
+      <extent>
+        <charseq START="153" END="164">iraqi troops</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030331_193419.9-E9-10" ROLE="Arg-2">
+      <extent>
+        <charseq START="147" END="151">where</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030331_193419.9-R6" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030331_193419.9-E14" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030331_193419.9-E16" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030331_193419.9-R6-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="333" END="343">their posts</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030331_193419.9-E14-18" ROLE="Arg-1">
+      <extent>
+        <charseq START="333" END="337">their</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030331_193419.9-E16-19" ROLE="Arg-2">
+      <extent>
+        <charseq START="333" END="343">their posts</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030331_193419.9-R7" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030331_193419.9-E2" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030331_193419.9-E1" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030331_193419.9-R7-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="364" END="379">kurdish fighters</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030331_193419.9-E2-3" ROLE="Arg-1">
+      <extent>
+        <charseq START="364" END="370">kurdish</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030331_193419.9-E1-2" ROLE="Arg-2">
+      <extent>
+        <charseq START="364" END="379">kurdish fighters</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNNHL_ENG_20030331_193419.9-EV1" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNNHL_ENG_20030331_193419.9-E7" ROLE="Attacker"/>
+  <event_argument REFID="CNNHL_ENG_20030331_193419.9-E5" ROLE="Place"/>
+  <event_argument REFID="CNNHL_ENG_20030331_193419.9-E8" ROLE="Target"/>
+  <event_argument REFID="CNNHL_ENG_20030331_193419.9-E6" ROLE="Instrument"/>
+  <event_argument REFID="CNNHL_ENG_20030331_193419.9-E3" ROLE="Place"/>
+  <event_argument REFID="CNNHL_ENG_20030331_193419.9-E13" ROLE="Instrument"/>
+  <event_argument REFID="CNNHL_ENG_20030331_193419.9-T2" ROLE="Time-Within"/>
+  <event_mention ID="CNNHL_ENG_20030331_193419.9-EV1-1">
+    <extent>
+      <charseq START="72" END="185">northern iraq, u.s. warplanes hit targets including a ridge east of
+mosul, where iraqi troops have been entrenched</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="69" END="185">in northern iraq, u.s. warplanes hit targets including a ridge east of
+mosul, where iraqi troops have been entrenched</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="102" END="104">hit</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030331_193419.9-E7-6" ROLE="Attacker">
+      <extent>
+        <charseq START="87" END="89">u.s</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030331_193419.9-E5-1" ROLE="Place">
+      <extent>
+        <charseq START="72" END="84">northern iraq</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030331_193419.9-E8-7" ROLE="Target">
+      <extent>
+        <charseq START="106" END="185">targets including a ridge east of
+mosul, where iraqi troops have been entrenched</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030331_193419.9-E6-5" ROLE="Instrument">
+      <extent>
+        <charseq START="87" END="100">u.s. warplanes</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNNHL_ENG_20030331_193419.9-EV1-2">
+    <extent>
+      <charseq START="188" END="237">two f-14 tomcats
+struck the targets, the same area</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="188" END="275">two f-14 tomcats
+struck the targets, the same area was a site of heavy bombing
+yesterday</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="205" END="210">struck</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030331_193419.9-E3-15" ROLE="Place">
+      <extent>
+        <charseq START="225" END="237">the same area</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030331_193419.9-E8-14" ROLE="Target">
+      <extent>
+        <charseq START="212" END="222">the targets</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030331_193419.9-E13-13" ROLE="Instrument">
+      <extent>
+        <charseq START="188" END="203">two f-14 tomcats</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNNHL_ENG_20030331_193419.9-EV1-3">
+    <extent>
+      <charseq START="284" END="302">today's air strikes</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="278" END="379">after today's air strikes, 13 iraqi soldiers abandoned
+their posts and surrendered to kurdish fighters</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="296" END="302">strikes</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030331_193419.9-T2-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="284" END="288">today</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNNHL_ENG_20030331_193419.9-EV2" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNNHL_ENG_20030331_193419.9-E3" ROLE="Place"/>
+  <event_argument REFID="CNNHL_ENG_20030331_193419.9-T1" ROLE="Time-Within"/>
+  <event_mention ID="CNNHL_ENG_20030331_193419.9-EV2-1">
+    <extent>
+      <charseq START="243" END="275">a site of heavy bombing
+yesterday</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="188" END="275">two f-14 tomcats
+struck the targets, the same area was a site of heavy bombing
+yesterday</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="259" END="265">bombing</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030331_193419.9-E3-4" ROLE="Place">
+      <extent>
+        <charseq START="243" END="265">a site of heavy bombing</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030331_193419.9-T1-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="267" END="275">yesterday</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNNHL_ENG_20030331_193419.9-EV3" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNNHL_ENG_20030331_193419.9-E14" ROLE="Artifact"/>
+  <event_argument REFID="CNNHL_ENG_20030331_193419.9-E16" ROLE="Origin"/>
+  <event_argument REFID="CNNHL_ENG_20030331_193419.9-E1" ROLE="Agent"/>
+  <event_argument REFID="CNNHL_ENG_20030331_193419.9-T2" ROLE="Time-Within"/>
+  <event_mention ID="CNNHL_ENG_20030331_193419.9-EV3-1">
+    <extent>
+      <charseq START="284" END="379">today's air strikes, 13 iraqi soldiers abandoned
+their posts and surrendered to kurdish fighters</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="278" END="379">after today's air strikes, 13 iraqi soldiers abandoned
+their posts and surrendered to kurdish fighters</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="323" END="331">abandoned</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030331_193419.9-E14-16" ROLE="Artifact">
+      <extent>
+        <charseq START="305" END="321">13 iraqi soldiers</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030331_193419.9-E16-19" ROLE="Origin">
+      <extent>
+        <charseq START="333" END="343">their posts</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030331_193419.9-E1-2" ROLE="Agent">
+      <extent>
+        <charseq START="364" END="379">kurdish fighters</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030331_193419.9-T2-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="284" END="288">today</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

@@ -1,0 +1,347 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="MARKETVIEW_20050205.1358.sgm" SOURCE="weblog" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="MARKETVIEW_20050205.1358">
+<entity ID="MARKETVIEW_20050205.1358-E1" TYPE="GPE" SUBTYPE="Nation" CLASS="GEN">
+  <entity_mention ID="MARKETVIEW_20050205.1358-E1-2" TYPE="NOM" LDCTYPE="NOM" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="313" END="337">the third
+world countries</charseq>
+    </extent>
+    <head>
+      <charseq START="329" END="337">countries</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050205.1358-E1-3" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="348" END="352">their</charseq>
+    </extent>
+    <head>
+      <charseq START="348" END="352">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050205.1358-E1-4" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="250" END="251">it</charseq>
+    </extent>
+    <head>
+      <charseq START="250" END="251">it</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050205.1358-E1-5" TYPE="NOM" LDCTYPE="NOMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="358" END="362">state</charseq>
+    </extent>
+    <head>
+      <charseq START="358" END="362">state</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050205.1358-E1-9" TYPE="NOM" LDCTYPE="NOM" ROLE="ORG" LDCATR="FALSE">
+    <extent>
+      <charseq START="194" END="238">some tiny, ill-established foreign government</charseq>
+    </extent>
+    <head>
+      <charseq START="229" END="238">government</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050205.1358-E2" TYPE="GPE" SUBTYPE="GPE-Cluster" CLASS="GEN">
+  <entity_mention ID="MARKETVIEW_20050205.1358-E2-6" TYPE="NOM" LDCTYPE="NOMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="317" END="327">third
+world</charseq>
+    </extent>
+    <head>
+      <charseq START="317" END="327">third
+world</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050205.1358-E3" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="MARKETVIEW_20050205.1358-E3-7" TYPE="NOM" LDCTYPE="NOMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="514" END="518">state</charseq>
+    </extent>
+    <head>
+      <charseq START="514" END="518">state</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050205.1358-E3-17" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="506" END="510">India</charseq>
+    </extent>
+    <head>
+      <charseq START="506" END="510">India</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="India">
+      <charseq START="506" END="510">India</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKETVIEW_20050205.1358-E4" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="MARKETVIEW_20050205.1358-E4-1" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="112" END="112">I</charseq>
+    </extent>
+    <head>
+      <charseq START="112" END="112">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050205.1358-E4-12" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="83" END="87">Byrne</charseq>
+    </extent>
+    <head>
+      <charseq START="83" END="87">Byrne</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Byrne">
+      <charseq START="83" END="87">Byrne</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKETVIEW_20050205.1358-E5" TYPE="ORG" SUBTYPE="Commercial" CLASS="GEN">
+  <entity_mention ID="MARKETVIEW_20050205.1358-E5-8" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="140" END="172">a major international oil company</charseq>
+    </extent>
+    <head>
+      <charseq START="166" END="172">company</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050205.1358-E7" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="MARKETVIEW_20050205.1358-E7-11" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="273" END="274">We</charseq>
+    </extent>
+    <head>
+      <charseq START="273" END="274">We</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050205.1358-E8" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="MARKETVIEW_20050205.1358-E8-10" TYPE="NAM" LDCTYPE="NAMPRE">
+    <extent>
+      <charseq START="560" END="564">Yukos</charseq>
+    </extent>
+    <head>
+      <charseq START="560" END="564">Yukos</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Yukos">
+      <charseq START="560" END="564">Yukos</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKETVIEW_20050205.1358-E9" TYPE="ORG" SUBTYPE="Government" CLASS="USP">
+  <entity_mention ID="MARKETVIEW_20050205.1358-E9-13" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="348" END="438">their own state oil companies, who are picking
+apart the carcasses of once-private concerns</charseq>
+    </extent>
+    <head>
+      <charseq START="368" END="376">companies</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050205.1358-E9-14" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="379" END="381">who</charseq>
+    </extent>
+    <head>
+      <charseq START="379" END="381">who</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050205.1358-E10" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="MARKETVIEW_20050205.1358-E10-15" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="441" END="461">The Capital Spectator</charseq>
+    </extent>
+    <head>
+      <charseq START="445" END="461">Capital Spectator</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Capital Spectator">
+      <charseq START="445" END="461">Capital Spectator</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKETVIEW_20050205.1358-E11" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="MARKETVIEW_20050205.1358-E11-16" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE">
+    <extent>
+      <charseq START="495" END="499">China</charseq>
+    </extent>
+    <head>
+      <charseq START="495" END="499">China</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="China">
+      <charseq START="495" END="499">China</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKETVIEW_20050205.1358-E13" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="MARKETVIEW_20050205.1358-E13-18" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="506" END="530">India's state oil company</charseq>
+    </extent>
+    <head>
+      <charseq START="524" END="530">company</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<timex2 ID="MARKETVIEW_20050205.1358-T1" VAL="PAST_REF" ANCHOR_VAL="2005-02-05" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="MARKETVIEW_20050205.1358-T1-1">
+    <extent>
+      <charseq START="126" END="133">the days</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKETVIEW_20050205.1358-T2" VAL="PAST_REF" ANCHOR_VAL="2005-02-05" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="MARKETVIEW_20050205.1358-T2-1">
+    <extent>
+      <charseq START="302" END="305">then</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKETVIEW_20050205.1358-T3" VAL="2005-02-05T13:58:00">
+  <timex2_mention ID="MARKETVIEW_20050205.1358-T3-1">
+    <extent>
+      <charseq START="308" END="310">Now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKETVIEW_20050205.1358-T4" VAL="PAST_REF" ANCHOR_VAL="2005-02-05T13:58:00" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="MARKETVIEW_20050205.1358-T4-1">
+    <extent>
+      <charseq START="418" END="421">once</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKETVIEW_20050205.1358-T5" VAL="2005-02-05T13:58:00">
+  <timex2_mention ID="MARKETVIEW_20050205.1358-T5-1">
+    <extent>
+      <charseq START="40" END="58">2005-02-05T13:58:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKETVIEW_20050205.1358-T6" VAL="2005-02-05T13:58:00">
+  <timex2_mention ID="MARKETVIEW_20050205.1358-T6-1">
+    <extent>
+      <charseq START="91" END="109">2005-02-05T13:58:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="MARKETVIEW_20050205.1358-R1" TYPE="ORG-AFF" SUBTYPE="Membership" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="MARKETVIEW_20050205.1358-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="MARKETVIEW_20050205.1358-E5" ROLE="Arg-2"/>
+  <relation_mention ID="MARKETVIEW_20050205.1358-R1-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="112" END="270">I really miss the days when a major international oil company could
+basically buy some tiny, ill-established foreign government to get at
+its natural resources</charseq>
+    </extent>
+    <relation_mention_argument REFID="MARKETVIEW_20050205.1358-E1-9" ROLE="Arg-1">
+      <extent>
+        <charseq START="194" END="238">some tiny, ill-established foreign government</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="MARKETVIEW_20050205.1358-E5-8" ROLE="Arg-2">
+      <extent>
+        <charseq START="140" END="172">a major international oil company</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="MARKETVIEW_20050205.1358-R2" TYPE="PART-WHOLE" SUBTYPE="Subsidiary" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="MARKETVIEW_20050205.1358-E9" ROLE="Arg-1"/>
+  <relation_argument REFID="MARKETVIEW_20050205.1358-E1" ROLE="Arg-2"/>
+  <relation_mention ID="MARKETVIEW_20050205.1358-R2-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="348" END="438">their own state oil companies, who are picking
+apart the carcasses of once-private concerns</charseq>
+    </extent>
+    <relation_mention_argument REFID="MARKETVIEW_20050205.1358-E9-13" ROLE="Arg-1">
+      <extent>
+        <charseq START="348" END="438">their own state oil companies, who are picking
+apart the carcasses of once-private concerns</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="MARKETVIEW_20050205.1358-E1-5" ROLE="Arg-2">
+      <extent>
+        <charseq START="358" END="362">state</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="MARKETVIEW_20050205.1358-R3" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="MARKETVIEW_20050205.1358-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="MARKETVIEW_20050205.1358-E2" ROLE="Arg-2"/>
+  <relation_mention ID="MARKETVIEW_20050205.1358-R3-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="313" END="337">the third
+world countries</charseq>
+    </extent>
+    <relation_mention_argument REFID="MARKETVIEW_20050205.1358-E1-2" ROLE="Arg-1">
+      <extent>
+        <charseq START="313" END="337">the third
+world countries</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="MARKETVIEW_20050205.1358-E2-6" ROLE="Arg-2">
+      <extent>
+        <charseq START="317" END="327">third
+world</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="MARKETVIEW_20050205.1358-R4" TYPE="PART-WHOLE" SUBTYPE="Subsidiary" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="MARKETVIEW_20050205.1358-E13" ROLE="Arg-1"/>
+  <relation_argument REFID="MARKETVIEW_20050205.1358-E3" ROLE="Arg-2"/>
+  <relation_mention ID="MARKETVIEW_20050205.1358-R4-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="506" END="530">India's state oil company</charseq>
+    </extent>
+    <relation_mention_argument REFID="MARKETVIEW_20050205.1358-E13-18" ROLE="Arg-1">
+      <extent>
+        <charseq START="506" END="530">India's state oil company</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="MARKETVIEW_20050205.1358-E3-7" ROLE="Arg-2">
+      <extent>
+        <charseq START="514" END="518">state</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="MARKETVIEW_20050205.1358-EV1" TYPE="Business" SUBTYPE="End-Org" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="MARKETVIEW_20050205.1358-E8" ROLE="Org"/>
+  <event_mention ID="MARKETVIEW_20050205.1358-EV1-1">
+    <extent>
+      <charseq START="560" END="578">Yukos-dismemberment</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="441" END="584">The Capital Spectator
+reports on the latest: Not only China, but India's state oil company has
+decided to get into the Yukos-dismemberment trade</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="566" END="578">dismemberment</charseq>
+    </anchor>
+    <event_mention_argument REFID="MARKETVIEW_20050205.1358-E8-10" ROLE="Org">
+      <extent>
+        <charseq START="560" END="564">Yukos</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

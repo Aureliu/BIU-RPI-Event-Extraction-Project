@@ -1,0 +1,2324 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="FLOPPINGACES_20041116.0833.027.sgm" SOURCE="weblog" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="FLOPPINGACES_20041116.0833.027">
+<entity ID="FLOPPINGACES_20041116.0833.027-E1" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E1-3" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="445" END="475">the young guard of Palestinians</charseq>
+    </extent>
+    <head>
+      <charseq START="455" END="459">guard</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E1-10" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="661" END="675">the young guard</charseq>
+    </extent>
+    <head>
+      <charseq START="671" END="675">guard</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="FLOPPINGACES_20041116.0833.027-E2" TYPE="GPE" SUBTYPE="Special" CLASS="SPC">
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E2-4" TYPE="NOM" LDCTYPE="NOM" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="485" END="500">the Palestinians</charseq>
+    </extent>
+    <head>
+      <charseq START="489" END="500">Palestinians</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E2-9" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="616" END="619">they</charseq>
+    </extent>
+    <head>
+      <charseq START="616" END="619">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E2-18" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="948" END="958">Palestinian</charseq>
+    </extent>
+    <head>
+      <charseq START="948" END="958">Palestinian</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E2-21" TYPE="NAM" LDCTYPE="NAM" ROLE="ORG" LDCATR="FALSE">
+    <extent>
+      <charseq START="1048" END="1072">the Palestinian Authority</charseq>
+    </extent>
+    <head>
+      <charseq START="1052" END="1072">Palestinian Authority</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E2-31" TYPE="NOM" LDCTYPE="BAR" ROLE="PER" LDCATR="FALSE">
+    <extent>
+      <charseq START="1392" END="1403">Palestinians</charseq>
+    </extent>
+    <head>
+      <charseq START="1392" END="1403">Palestinians</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Palestinian">
+      <charseq START="948" END="958">Palestinian</charseq>
+    </name>
+    <name NAME="Palestinian Authority">
+      <charseq START="1052" END="1072">Palestinian Authority</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="FLOPPINGACES_20041116.0833.027-E3" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E3-5" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="569" END="581">the Islamists</charseq>
+    </extent>
+    <head>
+      <charseq START="573" END="581">Islamists</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="FLOPPINGACES_20041116.0833.027-E4" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E4-6" TYPE="PRO" LDCTYPE="PTV">
+    <extent>
+      <charseq START="587" END="613">some of the people of Hamas</charseq>
+    </extent>
+    <head>
+      <charseq START="587" END="590">some</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="FLOPPINGACES_20041116.0833.027-E5" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E5-7" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="595" END="613">the people of Hamas</charseq>
+    </extent>
+    <head>
+      <charseq START="599" END="604">people</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="FLOPPINGACES_20041116.0833.027-E6" TYPE="ORG" SUBTYPE="Non-Governmental" CLASS="SPC">
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E6-8" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="609" END="613">Hamas</charseq>
+    </extent>
+    <head>
+      <charseq START="609" END="613">Hamas</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E6-63" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2383" END="2387">Hamas</charseq>
+    </extent>
+    <head>
+      <charseq START="2383" END="2387">Hamas</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Hamas">
+      <charseq START="609" END="613">Hamas</charseq>
+    </name>
+    <name NAME="Hamas">
+      <charseq START="2383" END="2387">Hamas</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="FLOPPINGACES_20041116.0833.027-E7" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E7-11" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="681" END="693">the old
+guard</charseq>
+    </extent>
+    <head>
+      <charseq START="689" END="693">guard</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="FLOPPINGACES_20041116.0833.027-E8" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E8-2" TYPE="PRO" LDCTYPE="PTV" LDCATR="FALSE">
+    <extent>
+      <charseq START="438" END="475">one of the young guard of Palestinians</charseq>
+    </extent>
+    <head>
+      <charseq START="438" END="440">one</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E8-16" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="875" END="904">the terrorist Marwan
+Barghouti</charseq>
+    </extent>
+    <head>
+      <charseq START="889" END="904">Marwan
+Barghouti</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E8-17" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="875" END="887">the terrorist</charseq>
+    </extent>
+    <head>
+      <charseq START="879" END="887">terrorist</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E8-24" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1140" END="1141">he</charseq>
+    </extent>
+    <head>
+      <charseq START="1140" END="1141">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E8-29" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1314" END="1322">Barghouti</charseq>
+    </extent>
+    <head>
+      <charseq START="1314" END="1322">Barghouti</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E8-34" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1490" END="1491">he</charseq>
+    </extent>
+    <head>
+      <charseq START="1490" END="1491">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E8-37" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1546" END="1547">he</charseq>
+    </extent>
+    <head>
+      <charseq START="1546" END="1547">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E8-39" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1578" END="1579">he</charseq>
+    </extent>
+    <head>
+      <charseq START="1578" END="1579">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E8-41" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1659" END="1660">he</charseq>
+    </extent>
+    <head>
+      <charseq START="1659" END="1660">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E8-44" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2621" END="2637">a known terrorist</charseq>
+    </extent>
+    <head>
+      <charseq START="2629" END="2637">terrorist</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E8-47" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2193" END="2201">Barghouti</charseq>
+    </extent>
+    <head>
+      <charseq START="2193" END="2201">Barghouti</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E8-48" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2479" END="2487">Barghouti</charseq>
+    </extent>
+    <head>
+      <charseq START="2479" END="2487">Barghouti</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E8-49" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1923" END="1931">Barghouti</charseq>
+    </extent>
+    <head>
+      <charseq START="1923" END="1931">Barghouti</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E8-50" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1997" END="2005">Barghouti</charseq>
+    </extent>
+    <head>
+      <charseq START="1997" END="2005">Barghouti</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E8-51" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2140" END="2142">him</charseq>
+    </extent>
+    <head>
+      <charseq START="2140" END="2142">him</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E8-52" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1836" END="1844">Barghouti</charseq>
+    </extent>
+    <head>
+      <charseq START="1836" END="1844">Barghouti</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E8-53" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="1850" END="1896">the General
+Secretary of Fatah in the West Bank</charseq>
+    </extent>
+    <head>
+      <charseq START="1862" END="1870">Secretary</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E8-54" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1723" END="1724">he</charseq>
+    </extent>
+    <head>
+      <charseq START="1723" END="1724">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E8-79" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="946" END="984">a Palestinian leader
+from the West Bank</charseq>
+    </extent>
+    <head>
+      <charseq START="960" END="965">leader</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E8-80" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="906" END="921">Marwan Barghouti</charseq>
+    </extent>
+    <head>
+      <charseq START="906" END="921">Marwan Barghouti</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E8-81" TYPE="PRO" LDCTYPE="PTV" LDCATR="TRUE">
+    <extent>
+      <charseq START="1328" END="1381">one of the major leaders of the First Intifada
+in 1987</charseq>
+    </extent>
+    <head>
+      <charseq START="1328" END="1330">one</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E8-85" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="2234" END="2269">a leader of the Fatah Tanzim militia</charseq>
+    </extent>
+    <head>
+      <charseq START="2236" END="2241">leader</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E8-86" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="990" END="1119">a leader of the Fatah movement that forms the
+backbone of the Palestinian Authority and the Palestine Liberation
+Organization (PLO</charseq>
+    </extent>
+    <head>
+      <charseq START="992" END="997">leader</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E8-99" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="320" END="338">a scumbag terrorist</charseq>
+    </extent>
+    <head>
+      <charseq START="330" END="338">terrorist</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E8-102" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="401" END="428">a man named
+Marwan Barghouti</charseq>
+    </extent>
+    <head>
+      <charseq START="403" END="405">man</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E8-103" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="413" END="428">Marwan Barghouti</charseq>
+    </extent>
+    <head>
+      <charseq START="413" END="428">Marwan Barghouti</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E8-105" TYPE="PRO" LDCTYPE="WHQ" LDCATR="FALSE">
+    <extent>
+      <charseq START="431" END="433">who</charseq>
+    </extent>
+    <head>
+      <charseq START="431" END="433">who</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Marwan Barghouti">
+      <charseq START="889" END="904">Marwan
+Barghouti</charseq>
+    </name>
+    <name NAME="Barghouti">
+      <charseq START="1314" END="1322">Barghouti</charseq>
+    </name>
+    <name NAME="Barghouti">
+      <charseq START="2193" END="2201">Barghouti</charseq>
+    </name>
+    <name NAME="Barghouti">
+      <charseq START="2479" END="2487">Barghouti</charseq>
+    </name>
+    <name NAME="Barghouti">
+      <charseq START="1923" END="1931">Barghouti</charseq>
+    </name>
+    <name NAME="Barghouti">
+      <charseq START="1997" END="2005">Barghouti</charseq>
+    </name>
+    <name NAME="Barghouti">
+      <charseq START="1836" END="1844">Barghouti</charseq>
+    </name>
+    <name NAME="Marwan Barghouti">
+      <charseq START="906" END="921">Marwan Barghouti</charseq>
+    </name>
+    <name NAME="Marwan Barghouti">
+      <charseq START="413" END="428">Marwan Barghouti</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="FLOPPINGACES_20041116.0833.027-E10" TYPE="LOC" SUBTYPE="Region-General" CLASS="SPC">
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E10-19" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="972" END="984">the West Bank</charseq>
+    </extent>
+    <head>
+      <charseq START="976" END="984">West Bank</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E10-33" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1454" END="1466">the West Bank</charseq>
+    </extent>
+    <head>
+      <charseq START="1458" END="1466">West Bank</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E10-59" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1884" END="1896">the West Bank</charseq>
+    </extent>
+    <head>
+      <charseq START="1888" END="1896">West Bank</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="West Bank">
+      <charseq START="976" END="984">West Bank</charseq>
+    </name>
+    <name NAME="West Bank">
+      <charseq START="1458" END="1466">West Bank</charseq>
+    </name>
+    <name NAME="West Bank">
+      <charseq START="1888" END="1896">West Bank</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="FLOPPINGACES_20041116.0833.027-E11" TYPE="ORG" SUBTYPE="Non-Governmental" CLASS="SPC">
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E11-20" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1002" END="1119">the Fatah movement that forms the
+backbone of the Palestinian Authority and the Palestine Liberation
+Organization (PLO</charseq>
+    </extent>
+    <head>
+      <charseq START="1006" END="1019">Fatah movement</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E11-32" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="1021" END="1024">that</charseq>
+    </extent>
+    <head>
+      <charseq START="1021" END="1024">that</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E11-72" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1875" END="1879">Fatah</charseq>
+    </extent>
+    <head>
+      <charseq START="1875" END="1879">Fatah</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Fatah movement">
+      <charseq START="1006" END="1019">Fatah movement</charseq>
+    </name>
+    <name NAME="Fatah">
+      <charseq START="1875" END="1879">Fatah</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="FLOPPINGACES_20041116.0833.027-E12" TYPE="ORG" SUBTYPE="Non-Governmental" CLASS="SPC">
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E12-22" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1078" END="1119">the Palestine Liberation
+Organization (PLO</charseq>
+    </extent>
+    <head>
+      <charseq START="1082" END="1114">Palestine Liberation
+Organization</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E12-43" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2646" END="2652">the PLO</charseq>
+    </extent>
+    <head>
+      <charseq START="2650" END="2652">PLO</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E12-83" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="1117" END="1119">PLO</charseq>
+    </extent>
+    <head>
+      <charseq START="1117" END="1119">PLO</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Palestine Liberation Organization">
+      <charseq START="1082" END="1114">Palestine Liberation
+Organization</charseq>
+    </name>
+    <name NAME="PLO">
+      <charseq START="2650" END="2652">PLO</charseq>
+    </name>
+    <name NAME="PLO">
+      <charseq START="1117" END="1119">PLO</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="FLOPPINGACES_20041116.0833.027-E13" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E13-12" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="725" END="726">me</charseq>
+    </extent>
+    <head>
+      <charseq START="725" END="726">me</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E13-13" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="729" END="729">I</charseq>
+    </extent>
+    <head>
+      <charseq START="729" END="729">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E13-23" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="108" END="111">Curt</charseq>
+    </extent>
+    <head>
+      <charseq START="108" END="111">Curt</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E13-46" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2692" END="2693">me</charseq>
+    </extent>
+    <head>
+      <charseq START="2692" END="2693">me</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Curt">
+      <charseq START="108" END="111">Curt</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="FLOPPINGACES_20041116.0833.027-E14" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E14-25" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1200" END="1216">Israeli civilians</charseq>
+    </extent>
+    <head>
+      <charseq START="1208" END="1216">civilians</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E14-27" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1295" END="1311">Israeli
+civilians</charseq>
+    </extent>
+    <head>
+      <charseq START="1303" END="1311">civilians</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="FLOPPINGACES_20041116.0833.027-E15" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E15-26" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1200" END="1206">Israeli</charseq>
+    </extent>
+    <head>
+      <charseq START="1200" END="1206">Israeli</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E15-28" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1295" END="1301">Israeli</charseq>
+    </extent>
+    <head>
+      <charseq START="1295" END="1301">Israeli</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E15-35" TYPE="NAM" LDCTYPE="NAM" ROLE="ORG" LDCATR="TRUE">
+    <extent>
+      <charseq START="1509" END="1514">Israel</charseq>
+    </extent>
+    <head>
+      <charseq START="1509" END="1514">Israel</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E15-58" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1747" END="1752">Israel</charseq>
+    </extent>
+    <head>
+      <charseq START="1747" END="1752">Israel</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E15-65" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="TRUE">
+    <extent>
+      <charseq START="2542" END="2547">Israel</charseq>
+    </extent>
+    <head>
+      <charseq START="2542" END="2547">Israel</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E15-78" TYPE="NOM" LDCTYPE="NOM" ROLE="ORG" LDCATR="TRUE">
+    <extent>
+      <charseq START="286" END="307">the Isreali government</charseq>
+    </extent>
+    <head>
+      <charseq START="298" END="307">government</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E15-91" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1432" END="1438">Israeli</charseq>
+    </extent>
+    <head>
+      <charseq START="1432" END="1438">Israeli</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E15-98" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="290" END="296">Isreali</charseq>
+    </extent>
+    <head>
+      <charseq START="290" END="296">Isreali</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E15-101" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="386" END="392">Israeli</charseq>
+    </extent>
+    <head>
+      <charseq START="386" END="392">Israeli</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Israeli">
+      <charseq START="1200" END="1206">Israeli</charseq>
+    </name>
+    <name NAME="Israeli">
+      <charseq START="1295" END="1301">Israeli</charseq>
+    </name>
+    <name NAME="Israel">
+      <charseq START="1509" END="1514">Israel</charseq>
+    </name>
+    <name NAME="Israel">
+      <charseq START="1747" END="1752">Israel</charseq>
+    </name>
+    <name NAME="Israel">
+      <charseq START="2542" END="2547">Israel</charseq>
+    </name>
+    <name NAME="Israeli">
+      <charseq START="1432" END="1438">Israeli</charseq>
+    </name>
+    <name NAME="Isreali">
+      <charseq START="290" END="296">Isreali</charseq>
+    </name>
+    <name NAME="Israeli">
+      <charseq START="386" END="392">Israeli</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="FLOPPINGACES_20041116.0833.027-E17" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E17-30" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1335" END="1381">the major leaders of the First Intifada
+in 1987</charseq>
+    </extent>
+    <head>
+      <charseq START="1345" END="1351">leaders</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="FLOPPINGACES_20041116.0833.027-E18" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E18-36" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="1532" END="1537">Jordan</charseq>
+    </extent>
+    <head>
+      <charseq START="1532" END="1537">Jordan</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E18-40" TYPE="PRO" LDCTYPE="WHQ" ROLE="LOC">
+    <extent>
+      <charseq START="1540" END="1544">where</charseq>
+    </extent>
+    <head>
+      <charseq START="1540" END="1544">where</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Jordan">
+      <charseq START="1532" END="1537">Jordan</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="FLOPPINGACES_20041116.0833.027-E19" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E19-1" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="146" END="155">Captain Ed</charseq>
+    </extent>
+    <head>
+      <charseq START="146" END="155">Captain Ed</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Captain Ed">
+      <charseq START="146" END="155">Captain Ed</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="FLOPPINGACES_20041116.0833.027-E20" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E20-38" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="1628" END="1631">Oslo</charseq>
+    </extent>
+    <head>
+      <charseq START="1628" END="1631">Oslo</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Oslo">
+      <charseq START="1628" END="1631">Oslo</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="FLOPPINGACES_20041116.0833.027-E21" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E21-42" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1677" END="1711">the Palestinian Legislative Council</charseq>
+    </extent>
+    <head>
+      <charseq START="1681" END="1711">Palestinian Legislative Council</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E21-84" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="1717" END="1721">which</charseq>
+    </extent>
+    <head>
+      <charseq START="1717" END="1721">which</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Palestinian Legislative Council">
+      <charseq START="1681" END="1711">Palestinian Legislative Council</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="FLOPPINGACES_20041116.0833.027-E23" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E23-55" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1789" END="1801">Yasser
+Arafat</charseq>
+    </extent>
+    <head>
+      <charseq START="1789" END="1801">Yasser
+Arafat</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E23-56" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1937" END="1942">Arafat</charseq>
+    </extent>
+    <head>
+      <charseq START="1937" END="1942">Arafat</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E23-57" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2112" END="2117">Arafat</charseq>
+    </extent>
+    <head>
+      <charseq START="2112" END="2117">Arafat</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E23-60" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2058" END="2060">his</charseq>
+    </extent>
+    <head>
+      <charseq START="2058" END="2060">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E23-92" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2016" END="2021">Arafat</charseq>
+    </extent>
+    <head>
+      <charseq START="2016" END="2021">Arafat</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Yasser Arafat">
+      <charseq START="1789" END="1801">Yasser
+Arafat</charseq>
+    </name>
+    <name NAME="Arafat">
+      <charseq START="1937" END="1942">Arafat</charseq>
+    </name>
+    <name NAME="Arafat">
+      <charseq START="2112" END="2117">Arafat</charseq>
+    </name>
+    <name NAME="Arafat">
+      <charseq START="2016" END="2021">Arafat</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="FLOPPINGACES_20041116.0833.027-E24" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E24-61" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2016" END="2038">Arafat's administration</charseq>
+    </extent>
+    <head>
+      <charseq START="2025" END="2038">administration</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="FLOPPINGACES_20041116.0833.027-E25" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E25-62" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2058" END="2078">his security services</charseq>
+    </extent>
+    <head>
+      <charseq START="2062" END="2078">security services</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="FLOPPINGACES_20041116.0833.027-E26" TYPE="ORG" SUBTYPE="Non-Governmental" CLASS="SPC">
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E26-64" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2393" END="2405">Islamic Jihad</charseq>
+    </extent>
+    <head>
+      <charseq START="2393" END="2405">Islamic Jihad</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Islamic Jihad">
+      <charseq START="2393" END="2405">Islamic Jihad</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="FLOPPINGACES_20041116.0833.027-E27" TYPE="ORG" SUBTYPE="Non-Governmental" CLASS="SPC">
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E27-66" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2246" END="2269">the Fatah Tanzim militia</charseq>
+    </extent>
+    <head>
+      <charseq START="2250" END="2269">Fatah Tanzim militia</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E27-67" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2318" END="2323">Tanzim</charseq>
+    </extent>
+    <head>
+      <charseq START="2318" END="2323">Tanzim</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E27-68" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2490" END="2499">the Tanzim</charseq>
+    </extent>
+    <head>
+      <charseq START="2494" END="2499">Tanzim</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E27-69" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2564" END="2588">al-Aqsa
+Martyrs' Brigades</charseq>
+    </extent>
+    <head>
+      <charseq START="2564" END="2588">al-Aqsa
+Martyrs' Brigades</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E27-88" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="2330" END="2405">an organization more resembling
+militant groups like Hamas and Islamic Jihad</charseq>
+    </extent>
+    <head>
+      <charseq START="2333" END="2344">organization</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Fatah Tanzim militia">
+      <charseq START="2250" END="2269">Fatah Tanzim militia</charseq>
+    </name>
+    <name NAME="Tanzim">
+      <charseq START="2318" END="2323">Tanzim</charseq>
+    </name>
+    <name NAME="Tanzim">
+      <charseq START="2494" END="2499">Tanzim</charseq>
+    </name>
+    <name NAME="al-Aqsa Martyrs' Brigades">
+      <charseq START="2564" END="2588">al-Aqsa
+Martyrs' Brigades</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="FLOPPINGACES_20041116.0833.027-E29" TYPE="ORG" SUBTYPE="Government" CLASS="GEN">
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E29-71" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="223" END="227">State</charseq>
+    </extent>
+    <head>
+      <charseq START="223" END="227">State</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="FLOPPINGACES_20041116.0833.027-E30" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E30-73" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="538" END="566">the really
+hard-line elements</charseq>
+    </extent>
+    <head>
+      <charseq START="559" END="566">elements</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="FLOPPINGACES_20041116.0833.027-E31" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E31-14" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="749" END="757">Mr. Baker</charseq>
+    </extent>
+    <head>
+      <charseq START="753" END="757">Baker</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E31-15" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="763" END="778">a upstanding guy</charseq>
+    </extent>
+    <head>
+      <charseq START="776" END="778">guy</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E31-45" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2600" END="2601">he</charseq>
+    </extent>
+    <head>
+      <charseq START="2600" END="2601">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E31-70" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="190" END="200">James Baker</charseq>
+    </extent>
+    <head>
+      <charseq START="190" END="200">James Baker</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E31-77" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="749" END="750">Mr</charseq>
+    </extent>
+    <head>
+      <charseq START="749" END="750">Mr</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E31-94" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="203" END="227">former Secretary of State</charseq>
+    </extent>
+    <head>
+      <charseq START="210" END="218">Secretary</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E31-95" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="233" END="273">current envoy for the Bush Administration</charseq>
+    </extent>
+    <head>
+      <charseq START="241" END="245">envoy</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Baker">
+      <charseq START="753" END="757">Baker</charseq>
+    </name>
+    <name NAME="James Baker">
+      <charseq START="190" END="200">James Baker</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="FLOPPINGACES_20041116.0833.027-E32" TYPE="ORG" SUBTYPE="Non-Governmental" CLASS="SPC">
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E32-74" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="646" END="693">a coalition of the young guard and the old
+guard</charseq>
+    </extent>
+    <head>
+      <charseq START="648" END="656">coalition</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="FLOPPINGACES_20041116.0833.027-E33" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E33-75" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1980" END="1989">each other</charseq>
+    </extent>
+    <head>
+      <charseq START="1985" END="1989">other</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="FLOPPINGACES_20041116.0833.027-E34" TYPE="ORG" SUBTYPE="Non-Governmental" CLASS="SPC">
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E34-76" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="2362" END="2405">militant groups like Hamas and Islamic Jihad</charseq>
+    </extent>
+    <head>
+      <charseq START="2371" END="2376">groups</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="FLOPPINGACES_20041116.0833.027-E39" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E39-82" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="464" END="475">Palestinians</charseq>
+    </extent>
+    <head>
+      <charseq START="464" END="475">Palestinians</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="FLOPPINGACES_20041116.0833.027-E44" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E44-89" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="2434" END="2441">civilian</charseq>
+    </extent>
+    <head>
+      <charseq START="2434" END="2441">civilian</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="FLOPPINGACES_20041116.0833.027-E45" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E45-90" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="2083" END="2087">human</charseq>
+    </extent>
+    <head>
+      <charseq START="2083" END="2087">human</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="FLOPPINGACES_20041116.0833.027-E47" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E47-93" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="2362" END="2369">militant</charseq>
+    </extent>
+    <head>
+      <charseq START="2362" END="2369">militant</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="FLOPPINGACES_20041116.0833.027-E48" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E48-96" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="251" END="273">the Bush Administration</charseq>
+    </extent>
+    <head>
+      <charseq START="260" END="273">Administration</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="FLOPPINGACES_20041116.0833.027-E49" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E49-97" TYPE="NAM" LDCTYPE="NAMPRE">
+    <extent>
+      <charseq START="255" END="258">Bush</charseq>
+    </extent>
+    <head>
+      <charseq START="255" END="258">Bush</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Bush">
+      <charseq START="255" END="258">Bush</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="FLOPPINGACES_20041116.0833.027-E53" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="FLOPPINGACES_20041116.0833.027-E53-100" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="383" END="399">an Israeli prison</charseq>
+    </extent>
+    <head>
+      <charseq START="394" END="399">prison</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<value ID="FLOPPINGACES_20041116.0833.027-V1" TYPE="Sentence">
+  <value_mention ID="FLOPPINGACES_20041116.0833.027-V1-1">
+    <extent>
+      <charseq START="1160" END="1178">five life
+sentences</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="FLOPPINGACES_20041116.0833.027-V2" TYPE="Crime">
+  <value_mention ID="FLOPPINGACES_20041116.0833.027-V2-1">
+    <extent>
+      <charseq START="1184" END="1216">five murders of Israeli civilians</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="FLOPPINGACES_20041116.0833.027-V3" TYPE="Sentence">
+  <value_mention ID="FLOPPINGACES_20041116.0833.027-V3-1">
+    <extent>
+      <charseq START="1222" END="1242">40 years
+imprisonment</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="FLOPPINGACES_20041116.0833.027-V4" TYPE="Crime">
+  <value_mention ID="FLOPPINGACES_20041116.0833.027-V4-1">
+    <extent>
+      <charseq START="1248" END="1264">attempted murders</charseq>
+    </extent>
+  </value_mention>
+</value>
+<timex2 ID="FLOPPINGACES_20041116.0833.027-T1">
+  <timex2_mention ID="FLOPPINGACES_20041116.0833.027-T1-1">
+    <extent>
+      <charseq START="1160" END="1178">five life
+sentences</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="FLOPPINGACES_20041116.0833.027-T2" VAL="1958-06-06">
+  <timex2_mention ID="FLOPPINGACES_20041116.0833.027-T2-1">
+    <extent>
+      <charseq START="929" END="940">June 6, 1958</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="FLOPPINGACES_20041116.0833.027-T3" VAL="2004-06-06">
+  <timex2_mention ID="FLOPPINGACES_20041116.0833.027-T3-1">
+    <extent>
+      <charseq START="1126" END="1137">June 6, 2004</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="FLOPPINGACES_20041116.0833.027-T4" VAL="1987">
+  <timex2_mention ID="FLOPPINGACES_20041116.0833.027-T4-1">
+    <extent>
+      <charseq START="1378" END="1381">1987</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="FLOPPINGACES_20041116.0833.027-T5" VAL="1994">
+  <timex2_mention ID="FLOPPINGACES_20041116.0833.027-T5-1">
+    <extent>
+      <charseq START="1644" END="1647">1994</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="FLOPPINGACES_20041116.0833.027-T6" VAL="1996">
+  <timex2_mention ID="FLOPPINGACES_20041116.0833.027-T6-1">
+    <extent>
+      <charseq START="1653" END="1656">1996</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="FLOPPINGACES_20041116.0833.027-T7" VAL="2000-SU">
+  <timex2_mention ID="FLOPPINGACES_20041116.0833.027-T7-1">
+    <extent>
+      <charseq START="1903" END="1920">the summer of 2000</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="FLOPPINGACES_20041116.0833.027-T8" VAL="PAST_REF" ANCHOR_VAL="2004-11-16T08:33:00" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="FLOPPINGACES_20041116.0833.027-T8-1">
+    <extent>
+      <charseq START="203" END="208">former</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="FLOPPINGACES_20041116.0833.027-T9" VAL="P7Y" ANCHOR_VAL="1994" ANCHOR_DIR="ENDING">
+  <timex2_mention ID="FLOPPINGACES_20041116.0833.027-T9-1">
+    <extent>
+      <charseq START="1560" END="1570">seven years</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="FLOPPINGACES_20041116.0833.027-T10" VAL="PRESENT_REF" ANCHOR_VAL="2004-11-16T08:33:00" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="FLOPPINGACES_20041116.0833.027-T10-1">
+    <extent>
+      <charseq START="233" END="239">current</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="FLOPPINGACES_20041116.0833.027-T11" VAL="PRESENT_REF" ANCHOR_VAL="2004-11-16T08:33:00" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="FLOPPINGACES_20041116.0833.027-T11-1">
+    <extent>
+      <charseq START="369" END="371">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="FLOPPINGACES_20041116.0833.027-T12" VAL="P40Y" ANCHOR_VAL="2004-06-06" ANCHOR_DIR="STARTING">
+  <timex2_mention ID="FLOPPINGACES_20041116.0833.027-T12-1">
+    <extent>
+      <charseq START="1222" END="1229">40 years</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="FLOPPINGACES_20041116.0833.027-T13" VAL="2004-11-16T08:33:00">
+  <timex2_mention ID="FLOPPINGACES_20041116.0833.027-T13-1">
+    <extent>
+      <charseq START="46" END="64">2004-11-16T08:33:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="FLOPPINGACES_20041116.0833.027-T14" VAL="2004-11-16T08:33:00">
+  <timex2_mention ID="FLOPPINGACES_20041116.0833.027-T14-1">
+    <extent>
+      <charseq START="115" END="133">2004-11-16T08:33:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="FLOPPINGACES_20041116.0833.027-R1" TYPE="ORG-AFF" SUBTYPE="Founder" TENSE="Present" MODALITY="Asserted">
+  <relation_argument REFID="FLOPPINGACES_20041116.0833.027-E49" ROLE="Arg-1"/>
+  <relation_argument REFID="FLOPPINGACES_20041116.0833.027-E48" ROLE="Arg-2"/>
+  <relation_mention ID="FLOPPINGACES_20041116.0833.027-R1-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="251" END="273">the Bush Administration</charseq>
+    </extent>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E49-97" ROLE="Arg-1">
+      <extent>
+        <charseq START="255" END="258">Bush</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E48-96" ROLE="Arg-2">
+      <extent>
+        <charseq START="251" END="273">the Bush Administration</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="FLOPPINGACES_20041116.0833.027-R2" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Present" MODALITY="Asserted">
+  <relation_argument REFID="FLOPPINGACES_20041116.0833.027-E31" ROLE="Arg-1"/>
+  <relation_argument REFID="FLOPPINGACES_20041116.0833.027-E48" ROLE="Arg-2"/>
+  <relation_argument REFID="FLOPPINGACES_20041116.0833.027-T10" ROLE="Time-Holds"/>
+  <relation_mention ID="FLOPPINGACES_20041116.0833.027-R2-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="233" END="273">current envoy for the Bush Administration</charseq>
+    </extent>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E31-95" ROLE="Arg-1">
+      <extent>
+        <charseq START="233" END="273">current envoy for the Bush Administration</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E48-96" ROLE="Arg-2">
+      <extent>
+        <charseq START="251" END="273">the Bush Administration</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-T10-1" ROLE="Time-Holds">
+      <extent>
+        <charseq START="233" END="239">current</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="FLOPPINGACES_20041116.0833.027-R3" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="FLOPPINGACES_20041116.0833.027-E15" ROLE="Arg-1"/>
+  <relation_argument REFID="FLOPPINGACES_20041116.0833.027-E53" ROLE="Arg-2"/>
+  <relation_mention ID="FLOPPINGACES_20041116.0833.027-R3-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="383" END="399">an Israeli prison</charseq>
+    </extent>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E15-101" ROLE="Arg-1">
+      <extent>
+        <charseq START="386" END="392">Israeli</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E53-100" ROLE="Arg-2">
+      <extent>
+        <charseq START="383" END="399">an Israeli prison</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="FLOPPINGACES_20041116.0833.027-R4" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="FLOPPINGACES_20041116.0833.027-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="FLOPPINGACES_20041116.0833.027-E39" ROLE="Arg-2"/>
+  <relation_mention ID="FLOPPINGACES_20041116.0833.027-R4-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="438" END="475">one of the young guard of Palestinians</charseq>
+    </extent>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E1-3" ROLE="Arg-1">
+      <extent>
+        <charseq START="445" END="475">the young guard of Palestinians</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E39-82" ROLE="Arg-2">
+      <extent>
+        <charseq START="464" END="475">Palestinians</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="FLOPPINGACES_20041116.0833.027-R7" TYPE="ORG-AFF" SUBTYPE="Membership" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="FLOPPINGACES_20041116.0833.027-E5" ROLE="Arg-1"/>
+  <relation_argument REFID="FLOPPINGACES_20041116.0833.027-E6" ROLE="Arg-2"/>
+  <relation_mention ID="FLOPPINGACES_20041116.0833.027-R7-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="595" END="613">the people of Hamas</charseq>
+    </extent>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E5-7" ROLE="Arg-1">
+      <extent>
+        <charseq START="595" END="613">the people of Hamas</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E6-8" ROLE="Arg-2">
+      <extent>
+        <charseq START="609" END="613">Hamas</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="FLOPPINGACES_20041116.0833.027-R8" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="FLOPPINGACES_20041116.0833.027-E8" ROLE="Arg-1"/>
+  <relation_argument REFID="FLOPPINGACES_20041116.0833.027-E2" ROLE="Arg-2"/>
+  <relation_mention ID="FLOPPINGACES_20041116.0833.027-R8-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="946" END="984">a Palestinian leader
+from the West Bank</charseq>
+    </extent>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E8-79" ROLE="Arg-1">
+      <extent>
+        <charseq START="946" END="984">a Palestinian leader
+from the West Bank</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E2-18" ROLE="Arg-2">
+      <extent>
+        <charseq START="948" END="958">Palestinian</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="FLOPPINGACES_20041116.0833.027-R9" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="FLOPPINGACES_20041116.0833.027-E8" ROLE="Arg-1"/>
+  <relation_argument REFID="FLOPPINGACES_20041116.0833.027-E10" ROLE="Arg-2"/>
+  <relation_mention ID="FLOPPINGACES_20041116.0833.027-R9-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="946" END="984">a Palestinian leader
+from the West Bank</charseq>
+    </extent>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E8-79" ROLE="Arg-1">
+      <extent>
+        <charseq START="946" END="984">a Palestinian leader
+from the West Bank</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E10-19" ROLE="Arg-2">
+      <extent>
+        <charseq START="972" END="984">the West Bank</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="FLOPPINGACES_20041116.0833.027-R10" TYPE="ORG-AFF" SUBTYPE="Membership" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="FLOPPINGACES_20041116.0833.027-E11" ROLE="Arg-2"/>
+  <relation_argument REFID="FLOPPINGACES_20041116.0833.027-E8" ROLE="Arg-1"/>
+  <relation_mention ID="FLOPPINGACES_20041116.0833.027-R10-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="990" END="1119">a leader of the Fatah movement that forms the
+backbone of the Palestinian Authority and the Palestine Liberation
+Organization (PLO</charseq>
+    </extent>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E11-20" ROLE="Arg-2">
+      <extent>
+        <charseq START="1002" END="1119">the Fatah movement that forms the
+backbone of the Palestinian Authority and the Palestine Liberation
+Organization (PLO</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E8-86" ROLE="Arg-1">
+      <extent>
+        <charseq START="990" END="1119">a leader of the Fatah movement that forms the
+backbone of the Palestinian Authority and the Palestine Liberation
+Organization (PLO</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="FLOPPINGACES_20041116.0833.027-R11" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="FLOPPINGACES_20041116.0833.027-E14" ROLE="Arg-1"/>
+  <relation_argument REFID="FLOPPINGACES_20041116.0833.027-E15" ROLE="Arg-2"/>
+  <relation_mention ID="FLOPPINGACES_20041116.0833.027-R11-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="1200" END="1216">Israeli civilians</charseq>
+    </extent>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E14-25" ROLE="Arg-1">
+      <extent>
+        <charseq START="1200" END="1216">Israeli civilians</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E15-26" ROLE="Arg-2">
+      <extent>
+        <charseq START="1200" END="1206">Israeli</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="FLOPPINGACES_20041116.0833.027-R11-2" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="1295" END="1311">Israeli
+civilians</charseq>
+    </extent>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E14-27" ROLE="Arg-1">
+      <extent>
+        <charseq START="1295" END="1311">Israeli
+civilians</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E15-28" ROLE="Arg-2">
+      <extent>
+        <charseq START="1295" END="1301">Israeli</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="FLOPPINGACES_20041116.0833.027-R12" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="FLOPPINGACES_20041116.0833.027-E8" ROLE="Arg-1"/>
+  <relation_argument REFID="FLOPPINGACES_20041116.0833.027-E11" ROLE="Arg-2"/>
+  <relation_mention ID="FLOPPINGACES_20041116.0833.027-R12-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="1850" END="1896">the General
+Secretary of Fatah in the West Bank</charseq>
+    </extent>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E8-53" ROLE="Arg-1">
+      <extent>
+        <charseq START="1850" END="1896">the General
+Secretary of Fatah in the West Bank</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E11-72" ROLE="Arg-2">
+      <extent>
+        <charseq START="1875" END="1879">Fatah</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="FLOPPINGACES_20041116.0833.027-R13" TYPE="GEN-AFF" SUBTYPE="Org-Location" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="FLOPPINGACES_20041116.0833.027-E11" ROLE="Arg-1"/>
+  <relation_argument REFID="FLOPPINGACES_20041116.0833.027-E10" ROLE="Arg-2"/>
+  <relation_mention ID="FLOPPINGACES_20041116.0833.027-R13-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="1875" END="1896">Fatah in the West Bank</charseq>
+    </extent>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E11-72" ROLE="Arg-1">
+      <extent>
+        <charseq START="1875" END="1879">Fatah</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E10-59" ROLE="Arg-2">
+      <extent>
+        <charseq START="1884" END="1896">the West Bank</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="FLOPPINGACES_20041116.0833.027-R14" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="FLOPPINGACES_20041116.0833.027-E8" ROLE="Arg-1"/>
+  <relation_argument REFID="FLOPPINGACES_20041116.0833.027-E21" ROLE="Arg-2"/>
+  <relation_argument REFID="FLOPPINGACES_20041116.0833.027-T6" ROLE="Time-Starting"/>
+  <relation_mention ID="FLOPPINGACES_20041116.0833.027-R14-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="1650" END="1801">In
+1996, he was elected to the Palestinian Legislative Council, in which he
+advocated peace with Israel, sometimes coming in conflict with Yasser
+Arafat</charseq>
+    </extent>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E8-41" ROLE="Arg-1">
+      <extent>
+        <charseq START="1659" END="1660">he</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E21-42" ROLE="Arg-2">
+      <extent>
+        <charseq START="1677" END="1711">the Palestinian Legislative Council</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-T6-1" ROLE="Time-Starting">
+      <extent>
+        <charseq START="1653" END="1656">1996</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="FLOPPINGACES_20041116.0833.027-R15" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="FLOPPINGACES_20041116.0833.027-E8" ROLE="Arg-1"/>
+  <relation_argument REFID="FLOPPINGACES_20041116.0833.027-E53" ROLE="Arg-2"/>
+  <relation_mention ID="FLOPPINGACES_20041116.0833.027-R15-1" LEXICALCONDITION="Formulaic">
+    <extent>
+      <charseq START="383" END="428">an Israeli prison a man named
+Marwan Barghouti</charseq>
+    </extent>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E8-102" ROLE="Arg-1">
+      <extent>
+        <charseq START="401" END="428">a man named
+Marwan Barghouti</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E53-100" ROLE="Arg-2">
+      <extent>
+        <charseq START="383" END="399">an Israeli prison</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="FLOPPINGACES_20041116.0833.027-R16" TYPE="ORG-AFF" SUBTYPE="Membership" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="FLOPPINGACES_20041116.0833.027-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="FLOPPINGACES_20041116.0833.027-E32" ROLE="Arg-2"/>
+  <relation_mention ID="FLOPPINGACES_20041116.0833.027-R16-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="646" END="693">a coalition of the young guard and the old
+guard</charseq>
+    </extent>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E1-10" ROLE="Arg-1">
+      <extent>
+        <charseq START="661" END="675">the young guard</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E32-74" ROLE="Arg-2">
+      <extent>
+        <charseq START="646" END="693">a coalition of the young guard and the old
+guard</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="FLOPPINGACES_20041116.0833.027-R17" TYPE="ORG-AFF" SUBTYPE="Membership" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="FLOPPINGACES_20041116.0833.027-E7" ROLE="Arg-1"/>
+  <relation_argument REFID="FLOPPINGACES_20041116.0833.027-E32" ROLE="Arg-2"/>
+  <relation_mention ID="FLOPPINGACES_20041116.0833.027-R17-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="646" END="693">a coalition of the young guard and the old
+guard</charseq>
+    </extent>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E7-11" ROLE="Arg-1">
+      <extent>
+        <charseq START="681" END="693">the old
+guard</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E32-74" ROLE="Arg-2">
+      <extent>
+        <charseq START="646" END="693">a coalition of the young guard and the old
+guard</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="FLOPPINGACES_20041116.0833.027-R18" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="FLOPPINGACES_20041116.0833.027-E8" ROLE="Arg-1"/>
+  <relation_argument REFID="FLOPPINGACES_20041116.0833.027-E10" ROLE="Arg-2"/>
+  <relation_argument REFID="FLOPPINGACES_20041116.0833.027-T4" ROLE="Time-Within"/>
+  <relation_mention ID="FLOPPINGACES_20041116.0833.027-R18-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="1314" END="1466">Barghouti was one of the major leaders of the First Intifada
+in 1987, leading Palestinians in a mass uprising against Israeli
+occupation of the West Bank</charseq>
+    </extent>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E8-29" ROLE="Arg-1">
+      <extent>
+        <charseq START="1314" END="1322">Barghouti</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E10-33" ROLE="Arg-2">
+      <extent>
+        <charseq START="1454" END="1466">the West Bank</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-T4-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="1378" END="1381">1987</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="FLOPPINGACES_20041116.0833.027-R19" TYPE="PER-SOC" SUBTYPE="Business" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="FLOPPINGACES_20041116.0833.027-E8" ROLE="Arg-1"/>
+  <relation_argument REFID="FLOPPINGACES_20041116.0833.027-E17" ROLE="Arg-2"/>
+  <relation_argument REFID="FLOPPINGACES_20041116.0833.027-T4" ROLE="Time-Within"/>
+  <relation_mention ID="FLOPPINGACES_20041116.0833.027-R19-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="1328" END="1381">one of the major leaders of the First Intifada
+in 1987</charseq>
+    </extent>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E8-81" ROLE="Arg-1">
+      <extent>
+        <charseq START="1328" END="1381">one of the major leaders of the First Intifada
+in 1987</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E17-30" ROLE="Arg-2">
+      <extent>
+        <charseq START="1335" END="1381">the major leaders of the First Intifada
+in 1987</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-T4-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="1378" END="1381">1987</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="FLOPPINGACES_20041116.0833.027-R20" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="FLOPPINGACES_20041116.0833.027-E8" ROLE="Arg-1"/>
+  <relation_argument REFID="FLOPPINGACES_20041116.0833.027-E15" ROLE="Arg-2"/>
+  <relation_mention ID="FLOPPINGACES_20041116.0833.027-R20-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="1469" END="1647">During the uprising, he was arrested by
+Israel and deported to Jordan, where he stayed for seven years until he
+was permitted to return under the terms of the Oslo Accords in 1994</charseq>
+    </extent>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E8-34" ROLE="Arg-1">
+      <extent>
+        <charseq START="1490" END="1491">he</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E15-35" ROLE="Arg-2">
+      <extent>
+        <charseq START="1509" END="1514">Israel</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="FLOPPINGACES_20041116.0833.027-R21" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="FLOPPINGACES_20041116.0833.027-E8" ROLE="Arg-1"/>
+  <relation_argument REFID="FLOPPINGACES_20041116.0833.027-E18" ROLE="Arg-2"/>
+  <relation_argument REFID="FLOPPINGACES_20041116.0833.027-T9" ROLE="Time-Holds"/>
+  <relation_argument REFID="FLOPPINGACES_20041116.0833.027-T5" ROLE="Time-Ending"/>
+  <relation_mention ID="FLOPPINGACES_20041116.0833.027-R21-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="1469" END="1647">During the uprising, he was arrested by
+Israel and deported to Jordan, where he stayed for seven years until he
+was permitted to return under the terms of the Oslo Accords in 1994</charseq>
+    </extent>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E8-34" ROLE="Arg-1">
+      <extent>
+        <charseq START="1490" END="1491">he</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E18-36" ROLE="Arg-2">
+      <extent>
+        <charseq START="1532" END="1537">Jordan</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-T9-1" ROLE="Time-Holds">
+      <extent>
+        <charseq START="1560" END="1570">seven years</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-T5-1" ROLE="Time-Ending">
+      <extent>
+        <charseq START="1644" END="1647">1994</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="FLOPPINGACES_20041116.0833.027-R22" TYPE="PER-SOC" SUBTYPE="Business" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="FLOPPINGACES_20041116.0833.027-E8" ROLE="Arg-1"/>
+  <relation_argument REFID="FLOPPINGACES_20041116.0833.027-E23" ROLE="Arg-2"/>
+  <relation_argument REFID="FLOPPINGACES_20041116.0833.027-T7" ROLE="Time-Starting"/>
+  <relation_mention ID="FLOPPINGACES_20041116.0833.027-R22-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="1650" END="1801">In
+1996, he was elected to the Palestinian Legislative Council, in which he
+advocated peace with Israel, sometimes coming in conflict with Yasser
+Arafat</charseq>
+    </extent>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E8-41" ROLE="Arg-1">
+      <extent>
+        <charseq START="1659" END="1660">he</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E23-55" ROLE="Arg-2">
+      <extent>
+        <charseq START="1789" END="1801">Yasser
+Arafat</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="FLOPPINGACES_20041116.0833.027-R22-2" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="1900" END="2150">By the summer of 2000, Barghouti and Arafat had grown increasingly at
+odds with each other, with Barghouti accusing Arafat's administration of
+corruption and his security services of human rights violations, and
+Arafat was planning to fire him shortly</charseq>
+    </extent>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E8-49" ROLE="Arg-1">
+      <extent>
+        <charseq START="1923" END="1931">Barghouti</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E23-56" ROLE="Arg-2">
+      <extent>
+        <charseq START="1937" END="1942">Arafat</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-T7-1" ROLE="Time-Starting">
+      <extent>
+        <charseq START="1903" END="1920">the summer of 2000</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="FLOPPINGACES_20041116.0833.027-R23" TYPE="ORG-AFF" SUBTYPE="Membership" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="FLOPPINGACES_20041116.0833.027-E8" ROLE="Arg-1"/>
+  <relation_argument REFID="FLOPPINGACES_20041116.0833.027-E27" ROLE="Arg-2"/>
+  <relation_mention ID="FLOPPINGACES_20041116.0833.027-R23-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="2234" END="2269">a leader of the Fatah Tanzim militia</charseq>
+    </extent>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E8-85" ROLE="Arg-1">
+      <extent>
+        <charseq START="2234" END="2269">a leader of the Fatah Tanzim militia</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E27-66" ROLE="Arg-2">
+      <extent>
+        <charseq START="2246" END="2269">the Fatah Tanzim militia</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="FLOPPINGACES_20041116.0833.027-R24" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="FLOPPINGACES_20041116.0833.027-E8" ROLE="Arg-1"/>
+  <relation_argument REFID="FLOPPINGACES_20041116.0833.027-E12" ROLE="Arg-2"/>
+  <relation_mention ID="FLOPPINGACES_20041116.0833.027-R24-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="2613" END="2707">Release a known terrorist to run the PLO and
+that will bring about peace, give me a effin break</charseq>
+    </extent>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E8-44" ROLE="Arg-1">
+      <extent>
+        <charseq START="2621" END="2637">a known terrorist</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E12-43" ROLE="Arg-2">
+      <extent>
+        <charseq START="2646" END="2652">the PLO</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="FLOPPINGACES_20041116.0833.027-EV1" TYPE="Personnel" SUBTYPE="End-Position" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="FLOPPINGACES_20041116.0833.027-E31" ROLE="Person"/>
+  <event_mention ID="FLOPPINGACES_20041116.0833.027-EV1-1">
+    <extent>
+      <charseq START="190" END="208">James Baker,
+former</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="179" END="356">Apparently James Baker,
+former Secretary of State and current envoy for the Bush Administration,
+has asked the Isreali government to release a scumbag terrorist to
+promote "peace</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="203" END="208">former</charseq>
+    </anchor>
+    <event_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E31-70" ROLE="Person">
+      <extent>
+        <charseq START="190" END="200">James Baker</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="FLOPPINGACES_20041116.0833.027-EV2" TYPE="Justice" SUBTYPE="Release-Parole" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Future">
+  <event_argument REFID="FLOPPINGACES_20041116.0833.027-E8" ROLE="Person"/>
+  <event_argument REFID="FLOPPINGACES_20041116.0833.027-E15" ROLE="Entity"/>
+  <event_mention ID="FLOPPINGACES_20041116.0833.027-EV2-1">
+    <extent>
+      <charseq START="286" END="338">the Isreali government to release a scumbag terrorist</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="179" END="356">Apparently James Baker,
+former Secretary of State and current envoy for the Bush Administration,
+has asked the Isreali government to release a scumbag terrorist to
+promote "peace</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="312" END="318">release</charseq>
+    </anchor>
+    <event_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E8-99" ROLE="Person">
+      <extent>
+        <charseq START="320" END="338">a scumbag terrorist</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E15-78" ROLE="Entity">
+      <extent>
+        <charseq START="286" END="307">the Isreali government</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="FLOPPINGACES_20041116.0833.027-EV3" TYPE="Life" SUBTYPE="Be-Born" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="FLOPPINGACES_20041116.0833.027-E8" ROLE="Person"/>
+  <event_argument REFID="FLOPPINGACES_20041116.0833.027-E10" ROLE="Place"/>
+  <event_argument REFID="FLOPPINGACES_20041116.0833.027-T2" ROLE="Time-Within"/>
+  <event_mention ID="FLOPPINGACES_20041116.0833.027-EV3-1">
+    <extent>
+      <charseq START="906" END="984">Marwan Barghouti (born June 6, 1958) is a Palestinian leader
+from the West Bank</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="906" END="1119">Marwan Barghouti (born June 6, 1958) is a Palestinian leader
+from the West Bank and a leader of the Fatah movement that forms the
+backbone of the Palestinian Authority and the Palestine Liberation
+Organization (PLO</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="924" END="927">born</charseq>
+    </anchor>
+    <event_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E8-80" ROLE="Person">
+      <extent>
+        <charseq START="906" END="921">Marwan Barghouti</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E10-19" ROLE="Place">
+      <extent>
+        <charseq START="972" END="984">the West Bank</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="FLOPPINGACES_20041116.0833.027-T2-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="929" END="940">June 6, 1958</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="FLOPPINGACES_20041116.0833.027-EV4" TYPE="Justice" SUBTYPE="Sentence" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="FLOPPINGACES_20041116.0833.027-E8" ROLE="Defendant"/>
+  <event_argument REFID="FLOPPINGACES_20041116.0833.027-V1" ROLE="Sentence"/>
+  <event_argument REFID="FLOPPINGACES_20041116.0833.027-V3" ROLE="Sentence"/>
+  <event_argument REFID="FLOPPINGACES_20041116.0833.027-V2" ROLE="Crime"/>
+  <event_argument REFID="FLOPPINGACES_20041116.0833.027-V4" ROLE="Crime"/>
+  <event_argument REFID="FLOPPINGACES_20041116.0833.027-T3" ROLE="Time-Within"/>
+  <event_mention ID="FLOPPINGACES_20041116.0833.027-EV4-1">
+    <extent>
+      <charseq START="1126" END="1264">June 6, 2004, he was sentenced to five life
+sentences for five murders of Israeli civilians and 40 years
+imprisonment for attempted murders</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1123" END="1311">On June 6, 2004, he was sentenced to five life
+sentences for five murders of Israeli civilians and 40 years
+imprisonment for attempted murders in terrorist attacks against Israeli
+civilians</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1147" END="1155">sentenced</charseq>
+    </anchor>
+    <event_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E8-24" ROLE="Defendant">
+      <extent>
+        <charseq START="1140" END="1141">he</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="FLOPPINGACES_20041116.0833.027-V1-1" ROLE="Sentence">
+      <extent>
+        <charseq START="1160" END="1178">five life
+sentences</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="FLOPPINGACES_20041116.0833.027-V3-1" ROLE="Sentence">
+      <extent>
+        <charseq START="1222" END="1242">40 years
+imprisonment</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="FLOPPINGACES_20041116.0833.027-V2-1" ROLE="Crime">
+      <extent>
+        <charseq START="1184" END="1216">five murders of Israeli civilians</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="FLOPPINGACES_20041116.0833.027-V4-1" ROLE="Crime">
+      <extent>
+        <charseq START="1248" END="1264">attempted murders</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="FLOPPINGACES_20041116.0833.027-T3-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="1126" END="1137">June 6, 2004</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="FLOPPINGACES_20041116.0833.027-EV5" TYPE="Conflict" SUBTYPE="Demonstrate" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="FLOPPINGACES_20041116.0833.027-E10" ROLE="Place"/>
+  <event_argument REFID="FLOPPINGACES_20041116.0833.027-T4" ROLE="Time-Within"/>
+  <event_mention ID="FLOPPINGACES_20041116.0833.027-EV5-1">
+    <extent>
+      <charseq START="1378" END="1466">1987, leading Palestinians in a mass uprising against Israeli
+occupation of the West Bank</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1314" END="1466">Barghouti was one of the major leaders of the First Intifada
+in 1987, leading Palestinians in a mass uprising against Israeli
+occupation of the West Bank</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1415" END="1422">uprising</charseq>
+    </anchor>
+    <event_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E10-33" ROLE="Place">
+      <extent>
+        <charseq START="1454" END="1466">the West Bank</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="FLOPPINGACES_20041116.0833.027-T4-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="1378" END="1381">1987</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="FLOPPINGACES_20041116.0833.027-EV5-2">
+    <extent>
+      <charseq START="1480" END="1487">uprising</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1469" END="1647">During the uprising, he was arrested by
+Israel and deported to Jordan, where he stayed for seven years until he
+was permitted to return under the terms of the Oslo Accords in 1994</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1480" END="1487">uprising</charseq>
+    </anchor>
+  </event_mention>
+</event>
+<event ID="FLOPPINGACES_20041116.0833.027-EV6" TYPE="Justice" SUBTYPE="Arrest-Jail" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="FLOPPINGACES_20041116.0833.027-E8" ROLE="Person"/>
+  <event_argument REFID="FLOPPINGACES_20041116.0833.027-E15" ROLE="Agent"/>
+  <event_mention ID="FLOPPINGACES_20041116.0833.027-EV6-1">
+    <extent>
+      <charseq START="1490" END="1514">he was arrested by
+Israel</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1469" END="1647">During the uprising, he was arrested by
+Israel and deported to Jordan, where he stayed for seven years until he
+was permitted to return under the terms of the Oslo Accords in 1994</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1497" END="1504">arrested</charseq>
+    </anchor>
+    <event_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E8-34" ROLE="Person">
+      <extent>
+        <charseq START="1490" END="1491">he</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E15-35" ROLE="Agent">
+      <extent>
+        <charseq START="1509" END="1514">Israel</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="FLOPPINGACES_20041116.0833.027-EV7" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="FLOPPINGACES_20041116.0833.027-E8" ROLE="Artifact"/>
+  <event_argument REFID="FLOPPINGACES_20041116.0833.027-E15" ROLE="Agent"/>
+  <event_argument REFID="FLOPPINGACES_20041116.0833.027-E18" ROLE="Destination"/>
+  <event_argument REFID="FLOPPINGACES_20041116.0833.027-E15" ROLE="Origin"/>
+  <event_argument REFID="FLOPPINGACES_20041116.0833.027-T9" ROLE="Time-Holds"/>
+  <event_argument REFID="FLOPPINGACES_20041116.0833.027-T5" ROLE="Time-Ending"/>
+  <event_mention ID="FLOPPINGACES_20041116.0833.027-EV7-1">
+    <extent>
+      <charseq START="1490" END="1647">he was arrested by
+Israel and deported to Jordan, where he stayed for seven years until he
+was permitted to return under the terms of the Oslo Accords in 1994</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1469" END="1647">During the uprising, he was arrested by
+Israel and deported to Jordan, where he stayed for seven years until he
+was permitted to return under the terms of the Oslo Accords in 1994</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1520" END="1527">deported</charseq>
+    </anchor>
+    <event_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E8-34" ROLE="Artifact">
+      <extent>
+        <charseq START="1490" END="1491">he</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E15-35" ROLE="Agent">
+      <extent>
+        <charseq START="1509" END="1514">Israel</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E18-36" ROLE="Destination">
+      <extent>
+        <charseq START="1532" END="1537">Jordan</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E15-35" ROLE="Origin">
+      <extent>
+        <charseq START="1509" END="1514">Israel</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="FLOPPINGACES_20041116.0833.027-T9-1" ROLE="Time-Holds">
+      <extent>
+        <charseq START="1560" END="1570">seven years</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="FLOPPINGACES_20041116.0833.027-T5-1" ROLE="Time-Ending">
+      <extent>
+        <charseq START="1644" END="1647">1994</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="FLOPPINGACES_20041116.0833.027-EV8" TYPE="Personnel" SUBTYPE="Elect" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="FLOPPINGACES_20041116.0833.027-E8" ROLE="Person"/>
+  <event_argument REFID="FLOPPINGACES_20041116.0833.027-E21" ROLE="Entity"/>
+  <event_argument REFID="FLOPPINGACES_20041116.0833.027-T6" ROLE="Time-Within"/>
+  <event_mention ID="FLOPPINGACES_20041116.0833.027-EV8-1">
+    <extent>
+      <charseq START="1653" END="1711">1996, he was elected to the Palestinian Legislative Council</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1650" END="1801">In
+1996, he was elected to the Palestinian Legislative Council, in which he
+advocated peace with Israel, sometimes coming in conflict with Yasser
+Arafat</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1666" END="1672">elected</charseq>
+    </anchor>
+    <event_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E8-41" ROLE="Person">
+      <extent>
+        <charseq START="1659" END="1660">he</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E21-42" ROLE="Entity">
+      <extent>
+        <charseq START="1677" END="1711">the Palestinian Legislative Council</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="FLOPPINGACES_20041116.0833.027-T6-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="1653" END="1656">1996</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="FLOPPINGACES_20041116.0833.027-EV9" TYPE="Personnel" SUBTYPE="End-Position" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="FLOPPINGACES_20041116.0833.027-E8" ROLE="Person"/>
+  <event_argument REFID="FLOPPINGACES_20041116.0833.027-T7" ROLE="Time-Starting"/>
+  <event_mention ID="FLOPPINGACES_20041116.0833.027-EV9-1">
+    <extent>
+      <charseq START="1903" END="2142">the summer of 2000, Barghouti and Arafat had grown increasingly at
+odds with each other, with Barghouti accusing Arafat's administration of
+corruption and his security services of human rights violations, and
+Arafat was planning to fire him</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1900" END="2150">By the summer of 2000, Barghouti and Arafat had grown increasingly at
+odds with each other, with Barghouti accusing Arafat's administration of
+corruption and his security services of human rights violations, and
+Arafat was planning to fire him shortly</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2135" END="2138">fire</charseq>
+    </anchor>
+    <event_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E8-51" ROLE="Person">
+      <extent>
+        <charseq START="2140" END="2142">him</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="FLOPPINGACES_20041116.0833.027-T7-1" ROLE="Time-Starting">
+      <extent>
+        <charseq START="1903" END="1920">the summer of 2000</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="FLOPPINGACES_20041116.0833.027-EV10" TYPE="Life" SUBTYPE="Die" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Past">
+  <event_argument REFID="FLOPPINGACES_20041116.0833.027-E27" ROLE="Agent"/>
+  <event_argument REFID="FLOPPINGACES_20041116.0833.027-E44" ROLE="Victim"/>
+  <event_mention ID="FLOPPINGACES_20041116.0833.027-EV10-1">
+    <extent>
+      <charseq START="2318" END="2448">Tanzim into an organization more resembling
+militant groups like Hamas and Islamic Jihad, responsible for dozens of
+civilian deaths</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2272" END="2470">This was perhaps due to
+the transformation of Tanzim into an organization more resembling
+militant groups like Hamas and Islamic Jihad, responsible for dozens of
+civilian deaths in drive-by shootings</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2443" END="2448">deaths</charseq>
+    </anchor>
+    <event_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E27-67" ROLE="Agent">
+      <extent>
+        <charseq START="2318" END="2323">Tanzim</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E44-89" ROLE="Victim">
+      <extent>
+        <charseq START="2434" END="2441">civilian</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="FLOPPINGACES_20041116.0833.027-EV11" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Generic" TENSE="Past">
+  <event_argument REFID="FLOPPINGACES_20041116.0833.027-E27" ROLE="Attacker"/>
+  <event_argument REFID="FLOPPINGACES_20041116.0833.027-E15" ROLE="Place"/>
+  <event_mention ID="FLOPPINGACES_20041116.0833.027-EV11-1">
+    <extent>
+      <charseq START="2490" END="2547">the Tanzim has
+also carried out suicide bombings in Israel</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2473" END="2588">Under Barghouti, the Tanzim has
+also carried out suicide bombings in Israel under the name al-Aqsa
+Martyrs' Brigades</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2530" END="2537">bombings</charseq>
+    </anchor>
+    <event_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E27-68" ROLE="Attacker">
+      <extent>
+        <charseq START="2490" END="2499">the Tanzim</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E15-65" ROLE="Place">
+      <extent>
+        <charseq START="2542" END="2547">Israel</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="FLOPPINGACES_20041116.0833.027-EV12" TYPE="Justice" SUBTYPE="Release-Parole" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="FLOPPINGACES_20041116.0833.027-E8" ROLE="Person"/>
+  <event_mention ID="FLOPPINGACES_20041116.0833.027-EV12-1">
+    <extent>
+      <charseq START="2613" END="2637">Release a known terrorist</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2613" END="2707">Release a known terrorist to run the PLO and
+that will bring about peace, give me a effin break</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2613" END="2619">Release</charseq>
+    </anchor>
+    <event_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E8-44" ROLE="Person">
+      <extent>
+        <charseq START="2621" END="2637">a known terrorist</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="FLOPPINGACES_20041116.0833.027-EV13" TYPE="Life" SUBTYPE="Die" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="FLOPPINGACES_20041116.0833.027-E14" ROLE="Victim"/>
+  <event_argument REFID="FLOPPINGACES_20041116.0833.027-E8" ROLE="Agent"/>
+  <event_mention ID="FLOPPINGACES_20041116.0833.027-EV13-1">
+    <extent>
+      <charseq START="1140" END="1264">he was sentenced to five life
+sentences for five murders of Israeli civilians and 40 years
+imprisonment for attempted murders</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1123" END="1311">On June 6, 2004, he was sentenced to five life
+sentences for five murders of Israeli civilians and 40 years
+imprisonment for attempted murders in terrorist attacks against Israeli
+civilians</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1258" END="1264">murders</charseq>
+    </anchor>
+    <event_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E14-25" ROLE="Victim">
+      <extent>
+        <charseq START="1200" END="1216">Israeli civilians</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E8-24" ROLE="Agent">
+      <extent>
+        <charseq START="1140" END="1141">he</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="FLOPPINGACES_20041116.0833.027-EV14" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="FLOPPINGACES_20041116.0833.027-E8" ROLE="Attacker"/>
+  <event_argument REFID="FLOPPINGACES_20041116.0833.027-E14" ROLE="Target"/>
+  <event_mention ID="FLOPPINGACES_20041116.0833.027-EV14-1">
+    <extent>
+      <charseq START="1140" END="1311">he was sentenced to five life
+sentences for five murders of Israeli civilians and 40 years
+imprisonment for attempted murders in terrorist attacks against Israeli
+civilians</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1123" END="1311">On June 6, 2004, he was sentenced to five life
+sentences for five murders of Israeli civilians and 40 years
+imprisonment for attempted murders in terrorist attacks against Israeli
+civilians</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1279" END="1285">attacks</charseq>
+    </anchor>
+    <event_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E8-24" ROLE="Attacker">
+      <extent>
+        <charseq START="1140" END="1141">he</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E14-27" ROLE="Target">
+      <extent>
+        <charseq START="1295" END="1311">Israeli
+civilians</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="FLOPPINGACES_20041116.0833.027-EV15" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="FLOPPINGACES_20041116.0833.027-E8" ROLE="Artifact"/>
+  <event_argument REFID="FLOPPINGACES_20041116.0833.027-E18" ROLE="Origin"/>
+  <event_argument REFID="FLOPPINGACES_20041116.0833.027-E15" ROLE="Destination"/>
+  <event_argument REFID="FLOPPINGACES_20041116.0833.027-T5" ROLE="Time-Starting"/>
+  <event_mention ID="FLOPPINGACES_20041116.0833.027-EV15-1">
+    <extent>
+      <charseq START="1490" END="1647">he was arrested by
+Israel and deported to Jordan, where he stayed for seven years until he
+was permitted to return under the terms of the Oslo Accords in 1994</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1469" END="1647">During the uprising, he was arrested by
+Israel and deported to Jordan, where he stayed for seven years until he
+was permitted to return under the terms of the Oslo Accords in 1994</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1598" END="1603">return</charseq>
+    </anchor>
+    <event_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E8-34" ROLE="Artifact">
+      <extent>
+        <charseq START="1490" END="1491">he</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E18-36" ROLE="Origin">
+      <extent>
+        <charseq START="1532" END="1537">Jordan</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E15-35" ROLE="Destination">
+      <extent>
+        <charseq START="1509" END="1514">Israel</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="FLOPPINGACES_20041116.0833.027-T5-1" ROLE="Time-Starting">
+      <extent>
+        <charseq START="1644" END="1647">1994</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="FLOPPINGACES_20041116.0833.027-EV16" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="FLOPPINGACES_20041116.0833.027-E27" ROLE="Attacker"/>
+  <event_mention ID="FLOPPINGACES_20041116.0833.027-EV16-1">
+    <extent>
+      <charseq START="2177" END="2269">Intifada began, Barghouti became increasingly
+popular as a leader of the Fatah Tanzim militia</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2154" END="2269">However, as the Second Intifada began, Barghouti became increasingly
+popular as a leader of the Fatah Tanzim militia</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2177" END="2184">Intifada</charseq>
+    </anchor>
+    <event_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E27-66" ROLE="Attacker">
+      <extent>
+        <charseq START="2246" END="2269">the Fatah Tanzim militia</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="FLOPPINGACES_20041116.0833.027-EV17" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Generic" TENSE="Past">
+  <event_argument REFID="FLOPPINGACES_20041116.0833.027-E27" ROLE="Attacker"/>
+  <event_argument REFID="FLOPPINGACES_20041116.0833.027-E44" ROLE="Target"/>
+  <event_mention ID="FLOPPINGACES_20041116.0833.027-EV17-1">
+    <extent>
+      <charseq START="2330" END="2470">an organization more resembling
+militant groups like Hamas and Islamic Jihad, responsible for dozens of
+civilian deaths in drive-by shootings</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2272" END="2470">This was perhaps due to
+the transformation of Tanzim into an organization more resembling
+militant groups like Hamas and Islamic Jihad, responsible for dozens of
+civilian deaths in drive-by shootings</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2462" END="2470">shootings</charseq>
+    </anchor>
+    <event_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E27-88" ROLE="Attacker">
+      <extent>
+        <charseq START="2330" END="2405">an organization more resembling
+militant groups like Hamas and Islamic Jihad</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="FLOPPINGACES_20041116.0833.027-E44-89" ROLE="Target">
+      <extent>
+        <charseq START="2434" END="2441">civilian</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

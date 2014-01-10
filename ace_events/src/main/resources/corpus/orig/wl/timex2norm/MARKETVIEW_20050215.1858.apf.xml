@@ -1,0 +1,569 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="MARKETVIEW_20050215.1858.sgm" SOURCE="weblog" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="MARKETVIEW_20050215.1858">
+<entity ID="MARKETVIEW_20050215.1858-E1" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="MARKETVIEW_20050215.1858-E1-1" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="916" END="953">those who are for Choice and Ownership</charseq>
+    </extent>
+    <head>
+      <charseq START="916" END="920">those</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050215.1858-E1-2" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="922" END="924">who</charseq>
+    </extent>
+    <head>
+      <charseq START="922" END="924">who</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050215.1858-E2" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="MARKETVIEW_20050215.1858-E2-3" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="956" END="959">Bush</charseq>
+    </extent>
+    <head>
+      <charseq START="956" END="959">Bush</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Bush">
+      <charseq START="956" END="959">Bush</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKETVIEW_20050215.1858-E3" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="MARKETVIEW_20050215.1858-E3-4" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="970" END="1037">those who equate investing in the SP500 as playing the slot machines</charseq>
+    </extent>
+    <head>
+      <charseq START="970" END="974">those</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050215.1858-E3-5" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="976" END="978">who</charseq>
+    </extent>
+    <head>
+      <charseq START="976" END="978">who</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050215.1858-E4" TYPE="ORG" SUBTYPE="Non-Governmental" CLASS="SPC">
+  <entity_mention ID="MARKETVIEW_20050215.1858-E4-6" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1040" END="1043">AARP</charseq>
+    </extent>
+    <head>
+      <charseq START="1040" END="1043">AARP</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="AARP">
+      <charseq START="1040" END="1043">AARP</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKETVIEW_20050215.1858-E5" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="MARKETVIEW_20050215.1858-E5-7" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1046" END="1059">most Democrats</charseq>
+    </extent>
+    <head>
+      <charseq START="1051" END="1059">Democrats</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050215.1858-E6" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="MARKETVIEW_20050215.1858-E6-8" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="1110" END="1127">Sir Alan Greenspan</charseq>
+    </extent>
+    <head>
+      <charseq START="1114" END="1127">Alan Greenspan</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050215.1858-E6-9" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1110" END="1112">Sir</charseq>
+    </extent>
+    <head>
+      <charseq START="1110" END="1112">Sir</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050215.1858-E6-10" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="1141" END="1155">Dr. Greenshades</charseq>
+    </extent>
+    <head>
+      <charseq START="1145" END="1155">Greenshades</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050215.1858-E6-11" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1141" END="1142">Dr</charseq>
+    </extent>
+    <head>
+      <charseq START="1141" END="1142">Dr</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050215.1858-E6-12" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="1193" END="1194">he</charseq>
+    </extent>
+    <head>
+      <charseq START="1193" END="1194">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050215.1858-E6-30" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="458" END="470">economic czar</charseq>
+    </extent>
+    <head>
+      <charseq START="467" END="470">czar</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050215.1858-E6-36" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="163" END="176">Alan Greenspan</charseq>
+    </extent>
+    <head>
+      <charseq START="163" END="176">Alan Greenspan</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050215.1858-E6-37" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="181" END="207">a George Lucas-esque
+figure</charseq>
+    </extent>
+    <head>
+      <charseq START="202" END="207">figure</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050215.1858-E6-42" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="425" END="433">Greenspan</charseq>
+    </extent>
+    <head>
+      <charseq START="425" END="433">Greenspan</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050215.1858-E6-45" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="704" END="712">Greenspan</charseq>
+    </extent>
+    <head>
+      <charseq START="704" END="712">Greenspan</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Alan Greenspan">
+      <charseq START="1114" END="1127">Alan Greenspan</charseq>
+    </name>
+    <name NAME="Greenshades">
+      <charseq START="1145" END="1155">Greenshades</charseq>
+    </name>
+    <name NAME="Alan Greenspan">
+      <charseq START="163" END="176">Alan Greenspan</charseq>
+    </name>
+    <name NAME="Greenspan">
+      <charseq START="425" END="433">Greenspan</charseq>
+    </name>
+    <name NAME="Greenspan">
+      <charseq START="704" END="712">Greenspan</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKETVIEW_20050215.1858-E8" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="MARKETVIEW_20050215.1858-E8-14" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1382" END="1382">I</charseq>
+    </extent>
+    <head>
+      <charseq START="1382" END="1382">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050215.1858-E8-15" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1408" END="1408">I</charseq>
+    </extent>
+    <head>
+      <charseq START="1408" END="1408">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050215.1858-E8-16" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1439" END="1439">I</charseq>
+    </extent>
+    <head>
+      <charseq START="1439" END="1439">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050215.1858-E8-18" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1528" END="1529">my</charseq>
+    </extent>
+    <head>
+      <charseq START="1528" END="1529">my</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050215.1858-E8-20" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1578" END="1578">I</charseq>
+    </extent>
+    <head>
+      <charseq START="1578" END="1578">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050215.1858-E8-21" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1598" END="1598">I</charseq>
+    </extent>
+    <head>
+      <charseq START="1598" END="1598">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050215.1858-E8-22" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1646" END="1646">I</charseq>
+    </extent>
+    <head>
+      <charseq START="1646" END="1646">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050215.1858-E8-26" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1458" END="1459">my</charseq>
+    </extent>
+    <head>
+      <charseq START="1458" END="1459">my</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050215.1858-E8-27" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1343" END="1347">Byrne</charseq>
+    </extent>
+    <head>
+      <charseq START="1343" END="1347">Byrne</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050215.1858-E8-28" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="108" END="112">Byrne</charseq>
+    </extent>
+    <head>
+      <charseq START="108" END="112">Byrne</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050215.1858-E8-32" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1495" END="1495">I</charseq>
+    </extent>
+    <head>
+      <charseq START="1495" END="1495">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Byrne">
+      <charseq START="1343" END="1347">Byrne</charseq>
+    </name>
+    <name NAME="Byrne">
+      <charseq START="108" END="112">Byrne</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKETVIEW_20050215.1858-E9" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="MARKETVIEW_20050215.1858-E9-17" TYPE="PRO" LDCTYPE="PTV">
+    <extent>
+      <charseq START="1523" END="1548">half my political audience</charseq>
+    </extent>
+    <head>
+      <charseq START="1523" END="1526">half</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050215.1858-E10" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="MARKETVIEW_20050215.1858-E10-19" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1528" END="1548">my political audience</charseq>
+    </extent>
+    <head>
+      <charseq START="1541" END="1548">audience</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050215.1858-E11" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="MARKETVIEW_20050215.1858-E11-23" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1703" END="1709">parents</charseq>
+    </extent>
+    <head>
+      <charseq START="1703" END="1709">parents</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050215.1858-E12" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="MARKETVIEW_20050215.1858-E12-24" TYPE="NOM" LDCTYPE="BAR" LDCATR="FALSE">
+    <extent>
+      <charseq START="1732" END="1739">children</charseq>
+    </extent>
+    <head>
+      <charseq START="1732" END="1739">children</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050215.1858-E12-31" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="1745" END="1754">the assets</charseq>
+    </extent>
+    <head>
+      <charseq START="1749" END="1754">assets</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050215.1858-E15" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="MARKETVIEW_20050215.1858-E15-35" TYPE="NAM" LDCTYPE="NAM" METONYMY_MENTION="TRUE">
+    <extent>
+      <charseq START="137" END="149">G's Investing</charseq>
+    </extent>
+    <head>
+      <charseq START="137" END="149">G's Investing</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050215.1858-E18" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="MARKETVIEW_20050215.1858-E18-38" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="183" END="194">George Lucas</charseq>
+    </extent>
+    <head>
+      <charseq START="183" END="194">George Lucas</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050215.1858-E18-40" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="240" END="251">George Lucas</charseq>
+    </extent>
+    <head>
+      <charseq START="240" END="251">George Lucas</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050215.1858-E18-41" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="254" END="255">he</charseq>
+    </extent>
+    <head>
+      <charseq START="254" END="255">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="George Lucas">
+      <charseq START="183" END="194">George Lucas</charseq>
+    </name>
+    <name NAME="George Lucas">
+      <charseq START="240" END="251">George Lucas</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKETVIEW_20050215.1858-E20" TYPE="LOC" SUBTYPE="Celestial" CLASS="SPC">
+  <entity_mention ID="MARKETVIEW_20050215.1858-E20-39" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="214" END="251">the Star Wars universe of George Lucas</charseq>
+    </extent>
+    <head>
+      <charseq START="228" END="235">universe</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050215.1858-E21" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="MARKETVIEW_20050215.1858-E21-33" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1804" END="1805">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1804" END="1805">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050215.1858-E21-43" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="485" END="486">we</charseq>
+    </extent>
+    <head>
+      <charseq START="485" END="486">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050215.1858-E21-44" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="674" END="675">we</charseq>
+    </extent>
+    <head>
+      <charseq START="674" END="675">we</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050215.1858-E22" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="MARKETVIEW_20050215.1858-E22-46" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="533" END="539">the Fed</charseq>
+    </extent>
+    <head>
+      <charseq START="537" END="539">Fed</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050215.1858-E22-47" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="690" END="696">the
+Fed</charseq>
+    </extent>
+    <head>
+      <charseq START="694" END="696">Fed</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Fed">
+      <charseq START="537" END="539">Fed</charseq>
+    </name>
+    <name NAME="Fed">
+      <charseq START="694" END="696">Fed</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKETVIEW_20050215.1858-E23" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="MARKETVIEW_20050215.1858-E23-13" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1275" END="1275">I</charseq>
+    </extent>
+    <head>
+      <charseq START="1275" END="1275">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050215.1858-E23-25" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="733" END="739">muckdog</charseq>
+    </extent>
+    <head>
+      <charseq START="733" END="739">muckdog</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050215.1858-E23-29" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1878" END="1884">muckdog</charseq>
+    </extent>
+    <head>
+      <charseq START="1878" END="1884">muckdog</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050215.1858-E23-34" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1915" END="1915">I</charseq>
+    </extent>
+    <head>
+      <charseq START="1915" END="1915">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050215.1858-E23-48" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="785" END="785">I</charseq>
+    </extent>
+    <head>
+      <charseq START="785" END="785">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="muckdog">
+      <charseq START="733" END="739">muckdog</charseq>
+    </name>
+    <name NAME="muckdog">
+      <charseq START="1878" END="1884">muckdog</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<value ID="MARKETVIEW_20050215.1858-V1" TYPE="Contact-Info" SUBTYPE="URL">
+  <value_mention ID="MARKETVIEW_20050215.1858-V1-1">
+    <extent>
+      <charseq START="806" END="829">socialsecuritychoice.org</charseq>
+    </extent>
+  </value_mention>
+</value>
+<timex2 ID="MARKETVIEW_20050215.1858-T1" VAL="2005-02-15T18:58:00">
+  <timex2_mention ID="MARKETVIEW_20050215.1858-T1-1">
+    <extent>
+      <charseq START="40" END="58">2005-02-15T18:58:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKETVIEW_20050215.1858-T2" VAL="PRESENT_REF" ANCHOR_VAL="2005-02-15T18:58:00" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="MARKETVIEW_20050215.1858-T2-1">
+    <extent>
+      <charseq START="1083" END="1085">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKETVIEW_20050215.1858-T3" VAL="2005-02-15T18:58:00">
+  <timex2_mention ID="MARKETVIEW_20050215.1858-T3-1">
+    <extent>
+      <charseq START="116" END="134">2005-02-15T18:58:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKETVIEW_20050215.1858-T4" VAL="PRESENT_REF" ANCHOR_VAL="2005-02-15T18:58:00" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="MARKETVIEW_20050215.1858-T4-1">
+    <extent>
+      <charseq START="493" END="501">right now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKETVIEW_20050215.1858-T5" VAL="T19:19:00">
+  <timex2_mention ID="MARKETVIEW_20050215.1858-T5-1">
+    <extent>
+      <charseq START="753" END="761">T19:19:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKETVIEW_20050215.1858-T6" VAL="T19:25:00">
+  <timex2_mention ID="MARKETVIEW_20050215.1858-T6-1">
+    <extent>
+      <charseq START="1361" END="1369">T19:25:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKETVIEW_20050215.1858-T7" VAL="T21:16:00">
+  <timex2_mention ID="MARKETVIEW_20050215.1858-T7-1">
+    <extent>
+      <charseq START="1898" END="1906">T21:16:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<event ID="MARKETVIEW_20050215.1858-EV1" TYPE="Personnel" SUBTYPE="End-Position" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Future">
+  <event_argument REFID="MARKETVIEW_20050215.1858-E6" ROLE="Person"/>
+  <event_argument REFID="MARKETVIEW_20050215.1858-E22" ROLE="Entity"/>
+  <event_mention ID="MARKETVIEW_20050215.1858-EV1-1">
+    <extent>
+      <charseq START="690" END="719">the
+Fed, when Greenspan leaves</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="669" END="719">Will we have that at the
+Fed, when Greenspan leaves</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="714" END="719">leaves</charseq>
+    </anchor>
+    <event_mention_argument REFID="MARKETVIEW_20050215.1858-E6-45" ROLE="Person">
+      <extent>
+        <charseq START="704" END="712">Greenspan</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="MARKETVIEW_20050215.1858-E22-47" ROLE="Entity">
+      <extent>
+        <charseq START="690" END="696">the
+Fed</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

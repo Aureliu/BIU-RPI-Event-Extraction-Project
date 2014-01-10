@@ -1,0 +1,890 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030508_210555.5.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030508_210555.5">
+<entity ID="CNN_ENG_20030508_210555.5-E1" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E1-45" TYPE="NOM" LDCTYPE="NOMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1227" END="1231">state</charseq>
+    </extent>
+    <head>
+      <charseq START="1227" END="1231">state</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E1-51" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="423" END="433">connecticut</charseq>
+    </extent>
+    <head>
+      <charseq START="423" END="433">connecticut</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E1-56" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="483" END="493">connecticut</charseq>
+    </extent>
+    <head>
+      <charseq START="483" END="493">connecticut</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="connecticut">
+      <charseq START="423" END="433">connecticut</charseq>
+    </name>
+    <name NAME="connecticut">
+      <charseq START="483" END="493">connecticut</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030508_210555.5-E2" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E2-3" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="562" END="573">her daughter</charseq>
+    </extent>
+    <head>
+      <charseq START="566" END="573">daughter</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E2-4" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="584" END="603">the 7
+-year-old girl</charseq>
+    </extent>
+    <head>
+      <charseq START="600" END="603">girl</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E2-8" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="670" END="690">her daughter daughter</charseq>
+    </extent>
+    <head>
+      <charseq START="683" END="690">daughter</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E2-39" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="720" END="728">sara dade</charseq>
+    </extent>
+    <head>
+      <charseq START="720" END="728">sara dade</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="sara dade">
+      <charseq START="720" END="728">sara dade</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030508_210555.5-E3" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E3-10" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="748" END="753">thomas</charseq>
+    </extent>
+    <head>
+      <charseq START="748" END="753">thomas</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E3-11" TYPE="NOM" LDCTYPE="BAR" LDCATR="TRUE">
+    <extent>
+      <charseq START="756" END="792">owner a local gun and motorcycle shop</charseq>
+    </extent>
+    <head>
+      <charseq START="756" END="760">owner</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E3-14" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="800" END="801">he</charseq>
+    </extent>
+    <head>
+      <charseq START="800" END="801">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E3-15" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="820" END="821">he</charseq>
+    </extent>
+    <head>
+      <charseq START="820" END="821">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E3-23" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="964" END="965">my</charseq>
+    </extent>
+    <head>
+      <charseq START="964" END="965">my</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E3-30" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1052" END="1053">me</charseq>
+    </extent>
+    <head>
+      <charseq START="1052" END="1053">me</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E3-32" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1190" END="1191">he</charseq>
+    </extent>
+    <head>
+      <charseq START="1190" END="1191">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E3-36" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1290" END="1291">he</charseq>
+    </extent>
+    <head>
+      <charseq START="1290" END="1291">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E3-38" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1338" END="1339">he</charseq>
+    </extent>
+    <head>
+      <charseq START="1338" END="1339">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E3-48" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="950" END="950">i</charseq>
+    </extent>
+    <head>
+      <charseq START="950" END="950">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="thomas">
+      <charseq START="748" END="753">thomas</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030508_210555.5-E5" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E5-12" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="762" END="792">a local gun and motorcycle shop</charseq>
+    </extent>
+    <head>
+      <charseq START="789" END="792">shop</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030508_210555.5-E6" TYPE="WEA" SUBTYPE="Shooting" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E6-1" TYPE="NOM" LDCTYPE="BAR" LDCATR="FALSE">
+    <extent>
+      <charseq START="117" END="120">guns</charseq>
+    </extent>
+    <head>
+      <charseq START="117" END="120">guns</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E6-13" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="770" END="772">gun</charseq>
+    </extent>
+    <head>
+      <charseq START="770" END="772">gun</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030508_210555.5-E7" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E7-17" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="895" END="913">the police officers</charseq>
+    </extent>
+    <head>
+      <charseq START="906" END="913">officers</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030508_210555.5-E8" TYPE="ORG" SUBTYPE="Government" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E8-18" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="899" END="904">police</charseq>
+    </extent>
+    <head>
+      <charseq START="899" END="904">police</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030508_210555.5-E9" TYPE="WEA" SUBTYPE="Shooting" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E9-19" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="922" END="928">the gun</charseq>
+    </extent>
+    <head>
+      <charseq START="926" END="928">gun</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E9-20" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="943" END="944">it</charseq>
+    </extent>
+    <head>
+      <charseq START="943" END="944">it</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E9-21" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="957" END="958">it</charseq>
+    </extent>
+    <head>
+      <charseq START="957" END="958">it</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E9-22" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="964" END="971">my rifle</charseq>
+    </extent>
+    <head>
+      <charseq START="967" END="971">rifle</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E9-26" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1002" END="1010">the rifle</charseq>
+    </extent>
+    <head>
+      <charseq START="1006" END="1010">rifle</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030508_210555.5-E11" TYPE="WEA" SUBTYPE="Shooting" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E11-29" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1063" END="1147">a lighter, smaller caliber hunting gun for
+deer hunting, for medium-size game hunting</charseq>
+    </extent>
+    <head>
+      <charseq START="1098" END="1100">gun</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030508_210555.5-E12" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E12-34" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1223" END="1242">the state authoritys</charseq>
+    </extent>
+    <head>
+      <charseq START="1233" END="1242">authoritys</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030508_210555.5-E14" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E14-41" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="141" END="146">people</charseq>
+    </extent>
+    <head>
+      <charseq START="141" END="146">people</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E14-42" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="258" END="263">people</charseq>
+    </extent>
+    <head>
+      <charseq START="258" END="263">people</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E14-43" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="133" END="138">people</charseq>
+    </extent>
+    <head>
+      <charseq START="133" END="138">people</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E14-44" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="244" END="249">people</charseq>
+    </extent>
+    <head>
+      <charseq START="244" END="249">people</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030508_210555.5-E16" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E16-46" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="279" END="290">other people</charseq>
+    </extent>
+    <head>
+      <charseq START="285" END="290">people</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E16-47" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="299" END="303">their</charseq>
+    </extent>
+    <head>
+      <charseq START="299" END="303">their</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030508_210555.5-E17" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E17-24" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="976" END="983">reporter</charseq>
+    </extent>
+    <head>
+      <charseq START="976" END="983">reporter</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E17-31" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1152" END="1159">reporter</charseq>
+    </extent>
+    <head>
+      <charseq START="1152" END="1159">reporter</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E17-49" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="356" END="379">newsnight's" beth nissen</charseq>
+    </extent>
+    <head>
+      <charseq START="369" END="379">beth nissen</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E17-50" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="384" END="391">reporter</charseq>
+    </extent>
+    <head>
+      <charseq START="384" END="391">reporter</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="beth nissen">
+      <charseq START="369" END="379">beth nissen</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030508_210555.5-E19" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E19-40" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="633" END="638">police</charseq>
+    </extent>
+    <head>
+      <charseq START="633" END="638">police</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E19-52" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="451" END="456">police</charseq>
+    </extent>
+    <head>
+      <charseq START="451" END="456">police</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030508_210555.5-E20" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E20-2" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="562" END="564">her</charseq>
+    </extent>
+    <head>
+      <charseq START="562" END="564">her</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E20-5" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="619" END="626">o'conner</charseq>
+    </extent>
+    <head>
+      <charseq START="619" END="626">o'conner</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E20-6" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="640" END="642">she</charseq>
+    </extent>
+    <head>
+      <charseq START="640" END="642">she</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E20-7" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="670" END="672">her</charseq>
+    </extent>
+    <head>
+      <charseq START="670" END="672">her</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E20-16" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="847" END="854">o'conner</charseq>
+    </extent>
+    <head>
+      <charseq START="847" END="854">o'conner</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E20-25" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="995" END="1000">oconer</charseq>
+    </extent>
+    <head>
+      <charseq START="995" END="1000">oconer</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E20-27" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1035" END="1037">she</charseq>
+    </extent>
+    <head>
+      <charseq START="1035" END="1037">she</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E20-28" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1055" END="1057">she</charseq>
+    </extent>
+    <head>
+      <charseq START="1055" END="1057">she</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E20-33" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1198" END="1204">oconeor</charseq>
+    </extent>
+    <head>
+      <charseq START="1198" END="1204">oconeor</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E20-35" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1273" END="1275">she</charseq>
+    </extent>
+    <head>
+      <charseq START="1273" END="1275">she</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E20-37" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1298" END="1305">o'conner</charseq>
+    </extent>
+    <head>
+      <charseq START="1298" END="1305">o'conner</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E20-54" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="462" END="478">jennifer o'conner</charseq>
+    </extent>
+    <head>
+      <charseq START="462" END="478">jennifer o'conner</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_210555.5-E20-55" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="481" END="538">a connecticut woman with a history of
+psychiatric problems</charseq>
+    </extent>
+    <head>
+      <charseq START="495" END="499">woman</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="o'conner">
+      <charseq START="619" END="626">o'conner</charseq>
+    </name>
+    <name NAME="o'conner">
+      <charseq START="847" END="854">o'conner</charseq>
+    </name>
+    <name NAME="oconer">
+      <charseq START="995" END="1000">oconer</charseq>
+    </name>
+    <name NAME="oconeor">
+      <charseq START="1198" END="1204">oconeor</charseq>
+    </name>
+    <name NAME="o'conner">
+      <charseq START="1298" END="1305">o'conner</charseq>
+    </name>
+    <name NAME="jennifer o'conner">
+      <charseq START="462" END="478">jennifer o'conner</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<value ID="CNN_ENG_20030508_210555.5-V1" TYPE="Crime">
+  <value_mention ID="CNN_ENG_20030508_210555.5-V1-1">
+    <extent>
+      <charseq START="866" END="871">murder</charseq>
+    </extent>
+  </value_mention>
+</value>
+<timex2 ID="CNN_ENG_20030508_210555.5-T1" VAL="2003-05-08T22:31:47">
+  <timex2_mention ID="CNN_ENG_20030508_210555.5-T1-1">
+    <extent>
+      <charseq START="43" END="61">2003-05-08 22:31:47</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030508_210555.5-T2" VAL="2003-04" MOD="START">
+  <timex2_mention ID="CNN_ENG_20030508_210555.5-T2-1">
+    <extent>
+      <charseq START="438" END="448">early april</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030508_210555.5-T3" VAL="PAST_REF" ANCHOR_VAL="2003-05-08-T22:31:47" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="CNN_ENG_20030508_210555.5-T3-1">
+    <extent>
+      <charseq START="730" END="745">three days later</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030508_210555.5-T4" VAL="2003-XX" ANCHOR_VAL="2003-05" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="CNN_ENG_20030508_210555.5-T4-1">
+    <extent>
+      <charseq START="1012" END="1030">a few months before</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030508_210555.5-T5" VAL="P2W" MOD="EQUAL_OR_MORE" ANCHOR_VAL="2003-W19" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="CNN_ENG_20030508_210555.5-T5-1">
+    <extent>
+      <charseq START="1316" END="1335">a minimum. two weeks</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030508_210555.5-R1" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030508_210555.5-E9" ROLE="Arg-2"/>
+  <relation_argument REFID="CNN_ENG_20030508_210555.5-T4" ROLE="Time-Starting"/>
+  <relation_argument REFID="CNN_ENG_20030508_210555.5-E20" ROLE="Arg-1"/>
+  <relation_mention ID="CNN_ENG_20030508_210555.5-R1-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="986" END="1030">had sold oconer the rifle a few months before</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030508_210555.5-E9-26" ROLE="Arg-2">
+      <extent>
+        <charseq START="1002" END="1010">the rifle</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030508_210555.5-T4-1" ROLE="Time-Starting">
+      <extent>
+        <charseq START="1012" END="1030">a few months before</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030508_210555.5-E20-25" ROLE="Arg-1">
+      <extent>
+        <charseq START="995" END="1000">oconer</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030508_210555.5-R2" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030508_210555.5-E20" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030508_210555.5-E1" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030508_210555.5-R2-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="481" END="538">a connecticut woman with a history of
+psychiatric problems</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030508_210555.5-E20-55" ROLE="Arg-1">
+      <extent>
+        <charseq START="481" END="538">a connecticut woman with a history of
+psychiatric problems</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030508_210555.5-E1-56" ROLE="Arg-2">
+      <extent>
+        <charseq START="483" END="493">connecticut</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030508_210555.5-R3" TYPE="PER-SOC" SUBTYPE="Family" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030508_210555.5-E20" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030508_210555.5-E2" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030508_210555.5-R3-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="562" END="573">her daughter</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030508_210555.5-E20-2" ROLE="Arg-1">
+      <extent>
+        <charseq START="562" END="564">her</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030508_210555.5-E2-3" ROLE="Arg-2">
+      <extent>
+        <charseq START="562" END="573">her daughter</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_ENG_20030508_210555.5-R3-2" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="670" END="690">her daughter daughter</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030508_210555.5-E20-7" ROLE="Arg-1">
+      <extent>
+        <charseq START="670" END="672">her</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030508_210555.5-E2-8" ROLE="Arg-2">
+      <extent>
+        <charseq START="670" END="690">her daughter daughter</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030508_210555.5-R5" TYPE="ORG-AFF" SUBTYPE="Ownership" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030508_210555.5-E3" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030508_210555.5-E5" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030508_210555.5-R5-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="756" END="792">owner a local gun and motorcycle shop</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030508_210555.5-E3-11" ROLE="Arg-1">
+      <extent>
+        <charseq START="756" END="792">owner a local gun and motorcycle shop</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030508_210555.5-E5-12" ROLE="Arg-2">
+      <extent>
+        <charseq START="762" END="792">a local gun and motorcycle shop</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030508_210555.5-R6" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030508_210555.5-E7" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030508_210555.5-E8" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030508_210555.5-R6-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="895" END="913">the police officers</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030508_210555.5-E7-17" ROLE="Arg-1">
+      <extent>
+        <charseq START="895" END="913">the police officers</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030508_210555.5-E8-18" ROLE="Arg-2">
+      <extent>
+        <charseq START="899" END="904">police</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030508_210555.5-R7" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030508_210555.5-E3" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030508_210555.5-E9" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030508_210555.5-R7-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="964" END="971">my rifle</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030508_210555.5-E3-23" ROLE="Arg-1">
+      <extent>
+        <charseq START="964" END="965">my</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030508_210555.5-E9-22" ROLE="Arg-2">
+      <extent>
+        <charseq START="964" END="971">my rifle</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030508_210555.5-R8" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030508_210555.5-E12" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030508_210555.5-E1" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030508_210555.5-R8-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="1223" END="1242">the state authoritys</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030508_210555.5-E12-34" ROLE="Arg-1">
+      <extent>
+        <charseq START="1223" END="1242">the state authoritys</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030508_210555.5-E1-45" ROLE="Arg-2">
+      <extent>
+        <charseq START="1227" END="1231">state</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030508_210555.5-EV1" TYPE="Life" SUBTYPE="Die" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030508_210555.5-E14" ROLE="Agent"/>
+  <event_argument REFID="CNN_ENG_20030508_210555.5-E14" ROLE="Victim"/>
+  <event_mention ID="CNN_ENG_20030508_210555.5-EV1-1">
+    <extent>
+      <charseq START="133" END="149">people, people do</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="67" END="149">the slogan makes for a powerful bumper sticker -- guns don't kill
+people, people do</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="148" END="149">do</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030508_210555.5-E14-41" ROLE="Agent">
+      <extent>
+        <charseq START="141" END="146">people</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030508_210555.5-E14-43" ROLE="Victim">
+      <extent>
+        <charseq START="133" END="138">people</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030508_210555.5-EV1-2">
+    <extent>
+      <charseq START="244" END="252">people do</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="221" END="337">a better one might be, people do and people die
+and still other people search their souls and struggle for redemption</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="251" END="252">do</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030508_210555.5-E14-44" ROLE="Agent">
+      <extent>
+        <charseq START="244" END="249">people</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030508_210555.5-EV2" TYPE="Life" SUBTYPE="Die" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030508_210555.5-E14" ROLE="Victim"/>
+  <event_mention ID="CNN_ENG_20030508_210555.5-EV2-1">
+    <extent>
+      <charseq START="258" END="267">people die</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="221" END="337">a better one might be, people do and people die
+and still other people search their souls and struggle for redemption</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="265" END="267">die</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030508_210555.5-E14-42" ROLE="Victim">
+      <extent>
+        <charseq START="258" END="263">people</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030508_210555.5-EV3" TYPE="Life" SUBTYPE="Die" MODALITY="Asserted" POLARITY="Negative" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030508_210555.5-E6" ROLE="Instrument"/>
+  <event_argument REFID="CNN_ENG_20030508_210555.5-E14" ROLE="Victim"/>
+  <event_mention ID="CNN_ENG_20030508_210555.5-EV3-1">
+    <extent>
+      <charseq START="117" END="138">guns don't kill
+people</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="67" END="149">the slogan makes for a powerful bumper sticker -- guns don't kill
+people, people do</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="128" END="131">kill</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030508_210555.5-E6-1" ROLE="Instrument">
+      <extent>
+        <charseq START="117" END="120">guns</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030508_210555.5-E14-43" ROLE="Victim">
+      <extent>
+        <charseq START="133" END="138">people</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030508_210555.5-EV4" TYPE="Life" SUBTYPE="Die" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030508_210555.5-E2" ROLE="Victim"/>
+  <event_argument REFID="CNN_ENG_20030508_210555.5-E20" ROLE="Agent"/>
+  <event_mention ID="CNN_ENG_20030508_210555.5-EV4-1">
+    <extent>
+      <charseq START="462" END="573">jennifer o'conner, a connecticut woman with a history of
+psychiatric problems confessed to shooting her daughter</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="394" END="616">it was the lead story across connecticut in early april,
+police say jennifer o'conner, a connecticut woman with a history of
+psychiatric problems confessed to shooting her daughter 7, while the 7
+-year-old girl lay sleeping</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="553" END="560">shooting</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030508_210555.5-E2-3" ROLE="Victim">
+      <extent>
+        <charseq START="562" END="573">her daughter</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030508_210555.5-E20-54" ROLE="Agent">
+      <extent>
+        <charseq START="462" END="478">jennifer o'conner</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030508_210555.5-EV5" TYPE="Justice" SUBTYPE="Arrest-Jail" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030508_210555.5-E20" ROLE="Person"/>
+  <event_argument REFID="CNN_ENG_20030508_210555.5-V1" ROLE="Crime"/>
+  <event_mention ID="CNN_ENG_20030508_210555.5-EV5-1">
+    <extent>
+      <charseq START="847" END="871">o'conner's vest on
+murder</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="748" END="879">thomas, owner a local gun and motorcycle shop, said
+he felt gutted when he saw the news reports of o'conner's vest on
+murder charges</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="858" END="861">vest</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030508_210555.5-E20-16" ROLE="Person">
+      <extent>
+        <charseq START="847" END="854">o'conner</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030508_210555.5-V1-1" ROLE="Crime">
+      <extent>
+        <charseq START="866" END="871">murder</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030508_210555.5-EV6" TYPE="Transaction" SUBTYPE="Transfer-Ownership" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030508_210555.5-E9" ROLE="Artifact"/>
+  <event_argument REFID="CNN_ENG_20030508_210555.5-E20" ROLE="Buyer"/>
+  <event_argument REFID="CNN_ENG_20030508_210555.5-T4" ROLE="Time-Within"/>
+  <event_mention ID="CNN_ENG_20030508_210555.5-EV6-1">
+    <extent>
+      <charseq START="990" END="1030">sold oconer the rifle a few months before</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="986" END="1030">had sold oconer the rifle a few months before</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="990" END="993">sold</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030508_210555.5-E9-26" ROLE="Artifact">
+      <extent>
+        <charseq START="1002" END="1010">the rifle</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030508_210555.5-E20-25" ROLE="Buyer">
+      <extent>
+        <charseq START="995" END="1000">oconer</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030508_210555.5-T4-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="1012" END="1030">a few months before</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

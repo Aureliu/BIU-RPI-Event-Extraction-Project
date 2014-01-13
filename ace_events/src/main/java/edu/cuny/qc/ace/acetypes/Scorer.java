@@ -125,8 +125,8 @@ public class Scorer
 		stats.calc();
 		
 		out.println("\n\n---------------------------");
-		out.printf("num_trigger_gold=%d, num_trigger_ans=%d  /  num_trigger_correct=%d, num_trigger_idt_correct=%d\n", stats.num_trigger_gold, stats.num_trigger_ans, stats.num_trigger_correct, stats.num_trigger_idt_correct);
-		out.printf("num_arg_gold=%d, num_arg_ans=%d  /  num_arg_correct=%d, num_arg_idt_correct=%d\n", stats.num_arg_gold, stats.num_arg_ans, stats.num_arg_correct, stats.num_arg_idt_correct);
+		out.printf("num_trigger_gold=%f, num_trigger_ans=%f  /  num_trigger_correct=%f, num_trigger_idt_correct=%f\n", stats.num_trigger_gold, stats.num_trigger_ans, stats.num_trigger_correct, stats.num_trigger_idt_correct);
+		out.printf("num_arg_gold=%f, num_arg_ans=%f  /  num_arg_correct=%f, num_arg_idt_correct=%f\n", stats.num_arg_gold, stats.num_arg_ans, stats.num_arg_correct, stats.num_arg_idt_correct);
 		out.println("\n---------------------------");
 		out.println("Summary:\n");
 		out.println(stats);

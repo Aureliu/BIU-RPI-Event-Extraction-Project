@@ -532,7 +532,7 @@ public class LearningCurve {
 				logger.info(String.format("Updating decode results file. Trigger id F1=%f, Arg id F1=%f", stats.f1_trigger_idt, stats.f1_arg_idt));
 				f.printf("%02d,%02d,%s,%03d,%03d,%03d,%03d,%03d," +
 						 "%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f,%f," +
-						 "%04d,%04d,%04d,%04d,%04d,%04d,%04d,%04d\r\n",
+						 "%f,%f,%f,%f,%f,%f,%f,%f\r\n",
 						
 						i, t, eventType, devMentions, testMentions, j, trainSet.size(), mentionsInTrainSet,
 						

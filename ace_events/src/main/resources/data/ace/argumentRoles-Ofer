@@ -1,0 +1,163 @@
+OferMove	OferArtifact	PER	WEA	VEH
+OferMove	OferOrigin	GPE	LOC	FAC
+OferMove	OferFakeRole	Time
+
+Be-Born	Person	PER
+Be-Born	Time	Time
+Be-Born	Place	GPE	LOC	FAC
+Marry	Person	PER
+Marry	Time	Time
+Marry	Place	GPE
+Divorce	Person	PER
+Divorce	Time	Time
+Divorce	Place	GPE	LOC	FAC
+Injure	Agent	PER	ORG	GPE
+Injure	Victim	PER
+Injure	Instrument	WEA	VEH
+Injure	Time	Time
+Injure	Place	GPE	LOC	FAC
+Die	Agent	PER	ORG	GPE
+Die	Victim	PER
+Die	Instrument	WEA	VEH
+Die	Time	Time
+Die	Place	GPE	LOC	FAC
+Transport	Agent	PER	ORG	GPE
+Transport	Artifact	PER	WEA	VEH
+Transport	Vehicle	VEH
+Transport	Price	Numeric
+Transport	Origin	GPE	LOC	FAC
+Transport	Destination	GPE	LOC	FAC
+Transport	Time	Time
+Transfer-Ownership	Buyer	PER	ORG	GPE
+Transfer-Ownership	Seller	PER	ORG	GPE
+Transfer-Ownership	Beneficiary	PER ORG GPE
+Transfer-Ownership	Artifact	VEH WEA	FAC	ORG
+Transfer-Ownership	Price	Numeric	
+Transfer-Ownership	Time	Time
+Transfer-Ownership	Place	GPE	LOC	FAC
+Transfer-Money	Giver	PER	ORG	GPE
+Transfer-Money	Recipient	PER	ORG	GPE
+Transfer-Money	Beneficiary	PER	ORG	GPE
+Transfer-Money	Money	Numeric
+Transfer-Money	Time	Time
+Transfer-Money	Place	GPE	LOC	FAC
+Start-Org	Agent	PER	ORG	GPE
+Start-Org	Org	ORG
+Start-Org	Time	Time
+Start-Org	Place	GPE	LOC	FAC
+Merge-Org	Org	ORG
+Merge-Org	Time	Time
+Merge-Org	Place	GPE	LOC	FAC
+Declare-Bankruptcy	Org	ORG	GPE	PER
+Declare-Bankruptcy	Time	Time
+Declare-Bankruptcy	Place	GPE	LOC	FAC
+End-Org	Org	ORG
+End-Org	Time	Time
+End-Org	Place	GPE	LOC	FAC
+Attack	Attacker	PER	ORG	GPE
+Attack	Target	PER	ORG	VEH	FAC	WEA	LOC
+Attack	Instrument	WEA	VEH
+Attack	Time	Time
+Attack	Place	GPE	LOC	FAC
+Demonstrate	Entity	PER	ORG
+Demonstrate	Time	Time
+Demonstrate	Place	LOC	GPE	FAC
+Meet	Entity	PER	ORG	GPE
+Meet	Time	Time
+Meet	Place	GPE	LOC	FAC
+Phone-Write	Entity	PER	ORG	GPE
+Phone-Write	Time	Time
+Phone-Write	Place	GPE	LOC	FAC
+Start-Position	Person	PER
+Start-Position	Entity	ORG	GPE
+Start-Position	Position	Job-Title
+Start-Position	Time	Time
+Start-Position	Place	GPE	LOC	FAC
+End-Position	Person	PER
+End-Position	Entity	ORG	GPE
+End-Position	Position	Job-Title
+End-Position	Time	Time
+End-Position	Place	GPE	LOC	FAC
+Nominate	Person	PER
+Nominate	Agent	PER	ORG	GPE	FAC
+Nominate	Position	Job-Title
+Nominate	Time	Time
+Nominate	Place	GPE	LOC	FAC
+Elect	Person	PER
+Elect	Entity	PER	ORG	GPE
+Elect	Position	Job-Title
+Elect	Time	Time
+Elect	Place	GPE	LOC	FAC
+Arrest-Jail	Person	PER
+Arrest-Jail	Agent	PER	ORG	GPE
+Arrest-Jail	Crime	Crime
+Arrest-Jail	Time	Time
+Arrest-Jail	Place	GPE	LOC	FAC
+Release-Parole	Person	PER
+Release-Parole	Entity	PER	ORG	GPE
+Release-Parole	Crime	Crime
+Release-Parole	Time	Time
+Release-Parole	Place	GPE	LOC	FAC
+Trial-Hearing	Defendant	PER	ORG	GPE
+Trial-Hearing	Prosecutor	PER	ORG	GPE
+Trial-Hearing	Adjudicator	PER	ORG	GPE
+Trial-Hearing	Crime	Crime
+Trial-Hearing	Time	Time
+Trial-Hearing	Place	GPE	LOC	FAC
+Charge-Indict	Defendant	PER	ORG	GPE
+Charge-Indict	Prosecutor	PER	ORG	GPE
+Charge-Indict	Adjudicator	PER	ORG	GPE
+Charge-Indict	Crime	Crime
+Charge-Indict	Time	Time
+Charge-Indict	Place	GPE	LOC	FAC
+Sue	Plaintiff	PER	ORG	GPE
+Sue	Defendant	PER	ORG	GPE
+Sue	Adjudicator	PER	ORG	GPE
+Sue	Crime	Crime
+Sue	Time	Time
+Sue	Place	GPE	LOC	FAC
+Convict	Defendant	PER	ORG	GPE
+Convict	Adjudicator	PER	ORG	GPE
+Convict	Crime	Crime
+Convict	Time	Time
+Convict	Place	GPE	LOC	FAC
+Sentence	Defendant	PER	ORG	GPE
+Sentence	Adjudicator	PER	ORG	GPE
+Sentence	Crime	Crime
+Sentence	Sentence	Sentence
+Sentence	Time	Time
+Sentence	Place	GPE	LOC	FAC
+Fine	Entity	PER	ORG	GPE
+Fine	Adjudicator	PER	ORG	GPE
+Fine	Money	Numeric
+Fine	Crime	Crime
+Fine	Time	Time
+Fine	Place	GPE	LOC	FAC
+Execute	Person	PER	
+Execute	Agent	PER	ORG	GPE
+Execute	Crime	Crime
+Execute	Time	Time
+Execute	Place	GPE	LOC	FAC
+Extradite	Agent	PER	ORG	GPE
+Extradite	Person	PER
+Extradite	Destination	GPE	LOC	FAC
+Extradite	Origin	GPE	LOC	FAC
+Extradite	Crime	Crime
+Extradite	Time	Time
+Acquit	Defendant	PER	ORG	GPE
+Acquit	Adjudicator	PER	ORG	GPE	
+Acquit	Crime	Crime
+Acquit	Time	Time
+Acquit	Place	GPE	LOC	FAC
+Pardon	Defendant	PER	ORG	GPE
+Pardon	Adjudicator	PER	ORG	GPE
+Pardon	Crime	Crime
+Pardon	Time	Time
+Pardon	Place	GPE	LOC	FAC
+Appeal	Defendant	PER	ORG	GPE
+Appeal	Prosecutor	PER	ORG	GPE
+Appeal	Adjudicator	PER	ORG	GPE
+Appeal	Crime	Crime
+Appeal	Time	Time
+Appeal	Place	GPE	LOC	FAC
+Appeal	Plaintiff	PER	ORG	GPE

@@ -470,6 +470,12 @@ public class Perceptron implements java.io.Serializable
 		{
 			e.printStackTrace();
 		}
+		
+		//TODO ofer1
+		// add these guys to the arg (edge) alphabet
+		model.edgeTargetAlphabet.lookupIndex("OferArtifact", true);
+		model.edgeTargetAlphabet.lookupIndex("OferOrigin", true);
+		model.edgeTargetAlphabet.lookupIndex("OferFakeRole", true);
 		return model;
 	}
 

@@ -1,0 +1,1443 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_LE_20030504.1200.02-2.sgm" SOURCE="broadcast conversation" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_LE_20030504.1200.02-2">
+<entity ID="CNN_LE_20030504.1200.02-2-E1" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E1-5" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="691" END="696">others</charseq>
+    </extent>
+    <head>
+      <charseq START="691" END="696">others</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_LE_20030504.1200.02-2-E2" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E2-6" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="709" END="728">the other government</charseq>
+    </extent>
+    <head>
+      <charseq START="719" END="728">government</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_LE_20030504.1200.02-2-E3" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E3-7" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="869" END="877">everybody</charseq>
+    </extent>
+    <head>
+      <charseq START="869" END="877">everybody</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_LE_20030504.1200.02-2-E4" TYPE="GPE" SUBTYPE="Nation" CLASS="USP">
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E4-9" TYPE="NOM" LDCTYPE="NOM" ROLE="GPE">
+    <extent>
+      <charseq START="912" END="926">other
+countries</charseq>
+    </extent>
+    <head>
+      <charseq START="918" END="926">countries</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_LE_20030504.1200.02-2-E5" TYPE="GPE" SUBTYPE="Nation" CLASS="USP">
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E5-11" TYPE="NOM" LDCTYPE="BAR" ROLE="GPE">
+    <extent>
+      <charseq START="945" END="955">NATO allies</charseq>
+    </extent>
+    <head>
+      <charseq START="950" END="955">allies</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_LE_20030504.1200.02-2-E6" TYPE="ORG" SUBTYPE="Non-Governmental" CLASS="SPC">
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E6-12" TYPE="NAM" LDCTYPE="NAMPRE">
+    <extent>
+      <charseq START="945" END="948">NATO</charseq>
+    </extent>
+    <head>
+      <charseq START="945" END="948">NATO</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="NATO">
+      <charseq START="945" END="948">NATO</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_LE_20030504.1200.02-2-E7" TYPE="ORG" SUBTYPE="Non-Governmental" CLASS="SPC">
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E7-13" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="960" END="977">the United Nations</charseq>
+    </extent>
+    <head>
+      <charseq START="964" END="977">United Nations</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E7-48" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="FALSE">
+    <extent>
+      <charseq START="2523" END="2525">U.N</charseq>
+    </extent>
+    <head>
+      <charseq START="2523" END="2525">U.N</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E7-50" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="2561" END="2563">U.N</charseq>
+    </extent>
+    <head>
+      <charseq START="2561" END="2563">U.N</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E7-52" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2597" END="2614">the United Nations</charseq>
+    </extent>
+    <head>
+      <charseq START="2601" END="2614">United Nations</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E7-66" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2871" END="2888">the United Nations</charseq>
+    </extent>
+    <head>
+      <charseq START="2875" END="2888">United Nations</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="United Nations">
+      <charseq START="964" END="977">United Nations</charseq>
+    </name>
+    <name NAME="U.N">
+      <charseq START="2523" END="2525">U.N</charseq>
+    </name>
+    <name NAME="U.N">
+      <charseq START="2561" END="2563">U.N</charseq>
+    </name>
+    <name NAME="United Nations">
+      <charseq START="2601" END="2614">United Nations</charseq>
+    </name>
+    <name NAME="United Nations">
+      <charseq START="2875" END="2888">United Nations</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_LE_20030504.1200.02-2-E8" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E8-14" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="982" END="1011">other
+people in the Arab world</charseq>
+    </extent>
+    <head>
+      <charseq START="988" END="993">people</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_LE_20030504.1200.02-2-E9" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E9-17" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="1002" END="1005">Arab</charseq>
+    </extent>
+    <head>
+      <charseq START="1002" END="1005">Arab</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_LE_20030504.1200.02-2-E10" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E10-22" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1221" END="1247">three divisions out of five</charseq>
+    </extent>
+    <head>
+      <charseq START="1227" END="1235">divisions</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_LE_20030504.1200.02-2-E11" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E11-23" TYPE="PRO" LDCTYPE="HLS">
+    <extent>
+      <charseq START="1244" END="1247">five</charseq>
+    </extent>
+    <head>
+      <charseq START="1244" END="1247">five</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_LE_20030504.1200.02-2-E12" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E12-25" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="1272" END="1289">Secretary
+Rumsfeld</charseq>
+    </extent>
+    <head>
+      <charseq START="1282" END="1289">Rumsfeld</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E12-26" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1272" END="1280">Secretary</charseq>
+    </extent>
+    <head>
+      <charseq START="1272" END="1280">Secretary</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E12-107" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="389" END="406">Secretary Rumsfeld</charseq>
+    </extent>
+    <head>
+      <charseq START="399" END="406">Rumsfeld</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E12-108" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="389" END="397">Secretary</charseq>
+    </extent>
+    <head>
+      <charseq START="389" END="397">Secretary</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Rumsfeld">
+      <charseq START="1282" END="1289">Rumsfeld</charseq>
+    </name>
+    <name NAME="Rumsfeld">
+      <charseq START="399" END="406">Rumsfeld</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_LE_20030504.1200.02-2-E13" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E13-15" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1517" END="1520">DODD</charseq>
+    </extent>
+    <head>
+      <charseq START="1517" END="1520">DODD</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E13-28" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1346" END="1348">you</charseq>
+    </extent>
+    <head>
+      <charseq START="1346" END="1348">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E13-29" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1351" END="1362">Senator Dodd</charseq>
+    </extent>
+    <head>
+      <charseq START="1359" END="1362">Dodd</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E13-30" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="FALSE">
+    <extent>
+      <charseq START="1351" END="1357">Senator</charseq>
+    </extent>
+    <head>
+      <charseq START="1351" END="1357">Senator</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E13-33" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1431" END="1433">you</charseq>
+    </extent>
+    <head>
+      <charseq START="1431" END="1433">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E13-36" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1900" END="1900">I</charseq>
+    </extent>
+    <head>
+      <charseq START="1900" END="1900">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E13-70" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="3102" END="3113">Senator
+Dodd</charseq>
+    </extent>
+    <head>
+      <charseq START="3110" END="3113">Dodd</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E13-71" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="3102" END="3108">Senator</charseq>
+    </extent>
+    <head>
+      <charseq START="3102" END="3108">Senator</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E13-76" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="3245" END="3267">Senators Lugar and Dodd</charseq>
+    </extent>
+    <head>
+      <charseq START="3264" END="3267">Dodd</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E13-110" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2241" END="2241">I</charseq>
+    </extent>
+    <head>
+      <charseq START="2241" END="2241">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="DODD">
+      <charseq START="1517" END="1520">DODD</charseq>
+    </name>
+    <name NAME="Dodd">
+      <charseq START="1359" END="1362">Dodd</charseq>
+    </name>
+    <name NAME="Dodd">
+      <charseq START="3110" END="3113">Dodd</charseq>
+    </name>
+    <name NAME="Dodd">
+      <charseq START="3264" END="3267">Dodd</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_LE_20030504.1200.02-2-E15" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E15-31" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1410" END="1423">U.S. taxpayers</charseq>
+    </extent>
+    <head>
+      <charseq START="1415" END="1423">taxpayers</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_LE_20030504.1200.02-2-E16" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E16-32" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1410" END="1412">U.S</charseq>
+    </extent>
+    <head>
+      <charseq START="1410" END="1412">U.S</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E16-34" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1495" END="1511">the United States</charseq>
+    </extent>
+    <head>
+      <charseq START="1499" END="1511">United States</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E16-35" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1876" END="1892">the United States</charseq>
+    </extent>
+    <head>
+      <charseq START="1880" END="1892">United States</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E16-83" TYPE="PRO" LDCTYPE="PRO" ROLE="ORG" LDCATR="TRUE">
+    <extent>
+      <charseq START="445" END="446">we</charseq>
+    </extent>
+    <head>
+      <charseq START="445" END="446">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E16-84" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="2388" END="2389">us</charseq>
+    </extent>
+    <head>
+      <charseq START="2388" END="2389">us</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E16-85" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="2204" END="2205">we</charseq>
+    </extent>
+    <head>
+      <charseq START="2204" END="2205">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E16-86" TYPE="PRO" LDCTYPE="PRO" ROLE="ORG" LDCATR="TRUE">
+    <extent>
+      <charseq START="1147" END="1148">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1147" END="1148">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E16-88" TYPE="PRO" LDCTYPE="PRO" ROLE="ORG" LDCATR="TRUE">
+    <extent>
+      <charseq START="1609" END="1610">We</charseq>
+    </extent>
+    <head>
+      <charseq START="1609" END="1610">We</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E16-89" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="2249" END="2250">we</charseq>
+    </extent>
+    <head>
+      <charseq START="2249" END="2250">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E16-91" TYPE="PRO" LDCTYPE="PRO" ROLE="ORG" LDCATR="TRUE">
+    <extent>
+      <charseq START="628" END="630">our</charseq>
+    </extent>
+    <head>
+      <charseq START="628" END="630">our</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E16-92" TYPE="PRO" LDCTYPE="PRO" ROLE="ORG" LDCATR="TRUE">
+    <extent>
+      <charseq START="658" END="659">We</charseq>
+    </extent>
+    <head>
+      <charseq START="658" END="659">We</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E16-93" TYPE="PRO" LDCTYPE="PRO" ROLE="ORG" LDCATR="TRUE">
+    <extent>
+      <charseq START="891" END="892">we</charseq>
+    </extent>
+    <head>
+      <charseq START="891" END="892">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E16-94" TYPE="PRO" LDCTYPE="PRO" ROLE="ORG" LDCATR="TRUE">
+    <extent>
+      <charseq START="929" END="930">We</charseq>
+    </extent>
+    <head>
+      <charseq START="929" END="930">We</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E16-95" TYPE="PRO" LDCTYPE="PRO" ROLE="ORG" LDCATR="TRUE">
+    <extent>
+      <charseq START="1065" END="1067">our</charseq>
+    </extent>
+    <head>
+      <charseq START="1065" END="1067">our</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E16-96" TYPE="PRO" LDCTYPE="PRO" ROLE="ORG" LDCATR="TRUE">
+    <extent>
+      <charseq START="1089" END="1090">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1089" END="1090">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E16-97" TYPE="NOM" LDCTYPE="NOM" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="2289" END="2328">the sole, or
+almost the sole power there</charseq>
+    </extent>
+    <head>
+      <charseq START="2318" END="2322">power</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E16-98" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="227" END="229">U.S</charseq>
+    </extent>
+    <head>
+      <charseq START="227" END="229">U.S</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E16-104" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="318" END="320">U.S</charseq>
+    </extent>
+    <head>
+      <charseq START="318" END="320">U.S</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="U.S">
+      <charseq START="1410" END="1412">U.S</charseq>
+    </name>
+    <name NAME="United States">
+      <charseq START="1499" END="1511">United States</charseq>
+    </name>
+    <name NAME="United States">
+      <charseq START="1880" END="1892">United States</charseq>
+    </name>
+    <name NAME="U.S">
+      <charseq START="227" END="229">U.S</charseq>
+    </name>
+    <name NAME="U.S">
+      <charseq START="318" END="320">U.S</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_LE_20030504.1200.02-2-E17" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E17-37" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1943" END="1944">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1943" END="1944">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E17-81" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3021" END="3022">we</charseq>
+    </extent>
+    <head>
+      <charseq START="3021" END="3022">we</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_LE_20030504.1200.02-2-E18" TYPE="ORG" SUBTYPE="Government" CLASS="GEN">
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E18-38" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1956" END="1976">a civilian government</charseq>
+    </extent>
+    <head>
+      <charseq START="1967" END="1976">government</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E18-82" TYPE="PRO" LDCTYPE="HLS">
+    <extent>
+      <charseq START="1994" END="2021">a democratically elected
+one</charseq>
+    </extent>
+    <head>
+      <charseq START="2019" END="2021">one</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_LE_20030504.1200.02-2-E19" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E19-40" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="1958" END="1965">civilian</charseq>
+    </extent>
+    <head>
+      <charseq START="1958" END="1965">civilian</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_LE_20030504.1200.02-2-E20" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E20-2" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="523" END="523">I</charseq>
+    </extent>
+    <head>
+      <charseq START="523" END="523">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E20-3" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="569" END="570">My</charseq>
+    </extent>
+    <head>
+      <charseq START="569" END="570">My</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E20-8" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="352" END="356">LUGAR</charseq>
+    </extent>
+    <head>
+      <charseq START="352" END="356">LUGAR</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E20-10" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="2815" END="2819">LUGAR</charseq>
+    </extent>
+    <head>
+      <charseq START="2815" END="2819">LUGAR</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E20-21" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="1164" END="1164">I</charseq>
+    </extent>
+    <head>
+      <charseq START="1164" END="1164">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E20-24" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="1264" END="1264">I</charseq>
+    </extent>
+    <head>
+      <charseq START="1264" END="1264">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E20-43" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="2429" END="2441">Senator Lugar</charseq>
+    </extent>
+    <head>
+      <charseq START="2437" END="2441">Lugar</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E20-44" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="2429" END="2435">Senator</charseq>
+    </extent>
+    <head>
+      <charseq START="2429" END="2435">Senator</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E20-47" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="2514" END="2516">you</charseq>
+    </extent>
+    <head>
+      <charseq START="2514" END="2516">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E20-49" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="2536" END="2538">you</charseq>
+    </extent>
+    <head>
+      <charseq START="2536" END="2538">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E20-51" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="2575" END="2577">you</charseq>
+    </extent>
+    <head>
+      <charseq START="2575" END="2577">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E20-61" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="2788" END="2790">you</charseq>
+    </extent>
+    <head>
+      <charseq START="2788" END="2790">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E20-63" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="2826" END="2826">I</charseq>
+    </extent>
+    <head>
+      <charseq START="2826" END="2826">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E20-65" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="2861" END="2861">I</charseq>
+    </extent>
+    <head>
+      <charseq START="2861" END="2861">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E20-68" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="2979" END="2979">I</charseq>
+    </extent>
+    <head>
+      <charseq START="2979" END="2979">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E20-69" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="3013" END="3013">I</charseq>
+    </extent>
+    <head>
+      <charseq START="3013" END="3013">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E20-75" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="3245" END="3267">Senators Lugar and Dodd</charseq>
+    </extent>
+    <head>
+      <charseq START="3254" END="3258">Lugar</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E20-100" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="259" END="271">Senator
+Lugar</charseq>
+    </extent>
+    <head>
+      <charseq START="267" END="271">Lugar</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E20-101" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="259" END="265">Senator</charseq>
+    </extent>
+    <head>
+      <charseq START="259" END="265">Senator</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E20-102" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="286" END="288">you</charseq>
+    </extent>
+    <head>
+      <charseq START="286" END="288">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E20-106" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="365" END="365">I</charseq>
+    </extent>
+    <head>
+      <charseq START="365" END="365">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="LUGAR">
+      <charseq START="352" END="356">LUGAR</charseq>
+    </name>
+    <name NAME="LUGAR">
+      <charseq START="2815" END="2819">LUGAR</charseq>
+    </name>
+    <name NAME="Lugar">
+      <charseq START="2437" END="2441">Lugar</charseq>
+    </name>
+    <name NAME="Lugar">
+      <charseq START="3254" END="3258">Lugar</charseq>
+    </name>
+    <name NAME="Lugar">
+      <charseq START="267" END="271">Lugar</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_LE_20030504.1200.02-2-E21" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E21-45" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2444" END="2445">we</charseq>
+    </extent>
+    <head>
+      <charseq START="2444" END="2445">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E21-46" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2486" END="2487">we</charseq>
+    </extent>
+    <head>
+      <charseq START="2486" END="2487">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E21-72" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3151" END="3152">We</charseq>
+    </extent>
+    <head>
+      <charseq START="3151" END="3152">We</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E21-74" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3209" END="3210">We</charseq>
+    </extent>
+    <head>
+      <charseq START="3209" END="3210">We</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E21-78" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3290" END="3291">us</charseq>
+    </extent>
+    <head>
+      <charseq START="3290" END="3291">us</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_LE_20030504.1200.02-2-E24" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E24-53" TYPE="NOM" LDCTYPE="BAR" ROLE="GPE">
+    <extent>
+      <charseq START="2690" END="2782">countries like
+France, Germany, and Russia, which opposed the Bush administration's war
+plans</charseq>
+    </extent>
+    <head>
+      <charseq START="2690" END="2698">countries</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E24-58" TYPE="PRO" LDCTYPE="WHQ" ROLE="GPE">
+    <extent>
+      <charseq START="2734" END="2738">which</charseq>
+    </extent>
+    <head>
+      <charseq START="2734" END="2738">which</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E24-62" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE">
+    <extent>
+      <charseq START="2797" END="2800">them</charseq>
+    </extent>
+    <head>
+      <charseq START="2797" END="2800">them</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_LE_20030504.1200.02-2-E25" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E25-54" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE">
+    <extent>
+      <charseq START="2705" END="2710">France</charseq>
+    </extent>
+    <head>
+      <charseq START="2705" END="2710">France</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="France">
+      <charseq START="2705" END="2710">France</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_LE_20030504.1200.02-2-E26" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E26-55" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE">
+    <extent>
+      <charseq START="2713" END="2719">Germany</charseq>
+    </extent>
+    <head>
+      <charseq START="2713" END="2719">Germany</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Germany">
+      <charseq START="2713" END="2719">Germany</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_LE_20030504.1200.02-2-E27" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E27-57" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE">
+    <extent>
+      <charseq START="2726" END="2731">Russia</charseq>
+    </extent>
+    <head>
+      <charseq START="2726" END="2731">Russia</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Russia">
+      <charseq START="2726" END="2731">Russia</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_LE_20030504.1200.02-2-E28" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E28-59" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2748" END="2770">the Bush administration</charseq>
+    </extent>
+    <head>
+      <charseq START="2757" END="2770">administration</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_LE_20030504.1200.02-2-E29" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E29-60" TYPE="NAM" LDCTYPE="NAMPRE">
+    <extent>
+      <charseq START="2752" END="2755">Bush</charseq>
+    </extent>
+    <head>
+      <charseq START="2752" END="2755">Bush</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Bush">
+      <charseq START="2752" END="2755">Bush</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_LE_20030504.1200.02-2-E30" TYPE="GPE" SUBTYPE="Nation" CLASS="USP">
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E30-64" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE">
+    <extent>
+      <charseq START="2839" END="2845">anybody</charseq>
+    </extent>
+    <head>
+      <charseq START="2839" END="2845">anybody</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_LE_20030504.1200.02-2-E32" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E32-73" TYPE="NOM" LDCTYPE="BAR" LDCATR="FALSE">
+    <extent>
+      <charseq START="3199" END="3206">Senators</charseq>
+    </extent>
+    <head>
+      <charseq START="3199" END="3206">Senators</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E32-77" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="3245" END="3252">Senators</charseq>
+    </extent>
+    <head>
+      <charseq START="3245" END="3252">Senators</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E32-79" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3294" END="3297">They</charseq>
+    </extent>
+    <head>
+      <charseq START="3294" END="3297">They</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_LE_20030504.1200.02-2-E34" TYPE="PER" SUBTYPE="Indeterminate" CLASS="GEN">
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E34-80" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3317" END="3320">your</charseq>
+    </extent>
+    <head>
+      <charseq START="3317" END="3320">your</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_LE_20030504.1200.02-2-E36" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E36-56" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="227" END="239">U.S. military</charseq>
+    </extent>
+    <head>
+      <charseq START="232" END="239">military</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_LE_20030504.1200.02-2-E39" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E39-1" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE">
+    <extent>
+      <charseq START="2180" END="2183">Iraq</charseq>
+    </extent>
+    <head>
+      <charseq START="2180" END="2183">Iraq</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E39-4" TYPE="NOM" LDCTYPE="NOM" ROLE="GPE">
+    <extent>
+      <charseq START="605" END="615">the country</charseq>
+    </extent>
+    <head>
+      <charseq START="609" END="615">country</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E39-41" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="1988" END="1991">Iraq</charseq>
+    </extent>
+    <head>
+      <charseq START="1988" END="1991">Iraq</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E39-42" TYPE="PRO" LDCTYPE="PRO" ROLE="LOC">
+    <extent>
+      <charseq START="2324" END="2328">there</charseq>
+    </extent>
+    <head>
+      <charseq START="2324" END="2328">there</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E39-67" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE">
+    <extent>
+      <charseq START="2916" END="2919">Iraq</charseq>
+    </extent>
+    <head>
+      <charseq START="2916" END="2919">Iraq</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E39-99" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="253" END="256">Iraq</charseq>
+    </extent>
+    <head>
+      <charseq START="253" END="256">Iraq</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E39-105" TYPE="PRO" LDCTYPE="PRO" ROLE="LOC">
+    <extent>
+      <charseq START="342" END="346">there</charseq>
+    </extent>
+    <head>
+      <charseq START="342" END="346">there</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E39-112" TYPE="PRO" LDCTYPE="PRO" ROLE="LOC">
+    <extent>
+      <charseq START="465" END="469">there</charseq>
+    </extent>
+    <head>
+      <charseq START="465" END="469">there</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Iraq">
+      <charseq START="2180" END="2183">Iraq</charseq>
+    </name>
+    <name NAME="Iraq">
+      <charseq START="1988" END="1991">Iraq</charseq>
+    </name>
+    <name NAME="Iraq">
+      <charseq START="2916" END="2919">Iraq</charseq>
+    </name>
+    <name NAME="Iraq">
+      <charseq START="253" END="256">Iraq</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_LE_20030504.1200.02-2-E42" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E42-103" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="301" END="328">large numbers of U.S. troops</charseq>
+    </extent>
+    <head>
+      <charseq START="323" END="328">troops</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E42-111" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="458" END="463">troops</charseq>
+    </extent>
+    <head>
+      <charseq START="458" END="463">troops</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_LE_20030504.1200.02-2-E46" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E46-16" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="189" END="195">BLITZER</charseq>
+    </extent>
+    <head>
+      <charseq START="189" END="195">BLITZER</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E46-18" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1322" END="1328">BLITZER</charseq>
+    </extent>
+    <head>
+      <charseq START="1322" END="1328">BLITZER</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E46-19" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2420" END="2426">BLITZER</charseq>
+    </extent>
+    <head>
+      <charseq START="2420" END="2426">BLITZER</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E46-20" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="3131" END="3137">BLITZER</charseq>
+    </extent>
+    <head>
+      <charseq START="3131" END="3137">BLITZER</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E46-90" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2493" END="2493">I</charseq>
+    </extent>
+    <head>
+      <charseq START="2493" END="2493">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E46-109" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="413" END="415">you</charseq>
+    </extent>
+    <head>
+      <charseq START="413" END="415">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="BLITZER">
+      <charseq START="189" END="195">BLITZER</charseq>
+    </name>
+    <name NAME="BLITZER">
+      <charseq START="1322" END="1328">BLITZER</charseq>
+    </name>
+    <name NAME="BLITZER">
+      <charseq START="2420" END="2426">BLITZER</charseq>
+    </name>
+    <name NAME="BLITZER">
+      <charseq START="3131" END="3137">BLITZER</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_LE_20030504.1200.02-2-E47" TYPE="LOC" SUBTYPE="Celestial" CLASS="SPC">
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E47-39" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="998" END="1011">the Arab world</charseq>
+    </extent>
+    <head>
+      <charseq START="1007" END="1011">world</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_LE_20030504.1200.02-2-E48" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E48-27" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1301" END="1302">us</charseq>
+    </extent>
+    <head>
+      <charseq START="1301" END="1302">us</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_LE_20030504.1200.02-2-E48-87" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1538" END="1539">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1538" END="1539">we</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<value ID="CNN_LE_20030504.1200.02-2-V1" TYPE="Numeric" SUBTYPE="Money">
+  <value_mention ID="CNN_LE_20030504.1200.02-2-V1-1">
+    <extent>
+      <charseq START="1595" END="1606">$100 billion</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_LE_20030504.1200.02-2-V2" TYPE="Numeric" SUBTYPE="Money">
+  <value_mention ID="CNN_LE_20030504.1200.02-2-V2-1">
+    <extent>
+      <charseq START="1616" END="1627">$2.5 billion</charseq>
+    </extent>
+  </value_mention>
+</value>
+<timex2 ID="CNN_LE_20030504.1200.02-2-T1" VAL="2003-05-04T12:00:00-05">
+  <timex2_mention ID="CNN_LE_20030504.1200.02-2-T1-1">
+    <extent>
+      <charseq START="38" END="62">2003-05-04T12:00:00-05:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_LE_20030504.1200.02-2-T2" VAL="PRESENT_REF" ANCHOR_VAL="2003-05-04-T12:00:00-05" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_LE_20030504.1200.02-2-T2-1">
+    <extent>
+      <charseq START="647" END="655">presently</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_LE_20030504.1200.02-2-T3" VAL="2003-FA">
+  <timex2_mention ID="CNN_LE_20030504.1200.02-2-T3-1">
+    <extent>
+      <charseq START="1211" END="1218">the fall</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_LE_20030504.1200.02-2-T4" VAL="2003-05-04">
+  <timex2_mention ID="CNN_LE_20030504.1200.02-2-T4-1">
+    <extent>
+      <charseq START="1312" END="1316">today</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_LE_20030504.1200.02-2-T5" VAL="PRESENT_REF" ANCHOR_VAL="2003-05-04-T12:00:00-05" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_LE_20030504.1200.02-2-T5-1">
+    <extent>
+      <charseq START="1041" END="1054">for the moment</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_LE_20030504.1200.02-2-R1" TYPE="PART-WHOLE" SUBTYPE="Subsidiary" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_LE_20030504.1200.02-2-E36" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_LE_20030504.1200.02-2-E16" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_LE_20030504.1200.02-2-R1-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="227" END="239">U.S. military</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_LE_20030504.1200.02-2-E36-56" ROLE="Arg-1">
+      <extent>
+        <charseq START="227" END="239">U.S. military</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_LE_20030504.1200.02-2-E16-98" ROLE="Arg-2">
+      <extent>
+        <charseq START="227" END="229">U.S</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_LE_20030504.1200.02-2-R2" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_LE_20030504.1200.02-2-E42" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_LE_20030504.1200.02-2-E16" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_LE_20030504.1200.02-2-R2-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="301" END="328">large numbers of U.S. troops</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_LE_20030504.1200.02-2-E42-103" ROLE="Arg-1">
+      <extent>
+        <charseq START="301" END="328">large numbers of U.S. troops</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_LE_20030504.1200.02-2-E16-104" ROLE="Arg-2">
+      <extent>
+        <charseq START="318" END="320">U.S</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_LE_20030504.1200.02-2-R3" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="CNN_LE_20030504.1200.02-2-E42" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_LE_20030504.1200.02-2-E39" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_LE_20030504.1200.02-2-R3-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="274" END="346">How long do you anticipate large numbers of U.S. troops will
+remain there</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_LE_20030504.1200.02-2-E42-103" ROLE="Arg-1">
+      <extent>
+        <charseq START="301" END="328">large numbers of U.S. troops</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_LE_20030504.1200.02-2-E39-105" ROLE="Arg-2">
+      <extent>
+        <charseq START="342" END="346">there</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_LE_20030504.1200.02-2-R3-2" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="359" END="520">Well, I was heartened by what Secretary Rumsfeld told you in the last
+interview, that we will have troops there as long as necessary, but no
+longer than necessary</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_LE_20030504.1200.02-2-E42-111" ROLE="Arg-1">
+      <extent>
+        <charseq START="458" END="463">troops</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_LE_20030504.1200.02-2-E39-112" ROLE="Arg-2">
+      <extent>
+        <charseq START="465" END="469">there</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_LE_20030504.1200.02-2-R5" TYPE="ORG-AFF" SUBTYPE="Membership" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_LE_20030504.1200.02-2-E5" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_LE_20030504.1200.02-2-E6" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_LE_20030504.1200.02-2-R5-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="945" END="955">NATO allies</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_LE_20030504.1200.02-2-E5-11" ROLE="Arg-1">
+      <extent>
+        <charseq START="945" END="955">NATO allies</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_LE_20030504.1200.02-2-E6-12" ROLE="Arg-2">
+      <extent>
+        <charseq START="945" END="948">NATO</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_LE_20030504.1200.02-2-R6" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_LE_20030504.1200.02-2-E8" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_LE_20030504.1200.02-2-E47" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_LE_20030504.1200.02-2-R6-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="982" END="1011">other
+people in the Arab world</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_LE_20030504.1200.02-2-E8-14" ROLE="Arg-1">
+      <extent>
+        <charseq START="982" END="1011">other
+people in the Arab world</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_LE_20030504.1200.02-2-E47-39" ROLE="Arg-2">
+      <extent>
+        <charseq START="998" END="1011">the Arab world</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_LE_20030504.1200.02-2-R7" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_LE_20030504.1200.02-2-E15" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_LE_20030504.1200.02-2-E16" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_LE_20030504.1200.02-2-R7-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="1410" END="1423">U.S. taxpayers</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_LE_20030504.1200.02-2-E15-31" ROLE="Arg-1">
+      <extent>
+        <charseq START="1410" END="1423">U.S. taxpayers</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_LE_20030504.1200.02-2-E16-32" ROLE="Arg-2">
+      <extent>
+        <charseq START="1410" END="1412">U.S</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_LE_20030504.1200.02-2-R8" TYPE="ORG-AFF" SUBTYPE="Membership" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_LE_20030504.1200.02-2-E19" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_LE_20030504.1200.02-2-E18" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_LE_20030504.1200.02-2-R8-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="1956" END="1976">a civilian government</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_LE_20030504.1200.02-2-E19-40" ROLE="Arg-1">
+      <extent>
+        <charseq START="1958" END="1965">civilian</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_LE_20030504.1200.02-2-E18-38" ROLE="Arg-2">
+      <extent>
+        <charseq START="1956" END="1976">a civilian government</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_LE_20030504.1200.02-2-R9" TYPE="PART-WHOLE" SUBTYPE="Subsidiary" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="CNN_LE_20030504.1200.02-2-E18" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_LE_20030504.1200.02-2-E39" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_LE_20030504.1200.02-2-R9-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="1895" END="2183">Now, I would hope that sooner rather than later we
+could see a civilian government emerge in Iraq, a democratically elected
+one, that there'd be more cooperation from the international community,
+on both the peacekeeping side as well as the political restructuring
+that's necessary in Iraq</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_LE_20030504.1200.02-2-E18-38" ROLE="Arg-1">
+      <extent>
+        <charseq START="1956" END="1976">a civilian government</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_LE_20030504.1200.02-2-E39-41" ROLE="Arg-2">
+      <extent>
+        <charseq START="1988" END="1991">Iraq</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_LE_20030504.1200.02-2-R10" TYPE="ORG-AFF" SUBTYPE="Membership" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_LE_20030504.1200.02-2-E29" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_LE_20030504.1200.02-2-E28" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_LE_20030504.1200.02-2-R10-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="2748" END="2770">the Bush administration</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_LE_20030504.1200.02-2-E29-60" ROLE="Arg-1">
+      <extent>
+        <charseq START="2752" END="2755">Bush</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_LE_20030504.1200.02-2-E28-59" ROLE="Arg-2">
+      <extent>
+        <charseq START="2748" END="2770">the Bush administration</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_LE_20030504.1200.02-2-EV1" TYPE="Business" SUBTYPE="Start-Org" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_LE_20030504.1200.02-2-E18" ROLE="Org"/>
+  <event_argument REFID="CNN_LE_20030504.1200.02-2-E39" ROLE="Place"/>
+  <event_mention ID="CNN_LE_20030504.1200.02-2-EV1-1">
+    <extent>
+      <charseq START="1956" END="1991">a civilian government emerge in Iraq</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1895" END="2183">Now, I would hope that sooner rather than later we
+could see a civilian government emerge in Iraq, a democratically elected
+one, that there'd be more cooperation from the international community,
+on both the peacekeeping side as well as the political restructuring
+that's necessary in Iraq</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1978" END="1983">emerge</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_LE_20030504.1200.02-2-E18-38" ROLE="Org">
+      <extent>
+        <charseq START="1956" END="1976">a civilian government</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_LE_20030504.1200.02-2-E39-41" ROLE="Place">
+      <extent>
+        <charseq START="1988" END="1991">Iraq</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_LE_20030504.1200.02-2-EV2" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_LE_20030504.1200.02-2-E28" ROLE="Attacker"/>
+  <event_mention ID="CNN_LE_20030504.1200.02-2-EV2-1">
+    <extent>
+      <charseq START="2748" END="2776">the Bush administration's war</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2662" END="2809">And secondarily, what about countries like
+France, Germany, and Russia, which opposed the Bush administration's war
+plans, do you want them shut out</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2774" END="2776">war</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_LE_20030504.1200.02-2-E28-59" ROLE="Attacker">
+      <extent>
+        <charseq START="2748" END="2770">the Bush administration</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_LE_20030504.1200.02-2-EV3" TYPE="Contact" SUBTYPE="Phone-Write" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_LE_20030504.1200.02-2-E32" ROLE="Entity"/>
+  <event_argument REFID="CNN_LE_20030504.1200.02-2-E34" ROLE="Entity"/>
+  <event_mention ID="CNN_LE_20030504.1200.02-2-EV3-1">
+    <extent>
+      <charseq START="3294" END="3332">They'll also be taking your phone calls</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="3294" END="3332">They'll also be taking your phone calls</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="3328" END="3332">calls</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_LE_20030504.1200.02-2-E32-79" ROLE="Entity">
+      <extent>
+        <charseq START="3294" END="3297">They</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_LE_20030504.1200.02-2-E34-80" ROLE="Entity">
+      <extent>
+        <charseq START="3317" END="3320">your</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_LE_20030504.1200.02-2-EV4" TYPE="Personnel" SUBTYPE="Elect" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_mention ID="CNN_LE_20030504.1200.02-2-EV4-1">
+    <extent>
+      <charseq START="2011" END="2017">elected</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1895" END="2183">Now, I would hope that sooner rather than later we
+could see a civilian government emerge in Iraq, a democratically elected
+one, that there'd be more cooperation from the international community,
+on both the peacekeeping side as well as the political restructuring
+that's necessary in Iraq</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2011" END="2017">elected</charseq>
+    </anchor>
+  </event_mention>
+</event>
+</document>
+</source_file>

@@ -1,0 +1,342 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030624_140104.22.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030624_140104.22">
+<entity ID="CNN_ENG_20030624_140104.22-E1" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030624_140104.22-E1-1" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1233" END="1234">it</charseq>
+    </extent>
+    <head>
+      <charseq START="1233" END="1234">it</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030624_140104.22-E1-2" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1181" END="1213">chip maker advanced micro devices</charseq>
+    </extent>
+    <head>
+      <charseq START="1192" END="1213">advanced micro devices</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030624_140104.22-E1-24" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1216" END="1226">the company</charseq>
+    </extent>
+    <head>
+      <charseq START="1220" END="1226">company</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="advanced micro devices">
+      <charseq START="1192" END="1213">advanced micro devices</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030624_140104.22-E2" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030624_140104.22-E2-3" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1073" END="1088">the central bank</charseq>
+    </extent>
+    <head>
+      <charseq START="1085" END="1088">bank</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030624_140104.22-E3" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030624_140104.22-E3-4" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1383" END="1385">cnn</charseq>
+    </extent>
+    <head>
+      <charseq START="1383" END="1385">cnn</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="cnn">
+      <charseq START="1383" END="1385">cnn</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030624_140104.22-E4" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030624_140104.22-E4-5" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="606" END="629">peoria police department</charseq>
+    </extent>
+    <head>
+      <charseq START="620" END="629">department</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030624_140104.22-E5" TYPE="FAC" SUBTYPE="Path" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030624_140104.22-E5-6" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="851" END="861">wall street</charseq>
+    </extent>
+    <head>
+      <charseq START="851" END="861">wall street</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="wall street">
+      <charseq START="851" END="861">wall street</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030624_140104.22-E6" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030624_140104.22-E6-10" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="613" END="618">police</charseq>
+    </extent>
+    <head>
+      <charseq START="613" END="618">police</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030624_140104.22-E7" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030624_140104.22-E7-12" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="72" END="72">s</charseq>
+    </extent>
+    <head>
+      <charseq START="72" END="72">s</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030624_140104.22-E7-23" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1019" END="1020">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1019" END="1020">we</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030624_140104.22-E8" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030624_140104.22-E8-8" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="346" END="348">its</charseq>
+    </extent>
+    <head>
+      <charseq START="346" END="348">its</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030624_140104.22-E8-9" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="631" END="634">they</charseq>
+    </extent>
+    <head>
+      <charseq START="631" END="634">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030624_140104.22-E8-13" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="85" END="92">fidelity</charseq>
+    </extent>
+    <head>
+      <charseq START="85" END="92">fidelity</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030624_140104.22-E8-14" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="265" END="272">fidelity</charseq>
+    </extent>
+    <head>
+      <charseq START="265" END="272">fidelity</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030624_140104.22-E8-15" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="275" END="282">fidelity</charseq>
+    </extent>
+    <head>
+      <charseq START="275" END="282">fidelity</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="fidelity">
+      <charseq START="85" END="92">fidelity</charseq>
+    </name>
+    <name NAME="fidelity">
+      <charseq START="265" END="272">fidelity</charseq>
+    </name>
+    <name NAME="fidelity">
+      <charseq START="275" END="282">fidelity</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030624_140104.22-E9" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030624_140104.22-E9-16" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="546" END="558">new
+investors</charseq>
+    </extent>
+    <head>
+      <charseq START="550" END="558">investors</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030624_140104.22-E10" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030624_140104.22-E10-17" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="561" END="577">current investors</charseq>
+    </extent>
+    <head>
+      <charseq START="569" END="577">investors</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030624_140104.22-E11" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030624_140104.22-E11-11" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="504" END="511">magellan</charseq>
+    </extent>
+    <head>
+      <charseq START="504" END="511">magellan</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="magellan">
+      <charseq START="504" END="511">magellan</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030624_140104.22-E12" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030624_140104.22-E12-18" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="606" END="611">peoria</charseq>
+    </extent>
+    <head>
+      <charseq START="606" END="611">peoria</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="peoria">
+      <charseq START="606" END="611">peoria</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030624_140104.22-E13" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030624_140104.22-E13-19" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="517" END="530">new millennium</charseq>
+    </extent>
+    <head>
+      <charseq START="517" END="530">new millennium</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="new millennium">
+      <charseq START="517" END="530">new millennium</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030624_140104.22-E14" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030624_140104.22-E14-20" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="668" END="675">investor</charseq>
+    </extent>
+    <head>
+      <charseq START="668" END="675">investor</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030624_140104.22-E15" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030624_140104.22-E15-21" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="711" END="724">many
+investors</charseq>
+    </extent>
+    <head>
+      <charseq START="716" END="724">investors</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030624_140104.22-E16" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030624_140104.22-E16-7" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1053" END="1063">wall
+street</charseq>
+    </extent>
+    <head>
+      <charseq START="1053" END="1063">wall
+street</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030624_140104.22-E16-22" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="946" END="953">everyone</charseq>
+    </extent>
+    <head>
+      <charseq START="946" END="953">everyone</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="wall street">
+      <charseq START="1053" END="1063">wall
+street</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<value ID="CNN_ENG_20030624_140104.22-V1" TYPE="Numeric" SUBTYPE="Percent">
+  <value_mention ID="CNN_ENG_20030624_140104.22-V1-1">
+    <extent>
+      <charseq START="311" END="312">3%</charseq>
+    </extent>
+  </value_mention>
+</value>
+<timex2 ID="CNN_ENG_20030624_140104.22-T1" VAL="PRESENT_REF" ANCHOR_VAL="2003-06-24-T14:30:53" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_ENG_20030624_140104.22-T1-1">
+    <extent>
+      <charseq START="561" END="567">current</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030624_140104.22-T2" VAL="PRESENT_REF" ANCHOR_VAL="2003-06-24-T14:30:53" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_ENG_20030624_140104.22-T2-1">
+    <extent>
+      <charseq START="546" END="548">new</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030624_140104.22-T3" VAL="2003-06-24T14:30:53">
+  <timex2_mention ID="CNN_ENG_20030624_140104.22-T3-1">
+    <extent>
+      <charseq START="44" END="62">2003-06-24 14:30:53</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030624_140104.22-T4" VAL="2003-06-25">
+  <timex2_mention ID="CNN_ENG_20030624_140104.22-T4-1">
+    <extent>
+      <charseq START="1043" END="1050">tomorrow</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030624_140104.22-T5" VAL="2003-06-24TAF">
+  <timex2_mention ID="CNN_ENG_20030624_140104.22-T5-1">
+    <extent>
+      <charseq START="896" END="909">this afternoon</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030624_140104.22-R1" TYPE="PART-WHOLE" SUBTYPE="Subsidiary" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030624_140104.22-E4" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030624_140104.22-E12" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030624_140104.22-R1-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="606" END="629">peoria police department</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030624_140104.22-E4-5" ROLE="Arg-1">
+      <extent>
+        <charseq START="606" END="629">peoria police department</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030624_140104.22-E12-18" ROLE="Arg-2">
+      <extent>
+        <charseq START="606" END="611">peoria</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+</document>
+</source_file>

@@ -1,0 +1,1187 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030513_080020.2.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030513_080020.2">
+<entity ID="CNN_ENG_20030513_080020.2-E1" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E1-4" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="489" END="505">president khatami</charseq>
+    </extent>
+    <head>
+      <charseq START="499" END="505">khatami</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E1-5" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="489" END="497">president</charseq>
+    </extent>
+    <head>
+      <charseq START="489" END="497">president</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E1-8" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="590" END="591">he</charseq>
+    </extent>
+    <head>
+      <charseq START="590" END="591">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E1-9" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="607" END="608">he</charseq>
+    </extent>
+    <head>
+      <charseq START="607" END="608">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E1-25" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="934" END="940">khatami</charseq>
+    </extent>
+    <head>
+      <charseq START="934" END="940">khatami</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E1-26" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="968" END="969">he</charseq>
+    </extent>
+    <head>
+      <charseq START="968" END="969">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E1-44" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="1510" END="1526">president khatami</charseq>
+    </extent>
+    <head>
+      <charseq START="1520" END="1526">khatami</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E1-45" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1510" END="1518">president</charseq>
+    </extent>
+    <head>
+      <charseq START="1510" END="1518">president</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E1-64" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="295" END="301">khatami</charseq>
+    </extent>
+    <head>
+      <charseq START="295" END="301">khatami</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E1-65" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="304" END="324">the president of iran</charseq>
+    </extent>
+    <head>
+      <charseq START="308" END="316">president</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E1-67" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="332" END="333">he</charseq>
+    </extent>
+    <head>
+      <charseq START="332" END="333">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E1-69" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="364" END="366">him</charseq>
+    </extent>
+    <head>
+      <charseq START="364" END="366">him</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E1-71" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="379" END="381">his</charseq>
+    </extent>
+    <head>
+      <charseq START="379" END="381">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E1-72" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="430" END="432">his</charseq>
+    </extent>
+    <head>
+      <charseq START="430" END="432">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="khatami">
+      <charseq START="499" END="505">khatami</charseq>
+    </name>
+    <name NAME="khatami">
+      <charseq START="934" END="940">khatami</charseq>
+    </name>
+    <name NAME="khatami">
+      <charseq START="1520" END="1526">khatami</charseq>
+    </name>
+    <name NAME="khatami">
+      <charseq START="295" END="301">khatami</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030513_080020.2-E2" TYPE="ORG" SUBTYPE="Non-Governmental" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E2-13" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="695" END="703">hezbollah</charseq>
+    </extent>
+    <head>
+      <charseq START="695" END="703">hezbollah</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E2-14" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="706" END="714">hezbollah</charseq>
+    </extent>
+    <head>
+      <charseq START="706" END="714">hezbollah</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E2-15" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="719" END="805">an organization based
+in lebanon that has beenify dn dn been tied to terrorist activity</charseq>
+    </extent>
+    <head>
+      <charseq START="722" END="733">organization</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E2-16" TYPE="PRO" LDCTYPE="WHQ" LDCATR="TRUE">
+    <extent>
+      <charseq START="752" END="755">that</charseq>
+    </extent>
+    <head>
+      <charseq START="752" END="755">that</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E2-29" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1063" END="1071">hezbollah</charseq>
+    </extent>
+    <head>
+      <charseq START="1063" END="1071">hezbollah</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="hezbollah">
+      <charseq START="695" END="703">hezbollah</charseq>
+    </name>
+    <name NAME="hezbollah">
+      <charseq START="706" END="714">hezbollah</charseq>
+    </name>
+    <name NAME="hezbollah">
+      <charseq START="1063" END="1071">hezbollah</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030513_080020.2-E5" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E5-18" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="788" END="796">terrorist</charseq>
+    </extent>
+    <head>
+      <charseq START="788" END="796">terrorist</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E5-40" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1385" END="1393">terrorist</charseq>
+    </extent>
+    <head>
+      <charseq START="1385" END="1393">terrorist</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030513_080020.2-E6" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E6-19" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="811" END="822">peter bergen</charseq>
+    </extent>
+    <head>
+      <charseq START="811" END="822">peter bergen</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="peter bergen">
+      <charseq START="811" END="822">peter bergen</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030513_080020.2-E7" TYPE="ORG" SUBTYPE="Non-Governmental" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E7-21" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="834" END="848">saudi hezbollah</charseq>
+    </extent>
+    <head>
+      <charseq START="840" END="848">hezbollah</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E7-23" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="850" END="888">an organization working in that
+country</charseq>
+    </extent>
+    <head>
+      <charseq START="853" END="864">organization</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="hezbollah">
+      <charseq START="840" END="848">hezbollah</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030513_080020.2-E8" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E8-22" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="834" END="838">saudi</charseq>
+    </extent>
+    <head>
+      <charseq START="834" END="838">saudi</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E8-24" TYPE="NOM" LDCTYPE="NOM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="877" END="888">that
+country</charseq>
+    </extent>
+    <head>
+      <charseq START="882" END="888">country</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E8-50" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="1698" END="1709">saudi
+arabia</charseq>
+    </extent>
+    <head>
+      <charseq START="1698" END="1709">saudi
+arabia</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="saudi">
+      <charseq START="834" END="838">saudi</charseq>
+    </name>
+    <name NAME="saudi arabia">
+      <charseq START="1698" END="1709">saudi
+arabia</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030513_080020.2-E11" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E11-27" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1006" END="1019">president bush</charseq>
+    </extent>
+    <head>
+      <charseq START="1016" END="1019">bush</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E11-28" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="FALSE">
+    <extent>
+      <charseq START="1006" END="1014">president</charseq>
+    </extent>
+    <head>
+      <charseq START="1006" END="1014">president</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E11-48" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1573" END="1586">president bush</charseq>
+    </extent>
+    <head>
+      <charseq START="1583" END="1586">bush</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E11-49" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1573" END="1581">president</charseq>
+    </extent>
+    <head>
+      <charseq START="1573" END="1581">president</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E11-52" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1739" END="1751">the president</charseq>
+    </extent>
+    <head>
+      <charseq START="1743" END="1751">president</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="bush">
+      <charseq START="1016" END="1019">bush</charseq>
+    </name>
+    <name NAME="bush">
+      <charseq START="1583" END="1586">bush</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030513_080020.2-E13" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E13-30" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1119" END="1120">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1119" END="1120">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E13-34" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1209" END="1210">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1209" END="1210">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E13-43" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1468" END="1469">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1468" END="1469">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E13-54" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1763" END="1764">us</charseq>
+    </extent>
+    <head>
+      <charseq START="1763" END="1764">us</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E13-57" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="83" END="85">our</charseq>
+    </extent>
+    <head>
+      <charseq START="83" END="85">our</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030513_080020.2-E14" TYPE="GPE" SUBTYPE="GPE-Cluster" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E14-12" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="95" END="109">the middle east</charseq>
+    </extent>
+    <head>
+      <charseq START="99" END="109">middle east</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E14-31" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1144" END="1150">mideast</charseq>
+    </extent>
+    <head>
+      <charseq START="1144" END="1150">mideast</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E14-38" TYPE="NOM" LDCTYPE="NOM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="1283" END="1292">the region</charseq>
+    </extent>
+    <head>
+      <charseq START="1287" END="1292">region</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E14-42" TYPE="NOM" LDCTYPE="NOM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="1455" END="1465">that region</charseq>
+    </extent>
+    <head>
+      <charseq START="1460" END="1465">region</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E14-58" TYPE="PRO" LDCTYPE="PRO" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="1326" END="1330">there</charseq>
+    </extent>
+    <head>
+      <charseq START="1326" END="1330">there</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="middle east">
+      <charseq START="99" END="109">middle east</charseq>
+    </name>
+    <name NAME="mideast">
+      <charseq START="1144" END="1150">mideast</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030513_080020.2-E15" TYPE="GPE" SUBTYPE="Special" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E15-32" TYPE="NOM" LDCTYPE="BAR" ROLE="PER">
+    <extent>
+      <charseq START="1174" END="1185">palestinians</charseq>
+    </extent>
+    <head>
+      <charseq START="1174" END="1185">palestinians</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E15-39" TYPE="NOM" LDCTYPE="NOM" ROLE="ORG">
+    <extent>
+      <charseq START="1356" END="1371">the
+palestinians</charseq>
+    </extent>
+    <head>
+      <charseq START="1360" END="1371">palestinians</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E15-41" TYPE="PRO" LDCTYPE="PRO" ROLE="ORG">
+    <extent>
+      <charseq START="1431" END="1435">their</charseq>
+    </extent>
+    <head>
+      <charseq START="1431" END="1435">their</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030513_080020.2-E16" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E16-33" TYPE="NOM" LDCTYPE="BAR" ROLE="PER">
+    <extent>
+      <charseq START="1191" END="1198">israelis</charseq>
+    </extent>
+    <head>
+      <charseq START="1191" END="1198">israelis</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030513_080020.2-E17" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E17-35" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1228" END="1258">secretary of state colin powell</charseq>
+    </extent>
+    <head>
+      <charseq START="1247" END="1258">colin powell</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E17-36" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1228" END="1245">secretary of state</charseq>
+    </extent>
+    <head>
+      <charseq START="1228" END="1236">secretary</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="colin powell">
+      <charseq START="1247" END="1258">colin powell</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030513_080020.2-E19" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E19-37" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1241" END="1245">state</charseq>
+    </extent>
+    <head>
+      <charseq START="1241" END="1245">state</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030513_080020.2-E23" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E23-51" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1712" END="1722">chris burns</charseq>
+    </extent>
+    <head>
+      <charseq START="1712" END="1722">chris burns</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E23-53" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1754" END="1755">he</charseq>
+    </extent>
+    <head>
+      <charseq START="1754" END="1755">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E23-56" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1789" END="1793">chris</charseq>
+    </extent>
+    <head>
+      <charseq START="1789" END="1793">chris</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="chris burns">
+      <charseq START="1712" END="1722">chris burns</charseq>
+    </name>
+    <name NAME="chris">
+      <charseq START="1789" END="1793">chris</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030513_080020.2-E24" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E24-55" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="1771" END="1782">indianapolis</charseq>
+    </extent>
+    <head>
+      <charseq START="1771" END="1782">indianapolis</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="indianapolis">
+      <charseq START="1771" END="1782">indianapolis</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030513_080020.2-E26" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E26-1" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="130" END="165">a
+massive assembly of shiite muslims</charseq>
+    </extent>
+    <head>
+      <charseq START="159" END="165">muslims</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E26-2" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="478" END="486">the crowd</charseq>
+    </extent>
+    <head>
+      <charseq START="482" END="486">crowd</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E26-10" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="620" END="629">this crowd</charseq>
+    </extent>
+    <head>
+      <charseq START="625" END="629">crowd</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E26-62" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="256" END="259">they</charseq>
+    </extent>
+    <head>
+      <charseq START="256" END="259">they</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030513_080020.2-E27" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E27-6" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="513" END="518">beirut</charseq>
+    </extent>
+    <head>
+      <charseq START="513" END="518">beirut</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E27-7" TYPE="PRO" LDCTYPE="PRO" ROLE="LOC">
+    <extent>
+      <charseq START="541" END="544">here</charseq>
+    </extent>
+    <head>
+      <charseq START="541" END="544">here</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E27-46" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="1545" END="1559">beirut, lebanon</charseq>
+    </extent>
+    <head>
+      <charseq START="1545" END="1550">beirut</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E27-61" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="191" END="196">beirut</charseq>
+    </extent>
+    <head>
+      <charseq START="191" END="196">beirut</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E27-63" TYPE="PRO" LDCTYPE="PRO" ROLE="LOC">
+    <extent>
+      <charseq START="274" END="278">there</charseq>
+    </extent>
+    <head>
+      <charseq START="274" END="278">there</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="beirut">
+      <charseq START="513" END="518">beirut</charseq>
+    </name>
+    <name NAME="beirut">
+      <charseq START="1545" END="1550">beirut</charseq>
+    </name>
+    <name NAME="beirut">
+      <charseq START="191" END="196">beirut</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030513_080020.2-E28" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E28-60" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1309" END="1330">regional leaders there</charseq>
+    </extent>
+    <head>
+      <charseq START="1318" END="1324">leaders</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030513_080020.2-E29" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E29-3" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="199" END="205">lebanon</charseq>
+    </extent>
+    <head>
+      <charseq START="199" END="205">lebanon</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E29-17" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="744" END="750">lebanon</charseq>
+    </extent>
+    <head>
+      <charseq START="744" END="750">lebanon</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E29-47" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="1553" END="1559">lebanon</charseq>
+    </extent>
+    <head>
+      <charseq START="1553" END="1559">lebanon</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="lebanon">
+      <charseq START="199" END="205">lebanon</charseq>
+    </name>
+    <name NAME="lebanon">
+      <charseq START="744" END="750">lebanon</charseq>
+    </name>
+    <name NAME="lebanon">
+      <charseq START="1553" END="1559">lebanon</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030513_080020.2-E32" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E32-11" TYPE="NAM" LDCTYPE="NAM" ROLE="ORG">
+    <extent>
+      <charseq START="632" END="635">iran</charseq>
+    </extent>
+    <head>
+      <charseq START="632" END="635">iran</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E32-66" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE">
+    <extent>
+      <charseq START="321" END="324">iran</charseq>
+    </extent>
+    <head>
+      <charseq START="321" END="324">iran</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="iran">
+      <charseq START="632" END="635">iran</charseq>
+    </name>
+    <name NAME="iran">
+      <charseq START="321" END="324">iran</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030513_080020.2-E33" TYPE="PER" SUBTYPE="Indeterminate" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E33-68" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="356" END="358">you</charseq>
+    </extent>
+    <head>
+      <charseq START="356" END="358">you</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030513_080020.2-E34" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_080020.2-E34-70" TYPE="NAM" LDCTYPE="NAM" ROLE="ORG">
+    <extent>
+      <charseq START="660" END="666">the u.s</charseq>
+    </extent>
+    <head>
+      <charseq START="664" END="666">u.s</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="u.s">
+      <charseq START="664" END="666">u.s</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<timex2 ID="CNN_ENG_20030513_080020.2-T1" VAL="2003-05-13T10:12:41">
+  <timex2_mention ID="CNN_ENG_20030513_080020.2-T1-1">
+    <extent>
+      <charseq START="43" END="61">2003-05-13 10:12:41</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030513_080020.2-T2" VAL="2003-05-13T10:12:41">
+  <timex2_mention ID="CNN_ENG_20030513_080020.2-T2-1">
+    <extent>
+      <charseq START="67" END="75">right now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030513_080020.2-T3" VAL="2003-05-13T10:12:41">
+  <timex2_mention ID="CNN_ENG_20030513_080020.2-T3-1">
+    <extent>
+      <charseq START="170" END="172">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030513_080020.2-T4" VAL="2003-05-13T10:12:41">
+  <timex2_mention ID="CNN_ENG_20030513_080020.2-T4-1">
+    <extent>
+      <charseq START="327" END="329">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030513_080020.2-T5" VAL="2003-05-13">
+  <timex2_mention ID="CNN_ENG_20030513_080020.2-T5-1">
+    <extent>
+      <charseq START="1596" END="1600">today</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030513_080020.2-T6" VAL="2003-05-13T10:12:41">
+  <timex2_mention ID="CNN_ENG_20030513_080020.2-T6-1">
+    <extent>
+      <charseq START="637" END="639">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030513_080020.2-R1" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030513_080020.2-E27" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030513_080020.2-E29" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030513_080020.2-R1-1" LEXICALCONDITION="Formulaic">
+    <extent>
+      <charseq START="191" END="205">beirut,
+lebanon</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030513_080020.2-E27-61" ROLE="Arg-1">
+      <extent>
+        <charseq START="191" END="196">beirut</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030513_080020.2-E29-3" ROLE="Arg-2">
+      <extent>
+        <charseq START="199" END="205">lebanon</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_ENG_20030513_080020.2-R1-2" LEXICALCONDITION="Formulaic">
+    <extent>
+      <charseq START="1545" END="1559">beirut, lebanon</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030513_080020.2-E27-46" ROLE="Arg-1">
+      <extent>
+        <charseq START="1545" END="1559">beirut, lebanon</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030513_080020.2-E29-47" ROLE="Arg-2">
+      <extent>
+        <charseq START="1553" END="1559">lebanon</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030513_080020.2-R2" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030513_080020.2-E26" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030513_080020.2-E27" ROLE="Arg-2"/>
+  <relation_argument REFID="CNN_ENG_20030513_080020.2-T3" ROLE="Time-Holds"/>
+  <relation_mention ID="CNN_ENG_20030513_080020.2-R2-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="67" END="205">right now, cast our eyes to the middle east, getting word that a
+massive assembly of shiite muslims is now come together in beirut,
+lebanon</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030513_080020.2-E26-1" ROLE="Arg-1">
+      <extent>
+        <charseq START="130" END="165">a
+massive assembly of shiite muslims</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030513_080020.2-E27-61" ROLE="Arg-2">
+      <extent>
+        <charseq START="191" END="196">beirut</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030513_080020.2-T3-1" ROLE="Time-Holds">
+      <extent>
+        <charseq START="170" END="172">now</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030513_080020.2-R3" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030513_080020.2-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030513_080020.2-E32" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030513_080020.2-R3-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="304" END="324">the president of iran</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030513_080020.2-E1-65" ROLE="Arg-1">
+      <extent>
+        <charseq START="304" END="324">the president of iran</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030513_080020.2-E32-66" ROLE="Arg-2">
+      <extent>
+        <charseq START="321" END="324">iran</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030513_080020.2-R4" TYPE="PHYS" SUBTYPE="Located" TENSE="Present" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030513_080020.2-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030513_080020.2-E27" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030513_080020.2-R4-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="489" END="629">president khatami is in beirut and what is
+observed here is very closely watched, what kind of words he'll utter
+when he speaks to this crowd</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030513_080020.2-E1-4" ROLE="Arg-1">
+      <extent>
+        <charseq START="489" END="505">president khatami</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030513_080020.2-E27-6" ROLE="Arg-2">
+      <extent>
+        <charseq START="513" END="518">beirut</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_ENG_20030513_080020.2-R4-2" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="1468" END="1559">we'll watch and listening very
+closely to president khatami's visit there in beirut, lebanon</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030513_080020.2-E1-44" ROLE="Arg-1">
+      <extent>
+        <charseq START="1510" END="1526">president khatami</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030513_080020.2-E27-46" ROLE="Arg-2">
+      <extent>
+        <charseq START="1545" END="1559">beirut, lebanon</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030513_080020.2-R5" TYPE="GEN-AFF" SUBTYPE="Org-Location" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030513_080020.2-E2" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030513_080020.2-E29" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030513_080020.2-R5-1" LEXICALCONDITION="Participial">
+    <extent>
+      <charseq START="719" END="805">an organization based
+in lebanon that has beenify dn dn been tied to terrorist activity</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030513_080020.2-E2-15" ROLE="Arg-1">
+      <extent>
+        <charseq START="719" END="805">an organization based
+in lebanon that has beenify dn dn been tied to terrorist activity</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030513_080020.2-E29-17" ROLE="Arg-2">
+      <extent>
+        <charseq START="744" END="750">lebanon</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030513_080020.2-R6" TYPE="GEN-AFF" SUBTYPE="Org-Location" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030513_080020.2-E7" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030513_080020.2-E8" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030513_080020.2-R6-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="834" END="848">saudi hezbollah</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030513_080020.2-E7-21" ROLE="Arg-1">
+      <extent>
+        <charseq START="834" END="848">saudi hezbollah</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030513_080020.2-E8-22" ROLE="Arg-2">
+      <extent>
+        <charseq START="834" END="838">saudi</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_ENG_20030513_080020.2-R6-2" LEXICALCONDITION="Participial">
+    <extent>
+      <charseq START="850" END="888">an organization working in that
+country</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030513_080020.2-E7-23" ROLE="Arg-1">
+      <extent>
+        <charseq START="850" END="888">an organization working in that
+country</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030513_080020.2-E8-24" ROLE="Arg-2">
+      <extent>
+        <charseq START="877" END="888">that
+country</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030513_080020.2-R9" TYPE="PHYS" SUBTYPE="Located" TENSE="Present" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030513_080020.2-E23" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030513_080020.2-E24" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030513_080020.2-R9-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="1712" END="1782">chris burns traveling with the president, he joins us from
+indianapolis</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030513_080020.2-E23-53" ROLE="Arg-1">
+      <extent>
+        <charseq START="1754" END="1755">he</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030513_080020.2-E24-55" ROLE="Arg-2">
+      <extent>
+        <charseq START="1771" END="1782">indianapolis</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030513_080020.2-R10" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030513_080020.2-E17" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030513_080020.2-E19" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030513_080020.2-R10-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="1228" END="1245">secretary of state</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030513_080020.2-E17-36" ROLE="Arg-1">
+      <extent>
+        <charseq START="1228" END="1245">secretary of state</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030513_080020.2-E19-37" ROLE="Arg-2">
+      <extent>
+        <charseq START="1241" END="1245">state</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030513_080020.2-R11" TYPE="PHYS" SUBTYPE="Located" TENSE="Present" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030513_080020.2-E17" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030513_080020.2-E14" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030513_080020.2-R11-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="1209" END="1465">we are seeing that
+secretary of state colin powell also traveling through the region,
+trying to get regional leaders there to put more pressure on the
+palestinians to stop any terrorist activities that may be happening on
+their behalf as well in that region</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030513_080020.2-E17-35" ROLE="Arg-1">
+      <extent>
+        <charseq START="1228" END="1258">secretary of state colin powell</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030513_080020.2-E14-38" ROLE="Arg-2">
+      <extent>
+        <charseq START="1283" END="1292">the region</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030513_080020.2-R12" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030513_080020.2-E28" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030513_080020.2-E14" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030513_080020.2-R12-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="1309" END="1330">regional leaders there</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030513_080020.2-E28-60" ROLE="Arg-1">
+      <extent>
+        <charseq START="1309" END="1330">regional leaders there</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030513_080020.2-E14-58" ROLE="Arg-2">
+      <extent>
+        <charseq START="1326" END="1330">there</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030513_080020.2-EV1" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030513_080020.2-E1" ROLE="Artifact"/>
+  <event_argument REFID="CNN_ENG_20030513_080020.2-E27" ROLE="Destination"/>
+  <event_argument REFID="CNN_ENG_20030513_080020.2-E29" ROLE="Destination"/>
+  <event_argument REFID="CNN_ENG_20030513_080020.2-T4" ROLE="Time-Within"/>
+  <event_mention ID="CNN_ENG_20030513_080020.2-EV1-1">
+    <extent>
+      <charseq START="274" END="301">there the arrival of khatami</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="208" END="324">this is a rather remarkable arrangement because they are
+cheering there the arrival of khatami, the president of iran</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="284" END="290">arrival</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030513_080020.2-E1-64" ROLE="Artifact">
+      <extent>
+        <charseq START="295" END="301">khatami</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030513_080020.2-E27-63" ROLE="Destination">
+      <extent>
+        <charseq START="274" END="278">there</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030513_080020.2-EV1-2">
+    <extent>
+      <charseq START="327" END="350">now, he
+is making a trip</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="327" END="486">now, he
+is making a trip and you see him there with his hands raised, there
+with the cloak on, shaking his fists, hands classped there, in a
+salute to the crowd</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="347" END="350">trip</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030513_080020.2-E1-67" ROLE="Artifact">
+      <extent>
+        <charseq START="332" END="333">he</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030513_080020.2-T4-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="327" END="329">now</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030513_080020.2-EV1-3">
+    <extent>
+      <charseq START="1510" END="1559">president khatami's visit there in beirut, lebanon</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1468" END="1559">we'll watch and listening very
+closely to president khatami's visit there in beirut, lebanon</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1530" END="1534">visit</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030513_080020.2-E1-44" ROLE="Artifact">
+      <extent>
+        <charseq START="1510" END="1526">president khatami</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030513_080020.2-E27-46" ROLE="Destination">
+      <extent>
+        <charseq START="1545" END="1559">beirut, lebanon</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030513_080020.2-E29-47" ROLE="Destination">
+      <extent>
+        <charseq START="1553" END="1559">lebanon</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030513_080020.2-EV2" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Generic" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030513_080020.2-E2" ROLE="Attacker"/>
+  <event_mention ID="CNN_ENG_20030513_080020.2-EV2-1">
+    <extent>
+      <charseq START="719" END="805">an organization based
+in lebanon that has beenify dn dn been tied to terrorist activity</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="706" END="888">hezbollah is an organization based
+in lebanon that has beenify dn dn been tied to terrorist activity and
+peter bergen mentioned saudi hezbollah an organization working in that
+country</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="798" END="805">activity</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030513_080020.2-E2-15" ROLE="Attacker">
+      <extent>
+        <charseq START="719" END="805">an organization based
+in lebanon that has beenify dn dn been tied to terrorist activity</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030513_080020.2-EV3" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030513_080020.2-E14" ROLE="Place"/>
+  <event_mention ID="CNN_ENG_20030513_080020.2-EV3-1">
+    <extent>
+      <charseq START="1395" END="1465">activities that may be happening on
+their behalf as well in that region</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1209" END="1465">we are seeing that
+secretary of state colin powell also traveling through the region,
+trying to get regional leaders there to put more pressure on the
+palestinians to stop any terrorist activities that may be happening on
+their behalf as well in that region</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1395" END="1404">activities</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030513_080020.2-E14-42" ROLE="Place">
+      <extent>
+        <charseq START="1455" END="1465">that region</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030513_080020.2-EV4" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Present">
+  <event_argument REFID="CNN_ENG_20030513_080020.2-E17" ROLE="Artifact"/>
+  <event_argument REFID="CNN_ENG_20030513_080020.2-E14" ROLE="Destination"/>
+  <event_mention ID="CNN_ENG_20030513_080020.2-EV4-1">
+    <extent>
+      <charseq START="1228" END="1292">secretary of state colin powell also traveling through the region</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1209" END="1465">we are seeing that
+secretary of state colin powell also traveling through the region,
+trying to get regional leaders there to put more pressure on the
+palestinians to stop any terrorist activities that may be happening on
+their behalf as well in that region</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1265" END="1273">traveling</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030513_080020.2-E17-35" ROLE="Artifact">
+      <extent>
+        <charseq START="1228" END="1258">secretary of state colin powell</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030513_080020.2-E14-38" ROLE="Destination">
+      <extent>
+        <charseq START="1283" END="1292">the region</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

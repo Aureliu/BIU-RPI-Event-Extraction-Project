@@ -1,0 +1,1143 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030513_160506.16.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030513_160506.16">
+<entity ID="CNN_ENG_20030513_160506.16-E1" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E1-2" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="518" END="530">a texas woman</charseq>
+    </extent>
+    <head>
+      <charseq START="526" END="530">woman</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E1-6" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="575" END="577">her</charseq>
+    </extent>
+    <head>
+      <charseq START="575" END="577">her</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E1-8" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="656" END="677">a silent dee ana laney</charseq>
+    </extent>
+    <head>
+      <charseq START="665" END="677">dee ana laney</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E1-10" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="724" END="726">her</charseq>
+    </extent>
+    <head>
+      <charseq START="724" END="726">her</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="dee ana laney">
+      <charseq START="665" END="677">dee ana laney</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030513_160506.16-E2" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E2-3" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="520" END="524">texas</charseq>
+    </extent>
+    <head>
+      <charseq START="520" END="524">texas</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="texas">
+      <charseq START="520" END="524">texas</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030513_160506.16-E3" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E3-4" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="538" END="541">jail</charseq>
+    </extent>
+    <head>
+      <charseq START="538" END="541">jail</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030513_160506.16-E4" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E4-5" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="575" END="586">her two sons</charseq>
+    </extent>
+    <head>
+      <charseq START="583" END="586">sons</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030513_160506.16-E5" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E5-7" TYPE="PRO" LDCTYPE="HLS">
+    <extent>
+      <charseq START="609" END="615">another</charseq>
+    </extent>
+    <head>
+      <charseq START="609" END="615">another</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030513_160506.16-E6" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E6-9" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="689" END="697">the judge</charseq>
+    </extent>
+    <head>
+      <charseq START="693" END="697">judge</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030513_160506.16-E7" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E7-11" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="775" END="819">the first people to arrive at the crime
+scene</charseq>
+    </extent>
+    <head>
+      <charseq START="785" END="790">people</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030513_160506.16-E8" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E8-12" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="967" END="990">the sheriff's department</charseq>
+    </extent>
+    <head>
+      <charseq START="981" END="990">department</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E8-15" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1118" END="1121">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1118" END="1121">they</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030513_160506.16-E9" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E9-13" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="967" END="977">the sheriff</charseq>
+    </extent>
+    <head>
+      <charseq START="971" END="977">sheriff</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030513_160506.16-E10" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E10-14" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1063" END="1064">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1063" END="1064">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E10-16" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1145" END="1146">us</charseq>
+    </extent>
+    <head>
+      <charseq START="1145" END="1146">us</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E10-35" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1070" END="1077">the ones</charseq>
+    </extent>
+    <head>
+      <charseq START="1074" END="1077">ones</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E10-36" TYPE="PRO" LDCTYPE="WHQ" LDCATR="FALSE">
+    <extent>
+      <charseq START="1079" END="1082">that</charseq>
+    </extent>
+    <head>
+      <charseq START="1079" END="1082">that</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E10-46" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="1038" END="1061">the justice of the peace</charseq>
+    </extent>
+    <head>
+      <charseq START="1042" END="1061">justice of the peace</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030513_160506.16-E11" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E11-17" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1227" END="1229">you</charseq>
+    </extent>
+    <head>
+      <charseq START="1227" END="1229">you</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030513_160506.16-E12" TYPE="PER" SUBTYPE="Indeterminate" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E12-18" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1334" END="1340">anybody</charseq>
+    </extent>
+    <head>
+      <charseq START="1334" END="1340">anybody</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E12-19" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1377" END="1380">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1377" END="1380">they</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030513_160506.16-E13" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E13-20" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1491" END="1492">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1491" END="1492">we</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030513_160506.16-E14" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E14-21" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1614" END="1617">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1614" END="1617">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E14-22" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1663" END="1693">the law enforcement
+authorities</charseq>
+    </extent>
+    <head>
+      <charseq START="1683" END="1693">authorities</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E14-24" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1698" END="1701">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1698" END="1701">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E14-25" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1723" END="1727">their</charseq>
+    </extent>
+    <head>
+      <charseq START="1723" END="1727">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E14-26" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1771" END="1774">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1771" END="1774">they</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030513_160506.16-E15" TYPE="ORG" SUBTYPE="Government" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E15-23" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="1667" END="1681">law enforcement</charseq>
+    </extent>
+    <head>
+      <charseq START="1671" END="1681">enforcement</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030513_160506.16-E16" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E16-1" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="71" END="72">we</charseq>
+    </extent>
+    <head>
+      <charseq START="71" END="72">we</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030513_160506.16-E17" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E17-27" TYPE="PRO" LDCTYPE="PTV" LDCATR="FALSE">
+    <extent>
+      <charseq START="768" END="819">one of the first people to arrive at the crime
+scene</charseq>
+    </extent>
+    <head>
+      <charseq START="768" END="770">one</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E17-29" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="822" END="838">judge james marin</charseq>
+    </extent>
+    <head>
+      <charseq START="828" END="838">james marin</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E17-30" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="822" END="826">judge</charseq>
+    </extent>
+    <head>
+      <charseq START="822" END="826">judge</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E17-31" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="868" END="870">you</charseq>
+    </extent>
+    <head>
+      <charseq START="868" END="870">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E17-32" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="892" END="892">i</charseq>
+    </extent>
+    <head>
+      <charseq START="892" END="892">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E17-33" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="928" END="928">i</charseq>
+    </extent>
+    <head>
+      <charseq START="928" END="928">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E17-34" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1010" END="1012">you</charseq>
+    </extent>
+    <head>
+      <charseq START="1010" END="1012">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E17-37" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1173" END="1175">you</charseq>
+    </extent>
+    <head>
+      <charseq START="1173" END="1175">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E17-38" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1186" END="1188">you</charseq>
+    </extent>
+    <head>
+      <charseq START="1186" END="1188">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E17-39" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1232" END="1232">i</charseq>
+    </extent>
+    <head>
+      <charseq START="1232" END="1232">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E17-40" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1266" END="1266">i</charseq>
+    </extent>
+    <head>
+      <charseq START="1266" END="1266">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E17-41" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1445" END="1447">you</charseq>
+    </extent>
+    <head>
+      <charseq START="1445" END="1447">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E17-42" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1573" END="1576">your</charseq>
+    </extent>
+    <head>
+      <charseq START="1573" END="1576">your</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E17-43" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1647" END="1649">you</charseq>
+    </extent>
+    <head>
+      <charseq START="1647" END="1649">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E17-44" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1759" END="1759">i</charseq>
+    </extent>
+    <head>
+      <charseq START="1759" END="1759">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E17-45" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1783" END="1784">me</charseq>
+    </extent>
+    <head>
+      <charseq START="1783" END="1784">me</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="james marin">
+      <charseq START="828" END="838">james marin</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030513_160506.16-E20" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E20-47" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="1578" END="1587">eyewitness</charseq>
+    </extent>
+    <head>
+      <charseq START="1578" END="1587">eyewitness</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030513_160506.16-E21" TYPE="PER" SUBTYPE="Indeterminate" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E21-28" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="79" END="81">you</charseq>
+    </extent>
+    <head>
+      <charseq START="79" END="81">you</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030513_160506.16-E22" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E22-48" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="112" END="128">an oklahoma judge</charseq>
+    </extent>
+    <head>
+      <charseq START="124" END="128">judge</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E22-58" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="442" END="515">the judge whose decision came as
+prosecutes were still presenting evidence</charseq>
+    </extent>
+    <head>
+      <charseq START="446" END="450">judge</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E22-59" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="452" END="456">whose</charseq>
+    </extent>
+    <head>
+      <charseq START="452" END="456">whose</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030513_160506.16-E23" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E23-49" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="115" END="122">oklahoma</charseq>
+    </extent>
+    <head>
+      <charseq START="115" END="122">oklahoma</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E23-52" TYPE="NOM" LDCTYPE="NOMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="191" END="195">state</charseq>
+    </extent>
+    <head>
+      <charseq START="191" END="195">state</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E23-57" TYPE="NOM" LDCTYPE="NOMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="329" END="333">state</charseq>
+    </extent>
+    <head>
+      <charseq START="329" END="333">state</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="oklahoma">
+      <charseq START="115" END="122">oklahoma</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030513_160506.16-E24" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E24-50" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="145" END="157">terry nichols</charseq>
+    </extent>
+    <head>
+      <charseq START="145" END="157">terry nichols</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E24-53" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="241" END="277">the oklahoma city bombing
+conspirator</charseq>
+    </extent>
+    <head>
+      <charseq START="267" END="277">conspirator</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E24-56" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="380" END="386">nichols</charseq>
+    </extent>
+    <head>
+      <charseq START="380" END="386">nichols</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="terry nichols">
+      <charseq START="145" END="157">terry nichols</charseq>
+    </name>
+    <name NAME="nichols">
+      <charseq START="380" END="386">nichols</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030513_160506.16-E25" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E25-51" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="186" END="201">that state court</charseq>
+    </extent>
+    <head>
+      <charseq START="197" END="201">court</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030513_160506.16-E27" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E27-54" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="245" END="257">oklahoma city</charseq>
+    </extent>
+    <head>
+      <charseq START="245" END="257">oklahoma city</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="oklahoma city">
+      <charseq START="245" END="257">oklahoma city</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030513_160506.16-E28" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E28-55" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="313" END="326">federal prison</charseq>
+    </extent>
+    <head>
+      <charseq START="321" END="326">prison</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030513_160506.16-E30" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030513_160506.16-E30-60" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="475" END="484">prosecutes</charseq>
+    </extent>
+    <head>
+      <charseq START="475" END="484">prosecutes</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<value ID="CNN_ENG_20030513_160506.16-V1" TYPE="Crime">
+  <value_mention ID="CNN_ENG_20030513_160506.16-V1-1">
+    <extent>
+      <charseq START="206" END="238">160 counts of first-degree murder</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_ENG_20030513_160506.16-V2" TYPE="Sentence">
+  <value_mention ID="CNN_ENG_20030513_160506.16-V2-1">
+    <extent>
+      <charseq START="298" END="326">a life term in federal prison</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_ENG_20030513_160506.16-V3" TYPE="Sentence">
+  <value_mention ID="CNN_ENG_20030513_160506.16-V3-1">
+    <extent>
+      <charseq START="359" END="375">the death penalty</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_ENG_20030513_160506.16-V4" TYPE="Crime">
+  <value_mention ID="CNN_ENG_20030513_160506.16-V4-1">
+    <extent>
+      <charseq START="729" END="765">capital murder and
+aggravated assault</charseq>
+    </extent>
+  </value_mention>
+</value>
+<timex2 ID="CNN_ENG_20030513_160506.16-T1" VAL="XXXX-XX-XX">
+  <timex2_mention ID="CNN_ENG_20030513_160506.16-T1-1">
+    <extent>
+      <charseq START="404" END="413">trial date</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030513_160506.16-T2">
+  <timex2_mention ID="CNN_ENG_20030513_160506.16-T2-1">
+    <extent>
+      <charseq START="300" END="308">life term</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030513_160506.16-T3" VAL="XXXX-XX-XX">
+  <timex2_mention ID="CNN_ENG_20030513_160506.16-T3-1">
+    <extent>
+      <charseq START="617" END="643">the day before mother's day</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030513_160506.16-T4" VAL="PAST_REF" ANCHOR_VAL="2003-05-13T17" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="CNN_ENG_20030513_160506.16-T4-1">
+    <extent>
+      <charseq START="949" END="994">a few hours
+after the sheriff's department did</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030513_160506.16-T5" VAL="2003-05-13T17:31:19">
+  <timex2_mention ID="CNN_ENG_20030513_160506.16-T5-1">
+    <extent>
+      <charseq START="44" END="62">2003-05-13 17:31:19</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030513_160506.16-T6" VAL="2003-05-13TMO">
+  <timex2_mention ID="CNN_ENG_20030513_160506.16-T6-1">
+    <extent>
+      <charseq START="543" END="554">this morning</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030513_160506.16-T7" VAL="2003-05-12">
+  <timex2_mention ID="CNN_ENG_20030513_160506.16-T7-1">
+    <extent>
+      <charseq START="646" END="654">yesterday</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030513_160506.16-T8" VAL="PXD" ANCHOR_VAL="2003-05-13" ANCHOR_DIR="ENDING">
+  <timex2_mention ID="CNN_ENG_20030513_160506.16-T8-1">
+    <extent>
+      <charseq START="1309" END="1325">the last few days</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030513_160506.16-R1" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030513_160506.16-E22" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030513_160506.16-E23" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030513_160506.16-R1-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="112" END="128">an oklahoma judge</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030513_160506.16-E22-48" ROLE="Arg-1">
+      <extent>
+        <charseq START="112" END="128">an oklahoma judge</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030513_160506.16-E23-49" ROLE="Arg-2">
+      <extent>
+        <charseq START="115" END="122">oklahoma</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030513_160506.16-R2" TYPE="PART-WHOLE" SUBTYPE="Subsidiary" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030513_160506.16-E25" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030513_160506.16-E23" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030513_160506.16-R2-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="186" END="201">that state court</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030513_160506.16-E25-51" ROLE="Arg-1">
+      <extent>
+        <charseq START="186" END="201">that state court</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030513_160506.16-E23-52" ROLE="Arg-2">
+      <extent>
+        <charseq START="191" END="195">state</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030513_160506.16-R3" TYPE="PHYS" SUBTYPE="Located" TENSE="Present" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030513_160506.16-E24" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030513_160506.16-E28" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030513_160506.16-R3-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="241" END="326">the oklahoma city bombing
+conspirator is already serving a life term in federal prison</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030513_160506.16-E24-53" ROLE="Arg-1">
+      <extent>
+        <charseq START="241" END="277">the oklahoma city bombing
+conspirator</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030513_160506.16-E28-55" ROLE="Arg-2">
+      <extent>
+        <charseq START="313" END="326">federal prison</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030513_160506.16-R4" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030513_160506.16-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030513_160506.16-E2" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030513_160506.16-R4-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="518" END="530">a texas woman</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030513_160506.16-E1-2" ROLE="Arg-1">
+      <extent>
+        <charseq START="518" END="530">a texas woman</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030513_160506.16-E2-3" ROLE="Arg-2">
+      <extent>
+        <charseq START="520" END="524">texas</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030513_160506.16-R5" TYPE="PHYS" SUBTYPE="Located" TENSE="Present" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030513_160506.16-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030513_160506.16-E3" ROLE="Arg-2"/>
+  <relation_argument REFID="CNN_ENG_20030513_160506.16-T6" ROLE="Time-Within"/>
+  <relation_mention ID="CNN_ENG_20030513_160506.16-R5-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="518" END="643">a texas woman is in jail
+this morning accused of killing her two sons and severely beating
+another the day before mother's day</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030513_160506.16-E1-2" ROLE="Arg-1">
+      <extent>
+        <charseq START="518" END="530">a texas woman</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030513_160506.16-E3-4" ROLE="Arg-2">
+      <extent>
+        <charseq START="538" END="541">jail</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030513_160506.16-T6-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="543" END="554">this morning</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030513_160506.16-R6" TYPE="PER-SOC" SUBTYPE="Family" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030513_160506.16-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030513_160506.16-E4" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030513_160506.16-R6-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="575" END="586">her two sons</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030513_160506.16-E1-6" ROLE="Arg-1">
+      <extent>
+        <charseq START="575" END="577">her</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030513_160506.16-E4-5" ROLE="Arg-2">
+      <extent>
+        <charseq START="575" END="586">her two sons</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030513_160506.16-R7" TYPE="PER-SOC" SUBTYPE="Family" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030513_160506.16-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030513_160506.16-E5" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030513_160506.16-R7-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="518" END="643">a texas woman is in jail
+this morning accused of killing her two sons and severely beating
+another the day before mother's day</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030513_160506.16-E1-2" ROLE="Arg-1">
+      <extent>
+        <charseq START="518" END="530">a texas woman</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030513_160506.16-E5-7" ROLE="Arg-2">
+      <extent>
+        <charseq START="609" END="615">another</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030513_160506.16-R8" TYPE="ORG-AFF" SUBTYPE="Membership" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030513_160506.16-E9" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030513_160506.16-E8" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030513_160506.16-R8-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="967" END="990">the sheriff's department</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030513_160506.16-E9-13" ROLE="Arg-1">
+      <extent>
+        <charseq START="967" END="977">the sheriff</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030513_160506.16-E8-12" ROLE="Arg-2">
+      <extent>
+        <charseq START="967" END="990">the sheriff's department</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030513_160506.16-R9" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030513_160506.16-E14" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030513_160506.16-E15" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030513_160506.16-R9-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="1663" END="1693">the law enforcement
+authorities</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030513_160506.16-E14-22" ROLE="Arg-1">
+      <extent>
+        <charseq START="1663" END="1693">the law enforcement
+authorities</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030513_160506.16-E15-23" ROLE="Arg-2">
+      <extent>
+        <charseq START="1667" END="1681">law enforcement</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030513_160506.16-EV1" TYPE="Justice" SUBTYPE="Trial-Hearing" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Future">
+  <event_argument REFID="CNN_ENG_20030513_160506.16-E22" ROLE="Adjudicator"/>
+  <event_argument REFID="CNN_ENG_20030513_160506.16-E24" ROLE="Defendant"/>
+  <event_argument REFID="CNN_ENG_20030513_160506.16-E23" ROLE="Place"/>
+  <event_argument REFID="CNN_ENG_20030513_160506.16-V1" ROLE="Crime"/>
+  <event_mention ID="CNN_ENG_20030513_160506.16-EV1-1">
+    <extent>
+      <charseq START="112" END="238">an oklahoma judge has
+ruled that terry nichols will indeed stand trial in that state court
+on 160 counts of first-degree murder</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="68" END="238">as we told you at the top of this newscast, an oklahoma judge has
+ruled that terry nichols will indeed stand trial in that state court
+on 160 counts of first-degree murder</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="177" END="181">trial</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030513_160506.16-E22-48" ROLE="Adjudicator">
+      <extent>
+        <charseq START="112" END="128">an oklahoma judge</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030513_160506.16-E24-50" ROLE="Defendant">
+      <extent>
+        <charseq START="145" END="157">terry nichols</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030513_160506.16-E23-52" ROLE="Place">
+      <extent>
+        <charseq START="191" END="195">state</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030513_160506.16-V1-1" ROLE="Crime">
+      <extent>
+        <charseq START="206" END="238">160 counts of first-degree murder</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030513_160506.16-EV1-2">
+    <extent>
+      <charseq START="404" END="515">trial date was not immediately set by the judge whose decision came as
+prosecutes were still presenting evidence</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="402" END="515">a
+trial date was not immediately set by the judge whose decision came as
+prosecutes were still presenting evidence</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="404" END="408">trial</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030513_160506.16-E22-58" ROLE="Adjudicator">
+      <extent>
+        <charseq START="442" END="515">the judge whose decision came as
+prosecutes were still presenting evidence</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030513_160506.16-EV2" TYPE="Life" SUBTYPE="Die" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Generic" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030513_160506.16-E23" ROLE="Place"/>
+  <event_mention ID="CNN_ENG_20030513_160506.16-EV2-1">
+    <extent>
+      <charseq START="115" END="238">oklahoma judge has
+ruled that terry nichols will indeed stand trial in that state court
+on 160 counts of first-degree murder</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="68" END="238">as we told you at the top of this newscast, an oklahoma judge has
+ruled that terry nichols will indeed stand trial in that state court
+on 160 counts of first-degree murder</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="233" END="238">murder</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030513_160506.16-E23-49" ROLE="Place">
+      <extent>
+        <charseq START="115" END="122">oklahoma</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030513_160506.16-EV3" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030513_160506.16-E24" ROLE="Attacker"/>
+  <event_argument REFID="CNN_ENG_20030513_160506.16-E27" ROLE="Place"/>
+  <event_mention ID="CNN_ENG_20030513_160506.16-EV3-1">
+    <extent>
+      <charseq START="241" END="277">the oklahoma city bombing
+conspirator</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="241" END="326">the oklahoma city bombing
+conspirator is already serving a life term in federal prison</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="259" END="265">bombing</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030513_160506.16-E24-53" ROLE="Attacker">
+      <extent>
+        <charseq START="241" END="277">the oklahoma city bombing
+conspirator</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030513_160506.16-E27-54" ROLE="Place">
+      <extent>
+        <charseq START="245" END="257">oklahoma city</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030513_160506.16-EV4" TYPE="Justice" SUBTYPE="Sentence" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Generic" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030513_160506.16-E24" ROLE="Defendant"/>
+  <event_argument REFID="CNN_ENG_20030513_160506.16-E27" ROLE="Place"/>
+  <event_argument REFID="CNN_ENG_20030513_160506.16-V2" ROLE="Sentence"/>
+  <event_mention ID="CNN_ENG_20030513_160506.16-EV4-1">
+    <extent>
+      <charseq START="241" END="326">the oklahoma city bombing
+conspirator is already serving a life term in federal prison</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="241" END="326">the oklahoma city bombing
+conspirator is already serving a life term in federal prison</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="290" END="296">serving</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030513_160506.16-E24-53" ROLE="Defendant">
+      <extent>
+        <charseq START="241" END="277">the oklahoma city bombing
+conspirator</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030513_160506.16-E27-54" ROLE="Place">
+      <extent>
+        <charseq START="245" END="257">oklahoma city</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030513_160506.16-V2-1" ROLE="Sentence">
+      <extent>
+        <charseq START="298" END="326">a life term in federal prison</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030513_160506.16-EV5" TYPE="Justice" SUBTYPE="Execute" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Future">
+  <event_argument REFID="CNN_ENG_20030513_160506.16-E24" ROLE="Person"/>
+  <event_argument REFID="CNN_ENG_20030513_160506.16-E23" ROLE="Agent"/>
+  <event_mention ID="CNN_ENG_20030513_160506.16-EV5-1">
+    <extent>
+      <charseq START="329" END="386">state
+proceedings could bring the death penalty if nichols</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="329" END="399">state
+proceedings could bring the death penalty if nichols is convicted</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="363" END="375">death penalty</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030513_160506.16-E24-56" ROLE="Person">
+      <extent>
+        <charseq START="380" END="386">nichols</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030513_160506.16-E23-57" ROLE="Agent">
+      <extent>
+        <charseq START="329" END="333">state</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030513_160506.16-EV6" TYPE="Justice" SUBTYPE="Convict" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Future">
+  <event_argument REFID="CNN_ENG_20030513_160506.16-E24" ROLE="Defendant"/>
+  <event_argument REFID="CNN_ENG_20030513_160506.16-E23" ROLE="Place"/>
+  <event_mention ID="CNN_ENG_20030513_160506.16-EV6-1">
+    <extent>
+      <charseq START="329" END="399">state
+proceedings could bring the death penalty if nichols is convicted</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="329" END="399">state
+proceedings could bring the death penalty if nichols is convicted</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="391" END="399">convicted</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030513_160506.16-E24-56" ROLE="Defendant">
+      <extent>
+        <charseq START="380" END="386">nichols</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030513_160506.16-E23-57" ROLE="Place">
+      <extent>
+        <charseq START="329" END="333">state</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030513_160506.16-EV7" TYPE="Life" SUBTYPE="Die" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030513_160506.16-E4" ROLE="Victim"/>
+  <event_argument REFID="CNN_ENG_20030513_160506.16-E1" ROLE="Agent"/>
+  <event_argument REFID="CNN_ENG_20030513_160506.16-E2" ROLE="Place"/>
+  <event_mention ID="CNN_ENG_20030513_160506.16-EV7-1">
+    <extent>
+      <charseq START="518" END="586">a texas woman is in jail
+this morning accused of killing her two sons</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="518" END="643">a texas woman is in jail
+this morning accused of killing her two sons and severely beating
+another the day before mother's day</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="567" END="573">killing</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030513_160506.16-E4-5" ROLE="Victim">
+      <extent>
+        <charseq START="575" END="586">her two sons</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030513_160506.16-E1-2" ROLE="Agent">
+      <extent>
+        <charseq START="518" END="530">a texas woman</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030513_160506.16-E2-3" ROLE="Place">
+      <extent>
+        <charseq START="520" END="524">texas</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030513_160506.16-EV8" TYPE="Life" SUBTYPE="Injure" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030513_160506.16-E5" ROLE="Victim"/>
+  <event_argument REFID="CNN_ENG_20030513_160506.16-E1" ROLE="Agent"/>
+  <event_mention ID="CNN_ENG_20030513_160506.16-EV8-1">
+    <extent>
+      <charseq START="518" END="615">a texas woman is in jail
+this morning accused of killing her two sons and severely beating
+another</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="518" END="643">a texas woman is in jail
+this morning accused of killing her two sons and severely beating
+another the day before mother's day</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="601" END="607">beating</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030513_160506.16-E5-7" ROLE="Victim">
+      <extent>
+        <charseq START="609" END="615">another</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030513_160506.16-E1-2" ROLE="Agent">
+      <extent>
+        <charseq START="518" END="530">a texas woman</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030513_160506.16-EV9" TYPE="Justice" SUBTYPE="Charge-Indict" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030513_160506.16-E6" ROLE="Adjudicator"/>
+  <event_argument REFID="CNN_ENG_20030513_160506.16-E1" ROLE="Defendant"/>
+  <event_argument REFID="CNN_ENG_20030513_160506.16-T7" ROLE="Time-Within"/>
+  <event_mention ID="CNN_ENG_20030513_160506.16-EV9-1">
+    <extent>
+      <charseq START="646" END="714">yesterday a silent dee ana laney
+waited as the judge read the charges</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="646" END="726">yesterday a silent dee ana laney
+waited as the judge read the charges against her</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="708" END="714">charges</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030513_160506.16-E6-9" ROLE="Adjudicator">
+      <extent>
+        <charseq START="689" END="697">the judge</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030513_160506.16-E1-8" ROLE="Defendant">
+      <extent>
+        <charseq START="656" END="677">a silent dee ana laney</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030513_160506.16-T7-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="646" END="654">yesterday</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

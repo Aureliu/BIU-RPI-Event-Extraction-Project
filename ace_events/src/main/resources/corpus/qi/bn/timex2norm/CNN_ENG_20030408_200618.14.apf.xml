@@ -1,0 +1,1852 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030408_200618.14.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030408_200618.14">
+<entity ID="CNN_ENG_20030408_200618.14-E1" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E1-7" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="438" END="442">iraqi</charseq>
+    </extent>
+    <head>
+      <charseq START="438" END="442">iraqi</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E1-23" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="712" END="716">iraqi</charseq>
+    </extent>
+    <head>
+      <charseq START="712" END="716">iraqi</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E1-81" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1960" END="1963">iraq</charseq>
+    </extent>
+    <head>
+      <charseq START="1960" END="1963">iraq</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E1-108" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="240" END="244">iraqi</charseq>
+    </extent>
+    <head>
+      <charseq START="240" END="244">iraqi</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="iraqi">
+      <charseq START="438" END="442">iraqi</charseq>
+    </name>
+    <name NAME="iraqi">
+      <charseq START="712" END="716">iraqi</charseq>
+    </name>
+    <name NAME="iraq">
+      <charseq START="1960" END="1963">iraq</charseq>
+    </name>
+    <name NAME="iraqi">
+      <charseq START="240" END="244">iraqi</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030408_200618.14-E2" TYPE="VEH" SUBTYPE="Air" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E2-9" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="468" END="486">the a-10s behind me</charseq>
+    </extent>
+    <head>
+      <charseq START="472" END="476">a-10s</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E2-12" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="489" END="513">the warthog attack planes</charseq>
+    </extent>
+    <head>
+      <charseq START="508" END="513">planes</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E2-13" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="493" END="499">warthog</charseq>
+    </extent>
+    <head>
+      <charseq START="493" END="499">warthog</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E2-30" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="845" END="860">all these planes</charseq>
+    </extent>
+    <head>
+      <charseq START="855" END="860">planes</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="warthog">
+      <charseq START="493" END="499">warthog</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030408_200618.14-E5" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E5-17" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="612" END="618">baghdad</charseq>
+    </extent>
+    <head>
+      <charseq START="612" END="618">baghdad</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E5-33" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="950" END="956">baghdad</charseq>
+    </extent>
+    <head>
+      <charseq START="950" END="956">baghdad</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="baghdad">
+      <charseq START="612" END="618">baghdad</charseq>
+    </name>
+    <name NAME="baghdad">
+      <charseq START="950" END="956">baghdad</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030408_200618.14-E6" TYPE="WEA" SUBTYPE="Projectile" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E6-21" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="702" END="703">it</charseq>
+    </extent>
+    <head>
+      <charseq START="702" END="703">it</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E6-22" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="709" END="724">an iraqi missile</charseq>
+    </extent>
+    <head>
+      <charseq START="718" END="724">missile</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E6-24" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="741" END="764">a shoulder fired missile</charseq>
+    </extent>
+    <head>
+      <charseq START="758" END="764">missile</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E6-96" TYPE="PRO" LDCTYPE="WHQ" LDCATR="TRUE">
+    <extent>
+      <charseq START="766" END="769">that</charseq>
+    </extent>
+    <head>
+      <charseq START="766" END="769">that</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E6-101" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="150" END="158">a missile</charseq>
+    </extent>
+    <head>
+      <charseq START="152" END="158">missile</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030408_200618.14-E9" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E9-31" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="883" END="892">the pilots</charseq>
+    </extent>
+    <head>
+      <charseq START="887" END="892">pilots</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030408_200618.14-E10" TYPE="LOC" SUBTYPE="Land-Region-Natural" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E10-32" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="930" END="956">the desert south of baghdad</charseq>
+    </extent>
+    <head>
+      <charseq START="934" END="939">desert</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E10-91" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1021" END="1028">the area</charseq>
+    </extent>
+    <head>
+      <charseq START="1025" END="1028">area</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030408_200618.14-E11" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E11-35" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="985" END="1007">u.s. army
+ground troops</charseq>
+    </extent>
+    <head>
+      <charseq START="1002" END="1007">troops</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E11-36" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="1009" END="1011">who</charseq>
+    </extent>
+    <head>
+      <charseq START="1009" END="1011">who</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030408_200618.14-E12" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E12-37" TYPE="NAM" LDCTYPE="NAMPRE">
+    <extent>
+      <charseq START="985" END="993">u.s. army</charseq>
+    </extent>
+    <head>
+      <charseq START="985" END="993">u.s. army</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="u.s. army">
+      <charseq START="985" END="993">u.s. army</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030408_200618.14-E13" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E13-42" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1136" END="1158">the 172nd fire squadron</charseq>
+    </extent>
+    <head>
+      <charseq START="1140" END="1158">172nd fire squadron</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E13-43" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="1160" END="1164">which</charseq>
+    </extent>
+    <head>
+      <charseq START="1160" END="1164">which</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030408_200618.14-E14" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E14-29" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1519" END="1530">those pilots</charseq>
+    </extent>
+    <head>
+      <charseq START="1525" END="1530">pilots</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030408_200618.14-E15" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E15-44" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="1178" END="1199">battle creek, michigan</charseq>
+    </extent>
+    <head>
+      <charseq START="1178" END="1189">battle creek</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="battle creek">
+      <charseq START="1178" END="1189">battle creek</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030408_200618.14-E16" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E16-1" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="68" END="85">an air force pilot</charseq>
+    </extent>
+    <head>
+      <charseq START="81" END="85">pilot</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E16-3" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="389" END="397">the pilot</charseq>
+    </extent>
+    <head>
+      <charseq START="393" END="397">pilot</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E16-4" TYPE="PRO" LDCTYPE="WHQ" LDCATR="FALSE">
+    <extent>
+      <charseq START="399" END="401">who</charseq>
+    </extent>
+    <head>
+      <charseq START="399" END="401">who</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E16-8" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="452" END="453">he</charseq>
+    </extent>
+    <head>
+      <charseq START="452" END="453">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E16-15" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="572" END="574">him</charseq>
+    </extent>
+    <head>
+      <charseq START="572" END="574">him</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E16-16" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="577" END="578">he</charseq>
+    </extent>
+    <head>
+      <charseq START="577" END="578">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E16-18" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="625" END="626">he</charseq>
+    </extent>
+    <head>
+      <charseq START="625" END="626">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E16-19" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="641" END="643">his</charseq>
+    </extent>
+    <head>
+      <charseq START="641" END="643">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E16-20" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="674" END="675">he</charseq>
+    </extent>
+    <head>
+      <charseq START="674" END="675">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E16-26" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="775" END="777">his</charseq>
+    </extent>
+    <head>
+      <charseq START="775" END="777">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E16-27" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="789" END="790">he</charseq>
+    </extent>
+    <head>
+      <charseq START="789" END="790">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E16-34" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="967" END="968">he</charseq>
+    </extent>
+    <head>
+      <charseq START="967" END="968">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E16-38" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1031" END="1039">the pilot</charseq>
+    </extent>
+    <head>
+      <charseq START="1035" END="1039">pilot</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E16-39" TYPE="PRO" LDCTYPE="WHQ" LDCATR="FALSE">
+    <extent>
+      <charseq START="1042" END="1046">whose</charseq>
+    </extent>
+    <head>
+      <charseq START="1042" END="1046">whose</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E16-41" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1107" END="1108">he</charseq>
+    </extent>
+    <head>
+      <charseq START="1107" END="1108">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E16-46" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1206" END="1207">he</charseq>
+    </extent>
+    <head>
+      <charseq START="1206" END="1207">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E16-47" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="1211" END="1226">a very lucky man</charseq>
+    </extent>
+    <head>
+      <charseq START="1224" END="1226">man</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E16-48" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1229" END="1230">he</charseq>
+    </extent>
+    <head>
+      <charseq START="1229" END="1230">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E16-50" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1273" END="1275">him</charseq>
+    </extent>
+    <head>
+      <charseq START="1273" END="1275">him</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E16-90" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="833" END="834">he</charseq>
+    </extent>
+    <head>
+      <charseq START="833" END="834">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E16-98" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="98" END="100">his</charseq>
+    </extent>
+    <head>
+      <charseq START="98" END="100">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E16-103" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="164" END="166">his</charseq>
+    </extent>
+    <head>
+      <charseq START="164" END="166">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E16-104" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="180" END="181">he</charseq>
+    </extent>
+    <head>
+      <charseq START="180" END="181">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E16-109" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="285" END="293">the pilot</charseq>
+    </extent>
+    <head>
+      <charseq START="289" END="293">pilot</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030408_200618.14-E17" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E17-45" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="1192" END="1199">michigan</charseq>
+    </extent>
+    <head>
+      <charseq START="1192" END="1199">michigan</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="michigan">
+      <charseq START="1192" END="1199">michigan</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030408_200618.14-E19" TYPE="VEH" SUBTYPE="Air" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E19-49" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1239" END="1275">two other a-10s flying along with
+him</charseq>
+    </extent>
+    <head>
+      <charseq START="1249" END="1253">a-10s</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E19-51" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1278" END="1281">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1278" END="1281">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E19-53" TYPE="PRO" LDCTYPE="HLS" LDCATR="TRUE">
+    <extent>
+      <charseq START="1284" END="1286">two</charseq>
+    </extent>
+    <head>
+      <charseq START="1284" END="1286">two</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030408_200618.14-E21" TYPE="VEH" SUBTYPE="Air" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E21-54" TYPE="PRO" LDCTYPE="HLS">
+    <extent>
+      <charseq START="1299" END="1301">one</charseq>
+    </extent>
+    <head>
+      <charseq START="1299" END="1301">one</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030408_200618.14-E22" TYPE="VEH" SUBTYPE="Air" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E22-56" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1326" END="1334">the other</charseq>
+    </extent>
+    <head>
+      <charseq START="1330" END="1334">other</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E22-58" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1358" END="1359">it</charseq>
+    </extent>
+    <head>
+      <charseq START="1358" END="1359">it</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E22-62" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1407" END="1426">that
+particular a-10</charseq>
+    </extent>
+    <head>
+      <charseq START="1423" END="1426">a-10</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030408_200618.14-E23" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E23-57" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1336" END="1337">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1336" END="1337">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E23-71" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1681" END="1682">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1681" END="1682">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E23-84" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2063" END="2064">we</charseq>
+    </extent>
+    <head>
+      <charseq START="2063" END="2064">we</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030408_200618.14-E24" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E24-59" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1371" END="1404">a base controlled by the coalition</charseq>
+    </extent>
+    <head>
+      <charseq START="1373" END="1376">base</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030408_200618.14-E25" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E25-60" TYPE="NOM" LDCTYPE="NOM" ROLE="ORG">
+    <extent>
+      <charseq START="1392" END="1404">the coalition</charseq>
+    </extent>
+    <head>
+      <charseq START="1396" END="1404">coalition</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030408_200618.14-E26" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E26-63" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1457" END="1465">the pilot</charseq>
+    </extent>
+    <head>
+      <charseq START="1461" END="1465">pilot</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030408_200618.14-E27" TYPE="PER" SUBTYPE="Individual" CLASS="NEG">
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E27-64" TYPE="PRO" LDCTYPE="HLS">
+    <extent>
+      <charseq START="1508" END="1530">neither of those pilots</charseq>
+    </extent>
+    <head>
+      <charseq START="1508" END="1514">neither</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030408_200618.14-E28" TYPE="VEH" SUBTYPE="Air" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E28-65" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1543" END="1547">those</charseq>
+    </extent>
+    <head>
+      <charseq START="1543" END="1547">those</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E28-66" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="1553" END="1574">three planes hit today</charseq>
+    </extent>
+    <head>
+      <charseq START="1559" END="1564">planes</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030408_200618.14-E30" TYPE="VEH" SUBTYPE="Air" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E30-67" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1577" END="1596">another a-10 warthog</charseq>
+    </extent>
+    <head>
+      <charseq START="1585" END="1596">a-10 warthog</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E30-72" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1698" END="1707">that plane</charseq>
+    </extent>
+    <head>
+      <charseq START="1703" END="1707">plane</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E30-73" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1710" END="1719">that plane</charseq>
+    </extent>
+    <head>
+      <charseq START="1715" END="1719">plane</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E30-74" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1781" END="1789">the plane</charseq>
+    </extent>
+    <head>
+      <charseq START="1785" END="1789">plane</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030408_200618.14-E31" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E31-68" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1618" END="1627">that pilot</charseq>
+    </extent>
+    <head>
+      <charseq START="1623" END="1627">pilot</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E31-75" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1792" END="1800">the pilot</charseq>
+    </extent>
+    <head>
+      <charseq START="1796" END="1800">pilot</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E31-76" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1829" END="1831">she</charseq>
+    </extent>
+    <head>
+      <charseq START="1829" END="1831">she</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E31-77" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1883" END="1885">she</charseq>
+    </extent>
+    <head>
+      <charseq START="1883" END="1885">she</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E31-78" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1914" END="1916">she</charseq>
+    </extent>
+    <head>
+      <charseq START="1914" END="1916">she</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E31-82" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2017" END="2019">she</charseq>
+    </extent>
+    <head>
+      <charseq START="2017" END="2019">she</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030408_200618.14-E32" TYPE="WEA" SUBTYPE="Projectile" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E32-69" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1640" END="1659">at least one missile</charseq>
+    </extent>
+    <head>
+      <charseq START="1653" END="1659">missile</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030408_200618.14-E33" TYPE="WEA" SUBTYPE="Shooting" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E33-70" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1665" END="1678">some artillery</charseq>
+    </extent>
+    <head>
+      <charseq START="1670" END="1678">artillery</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030408_200618.14-E34" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E34-79" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1931" END="1963">this base near the border of
+iraq</charseq>
+    </extent>
+    <head>
+      <charseq START="1936" END="1939">base</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030408_200618.14-E35" TYPE="LOC" SUBTYPE="Boundary" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E35-80" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1946" END="1963">the border of
+iraq</charseq>
+    </extent>
+    <head>
+      <charseq START="1950" END="1955">border</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030408_200618.14-E36" TYPE="WEA" SUBTYPE="Projectile" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E36-83" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="2035" END="2052">artillery missiles</charseq>
+    </extent>
+    <head>
+      <charseq START="2045" END="2052">missiles</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030408_200618.14-E37" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E37-85" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2082" END="2095">jamie
+mcintyre</charseq>
+    </extent>
+    <head>
+      <charseq START="2082" END="2095">jamie
+mcintyre</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="jamie mcintyre">
+      <charseq START="2082" END="2095">jamie
+mcintyre</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030408_200618.14-E38" TYPE="VEH" SUBTYPE="Air" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E38-87" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2103" END="2125">the f-15 e strike eagle</charseq>
+    </extent>
+    <head>
+      <charseq START="2107" END="2125">f-15 e strike eagle</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030408_200618.14-E39" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E39-88" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="2128" END="2138">authorities</charseq>
+    </extent>
+    <head>
+      <charseq START="2128" END="2138">authorities</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030408_200618.14-E40" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E40-61" TYPE="PRO" LDCTYPE="PRO" ROLE="LOC">
+    <extent>
+      <charseq START="1606" END="1609">here</charseq>
+    </extent>
+    <head>
+      <charseq START="1606" END="1609">here</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030408_200618.14-E42" TYPE="WEA" SUBTYPE="Shooting" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E42-95" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="2035" END="2043">artillery</charseq>
+    </extent>
+    <head>
+      <charseq START="2035" END="2043">artillery</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030408_200618.14-E44" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E44-86" TYPE="NAM" LDCTYPE="NAMPRE">
+    <extent>
+      <charseq START="71" END="79">air force</charseq>
+    </extent>
+    <head>
+      <charseq START="71" END="79">air force</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="air force">
+      <charseq START="71" END="79">air force</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030408_200618.14-E45" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E45-5" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="419" END="449">this base near the iraqi border</charseq>
+    </extent>
+    <head>
+      <charseq START="424" END="427">base</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E45-40" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1096" END="1104">this base</charseq>
+    </extent>
+    <head>
+      <charseq START="1101" END="1104">base</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E45-55" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1316" END="1323">the base</charseq>
+    </extent>
+    <head>
+      <charseq START="1320" END="1323">base</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E45-97" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="98" END="105">his base</charseq>
+    </extent>
+    <head>
+      <charseq START="102" END="105">base</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030408_200618.14-E46" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E46-99" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="127" END="144">military
+officials</charseq>
+    </extent>
+    <head>
+      <charseq START="136" END="144">officials</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030408_200618.14-E47" TYPE="ORG" SUBTYPE="Government" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E47-100" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="127" END="134">military</charseq>
+    </extent>
+    <head>
+      <charseq START="127" END="134">military</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030408_200618.14-E49" TYPE="VEH" SUBTYPE="Air" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E49-14" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="521" END="522">it</charseq>
+    </extent>
+    <head>
+      <charseq START="521" END="522">it</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E49-25" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="775" END="786">his aircraft</charseq>
+    </extent>
+    <head>
+      <charseq START="779" END="786">aircraft</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E49-28" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="801" END="809">the plane</charseq>
+    </extent>
+    <head>
+      <charseq START="805" END="809">plane</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E49-89" TYPE="PRO" LDCTYPE="PTV">
+    <extent>
+      <charseq START="461" END="513">one of the a-10s behind me, the warthog attack planes</charseq>
+    </extent>
+    <head>
+      <charseq START="461" END="463">one</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E49-102" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="164" END="174">his warthog</charseq>
+    </extent>
+    <head>
+      <charseq START="168" END="174">warthog</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030408_200618.14-E50" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E50-10" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="485" END="486">me</charseq>
+    </extent>
+    <head>
+      <charseq START="485" END="486">me</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E50-93" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="305" END="308">gary</charseq>
+    </extent>
+    <head>
+      <charseq START="305" END="308">gary</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E50-94" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="313" END="320">reporter</charseq>
+    </extent>
+    <head>
+      <charseq START="313" END="320">reporter</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E50-105" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="204" END="221">cnn's gary tuchman</charseq>
+    </extent>
+    <head>
+      <charseq START="210" END="221">gary tuchman</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="gary">
+      <charseq START="305" END="308">gary</charseq>
+    </name>
+    <name NAME="gary tuchman">
+      <charseq START="210" END="221">gary tuchman</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030408_200618.14-E51" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E51-106" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="204" END="206">cnn</charseq>
+    </extent>
+    <head>
+      <charseq START="204" END="206">cnn</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="cnn">
+      <charseq START="204" END="206">cnn</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030408_200618.14-E52" TYPE="LOC" SUBTYPE="Boundary" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E52-6" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="434" END="449">the iraqi border</charseq>
+    </extent>
+    <head>
+      <charseq START="444" END="449">border</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E52-107" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="236" END="251">the iraqi border</charseq>
+    </extent>
+    <head>
+      <charseq START="246" END="251">border</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030408_200618.14-E55" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E55-2" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="338" END="340">you</charseq>
+    </extent>
+    <head>
+      <charseq START="338" END="340">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030408_200618.14-E55-110" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="323" END="326">wolf</charseq>
+    </extent>
+    <head>
+      <charseq START="323" END="326">wolf</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="wolf">
+      <charseq START="323" END="326">wolf</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<timex2 ID="CNN_ENG_20030408_200618.14-T1" VAL="2003-04-08T20:29:33">
+  <timex2_mention ID="CNN_ENG_20030408_200618.14-T1-1">
+    <extent>
+      <charseq START="44" END="62">2003-04-08 20:29:33</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030408_200618.14-T2" VAL="2003-04-08">
+  <timex2_mention ID="CNN_ENG_20030408_200618.14-T2-1">
+    <extent>
+      <charseq START="381" END="383">day</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030408_200618.14-T3" VAL="2003-04-08TMO">
+  <timex2_mention ID="CNN_ENG_20030408_200618.14-T3-1">
+    <extent>
+      <charseq START="528" END="545">early this morning</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030408_200618.14-T4" VAL="2003-04-08">
+  <timex2_mention ID="CNN_ENG_20030408_200618.14-T4-1">
+    <extent>
+      <charseq START="1570" END="1574">today</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030408_200618.14-T5" VAL="2003-04-08">
+  <timex2_mention ID="CNN_ENG_20030408_200618.14-T5-1">
+    <extent>
+      <charseq START="1611" END="1615">today</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030408_200618.14-R1" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030408_200618.14-E16" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030408_200618.14-E44" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030408_200618.14-R1-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="68" END="85">an air force pilot</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030408_200618.14-E16-1" ROLE="Arg-1">
+      <extent>
+        <charseq START="68" END="85">an air force pilot</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030408_200618.14-E44-86" ROLE="Arg-2">
+      <extent>
+        <charseq START="71" END="79">air force</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030408_200618.14-R2" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030408_200618.14-E16" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030408_200618.14-E45" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030408_200618.14-R2-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="98" END="105">his base</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030408_200618.14-E16-98" ROLE="Arg-1">
+      <extent>
+        <charseq START="98" END="100">his</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030408_200618.14-E45-97" ROLE="Arg-2">
+      <extent>
+        <charseq START="98" END="105">his base</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030408_200618.14-R3" TYPE="PHYS" SUBTYPE="Located" TENSE="Present" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030408_200618.14-E16" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030408_200618.14-E45" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030408_200618.14-R3-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="68" END="124">an air force pilot is back at his base after a close call</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030408_200618.14-E16-1" ROLE="Arg-1">
+      <extent>
+        <charseq START="68" END="85">an air force pilot</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030408_200618.14-E45-97" ROLE="Arg-2">
+      <extent>
+        <charseq START="98" END="105">his base</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_ENG_20030408_200618.14-R3-2" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="343" END="449">it was a very tense and nerve-racking
+day for the pilot who is stationed at this base near the iraqi border</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030408_200618.14-E16-3" ROLE="Arg-1">
+      <extent>
+        <charseq START="389" END="397">the pilot</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030408_200618.14-E45-5" ROLE="Arg-2">
+      <extent>
+        <charseq START="419" END="449">this base near the iraqi border</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_ENG_20030408_200618.14-R3-3" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="1031" END="1104">the pilot, whose name has not been
+released, was brought back to this base</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030408_200618.14-E16-38" ROLE="Arg-1">
+      <extent>
+        <charseq START="1031" END="1039">the pilot</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030408_200618.14-E45-40" ROLE="Arg-2">
+      <extent>
+        <charseq START="1096" END="1104">this base</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030408_200618.14-R4" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030408_200618.14-E46" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030408_200618.14-E47" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030408_200618.14-R4-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="127" END="144">military
+officials</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030408_200618.14-E46-99" ROLE="Arg-1">
+      <extent>
+        <charseq START="127" END="144">military
+officials</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030408_200618.14-E47-100" ROLE="Arg-2">
+      <extent>
+        <charseq START="127" END="134">military</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030408_200618.14-R5" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030408_200618.14-E16" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030408_200618.14-E49" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030408_200618.14-R5-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="164" END="174">his warthog</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030408_200618.14-E16-103" ROLE="Arg-1">
+      <extent>
+        <charseq START="164" END="166">his</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030408_200618.14-E49-102" ROLE="Arg-2">
+      <extent>
+        <charseq START="164" END="174">his warthog</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_ENG_20030408_200618.14-R5-2" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="775" END="786">his aircraft</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030408_200618.14-E16-26" ROLE="Arg-1">
+      <extent>
+        <charseq START="775" END="777">his</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030408_200618.14-E49-25" ROLE="Arg-2">
+      <extent>
+        <charseq START="775" END="786">his aircraft</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030408_200618.14-R6" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030408_200618.14-E50" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030408_200618.14-E51" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030408_200618.14-R6-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="204" END="221">cnn's gary tuchman</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030408_200618.14-E50-105" ROLE="Arg-1">
+      <extent>
+        <charseq START="204" END="221">cnn's gary tuchman</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030408_200618.14-E51-106" ROLE="Arg-2">
+      <extent>
+        <charseq START="204" END="206">cnn</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030408_200618.14-R7" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030408_200618.14-E52" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030408_200618.14-E1" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030408_200618.14-R7-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="236" END="251">the iraqi border</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030408_200618.14-E52-107" ROLE="Arg-1">
+      <extent>
+        <charseq START="236" END="251">the iraqi border</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030408_200618.14-E1-108" ROLE="Arg-2">
+      <extent>
+        <charseq START="240" END="244">iraqi</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_ENG_20030408_200618.14-R7-2" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="434" END="449">the iraqi border</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030408_200618.14-E52-6" ROLE="Arg-1">
+      <extent>
+        <charseq START="434" END="449">the iraqi border</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030408_200618.14-E1-7" ROLE="Arg-2">
+      <extent>
+        <charseq START="438" END="442">iraqi</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030408_200618.14-R8" TYPE="PHYS" SUBTYPE="Near" TENSE="Present" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030408_200618.14-E50" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030408_200618.14-E52" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030408_200618.14-R8-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="204" END="302">cnn's gary tuchman is live near the iraqi border with details on the
+mission and the pilot's rescue</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030408_200618.14-E50-105" ROLE="Arg-1">
+      <extent>
+        <charseq START="204" END="221">cnn's gary tuchman</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030408_200618.14-E52-107" ROLE="Arg-2">
+      <extent>
+        <charseq START="236" END="251">the iraqi border</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030408_200618.14-R10" TYPE="PHYS" SUBTYPE="Near" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030408_200618.14-E45" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030408_200618.14-E52" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030408_200618.14-R10-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="419" END="449">this base near the iraqi border</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030408_200618.14-E45-5" ROLE="Arg-1">
+      <extent>
+        <charseq START="419" END="449">this base near the iraqi border</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030408_200618.14-E52-6" ROLE="Arg-2">
+      <extent>
+        <charseq START="434" END="449">the iraqi border</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030408_200618.14-R12" TYPE="PHYS" SUBTYPE="Near" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030408_200618.14-E16" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030408_200618.14-E5" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030408_200618.14-R12-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="577" END="786">he was going
+on a mission south of baghdad when he was close to his target area,
+all of a sudden he heard a noise. turns out it was an iraqi missile, a
+very likely a shoulder fired missile that hit his aircraft</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030408_200618.14-E16-16" ROLE="Arg-1">
+      <extent>
+        <charseq START="577" END="578">he</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030408_200618.14-E5-17" ROLE="Arg-2">
+      <extent>
+        <charseq START="612" END="618">baghdad</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030408_200618.14-R13" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030408_200618.14-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030408_200618.14-E6" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030408_200618.14-R13-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="709" END="724">an iraqi missile</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030408_200618.14-E1-23" ROLE="Arg-1">
+      <extent>
+        <charseq START="712" END="716">iraqi</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030408_200618.14-E6-22" ROLE="Arg-2">
+      <extent>
+        <charseq START="709" END="724">an iraqi missile</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030408_200618.14-R15" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030408_200618.14-E16" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030408_200618.14-E10" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030408_200618.14-R15-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="912" END="1028">ejected landed in
+the desert south of baghdad and then he was rescued by u.s. army
+ground troops who were in the area</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030408_200618.14-E16-34" ROLE="Arg-1">
+      <extent>
+        <charseq START="967" END="968">he</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030408_200618.14-E10-32" ROLE="Arg-2">
+      <extent>
+        <charseq START="930" END="956">the desert south of baghdad</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030408_200618.14-R16" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030408_200618.14-E11" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030408_200618.14-E10" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030408_200618.14-R16-1" LEXICALCONDITION="Participial">
+    <extent>
+      <charseq START="985" END="1028">u.s. army
+ground troops who were in the area</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030408_200618.14-E11-36" ROLE="Arg-1">
+      <extent>
+        <charseq START="1009" END="1011">who</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030408_200618.14-E10-91" ROLE="Arg-2">
+      <extent>
+        <charseq START="1021" END="1028">the area</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030408_200618.14-R17" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030408_200618.14-E11" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030408_200618.14-E12" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030408_200618.14-R17-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="985" END="1007">u.s. army
+ground troops</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030408_200618.14-E11-35" ROLE="Arg-1">
+      <extent>
+        <charseq START="985" END="1007">u.s. army
+ground troops</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030408_200618.14-E12-37" ROLE="Arg-2">
+      <extent>
+        <charseq START="985" END="993">u.s. army</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030408_200618.14-R19" TYPE="GEN-AFF" SUBTYPE="Org-Location" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030408_200618.14-E13" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030408_200618.14-E15" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030408_200618.14-R19-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="1107" END="1199">he is in good condition with
+the 172nd fire squadron which is based in battle creek, michigan</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030408_200618.14-E13-42" ROLE="Arg-1">
+      <extent>
+        <charseq START="1136" END="1158">the 172nd fire squadron</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030408_200618.14-E15-44" ROLE="Arg-2">
+      <extent>
+        <charseq START="1178" END="1199">battle creek, michigan</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030408_200618.14-R20" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030408_200618.14-E15" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030408_200618.14-E17" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030408_200618.14-R20-1" LEXICALCONDITION="Formulaic">
+    <extent>
+      <charseq START="1178" END="1199">battle creek, michigan</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030408_200618.14-E15-44" ROLE="Arg-1">
+      <extent>
+        <charseq START="1178" END="1199">battle creek, michigan</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030408_200618.14-E17-45" ROLE="Arg-2">
+      <extent>
+        <charseq START="1192" END="1199">michigan</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030408_200618.14-R21" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030408_200618.14-E25" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030408_200618.14-E24" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030408_200618.14-R21-1" LEXICALCONDITION="Participial">
+    <extent>
+      <charseq START="1371" END="1404">a base controlled by the coalition</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030408_200618.14-E25-60" ROLE="Arg-1">
+      <extent>
+        <charseq START="1392" END="1404">the coalition</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030408_200618.14-E24-59" ROLE="Arg-2">
+      <extent>
+        <charseq START="1371" END="1404">a base controlled by the coalition</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030408_200618.14-R22" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030408_200618.14-E31" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030408_200618.14-E34" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030408_200618.14-R22-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="1914" END="2052">she came back to this base near the border of
+iraq and it's being described as an heroic landing after she was
+struck by artillery missiles</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030408_200618.14-E31-78" ROLE="Arg-1">
+      <extent>
+        <charseq START="1914" END="1916">she</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030408_200618.14-E34-79" ROLE="Arg-2">
+      <extent>
+        <charseq START="1931" END="1963">this base near the border of
+iraq</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030408_200618.14-R23" TYPE="PHYS" SUBTYPE="Near" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030408_200618.14-E34" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030408_200618.14-E35" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030408_200618.14-R23-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="1931" END="1963">this base near the border of
+iraq</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030408_200618.14-E34-79" ROLE="Arg-1">
+      <extent>
+        <charseq START="1931" END="1963">this base near the border of
+iraq</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030408_200618.14-E35-80" ROLE="Arg-2">
+      <extent>
+        <charseq START="1946" END="1963">the border of
+iraq</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030408_200618.14-R24" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030408_200618.14-E35" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030408_200618.14-E1" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030408_200618.14-R24-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="1946" END="1963">the border of
+iraq</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030408_200618.14-E35-80" ROLE="Arg-1">
+      <extent>
+        <charseq START="1946" END="1963">the border of
+iraq</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030408_200618.14-E1-81" ROLE="Arg-2">
+      <extent>
+        <charseq START="1960" END="1963">iraq</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030408_200618.14-EV1" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030408_200618.14-E49" ROLE="Target"/>
+  <event_argument REFID="CNN_ENG_20030408_200618.14-E6" ROLE="Instrument"/>
+  <event_mention ID="CNN_ENG_20030408_200618.14-EV1-1">
+    <extent>
+      <charseq START="150" END="174">a missile hit his warthog</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="127" END="201">military
+officials say a missile hit his warthog and he was forced to eject</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="160" END="162">hit</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030408_200618.14-E49-102" ROLE="Target">
+      <extent>
+        <charseq START="164" END="174">his warthog</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030408_200618.14-E6-101" ROLE="Instrument">
+      <extent>
+        <charseq START="150" END="158">a missile</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030408_200618.14-EV1-2">
+    <extent>
+      <charseq START="702" END="786">it was an iraqi missile, a
+very likely a shoulder fired missile that hit his aircraft</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="692" END="786">turns out it was an iraqi missile, a
+very likely a shoulder fired missile that hit his aircraft</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="771" END="773">hit</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030408_200618.14-E49-25" ROLE="Target">
+      <extent>
+        <charseq START="775" END="786">his aircraft</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030408_200618.14-E6-21" ROLE="Instrument">
+      <extent>
+        <charseq START="702" END="703">it</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030408_200618.14-E6-22" ROLE="Instrument">
+      <extent>
+        <charseq START="709" END="724">an iraqi missile</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030408_200618.14-E6-24" ROLE="Instrument">
+      <extent>
+        <charseq START="741" END="764">a shoulder fired missile</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030408_200618.14-E6-96" ROLE="Instrument">
+      <extent>
+        <charseq START="766" END="769">that</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030408_200618.14-EV2" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030408_200618.14-E16" ROLE="Artifact"/>
+  <event_argument REFID="CNN_ENG_20030408_200618.14-E5" ROLE="Destination"/>
+  <event_mention ID="CNN_ENG_20030408_200618.14-EV2-1">
+    <extent>
+      <charseq START="577" END="618">he was going
+on a mission south of baghdad</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="577" END="689">he was going
+on a mission south of baghdad when he was close to his target area,
+all of a sudden he heard a noise</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="584" END="588">going</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030408_200618.14-E16-16" ROLE="Artifact">
+      <extent>
+        <charseq START="577" END="578">he</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030408_200618.14-E5-17" ROLE="Destination">
+      <extent>
+        <charseq START="612" END="618">baghdad</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030408_200618.14-EV3" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030408_200618.14-E16" ROLE="Artifact"/>
+  <event_argument REFID="CNN_ENG_20030408_200618.14-E10" ROLE="Destination"/>
+  <event_mention ID="CNN_ENG_20030408_200618.14-EV3-1">
+    <extent>
+      <charseq START="920" END="968">landed in
+the desert south of baghdad and then he</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="912" END="1028">ejected landed in
+the desert south of baghdad and then he was rescued by u.s. army
+ground troops who were in the area</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="920" END="925">landed</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030408_200618.14-E16-34" ROLE="Artifact">
+      <extent>
+        <charseq START="967" END="968">he</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030408_200618.14-E10-32" ROLE="Destination">
+      <extent>
+        <charseq START="930" END="956">the desert south of baghdad</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030408_200618.14-EV4" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030408_200618.14-E16" ROLE="Artifact"/>
+  <event_argument REFID="CNN_ENG_20030408_200618.14-E45" ROLE="Destination"/>
+  <event_mention ID="CNN_ENG_20030408_200618.14-EV4-1">
+    <extent>
+      <charseq START="1031" END="1104">the pilot, whose name has not been
+released, was brought back to this base</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1031" END="1104">the pilot, whose name has not been
+released, was brought back to this base</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1080" END="1091">brought back</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030408_200618.14-E16-38" ROLE="Artifact">
+      <extent>
+        <charseq START="1031" END="1039">the pilot</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030408_200618.14-E45-40" ROLE="Destination">
+      <extent>
+        <charseq START="1096" END="1104">this base</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030408_200618.14-EV5" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030408_200618.14-E19" ROLE="Target"/>
+  <event_mention ID="CNN_ENG_20030408_200618.14-EV5-1">
+    <extent>
+      <charseq START="1278" END="1296">they, two, were hit</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1278" END="1296">they, two, were hit</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1294" END="1296">hit</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030408_200618.14-E19-51" ROLE="Target">
+      <extent>
+        <charseq START="1278" END="1281">they</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030408_200618.14-EV6" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030408_200618.14-E22" ROLE="Target"/>
+  <event_mention ID="CNN_ENG_20030408_200618.14-EV6-1">
+    <extent>
+      <charseq START="1407" END="1434">that
+particular a-10 was hit</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1407" END="1454">that
+particular a-10 was hit in the right engine</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1432" END="1434">hit</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030408_200618.14-E22-62" ROLE="Target">
+      <extent>
+        <charseq START="1407" END="1426">that
+particular a-10</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030408_200618.14-EV7" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030408_200618.14-E28" ROLE="Target"/>
+  <event_argument REFID="CNN_ENG_20030408_200618.14-T4" ROLE="Time-Within"/>
+  <event_mention ID="CNN_ENG_20030408_200618.14-EV7-1">
+    <extent>
+      <charseq START="1553" END="1574">three planes hit today</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1543" END="1574">those
+are three planes hit today</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1566" END="1568">hit</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030408_200618.14-E28-66" ROLE="Target">
+      <extent>
+        <charseq START="1553" END="1574">three planes hit today</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030408_200618.14-T4-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="1570" END="1574">today</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030408_200618.14-EV8" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030408_200618.14-E31" ROLE="Target"/>
+  <event_argument REFID="CNN_ENG_20030408_200618.14-E32" ROLE="Instrument"/>
+  <event_argument REFID="CNN_ENG_20030408_200618.14-E33" ROLE="Instrument"/>
+  <event_argument REFID="CNN_ENG_20030408_200618.14-E40" ROLE="Place"/>
+  <event_argument REFID="CNN_ENG_20030408_200618.14-E30" ROLE="Target"/>
+  <event_argument REFID="CNN_ENG_20030408_200618.14-T5" ROLE="Time-Within"/>
+  <event_argument REFID="CNN_ENG_20030408_200618.14-E36" ROLE="Instrument"/>
+  <event_mention ID="CNN_ENG_20030408_200618.14-EV8-1">
+    <extent>
+      <charseq START="1577" END="1615">another a-10 warthog was hit here today</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1577" END="1615">another a-10 warthog was hit here today</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1602" END="1604">hit</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030408_200618.14-E40-61" ROLE="Place">
+      <extent>
+        <charseq START="1606" END="1609">here</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030408_200618.14-E30-67" ROLE="Target">
+      <extent>
+        <charseq START="1577" END="1596">another a-10 warthog</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030408_200618.14-T5-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="1611" END="1615">today</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030408_200618.14-EV8-2">
+    <extent>
+      <charseq START="1618" END="1678">that pilot was hit by at least one missile and some artillery</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1618" END="1678">that pilot was hit by at least one missile and some artillery</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1633" END="1635">hit</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030408_200618.14-E31-68" ROLE="Target">
+      <extent>
+        <charseq START="1618" END="1627">that pilot</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030408_200618.14-E32-69" ROLE="Instrument">
+      <extent>
+        <charseq START="1640" END="1659">at least one missile</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030408_200618.14-E33-70" ROLE="Instrument">
+      <extent>
+        <charseq START="1665" END="1678">some artillery</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030408_200618.14-EV8-3">
+    <extent>
+      <charseq START="2017" END="2052">she was
+struck by artillery missiles</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1914" END="2052">she came back to this base near the border of
+iraq and it's being described as an heroic landing after she was
+struck by artillery missiles</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2025" END="2030">struck</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030408_200618.14-E31-82" ROLE="Target">
+      <extent>
+        <charseq START="2017" END="2019">she</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030408_200618.14-E36-83" ROLE="Instrument">
+      <extent>
+        <charseq START="2035" END="2052">artillery missiles</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030408_200618.14-EV9" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030408_200618.14-E31" ROLE="Artifact"/>
+  <event_argument REFID="CNN_ENG_20030408_200618.14-E34" ROLE="Destination"/>
+  <event_mention ID="CNN_ENG_20030408_200618.14-EV9-1">
+    <extent>
+      <charseq START="1914" END="1963">she came back to this base near the border of
+iraq</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1914" END="2052">she came back to this base near the border of
+iraq and it's being described as an heroic landing after she was
+struck by artillery missiles</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1918" END="1921">came</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030408_200618.14-E31-78" ROLE="Artifact">
+      <extent>
+        <charseq START="1914" END="1916">she</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030408_200618.14-E34-79" ROLE="Destination">
+      <extent>
+        <charseq START="1931" END="1963">this base near the border of
+iraq</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

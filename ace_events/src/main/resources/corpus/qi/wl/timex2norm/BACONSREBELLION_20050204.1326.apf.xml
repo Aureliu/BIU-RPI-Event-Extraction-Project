@@ -1,0 +1,620 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="BACONSREBELLION_20050204.1326.sgm" SOURCE="weblog" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="BACONSREBELLION_20050204.1326">
+<entity ID="BACONSREBELLION_20050204.1326-E1" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="BACONSREBELLION_20050204.1326-E1-6" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="933" END="947">Charlottesville</charseq>
+    </extent>
+    <head>
+      <charseq START="933" END="947">Charlottesville</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Charlottesville">
+      <charseq START="933" END="947">Charlottesville</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="BACONSREBELLION_20050204.1326-E2" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="BACONSREBELLION_20050204.1326-E2-9" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="990" END="1025">Wahoos disenchanted with Pete Gillen</charseq>
+    </extent>
+    <head>
+      <charseq START="990" END="995">Wahoos</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="BACONSREBELLION_20050204.1326-E2-13" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1068" END="1072">their</charseq>
+    </extent>
+    <head>
+      <charseq START="1068" END="1072">their</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="BACONSREBELLION_20050204.1326-E3" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="BACONSREBELLION_20050204.1326-E3-10" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1015" END="1025">Pete Gillen</charseq>
+    </extent>
+    <head>
+      <charseq START="1015" END="1025">Pete Gillen</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Pete Gillen">
+      <charseq START="1015" END="1025">Pete Gillen</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="BACONSREBELLION_20050204.1326-E4" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="BACONSREBELLION_20050204.1326-E4-1" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="126" END="170">Renowned UVA political scientist Larry Sabato</charseq>
+    </extent>
+    <head>
+      <charseq START="159" END="170">Larry Sabato</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="BACONSREBELLION_20050204.1326-E4-2" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="784" END="785">he</charseq>
+    </extent>
+    <head>
+      <charseq START="784" END="785">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="BACONSREBELLION_20050204.1326-E4-3" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="813" END="815">his</charseq>
+    </extent>
+    <head>
+      <charseq START="813" END="815">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="BACONSREBELLION_20050204.1326-E4-5" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="848" END="849">He</charseq>
+    </extent>
+    <head>
+      <charseq START="848" END="849">He</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="BACONSREBELLION_20050204.1326-E4-7" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="961" END="963">his</charseq>
+    </extent>
+    <head>
+      <charseq START="961" END="963">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="BACONSREBELLION_20050204.1326-E4-11" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="1040" END="1045">Sabato</charseq>
+    </extent>
+    <head>
+      <charseq START="1040" END="1045">Sabato</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="BACONSREBELLION_20050204.1326-E4-12" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="1050" END="1096">the embodiment of their university's excellence</charseq>
+    </extent>
+    <head>
+      <charseq START="1054" END="1063">embodiment</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="BACONSREBELLION_20050204.1326-E4-15" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="567" END="569">HIS</charseq>
+    </extent>
+    <head>
+      <charseq START="567" END="569">HIS</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="BACONSREBELLION_20050204.1326-E4-16" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="663" END="678">Professor Sabato</charseq>
+    </extent>
+    <head>
+      <charseq START="673" END="678">Sabato</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="BACONSREBELLION_20050204.1326-E4-17" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="663" END="671">Professor</charseq>
+    </extent>
+    <head>
+      <charseq START="663" END="671">Professor</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="BACONSREBELLION_20050204.1326-E4-19" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="126" END="157">Renowned UVA political scientist</charseq>
+    </extent>
+    <head>
+      <charseq START="149" END="157">scientist</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="BACONSREBELLION_20050204.1326-E4-29" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="396" END="401">Sabato</charseq>
+    </extent>
+    <head>
+      <charseq START="396" END="401">Sabato</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="BACONSREBELLION_20050204.1326-E4-34" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="681" END="682">He</charseq>
+    </extent>
+    <head>
+      <charseq START="681" END="682">He</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="BACONSREBELLION_20050204.1326-E4-35" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="694" END="696">his</charseq>
+    </extent>
+    <head>
+      <charseq START="694" END="696">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Larry Sabato">
+      <charseq START="159" END="170">Larry Sabato</charseq>
+    </name>
+    <name NAME="Sabato">
+      <charseq START="1040" END="1045">Sabato</charseq>
+    </name>
+    <name NAME="Sabato">
+      <charseq START="673" END="678">Sabato</charseq>
+    </name>
+    <name NAME="Sabato">
+      <charseq START="396" END="401">Sabato</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="BACONSREBELLION_20050204.1326-E6" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="BACONSREBELLION_20050204.1326-E6-18" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="329" END="352">an active
+faculty member</charseq>
+    </extent>
+    <head>
+      <charseq START="347" END="352">member</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="BACONSREBELLION_20050204.1326-E9" TYPE="ORG" SUBTYPE="Educational" CLASS="SPC">
+  <entity_mention ID="BACONSREBELLION_20050204.1326-E9-4" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="831" END="833">UVA</charseq>
+    </extent>
+    <head>
+      <charseq START="831" END="833">UVA</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="BACONSREBELLION_20050204.1326-E9-14" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1068" END="1083">their university</charseq>
+    </extent>
+    <head>
+      <charseq START="1074" END="1083">university</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="BACONSREBELLION_20050204.1326-E9-20" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="FALSE">
+    <extent>
+      <charseq START="135" END="137">UVA</charseq>
+    </extent>
+    <head>
+      <charseq START="135" END="137">UVA</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="BACONSREBELLION_20050204.1326-E9-21" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="221" END="246">the University of Virginia</charseq>
+    </extent>
+    <head>
+      <charseq START="225" END="246">University of Virginia</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="BACONSREBELLION_20050204.1326-E9-22" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="311" END="324">the university</charseq>
+    </extent>
+    <head>
+      <charseq START="315" END="324">university</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="BACONSREBELLION_20050204.1326-E9-28" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="368" END="370">UVA</charseq>
+    </extent>
+    <head>
+      <charseq START="368" END="370">UVA</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="UVA">
+      <charseq START="831" END="833">UVA</charseq>
+    </name>
+    <name NAME="UVA">
+      <charseq START="135" END="137">UVA</charseq>
+    </name>
+    <name NAME="University of Virginia">
+      <charseq START="225" END="246">University of Virginia</charseq>
+    </name>
+    <name NAME="UVA">
+      <charseq START="368" END="370">UVA</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="BACONSREBELLION_20050204.1326-E11" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="BACONSREBELLION_20050204.1326-E11-23" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="498" END="506">Jim Bacon</charseq>
+    </extent>
+    <head>
+      <charseq START="498" END="506">Jim Bacon</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Jim Bacon">
+      <charseq START="498" END="506">Jim Bacon</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="BACONSREBELLION_20050204.1326-E12" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="BACONSREBELLION_20050204.1326-E12-25" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="339" END="345">faculty</charseq>
+    </extent>
+    <head>
+      <charseq START="339" END="345">faculty</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="BACONSREBELLION_20050204.1326-E13" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="BACONSREBELLION_20050204.1326-E13-26" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="368" END="393">UVA President John Casteen</charseq>
+    </extent>
+    <head>
+      <charseq START="382" END="393">John Casteen</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="BACONSREBELLION_20050204.1326-E13-27" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="368" END="380">UVA President</charseq>
+    </extent>
+    <head>
+      <charseq START="372" END="380">President</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="John Casteen">
+      <charseq START="382" END="393">John Casteen</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="BACONSREBELLION_20050204.1326-E16" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="BACONSREBELLION_20050204.1326-E16-30" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="474" END="493">the Associated Press</charseq>
+    </extent>
+    <head>
+      <charseq START="478" END="493">Associated Press</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Associated Press">
+      <charseq START="478" END="493">Associated Press</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="BACONSREBELLION_20050204.1326-E17" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="BACONSREBELLION_20050204.1326-E17-8" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="978" END="978">I</charseq>
+    </extent>
+    <head>
+      <charseq START="978" END="978">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="BACONSREBELLION_20050204.1326-E17-24" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="581" END="590">Will Vehrs</charseq>
+    </extent>
+    <head>
+      <charseq START="581" END="590">Will Vehrs</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="BACONSREBELLION_20050204.1326-E17-31" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="615" END="615">I</charseq>
+    </extent>
+    <head>
+      <charseq START="615" END="615">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="BACONSREBELLION_20050204.1326-E17-32" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="643" END="643">I</charseq>
+    </extent>
+    <head>
+      <charseq START="643" END="643">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Will Vehrs">
+      <charseq START="581" END="590">Will Vehrs</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="BACONSREBELLION_20050204.1326-E18" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="BACONSREBELLION_20050204.1326-E18-33" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="92" END="101">Barnie Day</charseq>
+    </extent>
+    <head>
+      <charseq START="92" END="101">Barnie Day</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Barnie Day">
+      <charseq START="92" END="101">Barnie Day</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="BACONSREBELLION_20050204.1326-E19" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="BACONSREBELLION_20050204.1326-E19-36" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="732" END="741">any pundit</charseq>
+    </extent>
+    <head>
+      <charseq START="736" END="741">pundit</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<value ID="BACONSREBELLION_20050204.1326-V1" TYPE="Numeric" SUBTYPE="Money">
+  <value_mention ID="BACONSREBELLION_20050204.1326-V1-1">
+    <extent>
+      <charseq START="197" END="206">$1,000,000</charseq>
+    </extent>
+  </value_mention>
+</value>
+<timex2 ID="BACONSREBELLION_20050204.1326-T1" VAL="2005-02-04T13:26:00">
+  <timex2_mention ID="BACONSREBELLION_20050204.1326-T1-1">
+    <extent>
+      <charseq START="45" END="63">2005-02-04T13:26:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="BACONSREBELLION_20050204.1326-T2" VAL="2005-02-04T13:26:00">
+  <timex2_mention ID="BACONSREBELLION_20050204.1326-T2-1">
+    <extent>
+      <charseq START="105" END="123">2005-02-04T13:26:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="BACONSREBELLION_20050204.1326-T3" VAL="P3Y" ANCHOR_VAL="2005-02-04" ANCHOR_DIR="STARTING">
+  <timex2_mention ID="BACONSREBELLION_20050204.1326-T3-1">
+    <extent>
+      <charseq START="267" END="282">over three years</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="BACONSREBELLION_20050204.1326-T4" VAL="2005-XX-XXT20:45:00">
+  <timex2_mention ID="BACONSREBELLION_20050204.1326-T4-1">
+    <extent>
+      <charseq START="520" END="528">T20:45:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="BACONSREBELLION_20050204.1326-T5" VAL="2005-XX-XXT20:45:00">
+  <timex2_mention ID="BACONSREBELLION_20050204.1326-T5-1">
+    <extent>
+      <charseq START="604" END="612">T20:45:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="BACONSREBELLION_20050204.1326-T6" VAL="2005-02-04TMO">
+  <timex2_mention ID="BACONSREBELLION_20050204.1326-T6-1">
+    <extent>
+      <charseq START="172" END="183">this morning</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="BACONSREBELLION_20050204.1326-R1" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="BACONSREBELLION_20050204.1326-E4" ROLE="Arg-1"/>
+  <relation_argument REFID="BACONSREBELLION_20050204.1326-E9" ROLE="Arg-2"/>
+  <relation_mention ID="BACONSREBELLION_20050204.1326-R1-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="126" END="157">Renowned UVA political scientist</charseq>
+    </extent>
+    <relation_mention_argument REFID="BACONSREBELLION_20050204.1326-E4-19" ROLE="Arg-1">
+      <extent>
+        <charseq START="126" END="157">Renowned UVA political scientist</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="BACONSREBELLION_20050204.1326-E9-20" ROLE="Arg-2">
+      <extent>
+        <charseq START="135" END="137">UVA</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="BACONSREBELLION_20050204.1326-R2" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="BACONSREBELLION_20050204.1326-E13" ROLE="Arg-1"/>
+  <relation_argument REFID="BACONSREBELLION_20050204.1326-E9" ROLE="Arg-2"/>
+  <relation_mention ID="BACONSREBELLION_20050204.1326-R2-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="368" END="380">UVA President</charseq>
+    </extent>
+    <relation_mention_argument REFID="BACONSREBELLION_20050204.1326-E13-27" ROLE="Arg-1">
+      <extent>
+        <charseq START="368" END="380">UVA President</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="BACONSREBELLION_20050204.1326-E9-28" ROLE="Arg-2">
+      <extent>
+        <charseq START="368" END="370">UVA</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="BACONSREBELLION_20050204.1326-R3" TYPE="ORG-AFF" SUBTYPE="Student-Alum" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="BACONSREBELLION_20050204.1326-E2" ROLE="Arg-1"/>
+  <relation_argument REFID="BACONSREBELLION_20050204.1326-E9" ROLE="Arg-2"/>
+  <relation_mention ID="BACONSREBELLION_20050204.1326-R3-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="1068" END="1083">their university</charseq>
+    </extent>
+    <relation_mention_argument REFID="BACONSREBELLION_20050204.1326-E2-13" ROLE="Arg-1">
+      <extent>
+        <charseq START="1068" END="1072">their</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="BACONSREBELLION_20050204.1326-E9-14" ROLE="Arg-2">
+      <extent>
+        <charseq START="1068" END="1083">their university</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="BACONSREBELLION_20050204.1326-R4" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="BACONSREBELLION_20050204.1326-E4" ROLE="Arg-1"/>
+  <relation_argument REFID="BACONSREBELLION_20050204.1326-E1" ROLE="Arg-2"/>
+  <relation_mention ID="BACONSREBELLION_20050204.1326-R4-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="848" END="974">He could have moved on to any number of
+tv or print opportunities, but has stayed in Charlottesville to continue
+his good works</charseq>
+    </extent>
+    <relation_mention_argument REFID="BACONSREBELLION_20050204.1326-E4-5" ROLE="Arg-1">
+      <extent>
+        <charseq START="848" END="849">He</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="BACONSREBELLION_20050204.1326-E1-6" ROLE="Arg-2">
+      <extent>
+        <charseq START="933" END="947">Charlottesville</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="BACONSREBELLION_20050204.1326-R5" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="BACONSREBELLION_20050204.1326-E6" ROLE="Arg-1"/>
+  <relation_argument REFID="BACONSREBELLION_20050204.1326-E9" ROLE="Arg-2"/>
+  <relation_mention ID="BACONSREBELLION_20050204.1326-R5-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="249" END="393">The gift, payable
+over three years, is the largest ever given the university by an active
+faculty member, according to UVA President John Casteen</charseq>
+    </extent>
+    <relation_mention_argument REFID="BACONSREBELLION_20050204.1326-E6-18" ROLE="Arg-1">
+      <extent>
+        <charseq START="329" END="352">an active
+faculty member</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="BACONSREBELLION_20050204.1326-E9-22" ROLE="Arg-2">
+      <extent>
+        <charseq START="311" END="324">the university</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="BACONSREBELLION_20050204.1326-EV1" TYPE="Transaction" SUBTYPE="Transfer-Money" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="BACONSREBELLION_20050204.1326-E4" ROLE="Giver"/>
+  <event_argument REFID="BACONSREBELLION_20050204.1326-V1" ROLE="Money"/>
+  <event_argument REFID="BACONSREBELLION_20050204.1326-E9" ROLE="Recipient"/>
+  <event_argument REFID="BACONSREBELLION_20050204.1326-T3" ROLE="Time-Within"/>
+  <event_argument REFID="BACONSREBELLION_20050204.1326-E6" ROLE="Giver"/>
+  <event_mention ID="BACONSREBELLION_20050204.1326-EV1-1">
+    <extent>
+      <charseq START="126" END="246">Renowned UVA political scientist Larry Sabato this morning announced
+a $1,000,000 cash gift to the University of Virginia</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="126" END="246">Renowned UVA political scientist Larry Sabato this morning announced
+a $1,000,000 cash gift to the University of Virginia</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="213" END="216">gift</charseq>
+    </anchor>
+    <event_mention_argument REFID="BACONSREBELLION_20050204.1326-E4-1" ROLE="Giver">
+      <extent>
+        <charseq START="126" END="170">Renowned UVA political scientist Larry Sabato</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="BACONSREBELLION_20050204.1326-V1-1" ROLE="Money">
+      <extent>
+        <charseq START="197" END="206">$1,000,000</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="BACONSREBELLION_20050204.1326-E9-21" ROLE="Recipient">
+      <extent>
+        <charseq START="221" END="246">the University of Virginia</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="BACONSREBELLION_20050204.1326-EV1-2">
+    <extent>
+      <charseq START="253" END="352">gift, payable
+over three years, is the largest ever given the university by an active
+faculty member</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="249" END="393">The gift, payable
+over three years, is the largest ever given the university by an active
+faculty member, according to UVA President John Casteen</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="253" END="256">gift</charseq>
+    </anchor>
+    <event_mention_argument REFID="BACONSREBELLION_20050204.1326-E9-22" ROLE="Recipient">
+      <extent>
+        <charseq START="311" END="324">the university</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="BACONSREBELLION_20050204.1326-T3-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="267" END="282">over three years</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="BACONSREBELLION_20050204.1326-E6-18" ROLE="Giver">
+      <extent>
+        <charseq START="329" END="352">an active
+faculty member</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="BACONSREBELLION_20050204.1326-EV1-3">
+    <extent>
+      <charseq START="681" END="759">He
+maintains his political independence as well as any pundit and this
+donation</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="681" END="845">He
+maintains his political independence as well as any pundit and this
+donation affirms that the words he's always used to describe his
+commitment to UVA are genuine</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="752" END="759">donation</charseq>
+    </anchor>
+    <event_mention_argument REFID="BACONSREBELLION_20050204.1326-E4-34" ROLE="Giver">
+      <extent>
+        <charseq START="681" END="682">He</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

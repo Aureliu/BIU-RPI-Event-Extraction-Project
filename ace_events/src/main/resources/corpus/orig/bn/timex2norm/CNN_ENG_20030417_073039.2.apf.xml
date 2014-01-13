@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030417_073039.2.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030417_073039.2">
+<entity ID="CNN_ENG_20030417_073039.2-E1" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030417_073039.2-E1-1" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="118" END="124">baghdad</charseq>
+    </extent>
+    <head>
+      <charseq START="118" END="124">baghdad</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030417_073039.2-E1-2" TYPE="NOM" LDCTYPE="NOM" ROLE="LOC">
+    <extent>
+      <charseq START="133" END="140">the
+city</charseq>
+    </extent>
+    <head>
+      <charseq START="137" END="140">city</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="baghdad">
+      <charseq START="118" END="124">baghdad</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030417_073039.2-E2" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030417_073039.2-E2-3" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="174" END="179">people</charseq>
+    </extent>
+    <head>
+      <charseq START="174" END="179">people</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030417_073039.2-E3" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030417_073039.2-E3-4" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="252" END="260">engineers</charseq>
+    </extent>
+    <head>
+      <charseq START="252" END="260">engineers</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030417_073039.2-E4" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030417_073039.2-E4-5" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="286" END="300">two substations</charseq>
+    </extent>
+    <head>
+      <charseq START="290" END="300">substations</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030417_073039.2-E5" TYPE="FAC" SUBTYPE="Plant" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030417_073039.2-E5-6" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="306" END="322">six diesel plants</charseq>
+    </extent>
+    <head>
+      <charseq START="317" END="322">plants</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030417_073039.2-E6" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030417_073039.2-E6-7" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="351" END="363">the hospitals</charseq>
+    </extent>
+    <head>
+      <charseq START="355" END="363">hospitals</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<timex2 ID="CNN_ENG_20030417_073039.2-T1" VAL="2003-04-17T08:36:32">
+  <timex2_mention ID="CNN_ENG_20030417_073039.2-T1-1">
+    <extent>
+      <charseq START="43" END="61">2003-04-17 08:36:32</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030417_073039.2-T2" VAL="2003-04-17">
+  <timex2_mention ID="CNN_ENG_20030417_073039.2-T2-1">
+    <extent>
+      <charseq START="126" END="130">today</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030417_073039.2-T3" VAL="2003-W14">
+  <timex2_mention ID="CNN_ENG_20030417_073039.2-T3-1">
+    <extent>
+      <charseq START="152" END="164">two weeks ago</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+</document>
+</source_file>

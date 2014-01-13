@@ -1,0 +1,988 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030415_173752.0.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030415_173752.0">
+<entity ID="CNN_ENG_20030415_173752.0-E1" TYPE="LOC" SUBTYPE="Water-Body" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030415_173752.0-E1-6" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="438" END="479">the mediterranean where he
+obviously, died</charseq>
+    </extent>
+    <head>
+      <charseq START="442" END="454">mediterranean</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030415_173752.0-E1-27" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="456" END="460">where</charseq>
+    </extent>
+    <head>
+      <charseq START="456" END="460">where</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="mediterranean">
+      <charseq START="442" END="454">mediterranean</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030415_173752.0-E2" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030415_173752.0-E2-9" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="482" END="489">this man</charseq>
+    </extent>
+    <head>
+      <charseq START="487" END="489">man</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030415_173752.0-E2-10" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="492" END="500">abu abbas</charseq>
+    </extent>
+    <head>
+      <charseq START="492" END="500">abu abbas</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030415_173752.0-E2-11" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="532" END="533">he</charseq>
+    </extent>
+    <head>
+      <charseq START="532" END="533">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030415_173752.0-E2-13" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="552" END="553">he</charseq>
+    </extent>
+    <head>
+      <charseq START="552" END="553">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030415_173752.0-E2-15" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="575" END="576">he</charseq>
+    </extent>
+    <head>
+      <charseq START="575" END="576">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030415_173752.0-E2-18" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="647" END="648">he</charseq>
+    </extent>
+    <head>
+      <charseq START="647" END="648">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030415_173752.0-E2-22" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="962" END="969">this man</charseq>
+    </extent>
+    <head>
+      <charseq START="967" END="969">man</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030415_173752.0-E2-23" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="971" END="980">abu absaas</charseq>
+    </extent>
+    <head>
+      <charseq START="971" END="980">abu absaas</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="abu abbas">
+      <charseq START="492" END="500">abu abbas</charseq>
+    </name>
+    <name NAME="abu absaas">
+      <charseq START="971" END="980">abu absaas</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030415_173752.0-E4" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030415_173752.0-E4-12" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="545" END="549">tunas</charseq>
+    </extent>
+    <head>
+      <charseq START="545" END="549">tunas</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="tunas">
+      <charseq START="545" END="549">tunas</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030415_173752.0-E5" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030415_173752.0-E5-14" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="565" END="569">libya</charseq>
+    </extent>
+    <head>
+      <charseq START="565" END="569">libya</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="libya">
+      <charseq START="565" END="569">libya</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030415_173752.0-E6" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030415_173752.0-E6-16" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="616" END="629">saddam hussein</charseq>
+    </extent>
+    <head>
+      <charseq START="616" END="629">saddam hussein</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="saddam hussein">
+      <charseq START="616" END="629">saddam hussein</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030415_173752.0-E7" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030415_173752.0-E7-20" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="706" END="708">u.s</charseq>
+    </extent>
+    <head>
+      <charseq START="706" END="708">u.s</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030415_173752.0-E7-24" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="985" END="987">u.s</charseq>
+    </extent>
+    <head>
+      <charseq START="985" END="987">u.s</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030415_173752.0-E7-32" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="155" END="157">u.s</charseq>
+    </extent>
+    <head>
+      <charseq START="155" END="157">u.s</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="u.s">
+      <charseq START="706" END="708">u.s</charseq>
+    </name>
+    <name NAME="u.s">
+      <charseq START="985" END="987">u.s</charseq>
+    </name>
+    <name NAME="u.s">
+      <charseq START="155" END="157">u.s</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030415_173752.0-E10" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030415_173752.0-E10-25" TYPE="NOM" LDCTYPE="BAR" METONYMY_MENTION="TRUE">
+    <extent>
+      <charseq START="985" END="994">u.s. hands</charseq>
+    </extent>
+    <head>
+      <charseq START="990" END="994">hands</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030415_173752.0-E11" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030415_173752.0-E11-26" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="997" END="1001">miles</charseq>
+    </extent>
+    <head>
+      <charseq START="997" END="1001">miles</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="miles">
+      <charseq START="997" END="1001">miles</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030415_173752.0-E12" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030415_173752.0-E12-1" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="84" END="104">private jessica lynch</charseq>
+    </extent>
+    <head>
+      <charseq START="92" END="104">jessica lynch</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030415_173752.0-E12-30" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="84" END="90">private</charseq>
+    </extent>
+    <head>
+      <charseq START="84" END="90">private</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="jessica lynch">
+      <charseq START="92" END="104">jessica lynch</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030415_173752.0-E13" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030415_173752.0-E13-37" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="67" END="69">spy</charseq>
+    </extent>
+    <head>
+      <charseq START="67" END="69">spy</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030415_173752.0-E14" TYPE="VEH" SUBTYPE="Water" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030415_173752.0-E14-5" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="424" END="431">the ship</charseq>
+    </extent>
+    <head>
+      <charseq START="428" END="431">ship</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030415_173752.0-E14-28" TYPE="PRO" LDCTYPE="WHQ" LDCATR="TRUE">
+    <extent>
+      <charseq START="231" END="234">that</charseq>
+    </extent>
+    <head>
+      <charseq START="231" END="234">that</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030415_173752.0-E14-34" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="187" END="190">this</charseq>
+    </extent>
+    <head>
+      <charseq START="187" END="190">this</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030415_173752.0-E14-35" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="196" END="286">the italian ship that was taken -- that
+was captured by palestinian terrorists back in 1985</charseq>
+    </extent>
+    <head>
+      <charseq START="208" END="211">ship</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030415_173752.0-E14-36" TYPE="PRO" LDCTYPE="WHQ" LDCATR="TRUE">
+    <extent>
+      <charseq START="213" END="216">that</charseq>
+    </extent>
+    <head>
+      <charseq START="213" END="216">that</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030415_173752.0-E16" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030415_173752.0-E16-31" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="155" END="184">u.s. forces in or near
+baghdad</charseq>
+    </extent>
+    <head>
+      <charseq START="160" END="165">forces</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030415_173752.0-E18" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030415_173752.0-E18-17" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="634" END="640">baghdad</charseq>
+    </extent>
+    <head>
+      <charseq START="634" END="640">baghdad</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030415_173752.0-E18-33" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="178" END="184">baghdad</charseq>
+    </extent>
+    <head>
+      <charseq START="178" END="184">baghdad</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="baghdad">
+      <charseq START="634" END="640">baghdad</charseq>
+    </name>
+    <name NAME="baghdad">
+      <charseq START="178" END="184">baghdad</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030415_173752.0-E22" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030415_173752.0-E22-38" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="749" END="749">i</charseq>
+    </extent>
+    <head>
+      <charseq START="749" END="749">i</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030415_173752.0-E23" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030415_173752.0-E23-19" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="674" END="678">italy</charseq>
+    </extent>
+    <head>
+      <charseq START="674" END="678">italy</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030415_173752.0-E23-29" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="680" END="684">italy</charseq>
+    </extent>
+    <head>
+      <charseq START="680" END="684">italy</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030415_173752.0-E23-39" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="200" END="206">italian</charseq>
+    </extent>
+    <head>
+      <charseq START="200" END="206">italian</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="italy">
+      <charseq START="674" END="678">italy</charseq>
+    </name>
+    <name NAME="italy">
+      <charseq START="680" END="684">italy</charseq>
+    </name>
+    <name NAME="italian">
+      <charseq START="200" END="206">italian</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030415_173752.0-E25" TYPE="GPE" SUBTYPE="Special" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030415_173752.0-E25-40" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="252" END="262">palestinian</charseq>
+    </extent>
+    <head>
+      <charseq START="252" END="262">palestinian</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="palestinian">
+      <charseq START="252" END="262">palestinian</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030415_173752.0-E26" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030415_173752.0-E26-2" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="368" END="381">the terrorists</charseq>
+    </extent>
+    <head>
+      <charseq START="372" END="381">terrorists</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030415_173752.0-E26-41" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="252" END="273">palestinian terrorists</charseq>
+    </extent>
+    <head>
+      <charseq START="264" END="273">terrorists</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030415_173752.0-E27" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030415_173752.0-E27-42" TYPE="PRO" LDCTYPE="HLS">
+    <extent>
+      <charseq START="292" END="295">some</charseq>
+    </extent>
+    <head>
+      <charseq START="292" END="295">some</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030415_173752.0-E28" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030415_173752.0-E28-3" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="388" END="390">him</charseq>
+    </extent>
+    <head>
+      <charseq START="388" END="390">him</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030415_173752.0-E28-4" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="403" END="405">him</charseq>
+    </extent>
+    <head>
+      <charseq START="403" END="405">him</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030415_173752.0-E28-7" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="462" END="463">he</charseq>
+    </extent>
+    <head>
+      <charseq START="462" END="463">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030415_173752.0-E28-43" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="323" END="337">leon clinghover</charseq>
+    </extent>
+    <head>
+      <charseq START="323" END="337">leon clinghover</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030415_173752.0-E28-44" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="340" END="341">he</charseq>
+    </extent>
+    <head>
+      <charseq START="340" END="341">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="leon clinghover">
+      <charseq START="323" END="337">leon clinghover</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<value ID="CNN_ENG_20030415_173752.0-V1" TYPE="Crime">
+  <value_mention ID="CNN_ENG_20030415_173752.0-V1-1">
+    <extent>
+      <charseq START="792" END="797">piracy</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_ENG_20030415_173752.0-V2" TYPE="Crime">
+  <value_mention ID="CNN_ENG_20030415_173752.0-V2-1">
+    <extent>
+      <charseq START="800" END="813">hostage
+taking</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_ENG_20030415_173752.0-V3" TYPE="Crime">
+  <value_mention ID="CNN_ENG_20030415_173752.0-V3-1">
+    <extent>
+      <charseq START="819" END="828">conspiracy</charseq>
+    </extent>
+  </value_mention>
+</value>
+<timex2 ID="CNN_ENG_20030415_173752.0-T1" VAL="2003-04-15T17:35:05">
+  <timex2_mention ID="CNN_ENG_20030415_173752.0-T1-1">
+    <extent>
+      <charseq START="43" END="61">2003-04-15 17:35:05</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030415_173752.0-T2" VAL="1995">
+  <timex2_mention ID="CNN_ENG_20030415_173752.0-T2-1">
+    <extent>
+      <charseq START="129" END="132">1995</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030415_173752.0-T3" VAL="1985">
+  <timex2_mention ID="CNN_ENG_20030415_173752.0-T3-1">
+    <extent>
+      <charseq START="283" END="286">1985</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030415_173752.0-T4" VAL="P18Y" ANCHOR_VAL="2003-04-15" ANCHOR_DIR="ENDING">
+  <timex2_mention ID="CNN_ENG_20030415_173752.0-T4-1">
+    <extent>
+      <charseq START="936" END="942">to date</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030415_173752.0-T5" VAL="2003-04-15T17:35:05">
+  <timex2_mention ID="CNN_ENG_20030415_173752.0-T5-1">
+    <extent>
+      <charseq START="947" END="949">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030415_173752.0-R1" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030415_173752.0-E16" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030415_173752.0-E7" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030415_173752.0-R1-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="155" END="184">u.s. forces in or near
+baghdad</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030415_173752.0-E16-31" ROLE="Arg-1">
+      <extent>
+        <charseq START="155" END="184">u.s. forces in or near
+baghdad</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030415_173752.0-E7-32" ROLE="Arg-2">
+      <extent>
+        <charseq START="155" END="157">u.s</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030415_173752.0-R2" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030415_173752.0-E23" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030415_173752.0-E14" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030415_173752.0-R2-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="196" END="286">the italian ship that was taken -- that
+was captured by palestinian terrorists back in 1985</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030415_173752.0-E23-39" ROLE="Arg-1">
+      <extent>
+        <charseq START="200" END="206">italian</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030415_173752.0-E14-35" ROLE="Arg-2">
+      <extent>
+        <charseq START="196" END="286">the italian ship that was taken -- that
+was captured by palestinian terrorists back in 1985</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030415_173752.0-R3" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030415_173752.0-E26" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030415_173752.0-E25" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030415_173752.0-R3-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="252" END="273">palestinian terrorists</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030415_173752.0-E26-41" ROLE="Arg-1">
+      <extent>
+        <charseq START="252" END="273">palestinian terrorists</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030415_173752.0-E25-40" ROLE="Arg-2">
+      <extent>
+        <charseq START="252" END="262">palestinian</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030415_173752.0-R4" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030415_173752.0-E28" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030415_173752.0-E1" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030415_173752.0-R4-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="187" END="479">this was the italian ship that was taken -- that
+was captured by palestinian terrorists back in 1985 and
+some may remember the story of leon clinghover, he was in a
+cheal chair and the terrorists shot him and pushed him over
+the side of the ship into the mediterranean where he
+obviously, died</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030415_173752.0-E28-4" ROLE="Arg-1">
+      <extent>
+        <charseq START="403" END="405">him</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030415_173752.0-E1-6" ROLE="Arg-2">
+      <extent>
+        <charseq START="438" END="479">the mediterranean where he
+obviously, died</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030415_173752.0-R5" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030415_173752.0-E2" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030415_173752.0-E4" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030415_173752.0-R5-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="482" END="549">this man, abu abbas has lived an i tin
+rant life, he's been in tunas</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030415_173752.0-E2-11" ROLE="Arg-1">
+      <extent>
+        <charseq START="532" END="533">he</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030415_173752.0-E4-12" ROLE="Arg-2">
+      <extent>
+        <charseq START="545" END="549">tunas</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030415_173752.0-R6" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030415_173752.0-E2" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030415_173752.0-E5" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030415_173752.0-R6-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="552" END="684">he's been in libya and he's
+been living under the protection of saddam hussein in
+baghdad, but he is wanted for murder in italy italy</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030415_173752.0-E2-13" ROLE="Arg-1">
+      <extent>
+        <charseq START="552" END="553">he</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030415_173752.0-E5-14" ROLE="Arg-2">
+      <extent>
+        <charseq START="565" END="569">libya</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030415_173752.0-R7" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030415_173752.0-E2" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030415_173752.0-E18" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030415_173752.0-R7-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="552" END="684">he's been in libya and he's
+been living under the protection of saddam hussein in
+baghdad, but he is wanted for murder in italy italy</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030415_173752.0-E2-15" ROLE="Arg-1">
+      <extent>
+        <charseq START="575" END="576">he</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030415_173752.0-E18-17" ROLE="Arg-2">
+      <extent>
+        <charseq START="634" END="640">baghdad</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030415_173752.0-R8" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030415_173752.0-E10" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030415_173752.0-E7" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030415_173752.0-R8-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="985" END="994">u.s. hands</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030415_173752.0-E10-25" ROLE="Arg-1">
+      <extent>
+        <charseq START="985" END="994">u.s. hands</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030415_173752.0-E7-24" ROLE="Arg-2">
+      <extent>
+        <charseq START="985" END="987">u.s</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030415_173752.0-R9" TYPE="PHYS" SUBTYPE="Near" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030415_173752.0-E16" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030415_173752.0-E18" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030415_173752.0-R9-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="155" END="184">u.s. forces in or near
+baghdad</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030415_173752.0-E16-31" ROLE="Arg-1">
+      <extent>
+        <charseq START="155" END="184">u.s. forces in or near
+baghdad</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030415_173752.0-E18-33" ROLE="Arg-2">
+      <extent>
+        <charseq START="178" END="184">baghdad</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030415_173752.0-R10" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030415_173752.0-E16" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030415_173752.0-E18" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030415_173752.0-R10-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="155" END="184">u.s. forces in or near
+baghdad</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030415_173752.0-E16-31" ROLE="Arg-1">
+      <extent>
+        <charseq START="155" END="184">u.s. forces in or near
+baghdad</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030415_173752.0-E18-33" ROLE="Arg-2">
+      <extent>
+        <charseq START="178" END="184">baghdad</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030415_173752.0-R11" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030415_173752.0-E26" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030415_173752.0-E14" ROLE="Arg-2"/>
+  <relation_argument REFID="CNN_ENG_20030415_173752.0-T3" ROLE="Time-Starting"/>
+  <relation_mention ID="CNN_ENG_20030415_173752.0-R11-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="187" END="479">this was the italian ship that was taken -- that
+was captured by palestinian terrorists back in 1985 and
+some may remember the story of leon clinghover, he was in a
+cheal chair and the terrorists shot him and pushed him over
+the side of the ship into the mediterranean where he
+obviously, died</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030415_173752.0-E26-41" ROLE="Arg-1">
+      <extent>
+        <charseq START="252" END="273">palestinian terrorists</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030415_173752.0-E14-35" ROLE="Arg-2">
+      <extent>
+        <charseq START="196" END="286">the italian ship that was taken -- that
+was captured by palestinian terrorists back in 1985</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030415_173752.0-T3-1" ROLE="Time-Starting">
+      <extent>
+        <charseq START="283" END="286">1985</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030415_173752.0-EV1" TYPE="Transaction" SUBTYPE="Transfer-Ownership" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030415_173752.0-E14" ROLE="Artifact"/>
+  <event_argument REFID="CNN_ENG_20030415_173752.0-E23" ROLE="Seller"/>
+  <event_argument REFID="CNN_ENG_20030415_173752.0-E26" ROLE="Buyer"/>
+  <event_argument REFID="CNN_ENG_20030415_173752.0-T3" ROLE="Time-Within"/>
+  <event_mention ID="CNN_ENG_20030415_173752.0-EV1-1">
+    <extent>
+      <charseq START="196" END="286">the italian ship that was taken -- that
+was captured by palestinian terrorists back in 1985</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="187" END="479">this was the italian ship that was taken -- that
+was captured by palestinian terrorists back in 1985 and
+some may remember the story of leon clinghover, he was in a
+cheal chair and the terrorists shot him and pushed him over
+the side of the ship into the mediterranean where he
+obviously, died</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="240" END="247">captured</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030415_173752.0-E14-35" ROLE="Artifact">
+      <extent>
+        <charseq START="196" END="286">the italian ship that was taken -- that
+was captured by palestinian terrorists back in 1985</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030415_173752.0-E23-39" ROLE="Seller">
+      <extent>
+        <charseq START="200" END="206">italian</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030415_173752.0-E26-41" ROLE="Buyer">
+      <extent>
+        <charseq START="252" END="273">palestinian terrorists</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030415_173752.0-T3-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="283" END="286">1985</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030415_173752.0-EV2" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030415_173752.0-E26" ROLE="Attacker"/>
+  <event_argument REFID="CNN_ENG_20030415_173752.0-E1" ROLE="Place"/>
+  <event_argument REFID="CNN_ENG_20030415_173752.0-E28" ROLE="Target"/>
+  <event_mention ID="CNN_ENG_20030415_173752.0-EV2-1">
+    <extent>
+      <charseq START="368" END="479">the terrorists shot him and pushed him over
+the side of the ship into the mediterranean where he
+obviously, died</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="187" END="479">this was the italian ship that was taken -- that
+was captured by palestinian terrorists back in 1985 and
+some may remember the story of leon clinghover, he was in a
+cheal chair and the terrorists shot him and pushed him over
+the side of the ship into the mediterranean where he
+obviously, died</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="383" END="386">shot</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030415_173752.0-E26-2" ROLE="Attacker">
+      <extent>
+        <charseq START="368" END="381">the terrorists</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030415_173752.0-E1-6" ROLE="Place">
+      <extent>
+        <charseq START="438" END="479">the mediterranean where he
+obviously, died</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030415_173752.0-E28-3" ROLE="Target">
+      <extent>
+        <charseq START="388" END="390">him</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030415_173752.0-EV3" TYPE="Life" SUBTYPE="Die" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030415_173752.0-E28" ROLE="Victim"/>
+  <event_argument REFID="CNN_ENG_20030415_173752.0-E26" ROLE="Agent"/>
+  <event_argument REFID="CNN_ENG_20030415_173752.0-E1" ROLE="Place"/>
+  <event_argument REFID="CNN_ENG_20030415_173752.0-T3" ROLE="Time-Within"/>
+  <event_mention ID="CNN_ENG_20030415_173752.0-EV3-1">
+    <extent>
+      <charseq START="283" END="479">1985 and
+some may remember the story of leon clinghover, he was in a
+cheal chair and the terrorists shot him and pushed him over
+the side of the ship into the mediterranean where he
+obviously, died</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="187" END="479">this was the italian ship that was taken -- that
+was captured by palestinian terrorists back in 1985 and
+some may remember the story of leon clinghover, he was in a
+cheal chair and the terrorists shot him and pushed him over
+the side of the ship into the mediterranean where he
+obviously, died</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="476" END="479">died</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030415_173752.0-E28-7" ROLE="Victim">
+      <extent>
+        <charseq START="462" END="463">he</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030415_173752.0-E26-2" ROLE="Agent">
+      <extent>
+        <charseq START="368" END="381">the terrorists</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030415_173752.0-E1-6" ROLE="Place">
+      <extent>
+        <charseq START="438" END="479">the mediterranean where he
+obviously, died</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030415_173752.0-T3-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="283" END="286">1985</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030415_173752.0-EV4" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_mention ID="CNN_ENG_20030415_173752.0-EV4-1">
+    <extent>
+      <charseq START="869" END="877">terrorism</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="831" END="942">so this is one of the oldest cases
+of terrorism that is one of the oldest cases that has not
+been closed to date</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="869" END="877">terrorism</charseq>
+    </anchor>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030415_173752.0-EV5" TYPE="Life" SUBTYPE="Die" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030415_173752.0-E2" ROLE="Agent"/>
+  <event_argument REFID="CNN_ENG_20030415_173752.0-E23" ROLE="Place"/>
+  <event_mention ID="CNN_ENG_20030415_173752.0-EV5-1">
+    <extent>
+      <charseq START="647" END="684">he is wanted for murder in italy italy</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="482" END="684">this man, abu abbas has lived an i tin
+rant life, he's been in tunas. he's been in libya and he's
+been living under the protection of saddam hussein in
+baghdad, but he is wanted for murder in italy italy</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="664" END="669">murder</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030415_173752.0-E2-18" ROLE="Agent">
+      <extent>
+        <charseq START="647" END="648">he</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030415_173752.0-E23-29" ROLE="Place">
+      <extent>
+        <charseq START="680" END="684">italy</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030415_173752.0-EV6" TYPE="Justice" SUBTYPE="Charge-Indict" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030415_173752.0-V1" ROLE="Crime"/>
+  <event_argument REFID="CNN_ENG_20030415_173752.0-V2" ROLE="Crime"/>
+  <event_argument REFID="CNN_ENG_20030415_173752.0-V3" ROLE="Crime"/>
+  <event_argument REFID="CNN_ENG_20030415_173752.0-E7" ROLE="Prosecutor"/>
+  <event_mention ID="CNN_ENG_20030415_173752.0-EV6-1">
+    <extent>
+      <charseq START="697" END="703">charges</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="687" END="828">there
+are charges, u.s. charges which have expired but could, i
+am told, possibly be re -- restarted for piracy, hostage
+taking and conspiracy</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="697" END="703">charges</charseq>
+    </anchor>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030415_173752.0-EV6-2">
+    <extent>
+      <charseq START="706" END="828">u.s. charges which have expired but could, i
+am told, possibly be re -- restarted for piracy, hostage
+taking and conspiracy</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="687" END="828">there
+are charges, u.s. charges which have expired but could, i
+am told, possibly be re -- restarted for piracy, hostage
+taking and conspiracy</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="711" END="717">charges</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030415_173752.0-V1-1" ROLE="Crime">
+      <extent>
+        <charseq START="792" END="797">piracy</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030415_173752.0-V2-1" ROLE="Crime">
+      <extent>
+        <charseq START="800" END="813">hostage
+taking</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030415_173752.0-V3-1" ROLE="Crime">
+      <extent>
+        <charseq START="819" END="828">conspiracy</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030415_173752.0-E7-20" ROLE="Prosecutor">
+      <extent>
+        <charseq START="706" END="708">u.s</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

@@ -1,0 +1,434 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030422_083005.10.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030422_083005.10">
+<entity ID="CNN_ENG_20030422_083005.10-E1" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030422_083005.10-E1-1" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="68" END="68">i</charseq>
+    </extent>
+    <head>
+      <charseq START="68" END="68">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_083005.10-E1-9" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="72" END="85">allan chernoff</charseq>
+    </extent>
+    <head>
+      <charseq START="72" END="85">allan chernoff</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="allan chernoff">
+      <charseq START="72" END="85">allan chernoff</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030422_083005.10-E3" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030422_083005.10-E3-10" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="90" END="116">the new york stock exchange</charseq>
+    </extent>
+    <head>
+      <charseq START="94" END="116">new york stock exchange</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="new york stock exchange">
+      <charseq START="94" END="116">new york stock exchange</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030422_083005.10-E4" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030422_083005.10-E4-11" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="375" END="391">transport brokers</charseq>
+    </extent>
+    <head>
+      <charseq START="385" END="391">brokers</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030422_083005.10-E5" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030422_083005.10-E5-4" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="577" END="588">that
+company</charseq>
+    </extent>
+    <head>
+      <charseq START="582" END="588">company</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_083005.10-E5-6" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="664" END="667">they</charseq>
+    </extent>
+    <head>
+      <charseq START="664" END="667">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_083005.10-E5-7" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="722" END="738">american airlines</charseq>
+    </extent>
+    <head>
+      <charseq START="722" END="738">american airlines</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_083005.10-E5-8" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="806" END="816">the
+company</charseq>
+    </extent>
+    <head>
+      <charseq START="810" END="816">company</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_083005.10-E5-12" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="119" END="135">american
+airlines</charseq>
+    </extent>
+    <head>
+      <charseq START="119" END="135">american
+airlines</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_083005.10-E5-15" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="162" END="169">american</charseq>
+    </extent>
+    <head>
+      <charseq START="162" END="169">american</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_083005.10-E5-16" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="197" END="207">the company</charseq>
+    </extent>
+    <head>
+      <charseq START="201" END="207">company</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="american airlines">
+      <charseq START="119" END="135">american
+airlines</charseq>
+    </name>
+    <name NAME="american">
+      <charseq START="162" END="169">american</charseq>
+    </name>
+    <name NAME="american airlines">
+      <charseq START="722" END="738">american airlines</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030422_083005.10-E6" TYPE="ORG" SUBTYPE="Non-Governmental" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030422_083005.10-E6-14" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="138" END="169">a second major union at american</charseq>
+    </extent>
+    <head>
+      <charseq START="153" END="157">union</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_083005.10-E6-19" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="337" END="345">the union</charseq>
+    </extent>
+    <head>
+      <charseq START="341" END="345">union</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_083005.10-E6-20" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="371" END="397">the transport brokers union</charseq>
+    </extent>
+    <head>
+      <charseq START="393" END="397">union</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030422_083005.10-E7" TYPE="ORG" SUBTYPE="Non-Governmental" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030422_083005.10-E7-17" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="235" END="244">the
+unions</charseq>
+    </extent>
+    <head>
+      <charseq START="239" END="244">unions</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030422_083005.10-E8" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030422_083005.10-E8-3" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="562" END="575">the executives</charseq>
+    </extent>
+    <head>
+      <charseq START="566" END="575">executives</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_083005.10-E8-18" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="281" END="294">top executives</charseq>
+    </extent>
+    <head>
+      <charseq START="285" END="294">executives</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030422_083005.10-E9" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030422_083005.10-E9-5" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="595" END="596">he</charseq>
+    </extent>
+    <head>
+      <charseq START="595" END="596">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_083005.10-E9-21" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="441" END="447">the ceo</charseq>
+    </extent>
+    <head>
+      <charseq START="445" END="447">ceo</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_083005.10-E9-22" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="472" END="474">his</charseq>
+    </extent>
+    <head>
+      <charseq START="472" END="474">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_083005.10-E9-24" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="487" END="491">carty</charseq>
+    </extent>
+    <head>
+      <charseq START="487" END="491">carty</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_083005.10-E9-25" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="498" END="499">he</charseq>
+    </extent>
+    <head>
+      <charseq START="498" END="499">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="carty">
+      <charseq START="487" END="491">carty</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030422_083005.10-E10" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030422_083005.10-E10-2" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="509" END="521">the employees</charseq>
+    </extent>
+    <head>
+      <charseq START="513" END="521">employees</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_083005.10-E10-13" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="681" END="689">employees</charseq>
+    </extent>
+    <head>
+      <charseq START="681" END="689">employees</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_083005.10-E10-23" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="472" END="484">his employees</charseq>
+    </extent>
+    <head>
+      <charseq START="476" END="484">employees</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<timex2 ID="CNN_ENG_20030422_083005.10-T1" VAL="2003-04-22T10:50:03">
+  <timex2_mention ID="CNN_ENG_20030422_083005.10-T1-1">
+    <extent>
+      <charseq START="44" END="62">2003-04-22 10:50:03</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030422_083005.10-T2" VAL="2003-04-21">
+  <timex2_mention ID="CNN_ENG_20030422_083005.10-T2-1">
+    <extent>
+      <charseq START="415" END="424">last night</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030422_083005.10-T3" VAL="P2D" ANCHOR_VAL="2003-04-21" ANCHOR_DIR="STARTING">
+  <timex2_mention ID="CNN_ENG_20030422_083005.10-T3-1">
+    <extent>
+      <charseq START="764" END="786">the second straight day</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030422_083005.10-T4" VAL="2003-04-22">
+  <timex2_mention ID="CNN_ENG_20030422_083005.10-T4-1">
+    <extent>
+      <charseq START="944" END="948">today</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030422_083005.10-T5" VAL="2003-04-22T10:50:03">
+  <timex2_mention ID="CNN_ENG_20030422_083005.10-T5-1">
+    <extent>
+      <charseq START="1063" END="1071">right now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030422_083005.10-R1" TYPE="PHYS" SUBTYPE="Located" TENSE="Present" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030422_083005.10-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030422_083005.10-E3" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030422_083005.10-R1-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="72" END="116">allan chernoff at the new york stock exchange</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030422_083005.10-E1-9" ROLE="Arg-1">
+      <extent>
+        <charseq START="72" END="85">allan chernoff</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030422_083005.10-E3-10" ROLE="Arg-2">
+      <extent>
+        <charseq START="90" END="116">the new york stock exchange</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030422_083005.10-R2" TYPE="ORG-AFF" SUBTYPE="Membership" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030422_083005.10-E4" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030422_083005.10-E6" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030422_083005.10-R2-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="371" END="397">the transport brokers union</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030422_083005.10-E4-11" ROLE="Arg-1">
+      <extent>
+        <charseq START="375" END="391">transport brokers</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030422_083005.10-E6-20" ROLE="Arg-2">
+      <extent>
+        <charseq START="371" END="397">the transport brokers union</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030422_083005.10-R3" TYPE="PART-WHOLE" SUBTYPE="Subsidiary" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030422_083005.10-E6" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030422_083005.10-E5" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030422_083005.10-R3-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="138" END="169">a second major union at american</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030422_083005.10-E6-14" ROLE="Arg-1">
+      <extent>
+        <charseq START="138" END="169">a second major union at american</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030422_083005.10-E5-15" ROLE="Arg-2">
+      <extent>
+        <charseq START="162" END="169">american</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030422_083005.10-R4" TYPE="PER-SOC" SUBTYPE="Business" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030422_083005.10-E9" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030422_083005.10-E10" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030422_083005.10-R4-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="472" END="484">his employees</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030422_083005.10-E9-22" ROLE="Arg-1">
+      <extent>
+        <charseq START="472" END="474">his</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030422_083005.10-E10-23" ROLE="Arg-2">
+      <extent>
+        <charseq START="472" END="484">his employees</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030422_083005.10-R5" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030422_083005.10-E8" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030422_083005.10-E5" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030422_083005.10-R5-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="487" END="588">carty said he thought the employees would
+like the plan that meant to keep the executives that
+company</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030422_083005.10-E8-3" ROLE="Arg-1">
+      <extent>
+        <charseq START="562" END="575">the executives</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030422_083005.10-E5-4" ROLE="Arg-2">
+      <extent>
+        <charseq START="577" END="588">that
+company</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030422_083005.10-R6" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030422_083005.10-E10" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030422_083005.10-E5" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030422_083005.10-R6-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="487" END="588">carty said he thought the employees would
+like the plan that meant to keep the executives that
+company</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030422_083005.10-E10-2" ROLE="Arg-1">
+      <extent>
+        <charseq START="509" END="521">the employees</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030422_083005.10-E5-4" ROLE="Arg-2">
+      <extent>
+        <charseq START="577" END="588">that
+company</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030422_083005.10-EV1" TYPE="Business" SUBTYPE="Declare-Bankruptcy" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Future">
+  <event_argument REFID="CNN_ENG_20030422_083005.10-E5" ROLE="Org"/>
+  <event_mention ID="CNN_ENG_20030422_083005.10-EV1-1">
+    <extent>
+      <charseq START="806" END="855">the
+company might be forced to file for bankruptcy</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="712" END="855">shares of american airlines are falling
+sharply for the second straight day on the fears that the
+company might be forced to file for bankruptcy</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="846" END="855">bankruptcy</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030422_083005.10-E5-8" ROLE="Org">
+      <extent>
+        <charseq START="806" END="816">the
+company</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

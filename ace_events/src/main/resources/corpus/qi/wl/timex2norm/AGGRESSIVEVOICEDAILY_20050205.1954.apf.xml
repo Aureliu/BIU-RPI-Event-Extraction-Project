@@ -1,0 +1,948 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="AGGRESSIVEVOICEDAILY_20050205.1954.sgm" SOURCE="weblog" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="AGGRESSIVEVOICEDAILY_20050205.1954">
+<entity ID="AGGRESSIVEVOICEDAILY_20050205.1954-E1" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-E1-5" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="693" END="704">the hospital</charseq>
+    </extent>
+    <head>
+      <charseq START="697" END="704">hospital</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050205.1954-E2" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-E2-6" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="721" END="737">Taylor Ostergaard</charseq>
+    </extent>
+    <head>
+      <charseq START="721" END="737">Taylor Ostergaard</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Taylor Ostergaard">
+      <charseq START="721" END="737">Taylor Ostergaard</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050205.1954-E3" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-E3-7" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="753" END="771">Lindsey Jo Zellitte</charseq>
+    </extent>
+    <head>
+      <charseq START="753" END="771">Lindsey Jo Zellitte</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Lindsey Jo Zellitte">
+      <charseq START="753" END="771">Lindsey Jo Zellitte</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050205.1954-E4" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-E4-8" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="816" END="833">small claims court</charseq>
+    </extent>
+    <head>
+      <charseq START="829" END="833">court</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-E4-11" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="845" END="865">La Plata
+County Court</charseq>
+    </extent>
+    <head>
+      <charseq START="845" END="865">La Plata
+County Court</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-E4-13" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="888" END="892">court</charseq>
+    </extent>
+    <head>
+      <charseq START="888" END="892">court</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-E4-37" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="480" END="484">court</charseq>
+    </extent>
+    <head>
+      <charseq START="480" END="484">court</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="La Plata County Court">
+      <charseq START="845" END="865">La Plata
+County Court</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050205.1954-E5" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-E5-9" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="845" END="883">La Plata
+County Court Judge Doug Walker</charseq>
+    </extent>
+    <head>
+      <charseq START="873" END="883">Doug Walker</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-E5-10" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="845" END="871">La Plata
+County Court Judge</charseq>
+    </extent>
+    <head>
+      <charseq START="867" END="871">Judge</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-E5-30" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="264" END="279">A Colorado
+judge</charseq>
+    </extent>
+    <head>
+      <charseq START="275" END="279">judge</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Doug Walker">
+      <charseq START="873" END="883">Doug Walker</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050205.1954-E7" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-E7-12" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="886" END="898">a court clerk</charseq>
+    </extent>
+    <head>
+      <charseq START="894" END="898">clerk</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050205.1954-E9" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-E9-15" TYPE="PRO" LDCTYPE="PTV">
+    <extent>
+      <charseq START="959" END="999">several of their rural
+Colorado neighbors</charseq>
+    </extent>
+    <head>
+      <charseq START="959" END="965">several</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-E9-19" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1045" END="1049">their</charseq>
+    </extent>
+    <head>
+      <charseq START="1045" END="1049">their</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050205.1954-E10" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-E10-16" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="970" END="999">their rural
+Colorado neighbors</charseq>
+    </extent>
+    <head>
+      <charseq START="991" END="999">neighbors</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050205.1954-E11" TYPE="LOC" SUBTYPE="Region-General" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-E11-18" TYPE="NAM" LDCTYPE="NAMPRE">
+    <extent>
+      <charseq START="976" END="989">rural
+Colorado</charseq>
+    </extent>
+    <head>
+      <charseq START="982" END="989">Colorado</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Colorado">
+      <charseq START="982" END="989">Colorado</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050205.1954-E12" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-E12-22" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1315" END="1326">Zebra Report</charseq>
+    </extent>
+    <head>
+      <charseq START="1315" END="1326">Zebra Report</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Zebra Report">
+      <charseq START="1315" END="1326">Zebra Report</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050205.1954-E13" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="GEN">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-E13-21" TYPE="NOM" LDCTYPE="BAR" LDCATR="FALSE">
+    <extent>
+      <charseq START="1220" END="1223">home</charseq>
+    </extent>
+    <head>
+      <charseq START="1220" END="1223">home</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-E13-24" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="385" END="388">home</charseq>
+    </extent>
+    <head>
+      <charseq START="385" END="388">home</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050205.1954-E14" TYPE="FAC" SUBTYPE="Subarea-Facility" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-E14-25" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1045" END="1057">their
+porches</charseq>
+    </extent>
+    <head>
+      <charseq START="1051" END="1057">porches</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050205.1954-E15" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-E15-1" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="134" END="135">We</charseq>
+    </extent>
+    <head>
+      <charseq START="134" END="135">We</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050205.1954-E16" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-E16-27" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="158" END="187">some pretty undesirable people</charseq>
+    </extent>
+    <head>
+      <charseq START="182" END="187">people</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050205.1954-E17" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-E17-26" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="105" END="109">Scott</charseq>
+    </extent>
+    <head>
+      <charseq START="105" END="109">Scott</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-E17-28" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="218" END="218">I</charseq>
+    </extent>
+    <head>
+      <charseq START="218" END="218">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Scott">
+      <charseq START="105" END="109">Scott</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050205.1954-E18" TYPE="PER" SUBTYPE="Indeterminate" CLASS="USP">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-E18-29" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="234" END="239">anyone</charseq>
+    </extent>
+    <head>
+      <charseq START="234" END="239">anyone</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050205.1954-E20" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-E20-31" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="266" END="273">Colorado</charseq>
+    </extent>
+    <head>
+      <charseq START="266" END="273">Colorado</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Colorado">
+      <charseq START="266" END="273">Colorado</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050205.1954-E21" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-E21-2" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="613" END="621">the girls</charseq>
+    </extent>
+    <head>
+      <charseq START="617" END="621">girls</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-E21-14" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="917" END="925">The girls</charseq>
+    </extent>
+    <head>
+      <charseq START="921" END="925">girls</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-E21-17" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="970" END="974">their</charseq>
+    </extent>
+    <head>
+      <charseq START="970" END="974">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-E21-20" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1190" END="1198">the girls</charseq>
+    </extent>
+    <head>
+      <charseq START="1194" END="1198">girls</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-E21-23" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1345" END="1370">the good-intentioned girls</charseq>
+    </extent>
+    <head>
+      <charseq START="1366" END="1370">girls</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-E21-32" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="289" END="306">two teen-age girls</charseq>
+    </extent>
+    <head>
+      <charseq START="302" END="306">girls</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-E21-34" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="359" END="362">they</charseq>
+    </extent>
+    <head>
+      <charseq START="359" END="362">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-E21-36" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="431" END="438">The pair</charseq>
+    </extent>
+    <head>
+      <charseq START="435" END="438">pair</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050205.1954-E22" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-E22-3" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="634" END="636">her</charseq>
+    </extent>
+    <head>
+      <charseq START="634" END="636">her</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-E22-4" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="686" END="688">her</charseq>
+    </extent>
+    <head>
+      <charseq START="686" END="688">her</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-E22-33" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="343" END="352">a
+neighbor</charseq>
+    </extent>
+    <head>
+      <charseq START="345" END="352">neighbor</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-E22-35" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="381" END="383">her</charseq>
+    </extent>
+    <head>
+      <charseq START="381" END="383">her</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-E22-38" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="498" END="524">neighbor Wanita Renea Young</charseq>
+    </extent>
+    <head>
+      <charseq START="507" END="524">Wanita Renea Young</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-E22-39" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="498" END="505">neighbor</charseq>
+    </extent>
+    <head>
+      <charseq START="498" END="505">neighbor</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-E22-41" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="597" END="599">her</charseq>
+    </extent>
+    <head>
+      <charseq START="597" END="599">her</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Wanita Renea Young">
+      <charseq START="507" END="524">Wanita Renea Young</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050205.1954-E26" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-E26-40" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="597" END="605">her house</charseq>
+    </extent>
+    <head>
+      <charseq START="601" END="605">house</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<value ID="AGGRESSIVEVOICEDAILY_20050205.1954-V1" TYPE="Numeric" SUBTYPE="Money">
+  <value_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-V1-1">
+    <extent>
+      <charseq START="315" END="324">about $900</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="AGGRESSIVEVOICEDAILY_20050205.1954-V2" TYPE="Numeric" SUBTYPE="Money">
+  <value_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-V2-1">
+    <extent>
+      <charseq START="460" END="466">$871.70</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="AGGRESSIVEVOICEDAILY_20050205.1954-V3" TYPE="Numeric" SUBTYPE="Money">
+  <value_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-V3-1">
+    <extent>
+      <charseq START="473" END="475">$39</charseq>
+    </extent>
+  </value_mention>
+</value>
+<timex2 ID="AGGRESSIVEVOICEDAILY_20050205.1954-T1" VAL="2005-02-05T19:54:00">
+  <timex2_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-T1-1">
+    <extent>
+      <charseq START="50" END="68">2005-02-05T19:54:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AGGRESSIVEVOICEDAILY_20050205.1954-T2" VAL="2005-02-05T19:54:00">
+  <timex2_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-T2-1">
+    <extent>
+      <charseq START="113" END="131">2005-02-05T19:54:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AGGRESSIVEVOICEDAILY_20050205.1954-T3" VAL="2004-08-01">
+  <timex2_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-T3-1">
+    <extent>
+      <charseq START="706" END="717">the
+next day</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AGGRESSIVEVOICEDAILY_20050205.1954-T4" VAL="2005-02-03">
+  <timex2_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-T4-1">
+    <extent>
+      <charseq START="799" END="806">Thursday</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AGGRESSIVEVOICEDAILY_20050205.1954-T5" VAL="2005-02-04">
+  <timex2_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-T5-1">
+    <extent>
+      <charseq START="908" END="913">Friday</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AGGRESSIVEVOICEDAILY_20050205.1954-T6" VAL="2004-07-31">
+  <timex2_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-T6-1">
+    <extent>
+      <charseq START="1004" END="1010">July 31</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AGGRESSIVEVOICEDAILY_20050205.1954-T7" VAL="2005-02-04">
+  <timex2_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-T7-1">
+    <extent>
+      <charseq START="1178" END="1183">Friday</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AGGRESSIVEVOICEDAILY_20050205.1954-T8" VAL="2004-07-31TNI">
+  <timex2_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-T8-1">
+    <extent>
+      <charseq START="1123" END="1135">a great night</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AGGRESSIVEVOICEDAILY_20050205.1954-T9" VAL="P49Y" ANCHOR_VAL="2005" ANCHOR_DIR="ENDING">
+  <timex2_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-T9-1">
+    <extent>
+      <charseq START="527" END="528">49</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AGGRESSIVEVOICEDAILY_20050205.1954-T10" VAL="2004-07-31">
+  <timex2_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-T10-1">
+    <extent>
+      <charseq START="740" END="743">then</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AGGRESSIVEVOICEDAILY_20050205.1954-T11" VAL="P17Y" ANCHOR_VAL="2004-07-31" ANCHOR_DIR="ENDING">
+  <timex2_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-T11-1">
+    <extent>
+      <charseq START="745" END="746">17</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AGGRESSIVEVOICEDAILY_20050205.1954-T12" VAL="P18Y" ANCHOR_VAL="2004-07-31" ANCHOR_DIR="ENDING">
+  <timex2_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-T12-1">
+    <extent>
+      <charseq START="774" END="775">18</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="AGGRESSIVEVOICEDAILY_20050205.1954-R1" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E21" ROLE="Arg-1"/>
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E13" ROLE="Arg-2"/>
+  <relation_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-R1-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="1140" END="1312">The Denver Post newspaper reported on Friday that the girls had
+decided to stay home and bake the cookies rather than go to a dance
+where there might be cursing and drinking</charseq>
+    </extent>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E21-20" ROLE="Arg-1">
+      <extent>
+        <charseq START="1190" END="1198">the girls</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E13-21" ROLE="Arg-2">
+      <extent>
+        <charseq START="1220" END="1223">home</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="AGGRESSIVEVOICEDAILY_20050205.1954-R2" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E5" ROLE="Arg-1"/>
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E20" ROLE="Arg-2"/>
+  <relation_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-R2-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="264" END="279">A Colorado
+judge</charseq>
+    </extent>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E5-30" ROLE="Arg-1">
+      <extent>
+        <charseq START="264" END="279">A Colorado
+judge</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E20-31" ROLE="Arg-2">
+      <extent>
+        <charseq START="266" END="273">Colorado</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="AGGRESSIVEVOICEDAILY_20050205.1954-R3" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E10" ROLE="Arg-1"/>
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E11" ROLE="Arg-2"/>
+  <relation_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-R3-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="959" END="999">several of their rural
+Colorado neighbors</charseq>
+    </extent>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E10-16" ROLE="Arg-1">
+      <extent>
+        <charseq START="970" END="999">their rural
+Colorado neighbors</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E11-18" ROLE="Arg-2">
+      <extent>
+        <charseq START="976" END="989">rural
+Colorado</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="AGGRESSIVEVOICEDAILY_20050205.1954-R4" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E7" ROLE="Arg-1"/>
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E4" ROLE="Arg-2"/>
+  <relation_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-R4-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="886" END="898">a court clerk</charseq>
+    </extent>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E7-12" ROLE="Arg-1">
+      <extent>
+        <charseq START="886" END="898">a court clerk</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E4-13" ROLE="Arg-2">
+      <extent>
+        <charseq START="888" END="892">court</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="AGGRESSIVEVOICEDAILY_20050205.1954-R5" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E21" ROLE="Arg-1"/>
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E14" ROLE="Arg-2"/>
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-T6" ROLE="Time-Within"/>
+  <relation_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-R5-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="917" END="1135">The girls baked cookies as a surprise for several of their rural
+Colorado neighbors on July 31 and dropped off small batches on their
+porches, accompanied by red or pink paper hearts and the message: "Have
+a great night</charseq>
+    </extent>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E21-14" ROLE="Arg-1">
+      <extent>
+        <charseq START="917" END="925">The girls</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E14-25" ROLE="Arg-2">
+      <extent>
+        <charseq START="1045" END="1057">their
+porches</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-T6-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="1004" END="1010">July 31</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="AGGRESSIVEVOICEDAILY_20050205.1954-R6" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E22" ROLE="Arg-1"/>
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E26" ROLE="Arg-2"/>
+  <relation_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-R6-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="597" END="605">her house</charseq>
+    </extent>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E22-41" ROLE="Arg-1">
+      <extent>
+        <charseq START="597" END="599">her</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E26-40" ROLE="Arg-2">
+      <extent>
+        <charseq START="597" END="605">her house</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="AGGRESSIVEVOICEDAILY_20050205.1954-R7" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E5" ROLE="Arg-1"/>
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E4" ROLE="Arg-2"/>
+  <relation_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-R7-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="845" END="871">La Plata
+County Court Judge</charseq>
+    </extent>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E5-10" ROLE="Arg-1">
+      <extent>
+        <charseq START="845" END="871">La Plata
+County Court Judge</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E4-11" ROLE="Arg-2">
+      <extent>
+        <charseq START="845" END="865">La Plata
+County Court</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="AGGRESSIVEVOICEDAILY_20050205.1954-R8" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E9" ROLE="Arg-1"/>
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E14" ROLE="Arg-2"/>
+  <relation_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-R8-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="1045" END="1057">their
+porches</charseq>
+    </extent>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E9-19" ROLE="Arg-1">
+      <extent>
+        <charseq START="1045" END="1049">their</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E14-25" ROLE="Arg-2">
+      <extent>
+        <charseq START="1045" END="1057">their
+porches</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="AGGRESSIVEVOICEDAILY_20050205.1954-R9" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E21" ROLE="Arg-1"/>
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E26" ROLE="Arg-2"/>
+  <relation_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-R9-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="431" END="717">The pair were ordered to pay $871.70 plus $39 in court costs after
+neighbor Wanita Renea Young, 49, filed a lawsuit complaining that the
+unsolicited cookies, left at her house after the girls knocked on her
+door, had triggered an anxiety attack that sent her to the hospital the
+next day</charseq>
+    </extent>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E21-36" ROLE="Arg-1">
+      <extent>
+        <charseq START="431" END="438">The pair</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E26-40" ROLE="Arg-2">
+      <extent>
+        <charseq START="597" END="605">her house</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="AGGRESSIVEVOICEDAILY_20050205.1954-EV1" TYPE="Transaction" SUBTYPE="Transfer-Money" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E21" ROLE="Giver"/>
+  <event_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-V2" ROLE="Money"/>
+  <event_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-V3" ROLE="Money"/>
+  <event_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E22" ROLE="Beneficiary"/>
+  <event_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-V1" ROLE="Money"/>
+  <event_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E20" ROLE="Place"/>
+  <event_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E4" ROLE="Recipient"/>
+  <event_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E2" ROLE="Giver"/>
+  <event_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E3" ROLE="Giver"/>
+  <event_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-T4" ROLE="Time-Within"/>
+  <event_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-EV1-1">
+    <extent>
+      <charseq START="266" END="352">Colorado
+judge ordered two teen-age girls to pay about $900 for the distress a
+neighbor</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="264" END="427">A Colorado
+judge ordered two teen-age girls to pay about $900 for the distress a
+neighbor said they caused by giving her home-made cookies adorned with
+paper hearts</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="311" END="313">pay</charseq>
+    </anchor>
+    <event_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E21-32" ROLE="Giver">
+      <extent>
+        <charseq START="289" END="306">two teen-age girls</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E22-33" ROLE="Beneficiary">
+      <extent>
+        <charseq START="343" END="352">a
+neighbor</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-V1-1" ROLE="Money">
+      <extent>
+        <charseq START="315" END="324">about $900</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E20-31" ROLE="Place">
+      <extent>
+        <charseq START="266" END="273">Colorado</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-EV1-2">
+    <extent>
+      <charseq START="431" END="484">The pair were ordered to pay $871.70 plus $39 in court</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="431" END="717">The pair were ordered to pay $871.70 plus $39 in court costs after
+neighbor Wanita Renea Young, 49, filed a lawsuit complaining that the
+unsolicited cookies, left at her house after the girls knocked on her
+door, had triggered an anxiety attack that sent her to the hospital the
+next day</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="456" END="458">pay</charseq>
+    </anchor>
+    <event_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E21-36" ROLE="Giver">
+      <extent>
+        <charseq START="431" END="438">The pair</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-V2-1" ROLE="Money">
+      <extent>
+        <charseq START="460" END="466">$871.70</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-V3-1" ROLE="Money">
+      <extent>
+        <charseq START="473" END="475">$39</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E4-37" ROLE="Recipient">
+      <extent>
+        <charseq START="480" END="484">court</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-EV1-3">
+    <extent>
+      <charseq START="721" END="806">Taylor Ostergaard, then 17, and Lindsey Jo Zellitte, 18, paid the
+judgment on Thursday</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="721" END="913">Taylor Ostergaard, then 17, and Lindsey Jo Zellitte, 18, paid the
+judgment on Thursday after a small claims court ruling by La Plata
+County Court Judge Doug Walker, a court clerk said on Friday</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="778" END="781">paid</charseq>
+    </anchor>
+    <event_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E2-6" ROLE="Giver">
+      <extent>
+        <charseq START="721" END="737">Taylor Ostergaard</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E3-7" ROLE="Giver">
+      <extent>
+        <charseq START="753" END="771">Lindsey Jo Zellitte</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-T4-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="799" END="806">Thursday</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="AGGRESSIVEVOICEDAILY_20050205.1954-EV2" TYPE="Justice" SUBTYPE="Sue" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E21" ROLE="Defendant"/>
+  <event_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E22" ROLE="Plaintiff"/>
+  <event_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-EV2-1">
+    <extent>
+      <charseq START="431" END="545">The pair were ordered to pay $871.70 plus $39 in court costs after
+neighbor Wanita Renea Young, 49, filed a lawsuit</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="431" END="717">The pair were ordered to pay $871.70 plus $39 in court costs after
+neighbor Wanita Renea Young, 49, filed a lawsuit complaining that the
+unsolicited cookies, left at her house after the girls knocked on her
+door, had triggered an anxiety attack that sent her to the hospital the
+next day</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="539" END="545">lawsuit</charseq>
+    </anchor>
+    <event_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E21-36" ROLE="Defendant">
+      <extent>
+        <charseq START="431" END="438">The pair</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E22-38" ROLE="Plaintiff">
+      <extent>
+        <charseq START="498" END="524">neighbor Wanita Renea Young</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="AGGRESSIVEVOICEDAILY_20050205.1954-EV3" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E22" ROLE="Artifact"/>
+  <event_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E26" ROLE="Destination"/>
+  <event_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E1" ROLE="Origin"/>
+  <event_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-T3" ROLE="Time-Within"/>
+  <event_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-EV3-1">
+    <extent>
+      <charseq START="597" END="717">her house after the girls knocked on her
+door, had triggered an anxiety attack that sent her to the hospital the
+next day</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="431" END="717">The pair were ordered to pay $871.70 plus $39 in court costs after
+neighbor Wanita Renea Young, 49, filed a lawsuit complaining that the
+unsolicited cookies, left at her house after the girls knocked on her
+door, had triggered an anxiety attack that sent her to the hospital the
+next day</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="681" END="684">sent</charseq>
+    </anchor>
+    <event_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E22-4" ROLE="Artifact">
+      <extent>
+        <charseq START="686" END="688">her</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E26-40" ROLE="Destination">
+      <extent>
+        <charseq START="597" END="605">her house</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E1-5" ROLE="Origin">
+      <extent>
+        <charseq START="693" END="704">the hospital</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-T3-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="706" END="717">the
+next day</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="AGGRESSIVEVOICEDAILY_20050205.1954-EV4" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Negative" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E21" ROLE="Artifact"/>
+  <event_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E13" ROLE="Origin"/>
+  <event_mention ID="AGGRESSIVEVOICEDAILY_20050205.1954-EV4-1">
+    <extent>
+      <charseq START="1190" END="1259">the girls had
+decided to stay home and bake the cookies rather than go</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1140" END="1312">The Denver Post newspaper reported on Friday that the girls had
+decided to stay home and bake the cookies rather than go to a dance
+where there might be cursing and drinking</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1258" END="1259">go</charseq>
+    </anchor>
+    <event_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E21-20" ROLE="Artifact">
+      <extent>
+        <charseq START="1190" END="1198">the girls</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050205.1954-E13-21" ROLE="Origin">
+      <extent>
+        <charseq START="1220" END="1223">home</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

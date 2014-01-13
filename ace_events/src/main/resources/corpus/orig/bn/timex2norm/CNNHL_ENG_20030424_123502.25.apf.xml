@@ -1,0 +1,370 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNNHL_ENG_20030424_123502.25.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNNHL_ENG_20030424_123502.25">
+<entity ID="CNNHL_ENG_20030424_123502.25-E1" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030424_123502.25-E1-2" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="350" END="369">a senior high school</charseq>
+    </extent>
+    <head>
+      <charseq START="364" END="369">school</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030424_123502.25-E2" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030424_123502.25-E2-1" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="70" END="91">police in pennsylvania</charseq>
+    </extent>
+    <head>
+      <charseq START="70" END="75">police</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030424_123502.25-E3" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030424_123502.25-E3-3" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="80" END="91">pennsylvania</charseq>
+    </extent>
+    <head>
+      <charseq START="80" END="91">pennsylvania</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="pennsylvania">
+      <charseq START="80" END="91">pennsylvania</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030424_123502.25-E4" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030424_123502.25-E4-4" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="93" END="101">a student</charseq>
+    </extent>
+    <head>
+      <charseq START="95" END="101">student</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030424_123502.25-E4-6" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="143" END="149">himself</charseq>
+    </extent>
+    <head>
+      <charseq START="143" END="149">himself</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030424_123502.25-E5" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030424_123502.25-E5-5" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="116" END="126">a principal</charseq>
+    </extent>
+    <head>
+      <charseq START="118" END="126">principal</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030424_123502.25-E6" TYPE="FAC" SUBTYPE="Subarea-Facility" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030424_123502.25-E6-7" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="180" END="267">the cafeteria of red lion
+area junior high school about 30 miles southeast of harrisburg</charseq>
+    </extent>
+    <head>
+      <charseq START="184" END="192">cafeteria</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030424_123502.25-E7" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030424_123502.25-E7-8" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="197" END="228">red lion
+area junior high school</charseq>
+    </extent>
+    <head>
+      <charseq START="197" END="228">red lion
+area junior high school</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="red lion area junior high school">
+      <charseq START="197" END="228">red lion
+area junior high school</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030424_123502.25-E8" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030424_123502.25-E8-9" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="258" END="267">harrisburg</charseq>
+    </extent>
+    <head>
+      <charseq START="258" END="267">harrisburg</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="harrisburg">
+      <charseq START="258" END="267">harrisburg</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030424_123502.25-E9" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNNHL_ENG_20030424_123502.25-E9-10" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="304" END="311">students</charseq>
+    </extent>
+    <head>
+      <charseq START="304" END="311">students</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<timex2 ID="CNNHL_ENG_20030424_123502.25-T1" VAL="2003-04-24T07:30">
+  <timex2_mention ID="CNNHL_ENG_20030424_123502.25-T1-1">
+    <extent>
+      <charseq START="285" END="301">7:30 this morning</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNNHL_ENG_20030424_123502.25-T2" VAL="2003-04-24T13:52:32">
+  <timex2_mention ID="CNNHL_ENG_20030424_123502.25-T2-1">
+    <extent>
+      <charseq START="46" END="64">2003-04-24 13:52:32</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNNHL_ENG_20030424_123502.25-T3" VAL="2003-04-24TMO">
+  <timex2_mention ID="CNNHL_ENG_20030424_123502.25-T3-1">
+    <extent>
+      <charseq START="151" END="162">this morning</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNNHL_ENG_20030424_123502.25-R1" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030424_123502.25-E2" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030424_123502.25-E3" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030424_123502.25-R1-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="70" END="91">police in pennsylvania</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030424_123502.25-E2-1" ROLE="Arg-1">
+      <extent>
+        <charseq START="70" END="91">police in pennsylvania</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030424_123502.25-E3-3" ROLE="Arg-2">
+      <extent>
+        <charseq START="80" END="91">pennsylvania</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030424_123502.25-R2" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030424_123502.25-E6" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030424_123502.25-E7" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030424_123502.25-R2-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="180" END="267">the cafeteria of red lion
+area junior high school about 30 miles southeast of harrisburg</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030424_123502.25-E6-7" ROLE="Arg-1">
+      <extent>
+        <charseq START="180" END="267">the cafeteria of red lion
+area junior high school about 30 miles southeast of harrisburg</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030424_123502.25-E7-8" ROLE="Arg-2">
+      <extent>
+        <charseq START="197" END="228">red lion
+area junior high school</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030424_123502.25-R3" TYPE="PHYS" SUBTYPE="Near" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030424_123502.25-E7" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030424_123502.25-E8" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030424_123502.25-R3-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="197" END="267">red lion
+area junior high school about 30 miles southeast of harrisburg</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030424_123502.25-E7-8" ROLE="Arg-1">
+      <extent>
+        <charseq START="197" END="228">red lion
+area junior high school</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030424_123502.25-E8-9" ROLE="Arg-2">
+      <extent>
+        <charseq START="258" END="267">harrisburg</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030424_123502.25-R4" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030424_123502.25-E9" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030424_123502.25-E1" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030424_123502.25-R4-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="304" END="369">students then were moved across the
+street to a senior high school</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030424_123502.25-E9-10" ROLE="Arg-1">
+      <extent>
+        <charseq START="304" END="311">students</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030424_123502.25-E1-2" ROLE="Arg-2">
+      <extent>
+        <charseq START="350" END="369">a senior high school</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNNHL_ENG_20030424_123502.25-EV1" TYPE="Life" SUBTYPE="Die" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNNHL_ENG_20030424_123502.25-E4" ROLE="Victim"/>
+  <event_argument REFID="CNNHL_ENG_20030424_123502.25-E4" ROLE="Agent"/>
+  <event_argument REFID="CNNHL_ENG_20030424_123502.25-E3" ROLE="Place"/>
+  <event_argument REFID="CNNHL_ENG_20030424_123502.25-T3" ROLE="Time-Within"/>
+  <event_mention ID="CNNHL_ENG_20030424_123502.25-EV1-1">
+    <extent>
+      <charseq START="80" END="162">pennsylvania a student fatally shot a principal before
+killing himself this morning</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="70" END="162">police in pennsylvania a student fatally shot a principal before
+killing himself this morning</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="135" END="141">killing</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030424_123502.25-E4-6" ROLE="Victim">
+      <extent>
+        <charseq START="143" END="149">himself</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030424_123502.25-E4-4" ROLE="Agent">
+      <extent>
+        <charseq START="93" END="101">a student</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030424_123502.25-E3-3" ROLE="Place">
+      <extent>
+        <charseq START="80" END="91">pennsylvania</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030424_123502.25-T3-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="151" END="162">this morning</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNNHL_ENG_20030424_123502.25-EV2" TYPE="Life" SUBTYPE="Die" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNNHL_ENG_20030424_123502.25-E6" ROLE="Place"/>
+  <event_argument REFID="CNNHL_ENG_20030424_123502.25-T1" ROLE="Time-Within"/>
+  <event_argument REFID="CNNHL_ENG_20030424_123502.25-E5" ROLE="Victim"/>
+  <event_argument REFID="CNNHL_ENG_20030424_123502.25-E4" ROLE="Agent"/>
+  <event_argument REFID="CNNHL_ENG_20030424_123502.25-E3" ROLE="Place"/>
+  <event_argument REFID="CNNHL_ENG_20030424_123502.25-T3" ROLE="Time-Within"/>
+  <event_mention ID="CNNHL_ENG_20030424_123502.25-EV2-1">
+    <extent>
+      <charseq START="165" END="267">it happened in the cafeteria of red lion
+area junior high school about 30 miles southeast of harrisburg</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="165" END="267">it happened in the cafeteria of red lion
+area junior high school about 30 miles southeast of harrisburg</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="165" END="166">it</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030424_123502.25-E6-7" ROLE="Place">
+      <extent>
+        <charseq START="180" END="267">the cafeteria of red lion
+area junior high school about 30 miles southeast of harrisburg</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNNHL_ENG_20030424_123502.25-EV2-2">
+    <extent>
+      <charseq START="270" END="301">it
+happened at 7:30 this morning</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="270" END="301">it
+happened at 7:30 this morning</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="270" END="271">it</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030424_123502.25-T1-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="285" END="301">7:30 this morning</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNNHL_ENG_20030424_123502.25-EV2-3">
+    <extent>
+      <charseq START="80" END="162">pennsylvania a student fatally shot a principal before
+killing himself this morning</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="70" END="162">police in pennsylvania a student fatally shot a principal before
+killing himself this morning</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="111" END="114">shot</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030424_123502.25-E5-5" ROLE="Victim">
+      <extent>
+        <charseq START="116" END="126">a principal</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030424_123502.25-E4-4" ROLE="Agent">
+      <extent>
+        <charseq START="93" END="101">a student</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030424_123502.25-E3-3" ROLE="Place">
+      <extent>
+        <charseq START="80" END="91">pennsylvania</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030424_123502.25-T3-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="151" END="162">this morning</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNNHL_ENG_20030424_123502.25-EV3" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNNHL_ENG_20030424_123502.25-E9" ROLE="Artifact"/>
+  <event_argument REFID="CNNHL_ENG_20030424_123502.25-E1" ROLE="Destination"/>
+  <event_mention ID="CNNHL_ENG_20030424_123502.25-EV3-1">
+    <extent>
+      <charseq START="304" END="369">students then were moved across the
+street to a senior high school</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="304" END="369">students then were moved across the
+street to a senior high school</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="323" END="327">moved</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030424_123502.25-E9-10" ROLE="Artifact">
+      <extent>
+        <charseq START="304" END="311">students</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030424_123502.25-E1-2" ROLE="Destination">
+      <extent>
+        <charseq START="350" END="369">a senior high school</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

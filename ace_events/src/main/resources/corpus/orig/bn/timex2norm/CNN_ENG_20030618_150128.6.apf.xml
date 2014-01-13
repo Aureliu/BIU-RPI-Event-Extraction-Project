@@ -1,0 +1,885 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030618_150128.6.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030618_150128.6">
+<entity ID="CNN_ENG_20030618_150128.6-E1" TYPE="PER" SUBTYPE="Group" CLASS="NEG">
+  <entity_mention ID="CNN_ENG_20030618_150128.6-E1-39" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="542" END="544">who</charseq>
+    </extent>
+    <head>
+      <charseq START="542" END="544">who</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030618_150128.6-E2" TYPE="ORG" SUBTYPE="Religious" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030618_150128.6-E2-3" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="591" END="604">another desies</charseq>
+    </extent>
+    <head>
+      <charseq START="599" END="604">desies</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030618_150128.6-E3" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030618_150128.6-E3-4" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="612" END="613">me</charseq>
+    </extent>
+    <head>
+      <charseq START="612" END="613">me</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030618_150128.6-E4" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030618_150128.6-E4-5" TYPE="NAM" LDCTYPE="NAMPRE">
+    <extent>
+      <charseq START="642" END="648">o'brien</charseq>
+    </extent>
+    <head>
+      <charseq START="642" END="648">o'brien</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="o'brien">
+      <charseq START="642" END="648">o'brien</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030618_150128.6-E5" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030618_150128.6-E5-8" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="703" END="715">barbara blain</charseq>
+    </extent>
+    <head>
+      <charseq START="703" END="715">barbara blain</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_150128.6-E5-9" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="718" END="766">the founder of the survivors
+network in st. louis</charseq>
+    </extent>
+    <head>
+      <charseq START="722" END="728">founder</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_150128.6-E5-19" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="851" END="857">barbara</charseq>
+    </extent>
+    <head>
+      <charseq START="851" END="857">barbara</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_150128.6-E5-20" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="863" END="865">you</charseq>
+    </extent>
+    <head>
+      <charseq START="863" END="865">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_150128.6-E5-22" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="940" END="942">you</charseq>
+    </extent>
+    <head>
+      <charseq START="940" END="942">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="barbara blain">
+      <charseq START="703" END="715">barbara blain</charseq>
+    </name>
+    <name NAME="barbara">
+      <charseq START="851" END="857">barbara</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030618_150128.6-E7" TYPE="ORG" SUBTYPE="Non-Governmental" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030618_150128.6-E7-10" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="733" END="766">the survivors
+network in st. louis</charseq>
+    </extent>
+    <head>
+      <charseq START="747" END="753">network</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030618_150128.6-E8" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030618_150128.6-E8-12" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="785" END="786">us</charseq>
+    </extent>
+    <head>
+      <charseq START="785" END="786">us</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030618_150128.6-E9" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030618_150128.6-E9-13" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="793" END="799">detroit</charseq>
+    </extent>
+    <head>
+      <charseq START="793" END="799">detroit</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="detroit">
+      <charseq START="793" END="799">detroit</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030618_150128.6-E10" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030618_150128.6-E10-15" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="812" END="848">the founder of a priest support group</charseq>
+    </extent>
+    <head>
+      <charseq START="816" END="822">founder</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_150128.6-E10-18" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="801" END="809">joe
+mayor</charseq>
+    </extent>
+    <head>
+      <charseq START="801" END="809">joe
+mayor</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="joe mayor">
+      <charseq START="801" END="809">joe
+mayor</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030618_150128.6-E12" TYPE="ORG" SUBTYPE="Non-Governmental" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030618_150128.6-E12-16" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="827" END="848">a priest support group</charseq>
+    </extent>
+    <head>
+      <charseq START="844" END="848">group</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030618_150128.6-E13" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030618_150128.6-E13-17" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="829" END="834">priest</charseq>
+    </extent>
+    <head>
+      <charseq START="829" END="834">priest</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030618_150128.6-E14" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030618_150128.6-E14-1" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="86" END="92">priests</charseq>
+    </extent>
+    <head>
+      <charseq START="86" END="92">priests</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030618_150128.6-E15" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030618_150128.6-E15-24" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="737" END="745">survivors</charseq>
+    </extent>
+    <head>
+      <charseq START="737" END="745">survivors</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030618_150128.6-E16" TYPE="ORG" SUBTYPE="Religious" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030618_150128.6-E16-6" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="688" END="697">the
+church</charseq>
+    </extent>
+    <head>
+      <charseq START="692" END="697">church</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_150128.6-E16-25" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="114" END="153">the catholic
+church in the united states</charseq>
+    </extent>
+    <head>
+      <charseq START="127" END="132">church</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030618_150128.6-E17" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030618_150128.6-E17-26" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="137" END="153">the united states</charseq>
+    </extent>
+    <head>
+      <charseq START="141" END="153">united states</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="united states">
+      <charseq START="141" END="153">united states</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030618_150128.6-E18" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030618_150128.6-E18-21" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="877" END="887">the bishops</charseq>
+    </extent>
+    <head>
+      <charseq START="881" END="887">bishops</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_150128.6-E18-23" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="959" END="962">they</charseq>
+    </extent>
+    <head>
+      <charseq START="959" END="962">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_150128.6-E18-27" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="191" END="197">bishops</charseq>
+    </extent>
+    <head>
+      <charseq START="191" END="197">bishops</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_150128.6-E18-29" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="232" END="236">their</charseq>
+    </extent>
+    <head>
+      <charseq START="232" END="236">their</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030618_150128.6-E19" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030618_150128.6-E19-11" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="758" END="766">st. louis</charseq>
+    </extent>
+    <head>
+      <charseq START="758" END="766">st. louis</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_150128.6-E19-28" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="218" END="226">st. louis</charseq>
+    </extent>
+    <head>
+      <charseq START="218" END="226">st. louis</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="st. louis">
+      <charseq START="758" END="766">st. louis</charseq>
+    </name>
+    <name NAME="st. louis">
+      <charseq START="218" END="226">st. louis</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030618_150128.6-E20" TYPE="ORG" SUBTYPE="Religious" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030618_150128.6-E20-30" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="296" END="338">the national conference of catholic bishops</charseq>
+    </extent>
+    <head>
+      <charseq START="300" END="338">national conference of catholic bishops</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="national conference of catholic bishops">
+      <charseq START="300" END="338">national conference of catholic bishops</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030618_150128.6-E21" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030618_150128.6-E21-31" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="341" END="357">diocese
+officials</charseq>
+    </extent>
+    <head>
+      <charseq START="349" END="357">officials</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030618_150128.6-E22" TYPE="ORG" SUBTYPE="Religious" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030618_150128.6-E22-32" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="341" END="347">diocese</charseq>
+    </extent>
+    <head>
+      <charseq START="341" END="347">diocese</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030618_150128.6-E23" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030618_150128.6-E23-2" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="561" END="567">a minor</charseq>
+    </extent>
+    <head>
+      <charseq START="563" END="567">minor</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_150128.6-E23-33" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="402" END="408">a
+minor</charseq>
+    </extent>
+    <head>
+      <charseq START="404" END="408">minor</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_150128.6-E23-35" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="473" END="479">a minor</charseq>
+    </extent>
+    <head>
+      <charseq START="475" END="479">minor</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030618_150128.6-E24" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030618_150128.6-E24-34" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="413" END="430">public authorities</charseq>
+    </extent>
+    <head>
+      <charseq START="420" END="430">authorities</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030618_150128.6-E25" TYPE="ORG" SUBTYPE="Religious" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030618_150128.6-E25-36" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="507" END="518">the ministry</charseq>
+    </extent>
+    <head>
+      <charseq START="511" END="518">ministry</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030618_150128.6-E26" TYPE="PER" SUBTYPE="Individual" CLASS="NEG">
+  <entity_mention ID="CNN_ENG_20030618_150128.6-E26-37" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="521" END="567">no
+priest or deacons who sexually abuse a minor</charseq>
+    </extent>
+    <head>
+      <charseq START="524" END="529">priest</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030618_150128.6-E27" TYPE="PER" SUBTYPE="Group" CLASS="NEG">
+  <entity_mention ID="CNN_ENG_20030618_150128.6-E27-38" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="521" END="567">no
+priest or deacons who sexually abuse a minor</charseq>
+    </extent>
+    <head>
+      <charseq START="534" END="540">deacons</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<timex2 ID="CNN_ENG_20030618_150128.6-T1" VAL="2003-06-18T15:22:40">
+  <timex2_mention ID="CNN_ENG_20030618_150128.6-T1-1">
+    <extent>
+      <charseq START="43" END="61">2003-06-18 15:22:40</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030618_150128.6-T2" VAL="2003-06-19">
+  <timex2_mention ID="CNN_ENG_20030618_150128.6-T2-1">
+    <extent>
+      <charseq START="206" END="213">tomorrow</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030618_150128.6-T3" VAL="2003-06-19" SET="YES">
+  <timex2_mention ID="CNN_ENG_20030618_150128.6-T3-1">
+    <extent>
+      <charseq START="238" END="247">semiannual</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030618_150128.6-T4" VAL="2002">
+  <timex2_mention ID="CNN_ENG_20030618_150128.6-T4-1">
+    <extent>
+      <charseq START="283" END="291">last year</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030618_150128.6-T5" VAL="PAST_REF" ANCHOR_VAL="2003-06-18-T15:22:40" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="CNN_ENG_20030618_150128.6-T5-1">
+    <extent>
+      <charseq START="433" END="436">past</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030618_150128.6-T6" VAL="PRESENT_REF" ANCHOR_VAL="2003-06-18-T15:22:40" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_ENG_20030618_150128.6-T6-1">
+    <extent>
+      <charseq START="439" END="445">present</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030618_150128.6-T7" VAL="FUTURE_REF" ANCHOR_VAL="2003-06-18-T15:22:40" ANCHOR_DIR="AFTER">
+  <timex2_mention ID="CNN_ENG_20030618_150128.6-T7-1">
+    <extent>
+      <charseq START="450" END="455">future</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030618_150128.6-T8" VAL="2003-06-19">
+  <timex2_mention ID="CNN_ENG_20030618_150128.6-T8-1">
+    <extent>
+      <charseq START="926" END="933">tomorrow</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030618_150128.6-T9" VAL="2003-06-18T15:22:40">
+  <timex2_mention ID="CNN_ENG_20030618_150128.6-T9-1">
+    <extent>
+      <charseq START="615" END="617">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030618_150128.6-R1" TYPE="GEN-AFF" SUBTYPE="Org-Location" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030618_150128.6-E16" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030618_150128.6-E17" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030618_150128.6-R1-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="114" END="153">the catholic
+church in the united states</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030618_150128.6-E16-25" ROLE="Arg-1">
+      <extent>
+        <charseq START="114" END="153">the catholic
+church in the united states</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030618_150128.6-E17-26" ROLE="Arg-2">
+      <extent>
+        <charseq START="137" END="153">the united states</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030618_150128.6-R2" TYPE="PHYS" SUBTYPE="Located" TENSE="Future" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030618_150128.6-E18" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030618_150128.6-E19" ROLE="Arg-2"/>
+  <relation_argument REFID="CNN_ENG_20030618_150128.6-T2" ROLE="Time-Within"/>
+  <relation_mention ID="CNN_ENG_20030618_150128.6-R2-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="67" END="255">well, sex abuse by priests remains an issue in the catholic
+church in the united states and it is certain to be an
+issue as bishops gather tomorrow in st. louis for their
+semiannual meeting</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030618_150128.6-E18-27" ROLE="Arg-1">
+      <extent>
+        <charseq START="191" END="197">bishops</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030618_150128.6-E19-28" ROLE="Arg-2">
+      <extent>
+        <charseq START="218" END="226">st. louis</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030618_150128.6-T2-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="206" END="213">tomorrow</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030618_150128.6-R3" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030618_150128.6-E21" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030618_150128.6-E22" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030618_150128.6-R3-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="341" END="357">diocese
+officials</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030618_150128.6-E21-31" ROLE="Arg-1">
+      <extent>
+        <charseq START="341" END="357">diocese
+officials</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030618_150128.6-E22-32" ROLE="Arg-2">
+      <extent>
+        <charseq START="341" END="347">diocese</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030618_150128.6-R4" TYPE="ORG-AFF" SUBTYPE="Founder" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030618_150128.6-E5" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030618_150128.6-E7" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030618_150128.6-R4-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="718" END="766">the founder of the survivors
+network in st. louis</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030618_150128.6-E5-9" ROLE="Arg-1">
+      <extent>
+        <charseq START="718" END="766">the founder of the survivors
+network in st. louis</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030618_150128.6-E7-10" ROLE="Arg-2">
+      <extent>
+        <charseq START="733" END="766">the survivors
+network in st. louis</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030618_150128.6-R5" TYPE="GEN-AFF" SUBTYPE="Org-Location" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030618_150128.6-E7" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030618_150128.6-E19" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030618_150128.6-R5-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="733" END="766">the survivors
+network in st. louis</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030618_150128.6-E7-10" ROLE="Arg-1">
+      <extent>
+        <charseq START="733" END="766">the survivors
+network in st. louis</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030618_150128.6-E19-11" ROLE="Arg-2">
+      <extent>
+        <charseq START="758" END="766">st. louis</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030618_150128.6-R6" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030618_150128.6-E10" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030618_150128.6-E9" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030618_150128.6-R6-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="607" END="848">with me now to talk more
+about the o'brien case and the divisions still dividing the
+church are barbara blain, the founder of the survivors
+network in st. louis and also joining us from detroit joe
+mayor, the founder of a priest support group</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030618_150128.6-E10-18" ROLE="Arg-1">
+      <extent>
+        <charseq START="801" END="809">joe
+mayor</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030618_150128.6-E9-13" ROLE="Arg-2">
+      <extent>
+        <charseq START="793" END="799">detroit</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030618_150128.6-R7" TYPE="ORG-AFF" SUBTYPE="Founder" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030618_150128.6-E10" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030618_150128.6-E12" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030618_150128.6-R7-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="812" END="848">the founder of a priest support group</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030618_150128.6-E10-15" ROLE="Arg-1">
+      <extent>
+        <charseq START="812" END="848">the founder of a priest support group</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030618_150128.6-E12-16" ROLE="Arg-2">
+      <extent>
+        <charseq START="827" END="848">a priest support group</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030618_150128.6-R8" TYPE="ORG-AFF" SUBTYPE="Membership" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030618_150128.6-E13" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030618_150128.6-E12" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030618_150128.6-R8-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="827" END="848">a priest support group</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030618_150128.6-E13-17" ROLE="Arg-1">
+      <extent>
+        <charseq START="829" END="834">priest</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030618_150128.6-E12-16" ROLE="Arg-2">
+      <extent>
+        <charseq START="827" END="848">a priest support group</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030618_150128.6-EV1" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030618_150128.6-E23" ROLE="Target"/>
+  <event_argument REFID="CNN_ENG_20030618_150128.6-T7" ROLE="Time-Within"/>
+  <event_argument REFID="CNN_ENG_20030618_150128.6-T5" ROLE="Time-Within"/>
+  <event_argument REFID="CNN_ENG_20030618_150128.6-T6" ROLE="Time-Within"/>
+  <event_argument REFID="CNN_ENG_20030618_150128.6-E14" ROLE="Attacker"/>
+  <event_mention ID="CNN_ENG_20030618_150128.6-EV1-1">
+    <extent>
+      <charseq START="77" END="92">abuse by priests</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="67" END="255">well, sex abuse by priests remains an issue in the catholic
+church in the united states and it is certain to be an
+issue as bishops gather tomorrow in st. louis for their
+semiannual meeting</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="77" END="81">abuse</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030618_150128.6-E14-1" ROLE="Attacker">
+      <extent>
+        <charseq START="86" END="92">priests</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030618_150128.6-EV1-2">
+    <extent>
+      <charseq START="433" END="479">past, present or future sexual
+abuse of a minor</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="433" END="518">past, present or future sexual
+abuse of a minor will lead to removal from the ministry</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="464" END="468">abuse</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030618_150128.6-E23-35" ROLE="Target">
+      <extent>
+        <charseq START="473" END="479">a minor</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030618_150128.6-T7-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="450" END="455">future</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030618_150128.6-T5-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="433" END="436">past</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030618_150128.6-T6-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="439" END="445">present</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030618_150128.6-EV1-3">
+    <extent>
+      <charseq START="1018" END="1022">abuse</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="874" END="1028">as the bishops get ready for this important
+meeting tomorrow, are you satisfied that they have taken
+all the appropriate steps to deal with the abuse issue</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1018" END="1022">abuse</charseq>
+    </anchor>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030618_150128.6-EV1-4">
+    <extent>
+      <charseq START="393" END="408">abuse of a
+minor</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="258" END="430">under a charter approved last year by
+the national conference of catholic bishops, diocese
+officials will report allegations of sexual abuse of a
+minor to public authorities</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="393" END="397">abuse</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030618_150128.6-E23-33" ROLE="Target">
+      <extent>
+        <charseq START="402" END="408">a
+minor</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030618_150128.6-EV2" TYPE="Contact" SUBTYPE="Meet" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Future">
+  <event_argument REFID="CNN_ENG_20030618_150128.6-E19" ROLE="Place"/>
+  <event_argument REFID="CNN_ENG_20030618_150128.6-E18" ROLE="Entity"/>
+  <event_argument REFID="CNN_ENG_20030618_150128.6-T2" ROLE="Time-Within"/>
+  <event_argument REFID="CNN_ENG_20030618_150128.6-T8" ROLE="Time-Within"/>
+  <event_mention ID="CNN_ENG_20030618_150128.6-EV2-1">
+    <extent>
+      <charseq START="206" END="255">tomorrow in st. louis for their
+semiannual meeting</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="67" END="255">well, sex abuse by priests remains an issue in the catholic
+church in the united states and it is certain to be an
+issue as bishops gather tomorrow in st. louis for their
+semiannual meeting</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="249" END="255">meeting</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030618_150128.6-E19-28" ROLE="Place">
+      <extent>
+        <charseq START="218" END="226">st. louis</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030618_150128.6-E18-29" ROLE="Entity">
+      <extent>
+        <charseq START="232" END="236">their</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030618_150128.6-T2-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="206" END="213">tomorrow</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030618_150128.6-EV2-2">
+    <extent>
+      <charseq START="877" END="933">the bishops get ready for this important
+meeting tomorrow</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="874" END="1028">as the bishops get ready for this important
+meeting tomorrow, are you satisfied that they have taken
+all the appropriate steps to deal with the abuse issue</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="918" END="924">meeting</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030618_150128.6-E18-21" ROLE="Entity">
+      <extent>
+        <charseq START="877" END="887">the bishops</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030618_150128.6-T8-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="926" END="933">tomorrow</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030618_150128.6-EV3" TYPE="Personnel" SUBTYPE="End-Position" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Future">
+  <event_argument REFID="CNN_ENG_20030618_150128.6-E23" ROLE="Person"/>
+  <event_argument REFID="CNN_ENG_20030618_150128.6-E25" ROLE="Entity"/>
+  <event_mention ID="CNN_ENG_20030618_150128.6-EV3-1">
+    <extent>
+      <charseq START="473" END="518">a minor will lead to removal from the ministry</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="433" END="518">past, present or future sexual
+abuse of a minor will lead to removal from the ministry</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="494" END="500">removal</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030618_150128.6-E23-35" ROLE="Person">
+      <extent>
+        <charseq START="473" END="479">a minor</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030618_150128.6-E25-36" ROLE="Entity">
+      <extent>
+        <charseq START="507" END="518">the ministry</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030618_150128.6-EV4" TYPE="Personnel" SUBTYPE="Start-Position" MODALITY="Other" POLARITY="Negative" GENERICITY="Specific" TENSE="Future">
+  <event_argument REFID="CNN_ENG_20030618_150128.6-E26" ROLE="Person"/>
+  <event_argument REFID="CNN_ENG_20030618_150128.6-E27" ROLE="Person"/>
+  <event_argument REFID="CNN_ENG_20030618_150128.6-E2" ROLE="Entity"/>
+  <event_mention ID="CNN_ENG_20030618_150128.6-EV4-1">
+    <extent>
+      <charseq START="521" END="604">no
+priest or deacons who sexually abuse a minor may be
+transferred to another desies</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="521" END="604">no
+priest or deacons who sexually abuse a minor may be
+transferred to another desies</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="576" END="586">transferred</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030618_150128.6-E26-37" ROLE="Person">
+      <extent>
+        <charseq START="521" END="567">no
+priest or deacons who sexually abuse a minor</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030618_150128.6-E27-38" ROLE="Person">
+      <extent>
+        <charseq START="521" END="567">no
+priest or deacons who sexually abuse a minor</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030618_150128.6-E2-3" ROLE="Entity">
+      <extent>
+        <charseq START="591" END="604">another desies</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030618_150128.6-EV5" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030618_150128.6-E1" ROLE="Attacker"/>
+  <event_argument REFID="CNN_ENG_20030618_150128.6-E23" ROLE="Target"/>
+  <event_mention ID="CNN_ENG_20030618_150128.6-EV5-1">
+    <extent>
+      <charseq START="542" END="567">who sexually abuse a minor</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="521" END="604">no
+priest or deacons who sexually abuse a minor may be
+transferred to another desies</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="555" END="559">abuse</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030618_150128.6-E1-39" ROLE="Attacker">
+      <extent>
+        <charseq START="542" END="544">who</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030618_150128.6-E23-2" ROLE="Target">
+      <extent>
+        <charseq START="561" END="567">a minor</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

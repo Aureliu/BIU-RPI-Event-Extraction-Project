@@ -1,0 +1,245 @@
+    <event_mention ID="/Users/che/Data/ACE/ACE2005-TrainingData-V6.0/English/nw/timex2norm/AFP_ENG_20030319.0879-E-5" p="1.000">
+      <extent>
+			<charseq START="851" END="1086">As part of the 11-billion-dollar sale of USA Interactive&apos;s film and
+television operations to the French media company in December 2001,
+USA Interactive received 2.5 billion dollars in preferred shares in
+Vivendi Universal Entertainment.</charseq>
+      </extent>
+      <anchor>
+			<charseq START="884" END="887">sale</charseq>
+      </anchor>
+      <event_mention_argument REFID="AFP_ENG_20030319.0879-E1-9" ROLE="Seller" p="1.000" pRole="1.000">
+      	<extent>
+			<charseq START="892" END="906">USA Interactive</charseq>
+      	</extent>
+      </event_mention_argument>
+      <event_mention_argument REFID="AFP_ENG_20030319.0879-E1-8" ROLE="Seller" p="1.000" pRole="1.000">
+      	<extent>
+			<charseq START="987" END="1001">USA Interactive</charseq>
+      	</extent>
+      </event_mention_argument>
+      <event_mention_argument REFID="AFP_ENG_20030319.0879-E2-10" ROLE="Seller" p="1.000" pRole="1.000">
+      	<extent>
+			<charseq START="892" END="939">USA Interactive&apos;s film and
+television operations</charseq>
+      	</extent>
+      </event_mention_argument>
+      <event_mention_argument REFID="AFP_ENG_20030319.0879-E3-12" ROLE="Place" p="1.000" pRole="1.000">
+      	<extent>
+			<charseq START="948" END="953">French</charseq>
+      	</extent>
+      </event_mention_argument>
+      <event_mention_argument REFID="AFP_ENG_20030319.0879-E13-11" ROLE="Seller" p="1.000" pRole="1.000">
+      	<extent>
+			<charseq START="944" END="967">the French media company</charseq>
+      	</extent>
+      </event_mention_argument>
+      <event_mention_argument REFID="AFP_ENG_20030319.0879-E25-7" ROLE="Seller" p="1.000" pRole="1.000">
+      	<extent>
+			<charseq START="1055" END="1085">Vivendi Universal Entertainment</charseq>
+      	</extent>
+      </event_mention_argument>
+      <event_mention_argument REFID="AFP_ENG_20030319.0879-E51-91" ROLE="Seller" p="1.000" pRole="1.000">
+      	<extent>
+			<charseq START="955" END="959">media</charseq>
+      	</extent>
+      </event_mention_argument>
+      <event_mention_argument REFID="AFP_ENG_20030319.0879-V3-1" ROLE="Price" p="1.000" pRole="1.000">
+      	<extent>
+			<charseq START="866" END="882">11-billion-dollar</charseq>
+      	</extent>
+      </event_mention_argument>
+      <event_mention_argument REFID="AFP_ENG_20030319.0879-V4-1" ROLE="Price" p="1.000" pRole="1.000">
+      	<extent>
+			<charseq START="1012" END="1030">2.5 billion dollars</charseq>
+      	</extent>
+      </event_mention_argument>
+      <event_mention_argument REFID="AFP_ENG_20030319.0879-T5-1" ROLE="Time-Within" p="1.000" pRole="1.000">
+      	<extent>
+			<charseq START="972" END="984">December 2001</charseq>
+      	</extent>
+      </event_mention_argument>
+    </event_mention>
+    <event_mention ID="/Users/che/Data/ACE/ACE2005-TrainingData-V6.0/English/nw/timex2norm/AFP_ENG_20030319.0879-E-5" p="1.000">
+      <extent>
+			<charseq START="851" END="1086">As part of the 11-billion-dollar sale of USA Interactive&apos;s film and
+television operations to the French media company in December 2001,
+USA Interactive received 2.5 billion dollars in preferred shares in
+Vivendi Universal Entertainment.</charseq>
+      </extent>
+      <anchor>
+			<charseq START="1003" END="1010">received</charseq>
+      </anchor>
+      <event_mention_argument REFID="AFP_ENG_20030319.0879-E2-10" ROLE="Recipient" p="1.000" pRole="1.000">
+      	<extent>
+			<charseq START="892" END="939">USA Interactive&apos;s film and
+television operations</charseq>
+      	</extent>
+      </event_mention_argument>
+      <event_mention_argument REFID="AFP_ENG_20030319.0879-E3-12" ROLE="Recipient" p="1.000" pRole="1.000">
+      	<extent>
+			<charseq START="948" END="953">French</charseq>
+      	</extent>
+      </event_mention_argument>
+      <event_mention_argument REFID="AFP_ENG_20030319.0879-V3-1" ROLE="Money" p="1.000" pRole="1.000">
+      	<extent>
+			<charseq START="866" END="882">11-billion-dollar</charseq>
+      	</extent>
+      </event_mention_argument>
+      <event_mention_argument REFID="AFP_ENG_20030319.0879-V4-1" ROLE="Money" p="1.000" pRole="1.000">
+      	<extent>
+			<charseq START="1012" END="1030">2.5 billion dollars</charseq>
+      	</extent>
+      </event_mention_argument>
+      <event_mention_argument REFID="AFP_ENG_20030319.0879-T5-1" ROLE="Time-Within" p="1.000" pRole="1.000">
+      	<extent>
+			<charseq START="972" END="984">December 2001</charseq>
+      	</extent>
+      </event_mention_argument>
+    </event_mention>
+    <event_mention ID="/Users/che/Data/ACE/ACE2005-TrainingData-V6.0/English/nw/timex2norm/AFP_ENG_20030319.0879-E-7" p="1.000">
+      <extent>
+			<charseq START="1318" END="1460">In Paris, the French media group said parent company chairman
+Jean-Rene Fourtou will replace Diller as chairman and chief executive
+of US unit.</charseq>
+      </extent>
+      <anchor>
+			<charseq START="1403" END="1409">replace</charseq>
+      </anchor>
+      <event_mention_argument REFID="AFP_ENG_20030319.0879-E1-26" ROLE="Entity" p="1.000" pRole="1.000">
+      	<extent>
+			<charseq START="1453" END="1459">US unit</charseq>
+      	</extent>
+      </event_mention_argument>
+      <event_mention_argument REFID="AFP_ENG_20030319.0879-E4-25" ROLE="Person" p="1.000" pRole="1.000">
+      	<extent>
+			<charseq START="1411" END="1416">Diller</charseq>
+      	</extent>
+      </event_mention_argument>
+      <event_mention_argument REFID="AFP_ENG_20030319.0879-E7-20" ROLE="Place" p="1.000" pRole="1.000">
+      	<extent>
+			<charseq START="1321" END="1325">Paris</charseq>
+      	</extent>
+      </event_mention_argument>
+      <event_mention_argument REFID="AFP_ENG_20030319.0879-E9-24" ROLE="Person" p="1.000" pRole="1.000">
+      	<extent>
+			<charseq START="1356" END="1378">parent company chairman</charseq>
+      	</extent>
+      </event_mention_argument>
+      <event_mention_argument REFID="AFP_ENG_20030319.0879-E9-23" ROLE="Person" p="1.000" pRole="1.000">
+      	<extent>
+			<charseq START="1356" END="1396">parent company chairman
+Jean-Rene Fourtou</charseq>
+      	</extent>
+      </event_mention_argument>
+      <event_mention_argument REFID="AFP_ENG_20030319.0879-E11-27" ROLE="Entity" p="1.000" pRole="1.000">
+      	<extent>
+			<charseq START="1453" END="1454">US</charseq>
+      	</extent>
+      </event_mention_argument>
+      <event_mention_argument REFID="AFP_ENG_20030319.0879-E13-21" ROLE="Entity" p="1.000" pRole="1.000">
+      	<extent>
+			<charseq START="1328" END="1349">the French media group</charseq>
+      	</extent>
+      </event_mention_argument>
+      <event_mention_argument REFID="AFP_ENG_20030319.0879-E44-81" ROLE="Entity" p="1.000" pRole="1.000">
+      	<extent>
+			<charseq START="1356" END="1369">parent company</charseq>
+      	</extent>
+      </event_mention_argument>
+      <event_mention_argument REFID="AFP_ENG_20030319.0879-E51-92" ROLE="Entity" p="1.000" pRole="1.000">
+      	<extent>
+			<charseq START="1339" END="1343">media</charseq>
+      	</extent>
+      </event_mention_argument>
+      <event_mention_argument REFID="AFP_ENG_20030319.0879-V6-1" ROLE="Position" p="1.000" pRole="1.000">
+      	<extent>
+			<charseq START="1421" END="1428">chairman</charseq>
+      	</extent>
+      </event_mention_argument>
+    </event_mention>
+    <event_mention ID="/Users/che/Data/ACE/ACE2005-TrainingData-V6.0/English/nw/timex2norm/AFP_ENG_20030319.0879-E-10" p="1.000">
+      <extent>
+			<charseq START="1906" END="2021">Vivendi Universal earlier this month posted a record net loss of 23.3
+billion euros (25.6 billion dollars) for 2002.</charseq>
+      </extent>
+      <anchor>
+			<charseq START="1914" END="1922">Universal</charseq>
+      </anchor>
+      <event_mention_argument REFID="AFP_ENG_20030319.0879-E13-41" ROLE="Entity" p="1.000" pRole="1.000">
+      	<extent>
+			<charseq START="1906" END="1922">Vivendi Universal</charseq>
+      	</extent>
+      </event_mention_argument>
+      <event_mention_argument REFID="AFP_ENG_20030319.0879-T12-1" ROLE="Time-Holds" p="1.000" pRole="1.000">
+      	<extent>
+			<charseq START="2017" END="2020">2002</charseq>
+      	</extent>
+      </event_mention_argument>
+      <event_mention_argument REFID="AFP_ENG_20030319.0879-T13-1" ROLE="Time-At-End" p="1.000" pRole="1.000">
+      	<extent>
+			<charseq START="1924" END="1941">earlier this month</charseq>
+      	</extent>
+      </event_mention_argument>
+    </event_mention>
+    <event_mention ID="/Users/che/Data/ACE/ACE2005-TrainingData-V6.0/English/nw/timex2norm/AFP_ENG_20030319.0879-E-15" p="1.000">
+      <extent>
+			<charseq START="2943" END="3217">While other media companies like Metro-Goldwyn-Mayer, Liberty Media
+Corp, News Corp and General Electric Co&apos;s NBC have been mentioned as
+potential bidders for the Vivendi operations, Viacom is one of the
+few media companies with a balance sheet healthy enough to mount a
+bid.</charseq>
+      </extent>
+      <anchor>
+			<charseq START="2961" END="2969">companies</charseq>
+      </anchor>
+      <event_mention_argument REFID="AFP_ENG_20030319.0879-E13-76" ROLE="Seller" p="1.000" pRole="1.000">
+      	<extent>
+			<charseq START="3106" END="3112">Vivendi</charseq>
+      	</extent>
+      </event_mention_argument>
+      <event_mention_argument REFID="AFP_ENG_20030319.0879-E13-75" ROLE="Buyer" p="1.000" pRole="1.000">
+      	<extent>
+			<charseq START="3102" END="3123">the Vivendi operations</charseq>
+      	</extent>
+      </event_mention_argument>
+      <event_mention_argument REFID="AFP_ENG_20030319.0879-E29-77" ROLE="Seller" p="1.000" pRole="1.000">
+      	<extent>
+			<charseq START="3126" END="3131">Viacom</charseq>
+      	</extent>
+      </event_mention_argument>
+      <event_mention_argument REFID="AFP_ENG_20030319.0879-E34-68" ROLE="Buyer" p="1.000" pRole="1.000">
+      	<extent>
+			<charseq START="2949" END="3055">other media companies like Metro-Goldwyn-Mayer, Liberty Media
+Corp, News Corp and General Electric Co&apos;s NBC</charseq>
+      	</extent>
+      </event_mention_argument>
+      <event_mention_argument REFID="AFP_ENG_20030319.0879-E34-74" ROLE="Buyer" p="1.000" pRole="1.000">
+      	<extent>
+			<charseq START="3080" END="3123">potential bidders for the Vivendi operations</charseq>
+      	</extent>
+      </event_mention_argument>
+      <event_mention_argument REFID="AFP_ENG_20030319.0879-E36-70" ROLE="Buyer" p="1.000" pRole="1.000">
+      	<extent>
+			<charseq START="2997" END="3014">Liberty Media
+Corp</charseq>
+      	</extent>
+      </event_mention_argument>
+      <event_mention_argument REFID="AFP_ENG_20030319.0879-E37-71" ROLE="Buyer" p="1.000" pRole="1.000">
+      	<extent>
+			<charseq START="3017" END="3025">News Corp</charseq>
+      	</extent>
+      </event_mention_argument>
+      <event_mention_argument REFID="AFP_ENG_20030319.0879-E39-73" ROLE="Buyer" p="1.000" pRole="1.000">
+      	<extent>
+			<charseq START="3031" END="3049">General Electric Co</charseq>
+      	</extent>
+      </event_mention_argument>
+      <event_mention_argument REFID="AFP_ENG_20030319.0879-E43-79" ROLE="Seller" p="1.000" pRole="1.000">
+      	<extent>
+			<charseq START="3143" END="3216">the
+few media companies with a balance sheet healthy enough to mount a
+bid</charseq>
+      	</extent>
+      </event_mention_argument>
+    </event_mention>

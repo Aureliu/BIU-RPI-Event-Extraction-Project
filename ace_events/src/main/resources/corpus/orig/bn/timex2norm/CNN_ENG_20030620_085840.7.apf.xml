@@ -1,0 +1,556 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030620_085840.7.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030620_085840.7">
+<entity ID="CNN_ENG_20030620_085840.7-E1" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030620_085840.7-E1-1" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="FALSE">
+    <extent>
+      <charseq START="67" END="102">convicted rapist and max factor heir</charseq>
+    </extent>
+    <head>
+      <charseq START="77" END="82">rapist</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030620_085840.7-E1-2" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="67" END="116">convicted rapist and max factor heir andrew luster</charseq>
+    </extent>
+    <head>
+      <charseq START="104" END="116">andrew luster</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030620_085840.7-E1-3" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="67" END="102">convicted rapist and max factor heir</charseq>
+    </extent>
+    <head>
+      <charseq START="99" END="102">heir</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030620_085840.7-E1-6" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="141" END="146">luster</charseq>
+    </extent>
+    <head>
+      <charseq START="141" END="146">luster</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030620_085840.7-E1-9" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="204" END="206">his</charseq>
+    </extent>
+    <head>
+      <charseq START="204" END="206">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030620_085840.7-E1-12" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="253" END="258">luster</charseq>
+    </extent>
+    <head>
+      <charseq START="253" END="258">luster</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030620_085840.7-E1-13" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="280" END="282">his</charseq>
+    </extent>
+    <head>
+      <charseq START="280" END="282">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030620_085840.7-E1-15" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="338" END="339">he</charseq>
+    </extent>
+    <head>
+      <charseq START="338" END="339">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="andrew luster">
+      <charseq START="104" END="116">andrew luster</charseq>
+    </name>
+    <name NAME="luster">
+      <charseq START="141" END="146">luster</charseq>
+    </name>
+    <name NAME="luster">
+      <charseq START="253" END="258">luster</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030620_085840.7-E4" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030620_085840.7-E4-4" TYPE="NAM" LDCTYPE="NAMPRE">
+    <extent>
+      <charseq START="88" END="97">max factor</charseq>
+    </extent>
+    <head>
+      <charseq START="88" END="97">max factor</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="max factor">
+      <charseq START="88" END="97">max factor</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030620_085840.7-E5" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030620_085840.7-E5-5" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="129" END="138">california</charseq>
+    </extent>
+    <head>
+      <charseq START="129" END="138">california</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="california">
+      <charseq START="129" END="138">california</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030620_085840.7-E6" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030620_085840.7-E6-7" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="160" END="170">los angeles</charseq>
+    </extent>
+    <head>
+      <charseq START="160" END="170">los angeles</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="los angeles">
+      <charseq START="160" END="170">los angeles</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030620_085840.7-E7" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030620_085840.7-E7-8" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="187" END="192">mexico</charseq>
+    </extent>
+    <head>
+      <charseq START="187" END="192">mexico</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="mexico">
+      <charseq START="187" END="192">mexico</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030620_085840.7-E8" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030620_085840.7-E8-10" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="227" END="250">american bounlty hunters</charseq>
+    </extent>
+    <head>
+      <charseq START="244" END="250">hunters</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030620_085840.7-E9" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030620_085840.7-E9-11" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="227" END="234">american</charseq>
+    </extent>
+    <head>
+      <charseq START="227" END="234">american</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="american">
+      <charseq START="227" END="234">american</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030620_085840.7-E10" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030620_085840.7-E10-14" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="325" END="335">three
+women</charseq>
+    </extent>
+    <head>
+      <charseq START="331" END="335">women</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030620_085840.7-E11" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030620_085840.7-E11-16" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="387" END="392">prison</charseq>
+    </extent>
+    <head>
+      <charseq START="387" END="392">prison</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<value ID="CNN_ENG_20030620_085840.7-V1" TYPE="Sentence">
+  <value_mention ID="CNN_ENG_20030620_085840.7-V1-1">
+    <extent>
+      <charseq START="374" END="392">124 years in prison</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_ENG_20030620_085840.7-V2" TYPE="Crime">
+  <value_mention ID="CNN_ENG_20030620_085840.7-V2-1">
+    <extent>
+      <charseq START="305" END="335">raping and drugging three
+women</charseq>
+    </extent>
+  </value_mention>
+</value>
+<timex2 ID="CNN_ENG_20030620_085840.7-T1" VAL="2003-06-19">
+  <timex2_mention ID="CNN_ENG_20030620_085840.7-T1-1">
+    <extent>
+      <charseq START="172" END="180">yesterday</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030620_085840.7-T2" VAL="2003-06-17">
+  <timex2_mention ID="CNN_ENG_20030620_085840.7-T2-1">
+    <extent>
+      <charseq START="216" END="222">tuesday</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030620_085840.7-T3" VAL="2003-01">
+  <timex2_mention ID="CNN_ENG_20030620_085840.7-T3-1">
+    <extent>
+      <charseq START="293" END="299">january</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030620_085840.7-T4" VAL="P124Y" ANCHOR_VAL="2003" ANCHOR_DIR="STARTING">
+  <timex2_mention ID="CNN_ENG_20030620_085840.7-T4-1">
+    <extent>
+      <charseq START="374" END="382">124 years</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030620_085840.7-T5" VAL="2003-06-20T09:09:14">
+  <timex2_mention ID="CNN_ENG_20030620_085840.7-T5-1">
+    <extent>
+      <charseq START="43" END="61">2003-06-20 09:09:14</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030620_085840.7-R1" TYPE="ORG-AFF" SUBTYPE="Investor-Shareholder" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030620_085840.7-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030620_085840.7-E4" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030620_085840.7-R1-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="67" END="102">convicted rapist and max factor heir</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030620_085840.7-E1-3" ROLE="Arg-1">
+      <extent>
+        <charseq START="67" END="102">convicted rapist and max factor heir</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030620_085840.7-E4-4" ROLE="Arg-2">
+      <extent>
+        <charseq START="88" END="97">max factor</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030620_085840.7-R2" TYPE="PHYS" SUBTYPE="Located" TENSE="Present" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030620_085840.7-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030620_085840.7-E5" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030620_085840.7-R2-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="67" END="138">convicted rapist and max factor heir andrew luster is back in
+california</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030620_085840.7-E1-2" ROLE="Arg-1">
+      <extent>
+        <charseq START="67" END="116">convicted rapist and max factor heir andrew luster</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030620_085840.7-E5-5" ROLE="Arg-2">
+      <extent>
+        <charseq START="129" END="138">california</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030620_085840.7-R3" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030620_085840.7-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030620_085840.7-E6" ROLE="Arg-2"/>
+  <relation_argument REFID="CNN_ENG_20030620_085840.7-T1" ROLE="Time-Starting"/>
+  <relation_mention ID="CNN_ENG_20030620_085840.7-R3-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="141" END="250">luster returned to los angeles yesterday from mexico
+following his capture tuesday by american bounlty hunters</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030620_085840.7-E1-6" ROLE="Arg-1">
+      <extent>
+        <charseq START="141" END="146">luster</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030620_085840.7-E6-7" ROLE="Arg-2">
+      <extent>
+        <charseq START="160" END="170">los angeles</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030620_085840.7-T1-1" ROLE="Time-Starting">
+      <extent>
+        <charseq START="172" END="180">yesterday</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030620_085840.7-R4" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030620_085840.7-T1" ROLE="Time-Ending"/>
+  <relation_argument REFID="CNN_ENG_20030620_085840.7-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030620_085840.7-E7" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030620_085840.7-R4-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="141" END="250">luster returned to los angeles yesterday from mexico
+following his capture tuesday by american bounlty hunters</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030620_085840.7-T1-1" ROLE="Time-Ending">
+      <extent>
+        <charseq START="172" END="180">yesterday</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030620_085840.7-E1-6" ROLE="Arg-1">
+      <extent>
+        <charseq START="141" END="146">luster</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030620_085840.7-E7-8" ROLE="Arg-2">
+      <extent>
+        <charseq START="187" END="192">mexico</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030620_085840.7-R5" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030620_085840.7-E8" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030620_085840.7-E9" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030620_085840.7-R5-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="227" END="250">american bounlty hunters</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030620_085840.7-E8-10" ROLE="Arg-1">
+      <extent>
+        <charseq START="227" END="250">american bounlty hunters</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030620_085840.7-E9-11" ROLE="Arg-2">
+      <extent>
+        <charseq START="227" END="234">american</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030620_085840.7-R6" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="CNN_ENG_20030620_085840.7-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030620_085840.7-E11" ROLE="Arg-2"/>
+  <relation_argument REFID="CNN_ENG_20030620_085840.7-T4" ROLE="Time-Holds"/>
+  <relation_mention ID="CNN_ENG_20030620_085840.7-R6-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="338" END="392">he was sentenced in an sten shah to 124 years in prison</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030620_085840.7-E1-15" ROLE="Arg-1">
+      <extent>
+        <charseq START="338" END="339">he</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030620_085840.7-E11-16" ROLE="Arg-2">
+      <extent>
+        <charseq START="387" END="392">prison</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030620_085840.7-T4-1" ROLE="Time-Holds">
+      <extent>
+        <charseq START="374" END="382">124 years</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030620_085840.7-EV1" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030620_085840.7-E6" ROLE="Destination"/>
+  <event_argument REFID="CNN_ENG_20030620_085840.7-E7" ROLE="Origin"/>
+  <event_argument REFID="CNN_ENG_20030620_085840.7-E1" ROLE="Artifact"/>
+  <event_argument REFID="CNN_ENG_20030620_085840.7-T1" ROLE="Time-Within"/>
+  <event_mention ID="CNN_ENG_20030620_085840.7-EV1-1">
+    <extent>
+      <charseq START="141" END="192">luster returned to los angeles yesterday from mexico</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="141" END="250">luster returned to los angeles yesterday from mexico
+following his capture tuesday by american bounlty hunters</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="148" END="155">returned</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030620_085840.7-E6-7" ROLE="Destination">
+      <extent>
+        <charseq START="160" END="170">los angeles</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030620_085840.7-E7-8" ROLE="Origin">
+      <extent>
+        <charseq START="187" END="192">mexico</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030620_085840.7-E1-6" ROLE="Artifact">
+      <extent>
+        <charseq START="141" END="146">luster</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030620_085840.7-T1-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="172" END="180">yesterday</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030620_085840.7-EV2" TYPE="Justice" SUBTYPE="Trial-Hearing" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030620_085840.7-E1" ROLE="Defendant"/>
+  <event_argument REFID="CNN_ENG_20030620_085840.7-V2" ROLE="Crime"/>
+  <event_argument REFID="CNN_ENG_20030620_085840.7-T3" ROLE="Time-Within"/>
+  <event_mention ID="CNN_ENG_20030620_085840.7-EV2-1">
+    <extent>
+      <charseq START="253" END="335">luster
+skipped bail during his trial in january for raping and drugging three
+women</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="253" END="335">luster
+skipped bail during his trial in january for raping and drugging three
+women</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="284" END="288">trial</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030620_085840.7-E1-12" ROLE="Defendant">
+      <extent>
+        <charseq START="253" END="258">luster</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030620_085840.7-V2-1" ROLE="Crime">
+      <extent>
+        <charseq START="305" END="335">raping and drugging three
+women</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030620_085840.7-T3-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="293" END="299">january</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030620_085840.7-EV3" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030620_085840.7-E10" ROLE="Victim"/>
+  <event_argument REFID="CNN_ENG_20030620_085840.7-E1" ROLE="Agent"/>
+  <event_mention ID="CNN_ENG_20030620_085840.7-EV3-1">
+    <extent>
+      <charseq START="253" END="335">luster
+skipped bail during his trial in january for raping and drugging three
+women</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="253" END="335">luster
+skipped bail during his trial in january for raping and drugging three
+women</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="305" END="323">raping and drugging</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030620_085840.7-E10-14" ROLE="Victim">
+      <extent>
+        <charseq START="325" END="335">three
+women</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030620_085840.7-E1-12" ROLE="Agent">
+      <extent>
+        <charseq START="253" END="258">luster</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030620_085840.7-EV4" TYPE="Justice" SUBTYPE="Convict" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030620_085840.7-E1" ROLE="Defendant"/>
+  <event_mention ID="CNN_ENG_20030620_085840.7-EV4-1">
+    <extent>
+      <charseq START="67" END="116">convicted rapist and max factor heir andrew luster</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="67" END="138">convicted rapist and max factor heir andrew luster is back in
+california</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="67" END="75">convicted</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030620_085840.7-E1-2" ROLE="Defendant">
+      <extent>
+        <charseq START="67" END="116">convicted rapist and max factor heir andrew luster</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030620_085840.7-EV5" TYPE="Justice" SUBTYPE="Sentence" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030620_085840.7-E1" ROLE="Defendant"/>
+  <event_argument REFID="CNN_ENG_20030620_085840.7-V1" ROLE="Sentence"/>
+  <event_mention ID="CNN_ENG_20030620_085840.7-EV5-1">
+    <extent>
+      <charseq START="338" END="392">he was sentenced in an sten shah to 124 years in prison</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="338" END="392">he was sentenced in an sten shah to 124 years in prison</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="345" END="353">sentenced</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030620_085840.7-E1-15" ROLE="Defendant">
+      <extent>
+        <charseq START="338" END="339">he</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030620_085840.7-V1-1" ROLE="Sentence">
+      <extent>
+        <charseq START="374" END="392">124 years in prison</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030620_085840.7-EV6" TYPE="Justice" SUBTYPE="Arrest-Jail" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030620_085840.7-E1" ROLE="Person"/>
+  <event_argument REFID="CNN_ENG_20030620_085840.7-E8" ROLE="Agent"/>
+  <event_argument REFID="CNN_ENG_20030620_085840.7-T2" ROLE="Time-Within"/>
+  <event_mention ID="CNN_ENG_20030620_085840.7-EV6-1">
+    <extent>
+      <charseq START="141" END="250">luster returned to los angeles yesterday from mexico
+following his capture tuesday by american bounlty hunters</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="141" END="250">luster returned to los angeles yesterday from mexico
+following his capture tuesday by american bounlty hunters</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="208" END="214">capture</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030620_085840.7-E1-6" ROLE="Person">
+      <extent>
+        <charseq START="141" END="146">luster</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030620_085840.7-E8-10" ROLE="Agent">
+      <extent>
+        <charseq START="227" END="250">american bounlty hunters</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030620_085840.7-T2-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="216" END="222">tuesday</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

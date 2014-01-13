@@ -1,0 +1,3545 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="HEALINGIRAQ_20041108.1942.05.sgm" SOURCE="weblog" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="HEALINGIRAQ_20041108.1942.05">
+<entity ID="HEALINGIRAQ_20041108.1942.05-E1" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E1-190" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="820" END="826">Ba'quba</charseq>
+    </extent>
+    <head>
+      <charseq START="820" END="826">Ba'quba</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Ba'quba">
+      <charseq START="820" END="826">Ba'quba</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E2" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E2-2" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="856" END="863">Latifiya</charseq>
+    </extent>
+    <head>
+      <charseq START="856" END="863">Latifiya</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E2-4" TYPE="PRO" LDCTYPE="WHQ" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="891" END="895">which</charseq>
+    </extent>
+    <head>
+      <charseq START="891" END="895">which</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E2-172" TYPE="NOM" LDCTYPE="NOM" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="883" END="963">an area
+which has supposedly been 'cleared' from insurgents a couple of weeks
+ago</charseq>
+    </extent>
+    <head>
+      <charseq START="886" END="889">area</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Latifiya">
+      <charseq START="856" END="863">Latifiya</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E3" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E3-5" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="932" END="941">insurgents</charseq>
+    </extent>
+    <head>
+      <charseq START="932" END="941">insurgents</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E4" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E4-6" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="990" END="996">Samarra</charseq>
+    </extent>
+    <head>
+      <charseq START="990" END="996">Samarra</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E4-8" TYPE="NOM" LDCTYPE="NOM" ROLE="LOC" LDCATR="TRUE">
+    <extent>
+      <charseq START="1004" END="1030">a recently 'liberated' area</charseq>
+    </extent>
+    <head>
+      <charseq START="1027" END="1030">area</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Samarra">
+      <charseq START="990" END="996">Samarra</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E6" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E6-10" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1092" END="1098">Zarqawi</charseq>
+    </extent>
+    <head>
+      <charseq START="1092" END="1098">Zarqawi</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E6-21" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1388" END="1394">Zarqawi</charseq>
+    </extent>
+    <head>
+      <charseq START="1388" END="1394">Zarqawi</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E6-56" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="5407" END="5413">Zarqawi</charseq>
+    </extent>
+    <head>
+      <charseq START="5407" END="5413">Zarqawi</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Zarqawi">
+      <charseq START="1092" END="1098">Zarqawi</charseq>
+    </name>
+    <name NAME="Zarqawi">
+      <charseq START="1388" END="1394">Zarqawi</charseq>
+    </name>
+    <name NAME="Zarqawi">
+      <charseq START="5407" END="5413">Zarqawi</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E7" TYPE="ORG" SUBTYPE="Non-Governmental" CLASS="SPC">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E7-11" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1092" END="1106">Zarqawi's
+group</charseq>
+    </extent>
+    <head>
+      <charseq START="1102" END="1106">group</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E7-22" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1388" END="1402">Zarqawi's group</charseq>
+    </extent>
+    <head>
+      <charseq START="1398" END="1402">group</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E7-57" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="5407" END="5421">Zarqawi's group</charseq>
+    </extent>
+    <head>
+      <charseq START="5417" END="5421">group</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E7-59" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="5423" END="5438">Qa'idat
+Al-Jihad</charseq>
+    </extent>
+    <head>
+      <charseq START="5423" END="5438">Qa'idat
+Al-Jihad</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Qa'idat Al-Jihad">
+      <charseq START="5423" END="5438">Qa'idat
+Al-Jihad</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E8" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E8-15" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="1174" END="1180">Haditha</charseq>
+    </extent>
+    <head>
+      <charseq START="1174" END="1180">Haditha</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E8-16" TYPE="NOM" LDCTYPE="NOM" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1183" END="1209">a small town west of Ramadi</charseq>
+    </extent>
+    <head>
+      <charseq START="1191" END="1194">town</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Haditha">
+      <charseq START="1174" END="1180">Haditha</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E9" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E9-13" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1149" END="1209">Three police stations in Haditha, a small town west of Ramadi</charseq>
+    </extent>
+    <head>
+      <charseq START="1162" END="1169">stations</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E10" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E10-14" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="1155" END="1160">police</charseq>
+    </extent>
+    <head>
+      <charseq START="1155" END="1160">police</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E12" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E12-17" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="1204" END="1209">Ramadi</charseq>
+    </extent>
+    <head>
+      <charseq START="1204" END="1209">Ramadi</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Ramadi">
+      <charseq START="1204" END="1209">Ramadi</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E13" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E13-18" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1230" END="1249">groups of insurgents</charseq>
+    </extent>
+    <head>
+      <charseq START="1230" END="1235">groups</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E13-19" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1240" END="1249">insurgents</charseq>
+    </extent>
+    <head>
+      <charseq START="1240" END="1249">insurgents</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E14" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E14-20" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1252" END="1268">Some 30 policemen</charseq>
+    </extent>
+    <head>
+      <charseq START="1260" END="1268">policemen</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E15" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E15-23" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="1478" END="1485">Fallujah</charseq>
+    </extent>
+    <head>
+      <charseq START="1478" END="1485">Fallujah</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E15-61" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="2221" END="2228">Fallujah</charseq>
+    </extent>
+    <head>
+      <charseq START="2221" END="2228">Fallujah</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E15-62" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="3774" END="3781">Fallujah</charseq>
+    </extent>
+    <head>
+      <charseq START="3774" END="3781">Fallujah</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E15-63" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="3876" END="3883">Fallujah</charseq>
+    </extent>
+    <head>
+      <charseq START="3876" END="3883">Fallujah</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E15-64" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="3906" END="3908">its</charseq>
+    </extent>
+    <head>
+      <charseq START="3906" END="3908">its</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E15-65" TYPE="PRO" LDCTYPE="PRO" ROLE="PER" LDCATR="FALSE">
+    <extent>
+      <charseq START="3950" END="3953">They</charseq>
+    </extent>
+    <head>
+      <charseq START="3950" END="3953">They</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E15-66" TYPE="NOM" LDCTYPE="NOM" ROLE="PER" LDCATR="TRUE">
+    <extent>
+      <charseq START="3959" END="3978">the sons of Mu'awiya</charseq>
+    </extent>
+    <head>
+      <charseq START="3963" END="3966">sons</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E15-67" TYPE="PRO" LDCTYPE="PRO" ROLE="PER" LDCATR="FALSE">
+    <extent>
+      <charseq START="3997" END="4004">them all</charseq>
+    </extent>
+    <head>
+      <charseq START="3997" END="4000">them</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E15-68" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="4694" END="4701">Fallujah</charseq>
+    </extent>
+    <head>
+      <charseq START="4694" END="4701">Fallujah</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E15-69" TYPE="NOM" LDCTYPE="NOM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="4848" END="4855">the city</charseq>
+    </extent>
+    <head>
+      <charseq START="4852" END="4855">city</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E15-70" TYPE="NOM" LDCTYPE="NOM" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="5129" END="5136">the town</charseq>
+    </extent>
+    <head>
+      <charseq START="5133" END="5136">town</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E15-71" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="5218" END="5225">Fallujah</charseq>
+    </extent>
+    <head>
+      <charseq START="5218" END="5225">Fallujah</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E15-72" TYPE="NOM" LDCTYPE="NOM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="5337" END="5344">the town</charseq>
+    </extent>
+    <head>
+      <charseq START="5341" END="5344">town</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E15-174" TYPE="NOM" LDCTYPE="NOM" ROLE="PER" LDCATR="FALSE">
+    <extent>
+      <charseq START="3906" END="3918">its residents</charseq>
+    </extent>
+    <head>
+      <charseq START="3910" END="3918">residents</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Fallujah">
+      <charseq START="1478" END="1485">Fallujah</charseq>
+    </name>
+    <name NAME="Fallujah">
+      <charseq START="2221" END="2228">Fallujah</charseq>
+    </name>
+    <name NAME="Fallujah">
+      <charseq START="3774" END="3781">Fallujah</charseq>
+    </name>
+    <name NAME="Fallujah">
+      <charseq START="3876" END="3883">Fallujah</charseq>
+    </name>
+    <name NAME="Fallujah">
+      <charseq START="4694" END="4701">Fallujah</charseq>
+    </name>
+    <name NAME="Fallujah">
+      <charseq START="5218" END="5225">Fallujah</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E16" TYPE="ORG" SUBTYPE="Government" CLASS="GEN">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E16-24" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1451" END="1458">military</charseq>
+    </extent>
+    <head>
+      <charseq START="1451" END="1458">military</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E16-54" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="4770" END="4777">military</charseq>
+    </extent>
+    <head>
+      <charseq START="4770" END="4777">military</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E17" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E17-25" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="100" END="104">zeyad</charseq>
+    </extent>
+    <head>
+      <charseq START="100" END="104">zeyad</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E17-28" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1573" END="1573">I</charseq>
+    </extent>
+    <head>
+      <charseq START="1573" END="1573">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E17-30" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1685" END="1685">I</charseq>
+    </extent>
+    <head>
+      <charseq START="1685" END="1685">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E17-73" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3722" END="3723">me</charseq>
+    </extent>
+    <head>
+      <charseq START="3722" END="3723">me</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E17-74" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="4458" END="4458">I</charseq>
+    </extent>
+    <head>
+      <charseq START="4458" END="4458">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E17-75" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="4602" END="4602">I</charseq>
+    </extent>
+    <head>
+      <charseq START="4602" END="4602">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E17-76" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="4639" END="4640">me</charseq>
+    </extent>
+    <head>
+      <charseq START="4639" END="4640">me</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E17-77" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="5584" END="5584">I</charseq>
+    </extent>
+    <head>
+      <charseq START="5584" END="5584">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E17-78" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="5617" END="5617">I</charseq>
+    </extent>
+    <head>
+      <charseq START="5617" END="5617">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E17-173" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3762" END="3763">me</charseq>
+    </extent>
+    <head>
+      <charseq START="3762" END="3763">me</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="zeyad">
+      <charseq START="100" END="104">zeyad</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E18" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E18-29" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="1636" END="1643">civilian</charseq>
+    </extent>
+    <head>
+      <charseq START="1636" END="1643">civilian</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E19" TYPE="LOC" SUBTYPE="Region-General" CLASS="SPC">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E19-31" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1758" END="1768">these areas</charseq>
+    </extent>
+    <head>
+      <charseq START="1764" END="1768">areas</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E20" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E20-32" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1771" END="1796">Insurgents west of Baghdad</charseq>
+    </extent>
+    <head>
+      <charseq START="1771" END="1780">Insurgents</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E20-40" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1929" END="1932">them</charseq>
+    </extent>
+    <head>
+      <charseq START="1929" END="1932">them</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E20-41" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1935" END="1938">They</charseq>
+    </extent>
+    <head>
+      <charseq START="1935" END="1938">They</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E20-42" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1994" END="1997">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1994" END="1997">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E20-43" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2025" END="2029">their</charseq>
+    </extent>
+    <head>
+      <charseq START="2025" END="2029">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E20-44" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2107" END="2110">they</charseq>
+    </extent>
+    <head>
+      <charseq START="2107" END="2110">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E20-165" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2189" END="2198">themselves</charseq>
+    </extent>
+    <head>
+      <charseq START="2189" END="2198">themselves</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E21" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E21-1" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="129" END="150">The interim government</charseq>
+    </extent>
+    <head>
+      <charseq START="141" END="150">government</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E21-27" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1538" END="1551">the government</charseq>
+    </extent>
+    <head>
+      <charseq START="1542" END="1551">government</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E21-46" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2129" END="2142">the government</charseq>
+    </extent>
+    <head>
+      <charseq START="2133" END="2142">government</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E21-49" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2246" END="2259">the government</charseq>
+    </extent>
+    <head>
+      <charseq START="2250" END="2259">government</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E21-109" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="3592" END="3605">the
+government</charseq>
+    </extent>
+    <head>
+      <charseq START="3596" END="3605">government</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E21-181" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="467" END="488">the
+interim government</charseq>
+    </extent>
+    <head>
+      <charseq START="479" END="488">government</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E22" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E22-38" TYPE="NOM" LDCTYPE="NOMPRE" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="1070" END="1080">governorate</charseq>
+    </extent>
+    <head>
+      <charseq START="1070" END="1080">governorate</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E22-39" TYPE="NOM" LDCTYPE="NOM" ROLE="ORG" LDCATR="FALSE">
+    <extent>
+      <charseq START="1893" END="1913">the Anbar governorate</charseq>
+    </extent>
+    <head>
+      <charseq START="1903" END="1913">governorate</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E22-79" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="1897" END="1901">Anbar</charseq>
+    </extent>
+    <head>
+      <charseq START="1897" END="1901">Anbar</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E22-80" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="2673" END="2677">Anbar</charseq>
+    </extent>
+    <head>
+      <charseq START="2673" END="2677">Anbar</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E22-81" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="2766" END="2770">Anbar</charseq>
+    </extent>
+    <head>
+      <charseq START="2766" END="2770">Anbar</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E22-89" TYPE="NOM" LDCTYPE="NOM" ROLE="ORG" LDCATR="FALSE">
+    <extent>
+      <charseq START="2809" END="2829">the Anbar governorate</charseq>
+    </extent>
+    <head>
+      <charseq START="2819" END="2829">governorate</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E22-90" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="2813" END="2817">Anbar</charseq>
+    </extent>
+    <head>
+      <charseq START="2813" END="2817">Anbar</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E22-168" TYPE="NOM" LDCTYPE="NOM" ROLE="ORG" LDCATR="FALSE">
+    <extent>
+      <charseq START="2669" END="2689">the Anbar
+governorate</charseq>
+    </extent>
+    <head>
+      <charseq START="2679" END="2689">governorate</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Anbar">
+      <charseq START="1897" END="1901">Anbar</charseq>
+    </name>
+    <name NAME="Anbar">
+      <charseq START="2673" END="2677">Anbar</charseq>
+    </name>
+    <name NAME="Anbar">
+      <charseq START="2766" END="2770">Anbar</charseq>
+    </name>
+    <name NAME="Anbar">
+      <charseq START="2813" END="2817">Anbar</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E24" TYPE="LOC" SUBTYPE="Region-General" CLASS="USP">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E24-26" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2090" END="2100">other
+areas</charseq>
+    </extent>
+    <head>
+      <charseq START="2096" END="2100">areas</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E25" TYPE="ORG" SUBTYPE="Government" CLASS="USP">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E25-47" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2147" END="2198">any other authority
+in the country beside themselves</charseq>
+    </extent>
+    <head>
+      <charseq START="2157" END="2165">authority</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E26" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E26-45" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2217" END="2239">the Fallujah negotiants</charseq>
+    </extent>
+    <head>
+      <charseq START="2230" END="2239">negotiants</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E27" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E27-37" TYPE="NOM" LDCTYPE="NOM" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1868" END="1878">the country</charseq>
+    </extent>
+    <head>
+      <charseq START="1872" END="1878">country</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E27-48" TYPE="NOM" LDCTYPE="NOM" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="2170" END="2180">the country</charseq>
+    </extent>
+    <head>
+      <charseq START="2174" END="2180">country</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E27-51" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="2418" END="2422">Iraqi</charseq>
+    </extent>
+    <head>
+      <charseq START="2418" END="2422">Iraqi</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E27-52" TYPE="NOM" LDCTYPE="NOM" ROLE="PER" LDCATR="TRUE">
+    <extent>
+      <charseq START="2414" END="2429">the Iraqi public</charseq>
+    </extent>
+    <head>
+      <charseq START="2424" END="2429">public</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E27-53" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="2642" END="2646">Iraqi</charseq>
+    </extent>
+    <head>
+      <charseq START="2642" END="2646">Iraqi</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E27-84" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="TRUE">
+    <extent>
+      <charseq START="185" END="188">Iraq</charseq>
+    </extent>
+    <head>
+      <charseq START="185" END="188">Iraq</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E27-179" TYPE="NOM" LDCTYPE="NOM" ROLE="LOC" LDCATR="TRUE">
+    <extent>
+      <charseq START="346" END="356">the country</charseq>
+    </extent>
+    <head>
+      <charseq START="350" END="356">country</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E27-180" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="426" END="430">Iraqi</charseq>
+    </extent>
+    <head>
+      <charseq START="426" END="430">Iraqi</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Iraqi">
+      <charseq START="2418" END="2422">Iraqi</charseq>
+    </name>
+    <name NAME="Iraqi">
+      <charseq START="2642" END="2646">Iraqi</charseq>
+    </name>
+    <name NAME="Iraq">
+      <charseq START="185" END="188">Iraq</charseq>
+    </name>
+    <name NAME="Iraqi">
+      <charseq START="426" END="430">Iraqi</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E30" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E30-55" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="5302" END="5309">American</charseq>
+    </extent>
+    <head>
+      <charseq START="5302" END="5309">American</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E30-85" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="2635" END="2636">US</charseq>
+    </extent>
+    <head>
+      <charseq START="2635" END="2636">US</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="American">
+      <charseq START="5302" END="5309">American</charseq>
+    </name>
+    <name NAME="US">
+      <charseq START="2635" END="2636">US</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E31" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E31-50" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1636" END="1654">civilian
+casualties</charseq>
+    </extent>
+    <head>
+      <charseq START="1645" END="1654">casualties</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E33" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E33-60" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="5606" END="5611">Basrah</charseq>
+    </extent>
+    <head>
+      <charseq START="5606" END="5611">Basrah</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Basrah">
+      <charseq START="5606" END="5611">Basrah</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E38" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E38-82" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="2740" END="2770">former army
+officers from Anbar</charseq>
+    </extent>
+    <head>
+      <charseq START="2752" END="2759">officers</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E39" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E39-83" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="2747" END="2750">army</charseq>
+    </extent>
+    <head>
+      <charseq START="2747" END="2750">army</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E39-170" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="3060" END="3063">army</charseq>
+    </extent>
+    <head>
+      <charseq START="3060" END="3063">army</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E41" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E41-86" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="2635" END="2662">US and Iraqi security forces</charseq>
+    </extent>
+    <head>
+      <charseq START="2657" END="2662">forces</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E42" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E42-87" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="2568" END="2592">foreign occupation forces</charseq>
+    </extent>
+    <head>
+      <charseq START="2587" END="2592">forces</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E43" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E43-88" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="2794" END="2829">ministers from the Anbar governorate</charseq>
+    </extent>
+    <head>
+      <charseq START="2794" END="2802">ministers</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E45" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E45-91" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2834" END="2885">the
+ministries of Interior, Defense, Oil and Finance</charseq>
+    </extent>
+    <head>
+      <charseq START="2838" END="2847">ministries</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E46" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E46-92" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2905" END="2991">certain officials (most of them from Shi'ite Islamic
+parties such as Ibrahim Al-Ja'fari</charseq>
+    </extent>
+    <head>
+      <charseq START="2913" END="2921">officials</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E47" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E47-93" TYPE="PRO" LDCTYPE="PTV">
+    <extent>
+      <charseq START="2924" END="2991">most of them from Shi'ite Islamic
+parties such as Ibrahim Al-Ja'fari</charseq>
+    </extent>
+    <head>
+      <charseq START="2924" END="2927">most</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E48" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E48-94" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="2942" END="2948">Shi'ite</charseq>
+    </extent>
+    <head>
+      <charseq START="2942" END="2948">Shi'ite</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E48-103" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="3277" END="3283">Shi'ite</charseq>
+    </extent>
+    <head>
+      <charseq START="3277" END="3283">Shi'ite</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E48-166" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="3186" END="3192">Shi'ite</charseq>
+    </extent>
+    <head>
+      <charseq START="3186" END="3192">Shi'ite</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Shi'ite">
+      <charseq START="2942" END="2948">Shi'ite</charseq>
+    </name>
+    <name NAME="Shi'ite">
+      <charseq START="3277" END="3283">Shi'ite</charseq>
+    </name>
+    <name NAME="Shi'ite">
+      <charseq START="3186" END="3192">Shi'ite</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E49" TYPE="ORG" SUBTYPE="Non-Governmental" CLASS="USP">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E49-95" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="2942" END="2991">Shi'ite Islamic
+parties such as Ibrahim Al-Ja'fari</charseq>
+    </extent>
+    <head>
+      <charseq START="2958" END="2964">parties</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E50" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E50-96" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="3048" END="3057">Ba'athists</charseq>
+    </extent>
+    <head>
+      <charseq START="3048" END="3057">Ba'athists</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E51" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E51-97" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="3060" END="3072">army officers</charseq>
+    </extent>
+    <head>
+      <charseq START="3065" END="3072">officers</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E52" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E52-98" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="3075" END="3091">Republican Guards</charseq>
+    </extent>
+    <head>
+      <charseq START="3075" END="3091">Republican Guards</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E53" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E53-99" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="3094" END="3103">Mukhabarat</charseq>
+    </extent>
+    <head>
+      <charseq START="3094" END="3103">Mukhabarat</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Mukhabarat">
+      <charseq START="3094" END="3103">Mukhabarat</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E54" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E54-100" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="3106" END="3140">intelligence and security personnel</charseq>
+    </extent>
+    <head>
+      <charseq START="3132" END="3140">personnel</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E55" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E55-101" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3145" END="3149">their</charseq>
+    </extent>
+    <head>
+      <charseq START="3145" END="3149">their</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E56" TYPE="ORG" SUBTYPE="Religious" CLASS="GEN">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E56-102" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="3277" END="3298">Shi'ite sacred shrines</charseq>
+    </extent>
+    <head>
+      <charseq START="3292" END="3298">shrines</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E58" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E58-105" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="3340" END="3387">the Ministry of Endowments and Religious Affairs</charseq>
+    </extent>
+    <head>
+      <charseq START="3344" END="3387">Ministry of Endowments and Religious Affairs</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Ministry of Endowments and Religious Affairs">
+      <charseq START="3344" END="3387">Ministry of Endowments and Religious Affairs</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E59" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E59-106" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="3443" END="3508">Sheikh Harith
+Al-Dhari (head of the Association of Muslim Scholars</charseq>
+    </extent>
+    <head>
+      <charseq START="3443" END="3464">Sheikh Harith
+Al-Dhari</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E59-107" TYPE="NOM" LDCTYPE="BAR" LDCATR="TRUE">
+    <extent>
+      <charseq START="3467" END="3508">head of the Association of Muslim Scholars</charseq>
+    </extent>
+    <head>
+      <charseq START="3467" END="3470">head</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Sheikh Harith Al-Dhari">
+      <charseq START="3443" END="3464">Sheikh Harith
+Al-Dhari</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E61" TYPE="ORG" SUBTYPE="Non-Governmental" CLASS="SPC">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E61-108" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="3475" END="3508">the Association of Muslim Scholars</charseq>
+    </extent>
+    <head>
+      <charseq START="3479" END="3508">Association of Muslim Scholars</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Association of Muslim Scholars">
+      <charseq START="3479" END="3508">Association of Muslim Scholars</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E62" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E62-110" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="3609" END="3632">Iraqis here in the south</charseq>
+    </extent>
+    <head>
+      <charseq START="3609" END="3614">Iraqis</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E63" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E63-111" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="3748" END="3763">people around me</charseq>
+    </extent>
+    <head>
+      <charseq START="3748" END="3753">people</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E64" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E64-112" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="3797" END="3840">The director of a
+primary health care clinic</charseq>
+    </extent>
+    <head>
+      <charseq START="3801" END="3808">director</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E64-137" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="4417" END="4428">the director</charseq>
+    </extent>
+    <head>
+      <charseq START="4421" END="4428">director</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E64-138" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="4449" END="4451">him</charseq>
+    </extent>
+    <head>
+      <charseq START="4449" END="4451">him</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E64-139" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="4469" END="4470">He</charseq>
+    </extent>
+    <head>
+      <charseq START="4469" END="4470">He</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E64-140" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="4520" END="4521">he</charseq>
+    </extent>
+    <head>
+      <charseq START="4520" END="4521">he</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E65" TYPE="ORG" SUBTYPE="Non-Governmental" CLASS="SPC">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E65-113" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="3813" END="3840">a
+primary health care clinic</charseq>
+    </extent>
+    <head>
+      <charseq START="3835" END="3840">clinic</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E66" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E66-114" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="3971" END="3978">Mu'awiya</charseq>
+    </extent>
+    <head>
+      <charseq START="3971" END="3978">Mu'awiya</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E66-116" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="4018" END="4040">Mu'awiya
+bin Abi Sufyan</charseq>
+    </extent>
+    <head>
+      <charseq START="4018" END="4040">Mu'awiya
+bin Abi Sufyan</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E66-117" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="4046" END="4089">the governor of Syria during the 7th century</charseq>
+    </extent>
+    <head>
+      <charseq START="4050" END="4057">governor</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E66-118" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="4095" END="4096">he</charseq>
+    </extent>
+    <head>
+      <charseq START="4095" END="4096">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E66-124" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="4213" END="4214">He</charseq>
+    </extent>
+    <head>
+      <charseq START="4213" END="4214">He</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E66-125" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="4223" END="4246">the first Ummayid
+Caliph</charseq>
+    </extent>
+    <head>
+      <charseq START="4241" END="4246">Caliph</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E66-126" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="4294" END="4296">his</charseq>
+    </extent>
+    <head>
+      <charseq START="4294" END="4296">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E66-127" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="4367" END="4369">his</charseq>
+    </extent>
+    <head>
+      <charseq START="4367" END="4369">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Mu'awiya">
+      <charseq START="3971" END="3978">Mu'awiya</charseq>
+    </name>
+    <name NAME="Mu'awiya bin Abi Sufyan">
+      <charseq START="4018" END="4040">Mu'awiya
+bin Abi Sufyan</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E68" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E68-115" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="3985" END="3989">Allah</charseq>
+    </extent>
+    <head>
+      <charseq START="3985" END="3989">Allah</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Allah">
+      <charseq START="3985" END="3989">Allah</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E70" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E70-119" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="4105" END="4149">Imam Ali bin Abi Talib (Muhammed's son-in-law</charseq>
+    </extent>
+    <head>
+      <charseq START="4105" END="4126">Imam Ali bin Abi Talib</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E70-121" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="4129" END="4149">Muhammed's son-in-law</charseq>
+    </extent>
+    <head>
+      <charseq START="4140" END="4149">son-in-law</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Imam Ali bin Abi Talib">
+      <charseq START="4105" END="4126">Imam Ali bin Abi Talib</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E71" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E71-120" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="4129" END="4136">Muhammed</charseq>
+    </extent>
+    <head>
+      <charseq START="4129" END="4136">Muhammed</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E71-133" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="4343" END="4350">Muhammed</charseq>
+    </extent>
+    <head>
+      <charseq START="4343" END="4350">Muhammed</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Muhammed">
+      <charseq START="4129" END="4136">Muhammed</charseq>
+    </name>
+    <name NAME="Muhammed">
+      <charseq START="4343" END="4350">Muhammed</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E73" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E73-122" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="4198" END="4210">Caliph Othman</charseq>
+    </extent>
+    <head>
+      <charseq START="4205" END="4210">Othman</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E73-123" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="4198" END="4203">Caliph</charseq>
+    </extent>
+    <head>
+      <charseq START="4198" END="4203">Caliph</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Othman">
+      <charseq START="4205" END="4210">Othman</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E76" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E76-129" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="4302" END="4306">Yazid</charseq>
+    </extent>
+    <head>
+      <charseq START="4302" END="4306">Yazid</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E76-130" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="4294" END="4300">his son</charseq>
+    </extent>
+    <head>
+      <charseq START="4298" END="4300">son</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Yazid">
+      <charseq START="4302" END="4306">Yazid</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E78" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E78-131" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="4309" END="4350">Imam
+Hussein bin Ali (grandson of Muhammed</charseq>
+    </extent>
+    <head>
+      <charseq START="4309" END="4328">Imam
+Hussein bin Ali</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E78-132" TYPE="NOM" LDCTYPE="BAR" LDCATR="TRUE">
+    <extent>
+      <charseq START="4331" END="4350">grandson of Muhammed</charseq>
+    </extent>
+    <head>
+      <charseq START="4331" END="4338">grandson</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Imam Hussein bin Ali">
+      <charseq START="4309" END="4328">Imam
+Hussein bin Ali</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E80" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E80-134" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="4367" END="4376">his armies</charseq>
+    </extent>
+    <head>
+      <charseq START="4371" END="4376">armies</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E81" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E81-135" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="4393" END="4399">Karbala</charseq>
+    </extent>
+    <head>
+      <charseq START="4393" END="4399">Karbala</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Karbala">
+      <charseq START="4393" END="4399">Karbala</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E82" TYPE="PER" SUBTYPE="Individual" CLASS="USP">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E82-136" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="4402" END="4408">Someone</charseq>
+    </extent>
+    <head>
+      <charseq START="4402" END="4408">Someone</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E83" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E83-141" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="4540" END="4547">Wahhabis</charseq>
+    </extent>
+    <head>
+      <charseq START="4540" END="4547">Wahhabis</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E84" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E84-142" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="4553" END="4568">foreign fighters</charseq>
+    </extent>
+    <head>
+      <charseq START="4561" END="4568">fighters</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E85" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E85-143" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="4620" END="4625">people</charseq>
+    </extent>
+    <head>
+      <charseq START="4620" END="4625">people</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E86" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E86-144" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="4660" END="4667">Refugees</charseq>
+    </extent>
+    <head>
+      <charseq START="4660" END="4667">Refugees</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E87" TYPE="LOC" SUBTYPE="Region-General" CLASS="GEN">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E87-145" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="4743" END="4763">the surrounding areas</charseq>
+    </extent>
+    <head>
+      <charseq START="4759" END="4763">areas</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E88" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E88-146" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="4884" END="4924">thousands of families with no place to go</charseq>
+    </extent>
+    <head>
+      <charseq START="4897" END="4904">families</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E89" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E89-147" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="4927" END="4945">Refugees
+in Baghdad</charseq>
+    </extent>
+    <head>
+      <charseq START="4927" END="4934">Refugees</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E90" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E90-148" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="4979" END="4993">the 'Mujahideen</charseq>
+    </extent>
+    <head>
+      <charseq START="4984" END="4993">Mujahideen</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E91" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E91-149" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="5008" END="5031">men from 15-50 years old</charseq>
+    </extent>
+    <head>
+      <charseq START="5008" END="5010">men</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E91-150" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="5050" END="5053">they</charseq>
+    </extent>
+    <head>
+      <charseq START="5050" END="5053">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E91-151" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="5089" END="5092">they</charseq>
+    </extent>
+    <head>
+      <charseq START="5089" END="5092">they</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E92" TYPE="WEA" SUBTYPE="Underspecified" CLASS="GEN">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E92-153" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="5110" END="5113">arms</charseq>
+    </extent>
+    <head>
+      <charseq START="5110" END="5113">arms</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E93" TYPE="ORG" SUBTYPE="Non-Governmental" CLASS="SPC">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E93-154" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="5139" END="5197">Majlis
+Shura Al-Mujahideen (The Mujahideen Advisory Council</charseq>
+    </extent>
+    <head>
+      <charseq START="5139" END="5164">Majlis
+Shura Al-Mujahideen</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E93-155" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="5167" END="5197">The Mujahideen Advisory Council</charseq>
+    </extent>
+    <head>
+      <charseq START="5171" END="5197">Mujahideen Advisory Council</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E93-156" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="5231" END="5234">they</charseq>
+    </extent>
+    <head>
+      <charseq START="5231" END="5234">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Majlis Shura Al-Mujahideen">
+      <charseq START="5139" END="5164">Majlis
+Shura Al-Mujahideen</charseq>
+    </name>
+    <name NAME="Mujahideen Advisory Council">
+      <charseq START="5171" END="5197">Mujahideen Advisory Council</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E94" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E94-157" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="5274" END="5326">Arab and foreign
+(including American) media reporters</charseq>
+    </extent>
+    <head>
+      <charseq START="5318" END="5326">reporters</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E95" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E95-158" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="5274" END="5277">Arab</charseq>
+    </extent>
+    <head>
+      <charseq START="5274" END="5277">Arab</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E96" TYPE="ORG" SUBTYPE="Media" CLASS="GEN">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E96-159" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="5312" END="5316">media</charseq>
+    </extent>
+    <head>
+      <charseq START="5312" END="5316">media</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E97" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E97-160" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="5443" END="5450">Everyone</charseq>
+    </extent>
+    <head>
+      <charseq START="5443" END="5450">Everyone</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E98" TYPE="FAC" SUBTYPE="Path" CLASS="GEN">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E98-161" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="5545" END="5566">the streets of Baghdad</charseq>
+    </extent>
+    <head>
+      <charseq START="5549" END="5555">streets</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E99" TYPE="LOC" SUBTYPE="Region-General" CLASS="USP">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E99-162" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="5571" END="5581">other
+areas</charseq>
+    </extent>
+    <head>
+      <charseq START="5577" END="5581">areas</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E100" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E100-163" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2351" END="2378">the armed groups in the area</charseq>
+    </extent>
+    <head>
+      <charseq START="2361" END="2366">groups</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E101" TYPE="LOC" SUBTYPE="Region-General" CLASS="SPC">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E101-164" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2371" END="2378">the area</charseq>
+    </extent>
+    <head>
+      <charseq START="2375" END="2378">area</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E103" TYPE="LOC" SUBTYPE="Region-General" CLASS="SPC">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E103-167" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="3624" END="3632">the south</charseq>
+    </extent>
+    <head>
+      <charseq START="3628" END="3632">south</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E103-171" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3616" END="3619">here</charseq>
+    </extent>
+    <head>
+      <charseq START="3616" END="3619">here</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E104" TYPE="LOC" SUBTYPE="Region-General" CLASS="SPC">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E104-152" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="200" END="217">the Kurdish region</charseq>
+    </extent>
+    <head>
+      <charseq START="212" END="217">region</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E105" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E105-104" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="4462" END="4466">Sunni</charseq>
+    </extent>
+    <head>
+      <charseq START="4462" END="4466">Sunni</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Sunni">
+      <charseq START="4462" END="4466">Sunni</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E107" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E107-169" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1066" END="1089">the governorate building</charseq>
+    </extent>
+    <head>
+      <charseq START="1082" END="1089">building</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E109" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E109-175" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE">
+    <extent>
+      <charseq START="773" END="778">Diyala</charseq>
+    </extent>
+    <head>
+      <charseq START="773" END="778">Diyala</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Diyala">
+      <charseq START="773" END="778">Diyala</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E110" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E110-176" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE">
+    <extent>
+      <charseq START="4062" END="4066">Syria</charseq>
+    </extent>
+    <head>
+      <charseq START="4062" END="4066">Syria</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Syria">
+      <charseq START="4062" END="4066">Syria</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E111" TYPE="ORG" SUBTYPE="Non-Governmental" CLASS="SPC">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E111-178" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2974" END="2991">Ibrahim Al-Ja'fari</charseq>
+    </extent>
+    <head>
+      <charseq START="2974" END="2991">Ibrahim Al-Ja'fari</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Ibrahim Al-Ja'fari">
+      <charseq START="2974" END="2991">Ibrahim Al-Ja'fari</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E112" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E112-177" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="204" END="210">Kurdish</charseq>
+    </extent>
+    <head>
+      <charseq START="204" END="210">Kurdish</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E114" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E114-182" TYPE="NAM" LDCTYPE="NAMPRE">
+    <extent>
+      <charseq START="1041" END="1054">National Guard</charseq>
+    </extent>
+    <head>
+      <charseq START="1041" END="1054">National Guard</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="National Guard">
+      <charseq START="1041" END="1054">National Guard</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E115" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E115-183" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1041" END="1060">National Guard units</charseq>
+    </extent>
+    <head>
+      <charseq START="1056" END="1060">units</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E116" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E116-184" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="635" END="688">insurgents and foreign terrorists based around Baghdad</charseq>
+    </extent>
+    <head>
+      <charseq START="635" END="644">insurgents</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E117" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E117-185" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="635" END="688">insurgents and foreign terrorists based around Baghdad</charseq>
+    </extent>
+    <head>
+      <charseq START="658" END="667">terrorists</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E118" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E118-3" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="874" END="880">Baghdad</charseq>
+    </extent>
+    <head>
+      <charseq START="874" END="880">Baghdad</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E118-33" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="1790" END="1796">Baghdad</charseq>
+    </extent>
+    <head>
+      <charseq START="1790" END="1796">Baghdad</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E118-34" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="5560" END="5566">Baghdad</charseq>
+    </extent>
+    <head>
+      <charseq START="5560" END="5566">Baghdad</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E118-35" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="4939" END="4945">Baghdad</charseq>
+    </extent>
+    <head>
+      <charseq START="4939" END="4945">Baghdad</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E118-36" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="4731" END="4737">Baghdad</charseq>
+    </extent>
+    <head>
+      <charseq START="4731" END="4737">Baghdad</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E118-186" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="682" END="688">Baghdad</charseq>
+    </extent>
+    <head>
+      <charseq START="682" END="688">Baghdad</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Baghdad">
+      <charseq START="874" END="880">Baghdad</charseq>
+    </name>
+    <name NAME="Baghdad">
+      <charseq START="1790" END="1796">Baghdad</charseq>
+    </name>
+    <name NAME="Baghdad">
+      <charseq START="5560" END="5566">Baghdad</charseq>
+    </name>
+    <name NAME="Baghdad">
+      <charseq START="4939" END="4945">Baghdad</charseq>
+    </name>
+    <name NAME="Baghdad">
+      <charseq START="4731" END="4737">Baghdad</charseq>
+    </name>
+    <name NAME="Baghdad">
+      <charseq START="682" END="688">Baghdad</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E119" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E119-187" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="754" END="778">Deputy governor of Diyala</charseq>
+    </extent>
+    <head>
+      <charseq START="761" END="768">governor</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E120" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E120-188" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="791" END="826">several council members from
+Ba'quba</charseq>
+    </extent>
+    <head>
+      <charseq START="807" END="813">members</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="HEALINGIRAQ_20041108.1942.05-E121" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="HEALINGIRAQ_20041108.1942.05-E121-189" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="799" END="805">council</charseq>
+    </extent>
+    <head>
+      <charseq START="799" END="805">council</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<value ID="HEALINGIRAQ_20041108.1942.05-V1" TYPE="Job-Title">
+  <value_mention ID="HEALINGIRAQ_20041108.1942.05-V1-1">
+    <extent>
+      <charseq START="2999" END="3020">governmental positions</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="HEALINGIRAQ_20041108.1942.05-V2" TYPE="Job-Title">
+  <value_mention ID="HEALINGIRAQ_20041108.1942.05-V2-1">
+    <extent>
+      <charseq START="3158" END="3166">positions</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="HEALINGIRAQ_20041108.1942.05-V3" TYPE="Job-Title">
+  <value_mention ID="HEALINGIRAQ_20041108.1942.05-V3-1">
+    <extent>
+      <charseq START="4233" END="4246">Ummayid
+Caliph</charseq>
+    </extent>
+  </value_mention>
+</value>
+<timex2 ID="HEALINGIRAQ_20041108.1942.05-T1" VAL="2004-11-08T19:42:06">
+  <timex2_mention ID="HEALINGIRAQ_20041108.1942.05-T1-1">
+    <extent>
+      <charseq START="108" END="126">2004-11-08T19:42:06</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="HEALINGIRAQ_20041108.1942.05-T2" VAL="2004-11-08T19:42:06">
+  <timex2_mention ID="HEALINGIRAQ_20041108.1942.05-T2-1">
+    <extent>
+      <charseq START="44" END="62">2004-11-08T19:42:06</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="HEALINGIRAQ_20041108.1942.05-T3" VAL="P60D" ANCHOR_VAL="XXXX-XX-XX" ANCHOR_DIR="STARTING">
+  <timex2_mention ID="HEALINGIRAQ_20041108.1942.05-T3-1">
+    <extent>
+      <charseq START="219" END="229">for 60 days</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="HEALINGIRAQ_20041108.1942.05-T4" VAL="2003-08">
+  <timex2_mention ID="HEALINGIRAQ_20041108.1942.05-T4-1">
+    <extent>
+      <charseq START="282" END="292">last August</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="HEALINGIRAQ_20041108.1942.05-T5" VAL="P60D" ANCHOR_VAL="XXXX-XX-XX" ANCHOR_DIR="STARTING">
+  <timex2_mention ID="HEALINGIRAQ_20041108.1942.05-T5-1">
+    <extent>
+      <charseq START="362" END="390">a period no more than 60 days</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="HEALINGIRAQ_20041108.1942.05-T6" VAL="PAST_REF" ANCHOR_VAL="2004-11-08T19:42:06" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="HEALINGIRAQ_20041108.1942.05-T6-1">
+    <extent>
+      <charseq START="556" END="578">at
+least two months ago</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="HEALINGIRAQ_20041108.1942.05-T7">
+  <timex2_mention ID="HEALINGIRAQ_20041108.1942.05-T7-1">
+    <extent>
+      <charseq START="744" END="750">Ramadan</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="HEALINGIRAQ_20041108.1942.05-T8" VAL="PAST_REF" ANCHOR_VAL="2004-11-08T19:42:06" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="HEALINGIRAQ_20041108.1942.05-T8-1">
+    <extent>
+      <charseq START="943" END="963">a couple of weeks
+ago</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="HEALINGIRAQ_20041108.1942.05-T9" VAL="PAST_REF" ANCHOR_VAL="2004-11-08T19:42:06" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="HEALINGIRAQ_20041108.1942.05-T9-1">
+    <extent>
+      <charseq START="1006" END="1013">recently</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="HEALINGIRAQ_20041108.1942.05-T10" VAL="PT2H" ANCHOR_VAL="XXXX-XX-XX" ANCHOR_DIR="STARTING">
+  <timex2_mention ID="HEALINGIRAQ_20041108.1942.05-T10-1">
+    <extent>
+      <charseq START="1370" END="1385">lasted two hours</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="HEALINGIRAQ_20041108.1942.05-T11" VAL="PAST_REF" ANCHOR_VAL="2004-11-08T19:42:06" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="HEALINGIRAQ_20041108.1942.05-T11-1">
+    <extent>
+      <charseq START="2261" END="2269">weeks ago</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="HEALINGIRAQ_20041108.1942.05-T12" VAL="PAST_REF" ANCHOR_VAL="2004-11-08T19:42:06" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="HEALINGIRAQ_20041108.1942.05-T12-1">
+    <extent>
+      <charseq START="2487" END="2494">days ago</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="HEALINGIRAQ_20041108.1942.05-T13" VAL="PAST_REF" ANCHOR_VAL="2004-11-08T19:42:06" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="HEALINGIRAQ_20041108.1942.05-T13-1">
+    <extent>
+      <charseq START="3151" END="3156">former</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="HEALINGIRAQ_20041108.1942.05-T14" VAL="PAST_REF" ANCHOR_VAL="2004-11-08T19:42:06" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="HEALINGIRAQ_20041108.1942.05-T14-1">
+    <extent>
+      <charseq START="3856" END="3868">the other day</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="HEALINGIRAQ_20041108.1942.05-T15" VAL="6">
+  <timex2_mention ID="HEALINGIRAQ_20041108.1942.05-T15-1">
+    <extent>
+      <charseq START="4068" END="4089">during the 7th century</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="HEALINGIRAQ_20041108.1942.05-T16" VAL="PAST_REF" ANCHOR_VAL="2004-11-08T19:42:06" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="HEALINGIRAQ_20041108.1942.05-T16-1">
+    <extent>
+      <charseq START="4252" END="4268">two decades later</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="HEALINGIRAQ_20041108.1942.05-T17" VAL="PRESENT_REF" ANCHOR_VAL="2004-11-08T19:42:06" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="HEALINGIRAQ_20041108.1942.05-T17-1">
+    <extent>
+      <charseq START="4381" END="4391">present day</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="HEALINGIRAQ_20041108.1942.05-T18" VAL="PXD" ANCHOR_VAL="2004-11-08T19:42:06" ANCHOR_DIR="ENDING">
+  <timex2_mention ID="HEALINGIRAQ_20041108.1942.05-T18-1">
+    <extent>
+      <charseq START="4703" END="4724">over the last few days</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="HEALINGIRAQ_20041108.1942.05-T19" VAL="PXD" ANCHOR_VAL="2004-11-08T19:42:06" ANCHOR_DIR="STARTING">
+  <timex2_mention ID="HEALINGIRAQ_20041108.1942.05-T19-1">
+    <extent>
+      <charseq START="5477" END="5493">the next few days</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="HEALINGIRAQ_20041108.1942.05-T20" VAL="PAST_REF" ANCHOR_VAL="2004-11-08T19:42:06" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="HEALINGIRAQ_20041108.1942.05-T20-1">
+    <extent>
+      <charseq START="2740" END="2745">former</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="HEALINGIRAQ_20041108.1942.05-R1" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E26" ROLE="Arg-1"/>
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E15" ROLE="Arg-2"/>
+  <relation_mention ID="HEALINGIRAQ_20041108.1942.05-R1-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="2217" END="2239">the Fallujah negotiants</charseq>
+    </extent>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E26-45" ROLE="Arg-1">
+      <extent>
+        <charseq START="2217" END="2239">the Fallujah negotiants</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E15-61" ROLE="Arg-2">
+      <extent>
+        <charseq START="2221" END="2228">Fallujah</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="HEALINGIRAQ_20041108.1942.05-R2" TYPE="GEN-AFF" SUBTYPE="Org-Location" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E100" ROLE="Arg-1"/>
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E101" ROLE="Arg-2"/>
+  <relation_mention ID="HEALINGIRAQ_20041108.1942.05-R2-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="2351" END="2378">the armed groups in the area</charseq>
+    </extent>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E100-163" ROLE="Arg-1">
+      <extent>
+        <charseq START="2351" END="2378">the armed groups in the area</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E101-164" ROLE="Arg-2">
+      <extent>
+        <charseq START="2371" END="2378">the area</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="HEALINGIRAQ_20041108.1942.05-R3" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E112" ROLE="Arg-1"/>
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E104" ROLE="Arg-2"/>
+  <relation_mention ID="HEALINGIRAQ_20041108.1942.05-R3-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="200" END="217">the Kurdish region</charseq>
+    </extent>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E112-177" ROLE="Arg-1">
+      <extent>
+        <charseq START="204" END="210">Kurdish</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E104-152" ROLE="Arg-2">
+      <extent>
+        <charseq START="200" END="217">the Kurdish region</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="HEALINGIRAQ_20041108.1942.05-R4" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E41" ROLE="Arg-1"/>
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E30" ROLE="Arg-2"/>
+  <relation_mention ID="HEALINGIRAQ_20041108.1942.05-R4-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="2635" END="2662">US and Iraqi security forces</charseq>
+    </extent>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E41-86" ROLE="Arg-1">
+      <extent>
+        <charseq START="2635" END="2662">US and Iraqi security forces</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E30-85" ROLE="Arg-2">
+      <extent>
+        <charseq START="2635" END="2636">US</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="HEALINGIRAQ_20041108.1942.05-R5" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E116" ROLE="Arg-1"/>
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E118" ROLE="Arg-2"/>
+  <relation_mention ID="HEALINGIRAQ_20041108.1942.05-R5-1" LEXICALCONDITION="Participial">
+    <extent>
+      <charseq START="635" END="688">insurgents and foreign terrorists based around Baghdad</charseq>
+    </extent>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E116-184" ROLE="Arg-1">
+      <extent>
+        <charseq START="635" END="688">insurgents and foreign terrorists based around Baghdad</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E118-186" ROLE="Arg-2">
+      <extent>
+        <charseq START="682" END="688">Baghdad</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="HEALINGIRAQ_20041108.1942.05-R6" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E117" ROLE="Arg-1"/>
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E118" ROLE="Arg-2"/>
+  <relation_mention ID="HEALINGIRAQ_20041108.1942.05-R6-1" LEXICALCONDITION="Participial">
+    <extent>
+      <charseq START="635" END="688">insurgents and foreign terrorists based around Baghdad</charseq>
+    </extent>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E117-185" ROLE="Arg-1">
+      <extent>
+        <charseq START="635" END="688">insurgents and foreign terrorists based around Baghdad</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E118-186" ROLE="Arg-2">
+      <extent>
+        <charseq START="682" END="688">Baghdad</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="HEALINGIRAQ_20041108.1942.05-R7" TYPE="ORG-AFF" SUBTYPE="Membership" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E120" ROLE="Arg-1"/>
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E121" ROLE="Arg-2"/>
+  <relation_mention ID="HEALINGIRAQ_20041108.1942.05-R7-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="791" END="826">several council members from
+Ba'quba</charseq>
+    </extent>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E120-188" ROLE="Arg-1">
+      <extent>
+        <charseq START="791" END="826">several council members from
+Ba'quba</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E121-189" ROLE="Arg-2">
+      <extent>
+        <charseq START="799" END="805">council</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="HEALINGIRAQ_20041108.1942.05-R8" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E120" ROLE="Arg-1"/>
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E1" ROLE="Arg-2"/>
+  <relation_mention ID="HEALINGIRAQ_20041108.1942.05-R8-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="791" END="826">several council members from
+Ba'quba</charseq>
+    </extent>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E120-188" ROLE="Arg-1">
+      <extent>
+        <charseq START="791" END="826">several council members from
+Ba'quba</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E1-190" ROLE="Arg-2">
+      <extent>
+        <charseq START="820" END="826">Ba'quba</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="HEALINGIRAQ_20041108.1942.05-R9" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E41" ROLE="Arg-1"/>
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E27" ROLE="Arg-2"/>
+  <relation_mention ID="HEALINGIRAQ_20041108.1942.05-R9-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="2635" END="2662">US and Iraqi security forces</charseq>
+    </extent>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E41-86" ROLE="Arg-1">
+      <extent>
+        <charseq START="2635" END="2662">US and Iraqi security forces</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E27-53" ROLE="Arg-2">
+      <extent>
+        <charseq START="2642" END="2646">Iraqi</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="HEALINGIRAQ_20041108.1942.05-R10" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E119" ROLE="Arg-1"/>
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E2" ROLE="Arg-2"/>
+  <relation_mention ID="HEALINGIRAQ_20041108.1942.05-R10-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="754" END="963">Deputy governor of Diyala along with several council members from
+Ba'quba were ambushed and killed in Latifiya south of Baghdad, an area
+which has supposedly been 'cleared' from insurgents a couple of weeks
+ago</charseq>
+    </extent>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E119-187" ROLE="Arg-1">
+      <extent>
+        <charseq START="754" END="778">Deputy governor of Diyala</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E2-2" ROLE="Arg-2">
+      <extent>
+        <charseq START="856" END="863">Latifiya</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="HEALINGIRAQ_20041108.1942.05-R11" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E120" ROLE="Arg-1"/>
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E2" ROLE="Arg-2"/>
+  <relation_mention ID="HEALINGIRAQ_20041108.1942.05-R11-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="754" END="963">Deputy governor of Diyala along with several council members from
+Ba'quba were ambushed and killed in Latifiya south of Baghdad, an area
+which has supposedly been 'cleared' from insurgents a couple of weeks
+ago</charseq>
+    </extent>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E120-188" ROLE="Arg-1">
+      <extent>
+        <charseq START="791" END="826">several council members from
+Ba'quba</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E2-2" ROLE="Arg-2">
+      <extent>
+        <charseq START="856" END="863">Latifiya</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="HEALINGIRAQ_20041108.1942.05-R12" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E115" ROLE="Arg-1"/>
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E4" ROLE="Arg-2"/>
+  <relation_mention ID="HEALINGIRAQ_20041108.1942.05-R12-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="966" END="1089">Four suicide attacks in Samarra, also a recently 'liberated' area,
+against National Guard units and the governorate building</charseq>
+    </extent>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E115-183" ROLE="Arg-1">
+      <extent>
+        <charseq START="1041" END="1060">National Guard units</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E4-6" ROLE="Arg-2">
+      <extent>
+        <charseq START="990" END="996">Samarra</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="HEALINGIRAQ_20041108.1942.05-R13" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E115" ROLE="Arg-1"/>
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E114" ROLE="Arg-2"/>
+  <relation_mention ID="HEALINGIRAQ_20041108.1942.05-R13-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="1041" END="1060">National Guard units</charseq>
+    </extent>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E115-183" ROLE="Arg-1">
+      <extent>
+        <charseq START="1041" END="1060">National Guard units</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E114-182" ROLE="Arg-2">
+      <extent>
+        <charseq START="1041" END="1054">National Guard</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="HEALINGIRAQ_20041108.1942.05-R14" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E38" ROLE="Arg-1"/>
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E39" ROLE="Arg-2"/>
+  <relation_mention ID="HEALINGIRAQ_20041108.1942.05-R14-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="2740" END="2770">former army
+officers from Anbar</charseq>
+    </extent>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E38-82" ROLE="Arg-1">
+      <extent>
+        <charseq START="2740" END="2770">former army
+officers from Anbar</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E39-83" ROLE="Arg-2">
+      <extent>
+        <charseq START="2747" END="2750">army</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="HEALINGIRAQ_20041108.1942.05-R15" TYPE="ORG-AFF" SUBTYPE="Membership" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E6" ROLE="Arg-1"/>
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E7" ROLE="Arg-2"/>
+  <relation_mention ID="HEALINGIRAQ_20041108.1942.05-R15-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="1092" END="1106">Zarqawi's
+group</charseq>
+    </extent>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E6-10" ROLE="Arg-1">
+      <extent>
+        <charseq START="1092" END="1098">Zarqawi</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E7-11" ROLE="Arg-2">
+      <extent>
+        <charseq START="1092" END="1106">Zarqawi's
+group</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="HEALINGIRAQ_20041108.1942.05-R15-2" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="1388" END="1402">Zarqawi's group</charseq>
+    </extent>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E6-21" ROLE="Arg-1">
+      <extent>
+        <charseq START="1388" END="1394">Zarqawi</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E7-22" ROLE="Arg-2">
+      <extent>
+        <charseq START="1388" END="1402">Zarqawi's group</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="HEALINGIRAQ_20041108.1942.05-R15-3" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="5407" END="5421">Zarqawi's group</charseq>
+    </extent>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E6-56" ROLE="Arg-1">
+      <extent>
+        <charseq START="5407" END="5413">Zarqawi</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E7-57" ROLE="Arg-2">
+      <extent>
+        <charseq START="5407" END="5421">Zarqawi's group</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="HEALINGIRAQ_20041108.1942.05-R16" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E9" ROLE="Arg-1"/>
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E8" ROLE="Arg-2"/>
+  <relation_mention ID="HEALINGIRAQ_20041108.1942.05-R16-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="1149" END="1209">Three police stations in Haditha, a small town west of Ramadi</charseq>
+    </extent>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E9-13" ROLE="Arg-1">
+      <extent>
+        <charseq START="1149" END="1209">Three police stations in Haditha, a small town west of Ramadi</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E8-15" ROLE="Arg-2">
+      <extent>
+        <charseq START="1174" END="1180">Haditha</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="HEALINGIRAQ_20041108.1942.05-R17" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E10" ROLE="Arg-1"/>
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E9" ROLE="Arg-2"/>
+  <relation_mention ID="HEALINGIRAQ_20041108.1942.05-R17-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="1149" END="1209">Three police stations in Haditha, a small town west of Ramadi</charseq>
+    </extent>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E10-14" ROLE="Arg-1">
+      <extent>
+        <charseq START="1155" END="1160">police</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E9-13" ROLE="Arg-2">
+      <extent>
+        <charseq START="1149" END="1209">Three police stations in Haditha, a small town west of Ramadi</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="HEALINGIRAQ_20041108.1942.05-R18" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E38" ROLE="Arg-1"/>
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E22" ROLE="Arg-2"/>
+  <relation_mention ID="HEALINGIRAQ_20041108.1942.05-R18-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="2740" END="2770">former army
+officers from Anbar</charseq>
+    </extent>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E38-82" ROLE="Arg-1">
+      <extent>
+        <charseq START="2740" END="2770">former army
+officers from Anbar</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E22-81" ROLE="Arg-2">
+      <extent>
+        <charseq START="2766" END="2770">Anbar</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="HEALINGIRAQ_20041108.1942.05-R19" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E43" ROLE="Arg-1"/>
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E22" ROLE="Arg-2"/>
+  <relation_mention ID="HEALINGIRAQ_20041108.1942.05-R19-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="2794" END="2829">ministers from the Anbar governorate</charseq>
+    </extent>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E43-88" ROLE="Arg-1">
+      <extent>
+        <charseq START="2794" END="2829">ministers from the Anbar governorate</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E22-89" ROLE="Arg-2">
+      <extent>
+        <charseq START="2809" END="2829">the Anbar governorate</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="HEALINGIRAQ_20041108.1942.05-R21" TYPE="ORG-AFF" SUBTYPE="Membership" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E47" ROLE="Arg-1"/>
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E49" ROLE="Arg-2"/>
+  <relation_mention ID="HEALINGIRAQ_20041108.1942.05-R21-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="2924" END="2991">most of them from Shi'ite Islamic
+parties such as Ibrahim Al-Ja'fari</charseq>
+    </extent>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E47-93" ROLE="Arg-1">
+      <extent>
+        <charseq START="2924" END="2991">most of them from Shi'ite Islamic
+parties such as Ibrahim Al-Ja'fari</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E49-95" ROLE="Arg-2">
+      <extent>
+        <charseq START="2942" END="2991">Shi'ite Islamic
+parties such as Ibrahim Al-Ja'fari</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="HEALINGIRAQ_20041108.1942.05-R22" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E51" ROLE="Arg-1"/>
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E39" ROLE="Arg-2"/>
+  <relation_mention ID="HEALINGIRAQ_20041108.1942.05-R22-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="3060" END="3072">army officers</charseq>
+    </extent>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E51-97" ROLE="Arg-1">
+      <extent>
+        <charseq START="3060" END="3072">army officers</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E39-170" ROLE="Arg-2">
+      <extent>
+        <charseq START="3060" END="3063">army</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="HEALINGIRAQ_20041108.1942.05-R23" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E48" ROLE="Arg-1"/>
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E56" ROLE="Arg-2"/>
+  <relation_mention ID="HEALINGIRAQ_20041108.1942.05-R23-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="3277" END="3298">Shi'ite sacred shrines</charseq>
+    </extent>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E48-103" ROLE="Arg-1">
+      <extent>
+        <charseq START="3277" END="3283">Shi'ite</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E56-102" ROLE="Arg-2">
+      <extent>
+        <charseq START="3277" END="3298">Shi'ite sacred shrines</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="HEALINGIRAQ_20041108.1942.05-R24" TYPE="ORG-AFF" SUBTYPE="Membership" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E59" ROLE="Arg-1"/>
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E61" ROLE="Arg-2"/>
+  <relation_mention ID="HEALINGIRAQ_20041108.1942.05-R24-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="3467" END="3508">head of the Association of Muslim Scholars</charseq>
+    </extent>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E59-107" ROLE="Arg-1">
+      <extent>
+        <charseq START="3467" END="3508">head of the Association of Muslim Scholars</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E61-108" ROLE="Arg-2">
+      <extent>
+        <charseq START="3475" END="3508">the Association of Muslim Scholars</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="HEALINGIRAQ_20041108.1942.05-R25" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E62" ROLE="Arg-1"/>
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E103" ROLE="Arg-2"/>
+  <relation_mention ID="HEALINGIRAQ_20041108.1942.05-R25-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="3609" END="3709">Iraqis here in the south were shocked to hear of these demands and
+sectarian tensions are on the rise</charseq>
+    </extent>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E62-110" ROLE="Arg-1">
+      <extent>
+        <charseq START="3609" END="3632">Iraqis here in the south</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E103-171" ROLE="Arg-2">
+      <extent>
+        <charseq START="3616" END="3619">here</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="HEALINGIRAQ_20041108.1942.05-R26" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E64" ROLE="Arg-1"/>
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E65" ROLE="Arg-2"/>
+  <relation_mention ID="HEALINGIRAQ_20041108.1942.05-R26-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="3797" END="3840">The director of a
+primary health care clinic</charseq>
+    </extent>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E64-112" ROLE="Arg-1">
+      <extent>
+        <charseq START="3797" END="3840">The director of a
+primary health care clinic</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E65-113" ROLE="Arg-2">
+      <extent>
+        <charseq START="3813" END="3840">a
+primary health care clinic</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="HEALINGIRAQ_20041108.1942.05-R27" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E66" ROLE="Arg-1"/>
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E110" ROLE="Arg-2"/>
+  <relation_mention ID="HEALINGIRAQ_20041108.1942.05-R27-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="4046" END="4089">the governor of Syria during the 7th century</charseq>
+    </extent>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E66-117" ROLE="Arg-1">
+      <extent>
+        <charseq START="4046" END="4089">the governor of Syria during the 7th century</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E110-176" ROLE="Arg-2">
+      <extent>
+        <charseq START="4062" END="4066">Syria</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="HEALINGIRAQ_20041108.1942.05-R28" TYPE="PER-SOC" SUBTYPE="Family" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E71" ROLE="Arg-1"/>
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E70" ROLE="Arg-2"/>
+  <relation_mention ID="HEALINGIRAQ_20041108.1942.05-R28-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="4129" END="4149">Muhammed's son-in-law</charseq>
+    </extent>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E71-120" ROLE="Arg-1">
+      <extent>
+        <charseq START="4129" END="4136">Muhammed</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E70-121" ROLE="Arg-2">
+      <extent>
+        <charseq START="4129" END="4149">Muhammed's son-in-law</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="HEALINGIRAQ_20041108.1942.05-R29" TYPE="PER-SOC" SUBTYPE="Family" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E66" ROLE="Arg-1"/>
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E76" ROLE="Arg-2"/>
+  <relation_mention ID="HEALINGIRAQ_20041108.1942.05-R29-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="4294" END="4300">his son</charseq>
+    </extent>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E66-126" ROLE="Arg-1">
+      <extent>
+        <charseq START="4294" END="4296">his</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E76-130" ROLE="Arg-2">
+      <extent>
+        <charseq START="4294" END="4300">his son</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="HEALINGIRAQ_20041108.1942.05-R31" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E78" ROLE="Arg-1"/>
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E81" ROLE="Arg-2"/>
+  <relation_mention ID="HEALINGIRAQ_20041108.1942.05-R31-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="4213" END="4399">He became the first Ummayid
+Caliph and two decades later, under the Caliphate of his son Yazid, Imam
+Hussein bin Ali (grandson of Muhammed) was killed by his armies at
+present day Karbala</charseq>
+    </extent>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E78-131" ROLE="Arg-1">
+      <extent>
+        <charseq START="4309" END="4350">Imam
+Hussein bin Ali (grandson of Muhammed</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E81-135" ROLE="Arg-2">
+      <extent>
+        <charseq START="4393" END="4399">Karbala</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="HEALINGIRAQ_20041108.1942.05-R32" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E86" ROLE="Arg-1"/>
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E15" ROLE="Arg-2"/>
+  <relation_mention ID="HEALINGIRAQ_20041108.1942.05-R32-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="4660" END="4763">Refugees have been pouring out of Fallujah over the last few days
+into Baghdad and the surrounding areas</charseq>
+    </extent>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E86-144" ROLE="Arg-1">
+      <extent>
+        <charseq START="4660" END="4667">Refugees</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E15-68" ROLE="Arg-2">
+      <extent>
+        <charseq START="4694" END="4701">Fallujah</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="HEALINGIRAQ_20041108.1942.05-R33" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E86" ROLE="Arg-1"/>
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E118" ROLE="Arg-2"/>
+  <relation_mention ID="HEALINGIRAQ_20041108.1942.05-R33-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="4660" END="4763">Refugees have been pouring out of Fallujah over the last few days
+into Baghdad and the surrounding areas</charseq>
+    </extent>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E86-144" ROLE="Arg-1">
+      <extent>
+        <charseq START="4660" END="4667">Refugees</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E118-36" ROLE="Arg-2">
+      <extent>
+        <charseq START="4731" END="4737">Baghdad</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="HEALINGIRAQ_20041108.1942.05-R34" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E86" ROLE="Arg-1"/>
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E87" ROLE="Arg-2"/>
+  <relation_mention ID="HEALINGIRAQ_20041108.1942.05-R34-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="4660" END="4763">Refugees have been pouring out of Fallujah over the last few days
+into Baghdad and the surrounding areas</charseq>
+    </extent>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E86-144" ROLE="Arg-1">
+      <extent>
+        <charseq START="4660" END="4667">Refugees</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E87-145" ROLE="Arg-2">
+      <extent>
+        <charseq START="4743" END="4763">the surrounding areas</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="HEALINGIRAQ_20041108.1942.05-R35" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E89" ROLE="Arg-1"/>
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E118" ROLE="Arg-2"/>
+  <relation_mention ID="HEALINGIRAQ_20041108.1942.05-R35-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="4927" END="4945">Refugees
+in Baghdad</charseq>
+    </extent>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E89-147" ROLE="Arg-1">
+      <extent>
+        <charseq START="4927" END="4945">Refugees
+in Baghdad</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E118-35" ROLE="Arg-2">
+      <extent>
+        <charseq START="4939" END="4945">Baghdad</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="HEALINGIRAQ_20041108.1942.05-R36" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E94" ROLE="Arg-1"/>
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E15" ROLE="Arg-2"/>
+  <relation_mention ID="HEALINGIRAQ_20041108.1942.05-R36-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="5139" END="5366">Majlis
+Shura Al-Mujahideen (The Mujahideen Advisory Council) are in control of
+Fallujah and they have distributed a statement inviting Arab and foreign
+(including American) media reporters to enter the town and cover the
+battles</charseq>
+    </extent>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E94-157" ROLE="Arg-1">
+      <extent>
+        <charseq START="5274" END="5326">Arab and foreign
+(including American) media reporters</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E15-72" ROLE="Arg-2">
+      <extent>
+        <charseq START="5337" END="5344">the town</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="HEALINGIRAQ_20041108.1942.05-R37" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E98" ROLE="Arg-1"/>
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E118" ROLE="Arg-2"/>
+  <relation_mention ID="HEALINGIRAQ_20041108.1942.05-R37-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="5545" END="5566">the streets of Baghdad</charseq>
+    </extent>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E98-161" ROLE="Arg-1">
+      <extent>
+        <charseq START="5545" END="5566">the streets of Baghdad</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E118-34" ROLE="Arg-2">
+      <extent>
+        <charseq START="5560" END="5566">Baghdad</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="HEALINGIRAQ_20041108.1942.05-R38" TYPE="PHYS" SUBTYPE="Located" TENSE="Present" MODALITY="Asserted">
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E17" ROLE="Arg-1"/>
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E33" ROLE="Arg-2"/>
+  <relation_mention ID="HEALINGIRAQ_20041108.1942.05-R38-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="5584" END="5662">I'm still holed up in Basrah but I'll try to be on the road as
+soon as possible</charseq>
+    </extent>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E17-77" ROLE="Arg-1">
+      <extent>
+        <charseq START="5584" END="5584">I</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E33-60" ROLE="Arg-2">
+      <extent>
+        <charseq START="5606" END="5611">Basrah</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="HEALINGIRAQ_20041108.1942.05-R39" TYPE="GEN-AFF" SUBTYPE="Org-Location" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E25" ROLE="Arg-1"/>
+  <relation_argument REFID="HEALINGIRAQ_20041108.1942.05-E27" ROLE="Arg-2"/>
+  <relation_mention ID="HEALINGIRAQ_20041108.1942.05-R39-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="2147" END="2198">any other authority
+in the country beside themselves</charseq>
+    </extent>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E25-47" ROLE="Arg-1">
+      <extent>
+        <charseq START="2147" END="2198">any other authority
+in the country beside themselves</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E27-48" ROLE="Arg-2">
+      <extent>
+        <charseq START="2170" END="2180">the country</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="HEALINGIRAQ_20041108.1942.05-EV1" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="HEALINGIRAQ_20041108.1942.05-E116" ROLE="Attacker"/>
+  <event_argument REFID="HEALINGIRAQ_20041108.1942.05-E117" ROLE="Attacker"/>
+  <event_mention ID="HEALINGIRAQ_20041108.1942.05-EV1-1">
+    <extent>
+      <charseq START="589" END="688">bombings and guerrilla attacks carried out
+by insurgents and foreign terrorists based around Baghdad</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="581" END="750">Suicide bombings and guerrilla attacks carried out
+by insurgents and foreign terrorists based around Baghdad have escalated
+to alarming levels particularly during Ramadan</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="589" END="596">bombings</charseq>
+    </anchor>
+    <event_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E116-184" ROLE="Attacker">
+      <extent>
+        <charseq START="635" END="688">insurgents and foreign terrorists based around Baghdad</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E117-185" ROLE="Attacker">
+      <extent>
+        <charseq START="635" END="688">insurgents and foreign terrorists based around Baghdad</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="HEALINGIRAQ_20041108.1942.05-EV2" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="HEALINGIRAQ_20041108.1942.05-E116" ROLE="Attacker"/>
+  <event_argument REFID="HEALINGIRAQ_20041108.1942.05-E117" ROLE="Attacker"/>
+  <event_mention ID="HEALINGIRAQ_20041108.1942.05-EV2-1">
+    <extent>
+      <charseq START="612" END="688">attacks carried out
+by insurgents and foreign terrorists based around Baghdad</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="581" END="750">Suicide bombings and guerrilla attacks carried out
+by insurgents and foreign terrorists based around Baghdad have escalated
+to alarming levels particularly during Ramadan</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="612" END="618">attacks</charseq>
+    </anchor>
+    <event_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E116-184" ROLE="Attacker">
+      <extent>
+        <charseq START="635" END="688">insurgents and foreign terrorists based around Baghdad</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E117-185" ROLE="Attacker">
+      <extent>
+        <charseq START="635" END="688">insurgents and foreign terrorists based around Baghdad</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="HEALINGIRAQ_20041108.1942.05-EV3" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="HEALINGIRAQ_20041108.1942.05-E2" ROLE="Place"/>
+  <event_argument REFID="HEALINGIRAQ_20041108.1942.05-E119" ROLE="Target"/>
+  <event_argument REFID="HEALINGIRAQ_20041108.1942.05-E120" ROLE="Target"/>
+  <event_mention ID="HEALINGIRAQ_20041108.1942.05-EV3-1">
+    <extent>
+      <charseq START="754" END="863">Deputy governor of Diyala along with several council members from
+Ba'quba were ambushed and killed in Latifiya</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="754" END="963">Deputy governor of Diyala along with several council members from
+Ba'quba were ambushed and killed in Latifiya south of Baghdad, an area
+which has supposedly been 'cleared' from insurgents a couple of weeks
+ago</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="833" END="840">ambushed</charseq>
+    </anchor>
+    <event_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E2-2" ROLE="Place">
+      <extent>
+        <charseq START="856" END="863">Latifiya</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E119-187" ROLE="Target">
+      <extent>
+        <charseq START="754" END="778">Deputy governor of Diyala</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E120-188" ROLE="Target">
+      <extent>
+        <charseq START="791" END="826">several council members from
+Ba'quba</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="HEALINGIRAQ_20041108.1942.05-EV4" TYPE="Life" SUBTYPE="Die" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="HEALINGIRAQ_20041108.1942.05-E119" ROLE="Victim"/>
+  <event_argument REFID="HEALINGIRAQ_20041108.1942.05-E120" ROLE="Victim"/>
+  <event_argument REFID="HEALINGIRAQ_20041108.1942.05-E2" ROLE="Place"/>
+  <event_mention ID="HEALINGIRAQ_20041108.1942.05-EV4-1">
+    <extent>
+      <charseq START="754" END="863">Deputy governor of Diyala along with several council members from
+Ba'quba were ambushed and killed in Latifiya</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="754" END="963">Deputy governor of Diyala along with several council members from
+Ba'quba were ambushed and killed in Latifiya south of Baghdad, an area
+which has supposedly been 'cleared' from insurgents a couple of weeks
+ago</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="846" END="851">killed</charseq>
+    </anchor>
+    <event_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E119-187" ROLE="Victim">
+      <extent>
+        <charseq START="754" END="778">Deputy governor of Diyala</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E120-188" ROLE="Victim">
+      <extent>
+        <charseq START="791" END="826">several council members from
+Ba'quba</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E2-2" ROLE="Place">
+      <extent>
+        <charseq START="856" END="863">Latifiya</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="HEALINGIRAQ_20041108.1942.05-EV5" TYPE="Life" SUBTYPE="Die" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_mention ID="HEALINGIRAQ_20041108.1942.05-EV5-1">
+    <extent>
+      <charseq START="581" END="587">Suicide</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="581" END="750">Suicide bombings and guerrilla attacks carried out
+by insurgents and foreign terrorists based around Baghdad have escalated
+to alarming levels particularly during Ramadan</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="581" END="587">Suicide</charseq>
+    </anchor>
+  </event_mention>
+</event>
+<event ID="HEALINGIRAQ_20041108.1942.05-EV6" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="HEALINGIRAQ_20041108.1942.05-E107" ROLE="Target"/>
+  <event_argument REFID="HEALINGIRAQ_20041108.1942.05-E4" ROLE="Place"/>
+  <event_argument REFID="HEALINGIRAQ_20041108.1942.05-E115" ROLE="Target"/>
+  <event_mention ID="HEALINGIRAQ_20041108.1942.05-EV6-1">
+    <extent>
+      <charseq START="979" END="1089">attacks in Samarra, also a recently 'liberated' area,
+against National Guard units and the governorate building</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="966" END="1089">Four suicide attacks in Samarra, also a recently 'liberated' area,
+against National Guard units and the governorate building</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="979" END="985">attacks</charseq>
+    </anchor>
+    <event_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E107-169" ROLE="Target">
+      <extent>
+        <charseq START="1066" END="1089">the governorate building</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E4-6" ROLE="Place">
+      <extent>
+        <charseq START="990" END="996">Samarra</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E115-183" ROLE="Target">
+      <extent>
+        <charseq START="1041" END="1060">National Guard units</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="HEALINGIRAQ_20041108.1942.05-EV6-2">
+    <extent>
+      <charseq START="1139" END="1145">attacks</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1092" END="1145">Zarqawi's
+group claimed responsibility for the attacks</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1139" END="1145">attacks</charseq>
+    </anchor>
+  </event_mention>
+</event>
+<event ID="HEALINGIRAQ_20041108.1942.05-EV7" TYPE="Life" SUBTYPE="Die" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="HEALINGIRAQ_20041108.1942.05-E4" ROLE="Place"/>
+  <event_mention ID="HEALINGIRAQ_20041108.1942.05-EV7-1">
+    <extent>
+      <charseq START="971" END="996">suicide attacks in Samarra</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="966" END="1089">Four suicide attacks in Samarra, also a recently 'liberated' area,
+against National Guard units and the governorate building</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="971" END="977">suicide</charseq>
+    </anchor>
+    <event_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E4-6" ROLE="Place">
+      <extent>
+        <charseq START="990" END="996">Samarra</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="HEALINGIRAQ_20041108.1942.05-EV8" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="HEALINGIRAQ_20041108.1942.05-E13" ROLE="Attacker"/>
+  <event_argument REFID="HEALINGIRAQ_20041108.1942.05-E8" ROLE="Place"/>
+  <event_argument REFID="HEALINGIRAQ_20041108.1942.05-E9" ROLE="Target"/>
+  <event_mention ID="HEALINGIRAQ_20041108.1942.05-EV8-1">
+    <extent>
+      <charseq START="1149" END="1249">Three police stations in Haditha, a small town west of Ramadi, were
+assaulted by groups of insurgents</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1149" END="1249">Three police stations in Haditha, a small town west of Ramadi, were
+assaulted by groups of insurgents</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1217" END="1225">assaulted</charseq>
+    </anchor>
+    <event_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E13-18" ROLE="Attacker">
+      <extent>
+        <charseq START="1230" END="1249">groups of insurgents</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E8-15" ROLE="Place">
+      <extent>
+        <charseq START="1174" END="1180">Haditha</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E9-13" ROLE="Target">
+      <extent>
+        <charseq START="1149" END="1209">Three police stations in Haditha, a small town west of Ramadi</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="HEALINGIRAQ_20041108.1942.05-EV9" TYPE="Life" SUBTYPE="Die" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="HEALINGIRAQ_20041108.1942.05-E14" ROLE="Victim"/>
+  <event_mention ID="HEALINGIRAQ_20041108.1942.05-EV9-1">
+    <extent>
+      <charseq START="1252" END="1304">Some 30 policemen were captured, tied
+up and executed</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1252" END="1385">Some 30 policemen were captured, tied
+up and executed in cold blood against the walls following a
+confrontation which lasted two hours</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1297" END="1304">executed</charseq>
+    </anchor>
+    <event_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E14-20" ROLE="Victim">
+      <extent>
+        <charseq START="1252" END="1268">Some 30 policemen</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="HEALINGIRAQ_20041108.1942.05-EV10" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="HEALINGIRAQ_20041108.1942.05-T10" ROLE="Time-Holds"/>
+  <event_mention ID="HEALINGIRAQ_20041108.1942.05-EV10-1">
+    <extent>
+      <charseq START="1350" END="1385">confrontation which lasted two hours</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1252" END="1385">Some 30 policemen were captured, tied
+up and executed in cold blood against the walls following a
+confrontation which lasted two hours</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1350" END="1362">confrontation</charseq>
+    </anchor>
+    <event_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-T10-1" ROLE="Time-Holds">
+      <extent>
+        <charseq START="1370" END="1385">lasted two hours</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="HEALINGIRAQ_20041108.1942.05-EV11" TYPE="Movement" SUBTYPE="Transport" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="HEALINGIRAQ_20041108.1942.05-E22" ROLE="Origin"/>
+  <event_argument REFID="HEALINGIRAQ_20041108.1942.05-E41" ROLE="Artifact"/>
+  <event_mention ID="HEALINGIRAQ_20041108.1942.05-EV11-1">
+    <extent>
+      <charseq START="2621" END="2689">withdrawal of US and Iraqi security forces from the Anbar
+governorate</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2611" END="2770">Immediate withdrawal of US and Iraqi security forces from the Anbar
+governorate and the handover of security responsibilities to former army
+officers from Anbar</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2621" END="2630">withdrawal</charseq>
+    </anchor>
+    <event_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E22-168" ROLE="Origin">
+      <extent>
+        <charseq START="2669" END="2689">the Anbar
+governorate</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E41-86" ROLE="Artifact">
+      <extent>
+        <charseq START="2635" END="2662">US and Iraqi security forces</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="HEALINGIRAQ_20041108.1942.05-EV12" TYPE="Personnel" SUBTYPE="End-Position" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="HEALINGIRAQ_20041108.1942.05-E46" ROLE="Person"/>
+  <event_argument REFID="HEALINGIRAQ_20041108.1942.05-V1" ROLE="Position"/>
+  <event_mention ID="HEALINGIRAQ_20041108.1942.05-EV12-1">
+    <extent>
+      <charseq START="2894" END="3020">removal of certain officials (most of them from Shi'ite Islamic
+parties such as Ibrahim Al-Ja'fari) from governmental positions</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2890" END="3020">The removal of certain officials (most of them from Shi'ite Islamic
+parties such as Ibrahim Al-Ja'fari) from governmental positions</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2894" END="2900">removal</charseq>
+    </anchor>
+    <event_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E46-92" ROLE="Person">
+      <extent>
+        <charseq START="2905" END="2991">certain officials (most of them from Shi'ite Islamic
+parties such as Ibrahim Al-Ja'fari</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-V1-1" ROLE="Position">
+      <extent>
+        <charseq START="2999" END="3020">governmental positions</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="HEALINGIRAQ_20041108.1942.05-EV13" TYPE="Personnel" SUBTYPE="Start-Position" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="HEALINGIRAQ_20041108.1942.05-E50" ROLE="Person"/>
+  <event_argument REFID="HEALINGIRAQ_20041108.1942.05-E51" ROLE="Person"/>
+  <event_argument REFID="HEALINGIRAQ_20041108.1942.05-E52" ROLE="Person"/>
+  <event_argument REFID="HEALINGIRAQ_20041108.1942.05-E53" ROLE="Person"/>
+  <event_argument REFID="HEALINGIRAQ_20041108.1942.05-E54" ROLE="Person"/>
+  <event_argument REFID="HEALINGIRAQ_20041108.1942.05-V2" ROLE="Position"/>
+  <event_mention ID="HEALINGIRAQ_20041108.1942.05-EV13-1">
+    <extent>
+      <charseq START="3038" END="3166">return of Ba'athists, army officers, Republican Guards,
+Mukhabarat, intelligence and security personnel to their former
+positions</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="3025" END="3166">The complete return of Ba'athists, army officers, Republican Guards,
+Mukhabarat, intelligence and security personnel to their former
+positions</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="3038" END="3043">return</charseq>
+    </anchor>
+    <event_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E50-96" ROLE="Person">
+      <extent>
+        <charseq START="3048" END="3057">Ba'athists</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E51-97" ROLE="Person">
+      <extent>
+        <charseq START="3060" END="3072">army officers</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E52-98" ROLE="Person">
+      <extent>
+        <charseq START="3075" END="3091">Republican Guards</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E53-99" ROLE="Person">
+      <extent>
+        <charseq START="3094" END="3103">Mukhabarat</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E54-100" ROLE="Person">
+      <extent>
+        <charseq START="3106" END="3140">intelligence and security personnel</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-V2-1" ROLE="Position">
+      <extent>
+        <charseq START="3158" END="3166">positions</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="HEALINGIRAQ_20041108.1942.05-EV14" TYPE="Personnel" SUBTYPE="End-Position" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="HEALINGIRAQ_20041108.1942.05-E55" ROLE="Person"/>
+  <event_argument REFID="HEALINGIRAQ_20041108.1942.05-V2" ROLE="Position"/>
+  <event_mention ID="HEALINGIRAQ_20041108.1942.05-EV14-1">
+    <extent>
+      <charseq START="3145" END="3166">their former
+positions</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="3025" END="3166">The complete return of Ba'athists, army officers, Republican Guards,
+Mukhabarat, intelligence and security personnel to their former
+positions</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="3151" END="3156">former</charseq>
+    </anchor>
+    <event_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E55-101" ROLE="Person">
+      <extent>
+        <charseq START="3145" END="3149">their</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-V2-1" ROLE="Position">
+      <extent>
+        <charseq START="3158" END="3166">positions</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="HEALINGIRAQ_20041108.1942.05-EV15" TYPE="Life" SUBTYPE="Die" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="HEALINGIRAQ_20041108.1942.05-E73" ROLE="Victim"/>
+  <event_mention ID="HEALINGIRAQ_20041108.1942.05-EV15-1">
+    <extent>
+      <charseq START="4181" END="4210">assassination of Caliph Othman</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="4008" END="4210">Sidenote: Mu'awiya
+bin Abi Sufyan was the governor of Syria during the 7th century and he
+fought Imam Ali bin Abi Talib (Muhammed's son-in-law) over the Caliphate
+after the assassination of Caliph Othman</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="4181" END="4193">assassination</charseq>
+    </anchor>
+    <event_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E73-122" ROLE="Victim">
+      <extent>
+        <charseq START="4198" END="4210">Caliph Othman</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="HEALINGIRAQ_20041108.1942.05-EV16" TYPE="Personnel" SUBTYPE="Start-Position" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="HEALINGIRAQ_20041108.1942.05-E66" ROLE="Person"/>
+  <event_argument REFID="HEALINGIRAQ_20041108.1942.05-V3" ROLE="Position"/>
+  <event_mention ID="HEALINGIRAQ_20041108.1942.05-EV16-1">
+    <extent>
+      <charseq START="4213" END="4246">He became the first Ummayid
+Caliph</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="4213" END="4399">He became the first Ummayid
+Caliph and two decades later, under the Caliphate of his son Yazid, Imam
+Hussein bin Ali (grandson of Muhammed) was killed by his armies at
+present day Karbala</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="4216" END="4221">became</charseq>
+    </anchor>
+    <event_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E66-124" ROLE="Person">
+      <extent>
+        <charseq START="4213" END="4214">He</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-V3-1" ROLE="Position">
+      <extent>
+        <charseq START="4233" END="4246">Ummayid
+Caliph</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="HEALINGIRAQ_20041108.1942.05-EV17" TYPE="Life" SUBTYPE="Die" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="HEALINGIRAQ_20041108.1942.05-E78" ROLE="Victim"/>
+  <event_argument REFID="HEALINGIRAQ_20041108.1942.05-E80" ROLE="Agent"/>
+  <event_argument REFID="HEALINGIRAQ_20041108.1942.05-E81" ROLE="Place"/>
+  <event_argument REFID="HEALINGIRAQ_20041108.1942.05-T16" ROLE="Time-Within"/>
+  <event_mention ID="HEALINGIRAQ_20041108.1942.05-EV17-1">
+    <extent>
+      <charseq START="4252" END="4399">two decades later, under the Caliphate of his son Yazid, Imam
+Hussein bin Ali (grandson of Muhammed) was killed by his armies at
+present day Karbala</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="4213" END="4399">He became the first Ummayid
+Caliph and two decades later, under the Caliphate of his son Yazid, Imam
+Hussein bin Ali (grandson of Muhammed) was killed by his armies at
+present day Karbala</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="4357" END="4362">killed</charseq>
+    </anchor>
+    <event_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E78-131" ROLE="Victim">
+      <extent>
+        <charseq START="4309" END="4350">Imam
+Hussein bin Ali (grandson of Muhammed</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E80-134" ROLE="Agent">
+      <extent>
+        <charseq START="4367" END="4376">his armies</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E81-135" ROLE="Place">
+      <extent>
+        <charseq START="4393" END="4399">Karbala</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-T16-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="4252" END="4268">two decades later</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="HEALINGIRAQ_20041108.1942.05-EV18" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Generic" TENSE="Past">
+  <event_argument REFID="HEALINGIRAQ_20041108.1942.05-E86" ROLE="Artifact"/>
+  <event_argument REFID="HEALINGIRAQ_20041108.1942.05-E118" ROLE="Destination"/>
+  <event_argument REFID="HEALINGIRAQ_20041108.1942.05-E87" ROLE="Destination"/>
+  <event_argument REFID="HEALINGIRAQ_20041108.1942.05-E15" ROLE="Origin"/>
+  <event_argument REFID="HEALINGIRAQ_20041108.1942.05-T18" ROLE="Time-Holds"/>
+  <event_mention ID="HEALINGIRAQ_20041108.1942.05-EV18-1">
+    <extent>
+      <charseq START="4660" END="4763">Refugees have been pouring out of Fallujah over the last few days
+into Baghdad and the surrounding areas</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="4660" END="4763">Refugees have been pouring out of Fallujah over the last few days
+into Baghdad and the surrounding areas</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="4679" END="4689">pouring out</charseq>
+    </anchor>
+    <event_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E86-144" ROLE="Artifact">
+      <extent>
+        <charseq START="4660" END="4667">Refugees</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E118-36" ROLE="Destination">
+      <extent>
+        <charseq START="4731" END="4737">Baghdad</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E87-145" ROLE="Destination">
+      <extent>
+        <charseq START="4743" END="4763">the surrounding areas</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E15-68" ROLE="Origin">
+      <extent>
+        <charseq START="4694" END="4701">Fallujah</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-T18-1" ROLE="Time-Holds">
+      <extent>
+        <charseq START="4703" END="4724">over the last few days</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="HEALINGIRAQ_20041108.1942.05-EV19" TYPE="Life" SUBTYPE="Die" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="HEALINGIRAQ_20041108.1942.05-E91" ROLE="Victim"/>
+  <event_mention ID="HEALINGIRAQ_20041108.1942.05-EV19-1">
+    <extent>
+      <charseq START="5050" END="5084">they were threatened with
+execution</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="4927" END="5136">Refugees
+in Baghdad have confirmed the rumours that the 'Mujahideen' are forcing
+men from 15-50 years old to stay and that they were threatened with
+execution if they refuse to carry arms in defense of the town</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="5076" END="5084">execution</charseq>
+    </anchor>
+    <event_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E91-150" ROLE="Victim">
+      <extent>
+        <charseq START="5050" END="5053">they</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="HEALINGIRAQ_20041108.1942.05-EV20" TYPE="Movement" SUBTYPE="Transport" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="HEALINGIRAQ_20041108.1942.05-E94" ROLE="Artifact"/>
+  <event_argument REFID="HEALINGIRAQ_20041108.1942.05-E15" ROLE="Destination"/>
+  <event_mention ID="HEALINGIRAQ_20041108.1942.05-EV20-1">
+    <extent>
+      <charseq START="5274" END="5344">Arab and foreign
+(including American) media reporters to enter the town</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="5139" END="5366">Majlis
+Shura Al-Mujahideen (The Mujahideen Advisory Council) are in control of
+Fallujah and they have distributed a statement inviting Arab and foreign
+(including American) media reporters to enter the town and cover the
+battles</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="5331" END="5335">enter</charseq>
+    </anchor>
+    <event_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E94-157" ROLE="Artifact">
+      <extent>
+        <charseq START="5274" END="5326">Arab and foreign
+(including American) media reporters</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E15-72" ROLE="Destination">
+      <extent>
+        <charseq START="5337" END="5344">the town</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="HEALINGIRAQ_20041108.1942.05-EV21" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="HEALINGIRAQ_20041108.1942.05-E15" ROLE="Place"/>
+  <event_mention ID="HEALINGIRAQ_20041108.1942.05-EV21-1">
+    <extent>
+      <charseq START="5337" END="5366">the town and cover the
+battles</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="5139" END="5366">Majlis
+Shura Al-Mujahideen (The Mujahideen Advisory Council) are in control of
+Fallujah and they have distributed a statement inviting Arab and foreign
+(including American) media reporters to enter the town and cover the
+battles</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="5360" END="5366">battles</charseq>
+    </anchor>
+    <event_mention_argument REFID="HEALINGIRAQ_20041108.1942.05-E15-72" ROLE="Place">
+      <extent>
+        <charseq START="5337" END="5344">the town</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="HEALINGIRAQ_20041108.1942.05-EV22" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_mention ID="HEALINGIRAQ_20041108.1942.05-EV22-1">
+    <extent>
+      <charseq START="5518" END="5525">violence</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="5443" END="5581">Everyone is closely watching what the next few days will bring,
+hoping the violence doesn't spread to the streets of Baghdad or other
+areas</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="5518" END="5525">violence</charseq>
+    </anchor>
+  </event_mention>
+</event>
+</document>
+</source_file>

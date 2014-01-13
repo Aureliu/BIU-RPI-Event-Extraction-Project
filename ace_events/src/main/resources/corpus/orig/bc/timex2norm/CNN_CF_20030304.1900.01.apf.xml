@@ -1,0 +1,4450 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_CF_20030304.1900.01.sgm" SOURCE="broadcast conversation" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_CF_20030304.1900.01">
+<entity ID="CNN_CF_20030304.1900.01-E1" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E1-2" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="880" END="886">doctors</charseq>
+    </extent>
+    <head>
+      <charseq START="880" END="886">doctors</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E1-3" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="922" END="925">they</charseq>
+    </extent>
+    <head>
+      <charseq START="922" END="925">they</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E2" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E2-4" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="971" END="972">We</charseq>
+    </extent>
+    <head>
+      <charseq START="971" END="972">We</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E2-238" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="7513" END="7514">We</charseq>
+    </extent>
+    <head>
+      <charseq START="7513" END="7514">We</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E3" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="USP">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E3-5" TYPE="PRO" LDCTYPE="PTV" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="998" END="1015">some of the
+states</charseq>
+    </extent>
+    <head>
+      <charseq START="998" END="1001">some</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E3-6" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="1018" END="1021">They</charseq>
+    </extent>
+    <head>
+      <charseq START="1018" END="1021">They</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E3-7" TYPE="NOM" LDCTYPE="BAR" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1026" END="1035">big states</charseq>
+    </extent>
+    <head>
+      <charseq START="1030" END="1035">states</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E5" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E5-8" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE">
+    <extent>
+      <charseq START="1038" END="1044">Florida</charseq>
+    </extent>
+    <head>
+      <charseq START="1038" END="1044">Florida</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E5-198" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="6209" END="6215">Florida</charseq>
+    </extent>
+    <head>
+      <charseq START="6209" END="6215">Florida</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E5-199" TYPE="PRO" LDCTYPE="PRO" ROLE="ORG">
+    <extent>
+      <charseq START="6218" END="6221">they</charseq>
+    </extent>
+    <head>
+      <charseq START="6218" END="6221">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Florida">
+      <charseq START="1038" END="1044">Florida</charseq>
+    </name>
+    <name NAME="Florida">
+      <charseq START="6209" END="6215">Florida</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E6" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E6-9" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE">
+    <extent>
+      <charseq START="1047" END="1056">New Jersey</charseq>
+    </extent>
+    <head>
+      <charseq START="1047" END="1056">New Jersey</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="New Jersey">
+      <charseq START="1047" END="1056">New Jersey</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E7" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E7-10" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE">
+    <extent>
+      <charseq START="1059" END="1066">New York</charseq>
+    </extent>
+    <head>
+      <charseq START="1059" END="1066">New York</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="New York">
+      <charseq START="1059" END="1066">New York</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E8" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E8-11" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE">
+    <extent>
+      <charseq START="1069" END="1072">Ohio</charseq>
+    </extent>
+    <head>
+      <charseq START="1069" END="1072">Ohio</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Ohio">
+      <charseq START="1069" END="1072">Ohio</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E9" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E9-12" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE">
+    <extent>
+      <charseq START="1075" END="1086">Pennsylvania</charseq>
+    </extent>
+    <head>
+      <charseq START="1075" END="1086">Pennsylvania</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Pennsylvania">
+      <charseq START="1075" END="1086">Pennsylvania</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E10" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E10-13" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE">
+    <extent>
+      <charseq START="1089" END="1096">Illinois</charseq>
+    </extent>
+    <head>
+      <charseq START="1089" END="1096">Illinois</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Illinois">
+      <charseq START="1089" END="1096">Illinois</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E11" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E11-14" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE">
+    <extent>
+      <charseq START="1099" END="1103">Texas</charseq>
+    </extent>
+    <head>
+      <charseq START="1099" END="1103">Texas</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Texas">
+      <charseq START="1099" END="1103">Texas</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E12" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E12-15" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1133" END="1139">lawyers</charseq>
+    </extent>
+    <head>
+      <charseq START="1133" END="1139">lawyers</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E13" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E13-16" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE">
+    <extent>
+      <charseq START="1161" END="1167">America</charseq>
+    </extent>
+    <head>
+      <charseq START="1161" END="1167">America</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E13-169" TYPE="PRO" LDCTYPE="PRO" ROLE="PER">
+    <extent>
+      <charseq START="4337" END="4339">our</charseq>
+    </extent>
+    <head>
+      <charseq START="4337" END="4339">our</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E13-170" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="3049" END="3065">the
+United States</charseq>
+    </extent>
+    <head>
+      <charseq START="3053" END="3065">United States</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E13-171" TYPE="PRO" LDCTYPE="PRO" ROLE="PER">
+    <extent>
+      <charseq START="5515" END="5517">our</charseq>
+    </extent>
+    <head>
+      <charseq START="5515" END="5517">our</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E13-173" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE">
+    <extent>
+      <charseq START="5670" END="5671">we</charseq>
+    </extent>
+    <head>
+      <charseq START="5670" END="5671">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E13-244" TYPE="NOM" LDCTYPE="NOM" ROLE="LOC">
+    <extent>
+      <charseq START="1748" END="1759">this country</charseq>
+    </extent>
+    <head>
+      <charseq START="1753" END="1759">country</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="America">
+      <charseq START="1161" END="1167">America</charseq>
+    </name>
+    <name NAME="United States">
+      <charseq START="3053" END="3065">United States</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E14" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E14-17" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1230" END="1233">your</charseq>
+    </extent>
+    <head>
+      <charseq START="1230" END="1233">your</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E14-31" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1717" END="1719">Bob</charseq>
+    </extent>
+    <head>
+      <charseq START="1717" END="1719">Bob</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E14-60" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2589" END="2591">Bob</charseq>
+    </extent>
+    <head>
+      <charseq START="2589" END="2591">Bob</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E14-159" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2042" END="2042">I</charseq>
+    </extent>
+    <head>
+      <charseq START="2042" END="2042">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E14-160" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2085" END="2085">I</charseq>
+    </extent>
+    <head>
+      <charseq START="2085" END="2085">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E14-254" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3630" END="3632">you</charseq>
+    </extent>
+    <head>
+      <charseq START="3630" END="3632">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E14-262" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="787" END="791">NOVAK</charseq>
+    </extent>
+    <head>
+      <charseq START="787" END="791">NOVAK</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E14-264" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1900" END="1904">NOVAK</charseq>
+    </extent>
+    <head>
+      <charseq START="1900" END="1904">NOVAK</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E14-265" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="7506" END="7510">NOVAK</charseq>
+    </extent>
+    <head>
+      <charseq START="7506" END="7510">NOVAK</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Bob">
+      <charseq START="1717" END="1719">Bob</charseq>
+    </name>
+    <name NAME="Bob">
+      <charseq START="2589" END="2591">Bob</charseq>
+    </name>
+    <name NAME="NOVAK">
+      <charseq START="787" END="791">NOVAK</charseq>
+    </name>
+    <name NAME="NOVAK">
+      <charseq START="1900" END="1904">NOVAK</charseq>
+    </name>
+    <name NAME="NOVAK">
+      <charseq START="7506" END="7510">NOVAK</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E15" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E15-18" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1292" END="1312">Over 80,000 Americans</charseq>
+    </extent>
+    <head>
+      <charseq START="1304" END="1312">Americans</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E16" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E16-20" TYPE="PRO" LDCTYPE="HLS">
+    <extent>
+      <charseq START="1315" END="1317">220</charseq>
+    </extent>
+    <head>
+      <charseq START="1315" END="1317">220</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E17" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E17-21" TYPE="PRO" LDCTYPE="HLS">
+    <extent>
+      <charseq START="1358" END="1377">hundred of thousands</charseq>
+    </extent>
+    <head>
+      <charseq START="1369" END="1377">thousands</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E18" TYPE="FAC" SUBTYPE="Subarea-Facility" CLASS="GEN">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E18-19" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="2983" END="2987">court</charseq>
+    </extent>
+    <head>
+      <charseq START="2983" END="2987">court</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E19" TYPE="ORG" SUBTYPE="Commercial" CLASS="USP">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E19-22" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1396" END="1482">the insurance companies which had
+relatively steady rates on doctors for about 10 years</charseq>
+    </extent>
+    <head>
+      <charseq START="1410" END="1418">companies</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E19-23" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="1420" END="1424">which</charseq>
+    </extent>
+    <head>
+      <charseq START="1420" END="1424">which</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E19-25" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1495" END="1497">its</charseq>
+    </extent>
+    <head>
+      <charseq START="1495" END="1497">its</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E19-26" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1518" END="1520">its</charseq>
+    </extent>
+    <head>
+      <charseq START="1518" END="1520">its</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E19-27" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1578" END="1581">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1578" END="1581">they</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E20" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E20-24" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1457" END="1463">doctors</charseq>
+    </extent>
+    <head>
+      <charseq START="1457" END="1463">doctors</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E21" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E21-28" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1637" END="1649">obstetricians</charseq>
+    </extent>
+    <head>
+      <charseq START="1637" END="1649">obstetricians</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E22" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E22-29" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1655" END="1667">neurosurgeons</charseq>
+    </extent>
+    <head>
+      <charseq START="1655" END="1667">neurosurgeons</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E23" TYPE="PER" SUBTYPE="Indeterminate" CLASS="GEN">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E23-30" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1677" END="1679">you</charseq>
+    </extent>
+    <head>
+      <charseq START="1677" END="1679">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E23-126" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="6419" END="6421">you</charseq>
+    </extent>
+    <head>
+      <charseq START="6419" END="6421">you</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E24" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E24-1" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="209" END="222">President Bush</charseq>
+    </extent>
+    <head>
+      <charseq START="219" END="222">Bush</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E24-33" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="209" END="217">President</charseq>
+    </extent>
+    <head>
+      <charseq START="209" END="217">President</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E24-69" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="238" END="240">his</charseq>
+    </extent>
+    <head>
+      <charseq START="238" END="240">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E24-77" TYPE="PRO" LDCTYPE="WHQ" LDCATR="TRUE">
+    <extent>
+      <charseq START="5509" END="5511">who</charseq>
+    </extent>
+    <head>
+      <charseq START="5509" END="5511">who</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E24-123" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="4199" END="4211">Mr. President</charseq>
+    </extent>
+    <head>
+      <charseq START="4203" END="4211">President</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E24-125" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="4199" END="4200">Mr</charseq>
+    </extent>
+    <head>
+      <charseq START="4199" END="4200">Mr</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E24-128" TYPE="NOM" LDCTYPE="BAR" LDCATR="TRUE">
+    <extent>
+      <charseq START="4229" END="4234">father</charseq>
+    </extent>
+    <head>
+      <charseq START="4229" END="4234">father</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E24-132" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="4337" END="4349">our president</charseq>
+    </extent>
+    <head>
+      <charseq START="4341" END="4349">president</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E24-134" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="4400" END="4407">Mr. Bush</charseq>
+    </extent>
+    <head>
+      <charseq START="4404" END="4407">Bush</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E24-135" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="4400" END="4401">Mr</charseq>
+    </extent>
+    <head>
+      <charseq START="4400" END="4401">Mr</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E24-136" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="4412" END="4425">President Bush</charseq>
+    </extent>
+    <head>
+      <charseq START="4422" END="4425">Bush</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E24-137" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="4412" END="4420">President</charseq>
+    </extent>
+    <head>
+      <charseq START="4412" END="4420">President</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E24-168" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="5515" END="5527">our president</charseq>
+    </extent>
+    <head>
+      <charseq START="5519" END="5527">president</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Bush">
+      <charseq START="219" END="222">Bush</charseq>
+    </name>
+    <name NAME="Bush">
+      <charseq START="4404" END="4407">Bush</charseq>
+    </name>
+    <name NAME="Bush">
+      <charseq START="4422" END="4425">Bush</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E26" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E26-34" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1737" END="1759">doctors in this country</charseq>
+    </extent>
+    <head>
+      <charseq START="1737" END="1743">doctors</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E26-36" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1807" END="1810">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1807" END="1810">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E26-37" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1872" END="1875">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1872" END="1875">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E26-52" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2414" END="2424">the doctors</charseq>
+    </extent>
+    <head>
+      <charseq START="2418" END="2424">doctors</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E27" TYPE="ORG" SUBTYPE="Commercial" CLASS="GEN">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E27-35" TYPE="NOM" LDCTYPE="BAR" LDCATR="FALSE">
+    <extent>
+      <charseq START="1764" END="1783">malpractice
+insurers</charseq>
+    </extent>
+    <head>
+      <charseq START="1776" END="1783">insurers</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E27-51" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2427" END="2450">the malpractice insurers</charseq>
+    </extent>
+    <head>
+      <charseq START="2443" END="2450">insurers</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E27-203" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="6168" END="6184">insurance company</charseq>
+    </extent>
+    <head>
+      <charseq START="6178" END="6184">company</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E28" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E28-38" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1881" END="1894">a receptionist</charseq>
+    </extent>
+    <head>
+      <charseq START="1883" END="1894">receptionist</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E29" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E29-39" TYPE="PRO" LDCTYPE="PTV">
+    <extent>
+      <charseq START="1939" END="1953">so many of them</charseq>
+    </extent>
+    <head>
+      <charseq START="1942" END="1945">many</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E29-40" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1972" END="1976">their</charseq>
+    </extent>
+    <head>
+      <charseq START="1972" END="1976">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E29-41" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1995" END="1998">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1995" END="1998">they</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E30" TYPE="PER" SUBTYPE="Indeterminate" CLASS="USP">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E30-42" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2017" END="2019">You</charseq>
+    </extent>
+    <head>
+      <charseq START="2017" END="2019">You</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E30-139" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="4390" END="4392">You</charseq>
+    </extent>
+    <head>
+      <charseq START="4390" END="4392">You</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E30-273" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="6311" END="6313">you</charseq>
+    </extent>
+    <head>
+      <charseq START="6311" END="6313">you</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E31" TYPE="PER" SUBTYPE="Indeterminate" CLASS="NEG">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E31-32" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3480" END="3485">no
+one</charseq>
+    </extent>
+    <head>
+      <charseq START="3483" END="3485">one</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E32" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E32-45" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2093" END="2094">we</charseq>
+    </extent>
+    <head>
+      <charseq START="2093" END="2094">we</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E33" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E33-47" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2165" END="2175">the lawyers</charseq>
+    </extent>
+    <head>
+      <charseq START="2169" END="2175">lawyers</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E33-50" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2354" END="2357">they</charseq>
+    </extent>
+    <head>
+      <charseq START="2354" END="2357">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E33-127" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2178" END="2285">the trial
+lawyers who appoint millions and millions of dollars into Democratic
+coffers in order to keep this</charseq>
+    </extent>
+    <head>
+      <charseq START="2188" END="2194">lawyers</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E33-141" TYPE="PRO" LDCTYPE="WHQ" LDCATR="TRUE">
+    <extent>
+      <charseq START="2196" END="2198">who</charseq>
+    </extent>
+    <head>
+      <charseq START="2196" END="2198">who</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E34" TYPE="ORG" SUBTYPE="Non-Governmental" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E34-48" TYPE="NAM" LDCTYPE="NAMPRE">
+    <extent>
+      <charseq START="2246" END="2255">Democratic</charseq>
+    </extent>
+    <head>
+      <charseq START="2246" END="2255">Democratic</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Democratic">
+      <charseq START="2246" END="2255">Democratic</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E35" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E35-44" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="3751" END="3763">the witnesses</charseq>
+    </extent>
+    <head>
+      <charseq START="3755" END="3763">witnesses</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E36" TYPE="ORG" SUBTYPE="Medical-Science" CLASS="GEN">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E36-53" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2453" END="2471">the hospital chains</charseq>
+    </extent>
+    <head>
+      <charseq START="2466" END="2471">chains</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E36-57" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="2457" END="2464">hospital</charseq>
+    </extent>
+    <head>
+      <charseq START="2457" END="2464">hospital</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E37" TYPE="ORG" SUBTYPE="Commercial" CLASS="GEN">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E37-54" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2477" END="2484">the
+HMOs</charseq>
+    </extent>
+    <head>
+      <charseq START="2481" END="2484">HMOs</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E38" TYPE="ORG" SUBTYPE="Medical-Science" CLASS="GEN">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E38-55" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2490" END="2512">the nursing home chains</charseq>
+    </extent>
+    <head>
+      <charseq START="2507" END="2512">chains</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E38-56" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="2494" END="2505">nursing home</charseq>
+    </extent>
+    <head>
+      <charseq START="2494" END="2505">nursing home</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E41" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E41-58" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="2531" END="2549">members of Congress</charseq>
+    </extent>
+    <head>
+      <charseq START="2531" END="2537">members</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E42" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E42-59" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2542" END="2549">Congress</charseq>
+    </extent>
+    <head>
+      <charseq START="2542" END="2549">Congress</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E42-74" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2990" END="3001">The Congress</charseq>
+    </extent>
+    <head>
+      <charseq START="2994" END="3001">Congress</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E42-188" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="5886" END="5893">Congress</charseq>
+    </extent>
+    <head>
+      <charseq START="5886" END="5893">Congress</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Congress">
+      <charseq START="2542" END="2549">Congress</charseq>
+    </name>
+    <name NAME="Congress">
+      <charseq START="2994" END="3001">Congress</charseq>
+    </name>
+    <name NAME="Congress">
+      <charseq START="5886" END="5893">Congress</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E43" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E43-61" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2620" END="2621">we</charseq>
+    </extent>
+    <head>
+      <charseq START="2620" END="2621">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E43-68" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2906" END="2907">we</charseq>
+    </extent>
+    <head>
+      <charseq START="2906" END="2907">we</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E44" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E44-62" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2638" END="2714">severely injured people who have found a lung taken out
+that's the wrong lung</charseq>
+    </extent>
+    <head>
+      <charseq START="2655" END="2660">people</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E44-63" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="2662" END="2664">who</charseq>
+    </extent>
+    <head>
+      <charseq START="2662" END="2664">who</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E45" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E45-64" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2783" END="2804">a woman in the Midwest</charseq>
+    </extent>
+    <head>
+      <charseq START="2785" END="2789">woman</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E46" TYPE="LOC" SUBTYPE="Region-General" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E46-65" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2794" END="2804">the Midwest</charseq>
+    </extent>
+    <head>
+      <charseq START="2798" END="2804">Midwest</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Midwest">
+      <charseq START="2798" END="2804">Midwest</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E47" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E47-70" TYPE="PRO" LDCTYPE="HLS">
+    <extent>
+      <charseq START="2925" END="2929">these</charseq>
+    </extent>
+    <head>
+      <charseq START="2925" END="2929">these</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E48" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E48-71" TYPE="PRO" LDCTYPE="HLS">
+    <extent>
+      <charseq START="2935" END="2948">so many others</charseq>
+    </extent>
+    <head>
+      <charseq START="2943" END="2948">others</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E49" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E49-72" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2951" END="2953">you</charseq>
+    </extent>
+    <head>
+      <charseq START="2951" END="2953">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E49-73" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2966" END="2969">your</charseq>
+    </extent>
+    <head>
+      <charseq START="2966" END="2969">your</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E50" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E50-75" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="3024" END="3065">the judges and juries in the
+United States</charseq>
+    </extent>
+    <head>
+      <charseq START="3028" END="3033">judges</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E51" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E51-76" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="3024" END="3065">the judges and juries in the
+United States</charseq>
+    </extent>
+    <head>
+      <charseq START="3039" END="3044">juries</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E53" TYPE="ORG" SUBTYPE="Government" CLASS="GEN">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E53-79" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="3074" END="3084">state court</charseq>
+    </extent>
+    <head>
+      <charseq START="3080" END="3084">court</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E54" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="GEN">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E54-81" TYPE="NOM" LDCTYPE="NOMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="3074" END="3078">state</charseq>
+    </extent>
+    <head>
+      <charseq START="3074" END="3078">state</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E54-205" TYPE="NOM" LDCTYPE="NOMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="6390" END="6394">state</charseq>
+    </extent>
+    <head>
+      <charseq START="6390" END="6394">state</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E54-215" TYPE="NOM" LDCTYPE="NOMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="6700" END="6704">state</charseq>
+    </extent>
+    <head>
+      <charseq START="6700" END="6704">state</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E55" TYPE="PER" SUBTYPE="Individual" CLASS="USP">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E55-84" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="3111" END="3342">one senator or
+representative who's for this bill who has demonstrated that the jurors
+in their home state and the judges in their home state are incompetent,
+unwilling or unable to perform justice in these medical malpractice
+cases</charseq>
+    </extent>
+    <head>
+      <charseq START="3115" END="3121">senator</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E56" TYPE="PER" SUBTYPE="Individual" CLASS="USP">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E56-85" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="3111" END="3342">one senator or
+representative who's for this bill who has demonstrated that the jurors
+in their home state and the judges in their home state are incompetent,
+unwilling or unable to perform justice in these medical malpractice
+cases</charseq>
+    </extent>
+    <head>
+      <charseq START="3126" END="3139">representative</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E57" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E57-80" TYPE="PRO" LDCTYPE="WHQ" LDCATR="TRUE">
+    <extent>
+      <charseq START="5496" END="5498">Who</charseq>
+    </extent>
+    <head>
+      <charseq START="5496" END="5498">Who</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E57-98" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="3530" END="3542">Dr. Palmisano</charseq>
+    </extent>
+    <head>
+      <charseq START="3534" END="3542">Palmisano</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E57-99" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="3530" END="3531">Dr</charseq>
+    </extent>
+    <head>
+      <charseq START="3530" END="3531">Dr</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E57-104" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="3726" END="3728">you</charseq>
+    </extent>
+    <head>
+      <charseq START="3726" END="3728">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E57-122" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="4115" END="4117">you</charseq>
+    </extent>
+    <head>
+      <charseq START="4115" END="4117">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E57-140" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="4516" END="4518">you</charseq>
+    </extent>
+    <head>
+      <charseq START="4516" END="4518">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E57-166" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="5454" END="5456">you</charseq>
+    </extent>
+    <head>
+      <charseq START="5454" END="5456">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E57-167" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="5504" END="5506">you</charseq>
+    </extent>
+    <head>
+      <charseq START="5504" END="5506">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E57-216" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="6745" END="6745">I</charseq>
+    </extent>
+    <head>
+      <charseq START="6745" END="6745">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E57-253" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="3557" END="3559">you</charseq>
+    </extent>
+    <head>
+      <charseq START="3557" END="3559">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E57-267" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="4560" END="4568">PALMISANO</charseq>
+    </extent>
+    <head>
+      <charseq START="4560" END="4568">PALMISANO</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E57-268" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="5411" END="5419">PALMISANO</charseq>
+    </extent>
+    <head>
+      <charseq START="5411" END="5419">PALMISANO</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E57-269" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="5611" END="5619">PALMISANO</charseq>
+    </extent>
+    <head>
+      <charseq START="5611" END="5619">PALMISANO</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E57-270" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="6734" END="6742">PALMISANO</charseq>
+    </extent>
+    <head>
+      <charseq START="6734" END="6742">PALMISANO</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E57-281" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="693" END="712">Dr. Donald Palmisano</charseq>
+    </extent>
+    <head>
+      <charseq START="697" END="712">Donald Palmisano</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E57-282" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="693" END="694">Dr</charseq>
+    </extent>
+    <head>
+      <charseq START="693" END="694">Dr</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E57-283" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="715" END="769">the president-elect of the American
+Medical Association</charseq>
+    </extent>
+    <head>
+      <charseq START="719" END="727">president</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Palmisano">
+      <charseq START="3534" END="3542">Palmisano</charseq>
+    </name>
+    <name NAME="PALMISANO">
+      <charseq START="4560" END="4568">PALMISANO</charseq>
+    </name>
+    <name NAME="PALMISANO">
+      <charseq START="5411" END="5419">PALMISANO</charseq>
+    </name>
+    <name NAME="PALMISANO">
+      <charseq START="5611" END="5619">PALMISANO</charseq>
+    </name>
+    <name NAME="PALMISANO">
+      <charseq START="6734" END="6742">PALMISANO</charseq>
+    </name>
+    <name NAME="Donald Palmisano">
+      <charseq START="697" END="712">Donald Palmisano</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E58" TYPE="PER" SUBTYPE="Individual" CLASS="USP">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E58-86" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="3141" END="3143">who</charseq>
+    </extent>
+    <head>
+      <charseq START="3141" END="3143">who</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E58-87" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="3161" END="3163">who</charseq>
+    </extent>
+    <head>
+      <charseq START="3161" END="3163">who</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E58-90" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3201" END="3205">their</charseq>
+    </extent>
+    <head>
+      <charseq START="3201" END="3205">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E58-91" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3236" END="3240">their</charseq>
+    </extent>
+    <head>
+      <charseq START="3236" END="3240">their</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E59" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E59-88" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="3187" END="3251">the jurors
+in their home state and the judges in their home state</charseq>
+    </extent>
+    <head>
+      <charseq START="3191" END="3196">jurors</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E60" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E60-89" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="3187" END="3251">the jurors
+in their home state and the judges in their home state</charseq>
+    </extent>
+    <head>
+      <charseq START="3226" END="3231">judges</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E61" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="USP">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E61-92" TYPE="NOM" LDCTYPE="NOM" ROLE="LOC">
+    <extent>
+      <charseq START="3201" END="3216">their home state</charseq>
+    </extent>
+    <head>
+      <charseq START="3212" END="3216">state</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E61-93" TYPE="NOM" LDCTYPE="NOM" ROLE="LOC">
+    <extent>
+      <charseq START="3236" END="3251">their home state</charseq>
+    </extent>
+    <head>
+      <charseq START="3247" END="3251">state</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E62" TYPE="PER" SUBTYPE="Individual" CLASS="USP">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E62-95" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="3366" END="3375">one person</charseq>
+    </extent>
+    <head>
+      <charseq START="3370" END="3375">person</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E63" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E63-96" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="3386" END="3477">the insurance executives
+who make $250,000 a week, every week without any pain and suffering</charseq>
+    </extent>
+    <head>
+      <charseq START="3400" END="3409">executives</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E63-97" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="3411" END="3413">who</charseq>
+    </extent>
+    <head>
+      <charseq START="3411" END="3413">who</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E65" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E65-100" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="4496" END="4511">a Lottery winner</charseq>
+    </extent>
+    <head>
+      <charseq START="4506" END="4511">winner</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E65-103" TYPE="NOM" LDCTYPE="BAR" LDCATR="TRUE">
+    <extent>
+      <charseq START="4219" END="4224">father</charseq>
+    </extent>
+    <head>
+      <charseq START="4219" END="4224">father</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E65-105" TYPE="PRO" LDCTYPE="PTV" LDCATR="TRUE">
+    <extent>
+      <charseq START="3744" END="3763">one of the witnesses</charseq>
+    </extent>
+    <head>
+      <charseq START="3744" END="3746">one</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E65-106" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="3766" END="3779">John McCormick</charseq>
+    </extent>
+    <head>
+      <charseq START="3766" END="3779">John McCormick</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E65-107" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="3798" END="3799">He</charseq>
+    </extent>
+    <head>
+      <charseq START="3798" END="3799">He</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E65-114" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="3906" END="3907">He</charseq>
+    </extent>
+    <head>
+      <charseq START="3906" END="3907">He</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E65-115" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="3855" END="3856">he</charseq>
+    </extent>
+    <head>
+      <charseq START="3855" END="3856">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E65-119" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="4083" END="4095">Mr. McCormick</charseq>
+    </extent>
+    <head>
+      <charseq START="4087" END="4095">McCormick</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E65-120" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="4083" END="4084">Mr</charseq>
+    </extent>
+    <head>
+      <charseq START="4083" END="4084">Mr</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E65-130" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="4237" END="4238">my</charseq>
+    </extent>
+    <head>
+      <charseq START="4237" END="4238">my</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E65-131" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="4321" END="4322">he</charseq>
+    </extent>
+    <head>
+      <charseq START="4321" END="4322">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E65-133" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="4370" END="4371">he</charseq>
+    </extent>
+    <head>
+      <charseq START="4370" END="4371">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E65-142" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="4542" END="4544">his</charseq>
+    </extent>
+    <head>
+      <charseq START="4542" END="4544">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E65-176" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="5473" END="5485">Mr. McCormick</charseq>
+    </extent>
+    <head>
+      <charseq START="5477" END="5485">McCormick</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E65-177" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="5473" END="5474">Mr</charseq>
+    </extent>
+    <head>
+      <charseq START="5473" END="5474">Mr</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E65-178" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="5537" END="5539">him</charseq>
+    </extent>
+    <head>
+      <charseq START="5537" END="5539">him</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E65-179" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="5546" END="5548">his</charseq>
+    </extent>
+    <head>
+      <charseq START="5546" END="5548">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E65-252" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="4153" END="4196">JOHN MCCORMICK, FATHER OF MALPRACTICE VICTIM</charseq>
+    </extent>
+    <head>
+      <charseq START="4153" END="4196">JOHN MCCORMICK, FATHER OF MALPRACTICE VICTIM</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E65-259" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="3803" END="3903">the father
+of a little girl, 13-month-old girl, who he said today died because of
+medical malpractice</charseq>
+    </extent>
+    <head>
+      <charseq START="3807" END="3812">father</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="John McCormick">
+      <charseq START="3766" END="3779">John McCormick</charseq>
+    </name>
+    <name NAME="McCormick">
+      <charseq START="4087" END="4095">McCormick</charseq>
+    </name>
+    <name NAME="McCormick">
+      <charseq START="5477" END="5485">McCormick</charseq>
+    </name>
+    <name NAME="JOHN MCCORMICK, FATHER OF MALPRACTICE VICTIM">
+      <charseq START="4153" END="4196">JOHN MCCORMICK, FATHER OF MALPRACTICE VICTIM</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E66" TYPE="LOC" SUBTYPE="Address" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E66-101" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="3687" END="3698">Capitol Hill</charseq>
+    </extent>
+    <head>
+      <charseq START="3687" END="3698">Capitol Hill</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Capitol Hill">
+      <charseq START="3687" END="3698">Capitol Hill</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E67" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E67-78" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="174" END="179">BEGALA</charseq>
+    </extent>
+    <head>
+      <charseq START="174" END="179">BEGALA</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E67-82" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="3522" END="3527">BEGALA</charseq>
+    </extent>
+    <head>
+      <charseq START="3522" END="3527">BEGALA</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E67-102" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3712" END="3712">I</charseq>
+    </extent>
+    <head>
+      <charseq START="3712" END="3712">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E67-121" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="4106" END="4106">I</charseq>
+    </extent>
+    <head>
+      <charseq START="4106" END="4106">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E67-164" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="5393" END="5393">I</charseq>
+    </extent>
+    <head>
+      <charseq START="5393" END="5393">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E67-165" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="5442" END="5442">I</charseq>
+    </extent>
+    <head>
+      <charseq START="5442" END="5442">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E67-172" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="3659" END="3664">BEGALA</charseq>
+    </extent>
+    <head>
+      <charseq START="3659" END="3664">BEGALA</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E67-207" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="6502" END="6505">Paul</charseq>
+    </extent>
+    <head>
+      <charseq START="6502" END="6505">Paul</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E67-226" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="4307" END="4312">BEGALA</charseq>
+    </extent>
+    <head>
+      <charseq START="4307" END="4312">BEGALA</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E67-249" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="5357" END="5362">BEGALA</charseq>
+    </extent>
+    <head>
+      <charseq START="5357" END="5362">BEGALA</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E67-251" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="5430" END="5435">BEGALA</charseq>
+    </extent>
+    <head>
+      <charseq START="5430" END="5435">BEGALA</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="BEGALA">
+      <charseq START="174" END="179">BEGALA</charseq>
+    </name>
+    <name NAME="BEGALA">
+      <charseq START="3522" END="3527">BEGALA</charseq>
+    </name>
+    <name NAME="BEGALA">
+      <charseq START="3659" END="3664">BEGALA</charseq>
+    </name>
+    <name NAME="Paul">
+      <charseq START="6502" END="6505">Paul</charseq>
+    </name>
+    <name NAME="BEGALA">
+      <charseq START="4307" END="4312">BEGALA</charseq>
+    </name>
+    <name NAME="BEGALA">
+      <charseq START="5357" END="5362">BEGALA</charseq>
+    </name>
+    <name NAME="BEGALA">
+      <charseq START="5430" END="5435">BEGALA</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E69" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E69-111" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="3817" END="3829">a little girl</charseq>
+    </extent>
+    <head>
+      <charseq START="3826" END="3829">girl</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E69-112" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="3832" END="3848">13-month-old girl</charseq>
+    </extent>
+    <head>
+      <charseq START="3845" END="3848">girl</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E69-113" TYPE="PRO" LDCTYPE="WHQ" LDCATR="FALSE">
+    <extent>
+      <charseq START="3851" END="3853">who</charseq>
+    </extent>
+    <head>
+      <charseq START="3851" END="3853">who</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E69-118" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="4041" END="4043">She</charseq>
+    </extent>
+    <head>
+      <charseq START="4041" END="4043">She</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E69-143" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="4542" END="4554">his dead baby</charseq>
+    </extent>
+    <head>
+      <charseq START="4551" END="4554">baby</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E69-210" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3963" END="3965">her</charseq>
+    </extent>
+    <head>
+      <charseq START="3963" END="3965">her</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E71" TYPE="ORG" SUBTYPE="Medical-Science" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E71-116" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="3919" END="3930">the hospital</charseq>
+    </extent>
+    <head>
+      <charseq START="3923" END="3930">hospital</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E72" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E72-117" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="3984" END="4006">the attending physician</charseq>
+    </extent>
+    <head>
+      <charseq START="3998" END="4006">physician</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E77" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E77-129" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="4237" END="4245">my family</charseq>
+    </extent>
+    <head>
+      <charseq START="4240" END="4245">family</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E80" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E80-138" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="4432" END="4441">these guys</charseq>
+    </extent>
+    <head>
+      <charseq START="4438" END="4441">guys</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E82" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E82-144" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="4627" END="4634">patients</charseq>
+    </extent>
+    <head>
+      <charseq START="4627" END="4634">patients</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E82-145" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="4644" END="4647">they</charseq>
+    </extent>
+    <head>
+      <charseq START="4644" END="4647">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E82-185" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="5773" END="5780">patients</charseq>
+    </extent>
+    <head>
+      <charseq START="5773" END="5780">patients</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E82-241" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="5814" END="5818">their</charseq>
+    </extent>
+    <head>
+      <charseq START="5814" END="5818">their</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E83" TYPE="ORG" SUBTYPE="Non-Governmental" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E83-148" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="4800" END="4837">the National Patient Safety Foundation</charseq>
+    </extent>
+    <head>
+      <charseq START="4804" END="4837">National Patient Safety Foundation</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="National Patient Safety Foundation">
+      <charseq START="4804" END="4837">National Patient Safety Foundation</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E84" TYPE="ORG" SUBTYPE="Medical-Science" CLASS="USP">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E84-150" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="4946" END="4964">the emergency rooms</charseq>
+    </extent>
+    <head>
+      <charseq START="4960" END="4964">rooms</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E85" TYPE="ORG" SUBTYPE="Medical-Science" CLASS="USP">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E85-151" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="4979" END="4992">trauma centers</charseq>
+    </extent>
+    <head>
+      <charseq START="4986" END="4992">centers</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E86" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E86-152" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="5007" END="5020">pregnant women</charseq>
+    </extent>
+    <head>
+      <charseq START="5016" END="5020">women</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E87" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E87-109" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="301" END="334">the victims of medical
+malpractice</charseq>
+    </extent>
+    <head>
+      <charseq START="305" END="311">victims</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E88" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E88-153" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="5033" END="5060">a doctor to deliver the baby</charseq>
+    </extent>
+    <head>
+      <charseq START="5035" END="5040">doctor</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E89" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E89-154" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="5063" END="5087">a boy
+knocked unconscious</charseq>
+    </extent>
+    <head>
+      <charseq START="5065" END="5067">boy</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E90" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="USP">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E90-155" TYPE="NOM" LDCTYPE="NOM" ROLE="LOC">
+    <extent>
+      <charseq START="5114" END="5126">another state</charseq>
+    </extent>
+    <head>
+      <charseq START="5122" END="5126">state</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E91" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E91-156" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="5129" END="5143">Another
+witness</charseq>
+    </extent>
+    <head>
+      <charseq START="5137" END="5143">witness</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E91-157" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="5176" END="5178">her</charseq>
+    </extent>
+    <head>
+      <charseq START="5176" END="5178">her</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E92" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E92-158" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="5176" END="5186">her husband</charseq>
+    </extent>
+    <head>
+      <charseq START="5180" END="5186">husband</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E92-163" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="5259" END="5269">The patient</charseq>
+    </extent>
+    <head>
+      <charseq START="5263" END="5269">patient</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E93" TYPE="PER" SUBTYPE="Group" CLASS="NEG">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E93-161" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="5217" END="5256">neurosurgeons available in the community</charseq>
+    </extent>
+    <head>
+      <charseq START="5217" END="5229">neurosurgeons</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E94" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E94-162" TYPE="NOM" LDCTYPE="NOM" ROLE="LOC">
+    <extent>
+      <charseq START="5244" END="5256">the community</charseq>
+    </extent>
+    <head>
+      <charseq START="5248" END="5256">community</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E95" TYPE="PER" SUBTYPE="Individual" CLASS="USP">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E95-175" TYPE="NOM" LDCTYPE="BAR" LDCATR="TRUE">
+    <extent>
+      <charseq START="7146" END="7158">obstetricians</charseq>
+    </extent>
+    <head>
+      <charseq START="7146" END="7158">obstetricians</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E95-181" TYPE="PRO" LDCTYPE="HLS" LDCATR="TRUE">
+    <extent>
+      <charseq START="7178" END="7195">emergency medicine</charseq>
+    </extent>
+    <head>
+      <charseq START="7188" END="7195">medicine</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E95-182" TYPE="NOM" LDCTYPE="BAR" LDCATR="TRUE">
+    <extent>
+      <charseq START="7161" END="7173">neurosurgeons</charseq>
+    </extent>
+    <head>
+      <charseq START="7161" END="7173">neurosurgeons</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E95-209" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="7137" END="7140">they</charseq>
+    </extent>
+    <head>
+      <charseq START="7137" END="7140">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E95-222" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="6983" END="6995">one physician</charseq>
+    </extent>
+    <head>
+      <charseq START="6987" END="6995">physician</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E95-224" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="7060" END="7077">the same physician</charseq>
+    </extent>
+    <head>
+      <charseq START="7069" END="7077">physician</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E97" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E97-180" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="5599" END="5605">a child</charseq>
+    </extent>
+    <head>
+      <charseq START="5601" END="5605">child</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E99" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E99-183" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="5705" END="5712">everyone</charseq>
+    </extent>
+    <head>
+      <charseq START="5705" END="5712">everyone</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E100" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E100-184" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="5735" END="5748">the physicians</charseq>
+    </extent>
+    <head>
+      <charseq START="5739" END="5748">physicians</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E100-186" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="5800" END="5809">physicians</charseq>
+    </extent>
+    <head>
+      <charseq START="5800" END="5809">physicians</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E101" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E101-187" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE">
+    <extent>
+      <charseq START="5852" END="5861">California</charseq>
+    </extent>
+    <head>
+      <charseq START="5852" END="5861">California</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E101-189" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE">
+    <extent>
+      <charseq START="5963" END="5972">California</charseq>
+    </extent>
+    <head>
+      <charseq START="5963" END="5972">California</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E101-190" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="5995" END="6004">California</charseq>
+    </extent>
+    <head>
+      <charseq START="5995" END="6004">California</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E101-196" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="6133" END="6142">California</charseq>
+    </extent>
+    <head>
+      <charseq START="6133" END="6142">California</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E101-197" TYPE="PRO" LDCTYPE="PRO" ROLE="ORG">
+    <extent>
+      <charseq START="6144" END="6147">they</charseq>
+    </extent>
+    <head>
+      <charseq START="6144" END="6147">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="California">
+      <charseq START="5852" END="5861">California</charseq>
+    </name>
+    <name NAME="California">
+      <charseq START="5963" END="5972">California</charseq>
+    </name>
+    <name NAME="California">
+      <charseq START="5995" END="6004">California</charseq>
+    </name>
+    <name NAME="California">
+      <charseq START="6133" END="6142">California</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E102" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E102-191" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="5978" END="6004">obstetricians in California</charseq>
+    </extent>
+    <head>
+      <charseq START="5978" END="5990">obstetricians</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E102-195" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="6077" END="6080">they</charseq>
+    </extent>
+    <head>
+      <charseq START="6077" END="6080">they</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E103" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E103-192" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="6034" END="6044">Los Angeles</charseq>
+    </extent>
+    <head>
+      <charseq START="6034" END="6044">Los Angeles</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Los Angeles">
+      <charseq START="6034" END="6044">Los Angeles</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E104" TYPE="LOC" SUBTYPE="Region-General" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E104-193" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="6053" END="6065">South Florida</charseq>
+    </extent>
+    <head>
+      <charseq START="6053" END="6065">South Florida</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E104-227" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="7233" END="7245">South Florida</charseq>
+    </extent>
+    <head>
+      <charseq START="7233" END="7245">South Florida</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E104-228" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="7251" END="7263">South Florida</charseq>
+    </extent>
+    <head>
+      <charseq START="7251" END="7263">South Florida</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E104-231" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="7389" END="7401">South Florida</charseq>
+    </extent>
+    <head>
+      <charseq START="7389" END="7401">South Florida</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="South Florida">
+      <charseq START="6053" END="6065">South Florida</charseq>
+    </name>
+    <name NAME="South Florida">
+      <charseq START="7233" END="7245">South Florida</charseq>
+    </name>
+    <name NAME="South Florida">
+      <charseq START="7251" END="7263">South Florida</charseq>
+    </name>
+    <name NAME="South Florida">
+      <charseq START="7389" END="7401">South Florida</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E105" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E105-194" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="6070" END="6074">Miami</charseq>
+    </extent>
+    <head>
+      <charseq START="6070" END="6074">Miami</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Miami">
+      <charseq START="6070" END="6074">Miami</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E106" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="USP">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E106-200" TYPE="NOM" LDCTYPE="NOM" ROLE="GPE">
+    <extent>
+      <charseq START="6255" END="6265">some states</charseq>
+    </extent>
+    <head>
+      <charseq START="6260" END="6265">states</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E107" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E107-201" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="6291" END="6318">doctors that are -- you know</charseq>
+    </extent>
+    <head>
+      <charseq START="6291" END="6297">doctors</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E107-202" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="6299" END="6302">that</charseq>
+    </extent>
+    <head>
+      <charseq START="6299" END="6302">that</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E107-208" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="6359" END="6362">they</charseq>
+    </extent>
+    <head>
+      <charseq START="6359" END="6362">they</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E109" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E109-204" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="6386" END="6408">the state medical board</charseq>
+    </extent>
+    <head>
+      <charseq START="6404" END="6408">board</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E112" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E112-124" TYPE="PRO" LDCTYPE="PTV">
+    <extent>
+      <charseq START="6430" END="6453">5 percent of the doctors</charseq>
+    </extent>
+    <head>
+      <charseq START="6432" END="6438">percent</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E112-211" TYPE="PRO" LDCTYPE="PTV">
+    <extent>
+      <charseq START="6523" END="6600">a small percentage of doctors that
+are bad, incompetent, indifferent, whatever</charseq>
+    </extent>
+    <head>
+      <charseq START="6531" END="6540">percentage</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E112-212" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="6553" END="6556">that</charseq>
+    </extent>
+    <head>
+      <charseq START="6553" END="6556">that</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E112-213" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="6603" END="6606">They</charseq>
+    </extent>
+    <head>
+      <charseq START="6603" END="6606">They</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E114" TYPE="ORG" SUBTYPE="Non-Governmental" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E114-217" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="6772" END="6806">The National Practitioner Data Bank</charseq>
+    </extent>
+    <head>
+      <charseq START="6776" END="6806">National Practitioner Data Bank</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E114-219" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="6845" END="6846">it</charseq>
+    </extent>
+    <head>
+      <charseq START="6845" END="6846">it</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E114-221" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="6950" END="6951">It</charseq>
+    </extent>
+    <head>
+      <charseq START="6950" END="6951">It</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E114-225" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="7110" END="7111">It</charseq>
+    </extent>
+    <head>
+      <charseq START="7110" END="7111">It</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E114-245" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="7198" END="7199">It</charseq>
+    </extent>
+    <head>
+      <charseq START="7198" END="7199">It</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E114-263" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="6811" END="6839">the
+source of the information</charseq>
+    </extent>
+    <head>
+      <charseq START="6815" END="6820">source</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="National Practitioner Data Bank">
+      <charseq START="6776" END="6806">National Practitioner Data Bank</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E115" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E115-220" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="6884" END="6915">the
+Government Accounting Office</charseq>
+    </extent>
+    <head>
+      <charseq START="6888" END="6915">Government Accounting Office</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Government Accounting Office">
+      <charseq START="6888" END="6915">Government Accounting Office</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E117" TYPE="ORG" SUBTYPE="Commercial" CLASS="USP">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E117-223" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="7034" END="7051">different insurers</charseq>
+    </extent>
+    <head>
+      <charseq START="7044" END="7051">insurers</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E118" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E118-229" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="7293" END="7310">every
+neurosurgeon</charseq>
+    </extent>
+    <head>
+      <charseq START="7299" END="7310">neurosurgeon</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E118-232" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="7412" END="7416">these</charseq>
+    </extent>
+    <head>
+      <charseq START="7412" END="7416">these</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E118-233" TYPE="NOM" LDCTYPE="BAR" LDCATR="FALSE">
+    <extent>
+      <charseq START="7418" END="7428">bad doctors</charseq>
+    </extent>
+    <head>
+      <charseq START="7422" END="7428">doctors</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E118-239" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="7556" END="7559">they</charseq>
+    </extent>
+    <head>
+      <charseq START="7556" END="7559">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E118-240" TYPE="NOM" LDCTYPE="BAR" LDCATR="TRUE">
+    <extent>
+      <charseq START="7565" END="7575">bad doctors</charseq>
+    </extent>
+    <head>
+      <charseq START="7569" END="7575">doctors</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E119" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E119-230" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="7363" END="7376">a
+neurosurgeon</charseq>
+    </extent>
+    <head>
+      <charseq START="7365" END="7376">neurosurgeon</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E121" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E121-234" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="7431" END="7432">We</charseq>
+    </extent>
+    <head>
+      <charseq START="7431" END="7432">We</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E121-246" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="7454" END="7455">we</charseq>
+    </extent>
+    <head>
+      <charseq START="7454" END="7455">we</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E122" TYPE="PER" SUBTYPE="Group" CLASS="NEG">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E122-235" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="7442" END="7451">no doctors</charseq>
+    </extent>
+    <head>
+      <charseq START="7445" END="7451">doctors</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E123" TYPE="PER" SUBTYPE="Group" CLASS="NEG">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E123-236" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="7465" END="7480">no neurosurgeons</charseq>
+    </extent>
+    <head>
+      <charseq START="7468" END="7480">neurosurgeons</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E124" TYPE="PER" SUBTYPE="Group" CLASS="NEG">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E124-237" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="7483" END="7498">no obstetricians</charseq>
+    </extent>
+    <head>
+      <charseq START="7486" END="7498">obstetricians</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E126" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E126-67" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="2886" END="2899">North Carolina</charseq>
+    </extent>
+    <head>
+      <charseq START="2886" END="2899">North Carolina</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E126-218" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="356" END="369">North Carolina</charseq>
+    </extent>
+    <head>
+      <charseq START="356" END="369">North Carolina</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="North Carolina">
+      <charseq START="2886" END="2899">North Carolina</charseq>
+    </name>
+    <name NAME="North Carolina">
+      <charseq START="356" END="369">North Carolina</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E127" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E127-43" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2027" END="2031">Ralph</charseq>
+    </extent>
+    <head>
+      <charseq START="2027" END="2031">Ralph</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E127-49" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2291" END="2293">you</charseq>
+    </extent>
+    <head>
+      <charseq START="2291" END="2293">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E127-83" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3093" END="3093">I</charseq>
+    </extent>
+    <head>
+      <charseq START="3093" END="3093">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E127-94" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3349" END="3349">I</charseq>
+    </extent>
+    <head>
+      <charseq START="3349" END="3349">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E127-174" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2152" END="2154">you</charseq>
+    </extent>
+    <head>
+      <charseq START="2152" END="2154">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E127-206" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="6411" END="6411">I</charseq>
+    </extent>
+    <head>
+      <charseq START="6411" END="6411">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E127-247" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="659" END="675">consumer advocate</charseq>
+    </extent>
+    <head>
+      <charseq START="668" END="675">advocate</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E127-250" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2034" END="2036">you</charseq>
+    </extent>
+    <head>
+      <charseq START="2034" END="2036">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E127-257" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2330" END="2334">NADER</charseq>
+    </extent>
+    <head>
+      <charseq START="2330" END="2334">NADER</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E127-258" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="6115" END="6119">NADER</charseq>
+    </extent>
+    <head>
+      <charseq START="6115" END="6119">NADER</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E127-260" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="7543" END="7547">NADER</charseq>
+    </extent>
+    <head>
+      <charseq START="7543" END="7547">NADER</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E127-279" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="659" END="687">consumer advocate
+Ralph Nader</charseq>
+    </extent>
+    <head>
+      <charseq START="677" END="687">Ralph Nader</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E127-285" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="794" END="804">Ralph Nader</charseq>
+    </extent>
+    <head>
+      <charseq START="794" END="804">Ralph Nader</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Ralph">
+      <charseq START="2027" END="2031">Ralph</charseq>
+    </name>
+    <name NAME="NADER">
+      <charseq START="2330" END="2334">NADER</charseq>
+    </name>
+    <name NAME="NADER">
+      <charseq START="6115" END="6119">NADER</charseq>
+    </name>
+    <name NAME="NADER">
+      <charseq START="7543" END="7547">NADER</charseq>
+    </name>
+    <name NAME="Ralph Nader">
+      <charseq START="677" END="687">Ralph Nader</charseq>
+    </name>
+    <name NAME="Ralph Nader">
+      <charseq START="794" END="804">Ralph Nader</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E128" TYPE="PER" SUBTYPE="Indeterminate" CLASS="GEN">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E128-248" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="659" END="666">consumer</charseq>
+    </extent>
+    <head>
+      <charseq START="659" END="666">consumer</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E129" TYPE="FAC" SUBTYPE="Subarea-Facility" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E129-255" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3571" END="3574">here</charseq>
+    </extent>
+    <head>
+      <charseq START="3571" END="3574">here</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E129-256" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3650" END="3653">here</charseq>
+    </extent>
+    <head>
+      <charseq START="3650" END="3653">here</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E132" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E132-266" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1183" END="1212">RALPH NADER, CONSUMER ADVOCATE</charseq>
+    </extent>
+    <head>
+      <charseq START="1183" END="1212">RALPH NADER, CONSUMER ADVOCATE</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="RALPH NADER, CONSUMER ADVOCATE">
+      <charseq START="1183" END="1212">RALPH NADER, CONSUMER ADVOCATE</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E133" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E133-271" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="3580" END="3621">DR. DONALD PALMISANO, PRESIDENT-ELECT, AMA</charseq>
+    </extent>
+    <head>
+      <charseq START="3580" END="3621">DR. DONALD PALMISANO, PRESIDENT-ELECT, AMA</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="DR. DONALD PALMISANO, PRESIDENT-ELECT, AMA">
+      <charseq START="3580" END="3621">DR. DONALD PALMISANO, PRESIDENT-ELECT, AMA</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E134" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E134-66" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2857" END="2899">that 17-year-old teenager in North Carolina</charseq>
+    </extent>
+    <head>
+      <charseq START="2874" END="2881">teenager</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E134-261" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="425" END="452">17-year-old Jesica Santillan</charseq>
+    </extent>
+    <head>
+      <charseq START="437" END="452">Jesica Santillan</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E134-275" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="455" END="554">the brave
+young woman who got the wrong heart and lungs in a botched transplant
+operation last month</charseq>
+    </extent>
+    <head>
+      <charseq START="471" END="475">woman</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E134-276" TYPE="PRO" LDCTYPE="WHQ" LDCATR="TRUE">
+    <extent>
+      <charseq START="477" END="479">who</charseq>
+    </extent>
+    <head>
+      <charseq START="477" END="479">who</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E134-277" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="560" END="562">her</charseq>
+    </extent>
+    <head>
+      <charseq START="560" END="562">her</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Jesica Santillan">
+      <charseq START="437" END="452">Jesica Santillan</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E135" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E135-272" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="5053" END="5060">the baby</charseq>
+    </extent>
+    <head>
+      <charseq START="5057" END="5060">baby</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E138" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E138-278" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="560" END="569">her family</charseq>
+    </extent>
+    <head>
+      <charseq START="564" END="569">family</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E143" TYPE="ORG" SUBTYPE="Medical-Science" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E143-146" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="4675" END="4706">The American Medical Association</charseq>
+    </extent>
+    <head>
+      <charseq START="4679" END="4706">American Medical Association</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E143-147" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="4789" END="4790">we</charseq>
+    </extent>
+    <head>
+      <charseq START="4789" END="4790">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E143-149" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="4920" END="4921">we</charseq>
+    </extent>
+    <head>
+      <charseq START="4920" END="4921">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E143-214" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="6639" END="6645">the AMA</charseq>
+    </extent>
+    <head>
+      <charseq START="6643" END="6645">AMA</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E143-243" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="866" END="872">the AMA</charseq>
+    </extent>
+    <head>
+      <charseq START="870" END="872">AMA</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E143-284" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="738" END="769">the American
+Medical Association</charseq>
+    </extent>
+    <head>
+      <charseq START="742" END="769">American
+Medical Association</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="American Medical Association">
+      <charseq START="4679" END="4706">American Medical Association</charseq>
+    </name>
+    <name NAME="AMA">
+      <charseq START="6643" END="6645">AMA</charseq>
+    </name>
+    <name NAME="AMA">
+      <charseq START="870" END="872">AMA</charseq>
+    </name>
+    <name NAME="American Medical Association">
+      <charseq START="742" END="769">American
+Medical Association</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030304.1900.01-E144" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="USP">
+  <entity_mention ID="CNN_CF_20030304.1900.01-E144-108" TYPE="PRO" LDCTYPE="WHQ" ROLE="GPE">
+    <extent>
+      <charseq START="874" END="878">where</charseq>
+    </extent>
+    <head>
+      <charseq START="874" END="878">where</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E144-242" TYPE="PRO" LDCTYPE="WHQ" ROLE="GPE">
+    <extent>
+      <charseq START="834" END="837">that</charseq>
+    </extent>
+    <head>
+      <charseq START="834" END="837">that</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030304.1900.01-E144-286" TYPE="NOM" LDCTYPE="BAR" ROLE="GPE">
+    <extent>
+      <charseq START="817" END="832">states in crisis</charseq>
+    </extent>
+    <head>
+      <charseq START="817" END="822">states</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<value ID="CNN_CF_20030304.1900.01-V1" TYPE="Numeric" SUBTYPE="Money">
+  <value_mention ID="CNN_CF_20030304.1900.01-V1-1">
+    <extent>
+      <charseq START="253" END="260">$250,000</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_CF_20030304.1900.01-V2" TYPE="Numeric" SUBTYPE="Money">
+  <value_mention ID="CNN_CF_20030304.1900.01-V2-1">
+    <extent>
+      <charseq START="603" END="610">$250,000</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_CF_20030304.1900.01-V3" TYPE="Numeric" SUBTYPE="Money">
+  <value_mention ID="CNN_CF_20030304.1900.01-V3-1">
+    <extent>
+      <charseq START="1824" END="1839">less than $9,000</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_CF_20030304.1900.01-V4" TYPE="Numeric" SUBTYPE="Money">
+  <value_mention ID="CNN_CF_20030304.1900.01-V4-1">
+    <extent>
+      <charseq START="3420" END="3427">$250,000</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_CF_20030304.1900.01-V5" TYPE="Numeric" SUBTYPE="Money">
+  <value_mention ID="CNN_CF_20030304.1900.01-V5-1">
+    <extent>
+      <charseq START="5574" END="5581">$250,000</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_CF_20030304.1900.01-V6" TYPE="Numeric" SUBTYPE="Percent">
+  <value_mention ID="CNN_CF_20030304.1900.01-V6-1">
+    <extent>
+      <charseq START="6430" END="6438">5 percent</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_CF_20030304.1900.01-V7" TYPE="Numeric" SUBTYPE="Percent">
+  <value_mention ID="CNN_CF_20030304.1900.01-V7-1">
+    <extent>
+      <charseq START="6475" END="6484">55 percent</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_CF_20030304.1900.01-V8" TYPE="Numeric" SUBTYPE="Money">
+  <value_mention ID="CNN_CF_20030304.1900.01-V8-1">
+    <extent>
+      <charseq START="2208" END="2239">millions and millions of dollars</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_CF_20030304.1900.01-V9" TYPE="Numeric" SUBTYPE="Money">
+  <value_mention ID="CNN_CF_20030304.1900.01-V9-1">
+    <extent>
+      <charseq START="6015" END="6016">55</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_CF_20030304.1900.01-V10" TYPE="Numeric" SUBTYPE="Money">
+  <value_mention ID="CNN_CF_20030304.1900.01-V10-1">
+    <extent>
+      <charseq START="6019" END="6020">57</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_CF_20030304.1900.01-V11" TYPE="Numeric" SUBTYPE="Money">
+  <value_mention ID="CNN_CF_20030304.1900.01-V11-1">
+    <extent>
+      <charseq START="6023" END="6029">$60,000</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_CF_20030304.1900.01-V12" TYPE="Numeric" SUBTYPE="Money">
+  <value_mention ID="CNN_CF_20030304.1900.01-V12-1">
+    <extent>
+      <charseq START="6089" END="6096">$210,000</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_CF_20030304.1900.01-V13" TYPE="Crime">
+  <value_mention ID="CNN_CF_20030304.1900.01-V13-1">
+    <extent>
+      <charseq START="316" END="334">medical
+malpractice</charseq>
+    </extent>
+  </value_mention>
+</value>
+<timex2 ID="CNN_CF_20030304.1900.01-T1" VAL="P17Y" ANCHOR_VAL="2003" ANCHOR_DIR="ENDING">
+  <timex2_mention ID="CNN_CF_20030304.1900.01-T1-1">
+    <extent>
+      <charseq START="425" END="435">17-year-old</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_CF_20030304.1900.01-T2" VAL="P17Y" ANCHOR_VAL="2003" ANCHOR_DIR="ENDING">
+  <timex2_mention ID="CNN_CF_20030304.1900.01-T2-1">
+    <extent>
+      <charseq START="2862" END="2872">17-year-old</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_CF_20030304.1900.01-T3" VAL="XXXX-XX-XX">
+  <timex2_mention ID="CNN_CF_20030304.1900.01-T3-1">
+    <extent>
+      <charseq START="2966" END="2987">your full day in
+court</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_CF_20030304.1900.01-T4">
+  <timex2_mention ID="CNN_CF_20030304.1900.01-T4-1">
+    <extent>
+      <charseq START="3832" END="3843">13-month-old</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_CF_20030304.1900.01-T5" VAL="PRESENT_REF" ANCHOR_VAL="2003-03-04T19:00:00" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_CF_20030304.1900.01-T5-1">
+    <extent>
+      <charseq START="4844" END="4850">current</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_CF_20030304.1900.01-T6" VAL="2003-03-04">
+  <timex2_mention ID="CNN_CF_20030304.1900.01-T6-1">
+    <extent>
+      <charseq START="390" END="392">day</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_CF_20030304.1900.01-T7" VAL="P1W" SET="YES">
+  <timex2_mention ID="CNN_CF_20030304.1900.01-T7-1">
+    <extent>
+      <charseq START="3431" END="3434">week</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_CF_20030304.1900.01-T8" VAL="PRESENT_REF" ANCHOR_VAL="2003-03-04T19:00:00-05" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_CF_20030304.1900.01-T8-1">
+    <extent>
+      <charseq START="4581" END="4587">current</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_CF_20030304.1900.01-T9" VAL="PRESENT_REF" ANCHOR_VAL="2003-03-04T19:00:00-05" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_CF_20030304.1900.01-T9-1">
+    <extent>
+      <charseq START="4934" END="4936">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_CF_20030304.1900.01-T10" VAL="2003-03-04">
+  <timex2_mention ID="CNN_CF_20030304.1900.01-T10-1">
+    <extent>
+      <charseq START="5145" END="5149">today</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_CF_20030304.1900.01-T11" VAL="PAST_REF" ANCHOR_VAL="2003-03-04T19:00:00-05" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="CNN_CF_20030304.1900.01-T11-1">
+    <extent>
+      <charseq START="5299" END="5307">that time</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_CF_20030304.1900.01-T12" VAL="2003-03-04">
+  <timex2_mention ID="CNN_CF_20030304.1900.01-T12-1">
+    <extent>
+      <charseq START="224" END="228">today</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_CF_20030304.1900.01-T13" VAL="2003-03-04">
+  <timex2_mention ID="CNN_CF_20030304.1900.01-T13-1">
+    <extent>
+      <charseq START="371" END="375">today</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_CF_20030304.1900.01-T14" VAL="XXXX-XX-XX" SET="YES">
+  <timex2_mention ID="CNN_CF_20030304.1900.01-T14-1">
+    <extent>
+      <charseq START="1319" END="1327">every day</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_CF_20030304.1900.01-T15" VAL="P10Y" MOD="APPROX" ANCHOR_VAL="2003" ANCHOR_DIR="ENDING">
+  <timex2_mention ID="CNN_CF_20030304.1900.01-T15-1">
+    <extent>
+      <charseq START="1469" END="1482">about 10 years</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_CF_20030304.1900.01-T16" VAL="PRESENT_REF" ANCHOR_VAL="2003-03-04T19:00:00-05" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_CF_20030304.1900.01-T16-1">
+    <extent>
+      <charseq START="5895" END="5897">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_CF_20030304.1900.01-T17" VAL="XXXX-WXX" SET="YES">
+  <timex2_mention ID="CNN_CF_20030304.1900.01-T17-1">
+    <extent>
+      <charseq START="3437" END="3446">every week</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_CF_20030304.1900.01-T18" VAL="2003-03-04">
+  <timex2_mention ID="CNN_CF_20030304.1900.01-T18-1">
+    <extent>
+      <charseq START="3700" END="3704">today</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_CF_20030304.1900.01-T19" VAL="2003-03-04">
+  <timex2_mention ID="CNN_CF_20030304.1900.01-T19-1">
+    <extent>
+      <charseq START="3791" END="3795">today</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_CF_20030304.1900.01-T20" VAL="2003-03-04">
+  <timex2_mention ID="CNN_CF_20030304.1900.01-T20-1">
+    <extent>
+      <charseq START="3863" END="3867">today</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_CF_20030304.1900.01-T21" VAL="P10Y" ANCHOR_VAL="2003" ANCHOR_DIR="ENDING">
+  <timex2_mention ID="CNN_CF_20030304.1900.01-T21-1">
+    <extent>
+      <charseq START="6345" END="6353">ten years</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_CF_20030304.1900.01-T22" VAL="2003-03-04">
+  <timex2_mention ID="CNN_CF_20030304.1900.01-T22-1">
+    <extent>
+      <charseq START="6863" END="6867">today</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_CF_20030304.1900.01-T23" VAL="2003-03-04T19:00:00-05">
+  <timex2_mention ID="CNN_CF_20030304.1900.01-T23-1">
+    <extent>
+      <charseq START="36" END="60">2003-03-04T19:00:00-05:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_CF_20030304.1900.01-T24" VAL="2003-02">
+  <timex2_mention ID="CNN_CF_20030304.1900.01-T24-1">
+    <extent>
+      <charseq START="545" END="554">last month</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_CF_20030304.1900.01-T25" VAL="PRESENT_REF" ANCHOR_VAL="2003-03-04T19:00:00-05" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_CF_20030304.1900.01-T25-1">
+    <extent>
+      <charseq START="7220" END="7228">Right now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_CF_20030304.1900.01-R1" TYPE="PER-SOC" SUBTYPE="Family" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E134" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E138" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030304.1900.01-R1-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="560" END="569">her family</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E134-277" ROLE="Arg-1">
+      <extent>
+        <charseq START="560" END="562">her</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E138-278" ROLE="Arg-2">
+      <extent>
+        <charseq START="560" END="569">her family</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030304.1900.01-R2" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Future" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E57" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E143" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030304.1900.01-R2-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="715" END="769">the president-elect of the American
+Medical Association</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E57-283" ROLE="Arg-1">
+      <extent>
+        <charseq START="715" END="769">the president-elect of the American
+Medical Association</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E143-284" ROLE="Arg-2">
+      <extent>
+        <charseq START="738" END="769">the American
+Medical Association</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030304.1900.01-R3" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E26" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E13" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030304.1900.01-R3-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="1737" END="1759">doctors in this country</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E26-34" ROLE="Arg-1">
+      <extent>
+        <charseq START="1737" END="1759">doctors in this country</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E13-244" ROLE="Arg-2">
+      <extent>
+        <charseq START="1748" END="1759">this country</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030304.1900.01-R4" TYPE="PART-WHOLE" SUBTYPE="Subsidiary" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E109" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E54" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030304.1900.01-R4-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="6386" END="6408">the state medical board</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E109-204" ROLE="Arg-1">
+      <extent>
+        <charseq START="6386" END="6408">the state medical board</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E54-205" ROLE="Arg-2">
+      <extent>
+        <charseq START="6390" END="6394">state</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030304.1900.01-R5" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E144" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030304.1900.01-R5-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="794" END="968">Ralph Nader, there are states in crisis that keep adding to the list by
+the AMA where doctors are going out of business because they can't afford
+the medical malpractice rates</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E1-2" ROLE="Arg-1">
+      <extent>
+        <charseq START="880" END="886">doctors</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E144-286" ROLE="Arg-2">
+      <extent>
+        <charseq START="817" END="832">states in crisis</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030304.1900.01-R6" TYPE="PER-SOC" SUBTYPE="Business" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E26" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E28" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030304.1900.01-R6-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="1847" END="1894">That's one-third of what they pay a receptionist</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E26-37" ROLE="Arg-1">
+      <extent>
+        <charseq START="1872" END="1875">they</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E28-38" ROLE="Arg-2">
+      <extent>
+        <charseq START="1881" END="1894">a receptionist</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030304.1900.01-R7" TYPE="ORG-AFF" SUBTYPE="Membership" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E41" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E42" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030304.1900.01-R7-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="2531" END="2549">members of Congress</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E41-58" ROLE="Arg-1">
+      <extent>
+        <charseq START="2531" END="2549">members of Congress</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E42-59" ROLE="Arg-2">
+      <extent>
+        <charseq START="2542" END="2549">Congress</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030304.1900.01-R8" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E45" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E46" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030304.1900.01-R8-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="2783" END="2804">a woman in the Midwest</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E45-64" ROLE="Arg-1">
+      <extent>
+        <charseq START="2783" END="2804">a woman in the Midwest</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E46-65" ROLE="Arg-2">
+      <extent>
+        <charseq START="2794" END="2804">the Midwest</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030304.1900.01-R9" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E134" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E126" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030304.1900.01-R9-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="2857" END="2899">that 17-year-old teenager in North Carolina</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E134-66" ROLE="Arg-1">
+      <extent>
+        <charseq START="2857" END="2899">that 17-year-old teenager in North Carolina</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E126-67" ROLE="Arg-2">
+      <extent>
+        <charseq START="2886" END="2899">North Carolina</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030304.1900.01-R10" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E59" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E61" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030304.1900.01-R10-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="3187" END="3251">the jurors
+in their home state and the judges in their home state</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E59-88" ROLE="Arg-1">
+      <extent>
+        <charseq START="3187" END="3251">the jurors
+in their home state and the judges in their home state</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E61-92" ROLE="Arg-2">
+      <extent>
+        <charseq START="3201" END="3216">their home state</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030304.1900.01-R11" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E60" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E61" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030304.1900.01-R11-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="3187" END="3251">the jurors
+in their home state and the judges in their home state</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E60-89" ROLE="Arg-1">
+      <extent>
+        <charseq START="3187" END="3251">the jurors
+in their home state and the judges in their home state</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E61-93" ROLE="Arg-2">
+      <extent>
+        <charseq START="3236" END="3251">their home state</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030304.1900.01-R12" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E50" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E13" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030304.1900.01-R12-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="3024" END="3065">the judges and juries in the
+United States</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E50-75" ROLE="Arg-1">
+      <extent>
+        <charseq START="3024" END="3065">the judges and juries in the
+United States</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E13-170" ROLE="Arg-2">
+      <extent>
+        <charseq START="3049" END="3065">the
+United States</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030304.1900.01-R13" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E89" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E90" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030304.1900.01-R13-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="4911" END="5126">And what we're
+finding now is that the emergency rooms are closing, trauma centers are
+closing, pregnant women can't find a doctor to deliver the baby, a boy
+knocked unconscious has to be transported to another state</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E89-154" ROLE="Arg-1">
+      <extent>
+        <charseq START="5063" END="5087">a boy
+knocked unconscious</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E90-155" ROLE="Arg-2">
+      <extent>
+        <charseq START="5114" END="5126">another state</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030304.1900.01-R14" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E51" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E13" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030304.1900.01-R14-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="3024" END="3065">the judges and juries in the
+United States</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E51-76" ROLE="Arg-1">
+      <extent>
+        <charseq START="3024" END="3065">the judges and juries in the
+United States</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E13-170" ROLE="Arg-2">
+      <extent>
+        <charseq START="3049" END="3065">the
+United States</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030304.1900.01-R15" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E58" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E61" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030304.1900.01-R15-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="3201" END="3216">their home state</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E58-90" ROLE="Arg-1">
+      <extent>
+        <charseq START="3201" END="3205">their</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E61-92" ROLE="Arg-2">
+      <extent>
+        <charseq START="3201" END="3216">their home state</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_CF_20030304.1900.01-R15-2" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="3236" END="3251">their home state</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E58-91" ROLE="Arg-1">
+      <extent>
+        <charseq START="3236" END="3240">their</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E61-93" ROLE="Arg-2">
+      <extent>
+        <charseq START="3236" END="3251">their home state</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030304.1900.01-R17" TYPE="PER-SOC" SUBTYPE="Business" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E82" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E100" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030304.1900.01-R17-1" LEXICALCONDITION="Participial">
+    <extent>
+      <charseq START="5622" END="5831">Well, what has to be done here is balance. What we need is a system
+that's fair to everyone, a system that keeps the physicians in practice
+and allows patients to have access to physicians in their hour of need</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E82-185" ROLE="Arg-1">
+      <extent>
+        <charseq START="5773" END="5780">patients</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E100-186" ROLE="Arg-2">
+      <extent>
+        <charseq START="5800" END="5809">physicians</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030304.1900.01-R18" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E24" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E13" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030304.1900.01-R18-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="5515" END="5527">our president</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E24-168" ROLE="Arg-1">
+      <extent>
+        <charseq START="5515" END="5527">our president</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E13-171" ROLE="Arg-2">
+      <extent>
+        <charseq START="5515" END="5517">our</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_CF_20030304.1900.01-R18-2" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="4337" END="4349">our president</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E24-132" ROLE="Arg-1">
+      <extent>
+        <charseq START="4337" END="4349">our president</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E13-169" ROLE="Arg-2">
+      <extent>
+        <charseq START="4337" END="4339">our</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030304.1900.01-R19" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E57" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E129" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030304.1900.01-R19-1" LEXICALCONDITION="Participial">
+    <extent>
+      <charseq START="3530" END="3574">Dr. Palmisano, first thank you for being here</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E57-253" ROLE="Arg-1">
+      <extent>
+        <charseq START="3557" END="3559">you</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E129-255" ROLE="Arg-2">
+      <extent>
+        <charseq START="3571" END="3574">here</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030304.1900.01-R20" TYPE="PER-SOC" SUBTYPE="Family" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E65" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E69" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030304.1900.01-R20-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="3803" END="3903">the father
+of a little girl, 13-month-old girl, who he said today died because of
+medical malpractice</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E65-259" ROLE="Arg-1">
+      <extent>
+        <charseq START="3803" END="3903">the father
+of a little girl, 13-month-old girl, who he said today died because of
+medical malpractice</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E69-111" ROLE="Arg-2">
+      <extent>
+        <charseq START="3817" END="3829">a little girl</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_CF_20030304.1900.01-R20-2" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="4542" END="4554">his dead baby</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E65-142" ROLE="Arg-1">
+      <extent>
+        <charseq START="4542" END="4544">his</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E69-143" ROLE="Arg-2">
+      <extent>
+        <charseq START="4542" END="4554">his dead baby</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030304.1900.01-R21" TYPE="PER-SOC" SUBTYPE="Family" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E65" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E77" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030304.1900.01-R21-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="4237" END="4245">my family</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E65-130" ROLE="Arg-1">
+      <extent>
+        <charseq START="4237" END="4238">my</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E77-129" ROLE="Arg-2">
+      <extent>
+        <charseq START="4237" END="4245">my family</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030304.1900.01-R24" TYPE="ORG-AFF" SUBTYPE="Founder" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E143" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E83" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030304.1900.01-R24-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="4778" END="4837">That's
+why we founded the National Patient Safety Foundation</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E143-147" ROLE="Arg-1">
+      <extent>
+        <charseq START="4789" END="4790">we</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E83-148" ROLE="Arg-2">
+      <extent>
+        <charseq START="4800" END="4837">the National Patient Safety Foundation</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030304.1900.01-R25" TYPE="PER-SOC" SUBTYPE="Family" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E91" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E92" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030304.1900.01-R25-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="5176" END="5186">her husband</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E91-157" ROLE="Arg-1">
+      <extent>
+        <charseq START="5176" END="5178">her</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E92-158" ROLE="Arg-2">
+      <extent>
+        <charseq START="5176" END="5186">her husband</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030304.1900.01-R26" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E93" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E94" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030304.1900.01-R26-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="5217" END="5256">neurosurgeons available in the community</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E93-161" ROLE="Arg-1">
+      <extent>
+        <charseq START="5217" END="5256">neurosurgeons available in the community</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E94-162" ROLE="Arg-2">
+      <extent>
+        <charseq START="5244" END="5256">the community</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030304.1900.01-R27" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E102" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E101" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030304.1900.01-R27-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="5978" END="6004">obstetricians in California</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E102-191" ROLE="Arg-1">
+      <extent>
+        <charseq START="5978" END="6004">obstetricians in California</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E101-190" ROLE="Arg-2">
+      <extent>
+        <charseq START="5995" END="6004">California</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030304.1900.01-R28" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E105" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E104" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030304.1900.01-R28-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="6053" END="6074">South Florida in Miami</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E105-194" ROLE="Arg-1">
+      <extent>
+        <charseq START="6070" END="6074">Miami</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E104-193" ROLE="Arg-2">
+      <extent>
+        <charseq START="6053" END="6065">South Florida</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030304.1900.01-R29" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E102" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E105" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030304.1900.01-R29-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="6050" END="6080">in South Florida in Miami, they</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E102-195" ROLE="Arg-1">
+      <extent>
+        <charseq START="6077" END="6080">they</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E105-194" ROLE="Arg-2">
+      <extent>
+        <charseq START="6070" END="6074">Miami</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030304.1900.01-R30" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E107" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030304.1900.01-E106" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030304.1900.01-R30-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="6248" END="6408">And in some states,
+for example, there are doctors that are -- you know, there are 45 payouts
+in ten years and they're not disciplined by the state medical board</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E107-201" ROLE="Arg-1">
+      <extent>
+        <charseq START="6291" END="6318">doctors that are -- you know</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030304.1900.01-E106-200" ROLE="Arg-2">
+      <extent>
+        <charseq START="6255" END="6265">some states</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_CF_20030304.1900.01-EV1" TYPE="Justice" SUBTYPE="Fine" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_mention ID="CNN_CF_20030304.1900.01-EV1-1">
+    <extent>
+      <charseq START="288" END="294">damages</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="209" END="334">President Bush today renewed his call for a
+$250,000 cap on pain and suffering damages from the victims of medical
+malpractice</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="288" END="294">damages</charseq>
+    </anchor>
+  </event_mention>
+</event>
+<event ID="CNN_CF_20030304.1900.01-EV2" TYPE="Personnel" SUBTYPE="Start-Position" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_CF_20030304.1900.01-E57" ROLE="Person"/>
+  <event_argument REFID="CNN_CF_20030304.1900.01-E143" ROLE="Entity"/>
+  <event_mention ID="CNN_CF_20030304.1900.01-EV2-1">
+    <extent>
+      <charseq START="715" END="769">the president-elect of the American
+Medical Association</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="613" END="769">Here to debate medical malpractice reform are consumer advocate
+Ralph Nader and Dr. Donald Palmisano, the president-elect of the American
+Medical Association</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="729" END="733">elect</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-E57-283" ROLE="Person">
+      <extent>
+        <charseq START="715" END="769">the president-elect of the American
+Medical Association</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-E143-284" ROLE="Entity">
+      <extent>
+        <charseq START="738" END="769">the American
+Medical Association</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_CF_20030304.1900.01-EV3" TYPE="Life" SUBTYPE="Die" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_CF_20030304.1900.01-E15" ROLE="Victim"/>
+  <event_argument REFID="CNN_CF_20030304.1900.01-E16" ROLE="Victim"/>
+  <event_argument REFID="CNN_CF_20030304.1900.01-T14" ROLE="Time-Within"/>
+  <event_mention ID="CNN_CF_20030304.1900.01-EV3-1">
+    <extent>
+      <charseq START="1292" END="1331">Over 80,000 Americans, 220 every day die</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1292" END="1389">Over 80,000 Americans, 220 every day die from medical negligence,
+hundred of thousands are injured</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1329" END="1331">die</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-E15-18" ROLE="Victim">
+      <extent>
+        <charseq START="1292" END="1312">Over 80,000 Americans</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-E16-20" ROLE="Victim">
+      <extent>
+        <charseq START="1315" END="1317">220</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-T14-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="1319" END="1327">every day</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_CF_20030304.1900.01-EV4" TYPE="Personnel" SUBTYPE="End-Position" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="CNN_CF_20030304.1900.01-E29" ROLE="Person"/>
+  <event_mention ID="CNN_CF_20030304.1900.01-EV4-1">
+    <extent>
+      <charseq START="1939" END="1970">so many of them are just leaving</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1907" END="2014">That runs against the fact that so many of them are just leaving their
+practice because they can't afford it</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1964" END="1970">leaving</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-E29-39" ROLE="Person">
+      <extent>
+        <charseq START="1939" END="1953">so many of them</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_CF_20030304.1900.01-EV5" TYPE="Business" SUBTYPE="End-Org" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="CNN_CF_20030304.1900.01-E84" ROLE="Org"/>
+  <event_argument REFID="CNN_CF_20030304.1900.01-E85" ROLE="Org"/>
+  <event_argument REFID="CNN_CF_20030304.1900.01-T9" ROLE="Time-Holds"/>
+  <event_mention ID="CNN_CF_20030304.1900.01-EV5-1">
+    <extent>
+      <charseq START="4934" END="5004">now is that the emergency rooms are closing, trauma centers are
+closing</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="4911" END="5126">And what we're
+finding now is that the emergency rooms are closing, trauma centers are
+closing, pregnant women can't find a doctor to deliver the baby, a boy
+knocked unconscious has to be transported to another state</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="4998" END="5004">closing</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-E84-150" ROLE="Org">
+      <extent>
+        <charseq START="4946" END="4964">the emergency rooms</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-E85-151" ROLE="Org">
+      <extent>
+        <charseq START="4979" END="4992">trauma centers</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-T9-1" ROLE="Time-Holds">
+      <extent>
+        <charseq START="4934" END="4936">now</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_CF_20030304.1900.01-EV6" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_CF_20030304.1900.01-E92" ROLE="Artifact"/>
+  <event_mention ID="CNN_CF_20030304.1900.01-EV6-1">
+    <extent>
+      <charseq START="5259" END="5290">The patient had to be
+airavacked</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="5259" END="5351">The patient had to be
+airavacked and by that time it was too late to prevent the brain damage</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="5281" END="5290">airavacked</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-E92-163" ROLE="Artifact">
+      <extent>
+        <charseq START="5259" END="5269">The patient</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_CF_20030304.1900.01-EV7" TYPE="Transaction" SUBTYPE="Transfer-Money" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Generic" TENSE="Past">
+  <event_argument REFID="CNN_CF_20030304.1900.01-E26" ROLE="Giver"/>
+  <event_argument REFID="CNN_CF_20030304.1900.01-E27" ROLE="Giver"/>
+  <event_argument REFID="CNN_CF_20030304.1900.01-E36" ROLE="Giver"/>
+  <event_argument REFID="CNN_CF_20030304.1900.01-E37" ROLE="Giver"/>
+  <event_argument REFID="CNN_CF_20030304.1900.01-E38" ROLE="Giver"/>
+  <event_argument REFID="CNN_CF_20030304.1900.01-E41" ROLE="Recipient"/>
+  <event_mention ID="CNN_CF_20030304.1900.01-EV7-1">
+    <extent>
+      <charseq START="2414" END="2549">the doctors, the malpractice insurers, the hospital chains and the
+HMOs and the nursing home chains have poured into members of Congress</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2337" END="2558">Well, as much as they've poured into those coffers, it's much less than
+what the doctors, the malpractice insurers, the hospital chains and the
+HMOs and the nursing home chains have poured into members of Congress'
+coffers</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2519" END="2524">poured</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-E26-52" ROLE="Giver">
+      <extent>
+        <charseq START="2414" END="2424">the doctors</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-E27-51" ROLE="Giver">
+      <extent>
+        <charseq START="2427" END="2450">the malpractice insurers</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-E36-53" ROLE="Giver">
+      <extent>
+        <charseq START="2453" END="2471">the hospital chains</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-E37-54" ROLE="Giver">
+      <extent>
+        <charseq START="2477" END="2484">the
+HMOs</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-E38-55" ROLE="Giver">
+      <extent>
+        <charseq START="2490" END="2512">the nursing home chains</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-E41-58" ROLE="Recipient">
+      <extent>
+        <charseq START="2531" END="2549">members of Congress</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_CF_20030304.1900.01-EV8" TYPE="Transaction" SUBTYPE="Transfer-Money" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Generic" TENSE="Past">
+  <event_argument REFID="CNN_CF_20030304.1900.01-E33" ROLE="Giver"/>
+  <event_mention ID="CNN_CF_20030304.1900.01-EV8-1">
+    <extent>
+      <charseq START="2354" END="2367">they've poured</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2337" END="2558">Well, as much as they've poured into those coffers, it's much less than
+what the doctors, the malpractice insurers, the hospital chains and the
+HMOs and the nursing home chains have poured into members of Congress'
+coffers</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2362" END="2367">poured</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-E33-50" ROLE="Giver">
+      <extent>
+        <charseq START="2354" END="2357">they</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_CF_20030304.1900.01-EV9" TYPE="Life" SUBTYPE="Injure" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Past">
+  <event_argument REFID="CNN_CF_20030304.1900.01-E44" ROLE="Victim"/>
+  <event_mention ID="CNN_CF_20030304.1900.01-EV9-1">
+    <extent>
+      <charseq START="2638" END="2714">severely injured people who have found a lung taken out
+that's the wrong lung</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2616" END="2899">Are we
+going to allow severely injured people who have found a lung taken out
+that's the wrong lung or a double mastectomy that wasn't indicated that
+was inflicted on a woman in the Midwest, or that organ transplant that
+was incompatible on that 17-year-old teenager in North Carolina</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2647" END="2653">injured</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-E44-62" ROLE="Victim">
+      <extent>
+        <charseq START="2638" END="2714">severely injured people who have found a lung taken out
+that's the wrong lung</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_CF_20030304.1900.01-EV10" TYPE="Justice" SUBTYPE="Trial-Hearing" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="CNN_CF_20030304.1900.01-E33" ROLE="Prosecutor"/>
+  <event_mention ID="CNN_CF_20030304.1900.01-EV10-1">
+    <extent>
+      <charseq START="2178" END="2285">the trial
+lawyers who appoint millions and millions of dollars into Democratic
+coffers in order to keep this</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2148" END="2322">Can you say that the lawyers, the trial
+lawyers who appoint millions and millions of dollars into Democratic
+coffers in order to keep this, do you believe that this is healthy</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2182" END="2186">trial</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-E33-127" ROLE="Prosecutor">
+      <extent>
+        <charseq START="2178" END="2285">the trial
+lawyers who appoint millions and millions of dollars into Democratic
+coffers in order to keep this</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_CF_20030304.1900.01-EV11" TYPE="Transaction" SUBTYPE="Transfer-Money" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="CNN_CF_20030304.1900.01-E33" ROLE="Giver"/>
+  <event_argument REFID="CNN_CF_20030304.1900.01-V8" ROLE="Money"/>
+  <event_argument REFID="CNN_CF_20030304.1900.01-E34" ROLE="Recipient"/>
+  <event_mention ID="CNN_CF_20030304.1900.01-EV11-1">
+    <extent>
+      <charseq START="2196" END="2255">who appoint millions and millions of dollars into Democratic</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2148" END="2322">Can you say that the lawyers, the trial
+lawyers who appoint millions and millions of dollars into Democratic
+coffers in order to keep this, do you believe that this is healthy</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2200" END="2206">appoint</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-E33-141" ROLE="Giver">
+      <extent>
+        <charseq START="2196" END="2198">who</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-V8-1" ROLE="Money">
+      <extent>
+        <charseq START="2208" END="2239">millions and millions of dollars</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-E34-48" ROLE="Recipient">
+      <extent>
+        <charseq START="2246" END="2255">Democratic</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_CF_20030304.1900.01-EV12" TYPE="Justice" SUBTYPE="Trial-Hearing" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="CNN_CF_20030304.1900.01-E49" ROLE="Prosecutor"/>
+  <event_mention ID="CNN_CF_20030304.1900.01-EV12-1">
+    <extent>
+      <charseq START="2951" END="2964">you can't have</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2902" END="2987">Are we
+going to say to these and so many others, you can't have your full day in
+court</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2961" END="2964">have</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-E49-72" ROLE="Prosecutor">
+      <extent>
+        <charseq START="2951" END="2953">you</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_CF_20030304.1900.01-EV13" TYPE="Life" SUBTYPE="Injure" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_CF_20030304.1900.01-E17" ROLE="Agent"/>
+  <event_mention ID="CNN_CF_20030304.1900.01-EV13-1">
+    <extent>
+      <charseq START="1358" END="1389">hundred of thousands are injured</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1292" END="1389">Over 80,000 Americans, 220 every day die from medical negligence,
+hundred of thousands are injured</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1383" END="1389">injured</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-E17-21" ROLE="Agent">
+      <extent>
+        <charseq START="1358" END="1377">hundred of thousands</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_CF_20030304.1900.01-EV14" TYPE="Justice" SUBTYPE="Trial-Hearing" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_CF_20030304.1900.01-E66" ROLE="Place"/>
+  <event_argument REFID="CNN_CF_20030304.1900.01-T18" ROLE="Time-Within"/>
+  <event_mention ID="CNN_CF_20030304.1900.01-EV14-1">
+    <extent>
+      <charseq START="3679" END="3704">hear on Capitol Hill today</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="3667" END="3704">There was a hear on Capitol Hill today</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="3679" END="3682">hear</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-E66-101" ROLE="Place">
+      <extent>
+        <charseq START="3687" END="3698">Capitol Hill</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-T18-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="3700" END="3704">today</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_CF_20030304.1900.01-EV15" TYPE="Life" SUBTYPE="Die" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_CF_20030304.1900.01-E69" ROLE="Victim"/>
+  <event_argument REFID="CNN_CF_20030304.1900.01-E97" ROLE="Victim"/>
+  <event_mention ID="CNN_CF_20030304.1900.01-EV15-1">
+    <extent>
+      <charseq START="3851" END="3872">who he said today died</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="3798" END="3903">He's the father
+of a little girl, 13-month-old girl, who he said today died because of
+medical malpractice</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="3869" END="3872">died</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-E69-113" ROLE="Victim">
+      <extent>
+        <charseq START="3851" END="3853">who</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_CF_20030304.1900.01-EV15-2">
+    <extent>
+      <charseq START="4041" END="4048">She died</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="4041" END="4065">She died awaiting surgery</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="4045" END="4048">died</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-E69-118" ROLE="Victim">
+      <extent>
+        <charseq START="4041" END="4043">She</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_CF_20030304.1900.01-EV15-3">
+    <extent>
+      <charseq START="4542" END="4554">his dead baby</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="4476" END="4554">Does that look like a Lottery winner to you,
+holding a picture of his dead baby</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="4546" END="4549">dead</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-E69-143" ROLE="Victim">
+      <extent>
+        <charseq START="4542" END="4554">his dead baby</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_CF_20030304.1900.01-EV15-4">
+    <extent>
+      <charseq START="5591" END="5605">loss of a child</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="5438" END="5605">But I wonder if you can respond to Mr. McCormick's point. Who are you,
+who's our president to tell him that his suffering is only worth $250,000
+for the loss of a child</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="5591" END="5594">loss</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-E97-180" ROLE="Victim">
+      <extent>
+        <charseq START="5599" END="5605">a child</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_CF_20030304.1900.01-EV16" TYPE="Business" SUBTYPE="Start-Org" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_CF_20030304.1900.01-E83" ROLE="Org"/>
+  <event_argument REFID="CNN_CF_20030304.1900.01-E143" ROLE="Agent"/>
+  <event_mention ID="CNN_CF_20030304.1900.01-EV16-1">
+    <extent>
+      <charseq START="4789" END="4837">we founded the National Patient Safety Foundation</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="4778" END="4837">That's
+why we founded the National Patient Safety Foundation</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="4792" END="4798">founded</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-E83-148" ROLE="Org">
+      <extent>
+        <charseq START="4800" END="4837">the National Patient Safety Foundation</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-E143-147" ROLE="Agent">
+      <extent>
+        <charseq START="4789" END="4790">we</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_CF_20030304.1900.01-EV17" TYPE="Life" SUBTYPE="Injure" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_CF_20030304.1900.01-E89" ROLE="Victim"/>
+  <event_mention ID="CNN_CF_20030304.1900.01-EV17-1">
+    <extent>
+      <charseq START="5063" END="5087">a boy
+knocked unconscious</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="4911" END="5126">And what we're
+finding now is that the emergency rooms are closing, trauma centers are
+closing, pregnant women can't find a doctor to deliver the baby, a boy
+knocked unconscious has to be transported to another state</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="5069" END="5075">knocked</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-E89-154" ROLE="Victim">
+      <extent>
+        <charseq START="5063" END="5087">a boy
+knocked unconscious</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_CF_20030304.1900.01-EV18" TYPE="Movement" SUBTYPE="Transport" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_CF_20030304.1900.01-E89" ROLE="Artifact"/>
+  <event_argument REFID="CNN_CF_20030304.1900.01-E90" ROLE="Destination"/>
+  <event_mention ID="CNN_CF_20030304.1900.01-EV18-1">
+    <extent>
+      <charseq START="5063" END="5126">a boy
+knocked unconscious has to be transported to another state</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="4911" END="5126">And what we're
+finding now is that the emergency rooms are closing, trauma centers are
+closing, pregnant women can't find a doctor to deliver the baby, a boy
+knocked unconscious has to be transported to another state</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="5099" END="5109">transported</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-E89-154" ROLE="Artifact">
+      <extent>
+        <charseq START="5063" END="5087">a boy
+knocked unconscious</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-E90-155" ROLE="Destination">
+      <extent>
+        <charseq START="5114" END="5126">another state</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_CF_20030304.1900.01-EV19" TYPE="Justice" SUBTYPE="Fine" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Future">
+  <event_argument REFID="CNN_CF_20030304.1900.01-E102" ROLE="Entity"/>
+  <event_argument REFID="CNN_CF_20030304.1900.01-V9" ROLE="Money"/>
+  <event_argument REFID="CNN_CF_20030304.1900.01-V10" ROLE="Money"/>
+  <event_argument REFID="CNN_CF_20030304.1900.01-V11" ROLE="Money"/>
+  <event_argument REFID="CNN_CF_20030304.1900.01-E103" ROLE="Place"/>
+  <event_mention ID="CNN_CF_20030304.1900.01-EV19-1">
+    <extent>
+      <charseq START="5978" END="6044">obstetricians in California will pay 55, 57, $60,000 in Los Angeles</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="5939" END="6096">It brought stability to California and
+obstetricians in California will pay 55, 57, $60,000 in Los Angeles and
+in South Florida in Miami, they'll pay $210,000</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="6011" END="6013">pay</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-E102-191" ROLE="Entity">
+      <extent>
+        <charseq START="5978" END="6004">obstetricians in California</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-V9-1" ROLE="Money">
+      <extent>
+        <charseq START="6015" END="6016">55</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-V10-1" ROLE="Money">
+      <extent>
+        <charseq START="6019" END="6020">57</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-V11-1" ROLE="Money">
+      <extent>
+        <charseq START="6023" END="6029">$60,000</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-E103-192" ROLE="Place">
+      <extent>
+        <charseq START="6034" END="6044">Los Angeles</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_CF_20030304.1900.01-EV20" TYPE="Justice" SUBTYPE="Fine" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Future">
+  <event_argument REFID="CNN_CF_20030304.1900.01-E102" ROLE="Entity"/>
+  <event_argument REFID="CNN_CF_20030304.1900.01-V12" ROLE="Money"/>
+  <event_argument REFID="CNN_CF_20030304.1900.01-E105" ROLE="Place"/>
+  <event_mention ID="CNN_CF_20030304.1900.01-EV20-1">
+    <extent>
+      <charseq START="6070" END="6096">Miami, they'll pay $210,000</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="5939" END="6096">It brought stability to California and
+obstetricians in California will pay 55, 57, $60,000 in Los Angeles and
+in South Florida in Miami, they'll pay $210,000</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="6085" END="6087">pay</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-E102-195" ROLE="Entity">
+      <extent>
+        <charseq START="6077" END="6080">they</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-V12-1" ROLE="Money">
+      <extent>
+        <charseq START="6089" END="6096">$210,000</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-E105-194" ROLE="Place">
+      <extent>
+        <charseq START="6070" END="6074">Miami</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_CF_20030304.1900.01-EV21" TYPE="Justice" SUBTYPE="Fine" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_CF_20030304.1900.01-E106" ROLE="Place"/>
+  <event_argument REFID="CNN_CF_20030304.1900.01-T21" ROLE="Time-Within"/>
+  <event_mention ID="CNN_CF_20030304.1900.01-EV21-1">
+    <extent>
+      <charseq START="6255" END="6353">some states,
+for example, there are doctors that are -- you know, there are 45 payouts
+in ten years</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="6248" END="6408">And in some states,
+for example, there are doctors that are -- you know, there are 45 payouts
+in ten years and they're not disciplined by the state medical board</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="6334" END="6340">payouts</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-E106-200" ROLE="Place">
+      <extent>
+        <charseq START="6255" END="6265">some states</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-T21-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="6345" END="6353">ten years</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_CF_20030304.1900.01-EV22" TYPE="Justice" SUBTYPE="Fine" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="CNN_CF_20030304.1900.01-E112" ROLE="Entity"/>
+  <event_mention ID="CNN_CF_20030304.1900.01-EV22-1">
+    <extent>
+      <charseq START="6430" END="6499">5 percent of the doctors accounting for over 55 percent
+of the payoffs</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="6411" END="6505">I
+mean, you've got 5 percent of the doctors accounting for over 55 percent
+of the payoffs, Paul</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="6493" END="6499">payoffs</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-E112-124" ROLE="Entity">
+      <extent>
+        <charseq START="6430" END="6453">5 percent of the doctors</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_CF_20030304.1900.01-EV23" TYPE="Justice" SUBTYPE="Sue" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_CF_20030304.1900.01-E95" ROLE="Defendant"/>
+  <event_mention ID="CNN_CF_20030304.1900.01-EV23-1">
+    <extent>
+      <charseq START="6968" END="6995">claims against one physician</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="6950" END="7107">It lists
+multiple claims against one physician when actually it's really one
+claim, different insurers pay on the same physician and it's counted as
+one claim</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="6968" END="6973">claims</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-E95-222" ROLE="Defendant">
+      <extent>
+        <charseq START="6983" END="6995">one physician</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_CF_20030304.1900.01-EV24" TYPE="Justice" SUBTYPE="Sue" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_CF_20030304.1900.01-E95" ROLE="Defendant"/>
+  <event_mention ID="CNN_CF_20030304.1900.01-EV24-1">
+    <extent>
+      <charseq START="6983" END="7031">one physician when actually it's really one
+claim</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="6950" END="7107">It lists
+multiple claims against one physician when actually it's really one
+claim, different insurers pay on the same physician and it's counted as
+one claim</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="7027" END="7031">claim</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-E95-222" ROLE="Defendant">
+      <extent>
+        <charseq START="6983" END="6995">one physician</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_CF_20030304.1900.01-EV24-2">
+    <extent>
+      <charseq START="7060" END="7107">the same physician and it's counted as
+one claim</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="6950" END="7107">It lists
+multiple claims against one physician when actually it's really one
+claim, different insurers pay on the same physician and it's counted as
+one claim</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="7103" END="7107">claim</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-E95-224" ROLE="Defendant">
+      <extent>
+        <charseq START="7060" END="7077">the same physician</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_CF_20030304.1900.01-EV25" TYPE="Justice" SUBTYPE="Fine" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="CNN_CF_20030304.1900.01-E95" ROLE="Entity"/>
+  <event_mention ID="CNN_CF_20030304.1900.01-EV25-1">
+    <extent>
+      <charseq START="7053" END="7077">pay on the same physician</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="6950" END="7107">It lists
+multiple claims against one physician when actually it's really one
+claim, different insurers pay on the same physician and it's counted as
+one claim</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="7053" END="7055">pay</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-E95-224" ROLE="Entity">
+      <extent>
+        <charseq START="7060" END="7077">the same physician</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_CF_20030304.1900.01-EV26" TYPE="Justice" SUBTYPE="Sue" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Generic" TENSE="Past">
+  <event_argument REFID="CNN_CF_20030304.1900.01-E118" ROLE="Defendant"/>
+  <event_argument REFID="CNN_CF_20030304.1900.01-E104" ROLE="Place"/>
+  <event_mention ID="CNN_CF_20030304.1900.01-EV26-1">
+    <extent>
+      <charseq START="7251" END="7324">South Florida, the latest poll shows that every
+neurosurgeon has been sued</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="7220" END="7324">Right now in
+South Florida, in South Florida, the latest poll shows that every
+neurosurgeon has been sued</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="7321" END="7324">sued</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-E118-229" ROLE="Defendant">
+      <extent>
+        <charseq START="7293" END="7310">every
+neurosurgeon</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-E104-228" ROLE="Place">
+      <extent>
+        <charseq START="7251" END="7263">South Florida</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_CF_20030304.1900.01-EV27" TYPE="Justice" SUBTYPE="Sue" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="CNN_CF_20030304.1900.01-E119" ROLE="Defendant"/>
+  <event_argument REFID="CNN_CF_20030304.1900.01-E104" ROLE="Place"/>
+  <event_mention ID="CNN_CF_20030304.1900.01-EV27-1">
+    <extent>
+      <charseq START="7349" END="7401">suits against a
+neurosurgeon is five in South Florida</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="7327" END="7401">The average number of suits against a
+neurosurgeon is five in South Florida</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="7349" END="7353">suits</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-E119-230" ROLE="Defendant">
+      <extent>
+        <charseq START="7363" END="7376">a
+neurosurgeon</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_CF_20030304.1900.01-E104-231" ROLE="Place">
+      <extent>
+        <charseq START="7389" END="7401">South Florida</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

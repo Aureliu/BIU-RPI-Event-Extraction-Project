@@ -1,0 +1,888 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030526_133535.4.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030526_133535.4">
+<entity ID="CNN_ENG_20030526_133535.4-E1" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E1-29" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1414" END="1430">the man overboard</charseq>
+    </extent>
+    <head>
+      <charseq START="1418" END="1420">man</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E1-30" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1527" END="1530">them</charseq>
+    </extent>
+    <head>
+      <charseq START="1527" END="1530">them</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E1-32" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1933" END="1947">a man overboard</charseq>
+    </extent>
+    <head>
+      <charseq START="1935" END="1937">man</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E1-37" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2044" END="2054">that person</charseq>
+    </extent>
+    <head>
+      <charseq START="2049" END="2054">person</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E1-45" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2337" END="2353">the man
+overboard</charseq>
+    </extent>
+    <head>
+      <charseq START="2341" END="2343">man</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E1-46" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2433" END="2449">the man overboard</charseq>
+    </extent>
+    <head>
+      <charseq START="2437" END="2439">man</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E1-48" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2572" END="2582">the
+swimmer</charseq>
+    </extent>
+    <head>
+      <charseq START="2576" END="2582">swimmer</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E1-49" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2617" END="2620">them</charseq>
+    </extent>
+    <head>
+      <charseq START="2617" END="2620">them</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E1-51" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2648" END="2651">them</charseq>
+    </extent>
+    <head>
+      <charseq START="2648" END="2651">them</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030526_133535.4-E2" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E2-7" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1054" END="1091">the gentleman here wearing a brown one</charseq>
+    </extent>
+    <head>
+      <charseq START="1058" END="1066">gentleman</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030526_133535.4-E3" TYPE="VEH" SUBTYPE="Water" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E3-13" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1365" END="1373">some ship</charseq>
+    </extent>
+    <head>
+      <charseq START="1370" END="1373">ship</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030526_133535.4-E4" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E4-17" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1508" END="1518">the rescuer</charseq>
+    </extent>
+    <head>
+      <charseq START="1512" END="1518">rescuer</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030526_133535.4-E5" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E5-19" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1553" END="1572">individuals on watch</charseq>
+    </extent>
+    <head>
+      <charseq START="1553" END="1563">individuals</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030526_133535.4-E6" TYPE="VEH" SUBTYPE="Water" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E6-20" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1590" END="1597">the ship</charseq>
+    </extent>
+    <head>
+      <charseq START="1594" END="1597">ship</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E6-21" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1611" END="1618">the ship</charseq>
+    </extent>
+    <head>
+      <charseq START="1615" END="1618">ship</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E6-22" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1667" END="1674">the
+ship</charseq>
+    </extent>
+    <head>
+      <charseq START="1671" END="1674">ship</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E6-23" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1702" END="1716">the entire ship</charseq>
+    </extent>
+    <head>
+      <charseq START="1713" END="1716">ship</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E6-31" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1907" END="1921">the entire ship</charseq>
+    </extent>
+    <head>
+      <charseq START="1918" END="1921">ship</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E6-35" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1997" END="2000">ship</charseq>
+    </extent>
+    <head>
+      <charseq START="1997" END="2000">ship</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E6-40" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2118" END="2125">the ship</charseq>
+    </extent>
+    <head>
+      <charseq START="2122" END="2125">ship</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E6-52" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2664" END="2671">the ship</charseq>
+    </extent>
+    <head>
+      <charseq START="2668" END="2671">ship</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030526_133535.4-E7" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E7-24" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1776" END="1776">s</charseq>
+    </extent>
+    <head>
+      <charseq START="1776" END="1776">s</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E7-25" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="71" END="71">s</charseq>
+    </extent>
+    <head>
+      <charseq START="71" END="71">s</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030526_133535.4-E8" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E8-18" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1841" END="1853">man
+overboard</charseq>
+    </extent>
+    <head>
+      <charseq START="1841" END="1843">man</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E8-26" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1793" END="1805">man overboard</charseq>
+    </extent>
+    <head>
+      <charseq START="1793" END="1795">man</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E8-27" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="806" END="818">man
+overboard</charseq>
+    </extent>
+    <head>
+      <charseq START="806" END="808">man</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E8-28" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="732" END="744">man overboard</charseq>
+    </extent>
+    <head>
+      <charseq START="732" END="734">man</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030526_133535.4-E12" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E12-15" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2467" END="2470">they</charseq>
+    </extent>
+    <head>
+      <charseq START="2467" END="2470">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E12-33" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1952" END="1959">everyone</charseq>
+    </extent>
+    <head>
+      <charseq START="1952" END="1959">everyone</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E12-34" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1967" END="1970">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1967" END="1970">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E12-36" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2029" END="2032">they</charseq>
+    </extent>
+    <head>
+      <charseq START="2029" END="2032">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E12-38" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2084" END="2087">they</charseq>
+    </extent>
+    <head>
+      <charseq START="2084" END="2087">they</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030526_133535.4-E14" TYPE="PER" SUBTYPE="Individual" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E14-39" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2096" END="2102">someone</charseq>
+    </extent>
+    <head>
+      <charseq START="2096" END="2102">someone</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030526_133535.4-E15" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E15-57" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3104" END="3105">we</charseq>
+    </extent>
+    <head>
+      <charseq START="3104" END="3105">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E15-61" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="148" END="149">we</charseq>
+    </extent>
+    <head>
+      <charseq START="148" END="149">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E15-62" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="190" END="191">we</charseq>
+    </extent>
+    <head>
+      <charseq START="190" END="191">we</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030526_133535.4-E16" TYPE="VEH" SUBTYPE="Water" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E16-41" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="2173" END="2183">small boats</charseq>
+    </extent>
+    <head>
+      <charseq START="2179" END="2183">boats</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030526_133535.4-E17" TYPE="VEH" SUBTYPE="Air" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E17-42" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="2245" END="2255">helicopters</charseq>
+    </extent>
+    <head>
+      <charseq START="2245" END="2255">helicopters</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E17-43" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2290" END="2306">those helicopters</charseq>
+    </extent>
+    <head>
+      <charseq START="2296" END="2306">helicopters</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030526_133535.4-E18" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E18-44" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="2308" END="2324">rescue imswimmers</charseq>
+    </extent>
+    <head>
+      <charseq START="2315" END="2324">imswimmers</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E18-47" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2511" END="2524">those
+swimmers</charseq>
+    </extent>
+    <head>
+      <charseq START="2517" END="2524">swimmers</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030526_133535.4-E19" TYPE="VEH" SUBTYPE="Air" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E19-50" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2630" END="2637">the
+helo</charseq>
+    </extent>
+    <head>
+      <charseq START="2634" END="2637">helo</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030526_133535.4-E20" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E20-53" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2730" END="2745">the search crews</charseq>
+    </extent>
+    <head>
+      <charseq START="2741" END="2745">crews</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E20-55" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3040" END="3043">they</charseq>
+    </extent>
+    <head>
+      <charseq START="3040" END="3043">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E20-56" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3050" END="3053">they</charseq>
+    </extent>
+    <head>
+      <charseq START="3050" END="3053">they</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030526_133535.4-E21" TYPE="PER" SUBTYPE="Individual" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E21-54" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2947" END="2953">someone</charseq>
+    </extent>
+    <head>
+      <charseq START="2947" END="2953">someone</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030526_133535.4-E22" TYPE="VEH" SUBTYPE="Water" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E22-58" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="3149" END="3163">the "uss nassau</charseq>
+    </extent>
+    <head>
+      <charseq START="3154" END="3163">uss nassau</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E22-68" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="328" END="331">this</charseq>
+    </extent>
+    <head>
+      <charseq START="328" END="331">this</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E22-69" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="336" END="353">an amphibious
+ship</charseq>
+    </extent>
+    <head>
+      <charseq START="350" END="353">ship</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="uss nassau">
+      <charseq START="3154" END="3163">uss nassau</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030526_133535.4-E23" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E23-59" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="3203" END="3225">the
+two missing sailors</charseq>
+    </extent>
+    <head>
+      <charseq START="3219" END="3225">sailors</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030526_133535.4-E24" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E24-60" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="107" END="114">the navy</charseq>
+    </extent>
+    <head>
+      <charseq START="111" END="114">navy</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E24-70" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="381" END="388">the navy</charseq>
+    </extent>
+    <head>
+      <charseq START="385" END="388">navy</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E24-74" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="471" END="478">the navy</charseq>
+    </extent>
+    <head>
+      <charseq START="475" END="478">navy</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030526_133535.4-E25" TYPE="VEH" SUBTYPE="Subarea-Vehicle" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E25-1" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1653" END="1674">most parts of the
+ship</charseq>
+    </extent>
+    <head>
+      <charseq START="1658" END="1662">parts</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E25-16" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1726" END="1735">most
+parts</charseq>
+    </extent>
+    <head>
+      <charseq START="1731" END="1735">parts</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030526_133535.4-E26" TYPE="PER" SUBTYPE="Indeterminate" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E26-2" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1866" END="1868">you</charseq>
+    </extent>
+    <head>
+      <charseq START="1866" END="1868">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E26-5" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="941" END="943">you</charseq>
+    </extent>
+    <head>
+      <charseq START="941" END="943">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E26-6" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1046" END="1048">you</charseq>
+    </extent>
+    <head>
+      <charseq START="1046" END="1048">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E26-63" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="224" END="226">you</charseq>
+    </extent>
+    <head>
+      <charseq START="224" END="226">you</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030526_133535.4-E27" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E27-64" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="229" END="229">i</charseq>
+    </extent>
+    <head>
+      <charseq START="229" END="229">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E27-65" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="261" END="261">i</charseq>
+    </extent>
+    <head>
+      <charseq START="261" END="261">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E27-66" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="277" END="277">i</charseq>
+    </extent>
+    <head>
+      <charseq START="277" END="277">i</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030526_133535.4-E28" TYPE="VEH" SUBTYPE="Water" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E28-67" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="302" END="325">the "uss abraham lincoln</charseq>
+    </extent>
+    <head>
+      <charseq START="307" END="325">uss abraham lincoln</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="uss abraham lincoln">
+      <charseq START="307" END="325">uss abraham lincoln</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030526_133535.4-E30" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E30-3" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="882" END="885">they</charseq>
+    </extent>
+    <head>
+      <charseq START="882" END="885">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E30-4" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="913" END="916">they</charseq>
+    </extent>
+    <head>
+      <charseq START="913" END="916">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E30-8" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1097" END="1100">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1097" END="1100">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E30-9" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1136" END="1139">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1136" END="1139">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E30-10" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1196" END="1199">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1196" END="1199">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E30-11" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1241" END="1244">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1241" END="1244">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E30-12" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1268" END="1271">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1268" END="1271">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E30-14" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1393" END="1396">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1393" END="1396">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E30-71" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="422" END="430">everybody</charseq>
+    </extent>
+    <head>
+      <charseq START="422" END="430">everybody</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E30-72" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="441" END="478">every sailor that's
+entersing the navy</charseq>
+    </extent>
+    <head>
+      <charseq START="447" END="452">sailor</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E30-73" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="454" END="457">that</charseq>
+    </extent>
+    <head>
+      <charseq START="454" END="457">that</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E30-75" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="503" END="506">they</charseq>
+    </extent>
+    <head>
+      <charseq START="503" END="506">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E30-76" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="563" END="566">they</charseq>
+    </extent>
+    <head>
+      <charseq START="563" END="566">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E30-77" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="641" END="647">sailors</charseq>
+    </extent>
+    <head>
+      <charseq START="641" END="647">sailors</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E30-79" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="713" END="716">they</charseq>
+    </extent>
+    <head>
+      <charseq START="713" END="716">they</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030526_133535.4-E31" TYPE="VEH" SUBTYPE="Water" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030526_133535.4-E31-78" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="659" END="666">any ship</charseq>
+    </extent>
+    <head>
+      <charseq START="663" END="666">ship</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<timex2 ID="CNN_ENG_20030526_133535.4-T1" VAL="PRESENT_REF" ANCHOR_VAL="2003-05-26T14:43:28" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_ENG_20030526_133535.4-T1-1">
+    <extent>
+      <charseq START="1768" END="1770">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030526_133535.4-T2" VAL="PT24H" MOD="END">
+  <timex2_mention ID="CNN_ENG_20030526_133535.4-T2-1">
+    <extent>
+      <charseq START="3085" END="3093">that
+time</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030526_133535.4-T3" VAL="2003-05-26T14:43:28">
+  <timex2_mention ID="CNN_ENG_20030526_133535.4-T3-1">
+    <extent>
+      <charseq START="43" END="61">2003-05-26 14:43:28</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030526_133535.4-T4" VAL="2003-05-26TMO">
+  <timex2_mention ID="CNN_ENG_20030526_133535.4-T4-1">
+    <extent>
+      <charseq START="173" END="184">this
+morning</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030526_133535.4-T5" VAL="XXXX-XX-XX" SET="YES">
+  <timex2_mention ID="CNN_ENG_20030526_133535.4-T5-1">
+    <extent>
+      <charseq START="700" END="710">twice a day</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030526_133535.4-T6">
+  <timex2_mention ID="CNN_ENG_20030526_133535.4-T6-1">
+    <extent>
+      <charseq START="1538" END="1541">24/7</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030526_133535.4-T7" VAL="PT24H" MOD="APPROX">
+  <timex2_mention ID="CNN_ENG_20030526_133535.4-T7-1">
+    <extent>
+      <charseq START="2714" END="2727">about 24 hours</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030526_133535.4-T8" VAL="PT24H">
+  <timex2_mention ID="CNN_ENG_20030526_133535.4-T8-1">
+    <extent>
+      <charseq START="2755" END="2762">24 hours</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030526_133535.4-T9" VAL="PT24H" ANCHOR_VAL="XXXX-XX-XX" ANCHOR_DIR="STARTING">
+  <timex2_mention ID="CNN_ENG_20030526_133535.4-T9-1">
+    <extent>
+      <charseq START="3022" END="3028">24-hour</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030526_133535.4-R1" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030526_133535.4-E27" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030526_133535.4-E28" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030526_133535.4-R1-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="229" END="419">i'll try
+to explain it the best i can from what i remember from
+being on the "uss abraham lincoln" this is an amphibious
+ship, rather, but this is what the navy does with regard to
+prevention</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030526_133535.4-E27-66" ROLE="Arg-1">
+      <extent>
+        <charseq START="277" END="277">i</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030526_133535.4-E28-67" ROLE="Arg-2">
+      <extent>
+        <charseq START="302" END="325">the "uss abraham lincoln</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030526_133535.4-R2" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="CNN_ENG_20030526_133535.4-E30" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030526_133535.4-E31" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030526_133535.4-R2-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="611" END="910">also drills take place before
+sailors get on to any ship, before any deployment, usually
+twice a day, they're practicing man overboard drills,
+knowing where to go, where to report to if indeed a man
+overboard takes place and as the deployment begins, those
+wane off, but they know where to go quickly</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030526_133535.4-E30-77" ROLE="Arg-1">
+      <extent>
+        <charseq START="641" END="647">sailors</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030526_133535.4-E31-78" ROLE="Arg-2">
+      <extent>
+        <charseq START="659" END="666">any ship</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030526_133535.4-R3" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030526_133535.4-E18" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030526_133535.4-E17" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030526_133535.4-R3-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="2283" END="2324">inside
+those helicopters rescue imswimmers</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030526_133535.4-E18-44" ROLE="Arg-1">
+      <extent>
+        <charseq START="2308" END="2324">rescue imswimmers</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030526_133535.4-E17-43" ROLE="Arg-2">
+      <extent>
+        <charseq START="2290" END="2306">those helicopters</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030526_133535.4-R4" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030526_133535.4-E30" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030526_133535.4-E24" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030526_133535.4-R4-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="422" END="500">everybody that is, every sailor that's
+entersing the navy does take a swim test</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030526_133535.4-E30-73" ROLE="Arg-1">
+      <extent>
+        <charseq START="454" END="457">that</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030526_133535.4-E24-74" ROLE="Arg-2">
+      <extent>
+        <charseq START="471" END="478">the navy</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030526_133535.4-R5" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030526_133535.4-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030526_133535.4-E6" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030526_133535.4-R5-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="2430" END="2727">if the man overboard is injured
+then they may use a basket, but more than likely those
+swimmers will go right into the water and try and help the
+swimmer hook up on that harness and pull them up into the
+helo and pull them back on to the ship for treatment and
+usually a search takes about 24 hours</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030526_133535.4-E1-51" ROLE="Arg-1">
+      <extent>
+        <charseq START="2648" END="2651">them</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030526_133535.4-E6-52" ROLE="Arg-2">
+      <extent>
+        <charseq START="2664" END="2671">the ship</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+</document>
+</source_file>

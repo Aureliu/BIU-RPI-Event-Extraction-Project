@@ -1,0 +1,55 @@
+===========================================================================
+Joint Event Extraction (ACE) via Structured Prediction with Global Features
+===========================================================================
+
+This is the software developed for the paper: 
+     Qi Li, Heng Ji and Liang Huang. 2013. Joint Event Extraction via Structured Prediction. ACL 2013
+The resources here are only allowed to be used for research-purpose.
+
+Platform: Java 1.6+
+
+
+1. Directory
+	src	----	Java source code
+	bin 	----	binary files from Java source code
+	data 	----	necessary data for the program, e.g. gazetteer. 
+	lib	----	third-party libraries
+	models	----	models that are developed for the experiments
+	examples ---	includes a sample file/filelist 
+
+2. Code	
+
+	acl.ace.acetypes: codes read and write ACE training data
+	acl.perceptron: implementation of the perceptron-based joint framework
+		acl.perceptron.core.BeamSearch: implements the beam-search with early update
+		acl.perceptron.core.Perceptron.java: training procedure for the averaged perceptron
+	acl.maxent: implementation of the MaxEnt based baseline
+	acl.util: utilities to create tokenization/parsing etc.
+
+3. Interface
+	edu.cuny.qc.perceptron.core.Decoder
+		Decoder for the joint approach, which takes joint model, apf file and sgm file as input, 
+		and outputs event mentions in apf format. 
+	edu.cuny.qc.maxent.Decoder 
+		Decoder for the pipelined baseline, which takes trigger classifier and argument classifier, apf file, and sgm file as input, 
+		outputs event mentions in apf format. 
+
+4. Usage (assuming you are in the home folder of this package): 
+	To test Joint approach: 
+		java -Xmx3G -cp bin;lib/* edu.cuny.qc.perceptron.core.Decoder models/model_April_15_4 examples/input examples/filelist examples/output
+	To test Pipelined approach:
+	   java -Xmx3G -cp bin;lib/* edu.cuny.qc.maxent.Decoder models/model_trigger_April_15_staged models/model_arg_April_15_staged examples/input examples/filelist examples/output
+
+Note: It needs 3G memory allocation. 
+Note: delimiter for classpath may vary in different OS. 
+
+
+Contact: 
+
+Qi Li 
+liqiearth@gmail.com
+The Graduate Center, CUNY
+
+Prof. Heng Ji
+hengjicuny@gmail.com
+The Graduate Center, Queens College, CUNY

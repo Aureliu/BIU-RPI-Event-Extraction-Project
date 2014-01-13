@@ -1,0 +1,356 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030407_080037.12.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030407_080037.12">
+<entity ID="CNN_ENG_20030407_080037.12-E1" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030407_080037.12-E1-3" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="82" END="94">3-7th cavalry</charseq>
+    </extent>
+    <head>
+      <charseq START="82" END="94">3-7th cavalry</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="3-7th cavalry">
+      <charseq START="82" END="94">3-7th cavalry</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030407_080037.12-E2" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030407_080037.12-E2-1" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="315" END="318">walt</charseq>
+    </extent>
+    <head>
+      <charseq START="315" END="318">walt</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030407_080037.12-E2-4" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="68" END="79">walt rodgers</charseq>
+    </extent>
+    <head>
+      <charseq START="68" END="79">walt rodgers</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="walt">
+      <charseq START="315" END="318">walt</charseq>
+    </name>
+    <name NAME="walt rodgers">
+      <charseq START="68" END="79">walt rodgers</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030407_080037.12-E3" TYPE="WEA" SUBTYPE="Exploding" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030407_080037.12-E3-5" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="101" END="113">iraqi missile</charseq>
+    </extent>
+    <head>
+      <charseq START="107" END="113">missile</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030407_080037.12-E4" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030407_080037.12-E4-6" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="101" END="105">iraqi</charseq>
+    </extent>
+    <head>
+      <charseq START="101" END="105">iraqi</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="iraqi">
+      <charseq START="101" END="105">iraqi</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030407_080037.12-E5" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030407_080037.12-E5-7" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="119" END="183">operation center
+for 2nd brigade 3rd infantry zrigs south baghdad</charseq>
+    </extent>
+    <head>
+      <charseq START="129" END="134">center</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030407_080037.12-E6" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030407_080037.12-E6-8" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="140" END="163">2nd brigade 3rd infantry</charseq>
+    </extent>
+    <head>
+      <charseq START="140" END="163">2nd brigade 3rd infantry</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="2nd brigade 3rd infantry">
+      <charseq START="140" END="163">2nd brigade 3rd infantry</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030407_080037.12-E7" TYPE="LOC" SUBTYPE="Region-General" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030407_080037.12-E7-2" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="388" END="392">there</charseq>
+    </extent>
+    <head>
+      <charseq START="388" END="392">there</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030407_080037.12-E7-9" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="171" END="183">south baghdad</charseq>
+    </extent>
+    <head>
+      <charseq START="177" END="183">baghdad</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030407_080037.12-E8" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030407_080037.12-E8-10" TYPE="PRO" LDCTYPE="HLS">
+    <extent>
+      <charseq START="186" END="198">at least four</charseq>
+    </extent>
+    <head>
+      <charseq START="195" END="198">four</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030407_080037.12-E9" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030407_080037.12-E9-11" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="206" END="217">two soldiers</charseq>
+    </extent>
+    <head>
+      <charseq START="210" END="217">soldiers</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030407_080037.12-E10" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030407_080037.12-E10-12" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="223" END="237">two journalists</charseq>
+    </extent>
+    <head>
+      <charseq START="227" END="237">journalists</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030407_080037.12-E11" TYPE="PER" SUBTYPE="Indeterminate" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030407_080037.12-E11-13" TYPE="PRO" LDCTYPE="HLS">
+    <extent>
+      <charseq START="240" END="244">other</charseq>
+    </extent>
+    <head>
+      <charseq START="240" END="244">other</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030407_080037.12-E12" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030407_080037.12-E12-14" TYPE="PRO" LDCTYPE="HLS">
+    <extent>
+      <charseq START="253" END="263">at least 15</charseq>
+    </extent>
+    <head>
+      <charseq START="262" END="263">15</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030407_080037.12-E12-16" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="286" END="289">them</charseq>
+    </extent>
+    <head>
+      <charseq START="286" END="289">them</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030407_080037.12-E13" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030407_080037.12-E13-15" TYPE="PRO" LDCTYPE="PTV">
+    <extent>
+      <charseq START="278" END="289">some of them</charseq>
+    </extent>
+    <head>
+      <charseq START="278" END="281">some</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<timex2 ID="CNN_ENG_20030407_080037.12-T1" VAL="2003-04-07T09:09:35">
+  <timex2_mention ID="CNN_ENG_20030407_080037.12-T1-1">
+    <extent>
+      <charseq START="44" END="62">2003-04-07 09:09:35</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030407_080037.12-T2" VAL="PTXM" ANCHOR_VAL="2003-04-07-T09:09" ANCHOR_DIR="AFTER">
+  <timex2_mention ID="CNN_ENG_20030407_080037.12-T2-1">
+    <extent>
+      <charseq START="326" END="341">a couple
+minutes</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030407_080037.12-R1" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030407_080037.12-E4" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030407_080037.12-E3" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030407_080037.12-R1-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="101" END="113">iraqi missile</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030407_080037.12-E4-6" ROLE="Arg-1">
+      <extent>
+        <charseq START="101" END="105">iraqi</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030407_080037.12-E3-5" ROLE="Arg-2">
+      <extent>
+        <charseq START="101" END="113">iraqi missile</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030407_080037.12-R2" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030407_080037.12-E5" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030407_080037.12-E7" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030407_080037.12-R2-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="119" END="183">operation center
+for 2nd brigade 3rd infantry zrigs south baghdad</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030407_080037.12-E5-7" ROLE="Arg-1">
+      <extent>
+        <charseq START="119" END="183">operation center
+for 2nd brigade 3rd infantry zrigs south baghdad</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030407_080037.12-E7-9" ROLE="Arg-2">
+      <extent>
+        <charseq START="171" END="183">south baghdad</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030407_080037.12-EV1" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030407_080037.12-E5" ROLE="Target"/>
+  <event_argument REFID="CNN_ENG_20030407_080037.12-E3" ROLE="Instrument"/>
+  <event_mention ID="CNN_ENG_20030407_080037.12-EV1-1">
+    <extent>
+      <charseq START="101" END="183">iraqi missile hit operation center
+for 2nd brigade 3rd infantry zrigs south baghdad</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="68" END="237">walt rodgers, 3-7th cavalry says iraqi missile hit operation center
+for 2nd brigade 3rd infantry zrigs south baghdad, at least four dead,
+two soldiers and two journalists</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="115" END="117">hit</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030407_080037.12-E5-7" ROLE="Target">
+      <extent>
+        <charseq START="119" END="183">operation center
+for 2nd brigade 3rd infantry zrigs south baghdad</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030407_080037.12-E3-5" ROLE="Instrument">
+      <extent>
+        <charseq START="101" END="113">iraqi missile</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030407_080037.12-EV2" TYPE="Life" SUBTYPE="Die" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030407_080037.12-E10" ROLE="Victim"/>
+  <event_argument REFID="CNN_ENG_20030407_080037.12-E5" ROLE="Place"/>
+  <event_argument REFID="CNN_ENG_20030407_080037.12-E3" ROLE="Instrument"/>
+  <event_argument REFID="CNN_ENG_20030407_080037.12-E8" ROLE="Victim"/>
+  <event_argument REFID="CNN_ENG_20030407_080037.12-E9" ROLE="Victim"/>
+  <event_mention ID="CNN_ENG_20030407_080037.12-EV2-1">
+    <extent>
+      <charseq START="101" END="237">iraqi missile hit operation center
+for 2nd brigade 3rd infantry zrigs south baghdad, at least four dead,
+two soldiers and two journalists</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="68" END="237">walt rodgers, 3-7th cavalry says iraqi missile hit operation center
+for 2nd brigade 3rd infantry zrigs south baghdad, at least four dead,
+two soldiers and two journalists</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="200" END="203">dead</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030407_080037.12-E10-12" ROLE="Victim">
+      <extent>
+        <charseq START="223" END="237">two journalists</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030407_080037.12-E5-7" ROLE="Place">
+      <extent>
+        <charseq START="119" END="183">operation center
+for 2nd brigade 3rd infantry zrigs south baghdad</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030407_080037.12-E3-5" ROLE="Instrument">
+      <extent>
+        <charseq START="101" END="113">iraqi missile</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030407_080037.12-E8-10" ROLE="Victim">
+      <extent>
+        <charseq START="186" END="198">at least four</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030407_080037.12-E9-11" ROLE="Victim">
+      <extent>
+        <charseq START="206" END="217">two soldiers</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030407_080037.12-EV3" TYPE="Life" SUBTYPE="Injure" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030407_080037.12-E12" ROLE="Victim"/>
+  <event_mention ID="CNN_ENG_20030407_080037.12-EV3-1">
+    <extent>
+      <charseq START="253" END="275">at least 15 are
+wounded</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="240" END="275">other report at least 15 are
+wounded</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="269" END="275">wounded</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030407_080037.12-E12-14" ROLE="Victim">
+      <extent>
+        <charseq START="253" END="263">at least 15</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030407_080037.12-EV4" TYPE="Life" SUBTYPE="Die" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Future">
+  <event_argument REFID="CNN_ENG_20030407_080037.12-E13" ROLE="Victim"/>
+  <event_mention ID="CNN_ENG_20030407_080037.12-EV4-1">
+    <extent>
+      <charseq START="278" END="300">some of them critically</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="278" END="300">some of them critically</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="291" END="300">critically</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030407_080037.12-E13-15" ROLE="Victim">
+      <extent>
+        <charseq START="278" END="289">some of them</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

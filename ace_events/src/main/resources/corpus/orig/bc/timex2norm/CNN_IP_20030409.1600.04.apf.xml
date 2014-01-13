@@ -1,0 +1,2611 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_IP_20030409.1600.04.sgm" SOURCE="broadcast conversation" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_IP_20030409.1600.04">
+<entity ID="CNN_IP_20030409.1600.04-E1" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030409.1600.04-E1-3" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="433" END="449">CNN's Daryn Kagan</charseq>
+    </extent>
+    <head>
+      <charseq START="439" END="449">Daryn Kagan</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E1-98" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="3659" END="3669">Daryn Kagan</charseq>
+    </extent>
+    <head>
+      <charseq START="3659" END="3669">Daryn Kagan</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Daryn Kagan">
+      <charseq START="439" END="449">Daryn Kagan</charseq>
+    </name>
+    <name NAME="Daryn Kagan">
+      <charseq START="3659" END="3669">Daryn Kagan</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_IP_20030409.1600.04-E2" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030409.1600.04-E2-4" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="433" END="435">CNN</charseq>
+    </extent>
+    <head>
+      <charseq START="433" END="435">CNN</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E2-99" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="3672" END="3674">CNN</charseq>
+    </extent>
+    <head>
+      <charseq START="3672" END="3674">CNN</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="CNN">
+      <charseq START="433" END="435">CNN</charseq>
+    </name>
+    <name NAME="CNN">
+      <charseq START="3672" END="3674">CNN</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_IP_20030409.1600.04-E3" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030409.1600.04-E3-5" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="570" END="572">U.S</charseq>
+    </extent>
+    <head>
+      <charseq START="570" END="572">U.S</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E3-25" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1157" END="1184">the United States of America</charseq>
+    </extent>
+    <head>
+      <charseq START="1161" END="1184">United States of America</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E3-154" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="137" END="149">United States</charseq>
+    </extent>
+    <head>
+      <charseq START="137" END="149">United States</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="U.S">
+      <charseq START="570" END="572">U.S</charseq>
+    </name>
+    <name NAME="United States of America">
+      <charseq START="1161" END="1184">United States of America</charseq>
+    </name>
+    <name NAME="United States">
+      <charseq START="137" END="149">United States</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_IP_20030409.1600.04-E4" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030409.1600.04-E4-6" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="570" END="594">U.S. Navy and Coast Guard</charseq>
+    </extent>
+    <head>
+      <charseq START="575" END="578">Navy</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E4-115" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="133" END="170">The United States Navy and Coast Guard</charseq>
+    </extent>
+    <head>
+      <charseq START="151" END="154">Navy</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Navy">
+      <charseq START="575" END="578">Navy</charseq>
+    </name>
+    <name NAME="Navy">
+      <charseq START="151" END="154">Navy</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_IP_20030409.1600.04-E5" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030409.1600.04-E5-7" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="570" END="594">U.S. Navy and Coast Guard</charseq>
+    </extent>
+    <head>
+      <charseq START="584" END="594">Coast Guard</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E5-153" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="133" END="170">The United States Navy and Coast Guard</charseq>
+    </extent>
+    <head>
+      <charseq START="160" END="170">Coast Guard</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Coast Guard">
+      <charseq START="584" END="594">Coast Guard</charseq>
+    </name>
+    <name NAME="Coast Guard">
+      <charseq START="160" END="170">Coast Guard</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_IP_20030409.1600.04-E6" TYPE="VEH" SUBTYPE="Water" CLASS="GEN">
+  <entity_mention ID="CNN_IP_20030409.1600.04-E6-11" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="617" END="621">ships</charseq>
+    </extent>
+    <head>
+      <charseq START="617" END="621">ships</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030409.1600.04-E7" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030409.1600.04-E7-12" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="1534" END="1539">Kuwait</charseq>
+    </extent>
+    <head>
+      <charseq START="1534" END="1539">Kuwait</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E7-13" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="643" END="648">Kuwait</charseq>
+    </extent>
+    <head>
+      <charseq START="643" END="648">Kuwait</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E7-101" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="3677" END="3682">Kuwait</charseq>
+    </extent>
+    <head>
+      <charseq START="3677" END="3682">Kuwait</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Kuwait">
+      <charseq START="1534" END="1539">Kuwait</charseq>
+    </name>
+    <name NAME="Kuwait">
+      <charseq START="643" END="648">Kuwait</charseq>
+    </name>
+    <name NAME="Kuwait">
+      <charseq START="3677" END="3682">Kuwait</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_IP_20030409.1600.04-E8" TYPE="VEH" SUBTYPE="Water" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030409.1600.04-E8-16" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="751" END="798">the boats, guns, radar, sonar and communications</charseq>
+    </extent>
+    <head>
+      <charseq START="755" END="759">boats</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030409.1600.04-E9" TYPE="WEA" SUBTYPE="Shooting" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030409.1600.04-E9-17" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="751" END="798">the boats, guns, radar, sonar and communications</charseq>
+    </extent>
+    <head>
+      <charseq START="762" END="765">guns</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030409.1600.04-E10" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_IP_20030409.1600.04-E10-18" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="801" END="802">we</charseq>
+    </extent>
+    <head>
+      <charseq START="801" END="802">we</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030409.1600.04-E11" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030409.1600.04-E11-19" TYPE="PRO" LDCTYPE="HLS">
+    <extent>
+      <charseq START="905" END="918">second-graders</charseq>
+    </extent>
+    <head>
+      <charseq START="912" END="918">graders</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E11-39" TYPE="PRO" LDCTYPE="HLS">
+    <extent>
+      <charseq START="1810" END="1827">Her second-graders</charseq>
+    </extent>
+    <head>
+      <charseq START="1821" END="1827">graders</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E11-43" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1946" END="1956">my children</charseq>
+    </extent>
+    <head>
+      <charseq START="1949" END="1956">children</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E11-48" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2267" END="2276">these kids</charseq>
+    </extent>
+    <head>
+      <charseq START="2273" END="2276">kids</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E11-49" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2337" END="2341">their</charseq>
+    </extent>
+    <head>
+      <charseq START="2337" END="2341">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E11-53" TYPE="PRO" LDCTYPE="HLS">
+    <extent>
+      <charseq START="2466" END="2504">the
+Riverwood Elementary second-graders</charseq>
+    </extent>
+    <head>
+      <charseq START="2498" END="2504">graders</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E11-56" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2636" END="2639">they</charseq>
+    </extent>
+    <head>
+      <charseq START="2636" END="2639">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E11-57" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2690" END="2694">their</charseq>
+    </extent>
+    <head>
+      <charseq START="2690" END="2694">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E11-89" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="3475" END="3487">your
+students</charseq>
+    </extent>
+    <head>
+      <charseq START="3480" END="3487">students</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E11-92" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3530" END="3533">they</charseq>
+    </extent>
+    <head>
+      <charseq START="3530" END="3533">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E11-94" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3574" END="3578">Their</charseq>
+    </extent>
+    <head>
+      <charseq START="3574" END="3578">Their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E11-148" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2239" END="2241">our</charseq>
+    </extent>
+    <head>
+      <charseq START="2239" END="2241">our</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E11-149" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2141" END="2142">We</charseq>
+    </extent>
+    <head>
+      <charseq START="2141" END="2142">We</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E11-161" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="296" END="339">elementary school children in North Carolina</charseq>
+    </extent>
+    <head>
+      <charseq START="314" END="321">children</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E11-164" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="342" END="353">The
+students</charseq>
+    </extent>
+    <head>
+      <charseq START="346" END="353">students</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E11-165" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="384" END="388">their</charseq>
+    </extent>
+    <head>
+      <charseq START="384" END="388">their</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030409.1600.04-E12" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="CNN_IP_20030409.1600.04-E12-21" TYPE="NOM" LDCTYPE="BAR" LDCATR="FALSE">
+    <extent>
+      <charseq START="1081" END="1092">brave friend</charseq>
+    </extent>
+    <head>
+      <charseq START="1087" END="1092">friend</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E12-24" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1141" END="1143">You</charseq>
+    </extent>
+    <head>
+      <charseq START="1141" END="1143">You</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E12-26" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1192" END="1194">You</charseq>
+    </extent>
+    <head>
+      <charseq START="1192" END="1194">You</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E12-27" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1227" END="1229">You</charseq>
+    </extent>
+    <head>
+      <charseq START="1227" END="1229">You</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E12-29" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1235" END="1248">my best friend</charseq>
+    </extent>
+    <head>
+      <charseq START="1243" END="1248">friend</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E12-30" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1251" END="1253">You</charseq>
+    </extent>
+    <head>
+      <charseq START="1251" END="1253">You</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E12-31" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1272" END="1275">your</charseq>
+    </extent>
+    <head>
+      <charseq START="1272" END="1275">your</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E12-136" TYPE="NOM" LDCTYPE="BAR" LDCATR="FALSE">
+    <extent>
+      <charseq START="2075" END="2086">brave friend</charseq>
+    </extent>
+    <head>
+      <charseq START="2081" END="2086">friend</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E12-137" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2217" END="2220">your</charseq>
+    </extent>
+    <head>
+      <charseq START="2217" END="2220">your</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E12-138" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2167" END="2169">you</charseq>
+    </extent>
+    <head>
+      <charseq START="2167" END="2169">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E12-139" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="2175" END="2193">a very brave person</charseq>
+    </extent>
+    <head>
+      <charseq START="2188" END="2193">person</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E12-140" TYPE="NOM" LDCTYPE="BAR" LDCATR="FALSE">
+    <extent>
+      <charseq START="2829" END="2834">friend</charseq>
+    </extent>
+    <head>
+      <charseq START="2829" END="2834">friend</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E12-141" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2919" END="2921">you</charseq>
+    </extent>
+    <head>
+      <charseq START="2919" END="2921">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E12-142" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2863" END="2865">you</charseq>
+    </extent>
+    <head>
+      <charseq START="2863" END="2865">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E12-143" TYPE="NOM" LDCTYPE="BAR" LDCATR="FALSE">
+    <extent>
+      <charseq START="1022" END="1033">brave friend</charseq>
+    </extent>
+    <head>
+      <charseq START="1028" END="1033">friend</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E12-144" TYPE="NOM" LDCTYPE="BAR" LDCATR="FALSE">
+    <extent>
+      <charseq START="979" END="990">brave friend</charseq>
+    </extent>
+    <head>
+      <charseq START="985" END="990">friend</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030409.1600.04-E13" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030409.1600.04-E13-22" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1102" END="1103">My</charseq>
+    </extent>
+    <head>
+      <charseq START="1102" END="1103">My</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E13-23" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1119" END="1119">I</charseq>
+    </extent>
+    <head>
+      <charseq START="1119" END="1119">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E13-28" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1235" END="1236">my</charseq>
+    </extent>
+    <head>
+      <charseq START="1235" END="1236">my</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E13-32" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1293" END="1296">Ryan</charseq>
+    </extent>
+    <head>
+      <charseq START="1293" END="1296">Ryan</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E13-81" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="954" END="970">UNIDENTIFIED MALE</charseq>
+    </extent>
+    <head>
+      <charseq START="954" END="970">UNIDENTIFIED MALE</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E13-90" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="997" END="1013">UNIDENTIFIED MALE</charseq>
+    </extent>
+    <head>
+      <charseq START="997" END="1013">UNIDENTIFIED MALE</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E13-91" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1207" END="1223">UNIDENTIFIED MALE</charseq>
+    </extent>
+    <head>
+      <charseq START="1207" END="1223">UNIDENTIFIED MALE</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E13-110" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1040" END="1072">LT. CMDR. MIKE ROBERTS, U.S. NAVY</charseq>
+    </extent>
+    <head>
+      <charseq START="1040" END="1072">LT. CMDR. MIKE ROBERTS, U.S. NAVY</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Ryan">
+      <charseq START="1293" END="1296">Ryan</charseq>
+    </name>
+    <name NAME="UNIDENTIFIED MALE">
+      <charseq START="954" END="970">UNIDENTIFIED MALE</charseq>
+    </name>
+    <name NAME="UNIDENTIFIED MALE">
+      <charseq START="997" END="1013">UNIDENTIFIED MALE</charseq>
+    </name>
+    <name NAME="UNIDENTIFIED MALE">
+      <charseq START="1207" END="1223">UNIDENTIFIED MALE</charseq>
+    </name>
+    <name NAME="LT. CMDR. MIKE ROBERTS, U.S. NAVY">
+      <charseq START="1040" END="1072">LT. CMDR. MIKE ROBERTS, U.S. NAVY</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_IP_20030409.1600.04-E15" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030409.1600.04-E15-1" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1437" END="1455">a supportive sister</charseq>
+    </extent>
+    <head>
+      <charseq START="1450" END="1455">sister</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E15-2" TYPE="PRO" LDCTYPE="WHQ" LDCATR="FALSE">
+    <extent>
+      <charseq START="399" END="401">who</charseq>
+    </extent>
+    <head>
+      <charseq START="399" END="401">who</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E15-9" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1511" END="1511">I</charseq>
+    </extent>
+    <head>
+      <charseq START="1511" END="1511">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E15-10" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1517" END="1518">My</charseq>
+    </extent>
+    <head>
+      <charseq START="1517" END="1518">My</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E15-15" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1623" END="1628">CUPOLO</charseq>
+    </extent>
+    <head>
+      <charseq START="1623" END="1628">CUPOLO</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E15-20" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1554" END="1562">My sister</charseq>
+    </extent>
+    <head>
+      <charseq START="1557" END="1562">sister</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E15-33" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="1567" END="1617">a grammar school teacher in Clayton, North Carolina</charseq>
+    </extent>
+    <head>
+      <charseq START="1584" END="1590">teacher</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E15-35" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1896" END="1901">CUPOLO</charseq>
+    </extent>
+    <head>
+      <charseq START="1896" END="1901">CUPOLO</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E15-38" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2540" END="2545">CUPOLO</charseq>
+    </extent>
+    <head>
+      <charseq START="2540" END="2545">CUPOLO</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E15-40" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1810" END="1812">Her</charseq>
+    </extent>
+    <head>
+      <charseq START="1810" END="1812">Her</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E15-42" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1908" END="1908">I</charseq>
+    </extent>
+    <head>
+      <charseq START="1908" END="1908">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E15-44" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1946" END="1947">my</charseq>
+    </extent>
+    <head>
+      <charseq START="1946" END="1947">my</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E15-45" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1975" END="1975">I</charseq>
+    </extent>
+    <head>
+      <charseq START="1975" END="1975">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E15-47" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2710" END="2715">CUPOLO</charseq>
+    </extent>
+    <head>
+      <charseq START="2710" END="2715">CUPOLO</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E15-58" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2784" END="2784">I</charseq>
+    </extent>
+    <head>
+      <charseq START="2784" END="2784">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E15-59" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2809" END="2809">I</charseq>
+    </extent>
+    <head>
+      <charseq START="2809" END="2809">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E15-75" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3231" END="3231">I</charseq>
+    </extent>
+    <head>
+      <charseq START="3231" END="3231">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E15-76" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3250" END="3251">me</charseq>
+    </extent>
+    <head>
+      <charseq START="3250" END="3251">me</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E15-77" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3268" END="3269">my</charseq>
+    </extent>
+    <head>
+      <charseq START="3268" END="3269">my</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E15-80" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="3317" END="3327">your sister</charseq>
+    </extent>
+    <head>
+      <charseq START="3322" END="3327">sister</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E15-82" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3369" END="3371">her</charseq>
+    </extent>
+    <head>
+      <charseq START="3369" END="3371">her</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E15-83" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3380" END="3382">you</charseq>
+    </extent>
+    <head>
+      <charseq START="3380" END="3382">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E15-84" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="3395" END="3403">Christine</charseq>
+    </extent>
+    <head>
+      <charseq START="3395" END="3403">Christine</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E15-85" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3411" END="3413">you</charseq>
+    </extent>
+    <head>
+      <charseq START="3411" END="3413">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E15-86" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3458" END="3460">you</charseq>
+    </extent>
+    <head>
+      <charseq START="3458" END="3460">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E15-87" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3475" END="3478">your</charseq>
+    </extent>
+    <head>
+      <charseq START="3475" END="3478">your</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E15-109" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1479" END="1503">CHRISTINE CUPOLO, TEACHER</charseq>
+    </extent>
+    <head>
+      <charseq START="1479" END="1503">CHRISTINE CUPOLO, TEACHER</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E15-156" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="1458" END="1473">Christine Cupolo</charseq>
+    </extent>
+    <head>
+      <charseq START="1458" END="1473">Christine Cupolo</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E15-162" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2059" END="2061">she</charseq>
+    </extent>
+    <head>
+      <charseq START="2059" END="2061">she</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E15-166" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="384" END="396">their teacher</charseq>
+    </extent>
+    <head>
+      <charseq START="390" END="396">teacher</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="CUPOLO">
+      <charseq START="1623" END="1628">CUPOLO</charseq>
+    </name>
+    <name NAME="CUPOLO">
+      <charseq START="1896" END="1901">CUPOLO</charseq>
+    </name>
+    <name NAME="CUPOLO">
+      <charseq START="2540" END="2545">CUPOLO</charseq>
+    </name>
+    <name NAME="CUPOLO">
+      <charseq START="2710" END="2715">CUPOLO</charseq>
+    </name>
+    <name NAME="Christine">
+      <charseq START="3395" END="3403">Christine</charseq>
+    </name>
+    <name NAME="CHRISTINE CUPOLO, TEACHER">
+      <charseq START="1479" END="1503">CHRISTINE CUPOLO, TEACHER</charseq>
+    </name>
+    <name NAME="Christine Cupolo">
+      <charseq START="1458" END="1473">Christine Cupolo</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_IP_20030409.1600.04-E16" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030409.1600.04-E16-34" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="1595" END="1617">Clayton, North Carolina</charseq>
+    </extent>
+    <head>
+      <charseq START="1595" END="1601">Clayton</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Clayton">
+      <charseq START="1595" END="1601">Clayton</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_IP_20030409.1600.04-E17" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_IP_20030409.1600.04-E17-41" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1881" END="1890">the troops</charseq>
+    </extent>
+    <head>
+      <charseq START="1885" END="1890">troops</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E17-46" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2031" END="2040">the troops</charseq>
+    </extent>
+    <head>
+      <charseq START="2035" END="2040">troops</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030409.1600.04-E18" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030409.1600.04-E18-72" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3040" END="3041">We</charseq>
+    </extent>
+    <head>
+      <charseq START="3040" END="3041">We</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E18-145" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3059" END="3061">our</charseq>
+    </extent>
+    <head>
+      <charseq START="3059" END="3061">our</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030409.1600.04-E19" TYPE="PER" SUBTYPE="Indeterminate" CLASS="GEN">
+  <entity_mention ID="CNN_IP_20030409.1600.04-E19-50" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2364" END="2366">you</charseq>
+    </extent>
+    <head>
+      <charseq START="2364" END="2366">you</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030409.1600.04-E20" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030409.1600.04-E20-54" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2560" END="2562">You</charseq>
+    </extent>
+    <head>
+      <charseq START="2560" END="2562">You</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E20-55" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2594" END="2597">your</charseq>
+    </extent>
+    <head>
+      <charseq START="2594" END="2597">your</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030409.1600.04-E21" TYPE="PER" SUBTYPE="Individual" CLASS="USP">
+  <entity_mention ID="CNN_IP_20030409.1600.04-E21-62" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2837" END="2837">I</charseq>
+    </extent>
+    <head>
+      <charseq START="2837" END="2837">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E21-64" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2868" END="2868">I</charseq>
+    </extent>
+    <head>
+      <charseq START="2868" END="2868">I</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030409.1600.04-E22" TYPE="PER" SUBTYPE="Indeterminate" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030409.1600.04-E22-66" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2944" END="2946">you</charseq>
+    </extent>
+    <head>
+      <charseq START="2944" END="2946">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E22-67" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2960" END="2962">you</charseq>
+    </extent>
+    <head>
+      <charseq START="2960" END="2962">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E22-68" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2970" END="2972">you</charseq>
+    </extent>
+    <head>
+      <charseq START="2970" END="2972">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E22-146" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2721" END="2723">you</charseq>
+    </extent>
+    <head>
+      <charseq START="2721" END="2723">you</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030409.1600.04-E23" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030409.1600.04-E23-69" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2984" END="2987">them</charseq>
+    </extent>
+    <head>
+      <charseq START="2984" END="2987">them</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E23-70" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3007" END="3010">They</charseq>
+    </extent>
+    <head>
+      <charseq START="3007" END="3010">They</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E23-73" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3179" END="3182">they</charseq>
+    </extent>
+    <head>
+      <charseq START="3179" END="3182">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E23-93" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3547" END="3548">us</charseq>
+    </extent>
+    <head>
+      <charseq START="3547" END="3548">us</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E23-113" TYPE="PRO" LDCTYPE="PTV">
+    <extent>
+      <charseq START="251" END="270">one group of sailors</charseq>
+    </extent>
+    <head>
+      <charseq START="255" END="259">group</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E23-114" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2646" END="2656">the sailors</charseq>
+    </extent>
+    <head>
+      <charseq START="2650" END="2656">sailors</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E23-116" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2311" END="2312">us</charseq>
+    </extent>
+    <head>
+      <charseq START="2311" END="2312">us</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030409.1600.04-E24" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_IP_20030409.1600.04-E24-95" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3617" END="3656">those who keep watch in the
+Persian Gulf</charseq>
+    </extent>
+    <head>
+      <charseq START="3617" END="3621">those</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E24-96" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="3623" END="3625">who</charseq>
+    </extent>
+    <head>
+      <charseq START="3623" END="3625">who</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030409.1600.04-E25" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030409.1600.04-E25-100" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="3554" END="3571">KAGAN (voice-over)</charseq>
+    </extent>
+    <head>
+      <charseq START="3554" END="3571">KAGAN (voice-over)</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="KAGAN (voice-over)">
+      <charseq START="3554" END="3571">KAGAN (voice-over)</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_IP_20030409.1600.04-E26" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_IP_20030409.1600.04-E26-51" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="133" END="176">The United States Navy and Coast Guard crews</charseq>
+    </extent>
+    <head>
+      <charseq START="172" END="176">crews</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E26-111" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="688" END="698">these units</charseq>
+    </extent>
+    <head>
+      <charseq START="694" END="698">units</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E26-112" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="570" END="603">U.S. Navy and Coast Guard
+reserves</charseq>
+    </extent>
+    <head>
+      <charseq START="596" END="603">reserves</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030409.1600.04-E27" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030409.1600.04-E27-102" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="848" END="889">the tent that serves as
+the command center</charseq>
+    </extent>
+    <head>
+      <charseq START="852" END="855">tent</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E27-122" TYPE="PRO" LDCTYPE="WHQ" LDCATR="FALSE">
+    <extent>
+      <charseq START="857" END="860">that</charseq>
+    </extent>
+    <head>
+      <charseq START="857" END="860">that</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E27-123" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="872" END="889">the command center</charseq>
+    </extent>
+    <head>
+      <charseq START="884" END="889">center</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030409.1600.04-E28" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030409.1600.04-E28-104" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1336" END="1340">KAGAN</charseq>
+    </extent>
+    <head>
+      <charseq START="1336" END="1340">KAGAN</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E28-106" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2396" END="2400">KAGAN</charseq>
+    </extent>
+    <head>
+      <charseq START="2396" END="2400">KAGAN</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E28-107" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2618" END="2622">KAGAN</charseq>
+    </extent>
+    <head>
+      <charseq START="2618" END="2622">KAGAN</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="KAGAN">
+      <charseq START="1336" END="1340">KAGAN</charseq>
+    </name>
+    <name NAME="KAGAN">
+      <charseq START="2396" END="2400">KAGAN</charseq>
+    </name>
+    <name NAME="KAGAN">
+      <charseq START="2618" END="2622">KAGAN</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_IP_20030409.1600.04-E29" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030409.1600.04-E29-60" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="123" END="130">WOODRUFF</charseq>
+    </extent>
+    <head>
+      <charseq START="123" END="130">WOODRUFF</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E29-61" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="3705" END="3712">WOODRUFF</charseq>
+    </extent>
+    <head>
+      <charseq START="3705" END="3712">WOODRUFF</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E29-103" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3778" END="3778">I</charseq>
+    </extent>
+    <head>
+      <charseq START="3778" END="3778">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E29-147" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="3782" END="3794">Judy
+Woodruff</charseq>
+    </extent>
+    <head>
+      <charseq START="3782" END="3794">Judy
+Woodruff</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="WOODRUFF">
+      <charseq START="123" END="130">WOODRUFF</charseq>
+    </name>
+    <name NAME="WOODRUFF">
+      <charseq START="3705" END="3712">WOODRUFF</charseq>
+    </name>
+    <name NAME="Judy Woodruff">
+      <charseq START="3782" END="3794">Judy
+Woodruff</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_IP_20030409.1600.04-E30" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030409.1600.04-E30-105" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="3799" END="3808">Washington</charseq>
+    </extent>
+    <head>
+      <charseq START="3799" END="3808">Washington</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Washington">
+      <charseq START="3799" END="3808">Washington</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_IP_20030409.1600.04-E31" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030409.1600.04-E31-108" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="481" END="523">DARYN KAGAN, CNN CORRESPONDENT (voice-over)</charseq>
+    </extent>
+    <head>
+      <charseq START="481" END="523">DARYN KAGAN, CNN CORRESPONDENT (voice-over)</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="DARYN KAGAN, CNN CORRESPONDENT (voice-over)">
+      <charseq START="481" END="523">DARYN KAGAN, CNN CORRESPONDENT (voice-over)</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_IP_20030409.1600.04-E32" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030409.1600.04-E32-117" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="FALSE">
+    <extent>
+      <charseq START="192" END="195">port</charseq>
+    </extent>
+    <head>
+      <charseq START="192" END="195">port</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E32-118" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="714" END="724">these ports</charseq>
+    </extent>
+    <head>
+      <charseq START="720" END="724">ports</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E32-119" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="551" END="554">port</charseq>
+    </extent>
+    <head>
+      <charseq START="551" END="554">port</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030409.1600.04-E35" TYPE="ORG" SUBTYPE="Educational" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030409.1600.04-E35-120" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="2470" END="2489">Riverwood Elementary</charseq>
+    </extent>
+    <head>
+      <charseq START="2470" END="2489">Riverwood Elementary</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E35-121" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1569" END="1582">grammar school</charseq>
+    </extent>
+    <head>
+      <charseq START="1577" END="1582">school</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E35-124" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="296" END="312">elementary school</charseq>
+    </extent>
+    <head>
+      <charseq START="307" END="312">school</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Riverwood Elementary">
+      <charseq START="2470" END="2489">Riverwood Elementary</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_IP_20030409.1600.04-E39" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030409.1600.04-E39-63" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1303" END="1309">ROBERTS</charseq>
+    </extent>
+    <head>
+      <charseq START="1303" END="1309">ROBERTS</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E39-65" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1545" END="1551">ROBERTS</charseq>
+    </extent>
+    <head>
+      <charseq START="1545" END="1551">ROBERTS</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E39-71" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1801" END="1807">ROBERTS</charseq>
+    </extent>
+    <head>
+      <charseq START="1801" END="1807">ROBERTS</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E39-74" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2046" END="2052">ROBERTS</charseq>
+    </extent>
+    <head>
+      <charseq START="2046" END="2052">ROBERTS</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E39-78" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2254" END="2260">ROBERTS</charseq>
+    </extent>
+    <head>
+      <charseq START="2254" END="2260">ROBERTS</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E39-79" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="3333" END="3339">ROBERTS</charseq>
+    </extent>
+    <head>
+      <charseq START="3333" END="3339">ROBERTS</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E39-125" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1517" END="1526">My brother</charseq>
+    </extent>
+    <head>
+      <charseq START="1520" END="1526">brother</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E39-126" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1387" END="1395">a brother</charseq>
+    </extent>
+    <head>
+      <charseq START="1389" END="1395">brother</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E39-127" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="3268" END="3277">my brother</charseq>
+    </extent>
+    <head>
+      <charseq START="3271" END="3277">brother</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E39-128" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1631" END="1632">He</charseq>
+    </extent>
+    <head>
+      <charseq START="1631" END="1632">He</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E39-129" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1741" END="1742">he</charseq>
+    </extent>
+    <head>
+      <charseq START="1741" END="1742">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E39-131" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1312" END="1312">I</charseq>
+    </extent>
+    <head>
+      <charseq START="1312" END="1312">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E39-132" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3347" END="3347">I</charseq>
+    </extent>
+    <head>
+      <charseq START="3347" END="3347">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E39-133" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1398" END="1430">Lieutenant
+Commander Mike Roberts</charseq>
+    </extent>
+    <head>
+      <charseq START="1419" END="1430">Mike Roberts</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E39-134" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1316" END="1330">the big brother</charseq>
+    </extent>
+    <head>
+      <charseq START="1324" END="1330">brother</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E39-135" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1398" END="1417">Lieutenant
+Commander</charseq>
+    </extent>
+    <head>
+      <charseq START="1409" END="1417">Commander</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E39-151" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1554" END="1555">My</charseq>
+    </extent>
+    <head>
+      <charseq START="1554" END="1555">My</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E39-152" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3317" END="3320">your</charseq>
+    </extent>
+    <head>
+      <charseq START="3317" END="3320">your</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="ROBERTS">
+      <charseq START="1303" END="1309">ROBERTS</charseq>
+    </name>
+    <name NAME="ROBERTS">
+      <charseq START="1545" END="1551">ROBERTS</charseq>
+    </name>
+    <name NAME="ROBERTS">
+      <charseq START="1801" END="1807">ROBERTS</charseq>
+    </name>
+    <name NAME="ROBERTS">
+      <charseq START="2046" END="2052">ROBERTS</charseq>
+    </name>
+    <name NAME="ROBERTS">
+      <charseq START="2254" END="2260">ROBERTS</charseq>
+    </name>
+    <name NAME="ROBERTS">
+      <charseq START="3333" END="3339">ROBERTS</charseq>
+    </name>
+    <name NAME="Mike Roberts">
+      <charseq START="1419" END="1430">Mike Roberts</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_IP_20030409.1600.04-E45" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030409.1600.04-E45-150" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2096" END="2097">My</charseq>
+    </extent>
+    <head>
+      <charseq START="2096" END="2097">My</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030409.1600.04-E47" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030409.1600.04-E47-159" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="3283" END="3299">KAGAN (on camera)</charseq>
+    </extent>
+    <head>
+      <charseq START="3283" END="3299">KAGAN (on camera)</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="KAGAN (on camera)">
+      <charseq START="3283" END="3299">KAGAN (on camera)</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_IP_20030409.1600.04-E51" TYPE="LOC" SUBTYPE="Water-Body" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030409.1600.04-E51-37" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1662" END="1677">the Persian Gulf</charseq>
+    </extent>
+    <head>
+      <charseq START="1666" END="1677">Persian Gulf</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E51-97" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="3641" END="3656">the
+Persian Gulf</charseq>
+    </extent>
+    <head>
+      <charseq START="3645" END="3656">Persian Gulf</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E51-155" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="209" END="224">the Persian Gulf</charseq>
+    </extent>
+    <head>
+      <charseq START="213" END="224">Persian Gulf</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Persian Gulf">
+      <charseq START="1666" END="1677">Persian Gulf</charseq>
+    </name>
+    <name NAME="Persian Gulf">
+      <charseq START="3645" END="3656">Persian Gulf</charseq>
+    </name>
+    <name NAME="Persian Gulf">
+      <charseq START="213" END="224">Persian Gulf</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_IP_20030409.1600.04-E53" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030409.1600.04-E53-14" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="654" END="657">Iraq</charseq>
+    </extent>
+    <head>
+      <charseq START="654" END="657">Iraq</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E53-158" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="237" END="240">Iraq</charseq>
+    </extent>
+    <head>
+      <charseq START="237" END="240">Iraq</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Iraq">
+      <charseq START="654" END="657">Iraq</charseq>
+    </name>
+    <name NAME="Iraq">
+      <charseq START="237" END="240">Iraq</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_IP_20030409.1600.04-E55" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030409.1600.04-E55-8" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2119" END="2137">UNIDENTIFIED FEMALE</charseq>
+    </extent>
+    <head>
+      <charseq START="2119" END="2137">UNIDENTIFIED FEMALE</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="UNIDENTIFIED FEMALE">
+      <charseq START="2119" END="2137">UNIDENTIFIED FEMALE</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_IP_20030409.1600.04-E56" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_IP_20030409.1600.04-E56-160" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="264" END="270">sailors</charseq>
+    </extent>
+    <head>
+      <charseq START="264" END="270">sailors</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030409.1600.04-E57" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030409.1600.04-E57-36" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="1604" END="1617">North Carolina</charseq>
+    </extent>
+    <head>
+      <charseq START="1604" END="1617">North Carolina</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E57-52" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="2450" END="2463">North Carolina</charseq>
+    </extent>
+    <head>
+      <charseq START="2450" END="2463">North Carolina</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E57-88" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="3432" END="3445">North Carolina</charseq>
+    </extent>
+    <head>
+      <charseq START="3432" END="3445">North Carolina</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030409.1600.04-E57-163" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="326" END="339">North Carolina</charseq>
+    </extent>
+    <head>
+      <charseq START="326" END="339">North Carolina</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="North Carolina">
+      <charseq START="1604" END="1617">North Carolina</charseq>
+    </name>
+    <name NAME="North Carolina">
+      <charseq START="2450" END="2463">North Carolina</charseq>
+    </name>
+    <name NAME="North Carolina">
+      <charseq START="3432" END="3445">North Carolina</charseq>
+    </name>
+    <name NAME="North Carolina">
+      <charseq START="326" END="339">North Carolina</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<timex2 ID="CNN_IP_20030409.1600.04-T1" VAL="2003-04-09T16:00:00-05">
+  <timex2_mention ID="CNN_IP_20030409.1600.04-T1-1">
+    <extent>
+      <charseq START="36" END="60">2003-04-09T16:00:00-05:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_IP_20030409.1600.04-T2" VAL="2002-12-31TEV">
+  <timex2_mention ID="CNN_IP_20030409.1600.04-T2-1">
+    <extent>
+      <charseq START="1689" END="1702">New Year's Eve</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_IP_20030409.1600.04-T3" VAL="2003-W09">
+  <timex2_mention ID="CNN_IP_20030409.1600.04-T3-1">
+    <extent>
+      <charseq START="3071" END="3095">the
+last week of February</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_IP_20030409.1600.04-T4" VAL="2003-W10">
+  <timex2_mention ID="CNN_IP_20030409.1600.04-T4-1">
+    <extent>
+      <charseq START="3116" END="3138">the first week of March</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_IP_20030409.1600.04-T5" VAL="PAST_REF" ANCHOR_VAL="2003-04-09" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="CNN_IP_20030409.1600.04-T5-1">
+    <extent>
+      <charseq START="3158" END="3172">a few weeks ago</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_IP_20030409.1600.04-T6" VAL="PT1H" ANCHOR_VAL="2003-04-09T16:00:00-05" ANCHOR_DIR="STARTING">
+  <timex2_mention ID="CNN_IP_20030409.1600.04-T6-1">
+    <extent>
+      <charseq START="3767" END="3775">this hour</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_IP_20030409.1600.04-T7" VAL="PRESENT_REF" ANCHOR_VAL="2003-04-09T16:00:00-05" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_IP_20030409.1600.04-T7-1">
+    <extent>
+      <charseq START="1679" END="1681">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_IP_20030409.1600.04-R1" TYPE="PART-WHOLE" SUBTYPE="Subsidiary" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_IP_20030409.1600.04-E4" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_IP_20030409.1600.04-E3" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_IP_20030409.1600.04-R1-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="570" END="594">U.S. Navy and Coast Guard</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E4-6" ROLE="Arg-1">
+      <extent>
+        <charseq START="570" END="594">U.S. Navy and Coast Guard</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E3-5" ROLE="Arg-2">
+      <extent>
+        <charseq START="570" END="572">U.S</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_IP_20030409.1600.04-R2" TYPE="PART-WHOLE" SUBTYPE="Subsidiary" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_IP_20030409.1600.04-E5" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_IP_20030409.1600.04-E3" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_IP_20030409.1600.04-R2-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="570" END="594">U.S. Navy and Coast Guard</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E5-7" ROLE="Arg-1">
+      <extent>
+        <charseq START="570" END="594">U.S. Navy and Coast Guard</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E3-5" ROLE="Arg-2">
+      <extent>
+        <charseq START="570" END="572">U.S</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_IP_20030409.1600.04-R3" TYPE="PER-SOC" SUBTYPE="Family" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_IP_20030409.1600.04-E39" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_IP_20030409.1600.04-E15" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_IP_20030409.1600.04-R3-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="3317" END="3327">your sister</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E39-152" ROLE="Arg-1">
+      <extent>
+        <charseq START="3317" END="3320">your</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E15-80" ROLE="Arg-2">
+      <extent>
+        <charseq START="3317" END="3327">your sister</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_IP_20030409.1600.04-R3-2" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="1554" END="1562">My sister</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E39-151" ROLE="Arg-1">
+      <extent>
+        <charseq START="1554" END="1555">My</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E15-20" ROLE="Arg-2">
+      <extent>
+        <charseq START="1554" END="1562">My sister</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_IP_20030409.1600.04-R3-3" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="1517" END="1526">My brother</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E15-10" ROLE="Arg-2">
+      <extent>
+        <charseq START="1517" END="1518">My</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E39-125" ROLE="Arg-1">
+      <extent>
+        <charseq START="1517" END="1526">My brother</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_IP_20030409.1600.04-R3-4" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="3268" END="3277">my brother</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E15-77" ROLE="Arg-2">
+      <extent>
+        <charseq START="3268" END="3269">my</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E39-127" ROLE="Arg-1">
+      <extent>
+        <charseq START="3268" END="3277">my brother</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_IP_20030409.1600.04-R3-5" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="1343" END="1473">It turns out this is actually a story about a brother, Lieutenant
+Commander Mike Roberts, and a supportive sister, Christine Cupolo</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E39-126" ROLE="Arg-1">
+      <extent>
+        <charseq START="1387" END="1395">a brother</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E15-1" ROLE="Arg-2">
+      <extent>
+        <charseq START="1437" END="1455">a supportive sister</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_IP_20030409.1600.04-R4" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_IP_20030409.1600.04-E26" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_IP_20030409.1600.04-E4" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_IP_20030409.1600.04-R4-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="133" END="176">The United States Navy and Coast Guard crews</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E26-51" ROLE="Arg-1">
+      <extent>
+        <charseq START="133" END="176">The United States Navy and Coast Guard crews</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E4-115" ROLE="Arg-2">
+      <extent>
+        <charseq START="133" END="170">The United States Navy and Coast Guard</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_IP_20030409.1600.04-R4-2" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="570" END="603">U.S. Navy and Coast Guard
+reserves</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E26-112" ROLE="Arg-1">
+      <extent>
+        <charseq START="570" END="603">U.S. Navy and Coast Guard
+reserves</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E4-6" ROLE="Arg-2">
+      <extent>
+        <charseq START="570" END="594">U.S. Navy and Coast Guard</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_IP_20030409.1600.04-R5" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_IP_20030409.1600.04-E11" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_IP_20030409.1600.04-E57" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_IP_20030409.1600.04-R5-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="2442" END="2534">Back in North Carolina, the
+Riverwood Elementary second-graders are working on the next batch</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E11-53" ROLE="Arg-1">
+      <extent>
+        <charseq START="2466" END="2504">the
+Riverwood Elementary second-graders</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E57-52" ROLE="Arg-2">
+      <extent>
+        <charseq START="2450" END="2463">North Carolina</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_IP_20030409.1600.04-R5-2" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="296" END="339">elementary school children in North Carolina</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E11-161" ROLE="Arg-1">
+      <extent>
+        <charseq START="296" END="339">elementary school children in North Carolina</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E57-163" ROLE="Arg-2">
+      <extent>
+        <charseq START="326" END="339">North Carolina</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_IP_20030409.1600.04-R6" TYPE="PER-SOC" SUBTYPE="Lasting-Personal" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_IP_20030409.1600.04-E11" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_IP_20030409.1600.04-E15" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_IP_20030409.1600.04-R6-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="384" END="396">their teacher</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E11-165" ROLE="Arg-1">
+      <extent>
+        <charseq START="384" END="388">their</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E15-166" ROLE="Arg-2">
+      <extent>
+        <charseq START="384" END="396">their teacher</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_IP_20030409.1600.04-R7" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_IP_20030409.1600.04-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_IP_20030409.1600.04-E2" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_IP_20030409.1600.04-R7-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="433" END="449">CNN's Daryn Kagan</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E1-3" ROLE="Arg-1">
+      <extent>
+        <charseq START="433" END="449">CNN's Daryn Kagan</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E2-4" ROLE="Arg-2">
+      <extent>
+        <charseq START="433" END="435">CNN</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_IP_20030409.1600.04-R7-2" LEXICALCONDITION="Formulaic">
+    <extent>
+      <charseq START="3659" END="3674">Daryn Kagan, CNN</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E1-98" ROLE="Arg-1">
+      <extent>
+        <charseq START="3659" END="3669">Daryn Kagan</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E2-99" ROLE="Arg-2">
+      <extent>
+        <charseq START="3672" END="3674">CNN</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_IP_20030409.1600.04-R8" TYPE="PER-SOC" SUBTYPE="Lasting-Personal" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_IP_20030409.1600.04-E13" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_IP_20030409.1600.04-E12" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_IP_20030409.1600.04-R8-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="1235" END="1248">my best friend</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E13-28" ROLE="Arg-1">
+      <extent>
+        <charseq START="1235" END="1236">my</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E12-29" ROLE="Arg-2">
+      <extent>
+        <charseq START="1235" END="1248">my best friend</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_IP_20030409.1600.04-R9" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_IP_20030409.1600.04-E15" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_IP_20030409.1600.04-E57" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_IP_20030409.1600.04-R9-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="3406" END="3445">Hope
+you're doing well in North Carolina</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E15-85" ROLE="Arg-1">
+      <extent>
+        <charseq START="3411" END="3413">you</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E57-88" ROLE="Arg-2">
+      <extent>
+        <charseq START="3432" END="3445">North Carolina</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_IP_20030409.1600.04-R10" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_IP_20030409.1600.04-E24" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_IP_20030409.1600.04-E51" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_IP_20030409.1600.04-R10-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="3574" END="3656">Their second-grade work keeping watch over those who keep watch in the
+Persian Gulf</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E24-96" ROLE="Arg-1">
+      <extent>
+        <charseq START="3623" END="3625">who</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E51-97" ROLE="Arg-2">
+      <extent>
+        <charseq START="3641" END="3656">the
+Persian Gulf</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_IP_20030409.1600.04-R12" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_IP_20030409.1600.04-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_IP_20030409.1600.04-E7" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_IP_20030409.1600.04-R12-1" LEXICALCONDITION="Formulaic">
+    <extent>
+      <charseq START="3659" END="3682">Daryn Kagan, CNN, Kuwait</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E1-98" ROLE="Arg-1">
+      <extent>
+        <charseq START="3659" END="3669">Daryn Kagan</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E7-101" ROLE="Arg-2">
+      <extent>
+        <charseq START="3677" END="3682">Kuwait</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_IP_20030409.1600.04-R13" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_IP_20030409.1600.04-E29" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_IP_20030409.1600.04-E30" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_IP_20030409.1600.04-R13-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="3782" END="3808">Judy
+Woodruff in Washington</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E29-147" ROLE="Arg-1">
+      <extent>
+        <charseq START="3782" END="3794">Judy
+Woodruff</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E30-105" ROLE="Arg-2">
+      <extent>
+        <charseq START="3799" END="3808">Washington</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_IP_20030409.1600.04-R14" TYPE="PHYS" SUBTYPE="Located" TENSE="Present" MODALITY="Asserted">
+  <relation_argument REFID="CNN_IP_20030409.1600.04-E39" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_IP_20030409.1600.04-E7" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_IP_20030409.1600.04-R14-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="1517" END="1539">My brother is in Kuwait</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E39-125" ROLE="Arg-1">
+      <extent>
+        <charseq START="1517" END="1526">My brother</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E7-12" ROLE="Arg-2">
+      <extent>
+        <charseq START="1534" END="1539">Kuwait</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_IP_20030409.1600.04-R15" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_IP_20030409.1600.04-E16" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_IP_20030409.1600.04-E57" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_IP_20030409.1600.04-R15-1" LEXICALCONDITION="Formulaic">
+    <extent>
+      <charseq START="1595" END="1617">Clayton, North Carolina</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E16-34" ROLE="Arg-1">
+      <extent>
+        <charseq START="1595" END="1617">Clayton, North Carolina</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E57-36" ROLE="Arg-2">
+      <extent>
+        <charseq START="1604" END="1617">North Carolina</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_IP_20030409.1600.04-R16" TYPE="PHYS" SUBTYPE="Located" TENSE="Present" MODALITY="Asserted">
+  <relation_argument REFID="CNN_IP_20030409.1600.04-E26" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_IP_20030409.1600.04-E51" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_IP_20030409.1600.04-R16-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="133" END="244">The United States Navy and Coast Guard crews are providing port security
+in the Persian Gulf during the Iraq war</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E26-51" ROLE="Arg-1">
+      <extent>
+        <charseq START="133" END="176">The United States Navy and Coast Guard crews</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E51-155" ROLE="Arg-2">
+      <extent>
+        <charseq START="209" END="224">the Persian Gulf</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_IP_20030409.1600.04-R17" TYPE="ORG-AFF" SUBTYPE="Student-Alum" TENSE="Present" MODALITY="Asserted">
+  <relation_argument REFID="CNN_IP_20030409.1600.04-E11" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_IP_20030409.1600.04-E35" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_IP_20030409.1600.04-R17-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="296" END="339">elementary school children in North Carolina</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E11-161" ROLE="Arg-1">
+      <extent>
+        <charseq START="296" END="339">elementary school children in North Carolina</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E35-124" ROLE="Arg-2">
+      <extent>
+        <charseq START="296" END="312">elementary school</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_IP_20030409.1600.04-R17-2" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="2466" END="2504">the
+Riverwood Elementary second-graders</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E11-53" ROLE="Arg-1">
+      <extent>
+        <charseq START="2466" END="2504">the
+Riverwood Elementary second-graders</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E35-120" ROLE="Arg-2">
+      <extent>
+        <charseq START="2470" END="2489">Riverwood Elementary</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_IP_20030409.1600.04-R18" TYPE="PHYS" SUBTYPE="Located" TENSE="Present" MODALITY="Asserted">
+  <relation_argument REFID="CNN_IP_20030409.1600.04-E26" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_IP_20030409.1600.04-E7" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_IP_20030409.1600.04-R18-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="526" END="657">It started as a story on port security, how U.S. Navy and Coast Guard
+reserves are keeping ships safe from attack in Kuwait and Iraq</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E26-112" ROLE="Arg-1">
+      <extent>
+        <charseq START="570" END="603">U.S. Navy and Coast Guard
+reserves</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E7-13" ROLE="Arg-2">
+      <extent>
+        <charseq START="643" END="648">Kuwait</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_IP_20030409.1600.04-R19" TYPE="PHYS" SUBTYPE="Located" TENSE="Present" MODALITY="Asserted">
+  <relation_argument REFID="CNN_IP_20030409.1600.04-E26" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_IP_20030409.1600.04-E53" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_IP_20030409.1600.04-R19-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="526" END="657">It started as a story on port security, how U.S. Navy and Coast Guard
+reserves are keeping ships safe from attack in Kuwait and Iraq</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E26-112" ROLE="Arg-1">
+      <extent>
+        <charseq START="570" END="603">U.S. Navy and Coast Guard
+reserves</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E53-14" ROLE="Arg-2">
+      <extent>
+        <charseq START="654" END="657">Iraq</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_IP_20030409.1600.04-R20" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_IP_20030409.1600.04-E15" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_IP_20030409.1600.04-E35" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_IP_20030409.1600.04-R20-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="1567" END="1617">a grammar school teacher in Clayton, North Carolina</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E15-33" ROLE="Arg-1">
+      <extent>
+        <charseq START="1567" END="1617">a grammar school teacher in Clayton, North Carolina</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E35-121" ROLE="Arg-2">
+      <extent>
+        <charseq START="1569" END="1582">grammar school</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_IP_20030409.1600.04-R21" TYPE="PHYS" SUBTYPE="Near" TENSE="Present" MODALITY="Asserted">
+  <relation_argument REFID="CNN_IP_20030409.1600.04-E39" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_IP_20030409.1600.04-E51" ROLE="Arg-2"/>
+  <relation_argument REFID="CNN_IP_20030409.1600.04-T2" ROLE="Time-Starting"/>
+  <relation_mention ID="CNN_IP_20030409.1600.04-R21-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="1631" END="1702">He was sent over right next to the Persian Gulf now since New Year's Eve</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E39-128" ROLE="Arg-1">
+      <extent>
+        <charseq START="1631" END="1632">He</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E51-37" ROLE="Arg-2">
+      <extent>
+        <charseq START="1662" END="1677">the Persian Gulf</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-T2-1" ROLE="Time-Starting">
+      <extent>
+        <charseq START="1689" END="1702">New Year's Eve</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_IP_20030409.1600.04-R25" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_IP_20030409.1600.04-E26" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_IP_20030409.1600.04-E5" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_IP_20030409.1600.04-R25-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="133" END="176">The United States Navy and Coast Guard crews</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E26-51" ROLE="Arg-1">
+      <extent>
+        <charseq START="133" END="176">The United States Navy and Coast Guard crews</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E5-153" ROLE="Arg-2">
+      <extent>
+        <charseq START="133" END="170">The United States Navy and Coast Guard</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_IP_20030409.1600.04-R25-2" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="570" END="603">U.S. Navy and Coast Guard
+reserves</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E26-112" ROLE="Arg-1">
+      <extent>
+        <charseq START="570" END="603">U.S. Navy and Coast Guard
+reserves</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E5-7" ROLE="Arg-2">
+      <extent>
+        <charseq START="570" END="594">U.S. Navy and Coast Guard</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_IP_20030409.1600.04-R26" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_IP_20030409.1600.04-E15" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_IP_20030409.1600.04-E16" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_IP_20030409.1600.04-R26-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="1567" END="1617">a grammar school teacher in Clayton, North Carolina</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E15-33" ROLE="Arg-1">
+      <extent>
+        <charseq START="1567" END="1617">a grammar school teacher in Clayton, North Carolina</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E16-34" ROLE="Arg-2">
+      <extent>
+        <charseq START="1595" END="1617">Clayton, North Carolina</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_IP_20030409.1600.04-R27" TYPE="PER-SOC" SUBTYPE="Lasting-Personal" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_IP_20030409.1600.04-E15" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_IP_20030409.1600.04-E11" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_IP_20030409.1600.04-R27-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="3475" END="3487">your
+students</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E15-87" ROLE="Arg-1">
+      <extent>
+        <charseq START="3475" END="3478">your</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E11-89" ROLE="Arg-2">
+      <extent>
+        <charseq START="3475" END="3487">your
+students</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_IP_20030409.1600.04-R27-2" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="1946" END="1956">my children</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E15-44" ROLE="Arg-1">
+      <extent>
+        <charseq START="1946" END="1947">my</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E11-43" ROLE="Arg-2">
+      <extent>
+        <charseq START="1946" END="1956">my children</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_IP_20030409.1600.04-R27-3" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="1810" END="1827">Her second-graders</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E15-40" ROLE="Arg-1">
+      <extent>
+        <charseq START="1810" END="1812">Her</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_IP_20030409.1600.04-E11-39" ROLE="Arg-2">
+      <extent>
+        <charseq START="1810" END="1827">Her second-graders</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_IP_20030409.1600.04-EV1" TYPE="Contact" SUBTYPE="Phone-Write" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="CNN_IP_20030409.1600.04-E20" ROLE="Entity"/>
+  <event_mention ID="CNN_IP_20030409.1600.04-EV1-1">
+    <extent>
+      <charseq START="2594" END="2604">your letter</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2560" END="2612">You might want to mention that in your letter as well</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2599" END="2604">letter</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_IP_20030409.1600.04-E20-55" ROLE="Entity">
+      <extent>
+        <charseq START="2594" END="2597">your</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_IP_20030409.1600.04-EV2" TYPE="Contact" SUBTYPE="Phone-Write" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Generic" TENSE="Future">
+  <event_mention ID="CNN_IP_20030409.1600.04-EV2-1">
+    <extent>
+      <charseq START="2422" END="2428">letters</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2403" END="2439">There will be more letters on the way</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2422" END="2428">letters</charseq>
+    </anchor>
+  </event_mention>
+</event>
+<event ID="CNN_IP_20030409.1600.04-EV3" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_IP_20030409.1600.04-E53" ROLE="Place"/>
+  <event_mention ID="CNN_IP_20030409.1600.04-EV3-1">
+    <extent>
+      <charseq START="237" END="244">Iraq war</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="133" END="244">The United States Navy and Coast Guard crews are providing port security
+in the Persian Gulf during the Iraq war</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="242" END="244">war</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_IP_20030409.1600.04-E53-158" ROLE="Place">
+      <extent>
+        <charseq START="237" END="240">Iraq</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_IP_20030409.1600.04-EV3-2">
+    <extent>
+      <charseq START="2205" END="2207">war</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2196" END="2247">When the war
+starts, your heart will be in our souls</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2205" END="2207">war</charseq>
+    </anchor>
+  </event_mention>
+</event>
+<event ID="CNN_IP_20030409.1600.04-EV4" TYPE="Contact" SUBTYPE="Phone-Write" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="CNN_IP_20030409.1600.04-E23" ROLE="Entity"/>
+  <event_argument REFID="CNN_IP_20030409.1600.04-E11" ROLE="Entity"/>
+  <event_argument REFID="CNN_IP_20030409.1600.04-E17" ROLE="Entity"/>
+  <event_argument REFID="CNN_IP_20030409.1600.04-E18" ROLE="Entity"/>
+  <event_argument REFID="CNN_IP_20030409.1600.04-T5" ROLE="Time-Within"/>
+  <event_mention ID="CNN_IP_20030409.1600.04-EV4-1">
+    <extent>
+      <charseq START="3721" END="3727">letters</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="3715" END="3750">Those letters important at both ends</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="3721" END="3727">letters</charseq>
+    </anchor>
+  </event_mention>
+  <event_mention ID="CNN_IP_20030409.1600.04-EV4-2">
+    <extent>
+      <charseq START="3179" END="3198">they got the letters</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="3175" END="3224">And they got the letters pretty quickly over
+there</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="3192" END="3198">letters</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_IP_20030409.1600.04-E23-73" ROLE="Entity">
+      <extent>
+        <charseq START="3179" END="3182">they</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_IP_20030409.1600.04-EV4-3">
+    <extent>
+      <charseq START="251" END="339">one group of sailors is
+getting letters from elementary school children in North Carolina</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="247" END="339">And one group of sailors is
+getting letters from elementary school children in North Carolina</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="283" END="289">letters</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_IP_20030409.1600.04-E23-113" ROLE="Entity">
+      <extent>
+        <charseq START="251" END="270">one group of sailors</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_IP_20030409.1600.04-E11-161" ROLE="Entity">
+      <extent>
+        <charseq START="296" END="339">elementary school children in North Carolina</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_IP_20030409.1600.04-EV4-4">
+    <extent>
+      <charseq START="892" END="918">letters from second-graders</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="741" END="918">But among the boats, guns, radar, sonar and communications,
+we found a secret weapon posted on the side of the tent that serves as
+the command center: letters from second-graders</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="892" END="898">letters</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_IP_20030409.1600.04-E11-19" ROLE="Entity">
+      <extent>
+        <charseq START="905" END="918">second-graders</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_IP_20030409.1600.04-EV4-5">
+    <extent>
+      <charseq START="1810" END="1890">Her second-graders were very interested in sending some letters out to
+the troops</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1810" END="1890">Her second-graders were very interested in sending some letters out to
+the troops</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1866" END="1872">letters</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_IP_20030409.1600.04-E11-39" ROLE="Entity">
+      <extent>
+        <charseq START="1810" END="1827">Her second-graders</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_IP_20030409.1600.04-E17-41" ROLE="Entity">
+      <extent>
+        <charseq START="1881" END="1890">the troops</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_IP_20030409.1600.04-EV4-6">
+    <extent>
+      <charseq START="2267" END="2312">these kids to takes time to read letters to us</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2263" END="2370">For these kids to takes time to read letters to us and stuff like that in
+their class, what more can you ask</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2300" END="2306">letters</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_IP_20030409.1600.04-E11-48" ROLE="Entity">
+      <extent>
+        <charseq START="2267" END="2276">these kids</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_IP_20030409.1600.04-E23-116" ROLE="Entity">
+      <extent>
+        <charseq START="2311" END="2312">us</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_IP_20030409.1600.04-EV4-7">
+    <extent>
+      <charseq START="3059" END="3172">our letters the
+last week of February and worked on them the first week of March and sent
+them out a few weeks ago</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="3040" END="3172">We started work on our letters the
+last week of February and worked on them the first week of March and sent
+them out a few weeks ago</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="3063" END="3069">letters</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_IP_20030409.1600.04-E18-145" ROLE="Entity">
+      <extent>
+        <charseq START="3059" END="3061">our</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_IP_20030409.1600.04-T5-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="3158" END="3172">a few weeks ago</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_IP_20030409.1600.04-EV4-8">
+    <extent>
+      <charseq START="3517" END="3548">letters that they sent out to us</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="3448" END="3548">And thank you very much to your
+students for all the support and the letters that they sent out to us</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="3517" END="3523">letters</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_IP_20030409.1600.04-E11-92" ROLE="Entity">
+      <extent>
+        <charseq START="3530" END="3533">they</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_IP_20030409.1600.04-E23-93" ROLE="Entity">
+      <extent>
+        <charseq START="3547" END="3548">us</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_IP_20030409.1600.04-EV5" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="CNN_IP_20030409.1600.04-E7" ROLE="Place"/>
+  <event_argument REFID="CNN_IP_20030409.1600.04-E53" ROLE="Place"/>
+  <event_mention ID="CNN_IP_20030409.1600.04-EV5-1">
+    <extent>
+      <charseq START="633" END="657">attack in Kuwait and Iraq</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="526" END="657">It started as a story on port security, how U.S. Navy and Coast Guard
+reserves are keeping ships safe from attack in Kuwait and Iraq</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="633" END="638">attack</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_IP_20030409.1600.04-E7-13" ROLE="Place">
+      <extent>
+        <charseq START="643" END="648">Kuwait</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_IP_20030409.1600.04-E53-14" ROLE="Place">
+      <extent>
+        <charseq START="654" END="657">Iraq</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_IP_20030409.1600.04-EV6" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_IP_20030409.1600.04-E51" ROLE="Destination"/>
+  <event_argument REFID="CNN_IP_20030409.1600.04-T2" ROLE="Time-At-Beginning"/>
+  <event_argument REFID="CNN_IP_20030409.1600.04-E39" ROLE="Artifact"/>
+  <event_mention ID="CNN_IP_20030409.1600.04-EV6-1">
+    <extent>
+      <charseq START="1631" END="1702">He was sent over right next to the Persian Gulf now since New Year's Eve</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1631" END="1702">He was sent over right next to the Persian Gulf now since New Year's Eve</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1638" END="1641">sent</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_IP_20030409.1600.04-E51-37" ROLE="Destination">
+      <extent>
+        <charseq START="1662" END="1677">the Persian Gulf</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_IP_20030409.1600.04-T2-1" ROLE="Time-At-Beginning">
+      <extent>
+        <charseq START="1689" END="1702">New Year's Eve</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_IP_20030409.1600.04-E39-128" ROLE="Artifact">
+      <extent>
+        <charseq START="1631" END="1632">He</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_IP_20030409.1600.04-EV7" TYPE="Contact" SUBTYPE="Phone-Write" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Future">
+  <event_argument REFID="CNN_IP_20030409.1600.04-E11" ROLE="Entity"/>
+  <event_argument REFID="CNN_IP_20030409.1600.04-E23" ROLE="Entity"/>
+  <event_mention ID="CNN_IP_20030409.1600.04-EV7-1">
+    <extent>
+      <charseq START="2636" END="2667">they hope the sailors will write</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2625" END="2704">This time, they hope the sailors will write back with answers to their
+questions</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2663" END="2667">write</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_IP_20030409.1600.04-E11-56" ROLE="Entity">
+      <extent>
+        <charseq START="2636" END="2639">they</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_IP_20030409.1600.04-E23-114" ROLE="Entity">
+      <extent>
+        <charseq START="2646" END="2656">the sailors</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

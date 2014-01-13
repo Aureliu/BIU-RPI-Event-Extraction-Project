@@ -1,0 +1,935 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNNHL_ENG_20030604_230238.5.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNNHL_ENG_20030604_230238.5">
+<entity ID="CNNHL_ENG_20030604_230238.5-E1" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="CNNHL_ENG_20030604_230238.5-E1-5" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="729" END="735">insider</charseq>
+    </extent>
+    <head>
+      <charseq START="729" END="735">insider</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030604_230238.5-E1-32" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="625" END="631">insider</charseq>
+    </extent>
+    <head>
+      <charseq START="625" END="631">insider</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030604_230238.5-E2" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030604_230238.5-E2-2" TYPE="NOM" LDCTYPE="NOM" ROLE="ORG">
+    <extent>
+      <charseq START="650" END="663">the government</charseq>
+    </extent>
+    <head>
+      <charseq START="654" END="663">government</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030604_230238.5-E4" TYPE="ORG" SUBTYPE="Medical-Science" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030604_230238.5-E4-6" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="766" END="772">biotech</charseq>
+    </extent>
+    <head>
+      <charseq START="766" END="772">biotech</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030604_230238.5-E4-7" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="795" END="797">its</charseq>
+    </extent>
+    <head>
+      <charseq START="795" END="797">its</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030604_230238.5-E6" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030604_230238.5-E6-8" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="845" END="859">her stockbroker</charseq>
+    </extent>
+    <head>
+      <charseq START="849" END="859">stockbroker</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030604_230238.5-E7" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNNHL_ENG_20030604_230238.5-E7-1" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="95" END="102">everyone</charseq>
+    </extent>
+    <head>
+      <charseq START="95" END="102">everyone</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030604_230238.5-E8" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="GEN">
+  <entity_mention ID="CNNHL_ENG_20030604_230238.5-E8-11" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="939" END="944">prison</charseq>
+    </extent>
+    <head>
+      <charseq START="939" END="944">prison</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030604_230238.5-E9" TYPE="ORG" SUBTYPE="Media" CLASS="GEN">
+  <entity_mention ID="CNNHL_ENG_20030604_230238.5-E9-12" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="208" END="212">media</charseq>
+    </extent>
+    <head>
+      <charseq START="208" END="212">media</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030604_230238.5-E10" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030604_230238.5-E10-13" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="105" END="108">mike</charseq>
+    </extent>
+    <head>
+      <charseq START="105" END="108">mike</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="mike">
+      <charseq START="105" END="108">mike</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030604_230238.5-E11" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNNHL_ENG_20030604_230238.5-E11-14" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="129" END="131">our</charseq>
+    </extent>
+    <head>
+      <charseq START="129" END="131">our</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030604_230238.5-E12" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030604_230238.5-E12-3" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="698" END="700">her</charseq>
+    </extent>
+    <head>
+      <charseq START="698" END="700">her</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030604_230238.5-E12-4" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="703" END="705">she</charseq>
+    </extent>
+    <head>
+      <charseq START="703" END="705">she</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030604_230238.5-E12-9" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="845" END="847">her</charseq>
+    </extent>
+    <head>
+      <charseq START="845" END="847">her</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030604_230238.5-E12-10" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="907" END="913">stewart</charseq>
+    </extent>
+    <head>
+      <charseq START="907" END="913">stewart</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030604_230238.5-E12-15" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="161" END="174">martha stewart</charseq>
+    </extent>
+    <head>
+      <charseq START="161" END="174">martha stewart</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030604_230238.5-E12-16" TYPE="NOM" LDCTYPE="BAR" LDCATR="FALSE">
+    <extent>
+      <charseq START="196" END="219">head of her media empire</charseq>
+    </extent>
+    <head>
+      <charseq START="196" END="199">head</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030604_230238.5-E12-18" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="204" END="206">her</charseq>
+    </extent>
+    <head>
+      <charseq START="204" END="206">her</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030604_230238.5-E12-19" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="222" END="224">she</charseq>
+    </extent>
+    <head>
+      <charseq START="222" END="224">she</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030604_230238.5-E12-20" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="236" END="238">her</charseq>
+    </extent>
+    <head>
+      <charseq START="236" END="238">her</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030604_230238.5-E12-21" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="259" END="261">her</charseq>
+    </extent>
+    <head>
+      <charseq START="259" END="261">her</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030604_230238.5-E12-22" TYPE="NOM" LDCTYPE="BAR" LDCATR="FALSE">
+    <extent>
+      <charseq START="271" END="320">chief executive of martha
+stewart living omnimedia</charseq>
+    </extent>
+    <head>
+      <charseq START="277" END="285">executive</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030604_230238.5-E12-23" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="271" END="275">chief</charseq>
+    </extent>
+    <head>
+      <charseq START="271" END="275">chief</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030604_230238.5-E12-25" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="379" END="381">she</charseq>
+    </extent>
+    <head>
+      <charseq START="379" END="381">she</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030604_230238.5-E12-26" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="388" END="390">she</charseq>
+    </extent>
+    <head>
+      <charseq START="388" END="390">she</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030604_230238.5-E12-28" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="450" END="452">she</charseq>
+    </extent>
+    <head>
+      <charseq START="450" END="452">she</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030604_230238.5-E12-31" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="491" END="497">stewart</charseq>
+    </extent>
+    <head>
+      <charseq START="491" END="497">stewart</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="stewart">
+      <charseq START="907" END="913">stewart</charseq>
+    </name>
+    <name NAME="martha stewart">
+      <charseq START="161" END="174">martha stewart</charseq>
+    </name>
+    <name NAME="stewart">
+      <charseq START="491" END="497">stewart</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030604_230238.5-E14" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030604_230238.5-E14-17" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="204" END="219">her media empire</charseq>
+    </extent>
+    <head>
+      <charseq START="214" END="219">empire</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030604_230238.5-E14-24" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="290" END="320">martha
+stewart living omnimedia</charseq>
+    </extent>
+    <head>
+      <charseq START="290" END="320">martha
+stewart living omnimedia</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030604_230238.5-E14-27" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="433" END="443">the company</charseq>
+    </extent>
+    <head>
+      <charseq START="437" END="443">company</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="martha stewart living omnimedia">
+      <charseq START="290" END="320">martha
+stewart living omnimedia</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030604_230238.5-E17" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030604_230238.5-E17-29" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="467" END="488">the board of directors</charseq>
+    </extent>
+    <head>
+      <charseq START="471" END="475">board</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030604_230238.5-E17-30" TYPE="NOM" LDCTYPE="BAR" LDCATR="TRUE">
+    <extent>
+      <charseq START="480" END="488">directors</charseq>
+    </extent>
+    <head>
+      <charseq START="480" END="488">directors</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<value ID="CNNHL_ENG_20030604_230238.5-V1" TYPE="Crime">
+  <value_mention ID="CNNHL_ENG_20030604_230238.5-V1-1">
+    <extent>
+      <charseq START="523" END="532">nine-count</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNNHL_ENG_20030604_230238.5-V2" TYPE="Crime">
+  <value_mention ID="CNNHL_ENG_20030604_230238.5-V2-1">
+    <extent>
+      <charseq START="566" END="595">conspiracy to
+obstruct justice</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNNHL_ENG_20030604_230238.5-V3" TYPE="Crime">
+  <value_mention ID="CNNHL_ENG_20030604_230238.5-V3-1">
+    <extent>
+      <charseq START="601" END="607">perjury</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNNHL_ENG_20030604_230238.5-V4" TYPE="Crime">
+  <value_mention ID="CNNHL_ENG_20030604_230238.5-V4-1">
+    <extent>
+      <charseq START="676" END="680">civil</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNNHL_ENG_20030604_230238.5-V5" TYPE="Crime">
+  <value_mention ID="CNNHL_ENG_20030604_230238.5-V5-1">
+    <extent>
+      <charseq START="895" END="904">all counts</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNNHL_ENG_20030604_230238.5-V6" TYPE="Sentence">
+  <value_mention ID="CNNHL_ENG_20030604_230238.5-V6-1">
+    <extent>
+      <charseq START="921" END="944">up
+to 30 years in prison</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNNHL_ENG_20030604_230238.5-V7" TYPE="Sentence">
+  <value_mention ID="CNNHL_ENG_20030604_230238.5-V7-1">
+    <extent>
+      <charseq START="950" END="968">$2 million in fines</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNNHL_ENG_20030604_230238.5-V8" TYPE="Numeric" SUBTYPE="Money">
+  <value_mention ID="CNNHL_ENG_20030604_230238.5-V8-1">
+    <extent>
+      <charseq START="950" END="959">$2 million</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNNHL_ENG_20030604_230238.5-V9" TYPE="Job-Title">
+  <value_mention ID="CNNHL_ENG_20030604_230238.5-V9-1">
+    <extent>
+      <charseq START="196" END="219">head of her media empire</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNNHL_ENG_20030604_230238.5-V10" TYPE="Job-Title">
+  <value_mention ID="CNNHL_ENG_20030604_230238.5-V10-1">
+    <extent>
+      <charseq START="271" END="320">chief executive of martha
+stewart living omnimedia</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNNHL_ENG_20030604_230238.5-V11" TYPE="Crime">
+  <value_mention ID="CNNHL_ENG_20030604_230238.5-V11-1">
+    <extent>
+      <charseq START="723" END="842">using insider information
+to bail out of a biotech stock the day before its price
+tanked, and then trying to cover it up</charseq>
+    </extent>
+  </value_mention>
+</value>
+<timex2 ID="CNNHL_ENG_20030604_230238.5-T1" VAL="2003-06-04T23:08:32">
+  <timex2_mention ID="CNNHL_ENG_20030604_230238.5-T1-1">
+    <extent>
+      <charseq START="45" END="63">2003-06-04 23:08:32</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNNHL_ENG_20030604_230238.5-T2" VAL="2003-06-04TEV">
+  <timex2_mention ID="CNNHL_ENG_20030604_230238.5-T2-1">
+    <extent>
+      <charseq START="86" END="92">evening</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNNHL_ENG_20030604_230238.5-T3" VAL="2003-06-04">
+  <timex2_mention ID="CNNHL_ENG_20030604_230238.5-T3-1">
+    <extent>
+      <charseq START="117" END="123">tonight</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNNHL_ENG_20030604_230238.5-T4" VAL="2003-06-04TEV">
+  <timex2_mention ID="CNNHL_ENG_20030604_230238.5-T4-1">
+    <extent>
+      <charseq START="146" END="156">the evening</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNNHL_ENG_20030604_230238.5-T5" VAL="PAST_REF" ANCHOR_VAL="2003-06-04" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="CNNHL_ENG_20030604_230238.5-T5-1">
+    <extent>
+      <charseq START="780" END="810">the day before its price
+tanked</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNNHL_ENG_20030604_230238.5-T6" VAL="P30Y" ANCHOR_VAL="2003-06-04" ANCHOR_DIR="AFTER">
+  <timex2_mention ID="CNNHL_ENG_20030604_230238.5-T6-1">
+    <extent>
+      <charseq START="921" END="934">up
+to 30 years</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNNHL_ENG_20030604_230238.5-R1" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030604_230238.5-E12" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030604_230238.5-E14" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030604_230238.5-R1-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="196" END="219">head of her media empire</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030604_230238.5-E12-16" ROLE="Arg-1">
+      <extent>
+        <charseq START="196" END="219">head of her media empire</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030604_230238.5-E14-17" ROLE="Arg-2">
+      <extent>
+        <charseq START="204" END="219">her media empire</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNNHL_ENG_20030604_230238.5-R1-2" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="271" END="320">chief executive of martha
+stewart living omnimedia</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030604_230238.5-E12-22" ROLE="Arg-1">
+      <extent>
+        <charseq START="271" END="320">chief executive of martha
+stewart living omnimedia</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030604_230238.5-E14-24" ROLE="Arg-2">
+      <extent>
+        <charseq START="290" END="320">martha
+stewart living omnimedia</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030604_230238.5-R2" TYPE="ORG-AFF" SUBTYPE="Ownership" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030604_230238.5-E12" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030604_230238.5-E14" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030604_230238.5-R2-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="204" END="219">her media empire</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030604_230238.5-E12-18" ROLE="Arg-1">
+      <extent>
+        <charseq START="204" END="206">her</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030604_230238.5-E14-17" ROLE="Arg-2">
+      <extent>
+        <charseq START="204" END="219">her media empire</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030604_230238.5-R3" TYPE="PER-SOC" SUBTYPE="Business" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030604_230238.5-E12" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030604_230238.5-E17" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030604_230238.5-R3-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="363" END="488">in a statement, she says she's stepping aside
+in the best interest of the company, but she will stay on
+the board of directors</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030604_230238.5-E12-28" ROLE="Arg-1">
+      <extent>
+        <charseq START="450" END="452">she</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030604_230238.5-E17-29" ROLE="Arg-2">
+      <extent>
+        <charseq START="467" END="488">the board of directors</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030604_230238.5-R4" TYPE="ORG-AFF" SUBTYPE="Investor-Shareholder" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030604_230238.5-E12" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030604_230238.5-E4" ROLE="Arg-2"/>
+  <relation_argument REFID="CNNHL_ENG_20030604_230238.5-T5" ROLE="Time-Ending"/>
+  <relation_mention ID="CNNHL_ENG_20030604_230238.5-R4-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="703" END="842">she is charged with using insider information
+to bail out of a biotech stock the day before its price
+tanked, and then trying to cover it up</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030604_230238.5-E12-4" ROLE="Arg-1">
+      <extent>
+        <charseq START="703" END="705">she</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030604_230238.5-E4-6" ROLE="Arg-2">
+      <extent>
+        <charseq START="766" END="772">biotech</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030604_230238.5-T5-1" ROLE="Time-Ending">
+      <extent>
+        <charseq START="780" END="810">the day before its price
+tanked</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030604_230238.5-R5" TYPE="PER-SOC" SUBTYPE="Business" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030604_230238.5-E12" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030604_230238.5-E6" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030604_230238.5-R5-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="845" END="859">her stockbroker</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030604_230238.5-E12-9" ROLE="Arg-1">
+      <extent>
+        <charseq START="845" END="847">her</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030604_230238.5-E6-8" ROLE="Arg-2">
+      <extent>
+        <charseq START="845" END="859">her stockbroker</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030604_230238.5-R7" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="CNNHL_ENG_20030604_230238.5-E12" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030604_230238.5-E8" ROLE="Arg-2"/>
+  <relation_argument REFID="CNNHL_ENG_20030604_230238.5-T6" ROLE="Time-Holds"/>
+  <relation_mention ID="CNNHL_ENG_20030604_230238.5-R7-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="879" END="968">if convicted on all counts, stewart faces up
+to 30 years in prison and $2 million in fines</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030604_230238.5-E12-10" ROLE="Arg-1">
+      <extent>
+        <charseq START="907" END="913">stewart</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030604_230238.5-E8-11" ROLE="Arg-2">
+      <extent>
+        <charseq START="939" END="944">prison</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030604_230238.5-T6-1" ROLE="Time-Holds">
+      <extent>
+        <charseq START="921" END="934">up
+to 30 years</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNNHL_ENG_20030604_230238.5-EV1" TYPE="Personnel" SUBTYPE="End-Position" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNNHL_ENG_20030604_230238.5-E12" ROLE="Person"/>
+  <event_argument REFID="CNNHL_ENG_20030604_230238.5-E14" ROLE="Entity"/>
+  <event_argument REFID="CNNHL_ENG_20030604_230238.5-V9" ROLE="Position"/>
+  <event_argument REFID="CNNHL_ENG_20030604_230238.5-V10" ROLE="Position"/>
+  <event_mention ID="CNNHL_ENG_20030604_230238.5-EV1-1">
+    <extent>
+      <charseq START="161" END="219">martha stewart is stepping
+down as head of her media empire</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="126" END="219">to
+our top story of the evening -- martha stewart is stepping
+down as head of her media empire</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="179" END="191">stepping
+down</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030604_230238.5-E12-15" ROLE="Person">
+      <extent>
+        <charseq START="161" END="174">martha stewart</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030604_230238.5-E14-17" ROLE="Entity">
+      <extent>
+        <charseq START="204" END="219">her media empire</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030604_230238.5-V9-1" ROLE="Position">
+      <extent>
+        <charseq START="196" END="219">head of her media empire</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNNHL_ENG_20030604_230238.5-EV1-2">
+    <extent>
+      <charseq START="236" END="320">her
+decision to vacate her post as chief executive of martha
+stewart living omnimedia</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="222" END="360">she announced her
+decision to vacate her post as chief executive of martha
+stewart living omnimedia, following word of a federal
+indictment</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="252" END="257">vacate</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030604_230238.5-E12-20" ROLE="Person">
+      <extent>
+        <charseq START="236" END="238">her</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030604_230238.5-E14-24" ROLE="Entity">
+      <extent>
+        <charseq START="290" END="320">martha
+stewart living omnimedia</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030604_230238.5-V10-1" ROLE="Position">
+      <extent>
+        <charseq START="271" END="320">chief executive of martha
+stewart living omnimedia</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNNHL_ENG_20030604_230238.5-EV1-3">
+    <extent>
+      <charseq START="388" END="443">she's stepping aside
+in the best interest of the company</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="363" END="488">in a statement, she says she's stepping aside
+in the best interest of the company, but she will stay on
+the board of directors</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="394" END="407">stepping aside</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030604_230238.5-E12-26" ROLE="Person">
+      <extent>
+        <charseq START="388" END="390">she</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030604_230238.5-E14-27" ROLE="Entity">
+      <extent>
+        <charseq START="433" END="443">the company</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNNHL_ENG_20030604_230238.5-EV2" TYPE="Justice" SUBTYPE="Charge-Indict" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNNHL_ENG_20030604_230238.5-V2" ROLE="Crime"/>
+  <event_argument REFID="CNNHL_ENG_20030604_230238.5-V3" ROLE="Crime"/>
+  <event_argument REFID="CNNHL_ENG_20030604_230238.5-E12" ROLE="Defendant"/>
+  <event_argument REFID="CNNHL_ENG_20030604_230238.5-E2" ROLE="Prosecutor"/>
+  <event_argument REFID="CNNHL_ENG_20030604_230238.5-V4" ROLE="Crime"/>
+  <event_argument REFID="CNNHL_ENG_20030604_230238.5-V11" ROLE="Crime"/>
+  <event_argument REFID="CNNHL_ENG_20030604_230238.5-V1" ROLE="Crime"/>
+  <event_mention ID="CNNHL_ENG_20030604_230238.5-EV2-1">
+    <extent>
+      <charseq START="222" END="360">she announced her
+decision to vacate her post as chief executive of martha
+stewart living omnimedia, following word of a federal
+indictment</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="222" END="360">she announced her
+decision to vacate her post as chief executive of martha
+stewart living omnimedia, following word of a federal
+indictment</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="351" END="360">indictment</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030604_230238.5-E12-19" ROLE="Defendant">
+      <extent>
+        <charseq START="222" END="224">she</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNNHL_ENG_20030604_230238.5-EV2-2">
+    <extent>
+      <charseq START="491" END="543">stewart pleaded not guilty to a
+nine-count indictment</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="491" END="543">stewart pleaded not guilty to a
+nine-count indictment</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="534" END="543">indictment</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030604_230238.5-E12-31" ROLE="Defendant">
+      <extent>
+        <charseq START="491" END="497">stewart</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030604_230238.5-V1-1" ROLE="Crime">
+      <extent>
+        <charseq START="523" END="532">nine-count</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNNHL_ENG_20030604_230238.5-EV2-3">
+    <extent>
+      <charseq START="550" END="607">charges include conspiracy to
+obstruct justice and perjury</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="546" END="647">the charges include conspiracy to
+obstruct justice and perjury connected to an insider
+trading scandal</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="550" END="556">charges</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030604_230238.5-V2-1" ROLE="Crime">
+      <extent>
+        <charseq START="566" END="595">conspiracy to
+obstruct justice</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030604_230238.5-V3-1" ROLE="Crime">
+      <extent>
+        <charseq START="601" END="607">perjury</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNNHL_ENG_20030604_230238.5-EV2-4">
+    <extent>
+      <charseq START="650" END="700">the government also filed civil charges
+against her</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="650" END="700">the government also filed civil charges
+against her</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="682" END="688">charges</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030604_230238.5-E12-3" ROLE="Defendant">
+      <extent>
+        <charseq START="698" END="700">her</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030604_230238.5-E2-2" ROLE="Prosecutor">
+      <extent>
+        <charseq START="650" END="663">the government</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030604_230238.5-V4-1" ROLE="Crime">
+      <extent>
+        <charseq START="676" END="680">civil</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNNHL_ENG_20030604_230238.5-EV2-5">
+    <extent>
+      <charseq START="703" END="842">she is charged with using insider information
+to bail out of a biotech stock the day before its price
+tanked, and then trying to cover it up</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="703" END="842">she is charged with using insider information
+to bail out of a biotech stock the day before its price
+tanked, and then trying to cover it up</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="710" END="716">charged</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030604_230238.5-E12-4" ROLE="Defendant">
+      <extent>
+        <charseq START="703" END="705">she</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030604_230238.5-V11-1" ROLE="Crime">
+      <extent>
+        <charseq START="723" END="842">using insider information
+to bail out of a biotech stock the day before its price
+tanked, and then trying to cover it up</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNNHL_ENG_20030604_230238.5-EV3" TYPE="Justice" SUBTYPE="Charge-Indict" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNNHL_ENG_20030604_230238.5-E6" ROLE="Defendant"/>
+  <event_mention ID="CNNHL_ENG_20030604_230238.5-EV3-1">
+    <extent>
+      <charseq START="845" END="876">her stockbroker was
+also charged</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="845" END="876">her stockbroker was
+also charged</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="870" END="876">charged</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030604_230238.5-E6-8" ROLE="Defendant">
+      <extent>
+        <charseq START="845" END="859">her stockbroker</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNNHL_ENG_20030604_230238.5-EV4" TYPE="Justice" SUBTYPE="Convict" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Future">
+  <event_argument REFID="CNNHL_ENG_20030604_230238.5-E12" ROLE="Defendant"/>
+  <event_argument REFID="CNNHL_ENG_20030604_230238.5-V5" ROLE="Crime"/>
+  <event_mention ID="CNNHL_ENG_20030604_230238.5-EV4-1">
+    <extent>
+      <charseq START="882" END="913">convicted on all counts, stewart</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="879" END="968">if convicted on all counts, stewart faces up
+to 30 years in prison and $2 million in fines</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="882" END="890">convicted</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030604_230238.5-E12-10" ROLE="Defendant">
+      <extent>
+        <charseq START="907" END="913">stewart</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030604_230238.5-V5-1" ROLE="Crime">
+      <extent>
+        <charseq START="895" END="904">all counts</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNNHL_ENG_20030604_230238.5-EV5" TYPE="Justice" SUBTYPE="Sentence" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Future">
+  <event_argument REFID="CNNHL_ENG_20030604_230238.5-E12" ROLE="Defendant"/>
+  <event_argument REFID="CNNHL_ENG_20030604_230238.5-V6" ROLE="Sentence"/>
+  <event_argument REFID="CNNHL_ENG_20030604_230238.5-V7" ROLE="Sentence"/>
+  <event_argument REFID="CNNHL_ENG_20030604_230238.5-V5" ROLE="Crime"/>
+  <event_mention ID="CNNHL_ENG_20030604_230238.5-EV5-1">
+    <extent>
+      <charseq START="895" END="968">all counts, stewart faces up
+to 30 years in prison and $2 million in fines</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="879" END="968">if convicted on all counts, stewart faces up
+to 30 years in prison and $2 million in fines</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="915" END="919">faces</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030604_230238.5-E12-10" ROLE="Defendant">
+      <extent>
+        <charseq START="907" END="913">stewart</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030604_230238.5-V6-1" ROLE="Sentence">
+      <extent>
+        <charseq START="921" END="944">up
+to 30 years in prison</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030604_230238.5-V7-1" ROLE="Sentence">
+      <extent>
+        <charseq START="950" END="968">$2 million in fines</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030604_230238.5-V5-1" ROLE="Crime">
+      <extent>
+        <charseq START="895" END="904">all counts</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNNHL_ENG_20030604_230238.5-EV6" TYPE="Justice" SUBTYPE="Fine" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Future">
+  <event_argument REFID="CNNHL_ENG_20030604_230238.5-E12" ROLE="Entity"/>
+  <event_argument REFID="CNNHL_ENG_20030604_230238.5-V8" ROLE="Money"/>
+  <event_argument REFID="CNNHL_ENG_20030604_230238.5-V5" ROLE="Crime"/>
+  <event_mention ID="CNNHL_ENG_20030604_230238.5-EV6-1">
+    <extent>
+      <charseq START="895" END="968">all counts, stewart faces up
+to 30 years in prison and $2 million in fines</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="879" END="968">if convicted on all counts, stewart faces up
+to 30 years in prison and $2 million in fines</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="964" END="968">fines</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030604_230238.5-E12-10" ROLE="Entity">
+      <extent>
+        <charseq START="907" END="913">stewart</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030604_230238.5-V8-1" ROLE="Money">
+      <extent>
+        <charseq START="950" END="959">$2 million</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030604_230238.5-V5-1" ROLE="Crime">
+      <extent>
+        <charseq START="895" END="904">all counts</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

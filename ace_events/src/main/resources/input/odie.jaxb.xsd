@@ -1,0 +1,53 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="odie_input">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="corpus">
+          <xs:annotation>
+            <xs:documentation>Generate XSD online: http://www.freeformatter.com/xsd-generator.html</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="xmi_folder_path"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="predicate">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="name"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="arguments">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="argument" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="role"/>
+                    <xs:element type="xs:string" name="types"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="usage_samples">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="sample" maxOccurs="unbounded" minOccurs="0"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="global_context">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="phrases"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

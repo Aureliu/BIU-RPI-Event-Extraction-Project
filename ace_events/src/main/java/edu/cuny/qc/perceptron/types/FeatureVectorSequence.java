@@ -90,7 +90,7 @@ public class FeatureVectorSequence implements Serializable
 		sb.append ('\n');
 		for (int i = 0; i < sequence.size(); i++) {
 			sb.append (Integer.toString(i)+": ");
-			sb.append (sequence.get(i).toString(true));
+			sb.append (sequence.get(i).toStringFull(true));
 			sb.append ('\n');
 		}
 		return sb.toString();

@@ -426,10 +426,10 @@ public class Perceptron implements java.io.Serializable
 		return weights;
 	}
 
-	protected void setLabelBigram(Map<String, List<String>> labelBigram)
-	{
-		this.labelBigram = labelBigram;
-	}
+//	protected void setLabelBigram(Map<String, List<String>> labelBigram)
+//	{
+//		this.labelBigram = labelBigram;
+//	}
 
 	protected Map<String, List<String>> getLabelBigram()
 	{

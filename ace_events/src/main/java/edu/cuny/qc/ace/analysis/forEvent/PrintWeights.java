@@ -25,7 +25,7 @@ public class PrintWeights
 		if(model.controller.avgArguments)
 		{
 			out.println("Averaged Feature Weights");
-			out.println(model.getAvg_weights());
+			out.println(model.getAvg_weights().toStringFull());
 		}
 		else
 		{

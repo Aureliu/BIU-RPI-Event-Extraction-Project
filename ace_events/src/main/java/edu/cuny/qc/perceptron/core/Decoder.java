@@ -65,20 +65,7 @@ public class Decoder
 	}
 	
 	public static void mainNoScoring(String[] args, String filenameSuffix, String folderNamePrefix, String singleEventType) throws IOException, DocumentException
-	{
-		System.out.printf("Args:\n%s\n\n", new ArrayList<String>(Arrays.asList(args)));
-		//if((args.length < 4) || (args.length>=5 && !args[4].equals(OPTION_NO_SCORING)))
-		if((args.length < 4) || (args.length>5))
-		{
-			System.out.println("Usage:");
-			System.out.println("args[0]: model");
-			System.out.println("args[1]: src dir");
-			System.out.println("args[2]: file list");
-			System.out.println("args[3]: output dir");
-			System.out.printf("optional args[4]: '%s' to not perform scoring, or anything else as a suffix for file names of intermediate output files\n", OPTION_NO_SCORING);
-			System.exit(-1);
-		}
-		
+	{		
 		System.err.println("(Decoding err stream)");
 		
 		File srcDir = new File(args[1]);
@@ -186,7 +173,19 @@ public class Decoder
 	public static void main(String[] args) throws IOException, DocumentException {
 		//TODO the organization here is bad, should be improved:
 		// 1. there's no way to specify both a filenameSufix and NO_SCORING
-		// 2. The check for enough args is only done later, so we'll get an exception
+
+		System.out.printf("Args:\n%s\n\n", new ArrayList<String>(Arrays.asList(args)));
+		if((args.length < 4) || (args.length>5))
+		{
+			System.out.println("Usage:");
+			System.out.println("args[0]: model");
+			System.out.println("args[1]: src dir");
+			System.out.println("args[2]: file list");
+			System.out.println("args[3]: output dir");
+			System.out.printf("optional args[4]: '%s' to not perform scoring, or anything else as a suffix for file names of intermediate output files\n", OPTION_NO_SCORING);
+			System.exit(-1);
+		}
+
 		String filenameSuffix = ".txt";
 		String folderNamePrefix = "";
 		if (args.length>=5) {
@@ -198,6 +197,9 @@ public class Decoder
 				folderNamePrefix = "DIR" + args[4] + "."; //yes, I know it's silly it has ".txt" in it, maybe should fix later
 				mainWithScoring(args, filenameSuffix, folderNamePrefix, null); //no singleEventType
 			}
+		}
+		else {
+			mainWithScoring(args, filenameSuffix, folderNamePrefix, null);
 		}
 	}
 }

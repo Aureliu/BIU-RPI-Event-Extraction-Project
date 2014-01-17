@@ -59,5 +59,5 @@ public class OdieInputXmiBuilder {
 
 		OdieInputXmiBuilder.build(args[0], args[1]);
 	}
-	private static final String USAGE = "USAGE: OdieInputXmiBuilder <input file path> <xmi file path>";
+	private static final String USAGE = "USAGE: OdieInputXmiBuilder <spec file path> <xmi file path>";
 }

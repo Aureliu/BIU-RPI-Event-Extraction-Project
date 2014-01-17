@@ -93,7 +93,7 @@ public class Decoder
 		featuresOut.close();
 		
 		PrintStream weightsOut = new PrintStream(new File(outDir + File.separator + "Weights" + filenameSuffix));
-		weightsOut.printf("%s", perceptron.getWeights().toString());
+		weightsOut.printf("%s", perceptron.getWeights().toStringFull());
 		weightsOut.close();
 		
 		// no need in printing that - we have the model.weights file! With exact same data!!! :)

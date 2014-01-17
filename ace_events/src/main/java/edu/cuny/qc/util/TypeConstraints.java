@@ -123,8 +123,8 @@ public class TypeConstraints
 			
 			// read argument role mapping
 			// TODO ofer1
-			BufferedReader reader = new BufferedReader(new FileReader("data/ace/argumentRoles-Ofer"));
-			//BufferedReader reader = new BufferedReader(new FileReader("data/ace/argumentRoles"));
+			BufferedReader reader = new BufferedReader(new FileReader("src/main/resources/data/ace/argumentRoles-Ofer"));
+			//BufferedReader reader = new BufferedReader(new FileReader("src/main/resources/data/ace/argumentRoles"));
 			String line = "";
 			while((line = reader.readLine()) != null)
 			{

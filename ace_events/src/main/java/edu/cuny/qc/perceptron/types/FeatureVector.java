@@ -231,9 +231,13 @@ public class FeatureVector implements Serializable
 		}
 	}
 	
-	public String toString()
+	public String toString() {
+		return String.format("%s(%s items)", FeatureVector.class.getSimpleName(), map.size());
+	}
+	
+	public String toStringFull()
 	{
-		return toString(false);
+		return toStringFull(false);
 	}
 	
 	public String toString (FeatureVector weights)
@@ -254,7 +258,7 @@ public class FeatureVector implements Serializable
 		return sb.toString();
 	}
 	
-	public String toString (boolean onOneLine)
+	public String toStringFull (boolean onOneLine)
 	{
 		//Thread.currentThread().dumpStack();
 		StringBuffer sb = new StringBuffer ();

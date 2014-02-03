@@ -170,6 +170,7 @@ public class Perceptron implements java.io.Serializable
 			long startTime = System.currentTimeMillis();	
 			int error_num = 0;	
 			int i=0;
+			int countNoViolation = 0;
 			for(SentenceInstance instance : trainingList)
 			{
 				SentenceAssignment assn = beamSearcher.beamSearch(instance, controller.beamSize, true);
@@ -182,6 +183,10 @@ public class Perceptron implements java.io.Serializable
 				{
 					earlyUpdate(assn, instance.target, c);
 					error_num ++;
+				}
+				else {
+					System.out.printf("  %d. No violation! (iter=%d) assn: %s\n", countNoViolation+1, iter, assn.toString());
+					countNoViolation += 1;
 				}
 				i++;
 			}

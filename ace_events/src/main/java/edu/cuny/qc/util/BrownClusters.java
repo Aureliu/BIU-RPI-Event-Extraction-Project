@@ -53,7 +53,7 @@ public class BrownClusters
 	 */
 	protected void initializeDict(File dictFile) 
 	{
-		System.out.print("loading brown cluster...");
+		//System.out.print("loading brown cluster...");
 		
 		BufferedReader reader;
 		try {
@@ -100,7 +100,7 @@ public class BrownClusters
 			e.printStackTrace();
 		}
 		
-		System.out.println("done");
+		//System.out.println("done");
 	}
 	
 	public List<String> getBrownCluster(String token)

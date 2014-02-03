@@ -294,6 +294,13 @@ public class TextFeatureGenerator
 	{
 		List<Map<Class<?>, Object>> tokens = (List<Map<Class<?>, Object>>) sent.get(Sent_Attribute.Token_FEATURE_MAPs);
 		
+		//TODO DEBUG - and everything having to do with this var is debug as well
+		List<List<String>> entities = new ArrayList<List<String>>(tokens.size());
+		for (int i=0; i<tokens.size(); i++) {
+			entities.add(null);
+		}
+		//////
+		
 		for(AceEntityMention entity : sent.entityMentions)
 		{
 			List<Integer> heads = entity.getHeadIndices();
@@ -309,6 +316,10 @@ public class TextFeatureGenerator
 				{
 					entityInfo.add(entity.getType());
 				}
+				
+				//TODO DEBUG
+				entities.set(index, entityInfo);
+				///////
 			}
 		}
 		
@@ -330,6 +341,10 @@ public class TextFeatureGenerator
 					{
 						entityInfo.add(value.getType());
 					}
+					
+					//TODO DEBUG
+					entities.set(index, entityInfo);
+					///////
 				}
 			}
 			if(value.getType().equals("Job-Title"))
@@ -351,6 +366,10 @@ public class TextFeatureGenerator
 						{
 							entityInfo.add(value.getType());
 						}
+						
+						//TODO DEBUG
+						entities.set(index, entityInfo);
+						///////
 					}
 				}
 			}
@@ -376,6 +395,10 @@ public class TextFeatureGenerator
 					{
 						entityInfo.add(timex.getType());
 					}
+					
+					//TODO DEBUG
+					entities.set(index, entityInfo);
+					///////
 				}
 			}
 		}
@@ -401,9 +424,15 @@ public class TextFeatureGenerator
 					{
 						entityInfo.add("Title");
 					}
+					
+					//TODO DEBUG
+					entities.set(index, entityInfo);
+					///////
 				}
 			}
 		}	
+		
+		System.out.printf("");
 	}
 	
 	/**

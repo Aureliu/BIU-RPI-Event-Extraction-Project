@@ -65,19 +65,19 @@ public class Perceptron implements java.io.Serializable
 	}
 	
 	// default constructor 
-	public Perceptron(Controller controller)
-	{
-		this.nodeTargetAlphabet = new Alphabet();
-		this.edgeTargetAlphabet = new Alphabet();
-		this.featureAlphabet = new Alphabet();
-		this.controller = controller;
-		
-		// create weights vector
-		this.setWeights(new FeatureVector());
-		this.avg_weights_base = new FeatureVector();
-		labelBigram = new HashMap<String, List<String>>();
-	}
-	
+//	public Perceptron(Controller controller)
+//	{
+//		this.nodeTargetAlphabet = new Alphabet();
+//		this.edgeTargetAlphabet = new Alphabet();
+//		this.featureAlphabet = new Alphabet();
+//		this.controller = controller;
+//		
+//		// create weights vector
+//		this.setWeights(new FeatureVector());
+//		this.avg_weights_base = new FeatureVector();
+//		labelBigram = new HashMap<String, List<String>>();
+//	}
+//	
 	/**
 	 *  given an instanceList, decode, and give the best assignmentList
 	 * @param instance

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><xmi:XMI xmlns:cas="http:///uima/cas.ecore" xmlns:xmi="http://www.omg.org/XMI" xmlns:roles="http:///ac/biu/nlp/nlp/ace_uima/odie/uima/roles.ecore" xmlns:uima="http:///ac/biu/nlp/nlp/ace_uima/odie/uima.ecore" xmlns:tcas="http:///uima/tcas.ecore" xmi:version="2.0">
+    <cas:NULL xmi:id="0"/>
+    <cas:Sofa xmi:id="1" sofaNum="1" sofaID="_InitialView" mimeType="text" sofaString="&lt;odie_input&gt;&#13;&#10;  &lt;!-- Generate XSD online: http://www.freeformatter.com/xsd-generator.html --&gt;&#13;&#10;  &lt;corpus&gt;&#13;&#10;    &lt;xmi_folder_path&gt;C:\Java\Git\lab\nlp-lab\Trunk\Common\Projects\ace_uima\target\main\resources\xmi\medium&lt;/xmi_folder_path&gt;&#13;&#10;  &lt;/corpus&gt;&#13;&#10;  &lt;predicate&gt;&#13;&#10;    &lt;name&gt;Attack&lt;/name&gt;&#13;&#10;  &lt;/predicate&gt;&#13;&#10;  &lt;arguments&gt;&#13;&#10;    &lt;argument&gt;&#13;&#10;      &lt;role&gt;Attacker&lt;/role&gt;&#13;&#10;      &lt;types&gt;person,organization,geopolitical entity&lt;/types&gt;&#13;&#10;    &lt;/argument&gt;&#13;&#10;    &lt;argument&gt;&#13;&#10;      &lt;role&gt;Target&lt;/role&gt;&#13;&#10;      &lt;types&gt;person,organization,vehicle,facility,weapon&lt;/types&gt;&#13;&#10;    &lt;/argument&gt;&#13;&#10;    &lt;argument&gt;&#13;&#10;      &lt;role&gt;Instrument&lt;/role&gt;&#13;&#10;      &lt;types&gt;weapon,vehicle&lt;/types&gt;&#13;&#10;    &lt;/argument&gt;&#13;&#10;    &lt;argument&gt;&#13;&#10;      &lt;role&gt;Time&lt;/role&gt;&#13;&#10;      &lt;types&gt;time&lt;/types&gt;&#13;&#10;    &lt;/argument&gt;&#13;&#10;    &lt;argument&gt;&#13;&#10;      &lt;role&gt;Place&lt;/role&gt;&#13;&#10;      &lt;types&gt;geopolitical entity,location,facility&lt;/types&gt;&#13;&#10;    &lt;/argument&gt;&#13;&#10;  &lt;/arguments&gt;&#13;&#10;  &lt;usage_samples&gt;&#13;&#10;    &lt;sample&gt;A number of demonstrators threw stones and empty bottles at Israeli soldiers positioned near a Jewish holy site at the town's entrance.&lt;/sample&gt;&#13;&#10;    &lt;sample&gt;Contrast GWB's Vision, Leadership, Excellent Management Talents, Endurance, Faith And Intelligence With LBJ's Lack Of Same In The Vietnam War.&lt;/sample&gt;&#13;&#10;    &lt;sample&gt;In theory, motivation is best carried out by a commander fighting alongside his men.&lt;/sample&gt;&#13;&#10;    &lt;sample&gt;Two 13-year-old children were among those killed in the Haifa bus bombing, Israeli public radio said, adding that most of the victims were youngsters.&lt;/sample&gt;&#13;&#10;    &lt;sample&gt;Israel's night-time raid in Gaza involving around 40 tanks and armoured vehicles came after Prime Minister Ariel Sharon convened his security cabinet to  discuss a response to the bomb attack.&lt;/sample&gt;&#13;&#10;    &lt;sample&gt;Earlier Monday, a 19-year-old Palestinian riding a bicycle detonated a 30-kilo (66-pound) bomb near a military jeep in the Gaza Strip, injuring three soldiers.&lt;/sample&gt;&#13;&#10;    &lt;sample&gt;&quot;The mob dragged out three members of a family and (killed) them with machetes and spears before fleeing the area&quot;, the spokesman said by telephone from Agartala. &quot;&lt;/sample&gt;&#13;&#10;    &lt;sample&gt;Americans sought to bring calm to Mosul, where U.S. troops killed 17 people in clashes earlier in the week.&lt;/sample&gt;&#13;&#10;    &lt;sample&gt;Israeli soldiers shot and killed a 16-year-old Palestinian boy and wounded a 7-year-old boy after opening fire at stone throwers in the Tulkarem refugee camp in the West Bank on Tuesday, Palestinian hospital officials said.&lt;/sample&gt;&#13;&#10;  &lt;/usage_samples&gt;&#13;&#10;  &lt;global_context&gt;&#13;&#10;    &lt;phrases&gt;war,killing&lt;/phrases&gt;&#13;&#10;  &lt;/global_context&gt;&#13;&#10;&lt;/odie_input&gt;"/>
+    <tcas:DocumentAnnotation xmi:id="8" sofa="1" begin="0" end="2582" language="en"/>
+    <uima:InputMetadata xmi:id="13" inputFilePath="src\main\resources\input\odie.jaxb.xml" corpusXmiFolderPath="C:\Java\Git\lab\nlp-lab\Trunk\Common\Projects\ace_uima\target\main\resources\xmi\medium"/>
+    <uima:Predicate xmi:id="16" name="Attack"/>
+    <uima:Argument xmi:id="18" role="Attacker">
+        <types>person</types>
+        <types>organization</types>
+        <types>geopolitical entity</types>
+    </uima:Argument>
+    <uima:Argument xmi:id="26" role="Target">
+        <types>person</types>
+        <types>organization</types>
+        <types>vehicle</types>
+        <types>facility</types>
+        <types>weapon</types>
+    </uima:Argument>
+    <uima:Argument xmi:id="36" role="Instrument">
+        <types>weapon</types>
+        <types>vehicle</types>
+    </uima:Argument>
+    <uima:Argument xmi:id="43" role="Time">
+        <types>time</types>
+    </uima:Argument>
+    <uima:Argument xmi:id="49" role="Place">
+        <types>geopolitical entity</types>
+        <types>location</types>
+        <types>facility</types>
+    </uima:Argument>
+    <uima:Sample xmi:id="57" sofa="1" begin="921" end="1056"/>
+    <uima:Sample xmi:id="61" sofa="1" begin="1079" end="1221"/>
+    <uima:Sample xmi:id="65" sofa="1" begin="1244" end="1328"/>
+    <uima:Sample xmi:id="69" sofa="1" begin="1351" end="1501"/>
+    <uima:Sample xmi:id="73" sofa="1" begin="1524" end="1716"/>
+    <uima:Sample xmi:id="77" sofa="1" begin="1739" end="1898"/>
+    <uima:Sample xmi:id="81" sofa="1" begin="1921" end="2085"/>
+    <uima:Sample xmi:id="85" sofa="1" begin="2108" end="2215"/>
+    <uima:Sample xmi:id="89" sofa="1" begin="2238" end="2461"/>
+    <roles:Attacker xmi:id="93" sofa="1" begin="933" end="946"/>
+    <roles:Attacker xmi:id="98" sofa="1" begin="1289" end="1328"/>
+    <roles:Attacker xmi:id="103" sofa="1" begin="1320" end="1327"/>
+    <roles:Attacker xmi:id="108" sofa="1" begin="1524" end="1530"/>
+    <roles:Attacker xmi:id="113" sofa="1" begin="1755" end="1797"/>
+    <roles:Attacker xmi:id="118" sofa="1" begin="1922" end="1929"/>
+    <roles:Attacker xmi:id="123" sofa="1" begin="2155" end="2166"/>
+    <roles:Attacker xmi:id="128" sofa="1" begin="2238" end="2254"/>
+    <uima:PredicateSeed xmi:id="133" sofa="1" begin="947" end="952"/>
+    <uima:PredicateSeed xmi:id="137" sofa="1" begin="1217" end="1220"/>
+    <uima:PredicateSeed xmi:id="141" sofa="1" begin="1301" end="1309"/>
+    <uima:PredicateSeed xmi:id="145" sofa="1" begin="1417" end="1424"/>
+    <uima:PredicateSeed xmi:id="149" sofa="1" begin="1544" end="1548"/>
+    <uima:PredicateSeed xmi:id="153" sofa="1" begin="1798" end="1807"/>
+    <uima:PredicateSeed xmi:id="157" sofa="1" begin="1973" end="1979"/>
+    <uima:PredicateSeed xmi:id="161" sofa="1" begin="2187" end="2194"/>
+    <uima:PredicateSeed xmi:id="165" sofa="1" begin="2255" end="2259"/>
+    <roles:Instrument xmi:id="169" sofa="1" begin="953" end="977"/>
+    <roles:Instrument xmi:id="174" sofa="1" begin="1567" end="1604"/>
+    <roles:Instrument xmi:id="179" sofa="1" begin="1808" end="1833"/>
+    <roles:Instrument xmi:id="184" sofa="1" begin="1991" end="1999"/>
+    <roles:Instrument xmi:id="189" sofa="1" begin="2004" end="2010"/>
+    <roles:Target xmi:id="194" sofa="1" begin="981" end="997"/>
+    <roles:Target xmi:id="199" sofa="1" begin="1351" end="1375"/>
+    <roles:Target xmi:id="204" sofa="1" begin="1387" end="1424"/>
+    <roles:Target xmi:id="209" sofa="1" begin="1413" end="1416"/>
+    <roles:Target xmi:id="214" sofa="1" begin="1473" end="1484"/>
+    <roles:Target xmi:id="219" sofa="1" begin="1490" end="1500"/>
+    <roles:Target xmi:id="224" sofa="1" begin="1839" end="1872"/>
+    <roles:Target xmi:id="229" sofa="1" begin="1883" end="1897"/>
+    <roles:Target xmi:id="234" sofa="1" begin="1981" end="1985"/>
+    <roles:Target xmi:id="239" sofa="1" begin="2174" end="2183"/>
+    <roles:Target xmi:id="244" sofa="1" begin="2271" end="2300"/>
+    <roles:Target xmi:id="249" sofa="1" begin="2313" end="2329"/>
+    <roles:Place xmi:id="254" sofa="1" begin="1014" end="1055"/>
+    <roles:Place xmi:id="259" sofa="1" begin="1209" end="1216"/>
+    <roles:Place xmi:id="264" sofa="1" begin="1407" end="1412"/>
+    <roles:Place xmi:id="269" sofa="1" begin="1858" end="1872"/>
+    <roles:Place xmi:id="274" sofa="1" begin="2026" end="2034"/>
+    <roles:Place xmi:id="279" sofa="1" begin="2142" end="2214"/>
+    <roles:Place xmi:id="284" sofa="1" begin="2370" end="2412"/>
+    <roles:Time xmi:id="289" sofa="1" begin="2195" end="2214"/>
+    <roles:Time xmi:id="294" sofa="1" begin="2416" end="2423"/>
+    <cas:View sofa="1" members="8 13 16 18 26 36 43 49 57 61 65 69 73 77 81 85 89 93 98 103 108 113 118 123 128 133 137 141 145 149 153 157 161 165 169 174 179 184 189 194 199 204 209 214 219 224 229 234 239 244 249 254 259 264 269 274 279 284 289 294"/>
+</xmi:XMI>

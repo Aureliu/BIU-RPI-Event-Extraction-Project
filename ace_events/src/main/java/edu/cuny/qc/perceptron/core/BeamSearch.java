@@ -199,6 +199,11 @@ public class BeamSearch
 		List<SentenceAssignment> sucessor = new ArrayList<SentenceAssignment>();
 		
 		AceMention mention = problem.eventArgCandidates.get(k);
+		//TODO DEBUG
+		if (mention.getType().toLowerCase().contains("time")) {
+			//System.err.println("We've got a time arg candidate!");
+		}
+		//////////
 		if(!TypeConstraints.isEntityTypeEventCompatible(currentNodeLabel, mention.getType()))
 		{
 			return null;

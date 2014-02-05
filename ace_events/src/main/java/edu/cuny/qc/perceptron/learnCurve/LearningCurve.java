@@ -493,7 +493,7 @@ public class LearningCurve {
 			}
 
 			logger.info(String.format("Running decoding (no scoring) with args: " + Arrays.asList(args)));
-			Decoder.mainNoScoring(args, filenameSuffix, folderNamePrefix, singleEventType);
+			Decoder.decode(args, filenameSuffix, folderNamePrefix, singleEventType);
 			logger.info("Returned from decoding");
 		}
 	}

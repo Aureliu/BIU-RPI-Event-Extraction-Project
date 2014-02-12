@@ -2,16 +2,24 @@ package edu.cuny.qc.perceptron.core;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.io.PrintWriter;
+import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
+import org.apache.commons.lang3.SerializationException;
+import org.apache.commons.lang3.SerializationUtils;
+import org.apache.uima.jcas.JCas;
 import org.dom4j.DocumentException;
+
+import ac.biu.nlp.nlp.ie.onthefly.input.OdieInputXmiBuilder;
 
 import edu.cuny.qc.ace.acetypes.AceDocument;
 import edu.cuny.qc.ace.acetypes.AceEntity;
@@ -30,7 +38,8 @@ import edu.cuny.qc.perceptron.types.SentenceInstance;
 
 public class Decoder
 {
-	public static String OPTION_NO_SCORING = "-n"; 
+	public static final String OPTION_NO_SCORING = "-n";
+	public static final String PREPROCESSED_SPEC_FILE_EXT = ".preprocessed";
 	public static File outDir = null; //TODO DEBUG
 	
 	public static void writeEntities (PrintWriter w, AceDocument aceDoc, List<AceEvent> events) {
@@ -64,7 +73,30 @@ public class Decoder
 		w.close();
 	}
 	
-	public static void decode(String[] args, String filenameSuffix, String folderNamePrefix, String singleEventType) throws IOException, DocumentException
+	private static JCas getPreprocessedSpec(String specXmlPath, Perceptron perceptron) {
+		JCas spec = null;
+		File preprocessed = new File(specXmlPath + PREPROCESSED_SPEC_FILE_EXT);
+		if (preprocessed.isFile()) {
+			spec = UimaUtils.loadXmi(preprocessed);
+		}
+		else {
+			spec = OdieInputXmiBuilder.build(specXmlPath);
+			perceptron.preprocessSpec(spec);
+
+			try {
+				UimaUtils.dumpXmi(preprocessed, spec);
+			}
+			catch (Exception e) {
+				Files.deleteIfExists(preprocessed.toPath());
+				throw e;
+			}
+		}
+		
+		return spec;
+	}
+
+
+	public static void decode(String[] args, String filenameSuffix, String folderNamePrefix, String singleEventType, List<String> specXmlPaths) throws IOException, DocumentException
 	{		
 		System.err.println("(Decoding err stream)");
 		
@@ -102,6 +134,13 @@ public class Decoder
 		//avgWeightsOut.close();
 				
 		System.out.printf("--------------\nPerceptron.controller =\n%s\r\n\r\n--------------------------\r\n\r\n", perceptron.controller);
+		
+		// handle specs
+		List<JCas> specs = new ArrayList<JCas>(specXmlPaths.size());
+		for (String specXmlPath : specXmlPaths) {
+			JCas spec = getPreprocessedSpec(specXmlPath);
+			specs.add(spec);
+		}
 		
 		BufferedReader reader = new BufferedReader(new FileReader(fileList));
 		String line = "";

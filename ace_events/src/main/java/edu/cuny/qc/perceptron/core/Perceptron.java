@@ -14,7 +14,10 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.lang3.SerializationUtils;
+import org.apache.uima.jcas.JCas;
 
+import edu.cuny.qc.perceptron.similarity_scorer.FeatureMechanism;
+import edu.cuny.qc.perceptron.similarity_scorer.WordNetFeatureMechanism;
 import edu.cuny.qc.perceptron.types.Alphabet;
 import edu.cuny.qc.perceptron.types.FeatureVector;
 import edu.cuny.qc.perceptron.types.SentenceAssignment;
@@ -50,6 +53,8 @@ public class Perceptron implements java.io.Serializable
 	protected FeatureVector avg_weights;
 	protected FeatureVector avg_weights_base; // for average weights update
 	
+	protected List<FeatureMechanism> featureMechanisms;
+	
 	// default constructor 
 	public Perceptron(Alphabet nodeTargetAlphabet, Alphabet edgeTargetAlphabet, Alphabet featureAlphabet)
 	{
@@ -62,6 +67,13 @@ public class Perceptron implements java.io.Serializable
 		this.avg_weights_base = new FeatureVector();
 		
 		labelBigram = new HashMap<String, List<String>>();
+	}
+	
+	private void buildFeatureMechanisms() {
+		featureMechanisms = new ArrayList<FeatureMechanism>();
+		
+		featureMechanisms.add(new WordNetFeatureMechanism());
+		yyy;
 	}
 	
 	// default constructor 
@@ -78,6 +90,12 @@ public class Perceptron implements java.io.Serializable
 //		labelBigram = new HashMap<String, List<String>>();
 //	}
 //	
+
+
+	public List<FeatureMechanism> getFeatureMechanisms() {
+		return featureMechanisms;
+	}
+	
 	/**
 	 *  given an instanceList, decode, and give the best assignmentList
 	 * @param instance

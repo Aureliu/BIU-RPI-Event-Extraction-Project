@@ -17,11 +17,18 @@ import ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentSeed;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.InputMetadata;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.Predicate;
+import edu.cuny.qc.perceptron.core.Perceptron;
+import edu.cuny.qc.perceptron.similarity_scorer.FeatureMechanism;
 import eu.excitementproject.eop.common.utilities.file.FileUtils;
 import eu.excitementproject.eop.common.utilities.uima.UimaUtils;
 
 public class OdieInputAnnotator extends JCasAnnotator_ImplBase {
 	public static final String LIST_SEPARATOR = ",";
+	private Perceptron perceptron = null;
+	
+	public void setPerceptorn(Perceptron perceptron) {
+		this.perceptron = perceptron;
+	}
 
 	@Override
 	public void process(JCas jCas) throws AnalysisEngineProcessException {
@@ -53,6 +60,12 @@ public class OdieInputAnnotator extends JCasAnnotator_ImplBase {
 			URL url = UimaUtils.class.getResource(FULL_TYPE_SYSTEM_FILE_PATH);
 			FileOutputStream out = new FileOutputStream(new File(url.toURI()));
 			typeSystemDescription.toXML(out);
+			
+			//TODO here add all generic preprocessing (like POS tagging, parsing, etc.)
+			
+			for (FeatureMechanism featureMechanism : perceptron.getFeatureMechanisms()) {
+				featureMechanism.preprocessSpec(jCas);
+			}
 		}
 		catch (Exception e) {
 			throw new AnalysisEngineProcessException(AnalysisEngineProcessException.ANNOTATOR_EXCEPTION, null, e); 

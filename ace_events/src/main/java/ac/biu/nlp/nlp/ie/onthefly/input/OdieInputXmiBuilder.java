@@ -16,7 +16,7 @@ import eu.excitementproject.eop.common.utilities.uima.UimaUtils;
 
 public class OdieInputXmiBuilder {
 
-	private static JCas build(String inputFilePath) throws InvalidXMLException, ResourceInitializationException, IOException, SAXException, AnalysisEngineProcessException {
+	public static JCas build(String inputFilePath) throws InvalidXMLException, ResourceInitializationException, IOException, SAXException, AnalysisEngineProcessException {
 		AnalysisEngine ae = UimaUtils.loadAE(OdieInputAnnotator.ANNOTATOR_FILE_PATH);
 		JCas jcas = ae.newJCas();
 		jcas.setDocumentLanguage("EN");
@@ -30,7 +30,7 @@ public class OdieInputXmiBuilder {
 		return jcas;
 	}
 	
-	private static void buildAndDump(String inputFilePath, String xmiFilePath) throws InvalidXMLException, ResourceInitializationException, IOException, SAXException, AnalysisEngineProcessException {
+	public static void buildAndDump(String inputFilePath, String xmiFilePath) throws InvalidXMLException, ResourceInitializationException, IOException, SAXException, AnalysisEngineProcessException {
 		File xmi = new File(xmiFilePath);
 		xmi.getParentFile().mkdirs();
 		
@@ -63,7 +63,7 @@ public class OdieInputXmiBuilder {
 			return;
 		}
 
-		OdieInputXmiBuilder.build(args[0], args[1]);
+		OdieInputXmiBuilder.buildAndDump(args[0], args[1]);
 	}
 	private static final String USAGE = "USAGE: OdieInputXmiBuilder <spec file path> <xmi file path>";
 }

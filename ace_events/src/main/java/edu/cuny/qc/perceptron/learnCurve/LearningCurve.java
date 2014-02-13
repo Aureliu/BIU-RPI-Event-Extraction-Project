@@ -493,7 +493,7 @@ public class LearningCurve {
 			}
 
 			logger.info(String.format("Running decoding (no scoring) with args: " + Arrays.asList(args)));
-			Decoder.decode(args, filenameSuffix, folderNamePrefix, singleEventType);
+			Decoder.decode(args, filenameSuffix, folderNamePrefix, singleEventType, new File("")); //the "empty file" at the end is a kludge - is this "learning curve" thing really relevant for my system?
 			logger.info("Returned from decoding");
 		}
 	}

@@ -23,6 +23,7 @@ import java.util.regex.Pattern;
 
 import org.apache.commons.lang3.SerializationException;
 import org.apache.commons.lang3.SerializationUtils;
+import org.apache.uima.jcas.JCas;
 
 import opennlp.tools.util.InvalidFormatException;
 
@@ -74,6 +75,8 @@ public class Document implements java.io.Serializable
 	 * e.g. the dummy sentence can be concatenation of sentences that linked by entity coreference 
 	 */
 	protected List<Sentence> sentences;
+	
+	private JCas jcas; zzz this should be used at some point
 	
 	/**
 	 * this object contains the parsed information from apf file (pretty much everything)
@@ -516,6 +519,7 @@ public class Document implements java.io.Serializable
 			List<Map<Class<?>, Object>> tokenFeatureMaps = new ArrayList<Map<Class<?>, Object>>();
 			sent.put(Sent_Attribute.Token_FEATURE_MAPs, tokenFeatureMaps);
 			this.sentences.add(sent);
+			xxx jcas xxx
 		}
 	}
 

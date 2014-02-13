@@ -62,6 +62,7 @@ public class OdieInputAnnotator extends JCasAnnotator_ImplBase {
 			typeSystemDescription.toXML(out);
 			
 			//TODO here add all generic preprocessing (like POS tagging, parsing, etc.)
+			xxx;
 			
 			for (FeatureMechanism featureMechanism : perceptron.getFeatureMechanisms()) {
 				featureMechanism.preprocessSpec(jCas);

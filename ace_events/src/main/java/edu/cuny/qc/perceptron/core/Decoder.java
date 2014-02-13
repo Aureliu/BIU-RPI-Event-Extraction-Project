@@ -16,8 +16,12 @@ import java.util.List;
 
 import org.apache.commons.lang3.SerializationException;
 import org.apache.commons.lang3.SerializationUtils;
+import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.jcas.JCas;
+import org.apache.uima.resource.ResourceInitializationException;
+import org.apache.uima.util.InvalidXMLException;
 import org.dom4j.DocumentException;
+import org.xml.sax.SAXException;
 
 import ac.biu.nlp.nlp.ie.onthefly.input.OdieInputXmiBuilder;
 
@@ -35,6 +39,9 @@ import edu.cuny.qc.perceptron.types.Document;
 import edu.cuny.qc.perceptron.types.DocumentCrossSent;
 import edu.cuny.qc.perceptron.types.SentenceAssignment;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
+import eu.excitementproject.eop.common.utilities.StringUtil;
+import eu.excitementproject.eop.common.utilities.file.FileUtils;
+import eu.excitementproject.eop.common.utilities.uima.UimaUtils;
 
 public class Decoder
 {
@@ -73,7 +80,7 @@ public class Decoder
 		w.close();
 	}
 	
-	private static JCas getPreprocessedSpec(String specXmlPath, Perceptron perceptron) {
+	private static JCas getPreprocessedSpec(String specXmlPath, Perceptron perceptron) throws InvalidXMLException, ResourceInitializationException, SAXException, IOException, AnalysisEngineProcessException {
 		JCas spec = null;
 		File preprocessed = new File(specXmlPath + PREPROCESSED_SPEC_FILE_EXT);
 		if (preprocessed.isFile()) {
@@ -81,12 +88,15 @@ public class Decoder
 		}
 		else {
 			spec = OdieInputXmiBuilder.build(specXmlPath);
-			perceptron.preprocessSpec(spec);
 
 			try {
 				UimaUtils.dumpXmi(preprocessed, spec);
 			}
-			catch (Exception e) {
+			catch (SAXException e) {
+				Files.deleteIfExists(preprocessed.toPath());
+				throw e;
+			}
+			catch (IOException e) {
 				Files.deleteIfExists(preprocessed.toPath());
 				throw e;
 			}
@@ -96,6 +106,12 @@ public class Decoder
 	}
 
 
+	public static void decode(String[] args, String filenameSuffix, String folderNamePrefix, String singleEventType, File specListFile) throws IOException, DocumentException
+	{
+		List<String> specPaths = FileUtils.loadFileToList(specListFile);
+		decode(args, filenameSuffix, folderNamePrefix, singleEventType, specPaths);
+	}
+	
 	public static void decode(String[] args, String filenameSuffix, String folderNamePrefix, String singleEventType, List<String> specXmlPaths) throws IOException, DocumentException
 	{		
 		System.err.println("(Decoding err stream)");
@@ -201,8 +217,8 @@ public class Decoder
 		System.out.printf("[%s] --------------\r\nPerceptron.controller =\r\n%s\r\n\r\n--------------------------\r\n\r\n", new Date(), perceptron.controller);
 	}
 	
-	public static Stats decodeAndScore(String[] args, String filenameSuffix, String folderNamePrefix, String singleEventType) throws IOException, DocumentException {
-		decode(args, filenameSuffix, folderNamePrefix, singleEventType);
+	public static Stats decodeAndScore(String[] args, String filenameSuffix, String folderNamePrefix, String singleEventType, File specListFile) throws IOException, DocumentException {
+		decode(args, filenameSuffix, folderNamePrefix, singleEventType, specListFile);
 		
 		File outputFile = new File(outDir + File.separator + "Score" + filenameSuffix);
 		Stats stats = Scorer.mainMultiRunReturningStats(folderNamePrefix, singleEventType, new String[]{args[1], args[3], args[2], outputFile.getAbsolutePath()});
@@ -214,31 +230,32 @@ public class Decoder
 		// 1. there's no way to specify both a filenameSufix and NO_SCORING
 
 		System.out.printf("Args:\n%s\n\n", new ArrayList<String>(Arrays.asList(args)));
-		if((args.length < 4) || (args.length>5))
+		if((args.length < 5) || (args.length>6))
 		{
 			System.out.println("Usage:");
 			System.out.println("args[0]: model");
 			System.out.println("args[1]: src dir");
 			System.out.println("args[2]: file list");
 			System.out.println("args[3]: output dir");
-			System.out.printf("optional args[4]: '%s' to not perform scoring, or anything else as a suffix for file names of intermediate output files\n", OPTION_NO_SCORING);
+			System.out.println("args[4]: spec list");
+			System.out.printf("optional args[5]: '%s' to not perform scoring, or anything else as a suffix for file names of intermediate output files\n", OPTION_NO_SCORING);
 			System.exit(-1);
 		}
 
 		String filenameSuffix = ".txt";
 		String folderNamePrefix = "";
-		if (args.length>=5) {
-			if (args[4].equals(OPTION_NO_SCORING)) {
-				decode(args, filenameSuffix, folderNamePrefix, null); //no singleEventType
+		if (args.length>=6) {
+			if (args[5].equals(OPTION_NO_SCORING)) {
+				decode(args, filenameSuffix, folderNamePrefix, null, new File(args[4])); //no singleEventType
 			}
 			else {
-				filenameSuffix = args[4];
-				folderNamePrefix = "DIR" + args[4] + "."; //yes, I know it's silly it has ".txt" in it, maybe should fix later
-				decodeAndScore(args, filenameSuffix, folderNamePrefix, null); //no singleEventType
+				filenameSuffix = args[5];
+				folderNamePrefix = "DIR" + args[5] + "."; //yes, I know it's silly it has ".txt" in it, maybe should fix later
+				decodeAndScore(args, filenameSuffix, folderNamePrefix, null, new File(args[4])); //no singleEventType
 			}
 		}
 		else {
-			decodeAndScore(args, filenameSuffix, folderNamePrefix, null);
+			decodeAndScore(args, filenameSuffix, folderNamePrefix, null, new File(args[4]));
 		}
 	}
 }

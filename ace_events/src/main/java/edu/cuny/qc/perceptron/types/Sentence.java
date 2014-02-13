@@ -39,7 +39,8 @@ public class Sentence implements java.io.Serializable
 		DepGraph,		// graph representation about the deps 
 		Token_FEATURE_MAPs,   // feature maps for each token: list->map<key,value>s
 		TOKEN_SPANS,		  // absolute spans for each token
-		ParseTree		// the parse tree
+		ParseTree,		// the parse tree
+		JCas,           // Jcas
 	}
 	
 	/**

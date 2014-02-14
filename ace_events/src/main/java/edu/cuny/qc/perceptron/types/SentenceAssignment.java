@@ -14,6 +14,7 @@ import edu.cuny.qc.perceptron.featureGenerator.EdgeFeatureGenerator;
 import edu.cuny.qc.perceptron.featureGenerator.GlobalFeatureGenerator;
 import edu.cuny.qc.perceptron.types.SentenceInstance.InstanceAnnotations;
 import edu.cuny.qc.util.TypeConstraints;
+import edu.cuny.qc.util.UnsupportedParameterException;
 
 /**
  * For the (target) assignment, it should encode two types of assignment:
@@ -587,17 +588,7 @@ public class SentenceAssignment
 		{
 			if(this.controller.order >= 1)
 			{
-				// bigram features
-				// create a bigram feature
-				String featureStr = "BigramFeature:\t" + textFeature + "\t" + "PreLabel:" + previousLabel + "\tcurrentLabel:" + outcome;
-				makeFeature(featureStr, this.getFV(i), addIfNotPresent, useIfNotPresent);
-				// this is a backoff feature for event
-				if(!outcome.equals(Default_Trigger_Label) && !outcome.equals("Transport"))
-				{
-					String superType = TypeConstraints.getEventSuperType(outcome);
-					featureStr = "BigramFeature:\t" + textFeature + "\t" + "\tcurrentLabel:" + superType;
-					makeFeature(featureStr, this.getFV(i), addIfNotPresent, useIfNotPresent);
-				}
+				throw new UnsupportedParameterException("order >= 1");
 			}
 			else // order = 0
 			{
@@ -605,22 +596,22 @@ public class SentenceAssignment
 				// create a bigram feature
 				String featureStr = "BigramFeature:\t" + textFeature + "\t" + "\tcurrentLabel:" + outcome;
 				makeFeature(featureStr, this.getFV(i), addIfNotPresent, useIfNotPresent);
-				// this is a backoff feature for event, use super event type/ except Transport, since Movement only have one subtype
-				if(!outcome.equals(Default_Trigger_Label) && !outcome.equals("Transport"))
-				{
-					String superType = TypeConstraints.getEventSuperType(outcome);
-					featureStr = "BigramFeature:\t" + textFeature + "\t" + "\tcurrentLabel:" + superType;
-					makeFeature(featureStr, this.getFV(i), addIfNotPresent, useIfNotPresent);
-				}
 			}
 		}
-		
+
+		//TODO Ofer - remove Event-including feature
 		// if the previous label is a trigger, then get the bigram labels
-		if(!previousLabel.equals(SentenceAssignment.Default_Trigger_Label))
-		{
-			String featureStr = "BigramFeature:\t" + "PreLabel:" + previousLabel + "\tcurrentLabel:" + outcome;
-			makeFeature(featureStr, this.getFV(i), addIfNotPresent, useIfNotPresent);
-		}
+//		if(!previousLabel.equals(SentenceAssignment.Default_Trigger_Label))
+//		{
+//			String featureStr = "BigramFeature:\t" + "PreLabel:" + previousLabel + "\tcurrentLabel:" + outcome;
+//			makeFeature(featureStr, this.getFV(i), addIfNotPresent, useIfNotPresent);
+//		}
+	}
+	
+	protected void makeFeature(String featureStr, FeatureVector fv, boolean add_if_not_present,
+			boolean use_if_not_present)
+	{
+		makeFeature(featureStr, fv, 1.0, add_if_not_present, use_if_not_present);
 	}
 	
 	/**
@@ -630,7 +621,7 @@ public class SentenceAssignment
 	 * @param add_if_not_present true if the feature is not in featureAlphabet, add it
 	 * @param use_if_not_present true if the feature is not in featureAlphaebt, still use it in FV
 	 */
-	protected void makeFeature(String featureStr, FeatureVector fv, boolean add_if_not_present,
+	protected void makeFeature(String featureStr, FeatureVector fv, double value, boolean add_if_not_present,
 			boolean use_if_not_present)
 	{
 		// Feature feat = new Feature(null, featureStr);
@@ -640,12 +631,12 @@ public class SentenceAssignment
 			int feat_index = lookupFeatures(this.featureAlphabet, featureStr, add_if_not_present);
 			if(feat_index != -1)
 			{
-				fv.add(featureStr, 1.0);
+				fv.add(featureStr, value);
 			}
 		}
 		else
 		{
-			fv.add(featureStr, 1.0);
+			fv.add(featureStr, value);
 		}
 	}
 	

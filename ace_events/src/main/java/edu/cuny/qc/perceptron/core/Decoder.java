@@ -16,14 +16,19 @@ import java.util.List;
 
 import org.apache.commons.lang3.SerializationException;
 import org.apache.commons.lang3.SerializationUtils;
+import org.apache.uima.analysis_engine.AnalysisEngine;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.util.InvalidXMLException;
 import org.dom4j.DocumentException;
+import org.uimafit.util.JCasUtil;
 import org.xml.sax.SAXException;
 
+import ac.biu.nlp.nlp.ie.onthefly.input.OdieInputAnnotator;
 import ac.biu.nlp.nlp.ie.onthefly.input.OdieInputXmiBuilder;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.InputMetadata;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.Predicate;
 
 import edu.cuny.qc.ace.acetypes.AceDocument;
 import edu.cuny.qc.ace.acetypes.AceEntity;
@@ -39,6 +44,7 @@ import edu.cuny.qc.perceptron.types.Document;
 import edu.cuny.qc.perceptron.types.DocumentCrossSent;
 import edu.cuny.qc.perceptron.types.SentenceAssignment;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
+import edu.cuny.qc.util.TypeConstraints;
 import eu.excitementproject.eop.common.utilities.StringUtil;
 import eu.excitementproject.eop.common.utilities.file.FileUtils;
 import eu.excitementproject.eop.common.utilities.uima.UimaUtils;
@@ -87,7 +93,18 @@ public class Decoder
 			spec = UimaUtils.loadXmi(preprocessed);
 		}
 		else {
-			spec = OdieInputXmiBuilder.build(specXmlPath);
+			AnalysisEngine ae = UimaUtils.loadAE(OdieInputAnnotator.ANNOTATOR_FILE_PATH);
+			JCas jcas = ae.newJCas();
+			jcas.setDocumentLanguage("EN");
+			
+			OdieInputAnnotator myAe = (OdieInputAnnotator) ae;
+			myAe.setPerceptorn(perceptron);
+
+			InputMetadata meta = new InputMetadata(jcas);
+			meta.setInputFilePath(specXmlPath);
+			meta.addToIndexes();
+			
+			ae.process(jcas);
 
 			try {
 				UimaUtils.dumpXmi(preprocessed, spec);
@@ -112,7 +129,7 @@ public class Decoder
 		decode(args, filenameSuffix, folderNamePrefix, singleEventType, specPaths);
 	}
 	
-	public static void decode(String[] args, String filenameSuffix, String folderNamePrefix, String singleEventType, List<String> specXmlPaths) throws IOException, DocumentException
+	public static void decode(String[] args, String filenameSuffix, String folderNamePrefix, String singleEventType, List<String> specXmlPaths) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException
 	{		
 		System.err.println("(Decoding err stream)");
 		
@@ -154,9 +171,13 @@ public class Decoder
 		// handle specs
 		List<JCas> specs = new ArrayList<JCas>(specXmlPaths.size());
 		for (String specXmlPath : specXmlPaths) {
-			JCas spec = getPreprocessedSpec(specXmlPath);
+			JCas spec = getPreprocessedSpec(specXmlPath, perceptron);
 			specs.add(spec);
+
+			Predicate predicate = JCasUtil.selectSingle(spec, Predicate.class);
+			TypeConstraints.addSpecType(predicate.getName());
 		}
+		
 		
 		BufferedReader reader = new BufferedReader(new FileReader(fileList));
 		String line = "";

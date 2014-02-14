@@ -31,12 +31,32 @@ public class SentenceAssignment
 {
 	public static final String PAD_Trigger_Label = "O"; // pad for the intial state
 	public static final String Default_Trigger_Label = "O";
+	public static final String Generic_Existing_Trigger_Label = "IS_TRIGGER";
 	public static final String Default_Argument_Label = "NON";
+	public static final String Generic_Existing_Argument_Label = "IS_ARG";
 	
 	/**
 	 * the index of last processed (assigned/searched) token
 	 */
 	int state = -1;
+	
+	public static String getGenericTriggerLabel(String label) {
+		if (label == Default_Trigger_Label) {
+			return Default_Trigger_Label;
+		}
+		else {
+			return Generic_Existing_Trigger_Label;
+		}
+	}
+	
+	public static String getGenericArgumentLabel(String label) {
+		if (label == Default_Argument_Label) {
+			return Default_Argument_Label;
+		}
+		else {
+			return Generic_Existing_Argument_Label;
+		}
+	}
 	
 	public void retSetState()
 	{
@@ -579,25 +599,51 @@ public class SentenceAssignment
 	public void makeNodeFeatures(SentenceInstance problem, int i, boolean addIfNotPresent, boolean useIfNotPresent)
 	{
 		// make node feature (bigram feature)
-		List<String> token = ((List<List<String>>) problem.get(InstanceAnnotations.NodeTextFeatureVectors)).get(i);
-		String previousLabel = this.getLabelAtToken(i-1);
-		String outcome = this.getLabelAtToken(i);
+		Map<String, Map<String, FeatureInstance>> token = ((List<Map<String, Map<String, FeatureInstance>>>) problem.get(InstanceAnnotations.NodeTextFeatureVectors)).get(i);
+		//String previousLabel = this.getLabelAtToken(i-1);
+		String label = this.getLabelAtToken(i);
+		String genericLabel = getGenericTriggerLabel(label);
 		
-		// traverse each text feature of the token to explore the bigram featurs
-		for(String textFeature : token)
+		if(this.controller.order >= 1)
 		{
-			if(this.controller.order >= 1)
-			{
-				throw new UnsupportedParameterException("order >= 1");
+			throw new UnsupportedParameterException("order >= 1");
+		}
+		else // order = 0
+		{
+			if (genericLabel == Generic_Existing_Trigger_Label) {
+				Map<String, FeatureInstance> featuresOfLabel = token.get(label);
+				for (FeatureInstance feature : featuresOfLabel.values()) {
+					if (feature.isPositive) {
+
+						// unigram features, for history reason, we still call them BigramFeature
+						// create a bigram feature
+						String featureStr = "BigramFeature:\t" + feature.name + "\t" + "\tcurrentLabel:" + genericLabel;
+						makeFeature(featureStr, this.getFV(i), feature.score, addIfNotPresent, useIfNotPresent);
+
+					}
+				}
 			}
-			else // order = 0
-			{
-				// unigram features, for history reason, we still call them BigramFeature
-				// create a bigram feature
-				String featureStr = "BigramFeature:\t" + textFeature + "\t" + "\tcurrentLabel:" + outcome;
-				makeFeature(featureStr, this.getFV(i), addIfNotPresent, useIfNotPresent);
+			else { //genericLabel == Default_Trigger_Label
+				for (String featureName : ... all possible feature names in the system! ...) {
+					double numFalse = 0.0;
+					for (Map<String, FeatureInstance> featuresOfLabel : token.values()) {
+						FeatureInstance feature = featuresOfLabel.get(featureName);
+						if (!feature.isPositive) {
+							numFalse += 1.0;
+						}
+					}
+					
+					double falseRatio = numFalse / token.size();
+					
+					// unigram features, for history reason, we still call them BigramFeature
+					// create a bigram feature
+					String featureStr = "BigramFeature:\t" + featureName + "\t" + "\tcurrentLabel:" + genericLabel;
+					makeFeature(featureStr, this.getFV(i), falseRatio, addIfNotPresent, useIfNotPresent);
+
+				}
 			}
 		}
+
 
 		//TODO Ofer - remove Event-including feature
 		// if the previous label is a trigger, then get the bigram labels

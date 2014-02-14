@@ -180,7 +180,7 @@ public class SentenceInstance
 		this.textFeaturesMap.put(InstanceAnnotations.POSTAGS, sent.get(Sent_Attribute.POSTAGS));
 		
 		// get node text feature vectors
-		List<List<String>> tokenFeatVectors = NodeFeatureGenerator.get_node_text_features(this);
+		List<Map<String, Map<String, FeatureInstance>>> tokenFeatVectors = NodeFeatureGenerator.get_node_text_features(this);
 		this.textFeaturesMap.put(InstanceAnnotations.NodeTextFeatureVectors, tokenFeatVectors);
 		
 		// get edge text feature vectors, this vectors is built up in the lasy fashion, when it's needed, it's filled

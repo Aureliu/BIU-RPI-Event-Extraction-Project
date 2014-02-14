@@ -55,6 +55,7 @@ public class Perceptron implements java.io.Serializable
 	
 	protected List<FeatureMechanism> featureMechanisms;
 	
+	
 	// default constructor 
 	public Perceptron(Alphabet nodeTargetAlphabet, Alphabet edgeTargetAlphabet, Alphabet featureAlphabet)
 	{
@@ -75,7 +76,7 @@ public class Perceptron implements java.io.Serializable
 		featureMechanisms.add(new WordNetFeatureMechanism());
 		yyy;
 	}
-	
+		
 	// default constructor 
 //	public Perceptron(Controller controller)
 //	{
@@ -390,7 +391,18 @@ public class Perceptron implements java.io.Serializable
 		}
 	}
 
-
+	protected void fillLabelBigrams() {
+		List<String> allTypes = new ArrayList<String>(TypeConstraints.specTypes);
+		allTypes.add(0, SentenceAssignment.PAD_Trigger_Label);
+		String currType = null;
+		for (int i=0; i<allTypes.size(); i++) {
+			currType = allTypes.get(i);
+			List<String> list = new ArrayList<String>(allTypes);
+			list.remove(i);
+			getLabelBigram().put(currType, list);
+		}
+	}
+	
 	protected void extractTriggerLabelBigrams(List<SentenceInstance> traininglist)
 	{
 		for(SentenceInstance instance : traininglist)

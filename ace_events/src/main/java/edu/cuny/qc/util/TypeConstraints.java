@@ -36,11 +36,10 @@ public class TypeConstraints
 	public static Map<String, String> eventTypeMap = new HashMap<String, String>();
 	public static Map<String, String> eventTypeMapModified = new HashMap<String, String>();
 	
+	public static List<String> specTypes = new ArrayList<String>();
+	
 	static
 	{
-		//TODOD ofer1
-		eventTypeMap.put("OferMove","OferSuperType");
-		
 		eventTypeMap.put("Be-Born","Life");
 		eventTypeMap.put("Marry","Life");
 		eventTypeMap.put("Divorce","Life");
@@ -74,9 +73,6 @@ public class TypeConstraints
 		eventTypeMap.put("Acquit","Justice");
 		eventTypeMap.put("Appeal","Justice");
 		eventTypeMap.put("Pardon","Justice");
-		
-		//TODOD ofer1
-		eventTypeMapModified.put("OferMove","OferSuperType");
 		
 		eventTypeMapModified.put("Be-Born","Life");
 		eventTypeMapModified.put("Marry","Life");
@@ -186,15 +182,15 @@ public class TypeConstraints
 		}
 	}
 	
-	/**
-	 * Given an event subtype, return the type. e.g. End_Position --> Personnel
-	 * @param type
-	 * @return
-	 */
-	public static String getEventSuperType(String type)
-	{
-		return eventTypeMap.get(type);
-	}
+//	/**
+//	 * Given an event subtype, return the type. e.g. End_Position --> Personnel
+//	 * @param type
+//	 * @return
+//	 */
+//	public static String getEventSuperType(String type)
+//	{
+//		return eventTypeMap.get(type);
+//	}
 	
 	/**
 	 * given an argument role, get the compatible entity types
@@ -313,5 +309,9 @@ public class TypeConstraints
 			}
 		}
 		return true;
+	}
+	
+	public static void addSpecType(String specTypeName) {
+		specTypes.add(specTypeName);
 	}
 }

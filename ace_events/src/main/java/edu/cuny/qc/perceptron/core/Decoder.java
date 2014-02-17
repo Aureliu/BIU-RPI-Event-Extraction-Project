@@ -185,6 +185,7 @@ public class Decoder
 			for (Argument arg : JCasUtil.select(spec, Argument.class)) {
 				String role = arg.getRole();
 				List<String> types = Arrays.asList(arg.getTypes().toStringArray());
+				perceptron.edgeTargetAlphabet.lookupIndex(predicateName);
 				
 				List<String> lineList = new ArrayList<String>();
 				lineList.add(predicateName);

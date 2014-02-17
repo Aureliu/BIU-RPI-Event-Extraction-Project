@@ -624,7 +624,8 @@ public class SentenceAssignment
 				}
 			}
 			else { //genericLabel == Default_Trigger_Label
-				for (String featureName : ... all possible feature names in the system! ...) {
+				for (Object featureNameObj : this.featureAlphabet.entries) {
+					String featureName = (String) featureNameObj;
 					double numFalse = 0.0;
 					for (Map<String, FeatureInstance> featuresOfLabel : token.values()) {
 						FeatureInstance feature = featuresOfLabel.get(featureName);

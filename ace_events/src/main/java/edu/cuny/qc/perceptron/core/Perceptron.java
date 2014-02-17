@@ -155,13 +155,7 @@ public class Perceptron implements java.io.Serializable
 			evaluator = new EvaluatorLoose();
 		}
 		
-		if (controller.learnBigrams) {
-			// traverse the training instance to get the trigger label bigram
-			extractTriggerLabelBigrams(trainingList);
-		}
-		else {
-			fillDefaultLabelBigrams(singleEventType);
-		}
+		fillLabelBigrams();
 		
 		BeamSearch beamSearcher = createBeamSearcher(this, true);
 		
@@ -391,6 +385,9 @@ public class Perceptron implements java.io.Serializable
 		}
 	}
 
+	/**
+	 * After each type of trigger, can appear any other type of trigger. Default label ("O") included.
+	 */
 	protected void fillLabelBigrams() {
 		List<String> allTypes = new ArrayList<String>(TypeConstraints.specTypes);
 		allTypes.add(0, SentenceAssignment.PAD_Trigger_Label);
@@ -505,12 +502,6 @@ public class Perceptron implements java.io.Serializable
 		{
 			e.printStackTrace();
 		}
-		
-		//TODO ofer1
-		// add these guys to the arg (edge) alphabet
-		model.edgeTargetAlphabet.lookupIndex("OferArtifact", true);
-		model.edgeTargetAlphabet.lookupIndex("OferOrigin", true);
-		model.edgeTargetAlphabet.lookupIndex("OferFakeRole", true);
 		return model;
 	}
 

@@ -178,6 +178,7 @@ public class Decoder
 			TypeConstraints.addSpecType(predicate.getName());
 			perceptron.nodeTargetAlphabet.lookupIndex(predicate.getName());
 		}
+		perceptron.fillLabelBigrams();
 		
 		
 		BufferedReader reader = new BufferedReader(new FileReader(fileList));

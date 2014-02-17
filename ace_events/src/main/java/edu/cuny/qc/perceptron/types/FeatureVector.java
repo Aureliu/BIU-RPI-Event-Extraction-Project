@@ -12,13 +12,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 import java.util.Set;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 import javax.management.RuntimeErrorException;
-
-import edu.cuny.qc.perceptron.featureGenerator.onthefly.mock.LexicalSimilarityMock;
-import edu.cuny.qc.perceptron.featureGenerator.onthefly.mock.PathSimilarityMock;
 
 import edu.cuny.qc.perceptron.core.Decoder;
 
@@ -91,85 +86,22 @@ public class FeatureVector implements Serializable
 	public final double dotProduct (FeatureVector fv) 
 	{
 		double ret = 0.0;
-		
-		//TODO ofer1
-		// Instead of doing a dot product, I will inspect the actual feature values (Strings), extract relevant
-		// info from relevant features (discarding all other features), calling appropriate scorers, and aggregate
-		// Their results
-		// I'm also ignoring fv, which contained the weights learned in training
-		
-		final String INPUT_OFERMOVE_SEED1 = "remove";
-		final String INPUT_OFERMOVE_PATH1 = "cool-path";
-		final Map<String, String> INPUT_OFERMOVE_ROLE_TO_ARGEXAMPLE = new HashMap<String, String>(){{
-			put("OferArtifact", "people");
-			put("OferOrigin", "house");
-			put("OferFakeRole", "today");
-		}};
-
-		final Double SCORER_WEIGHT_LEX_SIM = 0.6;
-		final Double SCORER_WEIGHT_PATH_SIM = 0.4;
-		
-		for (Object o : map.keySet()) {
-			String feature = (String) o;
-			Pattern pattern;
-			Matcher m;
-			
-			pattern = Pattern.compile("\\tW=([^\\t]*)\\t");
-			m = pattern.matcher(feature);
-			if (m.find()) {
-				String word = m.group(1);
-				LexicalSimilarityMock mock = new LexicalSimilarityMock();
-				Double score = mock.apply(word, INPUT_OFERMOVE_SEED1);
-				ret += score*SCORER_WEIGHT_LEX_SIM;
-			}
-			
-			if (feature.contains("home") && feature.contains("Head")) {
-				int y = 98;
-				int t = y+5;
-			}
-			
-			pattern = Pattern.compile("\\tHead=([^\\t]*)\\t.*?\\tArgRole:([^\\t ]+)");
-			m = pattern.matcher(feature);
-			if (m.find()) {
-				String word = m.group(1);
-				String role = m.group(2);
-				if (word.equals("home") /*|| role.equals("OferOrigin")*/) {
-					int x = 8;
-					int c = x+3;
-				}
-				LexicalSimilarityMock mock = new LexicalSimilarityMock();
-				Double score = mock.apply(word, INPUT_OFERMOVE_ROLE_TO_ARGEXAMPLE.get(role));
-				ret += score*SCORER_WEIGHT_LEX_SIM;
-			}
-
-			
-			pattern = Pattern.compile("\\tPath=([^\\t]*)\\t");
-			m = pattern.matcher(feature);
-			if (m.find()) {
-				String path = m.group(1);
-				PathSimilarityMock mock = new PathSimilarityMock();
-				Double score = mock.apply(path, INPUT_OFERMOVE_PATH1);
-				ret += score*SCORER_WEIGHT_PATH_SIM;
+		Map<Object, Double> map1 = map;
+		Map<Object, Double> map2 = fv.map;
+		if(map2.size() < map1.size())
+		{
+			map1 = fv.map;
+			map2 = map;
+		}
+		for(Object key : map1.keySet())
+		{
+			Double value2 = map2.get(key);
+			if(value2 != null)
+			{
+				Double value1 = map1.get(key);
+				ret += value1 * value2;
 			}
 		}
-		
-		// TODO ofer1-orig
-//		Map<Object, Double> map1 = map;
-//		Map<Object, Double> map2 = fv.map;
-//		if(map2.size() < map1.size())
-//		{
-//			map1 = fv.map;
-//			map2 = map;
-//		}
-//		for(Object key : map1.keySet())
-//		{
-//			Double value2 = map2.get(key);
-//			if(value2 != null)
-//			{
-//				Double value1 = map1.get(key);
-//				ret += value1 * value2;
-//			}
-//		}
 		
 		////
 		//TODO DEBUG

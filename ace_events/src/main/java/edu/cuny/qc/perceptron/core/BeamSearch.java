@@ -292,9 +292,7 @@ public class BeamSearch
 	 */
 	protected List<String> nextLabels(String previousLabel)
 	{
-		//TODO ofer1
-		return Arrays.asList(new String[] {"O", "OferMove"});
-		//return model.getLabelBigram().get(previousLabel);
+		return model.getLabelBigram().get(previousLabel);
 	}
 	
 	/**

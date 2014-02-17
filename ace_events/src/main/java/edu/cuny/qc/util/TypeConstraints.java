@@ -117,11 +117,33 @@ public class TypeConstraints
 			
 			// read argument role mapping
 			BufferedReader reader = new BufferedReader(new FileReader("src/main/resources/data/ace/argumentRoles"));
+			List<String[]> lines = new ArrayList<String[]>();
 			String line = "";
 			while((line = reader.readLine()) != null)
 			{
 				String fields[] = line.split("\\s");
 				
+				lines.add(fields);
+			}
+			reader.close();
+			fillArgRolesAndTypesLists(lines);
+		} 
+		catch (FileNotFoundException e)
+		{
+			e.printStackTrace();
+		} 
+		catch (IOException e)
+		{
+			e.printStackTrace();
+		}
+	}
+		
+		
+	
+	public static void fillArgRolesAndTypesLists(List<String[]> lines)
+	{
+			for (String[] fields : lines)
+			{
 				if(fields.length > 2)
 				{
 					String event_type = fields[0];
@@ -147,7 +169,6 @@ public class TypeConstraints
 					}
 				}
 			}
-			reader.close();
 			
 			for(String eventType : argumentRoles.keySet())
 			{
@@ -167,17 +188,8 @@ public class TypeConstraints
 					}
 				}
 			}
-		} 
-		catch (FileNotFoundException e)
-		{
-			e.printStackTrace();
-		} 
-		catch (IOException e)
-		{
-			e.printStackTrace();
-		}
 	}
-	
+
 	/**
 	 * Given an event subtype, return the type. e.g. End_Position --> Personnel
 	 * @param type

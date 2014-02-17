@@ -109,36 +109,36 @@ public class TypeConstraints
 		eventTypeMapModified.put("Pardon","Justice");
 	}
 	
-	static
-	{
-		try
-		{
-			// initialize independentRoles
-			independentRoles.add("Place");
-			independentRoles.add("Time");
-			
-			// read argument role mapping
-			BufferedReader reader = new BufferedReader(new FileReader("src/main/resources/data/ace/argumentRoles"));
-			List<String[]> lines = new ArrayList<String[]>();
-			String line = "";
-			while((line = reader.readLine()) != null)
-			{
-				String fields[] = line.split("\\s");
-				
-				lines.add(fields);
-			}
-			reader.close();
-			fillArgRolesAndTypesLists(lines);
-		} 
-		catch (FileNotFoundException e)
-		{
-			e.printStackTrace();
-		} 
-		catch (IOException e)
-		{
-			e.printStackTrace();
-		}
-	}
+//	static
+//	{
+//		try
+//		{
+//			// initialize independentRoles
+//			independentRoles.add("Place");
+//			independentRoles.add("Time");
+//			
+//			// read argument role mapping
+//			BufferedReader reader = new BufferedReader(new FileReader("src/main/resources/data/ace/argumentRoles"));
+//			List<String[]> lines = new ArrayList<String[]>();
+//			String line = "";
+//			while((line = reader.readLine()) != null)
+//			{
+//				String fields[] = line.split("\\s");
+//				
+//				lines.add(fields);
+//			}
+//			reader.close();
+//			fillArgRolesAndTypesLists(lines);
+//		} 
+//		catch (FileNotFoundException e)
+//		{
+//			e.printStackTrace();
+//		} 
+//		catch (IOException e)
+//		{
+//			e.printStackTrace();
+//		}
+//	}
 		
 		
 	

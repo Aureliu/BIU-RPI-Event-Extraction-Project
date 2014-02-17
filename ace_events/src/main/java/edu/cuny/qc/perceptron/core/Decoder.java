@@ -19,6 +19,7 @@ import org.apache.commons.lang3.SerializationUtils;
 import org.apache.uima.analysis_engine.AnalysisEngine;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.jcas.JCas;
+import org.apache.uima.jcas.cas.StringArray;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.util.InvalidXMLException;
 import org.dom4j.DocumentException;
@@ -27,6 +28,7 @@ import org.xml.sax.SAXException;
 
 import ac.biu.nlp.nlp.ie.onthefly.input.OdieInputAnnotator;
 import ac.biu.nlp.nlp.ie.onthefly.input.OdieInputXmiBuilder;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.InputMetadata;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.Predicate;
 
@@ -170,15 +172,29 @@ public class Decoder
 		
 		// handle specs
 		List<JCas> specs = new ArrayList<JCas>(specXmlPaths.size());
+		List<String[]> linesForArgs = new ArrayList<String[]>();
 		for (String specXmlPath : specXmlPaths) {
 			JCas spec = getPreprocessedSpec(specXmlPath, perceptron);
 			specs.add(spec);
 
 			Predicate predicate = JCasUtil.selectSingle(spec, Predicate.class);
-			TypeConstraints.addSpecType(predicate.getName());
-			perceptron.nodeTargetAlphabet.lookupIndex(predicate.getName());
+			String predicateName = predicate.getName();
+			TypeConstraints.addSpecType(predicateName);
+			perceptron.nodeTargetAlphabet.lookupIndex(predicateName);
+			
+			for (Argument arg : JCasUtil.select(spec, Argument.class)) {
+				String role = arg.getRole();
+				List<String> types = Arrays.asList(arg.getTypes().toStringArray());
+				
+				List<String> lineList = new ArrayList<String>();
+				lineList.add(predicateName);
+				lineList.add(role);
+				lineList.addAll(types);
+				linesForArgs.add((String[]) lineList.toArray());
+			}
 		}
 		perceptron.fillLabelBigrams();
+		TypeConstraints.fillArgRolesAndTypesLists(linesForArgs);
 		
 		
 		BufferedReader reader = new BufferedReader(new FileReader(fileList));

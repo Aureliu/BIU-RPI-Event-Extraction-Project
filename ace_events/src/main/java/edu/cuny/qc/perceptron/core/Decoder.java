@@ -176,6 +176,7 @@ public class Decoder
 
 			Predicate predicate = JCasUtil.selectSingle(spec, Predicate.class);
 			TypeConstraints.addSpecType(predicate.getName());
+			perceptron.nodeTargetAlphabet.lookupIndex(predicate.getName());
 		}
 		
 		

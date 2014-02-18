@@ -14,6 +14,7 @@ import edu.cuny.qc.ace.acetypes.AceMention;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
 import edu.cuny.qc.perceptron.types.SentenceInstance.InstanceAnnotations;
 import edu.cuny.qc.util.TokenAnnotations;
+import edu.cuny.qc.util.TypeConstraints;
 import edu.stanford.nlp.trees.Tree;
 
 /**
@@ -205,8 +206,12 @@ public class NodeFeatureGenerator
 		List<List<String>> ret = new ArrayList<List<String>>();
 		for(int i=0; i<sent.size(); i++)
 		{
-			List<String> vector = get_node_text_features(sent, i);
-			ret.add(vector);
+			
+			// Add here the check that this token can be valid as a trigger - to avoid building features when it's not
+			if (TypeConstraints.isPossibleTriggerByPOS(sent, i) && TypeConstraints.isPossibleTriggerByEntityType(sent, i)) {
+				List<String> vector = get_node_text_features(sent, i);
+				ret.add(vector);
+			}
 		}
 		return ret;
 	}

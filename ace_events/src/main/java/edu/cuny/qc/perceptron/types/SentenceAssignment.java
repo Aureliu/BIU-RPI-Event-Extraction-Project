@@ -460,56 +460,54 @@ public class SentenceAssignment
 			return;
 		}
 		String edgeLabel = (String) this.edgeTargetAlphabet.lookupObject(edgeLabelIndx);
+		String genericEdgeLabel = getGenericArgumentLabel(edgeLabel);
 		// if the argument role is NON, then do not produce any feature for it
 		if(controller.skipNonArgument && edgeLabel.equals(SentenceAssignment.Default_Argument_Label))
 		{
 			return; 
 		}
 		
-		List<List<List<String>>> edgeFeatVectors = (List<List<List<String>>>) problem.get(InstanceAnnotations.EdgeTextFeatureVectors);
-		List<String> textFeatures = edgeFeatVectors.get(index).get(entityIndex);
+		List<List<Map<String, Map<String, Map<String, FeatureInstance>>>>> edgeFeatVectors = (List<List<List<String>>>) problem.get(InstanceAnnotations.EdgeTextFeatureVectors);
+		Map<String, Map<String, Map<String, FeatureInstance>>> allEntityFeatures = edgeFeatVectors.get(index).get(entityIndex);
 		AceMention mention = problem.eventArgCandidates.get(entityIndex);
 		
 		int nodeLabelIndex = this.nodeAssignment.get(index);
 		String nodeLabel = (String) this.nodeTargetAlphabet.lookupObject(nodeLabelIndex);
 		FeatureVector fv = this.getFeatureVectorSequence().get(index);
-		if(textFeatures == null)
+		if(allEntityFeatures == null)
 		{
-			textFeatures = EdgeFeatureGenerator.get_edge_text_features(problem, index, mention);
-			edgeFeatVectors.get(index).set(entityIndex, textFeatures);
+			allEntityFeatures = EdgeFeatureGenerator.get_edge_text_features(problem, index, mention);
+			edgeFeatVectors.get(index).set(entityIndex, allEntityFeatures);
 		}
-		for(String textFeature : textFeatures)
-		{
-			String featureStr = "";
 		
-			if(!edgeLabel.equals(SentenceAssignment.Default_Argument_Label))
-			{
-				if(!TypeConstraints.isIndependentRole(edgeLabel))
-				{
-					// if the role is dependent on event type, then creat feature based on nodeLabel + edge label
-					featureStr = "EdgeLocalFeature:\t" + textFeature + "\t" + "triggerLabel:" + nodeLabel + "\tArgRole:" + edgeLabel;
+		if (genericEdgeLabel == Generic_Existing_Argument_Label) {
+			Map<String, FeatureInstance> featuresOfEntity = allEntityFeatures.get(nodeLabel).get(edgeLabel);
+			for (FeatureInstance feature : featuresOfEntity.values()) {
+				if (feature.isPositive) {
+					String featureStr = "EdgeLocalFeature:\t" + feature.name + "\t" + genericEdgeLabel;
 					makeFeature(featureStr, fv, addIfNotPresent, useIfNotPresent);
 				}
-				else
-				{
-					// if the role (like Place or Timex) is independent on event type, then creat feature only based on edge label
-					featureStr = "EdgeLocalFeature:\t" + textFeature + "\t" + "\tArgRole:" + edgeLabel;
-					makeFeature(featureStr, fv, addIfNotPresent, useIfNotPresent);
-				}
-			
-				// add backoff feature for argument
-				featureStr = "EdgeLocalFeature:\t" + textFeature + "\t" + "IsArg";
-				makeFeature(featureStr, fv, addIfNotPresent, useIfNotPresent);
-			}
-			else
-			{
-				// feature for NON
-				featureStr = "EdgeLocalFeature:\t" + textFeature + "\t" + edgeLabel;
-				makeFeature(featureStr, fv, addIfNotPresent, useIfNotPresent);
 			}
 		}
-		String featureStr = "EdgeLocalFeature:\tTriggerType=" + nodeLabel + "\t" + "\tArgRole:" + edgeLabel;
-		makeFeature(featureStr, fv, addIfNotPresent, useIfNotPresent);
+		else {
+			Map<String, Map<String, FeatureInstance>> featuresOfNodeLabel = allEntityFeatures.get(nodeLabel);
+			for (Object featureNameObj : this.featureAlphabet.entries) {
+				String featureName = (String) featureNameObj;
+				double numFalse = 0.0;
+				for (Map<String, FeatureInstance> featuresOfLabel : featuresOfNodeLabel.values()) {
+					FeatureInstance feature = featuresOfLabel.get(featureName);
+					if (!feature.isPositive) {
+						numFalse += 1.0;
+					}
+				}
+				
+				double falseRatio = numFalse / featuresOfNodeLabel.size(); // divide by number of roles in current spec
+				
+				String featureStr = "EdgeLocalFeature:\t" + featureName + "\t" + genericEdgeLabel;
+				makeFeature(featureStr, fv, falseRatio, addIfNotPresent, useIfNotPresent);
+
+			}
+		}
 	}
 	
 	/**
@@ -634,7 +632,7 @@ public class SentenceAssignment
 						}
 					}
 					
-					double falseRatio = numFalse / token.size();
+					double falseRatio = numFalse / token.size(); // divide by number of specs
 					
 					// unigram features, for history reason, we still call them BigramFeature
 					// create a bigram feature

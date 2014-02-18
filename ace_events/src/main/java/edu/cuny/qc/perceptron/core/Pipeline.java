@@ -14,11 +14,10 @@ import org.dom4j.DocumentException;
 
 import edu.cuny.qc.perceptron.featureGenerator.TextFeatureGenerator;
 import edu.cuny.qc.perceptron.types.Alphabet;
-import edu.cuny.qc.perceptron.types.ClusterInstance;
 import edu.cuny.qc.perceptron.types.Document;
-import edu.cuny.qc.perceptron.types.DocumentCrossSent;
 import edu.cuny.qc.perceptron.types.Sentence;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
+import edu.cuny.qc.util.UnsupportedParameterException;
 
 public class Pipeline
 {
@@ -43,10 +42,10 @@ public class Pipeline
 			if(!controller.crossSent)
 			{
 				System.out.printf("[%s] Reading instance list of train...\n", new Date());
-				trainInstanceList = readInstanceList(srcDir, trainingFileList, nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet, controller, true, singleEventType);
+				trainInstanceList = readInstanceList(model, srcDir, trainingFileList, nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet, controller, true, singleEventType);
 				System.out.printf("[%s] Finished reading instance list of train, got %d instances\n", new Date(), trainInstanceList.size());
 				System.out.printf("[%s] Reading instance list of dev\n", new Date());
-				devInstanceList = readInstanceList(srcDir, devFileList, nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet, controller, false, singleEventType);
+				devInstanceList = readInstanceList(model, srcDir, devFileList, nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet, controller, false, singleEventType);
 				System.out.printf("[%s] Finished reading instance list of dev, got %d instances\n", new Date(), devInstanceList.size());
 				// perceptron training
 				System.out.printf("[%s] Building perceptron...\n", new Date());
@@ -55,19 +54,7 @@ public class Pipeline
 			}
 			else
 			{
-				trainInstanceList = readInstanceClusters(srcDir, trainingFileList, nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet, controller, true);
-				devInstanceList = readInstanceClusters(srcDir, devFileList, nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet, controller, false);
-				if(controller.crossSentReranking)
-				{
-					// use BeamSearchCluster to do inference
-					model = new PerceptronCluster(nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet);
-				}
-				else
-				{
-					// use BeamSearchSeq to do inference
-					model = new PerceptronCluster(nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet,
-							BeamSearchClusterSeq.class);
-				}
+				throw new UnsupportedParameterException("crossSent = true");
 			}
 			
 			model.controller = controller;
@@ -96,7 +83,7 @@ public class Pipeline
 	 * @throws IOException
 	 * @throws DocumentException
 	 */
-	public static List<SentenceInstance> readInstanceList(File srcDir, File file_list, 
+	public static List<SentenceInstance> readInstanceList(Perceptron perceptron, File srcDir, File file_list, 
 			Alphabet nodeTargetAlphabet, Alphabet edgeTargetAlphabet, Alphabet featureAlphabet, 
 			Controller controller, boolean learnable, String singleEventType) throws IOException, DocumentException
 	{
@@ -124,14 +111,14 @@ public class Pipeline
 				{
 					if(sent.eventMentions != null && sent.eventMentions.size() > 0)
 					{
-						SentenceInstance inst = new SentenceInstance(sent, nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet,
+						SentenceInstance inst = new SentenceInstance(perceptron, sent, nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet,
 								controller, learnable);
 						instancelist.add(inst);
 					}
 				}
 				else // add all instances
 				{
-					SentenceInstance inst = new SentenceInstance(sent, nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet, 
+					SentenceInstance inst = new SentenceInstance(perceptron, sent, nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet, 
 							controller, learnable);
 					instancelist.add(inst);
 				}
@@ -146,53 +133,53 @@ public class Pipeline
 	 * This function is to get list of ClusterInstance
 	 * it's used for corss-sentence decoding
 	 */
-	public static List<SentenceInstance> readInstanceClusters(File srcDir, File file_list, 
-			Alphabet nodeTargetAlphabet, Alphabet edgeTargetAlphabet, Alphabet featureAlphabet, 
-			Controller controller, boolean learnable) throws IOException, DocumentException
-	{
-		System.out.println("Reading training instance ...");
-		
-		List<SentenceInstance> instancelist = new ArrayList<SentenceInstance>();
-		BufferedReader reader = new BufferedReader(new FileReader(file_list));
-		String line = "";
-		TextFeatureGenerator featGen = new TextFeatureGenerator();
-		while((line = reader.readLine()) != null)
-		{
-			boolean monoCase = line.contains("bn/") ? true : false;
-			String fileName = srcDir + File.separator + line;
-			
-			System.out.println(fileName);
-			
-			DocumentCrossSent doc = new DocumentCrossSent(fileName, true, monoCase);
-			// fill in text feature vector for each token
-			featGen.fillTextFeatures(doc);
-			doc.setSentenceClustersByTokens();
-			for(int cluster_id=0 ; cluster_id<doc.getSentenceClusters().size(); cluster_id++)
-			{
-				List<Sentence> cluster = doc.getSentenceClusters().get(cluster_id);
-				
-				// during learning, skip instances that do not have event mentions 
-				if(learnable && controller.skipNonEventSent)
-				{
-					if(hasEventMention(cluster))
-					{
-						SentenceInstance inst = new ClusterInstance(cluster, nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet,
-								controller, learnable);
-						instancelist.add(inst);
-					}
-				}
-				else // add all instances
-				{
-					SentenceInstance inst = new ClusterInstance(cluster, nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet, 
-							controller, learnable);
-					instancelist.add(inst);
-				}
-			}
-		}
-		
-		System.out.println("done");
-		return instancelist;
-	}
+//	public static List<SentenceInstance> readInstanceClusters(File srcDir, File file_list, 
+//			Alphabet nodeTargetAlphabet, Alphabet edgeTargetAlphabet, Alphabet featureAlphabet, 
+//			Controller controller, boolean learnable) throws IOException, DocumentException
+//	{
+//		System.out.println("Reading training instance ...");
+//		
+//		List<SentenceInstance> instancelist = new ArrayList<SentenceInstance>();
+//		BufferedReader reader = new BufferedReader(new FileReader(file_list));
+//		String line = "";
+//		TextFeatureGenerator featGen = new TextFeatureGenerator();
+//		while((line = reader.readLine()) != null)
+//		{
+//			boolean monoCase = line.contains("bn/") ? true : false;
+//			String fileName = srcDir + File.separator + line;
+//			
+//			System.out.println(fileName);
+//			
+//			DocumentCrossSent doc = new DocumentCrossSent(fileName, true, monoCase);
+//			// fill in text feature vector for each token
+//			featGen.fillTextFeatures(doc);
+//			doc.setSentenceClustersByTokens();
+//			for(int cluster_id=0 ; cluster_id<doc.getSentenceClusters().size(); cluster_id++)
+//			{
+//				List<Sentence> cluster = doc.getSentenceClusters().get(cluster_id);
+//				
+//				// during learning, skip instances that do not have event mentions 
+//				if(learnable && controller.skipNonEventSent)
+//				{
+//					if(hasEventMention(cluster))
+//					{
+//						SentenceInstance inst = new ClusterInstance(cluster, nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet,
+//								controller, learnable);
+//						instancelist.add(inst);
+//					}
+//				}
+//				else // add all instances
+//				{
+//					SentenceInstance inst = new ClusterInstance(cluster, nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet, 
+//							controller, learnable);
+//					instancelist.add(inst);
+//				}
+//			}
+//		}
+//		
+//		System.out.println("done");
+//		return instancelist;
+//	}
 
 	/**
 	 * check if a cluster of sentences contain event mentions

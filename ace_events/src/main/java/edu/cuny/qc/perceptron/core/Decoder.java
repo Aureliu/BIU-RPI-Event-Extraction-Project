@@ -2,8 +2,6 @@ package edu.cuny.qc.perceptron.core;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintStream;
@@ -14,24 +12,19 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
-import org.apache.commons.lang3.SerializationException;
-import org.apache.commons.lang3.SerializationUtils;
 import org.apache.uima.analysis_engine.AnalysisEngine;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.jcas.JCas;
-import org.apache.uima.jcas.cas.StringArray;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.util.InvalidXMLException;
 import org.dom4j.DocumentException;
 import org.uimafit.util.JCasUtil;
 import org.xml.sax.SAXException;
 
-import ac.biu.nlp.nlp.ie.onthefly.input.OdieInputAnnotator;
-import ac.biu.nlp.nlp.ie.onthefly.input.OdieInputXmiBuilder;
+import ac.biu.nlp.nlp.ie.onthefly.input.SpecAnnotator;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.InputMetadata;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.Predicate;
-
 import edu.cuny.qc.ace.acetypes.AceDocument;
 import edu.cuny.qc.ace.acetypes.AceEntity;
 import edu.cuny.qc.ace.acetypes.AceEvent;
@@ -43,11 +36,10 @@ import edu.cuny.qc.ace.acetypes.Scorer.Stats;
 import edu.cuny.qc.perceptron.featureGenerator.TextFeatureGenerator;
 import edu.cuny.qc.perceptron.types.Alphabet;
 import edu.cuny.qc.perceptron.types.Document;
-import edu.cuny.qc.perceptron.types.DocumentCrossSent;
 import edu.cuny.qc.perceptron.types.SentenceAssignment;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
 import edu.cuny.qc.util.TypeConstraints;
-import eu.excitementproject.eop.common.utilities.StringUtil;
+import edu.cuny.qc.util.UnsupportedParameterException;
 import eu.excitementproject.eop.common.utilities.file.FileUtils;
 import eu.excitementproject.eop.common.utilities.uima.UimaUtils;
 
@@ -95,11 +87,11 @@ public class Decoder
 			spec = UimaUtils.loadXmi(preprocessed);
 		}
 		else {
-			AnalysisEngine ae = UimaUtils.loadAE(OdieInputAnnotator.ANNOTATOR_FILE_PATH);
+			AnalysisEngine ae = UimaUtils.loadAE(SpecAnnotator.ANNOTATOR_FILE_PATH);
 			JCas jcas = ae.newJCas();
 			jcas.setDocumentLanguage("EN");
 			
-			OdieInputAnnotator myAe = (OdieInputAnnotator) ae;
+			SpecAnnotator myAe = (SpecAnnotator) ae;
 			myAe.setPerceptorn(perceptron);
 
 			InputMetadata meta = new InputMetadata(jcas);
@@ -125,7 +117,7 @@ public class Decoder
 	}
 
 
-	public static void decode(String[] args, String filenameSuffix, String folderNamePrefix, String singleEventType, File specListFile) throws IOException, DocumentException
+	public static void decode(String[] args, String filenameSuffix, String folderNamePrefix, String singleEventType, File specListFile) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException
 	{
 		List<String> specPaths = FileUtils.loadFileToList(specListFile);
 		decode(args, filenameSuffix, folderNamePrefix, singleEventType, specPaths);
@@ -210,10 +202,7 @@ public class Decoder
 			Document doc = null;
 			if(perceptron.controller.crossSent)
 			{
-				doc = new DocumentCrossSent(fileName, true, monoCase);
-				// fill in text feature vector for each token
-				featGen.fillTextFeatures(doc);
-				((DocumentCrossSent) doc).setSentenceClustersByTokens();	
+				throw new UnsupportedParameterException("crossSent = true");
 			}
 			else
 			{
@@ -221,7 +210,7 @@ public class Decoder
 				// fill in text feature vector for each token
 				featGen.fillTextFeatures_NoPreprocessing(doc);
 			}
-			localInstanceList = doc.getInstanceList(nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet, 
+			localInstanceList = doc.getInstanceList(perceptron, nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet, 
 					perceptron.controller, true);
 			
 			// decoding
@@ -257,7 +246,7 @@ public class Decoder
 		System.out.printf("[%s] --------------\r\nPerceptron.controller =\r\n%s\r\n\r\n--------------------------\r\n\r\n", new Date(), perceptron.controller);
 	}
 	
-	public static Stats decodeAndScore(String[] args, String filenameSuffix, String folderNamePrefix, String singleEventType, File specListFile) throws IOException, DocumentException {
+	public static Stats decodeAndScore(String[] args, String filenameSuffix, String folderNamePrefix, String singleEventType, File specListFile) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException {
 		decode(args, filenameSuffix, folderNamePrefix, singleEventType, specListFile);
 		
 		File outputFile = new File(outDir + File.separator + "Score" + filenameSuffix);
@@ -265,7 +254,7 @@ public class Decoder
 		return stats;
 	}
 
-	public static void main(String[] args) throws IOException, DocumentException {
+	public static void main(String[] args) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException {
 		//TODO the organization here is bad, should be improved:
 		// 1. there's no way to specify both a filenameSufix and NO_SCORING
 

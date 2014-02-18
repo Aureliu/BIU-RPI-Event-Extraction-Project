@@ -17,7 +17,7 @@ import eu.excitementproject.eop.common.utilities.uima.UimaUtils;
 public class OdieInputXmiBuilder {
 
 	public static JCas build(String inputFilePath) throws InvalidXMLException, ResourceInitializationException, IOException, SAXException, AnalysisEngineProcessException {
-		AnalysisEngine ae = UimaUtils.loadAE(OdieInputAnnotator.ANNOTATOR_FILE_PATH);
+		AnalysisEngine ae = UimaUtils.loadAE(SpecAnnotator.ANNOTATOR_FILE_PATH);
 		JCas jcas = ae.newJCas();
 		jcas.setDocumentLanguage("EN");
 

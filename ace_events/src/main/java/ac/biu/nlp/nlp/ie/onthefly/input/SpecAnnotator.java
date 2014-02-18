@@ -3,6 +3,9 @@ package ac.biu.nlp.nlp.ie.onthefly.input;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.jcas.JCas;
@@ -22,12 +25,26 @@ import edu.cuny.qc.perceptron.similarity_scorer.FeatureMechanism;
 import eu.excitementproject.eop.common.utilities.file.FileUtils;
 import eu.excitementproject.eop.common.utilities.uima.UimaUtils;
 
-public class OdieInputAnnotator extends JCasAnnotator_ImplBase {
+public class SpecAnnotator extends JCasAnnotator_ImplBase {
 	public static final String LIST_SEPARATOR = ",";
 	private Perceptron perceptron = null;
 	
 	public void setPerceptorn(Perceptron perceptron) {
 		this.perceptron = perceptron;
+	}
+	
+	public static String getSpecLabel(JCas spec) {
+		Predicate pred = JCasUtil.selectSingle(spec, Predicate.class);
+		return pred.getName();
+	}
+
+	public static List<String> getSpecRoles(JCas spec) {
+		Collection<Argument> args = JCasUtil.select(spec, Argument.class);
+		List<String> ret = new ArrayList<String>(args.size());
+		for (Argument arg : args) {
+			ret.add(arg.getRole());
+		}
+		return ret;
 	}
 
 	@Override
@@ -62,9 +79,9 @@ public class OdieInputAnnotator extends JCasAnnotator_ImplBase {
 			typeSystemDescription.toXML(out);
 			
 			//TODO here add all generic preprocessing (like POS tagging, parsing, etc.)
-			xxx;
+			///xxx;
 			
-			for (FeatureMechanism featureMechanism : perceptron.getFeatureMechanisms()) {
+			for (FeatureMechanism featureMechanism : perceptron.featureMechanisms) {
 				featureMechanism.preprocessSpec(jCas);
 			}
 		}

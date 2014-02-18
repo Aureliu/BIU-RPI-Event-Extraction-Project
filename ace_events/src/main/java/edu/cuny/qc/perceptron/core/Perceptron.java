@@ -10,8 +10,10 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.apache.commons.lang3.SerializationUtils;
 import org.apache.uima.jcas.JCas;
@@ -23,6 +25,7 @@ import edu.cuny.qc.perceptron.types.FeatureVector;
 import edu.cuny.qc.perceptron.types.SentenceAssignment;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
 import edu.cuny.qc.util.TypeConstraints;
+import edu.cuny.qc.util.UnsupportedParameterException;
 
 
 /**
@@ -53,7 +56,12 @@ public class Perceptron implements java.io.Serializable
 	protected FeatureVector avg_weights;
 	protected FeatureVector avg_weights_base; // for average weights update
 	
-	protected List<FeatureMechanism> featureMechanisms;
+	public List<FeatureMechanism> featureMechanisms= new ArrayList<FeatureMechanism>();
+	
+	public List<JCas> specs = new ArrayList<JCas>();
+	
+	public Set<String> triggerFeatureBaseNames = new LinkedHashSet<String>();
+	public Set<String> argFeatureBaseNames = new LinkedHashSet<String>();
 	
 	
 	// default constructor 
@@ -68,13 +76,14 @@ public class Perceptron implements java.io.Serializable
 		this.avg_weights_base = new FeatureVector();
 		
 		labelBigram = new HashMap<String, List<String>>();
+		
+		buildFeatureMechanisms();
 	}
 	
 	private void buildFeatureMechanisms() {
 		featureMechanisms = new ArrayList<FeatureMechanism>();
 		
 		featureMechanisms.add(new WordNetFeatureMechanism());
-		yyy;
 	}
 		
 	// default constructor 
@@ -91,11 +100,6 @@ public class Perceptron implements java.io.Serializable
 //		labelBigram = new HashMap<String, List<String>>();
 //	}
 //	
-
-
-	public List<FeatureMechanism> getFeatureMechanisms() {
-		return featureMechanisms;
-	}
 	
 	/**
 	 *  given an instanceList, decode, and give the best assignmentList
@@ -108,7 +112,7 @@ public class Perceptron implements java.io.Serializable
 		BeamSearch beamSearcher = new BeamSearch(this, false);
 		if(this.controller.updateType == 1)
 		{
-			beamSearcher = new BeamSearchStandard(this, false);
+			throw new UnsupportedParameterException("updateType == 1");
 		}
 		for(SentenceInstance inst : instanceList)
 		{
@@ -246,10 +250,10 @@ public class Perceptron implements java.io.Serializable
 			}
 			
 			// print out num of invalid update
-			if(beamSearcher instanceof BeamSearchStandard)
-			{
-				((BeamSearchStandard) beamSearcher).print_num_update(System.out);
-			}
+//			if(beamSearcher instanceof BeamSearchStandard)
+//			{
+//				((BeamSearchStandard) beamSearcher).print_num_update(System.out);
+//			}
 		}
 		
 		if(iter < this.controller.maxIterNum)
@@ -279,10 +283,10 @@ public class Perceptron implements java.io.Serializable
 		}
 		
 		// print out num of invalid update
-		if(beamSearcher instanceof BeamSearchStandard)
-		{
-			((BeamSearchStandard) beamSearcher).print_num_update(System.out);
-		}
+//		if(beamSearcher instanceof BeamSearchStandard)
+//		{
+//			((BeamSearchStandard) beamSearcher).print_num_update(System.out);
+//		}
 		
 		return;
 	}
@@ -297,7 +301,7 @@ public class Perceptron implements java.io.Serializable
 	{
 		if(this.controller.updateType == 1)
 		{
-			return new BeamSearchStandard(this, true);
+			throw new UnsupportedParameterException("updateType == 1");
 		}
 		else
 		{

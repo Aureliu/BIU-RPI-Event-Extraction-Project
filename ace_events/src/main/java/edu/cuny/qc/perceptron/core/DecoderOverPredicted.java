@@ -6,7 +6,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
+import org.apache.uima.resource.ResourceInitializationException;
+import org.apache.uima.util.InvalidXMLException;
 import org.dom4j.DocumentException;
+import org.xml.sax.SAXException;
 
 import edu.cuny.qc.ace.acetypes.Scorer;
 import edu.cuny.qc.util.RecursiveFileListIterator;
@@ -27,7 +31,7 @@ public class DecoderOverPredicted {
 	public static String EXTENSION_ORIG = ".sgm.xml";
 	public static String EXTENSION_NEW =  ".apf.xml";
 
-	public static void main(String[] args) throws IOException, DocumentException, InstantiationException {
+	public static void main(String[] args) throws IOException, DocumentException, InstantiationException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException {
 		System.out.printf("Args:\n%s\n\n", new ArrayList<String>(Arrays.asList(args)));
 		if(args.length < 5)	{
 			System.out.println("Usage:");

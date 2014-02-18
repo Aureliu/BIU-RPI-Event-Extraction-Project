@@ -1,18 +1,28 @@
 package edu.cuny.qc.perceptron.featureGenerator;
 
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Vector;
+import java.util.Map.Entry;
+
+import org.apache.uima.jcas.JCas;
+
+import ac.biu.nlp.nlp.ie.onthefly.input.SpecAnnotator;
 
 import edu.cuny.qc.ace.acetypes.AceEntityMention;
 import edu.cuny.qc.ace.acetypes.AceEventArgumentValue;
 import edu.cuny.qc.ace.acetypes.AceMention;
 import edu.cuny.qc.ace.acetypes.AceTimexMention;
+import edu.cuny.qc.perceptron.core.Perceptron;
 import edu.cuny.qc.perceptron.graph.DependencyGraph;
 import edu.cuny.qc.perceptron.graph.GraphEdge;
 import edu.cuny.qc.perceptron.graph.GraphNode;
 import edu.cuny.qc.perceptron.graph.DependencyGraph.PathTerm;
+import edu.cuny.qc.perceptron.similarity_scorer.FeatureMechanism;
+import edu.cuny.qc.perceptron.types.FeatureInstance;
+import edu.cuny.qc.perceptron.types.FeatureType;
 import edu.cuny.qc.perceptron.types.Sentence;
 import edu.cuny.qc.perceptron.types.Sentence.Sent_Attribute;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
@@ -28,275 +38,292 @@ import edu.stanford.nlp.trees.Tree;
  */
 public class EdgeFeatureGenerator
 {
-	/**
-	 * @param edgeLabel
-	 * @param problem
-	 * @param index
-	 * @param addIfNotPresent
-	 * @param nodeLabel
-	 * @param mention
-	 */
-	public static List<String> get_edge_text_features(SentenceInstance sent, int i, AceMention mention)
+	public static Map<String, Map<String, Map<String, FeatureInstance>>> get_edge_text_features(SentenceInstance sent, int i, AceMention mention, Perceptron perceptron)
 	{
-		List<Map<Class<?>, Object>> tokens = (List<Map<Class<?>, Object>>) sent.get(SentenceInstance.InstanceAnnotations.Token_FEATURE_MAPs);
-		Map<Class<?>, Object> token_trigger = tokens.get(i);
-		Vector<Integer> headIndices = mention.getHeadIndices();
-		Vector<Integer> extentIndices = mention.getExtentIndices();
-		List<String> featureLine = new ArrayList<String>();
+		Map<String, Map<String, Map<String, FeatureInstance>>> ret = new LinkedHashMap<String, Map<String, Map<String, FeatureInstance>>>();
 		
-		String feature = "";
-		// trigger
-		String trigger = (String) token_trigger.get(TokenAnnotations.LemmaAnnotation.class);
-		feature = "Trigger=" + trigger;
-		featureLine.add(feature); 
-		
-		// type of argument entity mention
-		String type = mention.getType();
-		feature = "EntityType=" + type; 
-		featureLine.add(feature);
-		
-		// subtype of entity
-		if(mention instanceof AceEntityMention)
-		{
-			String subtype = ((AceEntityMention)mention).getSubType();
-			feature = "EntitySubType=" + subtype; 
-			featureLine.add(feature);
-		}
-		
-		// type of GPE role
-		if(mention instanceof AceEntityMention)
-		{
-			AceEntityMention entityMention = (AceEntityMention) mention;
-			String role = entityMention.getRole();
-			if(role != null && !role.equals(""))
-			{
-				feature = "EntityGEPRole=" + role; 
-				featureLine.add(feature);
+		LinkedHashMap<String, Double> scoredFeatures;
+		for (JCas spec : perceptron.specs) {
+			Map<String, Map<String, FeatureInstance>> specFeatures = new LinkedHashMap<String, Map<String, FeatureInstance>>();
+			String label = SpecAnnotator.getSpecLabel(spec);
+			ret.put(label, specFeatures);
+			
+			for (String role : SpecAnnotator.getSpecRoles(spec)) {
+				Map<String, FeatureInstance> roleFeatures = new LinkedHashMap<String, FeatureInstance>();
+				specFeatures.put(role, roleFeatures);
+
+				for (FeatureMechanism mechanism : perceptron.featureMechanisms) {
+					scoredFeatures = mechanism.scoreArgument(spec, sent, i, mention);
+					for (Entry<String, Double> scoredFeature : scoredFeatures.entrySet()) {
+						FeatureInstance feature = new FeatureInstance(scoredFeature.getKey(), FeatureType.ARGUMENT, scoredFeature.getValue());
+						roleFeatures.put(feature.name, feature);
+						perceptron.argFeatureBaseNames.add(feature.name);
+					}
+				}
 			}
 		}
 		
-		// head of entity/timex mention
-		if(mention instanceof AceEntityMention || mention instanceof AceTimexMention)
-		{
-			for(Integer index : headIndices)
-			{
-				// head can be more than one word
-				String head = (String) tokens.get(index).get(TokenAnnotations.LemmaAnnotation.class);
-				feature = "Head=" + head;
-				featureLine.add(feature);
-			}
-		}
-		
-		// NOTE: ignore Heads for Values
-//		else // value mention
+		return ret;
+
+//		List<Map<Class<?>, Object>> tokens = (List<Map<Class<?>, Object>>) sent.get(SentenceInstance.InstanceAnnotations.Token_FEATURE_MAPs);
+//		Map<Class<?>, Object> token_trigger = tokens.get(i);
+//		Vector<Integer> headIndices = mention.getHeadIndices();
+//		Vector<Integer> extentIndices = mention.getExtentIndices();
+//		List<String> featureLine = new ArrayList<String>();
+//		
+//		String feature = "";
+//		// trigger
+//		String trigger = (String) token_trigger.get(TokenAnnotations.LemmaAnnotation.class);
+//		feature = "Trigger=" + trigger;
+//		featureLine.add(feature); 
+//		
+//		// type of argument entity mention
+//		String type = mention.getType();
+//		feature = "EntityType=" + type; 
+//		featureLine.add(feature);
+//		
+//		// subtype of entity
+//		if(mention instanceof AceEntityMention)
 //		{
-//			int index = headIndices.get(0);
-//			String head = (String) tokens.get(index).get(TokenAnnotations.TextAnnotation.class);
-//			feature = "Head=" + head;
+//			String subtype = ((AceEntityMention)mention).getSubType();
+//			feature = "EntitySubType=" + subtype; 
 //			featureLine.add(feature);
 //		}
-		
-		// head of NAM or NOM mentions for the entity
-		if(mention instanceof AceEntityMention)
-		{
-			AceEntityMention NAMMention = ((AceEntityMention) mention).getNAMMention();
-			if(NAMMention != mention)
-			{
-				String[] heads = NAMMention.getHeadText().split("\\s");
-				for(String head : heads)
-				{
-					feature = "NAMHead=" + head.toLowerCase();
-					featureLine.add(feature);
-				}
-			}
-		}
-		
-		// check if the current entity mention is a modifier for other entity
-		// e.g. US Chinese, and Russia diplomats. US/Chinese/Russia are modifiers of diplomats
-		boolean isModifierEntity = isModifierOfOtherEntity(sent, mention);
-		if(isModifierEntity)
-		{
-			feature = "isModifierEntity=" + true;
-			featureLine.add(feature);
-		}
-		
-		// neighbor words
-		feature = getNeighborWords(tokens, i, mention, "EntityW-1", new int[]{-1});
-		if(feature != null)
-			featureLine.add(feature);
-		feature = getNeighborWords(tokens, i, mention, "EntityW-2", new int[]{-2});
-		if(feature != null)
-			featureLine.add(feature);
-		feature = getNeighborWords(tokens, i, mention, "EntityW-2W-1", new int[]{-2,-1});
-		if(feature != null)
-			featureLine.add(feature);
-		feature = getNeighborWords(tokens, i, mention, "EntityW1", new int[]{1});
-		if(feature != null)
-			featureLine.add(feature);
-		feature = getNeighborWords(tokens, i, mention, "EntityW2", new int[]{2});
-		if(feature != null)
-			featureLine.add(feature);
-		feature = getNeighborWords(tokens, i, mention, "EntityW1W2", new int[]{1,2});
-		if(feature != null)
-			featureLine.add(feature);
-		
-		// relative position of the entity, before or after the trigger
-		String position = "";
-		if(headIndices.get(0) > i)
-		{
-			position = "AfterTrigger";
-		}
-		else if(headIndices.get(headIndices.size() - 1) < i)
-		{
-			position = "BeforeTrigger";
-		}
-		featureLine.add(position);
-		
-		// the entity is the nearest entity
-		String is_nearest = isNearestEntity(sent, mention, i);
-		if(is_nearest != null)
-		{
-			feature = "nearest=" + is_nearest;
-			featureLine.add(feature);
-		}
-		
-		// dependencies of the entity
-		for(Integer index : headIndices)
-		{
-			Map<Class<?>, Object> token_head = tokens.get(index);
-			Vector<String> dep_features = (Vector<String>) token_head.get(TokenAnnotations.DependencyAnnotation.class);
-			if(dep_features != null)
-			{
-				featureLine.addAll(dep_features);
-			}
-		}
-		
-		// dependency paths between entity and trigger
-		List<String> paths = getDependencyPaths(sent, headIndices, i);
-		feature = "";
-		if(paths != null && paths.size() != 0)
-		{
-			for(String path : paths)
-			{
-				int distance = (path.split("#").length + 1) / 2;
-				// skip very long dependency path
-				if(distance <= 5)
-				{
-					feature = "Path=" + path;
-					featureLine.add(feature);
-				}
-			}
-		}
-		
-		int depDistance = Integer.MAX_VALUE;
-		// distance between entity and trigger in dependency tree (graph)
-		if(paths != null && paths.size() > 0)
-		{
-			depDistance = (paths.get(0).split("#").length + 1) / 2;
-			if(depDistance > 4)
-			{
-				feature = "DepDistance>4";
-			}
-			else
-			{
-				feature = "DepDistance=" + depDistance;
-			}
-			featureLine.add(feature);
-		}
-		else if(paths == null)
-		{
-			feature = "DepDistance=" + "INF";
-			featureLine.add(feature);
-		}
-		
-		// to do: get shortest dependency path by coreference
-//		List<String> paths_corf = getDependencyPathsCoref(sent, mention, i);
-//		feature = "";
-//		if(paths_corf != null && paths_corf.size() != 0)
+//		
+//		// type of GPE role
+//		if(mention instanceof AceEntityMention)
 //		{
-//			for(String path : paths_corf)
+//			AceEntityMention entityMention = (AceEntityMention) mention;
+//			String role = entityMention.getRole();
+//			if(role != null && !role.equals(""))
 //			{
-//				int distance = (path.split("#").length + 1) / 2;
-//				if(distance < depDistance && distance <= 3)
+//				feature = "EntityGEPRole=" + role; 
+//				featureLine.add(feature);
+//			}
+//		}
+//		
+//		// head of entity/timex mention
+//		if(mention instanceof AceEntityMention || mention instanceof AceTimexMention)
+//		{
+//			for(Integer index : headIndices)
+//			{
+//				// head can be more than one word
+//				String head = (String) tokens.get(index).get(TokenAnnotations.LemmaAnnotation.class);
+//				feature = "Head=" + head;
+//				featureLine.add(feature);
+//			}
+//		}
+//		
+//		// NOTE: ignore Heads for Values
+////		else // value mention
+////		{
+////			int index = headIndices.get(0);
+////			String head = (String) tokens.get(index).get(TokenAnnotations.TextAnnotation.class);
+////			feature = "Head=" + head;
+////			featureLine.add(feature);
+////		}
+//		
+//		// head of NAM or NOM mentions for the entity
+//		if(mention instanceof AceEntityMention)
+//		{
+//			AceEntityMention NAMMention = ((AceEntityMention) mention).getNAMMention();
+//			if(NAMMention != mention)
+//			{
+//				String[] heads = NAMMention.getHeadText().split("\\s");
+//				for(String head : heads)
 //				{
-//					feature = "CorfPath=" + path;
+//					feature = "NAMHead=" + head.toLowerCase();
 //					featureLine.add(feature);
 //				}
 //			}
 //		}
-		
-		// surface distance between trigger and entity
-		int surf_distance = getSurfaceDistanceLog(extentIndices, i);
-		feature = "SurfDistance=" + surf_distance;
-		featureLine.add(feature);
-		
-		// whether they (entity and trigger) are in the same clause (according to parsing tree)
-		Boolean sameClause = isSameClause(headIndices, tokens, i);
-		if(sameClause != null)
-		{
-			feature = "sameClause=" + sameClause;
-			featureLine.add(feature);
-		}
-		
-		// check this feature only when the mention and trigger is in the same clause
-		if(sameClause != null && sameClause == true)
-		{
-			String isOnlyOneEntity = isOnlyOneEntity(sent, mention);
-			if(isOnlyOneEntity != null)
-			{
-				feature = "onlyMentionOf=" + is_nearest;
-				featureLine.add(feature);
-			}
-		}
-		
-		// whether the scope of the entity covers the trigger
-		if(extentIndices.contains(i))
-		{
-			feature = "overlap=true";
-			featureLine.add(feature);
-		}
-		else
-		{
-			feature = "overlap=false";
-			featureLine.add(feature);
-		}
-		
-		// check whether Entity and Trigger are separated by a puncuation
-		boolean separate = isSeparatedBypunctuation(tokens, headIndices, i);
-		feature = "separate=" + separate;
-		featureLine.add(feature);
-		
-		// the common root of the entity and trigger in the parse tree
-		List<List<Tree>> pathsInParse = new ArrayList<List<Tree>>();
-		Tree tree = (Tree) sent.get(InstanceAnnotations.ParseTree);
-		Tree commonRoot = getCommonRootInParse(tree, headIndices, i, pathsInParse);
-		if(commonRoot != null)
-		{
-			feature = "commonRoot=" + commonRoot.value();
-			featureLine.add(feature);
-		}
-		
-		// the depth of the common root to the trigger node
-		if(commonRoot != null)
-		{
-			Tree triggerNodeInParse = tree.getLeaves().get(i);
-			int commonRootDepth = commonRoot.depth(triggerNodeInParse);
-			if(commonRootDepth < 5)
-			{
-				feature = "commonRootDepth=" + commonRootDepth;
-				featureLine.add(feature);
-			}
-		}
-			
-		// the Path from Trigger to Entity
-		String pathInParse = getPathInParse(tree, commonRoot, pathsInParse);
-		if(pathInParse != null)
-		{
-			feature = "pathInParse=" + pathInParse;
-			featureLine.add(feature);
-		}
-		
-		return featureLine;
+//		
+//		// check if the current entity mention is a modifier for other entity
+//		// e.g. US Chinese, and Russia diplomats. US/Chinese/Russia are modifiers of diplomats
+//		boolean isModifierEntity = isModifierOfOtherEntity(sent, mention);
+//		if(isModifierEntity)
+//		{
+//			feature = "isModifierEntity=" + true;
+//			featureLine.add(feature);
+//		}
+//		
+//		// neighbor words
+//		feature = getNeighborWords(tokens, i, mention, "EntityW-1", new int[]{-1});
+//		if(feature != null)
+//			featureLine.add(feature);
+//		feature = getNeighborWords(tokens, i, mention, "EntityW-2", new int[]{-2});
+//		if(feature != null)
+//			featureLine.add(feature);
+//		feature = getNeighborWords(tokens, i, mention, "EntityW-2W-1", new int[]{-2,-1});
+//		if(feature != null)
+//			featureLine.add(feature);
+//		feature = getNeighborWords(tokens, i, mention, "EntityW1", new int[]{1});
+//		if(feature != null)
+//			featureLine.add(feature);
+//		feature = getNeighborWords(tokens, i, mention, "EntityW2", new int[]{2});
+//		if(feature != null)
+//			featureLine.add(feature);
+//		feature = getNeighborWords(tokens, i, mention, "EntityW1W2", new int[]{1,2});
+//		if(feature != null)
+//			featureLine.add(feature);
+//		
+//		// relative position of the entity, before or after the trigger
+//		String position = "";
+//		if(headIndices.get(0) > i)
+//		{
+//			position = "AfterTrigger";
+//		}
+//		else if(headIndices.get(headIndices.size() - 1) < i)
+//		{
+//			position = "BeforeTrigger";
+//		}
+//		featureLine.add(position);
+//		
+//		// the entity is the nearest entity
+//		String is_nearest = isNearestEntity(sent, mention, i);
+//		if(is_nearest != null)
+//		{
+//			feature = "nearest=" + is_nearest;
+//			featureLine.add(feature);
+//		}
+//		
+//		// dependencies of the entity
+//		for(Integer index : headIndices)
+//		{
+//			Map<Class<?>, Object> token_head = tokens.get(index);
+//			Vector<String> dep_features = (Vector<String>) token_head.get(TokenAnnotations.DependencyAnnotation.class);
+//			if(dep_features != null)
+//			{
+//				featureLine.addAll(dep_features);
+//			}
+//		}
+//		
+//		// dependency paths between entity and trigger
+//		List<String> paths = getDependencyPaths(sent, headIndices, i);
+//		feature = "";
+//		if(paths != null && paths.size() != 0)
+//		{
+//			for(String path : paths)
+//			{
+//				int distance = (path.split("#").length + 1) / 2;
+//				// skip very long dependency path
+//				if(distance <= 5)
+//				{
+//					feature = "Path=" + path;
+//					featureLine.add(feature);
+//				}
+//			}
+//		}
+//		
+//		int depDistance = Integer.MAX_VALUE;
+//		// distance between entity and trigger in dependency tree (graph)
+//		if(paths != null && paths.size() > 0)
+//		{
+//			depDistance = (paths.get(0).split("#").length + 1) / 2;
+//			if(depDistance > 4)
+//			{
+//				feature = "DepDistance>4";
+//			}
+//			else
+//			{
+//				feature = "DepDistance=" + depDistance;
+//			}
+//			featureLine.add(feature);
+//		}
+//		else if(paths == null)
+//		{
+//			feature = "DepDistance=" + "INF";
+//			featureLine.add(feature);
+//		}
+//		
+//		// to do: get shortest dependency path by coreference
+////		List<String> paths_corf = getDependencyPathsCoref(sent, mention, i);
+////		feature = "";
+////		if(paths_corf != null && paths_corf.size() != 0)
+////		{
+////			for(String path : paths_corf)
+////			{
+////				int distance = (path.split("#").length + 1) / 2;
+////				if(distance < depDistance && distance <= 3)
+////				{
+////					feature = "CorfPath=" + path;
+////					featureLine.add(feature);
+////				}
+////			}
+////		}
+//		
+//		// surface distance between trigger and entity
+//		int surf_distance = getSurfaceDistanceLog(extentIndices, i);
+//		feature = "SurfDistance=" + surf_distance;
+//		featureLine.add(feature);
+//		
+//		// whether they (entity and trigger) are in the same clause (according to parsing tree)
+//		Boolean sameClause = isSameClause(headIndices, tokens, i);
+//		if(sameClause != null)
+//		{
+//			feature = "sameClause=" + sameClause;
+//			featureLine.add(feature);
+//		}
+//		
+//		// check this feature only when the mention and trigger is in the same clause
+//		if(sameClause != null && sameClause == true)
+//		{
+//			String isOnlyOneEntity = isOnlyOneEntity(sent, mention);
+//			if(isOnlyOneEntity != null)
+//			{
+//				feature = "onlyMentionOf=" + is_nearest;
+//				featureLine.add(feature);
+//			}
+//		}
+//		
+//		// whether the scope of the entity covers the trigger
+//		if(extentIndices.contains(i))
+//		{
+//			feature = "overlap=true";
+//			featureLine.add(feature);
+//		}
+//		else
+//		{
+//			feature = "overlap=false";
+//			featureLine.add(feature);
+//		}
+//		
+//		// check whether Entity and Trigger are separated by a puncuation
+//		boolean separate = isSeparatedBypunctuation(tokens, headIndices, i);
+//		feature = "separate=" + separate;
+//		featureLine.add(feature);
+//		
+//		// the common root of the entity and trigger in the parse tree
+//		List<List<Tree>> pathsInParse = new ArrayList<List<Tree>>();
+//		Tree tree = (Tree) sent.get(InstanceAnnotations.ParseTree);
+//		Tree commonRoot = getCommonRootInParse(tree, headIndices, i, pathsInParse);
+//		if(commonRoot != null)
+//		{
+//			feature = "commonRoot=" + commonRoot.value();
+//			featureLine.add(feature);
+//		}
+//		
+//		// the depth of the common root to the trigger node
+//		if(commonRoot != null)
+//		{
+//			Tree triggerNodeInParse = tree.getLeaves().get(i);
+//			int commonRootDepth = commonRoot.depth(triggerNodeInParse);
+//			if(commonRootDepth < 5)
+//			{
+//				feature = "commonRootDepth=" + commonRootDepth;
+//				featureLine.add(feature);
+//			}
+//		}
+//			
+//		// the Path from Trigger to Entity
+//		String pathInParse = getPathInParse(tree, commonRoot, pathsInParse);
+//		if(pathInParse != null)
+//		{
+//			feature = "pathInParse=" + pathInParse;
+//			featureLine.add(feature);
+//		}
+//		
+//		return featureLine;
 	}
 	
 	/**

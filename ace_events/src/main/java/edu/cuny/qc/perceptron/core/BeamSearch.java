@@ -69,7 +69,7 @@ public class BeamSearch
 				}
 			}		
 			// evaluate all successors only consider trigger labeling, and then select beam
-			problem.target.makeNodeFeatures(problem, i, false, model.controller.addNeverSeenFeatures);
+			problem.target.makeNodeFeatures(problem, i, false, model.controller.addNeverSeenFeatures, model);
 			if(problem.controller.useGlobalFeature)
 			{
 				problem.target.makeGlobalFeaturesTrigger(problem, i, false, model.controller.addNeverSeenFeatures);
@@ -77,7 +77,7 @@ public class BeamSearch
 			for(SentenceAssignment assn : successor)
 			{
 				// make basic bigram features for event trigger
-				assn.makeNodeFeatures(problem, i, false, model.controller.addNeverSeenFeatures);
+				assn.makeNodeFeatures(problem, i, false, model.controller.addNeverSeenFeatures, model);
 				// evaluate the score of the assignment
 				if(problem.controller.useGlobalFeature)
 				{
@@ -125,7 +125,7 @@ public class BeamSearch
 						successor.add(assn);
 					}
 				}
-				problem.target.makeEdgeLocalFeature(problem, i, false, k, model.controller.addNeverSeenFeatures);
+				problem.target.makeEdgeLocalFeature(problem, i, false, k, model.controller.addNeverSeenFeatures, model);
 				if(problem.controller.useGlobalFeature)
 				{
 					// in each step of argument expansion, feed global feature if exists
@@ -139,7 +139,7 @@ public class BeamSearch
 				for(SentenceAssignment assn : successor)
 				{
 					// fill in local edge feature for the new argument
-					assn.makeEdgeLocalFeature(problem, i, false, k, model.controller.addNeverSeenFeatures);
+					assn.makeEdgeLocalFeature(problem, i, false, k, model.controller.addNeverSeenFeatures, model);
 					if(problem.controller.useGlobalFeature)
 					{
 						assn.makeGlobalFeaturesProgress(problem, i, k, false, model.controller.addNeverSeenFeatures);

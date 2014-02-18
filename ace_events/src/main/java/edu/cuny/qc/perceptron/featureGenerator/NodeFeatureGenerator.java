@@ -5,12 +5,22 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Vector;
+
+import org.apache.uima.jcas.JCas;
+
+import ac.biu.nlp.nlp.ie.onthefly.input.SpecAnnotator;
 
 import edu.cuny.qc.ace.acetypes.AceEntityMention;
 import edu.cuny.qc.ace.acetypes.AceMention;
+import edu.cuny.qc.perceptron.core.Perceptron;
+import edu.cuny.qc.perceptron.similarity_scorer.FeatureMechanism;
+import edu.cuny.qc.perceptron.types.FeatureInstance;
+import edu.cuny.qc.perceptron.types.FeatureType;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
 import edu.cuny.qc.perceptron.types.SentenceInstance.InstanceAnnotations;
 import edu.cuny.qc.util.TokenAnnotations;
@@ -201,184 +211,197 @@ public class NodeFeatureGenerator
 	 * @param sent
 	 * @return
 	 */
-	public static List<List<String>> get_node_text_features(SentenceInstance sent)
+	public static List<Map<String, Map<String, FeatureInstance>>> get_node_text_features(SentenceInstance sent, Perceptron perceptron)
 	{
-		List<List<String>> ret = new ArrayList<List<String>>();
+		List<Map<String, Map<String, FeatureInstance>>> ret = new ArrayList<Map<String, Map<String, FeatureInstance>>>();
 		for(int i=0; i<sent.size(); i++)
 		{
 			
 			// Add here the check that this token can be valid as a trigger - to avoid building features when it's not
 			if (TypeConstraints.isPossibleTriggerByPOS(sent, i) && TypeConstraints.isPossibleTriggerByEntityType(sent, i)) {
-				List<String> vector = get_node_text_features(sent, i);
-				ret.add(vector);
+				Map<String, Map<String, FeatureInstance>> features = get_node_text_features(sent, i, perceptron);
+				ret.add(features);
 			}
 		}
 		return ret;
 	}
 	
-	/**
-	 * Assume that text features for each token has been provided in feature map List<Map<Class<?>, Object>> sent, 
-	 * this function gathers all features for a token in a line, just before printing it out
-	 * @param sent
-	 * @param i
-	 * @param token
-	 * @return
-	 */
-	public static List<String> get_node_text_features(SentenceInstance inst, int i)
+	public static Map<String, Map<String, FeatureInstance>> get_node_text_features(SentenceInstance inst, int i, Perceptron perceptron)
 	{
-		List<Map<Class<?>, Object>> sent = (List<Map<Class<?>, Object>>) inst.get(InstanceAnnotations.Token_FEATURE_MAPs);
-		Map<Class<?>, Object> token = sent.get(i);
-		List<String> featureLine = new ArrayList<String>();
-		String feature = "";
+		Map<String, Map<String, FeatureInstance>> ret = new LinkedHashMap<String, Map<String, FeatureInstance>>();
 		
-		// text feature
-		String word = (String) token.get(TokenAnnotations.TextAnnotation.class);
-		feature = "W=" + word;
-		featureLine.add(feature);
-		
-		// lemma feature
-		String lemma = (String) token.get(TokenAnnotations.LemmaAnnotation.class);
-		feature = "Lem=" + lemma;
-		featureLine.add(feature);
-		
-		// Nomlex base from Noun --> verb. e.g. retirement --> retire
-		String base = (String) token.get(TokenAnnotations.NomlexbaseAnnotation.class);
-		if(base != null)
-		{
-			feature = "Lem=" + base;
-			if(!featureLine.contains(feature))
-			{
-				featureLine.add(feature);
+		LinkedHashMap<String, Double> scoredFeatures;
+		for (JCas spec : perceptron.specs) {
+			Map<String, FeatureInstance> specFeatures = new LinkedHashMap<String, FeatureInstance>();
+			String label = SpecAnnotator.getSpecLabel(spec);
+			ret.put(label, specFeatures);
+			
+			for (FeatureMechanism mechanism : perceptron.featureMechanisms) {
+				scoredFeatures = mechanism.scoreTrigger(spec, inst, i);
+				for (Entry<String, Double> scoredFeature : scoredFeatures.entrySet()) {
+					FeatureInstance feature = new FeatureInstance(scoredFeature.getKey(), FeatureType.TRIGGER, scoredFeature.getValue());
+					specFeatures.put(feature.name, feature);
+					perceptron.triggerFeatureBaseNames.add(feature.name);
+				}
 			}
 		}
 		
-		List<String> possibleTypes = getPossibleEventTypes(lemma);
-		for(String possible : possibleTypes)
-		{
-			feature = "Possible=" + possible;
-			featureLine.add(feature);
-		}
+		return ret;
 		
-		// POS feature
-		String pos = (String) token.get(TokenAnnotations.PartOfSpeechAnnotation.class);
-		feature = "POS=" + pos;
-		featureLine.add(feature);
-		
-//		String chunking = (String) token.get(TokenAnnotations.ChunkingAnnotation.class);
-//		feature = "chunk=" + chunking;
+				
+//		List<Map<Class<?>, Object>> sent = (List<Map<Class<?>, Object>>) inst.get(InstanceAnnotations.Token_FEATURE_MAPs);
+//		Map<Class<?>, Object> token = sent.get(i);
+//		List<String> featureLine = new ArrayList<String>();
+//		String feature = "";
+//		
+//		// text feature
+//		String word = (String) token.get(TokenAnnotations.TextAnnotation.class);
+//		feature = "W=" + word;
 //		featureLine.add(feature);
-		
-		// get WordNet Synonyms
-		List<String> synonyms = (List<String>) token.get(TokenAnnotations.SynonymsAnnotation.class);
-		if(synonyms != null)
-		{
-			for(String syn : synonyms)
-			{
-				feature = "Synonym=" + syn;
-				featureLine.add(feature);
-			}
-		}
-		
-		// get Brown clusters 
-		List<String> brownClusters = (List<String>) token.get(TokenAnnotations.BrownClusterAnnotation.class);
-		if(brownClusters != null)
-		{
-			for(String clusterPrefix : brownClusters)
-			feature = "Brown=" + clusterPrefix;
-			featureLine.add(feature);
-		}
-		
-		// get dependency features
-		Vector<String> dep_features = (Vector<String>) token.get(TokenAnnotations.DependencyAnnotation.class);
-		if(dep_features != null)
-		{
-			for(String dep_feature : dep_features)
-			{
-				featureLine.add(dep_feature);
-			}
-		}
-		
-		// get entity information if any
-		List<String> entityInfo = (List<String>) token.get(TokenAnnotations.EntityAnnotation.class);
-		if(entityInfo != null)
-		{
-			for(String entity : entityInfo)
-			{
-				entity = "entityTypeOfToken=" + entity;
-				featureLine.add(entity);
-			}
-		}
-		
-		// get nearest entity information
-		AceMention mention = (AceMention) token.get(TokenAnnotations.SyntacticallyNearestEntity.class);
-		if(mention != null)
-		{
-			// only keep this feature for Sentence and Crime and Job-Title
-			if(mention.getType().matches("Sentence|Crime|Job-Title"))
-			{
-				feature = "syn_near_entityType=" + mention.getType();
-				featureLine.add(feature);
-			}
-			if(mention instanceof AceEntityMention)
-			{
-				AceEntityMention NAMMention = ((AceEntityMention) mention).getNAMMention();
-				String[] heads = NAMMention.getHeadText().split("\\s");
-				for(String head : heads)
-				{
-					feature = "syn_near_entity=" + head.toLowerCase();
-					featureLine.add(feature);
-				}
-			}
-		}
-		
-		// get nearest entity information
-		mention = (AceMention) token.get(TokenAnnotations.PhysicallyNearestEntity.class);
-		if(mention != null)
-		{
-			if(mention instanceof AceEntityMention)
-			{
-				AceEntityMention NAMMention = ((AceEntityMention) mention).getNAMMention();
-				String[] heads = NAMMention.getHeadText().split("\\s");
-				for(String head : heads)
-				{
-					feature = "phy_near_entity=" + head.toLowerCase();
-					featureLine.add(feature);
-				}
-			}
-		}
-		
-		// if the current token is "it", then check it this "it"
-		// is a non-referential pronun
-		if(word.equalsIgnoreCase("it"))
-		{
-			Tree tree = (Tree) inst.get(InstanceAnnotations.ParseTree);
-			boolean nonref = isNonRefPronoun(tree, i);
-			feature = "NonRefProIt=" + nonref;
-			featureLine.add(feature);
-		}
-		
-		boolean titleModifier = checkNPModifier(sent, i);
-		if(titleModifier)
-		{
-			feature = "TitleModifier=" + true;
-			featureLine.add(feature);
-		}
-		
-		// conjunction features
-		addConjuctionFeatures(sent, i, featureLine);
-		
-		// add features from clusters
-		List<String> highConfTriggersInCluster = (List<String>) token.get(TokenAnnotations.HighConfidenceTriggerInCluster.class);
-		if(highConfTriggersInCluster != null)
-		{
-			for(String temp : highConfTriggersInCluster)
-			{
-				feature = "happenInOther=" + temp;
-				featureLine.add(feature);
-			}
-		}
-		
-		return featureLine;
+//		
+//		// lemma feature
+//		String lemma = (String) token.get(TokenAnnotations.LemmaAnnotation.class);
+//		feature = "Lem=" + lemma;
+//		featureLine.add(feature);
+//		
+//		// Nomlex base from Noun --> verb. e.g. retirement --> retire
+//		String base = (String) token.get(TokenAnnotations.NomlexbaseAnnotation.class);
+//		if(base != null)
+//		{
+//			feature = "Lem=" + base;
+//			if(!featureLine.contains(feature))
+//			{
+//				featureLine.add(feature);
+//			}
+//		}
+//		
+//		List<String> possibleTypes = getPossibleEventTypes(lemma);
+//		for(String possible : possibleTypes)
+//		{
+//			feature = "Possible=" + possible;
+//			featureLine.add(feature);
+//		}
+//		
+//		// POS feature
+//		String pos = (String) token.get(TokenAnnotations.PartOfSpeechAnnotation.class);
+//		feature = "POS=" + pos;
+//		featureLine.add(feature);
+//		
+////		String chunking = (String) token.get(TokenAnnotations.ChunkingAnnotation.class);
+////		feature = "chunk=" + chunking;
+////		featureLine.add(feature);
+//		
+//		// get WordNet Synonyms
+//		List<String> synonyms = (List<String>) token.get(TokenAnnotations.SynonymsAnnotation.class);
+//		if(synonyms != null)
+//		{
+//			for(String syn : synonyms)
+//			{
+//				feature = "Synonym=" + syn;
+//				featureLine.add(feature);
+//			}
+//		}
+//		
+//		// get Brown clusters 
+//		List<String> brownClusters = (List<String>) token.get(TokenAnnotations.BrownClusterAnnotation.class);
+//		if(brownClusters != null)
+//		{
+//			for(String clusterPrefix : brownClusters)
+//			feature = "Brown=" + clusterPrefix;
+//			featureLine.add(feature);
+//		}
+//		
+//		// get dependency features
+//		Vector<String> dep_features = (Vector<String>) token.get(TokenAnnotations.DependencyAnnotation.class);
+//		if(dep_features != null)
+//		{
+//			for(String dep_feature : dep_features)
+//			{
+//				featureLine.add(dep_feature);
+//			}
+//		}
+//		
+//		// get entity information if any
+//		List<String> entityInfo = (List<String>) token.get(TokenAnnotations.EntityAnnotation.class);
+//		if(entityInfo != null)
+//		{
+//			for(String entity : entityInfo)
+//			{
+//				entity = "entityTypeOfToken=" + entity;
+//				featureLine.add(entity);
+//			}
+//		}
+//		
+//		// get nearest entity information
+//		AceMention mention = (AceMention) token.get(TokenAnnotations.SyntacticallyNearestEntity.class);
+//		if(mention != null)
+//		{
+//			// only keep this feature for Sentence and Crime and Job-Title
+//			if(mention.getType().matches("Sentence|Crime|Job-Title"))
+//			{
+//				feature = "syn_near_entityType=" + mention.getType();
+//				featureLine.add(feature);
+//			}
+//			if(mention instanceof AceEntityMention)
+//			{
+//				AceEntityMention NAMMention = ((AceEntityMention) mention).getNAMMention();
+//				String[] heads = NAMMention.getHeadText().split("\\s");
+//				for(String head : heads)
+//				{
+//					feature = "syn_near_entity=" + head.toLowerCase();
+//					featureLine.add(feature);
+//				}
+//			}
+//		}
+//		
+//		// get nearest entity information
+//		mention = (AceMention) token.get(TokenAnnotations.PhysicallyNearestEntity.class);
+//		if(mention != null)
+//		{
+//			if(mention instanceof AceEntityMention)
+//			{
+//				AceEntityMention NAMMention = ((AceEntityMention) mention).getNAMMention();
+//				String[] heads = NAMMention.getHeadText().split("\\s");
+//				for(String head : heads)
+//				{
+//					feature = "phy_near_entity=" + head.toLowerCase();
+//					featureLine.add(feature);
+//				}
+//			}
+//		}
+//		
+//		// if the current token is "it", then check it this "it"
+//		// is a non-referential pronun
+//		if(word.equalsIgnoreCase("it"))
+//		{
+//			Tree tree = (Tree) inst.get(InstanceAnnotations.ParseTree);
+//			boolean nonref = isNonRefPronoun(tree, i);
+//			feature = "NonRefProIt=" + nonref;
+//			featureLine.add(feature);
+//		}
+//		
+//		boolean titleModifier = checkNPModifier(sent, i);
+//		if(titleModifier)
+//		{
+//			feature = "TitleModifier=" + true;
+//			featureLine.add(feature);
+//		}
+//		
+//		// conjunction features
+//		addConjuctionFeatures(sent, i, featureLine);
+//		
+//		// add features from clusters
+//		List<String> highConfTriggersInCluster = (List<String>) token.get(TokenAnnotations.HighConfidenceTriggerInCluster.class);
+//		if(highConfTriggersInCluster != null)
+//		{
+//			for(String temp : highConfTriggersInCluster)
+//			{
+//				feature = "happenInOther=" + temp;
+//				featureLine.add(feature);
+//			}
+//		}
+//		
+//		return featureLine;
 	}
 
 	/**

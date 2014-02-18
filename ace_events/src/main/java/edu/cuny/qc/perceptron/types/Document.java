@@ -34,6 +34,7 @@ import edu.cuny.qc.ace.acetypes.AceEntityMention;
 import edu.cuny.qc.ace.acetypes.AceEventMention;
 import edu.cuny.qc.ace.acetypes.AceMention;
 import edu.cuny.qc.perceptron.core.Controller;
+import edu.cuny.qc.perceptron.core.Perceptron;
 import edu.cuny.qc.perceptron.featureGenerator.TextFeatureGenerator;
 import edu.cuny.qc.perceptron.types.Sentence.Sent_Attribute;
 import edu.cuny.qc.util.SentDetectorWrapper;
@@ -76,7 +77,7 @@ public class Document implements java.io.Serializable
 	 */
 	protected List<Sentence> sentences;
 	
-	private JCas jcas; zzz this should be used at some point
+	private JCas jcas;
 	
 	/**
 	 * this object contains the parsed information from apf file (pretty much everything)
@@ -519,7 +520,8 @@ public class Document implements java.io.Serializable
 			List<Map<Class<?>, Object>> tokenFeatureMaps = new ArrayList<Map<Class<?>, Object>>();
 			sent.put(Sent_Attribute.Token_FEATURE_MAPs, tokenFeatureMaps);
 			this.sentences.add(sent);
-			xxx jcas xxx
+			
+			//TODO build/fill JCas!
 		}
 	}
 
@@ -846,7 +848,7 @@ public class Document implements java.io.Serializable
 	 * @param b
 	 * @return
 	 */
-	public List<SentenceInstance> getInstanceList(Alphabet nodeTargetAlphabet, Alphabet edgeTargetAlphabet, Alphabet featureAlphabet, 
+	public List<SentenceInstance> getInstanceList(Perceptron perceptron, Alphabet nodeTargetAlphabet, Alphabet edgeTargetAlphabet, Alphabet featureAlphabet, 
 			Controller controller, boolean learnable)
 	{
 		List<SentenceInstance> instancelist = new ArrayList<SentenceInstance>();
@@ -854,7 +856,7 @@ public class Document implements java.io.Serializable
 		{
 			Sentence sent = this.getSentences().get(sent_id);
 			// add all instances
-			SentenceInstance inst = new SentenceInstance(sent, nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet, 
+			SentenceInstance inst = new SentenceInstance(perceptron, sent, nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet, 
 					controller, learnable);
 			instancelist.add(inst);
 		}

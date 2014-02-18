@@ -9,6 +9,7 @@ import java.util.Map;
 
 import edu.cuny.qc.ace.acetypes.*;
 import edu.cuny.qc.perceptron.core.Controller;
+import edu.cuny.qc.perceptron.core.Perceptron;
 import edu.cuny.qc.perceptron.featureGenerator.NodeFeatureGenerator;
 import edu.cuny.qc.perceptron.graph.DependencyGraph;
 import edu.cuny.qc.perceptron.types.Sentence.Sent_Attribute;
@@ -81,7 +82,8 @@ public class SentenceInstance
 		POSTAGS,					// POS tags
 		NodeTextFeatureVectors,		// node feature Vectors
 		EdgeTextFeatureVectors,		// node feature Vectors
-		ParseTree					// parse tree
+		ParseTree,					// parse tree
+		JCas,                       // UIMA annotation in JCas
 	}
 	
 	public Object get(InstanceAnnotations key)
@@ -119,7 +121,7 @@ public class SentenceInstance
 	 * the SentenceInstance object can also be initialized by a file
 	 * @param sent
 	 */
-	public SentenceInstance(Sentence sent, Alphabet nodeTargetAlphabet, Alphabet edgeTargetAlphabet, Alphabet featureAlphabet, 
+	public SentenceInstance(Perceptron perceptron, Sentence sent, Alphabet nodeTargetAlphabet, Alphabet edgeTargetAlphabet, Alphabet featureAlphabet, 
 			Controller controller, boolean learnable)
 	{
 		this(nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet, controller, learnable);
@@ -180,7 +182,7 @@ public class SentenceInstance
 		this.textFeaturesMap.put(InstanceAnnotations.POSTAGS, sent.get(Sent_Attribute.POSTAGS));
 		
 		// get node text feature vectors
-		List<Map<String, Map<String, FeatureInstance>>> tokenFeatVectors = NodeFeatureGenerator.get_node_text_features(this);
+		List<Map<String, Map<String, FeatureInstance>>> tokenFeatVectors = NodeFeatureGenerator.get_node_text_features(this, perceptron);
 		this.textFeaturesMap.put(InstanceAnnotations.NodeTextFeatureVectors, tokenFeatVectors);
 		
 		// get edge text feature vectors, this vectors is built up in the lasy fashion, when it's needed, it's filled
@@ -201,7 +203,7 @@ public class SentenceInstance
 		eventMentions.addAll(sent.eventMentions);
 		
 		// add target as gold-standard assignment
-		this.target = new SentenceAssignment(this);
+		this.target = new SentenceAssignment(this, perceptron);
 	}
 
 	/**

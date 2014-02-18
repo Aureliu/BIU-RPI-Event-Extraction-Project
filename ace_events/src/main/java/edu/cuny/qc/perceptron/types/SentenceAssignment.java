@@ -10,6 +10,7 @@ import edu.cuny.qc.ace.acetypes.AceEventMention;
 import edu.cuny.qc.ace.acetypes.AceEventMentionArgument;
 import edu.cuny.qc.ace.acetypes.AceMention;
 import edu.cuny.qc.perceptron.core.Controller;
+import edu.cuny.qc.perceptron.core.Perceptron;
 import edu.cuny.qc.perceptron.featureGenerator.EdgeFeatureGenerator;
 import edu.cuny.qc.perceptron.featureGenerator.GlobalFeatureGenerator;
 import edu.cuny.qc.perceptron.types.SentenceInstance.InstanceAnnotations;
@@ -343,7 +344,7 @@ public class SentenceAssignment
 	 * also create a full featureVectorSequence
 	 * @param inst
 	 */
-	public SentenceAssignment(SentenceInstance inst)
+	public SentenceAssignment(SentenceInstance inst, Perceptron perceptron)
 	{
 		this(inst.nodeTargetAlphabet, inst.edgeTargetAlphabet, inst.featureAlphabet, inst.controller);
 		
@@ -401,21 +402,21 @@ public class SentenceAssignment
 		// create featureVectorSequence
 		for(int i=0; i<=state; i++)
 		{
-			makeAllFeatureForSingleState(inst, i, inst.learnable, inst.learnable);
+			makeAllFeatureForSingleState(inst, i, inst.learnable, inst.learnable, perceptron);
 		}
 	}
 	
 	private void makeAllFeatureForSingleState(SentenceInstance problem, int i, boolean addIfNotPresent,
-			boolean useIfNotPresent)
+			boolean useIfNotPresent, Perceptron perceptron)
 	{
 		// make basic bigram features for event trigger
-		this.makeNodeFeatures(problem, i, addIfNotPresent, useIfNotPresent);
+		this.makeNodeFeatures(problem, i, addIfNotPresent, useIfNotPresent, perceptron);
 		// make basic features of the argument-trigger link
-		this.makeEdgeFeatures(problem, i, addIfNotPresent, useIfNotPresent);
+		this.makeEdgeFeatures(problem, i, addIfNotPresent, useIfNotPresent, perceptron);
 		if(problem.controller.useGlobalFeature)
 		{
 			// make various global features
-			this.makeGlobalFeatures(problem, i, addIfNotPresent, useIfNotPresent);
+			this.makeGlobalFeatures(problem, i, addIfNotPresent, useIfNotPresent, perceptron);
 		}
 	}
 
@@ -425,7 +426,7 @@ public class SentenceAssignment
 	 * @param problem
 	 */
 	public void makeEdgeFeatures(SentenceInstance problem, int index, boolean addIfNotPresent, 
-			boolean useIfNotPresent)
+			boolean useIfNotPresent, Perceptron perceptron)
 	{
 		// node label
 		String nodeLabel = this.getLabelAtToken(index);
@@ -442,12 +443,12 @@ public class SentenceAssignment
 		for(Integer key : edge.keySet())
 		{
 			// edge label
-			makeEdgeLocalFeature(problem, index, addIfNotPresent, key, useIfNotPresent);
+			makeEdgeLocalFeature(problem, index, addIfNotPresent, key, useIfNotPresent, perceptron);
 		}
 	}
 
 	public void makeEdgeLocalFeature(SentenceInstance problem, int index, boolean addIfNotPresent, 
-			int entityIndex, boolean useIfNotPresent)
+			int entityIndex, boolean useIfNotPresent, Perceptron perceptron)
 	{	
 		if(this.edgeAssignment.get(index) == null)
 		{
@@ -467,7 +468,7 @@ public class SentenceAssignment
 			return; 
 		}
 		
-		List<List<Map<String, Map<String, Map<String, FeatureInstance>>>>> edgeFeatVectors = (List<List<List<String>>>) problem.get(InstanceAnnotations.EdgeTextFeatureVectors);
+		List<List<Map<String, Map<String, Map<String, FeatureInstance>>>>> edgeFeatVectors = (List<List<Map<String, Map<String, Map<String, FeatureInstance>>>>>) problem.get(InstanceAnnotations.EdgeTextFeatureVectors);
 		Map<String, Map<String, Map<String, FeatureInstance>>> allEntityFeatures = edgeFeatVectors.get(index).get(entityIndex);
 		AceMention mention = problem.eventArgCandidates.get(entityIndex);
 		
@@ -476,7 +477,7 @@ public class SentenceAssignment
 		FeatureVector fv = this.getFeatureVectorSequence().get(index);
 		if(allEntityFeatures == null)
 		{
-			allEntityFeatures = EdgeFeatureGenerator.get_edge_text_features(problem, index, mention);
+			allEntityFeatures = EdgeFeatureGenerator.get_edge_text_features(problem, index, mention, perceptron);
 			edgeFeatVectors.get(index).set(entityIndex, allEntityFeatures);
 		}
 		
@@ -491,7 +492,7 @@ public class SentenceAssignment
 		}
 		else {
 			Map<String, Map<String, FeatureInstance>> featuresOfNodeLabel = allEntityFeatures.get(nodeLabel);
-			for (Object featureNameObj : this.featureAlphabet.entries) {
+			for (Object featureNameObj : perceptron.argFeatureBaseNames) {
 				String featureName = (String) featureNameObj;
 				double numFalse = 0.0;
 				for (Map<String, FeatureInstance> featuresOfLabel : featuresOfNodeLabel.values()) {
@@ -581,8 +582,9 @@ public class SentenceAssignment
 	 * @param addIfNotPresent
 	 */
 	public void makeGlobalFeatures(SentenceInstance problem, int index, boolean addIfNotPresent, 
-			boolean useIfNotPresent)
+			boolean useIfNotPresent, Perceptron perceptron)
 	{
+		System.err.println("GLOBAL FEATURES ARE NOT IMPORTED YET!!!");
 		if(this.edgeAssignment.get(index) == null)
 		{
 			return;
@@ -594,7 +596,7 @@ public class SentenceAssignment
 		}
 	}
 	
-	public void makeNodeFeatures(SentenceInstance problem, int i, boolean addIfNotPresent, boolean useIfNotPresent)
+	public void makeNodeFeatures(SentenceInstance problem, int i, boolean addIfNotPresent, boolean useIfNotPresent, Perceptron perceptron)
 	{
 		// make node feature (bigram feature)
 		Map<String, Map<String, FeatureInstance>> token = ((List<Map<String, Map<String, FeatureInstance>>>) problem.get(InstanceAnnotations.NodeTextFeatureVectors)).get(i);
@@ -622,7 +624,7 @@ public class SentenceAssignment
 				}
 			}
 			else { //genericLabel == Default_Trigger_Label
-				for (Object featureNameObj : this.featureAlphabet.entries) {
+				for (Object featureNameObj : perceptron.triggerFeatureBaseNames) {
 					String featureName = (String) featureNameObj;
 					double numFalse = 0.0;
 					for (Map<String, FeatureInstance> featuresOfLabel : token.values()) {
@@ -642,15 +644,6 @@ public class SentenceAssignment
 				}
 			}
 		}
-
-
-		//TODO Ofer - remove Event-including feature
-		// if the previous label is a trigger, then get the bigram labels
-//		if(!previousLabel.equals(SentenceAssignment.Default_Trigger_Label))
-//		{
-//			String featureStr = "BigramFeature:\t" + "PreLabel:" + previousLabel + "\tcurrentLabel:" + outcome;
-//			makeFeature(featureStr, this.getFV(i), addIfNotPresent, useIfNotPresent);
-//		}
 	}
 	
 	protected void makeFeature(String featureStr, FeatureVector fv, boolean add_if_not_present,

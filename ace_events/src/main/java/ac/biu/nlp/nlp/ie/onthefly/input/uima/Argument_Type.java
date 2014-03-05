@@ -1,5 +1,5 @@
 
-/* First created by JCasGen Sun Aug 18 19:24:57 IDT 2013 */
+/* First created by JCasGen Wed Mar 05 18:37:19 IST 2014 */
 package ac.biu.nlp.nlp.ie.onthefly.input.uima;
 
 import org.apache.uima.jcas.JCas;
@@ -11,12 +11,12 @@ import org.apache.uima.cas.impl.TypeImpl;
 import org.apache.uima.cas.Type;
 import org.apache.uima.cas.impl.FeatureImpl;
 import org.apache.uima.cas.Feature;
-import org.apache.uima.jcas.cas.TOP_Type;
+import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** 
- * Updated by JCasGen Mon Aug 19 17:19:04 IDT 2013
+ * Updated by JCasGen Wed Mar 05 18:37:19 IST 2014
  * @generated */
-public class Argument_Type extends TOP_Type {
+public class Argument_Type extends Annotation_Type {
   /** @generated */
   @Override
   protected FSGenerator getFSGenerator() {return fsGenerator;}
@@ -42,23 +42,23 @@ public class Argument_Type extends TOP_Type {
   /** @generated 
      @modifiable */
   @SuppressWarnings ("hiding")
-  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("ac.biu.nlp.nlp.ace_uima.odie.uima.Argument");
+  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument");
  
   /** @generated */
   final Feature casFeat_role;
   /** @generated */
   final int     casFeatCode_role;
   /** @generated */ 
-  public String getRole(int addr) {
+  public int getRole(int addr) {
         if (featOkTst && casFeat_role == null)
-      jcas.throwFeatMissing("role", "ac.biu.nlp.nlp.ace_uima.odie.uima.Argument");
-    return ll_cas.ll_getStringValue(addr, casFeatCode_role);
+      jcas.throwFeatMissing("role", "ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument");
+    return ll_cas.ll_getRefValue(addr, casFeatCode_role);
   }
   /** @generated */    
-  public void setRole(int addr, String v) {
+  public void setRole(int addr, int v) {
         if (featOkTst && casFeat_role == null)
-      jcas.throwFeatMissing("role", "ac.biu.nlp.nlp.ace_uima.odie.uima.Argument");
-    ll_cas.ll_setStringValue(addr, casFeatCode_role, v);}
+      jcas.throwFeatMissing("role", "ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument");
+    ll_cas.ll_setRefValue(addr, casFeatCode_role, v);}
     
   
  
@@ -69,33 +69,70 @@ public class Argument_Type extends TOP_Type {
   /** @generated */ 
   public int getTypes(int addr) {
         if (featOkTst && casFeat_types == null)
-      jcas.throwFeatMissing("types", "ac.biu.nlp.nlp.ace_uima.odie.uima.Argument");
+      jcas.throwFeatMissing("types", "ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument");
     return ll_cas.ll_getRefValue(addr, casFeatCode_types);
   }
   /** @generated */    
   public void setTypes(int addr, int v) {
         if (featOkTst && casFeat_types == null)
-      jcas.throwFeatMissing("types", "ac.biu.nlp.nlp.ace_uima.odie.uima.Argument");
+      jcas.throwFeatMissing("types", "ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument");
     ll_cas.ll_setRefValue(addr, casFeatCode_types, v);}
     
    /** @generated */
-  public String getTypes(int addr, int i) {
+  public int getTypes(int addr, int i) {
         if (featOkTst && casFeat_types == null)
-      jcas.throwFeatMissing("types", "ac.biu.nlp.nlp.ace_uima.odie.uima.Argument");
+      jcas.throwFeatMissing("types", "ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument");
     if (lowLevelTypeChecks)
-      return ll_cas.ll_getStringArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_types), i, true);
+      return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_types), i, true);
     jcas.checkArrayBounds(ll_cas.ll_getRefValue(addr, casFeatCode_types), i);
-  return ll_cas.ll_getStringArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_types), i);
+	return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_types), i);
   }
    
   /** @generated */ 
-  public void setTypes(int addr, int i, String v) {
+  public void setTypes(int addr, int i, int v) {
         if (featOkTst && casFeat_types == null)
-      jcas.throwFeatMissing("types", "ac.biu.nlp.nlp.ace_uima.odie.uima.Argument");
+      jcas.throwFeatMissing("types", "ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument");
     if (lowLevelTypeChecks)
-      ll_cas.ll_setStringArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_types), i, v, true);
+      ll_cas.ll_setRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_types), i, v, true);
     jcas.checkArrayBounds(ll_cas.ll_getRefValue(addr, casFeatCode_types), i);
-    ll_cas.ll_setStringArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_types), i, v);
+    ll_cas.ll_setRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_types), i, v);
+  }
+ 
+ 
+  /** @generated */
+  final Feature casFeat_examples;
+  /** @generated */
+  final int     casFeatCode_examples;
+  /** @generated */ 
+  public int getExamples(int addr) {
+        if (featOkTst && casFeat_examples == null)
+      jcas.throwFeatMissing("examples", "ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument");
+    return ll_cas.ll_getRefValue(addr, casFeatCode_examples);
+  }
+  /** @generated */    
+  public void setExamples(int addr, int v) {
+        if (featOkTst && casFeat_examples == null)
+      jcas.throwFeatMissing("examples", "ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument");
+    ll_cas.ll_setRefValue(addr, casFeatCode_examples, v);}
+    
+   /** @generated */
+  public int getExamples(int addr, int i) {
+        if (featOkTst && casFeat_examples == null)
+      jcas.throwFeatMissing("examples", "ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument");
+    if (lowLevelTypeChecks)
+      return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_examples), i, true);
+    jcas.checkArrayBounds(ll_cas.ll_getRefValue(addr, casFeatCode_examples), i);
+	return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_examples), i);
+  }
+   
+  /** @generated */ 
+  public void setExamples(int addr, int i, int v) {
+        if (featOkTst && casFeat_examples == null)
+      jcas.throwFeatMissing("examples", "ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument");
+    if (lowLevelTypeChecks)
+      ll_cas.ll_setRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_examples), i, v, true);
+    jcas.checkArrayBounds(ll_cas.ll_getRefValue(addr, casFeatCode_examples), i);
+    ll_cas.ll_setRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_examples), i, v);
   }
  
 
@@ -108,12 +145,16 @@ public class Argument_Type extends TOP_Type {
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());
 
  
-    casFeat_role = jcas.getRequiredFeatureDE(casType, "role", "uima.cas.String", featOkTst);
+    casFeat_role = jcas.getRequiredFeatureDE(casType, "role", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentRole", featOkTst);
     casFeatCode_role  = (null == casFeat_role) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_role).getCode();
 
  
-    casFeat_types = jcas.getRequiredFeatureDE(casType, "types", "uima.cas.StringArray", featOkTst);
+    casFeat_types = jcas.getRequiredFeatureDE(casType, "types", "uima.cas.FSArray", featOkTst);
     casFeatCode_types  = (null == casFeat_types) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_types).getCode();
+
+ 
+    casFeat_examples = jcas.getRequiredFeatureDE(casType, "examples", "uima.cas.FSArray", featOkTst);
+    casFeatCode_examples  = (null == casFeat_examples) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_examples).getCode();
 
   }
 }

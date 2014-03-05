@@ -1,5 +1,5 @@
 
-/* First created by JCasGen Sun Aug 18 19:18:00 IDT 2013 */
+/* First created by JCasGen Wed Mar 05 18:37:19 IST 2014 */
 package ac.biu.nlp.nlp.ie.onthefly.input.uima;
 
 import org.apache.uima.jcas.JCas;
@@ -12,9 +12,9 @@ import org.apache.uima.cas.Type;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** 
- * Updated by JCasGen Mon Aug 19 17:19:05 IDT 2013
+ * Updated by JCasGen Wed Mar 05 18:37:19 IST 2014
  * @generated */
-public class Sample_Type extends Annotation_Type {
+public class UsageSample_Type extends Annotation_Type {
   /** @generated */
   @Override
   protected FSGenerator getFSGenerator() {return fsGenerator;}
@@ -22,31 +22,31 @@ public class Sample_Type extends Annotation_Type {
   private final FSGenerator fsGenerator = 
     new FSGenerator() {
       public FeatureStructure createFS(int addr, CASImpl cas) {
-  			 if (Sample_Type.this.useExistingInstance) {
+  			 if (UsageSample_Type.this.useExistingInstance) {
   			   // Return eq fs instance if already created
-  		     FeatureStructure fs = Sample_Type.this.jcas.getJfsFromCaddr(addr);
+  		     FeatureStructure fs = UsageSample_Type.this.jcas.getJfsFromCaddr(addr);
   		     if (null == fs) {
-  		       fs = new Sample(addr, Sample_Type.this);
-  			   Sample_Type.this.jcas.putJfsFromCaddr(addr, fs);
+  		       fs = new UsageSample(addr, UsageSample_Type.this);
+  			   UsageSample_Type.this.jcas.putJfsFromCaddr(addr, fs);
   			   return fs;
   		     }
   		     return fs;
-        } else return new Sample(addr, Sample_Type.this);
+        } else return new UsageSample(addr, UsageSample_Type.this);
   	  }
     };
   /** @generated */
   @SuppressWarnings ("hiding")
-  public final static int typeIndexID = Sample.typeIndexID;
+  public final static int typeIndexID = UsageSample.typeIndexID;
   /** @generated 
      @modifiable */
   @SuppressWarnings ("hiding")
-  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("ac.biu.nlp.nlp.ace_uima.odie.uima.Sample");
+  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("ac.biu.nlp.nlp.ie.onthefly.input.uima.UsageSample");
 
 
 
   /** initialize variables to correspond with Cas Type and Features
 	* @generated */
-  public Sample_Type(JCas jcas, Type casType) {
+  public UsageSample_Type(JCas jcas, Type casType) {
     super(jcas, casType);
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());
 

@@ -1,18 +1,16 @@
-<odie_input>
-  <!-- Generate XSD online: http://www.freeformatter.com/xsd-generator.html -->
-  <corpus>
-    <xmi_folder_path>C:\Java\Git\lab\nlp-lab\Trunk\Common\Projects\ace_uima\target\main\resources\xmi\medium</xmi_folder_path>
-  </corpus>
+<spec>
   <predicate>
     <name>Divorce</name>
+    <seeds>
+      <seed>divorced</seed>
+    </seeds>
   </predicate>
-  <seeds>
-    <seed>divorced</seed>
-  </seeds>
   <arguments>
     <argument>
       <role>Person</role>
-      <types>person</types>
+      <types>
+      	<type>PER</type>
+      </types>
       <examples>
         <example>princess</example>
         <example>heir</example>
@@ -26,7 +24,9 @@
     </argument>
     <argument>
       <role>Time</role>
-      <types>time</types>
+      <types>
+      	<type>TIME</type>
+      </types>
       <examples>
         <example>1996</example>
         <example>four years later</example>
@@ -34,7 +34,11 @@
     </argument>
     <argument>
       <role>Place</role>
-      <types>geopolitical entity,location,facility</types>
+      <types>
+      	<type>GPE</type>
+      	<type>LOC</type>
+      	<type>FAC</type>
+      </types>
       <examples />
     </argument>
   </arguments>
@@ -44,7 +48,4 @@
     <sample>The woman divorced John.</sample>
     <sample>The divorced mother is single again.</sample>
   </usage_samples>
-  <global_context>
-    <phrases>family, relationship</phrases>
-  </global_context>
-</odie_input>
+</spec>

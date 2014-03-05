@@ -14,12 +14,12 @@ import org.apache.uima.jcas.tcas.Annotation;
  * Updated by JCasGen Wed Mar 05 18:37:19 IST 2014
  * XML source: C:/Java/Git/breep/ace_events/src/main/resources/desc/OdieInputTypes.xml
  * @generated */
-public class PredicateSeed extends Annotation {
+public class PredicateName extends Annotation {
   /** @generated
    * @ordered 
    */
   @SuppressWarnings ("hiding")
-  public final static int typeIndexID = JCasRegistry.register(PredicateSeed.class);
+  public final static int typeIndexID = JCasRegistry.register(PredicateName.class);
   /** @generated
    * @ordered 
    */
@@ -31,23 +31,23 @@ public class PredicateSeed extends Annotation {
  
   /** Never called.  Disable default constructor
    * @generated */
-  protected PredicateSeed() {/* intentionally empty block */}
+  protected PredicateName() {/* intentionally empty block */}
     
   /** Internal - constructor used by generator 
    * @generated */
-  public PredicateSeed(int addr, TOP_Type type) {
+  public PredicateName(int addr, TOP_Type type) {
     super(addr, type);
     readObject();
   }
   
   /** @generated */
-  public PredicateSeed(JCas jcas) {
+  public PredicateName(JCas jcas) {
     super(jcas);
     readObject();   
   } 
 
   /** @generated */  
-  public PredicateSeed(JCas jcas, int begin, int end) {
+  public PredicateName(JCas jcas, int begin, int end) {
     super(jcas);
     setBegin(begin);
     setEnd(end);

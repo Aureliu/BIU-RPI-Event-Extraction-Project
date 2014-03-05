@@ -89,11 +89,11 @@ public class Decoder
 		else {
 			AnalysisEngine ae = UimaUtils.loadAE(SpecAnnotator.ANNOTATOR_FILE_PATH);
 			JCas jcas = ae.newJCas();
-			jcas.setDocumentLanguage("EN");
 			
 			SpecAnnotator myAe = (SpecAnnotator) ae;
 			myAe.setPerceptorn(perceptron);
 
+			System.err.println("Is InputMetadata.inputFilePath really needed???");
 			InputMetadata meta = new InputMetadata(jcas);
 			meta.setInputFilePath(specXmlPath);
 			meta.addToIndexes();

@@ -5,7 +5,7 @@
   <vendor/>
   <types>
     <typeDescription>
-      <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.Sample</name>
+      <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.UsageSample</name>
       <description/>
       <supertypeName>uima.tcas.Annotation</supertypeName>
     </typeDescription>
@@ -15,62 +15,66 @@
       <supertypeName>uima.tcas.Annotation</supertypeName>
     </typeDescription>
     <typeDescription>
-      <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentSeed</name>
+      <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentExample</name>
       <description/>
       <supertypeName>uima.tcas.Annotation</supertypeName>
-      <features>
-        <featureDescription>
-          <name>role</name>
-          <description/>
-          <rangeTypeName>uima.cas.String</rangeTypeName>
-        </featureDescription>
-      </features>
     </typeDescription>
     <typeDescription>
       <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.Predicate</name>
       <description/>
-      <supertypeName>uima.cas.TOP</supertypeName>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
       <features>
         <featureDescription>
           <name>name</name>
           <description/>
-          <rangeTypeName>uima.cas.String</rangeTypeName>
+          <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateName</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>seeds</name>
+          <description/>
+          <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+          <elementType>ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateSeed</elementType>
         </featureDescription>
       </features>
     </typeDescription>
     <typeDescription>
       <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument</name>
       <description/>
-      <supertypeName>uima.cas.TOP</supertypeName>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
       <features>
         <featureDescription>
           <name>role</name>
           <description/>
-          <rangeTypeName>uima.cas.String</rangeTypeName>
+          <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentRole</rangeTypeName>
         </featureDescription>
         <featureDescription>
           <name>types</name>
           <description/>
-          <rangeTypeName>uima.cas.StringArray</rangeTypeName>
+          <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+          <elementType>ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentType</elementType>
+        </featureDescription>
+        <featureDescription>
+          <name>examples</name>
+          <description/>
+          <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+          <elementType>ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentExample</elementType>
         </featureDescription>
       </features>
     </typeDescription>
     <typeDescription>
-      <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.InputMetadata</name>
+      <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentRole</name>
       <description/>
-      <supertypeName>uima.cas.TOP</supertypeName>
-      <features>
-        <featureDescription>
-          <name>inputFilePath</name>
-          <description/>
-          <rangeTypeName>uima.cas.String</rangeTypeName>
-        </featureDescription>
-        <featureDescription>
-          <name>corpusXmiFolderPath</name>
-          <description/>
-          <rangeTypeName>uima.cas.String</rangeTypeName>
-        </featureDescription>
-      </features>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+    </typeDescription>
+    <typeDescription>
+      <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentType</name>
+      <description/>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+    </typeDescription>
+    <typeDescription>
+      <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateName</name>
+      <description/>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
     </typeDescription>
   </types>
 </typeSystemDescription>

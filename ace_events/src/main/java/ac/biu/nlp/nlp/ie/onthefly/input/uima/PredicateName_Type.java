@@ -14,7 +14,7 @@ import org.apache.uima.jcas.tcas.Annotation_Type;
 /** 
  * Updated by JCasGen Wed Mar 05 18:37:19 IST 2014
  * @generated */
-public class PredicateSeed_Type extends Annotation_Type {
+public class PredicateName_Type extends Annotation_Type {
   /** @generated */
   @Override
   protected FSGenerator getFSGenerator() {return fsGenerator;}
@@ -22,31 +22,31 @@ public class PredicateSeed_Type extends Annotation_Type {
   private final FSGenerator fsGenerator = 
     new FSGenerator() {
       public FeatureStructure createFS(int addr, CASImpl cas) {
-  			 if (PredicateSeed_Type.this.useExistingInstance) {
+  			 if (PredicateName_Type.this.useExistingInstance) {
   			   // Return eq fs instance if already created
-  		     FeatureStructure fs = PredicateSeed_Type.this.jcas.getJfsFromCaddr(addr);
+  		     FeatureStructure fs = PredicateName_Type.this.jcas.getJfsFromCaddr(addr);
   		     if (null == fs) {
-  		       fs = new PredicateSeed(addr, PredicateSeed_Type.this);
-  			   PredicateSeed_Type.this.jcas.putJfsFromCaddr(addr, fs);
+  		       fs = new PredicateName(addr, PredicateName_Type.this);
+  			   PredicateName_Type.this.jcas.putJfsFromCaddr(addr, fs);
   			   return fs;
   		     }
   		     return fs;
-        } else return new PredicateSeed(addr, PredicateSeed_Type.this);
+        } else return new PredicateName(addr, PredicateName_Type.this);
   	  }
     };
   /** @generated */
   @SuppressWarnings ("hiding")
-  public final static int typeIndexID = PredicateSeed.typeIndexID;
+  public final static int typeIndexID = PredicateName.typeIndexID;
   /** @generated 
      @modifiable */
   @SuppressWarnings ("hiding")
-  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateSeed");
+  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateName");
 
 
 
   /** initialize variables to correspond with Cas Type and Features
 	* @generated */
-  public PredicateSeed_Type(JCas jcas, Type casType) {
+  public PredicateName_Type(JCas jcas, Type casType) {
     super(jcas, casType);
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());
 

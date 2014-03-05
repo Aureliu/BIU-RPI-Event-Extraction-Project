@@ -1,6 +1,6 @@
 
 
-/* First created by JCasGen Sun Aug 18 19:18:00 IDT 2013 */
+/* First created by JCasGen Wed Mar 05 18:37:19 IST 2014 */
 package ac.biu.nlp.nlp.ie.onthefly.input.uima;
 
 import org.apache.uima.jcas.JCas; 
@@ -11,15 +11,15 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Mon Aug 19 17:19:05 IDT 2013
- * XML source: C:/Java/Git/lab/nlp-lab/Trunk/Common/Projects/ace_uima/src/main/resources/desc/OdieInputTypes.xml
+ * Updated by JCasGen Wed Mar 05 18:37:19 IST 2014
+ * XML source: C:/Java/Git/breep/ace_events/src/main/resources/desc/OdieInputTypes.xml
  * @generated */
-public class Sample extends Annotation {
+public class ArgumentType extends Annotation {
   /** @generated
    * @ordered 
    */
   @SuppressWarnings ("hiding")
-  public final static int typeIndexID = JCasRegistry.register(Sample.class);
+  public final static int typeIndexID = JCasRegistry.register(ArgumentType.class);
   /** @generated
    * @ordered 
    */
@@ -31,23 +31,23 @@ public class Sample extends Annotation {
  
   /** Never called.  Disable default constructor
    * @generated */
-  protected Sample() {/* intentionally empty block */}
+  protected ArgumentType() {/* intentionally empty block */}
     
   /** Internal - constructor used by generator 
    * @generated */
-  public Sample(int addr, TOP_Type type) {
+  public ArgumentType(int addr, TOP_Type type) {
     super(addr, type);
     readObject();
   }
   
   /** @generated */
-  public Sample(JCas jcas) {
+  public ArgumentType(JCas jcas) {
     super(jcas);
     readObject();   
   } 
 
   /** @generated */  
-  public Sample(JCas jcas, int begin, int end) {
+  public ArgumentType(JCas jcas, int begin, int end) {
     super(jcas);
     setBegin(begin);
     setEnd(end);

@@ -80,6 +80,12 @@ public class Perceptron implements java.io.Serializable
 		buildFeatureMechanisms();
 	}
 	
+	public void close() {
+		for (FeatureMechanism featureMechanism : featureMechanisms) {
+			featureMechanism.close();
+		}
+	}
+	
 	private void buildFeatureMechanisms() {
 		featureMechanisms = new ArrayList<FeatureMechanism>();
 		

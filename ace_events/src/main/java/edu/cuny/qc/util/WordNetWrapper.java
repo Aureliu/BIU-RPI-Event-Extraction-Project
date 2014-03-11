@@ -39,7 +39,7 @@ public class WordNetWrapper
 	protected WordNetWrapper() throws IOException
 	{
 		// construct the URL to the Wordnet dictionary directory
-		URL url = new URL("file", null, "src/main/resources/data/WordnetDb");
+		URL url = new URL("file", null, "src/main/resources/data/Wordnet3.0");
 		
 		// construct the dictionary object and open it
 		dict = new Dictionary(url);

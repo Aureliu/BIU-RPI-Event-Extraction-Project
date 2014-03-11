@@ -3,12 +3,9 @@ package edu.cuny.qc.perceptron.types;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
 import java.io.PrintStream;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
@@ -21,14 +18,15 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.apache.commons.lang3.SerializationException;
-import org.apache.commons.lang3.SerializationUtils;
-import org.apache.uima.jcas.JCas;
-
 import opennlp.tools.util.InvalidFormatException;
 
-import edu.cuny.qc.util.Span;
+import org.apache.commons.lang3.SerializationException;
+import org.apache.commons.lang3.SerializationUtils;
+import org.apache.uima.analysis_engine.AnalysisEngine;
+import org.apache.uima.jcas.JCas;
+import org.apache.uima.resource.ResourceInitializationException;
 
+import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
 import edu.cuny.qc.ace.acetypes.AceDocument;
 import edu.cuny.qc.ace.acetypes.AceEntityMention;
 import edu.cuny.qc.ace.acetypes.AceEventMention;
@@ -38,9 +36,12 @@ import edu.cuny.qc.perceptron.core.Perceptron;
 import edu.cuny.qc.perceptron.featureGenerator.TextFeatureGenerator;
 import edu.cuny.qc.perceptron.types.Sentence.Sent_Attribute;
 import edu.cuny.qc.util.SentDetectorWrapper;
+import edu.cuny.qc.util.Span;
 import edu.cuny.qc.util.TokenAnnotations;
 import edu.cuny.qc.util.TokenizerWrapper;
 import edu.cuny.qc.util.TypeConstraints;
+import eu.excitementproject.eop.common.utilities.uima.UimaUtils;
+import eu.excitementproject.eop.common.utilities.uima.UimaUtilsException;
 
 /**
  * read the source data of i2b2
@@ -55,6 +56,9 @@ public class Document implements java.io.Serializable
 	static public final String textFileExt = ".sgm";
 	static public final String apfFileExt = ".apf.xml";
 	static public final String preprocessedFileExt = ".preprocessed";
+	static public final String xmiFileExt = ".xmi";
+	
+	static public final String AE_FILE_PATH = "/desc/DummyAE.xml";
 	
 	// the id (base file name) of the document
 	public String docID;
@@ -77,7 +81,7 @@ public class Document implements java.io.Serializable
 	 */
 	protected List<Sentence> sentences;
 	
-	private JCas jcas;
+	private JCas jcas = null;
 	
 	/**
 	 * this object contains the parsed information from apf file (pretty much everything)
@@ -358,10 +362,13 @@ public class Document implements java.io.Serializable
 	}
 	
 	public static Document createAndPreprocess(String baseFileName, boolean hasLabel, boolean monoCase, boolean tryLoadExisting, boolean dumpNewDoc, String singleEventType) throws IOException, SerializationException {
+		System.err.println("Still need to make sure XMI is not saved inside preprocessed doc, only in separate file");
 		Document doc = null;
 		File preprocessed = new File(baseFileName + preprocessedFileExt);
+		File xmi = new File(baseFileName + xmiFileExt);
 		if (tryLoadExisting && preprocessed.isFile()) {
 			doc = (Document) SerializationUtils.deserialize(new FileInputStream(preprocessed));
+			doc.jcas = UimaUtils.loadXmi(xmi);
 			if (singleEventType != null) {
 				doc.aceAnnotations.setSingleEventType(singleEventType);
 			}
@@ -373,6 +380,7 @@ public class Document implements java.io.Serializable
 			if (dumpNewDoc) {
 				try {
 					SerializationUtils.serialize(doc, new FileOutputStream(preprocessed));
+					UimaUtils.dumpXmi(xmi, doc.jcas);
 				}
 				catch (IOException e) {
 					Files.deleteIfExists(preprocessed.toPath());
@@ -485,6 +493,20 @@ public class Document implements java.io.Serializable
 			sentSpans = fixSentBoundaries(sentSpans);
 		}
 		
+		// Buid JCas
+		try {
+			AnalysisEngine ae = UimaUtils.loadAE(AE_FILE_PATH);
+			jcas = ae.newJCas();
+			jcas.setDocumentText(allText);
+			jcas.setDocumentLanguage("EN");
+		}
+		catch (UimaUtilsException e) {
+			throw new IOException(e); 
+		}
+		catch (ResourceInitializationException e) {
+			throw new IOException(e); 
+		}
+		
 		int sentID = 0;
 		for(Span sentSpan : sentSpans)
 		{	
@@ -506,12 +528,19 @@ public class Document implements java.io.Serializable
 			Sentence sent = new Sentence(this, sentID++);
 			sent.put(Sent_Attribute.TOKEN_SPANS, tokenSpans);
 			
+			de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence sentAnno = new de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence(jcas, sentSpan.start(), sentSpan.end()+1);
+			sentAnno.addToIndexes();
+			
 			String[] tokens = new String[tokenSpans.length];
 			for(int idx=0; idx < tokenSpans.length; idx++)
 			{
 				// get tokens
 				Span tokenSpan = tokenSpans[idx];
 				tokens[idx] = tokenSpan.getCoveredText(allText).toString();
+				
+				// Fill JCas
+				Token tokenAnno = new Token(jcas, tokenSpan.start(), tokenSpan.end()+1);
+				tokenAnno.addToIndexes();
 			}
 			
 			sent.put(Sent_Attribute.TOKENS, tokens);
@@ -521,7 +550,6 @@ public class Document implements java.io.Serializable
 			sent.put(Sent_Attribute.Token_FEATURE_MAPs, tokenFeatureMaps);
 			this.sentences.add(sent);
 			
-			//TODO build/fill JCas!
 		}
 	}
 

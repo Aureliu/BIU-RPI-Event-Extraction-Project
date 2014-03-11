@@ -11,6 +11,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Vector;
 
+import org.apache.uima.cas.CASException;
 import org.apache.uima.jcas.JCas;
 
 import ac.biu.nlp.nlp.ie.onthefly.input.SpecAnnotator;
@@ -226,7 +227,7 @@ public class NodeFeatureGenerator
 		return ret;
 	}
 	
-	public static Map<String, Map<String, FeatureInstance>> get_node_text_features(SentenceInstance inst, int i, Perceptron perceptron)
+	public static Map<String, Map<String, FeatureInstance>> get_node_text_features(SentenceInstance inst, int i, Perceptron perceptron) throws CASException
 	{
 		Map<String, Map<String, FeatureInstance>> ret = new LinkedHashMap<String, Map<String, FeatureInstance>>();
 		

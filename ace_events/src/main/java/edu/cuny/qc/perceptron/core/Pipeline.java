@@ -249,5 +249,7 @@ public class Pipeline
 			out.println(model.getWeights());
 		}
 		out.close();
+		
+		model.close();
 	}
 }

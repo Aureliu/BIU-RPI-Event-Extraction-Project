@@ -11,8 +11,8 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Wed Mar 05 18:37:19 IST 2014
- * XML source: C:/Java/Git/breep/ace_events/src/main/resources/desc/OdieInputTypes.xml
+ * Updated by JCasGen Tue Mar 11 18:07:44 IST 2014
+ * XML source: C:/Java/Git/breep/ace_events/src/main/resources/desc/SpecAnnotator.xml
  * @generated */
 public class ArgumentExample extends Annotation {
   /** @generated

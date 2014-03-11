@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** 
- * Updated by JCasGen Wed Mar 05 18:37:19 IST 2014
+ * Updated by JCasGen Tue Mar 11 18:07:45 IST 2014
  * @generated */
 public class Predicate_Type extends Annotation_Type {
   /** @generated */
@@ -85,7 +85,7 @@ public class Predicate_Type extends Annotation_Type {
     if (lowLevelTypeChecks)
       return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_seeds), i, true);
     jcas.checkArrayBounds(ll_cas.ll_getRefValue(addr, casFeatCode_seeds), i);
-	return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_seeds), i);
+  return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_seeds), i);
   }
    
   /** @generated */ 

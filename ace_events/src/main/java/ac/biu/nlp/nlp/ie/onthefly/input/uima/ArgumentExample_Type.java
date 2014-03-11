@@ -12,7 +12,7 @@ import org.apache.uima.cas.Type;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** 
- * Updated by JCasGen Wed Mar 05 18:37:19 IST 2014
+ * Updated by JCasGen Tue Mar 11 18:07:44 IST 2014
  * @generated */
 public class ArgumentExample_Type extends Annotation_Type {
   /** @generated */

@@ -7,6 +7,7 @@ import java.util.Map;
 import java.util.Vector;
 import java.util.Map.Entry;
 
+import org.apache.uima.cas.CASException;
 import org.apache.uima.jcas.JCas;
 
 import ac.biu.nlp.nlp.ie.onthefly.input.SpecAnnotator;
@@ -38,7 +39,7 @@ import edu.stanford.nlp.trees.Tree;
  */
 public class EdgeFeatureGenerator
 {
-	public static Map<String, Map<String, Map<String, FeatureInstance>>> get_edge_text_features(SentenceInstance sent, int i, AceMention mention, Perceptron perceptron)
+	public static Map<String, Map<String, Map<String, FeatureInstance>>> get_edge_text_features(SentenceInstance sent, int i, AceMention mention, Perceptron perceptron) throws CASException
 	{
 		Map<String, Map<String, Map<String, FeatureInstance>>> ret = new LinkedHashMap<String, Map<String, Map<String, FeatureInstance>>>();
 		

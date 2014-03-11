@@ -89,15 +89,11 @@ public class Decoder
 		else {
 			AnalysisEngine ae = UimaUtils.loadAE(SpecAnnotator.ANNOTATOR_FILE_PATH);
 			JCas jcas = ae.newJCas();
+			jcas.setDocumentText(FileUtils.loadFileToString(specXmlPath));
 			
 			SpecAnnotator myAe = (SpecAnnotator) ae;
 			myAe.setPerceptorn(perceptron);
 
-			System.err.println("Is InputMetadata.inputFilePath really needed???");
-			InputMetadata meta = new InputMetadata(jcas);
-			meta.setInputFilePath(specXmlPath);
-			meta.addToIndexes();
-			
 			ae.process(jcas);
 
 			try {
@@ -241,6 +237,8 @@ public class Decoder
 			}
 			writeEntities(out, doc.getAceAnnotations(), eventsInDoc);
 			out.close();
+			
+			perceptron.close();
 		}
 		
 		System.out.printf("[%s] --------------\r\nPerceptron.controller =\r\n%s\r\n\r\n--------------------------\r\n\r\n", new Date(), perceptron.controller);

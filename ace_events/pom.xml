@@ -3,6 +3,19 @@
   <groupId>ac.biu.nlp.nlp.ie</groupId>
   <artifactId>ace_events</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.1</version>
+        <configuration>
+          <source>1.6</source>
+          <target>1.6</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
   <dependencies>
   	<dependency>
   		<groupId>org.apache.commons</groupId>
@@ -32,7 +45,13 @@
   	<dependency>
   		<groupId>eu.excitementproject</groupId>
   		<artifactId>biutee</artifactId>
-  		<version>1.1.1-SNAPSHOT</version>
+  		<version>1.1.2-SNAPSHOT</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>com.google.guava</groupId>
+  		<artifactId>guava</artifactId>
+  		<version>16.0.1</version>
+  		<classifier>site</classifier>
   	</dependency>
   </dependencies>
 </project>

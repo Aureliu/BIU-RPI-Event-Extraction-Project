@@ -9,16 +9,28 @@ import org.uimafit.util.JCasUtil;
 
 public abstract class FeatureMechanismSpecIterator implements Iterator<Double> {
 
-	public FeatureMechanismSpecIterator(JCas spec, String viewName, Class<? extends Annotation> type, Annotation textAnno) throws CASException {
-		JCas view = spec.getView(viewName);
-		specIterator = JCasUtil.iterator(view, type);
-		this.textAnno = textAnno;
+	public FeatureMechanismSpecIterator init(JCas spec, String viewName, Class<? extends Annotation> type, Annotation textAnno) throws FeatureMechanismException {
+		try {
+			JCas view = spec.getView(viewName);
+			specIterator = JCasUtil.iterator(view, type);
+			this.textAnno = textAnno;
+	
+			// A little Java trick, to allow doing several things in a one-liner:
+			// instantiate this object, call init(), and use it inside an Aggregator method
+			return this;
+		} catch (CASException e) {
+			throw new FeatureMechanismException(e);
+		}
 	}
 	
 	@Override
 	public Double next() {
-		Annotation specElement = specIterator.next();
-		return calcScore(textAnno, specElement);
+		try {
+			Annotation specElement = specIterator.next();
+			return calcScore(textAnno, specElement);
+		} catch (FeatureMechanismException e) {
+			throw new FeatureMechanismRuntimeException(e);
+		}
 	}
 	
 	@Override
@@ -26,8 +38,13 @@ public abstract class FeatureMechanismSpecIterator implements Iterator<Double> {
 		return specIterator.hasNext();
 	}
 	
-	public abstract Double calcScore(Annotation text, Annotation spec);
+	@Override
+	public void remove() {
+		throw new UnsupportedOperationException(String.format("%s does not support removing spec items", this.getClass().getSimpleName()));
+	}
 	
-	private Iterator<? extends Annotation> specIterator;
-	private Annotation textAnno;
+	public abstract Double calcScore(Annotation text, Annotation spec) throws FeatureMechanismException;
+	
+	protected Iterator<? extends Annotation> specIterator;
+	protected Annotation textAnno;
 }

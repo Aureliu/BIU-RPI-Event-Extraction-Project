@@ -40,7 +40,8 @@ public class Sentence implements java.io.Serializable
 		Token_FEATURE_MAPs,   // feature maps for each token: list->map<key,value>s
 		TOKEN_SPANS,		  // absolute spans for each token
 		ParseTree,		// the parse tree
-		JCas,           // Jcas
+		SentenceAnnotation, // UIMA Sentence Annotation
+		TokenAnnotations,   // UIMA Token Annotations
 	}
 	
 	/**

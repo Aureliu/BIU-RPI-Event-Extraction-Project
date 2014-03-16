@@ -14,12 +14,15 @@ import java.util.Vector;
 import org.apache.uima.cas.CASException;
 import org.apache.uima.jcas.JCas;
 
+import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence;
+
 import ac.biu.nlp.nlp.ie.onthefly.input.SpecAnnotator;
 
 import edu.cuny.qc.ace.acetypes.AceEntityMention;
 import edu.cuny.qc.ace.acetypes.AceMention;
 import edu.cuny.qc.perceptron.core.Perceptron;
 import edu.cuny.qc.perceptron.similarity_scorer.FeatureMechanism;
+import edu.cuny.qc.perceptron.similarity_scorer.FeatureMechanismException;
 import edu.cuny.qc.perceptron.types.FeatureInstance;
 import edu.cuny.qc.perceptron.types.FeatureType;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
@@ -211,6 +214,8 @@ public class NodeFeatureGenerator
 	 * get text feature vector for the whole sentence
 	 * @param sent
 	 * @return
+	 * @throws FeatureMechanismException 
+	 * @throws CASException 
 	 */
 	public static List<Map<String, Map<String, FeatureInstance>>> get_node_text_features(SentenceInstance sent, Perceptron perceptron)
 	{
@@ -227,28 +232,33 @@ public class NodeFeatureGenerator
 		return ret;
 	}
 	
-	public static Map<String, Map<String, FeatureInstance>> get_node_text_features(SentenceInstance inst, int i, Perceptron perceptron) throws CASException
+	public static Map<String, Map<String, FeatureInstance>> get_node_text_features(SentenceInstance inst, int i, Perceptron perceptron)
 	{
-		Map<String, Map<String, FeatureInstance>> ret = new LinkedHashMap<String, Map<String, FeatureInstance>>();
-		
-		LinkedHashMap<String, Double> scoredFeatures;
-		for (JCas spec : perceptron.specs) {
-			Map<String, FeatureInstance> specFeatures = new LinkedHashMap<String, FeatureInstance>();
-			String label = SpecAnnotator.getSpecLabel(spec);
-			ret.put(label, specFeatures);
+		try {
+			Map<String, Map<String, FeatureInstance>> ret = new LinkedHashMap<String, Map<String, FeatureInstance>>();
 			
-			for (FeatureMechanism mechanism : perceptron.featureMechanisms) {
-				scoredFeatures = mechanism.scoreTrigger(spec, inst, i);
-				for (Entry<String, Double> scoredFeature : scoredFeatures.entrySet()) {
-					FeatureInstance feature = new FeatureInstance(scoredFeature.getKey(), FeatureType.TRIGGER, scoredFeature.getValue());
-					specFeatures.put(feature.name, feature);
-					perceptron.triggerFeatureBaseNames.add(feature.name);
+			LinkedHashMap<String, Double> scoredFeatures;
+			for (JCas spec : perceptron.specs) {
+				Map<String, FeatureInstance> specFeatures = new LinkedHashMap<String, FeatureInstance>();
+				String label = SpecAnnotator.getSpecLabel(spec);
+				ret.put(label, specFeatures);
+				
+				for (FeatureMechanism mechanism : perceptron.featureMechanisms) {
+					scoredFeatures = mechanism.scoreTrigger(spec, inst, i);
+					for (Entry<String, Double> scoredFeature : scoredFeatures.entrySet()) {
+						FeatureInstance feature = new FeatureInstance(scoredFeature.getKey(), FeatureType.TRIGGER, scoredFeature.getValue());
+						specFeatures.put(feature.name, feature);
+						perceptron.triggerFeatureBaseNames.add(feature.name);
+					}
 				}
 			}
+			
+			return ret;
+		} catch (CASException e) {
+			throw new RuntimeException(e);
+		} catch (FeatureMechanismException e) {
+			throw new RuntimeException(e);
 		}
-		
-		return ret;
-		
 				
 //		List<Map<Class<?>, Object>> sent = (List<Map<Class<?>, Object>>) inst.get(InstanceAnnotations.Token_FEATURE_MAPs);
 //		Map<Class<?>, Object> token = sent.get(i);

@@ -11,10 +11,10 @@ public abstract class FeatureMechanism {
 	
 	public FeatureMechanism() { }
 
-	public abstract void preprocessSpec(JCas spec);
-	public abstract void preprocessTextSentence(SentenceInstance textSentence);
-	public abstract LinkedHashMap<String, Double> scoreTrigger(JCas spec, SentenceInstance textSentence, int i);
-	public abstract LinkedHashMap<String, Double> scoreArgument(JCas spec, SentenceInstance textSentence, int i, AceMention mention);
+	public abstract void preprocessSpec(JCas spec) throws FeatureMechanismException;
+	public abstract void preprocessTextSentence(SentenceInstance textSentence) throws FeatureMechanismException;
+	public abstract LinkedHashMap<String, Double> scoreTrigger(JCas spec, SentenceInstance textSentence, int i) throws FeatureMechanismException;
+	public abstract LinkedHashMap<String, Double> scoreArgument(JCas spec, SentenceInstance textSentence, int i, AceMention mention) throws FeatureMechanismException;
 	
 	public void close() { }
 }

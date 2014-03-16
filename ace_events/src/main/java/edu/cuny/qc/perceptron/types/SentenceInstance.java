@@ -83,7 +83,8 @@ public class SentenceInstance
 		NodeTextFeatureVectors,		// node feature Vectors
 		EdgeTextFeatureVectors,		// node feature Vectors
 		ParseTree,					// parse tree
-		JCas,                       // UIMA annotation in JCas
+		SentenceAnnotation,         // UIMA Sentence Annotation
+		TokenAnnotations,           // UIMA Token Annotations
 	}
 	
 	public Object get(InstanceAnnotations key)
@@ -197,6 +198,9 @@ public class SentenceInstance
 			}
 		}
 		this.textFeaturesMap.put(InstanceAnnotations.EdgeTextFeatureVectors, edgeFeatVectors);
+		
+		this.textFeaturesMap.put(InstanceAnnotations.SentenceAnnotation, sent.get(Sent_Attribute.SentenceAnnotation));
+		this.textFeaturesMap.put(InstanceAnnotations.TokenAnnotations, sent.get(Sent_Attribute.TokenAnnotations));
 		
 		// add event ground-truth
 		eventMentions = new ArrayList<AceEventMention>();

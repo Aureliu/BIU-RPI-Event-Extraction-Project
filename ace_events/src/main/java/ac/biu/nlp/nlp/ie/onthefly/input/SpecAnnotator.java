@@ -4,6 +4,7 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 
+import org.apache.uima.analysis_engine.AnalysisEngine;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.cas.CASException;
 import org.apache.uima.jcas.JCas;
@@ -26,9 +27,13 @@ import edu.cuny.qc.perceptron.similarity_scorer.FeatureMechanism;
 
 public class SpecAnnotator extends JCasAnnotator_ImplBase {
 	private Perceptron perceptron = null;
+	private AnalysisEngine tokenAE;
+	private AnalysisEngine sentenceAE;
 	
-	public void setPerceptorn(Perceptron perceptron) {
+	public void init(Perceptron perceptron) throws AeException {
 		this.perceptron = perceptron;
+		tokenAE = AnalysisEngines.forSpecTokenView();
+		sentenceAE = AnalysisEngines.forSpecSentenceView();
 	}
 	
 	private static <T extends Annotation> String getValue(JCas spec, String viewName, Class<T> type) throws CASException {
@@ -78,6 +83,9 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 				Sentence sentence = new Sentence(sentenceView, anno.getBegin(), anno.getEnd());
 				sentence.addToIndexes();
 			}
+			
+			tokenAE.process(tokenView);
+			sentenceAE.process(sentenceView);
 			
 			for (FeatureMechanism featureMechanism : perceptron.featureMechanisms) {
 				featureMechanism.preprocessSpec(jcas);

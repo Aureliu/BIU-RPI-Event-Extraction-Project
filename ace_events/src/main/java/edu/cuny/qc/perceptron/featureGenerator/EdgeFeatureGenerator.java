@@ -22,6 +22,7 @@ import edu.cuny.qc.perceptron.graph.GraphEdge;
 import edu.cuny.qc.perceptron.graph.GraphNode;
 import edu.cuny.qc.perceptron.graph.DependencyGraph.PathTerm;
 import edu.cuny.qc.perceptron.similarity_scorer.FeatureMechanism;
+import edu.cuny.qc.perceptron.similarity_scorer.FeatureMechanismException;
 import edu.cuny.qc.perceptron.types.FeatureInstance;
 import edu.cuny.qc.perceptron.types.FeatureType;
 import edu.cuny.qc.perceptron.types.Sentence;
@@ -39,33 +40,38 @@ import edu.stanford.nlp.trees.Tree;
  */
 public class EdgeFeatureGenerator
 {
-	public static Map<String, Map<String, Map<String, FeatureInstance>>> get_edge_text_features(SentenceInstance sent, int i, AceMention mention, Perceptron perceptron) throws CASException
+	public static Map<String, Map<String, Map<String, FeatureInstance>>> get_edge_text_features(SentenceInstance sent, int i, AceMention mention, Perceptron perceptron)
 	{
-		Map<String, Map<String, Map<String, FeatureInstance>>> ret = new LinkedHashMap<String, Map<String, Map<String, FeatureInstance>>>();
-		
-		LinkedHashMap<String, Double> scoredFeatures;
-		for (JCas spec : perceptron.specs) {
-			Map<String, Map<String, FeatureInstance>> specFeatures = new LinkedHashMap<String, Map<String, FeatureInstance>>();
-			String label = SpecAnnotator.getSpecLabel(spec);
-			ret.put(label, specFeatures);
+		try {
+			Map<String, Map<String, Map<String, FeatureInstance>>> ret = new LinkedHashMap<String, Map<String, Map<String, FeatureInstance>>>();
 			
-			for (String role : SpecAnnotator.getSpecRoles(spec)) {
-				Map<String, FeatureInstance> roleFeatures = new LinkedHashMap<String, FeatureInstance>();
-				specFeatures.put(role, roleFeatures);
-
-				for (FeatureMechanism mechanism : perceptron.featureMechanisms) {
-					scoredFeatures = mechanism.scoreArgument(spec, sent, i, mention);
-					for (Entry<String, Double> scoredFeature : scoredFeatures.entrySet()) {
-						FeatureInstance feature = new FeatureInstance(scoredFeature.getKey(), FeatureType.ARGUMENT, scoredFeature.getValue());
-						roleFeatures.put(feature.name, feature);
-						perceptron.argFeatureBaseNames.add(feature.name);
+			LinkedHashMap<String, Double> scoredFeatures;
+			for (JCas spec : perceptron.specs) {
+				Map<String, Map<String, FeatureInstance>> specFeatures = new LinkedHashMap<String, Map<String, FeatureInstance>>();
+				String label = SpecAnnotator.getSpecLabel(spec);
+				ret.put(label, specFeatures);
+				
+				for (String role : SpecAnnotator.getSpecRoles(spec)) {
+					Map<String, FeatureInstance> roleFeatures = new LinkedHashMap<String, FeatureInstance>();
+					specFeatures.put(role, roleFeatures);
+	
+					for (FeatureMechanism mechanism : perceptron.featureMechanisms) {
+						scoredFeatures = mechanism.scoreArgument(spec, sent, i, mention);
+						for (Entry<String, Double> scoredFeature : scoredFeatures.entrySet()) {
+							FeatureInstance feature = new FeatureInstance(scoredFeature.getKey(), FeatureType.ARGUMENT, scoredFeature.getValue());
+							roleFeatures.put(feature.name, feature);
+							perceptron.argFeatureBaseNames.add(feature.name);
+						}
 					}
 				}
 			}
+			
+			return ret;
+		} catch (CASException e) {
+			throw new RuntimeException(e);
+		} catch (FeatureMechanismException e) {
+			throw new RuntimeException(e);
 		}
-		
-		return ret;
-
 //		List<Map<Class<?>, Object>> tokens = (List<Map<Class<?>, Object>>) sent.get(SentenceInstance.InstanceAnnotations.Token_FEATURE_MAPs);
 //		Map<Class<?>, Object> token_trigger = tokens.get(i);
 //		Vector<Integer> headIndices = mention.getHeadIndices();

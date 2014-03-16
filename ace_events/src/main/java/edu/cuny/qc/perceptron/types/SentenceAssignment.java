@@ -484,7 +484,7 @@ public class SentenceAssignment
 		if (genericEdgeLabel == Generic_Existing_Argument_Label) {
 			Map<String, FeatureInstance> featuresOfEntity = allEntityFeatures.get(nodeLabel).get(edgeLabel);
 			for (FeatureInstance feature : featuresOfEntity.values()) {
-				if (feature.isPositive) {
+				if (feature.positive) {
 					String featureStr = "EdgeLocalFeature:\t" + feature.name + "\t" + genericEdgeLabel;
 					makeFeature(featureStr, fv, addIfNotPresent, useIfNotPresent);
 				}
@@ -497,7 +497,7 @@ public class SentenceAssignment
 				double numFalse = 0.0;
 				for (Map<String, FeatureInstance> featuresOfLabel : featuresOfNodeLabel.values()) {
 					FeatureInstance feature = featuresOfLabel.get(featureName);
-					if (!feature.isPositive) {
+					if (!feature.positive) {
 						numFalse += 1.0;
 					}
 				}
@@ -613,7 +613,7 @@ public class SentenceAssignment
 			if (genericLabel == Generic_Existing_Trigger_Label) {
 				Map<String, FeatureInstance> featuresOfLabel = token.get(label);
 				for (FeatureInstance feature : featuresOfLabel.values()) {
-					if (feature.isPositive) {
+					if (feature.positive) {
 
 						// unigram features, for history reason, we still call them BigramFeature
 						// create a bigram feature
@@ -629,7 +629,7 @@ public class SentenceAssignment
 					double numFalse = 0.0;
 					for (Map<String, FeatureInstance> featuresOfLabel : token.values()) {
 						FeatureInstance feature = featuresOfLabel.get(featureName);
-						if (!feature.isPositive) {
+						if (!feature.positive) {
 							numFalse += 1.0;
 						}
 					}

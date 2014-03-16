@@ -23,8 +23,12 @@ import opennlp.tools.util.InvalidFormatException;
 import org.apache.commons.lang3.SerializationException;
 import org.apache.commons.lang3.SerializationUtils;
 import org.apache.uima.analysis_engine.AnalysisEngine;
+import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
+
+import ac.biu.nlp.nlp.ie.onthefly.input.AeException;
+import ac.biu.nlp.nlp.ie.onthefly.input.AnalysisEngines;
 
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
 import edu.cuny.qc.ace.acetypes.AceDocument;
@@ -81,7 +85,8 @@ public class Document implements java.io.Serializable
 	 */
 	protected List<Sentence> sentences;
 	
-	private JCas jcas = null;
+	protected JCas jcas = null;
+	protected static AnalysisEngine ae = null;
 	
 	/**
 	 * this object contains the parsed information from apf file (pretty much everything)
@@ -112,9 +117,14 @@ public class Document implements java.io.Serializable
 	
 	static
 	{
+		System.err.println("Still need to make sure XMI is not saved inside preprocessed doc, only in separate file");
+		System.err.println("Running both my UIMA-preprocessing and Qi's old preprocessing. Consider discarding Qi's.");
+		
 		// initialize priorityQueueEntities
 		try
 		{
+			ae = AnalysisEngines.forDocument();
+			
 			// initialize dict of triggerTokens
 			BufferedReader reader = new BufferedReader(new FileReader("src/main/resources/data/triggerTokens"));
 			String line = null;
@@ -172,6 +182,10 @@ public class Document implements java.io.Serializable
 			reader.close();
 		} 
 		catch (IOException e)
+		{
+			e.printStackTrace();
+		}
+		catch (AeException e)
 		{
 			e.printStackTrace();
 		}
@@ -361,41 +375,47 @@ public class Document implements java.io.Serializable
 		readDoc(txtFile, this.monoCase);
 	}
 	
-	public static Document createAndPreprocess(String baseFileName, boolean hasLabel, boolean monoCase, boolean tryLoadExisting, boolean dumpNewDoc, String singleEventType) throws IOException, SerializationException {
-		System.err.println("Still need to make sure XMI is not saved inside preprocessed doc, only in separate file");
-		Document doc = null;
-		File preprocessed = new File(baseFileName + preprocessedFileExt);
-		File xmi = new File(baseFileName + xmiFileExt);
-		if (tryLoadExisting && preprocessed.isFile()) {
-			doc = (Document) SerializationUtils.deserialize(new FileInputStream(preprocessed));
-			doc.jcas = UimaUtils.loadXmi(xmi);
-			if (singleEventType != null) {
-				doc.aceAnnotations.setSingleEventType(singleEventType);
+	public static Document createAndPreprocess(String baseFileName, boolean hasLabel, boolean monoCase, boolean tryLoadExisting, boolean dumpNewDoc, String singleEventType) throws IOException {
+		try {
+			Document doc = null;
+			File preprocessed = new File(baseFileName + preprocessedFileExt);
+			File xmi = new File(baseFileName + xmiFileExt);
+			if (tryLoadExisting && preprocessed.isFile()) {
+				doc = (Document) SerializationUtils.deserialize(new FileInputStream(preprocessed));
+				doc.jcas = UimaUtils.loadXmi(xmi);
+				if (singleEventType != null) {
+					doc.aceAnnotations.setSingleEventType(singleEventType);
+				}
 			}
+			if (doc==null) {
+				doc = new Document(baseFileName, hasLabel, monoCase);
+				TextFeatureGenerator.doPreprocess(doc);
+				ae.process(doc.jcas);
+				
+				if (dumpNewDoc) {
+					try {
+						SerializationUtils.serialize(doc, new FileOutputStream(preprocessed));
+						UimaUtils.dumpXmi(xmi, doc.jcas);
+					}
+					catch (IOException e) {
+						Files.deleteIfExists(preprocessed.toPath());
+						throw e;
+					}
+					catch (SerializationException e) {
+						Files.deleteIfExists(preprocessed.toPath());
+						throw e;
+					}
+				}
+				if (singleEventType != null) {
+					doc.aceAnnotations.setSingleEventType(singleEventType);
+				}
+			}
+			return doc;
+		} catch (UimaUtilsException e) {
+			throw new IOException(e);
+		} catch (AnalysisEngineProcessException e) {
+			throw new IOException(e);
 		}
-		if (doc==null) {
-			doc = new Document(baseFileName, hasLabel, monoCase);
-			TextFeatureGenerator.doPreprocess(doc);
-			
-			if (dumpNewDoc) {
-				try {
-					SerializationUtils.serialize(doc, new FileOutputStream(preprocessed));
-					UimaUtils.dumpXmi(xmi, doc.jcas);
-				}
-				catch (IOException e) {
-					Files.deleteIfExists(preprocessed.toPath());
-					throw e;
-				}
-				catch (SerializationException e) {
-					Files.deleteIfExists(preprocessed.toPath());
-					throw e;
-				}
-			}
-			if (singleEventType != null) {
-				doc.aceAnnotations.setSingleEventType(singleEventType);
-			}
-		}
-		return doc;
 	}
 	
 	/**
@@ -530,8 +550,10 @@ public class Document implements java.io.Serializable
 			
 			de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence sentAnno = new de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence(jcas, sentSpan.start(), sentSpan.end()+1);
 			sentAnno.addToIndexes();
+			sent.put(Sent_Attribute.SentenceAnnotation, sentAnno);
 			
 			String[] tokens = new String[tokenSpans.length];
+			List<Token> tokenAnnos = new ArrayList<Token>(tokenSpans.length);
 			for(int idx=0; idx < tokenSpans.length; idx++)
 			{
 				// get tokens
@@ -541,8 +563,11 @@ public class Document implements java.io.Serializable
 				// Fill JCas
 				Token tokenAnno = new Token(jcas, tokenSpan.start(), tokenSpan.end()+1);
 				tokenAnno.addToIndexes();
+				tokenAnnos.add(tokenAnno);
 			}
 			
+			sent.put(Sent_Attribute.TokenAnnotations, tokenAnnos);
+
 			sent.put(Sent_Attribute.TOKENS, tokens);
 			// save span of the sent
 			sent.setExtent(sentSpan);

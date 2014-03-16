@@ -6,25 +6,21 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.io.PrintWriter;
-import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
-import org.apache.uima.analysis_engine.AnalysisEngine;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
-import org.apache.uima.jcas.JCas;
+import org.apache.uima.cas.CASException;
+import org.apache.uima.cas.CASRuntimeException;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.util.InvalidXMLException;
 import org.dom4j.DocumentException;
-import org.uimafit.util.JCasUtil;
 import org.xml.sax.SAXException;
 
-import ac.biu.nlp.nlp.ie.onthefly.input.SpecAnnotator;
-import ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument;
-import ac.biu.nlp.nlp.ie.onthefly.input.uima.InputMetadata;
-import ac.biu.nlp.nlp.ie.onthefly.input.uima.Predicate;
+import ac.biu.nlp.nlp.ie.onthefly.input.AeException;
+import ac.biu.nlp.nlp.ie.onthefly.input.SpecHandler;
 import edu.cuny.qc.ace.acetypes.AceDocument;
 import edu.cuny.qc.ace.acetypes.AceEntity;
 import edu.cuny.qc.ace.acetypes.AceEvent;
@@ -38,15 +34,13 @@ import edu.cuny.qc.perceptron.types.Alphabet;
 import edu.cuny.qc.perceptron.types.Document;
 import edu.cuny.qc.perceptron.types.SentenceAssignment;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
-import edu.cuny.qc.util.TypeConstraints;
 import edu.cuny.qc.util.UnsupportedParameterException;
 import eu.excitementproject.eop.common.utilities.file.FileUtils;
-import eu.excitementproject.eop.common.utilities.uima.UimaUtils;
+import eu.excitementproject.eop.common.utilities.uima.UimaUtilsException;
 
 public class Decoder
 {
 	public static final String OPTION_NO_SCORING = "-n";
-	public static final String PREPROCESSED_SPEC_FILE_EXT = ".preprocessed";
 	public static File outDir = null; //TODO DEBUG
 	
 	public static void writeEntities (PrintWriter w, AceDocument aceDoc, List<AceEvent> events) {
@@ -79,47 +73,15 @@ public class Decoder
 		w.println ("</source_file>");
 		w.close();
 	}
-	
-	private static JCas getPreprocessedSpec(String specXmlPath, Perceptron perceptron) throws InvalidXMLException, ResourceInitializationException, SAXException, IOException, AnalysisEngineProcessException {
-		JCas spec = null;
-		File preprocessed = new File(specXmlPath + PREPROCESSED_SPEC_FILE_EXT);
-		if (preprocessed.isFile()) {
-			spec = UimaUtils.loadXmi(preprocessed);
-		}
-		else {
-			AnalysisEngine ae = UimaUtils.loadAE(SpecAnnotator.ANNOTATOR_FILE_PATH);
-			JCas jcas = ae.newJCas();
-			jcas.setDocumentText(FileUtils.loadFileToString(specXmlPath));
-			
-			SpecAnnotator myAe = (SpecAnnotator) ae;
-			myAe.setPerceptorn(perceptron);
-
-			ae.process(jcas);
-
-			try {
-				UimaUtils.dumpXmi(preprocessed, spec);
-			}
-			catch (SAXException e) {
-				Files.deleteIfExists(preprocessed.toPath());
-				throw e;
-			}
-			catch (IOException e) {
-				Files.deleteIfExists(preprocessed.toPath());
-				throw e;
-			}
-		}
-		
-		return spec;
-	}
 
 
-	public static void decode(String[] args, String filenameSuffix, String folderNamePrefix, String singleEventType, File specListFile) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException
+	public static void decode(String[] args, String filenameSuffix, String folderNamePrefix, String singleEventType, File specListFile) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException
 	{
 		List<String> specPaths = FileUtils.loadFileToList(specListFile);
 		decode(args, filenameSuffix, folderNamePrefix, singleEventType, specPaths);
 	}
 	
-	public static void decode(String[] args, String filenameSuffix, String folderNamePrefix, String singleEventType, List<String> specXmlPaths) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException
+	public static void decode(String[] args, String filenameSuffix, String folderNamePrefix, String singleEventType, List<String> specXmlPaths) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException
 	{		
 		System.err.println("(Decoding err stream)");
 		
@@ -159,32 +121,7 @@ public class Decoder
 		System.out.printf("--------------\nPerceptron.controller =\n%s\r\n\r\n--------------------------\r\n\r\n", perceptron.controller);
 		
 		// handle specs
-		List<JCas> specs = new ArrayList<JCas>(specXmlPaths.size());
-		List<String[]> linesForArgs = new ArrayList<String[]>();
-		for (String specXmlPath : specXmlPaths) {
-			JCas spec = getPreprocessedSpec(specXmlPath, perceptron);
-			specs.add(spec);
-
-			Predicate predicate = JCasUtil.selectSingle(spec, Predicate.class);
-			String predicateName = predicate.getName();
-			TypeConstraints.addSpecType(predicateName);
-			perceptron.nodeTargetAlphabet.lookupIndex(predicateName);
-			
-			for (Argument arg : JCasUtil.select(spec, Argument.class)) {
-				String role = arg.getRole();
-				List<String> types = Arrays.asList(arg.getTypes().toStringArray());
-				perceptron.edgeTargetAlphabet.lookupIndex(predicateName);
-				
-				List<String> lineList = new ArrayList<String>();
-				lineList.add(predicateName);
-				lineList.add(role);
-				lineList.addAll(types);
-				linesForArgs.add((String[]) lineList.toArray());
-			}
-		}
-		perceptron.fillLabelBigrams();
-		TypeConstraints.fillArgRolesAndTypesLists(linesForArgs);
-		
+		SpecHandler.loadSpecs(perceptron, specXmlPaths);		
 		
 		BufferedReader reader = new BufferedReader(new FileReader(fileList));
 		String line = "";
@@ -244,7 +181,7 @@ public class Decoder
 		System.out.printf("[%s] --------------\r\nPerceptron.controller =\r\n%s\r\n\r\n--------------------------\r\n\r\n", new Date(), perceptron.controller);
 	}
 	
-	public static Stats decodeAndScore(String[] args, String filenameSuffix, String folderNamePrefix, String singleEventType, File specListFile) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException {
+	public static Stats decodeAndScore(String[] args, String filenameSuffix, String folderNamePrefix, String singleEventType, File specListFile) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException {
 		decode(args, filenameSuffix, folderNamePrefix, singleEventType, specListFile);
 		
 		File outputFile = new File(outDir + File.separator + "Score" + filenameSuffix);
@@ -252,7 +189,7 @@ public class Decoder
 		return stats;
 	}
 
-	public static void main(String[] args) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException {
+	public static void main(String[] args) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException {
 		//TODO the organization here is bad, should be improved:
 		// 1. there's no way to specify both a filenameSufix and NO_SCORING
 

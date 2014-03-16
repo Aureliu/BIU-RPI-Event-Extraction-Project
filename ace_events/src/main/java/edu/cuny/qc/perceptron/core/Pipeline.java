@@ -10,14 +10,24 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
+import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
+import org.apache.uima.cas.CASException;
+import org.apache.uima.cas.CASRuntimeException;
+import org.apache.uima.resource.ResourceInitializationException;
 import org.dom4j.DocumentException;
 
+import ac.biu.nlp.nlp.ie.onthefly.input.AeException;
+import ac.biu.nlp.nlp.ie.onthefly.input.SpecHandler;
+
 import edu.cuny.qc.perceptron.featureGenerator.TextFeatureGenerator;
+import edu.cuny.qc.perceptron.similarity_scorer.FeatureMechanismException;
 import edu.cuny.qc.perceptron.types.Alphabet;
 import edu.cuny.qc.perceptron.types.Document;
 import edu.cuny.qc.perceptron.types.Sentence;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
 import edu.cuny.qc.util.UnsupportedParameterException;
+import eu.excitementproject.eop.common.utilities.file.FileUtils;
+import eu.excitementproject.eop.common.utilities.uima.UimaUtilsException;
 
 public class Pipeline
 {
@@ -27,7 +37,7 @@ public class Pipeline
 	 * @param trainingFileList
 	 * @param modelFile
 	 */
-	public static Perceptron trainPerceptron(File srcDir, File trainingFileList, File modelFile, File devFileList, Controller controller, String singleEventType)
+	public static Perceptron trainPerceptron(File srcDir, File trainingFileList, File modelFile, File devFileList, Controller controller, String singleEventType, List<String> specXmlPaths)
 	{
 		Alphabet nodeTargetAlphabet = new Alphabet();
 		Alphabet edgeTargetAlphabet = new Alphabet();
@@ -58,6 +68,9 @@ public class Pipeline
 			}
 			
 			model.controller = controller;
+			
+			SpecHandler.loadSpecs(model, specXmlPaths);		
+
 			// learning
 			model.learning(trainInstanceList, devInstanceList, 0, singleEventType);
 			// save learned perceptron to file
@@ -71,6 +84,20 @@ public class Pipeline
 		} 
 		catch (DocumentException e)
 		{
+			e.printStackTrace();
+		} catch (FeatureMechanismException e) {
+			e.printStackTrace();
+		} catch (CASRuntimeException e) {
+			e.printStackTrace();
+		} catch (AnalysisEngineProcessException e) {
+			e.printStackTrace();
+		} catch (ResourceInitializationException e) {
+			e.printStackTrace();
+		} catch (CASException e) {
+			e.printStackTrace();
+		} catch (UimaUtilsException e) {
+			e.printStackTrace();
+		} catch (AeException e) {
 			e.printStackTrace();
 		}
 		return null;
@@ -217,7 +244,8 @@ public class Pipeline
 			System.out.println("args[1]: file list of training data");
 			System.out.println("args[2]: model file to be saved");
 			System.out.println("args[3]: file list of dev data");
-			System.out.println("args[4+]: controller arguments");
+			System.out.println("args[4]: spec list");
+			System.out.println("args[5+]: controller arguments");
 			System.exit(-1);
 		}
 		
@@ -227,17 +255,19 @@ public class Pipeline
 		File trainingFileList = new File(args[1]);
 		File modelFile = new File(args[2]);
 		File devFileList = new File(args[3]);
+		File specListFile = new File(args[4]);
+		List<String> specXmlPaths = FileUtils.loadFileToList(specListFile);
 		
 		PrintStream out = new PrintStream(modelFile.getAbsoluteFile() + ".weights");
 
 		// set settings
 		Controller controller = new Controller();
-		String[] settings = Arrays.copyOfRange(args, 4, args.length);
+		String[] settings = Arrays.copyOfRange(args, 5, args.length);
 		controller.setValueFromArguments(settings);
 		System.out.println("\n" + controller.toString() + "\n");
 		
 		// train model
-		Perceptron model = trainPerceptron(srcDir, trainingFileList, modelFile, devFileList, controller, singleEventType);
+		Perceptron model = trainPerceptron(srcDir, trainingFileList, modelFile, devFileList, controller, singleEventType, specXmlPaths);
 		
 		// print out weights
 		if(model.controller.avgArguments)

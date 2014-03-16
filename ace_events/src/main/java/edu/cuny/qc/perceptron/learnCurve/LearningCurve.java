@@ -22,10 +22,14 @@ import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
+import org.apache.uima.cas.CASException;
+import org.apache.uima.cas.CASRuntimeException;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.util.InvalidXMLException;
 import org.dom4j.DocumentException;
 import org.xml.sax.SAXException;
+
+import ac.biu.nlp.nlp.ie.onthefly.input.AeException;
 
 import edu.cuny.qc.ace.acetypes.AceDocument;
 import edu.cuny.qc.ace.acetypes.Scorer;
@@ -34,6 +38,7 @@ import edu.cuny.qc.perceptron.core.Decoder;
 import edu.cuny.qc.perceptron.core.Pipeline;
 import edu.cuny.qc.util.LoggerUtils;
 import edu.cuny.qc.util.TypeConstraints;
+import eu.excitementproject.eop.common.utilities.uima.UimaUtilsException;
 
 
 public class LearningCurve {
@@ -275,22 +280,22 @@ public class LearningCurve {
 		return result;
 	}
 	
-	protected void doTraining() throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException {
+	protected void doTraining() throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException {
 		//doAction("train", new TrainAction(), filePointerTrain, lastTrainIteration, lastTrainChunk, OUT_ALL_FILENAME, ERR_ALL_FILENAME);
 		doAction("train", new TrainAction(), filePointerTrain, OUT_ALL_FILENAME, ERR_ALL_FILENAME);
 	}
 	
-	protected void doDecoding() throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException {
+	protected void doDecoding() throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException {
 		//doAction("decode", new DecodeAction(), filePointerDecode, lastDecodeIteration, lastDecodeChunk, OUT_ALL_FILENAME, ERR_ALL_FILENAME);
 		doAction("decode", new DecodeAction(), filePointerDecode, OUT_ALL_FILENAME, ERR_ALL_FILENAME);
 	}
 	
-	protected void doScoring() throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException {
+	protected void doScoring() throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException {
 		//doAction("score", new ScoreAction(), filePointerScore, lastScoreIteration, lastScoreChunk, OUT_ALL_FILENAME, ERR_ALL_FILENAME);
 		doAction("score", new ScoreAction(), filePointerScore, OUT_ALL_FILENAME, ERR_ALL_FILENAME);
 	}
 	
-	protected void doAction(String actionLabel, Action action, File filePointer, String outFileName, String errFileName) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException {
+	protected void doAction(String actionLabel, Action action, File filePointer, String outFileName, String errFileName) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException {
 		logger.info(String.format("##### Starting %s", actionLabel));
 		int tFirst = -800;
 		int tLast = -800;
@@ -445,7 +450,7 @@ public class LearningCurve {
 	}
 	
 	private interface Action {
-		public void go(String outputFolder, int i, int t, int j, String eventType, List<String> trainSet, int mentionsInTrainSet, String devDocsList, String testDocsList, int devMentions, int testMentions) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException;
+		public void go(String outputFolder, int i, int t, int j, String eventType, List<String> trainSet, int mentionsInTrainSet, String devDocsList, String testDocsList, int devMentions, int testMentions) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException ;
 	}
 	
 	private class TrainAction implements Action {
@@ -482,7 +487,7 @@ public class LearningCurve {
 	
 	private class DecodeAction implements Action {
 		@Override
-		public void go(String outputFolder, int i, int t, int j, String eventType, List<String> trainSet, int mentionsInTrainSet, String devDocsList, String testDocsList, int devMentions, int testMentions) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException {			
+		public void go(String outputFolder, int i, int t, int j, String eventType, List<String> trainSet, int mentionsInTrainSet, String devDocsList, String testDocsList, int devMentions, int testMentions) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException {			
 			String[] args = new String[] {
 					String.format(MODEL_FILENAME, outputFolder, i, t, j, trainSet.size(), mentionsInTrainSet),
 					ACE_PATH,

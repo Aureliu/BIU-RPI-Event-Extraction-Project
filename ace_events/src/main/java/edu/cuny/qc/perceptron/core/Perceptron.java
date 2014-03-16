@@ -19,6 +19,7 @@ import org.apache.commons.lang3.SerializationUtils;
 import org.apache.uima.jcas.JCas;
 
 import edu.cuny.qc.perceptron.similarity_scorer.FeatureMechanism;
+import edu.cuny.qc.perceptron.similarity_scorer.FeatureMechanismException;
 import edu.cuny.qc.perceptron.similarity_scorer.WordNetFeatureMechanism;
 import edu.cuny.qc.perceptron.types.Alphabet;
 import edu.cuny.qc.perceptron.types.FeatureVector;
@@ -26,6 +27,8 @@ import edu.cuny.qc.perceptron.types.SentenceAssignment;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
 import edu.cuny.qc.util.TypeConstraints;
 import edu.cuny.qc.util.UnsupportedParameterException;
+import eu.excitementproject.eop.common.component.lexicalknowledge.LexicalResourceException;
+import eu.excitementproject.eop.core.utilities.dictionary.wordnet.WordNetInitializationException;
 
 
 /**
@@ -65,7 +68,7 @@ public class Perceptron implements java.io.Serializable
 	
 	
 	// default constructor 
-	public Perceptron(Alphabet nodeTargetAlphabet, Alphabet edgeTargetAlphabet, Alphabet featureAlphabet)
+	public Perceptron(Alphabet nodeTargetAlphabet, Alphabet edgeTargetAlphabet, Alphabet featureAlphabet) throws FeatureMechanismException
 	{
 		this.nodeTargetAlphabet = nodeTargetAlphabet;
 		this.edgeTargetAlphabet = edgeTargetAlphabet;
@@ -86,10 +89,18 @@ public class Perceptron implements java.io.Serializable
 		}
 	}
 	
-	private void buildFeatureMechanisms() {
-		featureMechanisms = new ArrayList<FeatureMechanism>();
+	private void buildFeatureMechanisms() throws FeatureMechanismException {
+			featureMechanisms = new ArrayList<FeatureMechanism>();
 		
-		featureMechanisms.add(new WordNetFeatureMechanism());
+		try {
+			
+			featureMechanisms.add(new WordNetFeatureMechanism());
+			
+		} catch (WordNetInitializationException e) {
+			throw new FeatureMechanismException(e);
+		} catch (LexicalResourceException e) {
+			throw new FeatureMechanismException(e);
+		}
 	}
 		
 	// default constructor 
@@ -398,7 +409,7 @@ public class Perceptron implements java.io.Serializable
 	/**
 	 * After each type of trigger, can appear any other type of trigger. Default label ("O") included.
 	 */
-	protected void fillLabelBigrams() {
+	public void fillLabelBigrams() {
 		List<String> allTypes = new ArrayList<String>(TypeConstraints.specTypes);
 		allTypes.add(0, SentenceAssignment.PAD_Trigger_Label);
 		String currType = null;

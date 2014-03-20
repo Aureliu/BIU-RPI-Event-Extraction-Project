@@ -4,12 +4,15 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 
+import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_engine.AnalysisEngine;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.cas.CASException;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.tcas.Annotation;
+import org.apache.uima.resource.ResourceInitializationException;
 import org.uimafit.component.JCasAnnotator_ImplBase;
+import org.uimafit.descriptor.ConfigurationParameter;
 import org.uimafit.util.JCasUtil;
 
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentExample;
@@ -20,22 +23,43 @@ import ac.biu.nlp.nlp.ie.onthefly.input.uima.UsageSample;
 
 import com.google.common.collect.Iterators;
 
+import de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS;
+import de.tudarmstadt.ukp.dkpro.core.api.resources.MappingProvider;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
 import edu.cuny.qc.perceptron.core.Perceptron;
 import edu.cuny.qc.perceptron.similarity_scorer.FeatureMechanism;
+import eu.excitementproject.eop.lap.biu.uima.ae.postagger.PennPOSMapping;
 
 public class SpecAnnotator extends JCasAnnotator_ImplBase {
-	private Perceptron perceptron = null;
+	//private Perceptron perceptron = null;
 	private AnalysisEngine tokenAE;
 	private AnalysisEngine sentenceAE;
 	
-	public void init(Perceptron perceptron) throws AeException {
-		this.perceptron = perceptron;
-		tokenAE = AnalysisEngines.forSpecTokenView();
-		sentenceAE = AnalysisEngines.forSpecSentenceView();
-	}
+//	public static final String PARAM_PERCEPTRON = "perceptron_object";
+//	@ConfigurationParameter(name = PARAM_PERCEPTRON, mandatory = true)
+//	private Perceptron perceptron;
+
+//	public void init(Perceptron perceptron) throws AeException {
+//		this.perceptron = perceptron;
+//		tokenAE = AnalysisEngines.forSpecTokenView();
+//		sentenceAE = AnalysisEngines.forSpecSentenceView();
+//	}
 	
+	@Override
+	public void initialize(UimaContext aContext)
+		throws ResourceInitializationException
+	{
+		super.initialize(aContext);
+
+		try {
+			tokenAE = AnalysisEngines.forSpecTokenView(TOKEN_VIEW);
+			sentenceAE = AnalysisEngines.forSpecSentenceView(SENTENCE_VIEW);
+		} catch (AeException e) {
+			throw new ResourceInitializationException(e);
+		}
+	}
+
 	private static <T extends Annotation> String getValue(JCas spec, String viewName, Class<T> type) throws CASException {
 		JCas view = spec.getView(viewName);
 		T anno = JCasUtil.selectSingle(view, type);
@@ -63,6 +87,11 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 			jcas.setDocumentLanguage("EN");
 			JCas tokenView = jcas.createView(TOKEN_VIEW);
 			JCas sentenceView = jcas.createView(SENTENCE_VIEW);
+
+			tokenView.setDocumentLanguage("EN");
+			tokenView.setDocumentText(jcas.getDocumentText());
+			sentenceView.setDocumentLanguage("EN");
+			sentenceView.setDocumentText(jcas.getDocumentText());
 			
 			// Load basic spec annotation types
 			SpecXmlCasLoader loader = new SpecXmlCasLoader();
@@ -87,9 +116,9 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 			tokenAE.process(tokenView);
 			sentenceAE.process(sentenceView);
 			
-			for (FeatureMechanism featureMechanism : perceptron.featureMechanisms) {
-				featureMechanism.preprocessSpec(jcas);
-			}
+//			for (FeatureMechanism featureMechanism : perceptron.featureMechanisms) {
+//				featureMechanism.preprocessSpec(jcas);
+//			}
 			
 			Collection<Token> allTokens = JCasUtil.select(jcas, Token.class);
 			System.err.printf("%d tokens total in spec\n", allTokens.size());

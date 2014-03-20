@@ -182,6 +182,9 @@ public class SentenceInstance
 		this.textFeaturesMap.put(InstanceAnnotations.TOKEN_SPANS, sent.get(Sent_Attribute.TOKEN_SPANS));
 		this.textFeaturesMap.put(InstanceAnnotations.POSTAGS, sent.get(Sent_Attribute.POSTAGS));
 		
+		this.textFeaturesMap.put(InstanceAnnotations.SentenceAnnotation, sent.get(Sent_Attribute.SentenceAnnotation));
+		this.textFeaturesMap.put(InstanceAnnotations.TokenAnnotations, sent.get(Sent_Attribute.TokenAnnotations));
+
 		// get node text feature vectors
 		List<Map<String, Map<String, FeatureInstance>>> tokenFeatVectors = NodeFeatureGenerator.get_node_text_features(this, perceptron);
 		this.textFeaturesMap.put(InstanceAnnotations.NodeTextFeatureVectors, tokenFeatVectors);
@@ -198,9 +201,6 @@ public class SentenceInstance
 			}
 		}
 		this.textFeaturesMap.put(InstanceAnnotations.EdgeTextFeatureVectors, edgeFeatVectors);
-		
-		this.textFeaturesMap.put(InstanceAnnotations.SentenceAnnotation, sent.get(Sent_Attribute.SentenceAnnotation));
-		this.textFeaturesMap.put(InstanceAnnotations.TokenAnnotations, sent.get(Sent_Attribute.TokenAnnotations));
 		
 		// add event ground-truth
 		eventMentions = new ArrayList<AceEventMention>();

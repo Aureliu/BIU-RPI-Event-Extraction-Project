@@ -40,7 +40,7 @@ public class SpecXmlCasLoader {
 		while (matcher.find()) {
 			MatchResult result = matcher.toMatchResult();
 			int begin = container.getBegin() + result.start(1);
-			int end   = container.getEnd()   + result.end(1);
+			int end   = container.getBegin() + result.end(1);
 			
 			AnnotationFS anno = null;
 			if (annotationType == null) {
@@ -50,6 +50,24 @@ public class SpecXmlCasLoader {
 				anno = jcas.getCas().createAnnotation(type, begin, end);
 				jcas.addFsToIndexes(anno);
 			}
+			
+			// Debug
+			String c = container.getCoveredText();
+			System.err.printf("\n*Container(%s)[%d:%d], len=%d: '%s' {}\n\n", container.getType().getShortName(), container.getBegin(), container.getEnd(), c.length(), c);
+			
+			System.err.printf("\nAnno(%s)[%d:%d]", anno.getType().getShortName(), anno.getBegin(), anno.getEnd());
+			JCas main;
+			try {
+				main = jcas.getView("_InitialView");
+			} catch (CASException e) {
+				throw new SpecXmlException(e);
+			}
+			String doct = main.getDocumentText();
+			System.err.printf(" {%s}", doct.substring(begin, end));
+			String t = anno.getCoveredText();
+			System.err.printf(", t=%s: ", t);
+			System.err.printf(", len=%d \n\n", t.length());
+			
 			results.add(anno);
 		}
 		return results;
@@ -124,6 +142,6 @@ public class SpecXmlCasLoader {
 
 	}
 
-	public static final String XML_ELEMENT ="<%s[^>]*>(.*?)</%s>";
+	public static final String XML_ELEMENT ="(?s)<%s[^>]*>(.*?)</%s>";
 
 }

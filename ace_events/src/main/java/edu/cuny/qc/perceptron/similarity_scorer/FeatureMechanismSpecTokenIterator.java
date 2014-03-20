@@ -1,5 +1,6 @@
 package edu.cuny.qc.perceptron.similarity_scorer;
 
+import org.apache.uima.cas.CAS;
 import org.apache.uima.cas.CASException;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.tcas.Annotation;
@@ -19,8 +20,23 @@ public abstract class FeatureMechanismSpecTokenIterator extends FeatureMechanism
 	@Override
 	public Double calcScore(Annotation text, Annotation spec) throws FeatureMechanismException {
 		try {
-			Token textToken = UimaUtils.selectCoveredSingle(text.getCAS().getJCas(), Token.class, text);
-			Token specToken = UimaUtils.selectCoveredSingle(spec.getCAS().getJCas(), Token.class, spec);
+			Token textToken = null;
+			Token specToken = null;
+			
+			if (text.getClass().equals(Token.class)) {
+				textToken = (Token) text;
+			}
+			else {
+				textToken = UimaUtils.selectCoveredSingle(text.getView().getJCas(), Token.class, text);
+			}
+			
+			if (spec.getClass().equals(Token.class)) {
+				specToken = (Token) spec;
+			}
+			else {
+				specToken = UimaUtils.selectCoveredSingle(spec.getView().getJCas(), Token.class, spec);
+			}
+			
 			return calcTokenScore(textToken, specToken);
 		} catch (CASException e) {
 			throw new FeatureMechanismException(e);

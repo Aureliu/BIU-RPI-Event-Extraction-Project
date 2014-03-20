@@ -8,4 +8,8 @@ public class SpecXmlException extends Exception {
 		super(message);
 	}
 
+	public SpecXmlException(Throwable cause) {
+		super(cause);
+	}
+
 }

@@ -61,7 +61,7 @@ public class Perceptron implements java.io.Serializable
 	
 	public List<FeatureMechanism> featureMechanisms= new ArrayList<FeatureMechanism>();
 	
-	public List<JCas> specs = new ArrayList<JCas>();
+	public List<JCas> specs;
 	
 	public Set<String> triggerFeatureBaseNames = new LinkedHashSet<String>();
 	public Set<String> argFeatureBaseNames = new LinkedHashSet<String>();

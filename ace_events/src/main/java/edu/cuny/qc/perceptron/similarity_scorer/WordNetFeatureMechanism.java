@@ -64,21 +64,22 @@ public class WordNetFeatureMechanism extends FeatureMechanism {
 		super.close();
 	}
 	
-	@Override
-	public void preprocessSpec(JCas spec) throws FeatureMechanismException {
-		System.err.println("Currently no CAS-processing by WordNetFeatureMechanism - TBD");
-	}
-
-	@Override
-	public void preprocessTextSentence(SentenceInstance textSentence) throws FeatureMechanismException {
-		throw new NotImplementedException();
-	}
+//	@Override
+//	public void preprocessSpec(JCas spec) throws FeatureMechanismException {
+//		System.err.println("Currently no CAS-processing by WordNetFeatureMechanism - TBD");
+//	}
+//
+//	@Override
+//	public void preprocessTextSentence(SentenceInstance textSentence) throws FeatureMechanismException {
+//		throw new NotImplementedException();
+//	}
 
 	@Override
 	public LinkedHashMap<String, Double> scoreTrigger(JCas spec, SentenceInstance textSentence, int i) throws FeatureMechanismException {
 		LinkedHashMap<String, Double> ret = new LinkedHashMap<String, Double>();
 		
-		Token textAnno = ((List<Token>) textSentence.get(InstanceAnnotations.TokenAnnotations)).get(i);
+		List<Token> textAnnos = (List<Token>) textSentence.get(InstanceAnnotations.TokenAnnotations);
+		Token textAnno = textAnnos.get(i);
 		
 		ret.put("WORDNET_SAME_SYNSET", Aggregator.any(new SameSynset().init(spec, SpecAnnotator.TOKEN_VIEW, PredicateSeed.class, textAnno)));
 		ret.put("WORDNET_SPEC_HYPERNYM", Aggregator.any(new IsSpecHypernym().init(spec, SpecAnnotator.TOKEN_VIEW, PredicateSeed.class, textAnno)));

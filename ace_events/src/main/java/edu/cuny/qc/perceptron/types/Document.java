@@ -62,7 +62,7 @@ public class Document implements java.io.Serializable
 	static public final String preprocessedFileExt = ".preprocessed";
 	static public final String xmiFileExt = ".xmi";
 	
-	static public final String AE_FILE_PATH = "/desc/DummyAE.xml";
+	static public final String AE_FILE_PATH = "/desc/DummyAEforCAS.xml";
 	
 	// the id (base file name) of the document
 	public String docID;
@@ -85,7 +85,8 @@ public class Document implements java.io.Serializable
 	 */
 	protected List<Sentence> sentences;
 	
-	protected JCas jcas = null;
+	// transient - to not be serialized
+	protected transient JCas jcas = null;
 	protected static AnalysisEngine ae = null;
 	
 	/**
@@ -117,13 +118,14 @@ public class Document implements java.io.Serializable
 	
 	static
 	{
-		System.err.println("Still need to make sure XMI is not saved inside preprocessed doc, only in separate file");
-		System.err.println("Running both my UIMA-preprocessing and Qi's old preprocessing. Consider discarding Qi's.");
+		System.err.println("??? Document: Still need to make sure XMI is not saved inside preprocessed doc, only in separate file");
+		System.err.println("??? Document: Running both my UIMA-preprocessing and Qi's old preprocessing. Consider discarding Qi's.");
+		System.err.println("??? Document: Not dumping processed document (and jcas), because annotations are referenced not only in cas but also in cuny.Sentence and cuny.SentenceInstance. To solve, I should load annotations to these classes separately, like by finding in Document.jcas rlevant single annotations in [begin, end] spans.");
 		
 		// initialize priorityQueueEntities
 		try
 		{
-			ae = AnalysisEngines.forDocument();
+			ae = AnalysisEngines.forDocument(null);
 			
 			// initialize dict of triggerTokens
 			BufferedReader reader = new BufferedReader(new FileReader("src/main/resources/data/triggerTokens"));
@@ -377,12 +379,16 @@ public class Document implements java.io.Serializable
 	
 	public static Document createAndPreprocess(String baseFileName, boolean hasLabel, boolean monoCase, boolean tryLoadExisting, boolean dumpNewDoc, String singleEventType) throws IOException {
 		try {
+			// Kludge - don't serialize for now
+			dumpNewDoc = false;
+			///////////////////////////////////////////////////////////////////////////////////////////////////
+			
 			Document doc = null;
 			File preprocessed = new File(baseFileName + preprocessedFileExt);
 			File xmi = new File(baseFileName + xmiFileExt);
 			if (tryLoadExisting && preprocessed.isFile()) {
 				doc = (Document) SerializationUtils.deserialize(new FileInputStream(preprocessed));
-				doc.jcas = UimaUtils.loadXmi(xmi);
+				doc.jcas = UimaUtils.loadXmi(xmi, AE_FILE_PATH);
 				if (singleEventType != null) {
 					doc.aceAnnotations.setSingleEventType(singleEventType);
 				}
@@ -401,7 +407,7 @@ public class Document implements java.io.Serializable
 						Files.deleteIfExists(preprocessed.toPath());
 						throw e;
 					}
-					catch (SerializationException e) {
+					catch (RuntimeException e) {
 						Files.deleteIfExists(preprocessed.toPath());
 						throw e;
 					}
@@ -513,7 +519,7 @@ public class Document implements java.io.Serializable
 			sentSpans = fixSentBoundaries(sentSpans);
 		}
 		
-		// Buid JCas
+		// Build JCas
 		try {
 			AnalysisEngine ae = UimaUtils.loadAE(AE_FILE_PATH);
 			jcas = ae.newJCas();

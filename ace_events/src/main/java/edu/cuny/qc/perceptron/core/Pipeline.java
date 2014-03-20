@@ -51,16 +51,16 @@ public class Pipeline
 			
 			if(!controller.crossSent)
 			{
+				System.out.printf("[%s] Building perceptron...\n", new Date());
+				model = new Perceptron(nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet);
+				SpecHandler.loadSpecs(model, specXmlPaths);		
+				System.out.printf("[%s] Finished building perceptron. Its LabelBigram is: %s\n", new Date(), model.getLabelBigram());
 				System.out.printf("[%s] Reading instance list of train...\n", new Date());
 				trainInstanceList = readInstanceList(model, srcDir, trainingFileList, nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet, controller, true, singleEventType);
 				System.out.printf("[%s] Finished reading instance list of train, got %d instances\n", new Date(), trainInstanceList.size());
 				System.out.printf("[%s] Reading instance list of dev\n", new Date());
 				devInstanceList = readInstanceList(model, srcDir, devFileList, nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet, controller, false, singleEventType);
 				System.out.printf("[%s] Finished reading instance list of dev, got %d instances\n", new Date(), devInstanceList.size());
-				// perceptron training
-				System.out.printf("[%s] Building perceptron...\n", new Date());
-				model = new Perceptron(nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet);
-				System.out.printf("[%s] Finished building perceptron. It's LabelBigramis: %s\n", new Date(), model.getLabelBigram());
 			}
 			else
 			{
@@ -69,7 +69,6 @@ public class Pipeline
 			
 			model.controller = controller;
 			
-			SpecHandler.loadSpecs(model, specXmlPaths);		
 
 			// learning
 			model.learning(trainInstanceList, devInstanceList, 0, singleEventType);
@@ -256,7 +255,7 @@ public class Pipeline
 		File modelFile = new File(args[2]);
 		File devFileList = new File(args[3]);
 		File specListFile = new File(args[4]);
-		List<String> specXmlPaths = FileUtils.loadFileToList(specListFile);
+		List<String> specXmlPaths = SpecHandler.readSpecListFile(specListFile);
 		
 		PrintStream out = new PrintStream(modelFile.getAbsoluteFile() + ".weights");
 

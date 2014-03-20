@@ -24,6 +24,6 @@ public class StanfordLemmatizerAE extends JCasAnnotator_ImplBase {
 	}
 	
 	static {
-		System.err.println("StanfordLemmatizerAE: Always lemmatizing with 'V' POS. Should try to lemmatize with all possible poses, and add lemmas if necessary (with some token-extensions mechanism).");
+		System.err.println("??? StanfordLemmatizerAE: Always lemmatizing with 'V' POS. Should try to lemmatize with all possible poses, and add lemmas if necessary (with some token-extensions mechanism).");
 	}
 }

@@ -77,8 +77,8 @@ public class Decoder
 
 	public static void decode(String[] args, String filenameSuffix, String folderNamePrefix, String singleEventType, File specListFile) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException
 	{
-		List<String> specPaths = FileUtils.loadFileToList(specListFile);
-		decode(args, filenameSuffix, folderNamePrefix, singleEventType, specPaths);
+		List<String> specXmlPaths = SpecHandler.readSpecListFile(specListFile);
+		decode(args, filenameSuffix, folderNamePrefix, singleEventType, specXmlPaths);
 	}
 	
 	public static void decode(String[] args, String filenameSuffix, String folderNamePrefix, String singleEventType, List<String> specXmlPaths) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException

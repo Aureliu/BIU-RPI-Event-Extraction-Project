@@ -1,10 +1,13 @@
 package ac.biu.nlp.nlp.ie.onthefly.input;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
 import org.apache.uima.analysis_engine.AnalysisEngine;
@@ -24,18 +27,33 @@ import eu.excitementproject.eop.common.utilities.uima.UimaUtilsException;
 
 public class SpecHandler {
 
+	public static List<String> readSpecListFile(File specListFile) throws IOException {
+		List<String> outList = new LinkedList<String>();
+		String line;
+		BufferedReader bufferedReader = new BufferedReader(new FileReader(specListFile));
+		while ((line = bufferedReader.readLine()) != null) {
+			String trimmed = line.trim();
+			if (!trimmed.isEmpty()) {
+				outList.add(line);
+			}
+		}
+		bufferedReader.close();
+		return outList;
+	}
+
 	public static void loadSpecs(Perceptron perceptron, List<String> specXmlPaths) throws CASRuntimeException, AnalysisEngineProcessException, ResourceInitializationException, UimaUtilsException, IOException, AeException, CASException {
-		List<JCas> specs = new ArrayList<JCas>(specXmlPaths.size());
+		perceptron.specs = new ArrayList<JCas>(specXmlPaths.size());
 		List<String[]> linesForArgs = new ArrayList<String[]>();
 		for (String specXmlPath : specXmlPaths) {
 			JCas spec = getPreprocessedSpec(specXmlPath, perceptron);
-			specs.add(spec);
+			perceptron.specs.add(spec);
 
 			String predicateName = SpecAnnotator.getSpecLabel(spec);
 			TypeConstraints.addSpecType(predicateName);
 			perceptron.nodeTargetAlphabet.lookupIndex(predicateName);
 			
-			for (Argument arg : JCasUtil.select(spec, Argument.class)) {
+			JCas tokenView = spec.getView(SpecAnnotator.TOKEN_VIEW);
+			for (Argument arg : JCasUtil.select(tokenView, Argument.class)) {
 				String role = arg.getRole().getCoveredText();
 				List<String> types = Arrays.asList(arg.getTypes().toStringArray());
 				perceptron.edgeTargetAlphabet.lookupIndex(predicateName);
@@ -44,7 +62,9 @@ public class SpecHandler {
 				lineList.add(predicateName);
 				lineList.add(role);
 				lineList.addAll(types);
-				linesForArgs.add((String[]) lineList.toArray());
+				String[] lineArray = new String[lineList.size()];
+				lineArray = lineList.toArray(lineArray);
+				linesForArgs.add(lineArray);
 			}
 		}
 		perceptron.fillLabelBigrams();
@@ -53,26 +73,65 @@ public class SpecHandler {
 	
 	private static JCas getPreprocessedSpec(String specXmlPath, Perceptron perceptron) throws UimaUtilsException, ResourceInitializationException, CASRuntimeException, IOException, AeException, AnalysisEngineProcessException {
 		JCas spec = null;
+		boolean shouldDeletePreprocessed = false;
 		File preprocessed = new File(specXmlPath + PREPROCESSED_SPEC_FILE_EXT);
-		if (preprocessed.isFile()) {
-			spec = UimaUtils.loadXmi(preprocessed);
-		}
-		else {
-			AnalysisEngine ae = UimaUtils.loadAE(SpecAnnotator.ANNOTATOR_FILE_PATH);
-			JCas jcas = ae.newJCas();
-			jcas.setDocumentText(FileUtils.loadFileToString(specXmlPath));
-			
-			SpecAnnotator myAe = (SpecAnnotator) ae;
-			myAe.init(perceptron);
-
-			ae.process(jcas);
-
-			try {
-				UimaUtils.dumpXmi(preprocessed, spec);
+		try {
+			if (preprocessed.isFile()) {
+				spec = UimaUtils.loadXmi(preprocessed, SpecAnnotator.ANNOTATOR_FILE_PATH);
 			}
-			catch (UimaUtilsException e) {
+			else {
+				AnalysisEngine ae = UimaUtils.loadAE(SpecAnnotator.ANNOTATOR_FILE_PATH);
+				
+				//AnalysisEngine ae = AnalysisEngineFactory.createPrimitive(SpecAnnotator.class);
+	//			AnalysisEngine ae;
+	//			try {
+	//				ae = AnalysisEngineFactory.createAnalysisEngine("desc.SpecAnnotator");
+	//			} catch (UIMAException e) {
+	//				throw new AnalysisEngineProcessException(e);
+	//			}
+	
+				
+				
+				
+				spec = ae.newJCas();
+				spec.setDocumentText(FileUtils.loadFileToString(specXmlPath));
+				
+				//SpecAnnotator myAe = (SpecAnnotator) ae;
+				//myAe.init(perceptron);
+				
+				ae.process(spec);
+				
+	//			try {
+	//				JCas tokenView = spec.getView(SpecAnnotator.TOKEN_VIEW);
+	//				AnalysisEngine tokenAE = AnalysisEngines.forSpecTokenView(SpecAnnotator.TOKEN_VIEW);
+	//				tokenAE.process(tokenView);
+	//				
+	//				JCas sentenceView = spec.getView(SpecAnnotator.SENTENCE_VIEW);
+	//				AnalysisEngine sentenceAE = AnalysisEngines.forSpecSentenceView(SpecAnnotator.SENTENCE_VIEW);
+	//				sentenceAE.process(sentenceView);
+	//			} catch (CASException e) {
+	//				throw new AeException(e);
+	//			}
+				
+				
+	//			spec = ae3.newJCas();
+	//			spec.setDocumentText(FileUtils.loadFileToString(specXmlPath));
+	//			
+	//			//SpecAnnotator myAe = (SpecAnnotator) ae;
+	//			//myAe.init(perceptron);
+	//			
+	//			ae3.process(spec);
+	
+				
+				
+				shouldDeletePreprocessed = true;
+				UimaUtils.dumpXmi(preprocessed, spec);
+				shouldDeletePreprocessed = false;
+			}
+		}
+		finally {
+			if (shouldDeletePreprocessed) {
 				Files.deleteIfExists(preprocessed.toPath());
-				throw e;
 			}
 		}
 		

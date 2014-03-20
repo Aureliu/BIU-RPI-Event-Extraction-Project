@@ -29,12 +29,14 @@ public class TypeConstraints
 	public static Map<String, Set<String>> argumentRoles = new HashMap<String, Set<String>>();
 	// map argument_role --> entity types 
 	public static Map<String, Set<String>> roleEntityTypes = new HashMap<String, Set<String>>();
-	// independent argument roles: argument roles that are not dependent on the types of event
-	public static List<String> independentRoles = new ArrayList<String>();
+//	// independent argument roles: argument roles that are not dependent on the types of event
+//	public static List<String> independentRoles = new ArrayList<String>();
 	
 	// a mapping from event subtype to type
+	// 20.3.2014 Ofer's note: this list now only has a very minimal role (don't start using it!),
+	// see corresponding comment in SentenceInstance.getEvents()
 	public static Map<String, String> eventTypeMap = new HashMap<String, String>();
-	public static Map<String, String> eventTypeMapModified = new HashMap<String, String>();
+	//public static Map<String, String> eventTypeMapModified = new HashMap<String, String>();
 	
 	public static List<String> specTypes = new ArrayList<String>();
 	
@@ -74,39 +76,39 @@ public class TypeConstraints
 		eventTypeMap.put("Appeal","Justice");
 		eventTypeMap.put("Pardon","Justice");
 		
-		eventTypeMapModified.put("Be-Born","Life");
-		eventTypeMapModified.put("Marry","Life");
-		eventTypeMapModified.put("Divorce","Life");
-		eventTypeMapModified.put("Transport","Movement");
-		eventTypeMapModified.put("Transfer-Ownership","Transaction");
-		eventTypeMapModified.put("Transfer-Money","Transaction");
-		eventTypeMapModified.put("Start-Org","Business");
-		eventTypeMapModified.put("Merge-Org","Business");
-		eventTypeMapModified.put("Declare-Bankruptcy","Business");
-		eventTypeMapModified.put("End-Org","Business");
-		eventTypeMapModified.put("Injure","Conflict");
-		eventTypeMapModified.put("Die","Conflict");
-		eventTypeMapModified.put("Attack","Conflict");
-		eventTypeMapModified.put("Demonstrate","Conflict");
-		eventTypeMapModified.put("Meet","Contact");
-		eventTypeMapModified.put("Phone-Write","Contact");
-		eventTypeMapModified.put("Start-Position","Personnel");
-		eventTypeMapModified.put("End-Position","Personnel");
-		eventTypeMapModified.put("Nominate","Personnel");
-		eventTypeMapModified.put("Elect","Personnel");
-		eventTypeMapModified.put("Arrest-Jail","Justice");
-		eventTypeMapModified.put("Release-Parole","Justice");
-		eventTypeMapModified.put("Trial-Hearing","Justice");
-		eventTypeMapModified.put("Charge-Indict","Justice");
-		eventTypeMapModified.put("Sue","Justice");
-		eventTypeMapModified.put("Convict","Justice");
-		eventTypeMapModified.put("Sentence","Justice");
-		eventTypeMapModified.put("Fine","Justice");
-		eventTypeMapModified.put("Execute","Justice");
-		eventTypeMapModified.put("Extradite","Justice");
-		eventTypeMapModified.put("Acquit","Justice");
-		eventTypeMapModified.put("Appeal","Justice");
-		eventTypeMapModified.put("Pardon","Justice");
+//		eventTypeMapModified.put("Be-Born","Life");
+//		eventTypeMapModified.put("Marry","Life");
+//		eventTypeMapModified.put("Divorce","Life");
+//		eventTypeMapModified.put("Transport","Movement");
+//		eventTypeMapModified.put("Transfer-Ownership","Transaction");
+//		eventTypeMapModified.put("Transfer-Money","Transaction");
+//		eventTypeMapModified.put("Start-Org","Business");
+//		eventTypeMapModified.put("Merge-Org","Business");
+//		eventTypeMapModified.put("Declare-Bankruptcy","Business");
+//		eventTypeMapModified.put("End-Org","Business");
+//		eventTypeMapModified.put("Injure","Conflict");
+//		eventTypeMapModified.put("Die","Conflict");
+//		eventTypeMapModified.put("Attack","Conflict");
+//		eventTypeMapModified.put("Demonstrate","Conflict");
+//		eventTypeMapModified.put("Meet","Contact");
+//		eventTypeMapModified.put("Phone-Write","Contact");
+//		eventTypeMapModified.put("Start-Position","Personnel");
+//		eventTypeMapModified.put("End-Position","Personnel");
+//		eventTypeMapModified.put("Nominate","Personnel");
+//		eventTypeMapModified.put("Elect","Personnel");
+//		eventTypeMapModified.put("Arrest-Jail","Justice");
+//		eventTypeMapModified.put("Release-Parole","Justice");
+//		eventTypeMapModified.put("Trial-Hearing","Justice");
+//		eventTypeMapModified.put("Charge-Indict","Justice");
+//		eventTypeMapModified.put("Sue","Justice");
+//		eventTypeMapModified.put("Convict","Justice");
+//		eventTypeMapModified.put("Sentence","Justice");
+//		eventTypeMapModified.put("Fine","Justice");
+//		eventTypeMapModified.put("Execute","Justice");
+//		eventTypeMapModified.put("Extradite","Justice");
+//		eventTypeMapModified.put("Acquit","Justice");
+//		eventTypeMapModified.put("Appeal","Justice");
+//		eventTypeMapModified.put("Pardon","Justice");
 	}
 	
 //	static
@@ -234,7 +236,7 @@ public class TypeConstraints
 	 * @param role
 	 * @return
 	 */
-	protected static String getCanonicalRoleName(String role)
+	public static String getCanonicalRoleName(String role)
 	{
 		if(role.startsWith("Time"))
 		{
@@ -264,20 +266,20 @@ public class TypeConstraints
 		return false;
 	}
 	
-	/**
-	 * given a argument role type, check if it's independent of event types
-	 * @param role
-	 * @return
-	 */
-	public static boolean isIndependentRole(String role)
-	{
-		role = getCanonicalRoleName(role);
-		if(independentRoles.contains(role))
-		{
-			return true;
-		}
-		return false;
-	}
+//	/**
+//	 * given a argument role type, check if it's independent of event types
+//	 * @param role
+//	 * @return
+//	 */
+//	public static boolean isIndependentRole(String role)
+//	{
+//		role = getCanonicalRoleName(role);
+//		if(independentRoles.contains(role))
+//		{
+//			return true;
+//		}
+//		return false;
+//	}
 
 	public static boolean isEntityTypeEventCompatible(String eventType, String entityType)
 	{

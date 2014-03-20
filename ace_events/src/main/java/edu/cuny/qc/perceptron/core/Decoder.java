@@ -75,13 +75,13 @@ public class Decoder
 	}
 
 
-	public static void decode(String[] args, String filenameSuffix, String folderNamePrefix, String singleEventType, File specListFile) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException
+	public static Perceptron decode(String[] args, String filenameSuffix, String folderNamePrefix, File specListFile) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException
 	{
 		List<String> specXmlPaths = SpecHandler.readSpecListFile(specListFile);
-		decode(args, filenameSuffix, folderNamePrefix, singleEventType, specXmlPaths);
+		return decode(args, filenameSuffix, folderNamePrefix, specXmlPaths);
 	}
 	
-	public static void decode(String[] args, String filenameSuffix, String folderNamePrefix, String singleEventType, List<String> specXmlPaths) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException
+	public static Perceptron decode(String[] args, String filenameSuffix, String folderNamePrefix, List<String> specXmlPaths) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException
 	{		
 		System.err.println("(Decoding err stream)");
 		
@@ -121,7 +121,7 @@ public class Decoder
 		System.out.printf("--------------\nPerceptron.controller =\n%s\r\n\r\n--------------------------\r\n\r\n", perceptron.controller);
 		
 		// handle specs
-		SpecHandler.loadSpecs(perceptron, specXmlPaths);		
+		SpecHandler.loadSpecs(specXmlPaths, perceptron);		
 		
 		BufferedReader reader = new BufferedReader(new FileReader(fileList));
 		String line = "";
@@ -139,7 +139,7 @@ public class Decoder
 			}
 			else
 			{
-				doc = Document.createAndPreprocess(fileName, true, monoCase, true, true, singleEventType);
+				doc = Document.createAndPreprocess(fileName, true, monoCase, true, true, perceptron.specs);
 				// fill in text feature vector for each token
 				featGen.fillTextFeatures_NoPreprocessing(doc);
 			}
@@ -172,6 +172,7 @@ public class Decoder
 				List<AceEvent> events = inst.getEvents(assn, id, doc.allText);
 				eventsInDoc.addAll(events);
 			}
+			System.err.println("??? Decoder: Calls SentenceInstance.getEvents(), which uses TypeConstraints.eventTypeMap, which is not consistent with specs, so I'm not sure what should happen here...");
 			writeEntities(out, doc.getAceAnnotations(), eventsInDoc);
 			out.close();
 			
@@ -179,13 +180,16 @@ public class Decoder
 		}
 		
 		System.out.printf("[%s] --------------\r\nPerceptron.controller =\r\n%s\r\n\r\n--------------------------\r\n\r\n", new Date(), perceptron.controller);
+		
+		return perceptron;
 	}
 	
-	public static Stats decodeAndScore(String[] args, String filenameSuffix, String folderNamePrefix, String singleEventType, File specListFile) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException {
-		decode(args, filenameSuffix, folderNamePrefix, singleEventType, specListFile);
+	public static Stats decodeAndScore(String[] args, String filenameSuffix, String folderNamePrefix, File specListFile) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException {
+		Perceptron perceptron = decode(args, filenameSuffix, folderNamePrefix, specListFile);
 		
 		File outputFile = new File(outDir + File.separator + "Score" + filenameSuffix);
-		Stats stats = Scorer.mainMultiRunReturningStats(folderNamePrefix, singleEventType, new String[]{args[1], args[3], args[2], outputFile.getAbsolutePath()});
+		PrintStream out = new PrintStream(outputFile);
+		Stats stats = Scorer.mainMultiRunReturningStats(args[1], args[3], args[2], perceptron.specs, out, folderNamePrefix);
 		return stats;
 	}
 
@@ -210,16 +214,16 @@ public class Decoder
 		String folderNamePrefix = "";
 		if (args.length>=6) {
 			if (args[5].equals(OPTION_NO_SCORING)) {
-				decode(args, filenameSuffix, folderNamePrefix, null, new File(args[4])); //no singleEventType
+				decode(args, filenameSuffix, folderNamePrefix, new File(args[4]));
 			}
 			else {
 				filenameSuffix = args[5];
 				folderNamePrefix = "DIR" + args[5] + "."; //yes, I know it's silly it has ".txt" in it, maybe should fix later
-				decodeAndScore(args, filenameSuffix, folderNamePrefix, null, new File(args[4])); //no singleEventType
+				decodeAndScore(args, filenameSuffix, folderNamePrefix, new File(args[4]));
 			}
 		}
 		else {
-			decodeAndScore(args, filenameSuffix, folderNamePrefix, null, new File(args[4]));
+			decodeAndScore(args, filenameSuffix, folderNamePrefix, new File(args[4]));
 		}
 	}
 }

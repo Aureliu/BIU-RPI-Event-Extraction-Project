@@ -169,7 +169,7 @@ public class Perceptron implements java.io.Serializable
 		Evaluator evaluator = null;
 		if(controller.evaluatorType == 0)
 		{
-			evaluator = new EvaluatorFinal();
+			throw new UnsupportedParameterException("evaluatorType == 0");
 		}
 		else
 		{
@@ -388,24 +388,24 @@ public class Perceptron implements java.io.Serializable
 		}
 	}
 
-	private void fillDefaultLabelBigrams(String singleEventType) {
-		if (singleEventType != null) {
-			getLabelBigram().put(singleEventType,                      Arrays.asList(new String[] {SentenceAssignment.PAD_Trigger_Label, singleEventType}));
-			getLabelBigram().put(SentenceAssignment.PAD_Trigger_Label, Arrays.asList(new String[] {SentenceAssignment.PAD_Trigger_Label, singleEventType}));
-		}
-		else {
-			List<String> allTypes = new ArrayList<String>(TypeConstraints.eventTypeMap.keySet());
-			allTypes.add(0, SentenceAssignment.PAD_Trigger_Label);
-			String currType = null;
-			for (int i=0; i<allTypes.size(); i++) {
-				currType = allTypes.get(i);
-				List<String> list = new ArrayList<String>(allTypes);
-				list.remove(i);
-				getLabelBigram().put(currType, list);
-			}
-		}
-	}
-
+//	private void fillDefaultLabelBigrams(String singleEventType) {
+//		if (singleEventType != null) {
+//			getLabelBigram().put(singleEventType,                      Arrays.asList(new String[] {SentenceAssignment.PAD_Trigger_Label, singleEventType}));
+//			getLabelBigram().put(SentenceAssignment.PAD_Trigger_Label, Arrays.asList(new String[] {SentenceAssignment.PAD_Trigger_Label, singleEventType}));
+//		}
+//		else {
+//			List<String> allTypes = new ArrayList<String>(TypeConstraints.eventTypeMap.keySet());
+//			allTypes.add(0, SentenceAssignment.PAD_Trigger_Label);
+//			String currType = null;
+//			for (int i=0; i<allTypes.size(); i++) {
+//				currType = allTypes.get(i);
+//				List<String> list = new ArrayList<String>(allTypes);
+//				list.remove(i);
+//				getLabelBigram().put(currType, list);
+//			}
+//		}
+//	}
+//
 	/**
 	 * After each type of trigger, can appear any other type of trigger. Default label ("O") included.
 	 */

@@ -62,6 +62,10 @@ public class AceEntity extends AceEventArgumentValue {
 		this.subtype = subtype;
 		this.generic = generic;
 	}
+	
+	public String getType() {
+		return type;
+	}
 
 	/**
 	 *  create an AceEntity from the information in the APF file.

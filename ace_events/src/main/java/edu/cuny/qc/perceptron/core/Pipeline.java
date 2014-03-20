@@ -13,6 +13,7 @@ import java.util.List;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.cas.CASException;
 import org.apache.uima.cas.CASRuntimeException;
+import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.dom4j.DocumentException;
 
@@ -53,13 +54,13 @@ public class Pipeline
 			{
 				System.out.printf("[%s] Building perceptron...\n", new Date());
 				model = new Perceptron(nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet);
-				SpecHandler.loadSpecs(model, specXmlPaths);		
+				SpecHandler.loadSpecs(specXmlPaths, model);		
 				System.out.printf("[%s] Finished building perceptron. Its LabelBigram is: %s\n", new Date(), model.getLabelBigram());
 				System.out.printf("[%s] Reading instance list of train...\n", new Date());
-				trainInstanceList = readInstanceList(model, srcDir, trainingFileList, nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet, controller, true, singleEventType);
+				trainInstanceList = readInstanceList(model, srcDir, trainingFileList, nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet, controller, true);
 				System.out.printf("[%s] Finished reading instance list of train, got %d instances\n", new Date(), trainInstanceList.size());
 				System.out.printf("[%s] Reading instance list of dev\n", new Date());
-				devInstanceList = readInstanceList(model, srcDir, devFileList, nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet, controller, false, singleEventType);
+				devInstanceList = readInstanceList(model, srcDir, devFileList, nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet, controller, false);
 				System.out.printf("[%s] Finished reading instance list of dev, got %d instances\n", new Date(), devInstanceList.size());
 			}
 			else
@@ -111,7 +112,7 @@ public class Pipeline
 	 */
 	public static List<SentenceInstance> readInstanceList(Perceptron perceptron, File srcDir, File file_list, 
 			Alphabet nodeTargetAlphabet, Alphabet edgeTargetAlphabet, Alphabet featureAlphabet, 
-			Controller controller, boolean learnable, String singleEventType) throws IOException, DocumentException
+			Controller controller, boolean learnable) throws IOException, DocumentException
 	{
 		System.out.println("Reading training instance ...");
 		
@@ -126,7 +127,7 @@ public class Pipeline
 			
 			System.out.println(fileName);
 			
-			Document doc = Document.createAndPreprocess(fileName, true, monoCase, true, true, singleEventType);
+			Document doc = Document.createAndPreprocess(fileName, true, monoCase, true, true, perceptron.specs);
 			// fill in text feature vector for each token
 			featGen.fillTextFeatures_NoPreprocessing(doc);
 			for(int sent_id=0 ; sent_id<doc.getSentences().size(); sent_id++)

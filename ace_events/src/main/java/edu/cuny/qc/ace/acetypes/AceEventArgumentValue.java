@@ -14,5 +14,9 @@ package edu.cuny.qc.ace.acetypes;
 public abstract class AceEventArgumentValue implements java.io.Serializable {
 
 	public String id;
+	
+	public String getType() {
+		throw new UnsupportedOperationException("This is an optional method.");
+	}
 
 }

@@ -173,11 +173,12 @@ public class LearningCurve {
 	
 	protected void populateTypes() {
 		if (singleTypes) {
-			allEventTypes = new ArrayList<String>(TypeConstraints.eventTypeMap.keySet());
-			Collections.sort(allEventTypes); // Alphabetically!
-			if (maxType==null) {
-				maxType = allEventTypes.size()-1;
-			}
+			throw new RuntimeException("A read from TypeConstraints.eventTypeMap has been disables, as TypeConstraints.eventTypeMap itself has been disabled. If you wanna use this code, you gotta solve this issue first. Good luck...");
+////			allEventTypes = new ArrayList<String>(TypeConstraints.eventTypeMap.keySet());
+////			Collections.sort(allEventTypes); // Alphabetically!
+////			if (maxType==null) {
+////				maxType = allEventTypes.size()-1;
+////			}
 		}
 		else {
 			if (maxType==null) {

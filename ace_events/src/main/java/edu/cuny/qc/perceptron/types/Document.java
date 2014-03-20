@@ -95,26 +95,26 @@ public class Document implements java.io.Serializable
 	 */
 	protected AceDocument aceAnnotations;
 	
-	// Event type --> Trigger token
-	public static Map<String, List<String>> triggerTokens = new HashMap<String, List<String>>();
-	// Event subtype --> Trigger token
-	public static Map<String, List<String>> triggerTokensFineGrained = new HashMap<String, List<String>>();
-	// Event subtype --> trigger token with high confidence value
-	public static Map<String, List<String>> triggerTokensHighQuality = new HashMap<String, List<String>>();
+//	// Event type --> Trigger token
+//	public static Map<String, List<String>> triggerTokens = new HashMap<String, List<String>>();
+//	// Event subtype --> Trigger token
+//	public static Map<String, List<String>> triggerTokensFineGrained = new HashMap<String, List<String>>();
+//	// Event subtype --> trigger token with high confidence value
+//	public static Map<String, List<String>> triggerTokensHighQuality = new HashMap<String, List<String>>();
 	
 	/**
 	 * the container for the sentence "clusters"
 	 */
-	protected List<List<Sentence>> sentClusters = new ArrayList<List<Sentence>>(); 
+//	protected List<List<Sentence>> sentClusters = new ArrayList<List<Sentence>>(); 
 	
-	/**
-	 * return the sentence clusters to the client
-	 * @return
-	 */
-	public List<List<Sentence>> getSentenceClusters()
-	{
-		return sentClusters;
-	}
+//	/**
+//	 * return the sentence clusters to the client
+//	 * @return
+//	 */
+//	public List<List<Sentence>> getSentenceClusters()
+//	{
+//		return sentClusters;
+//	}
 	
 	static
 	{
@@ -128,194 +128,194 @@ public class Document implements java.io.Serializable
 			ae = AnalysisEngines.forDocument(null);
 			
 			// initialize dict of triggerTokens
-			BufferedReader reader = new BufferedReader(new FileReader("src/main/resources/data/triggerTokens"));
-			String line = null;
-			while((line = reader.readLine()) != null)
-			{
-				if(line.length() == 0)
-				{
-					continue;
-				}
-				String[] fields = line.split("\\t");
-				String eventSubType = fields[0];
-				String triggerToken = fields[1];
-				Double confidence = Double.parseDouble(fields[2]);
-				if(confidence < 0.150)
-				{
-					continue;
-				}
-				String eventType = TypeConstraints.eventTypeMapModified.get(eventSubType);
-				List<String> triggers = triggerTokens.get(eventType);
-				if(triggers == null)
-				{
-					triggers = new ArrayList<String>();
-					triggerTokens.put(eventType, triggers);
-				}
-				if(!triggers.contains(triggerToken))
-				{
-					triggers.add(triggerToken);
-				}
-				
-				triggers = triggerTokensFineGrained.get(eventSubType);
-				if(triggers == null)
-				{
-					triggers = new ArrayList<String>();
-					triggerTokensFineGrained.put(eventSubType, triggers);
-				}
-				if(!triggers.contains(triggerToken))
-				{
-					triggers.add(triggerToken);
-				}
-				
-				if(confidence >= 0.50)
-				{
-					triggers = triggerTokensHighQuality.get(eventSubType);
-					if(triggers == null)
-					{
-						triggers = new ArrayList<String>();
-						triggerTokensHighQuality.put(eventSubType, triggers);
-					}
-					if(!triggers.contains(triggerToken))
-					{
-						triggers.add(triggerToken);
-					}
-				}
-			}
-			reader.close();
+//			BufferedReader reader = new BufferedReader(new FileReader("src/main/resources/data/triggerTokens"));
+//			String line = null;
+//			while((line = reader.readLine()) != null)
+//			{
+//				if(line.length() == 0)
+//				{
+//					continue;
+//				}
+//				String[] fields = line.split("\\t");
+//				String eventSubType = fields[0];
+//				String triggerToken = fields[1];
+//				Double confidence = Double.parseDouble(fields[2]);
+//				if(confidence < 0.150)
+//				{
+//					continue;
+//				}
+//				String eventType = TypeConstraints.eventTypeMapModified.get(eventSubType);
+//				List<String> triggers = triggerTokens.get(eventType);
+//				if(triggers == null)
+//				{
+//					triggers = new ArrayList<String>();
+//					triggerTokens.put(eventType, triggers);
+//				}
+//				if(!triggers.contains(triggerToken))
+//				{
+//					triggers.add(triggerToken);
+//				}
+//				
+//				triggers = triggerTokensFineGrained.get(eventSubType);
+//				if(triggers == null)
+//				{
+//					triggers = new ArrayList<String>();
+//					triggerTokensFineGrained.put(eventSubType, triggers);
+//				}
+//				if(!triggers.contains(triggerToken))
+//				{
+//					triggers.add(triggerToken);
+//				}
+//				
+//				if(confidence >= 0.50)
+//				{
+//					triggers = triggerTokensHighQuality.get(eventSubType);
+//					if(triggers == null)
+//					{
+//						triggers = new ArrayList<String>();
+//						triggerTokensHighQuality.put(eventSubType, triggers);
+//					}
+//					if(!triggers.contains(triggerToken))
+//					{
+//						triggers.add(triggerToken);
+//					}
+//				}
+//			}
+//			reader.close();
 		} 
-		catch (IOException e)
-		{
-			e.printStackTrace();
-		}
+//		catch (IOException e)
+//		{
+//			e.printStackTrace();
+//		}
 		catch (AeException e)
 		{
 			e.printStackTrace();
 		}
 	}
 	
-	public void printDocCluster(PrintStream out)
-	{
-		int i=0;
-		for(List<Sentence> cluster : this.sentClusters)
-		{
-			out.println("cluster " + i++);
-			for(Sentence sent : cluster)
-			{
-				String[] tokens = (String[]) sent.get(Sent_Attribute.TOKENS);
-				for(String token : tokens)
-				{
-					out.print(token + " ");
-				}
-				out.println();
-			}
-		}
-	}
+//	public void printDocCluster(PrintStream out)
+//	{
+//		int i=0;
+//		for(List<Sentence> cluster : this.sentClusters)
+//		{
+//			out.println("cluster " + i++);
+//			for(Sentence sent : cluster)
+//			{
+//				String[] tokens = (String[]) sent.get(Sent_Attribute.TOKENS);
+//				for(String token : tokens)
+//				{
+//					out.print(token + " ");
+//				}
+//				out.println();
+//			}
+//		}
+//	}
 	
-	public void setSentenceClustersByTokens()
-	{
-		final String allowedPOS = "IN|JJ|RB|DT|VBG|VBD|NN|NNPS|VB|VBN|NNS|VBP|NNP|PRP|VBZ";
-		
-		this.sentClusters.clear();
-		// travels each entity to get relevant sents
-		
-		for(String eventType : triggerTokens.keySet())
-		{
-			List<String> triggers = triggerTokens.get(eventType);
-			List<Sentence> cluster = new ArrayList<Sentence>();
-			// add sentence that contains this entity
-			for(int i=0; i<this.sentences.size(); i++)
-			{
-				Sentence sent = this.sentences.get(i);
-				List<Map<Class<?>, Object>> tokens = (List<Map<Class<?>, Object>>) sent.get(Sent_Attribute.Token_FEATURE_MAPs);
-				for(int j=0; j<tokens.size(); j++)
-				{
-					String pos = (String) tokens.get(j).get(TokenAnnotations.PartOfSpeechAnnotation.class);
-					if(pos.matches(allowedPOS))
-					{
-						String lemma = (String) tokens.get(j).get(TokenAnnotations.LemmaAnnotation.class);
-						if(triggers.contains(lemma))
-						{
-							cluster.add(sent);
-							break;
-						}
-					}
-				}
-			}
-			
-			// add cluster if doesn't exist
-			if(cluster.size() > 0 && !this.sentClusters.contains(cluster))
-			{
-				this.sentClusters.add(cluster);
-			}
-		}
-		
-		// sort clusters by size and remove overlapping sents
-		Collections.sort(this.sentClusters, new Comparator<List<Sentence>>()
-			{			@Override
-				public int compare(List<Sentence> set1, List<Sentence> set2)
-				{
-					if(set1.size() > set2.size())
-					{
-						return -1;
-					}
-					else if(set1.size() < set2.size())
-					{
-						return 1;
-					}
-					else
-					{
-						return 0;
-					}
-				}
-			}
-		);
-		
-		for(int i=1; i<this.sentClusters.size(); i++)
-		{
-			List<Sentence> cluster = this.sentClusters.get(i);
-			for(int j=0; j<i; j++)
-			{
-				List<Sentence> pre_cluster = this.sentClusters.get(j);
-				// remove overlapping sents
-				cluster.removeAll(pre_cluster);
-			}
-			if(cluster.size() == 0)
-			{
-				this.sentClusters.remove(cluster);
-				i--;
-			}
-		}
-		
-		// set the remaining sents as singleton clusters
-		for(int i=0; i<this.sentences.size(); i++)
-		{
-			// only add sents that are not in any existing clusters
-			Sentence sent = this.sentences.get(i);
-			if(isNotInCluster(sent))
-			{
-				List<Sentence> cluster = new ArrayList<Sentence>();
-				cluster.add(sent);
-				this.sentClusters.add(cluster);
-			}
-		}
-	}
+//	public void setSentenceClustersByTokens()
+//	{
+//		final String allowedPOS = "IN|JJ|RB|DT|VBG|VBD|NN|NNPS|VB|VBN|NNS|VBP|NNP|PRP|VBZ";
+//		
+//		this.sentClusters.clear();
+//		// travels each entity to get relevant sents
+//		
+//		for(String eventType : triggerTokens.keySet())
+//		{
+//			List<String> triggers = triggerTokens.get(eventType);
+//			List<Sentence> cluster = new ArrayList<Sentence>();
+//			// add sentence that contains this entity
+//			for(int i=0; i<this.sentences.size(); i++)
+//			{
+//				Sentence sent = this.sentences.get(i);
+//				List<Map<Class<?>, Object>> tokens = (List<Map<Class<?>, Object>>) sent.get(Sent_Attribute.Token_FEATURE_MAPs);
+//				for(int j=0; j<tokens.size(); j++)
+//				{
+//					String pos = (String) tokens.get(j).get(TokenAnnotations.PartOfSpeechAnnotation.class);
+//					if(pos.matches(allowedPOS))
+//					{
+//						String lemma = (String) tokens.get(j).get(TokenAnnotations.LemmaAnnotation.class);
+//						if(triggers.contains(lemma))
+//						{
+//							cluster.add(sent);
+//							break;
+//						}
+//					}
+//				}
+//			}
+//			
+//			// add cluster if doesn't exist
+//			if(cluster.size() > 0 && !this.sentClusters.contains(cluster))
+//			{
+//				this.sentClusters.add(cluster);
+//			}
+//		}
+//		
+//		// sort clusters by size and remove overlapping sents
+//		Collections.sort(this.sentClusters, new Comparator<List<Sentence>>()
+//			{			@Override
+//				public int compare(List<Sentence> set1, List<Sentence> set2)
+//				{
+//					if(set1.size() > set2.size())
+//					{
+//						return -1;
+//					}
+//					else if(set1.size() < set2.size())
+//					{
+//						return 1;
+//					}
+//					else
+//					{
+//						return 0;
+//					}
+//				}
+//			}
+//		);
+//		
+//		for(int i=1; i<this.sentClusters.size(); i++)
+//		{
+//			List<Sentence> cluster = this.sentClusters.get(i);
+//			for(int j=0; j<i; j++)
+//			{
+//				List<Sentence> pre_cluster = this.sentClusters.get(j);
+//				// remove overlapping sents
+//				cluster.removeAll(pre_cluster);
+//			}
+//			if(cluster.size() == 0)
+//			{
+//				this.sentClusters.remove(cluster);
+//				i--;
+//			}
+//		}
+//		
+//		// set the remaining sents as singleton clusters
+//		for(int i=0; i<this.sentences.size(); i++)
+//		{
+//			// only add sents that are not in any existing clusters
+//			Sentence sent = this.sentences.get(i);
+//			if(isNotInCluster(sent))
+//			{
+//				List<Sentence> cluster = new ArrayList<Sentence>();
+//				cluster.add(sent);
+//				this.sentClusters.add(cluster);
+//			}
+//		}
+//	}
 	
 	/**
 	 * check if sent is in any cluster or not
 	 * @param sent
 	 * @return
 	 */
-	private boolean isNotInCluster(Sentence sent)
-	{
-		for(List<Sentence> cluster : this.sentClusters)
-		{
-			if(cluster.contains(sent))
-			{
-				return false;
-			}
-		}
-		return true;
-	}
+//	private boolean isNotInCluster(Sentence sent)
+//	{
+//		for(List<Sentence> cluster : this.sentClusters)
+//		{
+//			if(cluster.contains(sent))
+//			{
+//				return false;
+//			}
+//		}
+//		return true;
+//	}
 	
 	/**
 	 * implicit constructor
@@ -377,7 +377,7 @@ public class Document implements java.io.Serializable
 		readDoc(txtFile, this.monoCase);
 	}
 	
-	public static Document createAndPreprocess(String baseFileName, boolean hasLabel, boolean monoCase, boolean tryLoadExisting, boolean dumpNewDoc, String singleEventType) throws IOException {
+	public static Document createAndPreprocess(String baseFileName, boolean hasLabel, boolean monoCase, boolean tryLoadExisting, boolean dumpNewDoc, List<JCas> specs) throws IOException {
 		try {
 			// Kludge - don't serialize for now
 			dumpNewDoc = false;
@@ -389,8 +389,8 @@ public class Document implements java.io.Serializable
 			if (tryLoadExisting && preprocessed.isFile()) {
 				doc = (Document) SerializationUtils.deserialize(new FileInputStream(preprocessed));
 				doc.jcas = UimaUtils.loadXmi(xmi, AE_FILE_PATH);
-				if (singleEventType != null) {
-					doc.aceAnnotations.setSingleEventType(singleEventType);
+				if (specs != null) {
+					doc.aceAnnotations.filterBySpecs(specs);
 				}
 			}
 			if (doc==null) {
@@ -412,8 +412,8 @@ public class Document implements java.io.Serializable
 						throw e;
 					}
 				}
-				if (singleEventType != null) {
-					doc.aceAnnotations.setSingleEventType(singleEventType);
+				if (specs != null) {
+					doc.aceAnnotations.filterBySpecs(specs);
 				}
 			}
 			return doc;
@@ -923,16 +923,16 @@ public class Document implements java.io.Serializable
 	}
 	
 	
-	static public void main(String[] args) throws IOException
-	{
-		System.out.println("Default Charset=" + Charset.defaultCharset());
-		File txtFile = new File("/Users/XX/Data/ACE/ACE2005-TrainingData-V6.0/English/nw/timex2norm/AFP_ENG_20030417.0004");
-		Document doc = new Document(txtFile.getAbsolutePath(), true, false);
-		TextFeatureGenerator.doPreprocessCheap(doc);
-		doc.printDocBasic(System.out);
-		
-		doc.setSentenceClustersByTokens();
-		doc.printDocCluster(System.out);
-	}
+//	static public void main(String[] args) throws IOException
+//	{
+//		System.out.println("Default Charset=" + Charset.defaultCharset());
+//		File txtFile = new File("/Users/XX/Data/ACE/ACE2005-TrainingData-V6.0/English/nw/timex2norm/AFP_ENG_20030417.0004");
+//		Document doc = new Document(txtFile.getAbsolutePath(), true, false);
+//		TextFeatureGenerator.doPreprocessCheap(doc);
+//		doc.printDocBasic(System.out);
+//		
+//		doc.setSentenceClustersByTokens();
+//		doc.printDocCluster(System.out);
+//	}
 
 }

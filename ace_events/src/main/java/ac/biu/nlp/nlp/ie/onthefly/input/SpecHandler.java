@@ -41,12 +41,20 @@ public class SpecHandler {
 		return outList;
 	}
 
-	public static void loadSpecs(Perceptron perceptron, List<String> specXmlPaths) throws CASRuntimeException, AnalysisEngineProcessException, ResourceInitializationException, UimaUtilsException, IOException, AeException, CASException {
-		perceptron.specs = new ArrayList<JCas>(specXmlPaths.size());
-		List<String[]> linesForArgs = new ArrayList<String[]>();
+	public static List<JCas> getSpecs(List<String> specXmlPaths) throws CASRuntimeException, AnalysisEngineProcessException, ResourceInitializationException, UimaUtilsException, IOException, AeException {
+		List<JCas> specs = new ArrayList<JCas>(specXmlPaths.size());
 		for (String specXmlPath : specXmlPaths) {
-			JCas spec = getPreprocessedSpec(specXmlPath, perceptron);
-			perceptron.specs.add(spec);
+			JCas spec = getPreprocessedSpec(specXmlPath);
+			specs.add(spec);
+		}
+		return specs;
+	}
+	
+	public static void loadSpecs(List<String> specXmlPaths, Perceptron perceptron) throws CASRuntimeException, AnalysisEngineProcessException, ResourceInitializationException, UimaUtilsException, IOException, AeException, CASException {
+		perceptron.specs = getSpecs(specXmlPaths);
+		
+		List<String[]> linesForArgs = new ArrayList<String[]>();
+		for (JCas spec : perceptron.specs) {
 
 			String predicateName = SpecAnnotator.getSpecLabel(spec);
 			TypeConstraints.addSpecType(predicateName);
@@ -71,7 +79,7 @@ public class SpecHandler {
 		TypeConstraints.fillArgRolesAndTypesLists(linesForArgs);
 	}
 	
-	private static JCas getPreprocessedSpec(String specXmlPath, Perceptron perceptron) throws UimaUtilsException, ResourceInitializationException, CASRuntimeException, IOException, AeException, AnalysisEngineProcessException {
+	private static JCas getPreprocessedSpec(String specXmlPath/*, Perceptron perceptron*/) throws UimaUtilsException, ResourceInitializationException, CASRuntimeException, IOException, AeException, AnalysisEngineProcessException {
 		JCas spec = null;
 		boolean shouldDeletePreprocessed = false;
 		File preprocessed = new File(specXmlPath + PREPROCESSED_SPEC_FILE_EXT);

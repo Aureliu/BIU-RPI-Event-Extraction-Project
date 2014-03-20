@@ -59,6 +59,10 @@ public class AceValue extends AceEventArgumentValue {
 			}
 	}
 
+	public String getType() {
+		return type;
+	}
+
 	void addMention (AceValueMention mention) {
 		mentions.add(mention);
 		mention.value = this;

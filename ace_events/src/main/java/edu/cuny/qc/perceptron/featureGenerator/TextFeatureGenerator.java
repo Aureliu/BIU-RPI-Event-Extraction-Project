@@ -566,7 +566,7 @@ public class TextFeatureGenerator
 		fillDependencyFeatures(doc);
 		fillNearestEntityInformation(doc);
 		fillClauseNumber(doc);
-		fillFeaturesFromSentCluster(doc);
+		//fillFeaturesFromSentCluster(doc);
 	}
 	
 	/**
@@ -735,97 +735,97 @@ public class TextFeatureGenerator
 	 * @param lemma
 	 * @return
 	 */
-	static List<String> getPotentialEventTypes(String lemma)
-	{
-		List<String> ret = new ArrayList<String>();
-		for(String eventType : Document.triggerTokensFineGrained.keySet())
-		{
-			if(Document.triggerTokensFineGrained.get(eventType).contains(lemma))
-			{
-				ret.add(eventType);
-			}
-		}
-		
-		return ret;
-	}
+//	static List<String> getPotentialEventTypes(String lemma)
+//	{
+//		List<String> ret = new ArrayList<String>();
+//		for(String eventType : Document.triggerTokensFineGrained.keySet())
+//		{
+//			if(Document.triggerTokensFineGrained.get(eventType).contains(lemma))
+//			{
+//				ret.add(eventType);
+//			}
+//		}
+//		
+//		return ret;
+//	}
 	
-	static List<String> getPotentialEventTypesHighConf(String lemma)
-	{
-		List<String> ret = new ArrayList<String>();
-		for(String eventType : Document.triggerTokensHighQuality.keySet())
-		{
-			if(Document.triggerTokensHighQuality.get(eventType).contains(lemma))
-			{
-				ret.add(eventType);
-			}
-		}
-		
-		return ret;
-	}
+//	static List<String> getPotentialEventTypesHighConf(String lemma)
+//	{
+//		List<String> ret = new ArrayList<String>();
+//		for(String eventType : Document.triggerTokensHighQuality.keySet())
+//		{
+//			if(Document.triggerTokensHighQuality.get(eventType).contains(lemma))
+//			{
+//				ret.add(eventType);
+//			}
+//		}
+//		
+//		return ret;
+//	}
 	
-	/**
-	 * get a list of features based on the cluster of sents
-	 * @return
-	 */
-	protected void fillFeaturesFromSentCluster(Document doc)
-	{
-		// set the cluster in advance
-		doc.setSentenceClustersByTokens();
-		
-		for(List<Sentence> cluster : doc.getSentenceClusters())
-		{
-			for(int sent_id=0; sent_id < cluster.size(); sent_id++)
-			{
-				Sentence sent = cluster.get(sent_id);
-				List<Map<Class<?>, Object>> tokens = (List<Map<Class<?>, Object>>) sent.get(Sent_Attribute.Token_FEATURE_MAPs);
-				
-				for(int token_id=0; token_id < tokens.size(); token_id++)
-				{
-					String lemma = (String) tokens.get(token_id).get(TokenAnnotations.LemmaAnnotation.class);
-					List<String> eventTypes = getPotentialEventTypes(lemma);
-				
-					List<String> features = new ArrayList<String>();
-					tokens.get(token_id).put(TokenAnnotations.HighConfidenceTriggerInCluster.class, features);
-					
-					// skip if doesn't match event types
-					if(eventTypes.size() == 0)
-					{
-						continue;
-					}
-					
-					for(int i=0; i<cluster.size(); i++)
-					{
-						if(i != sent_id)
-						{
-							Sentence anotherSent = cluster.get(i);
-							List<Map<Class<?>, Object>> pre_tokens = (List<Map<Class<?>, Object>>) anotherSent.get(Sent_Attribute.Token_FEATURE_MAPs);
-							for(int j=0; j<pre_tokens.size(); j++)
-							{
-								String pre_lemma = (String) pre_tokens.get(j).get(TokenAnnotations.LemmaAnnotation.class);
-								List<String> pre_eventTypes = getPotentialEventTypesHighConf(pre_lemma);
-								for(String pre_eventType : pre_eventTypes)
-								{
-									String pre_eventSuperType = TypeConstraints.eventTypeMapModified.get(pre_eventType);
-									for(String eventType : eventTypes)
-									{
-										String eventSuperType = TypeConstraints.eventTypeMapModified.get(eventType);
-										if(pre_eventSuperType.equals(eventSuperType))
-										{
-											String feature = pre_eventType + "#" + eventType;
-											if(!features.contains(feature))
-											{
-												features.add(feature);
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-		
-	}
+//	/**
+//	 * get a list of features based on the cluster of sents
+//	 * @return
+//	 */
+//	protected void fillFeaturesFromSentCluster(Document doc)
+//	{
+//		// set the cluster in advance
+//		doc.setSentenceClustersByTokens();
+//		
+//		for(List<Sentence> cluster : doc.getSentenceClusters())
+//		{
+//			for(int sent_id=0; sent_id < cluster.size(); sent_id++)
+//			{
+//				Sentence sent = cluster.get(sent_id);
+//				List<Map<Class<?>, Object>> tokens = (List<Map<Class<?>, Object>>) sent.get(Sent_Attribute.Token_FEATURE_MAPs);
+//				
+//				for(int token_id=0; token_id < tokens.size(); token_id++)
+//				{
+//					String lemma = (String) tokens.get(token_id).get(TokenAnnotations.LemmaAnnotation.class);
+//					List<String> eventTypes = getPotentialEventTypes(lemma);
+//				
+//					List<String> features = new ArrayList<String>();
+//					tokens.get(token_id).put(TokenAnnotations.HighConfidenceTriggerInCluster.class, features);
+//					
+//					// skip if doesn't match event types
+//					if(eventTypes.size() == 0)
+//					{
+//						continue;
+//					}
+//					
+//					for(int i=0; i<cluster.size(); i++)
+//					{
+//						if(i != sent_id)
+//						{
+//							Sentence anotherSent = cluster.get(i);
+//							List<Map<Class<?>, Object>> pre_tokens = (List<Map<Class<?>, Object>>) anotherSent.get(Sent_Attribute.Token_FEATURE_MAPs);
+//							for(int j=0; j<pre_tokens.size(); j++)
+//							{
+//								String pre_lemma = (String) pre_tokens.get(j).get(TokenAnnotations.LemmaAnnotation.class);
+//								List<String> pre_eventTypes = getPotentialEventTypesHighConf(pre_lemma);
+//								for(String pre_eventType : pre_eventTypes)
+//								{
+//									String pre_eventSuperType = TypeConstraints.eventTypeMapModified.get(pre_eventType);
+//									for(String eventType : eventTypes)
+//									{
+//										String eventSuperType = TypeConstraints.eventTypeMapModified.get(eventType);
+//										if(pre_eventSuperType.equals(eventSuperType))
+//										{
+//											String feature = pre_eventType + "#" + eventType;
+//											if(!features.contains(feature))
+//											{
+//												features.add(feature);
+//											}
+//										}
+//									}
+//								}
+//							}
+//						}
+//					}
+//				}
+//			}
+//		}
+//		
+//	}
 	
 }

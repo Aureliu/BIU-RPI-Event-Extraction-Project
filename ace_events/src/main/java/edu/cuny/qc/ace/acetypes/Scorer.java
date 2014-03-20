@@ -10,8 +10,18 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
+import org.apache.uima.cas.CASRuntimeException;
+import org.apache.uima.jcas.JCas;
+import org.apache.uima.resource.ResourceInitializationException;
 import org.dom4j.DocumentException;
+
+import ac.biu.nlp.nlp.ie.onthefly.input.AeException;
+import ac.biu.nlp.nlp.ie.onthefly.input.SpecHandler;
+
+import edu.cuny.qc.perceptron.core.Perceptron;
 import edu.cuny.qc.util.Span;
+import eu.excitementproject.eop.common.utilities.uima.UimaUtilsException;
 
 /**
  * check the Identification scores
@@ -85,7 +95,7 @@ public class Scorer
 		}
 	}
 	
-	public static Stats doAnalysis(File goldDir, File ansDir, File file_list, PrintStream out, String dirNamePrefix, String singleEventType) throws IOException, DocumentException
+	public static Stats doAnalysis(File goldDir, File ansDir, File file_list, List<JCas> specs, PrintStream out, String dirNamePrefix) throws IOException, DocumentException
 	{
 		Stats stats = new Stats();
 		BufferedReader reader = new BufferedReader(new FileReader(file_list));
@@ -112,8 +122,8 @@ public class Scorer
 			}
 			AceDocument doc_ans = new AceDocument(textFile.getAbsolutePath(), apf_ans.getAbsolutePath());
 			AceDocument doc_gold = new AceDocument(textFile.getAbsolutePath(), apf_gold.getAbsolutePath());
-			if (singleEventType != null) {
-				doc_gold.setSingleEventType(singleEventType);
+			if (specs != null) {
+				doc_gold.filterBySpecs(specs);
 			}
 			// There no need to call setSingleEventType on doc_gold, as it already has just the single type (if indeed only one is required)
 
@@ -348,34 +358,45 @@ public class Scorer
 		return ret;
 	}
 
-	static public Stats mainReturningStats(String[] args) throws DocumentException, IOException
+	static public Stats mainReturningStats(String[] args) throws DocumentException, IOException, CASRuntimeException, AnalysisEngineProcessException, ResourceInitializationException, UimaUtilsException, AeException
 	{
-		return mainMultiRunReturningStats("", null, args);
-	}
-	
-	static public Stats mainMultiRunReturningStats(String dirNamePrefix, String singleEventType, String[] args) throws DocumentException, IOException
-	{	
-		if(args.length < 3)
+		if(args.length < 4)
 		{
 			System.out.println("Automatic error analysis Usage:");
 			System.out.println("args[0]: gold Dir");
 			System.out.println("args[1]: ans Dir");
 			System.out.println("args[2]: file list");
-			System.out.println("args[3]: output file");
+			System.out.println("args[3]: spec list");
+			System.out.println("optional args[4]: spec list");
 			System.exit(-1);
 		}
-		
-		File goldDir = new File(args[0]);
-		File ansDir = new File(args[1]);
-		File filelist = new File(args[2]);
-		
-		PrintStream out = System.out;
-		if(args.length >= 4)
+
+		String goldDir = args[0];
+		String ansDir = args[1];
+		String filelist = args[2];
+		File specListFile = new File(args[3]);
+		List<String> specXmlPaths = SpecHandler.readSpecListFile(specListFile);
+		List<JCas> specs = SpecHandler.getSpecs(specXmlPaths);
+
+		PrintStream out = null;
+		if(args.length >= 5)
 		{
-			File output = new File(args[3]);
+			File output = new File(args[4]);
 			out = new PrintStream(output);
 		}
-		Stats stats = doAnalysis(goldDir, ansDir, filelist, out, dirNamePrefix, singleEventType);
+		return mainMultiRunReturningStats(goldDir, ansDir, filelist, specs, out, "");
+	}
+	
+	static public Stats mainMultiRunReturningStats(String goldDir, String ansDir, String filelist, List<JCas> specs, PrintStream out, String dirNamePrefix) throws DocumentException, IOException
+	{	
+		System.err.println("??? Scorer: Nore that we are removing all non-spec events from gold, which is wrong - we need those for the Trigger Idt (I think... don't we?). Anyway, this should be well thoght-of.");
+		
+		if (out == null) {
+			out = System.out;
+		}
+		
+		Stats stats = doAnalysis(new File(goldDir), new File(ansDir), new File(filelist), specs, out, dirNamePrefix);
+		
 		if(out != System.out)
 		{
 			out.close();
@@ -384,7 +405,8 @@ public class Scorer
 		return stats;
 	}
 	
-	static public void main(String[] args) throws DocumentException, IOException {
+	static public void main(String[] args) throws DocumentException, IOException, CASRuntimeException, AnalysisEngineProcessException, ResourceInitializationException, UimaUtilsException, AeException {
 		mainReturningStats(args);
 	}
+
 }

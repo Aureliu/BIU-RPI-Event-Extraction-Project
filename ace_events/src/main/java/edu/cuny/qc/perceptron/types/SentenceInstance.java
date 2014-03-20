@@ -234,6 +234,10 @@ public class SentenceInstance
 			if(label != null && !label.equals(SentenceAssignment.Default_Trigger_Label))
 			{
 				// only put event subtype and id
+				// 20.3.2014 Ofer's note:
+				// The usage of TypeConstraints.eventTypeMap here is legitimate, as it's used in order to get
+				// the "top type" (like "Life") from subtype (like "Be-Born"), because it's required for the
+				// AceEvent object. We gotta have a static list of this, as this info doesn't appear in the specs.
 				AceEvent event = new AceEvent(id, TypeConstraints.eventTypeMap.get(label), label); 
 				
 				// not NON

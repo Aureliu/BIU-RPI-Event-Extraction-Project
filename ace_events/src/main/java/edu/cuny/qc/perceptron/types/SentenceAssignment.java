@@ -41,6 +41,10 @@ public class SentenceAssignment
 	 */
 	int state = -1;
 	
+	static {
+		System.err.println("??? SentenceAssignment: GLOBAL FEATURES ARE NOT IMPORTED YET!!!");
+	}
+	
 	public static String getGenericTriggerLabel(String label) {
 		if (label == Default_Trigger_Label) {
 			return Default_Trigger_Label;
@@ -584,7 +588,6 @@ public class SentenceAssignment
 	public void makeGlobalFeatures(SentenceInstance problem, int index, boolean addIfNotPresent, 
 			boolean useIfNotPresent, Perceptron perceptron)
 	{
-		System.err.println("GLOBAL FEATURES ARE NOT IMPORTED YET!!!");
 		if(this.edgeAssignment.get(index) == null)
 		{
 			return;

@@ -36,7 +36,11 @@ import eu.excitementproject.eop.core.utilities.dictionary.wordnet.WordNetRelatio
 
 public class WordNetFeatureMechanism extends FeatureMechanism {
 
-	static {System.err.println("WordNetFeatureMechanism: ignoring spec's POS, using only text's");}
+	static {
+		System.err.println("??? WordNetFeatureMechanism: ignoring spec's POS, using only text's");
+		System.err.println("??? WordNetFeatureMechanism: if a word has a non-wordnet POS (anything but noun/verb/adj/adv) we return FALSE, but we should return IRRELEVANT (when I figure out what it means... :( )");
+		System.err.println("??? WordNetFeatureMechanism: if a text or spec doesn't exist in wordnet, we return FALSE, although we should return IRRELEVANT");
+	}
 
 	public WordNetFeatureMechanism() throws LexicalResourceException, WordNetInitializationException {
 		super();
@@ -98,13 +102,27 @@ public class WordNetFeatureMechanism extends FeatureMechanism {
 		public Boolean calcTokenBooleanScore(Token text, Token spec) throws FeatureMechanismException
 		{
 			try {
-				PartOfSpeech textPos = new PennPartOfSpeech(text.getPos().getPosValue());
+				PartOfSpeech textPos = AnnotationUtils.tokenToPOS(text);
 				WordNetPartOfSpeech textWnPos = WordNetPartOfSpeech.toWordNetPartOfspeech(textPos);
+				
+				if (textWnPos == null) {
+					return false;
+				}
 				
 				Set<Synset> textSynsets = dictionary.getSynsetsOf(text.getLemma().getValue(), textWnPos);
 				//Use text's POS also for spec
 				Set<Synset> specSynsets = dictionary.getSynsetsOf(spec.getLemma().getValue(), textWnPos);
 				
+				if (textSynsets.isEmpty() || specSynsets.isEmpty()) {
+					if (textSynsets.isEmpty()) {
+						System.err.printf("WordNetFeatureMechanism: Empty Synset for text: %s!\n", text.getLemma().getValue());
+					}
+					if (specSynsets.isEmpty()) {
+						System.err.printf("WordNetFeatureMechanism: Empty Synset for spec: %s!\n", spec.getLemma().getValue());
+					}
+					return false;
+				}
+					
 				boolean differentSynsets = Collections.disjoint(textSynsets, specSynsets);
 				return !differentSynsets;
 			} catch (WordNetException e) {

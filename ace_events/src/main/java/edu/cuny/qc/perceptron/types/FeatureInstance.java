@@ -35,5 +35,9 @@ public class FeatureInstance {
 		this.score = score;
 		this.positive = isPositive.apply(score);
 	}
-
+	
+	@Override
+	public String toString() {
+		return String.format("%s(%s=%s[%s])", type, name, positive, score);
+	}
 }

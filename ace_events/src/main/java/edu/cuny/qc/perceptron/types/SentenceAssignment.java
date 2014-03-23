@@ -46,7 +46,7 @@ public class SentenceAssignment
 	}
 	
 	public static String getGenericTriggerLabel(String label) {
-		if (label == Default_Trigger_Label) {
+		if (label.equals(Default_Trigger_Label)) {
 			return Default_Trigger_Label;
 		}
 		else {
@@ -55,7 +55,7 @@ public class SentenceAssignment
 	}
 	
 	public static String getGenericArgumentLabel(String label) {
-		if (label == Default_Argument_Label) {
+		if (label.equals(Default_Argument_Label)) {
 			return Default_Argument_Label;
 		}
 		else {
@@ -632,6 +632,9 @@ public class SentenceAssignment
 					double numFalse = 0.0;
 					for (Map<String, FeatureInstance> featuresOfLabel : token.values()) {
 						FeatureInstance feature = featuresOfLabel.get(featureName);
+						if (feature == null) {
+							throw new IllegalArgumentException(String.format("Cannot find feature '%s' for non-label token %d", featureName, i));
+						}
 						if (!feature.positive) {
 							numFalse += 1.0;
 						}

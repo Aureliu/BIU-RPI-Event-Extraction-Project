@@ -59,9 +59,9 @@ public class Perceptron implements java.io.Serializable
 	protected FeatureVector avg_weights;
 	protected FeatureVector avg_weights_base; // for average weights update
 	
-	public List<FeatureMechanism> featureMechanisms= new ArrayList<FeatureMechanism>();
+	public transient List<FeatureMechanism> featureMechanisms = new ArrayList<FeatureMechanism>();
 	
-	public List<JCas> specs;
+	public transient List<JCas> specs;
 	
 	public Set<String> triggerFeatureBaseNames = new LinkedHashSet<String>();
 	public Set<String> argFeatureBaseNames = new LinkedHashSet<String>();
@@ -89,7 +89,7 @@ public class Perceptron implements java.io.Serializable
 		}
 	}
 	
-	private void buildFeatureMechanisms() throws FeatureMechanismException {
+	public void buildFeatureMechanisms() throws FeatureMechanismException {
 			featureMechanisms = new ArrayList<FeatureMechanism>();
 		
 		try {

@@ -55,15 +55,15 @@ public class WordNetFeatureMechanism extends FeatureMechanism {
 				);
 		System.err.printf("Worndet params: USE_FIRST_SENSE_ONLY_LEFT=%s, USE_FIRST_SENSE_ONLY_RIGHT=%s, DEFAULT_RELATIONS=%s, CHAINING_LENGTH=%s\n",
 				USE_FIRST_SENSE_ONLY_LEFT, USE_FIRST_SENSE_ONLY_RIGHT, DEFAULT_RELATIONS, CHAINING_LENGTH);
-		
+
 		// A dictionary is created and kept in the WordnetLexicalResource,
 		// but we don't have access to it, so we create another one
-		dictionary =  WordNetDictionaryFactory.newDictionary(wordnetDir, null);
+		//dictionary =  WordNetDictionaryFactory.newDictionary(wordnetDir, null);
 	}
 	
 	@Override
 	public void close() {
-		dictionary.close();
+		////dictionary.close();
 		resource.close();
 		super.close();
 	}
@@ -101,35 +101,38 @@ public class WordNetFeatureMechanism extends FeatureMechanism {
 		@Override
 		public Boolean calcTokenBooleanScore(Token text, Token spec) throws FeatureMechanismException
 		{
-			try {
-				PartOfSpeech textPos = AnnotationUtils.tokenToPOS(text);
-				WordNetPartOfSpeech textWnPos = WordNetPartOfSpeech.toWordNetPartOfspeech(textPos);
-				
-				if (textWnPos == null) {
-					return false;
-				}
-				
-				Set<Synset> textSynsets = dictionary.getSynsetsOf(text.getLemma().getValue(), textWnPos);
-				//Use text's POS also for spec
-				Set<Synset> specSynsets = dictionary.getSynsetsOf(spec.getLemma().getValue(), textWnPos);
-				
-				if (textSynsets.isEmpty() || specSynsets.isEmpty()) {
-					if (textSynsets.isEmpty()) {
-						System.err.printf("WordNetFeatureMechanism: Empty Synset for text: %s!\n", text.getLemma().getValue());
-					}
-					if (specSynsets.isEmpty()) {
-						System.err.printf("WordNetFeatureMechanism: Empty Synset for spec: %s!\n", spec.getLemma().getValue());
-					}
-					return false;
-				}
-					
-				boolean differentSynsets = Collections.disjoint(textSynsets, specSynsets);
-				return !differentSynsets;
-			} catch (WordNetException e) {
-				throw new FeatureMechanismException(e);
-			} catch (UnsupportedPosTagStringException e) {
-				throw new FeatureMechanismException(e);
-			}
+			return false;
+//			try {
+//				PartOfSpeech textPos = AnnotationUtils.tokenToPOS(text);
+//				WordNetPartOfSpeech textWnPos = WordNetPartOfSpeech.toWordNetPartOfspeech(textPos);
+//				
+//				if (textWnPos == null) {
+//					return false;
+//				}
+//				
+//				String textLemma = text.getLemma().getValue();
+//				String specLemma = spec.getLemma().getValue();
+//				Set<Synset> textSynsets = dictionary.getSynsetsOf(textLemma, textWnPos);
+//				//Use text's POS also for spec
+//				Set<Synset> specSynsets = dictionary.getSynsetsOf(specLemma, textWnPos);
+//				
+//				if (textSynsets.isEmpty() || specSynsets.isEmpty()) {
+//					if (textSynsets.isEmpty()) {
+//						System.err.printf("WordNetFeatureMechanism: Empty Synset for text: '%s' (pos=%s)\n", textLemma, textWnPos);
+//					}
+//					if (specSynsets.isEmpty()) {
+//						System.err.printf("WordNetFeatureMechanism: Empty Synset for spec: '%s' (pos=%s)\n", specLemma, textWnPos);
+//					}
+//					return false;
+//				}
+//					
+//				boolean differentSynsets = Collections.disjoint(textSynsets, specSynsets);
+//				return !differentSynsets;
+//			} catch (WordNetException e) {
+//				throw new FeatureMechanismException(e);
+//			} catch (UnsupportedPosTagStringException e) {
+//				throw new FeatureMechanismException(e);
+//			}
 		}
 	}
 	

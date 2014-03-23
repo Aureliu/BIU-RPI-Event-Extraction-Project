@@ -263,7 +263,13 @@ public class FeatureVector implements Serializable
 		//Thread.currentThread().dumpStack();
 		StringBuffer sb = new StringBuffer ();
 		
-	    for(Object key : map.keySet()) 
+		ArrayList<Object> keys = new ArrayList<Object>(map.keySet());
+		Collections.sort(keys, new Comparator<Object>() {			
+			@Override
+			public int compare(Object o1, Object o2) {
+			return ((String)o1).compareTo((String)o2);
+		}});
+	    for(Object key : keys) 
 	    {
 			Double value = map.get(key);
 			sb.append (key);

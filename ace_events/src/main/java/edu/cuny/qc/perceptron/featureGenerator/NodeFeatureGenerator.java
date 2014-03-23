@@ -224,10 +224,12 @@ public class NodeFeatureGenerator
 		{
 			
 			// Add here the check that this token can be valid as a trigger - to avoid building features when it's not
-			if (TypeConstraints.isPossibleTriggerByPOS(sent, i) && TypeConstraints.isPossibleTriggerByEntityType(sent, i)) {
-				Map<String, Map<String, FeatureInstance>> features = get_node_text_features(sent, i, perceptron);
-				ret.add(features);
-			}
+			// if it's not - still add something (null) to the list as a placeholder, to keep positions in the list correct
+			Map<String, Map<String, FeatureInstance>> features = null;
+			//if (TypeConstraints.isPossibleTriggerByPOS(sent, i) && TypeConstraints.isPossibleTriggerByEntityType(sent, i)) {
+				features = get_node_text_features(sent, i, perceptron);
+			//}
+			ret.add(features);
 		}
 		return ret;
 	}

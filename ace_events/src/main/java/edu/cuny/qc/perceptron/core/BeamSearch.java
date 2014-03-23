@@ -28,6 +28,10 @@ public class BeamSearch
 	
 	private static final boolean PRINT_BEAM = false;
 	
+	static {
+		System.err.println("??? BeamSearch: Calcing target's features (node, edge, global), multiple times here, even though they are needed only when there's a violation, Qi approves. Consider changing.");
+	}
+	
 	protected FeatureVector getWeights()
 	{
 		if(!isTraining && model.controller.avgArguments)
@@ -51,7 +55,6 @@ public class BeamSearch
 		List<SentenceAssignment> beam = new ArrayList<SentenceAssignment>();
 		SentenceAssignment initial = new SentenceAssignment(problem.nodeTargetAlphabet, problem.edgeTargetAlphabet, problem.featureAlphabet, problem.controller);
 		beam.add(initial);
-		System.err.println("BeamSearch: Calcing target's features (node, edge, global), multiple times here, even though they are needed only when there's a violation, Qi approves. Consider changing.");
 		
 		// clear the feature vector of ground-truth assignment
 		problem.target.clearFeatureVectors();

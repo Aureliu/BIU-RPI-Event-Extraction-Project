@@ -272,14 +272,17 @@ public class Pipeline
 		// print out weights
 		if(model.controller.avgArguments)
 		{
-			out.println(model.getAvg_weights());
+			out.println(model.getAvg_weights().toStringFull());
 		}
 		else
 		{
-			out.println(model.getWeights());
+			out.println(model.getWeights().toStringFull());
 		}
 		out.close();
 		
 		model.close();
+		
+		System.out.printf("\n[%s] Finished Pipeline successfully\n", new Date());
+
 	}
 }

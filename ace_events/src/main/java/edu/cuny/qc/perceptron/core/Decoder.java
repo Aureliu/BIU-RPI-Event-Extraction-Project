@@ -14,6 +14,7 @@ import java.util.List;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.cas.CASException;
 import org.apache.uima.cas.CASRuntimeException;
+import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.util.InvalidXMLException;
 import org.dom4j.DocumentException;
@@ -30,6 +31,7 @@ import edu.cuny.qc.ace.acetypes.AceValue;
 import edu.cuny.qc.ace.acetypes.Scorer;
 import edu.cuny.qc.ace.acetypes.Scorer.Stats;
 import edu.cuny.qc.perceptron.featureGenerator.TextFeatureGenerator;
+import edu.cuny.qc.perceptron.similarity_scorer.FeatureMechanismException;
 import edu.cuny.qc.perceptron.types.Alphabet;
 import edu.cuny.qc.perceptron.types.Document;
 import edu.cuny.qc.perceptron.types.SentenceAssignment;
@@ -75,13 +77,13 @@ public class Decoder
 	}
 
 
-	public static Perceptron decode(String[] args, String filenameSuffix, String folderNamePrefix, File specListFile) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException
+	public static List<JCas> decode(String[] args, String filenameSuffix, String folderNamePrefix, File specListFile) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException, FeatureMechanismException
 	{
 		List<String> specXmlPaths = SpecHandler.readSpecListFile(specListFile);
 		return decode(args, filenameSuffix, folderNamePrefix, specXmlPaths);
 	}
 	
-	public static Perceptron decode(String[] args, String filenameSuffix, String folderNamePrefix, List<String> specXmlPaths) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException
+	public static List<JCas> decode(String[] args, String filenameSuffix, String folderNamePrefix, List<String> specXmlPaths) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException, FeatureMechanismException
 	{		
 		System.err.println("(Decoding err stream)");
 		
@@ -99,6 +101,7 @@ public class Decoder
 		Alphabet nodeTargetAlphabet = perceptron.nodeTargetAlphabet;
 		Alphabet edgeTargetAlphabet = perceptron.edgeTargetAlphabet;
 		Alphabet featureAlphabet = perceptron.featureAlphabet;
+		perceptron.buildFeatureMechanisms();
 		
 		//Intermediate output - all features+weights to text files
 		String s;
@@ -121,7 +124,7 @@ public class Decoder
 		System.out.printf("--------------\nPerceptron.controller =\n%s\r\n\r\n--------------------------\r\n\r\n", perceptron.controller);
 		
 		// handle specs
-		SpecHandler.loadSpecs(specXmlPaths, perceptron);		
+		SpecHandler.loadSpecs(specXmlPaths, perceptron);
 		
 		BufferedReader reader = new BufferedReader(new FileReader(fileList));
 		String line = "";
@@ -176,24 +179,26 @@ public class Decoder
 			writeEntities(out, doc.getAceAnnotations(), eventsInDoc);
 			out.close();
 			
-			perceptron.close();
 		}
 		
+		List<JCas> specs = perceptron.specs;
+		perceptron.close();
+
 		System.out.printf("[%s] --------------\r\nPerceptron.controller =\r\n%s\r\n\r\n--------------------------\r\n\r\n", new Date(), perceptron.controller);
 		
-		return perceptron;
+		return specs;
 	}
 	
-	public static Stats decodeAndScore(String[] args, String filenameSuffix, String folderNamePrefix, File specListFile) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException {
-		Perceptron perceptron = decode(args, filenameSuffix, folderNamePrefix, specListFile);
+	public static Stats decodeAndScore(String[] args, String filenameSuffix, String folderNamePrefix, File specListFile) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException, FeatureMechanismException {
+		List<JCas> specs = decode(args, filenameSuffix, folderNamePrefix, specListFile);
 		
 		File outputFile = new File(outDir + File.separator + "Score" + filenameSuffix);
 		PrintStream out = new PrintStream(outputFile);
-		Stats stats = Scorer.mainMultiRunReturningStats(args[1], args[3], args[2], perceptron.specs, out, folderNamePrefix);
+		Stats stats = Scorer.mainMultiRunReturningStats(args[1], args[3], args[2], specs, out, folderNamePrefix);
 		return stats;
 	}
 
-	public static void main(String[] args) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException {
+	public static void main(String[] args) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException, FeatureMechanismException {
 		//TODO the organization here is bad, should be improved:
 		// 1. there's no way to specify both a filenameSufix and NO_SCORING
 

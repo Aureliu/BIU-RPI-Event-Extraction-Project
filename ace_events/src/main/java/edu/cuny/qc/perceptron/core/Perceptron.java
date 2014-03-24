@@ -18,9 +18,9 @@ import java.util.Set;
 import org.apache.commons.lang3.SerializationUtils;
 import org.apache.uima.jcas.JCas;
 
-import edu.cuny.qc.perceptron.similarity_scorer.FeatureMechanism;
-import edu.cuny.qc.perceptron.similarity_scorer.FeatureMechanismException;
-import edu.cuny.qc.perceptron.similarity_scorer.WordNetFeatureMechanism;
+import edu.cuny.qc.perceptron.similarity_scorer.MeasureMechanism;
+import edu.cuny.qc.perceptron.similarity_scorer.MeasureMechanismException;
+import edu.cuny.qc.perceptron.similarity_scorer.WordNetMeasureMechanism;
 import edu.cuny.qc.perceptron.types.Alphabet;
 import edu.cuny.qc.perceptron.types.FeatureVector;
 import edu.cuny.qc.perceptron.types.SentenceAssignment;
@@ -59,16 +59,16 @@ public class Perceptron implements java.io.Serializable
 	protected FeatureVector avg_weights;
 	protected FeatureVector avg_weights_base; // for average weights update
 	
-	public transient List<FeatureMechanism> featureMechanisms = new ArrayList<FeatureMechanism>();
+	public transient List<MeasureMechanism> measureMechanisms = new ArrayList<MeasureMechanism>();
 	
 	public transient List<JCas> specs;
 	
-	public Set<String> triggerFeatureBaseNames = new LinkedHashSet<String>();
-	public Set<String> argFeatureBaseNames = new LinkedHashSet<String>();
+	public Set<String> triggerMeasureNames = new LinkedHashSet<String>();
+	public Set<String> argumentMeasureNames = new LinkedHashSet<String>();
 	
 	
 	// default constructor 
-	public Perceptron(Alphabet nodeTargetAlphabet, Alphabet edgeTargetAlphabet, Alphabet featureAlphabet) throws FeatureMechanismException
+	public Perceptron(Alphabet nodeTargetAlphabet, Alphabet edgeTargetAlphabet, Alphabet featureAlphabet) throws MeasureMechanismException
 	{
 		this.nodeTargetAlphabet = nodeTargetAlphabet;
 		this.edgeTargetAlphabet = edgeTargetAlphabet;
@@ -80,26 +80,26 @@ public class Perceptron implements java.io.Serializable
 		
 		labelBigram = new HashMap<String, List<String>>();
 		
-		buildFeatureMechanisms();
+		buildMeasureMechanisms();
 	}
 	
 	public void close() {
-		for (FeatureMechanism featureMechanism : featureMechanisms) {
-			featureMechanism.close();
+		for (MeasureMechanism measureMechanism : measureMechanisms) {
+			measureMechanism.close();
 		}
 	}
 	
-	public void buildFeatureMechanisms() throws FeatureMechanismException {
-			featureMechanisms = new ArrayList<FeatureMechanism>();
+	public void buildMeasureMechanisms() throws MeasureMechanismException {
+			measureMechanisms = new ArrayList<MeasureMechanism>();
 		
 		try {
 			
-			featureMechanisms.add(new WordNetFeatureMechanism());
+			measureMechanisms.add(new WordNetMeasureMechanism());
 			
 		} catch (WordNetInitializationException e) {
-			throw new FeatureMechanismException(e);
+			throw new MeasureMechanismException(e);
 		} catch (LexicalResourceException e) {
-			throw new FeatureMechanismException(e);
+			throw new MeasureMechanismException(e);
 		}
 	}
 		

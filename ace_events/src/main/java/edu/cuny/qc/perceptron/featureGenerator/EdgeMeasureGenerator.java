@@ -21,10 +21,10 @@ import edu.cuny.qc.perceptron.graph.DependencyGraph;
 import edu.cuny.qc.perceptron.graph.GraphEdge;
 import edu.cuny.qc.perceptron.graph.GraphNode;
 import edu.cuny.qc.perceptron.graph.DependencyGraph.PathTerm;
-import edu.cuny.qc.perceptron.similarity_scorer.FeatureMechanism;
-import edu.cuny.qc.perceptron.similarity_scorer.FeatureMechanismException;
-import edu.cuny.qc.perceptron.types.FeatureInstance;
-import edu.cuny.qc.perceptron.types.FeatureType;
+import edu.cuny.qc.perceptron.similarity_scorer.MeasureMechanism;
+import edu.cuny.qc.perceptron.similarity_scorer.MeasureMechanismException;
+import edu.cuny.qc.perceptron.types.MeasureInstance;
+import edu.cuny.qc.perceptron.types.MeasaureType;
 import edu.cuny.qc.perceptron.types.Sentence;
 import edu.cuny.qc.perceptron.types.Sentence.Sent_Attribute;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
@@ -38,29 +38,29 @@ import edu.stanford.nlp.trees.Tree;
  * @author che
  *
  */
-public class EdgeFeatureGenerator
+public class EdgeMeasureGenerator
 {
-	public static Map<String, Map<String, Map<String, FeatureInstance>>> get_edge_text_features(SentenceInstance sent, int i, AceMention mention, Perceptron perceptron)
+	public static Map<String, Map<String, Map<String, MeasureInstance>>> get_edge_text_measures(SentenceInstance sent, int i, AceMention mention, Perceptron perceptron)
 	{
 		try {
-			Map<String, Map<String, Map<String, FeatureInstance>>> ret = new LinkedHashMap<String, Map<String, Map<String, FeatureInstance>>>();
+			Map<String, Map<String, Map<String, MeasureInstance>>> ret = new LinkedHashMap<String, Map<String, Map<String, MeasureInstance>>>();
 			
-			LinkedHashMap<String, Double> scoredFeatures;
+			LinkedHashMap<String, Double> scoredMeasures;
 			for (JCas spec : perceptron.specs) {
-				Map<String, Map<String, FeatureInstance>> specFeatures = new LinkedHashMap<String, Map<String, FeatureInstance>>();
+				Map<String, Map<String, MeasureInstance>> specMeasures = new LinkedHashMap<String, Map<String, MeasureInstance>>();
 				String label = SpecAnnotator.getSpecLabel(spec);
-				ret.put(label, specFeatures);
+				ret.put(label, specMeasures);
 				
 				for (String role : SpecAnnotator.getSpecRoles(spec)) {
-					Map<String, FeatureInstance> roleFeatures = new LinkedHashMap<String, FeatureInstance>();
-					specFeatures.put(role, roleFeatures);
+					Map<String, MeasureInstance> roleMeasures = new LinkedHashMap<String, MeasureInstance>();
+					specMeasures.put(role, roleMeasures);
 	
-					for (FeatureMechanism mechanism : perceptron.featureMechanisms) {
-						scoredFeatures = mechanism.scoreArgument(spec, sent, i, mention);
-						for (Entry<String, Double> scoredFeature : scoredFeatures.entrySet()) {
-							FeatureInstance feature = new FeatureInstance(scoredFeature.getKey(), FeatureType.ARGUMENT, scoredFeature.getValue());
-							roleFeatures.put(feature.name, feature);
-							perceptron.argFeatureBaseNames.add(feature.name);
+					for (MeasureMechanism mechanism : perceptron.measureMechanisms) {
+						scoredMeasures = mechanism.scoreArgument(spec, sent, i, mention);
+						for (Entry<String, Double> scoredMeasure : scoredMeasures.entrySet()) {
+							MeasureInstance measure = new MeasureInstance(scoredMeasure.getKey(), MeasaureType.ARGUMENT, scoredMeasure.getValue());
+							roleMeasures.put(measure.name, measure);
+							perceptron.argumentMeasureNames.add(measure.name);
 						}
 					}
 				}
@@ -69,7 +69,7 @@ public class EdgeFeatureGenerator
 			return ret;
 		} catch (CASException e) {
 			throw new RuntimeException(e);
-		} catch (FeatureMechanismException e) {
+		} catch (MeasureMechanismException e) {
 			throw new RuntimeException(e);
 		}
 //		List<Map<Class<?>, Object>> tokens = (List<Map<Class<?>, Object>>) sent.get(SentenceInstance.InstanceAnnotations.Token_FEATURE_MAPs);
@@ -883,12 +883,12 @@ public class EdgeFeatureGenerator
 		return feature;
 	}
 	
-	public static void main(String[] args)
-	{
-		String text = "\"";
-		if(text.matches("\"|,|\\?"))
-		{
-			System.out.println(true);
-		}
-	}
+//	public static void main(String[] args)
+//	{
+//		String text = "\"";
+//		if(text.matches("\"|,|\\?"))
+//		{
+//			System.out.println(true);
+//		}
+//	}
 }

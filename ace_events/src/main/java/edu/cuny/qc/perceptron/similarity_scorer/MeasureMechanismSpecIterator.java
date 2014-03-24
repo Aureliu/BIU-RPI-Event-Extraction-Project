@@ -7,9 +7,9 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.tcas.Annotation;
 import org.uimafit.util.JCasUtil;
 
-public abstract class FeatureMechanismSpecIterator implements Iterator<Double> {
+public abstract class MeasureMechanismSpecIterator implements Iterator<Double> {
 
-	public FeatureMechanismSpecIterator init(JCas spec, String viewName, Class<? extends Annotation> type, Annotation textAnno) throws FeatureMechanismException {
+	public MeasureMechanismSpecIterator init(JCas spec, String viewName, Class<? extends Annotation> type, Annotation textAnno) throws MeasureMechanismException {
 		try {
 			JCas view = spec.getView(viewName);
 			specIterator = JCasUtil.iterator(view, type);
@@ -19,7 +19,7 @@ public abstract class FeatureMechanismSpecIterator implements Iterator<Double> {
 			// instantiate this object, call init(), and use it inside an Aggregator method
 			return this;
 		} catch (CASException e) {
-			throw new FeatureMechanismException(e);
+			throw new MeasureMechanismException(e);
 		}
 	}
 	
@@ -28,8 +28,8 @@ public abstract class FeatureMechanismSpecIterator implements Iterator<Double> {
 		try {
 			Annotation specElement = specIterator.next();
 			return calcScore(textAnno, specElement);
-		} catch (FeatureMechanismException e) {
-			throw new FeatureMechanismRuntimeException(e);
+		} catch (MeasureMechanismException e) {
+			throw new MeasureMechanismRuntimeException(e);
 		}
 	}
 	
@@ -43,7 +43,7 @@ public abstract class FeatureMechanismSpecIterator implements Iterator<Double> {
 		throw new UnsupportedOperationException(String.format("%s does not support removing spec items", this.getClass().getSimpleName()));
 	}
 	
-	public abstract Double calcScore(Annotation text, Annotation spec) throws FeatureMechanismException;
+	public abstract Double calcScore(Annotation text, Annotation spec) throws MeasureMechanismException;
 	
 	protected Iterator<? extends Annotation> specIterator;
 	protected Annotation textAnno;

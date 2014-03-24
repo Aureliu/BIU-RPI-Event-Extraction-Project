@@ -12,7 +12,6 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.tcas.Annotation;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.uimafit.component.JCasAnnotator_ImplBase;
-import org.uimafit.descriptor.ConfigurationParameter;
 import org.uimafit.util.JCasUtil;
 
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentExample;
@@ -23,13 +22,8 @@ import ac.biu.nlp.nlp.ie.onthefly.input.uima.UsageSample;
 
 import com.google.common.collect.Iterators;
 
-import de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS;
-import de.tudarmstadt.ukp.dkpro.core.api.resources.MappingProvider;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
-import edu.cuny.qc.perceptron.core.Perceptron;
-import edu.cuny.qc.perceptron.similarity_scorer.FeatureMechanism;
-import eu.excitementproject.eop.lap.biu.uima.ae.postagger.PennPOSMapping;
 
 public class SpecAnnotator extends JCasAnnotator_ImplBase {
 	//private Perceptron perceptron = null;

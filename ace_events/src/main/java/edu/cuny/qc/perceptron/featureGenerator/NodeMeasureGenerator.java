@@ -21,10 +21,10 @@ import ac.biu.nlp.nlp.ie.onthefly.input.SpecAnnotator;
 import edu.cuny.qc.ace.acetypes.AceEntityMention;
 import edu.cuny.qc.ace.acetypes.AceMention;
 import edu.cuny.qc.perceptron.core.Perceptron;
-import edu.cuny.qc.perceptron.similarity_scorer.FeatureMechanism;
-import edu.cuny.qc.perceptron.similarity_scorer.FeatureMechanismException;
-import edu.cuny.qc.perceptron.types.FeatureInstance;
-import edu.cuny.qc.perceptron.types.FeatureType;
+import edu.cuny.qc.perceptron.similarity_scorer.MeasureMechanism;
+import edu.cuny.qc.perceptron.similarity_scorer.MeasureMechanismException;
+import edu.cuny.qc.perceptron.types.MeasureInstance;
+import edu.cuny.qc.perceptron.types.MeasaureType;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
 import edu.cuny.qc.perceptron.types.SentenceInstance.InstanceAnnotations;
 import edu.cuny.qc.util.TokenAnnotations;
@@ -38,10 +38,10 @@ import edu.stanford.nlp.trees.Tree;
  * 
  *
  */
-public class NodeFeatureGenerator 
+public class NodeMeasureGenerator 
 {
 	// the delimiter of token features for feature table
-	static public final String Feature_Delimiter = " ";
+	//static public final String Feature_Delimiter = " ";
 
 	// Event subtype --> trigger token with high confidence value
 	public static Map<String, List<String>> triggerTokensHighQuality = new HashMap<String, List<String>>();
@@ -50,7 +50,7 @@ public class NodeFeatureGenerator
 		// initialize priorityQueueEntities
 		try
 		{
-			System.err.println("???NodeFeatureGenerator.get_node_text_features should actually calc features only for relevant POSes, and for the rest should manufacture, artificially, all the features with a 0.0/false. Would save precious time.");
+			System.err.println("???NodeMeasureGenerator.get_node_text_measures should actually calc measures only for relevant POSes, and for the rest should manufacture, artificially, all the features with a 0.0/false. Would save precious time.");
 			
 			// initialize dict of triggerTokens
 			BufferedReader reader = new BufferedReader(new FileReader("src/main/resources/data/triggerTokens"));
@@ -103,7 +103,7 @@ public class NodeFeatureGenerator
 		return ret;
 	}
 	
-	public NodeFeatureGenerator() 
+	public NodeMeasureGenerator() 
 	{
 		;
 	}
@@ -213,46 +213,46 @@ public class NodeFeatureGenerator
 	}
 	
 	/**
-	 * get text feature vector for the whole sentence
+	 * get text measurements for the whole sentence
 	 * @param sent
 	 * @return
-	 * @throws FeatureMechanismException 
+	 * @throws MeasureMechanismException 
 	 * @throws CASException 
 	 */
-	public static List<Map<String, Map<String, FeatureInstance>>> get_node_text_features(SentenceInstance sent, Perceptron perceptron)
+	public static List<Map<String, Map<String, MeasureInstance>>> get_node_text_measures(SentenceInstance sent, Perceptron perceptron)
 	{
-		List<Map<String, Map<String, FeatureInstance>>> ret = new ArrayList<Map<String, Map<String, FeatureInstance>>>();
+		List<Map<String, Map<String, MeasureInstance>>> ret = new ArrayList<Map<String, Map<String, MeasureInstance>>>();
 		for(int i=0; i<sent.size(); i++)
 		{
 			
-			// Add here the check that this token can be valid as a trigger - to avoid building features when it's not
+			// Add here the check that this token can be valid as a trigger - to avoid building measures when it's not
 			// if it's not - still add something (null) to the list as a placeholder, to keep positions in the list correct
-			Map<String, Map<String, FeatureInstance>> features = null;
+			Map<String, Map<String, MeasureInstance>> measures = null;
 			//if (TypeConstraints.isPossibleTriggerByPOS(sent, i) && TypeConstraints.isPossibleTriggerByEntityType(sent, i)) {
-				features = get_node_text_features(sent, i, perceptron);
+				measures = get_node_text_measures(sent, i, perceptron);
 			//}
-			ret.add(features);
+			ret.add(measures);
 		}
 		return ret;
 	}
 	
-	public static Map<String, Map<String, FeatureInstance>> get_node_text_features(SentenceInstance inst, int i, Perceptron perceptron)
+	public static Map<String, Map<String, MeasureInstance>> get_node_text_measures(SentenceInstance inst, int i, Perceptron perceptron)
 	{
 		try {
-			Map<String, Map<String, FeatureInstance>> ret = new LinkedHashMap<String, Map<String, FeatureInstance>>();
+			Map<String, Map<String, MeasureInstance>> ret = new LinkedHashMap<String, Map<String, MeasureInstance>>();
 			
-			LinkedHashMap<String, Double> scoredFeatures;
+			LinkedHashMap<String, Double> scoredMeasures;
 			for (JCas spec : perceptron.specs) {
-				Map<String, FeatureInstance> specFeatures = new LinkedHashMap<String, FeatureInstance>();
+				Map<String, MeasureInstance> specMeasures = new LinkedHashMap<String, MeasureInstance>();
 				String label = SpecAnnotator.getSpecLabel(spec);
-				ret.put(label, specFeatures);
+				ret.put(label, specMeasures);
 				
-				for (FeatureMechanism mechanism : perceptron.featureMechanisms) {
-					scoredFeatures = mechanism.scoreTrigger(spec, inst, i);
-					for (Entry<String, Double> scoredFeature : scoredFeatures.entrySet()) {
-						FeatureInstance feature = new FeatureInstance(scoredFeature.getKey(), FeatureType.TRIGGER, scoredFeature.getValue());
-						specFeatures.put(feature.name, feature);
-						perceptron.triggerFeatureBaseNames.add(feature.name);
+				for (MeasureMechanism mechanism : perceptron.measureMechanisms) {
+					scoredMeasures = mechanism.scoreTrigger(spec, inst, i);
+					for (Entry<String, Double> scoredMeasure : scoredMeasures.entrySet()) {
+						MeasureInstance measure = new MeasureInstance(scoredMeasure.getKey(), MeasaureType.TRIGGER, scoredMeasure.getValue());
+						specMeasures.put(measure.name, measure);
+						perceptron.triggerMeasureNames.add(measure.name);
 					}
 				}
 			}
@@ -260,7 +260,7 @@ public class NodeFeatureGenerator
 			return ret;
 		} catch (CASException e) {
 			throw new RuntimeException(e);
-		} catch (FeatureMechanismException e) {
+		} catch (MeasureMechanismException e) {
 			throw new RuntimeException(e);
 		}
 				
@@ -598,8 +598,8 @@ public class NodeFeatureGenerator
 		if(conjunction_feature != null) featureLine.add(conjunction_feature);	
 	}
 	
-	public static void main(String[] args) throws IOException
-	{
-		;
-	}
+//	public static void main(String[] args) throws IOException
+//	{
+//		;
+//	}
 }

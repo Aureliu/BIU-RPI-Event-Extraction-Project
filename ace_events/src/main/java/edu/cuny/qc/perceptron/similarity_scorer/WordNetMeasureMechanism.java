@@ -35,15 +35,15 @@ import eu.excitementproject.eop.core.utilities.dictionary.wordnet.WordNetInitial
 import eu.excitementproject.eop.core.utilities.dictionary.wordnet.WordNetPartOfSpeech;
 import eu.excitementproject.eop.core.utilities.dictionary.wordnet.WordNetRelation;
 
-public class WordNetFeatureMechanism extends FeatureMechanism {
+public class WordNetMeasureMechanism extends MeasureMechanism {
 
 	static {
-		System.err.println("??? WordNetFeatureMechanism: ignoring spec's POS, using only text's");
-		System.err.println("??? WordNetFeatureMechanism: if a word has a non-wordnet POS (anything but noun/verb/adj/adv) we return FALSE, but we should return IRRELEVANT (when I figure out what it means... :( )");
-		System.err.println("??? WordNetFeatureMechanism: if a text or spec doesn't exist in wordnet, we return FALSE, although we should return IRRELEVANT");
+		System.err.println("??? WordNetMeasureMechanism: ignoring spec's POS, using only text's");
+		System.err.println("??? WordNetMeasureMechanism: if a word has a non-wordnet POS (anything but noun/verb/adj/adv) we return FALSE, but we should return IRRELEVANT (when I figure out what it means... :( )");
+		System.err.println("??? WordNetMeasureMechanism: if a text or spec doesn't exist in wordnet, we return FALSE, although we should return IRRELEVANT");
 	}
 
-	public WordNetFeatureMechanism() throws LexicalResourceException, WordNetInitializationException {
+	public WordNetMeasureMechanism() throws LexicalResourceException, WordNetInitializationException {
 		super();
 		
 		File wordnetDir = new File(WORDNET_DIR);
@@ -70,17 +70,17 @@ public class WordNetFeatureMechanism extends FeatureMechanism {
 	}
 	
 //	@Override
-//	public void preprocessSpec(JCas spec) throws FeatureMechanismException {
-//		System.err.println("Currently no CAS-processing by WordNetFeatureMechanism - TBD");
+//	public void preprocessSpec(JCas spec) throws MeasureMechanismException {
+//		System.err.println("Currently no CAS-processing by WordNetMeasureMechanism - TBD");
 //	}
 //
 //	@Override
-//	public void preprocessTextSentence(SentenceInstance textSentence) throws FeatureMechanismException {
+//	public void preprocessTextSentence(SentenceInstance textSentence) throws MeasureMechanismException {
 //		throw new NotImplementedException();
 //	}
 
 	@Override
-	public LinkedHashMap<String, Double> scoreTrigger(JCas spec, SentenceInstance textSentence, int i) throws FeatureMechanismException {
+	public LinkedHashMap<String, Double> scoreTrigger(JCas spec, SentenceInstance textSentence, int i) throws MeasureMechanismException {
 		LinkedHashMap<String, Double> ret = new LinkedHashMap<String, Double>();
 		
 		List<Token> textAnnos = (List<Token>) textSentence.get(InstanceAnnotations.TokenAnnotations);
@@ -94,13 +94,13 @@ public class WordNetFeatureMechanism extends FeatureMechanism {
 	}
 
 	@Override
-	public LinkedHashMap<String, Double> scoreArgument(JCas spec, SentenceInstance textSentence, int i, AceMention mention) throws FeatureMechanismException {
+	public LinkedHashMap<String, Double> scoreArgument(JCas spec, SentenceInstance textSentence, int i, AceMention mention) throws MeasureMechanismException {
 		throw new NotImplementedException();
 	}
 
-	private class SameSynset extends FeatureMechanismSpecTokenIterator {
+	private class SameSynset extends MeasureMechanismSpecTokenIterator {
 		@Override
-		public Boolean calcTokenBooleanScore(Token text, Token spec) throws FeatureMechanismException
+		public Boolean calcTokenBooleanScore(Token text, Token spec) throws MeasureMechanismException
 		{
 			try {
 				PartOfSpeech textPos = AnnotationUtils.tokenToPOS(text);
@@ -118,10 +118,10 @@ public class WordNetFeatureMechanism extends FeatureMechanism {
 				
 				if (textSynsets.isEmpty() || specSynsets.isEmpty()) {
 					if (textSynsets.isEmpty()) {
-						System.err.printf("WordNetFeatureMechanism: Empty Synset for text: '%s' (pos=%s)\n", textLemma, textWnPos);
+						System.err.printf("WordNetMeasureMechanism: Empty Synset for text: '%s' (pos=%s)\n", textLemma, textWnPos);
 					}
 					if (specSynsets.isEmpty()) {
-						//System.err.printf("WordNetFeatureMechanism: Empty Synset for spec: '%s' (pos=%s)\n", specLemma, textWnPos);
+						//System.err.printf("WordNetMeasureMechanism: Empty Synset for spec: '%s' (pos=%s)\n", specLemma, textWnPos);
 					}
 					return false;
 				}
@@ -133,16 +133,16 @@ public class WordNetFeatureMechanism extends FeatureMechanism {
 				}
 				return !differentSynsets;
 			} catch (WordNetException e) {
-				throw new FeatureMechanismException(e);
+				throw new MeasureMechanismException(e);
 			} catch (UnsupportedPosTagStringException e) {
-				throw new FeatureMechanismException(e);
+				throw new MeasureMechanismException(e);
 			}
 		}
 	}
 	
-	private class IsSpecHypernym extends FeatureMechanismSpecTokenIterator {
+	private class IsSpecHypernym extends MeasureMechanismSpecTokenIterator {
 		@Override
-		public Boolean calcTokenBooleanScore(Token text, Token spec) throws FeatureMechanismException
+		public Boolean calcTokenBooleanScore(Token text, Token spec) throws MeasureMechanismException
 		{
 			try {
 				PartOfSpeech textPos = AnnotationUtils.tokenToPOS(text);
@@ -162,16 +162,16 @@ public class WordNetFeatureMechanism extends FeatureMechanism {
 				}
 				return !rules.isEmpty();
 			} catch (LexicalResourceException e) {
-				throw new FeatureMechanismException(e);
+				throw new MeasureMechanismException(e);
 			} catch (UnsupportedPosTagStringException e) {
-				throw new FeatureMechanismException(e);
+				throw new MeasureMechanismException(e);
 			}
 		}
 	}
 	
-	private class IsSpecEntailed extends FeatureMechanismSpecTokenIterator {
+	private class IsSpecEntailed extends MeasureMechanismSpecTokenIterator {
 		@Override
-		public Boolean calcTokenBooleanScore(Token text, Token spec) throws FeatureMechanismException
+		public Boolean calcTokenBooleanScore(Token text, Token spec) throws MeasureMechanismException
 		{
 			try {
 				PartOfSpeech textPos = AnnotationUtils.tokenToPOS(text);
@@ -192,9 +192,9 @@ public class WordNetFeatureMechanism extends FeatureMechanism {
 				}
 				return !rules.isEmpty();
 			} catch (LexicalResourceException e) {
-				throw new FeatureMechanismException(e);
+				throw new MeasureMechanismException(e);
 			} catch (UnsupportedPosTagStringException e) {
-				throw new FeatureMechanismException(e);
+				throw new MeasureMechanismException(e);
 			}
 		}
 	}

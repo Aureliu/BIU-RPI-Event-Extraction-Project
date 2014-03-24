@@ -38,6 +38,6 @@ public class FeatureInstance {
 	
 	@Override
 	public String toString() {
-		return String.format("%s(%s=%s[%s])", type, name, positive, score);
+		return String.format("_%s_(%s=%s[%s])", type.toString().toLowerCase(), name, positive, score);
 	}
 }

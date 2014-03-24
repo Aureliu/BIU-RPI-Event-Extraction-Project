@@ -75,7 +75,7 @@ public class StanfordPosTaggerAE extends JCasAnnotator_ImplBase {
 				posAnnotation.addToIndexes();
 				
 				token.setPos(posAnnotation);
-
+				i++;
 			}
 		} catch (IOException e) {
 			throw new AnalysisEngineProcessException(AnalysisEngineProcessException.ANNOTATOR_EXCEPTION, null, e);

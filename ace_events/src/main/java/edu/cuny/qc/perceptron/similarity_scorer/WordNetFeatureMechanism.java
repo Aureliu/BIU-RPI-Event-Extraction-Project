@@ -1,6 +1,7 @@
 package edu.cuny.qc.perceptron.similarity_scorer;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashSet;
@@ -58,12 +59,12 @@ public class WordNetFeatureMechanism extends FeatureMechanism {
 
 		// A dictionary is created and kept in the WordnetLexicalResource,
 		// but we don't have access to it, so we create another one
-		//dictionary =  WordNetDictionaryFactory.newDictionary(wordnetDir, null);
+		dictionary =  WordNetDictionaryFactory.newDictionary(wordnetDir, null);
 	}
 	
 	@Override
 	public void close() {
-		////dictionary.close();
+		dictionary.close();
 		resource.close();
 		super.close();
 	}
@@ -101,38 +102,41 @@ public class WordNetFeatureMechanism extends FeatureMechanism {
 		@Override
 		public Boolean calcTokenBooleanScore(Token text, Token spec) throws FeatureMechanismException
 		{
-			return false;
-//			try {
-//				PartOfSpeech textPos = AnnotationUtils.tokenToPOS(text);
-//				WordNetPartOfSpeech textWnPos = WordNetPartOfSpeech.toWordNetPartOfspeech(textPos);
-//				
-//				if (textWnPos == null) {
-//					return false;
-//				}
-//				
-//				String textLemma = text.getLemma().getValue();
-//				String specLemma = spec.getLemma().getValue();
-//				Set<Synset> textSynsets = dictionary.getSynsetsOf(textLemma, textWnPos);
-//				//Use text's POS also for spec
-//				Set<Synset> specSynsets = dictionary.getSynsetsOf(specLemma, textWnPos);
-//				
-//				if (textSynsets.isEmpty() || specSynsets.isEmpty()) {
-//					if (textSynsets.isEmpty()) {
-//						System.err.printf("WordNetFeatureMechanism: Empty Synset for text: '%s' (pos=%s)\n", textLemma, textWnPos);
-//					}
-//					if (specSynsets.isEmpty()) {
-//						System.err.printf("WordNetFeatureMechanism: Empty Synset for spec: '%s' (pos=%s)\n", specLemma, textWnPos);
-//					}
-//					return false;
-//				}
-//					
-//				boolean differentSynsets = Collections.disjoint(textSynsets, specSynsets);
-//				return !differentSynsets;
-//			} catch (WordNetException e) {
-//				throw new FeatureMechanismException(e);
-//			} catch (UnsupportedPosTagStringException e) {
-//				throw new FeatureMechanismException(e);
-//			}
+			try {
+				PartOfSpeech textPos = AnnotationUtils.tokenToPOS(text);
+				WordNetPartOfSpeech textWnPos = WordNetPartOfSpeech.toWordNetPartOfspeech(textPos);
+				
+				if (textWnPos == null) {
+					return false;
+				}
+				
+				String textLemma = text.getLemma().getValue();
+				String specLemma = spec.getLemma().getValue();
+				Set<Synset> textSynsets = dictionary.getSynsetsOf(textLemma, textWnPos);
+				//Use text's POS also for spec
+				Set<Synset> specSynsets = dictionary.getSynsetsOf(specLemma, textWnPos);
+				
+				if (textSynsets.isEmpty() || specSynsets.isEmpty()) {
+					if (textSynsets.isEmpty()) {
+						System.err.printf("WordNetFeatureMechanism: Empty Synset for text: '%s' (pos=%s)\n", textLemma, textWnPos);
+					}
+					if (specSynsets.isEmpty()) {
+						//System.err.printf("WordNetFeatureMechanism: Empty Synset for spec: '%s' (pos=%s)\n", specLemma, textWnPos);
+					}
+					return false;
+				}
+					
+				boolean differentSynsets = Collections.disjoint(textSynsets, specSynsets);
+				//DEBUG
+				if (!differentSynsets) {
+					System.err.printf("Wordnet.SameSynset: TRUE! (%s,%s)\n", textLemma, specLemma);
+				}
+				return !differentSynsets;
+			} catch (WordNetException e) {
+				throw new FeatureMechanismException(e);
+			} catch (UnsupportedPosTagStringException e) {
+				throw new FeatureMechanismException(e);
+			}
 		}
 	}
 	
@@ -143,12 +147,19 @@ public class WordNetFeatureMechanism extends FeatureMechanism {
 			try {
 				PartOfSpeech textPos = AnnotationUtils.tokenToPOS(text);
 				Set<WordNetRelation> hypernym = new HashSet<WordNetRelation>(Arrays.asList(new WordNetRelation[] {WordNetRelation.HYPERNYM}));
-				List<LexicalRule<? extends WordnetRuleInfo>> rules = resource.getRules(	text.getLemma().getValue(),
+				String textLemma = text.getLemma().getValue();
+				String specLemma = spec.getLemma().getValue();
+				List<LexicalRule<? extends WordnetRuleInfo>> rules = resource.getRules(
+									textLemma,
 									textPos,
-									text.getLemma().getValue(),
+									specLemma,
 									textPos,
 									hypernym,
 									null);
+				//DEBUG
+				if (!rules.isEmpty()) {
+					System.err.printf("Wordnet.IsSpecHypernym: TRUE! %s-->%s\n", textLemma, specLemma);
+				}
 				return !rules.isEmpty();
 			} catch (LexicalResourceException e) {
 				throw new FeatureMechanismException(e);
@@ -164,10 +175,21 @@ public class WordNetFeatureMechanism extends FeatureMechanism {
 		{
 			try {
 				PartOfSpeech textPos = AnnotationUtils.tokenToPOS(text);
-				List<LexicalRule<? extends WordnetRuleInfo>> rules = resource.getRules(	text.getLemma().getValue(),
+				String textLemma = text.getLemma().getValue();
+				String specLemma = spec.getLemma().getValue();
+				List<LexicalRule<? extends WordnetRuleInfo>> rules = resource.getRules(
+									textLemma,
 									textPos,
-									text.getLemma().getValue(),
+									specLemma,
 									textPos);
+				//DEBUG
+				if (!rules.isEmpty()) {
+					List<WordNetRelation> relations = new ArrayList<WordNetRelation>(rules.size());
+					for (LexicalRule<? extends WordnetRuleInfo> rule : rules) {
+						relations.add(rule.getInfo().getTypedRelation());
+					}
+					System.err.printf("Wordnet.IsSpecEntailed: TRUE! %s-->%s (%d: %s)\n", textLemma, specLemma, rules.size(), relations);
+				}
 				return !rules.isEmpty();
 			} catch (LexicalResourceException e) {
 				throw new FeatureMechanismException(e);

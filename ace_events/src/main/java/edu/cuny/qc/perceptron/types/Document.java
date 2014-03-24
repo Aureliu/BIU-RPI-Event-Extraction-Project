@@ -551,7 +551,7 @@ public class Document implements java.io.Serializable
 			}
 			// fix tokenization error, e.g. split anti-war to three words
 			tokenSpans = fixTokenBoudaries(tokenSpans, allText);
-			Sentence sent = new Sentence(this, sentID++);
+			Sentence sent = new Sentence(this, sentID++, sentText);
 			sent.put(Sent_Attribute.TOKEN_SPANS, tokenSpans);
 			
 			de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence sentAnno = new de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence(jcas, sentSpan.start(), sentSpan.end()+1);

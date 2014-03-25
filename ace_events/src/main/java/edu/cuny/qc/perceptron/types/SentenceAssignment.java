@@ -614,28 +614,28 @@ public class SentenceAssignment
 		else // order = 0
 		{
 			if (genericLabel == Generic_Existing_Trigger_Label) {
-				Map<String, MeasureInstance> featuresOfLabel = token.get(label);
-				for (MeasureInstance feature : featuresOfLabel.values()) {
-					if (feature.positive) {
+				Map<String, MeasureInstance> measuresOfLabel = token.get(label);
+				for (MeasureInstance measure : measuresOfLabel.values()) {
+					if (measure.positive) {
 
 						// unigram features, for history reason, we still call them BigramFeature
 						// create a bigram feature
-						String featureStr = "BigramFeature:\t" + feature.name + "\t" + "\tcurrentLabel:" + genericLabel;
-						makeFeature(featureStr, this.getFV(i), feature.score, addIfNotPresent, useIfNotPresent);
+						String featureStr = "BigramFeature:\t" + measure.name + "\t" + "\tcurrentLabel:" + genericLabel;
+						makeFeature(featureStr, this.getFV(i), measure.score, addIfNotPresent, useIfNotPresent);
 
 					}
 				}
 			}
 			else { //genericLabel == Default_Trigger_Label
-				for (Object featureNameObj : perceptron.triggerMeasureNames) {
-					String featureName = (String) featureNameObj;
+				for (Object measureNameObj : perceptron.triggerMeasureNames) {
+					String measureName = (String) measureNameObj;
 					double numFalse = 0.0;
-					for (Map<String, MeasureInstance> featuresOfLabel : token.values()) {
-						MeasureInstance feature = featuresOfLabel.get(featureName);
-						if (feature == null) {
-							throw new IllegalArgumentException(String.format("Cannot find feature '%s' for non-label token %d", featureName, i));
+					for (Map<String, MeasureInstance> measuresOfLabel : token.values()) {
+						MeasureInstance measure = measuresOfLabel.get(measureName);
+						if (measure == null) {
+							throw new IllegalArgumentException(String.format("Cannot find feature '%s' for non-label token %d", measureName, i));
 						}
-						if (!feature.positive) {
+						if (!measure.positive) {
 							numFalse += 1.0;
 						}
 					}
@@ -644,7 +644,7 @@ public class SentenceAssignment
 					
 					// unigram features, for history reason, we still call them BigramFeature
 					// create a bigram feature
-					String featureStr = "BigramFeature:\t" + featureName + "\t" + "\tcurrentLabel:" + genericLabel;
+					String featureStr = "BigramFeature:\t" + measureName + "\t" + "\tcurrentLabel:" + genericLabel;
 					makeFeature(featureStr, this.getFV(i), falseRatio, addIfNotPresent, useIfNotPresent);
 
 				}

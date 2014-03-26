@@ -457,21 +457,23 @@ public class LearningCurve {
 				f.close();
 			}
 			
+			String singleEventType = "null";
+			if (!eventType.equals(JOKER_TYPE_NAME)) {
+				singleEventType = eventType;
+				TRAIN_OTHER_ARGS_ARR[TRAIN_OTHER_ARGS_ARR.length-1] = "learnBigrams=false"; //in a single type scenario, bigrams must include just the single type, and not be learned.
+			}
+
 			String[] args = new String[] {
 					ACE_PATH,
 					tempTrainDocList,
 					String.format(MODEL_FILENAME, outputFolder, i, t, j, trainSet.size(), mentionsInTrainSet),
 					devDocsList,
+					singleEventType,
 			};
-			String singleEventType = null;
-			if (!eventType.equals(JOKER_TYPE_NAME)) {
-				singleEventType = eventType;
-				TRAIN_OTHER_ARGS_ARR[TRAIN_OTHER_ARGS_ARR.length-1] = "learnBigrams=false"; //in a single type scenario, bigrams must include just the single type, and not be learned.
-			}
 			args = ArrayUtils.addAll(args, TRAIN_OTHER_ARGS_ARR);
 
 			logger.info(String.format("Running training with args: " + Arrays.asList(args)));
-			Pipeline.mainWithSingleEventType(args, singleEventType);
+			Pipeline.mainWithSingleEventType(args);
 			logger.info("Returned from training");		}
 		
 	}

@@ -2,6 +2,7 @@ package edu.cuny.qc.perceptron.core;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintStream;
@@ -30,11 +31,17 @@ public class Pipeline
 	 */
 	public static Perceptron trainPerceptron(File srcDir, File trainingFileList, File modelFile, File devFileList, Controller controller, String singleEventType)
 	{
+		
 		Alphabet nodeTargetAlphabet = new Alphabet();
 		Alphabet edgeTargetAlphabet = new Alphabet();
 		Alphabet featureAlphabet = new Alphabet();
 		try
 		{
+			// Make sure model file is writable
+			PrintStream stream = new PrintStream(modelFile);
+			stream.printf("(file is writable - verified)");
+			stream.close();
+
 			// read instance list from training data (and dev data)
 			List<SentenceInstance> trainInstanceList = null;
 			List<SentenceInstance> devInstanceList = null;
@@ -218,10 +225,11 @@ public class Pipeline
 	 */
 	static public void main(String[] args) throws IOException
 	{
-		mainWithSingleEventType(args, null);
+		//mainWithSingleEventType(args, null);
+		mainWithSingleEventType(args);
 	}
 	
-	public static void mainWithSingleEventType(String[] args, String singleEventType) throws IOException {
+	public static void mainWithSingleEventType(String[] args) throws IOException {
 		System.out.printf("Args:\n%s\n\n", new ArrayList<String>(Arrays.asList(args)));
 		if(args.length < 4)
 		{
@@ -230,7 +238,8 @@ public class Pipeline
 			System.out.println("args[1]: file list of training data");
 			System.out.println("args[2]: model file to be saved");
 			System.out.println("args[3]: file list of dev data");
-			System.out.println("args[4+]: controller arguments");
+			System.out.println("args[4]: single event type ('null' for all event types)");
+			System.out.println("args[5+]: controller arguments");
 			System.exit(-1);
 		}
 		
@@ -240,12 +249,16 @@ public class Pipeline
 		File trainingFileList = new File(args[1]);
 		File modelFile = new File(args[2]);
 		File devFileList = new File(args[3]);
+		String singleEventType = args[4];
+		if (singleEventType.equals("null")) {
+			singleEventType = null;
+		}
 		
 		PrintStream out = new PrintStream(modelFile.getAbsoluteFile() + ".weights");
 
 		// set settings
 		Controller controller = new Controller();
-		String[] settings = Arrays.copyOfRange(args, 4, args.length);
+		String[] settings = Arrays.copyOfRange(args, 5, args.length);
 		controller.setValueFromArguments(settings);
 		System.out.println("\n" + controller.toString() + "\n");
 		
@@ -255,11 +268,11 @@ public class Pipeline
 		// print out weights
 		if(model.controller.avgArguments)
 		{
-			out.println(model.getAvg_weights());
+			out.println(model.getAvg_weights().toStringFull());
 		}
 		else
 		{
-			out.println(model.getWeights());
+			out.println(model.getWeights().toStringFull());
 		}
 		out.close();
 	}

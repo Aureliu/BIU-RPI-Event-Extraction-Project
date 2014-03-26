@@ -182,24 +182,30 @@ public class Decoder
 			System.out.println("args[1]: src dir");
 			System.out.println("args[2]: file list");
 			System.out.println("args[3]: output dir");
-			System.out.printf("optional args[4]: '%s' to not perform scoring, or anything else as a suffix for file names of intermediate output files\n", OPTION_NO_SCORING);
+			System.out.println("args[4]: single event type ('null' for all event types)");
+			System.out.printf("optional args[5]: '%s' to not perform scoring, or anything else as a suffix for file names of intermediate output files\n", OPTION_NO_SCORING);
 			System.exit(-1);
 		}
 
+		String singleEventType = args[4];
+		if (singleEventType.equals("null")) {
+			singleEventType = null;
+		}
+		
 		String filenameSuffix = ".txt";
 		String folderNamePrefix = "";
-		if (args.length>=5) {
-			if (args[4].equals(OPTION_NO_SCORING)) {
-				decode(args, filenameSuffix, folderNamePrefix, null); //no singleEventType
+		if (args.length>=6) {
+			if (args[5].equals(OPTION_NO_SCORING)) {
+				decode(args, filenameSuffix, folderNamePrefix, singleEventType); //no singleEventType
 			}
 			else {
-				filenameSuffix = args[4];
-				folderNamePrefix = "DIR" + args[4] + "."; //yes, I know it's silly it has ".txt" in it, maybe should fix later
-				decodeAndScore(args, filenameSuffix, folderNamePrefix, null); //no singleEventType
+				filenameSuffix = args[5];
+				folderNamePrefix = "DIR" + args[5] + "."; //yes, I know it's silly it has ".txt" in it, maybe should fix later
+				decodeAndScore(args, filenameSuffix, folderNamePrefix, singleEventType); //no singleEventType
 			}
 		}
 		else {
-			decodeAndScore(args, filenameSuffix, folderNamePrefix, null);
+			decodeAndScore(args, filenameSuffix, folderNamePrefix, singleEventType);
 		}
 	}
 }

@@ -59,6 +59,11 @@ public class SentenceInstance
 	public String docID;
 	
 	/**
+	 * Ofer: Add this for debugging purposes
+	 */
+	public String text;
+	
+	/**
 	 * the list of argument candidates (values/entities/timex)
 	 */
 	public List<AceMention> eventArgCandidates = new ArrayList<AceMention>(); 
@@ -130,6 +135,7 @@ public class SentenceInstance
 		// set the text of the doc
 		this.allText = sent.doc.allText;
 		this.docID = sent.doc.docID;
+		this.text = sent.text;
 		
 		// fill in entity information
 		this.eventArgCandidates.addAll(sent.entityMentions);

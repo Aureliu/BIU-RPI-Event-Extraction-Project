@@ -38,7 +38,7 @@ public class Pipeline
 	 * @param trainingFileList
 	 * @param modelFile
 	 */
-	public static Perceptron trainPerceptron(File srcDir, File trainingFileList, File modelFile, File devFileList, Controller controller, String singleEventType, List<String> specXmlPaths)
+	public static Perceptron trainPerceptron(File srcDir, File trainingFileList, File modelFile, File devFileList, Controller controller, List<String> specXmlPaths)
 	{
 		Alphabet nodeTargetAlphabet = new Alphabet();
 		Alphabet edgeTargetAlphabet = new Alphabet();
@@ -72,7 +72,7 @@ public class Pipeline
 			
 
 			// learning
-			model.learning(trainInstanceList, devInstanceList, 0, singleEventType);
+			model.learning(trainInstanceList, devInstanceList, 0);
 			// save learned perceptron to file
 			Perceptron.serializeObject(model, modelFile);
 			
@@ -232,10 +232,10 @@ public class Pipeline
 	 */
 	static public void main(String[] args) throws IOException
 	{
-		mainWithSingleEventType(args, null);
-	}
-	
-	public static void mainWithSingleEventType(String[] args, String singleEventType) throws IOException {
+//		mainWithSingleEventType(args, null);
+//	}
+//	
+//	public static void mainWithSingleEventType(String[] args, String singleEventType) throws IOException {
 		System.out.printf("Args:\n%s\n\n", new ArrayList<String>(Arrays.asList(args)));
 		if(args.length < 4)
 		{
@@ -267,7 +267,7 @@ public class Pipeline
 		System.out.println("\n" + controller.toString() + "\n");
 		
 		// train model
-		Perceptron model = trainPerceptron(srcDir, trainingFileList, modelFile, devFileList, controller, singleEventType, specXmlPaths);
+		Perceptron model = trainPerceptron(srcDir, trainingFileList, modelFile, devFileList, controller, specXmlPaths);
 		
 		// print out weights
 		if(model.controller.avgArguments)

@@ -11,6 +11,7 @@ import org.apache.uima.cas.CASException;
 import org.apache.uima.jcas.JCas;
 
 import ac.biu.nlp.nlp.ie.onthefly.input.SpecAnnotator;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument;
 
 import edu.cuny.qc.ace.acetypes.AceEntityMention;
 import edu.cuny.qc.ace.acetypes.AceEventArgumentValue;
@@ -51,12 +52,13 @@ public class EdgeMeasureGenerator
 				String label = SpecAnnotator.getSpecLabel(spec);
 				ret.put(label, specMeasures);
 				
-				for (String role : SpecAnnotator.getSpecRoles(spec)) {
+				for (Argument argument : SpecAnnotator.getSpecArguments(spec)) {
 					Map<String, MeasureInstance> roleMeasures = new LinkedHashMap<String, MeasureInstance>();
+					String role = argument.getRole().getCoveredText();
 					specMeasures.put(role, roleMeasures);
 	
 					for (MeasureMechanism mechanism : perceptron.measureMechanisms) {
-						scoredMeasures = mechanism.scoreArgument(spec, sent, i, mention);
+						scoredMeasures = mechanism.scoreArgument(spec, argument, sent, i, mention);
 						for (Entry<String, Double> scoredMeasure : scoredMeasures.entrySet()) {
 							MeasureInstance measure = new MeasureInstance(scoredMeasure.getKey(), MeasaureType.ARGUMENT, scoredMeasure.getValue());
 							roleMeasures.put(measure.name, measure);

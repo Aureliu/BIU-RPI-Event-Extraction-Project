@@ -6,10 +6,13 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
+
 import edu.cuny.qc.ace.acetypes.AceMention;
 import edu.cuny.qc.perceptron.types.FeatureVector;
 import edu.cuny.qc.perceptron.types.SentenceAssignment;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
+import edu.cuny.qc.perceptron.types.SentenceInstance.InstanceAnnotations;
 import edu.cuny.qc.util.TypeConstraints;
 
 /**
@@ -88,6 +91,16 @@ public class BeamSearch
 					assn.makeGlobalFeaturesTrigger(problem, i, false, model.controller.addNeverSeenFeatures);
 				}
 				evaluate(assn, getWeights());
+				
+				// DEBUG
+				List<Token> textAnnos = (List<Token>) problem.get(InstanceAnnotations.TokenAnnotations);
+				Token token = textAnnos.get(i);
+				System.out.printf("\n- Lemma[%d]: %s [%s]\n", i, token.getLemma().getValue(), problem.text.replace('\n', ' '));
+				System.out.printf("- Weights: %s\n", getWeights().toStringFull(true));
+				System.out.printf("- Assn: %s\n", assn);
+				System.out.printf("  * assn.fv: [%s]\n", assn.getCurrentFV().toStringFull(true));
+				System.out.printf("  * assn.score: %s\n", assn.getScore());
+				////
 			}
 			
 			// rank according to score

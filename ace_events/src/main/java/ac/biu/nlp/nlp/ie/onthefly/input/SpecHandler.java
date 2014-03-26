@@ -19,6 +19,7 @@ import org.apache.uima.resource.ResourceInitializationException;
 import org.uimafit.util.JCasUtil;
 
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentType;
 import edu.cuny.qc.perceptron.core.Perceptron;
 import edu.cuny.qc.util.TypeConstraints;
 import eu.excitementproject.eop.common.utilities.file.FileUtils;
@@ -63,13 +64,14 @@ public class SpecHandler {
 			JCas tokenView = spec.getView(SpecAnnotator.TOKEN_VIEW);
 			for (Argument arg : JCasUtil.select(tokenView, Argument.class)) {
 				String role = arg.getRole().getCoveredText();
-				List<String> types = Arrays.asList(arg.getTypes().toStringArray());
-				perceptron.edgeTargetAlphabet.lookupIndex(predicateName);
+				List<ArgumentType> types = JCasUtil.selectCovered(tokenView, ArgumentType.class, arg);
+				List<String> typeStrs = JCasUtil.toText(types);
+				perceptron.edgeTargetAlphabet.lookupIndex(role);
 				
 				List<String> lineList = new ArrayList<String>();
 				lineList.add(predicateName);
 				lineList.add(role);
-				lineList.addAll(types);
+				lineList.addAll(typeStrs);
 				String[] lineArray = new String[lineList.size()];
 				lineArray = lineList.toArray(lineArray);
 				linesForArgs.add(lineArray);

@@ -14,6 +14,7 @@ import org.apache.uima.resource.ResourceInitializationException;
 import org.uimafit.component.JCasAnnotator_ImplBase;
 import org.uimafit.util.JCasUtil;
 
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentExample;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentRole;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateName;
@@ -60,18 +61,27 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 		return anno.getCoveredText();
 	}
 	
-	private static <T extends Annotation> List<String> getList(JCas spec, String viewName, Class<T> type) throws CASException {
+//	private static <T extends Annotation> List<String> getStringList(JCas spec, String viewName, Class<T> type) throws CASException {
+//		JCas view = spec.getView(viewName);
+//		Collection<T> annotations = JCasUtil.select(view, type);
+//		return JCasUtil.toText(annotations);
+//	}
+//	
+	private static <T extends Annotation> Collection<T> getAnnotationCollection(JCas spec, String viewName, Class<T> type) throws CASException {
 		JCas view = spec.getView(viewName);
-		Collection<T> annotations = JCasUtil.select(view, type);
-		return JCasUtil.toText(annotations);
+		return JCasUtil.select(view, type);
 	}
 	
 	public static String getSpecLabel(JCas spec) throws CASException {
 		return getValue(spec, TOKEN_VIEW, PredicateName.class);
 	}
 
-	public static List<String> getSpecRoles(JCas spec) throws CASException {
-		return getList(spec, TOKEN_VIEW, ArgumentRole.class);
+//	public static List<String> getSpecRoles(JCas spec) throws CASException {
+//		return getStringList(spec, TOKEN_VIEW, ArgumentRole.class);
+//	}
+	
+	public static Collection<Argument> getSpecArguments(JCas spec) throws CASException {
+		return getAnnotationCollection(spec, TOKEN_VIEW, Argument.class);
 	}
 	
 

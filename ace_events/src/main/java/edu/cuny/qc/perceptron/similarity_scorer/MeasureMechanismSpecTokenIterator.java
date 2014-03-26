@@ -1,7 +1,7 @@
 package edu.cuny.qc.perceptron.similarity_scorer;
 
-import org.apache.uima.cas.CAS;
 import org.apache.uima.cas.CASException;
+import org.apache.uima.cas.text.AnnotationFS;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.tcas.Annotation;
 
@@ -13,8 +13,8 @@ public abstract class MeasureMechanismSpecTokenIterator extends MeasureMechanism
 
 	static {System.err.println("Consider using Guava caches to cache measure values for specific textToken-specToken pairs (maybe also with their lemmas and/or POSes). Maybe also/instead, cache some intermediate values, like a lemma's WordNet sysnet.");}
 
-	public MeasureMechanismSpecIterator init(JCas spec, String viewName, Class<? extends Annotation> type, Token textAnno) throws MeasureMechanismException {
-		return super.init(spec, viewName, type, textAnno);
+	public MeasureMechanismSpecIterator init(JCas spec, String viewName, AnnotationFS covering, Class<? extends Annotation> type, Token textAnno) throws MeasureMechanismException {
+		return super.init(spec, viewName, covering, type, textAnno);
 	}
 	
 	@Override

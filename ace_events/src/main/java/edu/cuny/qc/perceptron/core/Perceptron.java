@@ -153,9 +153,9 @@ public class Perceptron implements java.io.Serializable
 //		learning(trainingList, null, 0);
 //	}
 	
-	public void learning(List<SentenceInstance> trainingList, List<SentenceInstance> devList, int cutoff) {
-		learning(trainingList, devList, cutoff, null);
-	}
+//	public void learning(List<SentenceInstance> trainingList, List<SentenceInstance> devList, int cutoff) {
+//		learning(trainingList, devList, cutoff, null);
+//	}
 	
 	/**
 	 * given an training instance list, and max number of iterations, learn weights by perceptron
@@ -163,7 +163,7 @@ public class Perceptron implements java.io.Serializable
 	 * @param trainingList
 	 * @param maxIter
 	 */
-	public void learning(List<SentenceInstance> trainingList, List<SentenceInstance> devList, int cutoff, String singleEventType)
+	public void learning(List<SentenceInstance> trainingList, List<SentenceInstance> devList, int cutoff)
 	{	
 		// the evaluator for dev set
 		Evaluator evaluator = null;
@@ -416,36 +416,36 @@ public class Perceptron implements java.io.Serializable
 		for (int i=0; i<allTypes.size(); i++) {
 			currType = allTypes.get(i);
 			List<String> list = new ArrayList<String>(allTypes);
-			list.remove(i);
+			//list.remove(i);
 			getLabelBigram().put(currType, list);
 		}
 	}
 	
-	protected void extractTriggerLabelBigrams(List<SentenceInstance> traininglist)
-	{
-		for(SentenceInstance instance : traininglist)
-		{
-			SentenceAssignment target = instance.target;
-			String prev = SentenceAssignment.PAD_Trigger_Label;
-			for(int i=0; i<target.getNodeAssignment().size(); i++)
-			{
-				Integer index = target.getNodeAssignment().get(i);
-				String label = (String) this.nodeTargetAlphabet.lookupObject(index);
-				
-				List<String> list = getLabelBigram().get(prev);
-				if(list == null)
-				{
-					list = new ArrayList<String>();
-				}
-				if(!list.contains(label))
-				{
-					list.add(label);
-				}
-				getLabelBigram().put(prev, list);
-				prev = label;
-			}
-		}
-	}
+//	protected void extractTriggerLabelBigrams(List<SentenceInstance> traininglist)
+//	{
+//		for(SentenceInstance instance : traininglist)
+//		{
+//			SentenceAssignment target = instance.target;
+//			String prev = SentenceAssignment.PAD_Trigger_Label;
+//			for(int i=0; i<target.getNodeAssignment().size(); i++)
+//			{
+//				Integer index = target.getNodeAssignment().get(i);
+//				String label = (String) this.nodeTargetAlphabet.lookupObject(index);
+//				
+//				List<String> list = getLabelBigram().get(prev);
+//				if(list == null)
+//				{
+//					list = new ArrayList<String>();
+//				}
+//				if(!list.contains(label))
+//				{
+//					list.add(label);
+//				}
+//				getLabelBigram().put(prev, list);
+//				prev = label;
+//			}
+//		}
+//	}
 
 	/**
 	 * given an assignment, and the gold-standard, update the weights

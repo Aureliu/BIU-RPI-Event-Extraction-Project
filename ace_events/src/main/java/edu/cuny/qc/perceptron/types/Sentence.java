@@ -48,6 +48,11 @@ public class Sentence implements java.io.Serializable
 	protected int sentID;
 	
 	/**
+	 * Ofer: Add this for debugging purposes
+	 */
+	protected String text;
+	
+	/**
 	 * a reference to its document object
 	 */
 	protected Document doc;
@@ -74,10 +79,11 @@ public class Sentence implements java.io.Serializable
 	public List<AceTimexMention> timexMentions = new ArrayList<AceTimexMention>();
 	public List<AceRelationMention> relationMentions = new ArrayList<AceRelationMention>();
 	
-	public Sentence(Document doc, int sentID)
+	public Sentence(Document doc, int sentID, String text)
 	{
 		this.doc = doc;
 		this.sentID = sentID;
+		this.text = text;
 	}
 	
 	public void fillAceAnnotaions()

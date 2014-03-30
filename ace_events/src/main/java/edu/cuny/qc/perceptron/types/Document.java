@@ -499,7 +499,7 @@ public class Document implements java.io.Serializable
 			}
 			// fix tokenization error, e.g. split anti-war to three words
 			tokenSpans = fixTokenBoudaries(tokenSpans, allText);
-			Sentence sent = new Sentence(this, sentID++);
+			Sentence sent = new Sentence(this, sentID++, sentText);
 			sent.put(Sent_Attribute.TOKEN_SPANS, tokenSpans);
 			
 			String[] tokens = new String[tokenSpans.length];
@@ -858,16 +858,16 @@ public class Document implements java.io.Serializable
 	}
 	
 	
-	static public void main(String[] args) throws IOException
-	{
-		System.out.println("Default Charset=" + Charset.defaultCharset());
-		File txtFile = new File("/Users/XX/Data/ACE/ACE2005-TrainingData-V6.0/English/nw/timex2norm/AFP_ENG_20030417.0004");
-		Document doc = new Document(txtFile.getAbsolutePath(), true, false);
-		TextFeatureGenerator.doPreprocessCheap(doc);
-		doc.printDocBasic(System.out);
-		
-		doc.setSentenceClustersByTokens();
-		doc.printDocCluster(System.out);
-	}
+//	static public void main(String[] args) throws IOException
+//	{
+//		System.out.println("Default Charset=" + Charset.defaultCharset());
+//		File txtFile = new File("/Users/XX/Data/ACE/ACE2005-TrainingData-V6.0/English/nw/timex2norm/AFP_ENG_20030417.0004");
+//		Document doc = new Document(txtFile.getAbsolutePath(), true, false);
+//		TextFeatureGenerator.doPreprocessCheap(doc);
+//		doc.printDocBasic(System.out);
+//		
+//		doc.setSentenceClustersByTokens();
+//		doc.printDocCluster(System.out);
+//	}
 
 }

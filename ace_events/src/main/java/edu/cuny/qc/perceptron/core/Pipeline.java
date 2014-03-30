@@ -2,7 +2,6 @@ package edu.cuny.qc.perceptron.core;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintStream;
@@ -23,6 +22,10 @@ import edu.cuny.qc.perceptron.types.SentenceInstance;
 
 public class Pipeline
 {
+	//DEBUG
+	public static File modelFile = null;
+	///////////
+	
 	/**
 	 * Given the document list, train a perceptron model, and write to modelFile
 	 * @param srcDir
@@ -76,6 +79,10 @@ public class Pipeline
 							BeamSearchClusterSeq.class);
 				}
 			}
+			
+			//DEBUG
+			Pipeline.modelFile = modelFile;
+			//////////////////
 			
 			model.controller = controller;
 			// learning

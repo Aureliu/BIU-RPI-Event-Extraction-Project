@@ -27,7 +27,7 @@ public class MeasureInstance {
 	
 	public static final double SCORE_THRESHOLD = 0.5;
 	public static final double POSITIVE_SCORE = 1.0;
-	public static final double NEGATIVE_SCORE = 0.0;
+	public static final double NEGATIVE_SCORE = -1.0;
 
 	public MeasureInstance(String name, MeasaureType type, double score) {
 		this.name = name;

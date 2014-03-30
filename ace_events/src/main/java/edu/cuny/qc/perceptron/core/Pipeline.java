@@ -32,6 +32,10 @@ import eu.excitementproject.eop.common.utilities.uima.UimaUtilsException;
 
 public class Pipeline
 {
+	//DEBUG
+	public static File modelFile = null;
+	///////////
+
 	/**
 	 * Given the document list, train a perceptron model, and write to modelFile
 	 * @param srcDir
@@ -45,6 +49,11 @@ public class Pipeline
 		Alphabet featureAlphabet = new Alphabet();
 		try
 		{
+			// Make sure model file is writable
+			PrintStream stream = new PrintStream(modelFile);
+			stream.printf("(file is writable - verified)");
+			stream.close();
+
 			// read instance list from training data (and dev data)
 			List<SentenceInstance> trainInstanceList = null;
 			List<SentenceInstance> devInstanceList = null;
@@ -68,6 +77,10 @@ public class Pipeline
 				throw new UnsupportedParameterException("crossSent = true");
 			}
 			
+			//DEBUG
+			Pipeline.modelFile = modelFile;
+			//////////////////
+
 			model.controller = controller;
 			
 

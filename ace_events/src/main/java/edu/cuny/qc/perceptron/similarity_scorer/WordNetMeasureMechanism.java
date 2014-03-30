@@ -85,8 +85,8 @@ public class WordNetMeasureMechanism extends MeasureMechanism {
 	public LinkedHashMap<String, Double> scoreTriggerToken(JCas spec, SentenceInstance textSentence, Token textTriggerToken) throws MeasureMechanismException {
 		LinkedHashMap<String, Double> ret = new LinkedHashMap<String, Double>();
 		
-		ret.put("WORDNET_SAME_SYNSET",   Aggregator.any(new SameSynset()    .init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
-		ret.put("WORDNET_SPEC_HYPERNYM", Aggregator.any(new IsSpecHypernym().init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
+		//ret.put("WORDNET_SAME_SYNSET",   Aggregator.any(new SameSynset()    .init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
+		//ret.put("WORDNET_SPEC_HYPERNYM", Aggregator.any(new IsSpecHypernym().init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
 		ret.put("WORDNET_SPEC_ENTAILED", Aggregator.any(new IsSpecEntailed().init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
 		
 		return ret;
@@ -96,8 +96,8 @@ public class WordNetMeasureMechanism extends MeasureMechanism {
 	public LinkedHashMap<String, Double> scoreArgumentFirstHeadToken(JCas spec, Argument argument, SentenceInstance textSentence, Token textTriggerToken, Token textArgToken) throws MeasureMechanismException {
 		LinkedHashMap<String, Double> ret = new LinkedHashMap<String, Double>();
 		
-		ret.put("WORDNET_SAME_SYNSET",   Aggregator.any(new SameSynset()    .init(spec, null, argument, ArgumentExample.class, textArgToken)));
-		ret.put("WORDNET_SPEC_HYPERNYM", Aggregator.any(new IsSpecHypernym().init(spec, null, argument, ArgumentExample.class, textArgToken)));
+		//ret.put("WORDNET_SAME_SYNSET",   Aggregator.any(new SameSynset()    .init(spec, null, argument, ArgumentExample.class, textArgToken)));
+		//ret.put("WORDNET_SPEC_HYPERNYM", Aggregator.any(new IsSpecHypernym().init(spec, null, argument, ArgumentExample.class, textArgToken)));
 		ret.put("WORDNET_SPEC_ENTAILED", Aggregator.any(new IsSpecEntailed().init(spec, null, argument, ArgumentExample.class, textArgToken)));
 		
 		return ret;

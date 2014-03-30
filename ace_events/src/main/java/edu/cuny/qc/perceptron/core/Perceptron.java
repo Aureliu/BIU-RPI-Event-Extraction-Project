@@ -4,12 +4,15 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.io.PrintStream;
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
@@ -25,8 +28,11 @@ import edu.cuny.qc.perceptron.types.Alphabet;
 import edu.cuny.qc.perceptron.types.FeatureVector;
 import edu.cuny.qc.perceptron.types.SentenceAssignment;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
+import edu.cuny.qc.perceptron.types.SentenceInstance.InstanceAnnotations;
+import edu.cuny.qc.util.TokenAnnotations;
 import edu.cuny.qc.util.TypeConstraints;
 import edu.cuny.qc.util.UnsupportedParameterException;
+import edu.cuny.qc.util.WeightTracer;
 import eu.excitementproject.eop.common.component.lexicalknowledge.LexicalResourceException;
 import eu.excitementproject.eop.core.utilities.dictionary.wordnet.WordNetInitializationException;
 
@@ -157,6 +163,7 @@ public class Perceptron implements java.io.Serializable
 //		learning(trainingList, devList, cutoff, null);
 //	}
 	
+	
 	/**
 	 * given an training instance list, and max number of iterations, learn weights by perceptron
 	 * in each iteration, use current weights to test the dev instance list, and in each peak, save the model to file
@@ -191,6 +198,20 @@ public class Perceptron implements java.io.Serializable
 			featureCutOff(trainingList, cutoff);
 		}
 		
+		//DEBUG
+		WeightTracer wt = new WeightTracer(this);
+		System.out.printf("Iter|%sSentenceNo|%s\n", wt.getFeaturesStringTitle(), wt.getFeaturesStringTitle());
+
+		String featuresOutputFilePath = Pipeline.modelFile.getParent() + "/AllFeatures-ODIE.tsv";
+		PrintStream f = null;
+		try {
+			f = new PrintStream(featuresOutputFilePath);
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		}
+		f.printf("Iter|SentenceNo|Sentence|i|Lemma|Feature|target-size|target|assn-size|assn|in-both|weights-size|weights|avg_weights\n");
+		//////////
+		
 		// online learning with beam search and early update
 		long totalTime = 0;
 		Evaluator.Score max_score = new Evaluator.Score();
@@ -222,13 +243,72 @@ public class Perceptron implements java.io.Serializable
 					System.out.printf("  %d. No violation! (iter=%d) assn: %s\n", countNoViolation+1, iter, assn.toString());
 					countNoViolation += 1;
 				}
+				
+				//DEBUG
+				System.out.printf("|%s%d|%s\n", wt.getFeaturesStringSkip(), i, wt.getFeaturesString());		
+				
+				List<Map<Class<?>, Object>> tokens = (List<Map<Class<?>, Object>>) instance.get(InstanceAnnotations.Token_FEATURE_MAPs);
+				String sentText = instance.text.replace('\n', ' ');
+				for (int j=0; j<=assn.getState(); j++) {
+					String lemma = (String) tokens.get(j).get(TokenAnnotations.LemmaAnnotation.class);
+					Set<Object> allFeaturesSet = new HashSet<Object>();
+					Map<Object, Double> mapTarget = instance.target.getFeatureVectorSequence().get(j).getMap();
+					Map<Object, Double> mapAssn   = assn           .getFeatureVectorSequence().get(j).getMap();
+					allFeaturesSet.addAll(mapTarget.keySet());
+					allFeaturesSet.addAll(mapAssn.keySet());
+					List<String> allFeaturesList = new ArrayList<String>(allFeaturesSet.size());
+					for (Object o : allFeaturesSet) {
+						allFeaturesList.add((String) o);
+					}
+					Collections.sort(allFeaturesList);
+					for (String s : allFeaturesList) {						
+						String inTarget = "X";
+						Double numTarget = mapTarget.get(s);
+						if (numTarget != null) {
+							inTarget = numTarget.toString();
+						}
+						String inAssn = "X";
+						Double numAssn = mapAssn.get(s);
+						if (numAssn != null) {
+							inAssn = numAssn.toString();
+						}
+						String inWeights = "X";
+						Double numWeights = weights.get(s);
+						if (numWeights != null) {
+							inWeights = numWeights.toString();
+						}
+						String inAvg = "X";
+						if (avg_weights == null) {
+							inAvg = "null vector";
+						}
+						else {
+							Double numAvg = avg_weights.get(s);
+							if (numAvg != null) {
+								inAvg = numAvg.toString();
+							}
+						}
+						
+						String bothTargetAndAssn = null;
+						if (!inTarget.equals("X") && !inAssn.equals("X")) {
+							bothTargetAndAssn = "T";
+						}
+						else {
+							bothTargetAndAssn ="F";
+						}
+						
+						f.printf("%d|%d|%s|%d|%s|%s|%d|%s|%d|%s|%s|%d|%s|%s\n", iter, i, sentText, j, lemma, s.replace('|', '*').replace("\t", "  "), mapTarget.size(), inTarget, mapAssn.size(), inAssn, bothTargetAndAssn, weights.size(), inWeights, inAvg);
+					}
+					f.printf("%d|%d|%s|%d|%s||%d||%d|||%d|\n", iter, i, sentText, j, lemma, mapTarget.size(), mapAssn.size(), weights.size());
+				}
+				////////////
+
 				i++;
 			}
 			
 			long endTime = System.currentTimeMillis();
 			long iterTime = endTime - startTime;
 			totalTime += iterTime;
-			System.out.println("\nIter " + iter + "\t error num: " + error_num + "\t time:" + iterTime + "\t feature size:" + this.weights.size());
+			//System.out.println("\nIter " + iter + "\t error num: " + error_num + "\t time:" + iterTime + "\t feature size:" + this.weights.size());
 			
 			// use current weight to decode and evaluate developement instances
 			if(devList != null)
@@ -245,7 +325,7 @@ public class Perceptron implements java.io.Serializable
 				List<SentenceAssignment> devResult = decoding(devList);
 				Evaluator.Score dev_score = evaluator.evaluate(devResult, getCanonicalInstanceList(devList));
 				
-				System.out.println("Dev " + dev_score);
+				//System.out.println("Dev " + dev_score);
 
 				if((dev_score.harmonic_mean - max_score.harmonic_mean) >= 0.001)
 				{
@@ -259,6 +339,11 @@ public class Perceptron implements java.io.Serializable
 					max_score = dev_score;
 				}
 			}
+			
+			//DEBUG
+			System.out.printf("%d|%s\n", iter, wt.getFeaturesString());		
+			////////////
+
 			
 			if(error_num == 0)
 			{

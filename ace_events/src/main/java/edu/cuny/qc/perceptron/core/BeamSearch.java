@@ -93,13 +93,13 @@ public class BeamSearch
 				evaluate(assn, getWeights());
 				
 				// DEBUG
-				List<Token> textAnnos = (List<Token>) problem.get(InstanceAnnotations.TokenAnnotations);
-				Token token = textAnnos.get(i);
-				System.out.printf("\n- Lemma[%d]: %s [%s]\n", i, token.getLemma().getValue(), problem.text.replace('\n', ' '));
-				System.out.printf("- Weights: %s\n", getWeights().toStringFull(true));
-				System.out.printf("- Assn: %s\n", assn);
-				System.out.printf("  * assn.fv: [%s]\n", assn.getCurrentFV().toStringFull(true));
-				System.out.printf("  * assn.score: %s\n", assn.getScore());
+//				List<Token> textAnnos = (List<Token>) problem.get(InstanceAnnotations.TokenAnnotations);
+//				Token token = textAnnos.get(i);
+//				System.out.printf("\n- Lemma[%d]: %s [%s]\n", i, token.getLemma().getValue(), problem.text.replace('\n', ' '));
+//				System.out.printf("- Weights: [%s]\n", getWeights().toStringFull(true));
+//				System.out.printf("- Assn: %s\n", assn);
+//				System.out.printf("  * assn.fv: [%s]\n", assn.getCurrentFV().toStringFull(true));
+//				System.out.printf("  * assn.score: %s\n", assn.getScore());
 				////
 			}
 			

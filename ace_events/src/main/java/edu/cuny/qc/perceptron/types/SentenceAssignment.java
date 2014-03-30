@@ -616,36 +616,45 @@ public class SentenceAssignment
 			if (genericLabel == Generic_Existing_Trigger_Label) {
 				Map<String, MeasureInstance> measuresOfLabel = token.get(label);
 				for (MeasureInstance measure : measuresOfLabel.values()) {
-					if (measure.positive) {
+					//if (measure.positive) {
 
 						// unigram features, for history reason, we still call them BigramFeature
 						// create a bigram feature
 						String featureStr = "BigramFeature:\t" + measure.name + "\t" + "\tcurrentLabel:" + genericLabel;
 						makeFeature(featureStr, this.getFV(i), measure.score, addIfNotPresent, useIfNotPresent);
 
-					}
+					//}
 				}
 			}
 			else { //genericLabel == Default_Trigger_Label
 				for (Object measureNameObj : perceptron.triggerMeasureNames) {
 					String measureName = (String) measureNameObj;
-					double numFalse = 0.0;
+					//double numFalse = 0.0;
+					
+					/**
+					 * If at least one spec has a positive measure - then the value is -1.0,
+					 * meaning that the token doesn't for Default_Trigger_Label ("O").
+					 * 
+					 * Otherwise (no spec fits), the value is 1.0 - the token fits "O". 
+					 */
+					double featureValue = 1.0;
 					for (Map<String, MeasureInstance> measuresOfLabel : token.values()) {
 						MeasureInstance measure = measuresOfLabel.get(measureName);
 						if (measure == null) {
 							throw new IllegalArgumentException(String.format("Cannot find feature '%s' for non-label token %d", measureName, i));
 						}
-						if (!measure.positive) {
-							numFalse += 1.0;
+						if (measure.positive) {
+							featureValue = -1.0;
+							break;
 						}
 					}
 					
-					double falseRatio = numFalse / token.size(); // divide by number of specs
-					
+					//double falseRatio = numFalse / token.size(); // divide by number of specs
+										
 					// unigram features, for history reason, we still call them BigramFeature
 					// create a bigram feature
 					String featureStr = "BigramFeature:\t" + measureName + "\t" + "\tcurrentLabel:" + genericLabel;
-					makeFeature(featureStr, this.getFV(i), falseRatio, addIfNotPresent, useIfNotPresent);
+					makeFeature(featureStr, this.getFV(i), featureValue, addIfNotPresent, useIfNotPresent);
 
 				}
 			}

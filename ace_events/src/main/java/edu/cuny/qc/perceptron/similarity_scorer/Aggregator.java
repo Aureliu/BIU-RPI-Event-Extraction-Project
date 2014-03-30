@@ -4,11 +4,11 @@ import java.util.Iterator;
 
 import com.google.common.collect.Iterators;
 
-import edu.cuny.qc.perceptron.types.MeasureInstance;
+import edu.cuny.qc.perceptron.types.SignalInstance;
 
 public class Aggregator {
 
 	public static Double any(Iterator<Double> scoreIterator) {
-		return MeasureInstance.toDouble(Iterators.any(scoreIterator, MeasureInstance.isPositive));
+		return SignalInstance.toDouble(Iterators.any(scoreIterator, SignalInstance.isPositive));
 	}
 }

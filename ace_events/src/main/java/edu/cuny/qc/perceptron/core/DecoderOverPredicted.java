@@ -17,7 +17,7 @@ import org.xml.sax.SAXException;
 import ac.biu.nlp.nlp.ie.onthefly.input.AeException;
 
 import edu.cuny.qc.ace.acetypes.Scorer;
-import edu.cuny.qc.perceptron.similarity_scorer.MeasureMechanismException;
+import edu.cuny.qc.perceptron.similarity_scorer.SignalMechanismException;
 import edu.cuny.qc.util.RecursiveFileListIterator;
 import eu.excitementproject.eop.common.utilities.uima.UimaUtilsException;
 
@@ -37,7 +37,7 @@ public class DecoderOverPredicted {
 	public static String EXTENSION_ORIG = ".sgm.xml";
 	public static String EXTENSION_NEW =  ".apf.xml";
 
-	public static void main(String[] args) throws IOException, DocumentException, InstantiationException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException, MeasureMechanismException {
+	public static void main(String[] args) throws IOException, DocumentException, InstantiationException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException, SignalMechanismException {
 		System.out.printf("Args:\n%s\n\n", new ArrayList<String>(Arrays.asList(args)));
 		if(args.length < 5)	{
 			System.out.println("Usage:");

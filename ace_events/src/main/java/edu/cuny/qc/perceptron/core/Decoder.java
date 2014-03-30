@@ -31,7 +31,7 @@ import edu.cuny.qc.ace.acetypes.AceValue;
 import edu.cuny.qc.ace.acetypes.Scorer;
 import edu.cuny.qc.ace.acetypes.Scorer.Stats;
 import edu.cuny.qc.perceptron.featureGenerator.TextFeatureGenerator;
-import edu.cuny.qc.perceptron.similarity_scorer.MeasureMechanismException;
+import edu.cuny.qc.perceptron.similarity_scorer.SignalMechanismException;
 import edu.cuny.qc.perceptron.types.Alphabet;
 import edu.cuny.qc.perceptron.types.Document;
 import edu.cuny.qc.perceptron.types.SentenceAssignment;
@@ -77,13 +77,13 @@ public class Decoder
 	}
 
 
-	public static List<JCas> decode(String[] args, String filenameSuffix, String folderNamePrefix, File specListFile) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException, MeasureMechanismException
+	public static List<JCas> decode(String[] args, String filenameSuffix, String folderNamePrefix, File specListFile) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException, SignalMechanismException
 	{
 		List<String> specXmlPaths = SpecHandler.readSpecListFile(specListFile);
 		return decode(args, filenameSuffix, folderNamePrefix, specXmlPaths);
 	}
 	
-	public static List<JCas> decode(String[] args, String filenameSuffix, String folderNamePrefix, List<String> specXmlPaths) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException, MeasureMechanismException
+	public static List<JCas> decode(String[] args, String filenameSuffix, String folderNamePrefix, List<String> specXmlPaths) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException, SignalMechanismException
 	{		
 		System.err.println("(Decoding err stream)");
 		
@@ -101,7 +101,7 @@ public class Decoder
 		Alphabet nodeTargetAlphabet = perceptron.nodeTargetAlphabet;
 		Alphabet edgeTargetAlphabet = perceptron.edgeTargetAlphabet;
 		Alphabet featureAlphabet = perceptron.featureAlphabet;
-		perceptron.buildMeasureMechanisms();
+		perceptron.buildSignalMechanisms();
 		
 		//Intermediate output - all features+weights to text files
 		String s;
@@ -189,7 +189,7 @@ public class Decoder
 		return specs;
 	}
 	
-	public static Stats decodeAndScore(String[] args, String filenameSuffix, String folderNamePrefix, File specListFile) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException, MeasureMechanismException {
+	public static Stats decodeAndScore(String[] args, String filenameSuffix, String folderNamePrefix, File specListFile) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException, SignalMechanismException {
 		List<JCas> specs = decode(args, filenameSuffix, folderNamePrefix, specListFile);
 		
 		File outputFile = new File(outDir + File.separator + "Score" + filenameSuffix);
@@ -198,7 +198,7 @@ public class Decoder
 		return stats;
 	}
 
-	public static void main(String[] args) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException, MeasureMechanismException {
+	public static void main(String[] args) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException, SignalMechanismException {
 		//TODO the organization here is bad, should be improved:
 		// 1. there's no way to specify both a filenameSufix and NO_SCORING
 

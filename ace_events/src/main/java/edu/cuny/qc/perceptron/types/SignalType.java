@@ -1,6 +1,6 @@
 package edu.cuny.qc.perceptron.types;
 
-public enum MeasaureType {
+public enum SignalType {
 	TRIGGER,
 	ARGUMENT,
 }

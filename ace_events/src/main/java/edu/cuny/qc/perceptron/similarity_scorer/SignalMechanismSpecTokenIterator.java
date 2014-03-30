@@ -6,19 +6,19 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.tcas.Annotation;
 
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
-import edu.cuny.qc.perceptron.types.MeasureInstance;
+import edu.cuny.qc.perceptron.types.SignalInstance;
 import eu.excitementproject.eop.common.utilities.uima.UimaUtils;
 
-public abstract class MeasureMechanismSpecTokenIterator extends MeasureMechanismSpecIterator {
+public abstract class SignalMechanismSpecTokenIterator extends SignalMechanismSpecIterator {
 
-	static {System.err.println("Consider using Guava caches to cache measure values for specific textToken-specToken pairs (maybe also with their lemmas and/or POSes). Maybe also/instead, cache some intermediate values, like a lemma's WordNet sysnet.");}
+	static {System.err.println("Consider using Guava caches to cache signal values for specific textToken-specToken pairs (maybe also with their lemmas and/or POSes). Maybe also/instead, cache some intermediate values, like a lemma's WordNet sysnet.");}
 
-	public MeasureMechanismSpecIterator init(JCas spec, String viewName, AnnotationFS covering, Class<? extends Annotation> type, Token textAnno) throws MeasureMechanismException {
+	public SignalMechanismSpecIterator init(JCas spec, String viewName, AnnotationFS covering, Class<? extends Annotation> type, Token textAnno) throws SignalMechanismException {
 		return super.init(spec, viewName, covering, type, textAnno);
 	}
 	
 	@Override
-	public Double calcScore(Annotation text, Annotation spec) throws MeasureMechanismException {
+	public Double calcScore(Annotation text, Annotation spec) throws SignalMechanismException {
 		try {
 			Token textToken = null;
 			Token specToken = null;
@@ -39,16 +39,16 @@ public abstract class MeasureMechanismSpecTokenIterator extends MeasureMechanism
 			
 			return calcTokenScore(textToken, specToken);
 		} catch (CASException e) {
-			throw new MeasureMechanismException(e);
+			throw new SignalMechanismException(e);
 		}
 	}
 
-	public Double calcTokenScore(Token text, Token spec) throws MeasureMechanismException {
+	public Double calcTokenScore(Token text, Token spec) throws SignalMechanismException {
 		Boolean boolResult = calcTokenBooleanScore(text, spec);
-		return MeasureInstance.toDouble(boolResult);
+		return SignalInstance.toDouble(boolResult);
 	}
 	
-	public Boolean calcTokenBooleanScore(Token text, Token spec) throws MeasureMechanismException {
+	public Boolean calcTokenBooleanScore(Token text, Token spec) throws SignalMechanismException {
 		throw new UnsupportedOperationException("calcTokenBooleanScore must be implemented in subclass");
 	}
 }

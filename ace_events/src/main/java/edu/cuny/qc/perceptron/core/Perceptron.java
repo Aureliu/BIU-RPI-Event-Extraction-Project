@@ -21,9 +21,9 @@ import java.util.Set;
 import org.apache.commons.lang3.SerializationUtils;
 import org.apache.uima.jcas.JCas;
 
-import edu.cuny.qc.perceptron.similarity_scorer.MeasureMechanism;
-import edu.cuny.qc.perceptron.similarity_scorer.MeasureMechanismException;
-import edu.cuny.qc.perceptron.similarity_scorer.WordNetMeasureMechanism;
+import edu.cuny.qc.perceptron.similarity_scorer.SignalMechanism;
+import edu.cuny.qc.perceptron.similarity_scorer.SignalMechanismException;
+import edu.cuny.qc.perceptron.similarity_scorer.WordNetSignalMechanism;
 import edu.cuny.qc.perceptron.types.Alphabet;
 import edu.cuny.qc.perceptron.types.FeatureVector;
 import edu.cuny.qc.perceptron.types.SentenceAssignment;
@@ -65,16 +65,16 @@ public class Perceptron implements java.io.Serializable
 	protected FeatureVector avg_weights;
 	protected FeatureVector avg_weights_base; // for average weights update
 	
-	public transient List<MeasureMechanism> measureMechanisms = new ArrayList<MeasureMechanism>();
+	public transient List<SignalMechanism> signalMechanisms = new ArrayList<SignalMechanism>();
 	
 	public transient List<JCas> specs;
 	
-	public Set<String> triggerMeasureNames = new LinkedHashSet<String>();
-	public Set<String> argumentMeasureNames = new LinkedHashSet<String>();
+	public Set<String> triggerSignalNames = new LinkedHashSet<String>();
+	public Set<String> argumentSignalNames = new LinkedHashSet<String>();
 	
 	
 	// default constructor 
-	public Perceptron(Alphabet nodeTargetAlphabet, Alphabet edgeTargetAlphabet, Alphabet featureAlphabet) throws MeasureMechanismException
+	public Perceptron(Alphabet nodeTargetAlphabet, Alphabet edgeTargetAlphabet, Alphabet featureAlphabet) throws SignalMechanismException
 	{
 		this.nodeTargetAlphabet = nodeTargetAlphabet;
 		this.edgeTargetAlphabet = edgeTargetAlphabet;
@@ -86,26 +86,26 @@ public class Perceptron implements java.io.Serializable
 		
 		labelBigram = new HashMap<String, List<String>>();
 		
-		buildMeasureMechanisms();
+		buildSignalMechanisms();
 	}
 	
 	public void close() {
-		for (MeasureMechanism measureMechanism : measureMechanisms) {
-			measureMechanism.close();
+		for (SignalMechanism signalMechanism : signalMechanisms) {
+			signalMechanism.close();
 		}
 	}
 	
-	public void buildMeasureMechanisms() throws MeasureMechanismException {
-			measureMechanisms = new ArrayList<MeasureMechanism>();
+	public void buildSignalMechanisms() throws SignalMechanismException {
+			signalMechanisms = new ArrayList<SignalMechanism>();
 		
 		try {
 			
-			measureMechanisms.add(new WordNetMeasureMechanism());
+			signalMechanisms.add(new WordNetSignalMechanism());
 			
 		} catch (WordNetInitializationException e) {
-			throw new MeasureMechanismException(e);
+			throw new SignalMechanismException(e);
 		} catch (LexicalResourceException e) {
-			throw new MeasureMechanismException(e);
+			throw new SignalMechanismException(e);
 		}
 	}
 		

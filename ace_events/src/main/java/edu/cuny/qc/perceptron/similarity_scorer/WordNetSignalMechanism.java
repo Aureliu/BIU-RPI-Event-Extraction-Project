@@ -37,15 +37,15 @@ import eu.excitementproject.eop.core.utilities.dictionary.wordnet.WordNetInitial
 import eu.excitementproject.eop.core.utilities.dictionary.wordnet.WordNetPartOfSpeech;
 import eu.excitementproject.eop.core.utilities.dictionary.wordnet.WordNetRelation;
 
-public class WordNetMeasureMechanism extends MeasureMechanism {
+public class WordNetSignalMechanism extends SignalMechanism {
 
 	static {
-		System.err.println("??? WordNetMeasureMechanism: ignoring spec's POS, using only text's");
-		System.err.println("??? WordNetMeasureMechanism: if a word has a non-wordnet POS (anything but noun/verb/adj/adv) we return FALSE, but we should return IRRELEVANT (when I figure out what it means... :( )");
-		System.err.println("??? WordNetMeasureMechanism: if a text or spec doesn't exist in wordnet, we return FALSE, although we should return IRRELEVANT");
+		System.err.println("??? WordNetSignalMechanism: ignoring spec's POS, using only text's");
+		System.err.println("??? WordNetSignalMechanism: if a word has a non-wordnet POS (anything but noun/verb/adj/adv) we return FALSE, but we should return IRRELEVANT (when I figure out what it means... :( )");
+		System.err.println("??? WordNetSignalMechanism: if a text or spec doesn't exist in wordnet, we return FALSE, although we should return IRRELEVANT");
 	}
 
-	public WordNetMeasureMechanism() throws LexicalResourceException, WordNetInitializationException {
+	public WordNetSignalMechanism() throws LexicalResourceException, WordNetInitializationException {
 		super();
 		
 		File wordnetDir = new File(WORDNET_DIR);
@@ -72,17 +72,17 @@ public class WordNetMeasureMechanism extends MeasureMechanism {
 	}
 	
 //	@Override
-//	public void preprocessSpec(JCas spec) throws MeasureMechanismException {
-//		System.err.println("Currently no CAS-processing by WordNetMeasureMechanism - TBD");
+//	public void preprocessSpec(JCas spec) throws SignalMechanismException {
+//		System.err.println("Currently no CAS-processing by WordNetSignalMechanism - TBD");
 //	}
 //
 //	@Override
-//	public void preprocessTextSentence(SentenceInstance textSentence) throws MeasureMechanismException {
+//	public void preprocessTextSentence(SentenceInstance textSentence) throws SignalMechanismException {
 //		throw new NotImplementedException();
 //	}
 
 	@Override
-	public LinkedHashMap<String, Double> scoreTriggerToken(JCas spec, SentenceInstance textSentence, Token textTriggerToken) throws MeasureMechanismException {
+	public LinkedHashMap<String, Double> scoreTriggerToken(JCas spec, SentenceInstance textSentence, Token textTriggerToken) throws SignalMechanismException {
 		LinkedHashMap<String, Double> ret = new LinkedHashMap<String, Double>();
 		
 		//ret.put("WORDNET_SAME_SYNSET",   Aggregator.any(new SameSynset()    .init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
@@ -93,7 +93,7 @@ public class WordNetMeasureMechanism extends MeasureMechanism {
 	}
 
 	@Override
-	public LinkedHashMap<String, Double> scoreArgumentFirstHeadToken(JCas spec, Argument argument, SentenceInstance textSentence, Token textTriggerToken, Token textArgToken) throws MeasureMechanismException {
+	public LinkedHashMap<String, Double> scoreArgumentFirstHeadToken(JCas spec, Argument argument, SentenceInstance textSentence, Token textTriggerToken, Token textArgToken) throws SignalMechanismException {
 		LinkedHashMap<String, Double> ret = new LinkedHashMap<String, Double>();
 		
 		//ret.put("WORDNET_SAME_SYNSET",   Aggregator.any(new SameSynset()    .init(spec, null, argument, ArgumentExample.class, textArgToken)));
@@ -103,9 +103,9 @@ public class WordNetMeasureMechanism extends MeasureMechanism {
 		return ret;
 	}
 
-	private class SameSynset extends MeasureMechanismSpecTokenIterator {
+	private class SameSynset extends SignalMechanismSpecTokenIterator {
 		@Override
-		public Boolean calcTokenBooleanScore(Token text, Token spec) throws MeasureMechanismException
+		public Boolean calcTokenBooleanScore(Token text, Token spec) throws SignalMechanismException
 		{
 			try {
 				PartOfSpeech textPos = AnnotationUtils.tokenToPOS(text);
@@ -123,10 +123,10 @@ public class WordNetMeasureMechanism extends MeasureMechanism {
 				
 				if (textSynsets.isEmpty() || specSynsets.isEmpty()) {
 					if (textSynsets.isEmpty()) {
-						System.err.printf("WordNetMeasureMechanism: Empty Synset for text: '%s' (pos=%s)\n", textLemma, textWnPos);
+						System.err.printf("WordNetSignalMechanism: Empty Synset for text: '%s' (pos=%s)\n", textLemma, textWnPos);
 					}
 					if (specSynsets.isEmpty()) {
-						//System.err.printf("WordNetMeasureMechanism: Empty Synset for spec: '%s' (pos=%s)\n", specLemma, textWnPos);
+						//System.err.printf("WordNetSignalMechanism: Empty Synset for spec: '%s' (pos=%s)\n", specLemma, textWnPos);
 					}
 					return false;
 				}
@@ -138,16 +138,16 @@ public class WordNetMeasureMechanism extends MeasureMechanism {
 				}
 				return !differentSynsets;
 			} catch (WordNetException e) {
-				throw new MeasureMechanismException(e);
+				throw new SignalMechanismException(e);
 			} catch (UnsupportedPosTagStringException e) {
-				throw new MeasureMechanismException(e);
+				throw new SignalMechanismException(e);
 			}
 		}
 	}
 	
-	private class IsSpecHypernym extends MeasureMechanismSpecTokenIterator {
+	private class IsSpecHypernym extends SignalMechanismSpecTokenIterator {
 		@Override
-		public Boolean calcTokenBooleanScore(Token text, Token spec) throws MeasureMechanismException
+		public Boolean calcTokenBooleanScore(Token text, Token spec) throws SignalMechanismException
 		{
 			try {
 				PartOfSpeech textPos = AnnotationUtils.tokenToPOS(text);
@@ -167,16 +167,16 @@ public class WordNetMeasureMechanism extends MeasureMechanism {
 				}
 				return !rules.isEmpty();
 			} catch (LexicalResourceException e) {
-				throw new MeasureMechanismException(e);
+				throw new SignalMechanismException(e);
 			} catch (UnsupportedPosTagStringException e) {
-				throw new MeasureMechanismException(e);
+				throw new SignalMechanismException(e);
 			}
 		}
 	}
 	
-	private class IsSpecEntailed extends MeasureMechanismSpecTokenIterator {
+	private class IsSpecEntailed extends SignalMechanismSpecTokenIterator {
 		@Override
-		public Boolean calcTokenBooleanScore(Token text, Token spec) throws MeasureMechanismException
+		public Boolean calcTokenBooleanScore(Token text, Token spec) throws SignalMechanismException
 		{
 			try {
 				PartOfSpeech textPos = AnnotationUtils.tokenToPOS(text);
@@ -197,9 +197,9 @@ public class WordNetMeasureMechanism extends MeasureMechanism {
 				}
 				return !rules.isEmpty();
 			} catch (LexicalResourceException e) {
-				throw new MeasureMechanismException(e);
+				throw new SignalMechanismException(e);
 			} catch (UnsupportedPosTagStringException e) {
-				throw new MeasureMechanismException(e);
+				throw new SignalMechanismException(e);
 			}
 		}
 	}

@@ -15,24 +15,24 @@ import edu.cuny.qc.ace.acetypes.AceMention;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
 import edu.cuny.qc.perceptron.types.SentenceInstance.InstanceAnnotations;
 
-public abstract class MeasureMechanism {
+public abstract class SignalMechanism {
 	
 	static {
-		System.err.println("??? MeasureMechanism: for argument, now considering only HEAD (not extent), and only FIRST WORD of head (could be more than one word). Need to think of handling MWEs.");
+		System.err.println("??? SignalMechanism: for argument, now considering only HEAD (not extent), and only FIRST WORD of head (could be more than one word). Need to think of handling MWEs.");
 	}
 	
-	public MeasureMechanism() { }
+	public SignalMechanism() { }
 
-//	public abstract void preprocessSpec(JCas spec) throws MeasureMechanismException;
-//	public abstract void preprocessTextSentence(SentenceInstance textSentence) throws MeasureMechanismException;
-	public LinkedHashMap<String, Double> scoreTrigger(JCas spec, SentenceInstance textSentence, int i) throws MeasureMechanismException {
+//	public abstract void preprocessSpec(JCas spec) throws SignalMechanismException;
+//	public abstract void preprocessTextSentence(SentenceInstance textSentence) throws SignalMechanismException;
+	public LinkedHashMap<String, Double> scoreTrigger(JCas spec, SentenceInstance textSentence, int i) throws SignalMechanismException {
 		List<Token> textAnnos = (List<Token>) textSentence.get(InstanceAnnotations.TokenAnnotations);
 		Token textTriggerToken = textAnnos.get(i);
 
 		return scoreTriggerToken(spec, textSentence, textTriggerToken);
 	}
 
-	public LinkedHashMap<String, Double> scoreArgument(JCas spec, Argument argument, SentenceInstance textSentence, int i, AceMention mention) throws MeasureMechanismException {
+	public LinkedHashMap<String, Double> scoreArgument(JCas spec, Argument argument, SentenceInstance textSentence, int i, AceMention mention) throws SignalMechanismException {
 		int argHeadFirstTokenIndex = mention.getHeadIndices().get(0);
 		
 		List<Token> textAnnos = (List<Token>) textSentence.get(InstanceAnnotations.TokenAnnotations);
@@ -42,8 +42,8 @@ public abstract class MeasureMechanism {
 		return scoreArgumentFirstHeadToken(spec, argument, textSentence, textTriggerToken, textArgToken);
 	}
 
-	public abstract LinkedHashMap<String, Double> scoreTriggerToken(JCas spec, SentenceInstance textSentence, Token textTriggerToken) throws MeasureMechanismException;
-	public abstract LinkedHashMap<String, Double> scoreArgumentFirstHeadToken(JCas spec, Argument argument, SentenceInstance textSentence, Token textTriggerToken, Token textArgToken) throws MeasureMechanismException;
+	public abstract LinkedHashMap<String, Double> scoreTriggerToken(JCas spec, SentenceInstance textSentence, Token textTriggerToken) throws SignalMechanismException;
+	public abstract LinkedHashMap<String, Double> scoreArgumentFirstHeadToken(JCas spec, Argument argument, SentenceInstance textSentence, Token textTriggerToken, Token textArgToken) throws SignalMechanismException;
 	
 	/**
 	 * Optional operation

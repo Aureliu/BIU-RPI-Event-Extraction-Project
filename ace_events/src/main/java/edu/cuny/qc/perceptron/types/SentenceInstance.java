@@ -10,7 +10,7 @@ import java.util.Map;
 import edu.cuny.qc.ace.acetypes.*;
 import edu.cuny.qc.perceptron.core.Controller;
 import edu.cuny.qc.perceptron.core.Perceptron;
-import edu.cuny.qc.perceptron.featureGenerator.NodeMeasureGenerator;
+import edu.cuny.qc.perceptron.featureGenerator.NodeSignalGenerator;
 import edu.cuny.qc.perceptron.graph.DependencyGraph;
 import edu.cuny.qc.perceptron.types.Sentence.Sent_Attribute;
 import edu.cuny.qc.util.Span;
@@ -85,8 +85,8 @@ public class SentenceInstance
 		DepGraph,	  				// dependency: Collection<TypedDependency> or other kind of data structure
 		TOKEN_SPANS,				// List<Span>: the spans of each token in this sent
 		POSTAGS,					// POS tags
-		NodeTextMeasuresBySpec,		// node feature Vectors
-		EdgeTextMeasures,		// node feature Vectors
+		NodeTextSignalsBySpec,		// node feature Vectors
+		EdgeTextSignals,		// node feature Vectors
 		ParseTree,					// parse tree
 		SentenceAnnotation,         // UIMA Sentence Annotation
 		TokenAnnotations,           // UIMA Token Annotations
@@ -192,21 +192,21 @@ public class SentenceInstance
 		this.textFeaturesMap.put(InstanceAnnotations.TokenAnnotations, sent.get(Sent_Attribute.TokenAnnotations));
 
 		// get node text feature vectors
-		List<Map<String, Map<String, MeasureInstance>>> tokenMeasureBySpec = NodeMeasureGenerator.get_node_text_measures(this, perceptron);
-		this.textFeaturesMap.put(InstanceAnnotations.NodeTextMeasuresBySpec, tokenMeasureBySpec);
+		List<Map<String, Map<String, SignalInstance>>> tokenSignalBySpec = NodeSignalGenerator.get_node_text_signals(this, perceptron);
+		this.textFeaturesMap.put(InstanceAnnotations.NodeTextSignalsBySpec, tokenSignalBySpec);
 		
 		// get edge text feature vectors, this vectors is built up in the lasy fashion, when it's needed, it's filled
-		List<List<List<String>>> edgeMeasures = new ArrayList<List<List<String>>>();
+		List<List<List<String>>> edgeSignals = new ArrayList<List<List<String>>>();
 		for(int i=0; i<size(); i++)
 		{
-			List<List<String>> measuresForNode = new ArrayList<List<String>>();
-			edgeMeasures.add(measuresForNode);
+			List<List<String>> signalsForNode = new ArrayList<List<String>>();
+			edgeSignals.add(signalsForNode);
 			for(int j=0; j<eventArgCandidates.size(); j++)
 			{
-				measuresForNode.add(null);
+				signalsForNode.add(null);
 			}
 		}
-		this.textFeaturesMap.put(InstanceAnnotations.EdgeTextMeasures, edgeMeasures);
+		this.textFeaturesMap.put(InstanceAnnotations.EdgeTextSignals, edgeSignals);
 		
 		// add event ground-truth
 		eventMentions = new ArrayList<AceEventMention>();

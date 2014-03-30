@@ -21,7 +21,7 @@ import ac.biu.nlp.nlp.ie.onthefly.input.AeException;
 import ac.biu.nlp.nlp.ie.onthefly.input.SpecHandler;
 
 import edu.cuny.qc.perceptron.featureGenerator.TextFeatureGenerator;
-import edu.cuny.qc.perceptron.similarity_scorer.MeasureMechanismException;
+import edu.cuny.qc.perceptron.similarity_scorer.SignalMechanismException;
 import edu.cuny.qc.perceptron.types.Alphabet;
 import edu.cuny.qc.perceptron.types.Document;
 import edu.cuny.qc.perceptron.types.Sentence;
@@ -98,7 +98,7 @@ public class Pipeline
 		catch (DocumentException e)
 		{
 			e.printStackTrace();
-		} catch (MeasureMechanismException e) {
+		} catch (SignalMechanismException e) {
 			e.printStackTrace();
 		} catch (CASRuntimeException e) {
 			e.printStackTrace();

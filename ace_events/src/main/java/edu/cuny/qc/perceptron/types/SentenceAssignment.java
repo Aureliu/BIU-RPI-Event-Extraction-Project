@@ -11,7 +11,7 @@ import edu.cuny.qc.ace.acetypes.AceEventMentionArgument;
 import edu.cuny.qc.ace.acetypes.AceMention;
 import edu.cuny.qc.perceptron.core.Controller;
 import edu.cuny.qc.perceptron.core.Perceptron;
-import edu.cuny.qc.perceptron.featureGenerator.EdgeMeasureGenerator;
+import edu.cuny.qc.perceptron.featureGenerator.EdgeSignalGenerator;
 import edu.cuny.qc.perceptron.featureGenerator.GlobalFeatureGenerator;
 import edu.cuny.qc.perceptron.types.SentenceInstance.InstanceAnnotations;
 import edu.cuny.qc.util.TypeConstraints;
@@ -472,43 +472,43 @@ public class SentenceAssignment
 			return; 
 		}
 		
-		List<List<Map<String, Map<String, Map<String, MeasureInstance>>>>> edgeMeasures = (List<List<Map<String, Map<String, Map<String, MeasureInstance>>>>>) problem.get(InstanceAnnotations.EdgeTextMeasures);
-		Map<String, Map<String, Map<String, MeasureInstance>>> allEntityMeasures = edgeMeasures.get(index).get(entityIndex);
+		List<List<Map<String, Map<String, Map<String, SignalInstance>>>>> edgeSignals = (List<List<Map<String, Map<String, Map<String, SignalInstance>>>>>) problem.get(InstanceAnnotations.EdgeTextSignals);
+		Map<String, Map<String, Map<String, SignalInstance>>> allEntitySignals = edgeSignals.get(index).get(entityIndex);
 		AceMention mention = problem.eventArgCandidates.get(entityIndex);
 		
 		int nodeLabelIndex = this.nodeAssignment.get(index);
 		String nodeLabel = (String) this.nodeTargetAlphabet.lookupObject(nodeLabelIndex);
 		FeatureVector fv = this.getFeatureVectorSequence().get(index);
-		if(allEntityMeasures == null)
+		if(allEntitySignals == null)
 		{
-			allEntityMeasures = EdgeMeasureGenerator.get_edge_text_measures(problem, index, mention, perceptron);
-			edgeMeasures.get(index).set(entityIndex, allEntityMeasures);
+			allEntitySignals = EdgeSignalGenerator.get_edge_text_signals(problem, index, mention, perceptron);
+			edgeSignals.get(index).set(entityIndex, allEntitySignals);
 		}
 		
 		if (genericEdgeLabel == Generic_Existing_Argument_Label) {
-			Map<String, MeasureInstance> measuresOfEntity = allEntityMeasures.get(nodeLabel).get(edgeLabel);
-			for (MeasureInstance measure : measuresOfEntity.values()) {
-				if (measure.positive) {
-					String featureStr = "EdgeLocalFeature:\t" + measure.name + "\t" + genericEdgeLabel;
+			Map<String, SignalInstance> signalsOfEntity = allEntitySignals.get(nodeLabel).get(edgeLabel);
+			for (SignalInstance signal : signalsOfEntity.values()) {
+				if (signal.positive) {
+					String featureStr = "EdgeLocalFeature:\t" + signal.name + "\t" + genericEdgeLabel;
 					makeFeature(featureStr, fv, addIfNotPresent, useIfNotPresent);
 				}
 			}
 		}
 		else {
-			Map<String, Map<String, MeasureInstance>> measuresOfNodeLabel = allEntityMeasures.get(nodeLabel);
-			for (Object measureNameObj : perceptron.argumentMeasureNames) {
-				String measureName = (String) measureNameObj;
+			Map<String, Map<String, SignalInstance>> signalsOfNodeLabel = allEntitySignals.get(nodeLabel);
+			for (Object signalNameObj : perceptron.argumentSignalNames) {
+				String signalName = (String) signalNameObj;
 				double numFalse = 0.0;
-				for (Map<String, MeasureInstance> measuresOfLabel : measuresOfNodeLabel.values()) {
-					MeasureInstance measure = measuresOfLabel.get(measureName);
-					if (!measure.positive) {
+				for (Map<String, SignalInstance> signalsOfLabel : signalsOfNodeLabel.values()) {
+					SignalInstance signal = signalsOfLabel.get(signalName);
+					if (!signal.positive) {
 						numFalse += 1.0;
 					}
 				}
 				
-				double falseRatio = numFalse / measuresOfNodeLabel.size(); // divide by number of roles in current spec
+				double falseRatio = numFalse / signalsOfNodeLabel.size(); // divide by number of roles in current spec
 				
-				String featureStr = "EdgeLocalFeature:\t" + measureName + "\t" + genericEdgeLabel;
+				String featureStr = "EdgeLocalFeature:\t" + signalName + "\t" + genericEdgeLabel;
 				makeFeature(featureStr, fv, falseRatio, addIfNotPresent, useIfNotPresent);
 
 			}
@@ -602,7 +602,7 @@ public class SentenceAssignment
 	public void makeNodeFeatures(SentenceInstance problem, int i, boolean addIfNotPresent, boolean useIfNotPresent, Perceptron perceptron)
 	{
 		// make node feature (bigram feature)
-		Map<String, Map<String, MeasureInstance>> token = ((List<Map<String, Map<String, MeasureInstance>>>) problem.get(InstanceAnnotations.NodeTextMeasuresBySpec)).get(i);
+		Map<String, Map<String, SignalInstance>> token = ((List<Map<String, Map<String, SignalInstance>>>) problem.get(InstanceAnnotations.NodeTextSignalsBySpec)).get(i);
 		//String previousLabel = this.getLabelAtToken(i-1);
 		String label = this.getLabelAtToken(i);
 		String genericLabel = getGenericTriggerLabel(label);
@@ -614,36 +614,36 @@ public class SentenceAssignment
 		else // order = 0
 		{
 			if (genericLabel == Generic_Existing_Trigger_Label) {
-				Map<String, MeasureInstance> measuresOfLabel = token.get(label);
-				for (MeasureInstance measure : measuresOfLabel.values()) {
-					//if (measure.positive) {
+				Map<String, SignalInstance> signalsOfLabel = token.get(label);
+				for (SignalInstance signal : signalsOfLabel.values()) {
+					//if (signal.positive) {
 
 						// unigram features, for history reason, we still call them BigramFeature
 						// create a bigram feature
-						String featureStr = "BigramFeature:\t" + measure.name + "\t" + "\tcurrentLabel:" + genericLabel;
-						makeFeature(featureStr, this.getFV(i), measure.score, addIfNotPresent, useIfNotPresent);
+						String featureStr = "BigramFeature:\t" + signal.name + "\t" + "\tcurrentLabel:" + genericLabel;
+						makeFeature(featureStr, this.getFV(i), signal.score, addIfNotPresent, useIfNotPresent);
 
 					//}
 				}
 			}
 			else { //genericLabel == Default_Trigger_Label
-				for (Object measureNameObj : perceptron.triggerMeasureNames) {
-					String measureName = (String) measureNameObj;
+				for (Object signalNameObj : perceptron.triggerSignalNames) {
+					String signalName = (String) signalNameObj;
 					//double numFalse = 0.0;
 					
 					/**
-					 * If at least one spec has a positive measure - then the value is -1.0,
+					 * If at least one spec has a positive signal - then the value is -1.0,
 					 * meaning that the token doesn't for Default_Trigger_Label ("O").
 					 * 
 					 * Otherwise (no spec fits), the value is 1.0 - the token fits "O". 
 					 */
 					double featureValue = 1.0;
-					for (Map<String, MeasureInstance> measuresOfLabel : token.values()) {
-						MeasureInstance measure = measuresOfLabel.get(measureName);
-						if (measure == null) {
-							throw new IllegalArgumentException(String.format("Cannot find feature '%s' for non-label token %d", measureName, i));
+					for (Map<String, SignalInstance> signalsOfLabel : token.values()) {
+						SignalInstance signal = signalsOfLabel.get(signalName);
+						if (signal == null) {
+							throw new IllegalArgumentException(String.format("Cannot find feature '%s' for non-label token %d", signalName, i));
 						}
-						if (measure.positive) {
+						if (signal.positive) {
 							featureValue = -1.0;
 							break;
 						}
@@ -653,7 +653,7 @@ public class SentenceAssignment
 										
 					// unigram features, for history reason, we still call them BigramFeature
 					// create a bigram feature
-					String featureStr = "BigramFeature:\t" + measureName + "\t" + "\tcurrentLabel:" + genericLabel;
+					String featureStr = "BigramFeature:\t" + signalName + "\t" + "\tcurrentLabel:" + genericLabel;
 					makeFeature(featureStr, this.getFV(i), featureValue, addIfNotPresent, useIfNotPresent);
 
 				}

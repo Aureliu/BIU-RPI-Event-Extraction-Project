@@ -21,10 +21,10 @@ import ac.biu.nlp.nlp.ie.onthefly.input.SpecAnnotator;
 import edu.cuny.qc.ace.acetypes.AceEntityMention;
 import edu.cuny.qc.ace.acetypes.AceMention;
 import edu.cuny.qc.perceptron.core.Perceptron;
-import edu.cuny.qc.perceptron.similarity_scorer.MeasureMechanism;
-import edu.cuny.qc.perceptron.similarity_scorer.MeasureMechanismException;
-import edu.cuny.qc.perceptron.types.MeasureInstance;
-import edu.cuny.qc.perceptron.types.MeasaureType;
+import edu.cuny.qc.perceptron.similarity_scorer.SignalMechanism;
+import edu.cuny.qc.perceptron.similarity_scorer.SignalMechanismException;
+import edu.cuny.qc.perceptron.types.SignalInstance;
+import edu.cuny.qc.perceptron.types.SignalType;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
 import edu.cuny.qc.perceptron.types.SentenceInstance.InstanceAnnotations;
 import edu.cuny.qc.util.TokenAnnotations;
@@ -38,7 +38,7 @@ import edu.stanford.nlp.trees.Tree;
  * 
  *
  */
-public class NodeMeasureGenerator 
+public class NodeSignalGenerator 
 {
 	// the delimiter of token features for feature table
 	//static public final String Feature_Delimiter = " ";
@@ -50,7 +50,7 @@ public class NodeMeasureGenerator
 		// initialize priorityQueueEntities
 		try
 		{
-			System.err.println("???NodeMeasureGenerator.get_node_text_measures should actually calc measures only for relevant POSes, and for the rest should manufacture, artificially, all the features with a 0.0/false. Would save precious time.");
+			System.err.println("???NodeSignalGenerator.get_node_text_signals should actually calc signals only for relevant POSes, and for the rest should manufacture, artificially, all the features with a 0.0/false. Would save precious time.");
 			
 			// initialize dict of triggerTokens
 			BufferedReader reader = new BufferedReader(new FileReader("src/main/resources/data/triggerTokens"));
@@ -103,7 +103,7 @@ public class NodeMeasureGenerator
 		return ret;
 	}
 	
-	public NodeMeasureGenerator() 
+	public NodeSignalGenerator() 
 	{
 		;
 	}
@@ -213,46 +213,46 @@ public class NodeMeasureGenerator
 	}
 	
 	/**
-	 * get text measurements for the whole sentence
+	 * get text signals for the whole sentence
 	 * @param sent
 	 * @return
-	 * @throws MeasureMechanismException 
+	 * @throws SignalMechanismException 
 	 * @throws CASException 
 	 */
-	public static List<Map<String, Map<String, MeasureInstance>>> get_node_text_measures(SentenceInstance sent, Perceptron perceptron)
+	public static List<Map<String, Map<String, SignalInstance>>> get_node_text_signals(SentenceInstance sent, Perceptron perceptron)
 	{
-		List<Map<String, Map<String, MeasureInstance>>> ret = new ArrayList<Map<String, Map<String, MeasureInstance>>>();
+		List<Map<String, Map<String, SignalInstance>>> ret = new ArrayList<Map<String, Map<String, SignalInstance>>>();
 		for(int i=0; i<sent.size(); i++)
 		{
 			
-			// Add here the check that this token can be valid as a trigger - to avoid building measures when it's not
+			// Add here the check that this token can be valid as a trigger - to avoid building signals when it's not
 			// if it's not - still add something (null) to the list as a placeholder, to keep positions in the list correct
-			Map<String, Map<String, MeasureInstance>> measures = null;
+			Map<String, Map<String, SignalInstance>> signals = null;
 			//if (TypeConstraints.isPossibleTriggerByPOS(sent, i) && TypeConstraints.isPossibleTriggerByEntityType(sent, i)) {
-				measures = get_node_text_measures(sent, i, perceptron);
+				signals = get_node_text_signals(sent, i, perceptron);
 			//}
-			ret.add(measures);
+			ret.add(signals);
 		}
 		return ret;
 	}
 	
-	public static Map<String, Map<String, MeasureInstance>> get_node_text_measures(SentenceInstance inst, int i, Perceptron perceptron)
+	public static Map<String, Map<String, SignalInstance>> get_node_text_signals(SentenceInstance inst, int i, Perceptron perceptron)
 	{
 		try {
-			Map<String, Map<String, MeasureInstance>> ret = new LinkedHashMap<String, Map<String, MeasureInstance>>();
+			Map<String, Map<String, SignalInstance>> ret = new LinkedHashMap<String, Map<String, SignalInstance>>();
 			
-			LinkedHashMap<String, Double> scoredMeasures;
+			LinkedHashMap<String, Double> scoredSignals;
 			for (JCas spec : perceptron.specs) {
-				Map<String, MeasureInstance> specMeasures = new LinkedHashMap<String, MeasureInstance>();
+				Map<String, SignalInstance> specSignals = new LinkedHashMap<String, SignalInstance>();
 				String label = SpecAnnotator.getSpecLabel(spec);
-				ret.put(label, specMeasures);
+				ret.put(label, specSignals);
 				
-				for (MeasureMechanism mechanism : perceptron.measureMechanisms) {
-					scoredMeasures = mechanism.scoreTrigger(spec, inst, i);
-					for (Entry<String, Double> scoredMeasure : scoredMeasures.entrySet()) {
-						MeasureInstance measure = new MeasureInstance(scoredMeasure.getKey(), MeasaureType.TRIGGER, scoredMeasure.getValue());
-						specMeasures.put(measure.name, measure);
-						perceptron.triggerMeasureNames.add(measure.name);
+				for (SignalMechanism mechanism : perceptron.signalMechanisms) {
+					scoredSignals = mechanism.scoreTrigger(spec, inst, i);
+					for (Entry<String, Double> scoredSignal : scoredSignals.entrySet()) {
+						SignalInstance signal = new SignalInstance(scoredSignal.getKey(), SignalType.TRIGGER, scoredSignal.getValue());
+						specSignals.put(signal.name, signal);
+						perceptron.triggerSignalNames.add(signal.name);
 					}
 				}
 			}
@@ -260,7 +260,7 @@ public class NodeMeasureGenerator
 			return ret;
 		} catch (CASException e) {
 			throw new RuntimeException(e);
-		} catch (MeasureMechanismException e) {
+		} catch (SignalMechanismException e) {
 			throw new RuntimeException(e);
 		}
 				

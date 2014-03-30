@@ -22,10 +22,10 @@ import edu.cuny.qc.perceptron.graph.DependencyGraph;
 import edu.cuny.qc.perceptron.graph.GraphEdge;
 import edu.cuny.qc.perceptron.graph.GraphNode;
 import edu.cuny.qc.perceptron.graph.DependencyGraph.PathTerm;
-import edu.cuny.qc.perceptron.similarity_scorer.MeasureMechanism;
-import edu.cuny.qc.perceptron.similarity_scorer.MeasureMechanismException;
-import edu.cuny.qc.perceptron.types.MeasureInstance;
-import edu.cuny.qc.perceptron.types.MeasaureType;
+import edu.cuny.qc.perceptron.similarity_scorer.SignalMechanism;
+import edu.cuny.qc.perceptron.similarity_scorer.SignalMechanismException;
+import edu.cuny.qc.perceptron.types.SignalInstance;
+import edu.cuny.qc.perceptron.types.SignalType;
 import edu.cuny.qc.perceptron.types.Sentence;
 import edu.cuny.qc.perceptron.types.Sentence.Sent_Attribute;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
@@ -39,30 +39,30 @@ import edu.stanford.nlp.trees.Tree;
  * @author che
  *
  */
-public class EdgeMeasureGenerator
+public class EdgeSignalGenerator
 {
-	public static Map<String, Map<String, Map<String, MeasureInstance>>> get_edge_text_measures(SentenceInstance sent, int i, AceMention mention, Perceptron perceptron)
+	public static Map<String, Map<String, Map<String, SignalInstance>>> get_edge_text_signals(SentenceInstance sent, int i, AceMention mention, Perceptron perceptron)
 	{
 		try {
-			Map<String, Map<String, Map<String, MeasureInstance>>> ret = new LinkedHashMap<String, Map<String, Map<String, MeasureInstance>>>();
+			Map<String, Map<String, Map<String, SignalInstance>>> ret = new LinkedHashMap<String, Map<String, Map<String, SignalInstance>>>();
 			
-			LinkedHashMap<String, Double> scoredMeasures;
+			LinkedHashMap<String, Double> scoredSignals;
 			for (JCas spec : perceptron.specs) {
-				Map<String, Map<String, MeasureInstance>> specMeasures = new LinkedHashMap<String, Map<String, MeasureInstance>>();
+				Map<String, Map<String, SignalInstance>> specSignals = new LinkedHashMap<String, Map<String, SignalInstance>>();
 				String label = SpecAnnotator.getSpecLabel(spec);
-				ret.put(label, specMeasures);
+				ret.put(label, specSignals);
 				
 				for (Argument argument : SpecAnnotator.getSpecArguments(spec)) {
-					Map<String, MeasureInstance> roleMeasures = new LinkedHashMap<String, MeasureInstance>();
+					Map<String, SignalInstance> roleSignals = new LinkedHashMap<String, SignalInstance>();
 					String role = argument.getRole().getCoveredText();
-					specMeasures.put(role, roleMeasures);
+					specSignals.put(role, roleSignals);
 	
-					for (MeasureMechanism mechanism : perceptron.measureMechanisms) {
-						scoredMeasures = mechanism.scoreArgument(spec, argument, sent, i, mention);
-						for (Entry<String, Double> scoredMeasure : scoredMeasures.entrySet()) {
-							MeasureInstance measure = new MeasureInstance(scoredMeasure.getKey(), MeasaureType.ARGUMENT, scoredMeasure.getValue());
-							roleMeasures.put(measure.name, measure);
-							perceptron.argumentMeasureNames.add(measure.name);
+					for (SignalMechanism mechanism : perceptron.signalMechanisms) {
+						scoredSignals = mechanism.scoreArgument(spec, argument, sent, i, mention);
+						for (Entry<String, Double> scoredSignal : scoredSignals.entrySet()) {
+							SignalInstance signal = new SignalInstance(scoredSignal.getKey(), SignalType.ARGUMENT, scoredSignal.getValue());
+							roleSignals.put(signal.name, signal);
+							perceptron.argumentSignalNames.add(signal.name);
 						}
 					}
 				}
@@ -71,7 +71,7 @@ public class EdgeMeasureGenerator
 			return ret;
 		} catch (CASException e) {
 			throw new RuntimeException(e);
-		} catch (MeasureMechanismException e) {
+		} catch (SignalMechanismException e) {
 			throw new RuntimeException(e);
 		}
 //		List<Map<Class<?>, Object>> tokens = (List<Map<Class<?>, Object>>) sent.get(SentenceInstance.InstanceAnnotations.Token_FEATURE_MAPs);

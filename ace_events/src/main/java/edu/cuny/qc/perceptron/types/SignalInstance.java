@@ -2,10 +2,10 @@ package edu.cuny.qc.perceptron.types;
 
 import com.google.common.base.Predicate;
 
-public class MeasureInstance {
+public class SignalInstance {
 	
 	public String name;
-	public MeasaureType type;
+	public SignalType type;
 	public double score;
 	public boolean positive;
 	
@@ -29,7 +29,7 @@ public class MeasureInstance {
 	public static final double POSITIVE_SCORE = 1.0;
 	public static final double NEGATIVE_SCORE = -1.0;
 
-	public MeasureInstance(String name, MeasaureType type, double score) {
+	public SignalInstance(String name, SignalType type, double score) {
 		this.name = name;
 		this.type = type;
 		this.score = score;

@@ -20,6 +20,7 @@ import edu.cuny.qc.perceptron.types.FeatureVector;
 import edu.cuny.qc.perceptron.types.SentenceAssignment;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
 import edu.cuny.qc.util.TypeConstraints;
+import edu.cuny.qc.util.WeightTracer;
 
 
 /**
@@ -157,6 +158,11 @@ public class Perceptron implements java.io.Serializable
 			featureCutOff(trainingList, cutoff);
 		}
 		
+		//DEBUG
+		WeightTracer wt = new WeightTracer(this);
+		System.out.printf("Iter|%sSentenceNo|%s\n", wt.getFeaturesStringTitle(), wt.getFeaturesStringTitle());
+		//////////
+		
 		// online learning with beam search and early update
 		long totalTime = 0;
 		Evaluator.Score max_score = new Evaluator.Score();
@@ -185,16 +191,20 @@ public class Perceptron implements java.io.Serializable
 					error_num ++;
 				}
 				else {
-					System.out.printf("  %d. No violation! (iter=%d) assn: %s\n", countNoViolation+1, iter, assn.toString());
+					//System.out.printf("  %d. No violation! (iter=%d) assn: %s\n", countNoViolation+1, iter, assn.toString());
 					countNoViolation += 1;
 				}
 				i++;
+				
+				//DEBUG
+				System.out.printf("|%s%d|%s\n", wt.getFeaturesStringSkip(), i, wt.getFeaturesString());		
+				////////////
 			}
 			
 			long endTime = System.currentTimeMillis();
 			long iterTime = endTime - startTime;
 			totalTime += iterTime;
-			System.out.println("\nIter " + iter + "\t error num: " + error_num + "\t time:" + iterTime + "\t feature size:" + this.weights.size());
+			//System.out.println("\nIter " + iter + "\t error num: " + error_num + "\t time:" + iterTime + "\t feature size:" + this.weights.size());
 			
 			// use current weight to decode and evaluate developement instances
 			if(devList != null)
@@ -211,7 +221,7 @@ public class Perceptron implements java.io.Serializable
 				List<SentenceAssignment> devResult = decoding(devList);
 				Evaluator.Score dev_score = evaluator.evaluate(devResult, getCanonicalInstanceList(devList));
 				
-				System.out.println("Dev " + dev_score);
+				//System.out.println("Dev " + dev_score);
 
 				if((dev_score.harmonic_mean - max_score.harmonic_mean) >= 0.001)
 				{
@@ -226,6 +236,10 @@ public class Perceptron implements java.io.Serializable
 				}
 			}
 			
+			//DEBUG
+			System.out.printf("%d|%s\n", iter, wt.getFeaturesString());		
+			////////////
+
 			if(error_num == 0)
 			{
 				// converge

@@ -1,5 +1,6 @@
 package edu.cuny.qc.perceptron.core;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -296,7 +297,7 @@ public class BeamSearch
 	 * @param problem
 	 * @return
 	 */
-	static protected double evaluate(SentenceAssignment partial, FeatureVector weights)
+	static protected BigDecimal evaluate(SentenceAssignment partial, FeatureVector weights)
 	{
 		partial.updateScoreForNewState(weights);
 		return partial.getScore();
@@ -335,18 +336,7 @@ public class BeamSearch
 		@Override
 		public int compare(SentenceAssignment assn1, SentenceAssignment assn2)
 		{
-			if(Math.abs(assn1.getScore() - assn2.getScore()) < 0.00001)
-			{
-				return 0;
-			}
-			if(assn1.getScore() > assn2.getScore())
-			{
-				return -1;
-			}
-			else 
-			{
-				return 1;
-			}
+			return assn1.getScore().compareTo(assn2.getScore());
 		}	
 	}
 }

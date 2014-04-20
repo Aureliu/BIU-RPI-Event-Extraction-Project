@@ -1,5 +1,7 @@
 package edu.cuny.qc.perceptron.similarity_scorer;
 
+import java.math.BigDecimal;
+
 import org.apache.uima.cas.CASException;
 import org.apache.uima.cas.text.AnnotationFS;
 import org.apache.uima.jcas.JCas;
@@ -18,7 +20,7 @@ public abstract class SignalMechanismSpecTokenIterator extends SignalMechanismSp
 	}
 	
 	@Override
-	public Double calcScore(Annotation text, Annotation spec) throws SignalMechanismException {
+	public BigDecimal calcScore(Annotation text, Annotation spec) throws SignalMechanismException {
 		try {
 			Token textToken = null;
 			Token specToken = null;
@@ -43,7 +45,7 @@ public abstract class SignalMechanismSpecTokenIterator extends SignalMechanismSp
 		}
 	}
 
-	public Double calcTokenScore(Token text, Token spec) throws SignalMechanismException {
+	public BigDecimal calcTokenScore(Token text, Token spec) throws SignalMechanismException {
 		Boolean boolResult = calcTokenBooleanScore(text, spec);
 		return SignalInstance.toDouble(boolResult);
 	}

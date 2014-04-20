@@ -9,6 +9,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.PrintStream;
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -219,7 +220,7 @@ public class Perceptron implements java.io.Serializable
 		FeatureVector best_weights = null;
 		FeatureVector best_avg_weights = null;
 		int iter = 0;
-		double c = 0; // for averaged parameter
+		BigDecimal c = BigDecimal.ZERO; // for averaged parameter
 		for(iter=0; iter<this.controller.maxIterNum; iter++)
 		{
 			long startTime = System.currentTimeMillis();	
@@ -232,7 +233,7 @@ public class Perceptron implements java.io.Serializable
 				// for averaged parameter
 				if(this.controller.avgArguments)
 				{
-					c++;
+					c = c.add(BigDecimal.ONE);
 				}
 				if(assn.getViolate())
 				{
@@ -252,8 +253,8 @@ public class Perceptron implements java.io.Serializable
 				for (int j=0; j<=assn.getState(); j++) {
 					String lemma = (String) tokens.get(j).get(TokenAnnotations.LemmaAnnotation.class);
 					Set<Object> allFeaturesSet = new HashSet<Object>();
-					Map<Object, Double> mapTarget = instance.target.getFeatureVectorSequence().get(j).getMap();
-					Map<Object, Double> mapAssn   = assn           .getFeatureVectorSequence().get(j).getMap();
+					Map<Object, BigDecimal> mapTarget = instance.target.getFeatureVectorSequence().get(j).getMap();
+					Map<Object, BigDecimal> mapAssn   = assn           .getFeatureVectorSequence().get(j).getMap();
 					allFeaturesSet.addAll(mapTarget.keySet());
 					allFeaturesSet.addAll(mapAssn.keySet());
 					List<String> allFeaturesList = new ArrayList<String>(allFeaturesSet.size());
@@ -263,17 +264,17 @@ public class Perceptron implements java.io.Serializable
 					Collections.sort(allFeaturesList);
 					for (String s : allFeaturesList) {						
 						String inTarget = "X";
-						Double numTarget = mapTarget.get(s);
+						BigDecimal numTarget = mapTarget.get(s);
 						if (numTarget != null) {
 							inTarget = numTarget.toString();
 						}
 						String inAssn = "X";
-						Double numAssn = mapAssn.get(s);
+						BigDecimal numAssn = mapAssn.get(s);
 						if (numAssn != null) {
 							inAssn = numAssn.toString();
 						}
 						String inWeights = "X";
-						Double numWeights = weights.get(s);
+						BigDecimal numWeights = weights.get(s);
 						if (numWeights != null) {
 							inWeights = numWeights.toString();
 						}
@@ -282,7 +283,7 @@ public class Perceptron implements java.io.Serializable
 							inAvg = "null vector";
 						}
 						else {
-							Double numAvg = avg_weights.get(s);
+							BigDecimal numAvg = avg_weights.get(s);
 							if (numAvg != null) {
 								inAvg = numAvg.toString();
 							}
@@ -415,14 +416,14 @@ public class Perceptron implements java.io.Serializable
 	 *  w_0 - w_a/c (w_0 is standard weights, w_a is the base of averaged weights) 	
 	 * @param c
 	 */
-	private void makeAveragedWeights(double c)
+	private void makeAveragedWeights(BigDecimal c)
 	{
 		this.avg_weights = new FeatureVector();
 		for(Object feat : this.weights.getMap().keySet())
 		{
-			double value = this.weights.get(feat); // w_0
-			double value_a = this.avg_weights_base.get(feat); // w_a
-			value = value - value_a / c; // w_0 - w_a/c
+			BigDecimal value = this.weights.get(feat); // w_0
+			BigDecimal value_a = this.avg_weights_base.get(feat); // w_a
+			value = value.subtract(value_a.divide(c)); //value - value_a / c; // w_0 - w_a/c
 			this.avg_weights.add(feat, value);
 		}
 	}
@@ -539,13 +540,14 @@ public class Perceptron implements java.io.Serializable
 	 * @param c 
 	 * @return return true if it's updated, i.e. the assn is not correct
 	 */
-	protected void earlyUpdate(SentenceAssignment assn, SentenceAssignment target, double c)
+	protected void earlyUpdate(SentenceAssignment assn, SentenceAssignment target, BigDecimal c)
 	{
 		// the beam search may return a early assignment, and we only update the prefix
 		for(int i=0; i <= assn.getState(); i++)
 		{
 			// weights = \phi(y*) - \phi(y)
-			this.getWeights().addDelta(target.featVecSequence.get(i), assn.featVecSequence.get(i), 1.0);
+			this.getWeights().addDelta2(target.featVecSequence.get(i), assn.featVecSequence.get(i), BigDecimal.ONE);
+			//this.getWeights().addDelta(target.featVecSequence.get(i), assn.featVecSequence.get(i), 1.0);
 			
 			if(this.controller.avgArguments)
 			{

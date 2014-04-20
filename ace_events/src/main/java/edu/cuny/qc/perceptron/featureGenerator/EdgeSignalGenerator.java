@@ -1,5 +1,6 @@
 package edu.cuny.qc.perceptron.featureGenerator;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -46,7 +47,7 @@ public class EdgeSignalGenerator
 		try {
 			Map<String, Map<String, Map<String, SignalInstance>>> ret = new LinkedHashMap<String, Map<String, Map<String, SignalInstance>>>();
 			
-			LinkedHashMap<String, Double> scoredSignals;
+			LinkedHashMap<String, BigDecimal> scoredSignals;
 			for (JCas spec : perceptron.specs) {
 				Map<String, Map<String, SignalInstance>> specSignals = new LinkedHashMap<String, Map<String, SignalInstance>>();
 				String label = SpecAnnotator.getSpecLabel(spec);
@@ -59,7 +60,7 @@ public class EdgeSignalGenerator
 	
 					for (SignalMechanism mechanism : perceptron.signalMechanisms) {
 						scoredSignals = mechanism.scoreArgument(spec, argument, sent, i, mention);
-						for (Entry<String, Double> scoredSignal : scoredSignals.entrySet()) {
+						for (Entry<String, BigDecimal> scoredSignal : scoredSignals.entrySet()) {
 							SignalInstance signal = new SignalInstance(scoredSignal.getKey(), SignalType.ARGUMENT, scoredSignal.getValue());
 							roleSignals.put(signal.name, signal);
 							perceptron.argumentSignalNames.add(signal.name);

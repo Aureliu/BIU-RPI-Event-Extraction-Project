@@ -1,5 +1,6 @@
 package edu.cuny.qc.perceptron.similarity_scorer;
 
+import java.math.BigDecimal;
 import java.util.Iterator;
 
 import org.apache.uima.cas.CASException;
@@ -8,7 +9,7 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.tcas.Annotation;
 import org.uimafit.util.JCasUtil;
 
-public abstract class SignalMechanismSpecIterator implements Iterator<Double> {
+public abstract class SignalMechanismSpecIterator implements Iterator<BigDecimal> {
 
 	public SignalMechanismSpecIterator init(JCas spec, String viewName, AnnotationFS covering, Class<? extends Annotation> type, Annotation textAnno) throws SignalMechanismException {
 		try {
@@ -30,7 +31,7 @@ public abstract class SignalMechanismSpecIterator implements Iterator<Double> {
 	}
 	
 	@Override
-	public Double next() {
+	public BigDecimal next() {
 		try {
 			Annotation specElement = specIterator.next();
 			return calcScore(textAnno, specElement);
@@ -49,7 +50,7 @@ public abstract class SignalMechanismSpecIterator implements Iterator<Double> {
 		throw new UnsupportedOperationException(String.format("%s does not support removing spec items", this.getClass().getSimpleName()));
 	}
 	
-	public abstract Double calcScore(Annotation text, Annotation spec) throws SignalMechanismException;
+	public abstract BigDecimal calcScore(Annotation text, Annotation spec) throws SignalMechanismException;
 	
 	protected Iterator<? extends Annotation> specIterator;
 	protected Annotation textAnno;

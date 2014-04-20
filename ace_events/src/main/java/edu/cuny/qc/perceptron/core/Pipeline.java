@@ -285,11 +285,11 @@ public class Pipeline
 		// print out weights
 		if(model.controller.avgArguments)
 		{
-			out.println(model.getAvg_weights().toStringFull());
+			out.print(model.getAvg_weights().toStringFull());
 		}
 		else
 		{
-			out.println(model.getWeights().toStringFull());
+			out.print(model.getWeights().toStringFull());
 		}
 		out.close();
 		

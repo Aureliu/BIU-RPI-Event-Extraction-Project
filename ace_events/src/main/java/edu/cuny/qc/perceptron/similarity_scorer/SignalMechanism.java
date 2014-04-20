@@ -1,5 +1,6 @@
 package edu.cuny.qc.perceptron.similarity_scorer;
 
+import java.math.BigDecimal;
 import java.util.LinkedHashMap;
 import java.util.List;
 
@@ -25,14 +26,14 @@ public abstract class SignalMechanism {
 
 //	public abstract void preprocessSpec(JCas spec) throws SignalMechanismException;
 //	public abstract void preprocessTextSentence(SentenceInstance textSentence) throws SignalMechanismException;
-	public LinkedHashMap<String, Double> scoreTrigger(JCas spec, SentenceInstance textSentence, int i) throws SignalMechanismException {
+	public LinkedHashMap<String, BigDecimal> scoreTrigger(JCas spec, SentenceInstance textSentence, int i) throws SignalMechanismException {
 		List<Token> textAnnos = (List<Token>) textSentence.get(InstanceAnnotations.TokenAnnotations);
 		Token textTriggerToken = textAnnos.get(i);
 
 		return scoreTriggerToken(spec, textSentence, textTriggerToken);
 	}
 
-	public LinkedHashMap<String, Double> scoreArgument(JCas spec, Argument argument, SentenceInstance textSentence, int i, AceMention mention) throws SignalMechanismException {
+	public LinkedHashMap<String, BigDecimal> scoreArgument(JCas spec, Argument argument, SentenceInstance textSentence, int i, AceMention mention) throws SignalMechanismException {
 		int argHeadFirstTokenIndex = mention.getHeadIndices().get(0);
 		
 		List<Token> textAnnos = (List<Token>) textSentence.get(InstanceAnnotations.TokenAnnotations);
@@ -42,8 +43,8 @@ public abstract class SignalMechanism {
 		return scoreArgumentFirstHeadToken(spec, argument, textSentence, textTriggerToken, textArgToken);
 	}
 
-	public abstract LinkedHashMap<String, Double> scoreTriggerToken(JCas spec, SentenceInstance textSentence, Token textTriggerToken) throws SignalMechanismException;
-	public abstract LinkedHashMap<String, Double> scoreArgumentFirstHeadToken(JCas spec, Argument argument, SentenceInstance textSentence, Token textTriggerToken, Token textArgToken) throws SignalMechanismException;
+	public abstract LinkedHashMap<String, BigDecimal> scoreTriggerToken(JCas spec, SentenceInstance textSentence, Token textTriggerToken) throws SignalMechanismException;
+	public abstract LinkedHashMap<String, BigDecimal> scoreArgumentFirstHeadToken(JCas spec, Argument argument, SentenceInstance textSentence, Token textTriggerToken, Token textArgToken) throws SignalMechanismException;
 	
 	/**
 	 * Optional operation

@@ -3,6 +3,7 @@ package edu.cuny.qc.perceptron.types;
 import java.io.File;
 import java.io.PrintStream;
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -22,23 +23,28 @@ public class FeatureVector implements Serializable
 	private static final long serialVersionUID = 9029197104497329900L;
 
 	// different from Mallet, just use a JDK HashMap to restore the sparse vector
-	HashMap<Object, Double> map;
+	HashMap<Object, BigDecimal> map;
 	
-	public Map<Object, Double> getMap()
+	static {
+		System.err.printf("??? FeatureVector.addDelta2: comparing to Double values, probably a bad idea. Maybe they should just be boolean? must they really be Double?");
+		System.err.printf("??? FeatureVector.addDelta2: Currently ignoring if the signal made a mistake. Maybe its weight should be punished.");
+	}
+	
+	public Map<Object, BigDecimal> getMap()
 	{
 		return map;
 	}
 	
-	public FeatureVector (Object[] feats, double[] values, int capacity) 
-	{
-		this(capacity);
-		for(int key=0; key<feats.length; key++)
-		{
-			double value = values[key];
-			Object feature = feats[key];
-			map.put(feature, value);
-		}
-	}
+//	public FeatureVector (Object[] feats, double[] values, int capacity) 
+//	{
+//		this(capacity);
+//		for(int key=0; key<feats.length; key++)
+//		{
+//			double value = values[key];
+//			Object feature = feats[key];
+//			map.put(feature, value);
+//		}
+//	}
 	
 	public FeatureVector ()
 	{
@@ -47,10 +53,10 @@ public class FeatureVector implements Serializable
 	
 	public FeatureVector (int capacity) 
 	{
-		map = new HashMap<Object, Double>(capacity);
+		map = new HashMap<Object, BigDecimal>(capacity);
 	}
 
-	public Double get(Object key)
+	public BigDecimal get(Object key)
 	{
 		return this.map.get(key);
 	}
@@ -61,17 +67,17 @@ public class FeatureVector implements Serializable
 	 * @param index
 	 * @param value
 	 */
-	public void add(Object feat, double value)
+	public void add(Object feat, BigDecimal value)
 	{
 		// first, check if index already exists
-		Double value_exist = map.get(feat);
+		BigDecimal value_exist = map.get(feat);
 		if(value_exist == null)
 		{
 			map.put(feat, value);
 		}
 		else
 		{
-			value_exist += value;
+			value_exist = value_exist.add(value);
 			map.put(feat, value_exist);
 		}
 	}
@@ -79,15 +85,15 @@ public class FeatureVector implements Serializable
 	public FeatureVector clone()
 	{
 		FeatureVector fv = new FeatureVector();
-		fv.map = (HashMap<Object, Double>) map.clone();
+		fv.map = (HashMap<Object, BigDecimal>) map.clone();
 		return fv;
 	}
 
-	public final double dotProduct (FeatureVector fv) 
+	public final BigDecimal dotProduct (FeatureVector fv) 
 	{
-		double ret = 0.0;
-		Map<Object, Double> map1 = map;
-		Map<Object, Double> map2 = fv.map;
+		BigDecimal ret = BigDecimal.ZERO;
+		Map<Object, BigDecimal> map1 = map;
+		Map<Object, BigDecimal> map2 = fv.map;
 		if(map2.size() < map1.size())
 		{
 			map1 = fv.map;
@@ -95,58 +101,58 @@ public class FeatureVector implements Serializable
 		}
 		for(Object key : map1.keySet())
 		{
-			Double value2 = map2.get(key);
+			BigDecimal value2 = map2.get(key);
 			if(value2 != null)
 			{
-				Double value1 = map1.get(key);
-				ret += value1 * value2;
+				BigDecimal value1 = map1.get(key);
+				ret = ret.add(value1.multiply(value2)); // ret += value1 * value2;
 			}
 		}
 		
 		////
 		//TODO DEBUG
 		if (PRINT_FEATURE_VECTORS && numWrittenOutputFiles < MAX_OUTPUT_FILES) {
-			try {
-				double d = random.nextDouble();
-				final FeatureVector fv1 = fv; // in order to use fv in the Comparable object, we need a "final" reference to it
-				if (d<PROB_FOR_OUTPUT_FILE) {
-					// Output!
-					numWrittenOutputFiles++;
-					PrintStream vectorsOut = new PrintStream(new File(String.format("%s%sRandomlyChosenDotProduct.%02d__%f.txt", Decoder.outDir, File.separator, numWrittenOutputFiles, ret)));
-					vectorsOut.printf("%-110s\tSentenceAssignment(%d)\t\tWeights(%d)\t\tdotProduct=%f\n", " ", map.size(), fv.map.size(), ret);
-					vectorsOut.printf("%-110s\t----------------------\t\t-----------\n", " ");
-					Set<Object> allKeysSet = new HashSet<Object>(map.keySet());
-					allKeysSet.addAll(fv.map.keySet());
-					List<Object> allKeys = new ArrayList<Object>(allKeysSet);
-					Collections.sort(allKeys, new Comparator<Object>() {
-						@Override
-						public int compare(Object o1, Object o2) {
-//							if (((String) o1).equals((String) o2)) {
-//								return 0;
-//							}
-//							if (map.containsKey(o1) && !fv1.map.containsKey(o2)) {
-//								return -1;
-//							}
-//							if (!map.containsKey(o1) && fv1.map.containsKey(o2)) {
-//								return 1;
-//							}
-							return ((String) o1).compareTo((String) o2);
-						}
-						
-					});
-					for (Object key : allKeys) {
-						Double m1 = map.get(key);
-						Double m2 = fv.map.get(key);
-						String str1 = (m1==null? "-" : m1.toString());
-						String str2 = (m2==null? "-" : m2.toString());
-						vectorsOut.printf("%-110s\t%s\t\t%s\n", key, str1, str2);
-					}
-					vectorsOut.close();
-				}
-			}
-			catch (Exception e) {
-				throw new RuntimeException(e);
-			}
+//			try {
+//				double d = random.nextDouble();
+//				final FeatureVector fv1 = fv; // in order to use fv in the Comparable object, we need a "final" reference to it
+//				if (d<PROB_FOR_OUTPUT_FILE) {
+//					// Output!
+//					numWrittenOutputFiles++;
+//					PrintStream vectorsOut = new PrintStream(new File(String.format("%s%sRandomlyChosenDotProduct.%02d__%f.txt", Decoder.outDir, File.separator, numWrittenOutputFiles, ret)));
+//					vectorsOut.printf("%-110s\tSentenceAssignment(%d)\t\tWeights(%d)\t\tdotProduct=%f\n", " ", map.size(), fv.map.size(), ret);
+//					vectorsOut.printf("%-110s\t----------------------\t\t-----------\n", " ");
+//					Set<Object> allKeysSet = new HashSet<Object>(map.keySet());
+//					allKeysSet.addAll(fv.map.keySet());
+//					List<Object> allKeys = new ArrayList<Object>(allKeysSet);
+//					Collections.sort(allKeys, new Comparator<Object>() {
+//						@Override
+//						public int compare(Object o1, Object o2) {
+////							if (((String) o1).equals((String) o2)) {
+////								return 0;
+////							}
+////							if (map.containsKey(o1) && !fv1.map.containsKey(o2)) {
+////								return -1;
+////							}
+////							if (!map.containsKey(o1) && fv1.map.containsKey(o2)) {
+////								return 1;
+////							}
+//							return ((String) o1).compareTo((String) o2);
+//						}
+//						
+//					});
+//					for (Object key : allKeys) {
+//						Double m1 = map.get(key);
+//						Double m2 = fv.map.get(key);
+//						String str1 = (m1==null? "-" : m1.toString());
+//						String str2 = (m2==null? "-" : m2.toString());
+//						vectorsOut.printf("%-110s\t%s\t\t%s\n", key, str1, str2);
+//					}
+//					vectorsOut.close();
+//				}
+//			}
+//			catch (Exception e) {
+//				throw new RuntimeException(e);
+//			}
 		}
 		////
 		return ret;
@@ -167,30 +173,30 @@ public class FeatureVector implements Serializable
 	 * @param fv2
 	 * @param factor
 	 */
-	public void addDelta(FeatureVector fv1, FeatureVector fv2, double factor)
+	public void addDelta(FeatureVector fv1, FeatureVector fv2, BigDecimal factor)
 	{
 		for(Object key : fv1.map.keySet())
 		{
-			Double value1 = fv1.get(key);
-			Double value2 = fv2.get(key);
+			BigDecimal value1 = fv1.get(key);
+			BigDecimal value2 = fv2.get(key);
 			if(value2 == null)
 			{
-				value2 = 0.0;
+				value2 = BigDecimal.ZERO;
 			}
-			double value = (value1 - value2) * factor;
-			if(value != 0.0)
+			BigDecimal value = factor.multiply(value1.subtract(value2));//(value1 - value2) * factor;
+			if(!value.equals(BigDecimal.ZERO))
 			{
 				this.add(key, value);
 			}
 		}
 		for(Object key : fv2.map.keySet())
 		{
-			Double value1 = fv1.get(key);
-			Double value2 = fv2.get(key);
+			BigDecimal value1 = fv1.get(key);
+			BigDecimal value2 = fv2.get(key);
 			if(value1 == null)
 			{
-				double value = (0.0 - value2) * factor;
-				if(value != 0.0)
+				BigDecimal value = factor.multiply(value2.negate());//(0.0 - value2) * factor;
+				if(!value.equals(BigDecimal.ZERO))
 				{
 					this.add(key, value);
 				}
@@ -198,38 +204,57 @@ public class FeatureVector implements Serializable
 		}
 	}
 	
-	// add indices in v if they are not in this, and then plusEquals(v, factor) 
-	public void plusEquals (FeatureVector v) 
-	{
-		plusEquals(v, 1.0);
-	}
-	
-	// add indices in v if they are not in this, and then plusEquals(v, factor) 
-	public void plusEquals (FeatureVector fv, double factor) 
-	{
-		for(Object key : fv.map.keySet())
+	public void addDelta2(FeatureVector targetFV, FeatureVector assnFV, BigDecimal factor) {
+		if (targetFV.map.size() != assnFV.map.size()) {
+			throw new IllegalStateException(String.format("Unequal feature vectors sizes: |Target|=%d features, |Assignment|=%d features", targetFV.map.size(), assnFV.map.size()));
+		}
+		for(Object key : targetFV.map.keySet())
 		{
-			Double value_new = fv.map.get(key) * factor; 
-			Double value = map.get(key);
-			if(value == null)
-			{
-				map.put(key, value_new);
+			BigDecimal targetVal = targetFV.get(key);
+			BigDecimal assnVal = assnFV.get(key);
+			
+			if (targetVal.equals(assnVal)) {
+				this.add(key, factor);
 			}
-			else
-			{
-				map.put(key, value + value_new);
-			}
+//			else {
+//				do some crazy shit, like decrease some value from the feature's weight
+//			}
 		}
 	}
+
 	
-	public void multiply(double factor)
-	{
-		for(Object key : map.keySet())
-		{
-			Double value = map.get(key);
-			map.put(key, value * factor);
-		}
-	}
+	// add indices in v if they are not in this, and then plusEquals(v, factor) 
+//	public void plusEquals (FeatureVector v) 
+//	{
+//		plusEquals(v, 1.0);
+//	}
+	
+	// add indices in v if they are not in this, and then plusEquals(v, factor) 
+//	public void plusEquals (FeatureVector fv, double factor) 
+//	{
+//		for(Object key : fv.map.keySet())
+//		{
+//			Double value_new = fv.map.get(key) * factor; 
+//			Double value = map.get(key);
+//			if(value == null)
+//			{
+//				map.put(key, value_new);
+//			}
+//			else
+//			{
+//				map.put(key, value + value_new);
+//			}
+//		}
+//	}
+	
+//	public void multiply(double factor)
+//	{
+//		for(Object key : map.keySet())
+//		{
+//			Double value = map.get(key);
+//			map.put(key, value * factor);
+//		}
+//	}
 	
 	public String toString() {
 		return String.format("%s(%s items)", FeatureVector.class.getSimpleName(), map.size());
@@ -247,7 +272,7 @@ public class FeatureVector implements Serializable
 		
 	    for(Object key : map.keySet()) 
 	    {
-			Double value = map.get(key);
+	    	BigDecimal value = map.get(key);
 			sb.append (key);
 			sb.append ("=");
 			sb.append (value);
@@ -271,7 +296,7 @@ public class FeatureVector implements Serializable
 		}});
 	    for(Object key : keys) 
 	    {
-			Double value = map.get(key);
+	    	BigDecimal value = map.get(key);
 			sb.append (key);
 			sb.append ("=");
 			sb.append (value);

@@ -1,5 +1,6 @@
 package edu.cuny.qc.perceptron.types;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -95,8 +96,8 @@ public class SentenceAssignment
 	public FeatureVectorSequence featVecSequence;
 	
 	// the score of the assignment, it can be partial score when the assignment is not complete
-	protected double score = 0.0;
-	protected List<Double> partial_scores;
+	protected BigDecimal score = BigDecimal.ZERO;
+	protected List<BigDecimal> partial_scores;
 	
 	public FeatureVector getFV(int index)
 	{
@@ -127,7 +128,7 @@ public class SentenceAssignment
 		state++;
 		FeatureVector fv = new FeatureVector();
 		this.addFeatureVector(fv);
-		this.partial_scores.add(0.0);
+		this.partial_scores.add(BigDecimal.ZERO);
 	}
 	
 	/**
@@ -340,7 +341,7 @@ public class SentenceAssignment
 		edgeAssignment = new HashMap<Integer, Map<Integer, Integer>>();
 		
 		featVecSequence = new FeatureVectorSequence();
-		partial_scores = new ArrayList<Double>();
+		partial_scores = new ArrayList<BigDecimal>();
 	}
 	
 	/**
@@ -488,28 +489,34 @@ public class SentenceAssignment
 		if (genericEdgeLabel == Generic_Existing_Argument_Label) {
 			Map<String, SignalInstance> signalsOfEntity = allEntitySignals.get(nodeLabel).get(edgeLabel);
 			for (SignalInstance signal : signalsOfEntity.values()) {
-				if (signal.positive) {
-					String featureStr = "EdgeLocalFeature:\t" + signal.name + "\t" + genericEdgeLabel;
+				//if (signal.positive) {
+					String featureStr = "EdgeLocalFeature:\t" + signal.name;// + "\t" + genericEdgeLabel;
 					makeFeature(featureStr, fv, addIfNotPresent, useIfNotPresent);
-				}
+				//}
 			}
 		}
 		else {
 			Map<String, Map<String, SignalInstance>> signalsOfNodeLabel = allEntitySignals.get(nodeLabel);
 			for (Object signalNameObj : perceptron.argumentSignalNames) {
 				String signalName = (String) signalNameObj;
-				double numFalse = 0.0;
+				//BigDecimal numFalse = BigDecimal.ZERO;
+				BigDecimal featureValue = BigDecimal.ONE;
 				for (Map<String, SignalInstance> signalsOfLabel : signalsOfNodeLabel.values()) {
 					SignalInstance signal = signalsOfLabel.get(signalName);
-					if (!signal.positive) {
-						numFalse += 1.0;
+					if (signal.positive) {
+						featureValue = BigDecimal.ZERO;
+						break;
 					}
+//					if (!signal.positive) {
+//						numFalse = numFalse.add(BigDecimal.ONE); //numFalse += 1.0;
+//					}
 				}
 				
-				double falseRatio = numFalse / signalsOfNodeLabel.size(); // divide by number of roles in current spec
+				//BigDecimal numRolesiInSpec = new BigDecimal(signalsOfNodeLabel.size());
+				//BigDecimal falseRatio = numFalse.divide(numRolesiInSpec);// divide by number of roles in current spec
 				
-				String featureStr = "EdgeLocalFeature:\t" + signalName + "\t" + genericEdgeLabel;
-				makeFeature(featureStr, fv, falseRatio, addIfNotPresent, useIfNotPresent);
+				String featureStr = "EdgeLocalFeature:\t" + signalName;// + "\t" + genericEdgeLabel;
+				makeFeature(featureStr, fv, featureValue, addIfNotPresent, useIfNotPresent);
 
 			}
 		}
@@ -620,7 +627,8 @@ public class SentenceAssignment
 
 						// unigram features, for history reason, we still call them BigramFeature
 						// create a bigram feature
-						String featureStr = "BigramFeature:\t" + signal.name + "\t" + "\tcurrentLabel:" + genericLabel;
+						String featureStr = "BigramFeature:\t" + signal.name;
+						//String featureStr = "BigramFeature:\t" + signal.name + "\t" + "\tcurrentLabel:" + genericLabel;
 						makeFeature(featureStr, this.getFV(i), signal.score, addIfNotPresent, useIfNotPresent);
 
 					//}
@@ -637,14 +645,14 @@ public class SentenceAssignment
 					 * 
 					 * Otherwise (no spec fits), the value is 1.0 - the token fits "O". 
 					 */
-					double featureValue = 1.0;
+					BigDecimal featureValue = BigDecimal.ONE;
 					for (Map<String, SignalInstance> signalsOfLabel : token.values()) {
 						SignalInstance signal = signalsOfLabel.get(signalName);
 						if (signal == null) {
 							throw new IllegalArgumentException(String.format("Cannot find feature '%s' for non-label token %d", signalName, i));
 						}
 						if (signal.positive) {
-							featureValue = -1.0;
+							featureValue = BigDecimal.ZERO;//0.0 //-1.0;
 							break;
 						}
 					}
@@ -653,7 +661,8 @@ public class SentenceAssignment
 										
 					// unigram features, for history reason, we still call them BigramFeature
 					// create a bigram feature
-					String featureStr = "BigramFeature:\t" + signalName + "\t" + "\tcurrentLabel:" + genericLabel;
+					String featureStr = "BigramFeature:\t" + signalName;
+					//String featureStr = "BigramFeature:\t" + signalName + "\t" + "\tcurrentLabel:" + genericLabel;
 					makeFeature(featureStr, this.getFV(i), featureValue, addIfNotPresent, useIfNotPresent);
 
 				}
@@ -664,7 +673,7 @@ public class SentenceAssignment
 	protected void makeFeature(String featureStr, FeatureVector fv, boolean add_if_not_present,
 			boolean use_if_not_present)
 	{
-		makeFeature(featureStr, fv, 1.0, add_if_not_present, use_if_not_present);
+		makeFeature(featureStr, fv, BigDecimal.ONE, add_if_not_present, use_if_not_present);
 	}
 	
 	/**
@@ -674,7 +683,7 @@ public class SentenceAssignment
 	 * @param add_if_not_present true if the feature is not in featureAlphabet, add it
 	 * @param use_if_not_present true if the feature is not in featureAlphaebt, still use it in FV
 	 */
-	protected void makeFeature(String featureStr, FeatureVector fv, double value, boolean add_if_not_present,
+	protected void makeFeature(String featureStr, FeatureVector fv, BigDecimal value, boolean add_if_not_present,
 			boolean use_if_not_present)
 	{
 		// Feature feat = new Feature(null, featureStr);
@@ -711,7 +720,7 @@ public class SentenceAssignment
 		return feat_index;
 	}
 	
-	public void setScore(double sc)
+	public void setScore(BigDecimal sc)
 	{
 		score = sc;
 	}
@@ -720,7 +729,7 @@ public class SentenceAssignment
 	 * get the score according to feature and weight 
 	 * @return
 	 */
-	public double getScore()
+	public BigDecimal getScore()
 	{
 		return score;
 	}
@@ -732,13 +741,13 @@ public class SentenceAssignment
 	public void updateScoreForNewState(FeatureVector weights)
 	{
 		FeatureVector fv = this.getCurrentFV();
-		double partial_score = fv.dotProduct(weights);
+		BigDecimal partial_score = fv.dotProduct(weights);
 		this.partial_scores.set(state, partial_score);
 		
-		this.score = 0;
+		this.score = BigDecimal.ZERO;
 		for(int i=0; i<=state; i++)
 		{
-			this.score += this.partial_scores.get(i);
+			this.score = this.score.add(this.partial_scores.get(i)); //this.score += this.partial_scores.get(i);
 		}
 	}
 

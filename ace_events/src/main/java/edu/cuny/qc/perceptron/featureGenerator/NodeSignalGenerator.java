@@ -3,6 +3,7 @@ package edu.cuny.qc.perceptron.featureGenerator;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -241,7 +242,7 @@ public class NodeSignalGenerator
 		try {
 			Map<String, Map<String, SignalInstance>> ret = new LinkedHashMap<String, Map<String, SignalInstance>>();
 			
-			LinkedHashMap<String, Double> scoredSignals;
+			LinkedHashMap<String, BigDecimal> scoredSignals;
 			for (JCas spec : perceptron.specs) {
 				Map<String, SignalInstance> specSignals = new LinkedHashMap<String, SignalInstance>();
 				String label = SpecAnnotator.getSpecLabel(spec);
@@ -249,7 +250,7 @@ public class NodeSignalGenerator
 				
 				for (SignalMechanism mechanism : perceptron.signalMechanisms) {
 					scoredSignals = mechanism.scoreTrigger(spec, inst, i);
-					for (Entry<String, Double> scoredSignal : scoredSignals.entrySet()) {
+					for (Entry<String, BigDecimal> scoredSignal : scoredSignals.entrySet()) {
 						SignalInstance signal = new SignalInstance(scoredSignal.getKey(), SignalType.TRIGGER, scoredSignal.getValue());
 						specSignals.put(signal.name, signal);
 						perceptron.triggerSignalNames.add(signal.name);

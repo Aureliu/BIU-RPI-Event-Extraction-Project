@@ -1,6 +1,7 @@
 package edu.cuny.qc.perceptron.similarity_scorer;
 
 import java.io.File;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -82,19 +83,19 @@ public class WordNetSignalMechanism extends SignalMechanism {
 //	}
 
 	@Override
-	public LinkedHashMap<String, Double> scoreTriggerToken(JCas spec, SentenceInstance textSentence, Token textTriggerToken) throws SignalMechanismException {
-		LinkedHashMap<String, Double> ret = new LinkedHashMap<String, Double>();
+	public LinkedHashMap<String, BigDecimal> scoreTriggerToken(JCas spec, SentenceInstance textSentence, Token textTriggerToken) throws SignalMechanismException {
+		LinkedHashMap<String, BigDecimal> ret = new LinkedHashMap<String, BigDecimal>();
 		
-		//ret.put("WORDNET_SAME_SYNSET",   Aggregator.any(new SameSynset()    .init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
-		//ret.put("WORDNET_SPEC_HYPERNYM", Aggregator.any(new IsSpecHypernym().init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
+		ret.put("WORDNET_SAME_SYNSET",   Aggregator.any(new SameSynset()    .init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
+		ret.put("WORDNET_SPEC_HYPERNYM", Aggregator.any(new IsSpecHypernym().init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
 		ret.put("WORDNET_SPEC_ENTAILED", Aggregator.any(new IsSpecEntailed().init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
 		
 		return ret;
 	}
 
 	@Override
-	public LinkedHashMap<String, Double> scoreArgumentFirstHeadToken(JCas spec, Argument argument, SentenceInstance textSentence, Token textTriggerToken, Token textArgToken) throws SignalMechanismException {
-		LinkedHashMap<String, Double> ret = new LinkedHashMap<String, Double>();
+	public LinkedHashMap<String, BigDecimal> scoreArgumentFirstHeadToken(JCas spec, Argument argument, SentenceInstance textSentence, Token textTriggerToken, Token textArgToken) throws SignalMechanismException {
+		LinkedHashMap<String, BigDecimal> ret = new LinkedHashMap<String, BigDecimal>();
 		
 		//ret.put("WORDNET_SAME_SYNSET",   Aggregator.any(new SameSynset()    .init(spec, null, argument, ArgumentExample.class, textArgToken)));
 		//ret.put("WORDNET_SPEC_HYPERNYM", Aggregator.any(new IsSpecHypernym().init(spec, null, argument, ArgumentExample.class, textArgToken)));

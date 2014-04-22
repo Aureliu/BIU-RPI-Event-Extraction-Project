@@ -51,7 +51,7 @@ public class NodeSignalGenerator
 		// initialize priorityQueueEntities
 		try
 		{
-			System.err.println("???NodeSignalGenerator.get_node_text_signals should actually calc signals only for relevant POSes, and for the rest should manufacture, artificially, all the features with a 0.0/false. Would save precious time.");
+			System.err.println("??? NodeSignalGenerator.get_node_text_signals should actually calc signals only for relevant POSes, and for the rest should manufacture, artificially, all the features with a 0.0/false. Would save precious time.");
 			
 			// initialize dict of triggerTokens
 			BufferedReader reader = new BufferedReader(new FileReader("src/main/resources/data/triggerTokens"));

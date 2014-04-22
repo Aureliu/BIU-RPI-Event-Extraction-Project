@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Vector;
 
 import edu.cuny.qc.ace.acetypes.AceEventMention;
@@ -103,6 +104,8 @@ public class SentenceAssignment
 	protected BigDecimal score = BigDecimal.ZERO;
 	protected List<BigDecimal> partial_scores;
 	
+	public Map<Integer, Map<String, SignalInstance>> featureToSignal; 
+	
 	public FeatureVector getFV(int index)
 	{
 		return featVecSequence.get(index);
@@ -189,6 +192,14 @@ public class SentenceAssignment
 		assn.local_score = this.local_score;
 		assn.partial_scores.addAll(this.partial_scores);
 		
+		assn.featureToSignal = new HashMap<Integer, Map<String, SignalInstance>>();
+		for (Entry<Integer, Map<String, SignalInstance>> entry : featureToSignal.entrySet()) {
+			Map<String, SignalInstance> map = new HashMap<String, SignalInstance>();
+			assn.featureToSignal.put(new Integer(entry.getKey()), map);
+			for(Entry<String, SignalInstance> entry2 : entry.getValue().entrySet()) {
+				map.put(entry2.getKey(), entry2.getValue());
+			}
+		}
 		return assn;
 	}
 	
@@ -346,6 +357,7 @@ public class SentenceAssignment
 		
 		featVecSequence = new FeatureVectorSequence();
 		partial_scores = new ArrayList<BigDecimal>();
+		featureToSignal = new HashMap<Integer, Map<String, SignalInstance>>();
 	}
 	
 	/**
@@ -498,7 +510,7 @@ public class SentenceAssignment
 				
 				// TODO this line should DEFINITELY be uncommented when I incorporate edges back to the story
 				// of course, a policy regarding them should be decided and implemented
-				//makeFeature(featureStr, fv, featureValue, addIfNotPresent, useIfNotPresent);
+				//makeFeature(featureStr, fv, featureValue, index, signal, addIfNotPresent, useIfNotPresent);
 			}
 		}
 		else {
@@ -526,7 +538,7 @@ public class SentenceAssignment
 				
 				// TODO this line should DEFINITELY be uncommented when I incorporate edges back to the story
 				// of course, a policy regarding them should be decided and implemented
-				//makeFeature(featureStr, fv, featureValue, addIfNotPresent, useIfNotPresent);
+				//makeFeature(featureStr, fv, featureValue, index, null, addIfNotPresent, useIfNotPresent);
 
 			}
 		}
@@ -547,7 +559,7 @@ public class SentenceAssignment
 		for(String feature : featureStrs)
 		{
 			String featureStr = "TriggerLevelGlobalFeature:\t" + feature;
-			makeFeature(featureStr, fv, addIfNotPresent, useIfNotPresent);
+			makeFeature(featureStr, fv, null, null, addIfNotPresent, useIfNotPresent);
 		}
 	} 
 	
@@ -565,7 +577,7 @@ public class SentenceAssignment
 		for(String feature : featureStrs)
 		{
 			String featureStr = "NodeLevelGlobalFeature:\t" + feature;
-			makeFeature(featureStr, fv, addIfNotPresent, useIfNotPresent);
+			makeFeature(featureStr, fv, null, null, addIfNotPresent, useIfNotPresent);
 		}
 	}
 	
@@ -584,13 +596,13 @@ public class SentenceAssignment
 		for(String feature : featureStrs)
 		{
 			String featureStr = "NodeLevelGlobalFeature:\t" + feature;
-			makeFeature(featureStr, fv, addIfNotPresent, useIfNotPresent);
+			makeFeature(featureStr, fv, null, null, addIfNotPresent, useIfNotPresent);
 		}
 		featureStrs = GlobalFeatureGenerator.get_global_features_sent_level(problem, index, this, entityIndex);
 		for(String feature : featureStrs)
 		{
 			String featureStr = "SentLevelGlobalFeature:\t" + feature;
-			makeFeature(featureStr, fv, addIfNotPresent, useIfNotPresent);
+			makeFeature(featureStr, fv, null, null, addIfNotPresent, useIfNotPresent);
 		}
 		
 	}
@@ -636,7 +648,7 @@ public class SentenceAssignment
 					BigDecimal featureValue = signal.positive ? FEATURE_POSITIVE_VAL : FEATURE_NEGATIVE_VAL;
 					String featureStr = "BigramFeature:\t" + signal.name;
 					//String featureStr = "BigramFeature:\t" + signal.name + "\t" + "\tcurrentLabel:" + genericLabel;
-					makeFeature(featureStr, this.getFV(i), featureValue, addIfNotPresent, useIfNotPresent);
+					makeFeature(featureStr, this.getFV(i), featureValue, i, signal, addIfNotPresent, useIfNotPresent);
 				}
 			}
 			else { //genericLabel == Default_Trigger_Label
@@ -666,17 +678,16 @@ public class SentenceAssignment
 										
 					String featureStr = "BigramFeature:\t" + signalName;
 					//String featureStr = "BigramFeature:\t" + signalName + "\t" + "\tcurrentLabel:" + genericLabel;
-					makeFeature(featureStr, this.getFV(i), featureValue, addIfNotPresent, useIfNotPresent);
-
+					makeFeature(featureStr, this.getFV(i), featureValue, i, null, addIfNotPresent, useIfNotPresent);
 				}
 			}
 		}
 	}
 	
-	protected void makeFeature(String featureStr, FeatureVector fv, boolean add_if_not_present,
+	protected void makeFeature(String featureStr, FeatureVector fv, Integer i, SignalInstance signal, boolean add_if_not_present,
 			boolean use_if_not_present)
 	{
-		makeFeature(featureStr, fv, BigDecimal.ONE, add_if_not_present, use_if_not_present);
+		makeFeature(featureStr, fv, BigDecimal.ONE, i, signal, add_if_not_present, use_if_not_present);
 	}
 	
 	/**
@@ -686,22 +697,41 @@ public class SentenceAssignment
 	 * @param add_if_not_present true if the feature is not in featureAlphabet, add it
 	 * @param use_if_not_present true if the feature is not in featureAlphaebt, still use it in FV
 	 */
-	protected void makeFeature(String featureStr, FeatureVector fv, BigDecimal value, boolean add_if_not_present,
+	protected void makeFeature(String featureStr, FeatureVector fv, BigDecimal value, Integer i, SignalInstance signal, boolean add_if_not_present,
 			boolean use_if_not_present)
 	{
 		// Feature feat = new Feature(null, featureStr);
 		// lookup the feature table to create an assignment with the new feature
+		boolean wasAdded = false;
 		if(!use_if_not_present || add_if_not_present)
 		{
 			int feat_index = lookupFeatures(this.featureAlphabet, featureStr, add_if_not_present);
 			if(feat_index != -1)
 			{
 				fv.add(featureStr, value);
+				wasAdded = true;
 			}
 		}
 		else
 		{
 			fv.add(featureStr, value);
+			wasAdded = true;
+		}
+		
+		if (wasAdded) {
+			Map<String, SignalInstance> map = featureToSignal.get(i);
+			if (!featureToSignal.containsKey(i)) {
+				map = new HashMap<String, SignalInstance>();
+				featureToSignal.put(i, map);
+			}
+			if (map.containsKey(featureStr)) {
+				SignalInstance existingSignal = map.get(featureStr);
+				// TODO I have some feeling that this exception will rise whenever I switch back to multiple labels.
+				// Perhaps this would mean that featureToSignal should be even more complex and also have a distinct "label" level.
+				throw new IllegalArgumentException(String.format("Tried to store signal '%s' for feature '%s' over i=%s, but this feature already exists over this i, it already has the signal '%s'",
+						signal, featureStr, i, existingSignal));
+			}
+			map.put(featureStr, signal);
 		}
 	}
 	
@@ -957,5 +987,6 @@ public class SentenceAssignment
 		{
 			this.featVecSequence.sequence.set(i, new FeatureVector());
 		}
+		featureToSignal = new HashMap<Integer, Map<String, SignalInstance>>();
 	}
 }

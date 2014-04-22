@@ -32,6 +32,7 @@ import edu.cuny.qc.perceptron.types.FeatureVector;
 import edu.cuny.qc.perceptron.types.SentenceAssignment;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
 import edu.cuny.qc.perceptron.types.SentenceInstance.InstanceAnnotations;
+import edu.cuny.qc.perceptron.types.SignalInstance;
 import edu.cuny.qc.util.TokenAnnotations;
 import edu.cuny.qc.util.TypeConstraints;
 import edu.cuny.qc.util.UnsupportedParameterException;
@@ -127,6 +128,24 @@ public class Perceptron implements java.io.Serializable
 //	}
 //	
 	
+	private String getSignalScore(SentenceAssignment assn, Integer i, String featureName) {
+		String result;
+		if (!assn.featureToSignal.containsKey(i)) {
+			throw new IllegalArgumentException("Cannot find featureToSignal map for index: "+i+" in assignment: " + assn.toString());
+		}
+		Map<String, SignalInstance> map = assn.featureToSignal.get(i);
+		if (!map.containsKey(featureName)) {
+			throw new IllegalArgumentException("Cannot find feature '"+featureName+"' for i="+i+" in assignment: " + assn.toString());
+		}
+		SignalInstance signal = map.get(featureName);
+		if (signal == null) {
+			result = "N/A";
+		}
+		else {
+			result = signal.positive ? "T" : "F";
+		}
+		return result;
+	}
 	/**
 	 *  given an instanceList, decode, and give the best assignmentList
 	 * @param instance
@@ -219,7 +238,7 @@ public class Perceptron implements java.io.Serializable
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
-		f.printf("Iter|SentenceNo|Tokens|Sentence|i|Lemma|target-label|assn-label|Feature|target-size|target|assn-size|assn|in-both|same-score|weights-size|weights|avg_weights\n");
+		f.printf("Iter|DocID|SentenceNo|Tokens|Sentence|i|Lemma|target-label|assn-label|Feature|target-size|target-signal|target|assn-size|assn-signal|assn|in-both|same-score|weights-size|weights|avg_weights\n");
 		//////////
 		
 		// online learning with beam search and early update
@@ -305,6 +324,9 @@ public class Perceptron implements java.io.Serializable
 							}
 						}
 						
+						String targetSignal = getSignalScore(instance.target, j, s);
+						String assnSignal = getSignalScore(assn, j, s);
+						
 						String bothTargetAndAssn = null;
 						String sameTargetAndAssn = "F";
 						if (!inTarget.equals("X") && !inAssn.equals("X")) {
@@ -317,11 +339,12 @@ public class Perceptron implements java.io.Serializable
 							bothTargetAndAssn ="F";
 						}
 						
-						f.printf("%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s\n", iter, i, instance.size(), sentText, j, lemma,
-								instance.target.getLabelAtToken(j),	assnLabel, s.replace('|', '*').replace("\t", "  "), mapTarget.size(), inTarget,
-								mapAssn.size(),	inAssn, bothTargetAndAssn, sameTargetAndAssn, weights.size(), inWeights, inAvg);
+						f.printf("%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s\n", iter, instance.docID, i, instance.size(),
+								sentText, j, lemma, instance.target.getLabelAtToken(j), assnLabel, s.replace('|', '*').replace("\t", "  "),
+								mapTarget.size(), targetSignal, inTarget, mapAssn.size(), assnSignal, inAssn, bothTargetAndAssn,
+								sameTargetAndAssn, weights.size(), inWeights, inAvg);
 					}
-					f.printf("%s|%s|%s|%s|%s|%s|%s|%s||%s||%s||||%s||\n", iter, i, instance.size(), sentText, j, lemma,
+					f.printf("%s|%s|%s|%s|%s|%s|%s|%s|%s||%s|||%s|||||%s||\n", iter, instance.docID, i, instance.size(), sentText, j, lemma,
 							instance.target.getLabelAtToken(j), assnLabel, mapTarget.size(), mapAssn.size(), weights.size());
 				}
 				////////////

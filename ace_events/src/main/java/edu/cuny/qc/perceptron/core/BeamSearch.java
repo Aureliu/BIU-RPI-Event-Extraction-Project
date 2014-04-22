@@ -31,9 +31,11 @@ public class BeamSearch
 	boolean isTraining = true;
 	
 	private static final boolean PRINT_BEAM = false;
+	private static final boolean PRINT_BEAM_DETAILED = false;
 	
 	static {
 		System.err.println("??? BeamSearch: Calcing target's features (node, edge, global), multiple times here, even though they are needed only when there's a violation, Qi approves. Consider changing.");
+		System.err.println("??? BeamSearch: In ScoreComparator, can try to use the compareTo() of both BigDecimals (I temporarily converted back to working on doubles, due to consistency problems with master).");
 	}
 	
 	protected FeatureVector getWeights()
@@ -104,8 +106,28 @@ public class BeamSearch
 				////
 			}
 			
+			//DEBUG
+			if (PRINT_BEAM_DETAILED) {
+				System.out.printf("*** i=%s, pre-sort:\n", i);
+				for (int q=0; q<successor.size(); q++) {
+					SentenceAssignment a = successor.get(q);
+					System.out.printf("  %d. score=%s : %s\n", q, a.getScore(), a);
+				}
+			}
+			//////////
+			
 			// rank according to score
 			Collections.sort(successor, new ScoreComparator());
+
+			//DEBUG
+			if (PRINT_BEAM_DETAILED) {
+				System.out.printf("******** i=%s, post-sort:\n", i);
+				for (int q=0; q<successor.size(); q++) {
+					SentenceAssignment a = successor.get(q);
+					System.out.printf("  %d. score=%s : %s\n", q, a.getScore(), a);
+				}
+			}
+			//////////
 			beam = successor.subList(0, Math.min(successor.size(), beamSize));
 			
 			// check early violation
@@ -170,8 +192,29 @@ public class BeamSearch
 					evaluate(assn, getWeights());
 				}
 				
+				//DEBUG
+				if (PRINT_BEAM_DETAILED) {
+					System.out.printf("*** i=%s, k=%s, pre-sort:\n", i, k);
+					for (int q=0; q<successor.size(); q++) {
+						SentenceAssignment a = successor.get(q);
+						System.out.printf("  %d. score=%s : %s\n", q, a.getScore(), a);
+					}
+				}
+				//////////
+				
 				// rank according to score
 				Collections.sort(successor, new ScoreComparator());
+
+				//DEBUG
+				if (PRINT_BEAM_DETAILED) {
+					System.out.printf("******** i=%s, k=%s, post-sort:\n", i, k);
+					for (int q=0; q<successor.size(); q++) {
+						SentenceAssignment a = successor.get(q);
+						System.out.printf("  %d. score=%s : %s\n", q, a.getScore(), a);
+					}
+				}
+				//////////
+
 				beam = successor.subList(0, Math.min(successor.size(), beamSize));
 				// System.out.println("sucessor size 2: " + successor.size());
 				if(isLearning)
@@ -336,7 +379,20 @@ public class BeamSearch
 		@Override
 		public int compare(SentenceAssignment assn1, SentenceAssignment assn2)
 		{
-			return assn1.getScore().compareTo(assn2.getScore());
+			double score1 = assn1.getScore().doubleValue();
+			double score2 = assn2.getScore().doubleValue();
+			if(Math.abs(score1 - score2) < 0.00001)
+			{
+				return 0;
+			}
+			if(score1 > score2)
+			{
+				return -1;
+			}
+			else 
+			{
+				return 1;
+			}
 		}	
 	}
 }

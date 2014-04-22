@@ -21,6 +21,7 @@ import org.uimafit.util.JCasUtil;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentType;
 import edu.cuny.qc.perceptron.core.Perceptron;
+import edu.cuny.qc.perceptron.types.SentenceAssignment;
 import edu.cuny.qc.util.TypeConstraints;
 import eu.excitementproject.eop.common.utilities.file.FileUtils;
 import eu.excitementproject.eop.common.utilities.uima.UimaUtils;
@@ -53,6 +54,9 @@ public class SpecHandler {
 	
 	public static void loadSpecs(List<String> specXmlPaths, Perceptron perceptron) throws CASRuntimeException, AnalysisEngineProcessException, ResourceInitializationException, UimaUtilsException, IOException, AeException, CASException {
 		perceptron.specs = getSpecs(specXmlPaths);
+		
+		perceptron.nodeTargetAlphabet.lookupIndex(SentenceAssignment.Default_Trigger_Label);
+		perceptron.edgeTargetAlphabet.lookupIndex(SentenceAssignment.Default_Argument_Label);
 		
 		List<String[]> linesForArgs = new ArrayList<String[]>();
 		for (JCas spec : perceptron.specs) {

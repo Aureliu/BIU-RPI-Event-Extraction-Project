@@ -184,7 +184,7 @@ public class Perceptron implements java.io.Serializable
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
-		f.printf("Iter|SentenceNo|Tokens|Sentence|i|Lemma|target-label|assn-label|Feature|target-size|target|assn-size|assn|in-both|same-score|weights-size|weights|avg_weights\n");
+		f.printf("Iter|DocID|SentenceNo|Tokens|Sentence|i|Lemma|target-label|assn-label|Feature|target-size|target|assn-size|assn|in-both|same-score|weights-size|weights|avg_weights\n");
 		//////////
 		
 		// online learning with beam search and early update
@@ -282,11 +282,11 @@ public class Perceptron implements java.io.Serializable
 							bothTargetAndAssn ="F";
 						}
 						
-						f.printf("%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s\n", iter, i, instance.size(), sentText, j, lemma,
+						f.printf("%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s\n", iter, instance.docID, i, instance.size(), sentText, j, lemma,
 								instance.target.getLabelAtToken(j),	assnLabel, s.replace('|', '*').replace("\t", "  "), mapTarget.size(), inTarget,
 								mapAssn.size(),	inAssn, bothTargetAndAssn, sameTargetAndAssn, weights.size(), inWeights, inAvg);
 					}
-					f.printf("%s|%s|%s|%s|%s|%s|%s|%s||%s||%s||||%s||\n", iter, i, instance.size(), sentText, j, lemma,
+					f.printf("%s|%s|%s|%s|%s|%s|%s|%s|%s||%s||%s||||%s||\n", iter, instance.docID, i, instance.size(), sentText, j, lemma,
 							instance.target.getLabelAtToken(j), assnLabel, mapTarget.size(), mapAssn.size(), weights.size());
 				}
 				////////////

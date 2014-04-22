@@ -16,11 +16,12 @@ package edu.cuny.qc.perceptron.types;
 
 import gnu.trove.map.hash.TObjectIntHashMap;
 
+import java.io.OutputStreamWriter;
+import java.io.PrintStream;
+import java.io.PrintWriter;
+import java.io.Serializable;
 import java.util.ArrayList;
-import java.io.*;
 import java.util.Iterator;
-
-import javax.management.RuntimeErrorException;
 
 /**
  *  A mapping between integers and objects where the mapping in each
@@ -37,7 +38,6 @@ import javax.management.RuntimeErrorException;
  * the integer part of the mapping to efficiently represent the subset of
  * the Alphabet present in the FeatureVector.
  * @see FeatureVector
- * @see Instance
  * @see cc.mallet.pipe.Pipe
  */
 public class Alphabet implements Serializable
@@ -161,14 +161,12 @@ public class Alphabet implements Serializable
 	public String toString()
 	{
 		// To avoid freezing of debugger whenever displaying this object
-		return String.format("Alphabet (%d entries)", entries.size());
-		
-//		StringBuffer sb = new StringBuffer();
-//		for (int i = 0; i < entries.size(); i++) {
-//			sb.append (entries.get(i).toString());
-//			sb.append ('\n');
-//		}
-//		return sb.toString();
+		final int PRINT_THRESHOLD = 20;
+		String full = "";
+		if (entries.size() <= PRINT_THRESHOLD) {
+			full = entries.toString();
+		}
+		return String.format("%s(%s items)%s", Alphabet.class.getSimpleName(), entries.size(), full);		
 	}
 
 	public void dump () { dump (System.out); }

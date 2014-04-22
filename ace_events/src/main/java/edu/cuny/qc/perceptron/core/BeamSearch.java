@@ -26,6 +26,7 @@ public class BeamSearch
 	boolean isTraining = true;
 	
 	private static final boolean PRINT_BEAM = false;
+	private static final boolean PRINT_BEAM_DETAILED = false;
 	
 	protected FeatureVector getWeights()
 	{
@@ -85,8 +86,28 @@ public class BeamSearch
 				evaluate(assn, getWeights());
 			}
 			
+			//DEBUG
+			if (PRINT_BEAM_DETAILED) {
+				System.out.printf("*** i=%s, pre-sort:\n", i);
+				for (int q=0; q<successor.size(); q++) {
+					SentenceAssignment a = successor.get(q);
+					System.out.printf("  %d. score=%s : %s\n", q, a.getScore(), a);
+				}
+			}
+			//////////
+			
 			// rank according to score
 			Collections.sort(successor, new ScoreComparator());
+
+			//DEBUG
+			if (PRINT_BEAM_DETAILED) {
+				System.out.printf("******** i=%s, post-sort:\n", i);
+				for (int q=0; q<successor.size(); q++) {
+					SentenceAssignment a = successor.get(q);
+					System.out.printf("  %d. score=%s : %s\n", q, a.getScore(), a);
+				}
+			}
+			//////////
 			beam = successor.subList(0, Math.min(successor.size(), beamSize));
 			
 			// check early violation
@@ -151,8 +172,29 @@ public class BeamSearch
 					evaluate(assn, getWeights());
 				}
 				
+				//DEBUG
+				if (PRINT_BEAM_DETAILED) {
+					System.out.printf("*** i=%s, k=%s, pre-sort:\n", i, k);
+					for (int q=0; q<successor.size(); q++) {
+						SentenceAssignment a = successor.get(q);
+						System.out.printf("  %d. score=%s : %s\n", q, a.getScore(), a);
+					}
+				}
+				//////////
+				
 				// rank according to score
 				Collections.sort(successor, new ScoreComparator());
+
+				//DEBUG
+				if (PRINT_BEAM_DETAILED) {
+					System.out.printf("******** i=%s, k=%s, post-sort:\n", i, k);
+					for (int q=0; q<successor.size(); q++) {
+						SentenceAssignment a = successor.get(q);
+						System.out.printf("  %d. score=%s : %s\n", q, a.getScore(), a);
+					}
+				}
+				//////////
+
 				beam = successor.subList(0, Math.min(successor.size(), beamSize));
 				// System.out.println("sucessor size 2: " + successor.size());
 				if(isLearning)

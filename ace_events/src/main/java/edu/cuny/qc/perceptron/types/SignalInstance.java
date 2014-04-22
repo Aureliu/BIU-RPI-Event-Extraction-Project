@@ -8,8 +8,12 @@ public class SignalInstance {
 	
 	public String name;
 	public SignalType type;
-	public BigDecimal score;
+	private /*public*/ BigDecimal score;
 	public boolean positive;
+	
+	static {
+		System.err.println("??? SignalInstance: score is currently made private, so that conceptually there is no link between which numbers represent a *signal*'s positiveness, and which numbers represent a *feature*'s positiveness. But in the future, maybe a signal's score will be meaningful, and we would want to somehow use it for the feature's score.");
+	}
 	
 	public static Predicate<BigDecimal> isPositive = new Predicate<BigDecimal>() {
 		@Override

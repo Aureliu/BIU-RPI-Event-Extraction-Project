@@ -10,8 +10,9 @@ import edu.cuny.qc.perceptron.core.Perceptron;
 public class WeightTracer {
 
 	private List<String> FEATURES_TO_PRINT = Arrays.asList(new String[] {
-			"BigramFeature:	WORDNET_SPEC_ENTAILED		currentLabel:IS_TRIGGER",
-			"BigramFeature:	WORDNET_SPEC_ENTAILED		currentLabel:O"
+			"BigramFeature:	WORDNET_SAME_SYNSET",
+			"BigramFeature:	WORDNET_SPEC_HYPERNYM",
+			"BigramFeature:	WORDNET_FAKE_LETTER_E",
 			});
 
 	

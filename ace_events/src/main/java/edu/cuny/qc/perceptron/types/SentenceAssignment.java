@@ -37,12 +37,16 @@ public class SentenceAssignment
 	public static final String Default_Argument_Label = "NON";
 	public static final String Generic_Existing_Argument_Label = "IS_ARG";
 	
+	public static final BigDecimal FEATURE_POSITIVE_VAL = BigDecimal.ONE;
+	public static final BigDecimal FEATURE_NEGATIVE_VAL = BigDecimal.ZERO;
+
 	/**
 	 * the index of last processed (assigned/searched) token
 	 */
 	int state = -1;
 	
 	static {
+		System.err.println("??? SentenceAssignment: Edge features are currently excluded, until I stabalize a policy with triggers. Then some policy should be decided for edges (that should handle, for example, the fact that if only the guess has some trigger that the gold doesn't have, then it would physically have more features than target (not same features just with different scores, like in the triggers' case), and this violated my assumption that guess and gold have the same features.");
 		System.err.println("??? SentenceAssignment: GLOBAL FEATURES ARE NOT IMPORTED YET!!!");
 	}
 	
@@ -489,10 +493,12 @@ public class SentenceAssignment
 		if (genericEdgeLabel == Generic_Existing_Argument_Label) {
 			Map<String, SignalInstance> signalsOfEntity = allEntitySignals.get(nodeLabel).get(edgeLabel);
 			for (SignalInstance signal : signalsOfEntity.values()) {
-				//if (signal.positive) {
-					String featureStr = "EdgeLocalFeature:\t" + signal.name;// + "\t" + genericEdgeLabel;
-					makeFeature(featureStr, fv, addIfNotPresent, useIfNotPresent);
-				//}
+				BigDecimal featureValue = signal.positive ? FEATURE_POSITIVE_VAL : FEATURE_NEGATIVE_VAL;
+				String featureStr = "EdgeLocalFeature:\t" + signal.name;// + "\t" + genericEdgeLabel;
+				
+				// TODO this line should DEFINITELY be uncommented when I incorporate edges back to the story
+				// of course, a policy regarding them should be decided and implemented
+				//makeFeature(featureStr, fv, featureValue, addIfNotPresent, useIfNotPresent);
 			}
 		}
 		else {
@@ -500,11 +506,11 @@ public class SentenceAssignment
 			for (Object signalNameObj : perceptron.argumentSignalNames) {
 				String signalName = (String) signalNameObj;
 				//BigDecimal numFalse = BigDecimal.ZERO;
-				BigDecimal featureValue = BigDecimal.ONE;
+				BigDecimal featureValue = FEATURE_POSITIVE_VAL;
 				for (Map<String, SignalInstance> signalsOfLabel : signalsOfNodeLabel.values()) {
 					SignalInstance signal = signalsOfLabel.get(signalName);
 					if (signal.positive) {
-						featureValue = BigDecimal.ZERO;
+						featureValue = FEATURE_NEGATIVE_VAL;
 						break;
 					}
 //					if (!signal.positive) {
@@ -516,7 +522,11 @@ public class SentenceAssignment
 				//BigDecimal falseRatio = numFalse.divide(numRolesiInSpec);// divide by number of roles in current spec
 				
 				String featureStr = "EdgeLocalFeature:\t" + signalName;// + "\t" + genericEdgeLabel;
-				makeFeature(featureStr, fv, featureValue, addIfNotPresent, useIfNotPresent);
+
+				
+				// TODO this line should DEFINITELY be uncommented when I incorporate edges back to the story
+				// of course, a policy regarding them should be decided and implemented
+				//makeFeature(featureStr, fv, featureValue, addIfNotPresent, useIfNotPresent);
 
 			}
 		}
@@ -623,15 +633,10 @@ public class SentenceAssignment
 			if (genericLabel == Generic_Existing_Trigger_Label) {
 				Map<String, SignalInstance> signalsOfLabel = token.get(label);
 				for (SignalInstance signal : signalsOfLabel.values()) {
-					//if (signal.positive) {
-
-						// unigram features, for history reason, we still call them BigramFeature
-						// create a bigram feature
-						String featureStr = "BigramFeature:\t" + signal.name;
-						//String featureStr = "BigramFeature:\t" + signal.name + "\t" + "\tcurrentLabel:" + genericLabel;
-						makeFeature(featureStr, this.getFV(i), signal.score, addIfNotPresent, useIfNotPresent);
-
-					//}
+					BigDecimal featureValue = signal.positive ? FEATURE_POSITIVE_VAL : FEATURE_NEGATIVE_VAL;
+					String featureStr = "BigramFeature:\t" + signal.name;
+					//String featureStr = "BigramFeature:\t" + signal.name + "\t" + "\tcurrentLabel:" + genericLabel;
+					makeFeature(featureStr, this.getFV(i), featureValue, addIfNotPresent, useIfNotPresent);
 				}
 			}
 			else { //genericLabel == Default_Trigger_Label
@@ -640,27 +645,25 @@ public class SentenceAssignment
 					//double numFalse = 0.0;
 					
 					/**
-					 * If at least one spec has a positive signal - then the value is -1.0,
-					 * meaning that the token doesn't for Default_Trigger_Label ("O").
+					 * If at least one spec has a positive signal - then the value is FEATURE_NEGATIVE_VAL,
+					 * meaning that the token doesn't fit Default_Trigger_Label ("O").
 					 * 
-					 * Otherwise (no spec fits), the value is 1.0 - the token fits "O". 
+					 * Otherwise (no spec fits), the value is FEATURE_POSITIVE_VAL - the token fits "O". 
 					 */
-					BigDecimal featureValue = BigDecimal.ONE;
+					BigDecimal featureValue = FEATURE_POSITIVE_VAL;
 					for (Map<String, SignalInstance> signalsOfLabel : token.values()) {
 						SignalInstance signal = signalsOfLabel.get(signalName);
 						if (signal == null) {
 							throw new IllegalArgumentException(String.format("Cannot find feature '%s' for non-label token %d", signalName, i));
 						}
 						if (signal.positive) {
-							featureValue = BigDecimal.ZERO;//0.0 //-1.0;
+							featureValue = FEATURE_NEGATIVE_VAL;//0.0 //-1.0;
 							break;
 						}
 					}
 					
 					//double falseRatio = numFalse / token.size(); // divide by number of specs
 										
-					// unigram features, for history reason, we still call them BigramFeature
-					// create a bigram feature
 					String featureStr = "BigramFeature:\t" + signalName;
 					//String featureStr = "BigramFeature:\t" + signalName + "\t" + "\tcurrentLabel:" + genericLabel;
 					makeFeature(featureStr, this.getFV(i), featureValue, addIfNotPresent, useIfNotPresent);

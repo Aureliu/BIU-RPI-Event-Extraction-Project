@@ -10,6 +10,8 @@ import java.io.OutputStream;
 import java.io.PrintStream;
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.math.MathContext;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -201,7 +203,14 @@ public class Perceptron implements java.io.Serializable
 		
 		//DEBUG
 		WeightTracer wt = new WeightTracer(this);
-		System.out.printf("Iter|%sSentenceNo|%s\n", wt.getFeaturesStringTitle(), wt.getFeaturesStringTitle());
+		String weightsOutputFilePath = Pipeline.modelFile.getParent() + "/AllWeights-ODIE.tsv";
+		PrintStream w = null;
+		try {
+			w = new PrintStream(weightsOutputFilePath);
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		}
+		w.printf("Iter|%sSentenceNo|%s\n", wt.getFeaturesStringTitle(), wt.getFeaturesStringTitle());
 
 		String featuresOutputFilePath = Pipeline.modelFile.getParent() + "/AllFeatures-ODIE.tsv";
 		PrintStream f = null;
@@ -210,7 +219,7 @@ public class Perceptron implements java.io.Serializable
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
-		f.printf("Iter|SentenceNo|Sentence|i|Lemma|Feature|target-size|target|assn-size|assn|in-both|weights-size|weights|avg_weights\n");
+		f.printf("Iter|SentenceNo|Tokens|Sentence|i|Lemma|target-label|assn-label|Feature|target-size|target|assn-size|assn|in-both|same-score|weights-size|weights|avg_weights\n");
 		//////////
 		
 		// online learning with beam search and early update
@@ -246,15 +255,22 @@ public class Perceptron implements java.io.Serializable
 				}
 				
 				//DEBUG
-				System.out.printf("|%s%d|%s\n", wt.getFeaturesStringSkip(), i, wt.getFeaturesString());		
+				w.printf("|%s%d|%s\n", wt.getFeaturesStringSkip(), i, wt.getFeaturesString());		
 				
 				List<Map<Class<?>, Object>> tokens = (List<Map<Class<?>, Object>>) instance.get(InstanceAnnotations.Token_FEATURE_MAPs);
 				String sentText = instance.text.replace('\n', ' ');
-				for (int j=0; j<=assn.getState(); j++) {
+				for (int j=0; j<instance.size(); j++) {
 					String lemma = (String) tokens.get(j).get(TokenAnnotations.LemmaAnnotation.class);
 					Set<Object> allFeaturesSet = new HashSet<Object>();
 					Map<Object, BigDecimal> mapTarget = instance.target.getFeatureVectorSequence().get(j).getMap();
-					Map<Object, BigDecimal> mapAssn   = assn           .getFeatureVectorSequence().get(j).getMap();
+					
+					String assnLabel = "X";
+					Map<Object, BigDecimal> mapAssn = new HashMap<Object, BigDecimal>();
+					if (j<assn.getFeatureVectorSequence().size()) {
+						mapAssn = assn.getFeatureVectorSequence().get(j).getMap();
+						assnLabel = assn.getLabelAtToken(j);
+					}
+					
 					allFeaturesSet.addAll(mapTarget.keySet());
 					allFeaturesSet.addAll(mapAssn.keySet());
 					List<String> allFeaturesList = new ArrayList<String>(allFeaturesSet.size());
@@ -290,16 +306,23 @@ public class Perceptron implements java.io.Serializable
 						}
 						
 						String bothTargetAndAssn = null;
+						String sameTargetAndAssn = "F";
 						if (!inTarget.equals("X") && !inAssn.equals("X")) {
 							bothTargetAndAssn = "T";
+							if (inTarget.equals(inAssn)) {
+								sameTargetAndAssn = "T";
+							}
 						}
 						else {
 							bothTargetAndAssn ="F";
 						}
 						
-						f.printf("%d|%d|%s|%d|%s|%s|%d|%s|%d|%s|%s|%d|%s|%s\n", iter, i, sentText, j, lemma, s.replace('|', '*').replace("\t", "  "), mapTarget.size(), inTarget, mapAssn.size(), inAssn, bothTargetAndAssn, weights.size(), inWeights, inAvg);
+						f.printf("%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s\n", iter, i, instance.size(), sentText, j, lemma,
+								instance.target.getLabelAtToken(j),	assnLabel, s.replace('|', '*').replace("\t", "  "), mapTarget.size(), inTarget,
+								mapAssn.size(),	inAssn, bothTargetAndAssn, sameTargetAndAssn, weights.size(), inWeights, inAvg);
 					}
-					f.printf("%d|%d|%s|%d|%s||%d||%d|||%d|\n", iter, i, sentText, j, lemma, mapTarget.size(), mapAssn.size(), weights.size());
+					f.printf("%s|%s|%s|%s|%s|%s|%s|%s||%s||%s||||%s||\n", iter, i, instance.size(), sentText, j, lemma,
+							instance.target.getLabelAtToken(j), assnLabel, mapTarget.size(), mapAssn.size(), weights.size());
 				}
 				////////////
 
@@ -342,7 +365,7 @@ public class Perceptron implements java.io.Serializable
 			}
 			
 			//DEBUG
-			System.out.printf("%d|%s\n", iter, wt.getFeaturesString());		
+			w.printf("%d|%s\n", iter, wt.getFeaturesString());		
 			////////////
 
 			
@@ -423,7 +446,8 @@ public class Perceptron implements java.io.Serializable
 		{
 			BigDecimal value = this.weights.get(feat); // w_0
 			BigDecimal value_a = this.avg_weights_base.get(feat); // w_a
-			value = value.subtract(value_a.divide(c)); //value - value_a / c; // w_0 - w_a/c
+			BigDecimal quotient = value_a.divide(c, MathContext.DECIMAL128);
+			value = value.subtract(quotient); //value - value_a / c; // w_0 - w_a/c
 			this.avg_weights.add(feat, value);
 		}
 	}

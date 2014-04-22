@@ -232,7 +232,13 @@ public class FeatureVector implements Serializable
 	}
 	
 	public String toString() {
-		return String.format("%s(%s items)", FeatureVector.class.getSimpleName(), map.size());
+		final int PRINT_THRESHOLD = 20;
+		if (map.size() <= PRINT_THRESHOLD) {
+			return String.format("[%s items]%s", map.size(), toStringFull(true));
+		}
+		else {
+			return String.format("%s(%s items)", FeatureVector.class.getSimpleName(), map.size());
+		}
 	}
 	
 	public String toStringFull()

@@ -136,7 +136,7 @@ public class SentenceInstance
 		this.allText = sent.doc.allText;
 		this.docID = sent.doc.docID;
 		this.text = sent.text;
-		
+
 		// fill in entity information
 		this.eventArgCandidates.addAll(sent.entityMentions);
 		this.eventArgCandidates.addAll(sent.valueMentions);

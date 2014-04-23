@@ -23,6 +23,15 @@ public class Evaluator
 		public double arg_precision = 0.0;
 		public double arg_recall = 0.0;
 	
+		public double count_trigger_ans = 0;
+		public double count_trigger_gold = 0;
+		public double count_trigger_correct = 0;
+
+		public double count_arg_ans = 0;
+		public double count_arg_gold = 0;
+		public double count_arg_correct = 0;
+		
+		
 		// harmonic_mean of trigger F1 and argument F1
 		public double harmonic_mean = 0.0;
 		
@@ -116,6 +125,10 @@ public class Evaluator
 			f_measure = 2 * (prec * recall) / (prec + recall);
 		}
 		
+		score.count_trigger_ans = count_trigger_ans;
+		score.count_trigger_gold = count_trigger_gold;
+		score.count_trigger_correct = count_trigger_correct;
+
 		score.trigger_precision = prec;
 		score.trigger_recall = recall;
 		score.trigger_F1 = f_measure;
@@ -229,6 +242,10 @@ public class Evaluator
 			f_measure = 2 * (prec * recall) / (prec + recall);
 		}
 		
+		score.count_arg_ans = count_arg_ans;
+		score.count_arg_gold = count_arg_gold;
+		score.count_arg_correct = count_arg_correct;
+
 		score.arg_precision = prec;
 		score.arg_recall = recall;
 		score.arg_F1 = f_measure;

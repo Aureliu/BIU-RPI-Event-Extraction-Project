@@ -2,6 +2,7 @@ package edu.cuny.qc.perceptron.types;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -104,7 +105,7 @@ public class SentenceAssignment
 	protected BigDecimal score = BigDecimal.ZERO;
 	protected List<BigDecimal> partial_scores;
 	
-	public Map<Integer, Map<String, SignalInstance>> featureToSignal; 
+	public Map<Integer, Map<String, List<SignalInstance>>> featureToSignal; 
 	
 	public FeatureVector getFV(int index)
 	{
@@ -192,11 +193,11 @@ public class SentenceAssignment
 		assn.local_score = this.local_score;
 		assn.partial_scores.addAll(this.partial_scores);
 		
-		assn.featureToSignal = new HashMap<Integer, Map<String, SignalInstance>>();
-		for (Entry<Integer, Map<String, SignalInstance>> entry : featureToSignal.entrySet()) {
-			Map<String, SignalInstance> map = new HashMap<String, SignalInstance>();
+		assn.featureToSignal = new HashMap<Integer, Map<String, List<SignalInstance>>>();
+		for (Entry<Integer, Map<String, List<SignalInstance>>> entry : featureToSignal.entrySet()) {
+			Map<String, List<SignalInstance>> map = new HashMap<String, List<SignalInstance>>();
 			assn.featureToSignal.put(new Integer(entry.getKey()), map);
-			for(Entry<String, SignalInstance> entry2 : entry.getValue().entrySet()) {
+			for(Entry<String, List<SignalInstance>> entry2 : entry.getValue().entrySet()) {
 				map.put(entry2.getKey(), entry2.getValue());
 			}
 		}
@@ -357,7 +358,7 @@ public class SentenceAssignment
 		
 		featVecSequence = new FeatureVectorSequence();
 		partial_scores = new ArrayList<BigDecimal>();
-		featureToSignal = new HashMap<Integer, Map<String, SignalInstance>>();
+		featureToSignal = new HashMap<Integer, Map<String, List<SignalInstance>>>();
 	}
 	
 	/**
@@ -648,12 +649,14 @@ public class SentenceAssignment
 					BigDecimal featureValue = signal.positive ? FEATURE_POSITIVE_VAL : FEATURE_NEGATIVE_VAL;
 					String featureStr = "BigramFeature:\t" + signal.name;
 					//String featureStr = "BigramFeature:\t" + signal.name + "\t" + "\tcurrentLabel:" + genericLabel;
-					makeFeature(featureStr, this.getFV(i), featureValue, i, signal, addIfNotPresent, useIfNotPresent);
+					List<SignalInstance> signals = Arrays.asList(new SignalInstance[] {signal});
+					makeFeature(featureStr, this.getFV(i), featureValue, i, signals, addIfNotPresent, useIfNotPresent);
 				}
 			}
 			else { //genericLabel == Default_Trigger_Label
 				for (Object signalNameObj : perceptron.triggerSignalNames) {
 					String signalName = (String) signalNameObj;
+					List<SignalInstance> signals = new ArrayList<SignalInstance>();
 					//double numFalse = 0.0;
 					
 					/**
@@ -668,6 +671,7 @@ public class SentenceAssignment
 						if (signal == null) {
 							throw new IllegalArgumentException(String.format("Cannot find feature '%s' for non-label token %d", signalName, i));
 						}
+						signals.add(signal);
 						if (signal.positive) {
 							featureValue = FEATURE_NEGATIVE_VAL;//0.0 //-1.0;
 							break;
@@ -678,16 +682,16 @@ public class SentenceAssignment
 										
 					String featureStr = "BigramFeature:\t" + signalName;
 					//String featureStr = "BigramFeature:\t" + signalName + "\t" + "\tcurrentLabel:" + genericLabel;
-					makeFeature(featureStr, this.getFV(i), featureValue, i, null, addIfNotPresent, useIfNotPresent);
+					makeFeature(featureStr, this.getFV(i), featureValue, i, signals, addIfNotPresent, useIfNotPresent);
 				}
 			}
 		}
 	}
 	
-	protected void makeFeature(String featureStr, FeatureVector fv, Integer i, SignalInstance signal, boolean add_if_not_present,
+	protected void makeFeature(String featureStr, FeatureVector fv, Integer i, List<SignalInstance> signals, boolean add_if_not_present,
 			boolean use_if_not_present)
 	{
-		makeFeature(featureStr, fv, BigDecimal.ONE, i, signal, add_if_not_present, use_if_not_present);
+		makeFeature(featureStr, fv, BigDecimal.ONE, i, signals, add_if_not_present, use_if_not_present);
 	}
 	
 	/**
@@ -697,7 +701,7 @@ public class SentenceAssignment
 	 * @param add_if_not_present true if the feature is not in featureAlphabet, add it
 	 * @param use_if_not_present true if the feature is not in featureAlphaebt, still use it in FV
 	 */
-	protected void makeFeature(String featureStr, FeatureVector fv, BigDecimal value, Integer i, SignalInstance signal, boolean add_if_not_present,
+	protected void makeFeature(String featureStr, FeatureVector fv, BigDecimal value, Integer i, List<SignalInstance> signals, boolean add_if_not_present,
 			boolean use_if_not_present)
 	{
 		// Feature feat = new Feature(null, featureStr);
@@ -719,19 +723,19 @@ public class SentenceAssignment
 		}
 		
 		if (wasAdded) {
-			Map<String, SignalInstance> map = featureToSignal.get(i);
+			Map<String, List<SignalInstance>> map = featureToSignal.get(i);
 			if (!featureToSignal.containsKey(i)) {
-				map = new HashMap<String, SignalInstance>();
+				map = new HashMap<String, List<SignalInstance>>();
 				featureToSignal.put(i, map);
 			}
 			if (map.containsKey(featureStr)) {
-				SignalInstance existingSignal = map.get(featureStr);
+				List<SignalInstance> existingSignals = map.get(featureStr);
 				// TODO I have some feeling that this exception will rise whenever I switch back to multiple labels.
 				// Perhaps this would mean that featureToSignal should be even more complex and also have a distinct "label" level.
-				throw new IllegalArgumentException(String.format("Tried to store signal '%s' for feature '%s' over i=%s, but this feature already exists over this i, it already has the signal '%s'",
-						signal, featureStr, i, existingSignal));
+				throw new IllegalArgumentException(String.format("Tried to store signals %s for feature '%s' over i=%s, but this feature already exists over this i, it already has the signals %s",
+						signals, featureStr, i, existingSignals));
 			}
-			map.put(featureStr, signal);
+			map.put(featureStr, signals);
 		}
 	}
 	
@@ -987,6 +991,6 @@ public class SentenceAssignment
 		{
 			this.featVecSequence.sequence.set(i, new FeatureVector());
 		}
-		featureToSignal = new HashMap<Integer, Map<String, SignalInstance>>();
+		featureToSignal = new HashMap<Integer, Map<String, List<SignalInstance>>>();
 	}
 }

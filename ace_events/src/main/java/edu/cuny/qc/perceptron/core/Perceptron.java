@@ -133,16 +133,25 @@ public class Perceptron implements java.io.Serializable
 		if (!assn.featureToSignal.containsKey(i)) {
 			throw new IllegalArgumentException("Cannot find featureToSignal map for index: "+i+" in assignment: " + assn.toString());
 		}
-		Map<String, SignalInstance> map = assn.featureToSignal.get(i);
+		Map<String, List<SignalInstance>> map = assn.featureToSignal.get(i);
 		if (!map.containsKey(featureName)) {
 			throw new IllegalArgumentException("Cannot find feature '"+featureName+"' for i="+i+" in assignment: " + assn.toString());
 		}
-		SignalInstance signal = map.get(featureName);
-		if (signal == null) {
+		List<SignalInstance> signals = map.get(featureName);
+		if (signals == null) {
 			result = "N/A";
 		}
 		else {
-			result = signal.positive ? "T" : "F";
+			List<String> strs = new ArrayList<String>(signals.size());
+			for (SignalInstance signal : signals) {
+				strs.add(signal.getPositiveString());
+			}
+			if (signals.size() == 1) {
+				result = strs.get(0);
+			}
+			else {
+				result = strs.toString();
+			}
 		}
 		return result;
 	}

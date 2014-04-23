@@ -42,6 +42,10 @@ public class SignalInstance {
 		this.positive = isPositive.apply(score);
 	}
 	
+	public String getPositiveString() {
+		return positive ? "T" : "F";
+	}
+	
 	@Override
 	public String toString() {
 		return String.format("_%s_(%s=%s[%s])", type.toString().toLowerCase(), name, positive, score);

@@ -20,6 +20,7 @@ import java.util.Set;
 
 import org.apache.commons.lang3.SerializationUtils;
 
+import edu.cuny.qc.perceptron.core.Evaluator.Score;
 import edu.cuny.qc.perceptron.types.Alphabet;
 import edu.cuny.qc.perceptron.types.FeatureVector;
 import edu.cuny.qc.perceptron.types.SentenceAssignment;
@@ -28,6 +29,7 @@ import edu.cuny.qc.perceptron.types.Sentence.Sent_Attribute;
 import edu.cuny.qc.perceptron.types.SentenceInstance.InstanceAnnotations;
 import edu.cuny.qc.util.TokenAnnotations;
 import edu.cuny.qc.util.TypeConstraints;
+import edu.cuny.qc.util.Utils;
 import edu.cuny.qc.util.WeightTracer;
 
 
@@ -87,6 +89,16 @@ public class Perceptron implements java.io.Serializable
 //		labelBigram = new HashMap<String, List<String>>();
 //	}
 //	
+	
+	private void printScore(PrintStream out, String iter, int devSize, Score score) {
+		Utils.print(out, "", "\n", "|", iter, devSize,
+				score.count_trigger_gold, score.count_trigger_ans, score.count_trigger_correct,
+				score.trigger_precision, score.trigger_recall, score.trigger_F1, 
+				score.count_arg_gold, score.count_arg_ans, score.count_arg_correct,
+				score.arg_precision, score.arg_recall, score.arg_F1, 
+				score.harmonic_mean);
+	}
+	
 	/**
 	 *  given an instanceList, decode, and give the best assignmentList
 	 * @param instance
@@ -168,7 +180,7 @@ public class Perceptron implements java.io.Serializable
 		
 		//DEBUG
 		WeightTracer wt = new WeightTracer(this);
-		String weightsOutputFilePath = Pipeline.modelFile.getParent() + "/AllWeights-ODIE.tsv";
+		String weightsOutputFilePath = Pipeline.modelFile.getParent() + "/AllWeights-matser.tsv";
 		PrintStream w = null;
 		try {
 			w = new PrintStream(weightsOutputFilePath);
@@ -185,6 +197,15 @@ public class Perceptron implements java.io.Serializable
 			throw new RuntimeException(e);
 		}
 		f.printf("Iter|DocID|SentenceNo|Tokens|Sentence|i|Lemma|target-label|assn-label|Feature|target-size|target|assn-size|assn|in-both|same-score|weights-size|weights|avg_weights\n");
+		
+		String devOutputFilePath = Pipeline.modelFile.getParent() + "/DevPerformance-master.tsv";
+		PrintStream d = null;
+		try {
+			d = new PrintStream(devOutputFilePath);
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		}
+		d.printf("Iter|DevSentences|Trigger-Gold|Trigger-System|Trigger-Correct|Trigger-Precision|Trigger-Recall|Trigger-F1|Arg-Gold|Arg-System|Arg-Correct|Arg-Precision|Arg-Recall|Arg-F1|HarmonicMean-F1\n");		
 		//////////
 		
 		// online learning with beam search and early update
@@ -313,8 +334,8 @@ public class Perceptron implements java.io.Serializable
 				
 				List<SentenceAssignment> devResult = decoding(devList);
 				Evaluator.Score dev_score = evaluator.evaluate(devResult, getCanonicalInstanceList(devList));
-				
-				//System.out.println("Dev " + dev_score);
+				printScore(d, new Integer(iter).toString(), devList.size(), dev_score);
+
 
 				if((dev_score.harmonic_mean - max_score.harmonic_mean) >= 0.001)
 				{
@@ -346,17 +367,22 @@ public class Perceptron implements java.io.Serializable
 			}
 		}
 		
+		String lastIter = null;
 		if(iter < this.controller.maxIterNum)
 		{
 			// converge
 			System.out.println("converge in iter " + iter + "\t time:" + totalTime);
+			lastIter = String.format("Best(iter=%s, converged)", best_iter);
 			iter++;
 		}
 		else
 		{
 			// stop without convergency
 			System.out.println("Stop without convergency" + "\t time:" + totalTime);
+			lastIter = String.format("Best(iter=%s, NO converge)", best_iter);
 		}
+		printScore(d, lastIter, devList.size(), max_score);
+
 		
 		if(devList != null && best_weights != null)
 		{

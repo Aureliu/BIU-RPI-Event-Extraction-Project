@@ -112,6 +112,10 @@ public class EvaluatorLoose extends Evaluator
 			f_measure = 2 * (prec * recall) / (prec + recall);
 		}
 		
+		score.count_arg_ans = count_arg_ans;
+		score.count_arg_gold = count_arg_gold;
+		score.count_arg_correct = count_arg_correct;
+
 		score.arg_precision = prec;
 		score.arg_recall = recall;
 		score.arg_F1 = f_measure;

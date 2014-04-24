@@ -13,6 +13,8 @@ import java.util.Map;
 import java.util.Random;
 import java.util.Set;
 
+import java_cup.internal_error;
+
 import javax.management.RuntimeErrorException;
 
 import edu.cuny.qc.perceptron.core.Decoder;
@@ -181,18 +183,20 @@ public class FeatureVector implements Serializable
 			if(value != 0.0)
 			{
 				this.add(key, value);
+				System.out.printf("  - [%s,%s,%s] %-70s\t += %s\n", value1, value2, factor, key, value);
 			}
 		}
 		for(Object key : fv2.map.keySet())
 		{
 			Double value1 = fv1.get(key);
-			Double value2 = fv2.get(key);
+			Double value2 = fv2.get(key);			
 			if(value1 == null)
 			{
 				double value = (0.0 - value2) * factor;
 				if(value != 0.0)
 				{
 					this.add(key, value);
+					System.out.printf("  @ [%s,%s,%s] %-70s\t += %s\n", value1, value2, factor, key, value);
 				}
 			}
 		}
@@ -286,29 +290,4 @@ public class FeatureVector implements Serializable
 	{
 		return map.size();
 	}
-	
-	public static void main(String[] args)
-	{
-		// test map operations
-		HashMap<Integer, Double> map = new HashMap<Integer, Double>();
-		map.put(1, 1.0);
-		map.put(2, 2.0);
-		map.put(3, 3.0);
-		
-		HashMap<Integer, Double> map2 = (HashMap<Integer, Double>) map.clone();
-		map.put(3, 4.0);
-		for(Integer key : map2.keySet())
-		{
-			Double value = map2.get(key);
-			System.out.println(key + " " + value);
-		}
-		
-		Double temp = map2.get(3);
-		temp++;
-		for(Integer key : map2.keySet())
-		{
-			Double value = map2.get(key);
-			System.out.println(key + " " + value);
-		}
 	}
-}

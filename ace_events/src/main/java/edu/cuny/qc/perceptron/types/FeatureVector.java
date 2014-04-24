@@ -187,6 +187,7 @@ public class FeatureVector implements Serializable
 			if(!value.equals(BigDecimal.ZERO))
 			{
 				this.add(key, value);
+				System.out.printf("  - [%s,%s,%s] %-70s\t += %s\n", value1, value2, factor, key, value);
 			}
 		}
 		for(Object key : fv2.map.keySet())
@@ -199,6 +200,7 @@ public class FeatureVector implements Serializable
 				if(!value.equals(BigDecimal.ZERO))
 				{
 					this.add(key, value);
+					System.out.printf("  @ [%s,%s,%s] %-70s\t += %s\n", value1, value2, factor, key, value);
 				}
 			}
 		}

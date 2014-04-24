@@ -11,10 +11,8 @@ import java.io.PrintStream;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.math.MathContext;
-import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
@@ -26,19 +24,19 @@ import org.apache.commons.lang3.SerializationUtils;
 import org.apache.uima.jcas.JCas;
 
 import edu.cuny.qc.perceptron.core.Evaluator.Score;
+import edu.cuny.qc.perceptron.similarity_scorer.SignalMechanism;
 import edu.cuny.qc.perceptron.similarity_scorer.SignalMechanismException;
 import edu.cuny.qc.perceptron.similarity_scorer.WordNetSignalMechanism;
 import edu.cuny.qc.perceptron.types.Alphabet;
 import edu.cuny.qc.perceptron.types.FeatureVector;
 import edu.cuny.qc.perceptron.types.SentenceAssignment;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
-import edu.cuny.qc.perceptron.types.Sentence.Sent_Attribute;
 import edu.cuny.qc.perceptron.types.SentenceInstance.InstanceAnnotations;
 import edu.cuny.qc.perceptron.types.SignalInstance;
 import edu.cuny.qc.util.TokenAnnotations;
 import edu.cuny.qc.util.TypeConstraints;
-import edu.cuny.qc.util.Utils;
 import edu.cuny.qc.util.UnsupportedParameterException;
+import edu.cuny.qc.util.Utils;
 import edu.cuny.qc.util.WeightTracer;
 import eu.excitementproject.eop.common.component.lexicalknowledge.LexicalResourceException;
 import eu.excitementproject.eop.core.utilities.dictionary.wordnet.WordNetInitializationException;
@@ -133,14 +131,15 @@ public class Perceptron implements java.io.Serializable
 	
 	private String getSignalScore(SentenceAssignment assn, Integer i, String featureName) {
 		String result;
+		String strippedFeatureName = SentenceAssignment.stripLabel(featureName);
 		if (!assn.featureToSignal.containsKey(i)) {
 			throw new IllegalArgumentException("Cannot find featureToSignal map for index: "+i+" in assignment: " + assn.toString());
 		}
 		Map<String, List<SignalInstance>> map = assn.featureToSignal.get(i);
-		if (!map.containsKey(featureName)) {
-			throw new IllegalArgumentException("Cannot find feature '"+featureName+"' for i="+i+" in assignment: " + assn.toString());
+		if (!map.containsKey(strippedFeatureName)) {
+			throw new IllegalArgumentException("Cannot find feature (stripped) '"+strippedFeatureName+"' for i="+i+" in assignment: " + assn.toString());
 		}
-		List<SignalInstance> signals = map.get(featureName);
+		List<SignalInstance> signals = map.get(strippedFeatureName);
 		if (signals == null) {
 			result = "N/A";
 		}
@@ -629,7 +628,7 @@ public class Perceptron implements java.io.Serializable
 		for(int i=0; i <= assn.getState(); i++)
 		{
 			// weights = \phi(y*) - \phi(y)
-			this.getWeights().addDelta2(target.featVecSequence.get(i), assn.featVecSequence.get(i), BigDecimal.ONE);
+			this.getWeights().addDelta(target.featVecSequence.get(i), assn.featVecSequence.get(i), BigDecimal.ONE);
 			//this.getWeights().addDelta(target.featVecSequence.get(i), assn.featVecSequence.get(i), 1.0);
 			
 			if(this.controller.avgArguments)

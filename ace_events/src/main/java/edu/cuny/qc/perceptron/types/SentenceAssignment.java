@@ -9,6 +9,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Vector;
 
+import org.apache.commons.lang.StringUtils;
+
 import edu.cuny.qc.ace.acetypes.AceEventMention;
 import edu.cuny.qc.ace.acetypes.AceEventMentionArgument;
 import edu.cuny.qc.ace.acetypes.AceMention;
@@ -39,6 +41,8 @@ public class SentenceAssignment
 	public static final String Default_Argument_Label = "NON";
 	public static final String Generic_Existing_Argument_Label = "IS_ARG";
 	
+	public static final String LABEL_MARKER = "\tcurrentLabel:";
+	
 	public static final BigDecimal FEATURE_POSITIVE_VAL = BigDecimal.ONE;
 	public static final BigDecimal FEATURE_NEGATIVE_VAL = BigDecimal.ZERO;
 
@@ -67,6 +71,21 @@ public class SentenceAssignment
 		}
 		else {
 			return Generic_Existing_Argument_Label;
+		}
+	}
+	
+	public static String stripLabel(String featureName) {
+		int count = StringUtils.countMatches(featureName, LABEL_MARKER);
+		if (count>1) {
+			throw new IllegalArgumentException("Got feature name with more than one marker label: '"+featureName+"'");
+		}
+		else if (count == 1) {
+			final String LABAEL_REGEX = String.format("%s\\S+", LABEL_MARKER);
+			String result = featureName.replaceFirst(LABAEL_REGEX, "");
+			return result;
+		}
+		else { //count == 0
+			return featureName;
 		}
 	}
 	
@@ -647,8 +666,8 @@ public class SentenceAssignment
 				Map<String, SignalInstance> signalsOfLabel = token.get(label);
 				for (SignalInstance signal : signalsOfLabel.values()) {
 					BigDecimal featureValue = signal.positive ? FEATURE_POSITIVE_VAL : FEATURE_NEGATIVE_VAL;
-					String featureStr = "BigramFeature:\t" + signal.name;
-					//String featureStr = "BigramFeature:\t" + signal.name + "\t" + "\tcurrentLabel:" + genericLabel;
+					//String featureStr = "BigramFeature:\t" + signal.name;
+					String featureStr = "BigramFeature:\t" + signal.name + "\t" + LABEL_MARKER + genericLabel;
 					List<SignalInstance> signals = Arrays.asList(new SignalInstance[] {signal});
 					makeFeature(featureStr, this.getFV(i), featureValue, i, signals, addIfNotPresent, useIfNotPresent);
 				}
@@ -680,8 +699,8 @@ public class SentenceAssignment
 					
 					//double falseRatio = numFalse / token.size(); // divide by number of specs
 										
-					String featureStr = "BigramFeature:\t" + signalName;
-					//String featureStr = "BigramFeature:\t" + signalName + "\t" + "\tcurrentLabel:" + genericLabel;
+					//String featureStr = "BigramFeature:\t" + signalName;
+					String featureStr = "BigramFeature:\t" + signalName + "\t" + LABEL_MARKER + genericLabel;
 					makeFeature(featureStr, this.getFV(i), featureValue, i, signals, addIfNotPresent, useIfNotPresent);
 				}
 			}
@@ -723,19 +742,20 @@ public class SentenceAssignment
 		}
 		
 		if (wasAdded) {
+			String strippedFeatureStr = stripLabel(featureStr);
 			Map<String, List<SignalInstance>> map = featureToSignal.get(i);
 			if (!featureToSignal.containsKey(i)) {
 				map = new HashMap<String, List<SignalInstance>>();
 				featureToSignal.put(i, map);
 			}
-			if (map.containsKey(featureStr)) {
-				List<SignalInstance> existingSignals = map.get(featureStr);
+			if (map.containsKey(strippedFeatureStr)) {
+				List<SignalInstance> existingSignals = map.get(strippedFeatureStr);
 				// TODO I have some feeling that this exception will rise whenever I switch back to multiple labels.
 				// Perhaps this would mean that featureToSignal should be even more complex and also have a distinct "label" level.
-				throw new IllegalArgumentException(String.format("Tried to store signals %s for feature '%s' over i=%s, but this feature already exists over this i, it already has the signals %s",
-						signals, featureStr, i, existingSignals));
+				throw new IllegalArgumentException(String.format("Tried to store signals %s for feature (stripped) '%s' over i=%s, but this feature already exists over this i, it already has the signals %s",
+						signals, strippedFeatureStr, i, existingSignals));
 			}
-			map.put(featureStr, signals);
+			map.put(strippedFeatureStr, signals);
 		}
 	}
 	

@@ -88,9 +88,12 @@ public class WordNetSignalMechanism extends SignalMechanism {
 		LinkedHashMap<String, BigDecimal> ret = new LinkedHashMap<String, BigDecimal>();
 		
 		ret.put("WORDNET_FAKE_LETTER_E", Aggregator.any(new TextHasLetterE().init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
+		ret.put("WORDNET_FAKE_LETTER_X", Aggregator.any(new TextHasLetterX().init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
+		ret.put("WORDNET_FAKE_PREKNOWN_TRIGGERS",     Aggregator.any(new PreknownTriggers().init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
+		ret.put("WORDNET_FAKE_NOT_PREKNOWN_TRIGGERS", Aggregator.any(new NotPreknownTriggers().init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
 		ret.put("WORDNET_SAME_SYNSET",   Aggregator.any(new SameSynset()    .init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
 		ret.put("WORDNET_SPEC_HYPERNYM", Aggregator.any(new IsSpecHypernym().init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
-		//ret.put("WORDNET_SPEC_ENTAILED", Aggregator.any(new IsSpecEntailed().init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
+		ret.put("WORDNET_SPEC_ENTAILED", Aggregator.any(new IsSpecEntailed().init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
 		
 		return ret;
 	}
@@ -112,6 +115,40 @@ public class WordNetSignalMechanism extends SignalMechanism {
 		{
 			String textLemma = text.getLemma().getValue();
 			return textLemma.contains("e");
+		}
+	}
+	
+	private class TextHasLetterX extends SignalMechanismSpecTokenIterator {
+		@Override
+		public Boolean calcTokenBooleanScore(Token text, Token spec) throws SignalMechanismException
+		{
+			String textLemma = text.getLemma().getValue();
+			return textLemma.contains("x");
+		}
+	}
+	
+	private static class PreknownTriggers extends SignalMechanismSpecTokenIterator {
+		public static final List<String> PREKNOWN_ATTACK_TRIGGERS = Arrays.asList(new String[] {
+				"ambush", "attack", "battle", "battlefront", "blast", "blow", "bomb", "bombing", "combat",
+				"conflict", "defend", "destroy", "drop", "engage", "explosion", "fight", "fighting", "fire",
+				"hit", "hold", "insurgency", "invade", "invasion", /*"it",*/ "kill", "launch", "occupy", "pummel",
+				"resistance", "response", "sept.", "shoot", "take", "terrorism", "threaten", "use",
+				"violence",	"war",
+		});
+		@Override
+		public Boolean calcTokenBooleanScore(Token text, Token spec) throws SignalMechanismException
+		{
+			String textLemma = text.getLemma().getValue();
+			return PREKNOWN_ATTACK_TRIGGERS.contains(textLemma);
+		}
+	}
+	
+	private static class NotPreknownTriggers extends SignalMechanismSpecTokenIterator {
+		@Override
+		public Boolean calcTokenBooleanScore(Token text, Token spec) throws SignalMechanismException
+		{
+			String textLemma = text.getLemma().getValue();
+			return !PreknownTriggers.PREKNOWN_ATTACK_TRIGGERS.contains(textLemma);
 		}
 	}
 	

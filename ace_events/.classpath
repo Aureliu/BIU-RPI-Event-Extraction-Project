@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry excluding="edu/cuny/qc/perceptron/types/GlarfDocument.java|edu/cuny/qc/ace/analysis/forEvent/AnalysisGlarf.java" kind="src" output="target/classes" path="src/main/java">
+	<classpathentry excluding="edu/cuny/qc/perceptron/types/GlarfDocument.java|edu/cuny/qc/ace/analysis/forEvent/AnalysisGlarf.java|edu/cuny/qc/perceptron/core/Test.java|edu/cuny/qc/perceptron/core/TestCluster.java|edu/cuny/qc/perceptron/core/TestClusterSeq.java|edu/cuny/qc/ace/analysis/forEvent/PrintWeights.java|edu/cuny/qc/perceptron/core/BeamSearchClusterSeq.java|edu/cuny/qc/perceptron/core/BeamSearchCluster.java|edu/cuny/qc/perceptron/core/BeamSearchStandard.java|edu/cuny/qc/perceptron/core/PerceptronCluster.java" kind="src" output="target/classes" path="src/main/java">
 		<attributes>
 			<attribute name="optional" value="true"/>
 			<attribute name="maven.pomderived" value="true"/>

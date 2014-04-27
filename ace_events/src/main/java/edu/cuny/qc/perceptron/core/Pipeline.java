@@ -19,6 +19,7 @@ import edu.cuny.qc.perceptron.types.Document;
 import edu.cuny.qc.perceptron.types.DocumentCrossSent;
 import edu.cuny.qc.perceptron.types.Sentence;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
+import edu.cuny.qc.util.UnsupportedParameterException;
 
 public class Pipeline
 {
@@ -65,19 +66,7 @@ public class Pipeline
 			}
 			else
 			{
-				trainInstanceList = readInstanceClusters(srcDir, trainingFileList, nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet, controller, true);
-				devInstanceList = readInstanceClusters(srcDir, devFileList, nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet, controller, false);
-				if(controller.crossSentReranking)
-				{
-					// use BeamSearchCluster to do inference
-					model = new PerceptronCluster(nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet);
-				}
-				else
-				{
-					// use BeamSearchSeq to do inference
-					model = new PerceptronCluster(nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet,
-							BeamSearchClusterSeq.class);
-				}
+				throw new UnsupportedParameterException("crossSent = true");
 			}
 			
 			//DEBUG

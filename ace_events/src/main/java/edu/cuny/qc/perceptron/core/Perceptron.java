@@ -158,6 +158,53 @@ public class Perceptron implements java.io.Serializable
 		return result;
 	}
 	
+	private void printf(PrintStream out, String format, Object ... args) {
+		if (out != null) {
+			out.printf(format, args);
+		}
+	}
+	
+	private String size(FeatureVector fv) {
+		if (fv == null) {
+			return "null vector";
+		}
+		else {
+			return ((Integer) fv.size()).toString();
+			
+		}
+	}
+	
+	private String str(FeatureVector fv, String key) {
+		if (fv == null) {
+			return "null vector";
+		}
+		Object val = fv.get(key);
+		if (val != null) {
+			return val.toString();
+		}
+		else {
+			return "X";
+		}
+	}
+	
+	private String feature(String featureName) {
+		return featureName.replace('|', '*').replace("\t", "  ");
+	}
+	
+	private void printWeights(PrintStream out, Object iter, Object docId, Object sentenceNo, Object c, Object tokens, Object sentenceText) {
+		List<String> featureNames = new ArrayList<String>();
+		for (Object feat : this.weights.getMap().keySet()) {
+			featureNames.add((String) feat);
+		}
+		Collections.sort(featureNames);
+		for (String name : featureNames) {
+			printf(out, "%s|%s|%s|%s|%s|%s|%s|%s|%s|%s"/*+"%s||%s|%s"*/+"\n",
+					iter, /*docId, */sentenceNo, c, /*tokens, sentenceText,*/
+					feature(name), str(weights, name), str(avg_weights_base, name), str(avg_weights, name),
+					size(weights), size(avg_weights_base), size(avg_weights));
+		}
+	}
+	
 	private void printScore(PrintStream out, String iter, int devSize, Score score) {
 		Utils.print(out, "", "\n", "|", iter, devSize,
 				score.count_trigger_gold, score.count_trigger_ans, score.count_trigger_correct,
@@ -166,6 +213,7 @@ public class Perceptron implements java.io.Serializable
 				score.arg_precision, score.arg_recall, score.arg_F1, 
 				score.harmonic_mean);
 	}
+	
 
 	/**
 	 *  given an instanceList, decode, and give the best assignmentList
@@ -250,7 +298,8 @@ public class Perceptron implements java.io.Serializable
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
-		w.printf("Iter|%sSentenceNo|%s\n", wt.getFeaturesStringTitle(), wt.getFeaturesStringTitle());
+		//printf(w, "Iter|%sSentenceNo|%s\n", wt.getFeaturesStringTitle(), wt.getFeaturesStringTitle());
+		printf(w, "Iter|"/*+"DocID|"*/+"SentenceNo|c|"/*+"Tokens|Sentence|"*/+"Feature|Weight|BaseWeight|AvgWeight|len-Weights|len-BaseWeights|len-AvgWeights\n");
 
 		String featuresOutputFilePath = Pipeline.modelFile.getParent() + "/AllFeatures-ODIE.tsv";
 		PrintStream f = null;
@@ -259,7 +308,7 @@ public class Perceptron implements java.io.Serializable
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
-		f.printf("Iter|DocID|SentenceNo|Tokens|Sentence|i|Lemma|target-label|assn-label|Feature|target-size|target-signal|target|assn-size|assn-signal|assn|in-both|same-score|weights-size|weights|avg_weights\n");
+		printf(f, "Iter|DocID|SentenceNo|c|Tokens|Sentence|i|Lemma|target-label|assn-label|Feature|target-size|target-signal|target|assn-size|assn-signal|assn|in-both|same-score|weights-size|weights|avg_weights\n");
 
 		String devOutputFilePath = Pipeline.modelFile.getParent() + "/DevPerformance-ODIE.tsv";
 		PrintStream d = null;
@@ -268,7 +317,7 @@ public class Perceptron implements java.io.Serializable
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
-		d.printf("Iter|DevSentences|Trigger-Gold|Trigger-System|Trigger-Correct|Trigger-Precision|Trigger-Recall|Trigger-F1|Arg-Gold|Arg-System|Arg-Correct|Arg-Precision|Arg-Recall|Arg-F1|HarmonicMean-F1\n");		
+		printf(d, "Iter|DevSentences|Trigger-Gold|Trigger-System|Trigger-Correct|Trigger-Precision|Trigger-Recall|Trigger-F1|Arg-Gold|Arg-System|Arg-Correct|Arg-Precision|Arg-Recall|Arg-F1|HarmonicMean-F1\n");		
 		//////////
 		
 		// online learning with beam search and early update
@@ -304,10 +353,11 @@ public class Perceptron implements java.io.Serializable
 				}
 				
 				//DEBUG
-				w.printf("|%s%d|%s\n", wt.getFeaturesStringSkip(), i, wt.getFeaturesString());		
-				
-				List<Map<Class<?>, Object>> tokens = (List<Map<Class<?>, Object>>) instance.get(InstanceAnnotations.Token_FEATURE_MAPs);
 				String sentText = instance.text.replace('\n', ' ');
+				//printf(w, "|%s%d|%s\n", wt.getFeaturesStringSkip(), i, wt.getFeaturesString());
+				printWeights(w, iter, instance.docID, i, c, instance.size(), sentText);
+
+				List<Map<Class<?>, Object>> tokens = (List<Map<Class<?>, Object>>) instance.get(InstanceAnnotations.Token_FEATURE_MAPs);
 				for (int j=0; j<instance.size(); j++) {
 					String lemma = (String) tokens.get(j).get(TokenAnnotations.LemmaAnnotation.class);
 					Set<Object> allFeaturesSet = new HashSet<Object>();
@@ -369,12 +419,11 @@ public class Perceptron implements java.io.Serializable
 							bothTargetAndAssn ="F";
 						}
 						
-						f.printf("%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s\n", iter, instance.docID, i, instance.size(),
-								sentText, j, lemma, instance.target.getLabelAtToken(j), assnLabel, s.replace('|', '*').replace("\t", "  "),
-								mapTarget.size(), targetSignal, inTarget, mapAssn.size(), assnSignal, inAssn, bothTargetAndAssn,
-								sameTargetAndAssn, weights.size(), inWeights, inAvg);
+						f.printf("%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s\n", iter, instance.docID, i, c, instance.size(), sentText, j, lemma,
+								instance.target.getLabelAtToken(j),	assnLabel, feature(s), mapTarget.size(), targetSignal, inTarget,
+								mapTarget.size(), targetSignal, inTarget, mapAssn.size(), assnSignal, assnSignal, inAssn, bothTargetAndAssn, sameTargetAndAssn, weights.size(), inWeights, inAvg);
 					}
-					f.printf("%s|%s|%s|%s|%s|%s|%s|%s|%s||%s|||%s|||||%s||\n", iter, instance.docID, i, instance.size(), sentText, j, lemma,
+					printf(f, "%s|%s|%s|%s|%s|%s|%s|%s|%s|%s||%s|||%s|||||%s||\n", iter, instance.docID, i, c, instance.size(), sentText, j, lemma,
 							instance.target.getLabelAtToken(j), assnLabel, mapTarget.size(), mapAssn.size(), weights.size());
 				}
 				////////////
@@ -393,10 +442,7 @@ public class Perceptron implements java.io.Serializable
 				makeAveragedWeights(c);
 				
 				//TODO DEBUG
-				List<SentenceAssignment> goldAssignments = new ArrayList<SentenceAssignment>(devList.size());
-				for (SentenceInstance instance : devList) {
-					goldAssignments.add(instance.target);
-				}
+				printWeights(w, iter, "", "After-Iter", c, "", "");
 				/// TODO END DEBUG
 				
 				List<SentenceAssignment> devResult = decoding(devList);
@@ -418,7 +464,7 @@ public class Perceptron implements java.io.Serializable
 			}
 			
 			//DEBUG
-			w.printf("%d|%s\n", iter, wt.getFeaturesString());		
+			//printf(w, "%d|%s\n", iter, wt.getFeaturesString());		
 			////////////
 
 			
@@ -465,6 +511,8 @@ public class Perceptron implements java.io.Serializable
 		{
 			makeAveragedWeights(c);
 		}
+		printWeights(w, lastIter, "", "After-Iter", c, "", "");
+
 		
 		// print out num of invalid update
 //		if(beamSearcher instanceof BeamSearchStandard)

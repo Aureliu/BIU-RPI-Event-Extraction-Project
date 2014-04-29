@@ -21,6 +21,7 @@ import java.util.Map;
 import java.util.Set;
 
 import org.apache.commons.lang3.SerializationUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.uima.jcas.JCas;
 
 import edu.cuny.qc.perceptron.core.Evaluator.Score;
@@ -157,12 +158,7 @@ public class Perceptron implements java.io.Serializable
 		}
 		return result;
 	}
-	
-	private void printf(PrintStream out, String format, Object ... args) {
-		if (out != null) {
-			out.printf(format, args);
-		}
-	}
+
 	
 	private String size(FeatureVector fv) {
 		if (fv == null) {
@@ -198,15 +194,27 @@ public class Perceptron implements java.io.Serializable
 		}
 		Collections.sort(featureNames);
 		for (String name : featureNames) {
-			printf(out, "%s|%s|%s|%s|%s|%s|%s|%s|%s|%s"/*+"%s||%s|%s"*/+"\n",
-					iter, /*docId, */sentenceNo, c, /*tokens, sentenceText,*/
-					feature(name), str(weights, name), str(avg_weights_base, name), str(avg_weights, name),
-					size(weights), size(avg_weights_base), size(avg_weights));
+			Utils.print(out, "", "\n", "|",					
+					iter,
+					//docId,
+					sentenceNo,
+					c,
+					//tokens,
+					//sentenceText,
+					feature(name),
+					str(weights, name),
+					str(avg_weights_base, name),
+					str(avg_weights, name),
+					size(weights),
+					size(avg_weights_base),
+					size(avg_weights)
+			);
 		}
 	}
 	
 	private void printScore(PrintStream out, String iter, int devSize, Score score) {
-		Utils.print(out, "", "\n", "|", iter, devSize,
+		Utils.print(out, "", "\n", "|",
+				iter, devSize,
 				score.count_trigger_gold, score.count_trigger_ans, score.count_trigger_correct,
 				score.trigger_precision, score.trigger_recall, score.trigger_F1, 
 				score.count_arg_gold, score.count_arg_ans, score.count_arg_correct,
@@ -299,7 +307,21 @@ public class Perceptron implements java.io.Serializable
 			throw new RuntimeException(e);
 		}
 		//printf(w, "Iter|%sSentenceNo|%s\n", wt.getFeaturesStringTitle(), wt.getFeaturesStringTitle());
-		printf(w, "Iter|"/*+"DocID|"*/+"SentenceNo|c|"/*+"Tokens|Sentence|"*/+"Feature|Weight|BaseWeight|AvgWeight|len-Weights|len-BaseWeights|len-AvgWeights\n");
+		Utils.print(w, "", "\n", "|",					
+				"Iter",
+				//"DocID",
+				"SentenceNo",
+				"c",
+				//"Tokens",
+				//"Sentence"
+				"Feature",
+				"Weight",
+				"BaseWeight",
+				"AvgWeight",
+				"len-Weights",
+				"len-BaseWeights",
+				"len-AvgWeights"
+		);
 
 		String featuresOutputFilePath = Pipeline.modelFile.getParent() + "/AllFeatures-ODIE.tsv";
 		PrintStream f = null;
@@ -308,7 +330,30 @@ public class Perceptron implements java.io.Serializable
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
-		printf(f, "Iter|DocID|SentenceNo|c|Tokens|Sentence|i|Lemma|target-label|assn-label|Feature|target-size|target-signal|target|assn-size|assn-signal|assn|in-both|same-score|weights-size|weights|avg_weights\n");
+		printf(f, "Iter|DocID|SentenceNo|c|Tokens|Sentence|i|Lemma|target-label|assn-label|Feature|target-size|target|assn-size|assn|in-both|same-score|weights-size|weights|avg_weights\n");
+				"Iter",
+				"DocID",
+				"SentenceNo",
+				"c",
+				"Tokens",
+				"Sentence",
+				"i",
+				"Lemma",
+				"target-label",
+				"assn-label",
+				"Feature",
+				"target-size",
+				"target-signal",
+				"target",
+				"assn-size",
+				"assn-signal",
+				"assn",
+				"in-both",
+				"same-score",
+				"weights-size",
+				"weights",
+				"avg_weights"
+		);
 
 		String devOutputFilePath = Pipeline.modelFile.getParent() + "/DevPerformance-ODIE.tsv";
 		PrintStream d = null;
@@ -317,7 +362,23 @@ public class Perceptron implements java.io.Serializable
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
-		printf(d, "Iter|DevSentences|Trigger-Gold|Trigger-System|Trigger-Correct|Trigger-Precision|Trigger-Recall|Trigger-F1|Arg-Gold|Arg-System|Arg-Correct|Arg-Precision|Arg-Recall|Arg-F1|HarmonicMean-F1\n");		
+		Utils.print(d, "", "\n", "|",					
+				"Iter",
+				"DevSentences",
+				"Trigger-Gold",
+				"Trigger-System",
+				"Trigger-Correct",
+				"Trigger-Precision",
+				"Trigger-Recall",
+				"Trigger-F1",
+				"Arg-Gold",
+				"Arg-System",
+				"Arg-Correct",
+				"Arg-Precision",
+				"Arg-Recall",
+				"Arg-F1",
+				"HarmonicMean-F1"
+		);		
 		//////////
 		
 		// online learning with beam search and early update
@@ -419,12 +480,55 @@ public class Perceptron implements java.io.Serializable
 							bothTargetAndAssn ="F";
 						}
 						
-						f.printf("%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s\n", iter, instance.docID, i, c, instance.size(), sentText, j, lemma,
-								instance.target.getLabelAtToken(j),	assnLabel, feature(s), mapTarget.size(), targetSignal, inTarget,
-								mapTarget.size(), targetSignal, inTarget, mapAssn.size(), assnSignal, assnSignal, inAssn, bothTargetAndAssn, sameTargetAndAssn, weights.size(), inWeights, inAvg);
+						Utils.print(f, "", "\n", "|",					
+								iter,
+								instance.docID,
+								i,
+								c,
+								instance.size(),
+								sentText,
+								j,
+								lemma,
+								instance.target.getLabelAtToken(j),
+								assnLabel,
+								feature(s),
+								mapTarget.size(),
+								targetSignal,
+								inTarget,
+								mapAssn.size(),
+								assnSignal,
+								inAssn,
+								bothTargetAndAssn,
+								sameTargetAndAssn,
+								weights.size(),
+								inWeights,
+								inAvg
+						);
 					}
-					printf(f, "%s|%s|%s|%s|%s|%s|%s|%s|%s|%s||%s|||%s|||||%s||\n", iter, instance.docID, i, c, instance.size(), sentText, j, lemma,
-							instance.target.getLabelAtToken(j), assnLabel, mapTarget.size(), mapAssn.size(), weights.size());
+					Utils.print(f, "", "\n", "|",					
+							iter,
+							instance.docID,
+							i,
+							c,
+							instance.size(),
+							sentText,
+							j,
+							lemma,
+							instance.target.getLabelAtToken(j),
+							assnLabel,
+							"",
+							mapTarget.size(),
+							"",
+							"",
+							mapAssn.size(),
+							"",
+							"",
+							"",
+							"",
+							weights.size(),
+							"",
+							""
+					);
 				}
 				////////////
 

@@ -14,6 +14,7 @@ import edu.cuny.qc.perceptron.featureGenerator.EdgeFeatureGenerator;
 import edu.cuny.qc.perceptron.featureGenerator.GlobalFeatureGenerator;
 import edu.cuny.qc.perceptron.types.SentenceInstance.InstanceAnnotations;
 import edu.cuny.qc.util.TypeConstraints;
+import edu.cuny.qc.util.UnsupportedParameterException;
 
 /**
  * For the (target) assignment, it should encode two types of assignment:
@@ -587,17 +588,7 @@ public class SentenceAssignment
 		{
 			if(this.controller.order >= 1)
 			{
-				// bigram features
-				// create a bigram feature
-				String featureStr = "BigramFeature:\t" + textFeature + "\t" + "PreLabel:" + previousLabel + "\tcurrentLabel:" + outcome;
-				makeFeature(featureStr, this.getFV(i), addIfNotPresent, useIfNotPresent);
-				// this is a backoff feature for event
-				if(!outcome.equals(Default_Trigger_Label) && !outcome.equals("Transport"))
-				{
-					String superType = TypeConstraints.getEventSuperType(outcome);
-					featureStr = "BigramFeature:\t" + textFeature + "\t" + "\tcurrentLabel:" + superType;
-					makeFeature(featureStr, this.getFV(i), addIfNotPresent, useIfNotPresent);
-				}
+				throw new UnsupportedParameterException("order >= 1");
 			}
 			else // order = 0
 			{

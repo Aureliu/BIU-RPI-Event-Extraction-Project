@@ -73,6 +73,10 @@ public class SentenceAssignment
 	protected double score = 0.0;
 	protected List<Double> partial_scores;
 	
+	public List<Double> getPartialScores() {
+		return partial_scores;
+	}
+	
 	public FeatureVector getFV(int index)
 	{
 		return featVecSequence.get(index);
@@ -156,7 +160,7 @@ public class SentenceAssignment
 		// deep copy attributes
 		assn.state = this.state;
 		assn.score = this.score;
-		assn.local_score = this.local_score;
+		//assn.local_score = this.local_score;
 		assn.partial_scores.addAll(this.partial_scores);
 		
 		return assn;
@@ -866,22 +870,22 @@ public class SentenceAssignment
 	}
 
 	// to store temprary local score
-	protected double local_score = 0.0;
+	//protected double local_score = 0.0;
 	
-	public void setLocalScore(double local_score)
-	{
-		this.local_score = local_score;
-	}
+//	public void setLocalScore(double local_score)
+//	{
+//		this.local_score = local_score;
+//	}
 	
-	public double getLocalScore()
-	{
-		return local_score;
-	}
+//	public double getLocalScore()
+//	{
+//		return local_score;
+//	}
 
-	public void addLocalScore(double local_score)
-	{
-		this.local_score += local_score;
-	}
+//	public void addLocalScore(double local_score)
+//	{
+//		this.local_score += local_score;
+//	}
 	
 	/**
 	 * clear feature vectors, so that the Target assignment can creates its feature vector in beamSearch

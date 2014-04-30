@@ -63,6 +63,9 @@ public class Perceptron implements java.io.Serializable
 	protected FeatureVector avg_weights;
 	protected FeatureVector avg_weights_base; // for average weights update
 	
+	public static int iter; // num of current iteration - public and static for logging
+	public static int i; // num of current sentence - public and static for logging
+	
 	// default constructor 
 	public Perceptron(Alphabet nodeTargetAlphabet, Alphabet edgeTargetAlphabet, Alphabet featureAlphabet)
 	{
@@ -323,13 +326,13 @@ public class Perceptron implements java.io.Serializable
 		int best_iter = 0;
 		FeatureVector best_weights = null;
 		FeatureVector best_avg_weights = null;
-		int iter = 0;
+		/*int*/ iter = 0;
 		double c = 0; // for averaged parameter
 		for(iter=0; iter<this.controller.maxIterNum; iter++)
 		{
 			long startTime = System.currentTimeMillis();	
 			int error_num = 0;	
-			int i=0;
+			/*int*/ i=0;
 			int countNoViolation = 0;
 			for(SentenceInstance instance : trainingList)
 			{

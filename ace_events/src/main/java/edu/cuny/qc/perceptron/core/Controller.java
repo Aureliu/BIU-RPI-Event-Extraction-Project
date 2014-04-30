@@ -35,6 +35,9 @@ public class Controller implements java.io.Serializable
 	// Should labelBigrams be learned from training data. Otherwise, all possible bigrams are considered by default.
 	public boolean learnBigrams = true;
 	
+	// Which of the four (A,B,C,D) methods should be used for the O features. No valid default value, must be explicitly supplied.
+	public String oMethod = null;
+	
 	public Controller()
 	{
 		System.out.printf("\n[%s] ******** Controller() **********\n", new Date());
@@ -106,6 +109,10 @@ public class Controller implements java.io.Serializable
 			else if(fields[0].equalsIgnoreCase("learnBigrams"))
 			{
 				learnBigrams = Boolean.parseBoolean(fields[1]);
+			}
+			else if(fields[0].equalsIgnoreCase("oMethod"))
+			{
+				oMethod = fields[1];
 			}
 		}
 	}

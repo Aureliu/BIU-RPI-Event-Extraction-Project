@@ -330,7 +330,7 @@ public class Perceptron implements java.io.Serializable
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
-		printf(f, "Iter|DocID|SentenceNo|c|Tokens|Sentence|i|Lemma|target-label|assn-label|Feature|target-size|target|assn-size|assn|in-both|same-score|weights-size|weights|avg_weights\n");
+		Utils.print(f, "", "\n", "|",					
 				"Iter",
 				"DocID",
 				"SentenceNo",

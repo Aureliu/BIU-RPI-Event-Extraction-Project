@@ -15,6 +15,10 @@ public class Evaluator
 {	
 	public static class Score
 	{
+		static {
+			System.err.println("??? Evaluator.Score: rgs are disables. Harmonic mean actually just takes triggers. Undo these when args are back in fashion.");
+		}
+		
 		public double trigger_F1 = 0.0;
 		public double trigger_precision = 0.0;
 		public double trigger_recall = 0.0;
@@ -38,7 +42,8 @@ public class Evaluator
 		// calculate harmonic mean of trigger F1 and argument F1
 		public void calculateHarmonic_mean()
 		{
-			harmonic_mean = 2 * trigger_F1 * arg_F1 / (trigger_F1 + arg_F1);
+			//harmonic_mean = 2 * trigger_F1 * arg_F1 / (trigger_F1 + arg_F1);
+			harmonic_mean = trigger_F1;
 		}
 		
 		public String toString()

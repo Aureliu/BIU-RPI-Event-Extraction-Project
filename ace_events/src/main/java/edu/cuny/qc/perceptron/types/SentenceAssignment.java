@@ -3,6 +3,7 @@ package edu.cuny.qc.perceptron.types;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -52,6 +53,7 @@ public class SentenceAssignment
 	int state = -1;
 	
 	static {
+		System.err.println("??? SentenceAssignment: Assumes binary labels O,ATTACK (around oMethod)");
 		System.err.println("??? SentenceAssignment: Edge features are currently excluded, until I stabalize a policy with triggers. Then some policy should be decided for edges (that should handle, for example, the fact that if only the guess has some trigger that the gold doesn't have, then it would physically have more features than target (not same features just with different scores, like in the triggers' case), and this violated my assumption that guess and gold have the same features.");
 		System.err.println("??? SentenceAssignment: GLOBAL FEATURES ARE NOT IMPORTED YET!!!");
 	}
@@ -662,6 +664,17 @@ public class SentenceAssignment
 		}
 		else // order = 0
 		{
+//			Map<String, SignalInstance> signalsOfLabel = token.get(label);
+//			for (SignalInstance signal : signalsOfLabel.values()) {
+//				BigDecimal featureValue = signal.positive ? FEATURE_POSITIVE_VAL : FEATURE_NEGATIVE_VAL;
+//				//String featureStr = "BigramFeature:\t" + signal.name;
+//				String featureStr = "BigramFeature:\t" + signal.name + "\t" + LABEL_MARKER + genericLabel;
+//				List<SignalInstance> signals = Arrays.asList(new SignalInstance[] {signal});
+//				makeFeature(featureStr, this.getFV(i), featureValue, i, signals, addIfNotPresent, useIfNotPresent);
+//			}
+
+			
+			
 			if (genericLabel == Generic_Existing_Trigger_Label) {
 				Map<String, SignalInstance> signalsOfLabel = token.get(label);
 				for (SignalInstance signal : signalsOfLabel.values()) {
@@ -678,26 +691,50 @@ public class SentenceAssignment
 					List<SignalInstance> signals = new ArrayList<SignalInstance>();
 					//double numFalse = 0.0;
 					
-					/**
-					 * If at least one spec has a positive signal - then the value is FEATURE_NEGATIVE_VAL,
-					 * meaning that the token doesn't fit Default_Trigger_Label ("O").
-					 * 
-					 * Otherwise (no spec fits), the value is FEATURE_POSITIVE_VAL - the token fits "O". 
-					 */
-					BigDecimal featureValue = FEATURE_POSITIVE_VAL;
-					for (Map<String, SignalInstance> signalsOfLabel : token.values()) {
-						SignalInstance signal = signalsOfLabel.get(signalName);
-						if (signal == null) {
-							throw new IllegalArgumentException(String.format("Cannot find feature '%s' for non-label token %d", signalName, i));
-						}
-						signals.add(signal);
-						if (signal.positive) {
-							featureValue = FEATURE_NEGATIVE_VAL;//0.0 //-1.0;
-							break;
-						}
+//					/**
+//					 * If at least one spec has a positive signal - then the value is FEATURE_NEGATIVE_VAL,
+//					 * meaning that the token doesn't fit Default_Trigger_Label ("O").
+//					 * 
+//					 * Otherwise (no spec fits), the value is FEATURE_POSITIVE_VAL - the token fits "O". 
+//					 */
+//					BigDecimal featureValue = FEATURE_NEGATIVE_VAL;//FEATURE_POSITIVE_VAL;
+//					for (Map<String, SignalInstance> signalsOfLabel : token.values()) {
+//						SignalInstance signal = signalsOfLabel.get(signalName);
+//						if (signal == null) {
+//							throw new IllegalArgumentException(String.format("Cannot find feature '%s' for non-label token %d", signalName, i));
+//						}
+//						signals.add(signal);
+//						if (signal.positive) {
+//							featureValue = FEATURE_POSITIVE_VAL;//FEATURE_NEGATIVE_VAL;//0.0 //-1.0;
+//							break;
+//						}
+//					}
+					
+					if (token.size() != 1) {
+						throw new IllegalStateException("token.size() should be 1 (1 non-O label, ATTACK), but it's " + token.size());
+					}
+					Map<String, SignalInstance> signalsOfAttack = token.values().iterator().next();
+					SignalInstance signalOfAttack = signalsOfAttack.get(signalName);
+					signals.add(signalOfAttack);
+
+					// Set feature value according to requested O Method
+					BigDecimal featureValue = null;
+					if (this.controller.oMethod.equalsIgnoreCase("A")) {
+						featureValue = signalOfAttack.positive ? BigDecimal.ZERO : BigDecimal.ONE;
+					}
+					else if (this.controller.oMethod.equalsIgnoreCase("B")) {
+						featureValue = signalOfAttack.positive ? BigDecimal.ONE : BigDecimal.ZERO;
+					}
+					else if (this.controller.oMethod.equalsIgnoreCase("C")) {
+						featureValue = BigDecimal.ZERO;
+					}
+					else if (this.controller.oMethod.equalsIgnoreCase("D")) {
+						featureValue = BigDecimal.ONE;
+					}
+					else {
+						throw new IllegalArgumentException("Illegal value for 'oMethod': '" + this.controller.oMethod + "'");
 					}
 					
-					//double falseRatio = numFalse / token.size(); // divide by number of specs
 										
 					//String featureStr = "BigramFeature:\t" + signalName;
 					String featureStr = "BigramFeature:\t" + signalName + "\t" + LABEL_MARKER + genericLabel;

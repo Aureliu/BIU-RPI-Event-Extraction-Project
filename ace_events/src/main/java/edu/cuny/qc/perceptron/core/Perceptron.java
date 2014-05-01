@@ -96,7 +96,7 @@ public class Perceptron implements java.io.Serializable
 //	
 	
 	
-	private String size(FeatureVector fv) {
+	public static String size(FeatureVector fv) {
 		if (fv == null) {
 			return "null vector";
 		}
@@ -106,7 +106,7 @@ public class Perceptron implements java.io.Serializable
 		}
 	}
 	
-	private String str(FeatureVector fv, String key) {
+	public static String str(FeatureVector fv, String key) {
 		if (fv == null) {
 			return "null vector";
 		}
@@ -119,7 +119,7 @@ public class Perceptron implements java.io.Serializable
 		}
 	}
 	
-	private String feature(String featureName) {
+	public static String feature(String featureName) {
 		return featureName.replace('|', '*').replace("\t", "  ");
 	}
 	

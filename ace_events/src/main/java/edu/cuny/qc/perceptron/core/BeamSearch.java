@@ -105,7 +105,7 @@ public class BeamSearch
 				}
 	
 				List<Map<Class<?>, Object>> tokens = (List<Map<Class<?>, Object>>) instance.get(InstanceAnnotations.Token_FEATURE_MAPs);
-				for (int j=0; j<assn.getState(); j++) {
+				for (int j=0; j<=assn.getState(); j++) {
 					String lemma = (String) tokens.get(j).get(TokenAnnotations.LemmaAnnotation.class);
 					
 					Map<Object, Double> mapAssn = assn.getFeatureVectorSequence().get(j).getMap();

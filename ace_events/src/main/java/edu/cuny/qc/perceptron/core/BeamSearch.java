@@ -1,11 +1,17 @@
 package edu.cuny.qc.perceptron.core;
 
+import java.io.IOException;
+import java.io.PrintStream;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
 
@@ -14,7 +20,9 @@ import edu.cuny.qc.perceptron.types.FeatureVector;
 import edu.cuny.qc.perceptron.types.SentenceAssignment;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
 import edu.cuny.qc.perceptron.types.SentenceInstance.InstanceAnnotations;
+import edu.cuny.qc.util.TokenAnnotations;
 import edu.cuny.qc.util.TypeConstraints;
+import edu.cuny.qc.util.Utils;
 
 /**
  * In this beam search, we use strict beam to search trigger and arguments
@@ -29,6 +37,7 @@ public class BeamSearch
 {
 	Perceptron model;
 	boolean isTraining = true;
+	private PrintStream b;
 	
 	private static final boolean PRINT_BEAM = false;
 	private static final boolean PRINT_BEAM_DETAILED = false;
@@ -54,6 +63,150 @@ public class BeamSearch
 	{
 		this.model = model;
 		this.isTraining = isTraining;
+		
+		if (this.isTraining) {
+			String beamsOutputFilePath = Pipeline.modelFile.getParent() + "/AllBeams-master.tsv";
+			this.b = null;
+			try {
+				this.b = new PrintStream(beamsOutputFilePath);
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+			Utils.print(b, "", "\n", "|",		
+					//general
+					"Iter",
+					"SentenceNo",
+					"exit",
+					"beam-size",
+					
+					//assignment
+					"pos",
+					"assignment", //toString()
+					"score",
+					"state",
+					
+					//token
+					"i",
+					"Lemma",
+					"target-label",
+					"assn-label",
+					"partial-score",
+					
+					//feature
+					"Feature",
+					"Weight",
+					"AvgWeight"
+			);
+		}
+	}
+	
+	public void printBeam(PrintStream out, SentenceInstance instance, List<SentenceAssignment> beam, String exit) {
+		if (this.isTraining) {
+			for (int pos=0; pos<beam.size(); pos++) {
+				SentenceAssignment assn = beam.get(pos);
+				
+				String posStr = Integer.toString(pos);
+				if (pos == 0) {
+					posStr = "0(Best)";
+				}
+				else if (pos == beam.size()-1) {
+					posStr = "" + pos + "(Worst)";
+				}
+	
+				List<Map<Class<?>, Object>> tokens = (List<Map<Class<?>, Object>>) instance.get(InstanceAnnotations.Token_FEATURE_MAPs);
+				for (int j=0; j<=assn.getState(); j++) {
+					String lemma = (String) tokens.get(j).get(TokenAnnotations.LemmaAnnotation.class);
+					
+					Map<Object, Double> mapAssn = assn.getFeatureVectorSequence().get(j).getMap();
+					List<String> allFeaturesList = new ArrayList<String>(mapAssn.size());
+					for (Object o : mapAssn.keySet()) {
+						allFeaturesList.add((String) o);
+					}
+					Collections.sort(allFeaturesList);
+	
+					for (String s : allFeaturesList) {						
+						Utils.print(b, "", "\n", "|",		
+								//general
+								Perceptron.iter,//"Iter",
+								Perceptron.i,//"SentenceNo",
+								exit,//"exit",
+								beam.size(),//"beam-size",
+								
+								//assignment
+								posStr, //"pos",
+								assn,//"assignment", //toString()
+								assn.getScore(),//"score",
+								assn.getState(),//"state",
+								
+								//token
+								j,//"i",
+								lemma,//"Lemma",
+								instance.target.getLabelAtToken(j),//"target-label",
+								assn.getLabelAtToken(j),//"assn-label",
+								assn.getPartialScores().get(j),//"partial-score",
+								
+								//feature
+								Perceptron.feature(s),//"Feature",
+								Perceptron.str(model.getWeights(), s),//"Weight",
+								Perceptron.str(model.getAvg_weights(), s)//"AvgWeight"
+						);
+					}
+					
+					
+					Utils.print(b, "", "\n", "|",		
+							//general
+							Perceptron.iter,//"Iter",
+							Perceptron.i,//"SentenceNo",
+							exit,//"exit",
+							beam.size(),//"beam-size",
+							
+							//assignment
+							posStr, //"pos",
+							assn,//"assignment", //toString()
+							assn.getScore(),//"score",
+							assn.getState(),//"state",
+							
+							//token
+							j,//"i",
+							lemma,//"Lemma",
+							instance.target.getLabelAtToken(j),//"target-label",
+							assn.getLabelAtToken(j),//"assn-label",
+							assn.getPartialScores().get(j),//"partial-score",
+							
+							//feature
+							"",//"Feature",
+							"",//"Weight",
+							""//"AvgWeight"
+					);
+				}
+				Utils.print(b, "", "\n", "|",		
+						//general
+						Perceptron.iter,//"Iter",
+						Perceptron.i,//"SentenceNo",
+						exit,//"exit",
+						beam.size(),//"beam-size",
+						
+						//assignment
+						posStr, //"pos",
+						assn,//"assignment", //toString()
+						assn.getScore(),//"score",
+						assn.getState(),//"state",
+						
+						//token
+						"",//"i",
+						"",//"Lemma",
+						"",//"target-label",
+						"",//"assn-label",
+						"",//"partial-score",
+						
+						//feature
+						"",//"Feature",
+						"",//"Weight",
+						""//"AvgWeight"
+				);
+
+			}
+		}
 	}
 	
 	public SentenceAssignment beamSearch(SentenceInstance problem, int beamSize, boolean isLearning)
@@ -137,6 +290,7 @@ public class BeamSearch
 				if(violation)
 				{
 					beam.get(0).setViolate(true);
+					printBeam(b, problem, beam, "trigger violation");
 					return beam.get(0);
 				}
 			}
@@ -223,6 +377,7 @@ public class BeamSearch
 					if(violation)
 					{
 						beam.get(0).setViolate(true);
+						printBeam(b, problem, beam, "arg violation");
 						return beam.get(0);
 					}
 				}
@@ -241,6 +396,7 @@ public class BeamSearch
 				System.out.printf("%d. [%f] %s\n", i, beam.get(i).getScore(), beam.get(i));
 			}
 		}
+		printBeam(b, problem, beam, "no violation");
 		return beam.get(0);
 	}
 	

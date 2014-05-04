@@ -78,7 +78,9 @@ public class Perceptron implements java.io.Serializable
 	public Set<String> triggerSignalNames = new LinkedHashSet<String>();
 	public Set<String> argumentSignalNames = new LinkedHashSet<String>();
 	
-	
+	public static int iter; // num of current iteration - public and static for logging
+	public static int i; // num of current sentence - public and static for logging
+
 	// default constructor 
 	public Perceptron(Alphabet nodeTargetAlphabet, Alphabet edgeTargetAlphabet, Alphabet featureAlphabet) throws SignalMechanismException
 	{
@@ -160,7 +162,7 @@ public class Perceptron implements java.io.Serializable
 	}
 
 	
-	private String size(FeatureVector fv) {
+	public static String size(FeatureVector fv) {
 		if (fv == null) {
 			return "null vector";
 		}
@@ -170,7 +172,7 @@ public class Perceptron implements java.io.Serializable
 		}
 	}
 	
-	private String str(FeatureVector fv, String key) {
+	public static String str(FeatureVector fv, String key) {
 		if (fv == null) {
 			return "null vector";
 		}
@@ -183,7 +185,7 @@ public class Perceptron implements java.io.Serializable
 		}
 	}
 	
-	private String feature(String featureName) {
+	public static String feature(String featureName) {
 		return featureName.replace('|', '*').replace("\t", "  ");
 	}
 	
@@ -387,13 +389,13 @@ public class Perceptron implements java.io.Serializable
 		int best_iter = 0;
 		FeatureVector best_weights = null;
 		FeatureVector best_avg_weights = null;
-		int iter = 0;
+		/*int*/ iter = 0;
 		BigDecimal c = BigDecimal.ZERO; // for averaged parameter
 		for(iter=0; iter<this.controller.maxIterNum; iter++)
 		{
 			long startTime = System.currentTimeMillis();	
 			int error_num = 0;	
-			int i=0;
+			/*int*/ i=0;
 			int countNoViolation = 0;
 			for(SentenceInstance instance : trainingList)
 			{

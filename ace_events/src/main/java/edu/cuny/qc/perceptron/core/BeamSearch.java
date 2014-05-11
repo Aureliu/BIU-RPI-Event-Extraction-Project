@@ -117,7 +117,7 @@ public class BeamSearch
 				for (int j=0; j<=assn.getState(); j++) {
 					String lemma = (String) tokens.get(j).get(TokenAnnotations.LemmaAnnotation.class);
 					
-					Map<Object, Double> mapAssn = assn.getFeatureVectorSequence().get(j).getMap();
+					Map<Object, BigDecimal> mapAssn = assn.getFeatureVectorSequence().get(j).getMap();
 					List<String> allFeaturesList = new ArrayList<String>(mapAssn.size());
 					for (Object o : mapAssn.keySet()) {
 						allFeaturesList.add((String) o);

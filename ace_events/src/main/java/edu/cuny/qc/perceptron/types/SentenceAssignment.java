@@ -127,7 +127,7 @@ public class SentenceAssignment
 	protected List<BigDecimal> partial_scores;
 	
 	public Map<Integer, Map<String, List<SignalInstance>>> featureToSignal; 
-	public List<Double> getPartialScores() {
+	public List<BigDecimal> getPartialScores() {
 		return partial_scores;
 	}
 	

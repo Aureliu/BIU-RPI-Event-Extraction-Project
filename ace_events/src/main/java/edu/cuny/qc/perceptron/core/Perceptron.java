@@ -64,7 +64,7 @@ public class Perceptron implements java.io.Serializable
 	public Controller controller = new Controller();
 	
 	// label bigram
-	private Map<String, List<String>> labelBigram;
+	//private Map<String, List<String>> labelBigram;
 	
 	// the weights of features, however, 
 	protected FeatureVector weights;
@@ -73,7 +73,6 @@ public class Perceptron implements java.io.Serializable
 	
 	public transient List<SignalMechanism> signalMechanisms = new ArrayList<SignalMechanism>();
 	
-	public transient List<JCas> specs;
 	
 	public Set<String> triggerSignalNames = new LinkedHashSet<String>();
 	public Set<String> argumentSignalNames = new LinkedHashSet<String>();

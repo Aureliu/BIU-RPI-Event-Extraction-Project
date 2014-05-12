@@ -42,7 +42,7 @@ public class Pipeline
 	 * @param trainingFileList
 	 * @param modelFile
 	 */
-	public static Perceptron trainPerceptron(File srcDir, File trainingFileList, File modelFile, File devFileList, Controller controller, List<String> specXmlPaths)
+	public static Perceptron trainPerceptron(File srcDir, File trainingFileList, File modelFile, File devFileList, Controller controller, List<String> trainSpecXmlPaths, List<String> devSpecXmlPaths)
 	{
 		Alphabet nodeTargetAlphabet = new Alphabet();
 		Alphabet edgeTargetAlphabet = new Alphabet();
@@ -250,15 +250,16 @@ public class Pipeline
 //	
 //	public static void mainWithSingleEventType(String[] args, String singleEventType) throws IOException {
 		System.out.printf("Args:\n%s\n\n", new ArrayList<String>(Arrays.asList(args)));
-		if(args.length < 4)
+		if(args.length < 5)
 		{
 			System.out.println("Training perceptron Usage:");
 			System.out.println("args[0]: source dir of training data");
 			System.out.println("args[1]: file list of training data");
 			System.out.println("args[2]: model file to be saved");
 			System.out.println("args[3]: file list of dev data");
-			System.out.println("args[4]: spec list");
-			System.out.println("args[5+]: controller arguments");
+			System.out.println("args[4]: training spec list");
+			System.out.println("args[5]: dev spec list");
+			System.out.println("args[6+]: controller arguments");
 			System.exit(-1);
 		}
 		
@@ -268,19 +269,21 @@ public class Pipeline
 		File trainingFileList = new File(args[1]);
 		File modelFile = new File(args[2]);
 		File devFileList = new File(args[3]);
-		File specListFile = new File(args[4]);
-		List<String> specXmlPaths = SpecHandler.readSpecListFile(specListFile);
+		File trainSpecListFile = new File(args[4]);
+		File devSpecListFile = new File(args[5]);
+		List<String> trainSpecXmlPaths = SpecHandler.readSpecListFile(trainSpecListFile);
+		List<String> devSpecXmlPaths = SpecHandler.readSpecListFile(devSpecListFile);
 		
 		PrintStream out = new PrintStream(modelFile.getAbsoluteFile() + ".weights");
 
 		// set settings
 		Controller controller = new Controller();
-		String[] settings = Arrays.copyOfRange(args, 5, args.length);
+		String[] settings = Arrays.copyOfRange(args, 6, args.length);
 		controller.setValueFromArguments(settings);
 		System.out.println("\n" + controller.toString() + "\n");
 		
 		// train model
-		Perceptron model = trainPerceptron(srcDir, trainingFileList, modelFile, devFileList, controller, specXmlPaths);
+		Perceptron model = trainPerceptron(srcDir, trainingFileList, modelFile, devFileList, controller, trainSpecXmlPaths, devSpecXmlPaths);
 		
 		// print out weights
 		if(model.controller.avgArguments)

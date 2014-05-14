@@ -203,6 +203,19 @@ public class Perceptron implements java.io.Serializable
 		}
 	}
 	
+	public static String str(Map<?, ?> map, String key) {
+		if (map == null) {
+			return "null vector";
+		}
+		Object val = map.get(key);
+		if (val != null) {
+			return val.toString();
+		}
+		else {
+			return "X";
+		}
+	}
+	
 	public static String values(FeatureVector fv) {
 		if (fv == null) {
 			return "null vector";

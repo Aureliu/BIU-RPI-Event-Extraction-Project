@@ -45,6 +45,7 @@ public class BeamSearch
 	static {
 		System.err.println("??? BeamSearch: Calcing target's features (node, edge, global), multiple times here, even though they are needed only when there's a violation, Qi approves. Consider changing.");
 		System.err.println("??? BeamSearch: In ScoreComparator, can try to use the compareTo() of both BigDecimals (I temporarily converted back to working on doubles, due to consistency problems with master).");
+		System.err.println("??? BeamSearch: Completely removing the part handling args - working only on triggers. Mostly to avoid arg-related violations, but also reduce run-time (since it's possible...).");
 	}
 	
 	protected FeatureVector getWeights()
@@ -65,7 +66,7 @@ public class BeamSearch
 		this.isTraining = isTraining;
 		
 		if (this.isTraining) {
-			String beamsOutputFilePath = Pipeline.modelFile.getParent() + "/AllBeams-master.tsv";
+			String beamsOutputFilePath = Pipeline.modelFile.getParent() + "/AllBeams-ODIE.tsv";
 			this.b = null;
 			try {
 				this.b = new PrintStream(beamsOutputFilePath);
@@ -76,12 +77,14 @@ public class BeamSearch
 					//general
 					"Iter",
 					"SentenceNo",
-					"exit",
+					"violation",
 					"beam-size",
 					
 					//assignment
 					"pos",
 					"assignment", //toString()
+					"target",
+					"compatible",
 					"score",
 					"state",
 					
@@ -94,19 +97,31 @@ public class BeamSearch
 					
 					//feature
 					"Feature",
+					"target",
+					"assn",
 					"Weight",
 					"AvgWeight"
 			);
 		}
 	}
 	
-	public void printBeam(PrintStream out, SentenceInstance instance, List<SentenceAssignment> beam, String exit) {
+	public void printBeam(PrintStream out, SentenceInstance instance, List<SentenceAssignment> beam, String violation) {
 		if (this.isTraining) {
 			for (int pos=0; pos<beam.size(); pos++) {
 				SentenceAssignment assn = beam.get(pos);
 				
+				String targetAssnCompatible = "F";
+				// the trick here with ignoring args - should be removed when re-introducing args!
+				String targetNoArgs = instance.target.toString().replaceAll("\\([^()]*\\)", "");
+				if (targetNoArgs.startsWith(assn.toString())) {
+					targetAssnCompatible = "T";
+				}
+
 				String posStr = Integer.toString(pos);
-				if (pos == 0) {
+				if (beam.size()==1) {
+					posStr = "0(Best+Worst)";
+				}
+				else if (pos == 0) {
 					posStr = "0(Best)";
 				}
 				else if (pos == beam.size()-1) {
@@ -117,6 +132,7 @@ public class BeamSearch
 				for (int j=0; j<=assn.getState(); j++) {
 					String lemma = (String) tokens.get(j).get(TokenAnnotations.LemmaAnnotation.class);
 					
+					Map<Object, BigDecimal> mapTarget = instance.target.getFeatureVectorSequence().get(j).getMap();
 					Map<Object, BigDecimal> mapAssn = assn.getFeatureVectorSequence().get(j).getMap();
 					List<String> allFeaturesList = new ArrayList<String>(mapAssn.size());
 					for (Object o : mapAssn.keySet()) {
@@ -129,12 +145,14 @@ public class BeamSearch
 								//general
 								Perceptron.iter,//"Iter",
 								Perceptron.i,//"SentenceNo",
-								exit,//"exit",
+								violation,//"violation",
 								beam.size(),//"beam-size",
 								
 								//assignment
 								posStr, //"pos",
-								assn,//"assignment", //toString()
+								"",//"assignment", //toString()
+								"",//"target"
+								"",//"copmatible"
 								assn.getScore(),//"score",
 								assn.getState(),//"state",
 								
@@ -147,48 +165,56 @@ public class BeamSearch
 								
 								//feature
 								Perceptron.feature(s),//"Feature",
+								Perceptron.str(mapTarget, s),//"target"
+								Perceptron.str(mapAssn, s),//"assn"
 								Perceptron.str(model.getWeights(), s),//"Weight",
 								Perceptron.str(model.getAvg_weights(), s)//"AvgWeight"
 						);
 					}
 					
 					
-					Utils.print(b, "", "\n", "|",		
-							//general
-							Perceptron.iter,//"Iter",
-							Perceptron.i,//"SentenceNo",
-							exit,//"exit",
-							beam.size(),//"beam-size",
-							
-							//assignment
-							posStr, //"pos",
-							assn,//"assignment", //toString()
-							assn.getScore(),//"score",
-							assn.getState(),//"state",
-							
-							//token
-							j,//"i",
-							lemma,//"Lemma",
-							instance.target.getLabelAtToken(j),//"target-label",
-							assn.getLabelAtToken(j),//"assn-label",
-							assn.getPartialScores().get(j),//"partial-score",
-							
-							//feature
-							"",//"Feature",
-							"",//"Weight",
-							""//"AvgWeight"
-					);
+//					Utils.print(b, "", "\n", "|",		
+//							//general
+//							Perceptron.iter,//"Iter",
+//							Perceptron.i,//"SentenceNo",
+//							violation,//"violation",
+//							beam.size(),//"beam-size",
+//							
+//							//assignment
+//							posStr, //"pos",
+//							"",//"assignment", //toString()
+//							"",//"target"
+//							"",//"copmatible"
+//							assn.getScore(),//"score",
+//							assn.getState(),//"state",
+//							
+//							//token
+//							j,//"i",
+//							lemma,//"Lemma",
+//							instance.target.getLabelAtToken(j),//"target-label",
+//							assn.getLabelAtToken(j),//"assn-label",
+//							assn.getPartialScores().get(j),//"partial-score",
+//							
+//							//feature
+//							"",//"Feature",
+//							"",//"target"
+//							"",//"assn"
+//							"",//"Weight",
+//							""//"AvgWeight"
+//					);
 				}
 				Utils.print(b, "", "\n", "|",		
 						//general
 						Perceptron.iter,//"Iter",
 						Perceptron.i,//"SentenceNo",
-						exit,//"exit",
+						violation,//"violation",
 						beam.size(),//"beam-size",
 						
 						//assignment
 						posStr, //"pos",
 						assn,//"assignment", //toString()
+						instance.target,//"target"
+						targetAssnCompatible,//"copmatible"
 						assn.getScore(),//"score",
 						assn.getState(),//"state",
 						
@@ -290,11 +316,14 @@ public class BeamSearch
 				if(violation)
 				{
 					beam.get(0).setViolate(true);
-					printBeam(b, problem, beam, "trigger violation");
+					printBeam(b, problem, beam, "trigger");
 					return beam.get(0);
 				}
 			}
 			
+			boolean DO_ARGS = false;
+			if (DO_ARGS) { // hack - don't do args! and mostly - don't look for violation on args!
+
 			// expand the arguments for assignments in beam
 			for(int k=0; k<problem.eventArgCandidates.size(); k++)
 			{
@@ -377,17 +406,23 @@ public class BeamSearch
 					if(violation)
 					{
 						beam.get(0).setViolate(true);
-						printBeam(b, problem, beam, "arg violation");
+						printBeam(b, problem, beam, "arg");
 						return beam.get(0);
 					}
 				}
 			} // end of expanding args
+			
+			} // end of fake "if" to not do args
 		}
 		
 		// check if final result is correct
 		if(isLearning && problem.violateGoldStandard(beam.get(0)))
 		{
 			beam.get(0).setViolate(true);
+			printBeam(b, problem, beam, "end");
+		}
+		else {
+			printBeam(b, problem, beam, "no");
 		}
 		
 		if (PRINT_BEAM) {
@@ -396,7 +431,6 @@ public class BeamSearch
 				System.out.printf("%d. [%f] %s\n", i, beam.get(i).getScore(), beam.get(i));
 			}
 		}
-		printBeam(b, problem, beam, "no violation");
 		return beam.get(0);
 	}
 	

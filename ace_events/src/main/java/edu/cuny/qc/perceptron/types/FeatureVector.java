@@ -9,6 +9,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
@@ -17,6 +18,8 @@ import java.util.Set;
 import java_cup.internal_error;
 
 import javax.management.RuntimeErrorException;
+
+import org.apache.commons.lang3.StringUtils;
 
 import edu.cuny.qc.perceptron.core.Decoder;
 
@@ -50,12 +53,12 @@ public class FeatureVector implements Serializable
 	
 	public FeatureVector ()
 	{
-		this(50);
+		this(20);
 	}
 	
 	public FeatureVector (int capacity) 
 	{
-		map = new HashMap<Object, BigDecimal>(capacity);
+		map = new LinkedHashMap<Object, BigDecimal>(capacity);
 	}
 
 	public BigDecimal get(Object key)
@@ -317,6 +320,29 @@ public class FeatureVector implements Serializable
 		return sb.toString();
 	}
 
+	private String stringify(List<?> list) {
+		ArrayList<String> strs = new ArrayList<String>(list.size());
+		for (Object o : list) {
+			strs.add(String.format("%.6s", o));
+		}
+		return StringUtils.join(strs, ',');
+	}
+	
+	public String toStringOnlyValues() {
+		final int START_TO=40, END_FROM=10;
+		String content;
+		List<?> values = new ArrayList<BigDecimal>(map.values());
+		if (values.size() <= START_TO + END_FROM) {
+			content = stringify(values);
+		}
+		else {
+			List<?> start = values.subList(0, START_TO);
+			List<?> end = values.subList(END_FROM, values.size());
+			content = stringify(start) + " ... " + stringify(end);
+		}
+		return "(" + content + ")";
+	}
+	
 	public int size()
 	{
 		return map.size();

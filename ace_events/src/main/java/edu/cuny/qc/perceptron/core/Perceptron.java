@@ -134,12 +134,18 @@ public class Perceptron implements java.io.Serializable
 	private String getSignalScore(SentenceAssignment assn, Integer i, String featureName) {
 		String result;
 		String strippedFeatureName = SentenceAssignment.stripLabel(featureName);
+		if (strippedFeatureName.contains(SentenceAssignment.BIAS_FEATURE)) { //TODO: horrible, horrible hack. Shold have a more generic treatment for features that are known not to exist for non-O situations (or just "not exist sometimes").
+			return "BIAS";
+		}
 		if (!assn.featureToSignal.containsKey(i)) {
 			throw new IllegalArgumentException("Cannot find featureToSignal map for index: "+i+" in assignment: " + assn.toString());
 		}
 		Map<String, List<SignalInstance>> map = assn.featureToSignal.get(i);
 		if (!map.containsKey(strippedFeatureName)) {
-			throw new IllegalArgumentException("Cannot find feature (stripped) '"+strippedFeatureName+"' for i="+i+" in assignment: " + assn.toString());
+			String msg = "Cannot find feature (stripped) '"+strippedFeatureName+"' for i="+i+" in assignment: " + assn.toString();
+			//throw new IllegalArgumentException(msg);
+			//System.err.println(msg); //an even worse hack! cause I have no idea why we get this exception.
+			return "-";
 		}
 		List<SignalInstance> signals = map.get(strippedFeatureName);
 		if (signals == null) {
@@ -184,6 +190,28 @@ public class Perceptron implements java.io.Serializable
 		}
 	}
 	
+	public static String str(Map<?, ?> map, String key) {
+		if (map == null) {
+			return "null vector";
+		}
+		Object val = map.get(key);
+		if (val != null) {
+			return val.toString();
+		}
+		else {
+			return "X";
+		}
+	}
+	
+	public static String values(FeatureVector fv) {
+		if (fv == null) {
+			return "null vector";
+		}
+		else {
+			return fv.toStringOnlyValues();
+		}
+	}
+	
 	public static String feature(String featureName) {
 		return featureName.replace('|', '*').replace("\t", "  ");
 	}
@@ -202,6 +230,8 @@ public class Perceptron implements java.io.Serializable
 					c,
 					//tokens,
 					//sentenceText,
+					"",
+					"",
 					feature(name),
 					str(weights, name),
 					str(avg_weights_base, name),
@@ -211,6 +241,16 @@ public class Perceptron implements java.io.Serializable
 					size(avg_weights)
 			);
 		}
+		Utils.print(out, "", "\n", "|",					
+				iter,
+				//docId,
+				sentenceNo,
+				c,
+				//tokens,
+				//sentenceText,
+				values(weights),
+				values(avg_weights)
+		);
 	}
 	
 	private void printScore(PrintStream out, String iter, int devSize, Score score) {
@@ -315,6 +355,8 @@ public class Perceptron implements java.io.Serializable
 				"c",
 				//"Tokens",
 				//"Sentence"
+				"Weights",
+				"AvgWeights",
 				"Feature",
 				"Weight",
 				"BaseWeight",
@@ -440,31 +482,10 @@ public class Perceptron implements java.io.Serializable
 					}
 					Collections.sort(allFeaturesList);
 					for (String s : allFeaturesList) {						
-						String inTarget = "X";
-						BigDecimal numTarget = mapTarget.get(s);
-						if (numTarget != null) {
-							inTarget = numTarget.toString();
-						}
-						String inAssn = "X";
-						BigDecimal numAssn = mapAssn.get(s);
-						if (numAssn != null) {
-							inAssn = numAssn.toString();
-						}
-						String inWeights = "X";
-						BigDecimal numWeights = weights.get(s);
-						if (numWeights != null) {
-							inWeights = numWeights.toString();
-						}
-						String inAvg = "X";
-						if (avg_weights == null) {
-							inAvg = "null vector";
-						}
-						else {
-							BigDecimal numAvg = avg_weights.get(s);
-							if (numAvg != null) {
-								inAvg = numAvg.toString();
-							}
-						}
+						String inTarget = str(mapTarget, s);
+						String inAssn = str(mapAssn, s);
+						String inWeights = str(weights, s);
+						String inAvg = str(avg_weights, s);
 						
 						String targetSignal = getSignalScore(instance.target, j, s);
 						String assnSignal = getSignalScore(assn, j, s);

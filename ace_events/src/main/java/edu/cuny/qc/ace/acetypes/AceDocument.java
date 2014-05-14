@@ -10,11 +10,10 @@ package edu.cuny.qc.ace.acetypes;
 import java.util.*;
 import java.io.*;
 
-import org.apache.uima.jcas.JCas;
 import org.w3c.dom.*;
 import org.xml.sax.*;
 
-import edu.cuny.qc.util.TypeConstraints;
+import ac.biu.nlp.nlp.ie.onthefly.input.TypesContainer;
 
 import javax.xml.parsers.*;
 
@@ -96,7 +95,8 @@ public class AceDocument implements java.io.Serializable {
 	 */
 	public List<AceMention> allMentionsList = new ArrayList<AceMention>();
 	
-	private List<JCas> specs = null;
+	//private List<JCas> specs = null;
+	private boolean filtered = false;
 	
 	private static final String encoding = "UTF-8";//"ISO-8859-1";  // default:  ISO-LATIN-1
 
@@ -486,27 +486,26 @@ public class AceDocument implements java.io.Serializable {
 		this.eventMentions.addAll(event.mentions);
 	}
 
-	public void filterBySpecs(List<JCas> specs) {
-		if (this.specs != null) {
+	public void filterBySpecs(TypesContainer types) {
+		if (filtered) {
 			throw new IllegalStateException("Can only filter by specs once per document");
 		}
-		this.specs = specs;
 		for (Iterator<AceEvent> eventIter = events.iterator(); eventIter.hasNext();) {
 			AceEvent e = eventIter.next();
-			if (!TypeConstraints.specTypes.contains(e.subtype)) {
+			if (!types.triggerTypes.contains(e.subtype)) {
 				eventIter.remove();
 			}
 			else {
-				Set<String> possibleArgs = TypeConstraints.argumentRoles.get(e.subtype);
+				Set<String> possibleArgs = types.argumentRoles.get(e.subtype);
 				for (Iterator<AceEventArgument> argIter = e.arguments.iterator(); argIter.hasNext();) {
 					AceEventArgument a = argIter.next();
-					String role = TypeConstraints.getCanonicalRoleName(a.role);
+					String role = types.getCanonicalRoleName(a.role);
 					if (!possibleArgs.contains(role)) {
 						argIter.remove();
 					}
 					else {
 						String argType = a.value.getType();
-						Set<String> possibleTypes = TypeConstraints.roleEntityTypes.get(role);
+						Set<String> possibleTypes = types.roleEntityTypes.get(role);
 						if (!possibleTypes.contains(argType)) {
 							argIter.remove();
 						}
@@ -516,22 +515,22 @@ public class AceDocument implements java.io.Serializable {
 		}
 		for (Iterator<AceEventMention> eventMentionIter = eventMentions.iterator(); eventMentionIter.hasNext();) {
 			AceEventMention em = eventMentionIter.next();
-			if (!TypeConstraints.specTypes.contains(em.event.subtype)) {
+			if (!types.triggerTypes.contains(em.event.subtype)) {
 				eventMentionIter.remove();
 				em.event.mentions.remove(em);
 				allMentionsList.remove(em);
 			}
 			else {
-				Set<String> possibleArgs = TypeConstraints.argumentRoles.get(em.event.subtype);
+				Set<String> possibleArgs = types.argumentRoles.get(em.event.subtype);
 				for (Iterator<AceEventMentionArgument> argMentionIter = em.arguments.iterator(); argMentionIter.hasNext();) {
 					AceEventMentionArgument am = argMentionIter.next();
-					String role = TypeConstraints.getCanonicalRoleName(am.role);
+					String role = types.getCanonicalRoleName(am.role);
 					if (!possibleArgs.contains(role)) {
 						argMentionIter.remove();
 					}
 					else {
 						String argType = am.value.getType();
-						Set<String> possibleTypes = TypeConstraints.roleEntityTypes.get(role);
+						Set<String> possibleTypes = types.roleEntityTypes.get(role);
 						if (!possibleTypes.contains(argType)) {
 							argMentionIter.remove();
 						}
@@ -549,6 +548,7 @@ public class AceDocument implements java.io.Serializable {
 //				}
 //			}
 //		}
+		filtered = true;
 	}
 	
 	/*  assumes elementType is a leaf element type */

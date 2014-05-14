@@ -29,6 +29,7 @@ public class TypesContainer {
 	public List<JCas> specs;
 	public Alphabet nodeTargetAlphabet;
 	public Alphabet edgeTargetAlphabet;
+	public List<String> triggerTypes;
 	public List<String> possibleTriggerLabels;
 	
 	// map event subtype --> entity types
@@ -41,19 +42,18 @@ public class TypesContainer {
 
 	public TypesContainer(List<String> specXmlPaths) throws CASRuntimeException, AnalysisEngineProcessException, ResourceInitializationException, UimaUtilsException, IOException, AeException, CASException {
 		specs = SpecHandler.getSpecs(specXmlPaths);
-		possibleTriggerLabels = new ArrayList<String>();
+		triggerTypes = new ArrayList<String>();
 
 		nodeTargetAlphabet = new Alphabet();
 		edgeTargetAlphabet = new Alphabet();
 		
 		nodeTargetAlphabet.lookupIndex(SentenceAssignment.Default_Trigger_Label);
 		edgeTargetAlphabet.lookupIndex(SentenceAssignment.Default_Argument_Label);
-		possibleTriggerLabels.add(SentenceAssignment.Default_Trigger_Label);
 		
 		for (JCas spec : specs) {
 
 			String triggerName = SpecAnnotator.getSpecLabel(spec);
-			possibleTriggerLabels.add(triggerName);
+			triggerTypes.add(triggerName);
 			nodeTargetAlphabet.lookupIndex(triggerName);
 			
 			JCas tokenView = spec.getView(SpecAnnotator.TOKEN_VIEW);
@@ -67,12 +67,11 @@ public class TypesContainer {
 		}
 		
 		finalizeMaps();
+		possibleTriggerLabels = new ArrayList<String>(triggerTypes.size() + 1);//.add();
+		possibleTriggerLabels.add(SentenceAssignment.Default_Trigger_Label);
+		possibleTriggerLabels.addAll(triggerTypes);
 	}
-	
-	public List<String> getPossibleTriggerLabels() {
-		return possibleTriggerLabels;
-	}
-	
+		
 	public boolean isEntityTypeCompatible(String role, String type)
 	{
 		role = getCanonicalRoleName(role);

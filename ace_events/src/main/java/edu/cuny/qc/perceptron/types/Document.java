@@ -44,7 +44,6 @@ import edu.cuny.qc.util.SentDetectorWrapper;
 import edu.cuny.qc.util.Span;
 import edu.cuny.qc.util.TokenAnnotations;
 import edu.cuny.qc.util.TokenizerWrapper;
-import edu.cuny.qc.util.TypeConstraints;
 import eu.excitementproject.eop.common.utilities.uima.UimaUtils;
 import eu.excitementproject.eop.common.utilities.uima.UimaUtilsException;
 
@@ -390,8 +389,8 @@ public class Document implements java.io.Serializable
 			if (tryLoadExisting && preprocessed.isFile()) {
 				doc = (Document) SerializationUtils.deserialize(new FileInputStream(preprocessed));
 				doc.jcas = UimaUtils.loadXmi(xmi, AE_FILE_PATH);
-				if (types.specs != null) { XXX 14.5 20:19 not sure this is the right way to go, maybe a different null check? 
-					doc.aceAnnotations.filterBySpecs(types.specs);
+				if (types.specs != null) { 
+					doc.aceAnnotations.filterBySpecs(types);
 				}
 			}
 			if (doc==null) {
@@ -414,7 +413,7 @@ public class Document implements java.io.Serializable
 					}
 				}
 				if (types.specs != null) {
-					doc.aceAnnotations.filterBySpecs(types.specs);
+					doc.aceAnnotations.filterBySpecs(types);
 				}
 			}
 			return doc;

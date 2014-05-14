@@ -494,7 +494,7 @@ public class BeamSearch
 		//List<String> nextLabels = nextLabels(previousLabel);
 		
 		// traverse all possible target alphabet (trigger labels) for the current token
-		for(String label : problem.types.getPossibleTriggerLabels())
+		for(String label : problem.types.possibleTriggerLabels)
 		{
 			// create a new assn as a successor 
 			SentenceAssignment assn = root_assn.clone();

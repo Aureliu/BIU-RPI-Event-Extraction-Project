@@ -22,6 +22,7 @@ import org.xml.sax.SAXException;
 
 import ac.biu.nlp.nlp.ie.onthefly.input.AeException;
 import ac.biu.nlp.nlp.ie.onthefly.input.SpecHandler;
+import ac.biu.nlp.nlp.ie.onthefly.input.TypesContainer;
 import edu.cuny.qc.ace.acetypes.AceDocument;
 import edu.cuny.qc.ace.acetypes.AceEntity;
 import edu.cuny.qc.ace.acetypes.AceEvent;
@@ -96,10 +97,12 @@ public class Decoder
 			outDir.mkdirs();
 		}
 		
+		TypesContainer types = new TypesContainer(specXmlPaths);
+		
 		// Perceptron read model from the serialized file
 		Perceptron perceptron = Perceptron.deserializeObject(new File(args[0]));
-		Alphabet nodeTargetAlphabet = perceptron.nodeTargetAlphabet;
-		Alphabet edgeTargetAlphabet = perceptron.edgeTargetAlphabet;
+		Alphabet nodeTargetAlphabet = types.nodeTargetAlphabet;
+		Alphabet edgeTargetAlphabet = types.edgeTargetAlphabet;
 		Alphabet featureAlphabet = perceptron.featureAlphabet;
 		perceptron.buildSignalMechanisms();
 		
@@ -122,9 +125,7 @@ public class Decoder
 		//avgWeightsOut.close();
 				
 		System.out.printf("--------------\nPerceptron.controller =\n%s\r\n\r\n--------------------------\r\n\r\n", perceptron.controller);
-		
-		// handle specs
-		SpecHandler.loadSpecs(specXmlPaths, perceptron);
+
 		
 		BufferedReader reader = new BufferedReader(new FileReader(fileList));
 		String line = "";
@@ -142,11 +143,11 @@ public class Decoder
 			}
 			else
 			{
-				doc = Document.createAndPreprocess(fileName, true, monoCase, true, true, perceptron.specs);
+				doc = Document.createAndPreprocess(fileName, true, monoCase, true, true, types);
 				// fill in text feature vector for each token
 				featGen.fillTextFeatures_NoPreprocessing(doc);
 			}
-			localInstanceList = doc.getInstanceList(perceptron, nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet, 
+			localInstanceList = doc.getInstanceList(perceptron, types, featureAlphabet, 
 					perceptron.controller, true);
 			
 			// decoding
@@ -181,7 +182,7 @@ public class Decoder
 			
 		}
 		
-		List<JCas> specs = perceptron.specs;
+		List<JCas> specs = types.specs;
 		perceptron.close();
 
 		System.out.printf("[%s] --------------\r\nPerceptron.controller =\r\n%s\r\n\r\n--------------------------\r\n\r\n", new Date(), perceptron.controller);

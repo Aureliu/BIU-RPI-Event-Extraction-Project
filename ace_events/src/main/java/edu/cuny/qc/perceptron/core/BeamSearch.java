@@ -4,16 +4,10 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.math.BigDecimal;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
-
-import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
 
 import edu.cuny.qc.ace.acetypes.AceMention;
 import edu.cuny.qc.perceptron.types.FeatureVector;
@@ -21,7 +15,6 @@ import edu.cuny.qc.perceptron.types.SentenceAssignment;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
 import edu.cuny.qc.perceptron.types.SentenceInstance.InstanceAnnotations;
 import edu.cuny.qc.util.TokenAnnotations;
-import edu.cuny.qc.util.TypeConstraints;
 import edu.cuny.qc.util.Utils;
 
 /**
@@ -238,7 +231,7 @@ public class BeamSearch
 	public SentenceAssignment beamSearch(SentenceInstance problem, int beamSize, boolean isLearning)
 	{
 		List<SentenceAssignment> beam = new ArrayList<SentenceAssignment>();
-		SentenceAssignment initial = new SentenceAssignment(problem.nodeTargetAlphabet, problem.edgeTargetAlphabet, problem.featureAlphabet, problem.controller);
+		SentenceAssignment initial = new SentenceAssignment(problem.types, problem.nodeTargetAlphabet, problem.edgeTargetAlphabet, problem.featureAlphabet, problem.controller);
 		beam.add(initial);
 		
 		// clear the feature vector of ground-truth assignment
@@ -455,7 +448,7 @@ public class BeamSearch
 			//System.err.println("We've got a time arg candidate!");
 		}
 		//////////
-		if(!TypeConstraints.isEntityTypeEventCompatible(currentNodeLabel, mention.getType()))
+		if(!problem.types.isEntityTypeEventCompatible(currentNodeLabel, mention.getType()))
 		{
 			return null;
 		}
@@ -464,7 +457,7 @@ public class BeamSearch
 		{	
 			String edgeLabel = (String) problem.edgeTargetAlphabet.lookupObject(l);
 			// skip the mentions that is not compatible with the current node label (trigger type)
-			if(!isRoleCompatible(mention.getType(), currentNodeLabel, edgeLabel))
+			if(!isRoleCompatible(problem, mention.getType(), currentNodeLabel, edgeLabel))
 			{
 				continue;
 			}
@@ -488,7 +481,7 @@ public class BeamSearch
 		List<SentenceAssignment> successor = new ArrayList<SentenceAssignment>();
 		
 		// in this function, rules out words that are not one of (Verb, Noun, Adj)
-		if(!TypeConstraints.isPossibleTriggerByPOS(problem, i) || !TypeConstraints.isPossibleTriggerByEntityType(problem, i))
+		if(!problem.types.isPossibleTriggerByPOS(problem, i) || !problem.types.isPossibleTriggerByEntityType(problem, i))
 		{
 			SentenceAssignment assn = root_assn.clone();
 			assn.incrementState();
@@ -497,17 +490,16 @@ public class BeamSearch
 			return successor;
 		}
 		
-		String previousLabel = root_assn.getCurrentNodeLabel();
-		List<String> nextLabels = nextLabels(previousLabel);
+		//String previousLabel = root_assn.getCurrentNodeLabel();
+		//List<String> nextLabels = nextLabels(previousLabel);
 		
 		// traverse all possible target alphabet (trigger labels) for the current token
-		for(int j=0; nextLabels != null && j<nextLabels.size(); j++)
+		for(String label : problem.types.getPossibleTriggerLabels())
 		{
-			String outcome = nextLabels.get(j);
 			// create a new assn as a successor 
 			SentenceAssignment assn = root_assn.clone();
 			assn.incrementState();
-			assn.setCurrentNodeLabel(outcome);
+			assn.setCurrentNodeLabel(label);
 			successor.add(assn);
 		}
 		// traverse all possible target alphabet (trigger labels) for the current token
@@ -536,15 +528,6 @@ public class BeamSearch
 		return partial.getScore();
 	}
 	
-	/**
-	 * get a list of possible next trigger label, this is learnt from all training data
-	 * @param previousLabel
-	 * @return
-	 */
-	protected List<String> nextLabels(String previousLabel)
-	{
-		return model.getLabelBigram().get(previousLabel);
-	}
 	
 	/**
 	 * check if ace mention is compatible with the event type and argument role in the
@@ -554,10 +537,10 @@ public class BeamSearch
 	 * @param currentNodeLabel
 	 * @return
 	 */
-	protected static boolean isRoleCompatible(String mention_type, String triggerType, String edgeLabel)
+	protected static boolean isRoleCompatible(SentenceInstance problem, String mention_type, String triggerType, String edgeLabel)
 	{
 		if(edgeLabel.equals(SentenceAssignment.Default_Argument_Label) || 
-				(TypeConstraints.isRoleCompatible(triggerType, edgeLabel) && TypeConstraints.isEntityTypeCompatible(edgeLabel, mention_type)))
+				(problem.types.isRoleCompatible(triggerType, edgeLabel) && problem.types.isEntityTypeCompatible(edgeLabel, mention_type)))
 		{
 			return true;
 		}

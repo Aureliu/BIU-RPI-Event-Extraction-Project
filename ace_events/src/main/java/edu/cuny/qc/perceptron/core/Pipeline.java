@@ -10,25 +10,16 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
-import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
-import org.apache.uima.cas.CASException;
-import org.apache.uima.cas.CASRuntimeException;
-import org.apache.uima.jcas.JCas;
-import org.apache.uima.resource.ResourceInitializationException;
 import org.dom4j.DocumentException;
 
-import ac.biu.nlp.nlp.ie.onthefly.input.AeException;
 import ac.biu.nlp.nlp.ie.onthefly.input.SpecHandler;
-
+import ac.biu.nlp.nlp.ie.onthefly.input.TypesContainer;
 import edu.cuny.qc.perceptron.featureGenerator.TextFeatureGenerator;
-import edu.cuny.qc.perceptron.similarity_scorer.SignalMechanismException;
 import edu.cuny.qc.perceptron.types.Alphabet;
 import edu.cuny.qc.perceptron.types.Document;
 import edu.cuny.qc.perceptron.types.Sentence;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
 import edu.cuny.qc.util.UnsupportedParameterException;
-import eu.excitementproject.eop.common.utilities.file.FileUtils;
-import eu.excitementproject.eop.common.utilities.uima.UimaUtilsException;
 
 public class Pipeline
 {
@@ -42,78 +33,46 @@ public class Pipeline
 	 * @param trainingFileList
 	 * @param modelFile
 	 */
-	public static Perceptron trainPerceptron(File srcDir, File trainingFileList, File modelFile, File devFileList, Controller controller, List<String> trainSpecXmlPaths, List<String> devSpecXmlPaths)
+	public static Perceptron trainPerceptron(File srcDir, File trainingFileList, File modelFile, File devFileList, Controller controller, List<String> trainSpecXmlPaths, List<String> devSpecXmlPaths) throws Exception
 	{
-		Alphabet nodeTargetAlphabet = new Alphabet();
-		Alphabet edgeTargetAlphabet = new Alphabet();
 		Alphabet featureAlphabet = new Alphabet();
-		try
-		{
-			// Make sure model file is writable
-			PrintStream stream = new PrintStream(modelFile);
-			stream.printf("(file is writable - verified)");
-			stream.close();
 
-			// read instance list from training data (and dev data)
-			List<SentenceInstance> trainInstanceList = null;
-			List<SentenceInstance> devInstanceList = null;
-			Perceptron model = null;
-			
-			if(!controller.crossSent)
-			{
-				System.out.printf("[%s] Building perceptron...\n", new Date());
-				model = new Perceptron(nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet);
-				SpecHandler.loadSpecs(specXmlPaths, model);		
-				System.out.printf("[%s] Finished building perceptron. Its LabelBigram is: %s\n", new Date(), model.getLabelBigram());
-				System.out.printf("[%s] Reading instance list of train...\n", new Date());
-				trainInstanceList = readInstanceList(model, srcDir, trainingFileList, nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet, controller, true);
-				System.out.printf("[%s] Finished reading instance list of train, got %d instances\n", new Date(), trainInstanceList.size());
-				System.out.printf("[%s] Reading instance list of dev\n", new Date());
-				devInstanceList = readInstanceList(model, srcDir, devFileList, nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet, controller, false);
-				System.out.printf("[%s] Finished reading instance list of dev, got %d instances\n", new Date(), devInstanceList.size());
-			}
-			else
-			{
-				throw new UnsupportedParameterException("crossSent = true");
-			}
-			
-			//DEBUG
-			Pipeline.modelFile = modelFile;
-			//////////////////
+		// Make sure model file is writable
+		PrintStream stream = new PrintStream(modelFile);
+		stream.printf("(file is writable - verified)");
+		stream.close();
 
-			model.controller = controller;
-			
-
-			// learning
-			model.learning(trainInstanceList, devInstanceList, 0);
-			// save learned perceptron to file
-			Perceptron.serializeObject(model, modelFile);
-			
-			return model;
-		} 
-		catch (IOException e)
+		// read instance list from training data (and dev data)
+		List<SentenceInstance> trainInstanceList = null;
+		List<SentenceInstance> devInstanceList = null;
+		Perceptron model = null;
+		
+		if(!controller.crossSent)
 		{
-			e.printStackTrace();
-		} 
-		catch (DocumentException e)
-		{
-			e.printStackTrace();
-		} catch (SignalMechanismException e) {
-			e.printStackTrace();
-		} catch (CASRuntimeException e) {
-			e.printStackTrace();
-		} catch (AnalysisEngineProcessException e) {
-			e.printStackTrace();
-		} catch (ResourceInitializationException e) {
-			e.printStackTrace();
-		} catch (CASException e) {
-			e.printStackTrace();
-		} catch (UimaUtilsException e) {
-			e.printStackTrace();
-		} catch (AeException e) {
-			e.printStackTrace();
+			model = new Perceptron(featureAlphabet);
+			TypesContainer trainTypes = new TypesContainer(trainSpecXmlPaths);
+			TypesContainer devTypes = new TypesContainer(trainSpecXmlPaths);
+			trainInstanceList = readInstanceList(model, trainTypes, srcDir, trainingFileList, featureAlphabet, controller, true);
+			devInstanceList = readInstanceList(model, devTypes, srcDir, devFileList, featureAlphabet, controller, false);
 		}
-		return null;
+		else
+		{
+			throw new UnsupportedParameterException("crossSent = true");
+		}
+		
+		//DEBUG
+		Pipeline.modelFile = modelFile;
+		//////////////////
+
+		model.controller = controller;
+		
+
+		// learning
+		model.learning(trainInstanceList, devInstanceList, 0);
+		// save learned perceptron to file
+		Perceptron.serializeObject(model, modelFile);
+		
+		return model;
 	}
 	
 	/**
@@ -123,8 +82,8 @@ public class Pipeline
 	 * @throws IOException
 	 * @throws DocumentException
 	 */
-	public static List<SentenceInstance> readInstanceList(Perceptron perceptron, File srcDir, File file_list, 
-			Alphabet nodeTargetAlphabet, Alphabet edgeTargetAlphabet, Alphabet featureAlphabet, 
+	public static List<SentenceInstance> readInstanceList(Perceptron perceptron,
+			TypesContainer types, File srcDir, File file_list, Alphabet featureAlphabet, 
 			Controller controller, boolean learnable) throws IOException, DocumentException
 	{
 		System.out.println("Reading training instance ...");
@@ -140,7 +99,7 @@ public class Pipeline
 			
 			System.out.println(fileName);
 			
-			Document doc = Document.createAndPreprocess(fileName, true, monoCase, true, true, perceptron.specs);
+			Document doc = Document.createAndPreprocess(fileName, true, monoCase, true, true, types);
 			// fill in text feature vector for each token
 			featGen.fillTextFeatures_NoPreprocessing(doc);
 			for(int sent_id=0 ; sent_id<doc.getSentences().size(); sent_id++)
@@ -151,19 +110,20 @@ public class Pipeline
 				{
 					if(sent.eventMentions != null && sent.eventMentions.size() > 0)
 					{
-						SentenceInstance inst = new SentenceInstance(perceptron, sent, nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet,
+						SentenceInstance inst = new SentenceInstance(perceptron, sent, types, featureAlphabet,
 								controller, learnable);
 						instancelist.add(inst);
 					}
 				}
 				else // add all instances
 				{
-					SentenceInstance inst = new SentenceInstance(perceptron, sent, nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet, 
+					SentenceInstance inst = new SentenceInstance(perceptron, sent, types, featureAlphabet, 
 							controller, learnable);
 					instancelist.add(inst);
 				}
 			}
 		}
+		reader.close();
 		
 		System.out.println("done");
 		return instancelist;
@@ -226,24 +186,24 @@ public class Pipeline
 	 * @param cluster
 	 * @return
 	 */
-	private static boolean hasEventMention(List<Sentence> cluster)
-	{
-		for(Sentence sent : cluster)
-		{
-			if(sent.eventMentions != null && sent.eventMentions.size() > 0)
-			{
-				return true;
-			}
-		}
-		return false;
-	}
+//	private static boolean hasEventMention(List<Sentence> cluster)
+//	{
+//		for(Sentence sent : cluster)
+//		{
+//			if(sent.eventMentions != null && sent.eventMentions.size() > 0)
+//			{
+//				return true;
+//			}
+//		}
+//		return false;
+//	}
 
 	/**
 	 * This is a very simple pipeline
 	 * @param args
 	 * @throws IOException
 	 */
-	static public void main(String[] args) throws IOException
+	static public void main(String[] args) throws Exception
 	{
 //		mainWithSingleEventType(args, null);
 //	}
@@ -263,7 +223,7 @@ public class Pipeline
 			System.exit(-1);
 		}
 		
-		System.err.println("(Training err stream)");
+		System.out.printf("\n[%s] Starting Pipeline...\n", new Date());
 
 		File srcDir = new File(args[0]);
 		File trainingFileList = new File(args[1]);

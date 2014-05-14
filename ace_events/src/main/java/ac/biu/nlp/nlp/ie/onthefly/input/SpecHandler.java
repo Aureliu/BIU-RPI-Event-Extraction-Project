@@ -6,23 +6,15 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
 import org.apache.uima.analysis_engine.AnalysisEngine;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
-import org.apache.uima.cas.CASException;
 import org.apache.uima.cas.CASRuntimeException;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
-import org.uimafit.util.JCasUtil;
 
-import ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument;
-import ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentType;
-import edu.cuny.qc.perceptron.core.Perceptron;
-import edu.cuny.qc.perceptron.types.SentenceAssignment;
-import edu.cuny.qc.util.TypeConstraints;
 import eu.excitementproject.eop.common.utilities.file.FileUtils;
 import eu.excitementproject.eop.common.utilities.uima.UimaUtils;
 import eu.excitementproject.eop.common.utilities.uima.UimaUtilsException;
@@ -52,38 +44,38 @@ public class SpecHandler {
 		return specs;
 	}
 	
-	public static void loadSpecs(List<String> specXmlPaths, Perceptron perceptron) throws CASRuntimeException, AnalysisEngineProcessException, ResourceInitializationException, UimaUtilsException, IOException, AeException, CASException {
-		perceptron.specs = getSpecs(specXmlPaths);
-		
-		perceptron.nodeTargetAlphabet.lookupIndex(SentenceAssignment.Default_Trigger_Label);
-		perceptron.edgeTargetAlphabet.lookupIndex(SentenceAssignment.Default_Argument_Label);
-		
-		List<String[]> linesForArgs = new ArrayList<String[]>();
-		for (JCas spec : perceptron.specs) {
-
-			String predicateName = SpecAnnotator.getSpecLabel(spec);
-			TypeConstraints.addSpecType(predicateName);
-			perceptron.nodeTargetAlphabet.lookupIndex(predicateName);
-			
-			JCas tokenView = spec.getView(SpecAnnotator.TOKEN_VIEW);
-			for (Argument arg : JCasUtil.select(tokenView, Argument.class)) {
-				String role = arg.getRole().getCoveredText();
-				List<ArgumentType> types = JCasUtil.selectCovered(tokenView, ArgumentType.class, arg);
-				List<String> typeStrs = JCasUtil.toText(types);
-				perceptron.edgeTargetAlphabet.lookupIndex(role);
-				
-				List<String> lineList = new ArrayList<String>();
-				lineList.add(predicateName);
-				lineList.add(role);
-				lineList.addAll(typeStrs);
-				String[] lineArray = new String[lineList.size()];
-				lineArray = lineList.toArray(lineArray);
-				linesForArgs.add(lineArray);
-			}
-		}
-		perceptron.fillLabelBigrams();
-		TypeConstraints.fillArgRolesAndTypesLists(linesForArgs);
-	}
+//	public static void loadSpecs(List<String> specXmlPaths, Perceptron perceptron) throws CASRuntimeException, AnalysisEngineProcessException, ResourceInitializationException, UimaUtilsException, IOException, AeException, CASException {
+//		perceptron.specs = getSpecs(specXmlPaths);
+//		
+//		perceptron.nodeTargetAlphabet.lookupIndex(SentenceAssignment.Default_Trigger_Label);
+//		perceptron.edgeTargetAlphabet.lookupIndex(SentenceAssignment.Default_Argument_Label);
+//		
+//		List<String[]> linesForArgs = new ArrayList<String[]>();
+//		for (JCas spec : perceptron.specs) {
+//
+//			String predicateName = SpecAnnotator.getSpecLabel(spec);
+//			TypeConstraints.addSpecType(predicateName);
+//			perceptron.nodeTargetAlphabet.lookupIndex(predicateName);
+//			
+//			JCas tokenView = spec.getView(SpecAnnotator.TOKEN_VIEW);
+//			for (Argument arg : JCasUtil.select(tokenView, Argument.class)) {
+//				String role = arg.getRole().getCoveredText();
+//				List<ArgumentType> types = JCasUtil.selectCovered(tokenView, ArgumentType.class, arg);
+//				List<String> typeStrs = JCasUtil.toText(types);
+//				perceptron.edgeTargetAlphabet.lookupIndex(role);
+//				
+//				List<String> lineList = new ArrayList<String>();
+//				lineList.add(predicateName);
+//				lineList.add(role);
+//				lineList.addAll(typeStrs);
+//				String[] lineArray = new String[lineList.size()];
+//				lineArray = lineList.toArray(lineArray);
+//				linesForArgs.add(lineArray);
+//			}
+//		}
+//		perceptron.fillLabelBigrams();
+//		TypeConstraints.fillArgRolesAndTypesLists(linesForArgs);
+//	}
 	
 	private static JCas getPreprocessedSpec(String specXmlPath/*, Perceptron perceptron*/) throws UimaUtilsException, ResourceInitializationException, CASRuntimeException, IOException, AeException, AnalysisEngineProcessException {
 		JCas spec = null;

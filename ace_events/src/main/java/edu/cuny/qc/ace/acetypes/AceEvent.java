@@ -50,44 +50,44 @@ public class AceEvent extends AceEventArgumentValue{
    *  create a new event with the specified id, type, subtype, and arguments.
    */
 
-	static HashMap eventTypeMap = new HashMap();
-
-	static {
-		//  -- person roles --
-		eventTypeMap.put("Be-born","Life");
-		eventTypeMap.put("Marry","Life");
-		eventTypeMap.put("Divorcen","Life");
-		eventTypeMap.put("Injure","Life");
-		eventTypeMap.put("Die","Life");
-		eventTypeMap.put("Transport","Movement");
-		eventTypeMap.put("Transfer-Ownership","Transaction");
-		eventTypeMap.put("Transfer-Money","Transaction");
-		eventTypeMap.put("Start-Org","Business");
-		eventTypeMap.put("Merge-Org","Business");
-		eventTypeMap.put("Declare-Bankruptcy","Business");
-		eventTypeMap.put("End-Org","Business");
-		eventTypeMap.put("Attack","Conflict");
-		eventTypeMap.put("Demonstrate","Conflict");
-		eventTypeMap.put("Meet","Contact");
-		eventTypeMap.put("Phone-Write","Contact");
-		eventTypeMap.put("Start-Position","Personnel");
-		eventTypeMap.put("End-Position","Personnel");
-		eventTypeMap.put("Nominate","Personnel");
-		eventTypeMap.put("Elect","Personnel");
-		eventTypeMap.put("Arrest-Jail","Justice");
-		eventTypeMap.put("Release-Parole","Justice");
-		eventTypeMap.put("Trial-Hearing","Justice");
-		eventTypeMap.put("Charge-Indict","Justice");
-		eventTypeMap.put("Sue","Justice");
-		eventTypeMap.put("Convict","Justice");
-		eventTypeMap.put("Sentence","Justice");
-		eventTypeMap.put("Fine","Justice");
-		eventTypeMap.put("Execute","Justice");
-		eventTypeMap.put("Extradite","Justice");
-		eventTypeMap.put("Acquit","Justice");
-		eventTypeMap.put("Appeal","Justice");
-		eventTypeMap.put("Pardon","Justice");
-	}
+//	static HashMap eventTypeMap = new HashMap();
+//
+//	static {
+//		//  -- person roles --
+//		eventTypeMap.put("Be-born","Life");
+//		eventTypeMap.put("Marry","Life");
+//		eventTypeMap.put("Divorcen","Life");
+//		eventTypeMap.put("Injure","Life");
+//		eventTypeMap.put("Die","Life");
+//		eventTypeMap.put("Transport","Movement");
+//		eventTypeMap.put("Transfer-Ownership","Transaction");
+//		eventTypeMap.put("Transfer-Money","Transaction");
+//		eventTypeMap.put("Start-Org","Business");
+//		eventTypeMap.put("Merge-Org","Business");
+//		eventTypeMap.put("Declare-Bankruptcy","Business");
+//		eventTypeMap.put("End-Org","Business");
+//		eventTypeMap.put("Attack","Conflict");
+//		eventTypeMap.put("Demonstrate","Conflict");
+//		eventTypeMap.put("Meet","Contact");
+//		eventTypeMap.put("Phone-Write","Contact");
+//		eventTypeMap.put("Start-Position","Personnel");
+//		eventTypeMap.put("End-Position","Personnel");
+//		eventTypeMap.put("Nominate","Personnel");
+//		eventTypeMap.put("Elect","Personnel");
+//		eventTypeMap.put("Arrest-Jail","Justice");
+//		eventTypeMap.put("Release-Parole","Justice");
+//		eventTypeMap.put("Trial-Hearing","Justice");
+//		eventTypeMap.put("Charge-Indict","Justice");
+//		eventTypeMap.put("Sue","Justice");
+//		eventTypeMap.put("Convict","Justice");
+//		eventTypeMap.put("Sentence","Justice");
+//		eventTypeMap.put("Fine","Justice");
+//		eventTypeMap.put("Execute","Justice");
+//		eventTypeMap.put("Extradite","Justice");
+//		eventTypeMap.put("Acquit","Justice");
+//		eventTypeMap.put("Appeal","Justice");
+//		eventTypeMap.put("Pardon","Justice");
+//	}
 	
 	public AceEvent (String id, String type, String subtype) {
 		this.id = id;

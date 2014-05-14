@@ -7,14 +7,18 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import edu.cuny.qc.ace.acetypes.*;
+import ac.biu.nlp.nlp.ie.onthefly.input.TypesContainer;
+import edu.cuny.qc.ace.acetypes.AceEntityMention;
+import edu.cuny.qc.ace.acetypes.AceEvent;
+import edu.cuny.qc.ace.acetypes.AceEventMention;
+import edu.cuny.qc.ace.acetypes.AceEventMentionArgument;
+import edu.cuny.qc.ace.acetypes.AceMention;
 import edu.cuny.qc.perceptron.core.Controller;
 import edu.cuny.qc.perceptron.core.Perceptron;
 import edu.cuny.qc.perceptron.featureGenerator.NodeSignalGenerator;
 import edu.cuny.qc.perceptron.graph.DependencyGraph;
 import edu.cuny.qc.perceptron.types.Sentence.Sent_Attribute;
 import edu.cuny.qc.util.Span;
-import edu.cuny.qc.util.TypeConstraints;
 
 /**
  * This is a basic object of the learning algrithm
@@ -37,6 +41,8 @@ import edu.cuny.qc.util.TypeConstraints;
 public class SentenceInstance
 {
 	public boolean learnable = false;
+	
+	public transient TypesContainer types;
 	
 	// the alphabet of the label for each node (token of trigger)
 	public Alphabet nodeTargetAlphabet;
@@ -112,11 +118,12 @@ public class SentenceInstance
 		return (List<Map<Class<?>, Object>>) textFeaturesMap.get(InstanceAnnotations.Token_FEATURE_MAPs);
 	}
 	
-	public SentenceInstance(Alphabet nodeTargetAlphabet, Alphabet edgeTargetAlphabet, Alphabet featureAlphabet, 
+	public SentenceInstance(TypesContainer types, Alphabet featureAlphabet, 
 			Controller controller, boolean learnable)
 	{
-		this.nodeTargetAlphabet = nodeTargetAlphabet;
-		this.edgeTargetAlphabet = edgeTargetAlphabet;
+		this.types = types;
+		this.nodeTargetAlphabet = types.nodeTargetAlphabet;
+		this.edgeTargetAlphabet = types.edgeTargetAlphabet;
 		this.featureAlphabet = featureAlphabet;
 		this.controller = controller;
 		this.learnable = learnable;
@@ -127,10 +134,10 @@ public class SentenceInstance
 	 * the SentenceInstance object can also be initialized by a file
 	 * @param sent
 	 */
-	public SentenceInstance(Perceptron perceptron, Sentence sent, Alphabet nodeTargetAlphabet, Alphabet edgeTargetAlphabet, Alphabet featureAlphabet, 
+	public SentenceInstance(Perceptron perceptron, Sentence sent, TypesContainer types, Alphabet featureAlphabet, 
 			Controller controller, boolean learnable)
 	{
-		this(nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet, controller, learnable);
+		this(types, featureAlphabet, controller, learnable);
 		
 		// set the text of the doc
 		this.allText = sent.doc.allText;
@@ -244,7 +251,8 @@ public class SentenceInstance
 				// The usage of TypeConstraints.eventTypeMap here is legitimate, as it's used in order to get
 				// the "top type" (like "Life") from subtype (like "Be-Born"), because it's required for the
 				// AceEvent object. We gotta have a static list of this, as this info doesn't appear in the specs.
-				AceEvent event = new AceEvent(id, TypeConstraints.eventTypeMap.get(label), label); 
+				//AceEvent event = new AceEvent(id, TypeConstraints.eventTypeMap.get(label), label); 
+				AceEvent event = new AceEvent(id, "", label); 
 				
 				// not NON
 				Span trigger_span = this.getTokenSpans()[i];

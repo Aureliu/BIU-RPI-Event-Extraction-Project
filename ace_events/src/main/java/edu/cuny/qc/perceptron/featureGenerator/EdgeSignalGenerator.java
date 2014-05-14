@@ -48,7 +48,7 @@ public class EdgeSignalGenerator
 			Map<String, Map<String, Map<String, SignalInstance>>> ret = new LinkedHashMap<String, Map<String, Map<String, SignalInstance>>>();
 			
 			LinkedHashMap<String, BigDecimal> scoredSignals;
-			for (JCas spec : perceptron.specs) {
+			for (JCas spec : sent.types.specs) {
 				Map<String, Map<String, SignalInstance>> specSignals = new LinkedHashMap<String, Map<String, SignalInstance>>();
 				String label = SpecAnnotator.getSpecLabel(spec);
 				ret.put(label, specSignals);

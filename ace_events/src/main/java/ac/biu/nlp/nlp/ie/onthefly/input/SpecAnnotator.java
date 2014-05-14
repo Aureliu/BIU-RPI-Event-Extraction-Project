@@ -2,7 +2,6 @@ package ac.biu.nlp.nlp.ie.onthefly.input;
 
 import java.util.Collection;
 import java.util.Iterator;
-import java.util.List;
 
 import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_engine.AnalysisEngine;
@@ -16,7 +15,6 @@ import org.uimafit.util.JCasUtil;
 
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentExample;
-import ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentRole;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateName;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateSeed;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.UsageSample;

@@ -15,21 +15,15 @@ import java.util.Vector;
 import org.apache.uima.cas.CASException;
 import org.apache.uima.jcas.JCas;
 
-import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence;
-
 import ac.biu.nlp.nlp.ie.onthefly.input.SpecAnnotator;
 
-import edu.cuny.qc.ace.acetypes.AceEntityMention;
-import edu.cuny.qc.ace.acetypes.AceMention;
 import edu.cuny.qc.perceptron.core.Perceptron;
 import edu.cuny.qc.perceptron.similarity_scorer.SignalMechanism;
 import edu.cuny.qc.perceptron.similarity_scorer.SignalMechanismException;
 import edu.cuny.qc.perceptron.types.SignalInstance;
 import edu.cuny.qc.perceptron.types.SignalType;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
-import edu.cuny.qc.perceptron.types.SentenceInstance.InstanceAnnotations;
 import edu.cuny.qc.util.TokenAnnotations;
-import edu.cuny.qc.util.TypeConstraints;
 import edu.stanford.nlp.trees.Tree;
 
 /**
@@ -243,7 +237,7 @@ public class NodeSignalGenerator
 			Map<String, Map<String, SignalInstance>> ret = new LinkedHashMap<String, Map<String, SignalInstance>>();
 			
 			LinkedHashMap<String, BigDecimal> scoredSignals;
-			for (JCas spec : perceptron.specs) {
+			for (JCas spec : inst.types.specs) {
 				Map<String, SignalInstance> specSignals = new LinkedHashMap<String, SignalInstance>();
 				String label = SpecAnnotator.getSpecLabel(spec);
 				ret.put(label, specSignals);

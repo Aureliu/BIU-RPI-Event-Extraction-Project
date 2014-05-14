@@ -12,6 +12,8 @@ import java.util.Vector;
 
 import org.apache.commons.lang.StringUtils;
 
+import ac.biu.nlp.nlp.ie.onthefly.input.TypesContainer;
+
 import edu.cuny.qc.ace.acetypes.AceEventMention;
 import edu.cuny.qc.ace.acetypes.AceEventMentionArgument;
 import edu.cuny.qc.ace.acetypes.AceMention;
@@ -20,7 +22,6 @@ import edu.cuny.qc.perceptron.core.Perceptron;
 import edu.cuny.qc.perceptron.featureGenerator.EdgeSignalGenerator;
 import edu.cuny.qc.perceptron.featureGenerator.GlobalFeatureGenerator;
 import edu.cuny.qc.perceptron.types.SentenceInstance.InstanceAnnotations;
-import edu.cuny.qc.util.TypeConstraints;
 import edu.cuny.qc.util.UnsupportedParameterException;
 
 /**
@@ -120,6 +121,8 @@ public class SentenceAssignment
 	
 	public Controller controller;
 	
+	public TypesContainer types;
+	
 	// the feature vector of the current assignment
 	public FeatureVectorSequence featVecSequence;
 	
@@ -185,7 +188,7 @@ public class SentenceAssignment
 	public SentenceAssignment clone()
 	{
 		// shallow copy the alphabets
-		SentenceAssignment assn = new SentenceAssignment(nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet, controller);
+		SentenceAssignment assn = new SentenceAssignment(types, nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet, controller);
 		
 		// shallow copy the assignment
 		assn.nodeAssignment = (Vector<Integer>) this.nodeAssignment.clone();
@@ -371,12 +374,13 @@ public class SentenceAssignment
 		}
 	}
 	
-	public SentenceAssignment(Alphabet nodeTargetAlphabet, Alphabet edgeTargetAlphabet, Alphabet featureAlphabet, Controller controller)
+	public SentenceAssignment(TypesContainer types, Alphabet nodeTargetAlphabet, Alphabet edgeTargetAlphabet, Alphabet featureAlphabet, Controller controller)
 	{
 		this.nodeTargetAlphabet = nodeTargetAlphabet;
 		this.edgeTargetAlphabet = edgeTargetAlphabet;
 		this.featureAlphabet = featureAlphabet;
 		this.controller = controller;
+		this.types = types;
 		
 		nodeAssignment = new Vector<Integer>();
 		edgeAssignment = new HashMap<Integer, Map<Integer, Integer>>();
@@ -393,7 +397,7 @@ public class SentenceAssignment
 	 */
 	public SentenceAssignment(SentenceInstance inst, Perceptron perceptron)
 	{
-		this(inst.nodeTargetAlphabet, inst.edgeTargetAlphabet, inst.featureAlphabet, inst.controller);
+		this(inst.types, inst.nodeTargetAlphabet, inst.edgeTargetAlphabet, inst.featureAlphabet, inst.controller);
 		
 		for(int i=0; i < inst.size(); i++)
 		{
@@ -410,7 +414,7 @@ public class SentenceAssignment
 			// for event, only pick up the first token as trigger
 			int trigger_index = headIndices.get(0);  
 			// ignore the triggers that are with other POS
-			if(!TypeConstraints.isPossibleTriggerByPOS(inst, trigger_index))
+			if(!types.isPossibleTriggerByPOS(inst, trigger_index))
 			{	
 				continue;
 			}
@@ -429,7 +433,7 @@ public class SentenceAssignment
 			{
 				AceMention can = inst.eventArgCandidates.get(can_id);
 				// ignore entity that are not compatible with the event
-				if(TypeConstraints.isEntityTypeEventCompatible(mention.getSubType(), can.getType()))
+				if(types.isEntityTypeEventCompatible(mention.getSubType(), can.getType()))
 				{
 					feat_index = this.edgeTargetAlphabet.lookupIndex(Default_Argument_Label);
 					arguments.put(can_id, feat_index);

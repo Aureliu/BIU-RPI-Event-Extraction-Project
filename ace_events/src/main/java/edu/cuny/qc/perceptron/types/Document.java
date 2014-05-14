@@ -29,6 +29,7 @@ import org.apache.uima.resource.ResourceInitializationException;
 
 import ac.biu.nlp.nlp.ie.onthefly.input.AeException;
 import ac.biu.nlp.nlp.ie.onthefly.input.AnalysisEngines;
+import ac.biu.nlp.nlp.ie.onthefly.input.TypesContainer;
 
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
 import edu.cuny.qc.ace.acetypes.AceDocument;
@@ -377,7 +378,7 @@ public class Document implements java.io.Serializable
 		readDoc(txtFile, this.monoCase);
 	}
 	
-	public static Document createAndPreprocess(String baseFileName, boolean hasLabel, boolean monoCase, boolean tryLoadExisting, boolean dumpNewDoc, List<JCas> specs) throws IOException {
+	public static Document createAndPreprocess(String baseFileName, boolean hasLabel, boolean monoCase, boolean tryLoadExisting, boolean dumpNewDoc, TypesContainer types) throws IOException {
 		try {
 			// Kludge - don't serialize for now
 			dumpNewDoc = false;
@@ -389,8 +390,8 @@ public class Document implements java.io.Serializable
 			if (tryLoadExisting && preprocessed.isFile()) {
 				doc = (Document) SerializationUtils.deserialize(new FileInputStream(preprocessed));
 				doc.jcas = UimaUtils.loadXmi(xmi, AE_FILE_PATH);
-				if (specs != null) {
-					doc.aceAnnotations.filterBySpecs(specs);
+				if (types.specs != null) { XXX 14.5 20:19 not sure this is the right way to go, maybe a different null check? 
+					doc.aceAnnotations.filterBySpecs(types.specs);
 				}
 			}
 			if (doc==null) {
@@ -412,8 +413,8 @@ public class Document implements java.io.Serializable
 						throw e;
 					}
 				}
-				if (specs != null) {
-					doc.aceAnnotations.filterBySpecs(specs);
+				if (types.specs != null) {
+					doc.aceAnnotations.filterBySpecs(types.specs);
 				}
 			}
 			return doc;
@@ -907,7 +908,7 @@ public class Document implements java.io.Serializable
 	 * @param b
 	 * @return
 	 */
-	public List<SentenceInstance> getInstanceList(Perceptron perceptron, Alphabet nodeTargetAlphabet, Alphabet edgeTargetAlphabet, Alphabet featureAlphabet, 
+	public List<SentenceInstance> getInstanceList(Perceptron perceptron, TypesContainer types, Alphabet featureAlphabet, 
 			Controller controller, boolean learnable)
 	{
 		List<SentenceInstance> instancelist = new ArrayList<SentenceInstance>();
@@ -915,7 +916,7 @@ public class Document implements java.io.Serializable
 		{
 			Sentence sent = this.getSentences().get(sent_id);
 			// add all instances
-			SentenceInstance inst = new SentenceInstance(perceptron, sent, nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet, 
+			SentenceInstance inst = new SentenceInstance(perceptron, sent, types, featureAlphabet, 
 					controller, learnable);
 			instancelist.add(inst);
 		}

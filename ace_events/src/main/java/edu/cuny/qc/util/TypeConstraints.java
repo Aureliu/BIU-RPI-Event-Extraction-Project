@@ -23,58 +23,58 @@ import edu.cuny.qc.perceptron.types.SentenceInstance;
  */
 public class TypeConstraints
 {
-	// map event subtype --> entity types
-	public static Map<String, Set<String>> eventEntityTypes = new HashMap<String, Set<String>>();
-	// map event subtype --> argument role
-	public static Map<String, Set<String>> argumentRoles = new HashMap<String, Set<String>>();
-	// map argument_role --> entity types 
-	public static Map<String, Set<String>> roleEntityTypes = new HashMap<String, Set<String>>();
+//	// map event subtype --> entity types
+//	public static Map<String, Set<String>> eventEntityTypes = new HashMap<String, Set<String>>();
+//	// map event subtype --> argument role
+//	public static Map<String, Set<String>> argumentRoles = new HashMap<String, Set<String>>();
+//	// map argument_role --> entity types 
+//	public static Map<String, Set<String>> roleEntityTypes = new HashMap<String, Set<String>>();
 //	// independent argument roles: argument roles that are not dependent on the types of event
 //	public static List<String> independentRoles = new ArrayList<String>();
 	
 	// a mapping from event subtype to type
 	// 20.3.2014 Ofer's note: this list now only has a very minimal role (don't start using it!),
 	// see corresponding comment in SentenceInstance.getEvents()
-	public static Map<String, String> eventTypeMap = new HashMap<String, String>();
+	//public static Map<String, String> eventTypeMap = new HashMap<String, String>();
 	//public static Map<String, String> eventTypeMapModified = new HashMap<String, String>();
 	
-	public static List<String> specTypes = new ArrayList<String>();
+//	public static List<String> specTypes = new ArrayList<String>();
 	
-	static
-	{
-		eventTypeMap.put("Be-Born","Life");
-		eventTypeMap.put("Marry","Life");
-		eventTypeMap.put("Divorce","Life");
-		eventTypeMap.put("Injure","Life");
-		eventTypeMap.put("Die","Life");
-		eventTypeMap.put("Transport","Movement");
-		eventTypeMap.put("Transfer-Ownership","Transaction");
-		eventTypeMap.put("Transfer-Money","Transaction");
-		eventTypeMap.put("Start-Org","Business");
-		eventTypeMap.put("Merge-Org","Business");
-		eventTypeMap.put("Declare-Bankruptcy","Business");
-		eventTypeMap.put("End-Org","Business");
-		eventTypeMap.put("Attack","Conflict");
-		eventTypeMap.put("Demonstrate","Conflict");
-		eventTypeMap.put("Meet","Contact");
-		eventTypeMap.put("Phone-Write","Contact");
-		eventTypeMap.put("Start-Position","Personnel");
-		eventTypeMap.put("End-Position","Personnel");
-		eventTypeMap.put("Nominate","Personnel");
-		eventTypeMap.put("Elect","Personnel");
-		eventTypeMap.put("Arrest-Jail","Justice");
-		eventTypeMap.put("Release-Parole","Justice");
-		eventTypeMap.put("Trial-Hearing","Justice");
-		eventTypeMap.put("Charge-Indict","Justice");
-		eventTypeMap.put("Sue","Justice");
-		eventTypeMap.put("Convict","Justice");
-		eventTypeMap.put("Sentence","Justice");
-		eventTypeMap.put("Fine","Justice");
-		eventTypeMap.put("Execute","Justice");
-		eventTypeMap.put("Extradite","Justice");
-		eventTypeMap.put("Acquit","Justice");
-		eventTypeMap.put("Appeal","Justice");
-		eventTypeMap.put("Pardon","Justice");
+//	static
+//	{
+//		eventTypeMap.put("Be-Born","Life");
+//		eventTypeMap.put("Marry","Life");
+//		eventTypeMap.put("Divorce","Life");
+//		eventTypeMap.put("Injure","Life");
+//		eventTypeMap.put("Die","Life");
+//		eventTypeMap.put("Transport","Movement");
+//		eventTypeMap.put("Transfer-Ownership","Transaction");
+//		eventTypeMap.put("Transfer-Money","Transaction");
+//		eventTypeMap.put("Start-Org","Business");
+//		eventTypeMap.put("Merge-Org","Business");
+//		eventTypeMap.put("Declare-Bankruptcy","Business");
+//		eventTypeMap.put("End-Org","Business");
+//		eventTypeMap.put("Attack","Conflict");
+//		eventTypeMap.put("Demonstrate","Conflict");
+//		eventTypeMap.put("Meet","Contact");
+//		eventTypeMap.put("Phone-Write","Contact");
+//		eventTypeMap.put("Start-Position","Personnel");
+//		eventTypeMap.put("End-Position","Personnel");
+//		eventTypeMap.put("Nominate","Personnel");
+//		eventTypeMap.put("Elect","Personnel");
+//		eventTypeMap.put("Arrest-Jail","Justice");
+//		eventTypeMap.put("Release-Parole","Justice");
+//		eventTypeMap.put("Trial-Hearing","Justice");
+//		eventTypeMap.put("Charge-Indict","Justice");
+//		eventTypeMap.put("Sue","Justice");
+//		eventTypeMap.put("Convict","Justice");
+//		eventTypeMap.put("Sentence","Justice");
+//		eventTypeMap.put("Fine","Justice");
+//		eventTypeMap.put("Execute","Justice");
+//		eventTypeMap.put("Extradite","Justice");
+//		eventTypeMap.put("Acquit","Justice");
+//		eventTypeMap.put("Appeal","Justice");
+//		eventTypeMap.put("Pardon","Justice");
 		
 //		eventTypeMapModified.put("Be-Born","Life");
 //		eventTypeMapModified.put("Marry","Life");
@@ -109,7 +109,7 @@ public class TypeConstraints
 //		eventTypeMapModified.put("Acquit","Justice");
 //		eventTypeMapModified.put("Appeal","Justice");
 //		eventTypeMapModified.put("Pardon","Justice");
-	}
+//	}
 	
 //	static
 //	{
@@ -144,55 +144,55 @@ public class TypeConstraints
 		
 		
 	
-	public static void fillArgRolesAndTypesLists(List<String[]> lines)
-	{
-			for (String[] fields : lines)
-			{
-				if(fields.length > 2)
-				{
-					String event_type = fields[0];
-					String argument_role = fields[1];
-					
-					Set<String> set = argumentRoles.get(event_type);
-					if(set == null)
-					{
-						set = new HashSet<String>();
-					}
-					set.add(argument_role);
-					argumentRoles.put(event_type, set);
-					
-					for(int i=2; i<fields.length; i++)
-					{
-						Set<String> entityTypes = roleEntityTypes.get(argument_role);
-						if(entityTypes == null)
-						{
-							entityTypes = new HashSet<String>();
-						}
-						entityTypes.add(fields[i]);
-						roleEntityTypes.put(argument_role, entityTypes);
-					}
-				}
-			}
-			
-			for(String eventType : argumentRoles.keySet())
-			{
-				Set<String> roles = argumentRoles.get(eventType);
-				for(String role : roles)
-				{
-					Set<String> entityTypes = roleEntityTypes.get(role);
-					if(entityTypes != null)
-					{
-						Set<String> possibleEntityTypes = eventEntityTypes.get(eventType);
-						if(possibleEntityTypes == null)
-						{
-							possibleEntityTypes = new HashSet<String>();
-							eventEntityTypes.put(eventType, possibleEntityTypes);
-						}
-						possibleEntityTypes.addAll(entityTypes);
-					}
-				}
-			}
-	}
+//	public static void fillArgRolesAndTypesLists(List<String[]> lines)
+//	{
+//			for (String[] fields : lines)
+//			{
+//				if(fields.length > 2)
+//				{
+//					String event_type = fields[0];
+//					String argument_role = fields[1];
+//					
+//					Set<String> set = argumentRoles.get(event_type);
+//					if(set == null)
+//					{
+//						set = new HashSet<String>();
+//					}
+//					set.add(argument_role);
+//					argumentRoles.put(event_type, set);
+//					
+//					for(int i=2; i<fields.length; i++)
+//					{
+//						Set<String> entityTypes = roleEntityTypes.get(argument_role);
+//						if(entityTypes == null)
+//						{
+//							entityTypes = new HashSet<String>();
+//						}
+//						entityTypes.add(fields[i]);
+//						roleEntityTypes.put(argument_role, entityTypes);
+//					}
+//				}
+//			}
+//			
+//			for(String eventType : argumentRoles.keySet())
+//			{
+//				Set<String> roles = argumentRoles.get(eventType);
+//				for(String role : roles)
+//				{
+//					Set<String> entityTypes = roleEntityTypes.get(role);
+//					if(entityTypes != null)
+//					{
+//						Set<String> possibleEntityTypes = eventEntityTypes.get(eventType);
+//						if(possibleEntityTypes == null)
+//						{
+//							possibleEntityTypes = new HashSet<String>();
+//							eventEntityTypes.put(eventType, possibleEntityTypes);
+//						}
+//						possibleEntityTypes.addAll(entityTypes);
+//					}
+//				}
+//			}
+//	}
 
 //	/**
 //	 * Given an event subtype, return the type. e.g. End_Position --> Personnel
@@ -204,67 +204,67 @@ public class TypeConstraints
 //		return eventTypeMap.get(type);
 //	}
 	
-	/**
-	 * given an argument role, get the compatible entity types
-	 * @param role
-	 * @return
-	 */
-	public static Set<String> getCompatibleEntityTypes(String role)
-	{
-		return roleEntityTypes.get(role);
-	}
+//	/**
+//	 * given an argument role, get the compatible entity types
+//	 * @param role
+//	 * @return
+//	 */
+//	public static Set<String> getCompatibleEntityTypes(String role)
+//	{
+//		return roleEntityTypes.get(role);
+//	}
 	
-	/**
-	 * given an argument role, and an entity type, check if they are compatible
-	 * @param role
-	 * @param type
-	 * @return
-	 */
-	public static boolean isEntityTypeCompatible(String role, String type)
-	{
-		role = getCanonicalRoleName(role);
-		Set<String> entityTypes = roleEntityTypes.get(role);
-		if(entityTypes != null && entityTypes.contains(type))
-		{
-			return true;
-		}
-		return false;
-	}
+//	/**
+//	 * given an argument role, and an entity type, check if they are compatible
+//	 * @param role
+//	 * @param type
+//	 * @return
+//	 */
+//	public static boolean isEntityTypeCompatible(String role, String type)
+//	{
+//		role = getCanonicalRoleName(role);
+//		Set<String> entityTypes = roleEntityTypes.get(role);
+//		if(entityTypes != null && entityTypes.contains(type))
+//		{
+//			return true;
+//		}
+//		return false;
+//	}
+//	
+//	/**
+//	 * get cannonical name of role. e.g TIME-Wthin --> TIME
+//	 * @param role
+//	 * @return
+//	 */
+//	public static String getCanonicalRoleName(String role)
+//	{
+//		if(role.startsWith("Time"))
+//		{
+//			return "Time";
+//		}
+//		else
+//		{
+//			return role;
+//		}
+//		
+//	}
 	
-	/**
-	 * get cannonical name of role. e.g TIME-Wthin --> TIME
-	 * @param role
-	 * @return
-	 */
-	public static String getCanonicalRoleName(String role)
-	{
-		if(role.startsWith("Time"))
-		{
-			return "Time";
-		}
-		else
-		{
-			return role;
-		}
-		
-	}
-	
-	/**
-	 * given a event subtype and argument role, check if it's comptible 
-	 * @param subtype
-	 * @param role
-	 * @return
-	 */
-	public static boolean isRoleCompatible(String subtype, String role)
-	{
-		role = getCanonicalRoleName(role);
-		Set<String> roles = argumentRoles.get(subtype);
-		if(roles != null && roles.contains(role))
-		{
-			return true;
-		}
-		return false;
-	}
+//	/**
+//	 * given a event subtype and argument role, check if it's comptible 
+//	 * @param subtype
+//	 * @param role
+//	 * @return
+//	 */
+//	public static boolean isRoleCompatible(String subtype, String role)
+//	{
+//		role = getCanonicalRoleName(role);
+//		Set<String> roles = argumentRoles.get(subtype);
+//		if(roles != null && roles.contains(role))
+//		{
+//			return true;
+//		}
+//		return false;
+//	}
 	
 //	/**
 //	 * given a argument role type, check if it's independent of event types
@@ -281,11 +281,11 @@ public class TypeConstraints
 //		return false;
 //	}
 
-	public static boolean isEntityTypeEventCompatible(String eventType, String entityType)
-	{
-		Set<String> types = eventEntityTypes.get(eventType);
-		return types.contains(entityType);
-	}
+//	public static boolean isEntityTypeEventCompatible(String eventType, String entityType)
+//	{
+//		Set<String> types = eventEntityTypes.get(eventType);
+//		return types.contains(entityType);
+//	}
 	
 	/**
 	 * judge if the current node is a possible trigger
@@ -294,16 +294,16 @@ public class TypeConstraints
 	 * @param i
 	 * @return
 	 */
-	public static boolean isPossibleTriggerByPOS(SentenceInstance problem, int i)
-	{
-		final String allowedPOS = "IN|JJ|RB|DT|VBG|VBD|NN|NNPS|VB|VBN|NNS|VBP|NNP|PRP|VBZ";
-		String[] posTags = problem.getPosTags();
-		if(posTags[i].matches(allowedPOS))
-		{
-			return true;
-		}
-		return false;
-	}
+//	public static boolean isPossibleTriggerByPOS(SentenceInstance problem, int i)
+//	{
+//		final String allowedPOS = "IN|JJ|RB|DT|VBG|VBD|NN|NNPS|VB|VBN|NNS|VBP|NNP|PRP|VBZ";
+//		String[] posTags = problem.getPosTags();
+//		if(posTags[i].matches(allowedPOS))
+//		{
+//			return true;
+//		}
+//		return false;
+//	}
 	
 	/**
 	 * if the token is in head of an entity, then it can not be a possible trigger
@@ -311,19 +311,19 @@ public class TypeConstraints
 	 * @param i
 	 * @return
 	 */
-	public static boolean isPossibleTriggerByEntityType(SentenceInstance problem, int i)
-	{
-		for(AceMention mention : problem.eventArgCandidates)
-		{
-			if(mention instanceof AceEntityMention && mention.getHeadIndices().contains(i))
-			{
-				return false;
-			}
-		}
-		return true;
-	}
+//	public static boolean isPossibleTriggerByEntityType(SentenceInstance problem, int i)
+//	{
+//		for(AceMention mention : problem.eventArgCandidates)
+//		{
+//			if(mention instanceof AceEntityMention && mention.getHeadIndices().contains(i))
+//			{
+//				return false;
+//			}
+//		}
+//		return true;
+//	}
 	
-	public static void addSpecType(String specTypeName) {
-		specTypes.add(specTypeName);
-	}
+//	public static void addSpecType(String specTypeName) {
+//		specTypes.add(specTypeName);
+//	}
 }

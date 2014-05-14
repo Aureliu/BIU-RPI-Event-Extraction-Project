@@ -21,8 +21,6 @@ import java.util.Map;
 import java.util.Set;
 
 import org.apache.commons.lang3.SerializationUtils;
-import org.apache.commons.lang3.StringUtils;
-import org.apache.uima.jcas.JCas;
 
 import edu.cuny.qc.perceptron.core.Evaluator.Score;
 import edu.cuny.qc.perceptron.similarity_scorer.SignalMechanism;
@@ -35,7 +33,6 @@ import edu.cuny.qc.perceptron.types.SentenceInstance;
 import edu.cuny.qc.perceptron.types.SentenceInstance.InstanceAnnotations;
 import edu.cuny.qc.perceptron.types.SignalInstance;
 import edu.cuny.qc.util.TokenAnnotations;
-import edu.cuny.qc.util.TypeConstraints;
 import edu.cuny.qc.util.UnsupportedParameterException;
 import edu.cuny.qc.util.Utils;
 import edu.cuny.qc.util.WeightTracer;
@@ -54,10 +51,10 @@ public class Perceptron implements java.io.Serializable
 	private static final long serialVersionUID = -8870655270637917361L;
 
 	// the alphabet of node labels (trigger labels)
-	public Alphabet nodeTargetAlphabet;	
+	//public Alphabet nodeTargetAlphabet;	
 	// the alphabet of the label for each edge (trigger-->argument link), shared by the whole application
 	// they should be consistent with SentenceInstance object
-	public Alphabet edgeTargetAlphabet;
+	//public Alphabet edgeTargetAlphabet;
 	// the alphabet of features, shared by the whole application
 	public Alphabet featureAlphabet;
 	// the settings of the perceptron
@@ -81,17 +78,17 @@ public class Perceptron implements java.io.Serializable
 	public static int i; // num of current sentence - public and static for logging
 
 	// default constructor 
-	public Perceptron(Alphabet nodeTargetAlphabet, Alphabet edgeTargetAlphabet, Alphabet featureAlphabet) throws SignalMechanismException
+	public Perceptron(Alphabet featureAlphabet) throws SignalMechanismException
 	{
-		this.nodeTargetAlphabet = nodeTargetAlphabet;
-		this.edgeTargetAlphabet = edgeTargetAlphabet;
+//		this.nodeTargetAlphabet = nodeTargetAlphabet;
+//		this.edgeTargetAlphabet = edgeTargetAlphabet;
 		this.featureAlphabet = featureAlphabet;
 		
 		// create weights vector
 		this.setWeights(new FeatureVector());
 		this.avg_weights_base = new FeatureVector();
 		
-		labelBigram = new HashMap<String, List<String>>();
+		//labelBigram = new HashMap<String, List<String>>();
 		
 		buildSignalMechanisms();
 	}
@@ -182,19 +179,6 @@ public class Perceptron implements java.io.Serializable
 			return "null vector";
 		}
 		Object val = fv.get(key);
-		if (val != null) {
-			return val.toString();
-		}
-		else {
-			return "X";
-		}
-	}
-	
-	public static String str(Map<?, ?> map, String key) {
-		if (map == null) {
-			return "null vector";
-		}
-		Object val = map.get(key);
 		if (val != null) {
 			return val.toString();
 		}
@@ -336,13 +320,13 @@ public class Perceptron implements java.io.Serializable
 			evaluator = new EvaluatorLoose();
 		}
 		
-		fillLabelBigrams();
+//		fillLabelBigrams();
 		
 		BeamSearch beamSearcher = createBeamSearcher(this, true);
 		
 		System.out.print("Alphabet size: " + this.featureAlphabet.size() + "\t");
-		System.out.println("Node target alphabet:" + this.nodeTargetAlphabet);
-		System.out.println("edge target alphabet:" + this.edgeTargetAlphabet);
+//		System.out.println("Node target alphabet:" + this.nodeTargetAlphabet);
+//		System.out.println("edge target alphabet:" + this.edgeTargetAlphabet);
 		System.out.println("instance num: " + trainingList.size());
 		
 		// feature cutoff
@@ -761,20 +745,20 @@ public class Perceptron implements java.io.Serializable
 //		}
 //	}
 //
-	/**
-	 * After each type of trigger, can appear any other type of trigger. Default label ("O") included.
-	 */
-	public void fillLabelBigrams() {
-		List<String> allTypes = new ArrayList<String>(TypeConstraints.specTypes);
-		allTypes.add(0, SentenceAssignment.PAD_Trigger_Label);
-		String currType = null;
-		for (int i=0; i<allTypes.size(); i++) {
-			currType = allTypes.get(i);
-			List<String> list = new ArrayList<String>(allTypes);
-			//list.remove(i);
-			getLabelBigram().put(currType, list);
-		}
-	}
+//	/**
+//	 * After each type of trigger, can appear any other type of trigger. Default label ("O") included.
+//	 */
+//	public void fillLabelBigrams() {
+//		List<String> allTypes = new ArrayList<String>(TypeConstraints.specTypes);
+//		allTypes.add(0, SentenceAssignment.PAD_Trigger_Label);
+//		String currType = null;
+//		for (int i=0; i<allTypes.size(); i++) {
+//			currType = allTypes.get(i);
+//			List<String> list = new ArrayList<String>(allTypes);
+//			//list.remove(i);
+//			getLabelBigram().put(currType, list);
+//		}
+//	}
 	
 //	protected void extractTriggerLabelBigrams(List<SentenceInstance> traininglist)
 //	{
@@ -840,10 +824,10 @@ public class Perceptron implements java.io.Serializable
 //		this.labelBigram = labelBigram;
 //	}
 
-	protected Map<String, List<String>> getLabelBigram()
-	{
-		return labelBigram;
-	}
+//	protected Map<String, List<String>> getLabelBigram()
+//	{
+//		return labelBigram;
+//	}
 	
 	/**
 	 * serialize the model (mainly weights/alphabets) to the file

@@ -11,6 +11,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
+import org.apache.uima.cas.CASException;
 import org.apache.uima.cas.CASRuntimeException;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
@@ -18,6 +19,7 @@ import org.dom4j.DocumentException;
 
 import ac.biu.nlp.nlp.ie.onthefly.input.AeException;
 import ac.biu.nlp.nlp.ie.onthefly.input.SpecHandler;
+import ac.biu.nlp.nlp.ie.onthefly.input.TypesContainer;
 
 import edu.cuny.qc.perceptron.core.Perceptron;
 import edu.cuny.qc.util.Span;
@@ -95,7 +97,7 @@ public class Scorer
 		}
 	}
 	
-	public static Stats doAnalysis(File goldDir, File ansDir, File file_list, List<JCas> specs, PrintStream out, String dirNamePrefix) throws IOException, DocumentException
+	public static Stats doAnalysis(File goldDir, File ansDir, File file_list, TypesContainer types, PrintStream out, String dirNamePrefix) throws IOException, DocumentException
 	{
 		Stats stats = new Stats();
 		BufferedReader reader = new BufferedReader(new FileReader(file_list));
@@ -122,8 +124,8 @@ public class Scorer
 			}
 			AceDocument doc_ans = new AceDocument(textFile.getAbsolutePath(), apf_ans.getAbsolutePath());
 			AceDocument doc_gold = new AceDocument(textFile.getAbsolutePath(), apf_gold.getAbsolutePath());
-			if (specs != null) {
-				doc_gold.filterBySpecs(specs);
+			if (types.specs != null) {
+				doc_gold.filterBySpecs(types);
 			}
 			// There no need to call setSingleEventType on doc_gold, as it already has just the single type (if indeed only one is required)
 
@@ -358,7 +360,7 @@ public class Scorer
 		return ret;
 	}
 
-	static public Stats mainReturningStats(String[] args) throws DocumentException, IOException, CASRuntimeException, AnalysisEngineProcessException, ResourceInitializationException, UimaUtilsException, AeException
+	static public Stats mainReturningStats(String[] args) throws DocumentException, IOException, CASRuntimeException, AnalysisEngineProcessException, ResourceInitializationException, UimaUtilsException, AeException, CASException
 	{
 		if(args.length < 4)
 		{
@@ -376,7 +378,7 @@ public class Scorer
 		String filelist = args[2];
 		File specListFile = new File(args[3]);
 		List<String> specXmlPaths = SpecHandler.readSpecListFile(specListFile);
-		List<JCas> specs = SpecHandler.getSpecs(specXmlPaths);
+		TypesContainer types = new TypesContainer(specXmlPaths);
 
 		PrintStream out = null;
 		if(args.length >= 5)
@@ -384,10 +386,10 @@ public class Scorer
 			File output = new File(args[4]);
 			out = new PrintStream(output);
 		}
-		return mainMultiRunReturningStats(goldDir, ansDir, filelist, specs, out, "");
+		return mainMultiRunReturningStats(goldDir, ansDir, filelist, types, out, "");
 	}
 	
-	static public Stats mainMultiRunReturningStats(String goldDir, String ansDir, String filelist, List<JCas> specs, PrintStream out, String dirNamePrefix) throws DocumentException, IOException
+	static public Stats mainMultiRunReturningStats(String goldDir, String ansDir, String filelist, TypesContainer types, PrintStream out, String dirNamePrefix) throws DocumentException, IOException
 	{	
 		System.err.println("??? Scorer: Nore that we are removing all non-spec events from gold, which is wrong - we need those for the Trigger Idt (I think... don't we?). Anyway, this should be well thoght-of.");
 		
@@ -395,7 +397,7 @@ public class Scorer
 			out = System.out;
 		}
 		
-		Stats stats = doAnalysis(new File(goldDir), new File(ansDir), new File(filelist), specs, out, dirNamePrefix);
+		Stats stats = doAnalysis(new File(goldDir), new File(ansDir), new File(filelist), types, out, dirNamePrefix);
 		
 		if(out != System.out)
 		{
@@ -405,7 +407,7 @@ public class Scorer
 		return stats;
 	}
 	
-	static public void main(String[] args) throws DocumentException, IOException, CASRuntimeException, AnalysisEngineProcessException, ResourceInitializationException, UimaUtilsException, AeException {
+	static public void main(String[] args) throws DocumentException, IOException, CASRuntimeException, AnalysisEngineProcessException, ResourceInitializationException, UimaUtilsException, AeException, CASException {
 		mainReturningStats(args);
 	}
 

@@ -78,13 +78,13 @@ public class Decoder
 	}
 
 
-	public static List<JCas> decode(String[] args, String filenameSuffix, String folderNamePrefix, File specListFile) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException, SignalMechanismException
+	public static TypesContainer decode(String[] args, String filenameSuffix, String folderNamePrefix, File specListFile) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException, SignalMechanismException
 	{
 		List<String> specXmlPaths = SpecHandler.readSpecListFile(specListFile);
 		return decode(args, filenameSuffix, folderNamePrefix, specXmlPaths);
 	}
 	
-	public static List<JCas> decode(String[] args, String filenameSuffix, String folderNamePrefix, List<String> specXmlPaths) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException, SignalMechanismException
+	public static TypesContainer decode(String[] args, String filenameSuffix, String folderNamePrefix, List<String> specXmlPaths) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException, SignalMechanismException
 	{		
 		System.err.println("(Decoding err stream)");
 		
@@ -182,20 +182,19 @@ public class Decoder
 			
 		}
 		
-		List<JCas> specs = types.specs;
 		perceptron.close();
 
 		System.out.printf("[%s] --------------\r\nPerceptron.controller =\r\n%s\r\n\r\n--------------------------\r\n\r\n", new Date(), perceptron.controller);
 		
-		return specs;
+		return types;
 	}
 	
 	public static Stats decodeAndScore(String[] args, String filenameSuffix, String folderNamePrefix, File specListFile) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException, SignalMechanismException {
-		List<JCas> specs = decode(args, filenameSuffix, folderNamePrefix, specListFile);
+		TypesContainer types = decode(args, filenameSuffix, folderNamePrefix, specListFile);
 		
 		File outputFile = new File(outDir + File.separator + "Score" + filenameSuffix);
 		PrintStream out = new PrintStream(outputFile);
-		Stats stats = Scorer.mainMultiRunReturningStats(args[1], args[3], args[2], specs, out, folderNamePrefix);
+		Stats stats = Scorer.mainMultiRunReturningStats(args[1], args[3], args[2], types, out, folderNamePrefix);
 		return stats;
 	}
 

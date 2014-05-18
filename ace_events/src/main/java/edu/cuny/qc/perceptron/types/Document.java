@@ -362,6 +362,11 @@ public class Document implements java.io.Serializable
 	 */
 	public Document(String baseFileName, boolean hasLabel, boolean monoCase) throws IOException
 	{
+		this(baseFileName, hasLabel, monoCase, null);
+	}
+	
+	public Document(String baseFileName, boolean hasLabel, boolean monoCase, JCas existingJCas) throws IOException
+	{
 		this.monoCase = monoCase;
 		docID = baseFileName;
 		File txtFile = new File(baseFileName + textFileExt);
@@ -374,7 +379,7 @@ public class Document implements java.io.Serializable
 		}
 		
 		sentences = new ArrayList<Sentence>();
-		readDoc(txtFile, this.monoCase);
+		readDoc(txtFile, this.monoCase, existingJCas);
 	}
 	
 	public static Document createAndPreprocess(String baseFileName, boolean hasLabel, boolean monoCase, boolean tryLoadExisting, boolean dumpNewDoc, TypesContainer types) throws IOException {
@@ -498,7 +503,7 @@ public class Document implements java.io.Serializable
 	 * @param txtFile
 	 * @throws IOException
 	 */
-	public void readDoc(File txtFile, boolean monoCase) throws IOException
+	public void readDoc(File txtFile, boolean monoCase, JCas existingJcas) throws IOException
 	{
 		// read text from the original data
 		List<TextSegment> segmnets = getSegments(txtFile);
@@ -520,17 +525,22 @@ public class Document implements java.io.Serializable
 		}
 		
 		// Build JCas
-		try {
-			AnalysisEngine ae = UimaUtils.loadAE(AE_FILE_PATH);
-			jcas = ae.newJCas();
-			jcas.setDocumentText(allText);
-			jcas.setDocumentLanguage("EN");
+		if (existingJcas != null) {
+			jcas = existingJcas;			
 		}
-		catch (UimaUtilsException e) {
-			throw new IOException(e); 
-		}
-		catch (ResourceInitializationException e) {
-			throw new IOException(e); 
+		else {
+			try {
+				AnalysisEngine ae = UimaUtils.loadAE(AE_FILE_PATH);
+				jcas = ae.newJCas();
+				jcas.setDocumentText(allText);
+				jcas.setDocumentLanguage("EN");
+			}
+			catch (UimaUtilsException e) {
+				throw new IOException(e); 
+			}
+			catch (ResourceInitializationException e) {
+				throw new IOException(e); 
+			}
 		}
 		
 		int sentID = 0;

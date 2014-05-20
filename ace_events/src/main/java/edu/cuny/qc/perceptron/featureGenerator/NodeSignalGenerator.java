@@ -223,9 +223,9 @@ public class NodeSignalGenerator
 			// Add here the check that this token can be valid as a trigger - to avoid building signals when it's not
 			// if it's not - still add something (null) to the list as a placeholder, to keep positions in the list correct
 			Map<String, Map<String, SignalInstance>> signals = null;
-			//if (TypeConstraints.isPossibleTriggerByPOS(sent, i) && TypeConstraints.isPossibleTriggerByEntityType(sent, i)) {
+			if (sent.types.isPossibleTriggerByPOS(sent, i) && sent.types.isPossibleTriggerByEntityType(sent, i)) {
 				signals = get_node_text_signals(sent, i, perceptron);
-			//}
+			}
 			ret.add(signals);
 		}
 		return ret;

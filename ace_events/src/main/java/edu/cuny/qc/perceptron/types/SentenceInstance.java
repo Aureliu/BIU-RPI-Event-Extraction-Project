@@ -7,6 +7,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.uima.cas.CASException;
+import org.apache.uima.cas.FeatureStructure;
+
+import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
+
 import ac.biu.nlp.nlp.ie.onthefly.input.TypesContainer;
 import edu.cuny.qc.ace.acetypes.AceEntityMention;
 import edu.cuny.qc.ace.acetypes.AceEvent;
@@ -69,6 +74,10 @@ public class SentenceInstance
 	 */
 	public String text;
 	
+	private List<Token> tokenAnnos = null;
+	private de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence sentenceAnno = null;
+	private Document doc;
+
 	/**
 	 * the list of argument candidates (values/entities/timex)
 	 */
@@ -143,6 +152,7 @@ public class SentenceInstance
 		this.allText = sent.doc.allText;
 		this.docID = sent.doc.docID;
 		this.text = sent.text;
+		this.doc = sent.doc;
 
 		// fill in entity information
 		this.eventArgCandidates.addAll(sent.entityMentions);
@@ -197,6 +207,7 @@ public class SentenceInstance
 		
 		this.textFeaturesMap.put(InstanceAnnotations.SentenceAnnotation, sent.get(Sent_Attribute.SentenceAnnotation));
 		this.textFeaturesMap.put(InstanceAnnotations.TokenAnnotations, sent.get(Sent_Attribute.TokenAnnotations));
+		tokenAnnos = new ArrayList<Token>(Collections.nCopies(size(), (Token) null));
 
 		// get node text feature vectors
 		List<Map<String, Map<String, SignalInstance>>> tokenSignalBySpec = NodeSignalGenerator.get_node_text_signals(this, perceptron);
@@ -230,6 +241,26 @@ public class SentenceInstance
 	public int size()
 	{
 		return this.getTokenSpans().length;
+	}
+	
+	public Token getTokenAnnotation(int i) {
+		Token token = tokenAnnos.get(i);
+		if (token == null) {
+			List<Integer> tokenAddrs = (List<Integer>) this.get(InstanceAnnotations.TokenAnnotations);
+			Integer addr = tokenAddrs.get(i);
+			FeatureStructure fs  = doc.jcas.getLowLevelCas().ll_getFSForRef(addr);
+			token = (Token) fs;
+			tokenAnnos.set(i, token);
+		}
+		return token;
+	}
+	
+	public de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence getSentenceAnnotation() {
+		if (sentenceAnno == null) {
+			Integer addr = (Integer) this.get(InstanceAnnotations.SentenceAnnotation);
+			sentenceAnno = (de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence) doc.jcas.getLowLevelCas().ll_getFSForRef(addr);
+		}
+		return sentenceAnno;
 	}
 	
 	/**

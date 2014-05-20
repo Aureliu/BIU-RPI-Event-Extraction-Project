@@ -6,13 +6,11 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.ObjectStreamException;
 import java.io.PrintStream;
-import java.nio.charset.Charset;
+import java.io.StreamCorruptedException;
 import java.nio.file.Files;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
@@ -20,17 +18,18 @@ import java.util.regex.Pattern;
 
 import opennlp.tools.util.InvalidFormatException;
 
-import org.apache.commons.lang3.SerializationException;
 import org.apache.commons.lang3.SerializationUtils;
 import org.apache.uima.analysis_engine.AnalysisEngine;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
+import org.apache.uima.cas.CASException;
+import org.apache.uima.cas.impl.CASCompleteSerializer;
+import org.apache.uima.cas.impl.Serialization;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
 
 import ac.biu.nlp.nlp.ie.onthefly.input.AeException;
 import ac.biu.nlp.nlp.ie.onthefly.input.AnalysisEngines;
 import ac.biu.nlp.nlp.ie.onthefly.input.TypesContainer;
-
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
 import edu.cuny.qc.ace.acetypes.AceDocument;
 import edu.cuny.qc.ace.acetypes.AceEntityMention;
@@ -42,10 +41,7 @@ import edu.cuny.qc.perceptron.featureGenerator.TextFeatureGenerator;
 import edu.cuny.qc.perceptron.types.Sentence.Sent_Attribute;
 import edu.cuny.qc.util.SentDetectorWrapper;
 import edu.cuny.qc.util.Span;
-import edu.cuny.qc.util.TokenAnnotations;
 import edu.cuny.qc.util.TokenizerWrapper;
-import eu.excitementproject.eop.common.utilities.uima.UimaUtils;
-import eu.excitementproject.eop.common.utilities.uima.UimaUtilsException;
 
 /**
  * read the source data of i2b2
@@ -60,9 +56,9 @@ public class Document implements java.io.Serializable
 	static public final String textFileExt = ".sgm";
 	static public final String apfFileExt = ".apf.xml";
 	static public final String preprocessedFileExt = ".preprocessed";
-	static public final String xmiFileExt = ".xmi";
+	//static public final String xmiFileExt = ".xmi";
 	
-	static public final String AE_FILE_PATH = "/desc/DummyAEforCAS.xml";
+	//static public final String AE_FILE_PATH = "/desc/DummyAEforCAS.xml";
 	
 	// the id (base file name) of the document
 	public String docID;
@@ -86,7 +82,7 @@ public class Document implements java.io.Serializable
 	protected List<Sentence> sentences;
 	
 	// transient - to not be serialized
-	protected transient JCas jcas = null;
+	public transient JCas jcas = null;
 	protected static AnalysisEngine ae = null;
 	
 	/**
@@ -385,15 +381,15 @@ public class Document implements java.io.Serializable
 	public static Document createAndPreprocess(String baseFileName, boolean hasLabel, boolean monoCase, boolean tryLoadExisting, boolean dumpNewDoc, TypesContainer types) throws IOException {
 		try {
 			// Kludge - don't serialize for now
-			dumpNewDoc = false;
+			//dumpNewDoc = false;
 			///////////////////////////////////////////////////////////////////////////////////////////////////
 			
 			Document doc = null;
 			File preprocessed = new File(baseFileName + preprocessedFileExt);
-			File xmi = new File(baseFileName + xmiFileExt);
+			//File xmi = new File(baseFileName + xmiFileExt);
 			if (tryLoadExisting && preprocessed.isFile()) {
 				doc = (Document) SerializationUtils.deserialize(new FileInputStream(preprocessed));
-				doc.jcas = UimaUtils.loadXmi(xmi, AE_FILE_PATH);
+				//doc.jcas = UimaUtils.loadXmi(xmi, AE_FILE_PATH);
 				if (types.specs != null) { 
 					doc.aceAnnotations.filterBySpecs(types);
 				}
@@ -406,7 +402,10 @@ public class Document implements java.io.Serializable
 				if (dumpNewDoc) {
 					try {
 						SerializationUtils.serialize(doc, new FileOutputStream(preprocessed));
-						UimaUtils.dumpXmi(xmi, doc.jcas);
+						//UimaUtils.dumpXmi(xmi, doc.jcas);
+						//SerializationUtils.serialize(Serialization.serializeCASComplete(doc.jcas.getCasImpl()), new FileOutputStream(baseFileName + ".CasComplete"));
+						//SerializationUtils.serialize(Serialization.serializeCAS(doc.jcas.getCasImpl()), new FileOutputStream(baseFileName + ".Cas"));
+						//SerializationUtils.serialize(Serialization.serializeCASMgr(doc.jcas.getCasImpl()), new FileOutputStream(baseFileName + ".CasMgr"));
 					}
 					catch (IOException e) {
 						Files.deleteIfExists(preprocessed.toPath());
@@ -422,11 +421,45 @@ public class Document implements java.io.Serializable
 				}
 			}
 			return doc;
-		} catch (UimaUtilsException e) {
-			throw new IOException(e);
+		//} catch (UimaUtilsException e) {
+		//	throw new IOException(e);
 		} catch (AnalysisEngineProcessException e) {
 			throw new IOException(e);
 		}
+	}
+	
+	private void writeObject(java.io.ObjectOutputStream out) throws IOException {
+		out.defaultWriteObject();
+		
+		CASCompleteSerializer ser = Serialization.serializeCASComplete(this.jcas.getCasImpl());
+		out.writeObject(ser);
+	}
+
+	private void readObject(java.io.ObjectInputStream in) throws IOException, ClassNotFoundException {
+		in.defaultReadObject();
+		
+		// Must explicitly create an empty JCas, to deserialize into
+		createJCas();
+		CASCompleteSerializer ser = (CASCompleteSerializer) in.readObject();
+		Serialization.deserializeCASComplete(ser, this.jcas.getCasImpl());
+		
+		// Workaround - as I have discussed with Richard Eckart de Castilho on May 20, 2014 in dev@uima.apache.org:
+		// For some reason the newly created jcas has a CAS with a svd.basCAS different from it (from the jcas's CAS).
+		// This has a very weird side effect - when calling ll_getFSForRef(addr) (in our case, in
+		// SentenceInstance.getTokenAnnotation), the returned FeatureStructure is of type AnnotationImpl and
+		// not Annotation, which have distinct inheritance hierarchies and therfore casting to Token throws
+		// a ClassCastException. However, if just once you call jcas.getCas().getJCas(), then the jcas becomes "fixed".
+		// Pretty weird.
+		try {
+			this.jcas.getCas().getJCas();
+		} catch (CASException e) {
+			throw new IOException(e);
+		}
+	}
+	
+	@SuppressWarnings("unused")
+	private void readObjectNoData() throws ObjectStreamException {
+		throw new StreamCorruptedException("I got to readObjectNoData(), but this should never be called! Something went wrong with deserializing.");
 	}
 	
 	/**
@@ -529,18 +562,8 @@ public class Document implements java.io.Serializable
 			jcas = existingJcas;			
 		}
 		else {
-			try {
-				AnalysisEngine ae = UimaUtils.loadAE(AE_FILE_PATH);
-				jcas = ae.newJCas();
-				jcas.setDocumentText(allText);
-				jcas.setDocumentLanguage("EN");
-			}
-			catch (UimaUtilsException e) {
-				throw new IOException(e); 
-			}
-			catch (ResourceInitializationException e) {
-				throw new IOException(e); 
-			}
+			createJCas();
+			jcas.setDocumentText(allText);
 		}
 		
 		int sentID = 0;
@@ -566,10 +589,10 @@ public class Document implements java.io.Serializable
 			
 			de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence sentAnno = new de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence(jcas, sentSpan.start(), sentSpan.end()+1);
 			sentAnno.addToIndexes();
-			sent.put(Sent_Attribute.SentenceAnnotation, sentAnno);
+			sent.put(Sent_Attribute.SentenceAnnotation, sentAnno.getAddress());
 			
 			String[] tokens = new String[tokenSpans.length];
-			List<Token> tokenAnnos = new ArrayList<Token>(tokenSpans.length);
+			List<Integer> tokenAddrs = new ArrayList<Integer>(tokenSpans.length);
 			for(int idx=0; idx < tokenSpans.length; idx++)
 			{
 				// get tokens
@@ -579,10 +602,10 @@ public class Document implements java.io.Serializable
 				// Fill JCas
 				Token tokenAnno = new Token(jcas, tokenSpan.start(), tokenSpan.end()+1);
 				tokenAnno.addToIndexes();
-				tokenAnnos.add(tokenAnno);
+				tokenAddrs.add(tokenAnno.getAddress());
 			}
 			
-			sent.put(Sent_Attribute.TokenAnnotations, tokenAnnos);
+			sent.put(Sent_Attribute.TokenAnnotations, tokenAddrs);
 
 			sent.put(Sent_Attribute.TOKENS, tokens);
 			// save span of the sent
@@ -594,6 +617,21 @@ public class Document implements java.io.Serializable
 		}
 	}
 
+	private void createJCas() throws IOException {
+		try {
+			//AnalysisEngine ae = UimaUtils.loadAE(AE_FILE_PATH);
+			jcas = ae.newJCas();
+			jcas.setDocumentLanguage("EN");
+			//jcas.setDocumentText(allText);
+		}
+		//catch (UimaUtilsException e) {
+		//	throw new IOException(e); 
+		//}
+		catch (ResourceInitializationException e) {
+			throw new IOException(e); 
+		}
+	}
+	
 	private Span[] splitSents(List<TextSegment> segments) throws InvalidFormatException, IOException
 	{
 		final String tagWhiteList = "SUBJECT";

@@ -11,10 +11,10 @@ import java.util.Map;
 
 import edu.cuny.qc.ace.acetypes.AceEntityMention;
 import edu.cuny.qc.ace.acetypes.AceEventMention;
+import edu.cuny.qc.ace.acetypes.AceMention;
 import edu.cuny.qc.ace.acetypes.AceRelationMention;
 import edu.cuny.qc.ace.acetypes.AceTimexMention;
 import edu.cuny.qc.ace.acetypes.AceValueMention;
-import edu.cuny.qc.ace.acetypes.AceMention;
 import edu.cuny.qc.perceptron.graph.DependencyGraph;
 import edu.cuny.qc.util.Span;
 

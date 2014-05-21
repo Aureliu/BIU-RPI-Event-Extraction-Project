@@ -1,10 +1,12 @@
 package edu.cuny.qc.perceptron.types;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 import com.google.common.base.Predicate;
 
-public class SignalInstance {
+public class SignalInstance implements Serializable {
+	private static final long serialVersionUID = 6105654845782902773L;
 	
 	public String name;
 	public SignalType type;

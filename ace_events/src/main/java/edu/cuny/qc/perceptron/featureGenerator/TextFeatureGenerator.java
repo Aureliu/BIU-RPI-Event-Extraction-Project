@@ -44,9 +44,9 @@ import edu.stanford.nlp.trees.TypedDependency;
 public class TextFeatureGenerator 
 {
 	// dictionary for title/time words
-	Map<String, List<String>> dicts = new HashMap<String, List<String>>();
+	private static Map<String, List<String>> dicts = new HashMap<String, List<String>>();
 	
-	public void readDict(String dirName) throws IOException
+	public static void readDict(String dirName) throws IOException
 	{
 		File dir = new File(dirName);
 		File[] children = dir.listFiles();
@@ -77,7 +77,8 @@ public class TextFeatureGenerator
 		}
 	}
 	
-	public TextFeatureGenerator() 
+	//public TextFeatureGenerator()
+	static
 	{
 		try
 		{
@@ -281,7 +282,7 @@ public class TextFeatureGenerator
 		}
 	}
 	
-	protected void fillEntityInformation(Document doc)
+	protected static void fillEntityInformation(Document doc)
 	{
 		for(Sentence sent : doc.getSentences())
 		{
@@ -289,7 +290,7 @@ public class TextFeatureGenerator
 		}
 	}
 	
-	protected void fillEntityInformation(Sentence sent)
+	protected static void fillEntityInformation(Sentence sent)
 	{
 		List<Map<Class<?>, Object>> tokens = (List<Map<Class<?>, Object>>) sent.get(Sent_Attribute.Token_FEATURE_MAPs);
 		
@@ -552,13 +553,13 @@ public class TextFeatureGenerator
 	 * @param doc
 	 * @throws IOException 
 	 */
-	public void fillTextFeatures(Document doc) throws IOException
-	{
-		doPreprocess(doc);
-		fillTextFeatures_NoPreprocessing(doc);
-	}
+//	public void fillTextFeatures(Document doc) throws IOException
+//	{
+//		doPreprocess(doc);
+//		fillTextFeatures_NoPreprocessing(doc);
+//	}
 	
-	public void fillTextFeatures_NoPreprocessing(Document doc) throws IOException {
+	public static void fillTextFeatures_NoPreprocessing(Document doc) throws IOException {
 		fillAceAnnotations(doc);
 		fillFeatures_local(doc);
 		fillEntityInformation(doc);

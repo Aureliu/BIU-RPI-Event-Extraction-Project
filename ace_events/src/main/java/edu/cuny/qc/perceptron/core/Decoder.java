@@ -129,7 +129,7 @@ public class Decoder
 		
 		BufferedReader reader = new BufferedReader(new FileReader(fileList));
 		String line = "";
-		TextFeatureGenerator featGen = new TextFeatureGenerator();
+		//TextFeatureGenerator featGen = new TextFeatureGenerator();
 		while((line = reader.readLine()) != null)
 		{
 			List<SentenceInstance> localInstanceList = null;
@@ -145,10 +145,12 @@ public class Decoder
 			{
 				doc = Document.createAndPreprocess(fileName, true, monoCase, true, true, types);
 				// fill in text feature vector for each token
-				featGen.fillTextFeatures_NoPreprocessing(doc);
+				//featGen.fillTextFeatures_NoPreprocessing(doc);
 			}
 			localInstanceList = doc.getInstanceList(perceptron, types, featureAlphabet, 
 					perceptron.controller, true);
+			
+			doc.dumpSignals(localInstanceList, types);
 			
 			// decoding
 			List<SentenceAssignment> localResults = perceptron.decoding(localInstanceList);

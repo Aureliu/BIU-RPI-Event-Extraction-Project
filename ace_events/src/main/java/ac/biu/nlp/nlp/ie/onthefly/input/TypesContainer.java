@@ -2,6 +2,7 @@ package ac.biu.nlp.nlp.ie.onthefly.input;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -29,7 +30,7 @@ public class TypesContainer {
 	public List<JCas> specs;
 	public Alphabet nodeTargetAlphabet;
 	public Alphabet edgeTargetAlphabet;
-	public List<String> triggerTypes;
+	public Set<String> triggerTypes;
 	public List<String> possibleTriggerLabels;
 	
 	// map event subtype --> entity types
@@ -42,7 +43,7 @@ public class TypesContainer {
 
 	public TypesContainer(List<String> specXmlPaths) throws CASRuntimeException, AnalysisEngineProcessException, ResourceInitializationException, UimaUtilsException, IOException, AeException, CASException {
 		specs = SpecHandler.getSpecs(specXmlPaths);
-		triggerTypes = new ArrayList<String>();
+		triggerTypes = new HashSet<String>();
 
 		nodeTargetAlphabet = new Alphabet();
 		edgeTargetAlphabet = new Alphabet();
@@ -67,9 +68,10 @@ public class TypesContainer {
 		}
 		
 		finalizeMaps();
-		possibleTriggerLabels = new ArrayList<String>(triggerTypes.size() + 1);//.add();
-		possibleTriggerLabels.add(SentenceAssignment.Default_Trigger_Label);
+		possibleTriggerLabels = new ArrayList<String>(triggerTypes.size() + 1);
 		possibleTriggerLabels.addAll(triggerTypes);
+		Collections.sort(possibleTriggerLabels);
+		possibleTriggerLabels.add(0, SentenceAssignment.Default_Trigger_Label); // First element!
 	}
 		
 	public boolean isEntityTypeCompatible(String role, String type)
@@ -93,6 +95,24 @@ public class TypesContainer {
 		{
 			return role;
 		}
+	}
+
+	/**
+	 * check if ace mention is compatible with the event type and argument role in the
+	 * current hypothesis
+	 * @param edgeLabel 
+	 * @param type
+	 * @param currentNodeLabel
+	 * @return
+	 */
+	public boolean isRoleCompatible(String mention_type, String triggerType, String edgeLabel)
+	{
+		if(edgeLabel.equals(SentenceAssignment.Default_Argument_Label) || 
+				(isRoleCompatible(triggerType, edgeLabel) && isEntityTypeCompatible(edgeLabel, mention_type)))
+		{
+			return true;
+		}
+		return false;
 	}
 
 	public boolean isRoleCompatible(String subtype, String role)

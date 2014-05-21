@@ -444,9 +444,9 @@ public class BeamSearch
 		
 		AceMention mention = problem.eventArgCandidates.get(k);
 		//TODO DEBUG
-		if (mention.getType().toLowerCase().contains("time")) {
+		//if (mention.getType().toLowerCase().contains("time")) {
 			//System.err.println("We've got a time arg candidate!");
-		}
+		//}
 		//////////
 		if(!problem.types.isEntityTypeEventCompatible(currentNodeLabel, mention.getType()))
 		{
@@ -457,7 +457,7 @@ public class BeamSearch
 		{	
 			String edgeLabel = (String) problem.edgeTargetAlphabet.lookupObject(l);
 			// skip the mentions that is not compatible with the current node label (trigger type)
-			if(!isRoleCompatible(problem, mention.getType(), currentNodeLabel, edgeLabel))
+			if(!problem.types.isRoleCompatible(mention.getType(), currentNodeLabel, edgeLabel))
 			{
 				continue;
 			}
@@ -529,23 +529,6 @@ public class BeamSearch
 	}
 	
 	
-	/**
-	 * check if ace mention is compatible with the event type and argument role in the
-	 * current hypothesis
-	 * @param edgeLabel 
-	 * @param type
-	 * @param currentNodeLabel
-	 * @return
-	 */
-	protected static boolean isRoleCompatible(SentenceInstance problem, String mention_type, String triggerType, String edgeLabel)
-	{
-		if(edgeLabel.equals(SentenceAssignment.Default_Argument_Label) || 
-				(problem.types.isRoleCompatible(triggerType, edgeLabel) && problem.types.isEntityTypeCompatible(edgeLabel, mention_type)))
-		{
-			return true;
-		}
-		return false;
-	}
 	
 	public static class ScoreComparator implements Comparator<SentenceAssignment>
 	{

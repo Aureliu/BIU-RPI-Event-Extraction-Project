@@ -91,7 +91,7 @@ public class Pipeline
 		List<SentenceInstance> instancelist = new ArrayList<SentenceInstance>();
 		BufferedReader reader = new BufferedReader(new FileReader(file_list));
 		String line = "";
-		TextFeatureGenerator featGen = new TextFeatureGenerator();
+		//TextFeatureGenerator featGen = new TextFeatureGenerator();
 		while((line = reader.readLine()) != null)
 		{
 			boolean monoCase = line.contains("bn/") ? true : false;
@@ -101,7 +101,8 @@ public class Pipeline
 			
 			Document doc = Document.createAndPreprocess(fileName, true, monoCase, true, true, types);
 			// fill in text feature vector for each token
-			featGen.fillTextFeatures_NoPreprocessing(doc);
+			//featGen.fillTextFeatures_NoPreprocessing(doc);
+			List<SentenceInstance> docInstancelist = new ArrayList<SentenceInstance>();
 			for(int sent_id=0 ; sent_id<doc.getSentences().size(); sent_id++)
 			{
 				Sentence sent = doc.getSentences().get(sent_id);
@@ -113,6 +114,7 @@ public class Pipeline
 						SentenceInstance inst = new SentenceInstance(perceptron, sent, types, featureAlphabet,
 								controller, learnable);
 						instancelist.add(inst);
+						docInstancelist.add(inst);
 					}
 				}
 				else // add all instances
@@ -120,8 +122,10 @@ public class Pipeline
 					SentenceInstance inst = new SentenceInstance(perceptron, sent, types, featureAlphabet, 
 							controller, learnable);
 					instancelist.add(inst);
+					docInstancelist.add(inst);
 				}
 			}
+			doc.dumpSignals(docInstancelist, types);
 		}
 		reader.close();
 		

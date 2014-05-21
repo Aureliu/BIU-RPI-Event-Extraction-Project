@@ -413,6 +413,12 @@ public class SentenceAssignment
 			
 			// for event, only pick up the first token as trigger
 			int trigger_index = headIndices.get(0);  
+			
+			/// DEBUG
+			if (trigger_index == -1) {
+				System.err.printf("\nGot -1 for 0's location in: %s, which are head indices of: %s\n\n", headIndices, mention);
+			}
+			//////////
 			// ignore the triggers that are with other POS
 			if(!types.isPossibleTriggerByPOS(inst, trigger_index))
 			{	
@@ -445,11 +451,23 @@ public class SentenceAssignment
 			{
 				AceMention arg_mention = arg.value;
 				int arg_index = inst.eventArgCandidates.indexOf(arg_mention);
+				/// DEBUG
+				if (arg_index == -1) {
+					System.err.printf("\n-1\n\n");
+				}
+				//////
 				feat_index = this.edgeTargetAlphabet.lookupIndex(arg.role);
 				arguments.put(arg_index, feat_index);
 			}
 		}
 		
+		//// DEBUG
+		for (Map<Integer, Integer> map : edgeAssignment.values()) {
+			if (map.keySet().contains(-1)) {
+				System.err.printf("\nGot -1! Here: %s\n\n", map);
+			}
+		}
+		///////
 		// create featureVectorSequence
 		for(int i=0; i<=state; i++)
 		{
@@ -491,6 +509,12 @@ public class SentenceAssignment
 		{
 			return;
 		}
+		
+		// DEBUG
+		if (edge.keySet().contains(-1)) {
+			System.err.printf("\nGot a -1!!! keys: %s\n\n", edge.keySet());
+		}
+		/////
 		for(Integer key : edge.keySet())
 		{
 			// edge label
@@ -519,22 +543,24 @@ public class SentenceAssignment
 			return; 
 		}
 		
-		List<List<Map<String, Map<String, Map<String, SignalInstance>>>>> edgeSignals = (List<List<Map<String, Map<String, Map<String, SignalInstance>>>>>) problem.get(InstanceAnnotations.EdgeTextSignals);
-		Map<String, Map<String, Map<String, SignalInstance>>> allEntitySignals = edgeSignals.get(index).get(entityIndex);
-		AceMention mention = problem.eventArgCandidates.get(entityIndex);
+		String nodeLabel = getLabelAtToken(index);
+		List<Map<String, List<Map<String, Map<String, SignalInstance>>>>> edgeSignals = (List<Map<String, List<Map<String, Map<String, SignalInstance>>>>>) problem.get(InstanceAnnotations.EdgeTextSignals);
+		Map<String, SignalInstance> signals = edgeSignals.get(index).get(nodeLabel).get(entityIndex).get(edgeLabel);
+		//Map<String, Map<String, Map<String, SignalInstance>>> allEntitySignals = edgeSignals.get(index).get(entityIndex);
+		//AceMention mention = problem.eventArgCandidates.get(entityIndex);
 		
-		int nodeLabelIndex = this.nodeAssignment.get(index);
-		String nodeLabel = (String) this.nodeTargetAlphabet.lookupObject(nodeLabelIndex);
-		FeatureVector fv = this.getFeatureVectorSequence().get(index);
-		if(allEntitySignals == null)
-		{
-			allEntitySignals = EdgeSignalGenerator.get_edge_text_signals(problem, index, mention, perceptron);
-			edgeSignals.get(index).set(entityIndex, allEntitySignals);
-		}
+		//int nodeLabelIndex = this.nodeAssignment.get(index);
+		//String nodeLabel = (String) this.nodeTargetAlphabet.lookupObject(nodeLabelIndex);
+		//FeatureVector fv = this.getFeatureVectorSequence().get(index);
+//		if(allEntitySignals == null)
+//		{
+//			allEntitySignals = EdgeSignalGenerator.get_edge_text_signals(problem, index, mention, perceptron);
+//			edgeSignals.get(index).set(entityIndex, allEntitySignals);
+//		}
 		
 		if (genericEdgeLabel == Generic_Existing_Argument_Label) {
-			Map<String, SignalInstance> signalsOfEntity = allEntitySignals.get(nodeLabel).get(edgeLabel);
-			for (SignalInstance signal : signalsOfEntity.values()) {
+			//Map<String, SignalInstance> signalsOfEntity = allEntitySignals.get(nodeLabel).get(edgeLabel);
+			for (SignalInstance signal : signals.values()) {
 				BigDecimal featureValue = signal.positive ? FEATURE_POSITIVE_VAL : FEATURE_NEGATIVE_VAL;
 				String featureStr = "EdgeLocalFeature:\t" + signal.name;// + "\t" + genericEdgeLabel;
 				
@@ -544,33 +570,33 @@ public class SentenceAssignment
 			}
 		}
 		else {
-			Map<String, Map<String, SignalInstance>> signalsOfNodeLabel = allEntitySignals.get(nodeLabel);
-			for (Object signalNameObj : perceptron.argumentSignalNames) {
-				String signalName = (String) signalNameObj;
-				//BigDecimal numFalse = BigDecimal.ZERO;
-				BigDecimal featureValue = FEATURE_POSITIVE_VAL;
-				for (Map<String, SignalInstance> signalsOfLabel : signalsOfNodeLabel.values()) {
-					SignalInstance signal = signalsOfLabel.get(signalName);
-					if (signal.positive) {
-						featureValue = FEATURE_NEGATIVE_VAL;
-						break;
-					}
-//					if (!signal.positive) {
-//						numFalse = numFalse.add(BigDecimal.ONE); //numFalse += 1.0;
+//			Map<String, Map<String, SignalInstance>> signalsOfNodeLabel = allEntitySignals.get(nodeLabel);
+//			for (Object signalNameObj : perceptron.argumentSignalNames) {
+//				String signalName = (String) signalNameObj;
+//				//BigDecimal numFalse = BigDecimal.ZERO;
+//				BigDecimal featureValue = FEATURE_POSITIVE_VAL;
+//				for (Map<String, SignalInstance> signalsOfLabel : signalsOfNodeLabel.values()) {
+//					SignalInstance signal = signalsOfLabel.get(signalName);
+//					if (signal.positive) {
+//						featureValue = FEATURE_NEGATIVE_VAL;
+//						break;
 //					}
-				}
-				
-				//BigDecimal numRolesiInSpec = new BigDecimal(signalsOfNodeLabel.size());
-				//BigDecimal falseRatio = numFalse.divide(numRolesiInSpec);// divide by number of roles in current spec
-				
-				String featureStr = "EdgeLocalFeature:\t" + signalName;// + "\t" + genericEdgeLabel;
-
-				
-				// TODO this line should DEFINITELY be uncommented when I incorporate edges back to the story
-				// of course, a policy regarding them should be decided and implemented
-				//makeFeature(featureStr, fv, featureValue, index, null, addIfNotPresent, useIfNotPresent);
-
-			}
+////					if (!signal.positive) {
+////						numFalse = numFalse.add(BigDecimal.ONE); //numFalse += 1.0;
+////					}
+//				}
+//				
+//				//BigDecimal numRolesiInSpec = new BigDecimal(signalsOfNodeLabel.size());
+//				//BigDecimal falseRatio = numFalse.divide(numRolesiInSpec);// divide by number of roles in current spec
+//				
+//				String featureStr = "EdgeLocalFeature:\t" + signalName;// + "\t" + genericEdgeLabel;
+//
+//				
+//				// TODO this line should DEFINITELY be uncommented when I incorporate edges back to the story
+//				// of course, a policy regarding them should be decided and implemented
+//				//makeFeature(featureStr, fv, featureValue, index, null, addIfNotPresent, useIfNotPresent);
+//
+//			}
 		}
 	}
 	

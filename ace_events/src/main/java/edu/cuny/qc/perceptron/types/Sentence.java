@@ -9,6 +9,9 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+import ac.biu.nlp.nlp.ie.onthefly.input.TypesContainer;
+
+import edu.cuny.qc.ace.acetypes.AceDocument;
 import edu.cuny.qc.ace.acetypes.AceEntityMention;
 import edu.cuny.qc.ace.acetypes.AceEventMention;
 import edu.cuny.qc.ace.acetypes.AceMention;
@@ -81,6 +84,8 @@ public class Sentence implements java.io.Serializable
 	public List<AceTimexMention> timexMentions = new ArrayList<AceTimexMention>();
 	public List<AceRelationMention> relationMentions = new ArrayList<AceRelationMention>();
 	
+	private Boolean filtered = false;
+
 	public Sentence(Document doc, int sentID, String text)
 	{
 		this.doc = doc;
@@ -134,6 +139,10 @@ public class Sentence implements java.io.Serializable
 		}
 	}
 	
+	public void filterBySpecs(TypesContainer types) {
+		AceDocument.filterBySpecs(types, filtered, eventMentions, entityMentions, valueMentions, timexMentions, null, null, null, null, null);
+	}
+
 	/**
 	 * fill ace annotations to the sentence 
 	 * @param eventMentions2
@@ -191,40 +200,40 @@ public class Sentence implements java.io.Serializable
 		}
 	}
 	
-	public void printBasicSent(PrintStream out)
-	{
-		String[] tokens = (String[]) this.get(Sent_Attribute.TOKENS);
-		String[] posTags = (String[]) this.get(Sent_Attribute.POSTAGS);
-		String[] chunks = (String[]) this.get(Sent_Attribute.CHUNKS);
-		DependencyGraph graph = (DependencyGraph) this.get(Sent_Attribute.DepGraph);
-		
-		// print pos/chunks/tdl
-		out.print(Arrays.toString(tokens) + "\t");
-		out.print(Arrays.toString(posTags) + "\t");
-		out.print(Arrays.toString(chunks) + "\t");
-		out.print(graph);
-		out.println();
-		
-		// print tokens 
-		List<Map<Class<?>, Object>> list =  (List<Map<Class<?>, Object>>) this.get(Sent_Attribute.Token_FEATURE_MAPs);
-		for(Map<Class<?>, Object> token_features : list)
-		{
-			for(Class<?> key : token_features.keySet())
-			{
-				Object value = token_features.get(key);
-				out.print(value);
-				out.print("\t");
-			}
-			out.println();
-		}
-		
-		// print ace annotations
-		printAceAnnotatoin(out, this.entityMentions);
-		printAceAnnotatoin(out, this.relationMentions);
-		printAceAnnotatoin(out, this.valueMentions);
-		printAceAnnotatoin(out, this.timexMentions);
-		printAceAnnotatoin(out, this.eventMentions);
-	}
+//	public void printBasicSent(PrintStream out)
+//	{
+//		String[] tokens = (String[]) this.get(Sent_Attribute.TOKENS);
+//		String[] posTags = (String[]) this.get(Sent_Attribute.POSTAGS);
+//		String[] chunks = (String[]) this.get(Sent_Attribute.CHUNKS);
+//		DependencyGraph graph = (DependencyGraph) this.get(Sent_Attribute.DepGraph);
+//		
+//		// print pos/chunks/tdl
+//		out.print(Arrays.toString(tokens) + "\t");
+//		out.print(Arrays.toString(posTags) + "\t");
+//		out.print(Arrays.toString(chunks) + "\t");
+//		out.print(graph);
+//		out.println();
+//		
+//		// print tokens 
+//		List<Map<Class<?>, Object>> list =  (List<Map<Class<?>, Object>>) this.get(Sent_Attribute.Token_FEATURE_MAPs);
+//		for(Map<Class<?>, Object> token_features : list)
+//		{
+//			for(Class<?> key : token_features.keySet())
+//			{
+//				Object value = token_features.get(key);
+//				out.print(value);
+//				out.print("\t");
+//			}
+//			out.println();
+//		}
+//		
+//		// print ace annotations
+//		printAceAnnotatoin(out, this.entityMentions);
+//		printAceAnnotatoin(out, this.relationMentions);
+//		printAceAnnotatoin(out, this.valueMentions);
+//		printAceAnnotatoin(out, this.timexMentions);
+//		printAceAnnotatoin(out, this.eventMentions);
+//	}
 	
 	private void printAceAnnotatoin(PrintStream out, List mentions)
 	{

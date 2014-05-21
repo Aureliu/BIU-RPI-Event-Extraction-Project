@@ -3,21 +3,27 @@ package edu.cuny.qc.perceptron.types;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.ObjectStreamException;
+import java.io.OutputStream;
 import java.io.PrintStream;
 import java.io.StreamCorruptedException;
 import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import opennlp.tools.util.InvalidFormatException;
 
+import org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStream;
+import org.apache.commons.compress.compressors.bzip2.BZip2CompressorOutputStream;
 import org.apache.commons.lang3.SerializationUtils;
 import org.apache.uima.analysis_engine.AnalysisEngine;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
@@ -39,6 +45,7 @@ import edu.cuny.qc.perceptron.core.Controller;
 import edu.cuny.qc.perceptron.core.Perceptron;
 import edu.cuny.qc.perceptron.featureGenerator.TextFeatureGenerator;
 import edu.cuny.qc.perceptron.types.Sentence.Sent_Attribute;
+import edu.cuny.qc.perceptron.types.SentenceInstance.InstanceAnnotations;
 import edu.cuny.qc.util.SentDetectorWrapper;
 import edu.cuny.qc.util.Span;
 import edu.cuny.qc.util.TokenizerWrapper;
@@ -55,7 +62,8 @@ public class Document implements java.io.Serializable
 	// file extentions
 	static public final String textFileExt = ".sgm";
 	static public final String apfFileExt = ".apf.xml";
-	static public final String preprocessedFileExt = ".preprocessed";
+	static public final String preprocessedFileExt = ".preprocessed.bz2";
+	static public final String signalsFileExt = ".signals.bz2";
 	//static public final String xmiFileExt = ".xmi";
 	
 	//static public final String AE_FILE_PATH = "/desc/DummyAEforCAS.xml";
@@ -84,6 +92,11 @@ public class Document implements java.io.Serializable
 	// transient - to not be serialized
 	public transient JCas jcas = null;
 	protected static AnalysisEngine ae = null;
+	
+//	public transient List<List<Map<String, Map<String, SignalInstance>>>> triggerSignals;
+//	public transient List<List<Map<String, Map<String, Map<String, SignalInstance>>>>> argSignals;
+//	public transient boolean signalsLoaded = false;
+	public transient BundledSignals signals = null;
 	
 	/**
 	 * this object contains the parsed information from apf file (pretty much everything)
@@ -388,20 +401,28 @@ public class Document implements java.io.Serializable
 			File preprocessed = new File(baseFileName + preprocessedFileExt);
 			//File xmi = new File(baseFileName + xmiFileExt);
 			if (tryLoadExisting && preprocessed.isFile()) {
-				doc = (Document) SerializationUtils.deserialize(new FileInputStream(preprocessed));
+				InputStream in = new BZip2CompressorInputStream(new FileInputStream(preprocessed));
+				doc = (Document) SerializationUtils.deserialize(in);
+				in.close();
 				//doc.jcas = UimaUtils.loadXmi(xmi, AE_FILE_PATH);
 				if (types.specs != null) { 
-					doc.aceAnnotations.filterBySpecs(types);
+					doc.filterBySpecs(types);
 				}
 			}
 			if (doc==null) {
 				doc = new Document(baseFileName, hasLabel, monoCase);
+				
+				// These two are separated only for historical reasons, and could be joint back.
 				TextFeatureGenerator.doPreprocess(doc);
+				TextFeatureGenerator.fillTextFeatures_NoPreprocessing(doc);
+				
 				ae.process(doc.jcas);
 				
 				if (dumpNewDoc) {
 					try {
-						SerializationUtils.serialize(doc, new FileOutputStream(preprocessed));
+						OutputStream out = new BZip2CompressorOutputStream(new FileOutputStream(preprocessed));
+						SerializationUtils.serialize(doc, out);
+						out.close();
 						//UimaUtils.dumpXmi(xmi, doc.jcas);
 						//SerializationUtils.serialize(Serialization.serializeCASComplete(doc.jcas.getCasImpl()), new FileOutputStream(baseFileName + ".CasComplete"));
 						//SerializationUtils.serialize(Serialization.serializeCAS(doc.jcas.getCasImpl()), new FileOutputStream(baseFileName + ".Cas"));
@@ -417,14 +438,24 @@ public class Document implements java.io.Serializable
 					}
 				}
 				if (types.specs != null) {
-					doc.aceAnnotations.filterBySpecs(types);
+					doc.filterBySpecs(types);
 				}
 			}
+			
+			doc.loadSignals(types);
+
 			return doc;
 		//} catch (UimaUtilsException e) {
 		//	throw new IOException(e);
 		} catch (AnalysisEngineProcessException e) {
 			throw new IOException(e);
+		}
+	}
+	
+	private void filterBySpecs(TypesContainer types) {
+		this.aceAnnotations.filterBySpecs(types);
+		for (Sentence sent : sentences) {
+			sent.filterBySpecs(types);
 		}
 	}
 	
@@ -903,18 +934,18 @@ public class Document implements java.io.Serializable
 		return ret.toArray(new Span[ret.size()]);
 	}
 
-	public void printDocBasic(PrintStream out)
-	{
-		out.println(headline);
-		out.println("Text offset: " + this.textoffset);
-		
-		for(int i=0; i<this.sentences.size(); i++)
-		{
-			Sentence sent = this.sentences.get(i);
-			out.println("Sent num:\t" + i);
-			sent.printBasicSent(out);
-		}
-	}
+//	public void printDocBasic(PrintStream out)
+//	{
+//		out.println(headline);
+//		out.println("Text offset: " + this.textoffset);
+//		
+//		for(int i=0; i<this.sentences.size(); i++)
+//		{
+//			Sentence sent = this.sentences.get(i);
+//			out.println("Sent num:\t" + i);
+//			sent.printBasicSent(out);
+//		}
+//	}
 	
 	public List<Sentence> getSentences() 
 	{
@@ -946,6 +977,77 @@ public class Document implements java.io.Serializable
 		return hasLabel;
 	}
 
+	public void dumpSignals(List<SentenceInstance> instances, TypesContainer types) throws IOException {
+		if (signals == null) {
+			List<List<Map<String, Map<String, SignalInstance>>>> triggerSignals = new ArrayList<List<Map<String, Map<String, SignalInstance>>>>(sentences.size());
+			List<List<Map<String, List<Map<String, Map<String, SignalInstance>>>>>> argSignals = new ArrayList<List<Map<String, List<Map<String, Map<String, SignalInstance>>>>>>(sentences.size());
+			sentences = null;
+			for (SentenceInstance inst : instances) {
+				triggerSignals.add((List<Map<String, Map<String, SignalInstance>>>) inst.get(InstanceAnnotations.EdgeTextSignals));
+				argSignals.add((List<Map<String, List<Map<String, Map<String, SignalInstance>>>>>) inst.get(InstanceAnnotations.EdgeTextSignals));
+			}
+			
+			BundledSignals signals = new BundledSignals(types, triggerSignals, argSignals);
+			File signalsFile = new File(docID + signalsFileExt);
+			try {
+				OutputStream out = new BZip2CompressorOutputStream(new FileOutputStream(signalsFile));
+				SerializationUtils.serialize(signals, out);
+				out.close();
+			}
+			catch (IOException e) {
+				Files.deleteIfExists(signalsFile.toPath());
+				throw e;
+			}
+			catch (RuntimeException e) {
+				Files.deleteIfExists(signalsFile.toPath());
+				throw e;
+			}
+
+		}
+		else {
+			System.out.printf("Not dumping signals, as we already had them from file: Document %s\n", docID);
+		}
+	}
+	
+	private void loadSignals(TypesContainer types) throws IOException {
+		//List<List<Map<String, Map<String, SignalInstance>>>> triggerSignals = new ArrayList<List<Map<String, Map<String, SignalInstance>>>>();
+		//List<List<Map<String, Map<String, Map<String, SignalInstance>>>>> argSignals = new ArrayList<List<Map<String, Map<String, Map<String, SignalInstance>>>>>();
+		// read file 
+		File signalsFile = new File(docID + signalsFileExt);
+		//File xmi = new File(baseFileName + xmiFileExt);
+		if (signalsFile.isFile()) {
+			InputStream in = new BZip2CompressorInputStream(new FileInputStream(signalsFile));
+			signals = (BundledSignals) SerializationUtils.deserialize(in);
+			in.close();
+		}
+		
+		if (signals != null) {
+			if (signals.triggerSignals.size() != sentences.size()) {
+				throw new IllegalStateException(String.format("Document %s has %s sentences, but trigger signals from file are for %s sentences", docID, sentences.size(), signals.triggerSignals.size()));
+			}
+			if (signals.argSignals.size() != sentences.size()) {
+				throw new IllegalStateException(String.format("Document %s has %s sentences, but arg signals from file are for %s sentences", docID, sentences.size(), signals.argSignals.size()));
+			}
+			if (!signals.eventEntityTypes.keySet().containsAll(types.eventEntityTypes.keySet())) {
+				throw new IllegalStateException(String.format("Working on these trigger types: %s - but loaded trigger signals of document %s has these trigger types: %s", types.eventEntityTypes, docID, signals.eventEntityTypes.keySet()));
+			}
+			
+			for (String triggerType : types.eventEntityTypes.keySet()) {
+				Set<String> workingEntityTypes = types.eventEntityTypes.get(triggerType);
+				Set<String> loadedEntityTypes = signals.eventEntityTypes.get(triggerType);
+				Set<String> workingRoles = types.argumentRoles.get(triggerType);
+				Set<String> loadedRoles = signals.argumentRoles.get(triggerType);
+				
+				if (!loadedRoles.containsAll(workingRoles)) {
+					throw new IllegalStateException(String.format("For trigger %s, working on these roles: %s - but loaded signals for this trigger type in document %s has these roles: %s", triggerType, workingRoles, docID, loadedRoles));
+				}
+				if (!loadedEntityTypes.containsAll(workingEntityTypes)) {
+					throw new IllegalStateException(String.format("For trigger %s, working on these entity types: %s - but loaded signals for this trigger type in document %s has these entity types: %s", triggerType, workingEntityTypes, docID, loadedEntityTypes));
+				}
+			}
+		}
+	}
+	
 	/**
 	 * get a list of SentenceInstance from this 
 	 * @param nodeTargetAlphabet
@@ -957,7 +1059,7 @@ public class Document implements java.io.Serializable
 	 */
 	public List<SentenceInstance> getInstanceList(Perceptron perceptron, TypesContainer types, Alphabet featureAlphabet, 
 			Controller controller, boolean learnable)
-	{
+	{		
 		List<SentenceInstance> instancelist = new ArrayList<SentenceInstance>();
 		for(int sent_id=0 ; sent_id<this.getSentences().size(); sent_id++)
 		{

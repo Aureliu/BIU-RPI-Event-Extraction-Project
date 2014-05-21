@@ -96,7 +96,7 @@ public class AceDocument implements java.io.Serializable {
 	public List<AceMention> allMentionsList = new ArrayList<AceMention>();
 	
 	//private List<JCas> specs = null;
-	private boolean filtered = false;
+	private Boolean filtered = false;
 	
 	private static final String encoding = "UTF-8";//"ISO-8859-1";  // default:  ISO-LATIN-1
 
@@ -487,70 +487,87 @@ public class AceDocument implements java.io.Serializable {
 	}
 
 	public void filterBySpecs(TypesContainer types) {
-		if (filtered) {
+		filterBySpecs(types, filtered, eventMentions, entityMentions, valueMentions, timexMentions, allMentionsList, events, entities, timeExpressions, values);
+	}
+	
+	/**
+	 * NOTE! (Ofer, 21/5/14) At first I thought I should remove also all the arguments
+	 * (entities, timex, values) from their lists, but now I realized that positively I should leave them be,
+	 * and remove only event mentions and the events, and specific roles from event mentions. This is because:
+	 * 1. The evaluation is only according to events anyway, it doesn't hurt to have many entities lying around.
+	 * 2. I got to a case where I accidently deleted an entity that was an argument of a VALID event.
+	 *    Maybe it got deleted because it was also in another event which was invalid, I dunno. The point is that 
+	 *    I got an exception for that later (got a tried toget arg candidate -1). This happened in:
+	 *    "src\\main\\resources\\corpus\\qi\\bc/timex2norm/CNN_CF_20030304.1900.04", sentID=65
+	 */
+	public static void filterBySpecs(TypesContainer types, Boolean isFiltered,
+			List<AceEventMention> eventMentions,
+			List<AceEntityMention> entityMentions,
+			List<AceValueMention> valueMentions,
+			List<AceTimexMention> timexMentions,
+			List<AceMention> allMentionsList,
+			List<AceEvent> events,
+			List<AceEntity> entities,
+			List<AceTimex> timeExpressions,
+			List<AceValue> values)
+	{
+		if (isFiltered) {
 			throw new IllegalStateException("Can only filter by specs once per document");
 		}
-		for (Iterator<AceEvent> eventIter = events.iterator(); eventIter.hasNext();) {
-			AceEvent e = eventIter.next();
-			if (!types.triggerTypes.contains(e.subtype)) {
-				eventIter.remove();
-			}
-			else {
-				Set<String> possibleArgs = types.argumentRoles.get(e.subtype);
-				for (Iterator<AceEventArgument> argIter = e.arguments.iterator(); argIter.hasNext();) {
-					AceEventArgument a = argIter.next();
-					String role = types.getCanonicalRoleName(a.role);
-					if (!possibleArgs.contains(role)) {
-						argIter.remove();
-					}
-					else {
-						String argType = a.value.getType();
-						Set<String> possibleTypes = types.roleEntityTypes.get(role);
-						if (!possibleTypes.contains(argType)) {
-							argIter.remove();
-						}
-					}
-				}
-			}
+		
+		if (eventMentions == null) {
+			throw new IllegalStateException("Got eventMentions==null: All parameters are optional, except for eventMentions");
 		}
+		
 		for (Iterator<AceEventMention> eventMentionIter = eventMentions.iterator(); eventMentionIter.hasNext();) {
 			AceEventMention em = eventMentionIter.next();
+			
 			if (!types.triggerTypes.contains(em.event.subtype)) {
 				eventMentionIter.remove();
-				em.event.mentions.remove(em);
-				allMentionsList.remove(em);
+				remove(allMentionsList, em);
+				remove(events, em.event);
+				
+//				for (Iterator<AceEventMentionArgument> argMentionIter = em.arguments.iterator(); argMentionIter.hasNext();) {
+//					AceEventMentionArgument am = argMentionIter.next();
+//					remove(entityMentions, am.value);
+//					remove(valueMentions, am.value);
+//					remove(timexMentions, am.value);
+//					remove(allMentionsList, am.value);
+//					remove(entities, am.value.getParent());
+//					remove(timeExpressions, am.value.getParent());
+//					remove(values, am.value.getParent());
+//				}
 			}
+			
 			else {
-				Set<String> possibleArgs = types.argumentRoles.get(em.event.subtype);
+				Set<String> possibleRoles = types.argumentRoles.get(em.event.subtype);
 				for (Iterator<AceEventMentionArgument> argMentionIter = em.arguments.iterator(); argMentionIter.hasNext();) {
 					AceEventMentionArgument am = argMentionIter.next();
 					String role = types.getCanonicalRoleName(am.role);
-					if (!possibleArgs.contains(role)) {
+					Set<String> possibleTypes = types.roleEntityTypes.get(role);
+					String argType = am.value.getType();
+					if (!possibleRoles.contains(role) || !possibleTypes.contains(argType)) {
 						argMentionIter.remove();
+//						remove(entityMentions, am.value);
+//						remove(valueMentions, am.value);
+//						remove(timexMentions, am.value);
+//						remove(allMentionsList, am.value);
+//						remove(entities, am.value.getParent());
+//						remove(timeExpressions, am.value.getParent());
+//						remove(values, am.value.getParent());
 					}
-					else {
-						String argType = am.value.getType();
-						Set<String> possibleTypes = types.roleEntityTypes.get(role);
-						if (!possibleTypes.contains(argType)) {
-							argMentionIter.remove();
-						}
-					}
-				}
+				}	
 			}
-		}
-//		AceMention m = null;
-//		for (Iterator<AceMention> mentionIter = allMentionsList.iterator(); mentionIter.hasNext();) {
-//			m = mentionIter.next();
-//			if (m instanceof AceEventMention) {
-//				em = (AceEventMention) m;
-//				if (!TypeConstraints.specTypes.contains(em.event.subtype)) {
-//					mentionIter.remove();
-//				}
-//			}
-//		}
-		filtered = true;
+		}		
+		isFiltered = true;
 	}
 	
+	private static void remove(List<?> list, Object o) {
+		if (list != null) {
+			list.remove(o);
+		}
+	}
+
 	/*  assumes elementType is a leaf element type */
 
 	static String getElementText (Element e, String elementType) {

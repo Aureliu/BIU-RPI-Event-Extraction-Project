@@ -106,9 +106,9 @@ public class WordNetSignalMechanism extends SignalMechanism {
 	public LinkedHashMap<String, BigDecimal> scoreArgumentFirstHeadToken(JCas spec, Argument argument, SentenceInstance textSentence, Token textTriggerToken, Map<Class<?>, Object> textTriggerTokenMap, Token textArgToken, Map<Class<?>, Object> textArgTokenMap) throws SignalMechanismException {
 		LinkedHashMap<String, BigDecimal> ret = new LinkedHashMap<String, BigDecimal>();
 		
-//		//ret.put("WORDNET_SAME_SYNSET",   Aggregator.any(new SameSynset()    .init(spec, null, argument, ArgumentExample.class, textArgToken)));
-//		//ret.put("WORDNET_SPEC_HYPERNYM", Aggregator.any(new IsSpecHypernym().init(spec, null, argument, ArgumentExample.class, textArgToken)));
-//		ret.put("WORDNET_SPEC_ENTAILED", Aggregator.any(new IsSpecEntailed().init(spec, null, argument, ArgumentExample.class, textArgToken)));
+		ret.put("xxWORDNET_SAME_SYNSET",   Aggregator.any(new SameSynset()    .init(spec, null, argument, ArgumentExample.class, textArgToken)));
+		ret.put("xxWORDNET_SPEC_HYPERNYM", Aggregator.any(new IsSpecHypernym().init(spec, null, argument, ArgumentExample.class, textArgToken)));
+		ret.put("xxWORDNET_SPEC_ENTAILED", Aggregator.any(new IsSpecEntailed().init(spec, null, argument, ArgumentExample.class, textArgToken)));
 		
 		return ret;
 	}

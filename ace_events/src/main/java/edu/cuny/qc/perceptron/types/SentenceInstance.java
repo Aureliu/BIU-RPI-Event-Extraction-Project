@@ -1,18 +1,24 @@
 package edu.cuny.qc.perceptron.types;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import org.apache.uima.cas.CASException;
 import org.apache.uima.cas.FeatureStructure;
+import org.apache.uima.jcas.JCas;
 
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
 
+import ac.biu.nlp.nlp.ie.onthefly.input.SpecAnnotator;
 import ac.biu.nlp.nlp.ie.onthefly.input.TypesContainer;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument;
 import edu.cuny.qc.ace.acetypes.AceEntityMention;
 import edu.cuny.qc.ace.acetypes.AceEvent;
 import edu.cuny.qc.ace.acetypes.AceEventMention;
@@ -22,6 +28,8 @@ import edu.cuny.qc.perceptron.core.Controller;
 import edu.cuny.qc.perceptron.core.Perceptron;
 import edu.cuny.qc.perceptron.featureGenerator.NodeSignalGenerator;
 import edu.cuny.qc.perceptron.graph.DependencyGraph;
+import edu.cuny.qc.perceptron.similarity_scorer.SignalMechanism;
+import edu.cuny.qc.perceptron.similarity_scorer.SignalMechanismException;
 import edu.cuny.qc.perceptron.types.Sentence.Sent_Attribute;
 import edu.cuny.qc.util.Span;
 
@@ -68,6 +76,8 @@ public class SentenceInstance
 	public String allText;
 	
 	public String docID;
+	
+	public int sentID;
 	
 	/**
 	 * Ofer: Add this for debugging purposes
@@ -153,11 +163,20 @@ public class SentenceInstance
 		this.docID = sent.doc.docID;
 		this.text = sent.text;
 		this.doc = sent.doc;
+		this.sentID = sent.sentID;
 
 		// fill in entity information
 		this.eventArgCandidates.addAll(sent.entityMentions);
 		this.eventArgCandidates.addAll(sent.valueMentions);
 		this.eventArgCandidates.addAll(sent.timexMentions);
+		
+		/// DEBUG
+//		if (docID.equals("src\\main\\resources\\corpus\\qi\\bc/timex2norm/CNN_CF_20030304.1900.04") &&
+//				sentID == 65) {
+//			System.out.printf("");
+//		}
+
+		//////
 		
 		// sort event Arg candidates by order of offsets
 		Collections.sort(this.eventArgCandidates, new Comparator<AceMention>()
@@ -210,21 +229,23 @@ public class SentenceInstance
 		tokenAnnos = new ArrayList<Token>(Collections.nCopies(size(), (Token) null));
 
 		// get node text feature vectors
-		List<Map<String, Map<String, SignalInstance>>> tokenSignalBySpec = NodeSignalGenerator.get_node_text_signals(this, perceptron);
-		this.textFeaturesMap.put(InstanceAnnotations.NodeTextSignalsBySpec, tokenSignalBySpec);
+//		List<Map<String, Map<String, SignalInstance>>> tokenSignalBySpec = NodeSignalGenerator.get_node_text_signals(this, perceptron);
+//		this.textFeaturesMap.put(InstanceAnnotations.NodeTextSignalsBySpec, tokenSignalBySpec);
+//		
+//		// get edge text feature vectors, this vectors is built up in the lasy fashion, when it's needed, it's filled
+//		List<List<List<String>>> edgeSignals = new ArrayList<List<List<String>>>();
+//		for(int i=0; i<size(); i++)
+//		{
+//			List<List<String>> signalsForNode = new ArrayList<List<String>>();
+//			edgeSignals.add(signalsForNode);
+//			for(int j=0; j<eventArgCandidates.size(); j++)
+//			{
+//				signalsForNode.add(null);
+//			}
+//		}
+//		this.textFeaturesMap.put(InstanceAnnotations.EdgeTextSignals, edgeSignals);
 		
-		// get edge text feature vectors, this vectors is built up in the lasy fashion, when it's needed, it's filled
-		List<List<List<String>>> edgeSignals = new ArrayList<List<List<String>>>();
-		for(int i=0; i<size(); i++)
-		{
-			List<List<String>> signalsForNode = new ArrayList<List<String>>();
-			edgeSignals.add(signalsForNode);
-			for(int j=0; j<eventArgCandidates.size(); j++)
-			{
-				signalsForNode.add(null);
-			}
-		}
-		this.textFeaturesMap.put(InstanceAnnotations.EdgeTextSignals, edgeSignals);
+		getPersistentSignals(perceptron);
 		
 		// add event ground-truth
 		eventMentions = new ArrayList<AceEventMention>();
@@ -380,5 +401,107 @@ public class SentenceInstance
 			return false;
 		}
 		return !assn.equals(this.target, this.target.state, argNum);
+	}
+	
+	
+	/// Ofer's new section - calcing signals!
+	private void getPersistentSignals(Perceptron perceptron) {
+		try {
+			if (doc.signals != null) {
+				List<Map<String, Map<String, SignalInstance>>> triggerSignals = doc.signals.triggerSignals.get(sentID);
+				this.textFeaturesMap.put(InstanceAnnotations.NodeTextSignalsBySpec, triggerSignals);
+				
+				List<Map<String, List<Map<String, Map<String, SignalInstance>>>>> argSignals = doc.signals.argSignals.get(sentID);
+				this.textFeaturesMap.put(InstanceAnnotations.EdgeTextSignals, argSignals);
+			}
+			else {
+				calculatePersistentSignals(perceptron);
+			}
+		} catch (SignalMechanismException e) {
+			throw new RuntimeException(e);
+		} catch (CASException e) {
+			throw new RuntimeException(e);
+		}
+	}
+	
+	private void calculatePersistentSignals(Perceptron perceptron) throws SignalMechanismException, CASException {
+		List<Map<String, Map<String, SignalInstance>>> triggerSignals = new ArrayList<Map<String, Map<String, SignalInstance>>>(size());
+		List<Map<String, List<Map<String, Map<String, SignalInstance>>>>> argSignals = new ArrayList<Map<String, List<Map<String, Map<String, SignalInstance>>>>>(size());
+		for(int i=0; i<size(); i++)
+		{
+			
+			// Add here the check that this token can be valid as a trigger - to avoid building signals when it's not possible
+			// if it's not - still add something (null) to the list as a placeholder, to keep positions in the list correct
+			Map<String, Map<String, SignalInstance>> tokenTriggerSignals = null;
+			Map<String, List<Map<String, Map<String, SignalInstance>>>> tokenArgSignals = null;
+			if (types.isPossibleTriggerByPOS(this, i) && types.isPossibleTriggerByEntityType(this, i)) {
+
+				tokenTriggerSignals = new LinkedHashMap<String, Map<String, SignalInstance>>(types.specs.size());
+				tokenArgSignals = new LinkedHashMap<String, List<Map<String, Map<String, SignalInstance>>>>();
+				
+				for (JCas spec : types.specs) {
+					Map<String, SignalInstance> specSignals = getTriggerSignals(spec, i, perceptron);
+					String triggerLabel = SpecAnnotator.getSpecLabel(spec);
+					
+					List<Map<String, Map<String, SignalInstance>>> tokenArgSpecSignals = new ArrayList<Map<String, Map<String, SignalInstance>>>();
+					
+					for(int k=0; k<eventArgCandidates.size(); k++) {
+						AceMention mention = eventArgCandidates.get(k);
+						Map<String, Map<String, SignalInstance>> tokenArgSpecEntitySignals = null;
+
+						if(types.isEntityTypeEventCompatible(triggerLabel, mention.getType())) {
+
+							tokenArgSpecEntitySignals = new LinkedHashMap<String, Map<String, SignalInstance>>();
+	
+							for (Argument argument : SpecAnnotator.getSpecArguments(spec)) {
+								String role = argument.getRole().getCoveredText();
+								
+								if(types.isRoleCompatible(mention.getType(), triggerLabel, role)) {
+
+									Map<String, SignalInstance> roleSignals = getArgumentSignals(spec, i, argument, mention, perceptron);
+									tokenArgSpecEntitySignals.put(role, roleSignals);
+								}
+							}
+						}
+						tokenArgSpecSignals.add(tokenArgSpecEntitySignals);
+					}
+					
+					tokenTriggerSignals.put(triggerLabel, specSignals);
+					tokenArgSignals.put(triggerLabel, tokenArgSpecSignals);
+				}
+			}
+			triggerSignals.add(tokenTriggerSignals);
+			argSignals.add(tokenArgSignals);
+		}
+		this.textFeaturesMap.put(InstanceAnnotations.NodeTextSignalsBySpec, triggerSignals);
+		this.textFeaturesMap.put(InstanceAnnotations.EdgeTextSignals, argSignals);
+	}
+	
+	private Map<String, SignalInstance> getTriggerSignals(JCas spec, int i, Perceptron perceptron) throws SignalMechanismException {
+		Map<String, SignalInstance> specSignals = new LinkedHashMap<String, SignalInstance>();
+		LinkedHashMap<String, BigDecimal> scoredSignals;
+		for (SignalMechanism mechanism : perceptron.signalMechanisms) {
+			scoredSignals = mechanism.scoreTrigger(spec, this, i);
+			for (Entry<String, BigDecimal> scoredSignal : scoredSignals.entrySet()) {
+				SignalInstance signal = new SignalInstance(scoredSignal.getKey(), SignalType.TRIGGER, scoredSignal.getValue());
+				specSignals.put(signal.name, signal);
+				perceptron.triggerSignalNames.add(signal.name);
+			}
+		}
+		return specSignals;
+	}
+	
+	private Map<String, SignalInstance> getArgumentSignals(JCas spec, int i, Argument argument, AceMention mention, Perceptron perceptron) throws SignalMechanismException {
+		Map<String, SignalInstance> roleSignals = new LinkedHashMap<String, SignalInstance>();
+		LinkedHashMap<String, BigDecimal> scoredSignals;
+		for (SignalMechanism mechanism : perceptron.signalMechanisms) {
+			scoredSignals = mechanism.scoreArgument(spec, argument, this, i, mention);
+			for (Entry<String, BigDecimal> scoredSignal : scoredSignals.entrySet()) {
+				SignalInstance signal = new SignalInstance(scoredSignal.getKey(), SignalType.ARGUMENT, scoredSignal.getValue());
+				roleSignals.put(signal.name, signal);
+				perceptron.argumentSignalNames.add(signal.name);
+			}
+		}
+		return roleSignals;
 	}
 }

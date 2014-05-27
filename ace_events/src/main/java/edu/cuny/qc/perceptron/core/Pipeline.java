@@ -20,6 +20,7 @@ import edu.cuny.qc.perceptron.types.DocumentCrossSent;
 import edu.cuny.qc.perceptron.types.Sentence;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
 import edu.cuny.qc.util.UnsupportedParameterException;
+import edu.cuny.qc.util.Utils;
 
 public class Pipeline
 {
@@ -39,8 +40,15 @@ public class Pipeline
 		Alphabet nodeTargetAlphabet = new Alphabet();
 		Alphabet edgeTargetAlphabet = new Alphabet();
 		Alphabet featureAlphabet = new Alphabet();
+		
+		File prevModelFile = new File(modelFile.getAbsolutePath() + ".previous");
 		try
 		{
+			if (modelFile.isFile()) {
+				prevModelFile.delete();
+				modelFile.renameTo(prevModelFile);
+			}
+			
 			// Make sure model file is writable
 			PrintStream stream = new PrintStream(modelFile);
 			stream.printf("(file is writable - verified)");
@@ -250,26 +258,32 @@ public class Pipeline
 			singleEventType = null;
 		}
 		
-		PrintStream out = new PrintStream(modelFile.getAbsoluteFile() + ".weights");
-
 		// set settings
 		Controller controller = new Controller();
 		String[] settings = Arrays.copyOfRange(args, 5, args.length);
 		controller.setValueFromArguments(settings);
 		System.out.println("\n" + controller.toString() + "\n");
 		
+		PrintStream out = null;
+		if (controller.logLevel >= 1) {
+			out = new PrintStream(modelFile.getAbsoluteFile() + "." + controller.logLevel + ".weights");
+		}
+
 		// train model
 		Perceptron model = trainPerceptron(srcDir, trainingFileList, modelFile, devFileList, controller, singleEventType);
 		
 		// print out weights
 		if(model.controller.avgArguments)
 		{
-			out.print(model.getAvg_weights().toStringFull());
+			Utils.print(out, "", "", "", model.getAvg_weights().toStringFull());			
 		}
 		else
 		{
-			out.print(model.getWeights().toStringFull());
+			Utils.print(out, "", "", "", model.getWeights().toStringFull());			
 		}
-		out.close();
+		
+		if (out != null	) {
+			out.close();
+		}
 	}
 }

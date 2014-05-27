@@ -9,6 +9,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.PrintStream;
 import java.io.Serializable;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -20,6 +21,8 @@ import java.util.Set;
 
 import org.apache.commons.lang3.SerializationUtils;
 import org.apache.commons.lang3.StringUtils;
+
+import arkref.ext.fig.basic.Fmt;
 
 import edu.cuny.qc.perceptron.core.Evaluator.Score;
 import edu.cuny.qc.perceptron.types.Alphabet;
@@ -44,6 +47,9 @@ import edu.cuny.qc.util.WeightTracer;
 public class Perceptron implements java.io.Serializable
 {
 	private static final long serialVersionUID = -8870655270637917361L;
+	
+	public static final DecimalFormat FMT = new DecimalFormat("#.###"); //("#.####") //("#.#####")
+	public static final String POST_ITERATION_MARK = "PostItr";
 
 	// the alphabet of node labels (trigger labels)
 	public Alphabet nodeTargetAlphabet;	
@@ -98,7 +104,7 @@ public class Perceptron implements java.io.Serializable
 	
 	public static String size(FeatureVector fv) {
 		if (fv == null) {
-			return "null vector";
+			return "X";
 		}
 		else {
 			return ((Integer) fv.size()).toString();
@@ -106,30 +112,122 @@ public class Perceptron implements java.io.Serializable
 		}
 	}
 	
+	public static String size(Map<?, ?> map) {
+		if (map == null) {
+			return "X";
+		}
+		else {
+			return ((Integer) map.size()).toString();
+			
+		}
+	}
+	
 	public static String str(FeatureVector fv, String key) {
 		if (fv == null) {
-			return "null vector";
+			return "X";
 		}
 		Object val = fv.get(key);
 		if (val != null) {
-			return val.toString();
+			return FMT.format(val);
 		}
 		else {
 			return "X";
 		}
 	}
 	
+	public static String str(Map<?, ?> map, String key) {
+		if (map == null) {
+			return "X";
+		}
+		Object val = map.get(key);
+		if (val != null) {
+			return FMT.format(val);
+		}
+		else {
+			return "X";
+		}
+	}
+	
+	public static String values(FeatureVector fv) {
+		if (fv == null) {
+			return "X";
+		}
+		else {
+			return fv.toStringOnlyValues();
+		}
+	}
+	
 	public static String feature(String featureName) {
-		return featureName.replace('|', '*').replace("\t", "  ");
+		return featureName.replace('|', '*').replaceAll("\\s+", " ").replace("BigramFeature: ", "B:").replace("EdgeLocalFeature: ", "E:")
+				.replace("NodeLevelGlobalFeature: ","GN:").replace("SentLevelGlobalFeature: ","GS:").replace("TriggerLevelGlobalFeature: ","GT:");
+	}
+	
+	public static String lemma(String lemma) {
+		final int MAX_CHARS = 10;
+		if (lemma.length() > MAX_CHARS) {
+			return lemma.substring(0, MAX_CHARS-1) + "+";
+		}
+		else {
+			return lemma;
+		}
+	}
+	
+	public static String assn(SentenceAssignment assn) {
+		// the minimum output out of these two methods is eventually taken
+		final int MAX_CHARS = 120;
+		final int MAX_NODES = 20;
+		String ret = assn.toString(MAX_NODES);
+		if (ret.length() > MAX_CHARS) {
+			ret = ret.substring(0, MAX_CHARS-1) + "+";
+		}
+		return ret;
+	}
+	
+	public static String sentence(String sentence) {
+		final int MAX_CHARS = 100;
+		String ret = sentence.replace('\n', ' ');
+		if (ret.length() > MAX_CHARS) {
+			return ret.substring(0, MAX_CHARS-1) + "+";
+		}
+		else {
+			return ret;
+		}
+	}
+	
+	public static String docid(String id) {
+		File f = new File(id);
+		return f.getName();
 	}
 	
 	private void printWeights(PrintStream out, Object iter, Object docId, Object sentenceNo, Object c, Object tokens, Object sentenceText) {
-		List<String> featureNames = new ArrayList<String>();
-		for (Object feat : this.weights.getMap().keySet()) {
-			featureNames.add((String) feat);
+		if (  (controller.logLevel >= 7 && sentenceNo.equals(POST_ITERATION_MARK))   ||
+			  (controller.logLevel >= 8)  ) {
+			List<String> featureNames = new ArrayList<String>();
+			for (Object feat : this.weights.getMap().keySet()) {
+				featureNames.add((String) feat);
+			}
+			Collections.sort(featureNames);
+			for (String name : featureNames) {
+				Utils.print(out, "", "\n", "|",					
+						iter,
+						//docId,
+						sentenceNo,
+						c,
+						//tokens,
+						//sentenceText,
+						"",
+						"",
+						feature(name),
+						str(weights, name),
+						str(avg_weights_base, name),
+						str(avg_weights, name),
+						"",//size(weights),
+						"",//size(avg_weights_base),
+						"" //size(avg_weights)
+				);
+			}
 		}
-		Collections.sort(featureNames);
-		for (String name : featureNames) {
+		if (controller.logLevel >= 3) {
 			Utils.print(out, "", "\n", "|",					
 					iter,
 					//docId,
@@ -137,10 +235,12 @@ public class Perceptron implements java.io.Serializable
 					c,
 					//tokens,
 					//sentenceText,
-					feature(name),
-					str(weights, name),
-					str(avg_weights_base, name),
-					str(avg_weights, name),
+					values(weights),
+					values(avg_weights),
+					"",
+					"",
+					"",
+					"",
 					size(weights),
 					size(avg_weights_base),
 					size(avg_weights)
@@ -239,11 +339,13 @@ public class Perceptron implements java.io.Serializable
 		}
 		
 		//DEBUG
-		WeightTracer wt = new WeightTracer(this);
-		String weightsOutputFilePath = Pipeline.modelFile.getParent() + "/AllWeights-matser.tsv";
+		//WeightTracer wt = new WeightTracer(this);
+		String weightsOutputFilePath = Pipeline.modelFile.getParent() + "/AllWeights-matser." + controller.logLevel + ".tsv";
 		PrintStream w = null;
 		try {
-			w = new PrintStream(weightsOutputFilePath);
+			if (controller.logLevel >= 3) {
+				w = new PrintStream(weightsOutputFilePath);
+			}
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
@@ -255,6 +357,8 @@ public class Perceptron implements java.io.Serializable
 				"c",
 				//"Tokens",
 				//"Sentence"
+				"Weights",
+				"AvgWeights",
 				"Feature",
 				"Weight",
 				"BaseWeight",
@@ -264,10 +368,12 @@ public class Perceptron implements java.io.Serializable
 				"len-AvgWeights"
 		);
 
-		String featuresOutputFilePath = Pipeline.modelFile.getParent() + "/AllFeatures-master.tsv";
+		String featuresOutputFilePath = Pipeline.modelFile.getParent() + "/AllFeatures-master." + controller.logLevel + ".tsv";
 		PrintStream f = null;
 		try {
-			f = new PrintStream(featuresOutputFilePath);
+			if (controller.logLevel >= 2) {
+				f = new PrintStream(featuresOutputFilePath);
+			}
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
@@ -294,10 +400,12 @@ public class Perceptron implements java.io.Serializable
 				"avg_weights"
 		);
 		
-		String devOutputFilePath = Pipeline.modelFile.getParent() + "/DevPerformance-master.tsv";
+		String devOutputFilePath = Pipeline.modelFile.getParent() + "/DevPerformance-master." + controller.logLevel + ".tsv";
 		PrintStream d = null;
 		try {
-			d = new PrintStream(devOutputFilePath);
+			if (controller.logLevel >= 1) {
+				d = new PrintStream(devOutputFilePath);
+			}
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
@@ -353,7 +461,7 @@ public class Perceptron implements java.io.Serializable
 				}
 				
 				//DEBUG
-				String sentText = instance.text.replace('\n', ' ');
+				String sentText = sentence(instance.text);
 				//printf(w, "|%s%d|%s\n", wt.getFeaturesStringSkip(), i, wt.getFeaturesString());
 				printWeights(w, iter, instance.docID, i, c, instance.size(), sentText);
 
@@ -378,31 +486,10 @@ public class Perceptron implements java.io.Serializable
 					}
 					Collections.sort(allFeaturesList);
 					for (String s : allFeaturesList) {						
-						String inTarget = "X";
-						Double numTarget = mapTarget.get(s);
-						if (numTarget != null) {
-							inTarget = numTarget.toString();
-						}
-						String inAssn = "X";
-						Double numAssn = mapAssn.get(s);
-						if (numAssn != null) {
-							inAssn = numAssn.toString();
-						}
-						String inWeights = "X";
-						Double numWeights = weights.get(s);
-						if (numWeights != null) {
-							inWeights = numWeights.toString();
-						}
-						String inAvg = "X";
-						if (avg_weights == null) {
-							inAvg = "null vector";
-						}
-						else {
-							Double numAvg = avg_weights.get(s);
-							if (numAvg != null) {
-								inAvg = numAvg.toString();
-							}
-						}
+						String inTarget = str(mapTarget, s);
+						String inAssn = str(mapAssn, s);
+						String inWeights = str(weights, s);
+						String inAvg = str(avg_weights, s);
 						
 						String bothTargetAndAssn = null;
 						String sameTargetAndAssn = "F";
@@ -416,51 +503,56 @@ public class Perceptron implements java.io.Serializable
 							bothTargetAndAssn ="F";
 						}
 						
+						if (controller.logLevel >= 4) {
+							Utils.print(f, "", "\n", "|",					
+									iter,
+									"",//instance.docID,
+									i,
+									c,
+									instance.size(),
+									"",//sentText,
+									j,
+									lemma(lemma),
+									instance.target.getLabelAtToken(j),
+									assnLabel,
+									feature(s),
+									"",//mapTarget.size(),
+									inTarget,
+									"",//mapAssn.size(),
+									inAssn,
+									bothTargetAndAssn,
+									sameTargetAndAssn,
+									"",//weights.size(),
+									inWeights,
+									inAvg
+							);
+						}
+					}
+					if (controller.logLevel >= 2) {
+
 						Utils.print(f, "", "\n", "|",					
 								iter,
-								instance.docID,
+								docid(instance.docID),
 								i,
 								c,
 								instance.size(),
 								sentText,
 								j,
-								lemma,
+								lemma(lemma),
 								instance.target.getLabelAtToken(j),
 								assnLabel,
-								feature(s),
-								mapTarget.size(),
-								inTarget,
-								mapAssn.size(),
-								inAssn,
-								bothTargetAndAssn,
-								sameTargetAndAssn,
-								weights.size(),
-								inWeights,
-								inAvg
+								"",
+								size(mapTarget),
+								"",
+								size(mapAssn),
+								"",
+								"",
+								"",
+								size(weights),
+								"",
+								""
 						);
 					}
-					Utils.print(f, "", "\n", "|",					
-							iter,
-							instance.docID,
-							i,
-							c,
-							instance.size(),
-							sentText,
-							j,
-							lemma,
-							instance.target.getLabelAtToken(j),
-							assnLabel,
-							"",
-							mapTarget.size(),
-							"",
-							mapAssn.size(),
-							"",
-							"",
-							"",
-							weights.size(),
-							"",
-							""
-					);
 				}
 				////////////
 				
@@ -478,7 +570,7 @@ public class Perceptron implements java.io.Serializable
 				makeAveragedWeights(c);
 				
 				//TODO DEBUG
-				printWeights(w, iter, "", "After-Iter", c, "", "");
+				printWeights(w, iter, "", POST_ITERATION_MARK, c, "", "");
 				/// TODO END DEBUG
 				
 				List<SentenceAssignment> devResult = decoding(devList);
@@ -546,7 +638,7 @@ public class Perceptron implements java.io.Serializable
 		{
 			makeAveragedWeights(c);
 		}
-		printWeights(w, lastIter, "", "After-Iter", c, "", "");
+		printWeights(w, lastIter, "", POST_ITERATION_MARK, c, "", "");
 
 		
 		// print out num of invalid update

@@ -57,6 +57,9 @@ public class SentenceInstance
 	
 	public String docID;
 	
+	public int sentID;
+
+	
 	/**
 	 * Ofer: Add this for debugging purposes
 	 */
@@ -133,6 +136,7 @@ public class SentenceInstance
 		this.allText = sent.doc.allText;
 		this.docID = sent.doc.docID;
 		this.text = sent.text;
+		this.sentID = sent.sentID;
 
 		// fill in entity information
 		this.eventArgCandidates.addAll(sent.entityMentions);

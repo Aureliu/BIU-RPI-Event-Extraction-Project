@@ -4,10 +4,12 @@ import java.io.File;
 import java.io.PrintStream;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
@@ -17,7 +19,10 @@ import java_cup.internal_error;
 
 import javax.management.RuntimeErrorException;
 
+import org.apache.commons.lang3.StringUtils;
+
 import edu.cuny.qc.perceptron.core.Decoder;
+import edu.cuny.qc.perceptron.core.Perceptron;
 
 public class FeatureVector implements Serializable
 {	
@@ -49,7 +54,7 @@ public class FeatureVector implements Serializable
 	
 	public FeatureVector (int capacity) 
 	{
-		map = new HashMap<Object, Double>(capacity);
+		map = new LinkedHashMap<Object, Double>(capacity);
 	}
 
 	public Double get(Object key)
@@ -271,8 +276,14 @@ public class FeatureVector implements Serializable
 	{
 		//Thread.currentThread().dumpStack();
 		StringBuffer sb = new StringBuffer ();
+
+		List<String> keys = new ArrayList<String>(map.size());
+		for (Object key : map.keySet()) {
+			keys.add((String) key);
+		}
+		Collections.sort(keys);
 		
-	    for(Object key : map.keySet()) 
+	    for(Object key : keys) 
 	    {
 			Double value = map.get(key);
 			sb.append (key);
@@ -286,6 +297,29 @@ public class FeatureVector implements Serializable
 		return sb.toString();
 	}
 
+	private static String stringify(List<?> list) {
+		ArrayList<String> strs = new ArrayList<String>(list.size());
+		for (Object o : list) {
+			strs.add(Perceptron.FMT.format(o));
+		}
+		return StringUtils.join(strs, ',');
+	}
+	
+	public String toStringOnlyValues() {
+		final int START_TO=15, END_FROM=5;
+		String content;
+		List<?> values = new ArrayList<Double>(map.values());
+		if (values.size() <= START_TO + END_FROM) {
+			content = stringify(values);
+		}
+		else {
+			List<?> start = values.subList(0, START_TO);
+			List<?> end = values.subList(values.size()-END_FROM, values.size());
+			content = stringify(start) + "..." + stringify(end);
+		}
+		return /*"(" +*/ content /*+ ")"*/;
+	}
+	
 	public int size()
 	{
 		return map.size();

@@ -3,17 +3,17 @@ package edu.cuny.qc.perceptron.types;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.ObjectStreamException;
 import java.io.OutputStream;
-import java.io.PrintStream;
 import java.io.StreamCorruptedException;
 import java.nio.file.Files;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -28,6 +28,7 @@ import org.apache.commons.lang3.SerializationUtils;
 import org.apache.uima.analysis_engine.AnalysisEngine;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.cas.CASException;
+import org.apache.uima.cas.CASRuntimeException;
 import org.apache.uima.cas.impl.CASCompleteSerializer;
 import org.apache.uima.cas.impl.Serialization;
 import org.apache.uima.jcas.JCas;
@@ -49,6 +50,7 @@ import edu.cuny.qc.perceptron.types.SentenceInstance.InstanceAnnotations;
 import edu.cuny.qc.util.SentDetectorWrapper;
 import edu.cuny.qc.util.Span;
 import edu.cuny.qc.util.TokenizerWrapper;
+import eu.excitementproject.eop.common.utilities.uima.UimaUtilsException;
 
 /**
  * read the source data of i2b2
@@ -65,6 +67,8 @@ public class Document implements java.io.Serializable
 	static public final String preprocessedFileExt = ".preprocessed.bz2";
 	static public final String signalsFileExt = ".signals.bz2";
 	//static public final String xmiFileExt = ".xmi";
+	public static final int SENT_ID_ADDITION = 100000;
+
 	
 	//static public final String AE_FILE_PATH = "/desc/DummyAEforCAS.xml";
 	
@@ -979,12 +983,12 @@ public class Document implements java.io.Serializable
 
 	public void dumpSignals(List<SentenceInstance> instances, TypesContainer types) throws IOException {
 		if (signals == null) {
-			List<List<Map<String, Map<String, SignalInstance>>>> triggerSignals = new ArrayList<List<Map<String, Map<String, SignalInstance>>>>(sentences.size());
-			List<List<Map<String, List<Map<String, Map<String, SignalInstance>>>>>> argSignals = new ArrayList<List<Map<String, List<Map<String, Map<String, SignalInstance>>>>>>(sentences.size());
+			Map<Integer, List<Map<String, Map<String, SignalInstance>>>> triggerSignals = new HashMap<Integer, List<Map<String, Map<String, SignalInstance>>>>(sentences.size());
+			Map<Integer, List<Map<String, List<Map<String, Map<String, SignalInstance>>>>>> argSignals = new HashMap<Integer, List<Map<String, List<Map<String, Map<String, SignalInstance>>>>>>(sentences.size());
 			sentences = null;
 			for (SentenceInstance inst : instances) {
-				triggerSignals.add((List<Map<String, Map<String, SignalInstance>>>) inst.get(InstanceAnnotations.EdgeTextSignals));
-				argSignals.add((List<Map<String, List<Map<String, Map<String, SignalInstance>>>>>) inst.get(InstanceAnnotations.EdgeTextSignals));
+				triggerSignals.put(inst.sentID, (List<Map<String, Map<String, SignalInstance>>>) inst.get(InstanceAnnotations.EdgeTextSignals));
+				argSignals.put(inst.sentID, (List<Map<String, List<Map<String, Map<String, SignalInstance>>>>>) inst.get(InstanceAnnotations.EdgeTextSignals));
 			}
 			
 			BundledSignals signals = new BundledSignals(types, triggerSignals, argSignals);
@@ -1005,6 +1009,15 @@ public class Document implements java.io.Serializable
 
 		}
 		else {
+			// These checks are here even though logically they should be when loading the signals
+			// But we put them here since they must be performed only after we have all of the SentenceInstances
+			if (signals.triggerSignals.size() != instances.size()) {
+				throw new IllegalStateException(String.format("Document %s has %s (non-skipped) sentences, but trigger signals from file are for %s sentences", docID, instances.size(), signals.triggerSignals.size()));
+			}
+			if (signals.argSignals.size() != instances.size()) {
+				throw new IllegalStateException(String.format("Document %s has %s (non-skipped) sentences, but arg signals from file are for %s sentences", docID, instances.size(), signals.argSignals.size()));
+			}
+
 			System.out.printf("Not dumping signals, as we already had them from file: Document %s\n", docID);
 		}
 	}
@@ -1014,20 +1027,24 @@ public class Document implements java.io.Serializable
 		//List<List<Map<String, Map<String, Map<String, SignalInstance>>>>> argSignals = new ArrayList<List<Map<String, Map<String, Map<String, SignalInstance>>>>>();
 		// read file 
 		File signalsFile = new File(docID + signalsFileExt);
-		//File xmi = new File(baseFileName + xmiFileExt);
-		if (signalsFile.isFile()) {
+
+		// 22.5.14 Kludge - not loading signals, due to some weird ClassCastException
+		if (signalsFile.isFile()/* && false*/) {
 			InputStream in = new BZip2CompressorInputStream(new FileInputStream(signalsFile));
 			signals = (BundledSignals) SerializationUtils.deserialize(in);
 			in.close();
 		}
 		
 		if (signals != null) {
-			if (signals.triggerSignals.size() != sentences.size()) {
-				throw new IllegalStateException(String.format("Document %s has %s sentences, but trigger signals from file are for %s sentences", docID, sentences.size(), signals.triggerSignals.size()));
-			}
-			if (signals.argSignals.size() != sentences.size()) {
-				throw new IllegalStateException(String.format("Document %s has %s sentences, but arg signals from file are for %s sentences", docID, sentences.size(), signals.argSignals.size()));
-			}
+			// We can't have the check of the number of sentences be here, as we should check the number of SentenceInstances, which we don't have here yet
+			// we only have the number of Sentences, but many of them may be later skipped and thus should be ignored)
+			// Instead, we'll check it when dumping the signal
+//			if (signals.triggerSignals.size() != sentences.size()) {
+//				throw new IllegalStateException(String.format("Document %s has %s sentences, but trigger signals from file are for %s sentences", docID, sentences.size(), signals.triggerSignals.size()));
+//			}
+//			if (signals.argSignals.size() != sentences.size()) {
+//				throw new IllegalStateException(String.format("Document %s has %s sentences, but arg signals from file are for %s sentences", docID, sentences.size(), signals.argSignals.size()));
+//			}
 			if (!signals.eventEntityTypes.keySet().containsAll(types.eventEntityTypes.keySet())) {
 				throw new IllegalStateException(String.format("Working on these trigger types: %s - but loaded trigger signals of document %s has these trigger types: %s", types.eventEntityTypes, docID, signals.eventEntityTypes.keySet()));
 			}
@@ -1047,32 +1064,42 @@ public class Document implements java.io.Serializable
 			}
 		}
 	}
-	
-	/**
-	 * get a list of SentenceInstance from this 
-	 * @param nodeTargetAlphabet
-	 * @param edgeTargetAlphabet
-	 * @param featureAlphabet
-	 * @param controller
-	 * @param b
-	 * @return
-	 */
-	public List<SentenceInstance> getInstanceList(Perceptron perceptron, TypesContainer types, Alphabet featureAlphabet, 
-			Controller controller, boolean learnable)
+
+	public List<SentenceInstance> getInstances(Perceptron perceptron, TypesContainer types, Alphabet featureAlphabet, 
+			Controller controller, boolean learnable) throws CASRuntimeException, AnalysisEngineProcessException, ResourceInitializationException, CASException, UimaUtilsException, IOException, AeException
 	{		
 		List<SentenceInstance> instancelist = new ArrayList<SentenceInstance>();
 		for(int sent_id=0 ; sent_id<this.getSentences().size(); sent_id++)
 		{
 			Sentence sent = this.getSentences().get(sent_id);
 			// add all instances
-			SentenceInstance inst = new SentenceInstance(perceptron, sent, types, featureAlphabet, 
-					controller, learnable);
-			instancelist.add(inst);
+			List<SentenceInstance> insts = Document.getInstancesForSentence(perceptron, sent, types, featureAlphabet, learnable);
+			instancelist.addAll(insts);
 		}
 		return instancelist;
 	}
 	
+	public static List<SentenceInstance> getInstancesForSentence(Perceptron perceptron, Sentence sent, TypesContainer types, Alphabet featureAlphabet, 
+			boolean learnable) throws CASRuntimeException, AnalysisEngineProcessException, ResourceInitializationException, CASException, UimaUtilsException, IOException, AeException {
+		List<SentenceInstance> result = new ArrayList<SentenceInstance>();
+		if (perceptron.controller.oMethod.equalsIgnoreCase("F")) {
+			for (int specNum=0; specNum < types.specs.size(); specNum++) {
+				JCas spec = types.specs.get(specNum);
+				List<JCas> oneSpec = Arrays.asList(new JCas[] {spec});
+				TypesContainer oneType = new TypesContainer(oneSpec); 
+				result.add(new SentenceInstance(perceptron, sent, oneType, featureAlphabet,
+						learnable, spec, sent.sentID + specNum*SENT_ID_ADDITION));
+			}
+		}
+		else {
+			result.add(new SentenceInstance(perceptron, sent, types, featureAlphabet,
+					learnable, null, null));
+		}
+		
+		return result;
+	}
 	
+
 //	static public void main(String[] args) throws IOException
 //	{
 //		System.out.println("Default Charset=" + Charset.defaultCharset());

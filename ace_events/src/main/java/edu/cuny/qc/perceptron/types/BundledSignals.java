@@ -24,15 +24,15 @@ public class BundledSignals implements Serializable {
 	// These are the actual signals
 	
 	// Sentence\TriggerToken\Spec\Signals
-	public List<List<Map<String, Map<String, SignalInstance>>>> triggerSignals;
+	public Map<Integer, List<Map<String, Map<String, SignalInstance>>>> triggerSignals;
 	
 	// Sentence\TriggerToken\Spec\ArgToken\Role\Signals
-	public List<List<Map<String, List<Map<String, Map<String, SignalInstance>>>>>> argSignals;
+	public Map<Integer, List<Map<String, List<Map<String, Map<String, SignalInstance>>>>>> argSignals;
 
 	public BundledSignals(
 			TypesContainer types,
-			List<List<Map<String, Map<String, SignalInstance>>>> triggerSignals,
-			List<List<Map<String, List<Map<String, Map<String, SignalInstance>>>>>> argSignals) {
+			Map<Integer, List<Map<String, Map<String, SignalInstance>>>> triggerSignals,
+			Map<Integer, List<Map<String, List<Map<String, Map<String, SignalInstance>>>>>> argSignals) {
 		this.eventEntityTypes = types.eventEntityTypes;
 		this.argumentRoles = types.argumentRoles;
 		this.roleEntityTypes = types.roleEntityTypes;

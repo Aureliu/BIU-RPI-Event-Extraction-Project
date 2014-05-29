@@ -11,7 +11,10 @@ import java.util.Map.Entry;
 import java.util.Vector;
 
 import org.apache.commons.lang.StringUtils;
+import org.apache.uima.cas.CASException;
 
+import ac.biu.nlp.nlp.ie.onthefly.input.SpecAnnotator;
+import ac.biu.nlp.nlp.ie.onthefly.input.SpecHandler;
 import ac.biu.nlp.nlp.ie.onthefly.input.TypesContainer;
 
 import edu.cuny.qc.ace.acetypes.AceEventMention;
@@ -37,11 +40,11 @@ import edu.cuny.qc.util.UnsupportedParameterException;
  */
 public class SentenceAssignment
 {
-	public static final String PAD_Trigger_Label = "O"; // pad for the intial state
-	public static final String Default_Trigger_Label = "O";
-	public static final String Generic_Existing_Trigger_Label = "IS_TRIGGER";
-	public static final String Default_Argument_Label = "NON";
-	public static final String Generic_Existing_Argument_Label = "IS_ARG";
+	public static final String PAD_Trigger_Label = "O\t"; // pad for the intial state
+	public static final String Default_Trigger_Label = PAD_Trigger_Label;
+	public static final String Generic_Existing_Trigger_Label = "TRIGGER\t";
+	public static final String Default_Argument_Label = "NON\t";
+	public static final String Generic_Existing_Argument_Label = "IS_ARG\t";
 	
 	public static final String LABEL_MARKER = "\tcurrentLabel:";
 	public static final String BIAS_FEATURE = "BIAS_FEATURE";
@@ -706,82 +709,116 @@ public class SentenceAssignment
 //				List<SignalInstance> signals = Arrays.asList(new SignalInstance[] {signal});
 //				makeFeature(featureStr, this.getFV(i), featureValue, i, signals, addIfNotPresent, useIfNotPresent);
 //			}
-
 			
-			
-			if (genericLabel == Generic_Existing_Trigger_Label) {
-				Map<String, SignalInstance> signalsOfLabel = token.get(label);
-				for (SignalInstance signal : signalsOfLabel.values()) {
-					BigDecimal featureValue = signal.positive ? FEATURE_POSITIVE_VAL : FEATURE_NEGATIVE_VAL;
-					String featureStr = null;
-					if (this.controller.oMethod.equalsIgnoreCase("E")) {
-						featureStr = "BigramFeature:\t" + signal.name;// + "\t" + LABEL_MARKER + genericLabel;
+			if (this.controller.oMethod.equalsIgnoreCase("F")) {
+				// We don't check what is the label of this token, as the feature value is always according
+				// to the associated spec, even when the token's label is O.
+				// The only place in which the current label is expressed, is the "genericLabel" that is
+				// added to the feature string
+				try {
+					String associatedSpecLabel = SpecAnnotator.getSpecLabel(problem.associatedSpec);
+					/// DEBUG
+					if (associatedSpecLabel == null || token == null) {
+						System.err.printf("associatedSpecLabel=%s, token=%s\n", associatedSpecLabel, token);
 					}
-					else {
-						featureStr = "BigramFeature:\t" + signal.name + "\t" + LABEL_MARKER + genericLabel;
+					///
+					Map<String, SignalInstance> signalsOfLabel = token.get(associatedSpecLabel);
+					/// DEBUG
+					if (signalsOfLabel == null) {
+						System.err.printf("associatedSpecLabel=%s, token=%s\n", associatedSpecLabel, token);
 					}
-					List<SignalInstance> signals = Arrays.asList(new SignalInstance[] {signal});
-					makeFeature(featureStr, this.getFV(i), featureValue, i, signals, addIfNotPresent, useIfNotPresent);
+					///
+					for (SignalInstance signal : signalsOfLabel.values()) {
+						List<SignalInstance> signals = Arrays.asList(new SignalInstance[] {signal});
+						BigDecimal featureValuePositive = signal.positive ? FEATURE_POSITIVE_VAL : FEATURE_NEGATIVE_VAL;
+						BigDecimal featureValueNegative = signal.positive ? FEATURE_NEGATIVE_VAL : FEATURE_POSITIVE_VAL;
+						
+						String featureStrPositive = "BigramFeature:\t" + signal.name + "\t" + "P:+\t" + LABEL_MARKER + genericLabel;
+						String featureStrNegative = "BigramFeature:\t" + signal.name + "\t" + "P:-\t" + LABEL_MARKER + genericLabel;
+						
+						makeFeature(featureStrPositive, this.getFV(i), featureValuePositive, i, signals, addIfNotPresent, useIfNotPresent);
+						makeFeature(featureStrNegative, this.getFV(i), featureValueNegative, i, signals, addIfNotPresent, useIfNotPresent);
+					}
+				} catch (CASException e) {
+					throw new RuntimeException(e);
 				}
-			}
-			else if (this.controller.oMethod.equalsIgnoreCase("E")) { //genericLabel == Default_Trigger_Label + "E"
-				String featureStr = "BigramFeature:\t" + BIAS_FEATURE;
-				makeFeature(featureStr, this.getFV(i), BigDecimal.ONE, i, new ArrayList<SignalInstance>(), addIfNotPresent, useIfNotPresent);
-			}
-			else { //genericLabel == Default_Trigger_Label
-				for (Object signalNameObj : perceptron.triggerSignalNames) {
-					String signalName = (String) signalNameObj;
-					List<SignalInstance> signals = new ArrayList<SignalInstance>();
-					//double numFalse = 0.0;
-					
-//					/**
-//					 * If at least one spec has a positive signal - then the value is FEATURE_NEGATIVE_VAL,
-//					 * meaning that the token doesn't fit Default_Trigger_Label ("O").
-//					 * 
-//					 * Otherwise (no spec fits), the value is FEATURE_POSITIVE_VAL - the token fits "O". 
-//					 */
-//					BigDecimal featureValue = FEATURE_NEGATIVE_VAL;//FEATURE_POSITIVE_VAL;
-//					for (Map<String, SignalInstance> signalsOfLabel : token.values()) {
-//						SignalInstance signal = signalsOfLabel.get(signalName);
-//						if (signal == null) {
-//							throw new IllegalArgumentException(String.format("Cannot find feature '%s' for non-label token %d", signalName, i));
-//						}
-//						signals.add(signal);
-//						if (signal.positive) {
-//							featureValue = FEATURE_POSITIVE_VAL;//FEATURE_NEGATIVE_VAL;//0.0 //-1.0;
-//							break;
-//						}
-//					}
-					
-					if (token.size() != 1) {
-						throw new IllegalStateException("token.size() should be 1 (1 non-O label, ATTACK), but it's " + token.size());
-					}
-					Map<String, SignalInstance> signalsOfAttack = token.values().iterator().next();
-					SignalInstance signalOfAttack = signalsOfAttack.get(signalName);
-					signals.add(signalOfAttack);
 
-					// Set feature value according to requested O Method
-					BigDecimal featureValue = null;
-					if (this.controller.oMethod.equalsIgnoreCase("A")) {
-						featureValue = signalOfAttack.positive ? BigDecimal.ZERO : BigDecimal.ONE;
+			}
+			else {
+				if (genericLabel == Generic_Existing_Trigger_Label) {
+					Map<String, SignalInstance> signalsOfLabel = token.get(label);
+					for (SignalInstance signal : signalsOfLabel.values()) {
+						List<SignalInstance> signals = Arrays.asList(new SignalInstance[] {signal});
+						BigDecimal featureValue = signal.positive ? FEATURE_POSITIVE_VAL : FEATURE_NEGATIVE_VAL;
+						String featureStr = null;
+						if (this.controller.oMethod.equalsIgnoreCase("E")) {
+							featureStr = "BigramFeature:\t" + signal.name;// + "\t" + LABEL_MARKER + genericLabel;
+						}
+						else {
+							featureStr = "BigramFeature:\t" + signal.name + "\t" + LABEL_MARKER + genericLabel;
+						}
+						makeFeature(featureStr, this.getFV(i), featureValue, i, signals, addIfNotPresent, useIfNotPresent);
 					}
-					else if (this.controller.oMethod.equalsIgnoreCase("B")) {
-						featureValue = signalOfAttack.positive ? BigDecimal.ONE : BigDecimal.ZERO;
+				}
+				else if (this.controller.oMethod.equalsIgnoreCase("E")) { //genericLabel == Default_Trigger_Label + "E"
+					String featureStr = "BigramFeature:\t" + BIAS_FEATURE;
+					makeFeature(featureStr, this.getFV(i), BigDecimal.ONE, i, new ArrayList<SignalInstance>(), addIfNotPresent, useIfNotPresent);
+				}
+				else { //genericLabel == Default_Trigger_Label
+					for (Object signalNameObj : perceptron.triggerSignalNames) {
+						String signalName = (String) signalNameObj;
+						List<SignalInstance> signals = new ArrayList<SignalInstance>();
+						//double numFalse = 0.0;
+						
+	//					/**
+	//					 * If at least one spec has a positive signal - then the value is FEATURE_NEGATIVE_VAL,
+	//					 * meaning that the token doesn't fit Default_Trigger_Label ("O").
+	//					 * 
+	//					 * Otherwise (no spec fits), the value is FEATURE_POSITIVE_VAL - the token fits "O". 
+	//					 */
+	//					BigDecimal featureValue = FEATURE_NEGATIVE_VAL;//FEATURE_POSITIVE_VAL;
+	//					for (Map<String, SignalInstance> signalsOfLabel : token.values()) {
+	//						SignalInstance signal = signalsOfLabel.get(signalName);
+	//						if (signal == null) {
+	//							throw new IllegalArgumentException(String.format("Cannot find feature '%s' for non-label token %d", signalName, i));
+	//						}
+	//						signals.add(signal);
+	//						if (signal.positive) {
+	//							featureValue = FEATURE_POSITIVE_VAL;//FEATURE_NEGATIVE_VAL;//0.0 //-1.0;
+	//							break;
+	//						}
+	//					}
+						
+						if (token.size() != 1) {
+							throw new IllegalStateException("token.size() should be 1 (1 non-O label, ATTACK), but it's " + token.size());
+						}
+						Map<String, SignalInstance> signalsOfAttack = token.values().iterator().next();
+						SignalInstance signalOfAttack = signalsOfAttack.get(signalName);
+						signals.add(signalOfAttack);
+	
+						// Set feature value according to requested O Method
+						BigDecimal featureValue = null;
+						if (this.controller.oMethod.equalsIgnoreCase("A")) {
+							featureValue = signalOfAttack.positive ? BigDecimal.ZERO : BigDecimal.ONE;
+						}
+						else if (this.controller.oMethod.equalsIgnoreCase("B")) {
+							featureValue = signalOfAttack.positive ? BigDecimal.ONE : BigDecimal.ZERO;
+						}
+						else if (this.controller.oMethod.equalsIgnoreCase("C")) {
+							featureValue = BigDecimal.ZERO;
+						}
+						else if (this.controller.oMethod.equalsIgnoreCase("D")) {
+							featureValue = BigDecimal.ONE;
+						}
+						else {
+							throw new IllegalArgumentException("Illegal value for 'oMethod': '" + this.controller.oMethod + "'");
+						}
+						
+											
+						//String featureStr = "BigramFeature:\t" + signalName;
+						String featureStr = "BigramFeature:\t" + signalName + "\t" + LABEL_MARKER + genericLabel;
+						makeFeature(featureStr, this.getFV(i), featureValue, i, signals, addIfNotPresent, useIfNotPresent);
 					}
-					else if (this.controller.oMethod.equalsIgnoreCase("C")) {
-						featureValue = BigDecimal.ZERO;
-					}
-					else if (this.controller.oMethod.equalsIgnoreCase("D")) {
-						featureValue = BigDecimal.ONE;
-					}
-					else {
-						throw new IllegalArgumentException("Illegal value for 'oMethod': '" + this.controller.oMethod + "'");
-					}
-					
-										
-					//String featureStr = "BigramFeature:\t" + signalName;
-					String featureStr = "BigramFeature:\t" + signalName + "\t" + LABEL_MARKER + genericLabel;
-					makeFeature(featureStr, this.getFV(i), featureValue, i, signals, addIfNotPresent, useIfNotPresent);
 				}
 			}
 		}

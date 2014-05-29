@@ -97,7 +97,7 @@ public class Decoder
 			outDir.mkdirs();
 		}
 		
-		TypesContainer types = new TypesContainer(specXmlPaths);
+		TypesContainer types = new TypesContainer(specXmlPaths, false);
 		
 		// Perceptron read model from the serialized file
 		Perceptron perceptron = Perceptron.deserializeObject(new File(args[0]));
@@ -147,7 +147,7 @@ public class Decoder
 				// fill in text feature vector for each token
 				//featGen.fillTextFeatures_NoPreprocessing(doc);
 			}
-			localInstanceList = doc.getInstanceList(perceptron, types, featureAlphabet, 
+			localInstanceList = doc.getInstances(perceptron, types, featureAlphabet, 
 					perceptron.controller, true);
 			
 			doc.dumpSignals(localInstanceList, types);

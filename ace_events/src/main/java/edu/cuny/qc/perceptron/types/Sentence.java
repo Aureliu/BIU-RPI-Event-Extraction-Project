@@ -50,7 +50,7 @@ public class Sentence implements java.io.Serializable
 	/**
 	 * the sentID, the number of sentence in its document
 	 */
-	protected int sentID;
+	public int sentID;
 	
 	/**
 	 * Ofer: Add this for debugging purposes

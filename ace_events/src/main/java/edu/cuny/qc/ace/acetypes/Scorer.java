@@ -378,7 +378,7 @@ public class Scorer
 		String filelist = args[2];
 		File specListFile = new File(args[3]);
 		List<String> specXmlPaths = SpecHandler.readSpecListFile(specListFile);
-		TypesContainer types = new TypesContainer(specXmlPaths);
+		TypesContainer types = new TypesContainer(specXmlPaths, false);
 
 		PrintStream out = null;
 		if(args.length >= 5)

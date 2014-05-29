@@ -41,8 +41,12 @@ public class TypesContainer {
 	public Map<String, Set<String>> roleEntityTypes = new HashMap<String, Set<String>>();
 
 
-	public TypesContainer(List<String> specXmlPaths) throws CASRuntimeException, AnalysisEngineProcessException, ResourceInitializationException, UimaUtilsException, IOException, AeException, CASException {
-		specs = SpecHandler.getSpecs(specXmlPaths);
+	// second param - hack
+	public TypesContainer(List<String> specXmlPaths, boolean ignoreThis) throws CASRuntimeException, AnalysisEngineProcessException, ResourceInitializationException, UimaUtilsException, IOException, AeException, CASException { 
+		this(SpecHandler.getSpecs(specXmlPaths));
+	}
+	public TypesContainer(List<JCas> specs) throws CASRuntimeException, AnalysisEngineProcessException, ResourceInitializationException, UimaUtilsException, IOException, AeException, CASException {
+		this.specs = specs;
 		triggerTypes = new HashSet<String>();
 
 		nodeTargetAlphabet = new Alphabet();
@@ -158,6 +162,10 @@ public class TypesContainer {
 	public Set<String> getCompatibleEntityTypes(String role)
 	{
 		return roleEntityTypes.get(role);
+	}
+	
+	public String toString() {
+		return argumentRoles.toString();
 	}
 
 	

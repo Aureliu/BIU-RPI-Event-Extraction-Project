@@ -10,16 +10,22 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
+import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
+import org.apache.uima.cas.CASException;
+import org.apache.uima.cas.CASRuntimeException;
+import org.apache.uima.jcas.JCas;
+import org.apache.uima.resource.ResourceInitializationException;
 import org.dom4j.DocumentException;
 
+import ac.biu.nlp.nlp.ie.onthefly.input.AeException;
 import ac.biu.nlp.nlp.ie.onthefly.input.SpecHandler;
 import ac.biu.nlp.nlp.ie.onthefly.input.TypesContainer;
-import edu.cuny.qc.perceptron.featureGenerator.TextFeatureGenerator;
 import edu.cuny.qc.perceptron.types.Alphabet;
 import edu.cuny.qc.perceptron.types.Document;
 import edu.cuny.qc.perceptron.types.Sentence;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
 import edu.cuny.qc.util.UnsupportedParameterException;
+import eu.excitementproject.eop.common.utilities.uima.UimaUtilsException;
 
 public class Pipeline
 {
@@ -50,10 +56,11 @@ public class Pipeline
 		if(!controller.crossSent)
 		{
 			model = new Perceptron(featureAlphabet);
-			TypesContainer trainTypes = new TypesContainer(trainSpecXmlPaths);
-			TypesContainer devTypes = new TypesContainer(trainSpecXmlPaths);
-			trainInstanceList = readInstanceList(model, trainTypes, srcDir, trainingFileList, featureAlphabet, controller, true);
-			devInstanceList = readInstanceList(model, devTypes, srcDir, devFileList, featureAlphabet, controller, false);
+			model.controller = controller;
+			TypesContainer trainTypes = new TypesContainer(trainSpecXmlPaths, false);
+			TypesContainer devTypes = new TypesContainer(trainSpecXmlPaths, false);
+			trainInstanceList = readInstanceList(model, trainTypes, srcDir, trainingFileList, featureAlphabet, true);
+			devInstanceList = readInstanceList(model, devTypes, srcDir, devFileList, featureAlphabet, false);
 		}
 		else
 		{
@@ -64,7 +71,6 @@ public class Pipeline
 		Pipeline.modelFile = modelFile;
 		//////////////////
 
-		model.controller = controller;
 		
 
 		// learning
@@ -81,10 +87,16 @@ public class Pipeline
 	 * @param file_list
 	 * @throws IOException
 	 * @throws DocumentException
+	 * @throws AeException 
+	 * @throws UimaUtilsException 
+	 * @throws CASException 
+	 * @throws ResourceInitializationException 
+	 * @throws AnalysisEngineProcessException 
+	 * @throws CASRuntimeException 
 	 */
 	public static List<SentenceInstance> readInstanceList(Perceptron perceptron,
 			TypesContainer types, File srcDir, File file_list, Alphabet featureAlphabet, 
-			Controller controller, boolean learnable) throws IOException, DocumentException
+			boolean learnable) throws IOException, DocumentException, CASRuntimeException, AnalysisEngineProcessException, ResourceInitializationException, CASException, UimaUtilsException, AeException
 	{
 		System.out.println("Reading training instance ...");
 		
@@ -92,42 +104,44 @@ public class Pipeline
 		BufferedReader reader = new BufferedReader(new FileReader(file_list));
 		String line = "";
 		//TextFeatureGenerator featGen = new TextFeatureGenerator();
-		while((line = reader.readLine()) != null)
-		{
-			boolean monoCase = line.contains("bn/") ? true : false;
-			String fileName = srcDir + File.separator + line;
-			
-			System.out.println(fileName);
-			
-			Document doc = Document.createAndPreprocess(fileName, true, monoCase, true, true, types);
-			// fill in text feature vector for each token
-			//featGen.fillTextFeatures_NoPreprocessing(doc);
-			List<SentenceInstance> docInstancelist = new ArrayList<SentenceInstance>();
-			for(int sent_id=0 ; sent_id<doc.getSentences().size(); sent_id++)
+		try {
+			while((line = reader.readLine()) != null)
 			{
-				Sentence sent = doc.getSentences().get(sent_id);
-				// during learning, skip instances that do not have event mentions 
-				if(learnable && controller.skipNonEventSent)
+				boolean monoCase = line.contains("bn/") ? true : false;
+				String fileName = srcDir + File.separator + line;
+				
+				System.out.println(fileName);
+				
+				Document doc = Document.createAndPreprocess(fileName, true, monoCase, true, true, types);
+				// fill in text feature vector for each token
+				//featGen.fillTextFeatures_NoPreprocessing(doc);
+				List<SentenceInstance> docInstancelist = new ArrayList<SentenceInstance>();
+				for(int sent_id=0 ; sent_id<doc.getSentences().size(); sent_id++)
 				{
-					if(sent.eventMentions != null && sent.eventMentions.size() > 0)
+					Sentence sent = doc.getSentences().get(sent_id);
+					// during learning, skip instances that do not have event mentions 
+					if(learnable && perceptron.controller.skipNonEventSent)
 					{
-						SentenceInstance inst = new SentenceInstance(perceptron, sent, types, featureAlphabet,
-								controller, learnable);
-						instancelist.add(inst);
-						docInstancelist.add(inst);
+						if(sent.eventMentions != null && sent.eventMentions.size() > 0)
+						{
+							List<SentenceInstance> insts = Document.getInstancesForSentence(perceptron, sent, types, featureAlphabet, learnable);
+							instancelist.addAll(insts);
+							docInstancelist.addAll(insts);
+						}
+					}
+					else // add all instances
+					{
+						List<SentenceInstance> insts = Document.getInstancesForSentence(perceptron, sent, types, featureAlphabet, learnable);
+						instancelist.addAll(insts);
+						docInstancelist.addAll(insts);
 					}
 				}
-				else // add all instances
-				{
-					SentenceInstance inst = new SentenceInstance(perceptron, sent, types, featureAlphabet, 
-							controller, learnable);
-					instancelist.add(inst);
-					docInstancelist.add(inst);
-				}
+				doc.dumpSignals(docInstancelist, types);
 			}
-			doc.dumpSignals(docInstancelist, types);
 		}
-		reader.close();
+		finally {
+			reader.close();
+		}
 		
 		System.out.println("done");
 		return instancelist;

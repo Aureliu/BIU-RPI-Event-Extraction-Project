@@ -2,6 +2,7 @@ package edu.cuny.qc.perceptron.types;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
@@ -19,6 +20,7 @@ import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
 import ac.biu.nlp.nlp.ie.onthefly.input.SpecAnnotator;
 import ac.biu.nlp.nlp.ie.onthefly.input.TypesContainer;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument;
+import edu.cuny.qc.ace.acetypes.AceDocument;
 import edu.cuny.qc.ace.acetypes.AceEntityMention;
 import edu.cuny.qc.ace.acetypes.AceEvent;
 import edu.cuny.qc.ace.acetypes.AceEventMention;
@@ -87,6 +89,8 @@ public class SentenceInstance
 	private List<Token> tokenAnnos = null;
 	private de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence sentenceAnno = null;
 	private Document doc;
+	public JCas associatedSpec = null;
+	private Boolean filtered = false;
 
 	/**
 	 * the list of argument candidates (values/entities/timex)
@@ -154,16 +158,23 @@ public class SentenceInstance
 	 * @param sent
 	 */
 	public SentenceInstance(Perceptron perceptron, Sentence sent, TypesContainer types, Alphabet featureAlphabet, 
-			Controller controller, boolean learnable)
+			boolean learnable, JCas associatedSpec, Integer sentID)
 	{
-		this(types, featureAlphabet, controller, learnable);
+		this(types, featureAlphabet, perceptron.controller, learnable);
 		
 		// set the text of the doc
 		this.allText = sent.doc.allText;
 		this.docID = sent.doc.docID;
 		this.text = sent.text;
 		this.doc = sent.doc;
-		this.sentID = sent.sentID;
+		if (sentID != null) {
+			this.sentID = sentID;
+		}
+		else {
+			this.sentID = sent.sentID;
+		}
+		//this.sentID = sent.sentID;
+		this.associatedSpec = associatedSpec;
 
 		// fill in entity information
 		this.eventArgCandidates.addAll(sent.entityMentions);
@@ -250,6 +261,10 @@ public class SentenceInstance
 		// add event ground-truth
 		eventMentions = new ArrayList<AceEventMention>();
 		eventMentions.addAll(sent.eventMentions);
+		
+		if (associatedSpec != null) {
+			AceDocument.filterBySpecs(types, filtered, eventMentions, null, null, null, null, null, null, null, null);
+		}
 		
 		// add target as gold-standard assignment
 		this.target = new SentenceAssignment(this, perceptron);
@@ -430,11 +445,13 @@ public class SentenceInstance
 		for(int i=0; i<size(); i++)
 		{
 			
-			// Add here the check that this token can be valid as a trigger - to avoid building signals when it's not possible
+			// Add here the check that this token can be valid as a trigger - to avoid building signals when it's not needed
 			// if it's not - still add something (null) to the list as a placeholder, to keep positions in the list correct
+			// 26.5.14: No, always calculate signals. That's because in the current method ("F"), the feature values for an "O"
+			// label are defined as being the same as the non-O (e.g., the Attack signals)
 			Map<String, Map<String, SignalInstance>> tokenTriggerSignals = null;
 			Map<String, List<Map<String, Map<String, SignalInstance>>>> tokenArgSignals = null;
-			if (types.isPossibleTriggerByPOS(this, i) && types.isPossibleTriggerByEntityType(this, i)) {
+//			if (types.isPossibleTriggerByPOS(this, i) && types.isPossibleTriggerByEntityType(this, i)) {
 
 				tokenTriggerSignals = new LinkedHashMap<String, Map<String, SignalInstance>>(types.specs.size());
 				tokenArgSignals = new LinkedHashMap<String, List<Map<String, Map<String, SignalInstance>>>>();
@@ -469,7 +486,7 @@ public class SentenceInstance
 					tokenTriggerSignals.put(triggerLabel, specSignals);
 					tokenArgSignals.put(triggerLabel, tokenArgSpecSignals);
 				}
-			}
+//			}
 			triggerSignals.add(tokenTriggerSignals);
 			argSignals.add(tokenArgSignals);
 		}

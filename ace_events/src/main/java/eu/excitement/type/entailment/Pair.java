@@ -3,11 +3,10 @@
 /* First created by JCasGen Tue Mar 11 18:07:46 IST 2014 */
 package eu.excitement.type.entailment;
 
-import org.apache.uima.jcas.JCas; 
+import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
-import org.apache.uima.jcas.cas.TOP_Type;
-
 import org.apache.uima.jcas.cas.TOP;
+import org.apache.uima.jcas.cas.TOP_Type;
 
 
 /** This type represents a text-hypothesis pair.

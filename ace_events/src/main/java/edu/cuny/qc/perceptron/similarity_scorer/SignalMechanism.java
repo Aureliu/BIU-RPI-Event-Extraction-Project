@@ -5,14 +5,10 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.security.auth.callback.TextInputCallback;
-
 import org.apache.uima.jcas.JCas;
 
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument;
-
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
-
 import edu.cuny.qc.ace.acetypes.AceMention;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
 import edu.cuny.qc.perceptron.types.SentenceInstance.InstanceAnnotations;

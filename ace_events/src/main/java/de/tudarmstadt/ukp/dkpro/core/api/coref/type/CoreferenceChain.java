@@ -3,11 +3,10 @@
 /* First created by JCasGen Tue Mar 11 18:07:45 IST 2014 */
 package de.tudarmstadt.ukp.dkpro.core.api.coref.type;
 
-import org.apache.uima.jcas.JCas; 
+import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
-import org.apache.uima.jcas.cas.TOP_Type;
-
 import org.apache.uima.jcas.cas.AnnotationBase;
+import org.apache.uima.jcas.cas.TOP_Type;
 
 
 /** 

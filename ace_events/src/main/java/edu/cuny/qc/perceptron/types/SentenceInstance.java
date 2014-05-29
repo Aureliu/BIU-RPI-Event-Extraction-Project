@@ -2,7 +2,6 @@ package edu.cuny.qc.perceptron.types;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
@@ -15,11 +14,10 @@ import org.apache.uima.cas.CASException;
 import org.apache.uima.cas.FeatureStructure;
 import org.apache.uima.jcas.JCas;
 
-import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
-
 import ac.biu.nlp.nlp.ie.onthefly.input.SpecAnnotator;
 import ac.biu.nlp.nlp.ie.onthefly.input.TypesContainer;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument;
+import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
 import edu.cuny.qc.ace.acetypes.AceDocument;
 import edu.cuny.qc.ace.acetypes.AceEntityMention;
 import edu.cuny.qc.ace.acetypes.AceEvent;
@@ -28,7 +26,6 @@ import edu.cuny.qc.ace.acetypes.AceEventMentionArgument;
 import edu.cuny.qc.ace.acetypes.AceMention;
 import edu.cuny.qc.perceptron.core.Controller;
 import edu.cuny.qc.perceptron.core.Perceptron;
-import edu.cuny.qc.perceptron.featureGenerator.NodeSignalGenerator;
 import edu.cuny.qc.perceptron.graph.DependencyGraph;
 import edu.cuny.qc.perceptron.similarity_scorer.SignalMechanism;
 import edu.cuny.qc.perceptron.similarity_scorer.SignalMechanismException;

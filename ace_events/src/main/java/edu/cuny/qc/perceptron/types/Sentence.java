@@ -3,14 +3,12 @@ package edu.cuny.qc.perceptron.types;
 import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
 import ac.biu.nlp.nlp.ie.onthefly.input.TypesContainer;
-
 import edu.cuny.qc.ace.acetypes.AceDocument;
 import edu.cuny.qc.ace.acetypes.AceEntityMention;
 import edu.cuny.qc.ace.acetypes.AceEventMention;
@@ -18,7 +16,6 @@ import edu.cuny.qc.ace.acetypes.AceMention;
 import edu.cuny.qc.ace.acetypes.AceRelationMention;
 import edu.cuny.qc.ace.acetypes.AceTimexMention;
 import edu.cuny.qc.ace.acetypes.AceValueMention;
-import edu.cuny.qc.perceptron.graph.DependencyGraph;
 import edu.cuny.qc.util.Span;
 
 /**

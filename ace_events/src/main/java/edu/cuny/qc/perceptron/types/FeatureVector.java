@@ -1,28 +1,17 @@
 package edu.cuny.qc.perceptron.types;
 
-import java.io.File;
-import java.io.PrintStream;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
-import java.util.Set;
-
-import java_cup.internal_error;
-
-import javax.management.RuntimeErrorException;
 
 import org.apache.commons.lang3.StringUtils;
 
-import edu.cuny.qc.perceptron.core.Decoder;
 import edu.cuny.qc.perceptron.core.Perceptron;
 
 public class FeatureVector implements Serializable

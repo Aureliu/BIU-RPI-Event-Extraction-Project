@@ -15,7 +15,6 @@ import org.dom4j.DocumentException;
 import org.xml.sax.SAXException;
 
 import ac.biu.nlp.nlp.ie.onthefly.input.AeException;
-
 import edu.cuny.qc.ace.acetypes.Scorer;
 import edu.cuny.qc.perceptron.similarity_scorer.SignalMechanismException;
 import edu.cuny.qc.util.RecursiveFileListIterator;

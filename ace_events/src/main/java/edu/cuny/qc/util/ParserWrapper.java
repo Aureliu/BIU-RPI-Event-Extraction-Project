@@ -7,7 +7,6 @@ import java.util.Collection;
 import java.util.List;
 
 import opennlp.tools.util.InvalidFormatException;
-
 import edu.stanford.nlp.ling.HasWord;
 import edu.stanford.nlp.ling.TaggedWord;
 import edu.stanford.nlp.ling.Word;

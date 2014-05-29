@@ -3,7 +3,6 @@ package edu.cuny.qc.ace.analysis.forEvent;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.StringBufferInputStream;
-
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,8 +10,8 @@ import java.util.Vector;
 
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
-import org.dom4j.io.SAXReader;
 import org.dom4j.Node;
+import org.dom4j.io.SAXReader;
 import org.xml.sax.EntityResolver;
 import org.xml.sax.InputSource;
 

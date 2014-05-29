@@ -7,10 +7,11 @@
 
 package edu.cuny.qc.ace.acetypes;
 
-import java.util.*;
-import java.io.*;
+import java.io.PrintWriter;
+import java.util.ArrayList;
 
-import org.w3c.dom.*;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
 
 /**
  *  an Ace Event, with information from the ACE key or system output.

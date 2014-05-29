@@ -16,13 +16,12 @@ import org.apache.uima.cas.CASException;
 import org.apache.uima.jcas.JCas;
 
 import ac.biu.nlp.nlp.ie.onthefly.input.SpecAnnotator;
-
 import edu.cuny.qc.perceptron.core.Perceptron;
 import edu.cuny.qc.perceptron.similarity_scorer.SignalMechanism;
 import edu.cuny.qc.perceptron.similarity_scorer.SignalMechanismException;
+import edu.cuny.qc.perceptron.types.SentenceInstance;
 import edu.cuny.qc.perceptron.types.SignalInstance;
 import edu.cuny.qc.perceptron.types.SignalType;
-import edu.cuny.qc.perceptron.types.SentenceInstance;
 import edu.cuny.qc.util.TokenAnnotations;
 import edu.stanford.nlp.trees.Tree;
 

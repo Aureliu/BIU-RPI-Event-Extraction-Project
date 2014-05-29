@@ -7,8 +7,6 @@ import org.apache.uima.analysis_engine.AnalysisEngineDescription;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.uimafit.factory.AggregateBuilder;
 
-import de.tudarmstadt.ukp.dkpro.core.stanfordnlp.StanfordParser;
-
 public class AnalysisEngines {
 	static {
 		//System.err.println("AnalysisEngines: TODO - add POS tagging back to Document and Sentence");

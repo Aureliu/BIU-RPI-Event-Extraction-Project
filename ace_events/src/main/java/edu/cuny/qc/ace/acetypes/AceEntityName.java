@@ -1,16 +1,11 @@
 // -*- tab-width: 4 -*-
 package edu.cuny.qc.ace.acetypes;
 
-import java.util.*;
-import java.io.*;
+import java.io.PrintWriter;
 
-
-import org.w3c.dom.*;
-import org.xml.sax.*;
+import org.w3c.dom.Element;
 
 import edu.cuny.qc.util.Span;
-
-import javax.xml.parsers.*;
 
 /**
  *  an Ace Entity Name, with information from the APF ACE key.

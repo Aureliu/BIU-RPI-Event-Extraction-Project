@@ -5,32 +5,29 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Vector;
 import java.util.Map.Entry;
+import java.util.Vector;
 
 import org.apache.uima.cas.CASException;
 import org.apache.uima.jcas.JCas;
 
 import ac.biu.nlp.nlp.ie.onthefly.input.SpecAnnotator;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument;
-
 import edu.cuny.qc.ace.acetypes.AceEntityMention;
 import edu.cuny.qc.ace.acetypes.AceEventArgumentValue;
 import edu.cuny.qc.ace.acetypes.AceMention;
-import edu.cuny.qc.ace.acetypes.AceTimexMention;
 import edu.cuny.qc.perceptron.core.Perceptron;
 import edu.cuny.qc.perceptron.graph.DependencyGraph;
+import edu.cuny.qc.perceptron.graph.DependencyGraph.PathTerm;
 import edu.cuny.qc.perceptron.graph.GraphEdge;
 import edu.cuny.qc.perceptron.graph.GraphNode;
-import edu.cuny.qc.perceptron.graph.DependencyGraph.PathTerm;
 import edu.cuny.qc.perceptron.similarity_scorer.SignalMechanism;
 import edu.cuny.qc.perceptron.similarity_scorer.SignalMechanismException;
-import edu.cuny.qc.perceptron.types.SignalInstance;
-import edu.cuny.qc.perceptron.types.SignalType;
 import edu.cuny.qc.perceptron.types.Sentence;
 import edu.cuny.qc.perceptron.types.Sentence.Sent_Attribute;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
-import edu.cuny.qc.perceptron.types.SentenceInstance.InstanceAnnotations;
+import edu.cuny.qc.perceptron.types.SignalInstance;
+import edu.cuny.qc.perceptron.types.SignalType;
 import edu.cuny.qc.util.Span;
 import edu.cuny.qc.util.TokenAnnotations;
 import edu.stanford.nlp.trees.Tree;

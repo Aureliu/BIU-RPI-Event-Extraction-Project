@@ -3,7 +3,7 @@
 /* First created by JCasGen Tue Mar 11 18:07:46 IST 2014 */
 package eu.excitement.type.temporal;
 
-import org.apache.uima.jcas.JCas; 
+import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
 import org.apache.uima.jcas.cas.TOP_Type;
 

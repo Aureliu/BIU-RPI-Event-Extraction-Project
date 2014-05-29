@@ -13,7 +13,6 @@ import java.math.BigDecimal;
 import java.math.MathContext;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -37,7 +36,6 @@ import edu.cuny.qc.perceptron.types.SignalInstance;
 import edu.cuny.qc.util.TokenAnnotations;
 import edu.cuny.qc.util.UnsupportedParameterException;
 import edu.cuny.qc.util.Utils;
-import edu.cuny.qc.util.WeightTracer;
 import eu.excitementproject.eop.common.component.lexicalknowledge.LexicalResourceException;
 import eu.excitementproject.eop.core.utilities.dictionary.wordnet.WordNetInitializationException;
 

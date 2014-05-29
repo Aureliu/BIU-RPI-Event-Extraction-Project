@@ -80,6 +80,7 @@ public class SentenceInstance
 	public String docID;
 	
 	public int sentID;
+
 	
 	/**
 	 * Ofer: Add this for debugging purposes

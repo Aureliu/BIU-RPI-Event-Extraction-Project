@@ -25,6 +25,7 @@ import edu.cuny.qc.perceptron.types.Document;
 import edu.cuny.qc.perceptron.types.Sentence;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
 import edu.cuny.qc.util.UnsupportedParameterException;
+import edu.cuny.qc.util.Utils;
 import eu.excitementproject.eop.common.utilities.uima.UimaUtilsException;
 
 public class Pipeline
@@ -42,7 +43,13 @@ public class Pipeline
 	public static Perceptron trainPerceptron(File srcDir, File trainingFileList, File modelFile, File devFileList, Controller controller, List<String> trainSpecXmlPaths, List<String> devSpecXmlPaths) throws Exception
 	{
 		Alphabet featureAlphabet = new Alphabet();
-
+		
+		File prevModelFile = new File(modelFile.getAbsolutePath() + ".previous");
+		if (modelFile.isFile()) {
+			prevModelFile.delete();
+			modelFile.renameTo(prevModelFile);
+		}
+			
 		// Make sure model file is writable
 		PrintStream stream = new PrintStream(modelFile);
 		stream.printf("(file is writable - verified)");
@@ -252,31 +259,36 @@ public class Pipeline
 		List<String> trainSpecXmlPaths = SpecHandler.readSpecListFile(trainSpecListFile);
 		List<String> devSpecXmlPaths = SpecHandler.readSpecListFile(devSpecListFile);
 		
-		PrintStream out = new PrintStream(modelFile.getAbsoluteFile() + ".weights");
-
 		// set settings
 		Controller controller = new Controller();
 		String[] settings = Arrays.copyOfRange(args, 6, args.length);
 		controller.setValueFromArguments(settings);
 		System.out.println("\n" + controller.toString() + "\n");
 		
+		PrintStream out = null;
+		if (controller.logLevel >= 1) {
+			out = new PrintStream(modelFile.getAbsoluteFile() + "." + controller.logLevel + ".weights");
+		}
+
 		// train model
 		Perceptron model = trainPerceptron(srcDir, trainingFileList, modelFile, devFileList, controller, trainSpecXmlPaths, devSpecXmlPaths);
 		
 		// print out weights
 		if(model.controller.avgArguments)
 		{
-			out.print(model.getAvg_weights().toStringFull());
+			Utils.print(out, "", "", "", model.getAvg_weights().toStringFull());			
 		}
 		else
 		{
-			out.print(model.getWeights().toStringFull());
+			Utils.print(out, "", "", "", model.getWeights().toStringFull());			
 		}
-		out.close();
+		
+		if (out != null	) {
+			out.close();
 		
 		model.close();
 		
 		System.out.printf("\n[%s] Finished Pipeline successfully\n", new Date());
-
+		}
 	}
 }

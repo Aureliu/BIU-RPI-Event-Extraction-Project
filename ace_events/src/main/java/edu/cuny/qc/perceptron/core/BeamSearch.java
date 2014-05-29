@@ -59,10 +59,12 @@ public class BeamSearch
 		this.isTraining = isTraining;
 		
 		if (this.isTraining) {
-			String beamsOutputFilePath = Pipeline.modelFile.getParent() + "/AllBeams-ODIE.tsv";
+			String beamsOutputFilePath = Pipeline.modelFile.getParent() + "/AllBeams-ODIE." + model.controller.logLevel + ".tsv";
 			this.b = null;
 			try {
-				this.b = new PrintStream(beamsOutputFilePath);
+				if (model.controller.logLevel >= 5) {
+					this.b = new PrintStream(beamsOutputFilePath);
+				}
 			} catch (IOException e) {
 				throw new RuntimeException(e);
 			}
@@ -112,118 +114,123 @@ public class BeamSearch
 
 				String posStr = Integer.toString(pos);
 				if (beam.size()==1) {
-					posStr = "0(Best+Worst)";
+					posStr = "0-!";
 				}
-				else if (pos == 0) {
-					posStr = "0(Best)";
-				}
+				//else if (pos == 0) {
+				//	posStr = "0+";
+				//}
 				else if (pos == beam.size()-1) {
-					posStr = "" + pos + "(Worst)";
+					posStr = "" + pos + "-";
 				}
 	
-				List<Map<Class<?>, Object>> tokens = (List<Map<Class<?>, Object>>) instance.get(InstanceAnnotations.Token_FEATURE_MAPs);
-				for (int j=0; j<=assn.getState(); j++) {
-					String lemma = (String) tokens.get(j).get(TokenAnnotations.LemmaAnnotation.class);
-					
-					Map<Object, BigDecimal> mapTarget = instance.target.getFeatureVectorSequence().get(j).getMap();
-					Map<Object, BigDecimal> mapAssn = assn.getFeatureVectorSequence().get(j).getMap();
-					List<String> allFeaturesList = new ArrayList<String>(mapAssn.size());
-					for (Object o : mapAssn.keySet()) {
-						allFeaturesList.add((String) o);
+				if (model.controller.logLevel >= 6) {
+					List<Map<Class<?>, Object>> tokens = (List<Map<Class<?>, Object>>) instance.get(InstanceAnnotations.Token_FEATURE_MAPs);
+					for (int j=0; j<=assn.getState(); j++) {
+						String lemma = (String) tokens.get(j).get(TokenAnnotations.LemmaAnnotation.class);
+						
+						Map<Object, BigDecimal> mapTarget = instance.target.getFeatureVectorSequence().get(j).getMap();
+						Map<Object, BigDecimal> mapAssn = assn.getFeatureVectorSequence().get(j).getMap();
+						List<String> allFeaturesList = new ArrayList<String>(mapAssn.size());
+						for (Object o : mapAssn.keySet()) {
+							allFeaturesList.add((String) o);
+						}
+						Collections.sort(allFeaturesList);
+		
+						for (String s : allFeaturesList) {						
+							Utils.print(b, "", "\n", "|",		
+									//general
+									Perceptron.iter,//"Iter",
+									Perceptron.i,//"SentenceNo",
+									violation,//"violation",
+									beam.size(),//"beam-size",
+									
+									//assignment
+									posStr, //"pos",
+									"",//"assignment", //toString()
+									"",//"target"
+									"",//"copmatible"
+									assn.getScore(),//"score",
+									assn.getState(),//"state",
+									
+									//token
+									j,//"i",
+									Perceptron.lemma(lemma),//"Lemma",
+									instance.target.getLabelAtToken(j),//"target-label",
+									assn.getLabelAtToken(j),//"assn-label",
+									assn.getPartialScores().get(j),//"partial-score",
+									
+									//feature
+									Perceptron.feature(s),//"Feature",
+									Perceptron.str(mapTarget, s),//"target"
+									Perceptron.str(mapAssn, s),//"assn"
+									Perceptron.str(model.getWeights(), s),//"Weight",
+									Perceptron.str(model.getAvg_weights(), s)//"AvgWeight"
+							);
+						}
+						
+						
+	//					Utils.print(b, "", "\n", "|",		
+	//							//general
+	//							Perceptron.iter,//"Iter",
+	//							Perceptron.i,//"SentenceNo",
+	//							violation,//"violation",
+	//							beam.size(),//"beam-size",
+	//							
+	//							//assignment
+	//							posStr, //"pos",
+	//							"",//"assignment", //toString()
+	//							"",//"target"
+	//							"",//"copmatible"
+	//							assn.getScore(),//"score",
+	//							assn.getState(),//"state",
+	//							
+	//							//token
+	//							j,//"i",
+	//							Perceptron.lemma(lemma),//"Lemma",
+	//							instance.target.getLabelAtToken(j),//"target-label",
+	//							assn.getLabelAtToken(j),//"assn-label",
+	//							assn.getPartialScores().get(j),//"partial-score",
+	//							
+	//							//feature
+	//							"",//"Feature",
+	//							"",//"target"
+	//							"",//"assn"
+	//							"",//"Weight",
+	//							""//"AvgWeight"
+	//					);
 					}
-					Collections.sort(allFeaturesList);
-	
-					for (String s : allFeaturesList) {						
-						Utils.print(b, "", "\n", "|",		
-								//general
-								Perceptron.iter,//"Iter",
-								Perceptron.i,//"SentenceNo",
-								violation,//"violation",
-								beam.size(),//"beam-size",
-								
-								//assignment
-								posStr, //"pos",
-								"",//"assignment", //toString()
-								"",//"target"
-								"",//"copmatible"
-								assn.getScore(),//"score",
-								assn.getState(),//"state",
-								
-								//token
-								j,//"i",
-								lemma,//"Lemma",
-								instance.target.getLabelAtToken(j),//"target-label",
-								assn.getLabelAtToken(j),//"assn-label",
-								assn.getPartialScores().get(j),//"partial-score",
-								
-								//feature
-								Perceptron.feature(s),//"Feature",
-								Perceptron.str(mapTarget, s),//"target"
-								Perceptron.str(mapAssn, s),//"assn"
-								Perceptron.str(model.getWeights(), s),//"Weight",
-								Perceptron.str(model.getAvg_weights(), s)//"AvgWeight"
-						);
-					}
-					
-					
-//					Utils.print(b, "", "\n", "|",		
-//							//general
-//							Perceptron.iter,//"Iter",
-//							Perceptron.i,//"SentenceNo",
-//							violation,//"violation",
-//							beam.size(),//"beam-size",
-//							
-//							//assignment
-//							posStr, //"pos",
-//							"",//"assignment", //toString()
-//							"",//"target"
-//							"",//"copmatible"
-//							assn.getScore(),//"score",
-//							assn.getState(),//"state",
-//							
-//							//token
-//							j,//"i",
-//							lemma,//"Lemma",
-//							instance.target.getLabelAtToken(j),//"target-label",
-//							assn.getLabelAtToken(j),//"assn-label",
-//							assn.getPartialScores().get(j),//"partial-score",
-//							
-//							//feature
-//							"",//"Feature",
-//							"",//"target"
-//							"",//"assn"
-//							"",//"Weight",
-//							""//"AvgWeight"
-//					);
 				}
-				Utils.print(b, "", "\n", "|",		
-						//general
-						Perceptron.iter,//"Iter",
-						Perceptron.i,//"SentenceNo",
-						violation,//"violation",
-						beam.size(),//"beam-size",
-						
-						//assignment
-						posStr, //"pos",
-						assn,//"assignment", //toString()
-						instance.target,//"target"
-						targetAssnCompatible,//"copmatible"
-						assn.getScore(),//"score",
-						assn.getState(),//"state",
-						
-						//token
-						"",//"i",
-						"",//"Lemma",
-						"",//"target-label",
-						"",//"assn-label",
-						"",//"partial-score",
-						
-						//feature
-						"",//"Feature",
-						"",//"Weight",
-						""//"AvgWeight"
-				);
-
+				
+				if (model.controller.logLevel >= 5) {
+					Utils.print(b, "", "\n", "|",		
+							//general
+							Perceptron.iter,//"Iter",
+							Perceptron.i,//"SentenceNo",
+							violation,//"violation",
+							beam.size(),//"beam-size",
+							
+							//assignment
+							posStr, //"pos",
+							Perceptron.assn(assn),//"assignment", //toString()
+							Perceptron.assn(instance.target),//"target"
+							targetAssnCompatible,//"copmatible"
+							assn.getScore(),//"score",
+							assn.getState(),//"state",
+							
+							//token
+							"",//"i",
+							"",//"Lemma",
+							"",//"target-label",
+							"",//"assn-label",
+							"",//"partial-score",
+							
+							//feature
+							"",//"Feature",
+							"",//"Weight",
+							""//"AvgWeight"
+					);
+				}
+				
 			}
 		}
 	}
@@ -309,7 +316,7 @@ public class BeamSearch
 				if(violation)
 				{
 					beam.get(0).setViolate(true);
-					printBeam(b, problem, beam, "trigger");
+					printBeam(b, problem, beam, "trg");
 					return beam.get(0);
 				}
 			}

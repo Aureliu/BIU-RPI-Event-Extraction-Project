@@ -35,6 +35,19 @@ public class Controller implements java.io.Serializable
 	// Should labelBigrams be learned from training data. Otherwise, all possible bigrams are considered by default.
 	public boolean learnBigrams = true;
 	
+	/**
+	 * 0 - only model file
+	 * 1 - model, weights, performance
+	 * 2 - model, weights, performance, features (only label per token)
+	 * 3 - model, weights, performance, features (only label per token), weights (only vector summary per sentence)
+	 * 4 - model, weights, performance, features, weights (only vector summary per sentence)
+	 * 5 - model, weights, performance, features, weights (only vector summary per sentence), beam (only full assignments)
+	 * 6 - model, weights, performance, features, weights (only vector summary per sentence), beam
+	 * 7 - model, weights, performance, features, weights (vector summary per sentence + all weights only for PostItr), beam
+	 * 8 - model, weights, performance, features, weights, beam
+	 */
+	public int logLevel = 1;
+
 	// Which of the four (A,B,C,D) methods should be used for the O features. No valid default value, must be explicitly supplied.
 	public String oMethod = null;
 	
@@ -109,6 +122,10 @@ public class Controller implements java.io.Serializable
 			else if(fields[0].equalsIgnoreCase("learnBigrams"))
 			{
 				learnBigrams = Boolean.parseBoolean(fields[1]);
+			}
+			else if(fields[0].equalsIgnoreCase("logLevel"))
+			{
+				logLevel = Integer.parseInt(fields[1]);
 			}
 			else if(fields[0].equalsIgnoreCase("oMethod"))
 			{

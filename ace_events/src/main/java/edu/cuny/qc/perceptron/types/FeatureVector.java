@@ -5,6 +5,7 @@ import java.io.PrintStream;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
@@ -22,6 +23,7 @@ import javax.management.RuntimeErrorException;
 import org.apache.commons.lang3.StringUtils;
 
 import edu.cuny.qc.perceptron.core.Decoder;
+import edu.cuny.qc.perceptron.core.Perceptron;
 
 public class FeatureVector implements Serializable
 {	
@@ -299,13 +301,13 @@ public class FeatureVector implements Serializable
 	{
 		//Thread.currentThread().dumpStack();
 		StringBuffer sb = new StringBuffer ();
+
+		List<String> keys = new ArrayList<String>(map.size());
+		for (Object key : map.keySet()) {
+			keys.add((String) key);
+		}
+		Collections.sort(keys);
 		
-		ArrayList<Object> keys = new ArrayList<Object>(map.keySet());
-		Collections.sort(keys, new Comparator<Object>() {			
-			@Override
-			public int compare(Object o1, Object o2) {
-			return ((String)o1).compareTo((String)o2);
-		}});
 	    for(Object key : keys) 
 	    {
 	    	BigDecimal value = map.get(key);
@@ -320,16 +322,16 @@ public class FeatureVector implements Serializable
 		return sb.toString();
 	}
 
-	private String stringify(List<?> list) {
+	private static String stringify(List<?> list) {
 		ArrayList<String> strs = new ArrayList<String>(list.size());
 		for (Object o : list) {
-			strs.add(String.format("%.6s", o));
+			strs.add(Perceptron.FMT.format(o));
 		}
 		return StringUtils.join(strs, ',');
 	}
 	
 	public String toStringOnlyValues() {
-		final int START_TO=40, END_FROM=10;
+		final int START_TO=15, END_FROM=5;
 		String content;
 		List<?> values = new ArrayList<BigDecimal>(map.values());
 		if (values.size() <= START_TO + END_FROM) {
@@ -337,10 +339,10 @@ public class FeatureVector implements Serializable
 		}
 		else {
 			List<?> start = values.subList(0, START_TO);
-			List<?> end = values.subList(END_FROM, values.size());
-			content = stringify(start) + " ... " + stringify(end);
+			List<?> end = values.subList(values.size()-END_FROM, values.size());
+			content = stringify(start) + "..." + stringify(end);
 		}
-		return "(" + content + ")";
+		return /*"(" +*/ content /*+ ")"*/;
 	}
 	
 	public int size()

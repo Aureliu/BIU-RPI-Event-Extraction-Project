@@ -43,7 +43,7 @@ public class SentenceAssignment
 	public static final String PAD_Trigger_Label = "O\t"; // pad for the intial state
 	public static final String Default_Trigger_Label = PAD_Trigger_Label;
 	public static final String Generic_Existing_Trigger_Label = "TRIGGER\t";
-	public static final String Default_Argument_Label = "NON\t";
+	public static final String Default_Argument_Label = "X\t";//"NON\t";
 	public static final String Generic_Existing_Argument_Label = "IS_ARG\t";
 	
 	public static final String LABEL_MARKER = "\tcurrentLabel:";
@@ -1074,31 +1074,44 @@ public class SentenceAssignment
 	}
 	
 	@Override
-	public String toString()
+	public String toString() {
+		return toString(null);
+	}
+	
+	public String toString(Integer maxNodes)
 	{
-		String ret = "";
+		StringBuffer ret = new StringBuffer();;
 		int i=0;
 		for(Integer assn : this.nodeAssignment)
 		{
-			String token_label = (String) this.nodeTargetAlphabet.lookupObject(assn);
-			ret += " " + token_label;
-			
-			Map<Integer, Integer> edges = this.edgeAssignment.get(i);
-			if(edges != null)
-			{
-				ret += "(";
-				for(Integer key : edges.keySet())
+			if (maxNodes == null || i < maxNodes) {
+				String token_label = (String) this.nodeTargetAlphabet.lookupObject(assn);
+				ret.append(" ");
+				ret.append(token_label);
+				
+				Map<Integer, Integer> edges = this.edgeAssignment.get(i);
+				if(edges != null)
 				{
-					ret += " " + key + ":";
-					Integer val = edges.get(key);
-					String arg_role = (String) this.edgeTargetAlphabet.lookupObject(val);
-					ret += arg_role;
+					ret.append("(");
+					for(Integer key : edges.keySet())
+					{
+						ret.append(" ");
+						ret.append(key);
+						ret.append(":");
+						Integer val = edges.get(key);
+						String arg_role = (String) this.edgeTargetAlphabet.lookupObject(val);
+						ret.append(arg_role);
+					}
+					ret.append(")");
 				}
-				ret += ")";
+				i++;
 			}
-			i++;
+			else {
+				ret.append("+");
+				break;
+			}
 		}
-		return ret;
+		return ret.toString();
 	}
 	
 	/**
@@ -1108,7 +1121,7 @@ public class SentenceAssignment
 	 */
 	public static boolean isArgumentable(String label)
 	{
-		if(label.equalsIgnoreCase("O"))
+		if(label.equalsIgnoreCase(PAD_Trigger_Label))
 		{
 			return false;
 		}

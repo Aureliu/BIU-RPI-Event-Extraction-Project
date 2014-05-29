@@ -54,7 +54,7 @@ public class Perceptron implements java.io.Serializable
 	
 	public static final DecimalFormat FMT = new DecimalFormat("#.###"); //("#.####") //("#.#####")
 	public static final String POST_ITERATION_MARK = "PostItr";
-	public static final String LOG_NAME_ID = "master";
+	public static final String LOG_NAME_ID = "ODIE";
 
 	// the alphabet of node labels (trigger labels)
 	//public Alphabet nodeTargetAlphabet;	

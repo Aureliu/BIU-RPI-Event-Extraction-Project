@@ -1,0 +1,74 @@
+<spec>
+  <predicate>
+    <name>Meet</name>
+    <seeds>
+      <seed>meet</seed>
+      <seed>talks</seed>
+      <seed>summit</seed>
+      <seed>conference</seed>
+      <seed>meeting</seed>
+      <seed>visit</seed>
+    </seeds>
+  </predicate>
+  <arguments>
+    <argument>
+      <role>Entity</role>
+      <types>
+      	<type>PER</type>
+      	<type>ORG</type>
+      	<type>GPE</type>
+      </types>
+      <examples>
+        <example>Bush</example>
+        <example>Putin</example>
+        <example>China</example>
+        <example>Japan</example>
+        <example>United States</example>
+        <example>Korea</example>
+        <example>representative</example>
+        <example>Tommy</example>
+        <example>prosecutor</example>
+        <example>governor</example>
+        <example>John Coburn</example>
+        <example>Erekat</example>
+        <example>Madeleine Albright</example>
+        <example>Mrs. Albright</example>
+        <example>official</example>
+        <example>minister</example>
+        <example>Israeli</example>
+        <example>Palestinian</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Time</role>
+      <types>
+      	<type>TIME</type>
+      </types>
+      <examples>
+        <example>this week</example>
+        <example>this month</example>
+        <example>Wednesday</example>
+        <example>Friday</example>
+        <example>tomorrow</example>
+        <example>Monday</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Place</role>
+      <types>
+      	<type>GPE</type>
+      	<type>LOC</type>
+      	<type>FAC</type>
+      </types>
+      <examples>
+        <example>Washington</example>
+        <example>Egypt</example>
+      </examples>
+    </argument>
+  </arguments>
+  <usage_samples>
+    <sample>Officials would meet ministers on Friday in Egypt.</sample>
+    <sample>Korea, Japan and China held a summit on Monday in Washington.</sample>
+    <sample>The governor is in talks with the representatives this Month.</sample>
+  </usage_samples>
+</spec>

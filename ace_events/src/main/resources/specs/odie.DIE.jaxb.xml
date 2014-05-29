@@ -1,0 +1,98 @@
+<spec>
+  <predicate>
+    <name>Die</name>
+    <seeds>
+      <seed>die</seed>
+      <seed>death</seed>
+      <seed>dead</seed>
+      <seed>assassinate</seed>
+      <seed>kill</seed>
+      <seed>slain</seed>
+      <seed>assassination</seed>
+      <seed>late</seed>
+      <seed>fatal</seed>
+      <seed>suicide</seed>
+    </seeds>
+  </predicate>
+  <arguments>
+    <argument>
+      <role>Agent</role>
+      <types>
+      	<type>PER</type>
+      	<type>ORG</type>
+      	<type>GPE</type>
+      </types>
+      <examples>
+        <example>man</example>
+        <example>John Hinckley</example>
+        <example>terrorist group</example>
+        <example>group</example>
+        <example>Richard Farnsworth</example>
+        <example>bomber</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Victim</role>
+      <types>
+      	<type>PER</type>
+      </types>
+      <examples>
+        <example>passenger</example>
+        <example>member</example>
+        <example>crew member</example>
+        <example>Pierre Trudeau</example>
+        <example>Ronald Reagan</example>
+        <example>hostage</example>
+        <example>leader</example>
+        <example>she</example>
+        <example>Obaiyat</example>
+        <example>Pope John Paul II</example>
+        <example>worker</example>
+        <example>Richard Farnsworth</example>
+        <example>person</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Instrument</role>
+      <types>
+      	<type>WEA</type>
+      	<type>VEH</type>
+      </types>
+      <examples>
+        <example>automobile</example>
+        <example>helicopter</example>
+        <example>explosive</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Time</role>
+      <types>
+      	<type>TIME</type>
+      </types>
+      <examples>
+        <example>1985</example>
+        <example>last week</example>
+        <example>Thursday</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Place</role>
+      <types>
+      	<type>GPE</type>
+      	<type>LOC</type>
+      	<type>FAC</type>
+      </types>
+      <examples>
+        <example>Irish Sea</example>
+        <example>Gaza Strip</example>
+        <example>Aden</example>
+      </examples>
+    </argument>
+  </arguments>
+  <usage_samples>
+    <sample>The leader died last week.</sample>
+    <sample>Richard Farnsworth committed suicide in Aden.</sample>
+    <sample>A terrorist group killed the hostages with explosives in 1985.</sample>
+    <sample>We heard of the death of Obaiyat on the radio.</sample>
+  </usage_samples>
+</spec>

@@ -1,0 +1,80 @@
+<spec>
+  <predicate>
+    <name>Injure</name>
+    <seeds>
+      <seed>injured</seed>
+      <seed>injure</seed>
+      <seed>wounded</seed>
+      <seed>hospitalized</seed>
+      <seed>disabled</seed>
+    </seeds>
+  </predicate>
+  <arguments>
+    <argument>
+      <role>Agent</role>
+      <types>
+      	<type>PER</type>
+      	<type>ORG</type>
+      	<type>GPE</type>
+      </types>
+      <examples>
+        <example>Palestinian</example>
+        <example>soldier</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Victim</role>
+      <types>
+      	<type>PER</type>
+      </types>
+      <examples>
+        <!--example>soldier</example-->
+        <example>she</example>
+        <example>demonstrator</example>
+        <example>person</example>
+        <example>passenger</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Instrument</role>
+      <types>
+      	<type>VEH</type>
+      	<type>WEA</type>
+      </types>
+      <examples>
+        <example>automobile</example>
+        <example>gas</example>
+        <example>tear gas</example>
+        <example>bullet</example>
+        <example>rubber bullet</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Time</role>
+      <types>
+      	<type>TIME</type>
+      </types>
+      <examples>
+        <example>Saturday afternoon</example>
+        <example>Saturday</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Place</role>
+      <types>
+      	<type>GPE</type>
+      	<type>LOC</type>
+      	<type>FAC</type>
+      </types>
+      <examples>
+        <example>Gush Katif</example>
+        <example>Alabama</example>
+      </examples>
+    </argument>
+  </arguments>
+  <usage_samples>
+    <sample>The people were injured on Saturday</sample>
+    <sample>The disabled passengers boarded the bus.</sample>
+    <sample>The soldiers wounded the demonstrators with bullets.</sample>
+  </usage_samples>
+</spec>

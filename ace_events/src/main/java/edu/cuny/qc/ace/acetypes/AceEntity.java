@@ -7,10 +7,15 @@
 
 package edu.cuny.qc.ace.acetypes;
 
-import java.util.*;
-import java.io.*;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
 
-import org.w3c.dom.*;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
 
 /**
  *  an Ace Entity, with information from the ACE key.  The 'id' field is inherited from its

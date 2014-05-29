@@ -11,6 +11,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.dom4j.DocumentException;
+
 import edu.cuny.qc.util.Span;
 
 /**

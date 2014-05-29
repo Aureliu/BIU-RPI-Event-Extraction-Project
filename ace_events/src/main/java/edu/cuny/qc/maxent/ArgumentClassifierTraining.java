@@ -12,7 +12,6 @@ import org.dom4j.DocumentException;
 
 import cc.mallet.classify.Classifier;
 import cc.mallet.classify.MaxEnt;
-
 import edu.cuny.qc.ace.acetypes.AceMention;
 import edu.cuny.qc.perceptron.core.Controller;
 import edu.cuny.qc.perceptron.featureGenerator.EdgeFeatureGenerator;

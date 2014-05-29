@@ -7,7 +7,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import edu.cuny.qc.ace.acetypes.*;
+import edu.cuny.qc.ace.acetypes.AceEntityMention;
+import edu.cuny.qc.ace.acetypes.AceEvent;
+import edu.cuny.qc.ace.acetypes.AceEventMention;
+import edu.cuny.qc.ace.acetypes.AceEventMentionArgument;
+import edu.cuny.qc.ace.acetypes.AceMention;
 import edu.cuny.qc.perceptron.core.Controller;
 import edu.cuny.qc.perceptron.featureGenerator.NodeFeatureGenerator;
 import edu.cuny.qc.perceptron.graph.DependencyGraph;

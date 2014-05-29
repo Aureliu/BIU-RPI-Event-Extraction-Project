@@ -22,7 +22,6 @@ import edu.cuny.qc.perceptron.types.Document;
 import edu.cuny.qc.perceptron.types.Sentence;
 import edu.cuny.qc.perceptron.types.SentenceAssignment;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
-import edu.cuny.qc.util.TokenAnnotations;
 
 public class Analysis_5
 {	

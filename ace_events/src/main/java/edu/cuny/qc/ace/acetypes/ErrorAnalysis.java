@@ -11,9 +11,9 @@ import java.util.List;
 import org.dom4j.DocumentException;
 import org.dom4j.Node;
 
-import edu.cuny.qc.ace.analysis.forEvent.ApfReader;
 import edu.cuny.qc.ace.analysis.forEvent.Analysis.Arg;
 import edu.cuny.qc.ace.analysis.forEvent.Analysis.EventMention;
+import edu.cuny.qc.ace.analysis.forEvent.ApfReader;
 import edu.cuny.qc.perceptron.types.Document;
 import edu.cuny.qc.perceptron.types.Sentence;
 import edu.cuny.qc.util.Span;

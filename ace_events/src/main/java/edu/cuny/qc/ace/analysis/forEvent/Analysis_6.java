@@ -12,23 +12,14 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
-import java.util.Vector;
 import java.util.Map.Entry;
+import java.util.Set;
 
 import org.dom4j.DocumentException;
 
-import edu.cuny.qc.ace.acetypes.AceEntityMention;
-import edu.cuny.qc.ace.acetypes.AceEventMention;
 import edu.cuny.qc.ace.acetypes.AceTimexMention;
 import edu.cuny.qc.ace.acetypes.AceValueMention;
-import edu.cuny.qc.perceptron.featureGenerator.TextFeatureGenerator;
-import edu.cuny.qc.perceptron.types.Alphabet;
 import edu.cuny.qc.perceptron.types.Document;
-import edu.cuny.qc.perceptron.types.Sentence;
-import edu.cuny.qc.perceptron.types.SentenceAssignment;
-import edu.cuny.qc.perceptron.types.SentenceInstance;
-import edu.cuny.qc.perceptron.types.Sentence.Sent_Attribute;
 
 public class Analysis_6
 {

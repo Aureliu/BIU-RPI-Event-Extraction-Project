@@ -8,7 +8,6 @@
 package edu.cuny.qc.ace.acetypes;
 
 import java.io.PrintWriter;
-import java.util.*;
 
 import edu.cuny.qc.util.Span;
 

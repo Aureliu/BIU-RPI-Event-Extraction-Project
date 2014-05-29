@@ -5,14 +5,11 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintStream;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 import org.dom4j.DocumentException;
 
-import edu.cuny.qc.ace.acetypes.AceEntity;
-import edu.cuny.qc.ace.acetypes.AceEntityMention;
 import edu.cuny.qc.ace.acetypes.AceEventMention;
 import edu.cuny.qc.ace.acetypes.AceEventMentionArgument;
 import edu.cuny.qc.ace.acetypes.AceMention;

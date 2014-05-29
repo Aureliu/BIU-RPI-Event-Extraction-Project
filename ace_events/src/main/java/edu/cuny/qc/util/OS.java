@@ -1,6 +1,8 @@
 package edu.cuny.qc.util;
 
-import java.util.*;
+import java.util.HashSet;
+
+import eu.excitementproject.eop.common.utilities.OsNotSupportedException;
 
 
 /**

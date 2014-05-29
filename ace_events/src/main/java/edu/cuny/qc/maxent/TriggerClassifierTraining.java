@@ -14,7 +14,6 @@ import org.dom4j.DocumentException;
 
 import cc.mallet.classify.Classifier;
 import cc.mallet.classify.MaxEnt;
-
 import edu.cuny.qc.perceptron.core.Controller;
 import edu.cuny.qc.perceptron.featureGenerator.TextFeatureGenerator;
 import edu.cuny.qc.perceptron.types.Alphabet;

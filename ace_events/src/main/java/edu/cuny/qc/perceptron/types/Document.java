@@ -3,14 +3,10 @@ package edu.cuny.qc.perceptron.types;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
 import java.io.PrintStream;
-import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -21,12 +17,10 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.apache.commons.lang3.SerializationException;
-import org.apache.commons.lang3.SerializationUtils;
-
 import opennlp.tools.util.InvalidFormatException;
 
-import edu.cuny.qc.util.Span;
+import org.apache.commons.lang3.SerializationException;
+import org.apache.commons.lang3.SerializationUtils;
 
 import edu.cuny.qc.ace.acetypes.AceDocument;
 import edu.cuny.qc.ace.acetypes.AceEntityMention;
@@ -36,6 +30,7 @@ import edu.cuny.qc.perceptron.core.Controller;
 import edu.cuny.qc.perceptron.featureGenerator.TextFeatureGenerator;
 import edu.cuny.qc.perceptron.types.Sentence.Sent_Attribute;
 import edu.cuny.qc.util.SentDetectorWrapper;
+import edu.cuny.qc.util.Span;
 import edu.cuny.qc.util.TokenAnnotations;
 import edu.cuny.qc.util.TokenizerWrapper;
 import edu.cuny.qc.util.TypeConstraints;

@@ -1,14 +1,7 @@
 package edu.cuny.qc.perceptron.core;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
-import edu.cuny.qc.ace.acetypes.AceEvent;
-import edu.cuny.qc.ace.acetypes.AceEventMention;
-import edu.cuny.qc.ace.acetypes.Scorer;
-import edu.cuny.qc.ace.acetypes.Scorer.Stats;
 import edu.cuny.qc.perceptron.types.SentenceAssignment;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
 import edu.cuny.qc.util.UnsupportedParameterException;

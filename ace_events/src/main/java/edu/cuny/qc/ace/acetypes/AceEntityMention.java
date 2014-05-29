@@ -7,11 +7,11 @@
 
 package edu.cuny.qc.ace.acetypes;
 
-import java.util.*;
-import java.io.*;
+import java.io.PrintWriter;
+import java.util.Vector;
 
-
-import org.w3c.dom.*;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
 
 import edu.cuny.qc.util.Span;
 

@@ -1,11 +1,8 @@
 package edu.cuny.qc.util;
 
 import java.io.IOException;
-import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.io.StringWriter;
-
-import org.apache.log4j.Logger;
 
 
 /**

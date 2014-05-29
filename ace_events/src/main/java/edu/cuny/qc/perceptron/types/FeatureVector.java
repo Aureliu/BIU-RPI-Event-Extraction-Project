@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.PrintStream;
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
@@ -14,10 +13,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 import java.util.Set;
-
-import java_cup.internal_error;
-
-import javax.management.RuntimeErrorException;
 
 import org.apache.commons.lang3.StringUtils;
 

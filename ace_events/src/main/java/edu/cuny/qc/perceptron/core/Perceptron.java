@@ -20,22 +20,17 @@ import java.util.Map;
 import java.util.Set;
 
 import org.apache.commons.lang3.SerializationUtils;
-import org.apache.commons.lang3.StringUtils;
-
-import arkref.ext.fig.basic.Fmt;
 
 import edu.cuny.qc.perceptron.core.Evaluator.Score;
 import edu.cuny.qc.perceptron.types.Alphabet;
 import edu.cuny.qc.perceptron.types.FeatureVector;
 import edu.cuny.qc.perceptron.types.SentenceAssignment;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
-import edu.cuny.qc.perceptron.types.Sentence.Sent_Attribute;
 import edu.cuny.qc.perceptron.types.SentenceInstance.InstanceAnnotations;
 import edu.cuny.qc.util.TokenAnnotations;
 import edu.cuny.qc.util.TypeConstraints;
 import edu.cuny.qc.util.UnsupportedParameterException;
 import edu.cuny.qc.util.Utils;
-import edu.cuny.qc.util.WeightTracer;
 
 
 /**
@@ -50,6 +45,7 @@ public class Perceptron implements java.io.Serializable
 	
 	public static final DecimalFormat FMT = new DecimalFormat("#.###"); //("#.####") //("#.#####")
 	public static final String POST_ITERATION_MARK = "PostItr";
+	public static final String LOG_NAME_ID = "master";
 
 	// the alphabet of node labels (trigger labels)
 	public Alphabet nodeTargetAlphabet;	
@@ -340,7 +336,7 @@ public class Perceptron implements java.io.Serializable
 		
 		//DEBUG
 		//WeightTracer wt = new WeightTracer(this);
-		String weightsOutputFilePath = Pipeline.modelFile.getParent() + "/AllWeights-matser." + controller.logLevel + ".tsv";
+		String weightsOutputFilePath = Pipeline.modelFile.getParent() + "/AllWeights-" + LOG_NAME_ID + "." + controller.logLevel + ".tsv";
 		PrintStream w = null;
 		try {
 			if (controller.logLevel >= 3) {
@@ -368,7 +364,7 @@ public class Perceptron implements java.io.Serializable
 				"len-AvgWeights"
 		);
 
-		String featuresOutputFilePath = Pipeline.modelFile.getParent() + "/AllFeatures-master." + controller.logLevel + ".tsv";
+		String featuresOutputFilePath = Pipeline.modelFile.getParent() + "/AllFeatures-" + LOG_NAME_ID + "." + controller.logLevel + ".tsv";
 		PrintStream f = null;
 		try {
 			if (controller.logLevel >= 2) {
@@ -400,7 +396,7 @@ public class Perceptron implements java.io.Serializable
 				"avg_weights"
 		);
 		
-		String devOutputFilePath = Pipeline.modelFile.getParent() + "/DevPerformance-master." + controller.logLevel + ".tsv";
+		String devOutputFilePath = Pipeline.modelFile.getParent() + "/DevPerformance-" + LOG_NAME_ID + "." + controller.logLevel + ".tsv";
 		PrintStream d = null;
 		try {
 			if (controller.logLevel >= 1) {

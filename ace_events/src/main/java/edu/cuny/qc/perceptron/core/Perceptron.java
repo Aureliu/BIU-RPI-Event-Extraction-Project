@@ -54,6 +54,7 @@ public class Perceptron implements java.io.Serializable
 	
 	public static final DecimalFormat FMT = new DecimalFormat("#.###"); //("#.####") //("#.#####")
 	public static final String POST_ITERATION_MARK = "PostItr";
+	public static final String LOG_NAME_ID = "master";
 
 	// the alphabet of node labels (trigger labels)
 	//public Alphabet nodeTargetAlphabet;	
@@ -402,7 +403,7 @@ public class Perceptron implements java.io.Serializable
 		
 		//DEBUG
 		//WeightTracer wt = new WeightTracer(this);
-		String weightsOutputFilePath = Pipeline.modelFile.getParent() + "/AllWeights-ODIE." + controller.logLevel + ".tsv";
+		String weightsOutputFilePath = Pipeline.modelFile.getParent() + "/AllWeights-" + LOG_NAME_ID + "." + controller.logLevel + ".tsv";
 		PrintStream w = null;
 		try {
 			if (controller.logLevel >= 3) {
@@ -430,7 +431,7 @@ public class Perceptron implements java.io.Serializable
 				"len-AvgWeights"
 		);
 
-		String featuresOutputFilePath = Pipeline.modelFile.getParent() + "/AllFeatures-ODIE." + controller.logLevel + ".tsv";
+		String featuresOutputFilePath = Pipeline.modelFile.getParent() + "/AllFeatures-" + LOG_NAME_ID + "." + controller.logLevel + ".tsv";
 		PrintStream f = null;
 		try {
 			if (controller.logLevel >= 2) {
@@ -464,7 +465,7 @@ public class Perceptron implements java.io.Serializable
 				"avg_weights"
 		);
 		
-		String devOutputFilePath = Pipeline.modelFile.getParent() + "/DevPerformance-ODIE." + controller.logLevel + ".tsv";
+		String devOutputFilePath = Pipeline.modelFile.getParent() + "/DevPerformance-" + LOG_NAME_ID + "." + controller.logLevel + ".tsv";
 		PrintStream d = null;
 		try {
 			if (controller.logLevel >= 1) {

@@ -59,7 +59,7 @@ public class BeamSearch
 		this.isTraining = isTraining;
 		
 		if (this.isTraining) {
-			String beamsOutputFilePath = Pipeline.modelFile.getParent() + "/AllBeams-ODIE." + model.controller.logLevel + ".tsv";
+			String beamsOutputFilePath = Pipeline.modelFile.getParent() + "/AllBeams-" + Perceptron.LOG_NAME_ID + "." + model.controller.logLevel + ".tsv";
 			this.b = null;
 			try {
 				if (model.controller.logLevel >= 5) {

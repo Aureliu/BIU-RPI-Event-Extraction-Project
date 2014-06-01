@@ -443,6 +443,9 @@ public class WordNetSignalMechanism extends SignalMechanism {
 				return false;
 			return true;
 		}
+		public String toString() {
+			return String.format("%s(%s/%s-->%s/%s)", RulesQuery.class.getSimpleName(), lLemma, lPos, rLemma, rPos);
+		}
 		public RulesQuery(String lLemma, String rLemma, PartOfSpeech lPos,
 				PartOfSpeech rPos/*, Set<WordNetRelation> relations*/) {
 			this.lLemma = lLemma;

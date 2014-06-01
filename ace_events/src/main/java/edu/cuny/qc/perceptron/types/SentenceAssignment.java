@@ -729,8 +729,8 @@ public class SentenceAssignment
 						BigDecimal featureValuePositive = signal.positive ? FEATURE_POSITIVE_VAL : FEATURE_NEGATIVE_VAL;
 						BigDecimal featureValueNegative = signal.positive ? FEATURE_NEGATIVE_VAL : FEATURE_POSITIVE_VAL;
 						
-						String featureStrPositive = "BigramFeature:\t" + signal.name + "\t" + "P:+\t" + LABEL_MARKER + genericLabel;
-						String featureStrNegative = "BigramFeature:\t" + signal.name + "\t" + "P:-\t" + LABEL_MARKER + genericLabel;
+						String featureStrPositive = "BigramFeature:\t" + signal.name + "\t" + "P+\t" + LABEL_MARKER + genericLabel;
+						String featureStrNegative = "BigramFeature:\t" + signal.name + "\t" + "P-\t" + LABEL_MARKER + genericLabel;
 						
 						makeFeature(featureStrPositive, this.getFV(i), featureValuePositive, i, signals, addIfNotPresent, useIfNotPresent);
 						makeFeature(featureStrNegative, this.getFV(i), featureValueNegative, i, signals, addIfNotPresent, useIfNotPresent);

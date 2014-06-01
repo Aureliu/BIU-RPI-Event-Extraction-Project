@@ -54,6 +54,10 @@ public class Pipeline
 		stream.printf("(file is writable - verified)");
 		stream.close();
 
+		// start marker
+		PrintStream m = new PrintStream(new File(modelFile.getAbsolutePath() + ".start"));
+		m.close();
+
 		// read instance list from training data (and dev data)
 		List<SentenceInstance> trainInstanceList = null;
 		List<SentenceInstance> devInstanceList = null;

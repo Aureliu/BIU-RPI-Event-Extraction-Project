@@ -987,7 +987,7 @@ public class Document implements java.io.Serializable
 			Map<Integer, List<Map<String, List<Map<String, Map<String, SignalInstance>>>>>> argSignals = new HashMap<Integer, List<Map<String, List<Map<String, Map<String, SignalInstance>>>>>>(sentences.size());
 			sentences = null;
 			for (SentenceInstance inst : instances) {
-				triggerSignals.put(inst.sentID, (List<Map<String, Map<String, SignalInstance>>>) inst.get(InstanceAnnotations.EdgeTextSignals));
+				triggerSignals.put(inst.sentID, (List<Map<String, Map<String, SignalInstance>>>) inst.get(InstanceAnnotations.NodeTextSignalsBySpec));
 				argSignals.put(inst.sentID, (List<Map<String, List<Map<String, Map<String, SignalInstance>>>>>) inst.get(InstanceAnnotations.EdgeTextSignals));
 			}
 			

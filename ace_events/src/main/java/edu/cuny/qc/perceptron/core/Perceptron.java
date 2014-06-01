@@ -526,7 +526,7 @@ public class Perceptron implements java.io.Serializable
 				//DEBUG
 				String sentText = sentence(instance.text);
 				//printf(w, "|%s%d|%s\n", wt.getFeaturesStringSkip(), i, wt.getFeaturesString());
-				printWeights(w, iter, instance.docID, i, c, instance.size(), sentText);
+				printWeights(w, iter, instance.docID, instance.sentID, c, instance.size(), sentText);
 
 				List<Map<Class<?>, Object>> tokens = (List<Map<Class<?>, Object>>) instance.get(InstanceAnnotations.Token_FEATURE_MAPs);
 				for (int j=0; j<instance.size(); j++) {
@@ -573,7 +573,7 @@ public class Perceptron implements java.io.Serializable
 							Utils.print(f, "", "\n", "|",					
 									iter,
 									"",//instance.docID,
-									i,
+									instance.sentID,
 									c,
 									instance.size(),
 									"",//sentText,
@@ -601,7 +601,7 @@ public class Perceptron implements java.io.Serializable
 						Utils.print(f, "", "\n", "|",					
 								iter,
 								docid(instance.docID),
-								i,
+								instance.sentID,
 								c,
 								instance.size(),
 								sentText,

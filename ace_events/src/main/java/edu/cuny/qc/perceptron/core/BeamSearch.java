@@ -140,7 +140,7 @@ public class BeamSearch
 							Utils.print(b, "", "\n", "|",		
 									//general
 									Perceptron.iter,//"Iter",
-									Perceptron.i,//"SentenceNo",
+									instance.sentID,//"SentenceNo",
 									violation,//"violation",
 									beam.size(),//"beam-size",
 									
@@ -172,7 +172,7 @@ public class BeamSearch
 	//					Utils.print(b, "", "\n", "|",		
 	//							//general
 	//							Perceptron.iter,//"Iter",
-	//							Perceptron.i,//"SentenceNo",
+	//							instance.sentID,//"SentenceNo",
 	//							violation,//"violation",
 	//							beam.size(),//"beam-size",
 	//							
@@ -205,7 +205,7 @@ public class BeamSearch
 					Utils.print(b, "", "\n", "|",		
 							//general
 							Perceptron.iter,//"Iter",
-							Perceptron.i,//"SentenceNo",
+							instance.sentID,//"SentenceNo",
 							violation,//"violation",
 							beam.size(),//"beam-size",
 							

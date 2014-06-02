@@ -23,6 +23,7 @@ import ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentExample;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateSeed;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
+import edu.cuny.qc.perceptron.types.SignalInstance;
 import eu.excitementproject.eop.common.component.lexicalknowledge.LexicalResourceException;
 import eu.excitementproject.eop.common.component.lexicalknowledge.LexicalRule;
 import eu.excitementproject.eop.common.representation.partofspeech.PartOfSpeech;
@@ -127,36 +128,40 @@ public class WordNetSignalMechanism extends SignalMechanism {
 //	}
 
 	@Override
-	public LinkedHashMap<String, BigDecimal> scoreTriggerToken(JCas spec, SentenceInstance textSentence, Token textTriggerToken, Map<Class<?>, Object> textTriggerTokenMap) throws SignalMechanismException {
-		LinkedHashMap<String, BigDecimal> ret = new LinkedHashMap<String, BigDecimal>();
+	public LinkedHashMap<String, BigDecimal> scoreTriggerToken(Map<String, SignalInstance> e, JCas spec, SentenceInstance textSentence, Token textTriggerToken, Map<Class<?>, Object> textTriggerTokenMap) throws SignalMechanismException {
+		SignalMechanismSpecIterator m;
+		LinkedHashMap<String, BigDecimal> r = new LinkedHashMap<String, BigDecimal>();
 		
-		ret.put("FAKE_LETTER_E", Aggregator.any(new TextHasLetterE().init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
-		ret.put("FAKE_LETTER_X", Aggregator.any(new TextHasLetterX().init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
-		ret.put("SAME_LEMMA", Aggregator.any(new SameLemma().init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
-		//ret.put("WORDNET_FAKE_PREKNOWN_TRIGGERS",     Aggregator.any(new PreknownTriggers().init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
-		//ret.put("WORDNET_FAKE_NOT_PREKNOWN_TRIGGERS", Aggregator.any(new NotPreknownTriggers().init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
-		ret.put("WORDNET_SAME_SYNSET",   Aggregator.any(new SameSynset()    .init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
-		ret.put("WORDNET_SPEC_HYPERNYM_1", Aggregator.any(new IsSpecHypernym_1().init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
-		ret.put("WORDNET_SPEC_HYPERNYM_2", Aggregator.any(new IsSpecHypernym_2().init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
-		ret.put("WORDNET_SPEC_HYPERNYM_3", Aggregator.any(new IsSpecHypernym_3().init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
-		ret.put("WORDNET_SPEC_DERV_RELATED", Aggregator.any(new IsSpecDerivationallyRelated().init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
-		ret.put("WORDNET_SPEC_ENTAILED", Aggregator.any(new IsSpecEntailed().init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
+		m=new TextHasLetterE("FAKE_LETTER_E"); if(m.q(e)) r.put(m.name, Aggregator.any(m.init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
+		m=new TextHasLetterX("FAKE_LETTER_X"); if(m.q(e)) r.put(m.name, Aggregator.any(m.init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
+		m=new SameLemma("SAME_LEMMA"); if(m.q(e)) r.put(m.name, Aggregator.any(m.init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
+		m=new SameSynset("WORDNET_SAME_SYNSET"); if(m.q(e)) r.put(m.name, Aggregator.any(m.init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
+		m=new IsSpecHypernym_1("WORDNET_SPEC_HYPERNYM_1"); if(m.q(e)) r.put(m.name, Aggregator.any(m.init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
+		m=new IsSpecHypernym_2("WORDNET_SPEC_HYPERNYM_2"); if(m.q(e)) r.put(m.name, Aggregator.any(m.init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
+		m=new IsSpecHypernym_3("WORDNET_SPEC_HYPERNYM_3"); if(m.q(e)) r.put(m.name, Aggregator.any(m.init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
+		m=new IsSpecDerivationallyRelated("WORDNET_SPEC_DERV_RELATED"); if(m.q(e)) r.put(m.name, Aggregator.any(m.init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
+		m=new IsSpecEntailed("WORDNET_SPEC_ENTAILED"); if(m.q(e)) r.put(m.name, Aggregator.any(m.init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
 		
-		return ret;
+		//m=new PreknownTriggers("WORDNET_FAKE_PREKNOWN_TRIGGERS"); if(m.q(e)) r.put(m.name, Aggregator.any(m.init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
+		//m=new NotPreknownTriggers("WORDNET_FAKE_NOT_PREKNOWN_TRIGGERS"); if(m.q(e)) r.put(m.name, Aggregator.any(m.init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
+
+		return r;
 	}
 
 	@Override
-	public LinkedHashMap<String, BigDecimal> scoreArgumentFirstHeadToken(JCas spec, Argument argument, SentenceInstance textSentence, Token textTriggerToken, Map<Class<?>, Object> textTriggerTokenMap, Token textArgToken, Map<Class<?>, Object> textArgTokenMap) throws SignalMechanismException {
-		LinkedHashMap<String, BigDecimal> ret = new LinkedHashMap<String, BigDecimal>();
+	public LinkedHashMap<String, BigDecimal> scoreArgumentFirstHeadToken(Map<String, SignalInstance> e, JCas spec, Argument argument, SentenceInstance textSentence, Token textTriggerToken, Map<Class<?>, Object> textTriggerTokenMap, Token textArgToken, Map<Class<?>, Object> textArgTokenMap) throws SignalMechanismException {
+		SignalMechanismSpecIterator m;
+		LinkedHashMap<String, BigDecimal> r = new LinkedHashMap<String, BigDecimal>();
 		
-		ret.put("xxWORDNET_SAME_SYNSET",   Aggregator.any(new SameSynset()    .init(spec, null, argument, ArgumentExample.class, textArgToken)));
-		ret.put("xxWORDNET_SPEC_HYPERNYM_1", Aggregator.any(new IsSpecHypernym_1().init(spec, null, argument, ArgumentExample.class, textArgToken)));
-		ret.put("xxWORDNET_SPEC_ENTAILED", Aggregator.any(new IsSpecEntailed().init(spec, null, argument, ArgumentExample.class, textArgToken)));
+		m=new SameSynset("xxWORDNET_SAME_SYNSET"); if(m.q(e)) r.put(m.name, Aggregator.any(m.init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
+		m=new IsSpecHypernym_1("xxWORDNET_SPEC_HYPERNYM_1"); if(m.q(e)) r.put(m.name, Aggregator.any(m.init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
+		m=new IsSpecEntailed("xxWORDNET_SPEC_ENTAILED"); if(m.q(e)) r.put(m.name, Aggregator.any(m.init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
 		
-		return ret;
+		return r;
 	}
 
 	private class SameLemma extends SignalMechanismSpecTokenIterator {
+		public SameLemma(String name) {super(name);}
 		@Override
 		public Boolean calcTokenBooleanScore(Token text, Token spec) throws SignalMechanismException
 		{
@@ -167,6 +172,7 @@ public class WordNetSignalMechanism extends SignalMechanism {
 	}
 	
 	private class TextHasLetterE extends SignalMechanismSpecTokenIterator {
+		public TextHasLetterE(String name) {super(name);}
 		@Override
 		public Boolean calcTokenBooleanScore(Token text, Token spec) throws SignalMechanismException
 		{
@@ -176,6 +182,7 @@ public class WordNetSignalMechanism extends SignalMechanism {
 	}
 	
 	private class TextHasLetterX extends SignalMechanismSpecTokenIterator {
+		public TextHasLetterX(String name) {super(name);}
 		@Override
 		public Boolean calcTokenBooleanScore(Token text, Token spec) throws SignalMechanismException
 		{
@@ -185,6 +192,7 @@ public class WordNetSignalMechanism extends SignalMechanism {
 	}
 	
 	private static class PreknownTriggers extends SignalMechanismSpecTokenIterator {
+		public PreknownTriggers(String name) {super(name);}
 		public static final List<String> PREKNOWN_ATTACK_TRIGGERS = Arrays.asList(new String[] {
 				"ambush", "attack", "battle", "battlefront", "blast", "blow", "bomb", "bombing", "combat",
 				"conflict", "defend", "destroy", "drop", "engage", "explosion", "fight", "fighting", "fire",
@@ -201,6 +209,7 @@ public class WordNetSignalMechanism extends SignalMechanism {
 	}
 	
 	private static class NotPreknownTriggers extends SignalMechanismSpecTokenIterator {
+		public NotPreknownTriggers(String name) {super(name);}
 		@Override
 		public Boolean calcTokenBooleanScore(Token text, Token spec) throws SignalMechanismException
 		{
@@ -210,6 +219,7 @@ public class WordNetSignalMechanism extends SignalMechanism {
 	}
 	
 	private class SameSynset extends SignalMechanismSpecTokenIterator {
+		public SameSynset(String name) {super(name);}
 		@Override
 		public Boolean calcTokenBooleanScore(Token text, Token spec) throws SignalMechanismException
 		{
@@ -252,6 +262,7 @@ public class WordNetSignalMechanism extends SignalMechanism {
 	}
 	
 	private class IsSpecHypernym_1 extends SignalMechanismSpecTokenIterator {
+		public IsSpecHypernym_1(String name) {super(name);}
 		@Override
 		public Boolean calcTokenBooleanScore(Token text, Token spec) throws SignalMechanismException
 		{
@@ -280,6 +291,7 @@ public class WordNetSignalMechanism extends SignalMechanism {
 	}
 	
 	private class IsSpecHypernym_2 extends SignalMechanismSpecTokenIterator {
+		public IsSpecHypernym_2(String name) {super(name);}
 		@Override
 		public Boolean calcTokenBooleanScore(Token text, Token spec) throws SignalMechanismException
 		{
@@ -308,6 +320,7 @@ public class WordNetSignalMechanism extends SignalMechanism {
 	}
 	
 	private class IsSpecHypernym_3 extends SignalMechanismSpecTokenIterator {
+		public IsSpecHypernym_3(String name) {super(name);}
 		@Override
 		public Boolean calcTokenBooleanScore(Token text, Token spec) throws SignalMechanismException
 		{
@@ -336,6 +349,7 @@ public class WordNetSignalMechanism extends SignalMechanism {
 	}
 	
 	private class IsSpecDerivationallyRelated extends SignalMechanismSpecTokenIterator {
+		public IsSpecDerivationallyRelated(String name) {super(name);}
 		@Override
 		public Boolean calcTokenBooleanScore(Token text, Token spec) throws SignalMechanismException
 		{
@@ -364,6 +378,7 @@ public class WordNetSignalMechanism extends SignalMechanism {
 	}
 	
 	private class IsSpecEntailed extends SignalMechanismSpecTokenIterator {
+		public IsSpecEntailed(String name) {super(name);}
 		@Override
 		public Boolean calcTokenBooleanScore(Token text, Token spec) throws SignalMechanismException
 		{

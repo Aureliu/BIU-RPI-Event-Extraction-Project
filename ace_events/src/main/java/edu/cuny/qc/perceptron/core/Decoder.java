@@ -140,14 +140,14 @@ public class Decoder
 			}
 			else
 			{
-				doc = Document.createAndPreprocess(fileName, true, monoCase, true, true, types);
+				doc = Document.createAndPreprocess(fileName, true, monoCase, true, true, types, perceptron);
 				// fill in text feature vector for each token
 				//featGen.fillTextFeatures_NoPreprocessing(doc);
 			}
 			localInstanceList = doc.getInstances(perceptron, types, featureAlphabet, 
 					perceptron.controller, true);
 			
-			doc.dumpSignals(localInstanceList, types);
+			doc.dumpSignals(localInstanceList, types, perceptron);
 			
 			// decoding
 			List<SentenceAssignment> localResults = perceptron.decoding(localInstanceList);

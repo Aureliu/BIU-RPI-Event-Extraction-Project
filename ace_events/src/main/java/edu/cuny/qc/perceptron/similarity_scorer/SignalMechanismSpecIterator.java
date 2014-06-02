@@ -2,6 +2,7 @@ package edu.cuny.qc.perceptron.similarity_scorer;
 
 import java.math.BigDecimal;
 import java.util.Iterator;
+import java.util.Map;
 
 import org.apache.uima.cas.CASException;
 import org.apache.uima.cas.text.AnnotationFS;
@@ -9,8 +10,14 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.tcas.Annotation;
 import org.uimafit.util.JCasUtil;
 
+import edu.cuny.qc.perceptron.types.SignalInstance;
+
 public abstract class SignalMechanismSpecIterator implements Iterator<BigDecimal> {
 
+	public SignalMechanismSpecIterator(String name) {
+		this.name = name;
+	}
+	
 	public SignalMechanismSpecIterator init(JCas spec, String viewName, AnnotationFS covering, Class<? extends Annotation> type, Annotation textAnno) throws SignalMechanismException {
 		try {
 			if (covering != null) {
@@ -28,6 +35,10 @@ public abstract class SignalMechanismSpecIterator implements Iterator<BigDecimal
 		} catch (CASException e) {
 			throw new SignalMechanismException(e);
 		}
+	}
+	
+	public boolean q(Map<String, SignalInstance> existingSignals) {
+		return !existingSignals.containsKey(name);
 	}
 	
 	@Override
@@ -54,4 +65,5 @@ public abstract class SignalMechanismSpecIterator implements Iterator<BigDecimal
 	
 	protected Iterator<? extends Annotation> specIterator;
 	protected Annotation textAnno;
+	protected String name;
 }

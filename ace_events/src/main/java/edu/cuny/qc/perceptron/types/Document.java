@@ -13,7 +13,6 @@ import java.io.StreamCorruptedException;
 import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -46,7 +45,6 @@ import edu.cuny.qc.perceptron.core.Controller;
 import edu.cuny.qc.perceptron.core.Perceptron;
 import edu.cuny.qc.perceptron.featureGenerator.TextFeatureGenerator;
 import edu.cuny.qc.perceptron.types.Sentence.Sent_Attribute;
-import edu.cuny.qc.perceptron.types.SentenceInstance.InstanceAnnotations;
 import edu.cuny.qc.util.SentDetectorWrapper;
 import edu.cuny.qc.util.Span;
 import edu.cuny.qc.util.TokenizerWrapper;
@@ -67,7 +65,7 @@ public class Document implements java.io.Serializable
 	static public final String preprocessedFileExt = ".preprocessed.bz2";
 	static public final String signalsFileExt = ".signals.bz2";
 	//static public final String xmiFileExt = ".xmi";
-	public static final int SENT_ID_ADDITION = 100000;
+	//public static final int SENT_ID_ADDITION = 100000;
 
 	
 	//static public final String AE_FILE_PATH = "/desc/DummyAEforCAS.xml";
@@ -83,6 +81,7 @@ public class Document implements java.io.Serializable
 	private String before_text;
 	public int textoffset;
 	protected boolean hasLabel;
+	public boolean signalsUpdated = false;
 	
 	// if the document is monoCase
 	boolean monoCase = false;
@@ -395,10 +394,11 @@ public class Document implements java.io.Serializable
 		readDoc(txtFile, this.monoCase, existingJCas);
 	}
 	
-	public static Document createAndPreprocess(String baseFileName, boolean hasLabel, boolean monoCase, boolean tryLoadExisting, boolean dumpNewDoc, TypesContainer types) throws IOException {
+	public static Document createAndPreprocess(String baseFileName, boolean hasLabel, boolean monoCase, boolean tryLoadExisting, boolean dumpNewDoc, TypesContainer types, Perceptron perceptron) throws IOException {
 		try {
 			// Kludge - don't serialize for now
 			//dumpNewDoc = false;
+			//tryLoadExisting = false;
 			///////////////////////////////////////////////////////////////////////////////////////////////////
 			
 			Document doc = null;
@@ -446,7 +446,7 @@ public class Document implements java.io.Serializable
 				}
 			}
 			
-			doc.loadSignals(types);
+			doc.loadSignals(perceptron, types);
 
 			return doc;
 		//} catch (UimaUtilsException e) {
@@ -981,17 +981,43 @@ public class Document implements java.io.Serializable
 		return hasLabel;
 	}
 
-	public void dumpSignals(List<SentenceInstance> instances, TypesContainer types) throws IOException {
-		if (signals == null) {
-			Map<Integer, List<Map<String, Map<String, SignalInstance>>>> triggerSignals = new HashMap<Integer, List<Map<String, Map<String, SignalInstance>>>>(sentences.size());
-			Map<Integer, List<Map<String, List<Map<String, Map<String, SignalInstance>>>>>> argSignals = new HashMap<Integer, List<Map<String, List<Map<String, Map<String, SignalInstance>>>>>>(sentences.size());
-			sentences = null;
-			for (SentenceInstance inst : instances) {
-				triggerSignals.put(inst.sentID, (List<Map<String, Map<String, SignalInstance>>>) inst.get(InstanceAnnotations.NodeTextSignalsBySpec));
-				argSignals.put(inst.sentID, (List<Map<String, List<Map<String, Map<String, SignalInstance>>>>>) inst.get(InstanceAnnotations.EdgeTextSignals));
-			}
-			
-			BundledSignals signals = new BundledSignals(types, triggerSignals, argSignals);
+	public void dumpSignals(List<SentenceInstance> instances, TypesContainer types, Perceptron perceptron) throws IOException {
+		// 2.6.14: Now BundledSignals() is built lazily before.
+//		if (signals == null) {
+//			Map<Integer, List<Map<String, Map<String, SignalInstance>>>> triggerSignals = new HashMap<Integer, List<Map<String, Map<String, SignalInstance>>>>(sentences.size());
+//			Map<Integer, List<Map<String, List<Map<String, Map<String, SignalInstance>>>>>> argSignals = new HashMap<Integer, List<Map<String, List<Map<String, Map<String, SignalInstance>>>>>>(sentences.size());
+//			// sentences = null; //Ofer: Why the hell was this here???
+//			for (SentenceInstance inst : instances) {
+//				triggerSignals.put(/*inst.sentInstID*/inst.sentID, (List<Map<String, Map<String, SignalInstance>>>) inst.get(InstanceAnnotations.NodeTextSignalsBySpec));
+//				argSignals.put(/*inst.sentInstID*/inst.sentID, (List<Map<String, List<Map<String, Map<String, SignalInstance>>>>>) inst.get(InstanceAnnotations.EdgeTextSignals));
+//			}
+//			signals = new BundledSignals(types, perceptron, triggerSignals, argSignals);
+//			signalsUpdated = true;
+//		}
+		
+		// These checks are here even though logically they should be when loading the signals
+		// But we put them here since they must be performed only after we have all of the SentenceInstances
+		// 1.6.14: I actually can't do these checks at all -
+		// That's because sometimes event-less sentences are skipped (specifically - when the sentence is
+		// loaded in training), and sometimes not (specifically, when sentence is loaded in dev).
+		// So we can't compare sizes, they might be legitimately different. Bummer.
+		// 1.6.14: And note that even though I thought an hour ago that I can't do these checks since sometimes
+		// some sentences are skipped and sometimes not - well now, all sentence are always *constructed*, it's just
+		// that sometimes they are not *used*. But all their signals would always be dumped, so it's fine.
+		// 2.6.14: And now they're back here, but over Sentences, not SentenceInstances.
+		// This way we check not just loaded signals, but also constructed ones. 
+		if (signals.triggerSignals.size() != sentences.size()) {
+			throw new IllegalStateException(String.format("Document %s has %s (non-skipped) sentences, but trigger signals are for %s sentences", docID, sentences.size(), signals.triggerSignals.size()));
+		}
+		if (signals.argSignals.size() != sentences.size()) {
+			throw new IllegalStateException(String.format("Document %s has %s (non-skipped) sentences, but arg signals re for %s sentences", docID, sentences.size(), signals.argSignals.size()));
+		}
+
+		if (signals == null	) {
+			throw new IllegalStateException("About to dump signals after finishing all SentenceInstances, but there is no BundledSignals in document: " + docID);
+		}
+		
+		if (signalsUpdated) {
 			File signalsFile = new File(docID + signalsFileExt);
 			try {
 				OutputStream out = new BZip2CompressorOutputStream(new FileOutputStream(signalsFile));
@@ -1006,62 +1032,60 @@ public class Document implements java.io.Serializable
 				Files.deleteIfExists(signalsFile.toPath());
 				throw e;
 			}
-
 		}
 		else {
-			// These checks are here even though logically they should be when loading the signals
-			// But we put them here since they must be performed only after we have all of the SentenceInstances
-			if (signals.triggerSignals.size() != instances.size()) {
-				throw new IllegalStateException(String.format("Document %s has %s (non-skipped) sentences, but trigger signals from file are for %s sentences", docID, instances.size(), signals.triggerSignals.size()));
-			}
-			if (signals.argSignals.size() != instances.size()) {
-				throw new IllegalStateException(String.format("Document %s has %s (non-skipped) sentences, but arg signals from file are for %s sentences", docID, instances.size(), signals.argSignals.size()));
-			}
-
-			System.out.printf("Not dumping signals, as we already had them from file: Document %s\n", docID);
+			System.out.printf("Not dumping signals, already had them in full: Document %s\n", docID);
 		}
 	}
 	
-	private void loadSignals(TypesContainer types) throws IOException {
+	public void loadSignals(Perceptron perceptron, TypesContainer types) throws IOException {
 		//List<List<Map<String, Map<String, SignalInstance>>>> triggerSignals = new ArrayList<List<Map<String, Map<String, SignalInstance>>>>();
 		//List<List<Map<String, Map<String, Map<String, SignalInstance>>>>> argSignals = new ArrayList<List<Map<String, Map<String, Map<String, SignalInstance>>>>>();
 		// read file 
 		File signalsFile = new File(docID + signalsFileExt);
 
 		// 22.5.14 Kludge - not loading signals, due to some weird ClassCastException
-		if (signalsFile.isFile()/* && false*/) {
+		if (signalsFile.isFile() /* && false */) {
 			InputStream in = new BZip2CompressorInputStream(new FileInputStream(signalsFile));
 			signals = (BundledSignals) SerializationUtils.deserialize(in);
 			in.close();
 		}
 		
 		if (signals != null) {
+			perceptron.triggerSignalNames = signals.triggerSignalNames;
+			perceptron.argumentSignalNames = signals.argumentSignalNames;
+			
 			// We can't have the check of the number of sentences be here, as we should check the number of SentenceInstances, which we don't have here yet
 			// we only have the number of Sentences, but many of them may be later skipped and thus should be ignored)
 			// Instead, we'll check it when dumping the signal
+			// 2.6.14: Nope, sentences are not skipped anymore. And signals are by Sentence, not by SentenceInstance.
+			// So these checks return to here.
+			// 2.6.14: But actually we want to perform them also if signals were not loaded but constructed. Moving back there.
 //			if (signals.triggerSignals.size() != sentences.size()) {
 //				throw new IllegalStateException(String.format("Document %s has %s sentences, but trigger signals from file are for %s sentences", docID, sentences.size(), signals.triggerSignals.size()));
 //			}
 //			if (signals.argSignals.size() != sentences.size()) {
 //				throw new IllegalStateException(String.format("Document %s has %s sentences, but arg signals from file are for %s sentences", docID, sentences.size(), signals.argSignals.size()));
 //			}
-			if (!signals.eventEntityTypes.keySet().containsAll(types.eventEntityTypes.keySet())) {
-				throw new IllegalStateException(String.format("Working on these trigger types: %s - but loaded trigger signals of document %s has these trigger types: %s", types.eventEntityTypes, docID, signals.eventEntityTypes.keySet()));
-			}
 			
-			for (String triggerType : types.eventEntityTypes.keySet()) {
-				Set<String> workingEntityTypes = types.eventEntityTypes.get(triggerType);
-				Set<String> loadedEntityTypes = signals.eventEntityTypes.get(triggerType);
-				Set<String> workingRoles = types.argumentRoles.get(triggerType);
-				Set<String> loadedRoles = signals.argumentRoles.get(triggerType);
-				
-				if (!loadedRoles.containsAll(workingRoles)) {
-					throw new IllegalStateException(String.format("For trigger %s, working on these roles: %s - but loaded signals for this trigger type in document %s has these roles: %s", triggerType, workingRoles, docID, loadedRoles));
-				}
-				if (!loadedEntityTypes.containsAll(workingEntityTypes)) {
-					throw new IllegalStateException(String.format("For trigger %s, working on these entity types: %s - but loaded signals for this trigger type in document %s has these entity types: %s", triggerType, workingEntityTypes, docID, loadedEntityTypes));
-				}
-			}
+			
+//			if (!signals.eventEntityTypes.keySet().containsAll(types.eventEntityTypes.keySet())) {
+//				throw new IllegalStateException(String.format("Working on these trigger types: %s - but loaded trigger signals of document %s has these trigger types: %s", types.eventEntityTypes, docID, signals.eventEntityTypes.keySet()));
+//			}
+//			
+//			for (String triggerType : types.eventEntityTypes.keySet()) {
+//				Set<String> workingEntityTypes = types.eventEntityTypes.get(triggerType);
+//				Set<String> loadedEntityTypes = signals.eventEntityTypes.get(triggerType);
+//				Set<String> workingRoles = types.argumentRoles.get(triggerType);
+//				Set<String> loadedRoles = signals.argumentRoles.get(triggerType);
+//				
+//				if (!loadedRoles.containsAll(workingRoles)) {
+//					throw new IllegalStateException(String.format("For trigger %s, working on these roles: %s - but loaded signals for this trigger type in document %s has these roles: %s", triggerType, workingRoles, docID, loadedRoles));
+//				}
+//				if (!loadedEntityTypes.containsAll(workingEntityTypes)) {
+//					throw new IllegalStateException(String.format("For trigger %s, working on these entity types: %s - but loaded signals for this trigger type in document %s has these entity types: %s", triggerType, workingEntityTypes, docID, loadedEntityTypes));
+//				}
+//			}
 		}
 	}
 
@@ -1088,7 +1112,7 @@ public class Document implements java.io.Serializable
 				List<JCas> oneSpec = Arrays.asList(new JCas[] {spec});
 				TypesContainer oneType = new TypesContainer(oneSpec); 
 				result.add(new SentenceInstance(perceptron, sent, oneType, featureAlphabet,
-						learnable, spec, sent.sentID + specNum*SENT_ID_ADDITION));
+						learnable, spec, specNum));
 			}
 		}
 		else {

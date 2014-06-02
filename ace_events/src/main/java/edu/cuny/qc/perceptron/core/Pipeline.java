@@ -20,6 +20,7 @@ import ac.biu.nlp.nlp.ie.onthefly.input.AeException;
 import ac.biu.nlp.nlp.ie.onthefly.input.SpecHandler;
 import ac.biu.nlp.nlp.ie.onthefly.input.TypesContainer;
 import edu.cuny.qc.perceptron.types.Alphabet;
+import edu.cuny.qc.perceptron.types.BundledSignals;
 import edu.cuny.qc.perceptron.types.Document;
 import edu.cuny.qc.perceptron.types.Sentence;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
@@ -68,7 +69,7 @@ public class Pipeline
 			model = new Perceptron(featureAlphabet);
 			model.controller = controller;
 			TypesContainer trainTypes = new TypesContainer(trainSpecXmlPaths, false);
-			TypesContainer devTypes = new TypesContainer(trainSpecXmlPaths, false);
+			TypesContainer devTypes = new TypesContainer(devSpecXmlPaths, false);
 			trainInstanceList = readInstanceList(model, trainTypes, srcDir, trainingFileList, featureAlphabet, true);
 			devInstanceList = readInstanceList(model, devTypes, srcDir, devFileList, featureAlphabet, false);
 		}
@@ -122,7 +123,7 @@ public class Pipeline
 				
 				System.out.println(fileName);
 				
-				Document doc = Document.createAndPreprocess(fileName, true, monoCase, true, true, types);
+				Document doc = Document.createAndPreprocess(fileName, true, monoCase, true, true, types, perceptron);
 				// fill in text feature vector for each token
 				//featGen.fillTextFeatures_NoPreprocessing(doc);
 				List<SentenceInstance> docInstancelist = new ArrayList<SentenceInstance>();
@@ -130,23 +131,36 @@ public class Pipeline
 				{
 					Sentence sent = doc.getSentences().get(sent_id);
 					// during learning, skip instances that do not have event mentions 
+					
+					// 1.6.14: Create instances even if we skip them - to fully create their signals  
+					List<SentenceInstance> insts = Document.getInstancesForSentence(perceptron, sent, types, featureAlphabet, learnable);
+					docInstancelist.addAll(insts);
+					
 					if(learnable && perceptron.controller.skipNonEventSent)
 					{
 						if(sent.eventMentions != null && sent.eventMentions.size() > 0)
 						{
-							List<SentenceInstance> insts = Document.getInstancesForSentence(perceptron, sent, types, featureAlphabet, learnable);
 							instancelist.addAll(insts);
-							docInstancelist.addAll(insts);
 						}
 					}
 					else // add all instances
 					{
-						List<SentenceInstance> insts = Document.getInstancesForSentence(perceptron, sent, types, featureAlphabet, learnable);
+						//List<SentenceInstance> insts = Document.getInstancesForSentence(perceptron, sent, types, featureAlphabet, learnable);
 						instancelist.addAll(insts);
-						docInstancelist.addAll(insts);
 					}
 				}
-				doc.dumpSignals(docInstancelist, types);
+				/// DEBUG
+//				if (doc.docID.contains("CNN_ENG_20030506_160524.18")) {
+//					System.out.println(docInstancelist.size());
+//				}
+				///
+				doc.dumpSignals(docInstancelist, types, perceptron);
+				/// DEBUG
+//				BundledSignals dumpedSignals = doc.signals;
+//				doc.loadSignals(types);
+//				boolean b = dumpedSignals.equals(doc.signals);
+//				System.out.println(b);
+//				////
 			}
 		}
 		finally {

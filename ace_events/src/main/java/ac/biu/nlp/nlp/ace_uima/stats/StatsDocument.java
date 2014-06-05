@@ -137,6 +137,7 @@ public class StatsDocument {
 	private Set<StatsRow> rowsOfCurrentUpdate = null;
 	
 	public static final String ANY = "*";
-	public static final String SEPARATOR = "§";
+	public static final String SEPARATOR = "^";
+	public static final String SEPARATOR_SUBSTITUTE = "~";
 	private static final int MAX_CHARS = 5000;
 }

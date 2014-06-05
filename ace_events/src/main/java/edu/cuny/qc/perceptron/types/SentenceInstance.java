@@ -28,6 +28,7 @@ import edu.cuny.qc.ace.acetypes.AceMention;
 import edu.cuny.qc.perceptron.core.Controller;
 import edu.cuny.qc.perceptron.core.Perceptron;
 import edu.cuny.qc.perceptron.graph.DependencyGraph;
+import edu.cuny.qc.perceptron.similarity_scorer.ScorerData;
 import edu.cuny.qc.perceptron.similarity_scorer.SignalMechanism;
 import edu.cuny.qc.perceptron.similarity_scorer.SignalMechanismException;
 import edu.cuny.qc.perceptron.types.Sentence.Sent_Attribute;
@@ -591,30 +592,36 @@ public class SentenceInstance
 		}
 	}
 	
-	private void addTriggerSignals(JCas spec, int i, Perceptron perceptron, Map<String, SignalInstance> specSignals) throws SignalMechanismException {
-		LinkedHashMap<String, BigDecimal> scoredSignals;
+	public Map<ScorerData, SignalInstance> addTriggerSignals(JCas spec, int i, Perceptron perceptron, Map<String, SignalInstance> specSignals) throws SignalMechanismException {
+		LinkedHashMap<ScorerData, BigDecimal> scoredSignals;
+		Map<ScorerData, SignalInstance> result = new HashMap<ScorerData, SignalInstance>(); //technically, we could add ScorerData to "specSignals", but it's needed only for reports, and also I don't feel like changing the entire dumpSignals compund types AGAIN. 
 		for (SignalMechanism mechanism : perceptron.signalMechanisms) {
 			scoredSignals = mechanism.scoreTrigger(specSignals, spec, this, i);
-			for (Entry<String, BigDecimal> scoredSignal : scoredSignals.entrySet()) {
-				SignalInstance signal = new SignalInstance(scoredSignal.getKey(), SignalType.TRIGGER, scoredSignal.getValue());
+			for (Entry<ScorerData, BigDecimal> scoredSignal : scoredSignals.entrySet()) {
+				SignalInstance signal = new SignalInstance(scoredSignal.getKey().fullName, SignalType.TRIGGER, scoredSignal.getValue());
 				specSignals.put(signal.name, signal);
+				result.put(scoredSignal.getKey(), signal);
 				perceptron.triggerSignalNames.add(signal.name);
 				markSignalUpdate();
 			}
 		}
+		return result;
 	}
 	
-	private void addArgumentSignals(JCas spec, int i, Argument argument, AceMention mention, Perceptron perceptron, Map<String, SignalInstance> roleSignals) throws SignalMechanismException {
-		LinkedHashMap<String, BigDecimal> scoredSignals;
+	public Map<ScorerData, SignalInstance> addArgumentSignals(JCas spec, int i, Argument argument, AceMention mention, Perceptron perceptron, Map<String, SignalInstance> roleSignals) throws SignalMechanismException {
+		LinkedHashMap<ScorerData, BigDecimal> scoredSignals;
+		Map<ScorerData, SignalInstance> result = new HashMap<ScorerData, SignalInstance>(); //Ditto.
 		for (SignalMechanism mechanism : perceptron.signalMechanisms) {
 			scoredSignals = mechanism.scoreArgument(roleSignals, spec, argument, this, i, mention);
-			for (Entry<String, BigDecimal> scoredSignal : scoredSignals.entrySet()) {
-				SignalInstance signal = new SignalInstance(scoredSignal.getKey(), SignalType.ARGUMENT, scoredSignal.getValue());
+			for (Entry<ScorerData, BigDecimal> scoredSignal : scoredSignals.entrySet()) {
+				SignalInstance signal = new SignalInstance(scoredSignal.getKey().fullName, SignalType.ARGUMENT, scoredSignal.getValue());
 				roleSignals.put(signal.name, signal);
+				result.put(scoredSignal.getKey(), signal);
 				perceptron.argumentSignalNames.add(signal.name);
 				markSignalUpdate();
 			}
 		}
+		return result;
 	}
 	
 	public void markSignalUpdate() {

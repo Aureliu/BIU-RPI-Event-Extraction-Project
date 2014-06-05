@@ -1,5 +1,6 @@
 package edu.cuny.qc.perceptron.learnCurve;
 
+/***
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -39,9 +40,10 @@ import edu.cuny.qc.perceptron.core.Pipeline;
 import edu.cuny.qc.util.LoggerUtils;
 import edu.cuny.qc.util.TypeConstraints;
 import eu.excitementproject.eop.common.utilities.uima.UimaUtilsException;
-
+***/
 
 public class LearningCurve {
+	/****
 	protected List<List<List<String>>> allChunks = new ArrayList<List<List<String>>>();
 	protected List<String> allEventTypes = null;
 	protected String trainDocsList;
@@ -587,4 +589,5 @@ public class LearningCurve {
 		LearningCurve prog = new LearningCurve();
 		prog.run(args);
 	}
+	****/
 }

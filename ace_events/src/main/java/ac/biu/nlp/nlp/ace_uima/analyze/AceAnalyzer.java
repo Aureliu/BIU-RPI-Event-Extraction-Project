@@ -2,6 +2,7 @@ package ac.biu.nlp.nlp.ace_uima.analyze;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
@@ -551,7 +552,7 @@ public class AceAnalyzer {
 		}
 	}
 
-	protected String getCategory(String docId) {
+	protected static String getCategory(String docId) {
 		if (devFileIds.contains(docId)) {
 			return "Dev";
 		}
@@ -875,9 +876,13 @@ public class AceAnalyzer {
 		pastaFactory = new PredicateArgumentStructureBuilderFactory<Info, BasicNode>(nomlexMap);
 		
 		// doc categories init
-		devFileIds = FileUtils.loadFileToString(AceAnalyzer.class.getResource("/qi/new_filelist_ACE_dev").getPath());
-		trainFileIds = FileUtils.loadFileToString(AceAnalyzer.class.getResource("/qi/new_filelist_ACE_training").getPath());
-		testFileIds = FileUtils.loadFileToString(AceAnalyzer.class.getResource("/qi/new_filelist_ACE_test").getPath());
+		fillCategories();
+	}
+	
+	public static void fillCategories() throws IOException {
+		devFileIds = FileUtils.loadFileToString(AceAnalyzer.class.getResource("/doclists/new_filelist_ACE_dev.txt").getPath());
+		trainFileIds = FileUtils.loadFileToString(AceAnalyzer.class.getResource("/doclists/new_filelist_ACE_training.txt").getPath());
+		testFileIds = FileUtils.loadFileToString(AceAnalyzer.class.getResource("/doclists/new_filelist_ACE_test.txt").getPath());
 	}
 	
 	public void analyzeFolder(String xmiFolderPath, String entityStatsOutputPath, String roleStatsOutputFile, String typePerDocOutputFile, String detailedOutputFolderPath) throws AceException, LAPException, IOException, StatsException, InvalidXMLException, ResourceInitializationException, SAXException, CASException, CasTreeConverterException, UnsupportedPosTagStringException, TreeAndParentMapException, TreeFragmentBuilderException, PredicateArgumentIdentificationException {
@@ -969,9 +974,9 @@ public class AceAnalyzer {
 	protected ValueSetMap<BasicNode, PredicateArgumentStructure<Info, BasicNode>> argToPas;
 	//protected MultiMap<BasicNode, PredicateArgumentStructure<Info, BasicNode>> clauseArgToPas;
 	protected Map<BasicNode, Facet> linkToFacet;
-	protected String devFileIds;
-	protected String trainFileIds;
-	protected String testFileIds;
+	protected static String devFileIds;
+	protected static String trainFileIds;
+	protected static String testFileIds;
 	
 
 	protected static Logger logger = Logger.getLogger(AceAnalyzer.class);

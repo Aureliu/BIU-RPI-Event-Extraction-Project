@@ -20,22 +20,22 @@ public class SignalAnalyzerDocumentCollection extends StatsDocumentCollection {
 		triggerDoc.startUpdate();
 		triggerDoc.update(key, fieldNameLvl1, fieldNameLvl2, element, isDynamic);
 		triggerDoc.update(without(key, new String[] {"category"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
-		triggerDoc.update(without(key, new String[] {"EventSubType"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
-		triggerDoc.update(without(key, new String[] {"category", "EventSubType"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
+		triggerDoc.update(without(key, new String[] {"label"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
+		triggerDoc.update(without(key, new String[] {"category", "label"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
 		triggerDoc.update(without(key, new String[] {"docId"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
-		triggerDoc.update(without(key, new String[] {"docId", "EventSubType"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
+		triggerDoc.update(without(key, new String[] {"docId", "label"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
 		triggerDoc.update(without(key, new String[] {"folder", "docId"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
-		triggerDoc.update(without(key, new String[] {"folder", "docId", "EventSubType"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
+		triggerDoc.update(without(key, new String[] {"folder", "docId", "label"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
 		triggerDoc.update(without(key, new String[] {"folder", "category", "docId",}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
-		triggerDoc.update(without(key, new String[] {"folder", "category", "docId", "EventSubType"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
+		triggerDoc.update(without(key, new String[] {"folder", "category", "docId", "label"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
 		triggerDoc.endUpdate();
 		
 		argDoc.startUpdate();
 		argDoc.update(key, fieldNameLvl1, fieldNameLvl2, element, isDynamic);
-		argDoc.update(without(key, new String[] {"EventSubType"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
-		argDoc.update(without(key, new String[] {"EventSubType", "Role"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
-		argDoc.update(without(key, new String[] {"EventSubType", "ArgType"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
-		argDoc.update(without(key, new String[] {"EventSubType", "ArgType", "Role"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
+//		argDoc.update(without(key, new String[] {"EventSubType"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
+//		argDoc.update(without(key, new String[] {"EventSubType", "Role"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
+//		argDoc.update(without(key, new String[] {"EventSubType", "ArgType"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
+//		argDoc.update(without(key, new String[] {"EventSubType", "ArgType", "Role"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
 		argDoc.endUpdate();
 		
 //		globalDoc.startUpdate();
@@ -43,10 +43,10 @@ public class SignalAnalyzerDocumentCollection extends StatsDocumentCollection {
 //		globalDoc.endUpdate();
 	}
 	
-	public void dumpAsCsvFiles(File entityFile, File roleFile, File typePerDocFile) throws IOException { //add a specific parameter for each specific file
-		triggerDoc.dumpAsCsv(entityFile);
-		argDoc.dumpAsCsv(roleFile);
-		globalDoc.dumpAsCsv(typePerDocFile);
+	public void dumpAsCsvFiles(File triggerFile, File argFile, File globalFile) throws IOException { //add a specific parameter for each specific file
+		triggerDoc.dumpAsCsv(triggerFile);
+		argDoc.dumpAsCsv(argFile);
+		globalDoc.dumpAsCsv(globalFile);
 	}
 	
 	
@@ -55,10 +55,12 @@ public class SignalAnalyzerDocumentCollection extends StatsDocumentCollection {
 	@SuppressWarnings("serial")
 	private StatsDocument triggerDoc = new StatsDocument(
 			Arrays.asList(new String[] {
-					"folder", "category", "docId", "EventSubType", "SignalName"
+					"folder", "category", "docId", "label", "signal", "aggregator"
 			}),
 			new LinkedHashMap<FieldName,StatsFieldType>() {{
-				put(new FieldName("Perfrmace", ""), StatsFieldType.PERFORMANCE);
+				put(new FieldName("Perfrmace", ""), StatsFieldType.SIGNAL_PERFORMANCE_TRIGGER);
+				put(new FieldName("SpecTokens", "TruePositive"), StatsFieldType.LIST_COUNTS);
+				put(new FieldName("SpecTokens", "FalsePositive"), StatsFieldType.LIST_COUNTS);
 			}});
 	
 	@SuppressWarnings("serial")
@@ -67,7 +69,7 @@ public class SignalAnalyzerDocumentCollection extends StatsDocumentCollection {
 					"EventSubType", "ArgType", "Role"
 			}),
 			new LinkedHashMap<FieldName,StatsFieldType>() {{
-				put(new FieldName("Perfrmace", ""), StatsFieldType.PERFORMANCE);
+				//put(new FieldName("Perfrmace", ""), StatsFieldType.PERFORMANCE);
 			}});
 	
 	@SuppressWarnings("serial")
@@ -76,7 +78,7 @@ public class SignalAnalyzerDocumentCollection extends StatsDocumentCollection {
 					"?"
 			}),
 			new LinkedHashMap<FieldName,StatsFieldType>() {{
-				put(new FieldName("Perfrmace", ""), StatsFieldType.PERFORMANCE);
+				//put(new FieldName("Perfrmace", ""), StatsFieldType.PERFORMANCE);
 			}});
 
 }

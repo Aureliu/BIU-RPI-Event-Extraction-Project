@@ -15,10 +15,6 @@ public abstract class SignalMechanismSpecTokenIterator extends SignalMechanismSp
 
 	static {System.err.println("Consider using Guava caches to cache signal values for specific textToken-specToken pairs (maybe also with their lemmas and/or POSes). Maybe also/instead, cache some intermediate values, like a lemma's WordNet sysnet.");}
 
-	public SignalMechanismSpecTokenIterator(String name) {
-		super(name);
-	}
-
 	public SignalMechanismSpecIterator init(JCas spec, String viewName, AnnotationFS covering, Class<? extends Annotation> type, Token textAnno) throws SignalMechanismException {
 		return super.init(spec, viewName, covering, type, textAnno);
 	}
@@ -26,9 +22,6 @@ public abstract class SignalMechanismSpecTokenIterator extends SignalMechanismSp
 	@Override
 	public BigDecimal calcScore(Annotation text, Annotation spec) throws SignalMechanismException {
 		try {
-			Token textToken = null;
-			Token specToken = null;
-			
 			if (text.getClass().equals(Token.class)) {
 				textToken = (Token) text;
 			}
@@ -43,9 +36,18 @@ public abstract class SignalMechanismSpecTokenIterator extends SignalMechanismSp
 				specToken = UimaUtils.selectCoveredSingle(spec.getView().getJCas(), Token.class, spec);
 			}
 			
-			return calcTokenScore(textToken, specToken);
+			BigDecimal result = calcTokenScore(textToken, specToken);
+			addToHistory(result);
+			return result;
 		} catch (CASException e) {
 			throw new SignalMechanismException(e);
+		}
+	}
+	
+	@Override
+	public void addToHistory(BigDecimal result) {
+		if (debug && SignalInstance.isPositive.apply(result)) {
+			history.put(specToken.getCoveredText(), textToken.getLemma().getCoveredText());
 		}
 	}
 
@@ -57,4 +59,7 @@ public abstract class SignalMechanismSpecTokenIterator extends SignalMechanismSp
 	public Boolean calcTokenBooleanScore(Token text, Token spec) throws SignalMechanismException {
 		throw new UnsupportedOperationException("calcTokenBooleanScore must be implemented in subclass");
 	}
+	
+	Token textToken;
+	Token specToken;
 }

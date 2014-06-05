@@ -1,7 +1,13 @@
 package ac.biu.nlp.nlp.ace_uima.stats;
 
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map.Entry;
+
+import edu.cuny.qc.perceptron.core.Evaluator.Score;
+
+import ac.biu.nlp.nlp.ace_uima.stats.SignalPerformanceField.TriggerSignalPerformanceField;
+import ac.biu.nlp.nlp.ace_uima.stats.SignalPerformanceField.ArgumentSignalPerformanceField;
 
 public class StatsRow {
 
@@ -38,12 +44,14 @@ public class StatsRow {
 		StatsField field = null;
 		
 		switch (fieldType) {
-		case ENUM_REL:    field = new EnumRelativeField(name); break;
-		case ENUM_SUM:    field = new EnumSumField(name); break;
-		case COUNT_INT:   field = new CountIntField(name); break;
-		case SUM_INT:     field = new SumIntField(name); break;
-		case COUNT_DOUBLE:field = new CountDoubleField(name); break;
-		case LIST_COUNTS: field = new ListCountsField(name); break;
+		case ENUM_REL:						field = new EnumRelativeField(name); break;
+		case ENUM_SUM:						field = new EnumSumField(name); break;
+		case COUNT_INT:						field = new CountIntField(name); break;
+		case SUM_INT:						field = new SumIntField(name); break;
+		case COUNT_DOUBLE:					field = new CountDoubleField(name); break;
+		case LIST_COUNTS:					field = new ListCountsField(name); break;
+		case SIGNAL_PERFORMANCE_TRIGGER:	field = new TriggerSignalPerformanceField(name); break;
+		case SIGNAL_PERFORMANCE_ARG:		field = new ArgumentSignalPerformanceField(name); break;
 		default: throw new StatsException("Invalid field type: " + fieldType);
 		}
 		

@@ -67,7 +67,7 @@ public class DecoderOverPredicted {
 		Decoder.main(new String[] {args[0], args[2], args[3], args[4], Decoder.OPTION_NO_SCORING});
 
 		// get score
-		File outputFile = new File(args[4] + File.separator + "Score");
+		File outputFile = new File(args[4] + "/" + "Score");
 		Scorer.main(new String[]{args[1], args[4], args[3], outputFile.getAbsolutePath()});
 
 	}

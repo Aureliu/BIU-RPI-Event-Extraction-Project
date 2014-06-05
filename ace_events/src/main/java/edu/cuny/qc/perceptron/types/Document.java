@@ -405,12 +405,19 @@ public class Document implements java.io.Serializable
 			File preprocessed = new File(baseFileName + preprocessedFileExt);
 			//File xmi = new File(baseFileName + xmiFileExt);
 			if (tryLoadExisting && preprocessed.isFile()) {
-				InputStream in = new BZip2CompressorInputStream(new FileInputStream(preprocessed));
-				doc = (Document) SerializationUtils.deserialize(in);
-				in.close();
-				//doc.jcas = UimaUtils.loadXmi(xmi, AE_FILE_PATH);
-				if (types.specs != null) { 
-					doc.filterBySpecs(types);
+				try {
+					InputStream in = new BZip2CompressorInputStream(new FileInputStream(preprocessed));
+					Document input = (Document) SerializationUtils.deserialize(in);
+					doc = input;
+					in.close();
+					//doc.jcas = UimaUtils.loadXmi(xmi, AE_FILE_PATH);
+					if (types.specs != null) { 
+						doc.filterBySpecs(types);
+					}
+				} catch (IOException e) {
+					// Ignore IOException, and treat it as if the file didn't exist.
+					// it might be corrupted due to a previous bad run - we'll just overwrite it.
+					System.err.printf("Got an IOException (%s) when trying to decompress and deserialize file: '%s'. Continuing as if this file doesn't exist.", e.toString(), preprocessed.getAbsolutePath());
 				}
 			}
 			if (doc==null) {
@@ -1046,9 +1053,16 @@ public class Document implements java.io.Serializable
 
 		// 22.5.14 Kludge - not loading signals, due to some weird ClassCastException
 		if (signalsFile.isFile() /* && false */) {
-			InputStream in = new BZip2CompressorInputStream(new FileInputStream(signalsFile));
-			signals = (BundledSignals) SerializationUtils.deserialize(in);
-			in.close();
+			try {
+				InputStream in = new BZip2CompressorInputStream(new FileInputStream(signalsFile));
+				BundledSignals input = (BundledSignals) SerializationUtils.deserialize(in);
+				signals = input;
+				in.close();
+			} catch (IOException e) {
+				// Ignore IOException, and treat it as if the file didn't exist.
+				// it might be corrupted due to a previous bad run - we'll just overwrite it.
+				System.err.printf("Got an IOException (%s) when trying to decompress and deserialize file: '%s'. Continuing as if this file doesn't exist.", e.toString(), signalsFile.getAbsolutePath());
+			}
 		}
 		
 		if (signals != null) {

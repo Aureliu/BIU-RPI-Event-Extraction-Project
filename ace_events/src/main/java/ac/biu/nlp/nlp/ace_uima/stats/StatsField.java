@@ -23,7 +23,7 @@ public abstract class StatsField {
 		List<String> values = getValues();
 		List<String> result = new ArrayList<String>(values.size());
 		for (String val : values) {
-			String toAdd = val;
+			String toAdd = val.replace(StatsDocument.SEPARATOR, StatsDocument.SEPARATOR_SUBSTITUTE);
 			if (toAdd.length() > charsLimit) {
 				toAdd = toAdd.substring(0, charsLimit);
 			}

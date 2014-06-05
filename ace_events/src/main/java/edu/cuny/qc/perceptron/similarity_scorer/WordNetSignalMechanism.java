@@ -1,29 +1,22 @@
 package edu.cuny.qc.perceptron.similarity_scorer;
 
 import java.io.File;
-import java.math.BigDecimal;
 import java.util.AbstractMap;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
-import org.apache.uima.jcas.JCas;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 import ac.biu.nlp.nlp.ie.onthefly.input.AnnotationUtils;
-import ac.biu.nlp.nlp.ie.onthefly.input.SpecAnnotator;
-import ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument;
-import ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentExample;
-import ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateSeed;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
-import edu.cuny.qc.perceptron.types.SentenceInstance;
-import edu.cuny.qc.perceptron.types.SignalInstance;
 import eu.excitementproject.eop.common.component.lexicalknowledge.LexicalResourceException;
 import eu.excitementproject.eop.common.component.lexicalknowledge.LexicalRule;
 import eu.excitementproject.eop.common.representation.partofspeech.PartOfSpeech;
@@ -128,40 +121,29 @@ public class WordNetSignalMechanism extends SignalMechanism {
 //	}
 
 	@Override
-	public LinkedHashMap<String, BigDecimal> scoreTriggerToken(Map<String, SignalInstance> e, JCas spec, SentenceInstance textSentence, Token textTriggerToken, Map<Class<?>, Object> textTriggerTokenMap) throws SignalMechanismException {
-		SignalMechanismSpecIterator m;
-		LinkedHashMap<String, BigDecimal> r = new LinkedHashMap<String, BigDecimal>();
-		
-		m=new TextHasLetterE("FAKE_LETTER_E"); if(m.q(e)) r.put(m.name, Aggregator.any(m.init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
-		m=new TextHasLetterX("FAKE_LETTER_X"); if(m.q(e)) r.put(m.name, Aggregator.any(m.init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
-		m=new SameLemma("SAME_LEMMA"); if(m.q(e)) r.put(m.name, Aggregator.any(m.init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
-		m=new SameSynset("WORDNET_SAME_SYNSET"); if(m.q(e)) r.put(m.name, Aggregator.any(m.init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
-		m=new IsSpecHypernym_1("WORDNET_SPEC_HYPERNYM_1"); if(m.q(e)) r.put(m.name, Aggregator.any(m.init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
-		m=new IsSpecHypernym_2("WORDNET_SPEC_HYPERNYM_2"); if(m.q(e)) r.put(m.name, Aggregator.any(m.init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
-		m=new IsSpecHypernym_3("WORDNET_SPEC_HYPERNYM_3"); if(m.q(e)) r.put(m.name, Aggregator.any(m.init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
-		m=new IsSpecDerivationallyRelated("WORDNET_SPEC_DERV_RELATED"); if(m.q(e)) r.put(m.name, Aggregator.any(m.init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
-		m=new IsSpecEntailed("WORDNET_SPEC_ENTAILED"); if(m.q(e)) r.put(m.name, Aggregator.any(m.init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
-		
-		//m=new PreknownTriggers("WORDNET_FAKE_PREKNOWN_TRIGGERS"); if(m.q(e)) r.put(m.name, Aggregator.any(m.init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
-		//m=new NotPreknownTriggers("WORDNET_FAKE_NOT_PREKNOWN_TRIGGERS"); if(m.q(e)) r.put(m.name, Aggregator.any(m.init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
+	public void addScorers() {
+		addTrigger(new ScorerData("FAKE_LETTER_E",		TextHasLetterE.inst,		Aggregator.Any.inst		));
+		addTrigger(new ScorerData("FAKE_LETTER_X",		TextHasLetterX.inst,		Aggregator.Any.inst		));
+		addTrigger(new ScorerData("SAME_LEMMA",			SameLemma.inst,				Aggregator.Any.inst		));
+		addTrigger(new ScorerData("WN_SYNSET",			SameSynset.inst,			Aggregator.Any.inst		));
+		addTrigger(new ScorerData("WN_HYPERNYM_1",		IsSpecHypernym_1.inst,		Aggregator.Any.inst		));
+		addTrigger(new ScorerData("WN_HYPERNYM_2",		IsSpecHypernym_2.inst,		Aggregator.Any.inst		));
+		addTrigger(new ScorerData("WN_HYPERNYM_3",		IsSpecHypernym_3.inst,		Aggregator.Any.inst		));
+		addTrigger(new ScorerData("WN_DERV_RELATED",	IsSpecDervRelated.inst,		Aggregator.Any.inst		));
+		addTrigger(new ScorerData("WN_ENTAILED",		IsSpecEntailed.inst,		Aggregator.Any.inst		));
+		addTrigger(new ScorerData("WN_ENTAILED",		IsSpecEntailed.inst,		Aggregator.Min2.inst	));
+		addTrigger(new ScorerData("WN_SYNSET|WN_HYPERNYM_1",	new Compose.Or(SameSynset.inst, IsSpecHypernym_1.inst),	Aggregator.Any.inst		));
+		addTrigger(new ScorerData("WN_SYNSET|WN_HYPERNYM_1",	new Compose.Or(SameSynset.inst, IsSpecHypernym_1.inst),	Aggregator.Min2.inst	));
 
-		return r;
+		//addTrigger(new ScorerData("FAKE_PREKNOWN_TRIGGERS",				PreknownTriggers.inst,			Aggregator.Any.inst));
+		
+		addArgument(new ScorerData("xxWN_SYNSET",		SameSynset.inst,			Aggregator.Any.inst		));
+		addArgument(new ScorerData("xxWN_HYPERNYM_1",	IsSpecHypernym_1.inst,		Aggregator.Any.inst		));
+		addArgument(new ScorerData("xxWN_ENTAILED",		IsSpecEntailed.inst,		Aggregator.Any.inst		));
 	}
 
-	@Override
-	public LinkedHashMap<String, BigDecimal> scoreArgumentFirstHeadToken(Map<String, SignalInstance> e, JCas spec, Argument argument, SentenceInstance textSentence, Token textTriggerToken, Map<Class<?>, Object> textTriggerTokenMap, Token textArgToken, Map<Class<?>, Object> textArgTokenMap) throws SignalMechanismException {
-		SignalMechanismSpecIterator m;
-		LinkedHashMap<String, BigDecimal> r = new LinkedHashMap<String, BigDecimal>();
-		
-		m=new SameSynset("xxWORDNET_SAME_SYNSET"); if(m.q(e)) r.put(m.name, Aggregator.any(m.init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
-		m=new IsSpecHypernym_1("xxWORDNET_SPEC_HYPERNYM_1"); if(m.q(e)) r.put(m.name, Aggregator.any(m.init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
-		m=new IsSpecEntailed("xxWORDNET_SPEC_ENTAILED"); if(m.q(e)) r.put(m.name, Aggregator.any(m.init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken)));
-		
-		return r;
-	}
-
-	private class SameLemma extends SignalMechanismSpecTokenIterator {
-		public SameLemma(String name) {super(name);}
+	private static class SameLemma extends SignalMechanismSpecTokenIterator {
+		public static final SameLemma inst = new SameLemma();
 		@Override
 		public Boolean calcTokenBooleanScore(Token text, Token spec) throws SignalMechanismException
 		{
@@ -171,8 +153,8 @@ public class WordNetSignalMechanism extends SignalMechanism {
 		}
 	}
 	
-	private class TextHasLetterE extends SignalMechanismSpecTokenIterator {
-		public TextHasLetterE(String name) {super(name);}
+	private static class TextHasLetterE extends SignalMechanismSpecTokenIterator {
+		public static final TextHasLetterE inst = new TextHasLetterE();
 		@Override
 		public Boolean calcTokenBooleanScore(Token text, Token spec) throws SignalMechanismException
 		{
@@ -181,8 +163,8 @@ public class WordNetSignalMechanism extends SignalMechanism {
 		}
 	}
 	
-	private class TextHasLetterX extends SignalMechanismSpecTokenIterator {
-		public TextHasLetterX(String name) {super(name);}
+	private static class TextHasLetterX extends SignalMechanismSpecTokenIterator {
+		public static final TextHasLetterX inst = new TextHasLetterX();
 		@Override
 		public Boolean calcTokenBooleanScore(Token text, Token spec) throws SignalMechanismException
 		{
@@ -191,35 +173,25 @@ public class WordNetSignalMechanism extends SignalMechanism {
 		}
 	}
 	
-	private static class PreknownTriggers extends SignalMechanismSpecTokenIterator {
-		public PreknownTriggers(String name) {super(name);}
-		public static final List<String> PREKNOWN_ATTACK_TRIGGERS = Arrays.asList(new String[] {
-				"ambush", "attack", "battle", "battlefront", "blast", "blow", "bomb", "bombing", "combat",
-				"conflict", "defend", "destroy", "drop", "engage", "explosion", "fight", "fighting", "fire",
-				"hit", "hold", "insurgency", "invade", "invasion", /*"it",*/ "kill", "launch", "occupy", "pummel",
-				"resistance", "response", "sept.", "shoot", "take", "terrorism", "threaten", "use",
-				"violence",	"war",
-		});
-		@Override
-		public Boolean calcTokenBooleanScore(Token text, Token spec) throws SignalMechanismException
-		{
-			String textLemma = text.getLemma().getValue();
-			return PREKNOWN_ATTACK_TRIGGERS.contains(textLemma);
-		}
-	}
+//	private static class PreknownTriggers extends SignalMechanismSpecTokenIterator {
+//		public static final PreknownTriggers inst = new PreknownTriggers();
+//		public static final List<String> PREKNOWN_ATTACK_TRIGGERS = Arrays.asList(new String[] {
+//				"ambush", "attack", "battle", "battlefront", "blast", "blow", "bomb", "bombing", "combat",
+//				"conflict", "defend", "destroy", "drop", "engage", "explosion", "fight", "fighting", "fire",
+//				"hit", "hold", "insurgency", "invade", "invasion", /*"it",*/ "kill", "launch", "occupy", "pummel",
+//				"resistance", "response", "sept.", "shoot", "take", "terrorism", "threaten", "use",
+//				"violence",	"war",
+//		});
+//		@Override
+//		public Boolean calcTokenBooleanScore(Token text, Token spec) throws SignalMechanismException
+//		{
+//			String textLemma = text.getLemma().getValue();
+//			return PREKNOWN_ATTACK_TRIGGERS.contains(textLemma);
+//		}
+//	}
 	
-	private static class NotPreknownTriggers extends SignalMechanismSpecTokenIterator {
-		public NotPreknownTriggers(String name) {super(name);}
-		@Override
-		public Boolean calcTokenBooleanScore(Token text, Token spec) throws SignalMechanismException
-		{
-			String textLemma = text.getLemma().getValue();
-			return !PreknownTriggers.PREKNOWN_ATTACK_TRIGGERS.contains(textLemma);
-		}
-	}
-	
-	private class SameSynset extends SignalMechanismSpecTokenIterator {
-		public SameSynset(String name) {super(name);}
+	private static class SameSynset extends SignalMechanismSpecTokenIterator {
+		public static final SameSynset inst = new SameSynset();
 		@Override
 		public Boolean calcTokenBooleanScore(Token text, Token spec) throws SignalMechanismException
 		{
@@ -261,8 +233,8 @@ public class WordNetSignalMechanism extends SignalMechanism {
 		}
 	}
 	
-	private class IsSpecHypernym_1 extends SignalMechanismSpecTokenIterator {
-		public IsSpecHypernym_1(String name) {super(name);}
+	private static class IsSpecHypernym_1 extends SignalMechanismSpecTokenIterator {
+		public static final IsSpecHypernym_1 inst = new IsSpecHypernym_1();
 		@Override
 		public Boolean calcTokenBooleanScore(Token text, Token spec) throws SignalMechanismException
 		{
@@ -290,8 +262,8 @@ public class WordNetSignalMechanism extends SignalMechanism {
 		}
 	}
 	
-	private class IsSpecHypernym_2 extends SignalMechanismSpecTokenIterator {
-		public IsSpecHypernym_2(String name) {super(name);}
+	private static class IsSpecHypernym_2 extends SignalMechanismSpecTokenIterator {
+		public static final IsSpecHypernym_2 inst = new IsSpecHypernym_2();
 		@Override
 		public Boolean calcTokenBooleanScore(Token text, Token spec) throws SignalMechanismException
 		{
@@ -319,8 +291,8 @@ public class WordNetSignalMechanism extends SignalMechanism {
 		}
 	}
 	
-	private class IsSpecHypernym_3 extends SignalMechanismSpecTokenIterator {
-		public IsSpecHypernym_3(String name) {super(name);}
+	private static class IsSpecHypernym_3 extends SignalMechanismSpecTokenIterator {
+		public static final IsSpecHypernym_3 inst = new IsSpecHypernym_3();
 		@Override
 		public Boolean calcTokenBooleanScore(Token text, Token spec) throws SignalMechanismException
 		{
@@ -348,8 +320,8 @@ public class WordNetSignalMechanism extends SignalMechanism {
 		}
 	}
 	
-	private class IsSpecDerivationallyRelated extends SignalMechanismSpecTokenIterator {
-		public IsSpecDerivationallyRelated(String name) {super(name);}
+	private static class IsSpecDervRelated extends SignalMechanismSpecTokenIterator {
+		public static final IsSpecDervRelated inst = new IsSpecDervRelated();
 		@Override
 		public Boolean calcTokenBooleanScore(Token text, Token spec) throws SignalMechanismException
 		{
@@ -377,8 +349,8 @@ public class WordNetSignalMechanism extends SignalMechanism {
 		}
 	}
 	
-	private class IsSpecEntailed extends SignalMechanismSpecTokenIterator {
-		public IsSpecEntailed(String name) {super(name);}
+	private static class IsSpecEntailed extends SignalMechanismSpecTokenIterator {
+		public static final IsSpecEntailed inst = new IsSpecEntailed();
 		@Override
 		public Boolean calcTokenBooleanScore(Token text, Token spec) throws SignalMechanismException
 		{
@@ -410,53 +382,20 @@ public class WordNetSignalMechanism extends SignalMechanism {
 	}
 	
 	
-	// TODO These very naive caches should probably be thought through and get a better implementation
-	private class RulesQuery {
+	private static class RulesQuery {
 		@Override
 		public int hashCode() {
-			final int prime = 31;
-			int result = 1;
-			result = prime * result + getOuterType().hashCode();
-			result = prime * result
-					+ ((lLemma == null) ? 0 : lLemma.hashCode());
-			result = prime * result + ((lPos == null) ? 0 : lPos.hashCode());
-			result = prime * result
-					+ ((rLemma == null) ? 0 : rLemma.hashCode());
-			result = prime * result + ((rPos == null) ? 0 : rPos.hashCode());
-			return result;
+		     return new HashCodeBuilder(17, 37).append(lLemma).append(rLemma).append(lPos).append(rPos).toHashCode();
 		}
 		@Override
 		public boolean equals(Object obj) {
-			if (this == obj)
-				return true;
-			if (obj == null)
-				return false;
-			if (getClass() != obj.getClass())
-				return false;
-			RulesQuery other = (RulesQuery) obj;
-			if (!getOuterType().equals(other.getOuterType()))
-				return false;
-			if (lLemma == null) {
-				if (other.lLemma != null)
-					return false;
-			} else if (!lLemma.equals(other.lLemma))
-				return false;
-			if (lPos == null) {
-				if (other.lPos != null)
-					return false;
-			} else if (!lPos.equals(other.lPos))
-				return false;
-			if (rLemma == null) {
-				if (other.rLemma != null)
-					return false;
-			} else if (!rLemma.equals(other.rLemma))
-				return false;
-			if (rPos == null) {
-				if (other.rPos != null)
-					return false;
-			} else if (!rPos.equals(other.rPos))
-				return false;
-			return true;
+		   if (obj == null) { return false; }
+		   if (obj == this) { return true; }
+		   if (obj.getClass() != getClass()) {
+		     return false;
+		   }
+		   RulesQuery rhs = (RulesQuery) obj;
+		   return new EqualsBuilder().appendSuper(super.equals(obj)).append(lLemma, rhs.lLemma).append(rLemma, rhs.rLemma).append(lPos, rhs.lPos).append(rPos, rhs.rPos).isEquals();
 		}
 		public String toString() {
 			return String.format("%s(%s/%s-->%s/%s)", RulesQuery.class.getSimpleName(), lLemma, lPos, rLemma, rPos);
@@ -472,11 +411,8 @@ public class WordNetSignalMechanism extends SignalMechanism {
 		public String lLemma, rLemma;
 		public PartOfSpeech lPos, rPos;
 		//public Set<WordNetRelation> relations;
-		private WordNetSignalMechanism getOuterType() {
-			return WordNetSignalMechanism.this;
-		}
 	}
-	private Set<Synset> getSynsetsOf(String text, WordNetPartOfSpeech pos) throws WordNetException {
+	private static Set<Synset> getSynsetsOf(String text, WordNetPartOfSpeech pos) throws WordNetException {
 		Entry<String, WordNetPartOfSpeech> query = new AbstractMap.SimpleEntry<String, WordNetPartOfSpeech>(text, pos);
 		Set<Synset> result = cacheSynset.get(query);
 		if (result == null) {
@@ -497,7 +433,7 @@ public class WordNetSignalMechanism extends SignalMechanism {
 //		}
 //	}
 	
-	private List<LexicalRule<? extends WordnetRuleInfo>> getRules(WordnetLexicalResource resource, Map<RulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>> cache, String textLemma, PartOfSpeech textPos, String specLemma, PartOfSpeech specPos) throws LexicalResourceException {
+	private static List<LexicalRule<? extends WordnetRuleInfo>> getRules(WordnetLexicalResource resource, Map<RulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>> cache, String textLemma, PartOfSpeech textPos, String specLemma, PartOfSpeech specPos) throws LexicalResourceException {
 		RulesQuery query = new RulesQuery(textLemma, specLemma, textPos, specPos);
 		List<LexicalRule<? extends WordnetRuleInfo>> result = cache.get(query);
 		if (result == null) {
@@ -508,42 +444,42 @@ public class WordNetSignalMechanism extends SignalMechanism {
 
 	}
 	
-	private List<LexicalRule<? extends WordnetRuleInfo>> getDefaultRules(String textLemma, PartOfSpeech textPos, String specLemma, PartOfSpeech specPos, int chainingLength) throws LexicalResourceException {
+	private static List<LexicalRule<? extends WordnetRuleInfo>> getDefaultRules(String textLemma, PartOfSpeech textPos, String specLemma, PartOfSpeech specPos, int chainingLength) throws LexicalResourceException {
 		WordnetLexicalResource resource = resourceMap.get(chainingLength);
 		Map<RulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>> cache = cahceDefaultMap.get(chainingLength);
 		return getRules(resource, cache, textLemma, textPos, specLemma, specPos);
 	}
-	private List<LexicalRule<? extends WordnetRuleInfo>> getHypernymRules(String textLemma, PartOfSpeech textPos, String specLemma, PartOfSpeech specPos, int chainingLength) throws LexicalResourceException {
+	private static List<LexicalRule<? extends WordnetRuleInfo>> getHypernymRules(String textLemma, PartOfSpeech textPos, String specLemma, PartOfSpeech specPos, int chainingLength) throws LexicalResourceException {
 		WordnetLexicalResource resource = resourceMap.get(chainingLength);
 		Map<RulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>> cache = cahceHypernymMap.get(chainingLength);
 		return getRules(resource, cache, textLemma, textPos, specLemma, specPos);
 	}
-	private List<LexicalRule<? extends WordnetRuleInfo>> getDerivationallyRelatedRules(String textLemma, PartOfSpeech textPos, String specLemma, PartOfSpeech specPos, int chainingLength) throws LexicalResourceException {
+	private static List<LexicalRule<? extends WordnetRuleInfo>> getDerivationallyRelatedRules(String textLemma, PartOfSpeech textPos, String specLemma, PartOfSpeech specPos, int chainingLength) throws LexicalResourceException {
 		WordnetLexicalResource resource = resourceMap.get(chainingLength);
 		Map<RulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>> cache = cahceDerivationallyRelatedMap.get(chainingLength);
 		return getRules(resource, cache, textLemma, textPos, specLemma, specPos);
 	}
 	
-	private WordnetLexicalResource resource_chain1;
-	private WordnetLexicalResource resource_chain2;
-	private WordnetLexicalResource resource_chain3;
-	private Dictionary dictionary;
+	private static WordnetLexicalResource resource_chain1;
+	private static WordnetLexicalResource resource_chain2;
+	private static WordnetLexicalResource resource_chain3;
+	private static Dictionary dictionary;
 	
-	private Map<Entry<String, WordNetPartOfSpeech>, Set<Synset>> cacheSynset = new HashMap<Entry<String, WordNetPartOfSpeech>, Set<Synset>>();
-	private Map<RulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>> cahceDefaultRules_1 = new HashMap<RulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>>();
-	private Map<RulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>> cahceDefaultRules_2 = new HashMap<RulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>>();
-	private Map<RulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>> cahceDefaultRules_3 = new HashMap<RulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>>();
-	private Map<RulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>> cahceHypernymRules_1 = new HashMap<RulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>>();
-	private Map<RulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>> cahceHypernymRules_2 = new HashMap<RulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>>();
-	private Map<RulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>> cahceHypernymRules_3 = new HashMap<RulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>>();
-	private Map<RulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>> cahceDerivationallyRelatedRules_1 = new HashMap<RulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>>();
-	private Map<RulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>> cahceDerivationallyRelatedRules_2 = new HashMap<RulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>>();
-	private Map<RulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>> cahceDerivationallyRelatedRules_3 = new HashMap<RulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>>();
+	private static Map<Entry<String, WordNetPartOfSpeech>, Set<Synset>> cacheSynset = new HashMap<Entry<String, WordNetPartOfSpeech>, Set<Synset>>();
+	private static Map<RulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>> cahceDefaultRules_1 = new HashMap<RulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>>();
+	private static Map<RulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>> cahceDefaultRules_2 = new HashMap<RulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>>();
+	private static Map<RulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>> cahceDefaultRules_3 = new HashMap<RulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>>();
+	private static Map<RulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>> cahceHypernymRules_1 = new HashMap<RulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>>();
+	private static Map<RulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>> cahceHypernymRules_2 = new HashMap<RulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>>();
+	private static Map<RulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>> cahceHypernymRules_3 = new HashMap<RulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>>();
+	private static Map<RulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>> cahceDerivationallyRelatedRules_1 = new HashMap<RulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>>();
+	private static Map<RulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>> cahceDerivationallyRelatedRules_2 = new HashMap<RulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>>();
+	private static Map<RulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>> cahceDerivationallyRelatedRules_3 = new HashMap<RulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>>();
 	
-	private Map<Integer, WordnetLexicalResource> resourceMap;
-	private Map<Integer, Map<RulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>>> cahceDefaultMap;
-	private Map<Integer, Map<RulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>>> cahceHypernymMap;
-	private Map<Integer, Map<RulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>>> cahceDerivationallyRelatedMap;
+	private static Map<Integer, WordnetLexicalResource> resourceMap;
+	private static Map<Integer, Map<RulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>>> cahceDefaultMap;
+	private static Map<Integer, Map<RulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>>> cahceHypernymMap;
+	private static Map<Integer, Map<RulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>>> cahceDerivationallyRelatedMap;
 	
 	private static final String WORDNET_DIR = "src/main/resources/data/Wordnet3.0";
 	private static final Boolean USE_FIRST_SENSE_ONLY_LEFT = true;

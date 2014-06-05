@@ -119,7 +119,7 @@ public class Pipeline
 			while((line = reader.readLine()) != null)
 			{
 				boolean monoCase = line.contains("bn/") ? true : false;
-				String fileName = srcDir + File.separator + line;
+				String fileName = srcDir + "/" + line;
 				
 				System.out.println(fileName);
 				

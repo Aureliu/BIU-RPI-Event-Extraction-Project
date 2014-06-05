@@ -105,14 +105,14 @@ public class Decoder
 		
 		//Intermediate output - all features+weights to text files
 		String s;
-		PrintStream featuresOut = new PrintStream(new File(outDir + File.separator + "FeatureAlphabet" + filenameSuffix));
+		PrintStream featuresOut = new PrintStream(new File(outDir + "/" + "FeatureAlphabet" + filenameSuffix));
 		for (Object o : featureAlphabet.toArray()) {
 			s = (String) o;
 			featuresOut.printf("%s\n", s);
 		}
 		featuresOut.close();
 		
-		PrintStream weightsOut = new PrintStream(new File(outDir + File.separator + "Weights" + filenameSuffix));
+		PrintStream weightsOut = new PrintStream(new File(outDir + "/" + "Weights" + filenameSuffix));
 		weightsOut.printf("%s", perceptron.getWeights().toStringFull());
 		weightsOut.close();
 		
@@ -131,7 +131,7 @@ public class Decoder
 		{
 			List<SentenceInstance> localInstanceList = null;
 			boolean monoCase = line.contains("bn/") ? true : false;
-			String fileName = srcDir + File.separator + line;
+			String fileName = srcDir + "/" + line;
 			System.out.println(fileName);
 			Document doc = null;
 			if(perceptron.controller.crossSent)
@@ -153,12 +153,12 @@ public class Decoder
 			List<SentenceAssignment> localResults = perceptron.decoding(localInstanceList);
 			
 			// print to docs
-			File outputFile = new File(outDir + File.separator + folderNamePrefix + line + ".apf.xml");
+			File outputFile = new File(outDir + "/" + folderNamePrefix + line + ".apf.xml");
 			if(!outputFile.getParentFile().exists())
 			{
 				outputFile.getParentFile().mkdirs();
 			}
-			String docID = doc.docID.substring(doc.docID.lastIndexOf(File.separator) + 1);
+			String docID = doc.docID.substring(doc.docID.lastIndexOf("/") + 1);
 			String id_prefix = docID + "-" + "EV";
 			PrintWriter out = new PrintWriter(outputFile);
 			
@@ -191,7 +191,7 @@ public class Decoder
 	public static Stats decodeAndScore(String[] args, String filenameSuffix, String folderNamePrefix, File specListFile) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException, SignalMechanismException {
 		TypesContainer types = decode(args, filenameSuffix, folderNamePrefix, specListFile);
 		
-		File outputFile = new File(outDir + File.separator + "Score" + filenameSuffix);
+		File outputFile = new File(outDir + "/" + "Score" + filenameSuffix);
 		PrintStream out = new PrintStream(outputFile);
 		Stats stats = Scorer.mainMultiRunReturningStats(args[1], args[3], args[2], types, out, folderNamePrefix);
 		return stats;

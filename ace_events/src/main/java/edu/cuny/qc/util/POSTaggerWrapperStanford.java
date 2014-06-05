@@ -22,7 +22,7 @@ public class POSTaggerWrapperStanford
 	
 	static
 	{
-		taggerModelPath = "data" + File.separator + "left3words-wsj-0-18.tagger";
+		taggerModelPath = "data" + "/" + "left3words-wsj-0-18.tagger";
 	}
 		
 	private MaxentTagger tagger;

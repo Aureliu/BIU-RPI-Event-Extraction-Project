@@ -101,23 +101,23 @@ public class Scorer
 		String line = "";
 		while((line = reader.readLine()) != null)
 		{
-			File apf_ans = new File(ansDir + File.separator + dirNamePrefix + line + ".sgm.apf");
+			File apf_ans = new File(ansDir + "/" + dirNamePrefix + line + ".sgm.apf");
 			if(!apf_ans.exists())
 			{
-				apf_ans = new File(ansDir + File.separator + dirNamePrefix + line);
+				apf_ans = new File(ansDir + "/" + dirNamePrefix + line);
 			}
 			if(!apf_ans.exists())
 			{
-				apf_ans = new File(ansDir + File.separator + dirNamePrefix + line + ".apf.xml");
+				apf_ans = new File(ansDir + "/" + dirNamePrefix + line + ".apf.xml");
 			}
 			int idx = line.indexOf("/");
-			String new_line = line.substring(0, idx+1) + "timex2norm" + File.separator + line.substring(idx+1);
-			File apf_gold = new File(goldDir + File.separator + new_line + ".apf.xml");
-			File textFile = new File(goldDir + File.separator + new_line + ".sgm");
+			String new_line = line.substring(0, idx+1) + "timex2norm" + "/" + line.substring(idx+1);
+			File apf_gold = new File(goldDir + "/" + new_line + ".apf.xml");
+			File textFile = new File(goldDir + "/" + new_line + ".sgm");
 			if(!apf_gold.exists())
 			{
-				apf_gold = new File(goldDir + File.separator + line + ".apf.xml");
-				textFile = new File(goldDir + File.separator + line + ".sgm");
+				apf_gold = new File(goldDir + "/" + line + ".apf.xml");
+				textFile = new File(goldDir + "/" + line + ".sgm");
 			}
 			AceDocument doc_ans = new AceDocument(textFile.getAbsolutePath(), apf_ans.getAbsolutePath());
 			AceDocument doc_gold = new AceDocument(textFile.getAbsolutePath(), apf_gold.getAbsolutePath());

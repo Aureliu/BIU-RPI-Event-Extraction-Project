@@ -89,7 +89,7 @@ public class ApfReader {
 	/**
 	 * return names of an entity
 	 * @param arg
-	 * @param name
+	 * @param fullName
 	 * @return
 	 */
 	public static Vector<String> getNames(Node arg)

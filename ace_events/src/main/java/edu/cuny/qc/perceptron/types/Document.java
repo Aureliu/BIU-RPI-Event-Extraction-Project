@@ -13,16 +13,14 @@ import java.io.StreamCorruptedException;
 import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import opennlp.tools.util.InvalidFormatException;
 
-import org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStream;
-import org.apache.commons.compress.compressors.bzip2.BZip2CompressorOutputStream;
 import org.apache.commons.lang3.SerializationUtils;
 import org.apache.uima.analysis_engine.AnalysisEngine;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
@@ -43,6 +41,7 @@ import edu.cuny.qc.ace.acetypes.AceEventMention;
 import edu.cuny.qc.ace.acetypes.AceMention;
 import edu.cuny.qc.perceptron.core.Controller;
 import edu.cuny.qc.perceptron.core.Perceptron;
+import edu.cuny.qc.perceptron.core.SerializationMethod;
 import edu.cuny.qc.perceptron.featureGenerator.TextFeatureGenerator;
 import edu.cuny.qc.perceptron.types.Sentence.Sent_Attribute;
 import edu.cuny.qc.util.SentDetectorWrapper;
@@ -62,8 +61,8 @@ public class Document implements java.io.Serializable
 	// file extentions
 	static public final String textFileExt = ".sgm";
 	static public final String apfFileExt = ".apf.xml";
-	static public final String preprocessedFileExt = ".preprocessed.bz2";
-	static public final String signalsFileExt = ".signals.bz2";
+	static public final String preprocessedFileExt = ".preprocessed";
+	static public final String signalsFileExt = ".signals";
 	//static public final String xmiFileExt = ".xmi";
 	//public static final int SENT_ID_ADDITION = 100000;
 
@@ -400,16 +399,26 @@ public class Document implements java.io.Serializable
 			//dumpNewDoc = false;
 			//tryLoadExisting = false;
 			///////////////////////////////////////////////////////////////////////////////////////////////////
-			
+			System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] CreateAndPreprocess - start\n", new Date());
+
 			Document doc = null;
-			File preprocessed = new File(baseFileName + preprocessedFileExt);
+			File preprocessed = new File(baseFileName + preprocessedFileExt + perceptron.controller.serialization.extension);
 			//File xmi = new File(baseFileName + xmiFileExt);
 			if (tryLoadExisting && preprocessed.isFile()) {
 				try {
-					InputStream in = new BZip2CompressorInputStream(new FileInputStream(preprocessed));
+					System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] reading 'preprocessed' file...", new Date());
+					InputStream in = perceptron.controller.serialization.getInputStream(new FileInputStream(preprocessed));
 					Document input = (Document) SerializationUtils.deserialize(in);
 					doc = input;
 					in.close();
+					System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] done.\n", new Date());
+
+					/// DEBUG
+//					OutputStream out = SerializationMethod.NONE.getOutputStream(new FileOutputStream(new File(baseFileName + preprocessedFileExt + SerializationMethod.NONE.extension)));
+//					SerializationUtils.serialize(doc, out);
+//					out.close();
+					////
+					
 					//doc.jcas = UimaUtils.loadXmi(xmi, AE_FILE_PATH);
 					if (types.specs != null) { 
 						doc.filterBySpecs(types);
@@ -421,6 +430,7 @@ public class Document implements java.io.Serializable
 				}
 			}
 			if (doc==null) {
+				System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] building document...", new Date());
 				doc = new Document(baseFileName, hasLabel, monoCase);
 				
 				// These two are separated only for historical reasons, and could be joint back.
@@ -428,12 +438,17 @@ public class Document implements java.io.Serializable
 				TextFeatureGenerator.fillTextFeatures_NoPreprocessing(doc);
 				
 				ae.process(doc.jcas);
-				
+				System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] Done.\n", new Date());
+
 				if (dumpNewDoc) {
 					try {
-						OutputStream out = new BZip2CompressorOutputStream(new FileOutputStream(preprocessed));
+						System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] dumping 'preprocessed' file...", new Date());
+
+						OutputStream out = perceptron.controller.serialization.getOutputStream(new FileOutputStream(preprocessed));
 						SerializationUtils.serialize(doc, out);
 						out.close();
+						System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] Done.\n", new Date());
+
 						//UimaUtils.dumpXmi(xmi, doc.jcas);
 						//SerializationUtils.serialize(Serialization.serializeCASComplete(doc.jcas.getCasImpl()), new FileOutputStream(baseFileName + ".CasComplete"));
 						//SerializationUtils.serialize(Serialization.serializeCAS(doc.jcas.getCasImpl()), new FileOutputStream(baseFileName + ".Cas"));
@@ -455,6 +470,7 @@ public class Document implements java.io.Serializable
 			
 			doc.loadSignals(perceptron, types);
 
+			System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] CreateAndPreprocess - Done.\n\n", new Date());
 			return doc;
 		//} catch (UimaUtilsException e) {
 		//	throw new IOException(e);
@@ -1025,9 +1041,9 @@ public class Document implements java.io.Serializable
 		}
 		
 		if (signalsUpdated) {
-			File signalsFile = new File(docID + signalsFileExt);
+			File signalsFile = new File(docID + signalsFileExt + perceptron.controller.serialization.extension);
 			try {
-				OutputStream out = new BZip2CompressorOutputStream(new FileOutputStream(signalsFile));
+				OutputStream out = perceptron.controller.serialization.getOutputStream(new FileOutputStream(signalsFile));
 				SerializationUtils.serialize(signals, out);
 				out.close();
 			}
@@ -1049,15 +1065,29 @@ public class Document implements java.io.Serializable
 		//List<List<Map<String, Map<String, SignalInstance>>>> triggerSignals = new ArrayList<List<Map<String, Map<String, SignalInstance>>>>();
 		//List<List<Map<String, Map<String, Map<String, SignalInstance>>>>> argSignals = new ArrayList<List<Map<String, Map<String, Map<String, SignalInstance>>>>>();
 		// read file 
-		File signalsFile = new File(docID + signalsFileExt);
+		File signalsFile = new File(docID + signalsFileExt + perceptron.controller.serialization.extension);
 
 		// 22.5.14 Kludge - not loading signals, due to some weird ClassCastException
 		if (signalsFile.isFile() /* && false */) {
 			try {
-				InputStream in = new BZip2CompressorInputStream(new FileInputStream(signalsFile));
+				System.out.printf("build input stream: [%1$tH:%1$tM:%1$tS.%1$tL]...\n", new Date());
+				InputStream in = perceptron.controller.serialization.getInputStream(new FileInputStream(signalsFile));
+//				byte b[] = new byte[1024*1024*20];
+//				System.out.printf("\nread array: [%1$tH:%1$tM:%1$tS.%1$tL]...", new Date());
+//				int num = in.read(b);
+//				System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL]\n", new Date());
+//				in = perceptron.controller.serialization.getInputStream(new FileInputStream(signalsFile));
+				System.out.printf("read object: [%1$tH:%1$tM:%1$tS.%1$tL]...", new Date());
 				BundledSignals input = (BundledSignals) SerializationUtils.deserialize(in);
+				System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL]\n", new Date());
 				signals = input;
 				in.close();
+				
+				/// DEBUG
+//				OutputStream out = SerializationMethod.NONE.getOutputStream(new FileOutputStream(new File(docID + signalsFileExt + SerializationMethod.NONE.extension)));
+//				SerializationUtils.serialize(signals, out);
+//				out.close();
+				////
 			} catch (IOException e) {
 				// Ignore IOException, and treat it as if the file didn't exist.
 				// it might be corrupted due to a previous bad run - we'll just overwrite it.
@@ -1066,8 +1096,8 @@ public class Document implements java.io.Serializable
 		}
 		
 		if (signals != null) {
-			perceptron.triggerSignalNames = signals.triggerSignalNames;
-			perceptron.argumentSignalNames = signals.argumentSignalNames;
+			perceptron.triggerScorers = signals.triggerScorers;
+			perceptron.argumentScorers = signals.argumentScorers;
 			
 			// We can't have the check of the number of sentences be here, as we should check the number of SentenceInstances, which we don't have here yet
 			// we only have the number of Sentences, but many of them may be later skipped and thus should be ignored)
@@ -1125,8 +1155,10 @@ public class Document implements java.io.Serializable
 				JCas spec = types.specs.get(specNum);
 				List<JCas> oneSpec = Arrays.asList(new JCas[] {spec});
 				TypesContainer oneType = new TypesContainer(oneSpec); 
+				//System.out.printf("\n\t[%1$tH:%1$tM:%1$tS.%1$tL] adding inst...", new Date());
 				result.add(new SentenceInstance(perceptron, sent, oneType, featureAlphabet,
 						learnable, spec, specNum));
+				//System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] done.\n", new Date());
 			}
 		}
 		else {

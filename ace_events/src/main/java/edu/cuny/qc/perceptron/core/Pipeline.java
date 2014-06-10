@@ -32,6 +32,7 @@ public class Pipeline
 {
 	//DEBUG
 	public static File modelFile = null;
+	public static final int DOCUMENT_GC_FREQ = 10;
 	///////////
 
 	/**
@@ -116,16 +117,31 @@ public class Pipeline
 		String line = "";
 		//TextFeatureGenerator featGen = new TextFeatureGenerator();
 		try {
+			int num = 0;
 			while((line = reader.readLine()) != null)
 			{
+				num++;
+				if (num % DOCUMENT_GC_FREQ == 0) {
+					System.out.printf("***[%1$tH:%1$tM:%1$tS.%1$tL] running gc...", new Date());
+					System.gc();
+					System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] done.\n", new Date());					
+				}
+				
 				boolean monoCase = line.contains("bn/") ? true : false;
 				String fileName = srcDir + "/" + line;
 				
-				System.out.println(fileName);
+				System.out.printf("[%s] %s\n", new Date(), fileName);
+				
 				
 				Document doc = Document.createAndPreprocess(fileName, true, monoCase, true, true, types, perceptron);
 				// fill in text feature vector for each token
 				//featGen.fillTextFeatures_NoPreprocessing(doc);
+				
+				//System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] running gc...", new Date());
+				//System.gc();
+				//System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] done.\n", new Date());
+
+				
 				List<SentenceInstance> docInstancelist = new ArrayList<SentenceInstance>();
 				for(int sent_id=0 ; sent_id<doc.getSentences().size(); sent_id++)
 				{
@@ -133,21 +149,28 @@ public class Pipeline
 					// during learning, skip instances that do not have event mentions 
 					
 					// 1.6.14: Create instances even if we skip them - to fully create their signals  
+					//System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] sent_id=%2$s, insts..", new Date(), sent_id);
 					List<SentenceInstance> insts = Document.getInstancesForSentence(perceptron, sent, types, featureAlphabet, learnable);
+					//System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] done(%2$d).", new Date(), insts.size());
 					docInstancelist.addAll(insts);
 					
 					if(learnable && perceptron.controller.skipNonEventSent)
 					{
 						if(sent.eventMentions != null && sent.eventMentions.size() > 0)
 						{
+							//System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] add\n", new Date());
 							instancelist.addAll(insts);
 						}
 					}
 					else // add all instances
 					{
 						//List<SentenceInstance> insts = Document.getInstancesForSentence(perceptron, sent, types, featureAlphabet, learnable);
+						//System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] add\n", new Date());
 						instancelist.addAll(insts);
 					}
+					
+					//System.gc();
+
 				}
 				/// DEBUG
 //				if (doc.docID.contains("CNN_ENG_20030506_160524.18")) {
@@ -165,6 +188,9 @@ public class Pipeline
 		}
 		finally {
 			reader.close();
+			System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] FINAL GC...", new Date());
+			System.gc();
+			System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] done.\n", new Date());
 		}
 		
 		System.out.println("done");

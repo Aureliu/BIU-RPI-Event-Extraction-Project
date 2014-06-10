@@ -35,6 +35,8 @@ public class Controller implements java.io.Serializable
 	// Should labelBigrams be learned from training data. Otherwise, all possible bigrams are considered by default.
 	public boolean learnBigrams = true;
 	
+	public SerializationMethod serialization = SerializationMethod.BZ2; 
+	
 	/**
 	 * 0 - only model file
 	 * 1 - model, weights, performance
@@ -130,6 +132,10 @@ public class Controller implements java.io.Serializable
 			else if(fields[0].equalsIgnoreCase("oMethod"))
 			{
 				oMethod = fields[1];
+			}
+			else if(fields[0].equalsIgnoreCase("serialization"))
+			{
+				serialization = SerializationMethod.valueOf(fields[1].toUpperCase());
 			}
 		}
 	}

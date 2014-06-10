@@ -24,6 +24,7 @@ import java.util.Set;
 import org.apache.commons.lang3.SerializationUtils;
 
 import edu.cuny.qc.perceptron.core.Evaluator.Score;
+import edu.cuny.qc.perceptron.similarity_scorer.ScorerData;
 import edu.cuny.qc.perceptron.similarity_scorer.SignalMechanism;
 import edu.cuny.qc.perceptron.similarity_scorer.SignalMechanismException;
 import edu.cuny.qc.perceptron.similarity_scorer.WordNetSignalMechanism;
@@ -75,8 +76,8 @@ public class Perceptron implements java.io.Serializable
 	public transient List<SignalMechanism> signalMechanisms = new ArrayList<SignalMechanism>();
 	
 	
-	public Set<String> triggerSignalNames = new LinkedHashSet<String>();
-	public Set<String> argumentSignalNames = new LinkedHashSet<String>();
+	public Set<ScorerData> triggerScorers = new LinkedHashSet<ScorerData>();
+	public Set<ScorerData> argumentScorers = new LinkedHashSet<ScorerData>();
 	
 	public static int iter; // num of current iteration - public and static for logging
 	public static int i; // num of current sentence - public and static for logging

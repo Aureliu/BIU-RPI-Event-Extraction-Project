@@ -82,6 +82,9 @@ public class StatsDocument {
 		
 		boolean first = true;
 		for (Entry<List<String>, StatsRow> row : rows.entrySet()) {
+			/// DEBUG
+			//System.out.printf("Statsdocument.dumpAsCsv(): key=%s\n", row.getKey());
+			///
 			content.append(StringUtil.join(row.getKey(), SEPARATOR));
 			
 			for (Entry<FieldName,StatsField> field : row.getValue().getFields().entrySet()) {

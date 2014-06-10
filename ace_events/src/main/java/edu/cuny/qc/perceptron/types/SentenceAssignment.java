@@ -20,6 +20,7 @@ import edu.cuny.qc.ace.acetypes.AceMention;
 import edu.cuny.qc.perceptron.core.Controller;
 import edu.cuny.qc.perceptron.core.Perceptron;
 import edu.cuny.qc.perceptron.featureGenerator.GlobalFeatureGenerator;
+import edu.cuny.qc.perceptron.similarity_scorer.ScorerData;
 import edu.cuny.qc.perceptron.types.SentenceInstance.InstanceAnnotations;
 import edu.cuny.qc.util.UnsupportedParameterException;
 
@@ -122,6 +123,8 @@ public class SentenceAssignment
 	
 	public TypesContainer types;
 	
+	public transient SentenceInstance inst = null;
+	
 	// the feature vector of the current assignment
 	public FeatureVectorSequence featVecSequence;
 	
@@ -187,7 +190,7 @@ public class SentenceAssignment
 	public SentenceAssignment clone()
 	{
 		// shallow copy the alphabets
-		SentenceAssignment assn = new SentenceAssignment(types, nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet, controller);
+		SentenceAssignment assn = new SentenceAssignment(types, inst, nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet, controller);
 		
 		// shallow copy the assignment
 		assn.nodeAssignment = (Vector<Integer>) this.nodeAssignment.clone();
@@ -373,13 +376,14 @@ public class SentenceAssignment
 		}
 	}
 	
-	public SentenceAssignment(TypesContainer types, Alphabet nodeTargetAlphabet, Alphabet edgeTargetAlphabet, Alphabet featureAlphabet, Controller controller)
+	public SentenceAssignment(TypesContainer types, SentenceInstance instance, Alphabet nodeTargetAlphabet, Alphabet edgeTargetAlphabet, Alphabet featureAlphabet, Controller controller)
 	{
 		this.nodeTargetAlphabet = nodeTargetAlphabet;
 		this.edgeTargetAlphabet = edgeTargetAlphabet;
 		this.featureAlphabet = featureAlphabet;
 		this.controller = controller;
 		this.types = types;
+		this.inst = instance;
 		
 		nodeAssignment = new Vector<Integer>();
 		edgeAssignment = new HashMap<Integer, Map<Integer, Integer>>();
@@ -396,7 +400,7 @@ public class SentenceAssignment
 	 */
 	public SentenceAssignment(SentenceInstance inst, Perceptron perceptron)
 	{
-		this(inst.types, inst.nodeTargetAlphabet, inst.edgeTargetAlphabet, inst.featureAlphabet, inst.controller);
+		this(inst.types, inst, inst.nodeTargetAlphabet, inst.edgeTargetAlphabet, inst.featureAlphabet, inst.controller);
 		
 		for(int i=0; i < inst.size(); i++)
 		{
@@ -687,13 +691,13 @@ public class SentenceAssignment
 	{
 		try {
 			// make node feature (bigram feature)
-			List<Map<String, Map<String, SignalInstance>>> tokens = (List<Map<String, Map<String, SignalInstance>>>) problem.get(InstanceAnnotations.NodeTextSignalsBySpec);
+			List<Map<String, Map<ScorerData, SignalInstance>>> tokens = (List<Map<String, Map<ScorerData, SignalInstance>>>) problem.get(InstanceAnnotations.NodeTextSignalsBySpec);
 			/// DEBUG
 			if (tokens == null) {
 				System.out.println(problem);
 			}
 			////
-			Map<String, Map<String, SignalInstance>> token = tokens.get(i);
+			Map<String, Map<ScorerData, SignalInstance>> token = tokens.get(i);
 			//String previousLabel = this.getLabelAtToken(i-1);
 			String label = this.getLabelAtToken(i);
 			String genericLabel = getGenericTriggerLabel(label);
@@ -725,7 +729,7 @@ public class SentenceAssignment
 	//						System.err.printf("associatedSpecLabel=%s, token=%s\n", associatedSpecLabel, token);
 	//					}
 	//					///
-						Map<String, SignalInstance> signalsOfLabel = token.get(associatedSpecLabel);
+						Map<ScorerData, SignalInstance> signalsOfLabel = token.get(associatedSpecLabel);
 	//					/// DEBUG
 	//					if (signalsOfLabel == null) {
 	//						System.err.printf("associatedSpecLabel=%s, token=%s\n", associatedSpecLabel, token);
@@ -749,7 +753,7 @@ public class SentenceAssignment
 				}
 				else {
 					if (genericLabel == Generic_Existing_Trigger_Label) {
-						Map<String, SignalInstance> signalsOfLabel = token.get(label);
+						Map<ScorerData, SignalInstance> signalsOfLabel = token.get(label);
 						for (SignalInstance signal : signalsOfLabel.values()) {
 							List<SignalInstance> signals = Arrays.asList(new SignalInstance[] {signal});
 							BigDecimal featureValue = signal.positive ? FEATURE_POSITIVE_VAL : FEATURE_NEGATIVE_VAL;
@@ -768,8 +772,8 @@ public class SentenceAssignment
 						makeFeature(featureStr, this.getFV(i), BigDecimal.ONE, i, new ArrayList<SignalInstance>(), addIfNotPresent, useIfNotPresent);
 					}
 					else { //genericLabel == Default_Trigger_Label
-						for (Object signalNameObj : perceptron.triggerSignalNames) {
-							String signalName = (String) signalNameObj;
+						for (ScorerData scorerData : perceptron.triggerScorers) {
+							//String signalName = (String) signalNameObj;
 							List<SignalInstance> signals = new ArrayList<SignalInstance>();
 							//double numFalse = 0.0;
 							
@@ -795,8 +799,8 @@ public class SentenceAssignment
 							if (token.size() != 1) {
 								throw new IllegalStateException("token.size() should be 1 (1 non-O label, ATTACK), but it's " + token.size());
 							}
-							Map<String, SignalInstance> signalsOfAttack = token.values().iterator().next();
-							SignalInstance signalOfAttack = signalsOfAttack.get(signalName);
+							Map<ScorerData, SignalInstance> signalsOfAttack = token.values().iterator().next();
+							SignalInstance signalOfAttack = signalsOfAttack.get(scorerData);
 							signals.add(signalOfAttack);
 		
 							// Set feature value according to requested O Method
@@ -819,7 +823,7 @@ public class SentenceAssignment
 							
 												
 							//String featureStr = "BigramFeature:\t" + signalName;
-							String featureStr = "BigramFeature:\t" + signalName + "\t" + LABEL_MARKER + genericLabel;
+							String featureStr = "BigramFeature:\t" + signalOfAttack.name + "\t" + LABEL_MARKER + genericLabel;
 							makeFeature(featureStr, this.getFV(i), featureValue, i, signals, addIfNotPresent, useIfNotPresent);
 						}
 					}

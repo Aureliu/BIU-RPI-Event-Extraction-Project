@@ -16,7 +16,7 @@ public class Evaluator
 	public static class Score
 	{
 		static {
-			System.err.println("??? Evaluator.Score: rgs are disables. Harmonic mean actually just takes triggers. Undo these when args are back in fashion.");
+			System.err.println("??? Evaluator.Score: args are disables. Harmonic mean actually just takes triggers. Undo these when args are back in fashion.");
 		}
 		
 		public double trigger_F1 = 0.0;
@@ -116,7 +116,14 @@ public class Evaluator
 			for(int j=0; j<gold.getNodeAssignment().size(); j++)
 			{
 				String gold_trigger = gold.getLabelAtToken(j);
-				String ans_trigger = ans.getLabelAtToken(j);
+				String ans_trigger;
+				try {
+					ans_trigger = ans.getLabelAtToken(j);
+				} catch (Exception e) {
+					System.err.printf("\n\ninst=%s, i=%s, j=%s, ans=%s, gold=%s, ans.size=%s, gold.size=%s\n\n",
+							goldInstance, i, j, ans, gold, ans.getNodeAssignment().size(), gold.getNodeAssignment().size());
+					throw new IllegalStateException(e);
+				}
 				//if(gold_trigger.equals(ans_trigger))
 				if(!gold_trigger.equals(SentenceAssignment.Default_Trigger_Label) && !ans_trigger.equals(SentenceAssignment.Default_Trigger_Label))
 				{

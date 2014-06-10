@@ -50,6 +50,7 @@ public class StatsRow {
 		case SUM_INT:						field = new SumIntField(name); break;
 		case COUNT_DOUBLE:					field = new CountDoubleField(name); break;
 		case LIST_COUNTS:					field = new ListCountsField(name); break;
+		case LIST_VALUES:					field = new ListValuesField(name); break;
 		case SIGNAL_PERFORMANCE_TRIGGER:	field = new TriggerSignalPerformanceField(name); break;
 		case SIGNAL_PERFORMANCE_ARG:		field = new ArgumentSignalPerformanceField(name); break;
 		default: throw new StatsException("Invalid field type: " + fieldType);

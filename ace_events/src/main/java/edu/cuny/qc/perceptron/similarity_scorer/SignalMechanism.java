@@ -45,7 +45,7 @@ public abstract class SignalMechanism {
 		scorers.get(SignalType.ARGUMENT).add(data);
 	}
 
-	public LinkedHashMap<ScorerData, BigDecimal> scoreTrigger(Map<String, SignalInstance> existingSignals, JCas spec, SentenceInstance textSentence, int i) throws SignalMechanismException {
+	public LinkedHashMap<ScorerData, BigDecimal> scoreTrigger(Map<ScorerData, SignalInstance> existingSignals, JCas spec, SentenceInstance textSentence, int i) throws SignalMechanismException {
 		Token textTriggerToken = textSentence.getTokenAnnotation(i);
 		Map<Class<?>, Object> textTriggerTokenMap = ((List<Map<Class<?>, Object>>) textSentence.get(InstanceAnnotations.Token_FEATURE_MAPs)).get(i);
 		
@@ -59,7 +59,7 @@ public abstract class SignalMechanism {
 		return getTriggerTokenDetails(spec, textSentence, textTriggerToken, textTriggerTokenMap);
 	}
 
-	public LinkedHashMap<ScorerData, BigDecimal> scoreArgument(Map<String, SignalInstance> existingSignals, JCas spec, Argument argument, SentenceInstance textSentence, int i, AceMention mention) throws SignalMechanismException {
+	public LinkedHashMap<ScorerData, BigDecimal> scoreArgument(Map<ScorerData, SignalInstance> existingSignals, JCas spec, Argument argument, SentenceInstance textSentence, int i, AceMention mention) throws SignalMechanismException {
 		int argHeadFirstTokenIndex = mention.getHeadIndices().get(0);
 		
 		Token textTriggerToken = textSentence.getTokenAnnotation(i);
@@ -75,11 +75,11 @@ public abstract class SignalMechanism {
 	// not doing right now the arg equivalent of getTriggerDetails
 	
 	
-	public LinkedHashMap<ScorerData, BigDecimal> scoreTriggerToken(Map<String, SignalInstance> existingSignalNames, JCas spec, SentenceInstance textSentence, Token textTriggerToken, Map<Class<?>, Object> textTriggerTokenMap) throws SignalMechanismException {
+	public LinkedHashMap<ScorerData, BigDecimal> scoreTriggerToken(Map<ScorerData, SignalInstance> existingSignalNames, JCas spec, SentenceInstance textSentence, Token textTriggerToken, Map<Class<?>, Object> textTriggerTokenMap) throws SignalMechanismException {
 		LinkedHashMap<ScorerData, BigDecimal> ret = new LinkedHashMap<ScorerData, BigDecimal>();
 
 		for (ScorerData data : scorers.get(SignalType.TRIGGER)) {
-			if (existingSignalNames == null || !existingSignalNames.containsKey(data.fullName)) {
+			if (existingSignalNames == null || !existingSignalNames.containsKey(data)) {
 				data.scorer.init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken);
 				ret.put(data, data.aggregator.aggregate(data.scorer));
 			}
@@ -100,11 +100,11 @@ public abstract class SignalMechanism {
 		return ret;
 	}
 	
-	public LinkedHashMap<ScorerData, BigDecimal> scoreArgumentFirstHeadToken(Map<String, SignalInstance> existingSignalNames, JCas spec, Argument argument, SentenceInstance textSentence, Token textTriggerToken, Map<Class<?>, Object> textTriggerTokenMap, Token textArgToken, Map<Class<?>, Object> textArgTokenMap) throws SignalMechanismException {
+	public LinkedHashMap<ScorerData, BigDecimal> scoreArgumentFirstHeadToken(Map<ScorerData, SignalInstance> existingSignalNames, JCas spec, Argument argument, SentenceInstance textSentence, Token textTriggerToken, Map<Class<?>, Object> textTriggerTokenMap, Token textArgToken, Map<Class<?>, Object> textArgTokenMap) throws SignalMechanismException {
 		LinkedHashMap<ScorerData, BigDecimal> ret = new LinkedHashMap<ScorerData, BigDecimal>();
 
 		for (ScorerData data : scorers.get(SignalType.ARGUMENT)) {
-			if (existingSignalNames == null || !existingSignalNames.containsKey(data.fullName)) {
+			if (existingSignalNames == null || !existingSignalNames.containsKey(data)) {
 				data.scorer.init(spec, null, argument, ArgumentExample.class, textArgToken);
 				ret.put(data, data.aggregator.aggregate(data.scorer));
 			}

@@ -1,15 +1,12 @@
 package edu.cuny.qc.perceptron.types;
 
 import java.io.Serializable;
-import java.util.HashMap;
-import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
 import edu.cuny.qc.perceptron.core.Perceptron;
-
-import ac.biu.nlp.nlp.ie.onthefly.input.TypesContainer;
+import edu.cuny.qc.perceptron.similarity_scorer.ScorerData;
 
 public class BundledSignals implements Serializable {
 	private static final long serialVersionUID = -517597227392807906L;
@@ -27,28 +24,28 @@ public class BundledSignals implements Serializable {
 
 	
 	// Signal Names (for perceptron)
-	public Set<String> triggerSignalNames;
-	public Set<String> argumentSignalNames;
+	public Set<ScorerData> triggerScorers;
+	public Set<ScorerData> argumentScorers;
 
 	
 	// These are the actual signals
 	
 	// Sentence\TriggerToken\Spec\Signals
-	public Map<Integer, List<Map<String, Map<String, SignalInstance>>>> triggerSignals;
+	public Map<Integer, List<Map<String, Map<ScorerData, SignalInstance>>>> triggerSignals;
 	
 	// Sentence\TriggerToken\Spec\ArgToken\Role\Signals
-	public Map<Integer, List<Map<String, List<Map<String, Map<String, SignalInstance>>>>>> argSignals;
+	public Map<Integer, List<Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>>>> argSignals;
 
 	public BundledSignals(
 			//TypesContainer types,
 			Perceptron perceptron,
-			Map<Integer, List<Map<String, Map<String, SignalInstance>>>> triggerSignals,
-			Map<Integer, List<Map<String, List<Map<String, Map<String, SignalInstance>>>>>> argSignals) {
+			Map<Integer, List<Map<String, Map<ScorerData, SignalInstance>>>> triggerSignals,
+			Map<Integer, List<Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>>>> argSignals) {
 //		this.eventEntityTypes = types.eventEntityTypes;
 //		this.argumentRoles = types.argumentRoles;
 //		this.roleEntityTypes = types.roleEntityTypes;
-		this.triggerSignalNames = perceptron.triggerSignalNames;
-		this.argumentSignalNames = perceptron.argumentSignalNames;
+		this.triggerScorers = perceptron.triggerScorers;
+		this.argumentScorers = perceptron.argumentScorers;
 		this.triggerSignals = triggerSignals;
 		this.argSignals = argSignals;
 	}
@@ -63,7 +60,7 @@ public class BundledSignals implements Serializable {
 //				+ ((argumentRoles == null) ? 0 : argumentRoles.hashCode());
 		result = prime
 				* result
-				+ ((argumentSignalNames == null) ? 0 : argumentSignalNames
+				+ ((argumentScorers == null) ? 0 : argumentScorers
 						.hashCode());
 //		result = prime
 //				* result
@@ -72,7 +69,7 @@ public class BundledSignals implements Serializable {
 //				+ ((roleEntityTypes == null) ? 0 : roleEntityTypes.hashCode());
 		result = prime
 				* result
-				+ ((triggerSignalNames == null) ? 0 : triggerSignalNames
+				+ ((triggerScorers == null) ? 0 : triggerScorers
 						.hashCode());
 		result = prime * result
 				+ ((triggerSignals == null) ? 0 : triggerSignals.hashCode());
@@ -98,10 +95,10 @@ public class BundledSignals implements Serializable {
 //				return false;
 //		} else if (!argumentRoles.equals(other.argumentRoles))
 //			return false;
-		if (argumentSignalNames == null) {
-			if (other.argumentSignalNames != null)
+		if (argumentScorers == null) {
+			if (other.argumentScorers != null)
 				return false;
-		} else if (!argumentSignalNames.equals(other.argumentSignalNames))
+		} else if (!argumentScorers.equals(other.argumentScorers))
 			return false;
 //		if (eventEntityTypes == null) {
 //			if (other.eventEntityTypes != null)
@@ -113,10 +110,10 @@ public class BundledSignals implements Serializable {
 //				return false;
 //		} else if (!roleEntityTypes.equals(other.roleEntityTypes))
 //			return false;
-		if (triggerSignalNames == null) {
-			if (other.triggerSignalNames != null)
+		if (triggerScorers == null) {
+			if (other.triggerScorers != null)
 				return false;
-		} else if (!triggerSignalNames.equals(other.triggerSignalNames))
+		} else if (!triggerScorers.equals(other.triggerScorers))
 			return false;
 		if (triggerSignals == null) {
 			if (other.triggerSignals != null)

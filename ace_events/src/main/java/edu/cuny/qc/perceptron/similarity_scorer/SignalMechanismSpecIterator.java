@@ -10,7 +10,6 @@ import org.apache.uima.jcas.tcas.Annotation;
 import org.uimafit.util.JCasUtil;
 
 import com.google.common.collect.ArrayListMultimap;
-import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 
 import edu.cuny.qc.perceptron.types.SignalInstance;

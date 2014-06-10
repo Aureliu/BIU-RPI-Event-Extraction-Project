@@ -19,15 +19,17 @@ public class SignalAnalyzerDocumentCollection extends StatsDocumentCollection {
 	public void updateDocs(Map<String,String> key, String fieldNameLvl1, String fieldNameLvl2, Object element, boolean isDynamic) throws StatsException {
 		triggerDoc.startUpdate();
 		triggerDoc.update(key, fieldNameLvl1, fieldNameLvl2, element, isDynamic);
-		triggerDoc.update(without(key, new String[] {"category"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
 		triggerDoc.update(without(key, new String[] {"label"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
-		triggerDoc.update(without(key, new String[] {"category", "label"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
-		triggerDoc.update(without(key, new String[] {"docId"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
-		triggerDoc.update(without(key, new String[] {"docId", "label"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
+		triggerDoc.update(without(key, new String[] {"signal", "aggregator"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
+		triggerDoc.update(without(key, new String[] {"label", "signal", "aggregator"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
 		triggerDoc.update(without(key, new String[] {"folder", "docId"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
+		triggerDoc.update(without(key, new String[] {"folder", "docId", "signal", "aggregator"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
 		triggerDoc.update(without(key, new String[] {"folder", "docId", "label"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
-		triggerDoc.update(without(key, new String[] {"folder", "category", "docId",}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
+		triggerDoc.update(without(key, new String[] {"folder", "docId", "label", "signal", "aggregator"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
+		triggerDoc.update(without(key, new String[] {"folder", "category", "docId"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
+		triggerDoc.update(without(key, new String[] {"folder", "category", "docId", "signal", "aggregator"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
 		triggerDoc.update(without(key, new String[] {"folder", "category", "docId", "label"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
+		triggerDoc.update(without(key, new String[] {"folder", "category", "docId", "label", "signal", "aggregator"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
 		triggerDoc.endUpdate();
 		
 		argDoc.startUpdate();
@@ -58,9 +60,11 @@ public class SignalAnalyzerDocumentCollection extends StatsDocumentCollection {
 					"folder", "category", "docId", "label", "signal", "aggregator"
 			}),
 			new LinkedHashMap<FieldName,StatsFieldType>() {{
-				put(new FieldName("Perfrmace", ""), StatsFieldType.SIGNAL_PERFORMANCE_TRIGGER);
+				put(new FieldName("Performance", ""), StatsFieldType.SIGNAL_PERFORMANCE_TRIGGER);
 				put(new FieldName("SpecTokens", "TruePositive"), StatsFieldType.LIST_COUNTS);
 				put(new FieldName("SpecTokens", "FalsePositive"), StatsFieldType.LIST_COUNTS);
+				put(new FieldName("SpecTextTokens", "TruePositive"), StatsFieldType.LIST_VALUES);
+				put(new FieldName("SpecTextTokens", "FalsePositive"), StatsFieldType.LIST_VALUES);
 			}});
 	
 	@SuppressWarnings("serial")

@@ -107,9 +107,9 @@ public class AceAnalyzer {
 		logger.debug("starting file " + docId);
 				
 		/// DEBUG
-		if (docId.contains("AFP_ENG_20030311.0491")) {
-			System.out.println("Got it!");
-		}
+//		if (docId.contains("AFP_ENG_20030311.0491")) {
+//			System.out.println("Got it!");
+//		}
 		////
 		tokenIndex = JCasUtil.indexCovering(jcas, Token.class, Sentence.class);
 		

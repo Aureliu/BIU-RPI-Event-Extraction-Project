@@ -37,7 +37,7 @@ public abstract class SignalMechanismSpecTokenIterator extends SignalMechanismSp
 			}
 			
 			BigDecimal result = calcTokenScore(textToken, specToken);
-			addToHistory(result);
+			//addToHistory(result);
 			return result;
 		} catch (CASException e) {
 			throw new SignalMechanismException(e);

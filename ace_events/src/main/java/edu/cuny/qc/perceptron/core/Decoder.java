@@ -30,11 +30,11 @@ import edu.cuny.qc.ace.acetypes.AceTimex;
 import edu.cuny.qc.ace.acetypes.AceValue;
 import edu.cuny.qc.ace.acetypes.Scorer;
 import edu.cuny.qc.ace.acetypes.Scorer.Stats;
-import edu.cuny.qc.perceptron.similarity_scorer.SignalMechanismException;
 import edu.cuny.qc.perceptron.types.Alphabet;
 import edu.cuny.qc.perceptron.types.Document;
 import edu.cuny.qc.perceptron.types.SentenceAssignment;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
+import edu.cuny.qc.scorer.SignalMechanismException;
 import edu.cuny.qc.util.UnsupportedParameterException;
 import eu.excitementproject.eop.common.utilities.uima.UimaUtilsException;
 
@@ -145,7 +145,7 @@ public class Decoder
 				//featGen.fillTextFeatures_NoPreprocessing(doc);
 			}
 			localInstanceList = doc.getInstances(perceptron, types, featureAlphabet, 
-					perceptron.controller, true);
+					perceptron.controller, true, false);
 			
 			doc.dumpSignals(localInstanceList, types, perceptron);
 			

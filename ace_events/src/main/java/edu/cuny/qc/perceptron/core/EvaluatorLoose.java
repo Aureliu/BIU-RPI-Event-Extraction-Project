@@ -10,6 +10,7 @@ import edu.cuny.qc.ace.acetypes.AceEntityMention;
 import edu.cuny.qc.ace.acetypes.AceMention;
 import edu.cuny.qc.perceptron.types.SentenceAssignment;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
+import edu.cuny.qc.util.InfoGainAndEntropy;
 import edu.cuny.qc.util.Span;
 
 /**
@@ -62,6 +63,7 @@ public class EvaluatorLoose extends Evaluator
 	@Override
 	public void evaluteArgument(List<SentenceAssignment> results, List<SentenceInstance> instancesGold, Score score)
 	{
+		double count_arg_total = 0;
 		double count_arg_ans = 0;
 		double count_arg_gold = 0;
 		double count_arg_correct = 0;
@@ -73,8 +75,8 @@ public class EvaluatorLoose extends Evaluator
 			SentenceAssignment gold = goldInstance.target;
 			
 			// count num of args
-			List<Argument> args_ans = getArguments(goldInstance, ans);
-			List<Argument> args_gold = getArguments(goldInstance, gold); 
+			List<Argument> args_ans = getArguments(goldInstance, ans, count_arg_total);
+			List<Argument> args_gold = getArguments(goldInstance, gold, null); 
 			count_arg_ans += args_ans.size();
 			count_arg_gold += args_gold.size();
 			
@@ -112,6 +114,7 @@ public class EvaluatorLoose extends Evaluator
 			f_measure = 2 * (prec * recall) / (prec + recall);
 		}
 		
+		score.count_arg_total = count_arg_total;
 		score.count_arg_ans = count_arg_ans;
 		score.count_arg_gold = count_arg_gold;
 		score.count_arg_correct = count_arg_correct;
@@ -119,9 +122,17 @@ public class EvaluatorLoose extends Evaluator
 		score.arg_precision = prec;
 		score.arg_recall = recall;
 		score.arg_F1 = f_measure;
+		
+		double count_arg_ans_not_correct = count_arg_ans - count_arg_correct;
+		score.arg_info_gain = InfoGainAndEntropy.infoGain(
+				count_arg_correct,
+				count_arg_ans_not_correct,
+				count_arg_gold - count_arg_correct,
+				count_arg_total - count_arg_gold - count_arg_ans_not_correct);
+
 	}
 
-	protected static List<Argument> getArguments(SentenceInstance inst, SentenceAssignment ans)
+	protected static List<Argument> getArguments(SentenceInstance inst, SentenceAssignment ans, Double totalArgCandidates)
 	{
 		List<Argument> ret = new ArrayList<Argument>();
 		
@@ -134,6 +145,9 @@ public class EvaluatorLoose extends Evaluator
 				Map<Integer, Integer> edgeAssn = edgeAssns.get(nodeIndex);
 				for(Integer mentionIndex : edgeAssn.keySet())
 				{
+					if (totalArgCandidates != null) {
+						totalArgCandidates++;
+					}
 					String role = (String) inst.edgeTargetAlphabet.lookupObject(edgeAssn.get(mentionIndex));
 					if(!role.equals(SentenceAssignment.Default_Argument_Label))
 					{

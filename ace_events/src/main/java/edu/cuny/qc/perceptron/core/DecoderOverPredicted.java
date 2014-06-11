@@ -16,7 +16,7 @@ import org.xml.sax.SAXException;
 
 import ac.biu.nlp.nlp.ie.onthefly.input.AeException;
 import edu.cuny.qc.ace.acetypes.Scorer;
-import edu.cuny.qc.perceptron.similarity_scorer.SignalMechanismException;
+import edu.cuny.qc.scorer.SignalMechanismException;
 import edu.cuny.qc.util.RecursiveFileListIterator;
 import eu.excitementproject.eop.common.utilities.uima.UimaUtilsException;
 

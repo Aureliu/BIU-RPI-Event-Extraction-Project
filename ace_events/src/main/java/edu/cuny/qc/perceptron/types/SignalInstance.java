@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 
 import com.google.common.base.Predicate;
+import com.google.common.collect.ArrayListMultimap;
+import com.google.common.collect.Multimap;
 
 public class SignalInstance implements Serializable {
 	private static final long serialVersionUID = 6105654845782902773L;
@@ -12,6 +14,7 @@ public class SignalInstance implements Serializable {
 	public SignalType type;
 	private /*public*/ BigDecimal score;
 	public boolean positive;
+	public Multimap<String, String> history; //optional, and is not part of the object's identity
 	
 	static {
 		System.err.println("??? SignalInstance: score is currently made private, so that conceptually there is no link between which numbers represent a *signal*'s positiveness, and which numbers represent a *feature*'s positiveness. But in the future, maybe a signal's score will be meaningful, and we would want to somehow use it for the feature's score.");
@@ -53,6 +56,10 @@ public class SignalInstance implements Serializable {
 		return String.format("_%s_(%s=%s[%s])", type.toString().toLowerCase(), name, positive, score);
 	}
 
+//	public void initHistory() {
+//		history = ArrayListMultimap.create();
+//	}
+//	
 	@Override
 	public int hashCode() {
 		final int prime = 31;

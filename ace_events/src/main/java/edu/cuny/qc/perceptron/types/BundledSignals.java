@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.Set;
 
 import edu.cuny.qc.perceptron.core.Perceptron;
-import edu.cuny.qc.perceptron.similarity_scorer.ScorerData;
+import edu.cuny.qc.scorer.ScorerData;
 
 public class BundledSignals implements Serializable {
 	private static final long serialVersionUID = -517597227392807906L;

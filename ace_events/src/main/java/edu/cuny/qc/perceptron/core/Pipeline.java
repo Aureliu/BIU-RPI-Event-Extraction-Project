@@ -10,6 +10,7 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.cas.CASException;
 import org.apache.uima.cas.CASRuntimeException;
@@ -32,9 +33,24 @@ public class Pipeline
 {
 	//DEBUG
 	public static File modelFile = null;
-	public static final int DOCUMENT_GC_FREQ = 10;
+	public static final int DOCUMENT_GC_FREQ = 100;
+	private static final Runtime runtime = Runtime.getRuntime();
+	public static final double MB = 1024.0*1024;
 	///////////
 
+	public static double inMB(long bytes) {
+		return bytes / MB;
+	}
+	public static String detailedLog() {
+		//Runtime runtime = Runtime.getRuntime();
+		long max = runtime.maxMemory();
+		long total = runtime.totalMemory();
+		return String.format("[%1$tH:%1$tM:%1$tS.%1$tL max=%2$.2f, total=%3$.2f, used=%4$.2f]",
+				new Date(),
+				max==Long.MAX_VALUE? "no limit" : inMB(max), 
+				inMB(total), 
+				inMB(total - runtime.freeMemory()));
+	}
 	/**
 	 * Given the document list, train a perceptron model, and write to modelFile
 	 * @param srcDir
@@ -71,8 +87,8 @@ public class Pipeline
 			model.controller = controller;
 			TypesContainer trainTypes = new TypesContainer(trainSpecXmlPaths, false);
 			TypesContainer devTypes = new TypesContainer(devSpecXmlPaths, false);
-			trainInstanceList = readInstanceList(model, trainTypes, srcDir, trainingFileList, featureAlphabet, true);
-			devInstanceList = readInstanceList(model, devTypes, srcDir, devFileList, featureAlphabet, false);
+			trainInstanceList = readInstanceList(model, trainTypes, srcDir, trainingFileList, featureAlphabet, true, false);
+			devInstanceList = readInstanceList(model, devTypes, srcDir, devFileList, featureAlphabet, false, false);
 		}
 		else
 		{
@@ -108,9 +124,9 @@ public class Pipeline
 	 */
 	public static List<SentenceInstance> readInstanceList(Perceptron perceptron,
 			TypesContainer types, File srcDir, File file_list, Alphabet featureAlphabet, 
-			boolean learnable) throws IOException, DocumentException, CASRuntimeException, AnalysisEngineProcessException, ResourceInitializationException, CASException, UimaUtilsException, AeException
+			boolean learnable, boolean debug) throws IOException, DocumentException, CASRuntimeException, AnalysisEngineProcessException, ResourceInitializationException, CASException, UimaUtilsException, AeException
 	{
-		System.out.println("Reading training instance ...");
+		System.out.printf("%s Reading instance list ...\n", detailedLog());
 		
 		List<SentenceInstance> instancelist = new ArrayList<SentenceInstance>();
 		BufferedReader reader = new BufferedReader(new FileReader(file_list));
@@ -122,9 +138,9 @@ public class Pipeline
 			{
 				num++;
 				if (num % DOCUMENT_GC_FREQ == 0) {
-					System.out.printf("***[%1$tH:%1$tM:%1$tS.%1$tL] running gc...", new Date());
+					System.out.printf("***%s running gc...", detailedLog());
 					System.gc();
-					System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] done.\n", new Date());					
+					System.out.printf("%s done.\n", detailedLog());					
 				}
 				
 				boolean monoCase = line.contains("bn/") ? true : false;
@@ -150,7 +166,7 @@ public class Pipeline
 					
 					// 1.6.14: Create instances even if we skip them - to fully create their signals  
 					//System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] sent_id=%2$s, insts..", new Date(), sent_id);
-					List<SentenceInstance> insts = Document.getInstancesForSentence(perceptron, sent, types, featureAlphabet, learnable);
+					List<SentenceInstance> insts = Document.getInstancesForSentence(perceptron, sent, types, featureAlphabet, learnable, debug);
 					//System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] done(%2$d).", new Date(), insts.size());
 					docInstancelist.addAll(insts);
 					
@@ -188,11 +204,11 @@ public class Pipeline
 		}
 		finally {
 			reader.close();
-			System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] FINAL GC...", new Date());
-			System.gc();
-			System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] done.\n", new Date());
 		}
 		
+		System.out.printf("%s FINAL GC...", detailedLog());
+		System.gc();
+		System.out.printf("%s done.\n", detailedLog());
 		System.out.println("done");
 		return instancelist;
 	}

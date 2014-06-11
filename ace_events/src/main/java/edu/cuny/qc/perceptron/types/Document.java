@@ -399,7 +399,7 @@ public class Document implements java.io.Serializable
 			//dumpNewDoc = false;
 			//tryLoadExisting = false;
 			///////////////////////////////////////////////////////////////////////////////////////////////////
-			System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] CreateAndPreprocess - start\n", new Date());
+			//System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] CreateAndPreprocess - start\n", new Date());
 
 			Document doc = null;
 			File preprocessed = new File(baseFileName + preprocessedFileExt + perceptron.controller.serialization.extension);
@@ -470,7 +470,7 @@ public class Document implements java.io.Serializable
 			
 			doc.loadSignals(perceptron, types);
 
-			System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] CreateAndPreprocess - Done.\n\n", new Date());
+			//System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] CreateAndPreprocess - Done.\n\n", new Date());
 			return doc;
 		//} catch (UimaUtilsException e) {
 		//	throw new IOException(e);
@@ -1070,16 +1070,16 @@ public class Document implements java.io.Serializable
 		// 22.5.14 Kludge - not loading signals, due to some weird ClassCastException
 		if (signalsFile.isFile() /* && false */) {
 			try {
-				System.out.printf("build input stream: [%1$tH:%1$tM:%1$tS.%1$tL]...\n", new Date());
+				System.out.printf("Reading 'signals' file: [%1$tH:%1$tM:%1$tS.%1$tL]...", new Date());
 				InputStream in = perceptron.controller.serialization.getInputStream(new FileInputStream(signalsFile));
 //				byte b[] = new byte[1024*1024*20];
 //				System.out.printf("\nread array: [%1$tH:%1$tM:%1$tS.%1$tL]...", new Date());
 //				int num = in.read(b);
 //				System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL]\n", new Date());
 //				in = perceptron.controller.serialization.getInputStream(new FileInputStream(signalsFile));
-				System.out.printf("read object: [%1$tH:%1$tM:%1$tS.%1$tL]...", new Date());
+				//System.out.printf("read object: [%1$tH:%1$tM:%1$tS.%1$tL]...", new Date());
 				BundledSignals input = (BundledSignals) SerializationUtils.deserialize(in);
-				System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL]\n", new Date());
+				System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] done.\n", new Date());
 				signals = input;
 				in.close();
 				
@@ -1134,21 +1134,21 @@ public class Document implements java.io.Serializable
 	}
 
 	public List<SentenceInstance> getInstances(Perceptron perceptron, TypesContainer types, Alphabet featureAlphabet, 
-			Controller controller, boolean learnable) throws CASRuntimeException, AnalysisEngineProcessException, ResourceInitializationException, CASException, UimaUtilsException, IOException, AeException
+			Controller controller, boolean learnable, boolean debug) throws CASRuntimeException, AnalysisEngineProcessException, ResourceInitializationException, CASException, UimaUtilsException, IOException, AeException
 	{		
 		List<SentenceInstance> instancelist = new ArrayList<SentenceInstance>();
 		for(int sent_id=0 ; sent_id<this.getSentences().size(); sent_id++)
 		{
 			Sentence sent = this.getSentences().get(sent_id);
 			// add all instances
-			List<SentenceInstance> insts = Document.getInstancesForSentence(perceptron, sent, types, featureAlphabet, learnable);
+			List<SentenceInstance> insts = Document.getInstancesForSentence(perceptron, sent, types, featureAlphabet, learnable, debug);
 			instancelist.addAll(insts);
 		}
 		return instancelist;
 	}
 	
 	public static List<SentenceInstance> getInstancesForSentence(Perceptron perceptron, Sentence sent, TypesContainer types, Alphabet featureAlphabet, 
-			boolean learnable) throws CASRuntimeException, AnalysisEngineProcessException, ResourceInitializationException, CASException, UimaUtilsException, IOException, AeException {
+			boolean learnable, boolean debug) throws CASRuntimeException, AnalysisEngineProcessException, ResourceInitializationException, CASException, UimaUtilsException, IOException, AeException {
 		List<SentenceInstance> result = new ArrayList<SentenceInstance>();
 		if (perceptron.controller.oMethod.equalsIgnoreCase("F")) {
 			for (int specNum=0; specNum < types.specs.size(); specNum++) {
@@ -1157,13 +1157,13 @@ public class Document implements java.io.Serializable
 				TypesContainer oneType = new TypesContainer(oneSpec); 
 				//System.out.printf("\n\t[%1$tH:%1$tM:%1$tS.%1$tL] adding inst...", new Date());
 				result.add(new SentenceInstance(perceptron, sent, oneType, featureAlphabet,
-						learnable, spec, specNum));
+						learnable, spec, specNum, debug));
 				//System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] done.\n", new Date());
 			}
 		}
 		else {
 			result.add(new SentenceInstance(perceptron, sent, types, featureAlphabet,
-					learnable, null, null));
+					learnable, null, null, debug));
 		}
 		
 		return result;

@@ -24,13 +24,13 @@ import ac.biu.nlp.nlp.ie.onthefly.input.TypesContainer;
 import edu.cuny.qc.perceptron.core.Controller;
 import edu.cuny.qc.perceptron.core.Perceptron;
 import edu.cuny.qc.perceptron.core.Pipeline;
-import edu.cuny.qc.perceptron.similarity_scorer.ScorerData;
-import edu.cuny.qc.perceptron.similarity_scorer.SignalMechanism;
 import edu.cuny.qc.perceptron.types.Alphabet;
 import edu.cuny.qc.perceptron.types.SentenceAssignment;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
 import edu.cuny.qc.perceptron.types.SignalInstance;
 import edu.cuny.qc.perceptron.types.SentenceInstance.InstanceAnnotations;
+import edu.cuny.qc.scorer.ScorerData;
+import edu.cuny.qc.scorer.SignalMechanism;
 
 public class SignalAnalyzer {
 	private static final String CORPUS_DIR = "src/main/resources/corpus/qi";
@@ -39,7 +39,8 @@ public class SignalAnalyzer {
 					"addNeverSeenFeatures=true crossSent=false crossSentReranking=false order=0 evaluatorType=1 learnBigrams=true logLevel=3 " +
 					"oMethod=F serialization=BZ2";
 	private static SignalAnalyzerDocumentCollection docs = new SignalAnalyzerDocumentCollection();
-	private static final int SENTENCE_PRINT_FREQ = 100;
+	private static final int SENTENCE_PRINT_FREQ = 1000;
+	private static final int SENTENCE_GC_FREQ = 20000;
 
 	public static void analyze(File inputFileList, File specList, File outputFolder, String triggerDocName, String argDocName, String globalDocName) throws Exception {
 		(new PrintStream(new File(outputFolder, "start"))).close();
@@ -59,7 +60,7 @@ public class SignalAnalyzer {
 		perceptron.controller = new Controller();
 		perceptron.controller.setValueFromArguments(StringUtils.split(CONTROLLER_PARAMS));
 		
-		List<SentenceInstance> goldInstances = Pipeline.readInstanceList(perceptron, types, new File(CORPUS_DIR), inputFileList, new Alphabet(), false);
+		List<SentenceInstance> goldInstances = Pipeline.readInstanceList(perceptron, types, new File(CORPUS_DIR), inputFileList, new Alphabet(), false, true);
 		//SignalPerformanceField.goldInstances = goldInstances;
 		System.out.printf("[%s] Finished reading documents, starting to process %s sentences\n", new Date(), goldInstances.size());
 		
@@ -69,7 +70,7 @@ public class SignalAnalyzer {
 		for (SentenceInstance problem : goldInstances) {
 			sentNum++;
 			if (sentNum % SENTENCE_PRINT_FREQ == 1) {
-				System.out.printf("[%s] Processing sentence %s\n", new Date(), sentNum);
+				System.out.printf("%s Processing sentence %s\n", Pipeline.detailedLog(), sentNum);
 			}
 			Map<ScorerData, SentenceAssignment> assignments = new LinkedHashMap<ScorerData, SentenceAssignment>();
 			String triggerLabel = SpecAnnotator.getSpecLabel(problem.associatedSpec);
@@ -85,7 +86,11 @@ public class SignalAnalyzer {
 			key.put("docId", docId);
 			key.put("label", triggerLabel);
 			
-			System.gc();
+			if (sentNum % SENTENCE_GC_FREQ == 1) {
+				System.out.printf("%s *** running gc... ", Pipeline.detailedLog());
+				System.gc();
+				System.out.printf("%s done.\n", Pipeline.detailedLog());
+			}
 			
 			for(int i=0; i<problem.size(); i++) {
 				String goldLabel = problem.target.getLabelAtToken(i);
@@ -123,19 +128,20 @@ public class SignalAnalyzer {
 					else {
 						assn.setCurrentNodeLabel(SentenceAssignment.Default_Trigger_Label);
 					}
-				}
-				
-				LinkedHashMap<ScorerData, Multimap<String, String>> allDetailedSignals = new LinkedHashMap<ScorerData, Multimap<String, String>>();
-				//System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] getTriggerDetails...", new Date());
-				for (SignalMechanism mechanism : perceptron.signalMechanisms) {
-					allDetailedSignals.putAll(mechanism.getTriggerDetails(problem.associatedSpec, problem, i));
-				}
-				//System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] done.\n", new Date());
-				for (ScorerData data : allDetailedSignals.keySet()) {
-					Multimap<String, String> details = allDetailedSignals.get(data);
+					
+//					if (sentNum % SENTENCE_PRINT_FREQ == 1 && i%10==0) {
+//						System.out.printf("%s   Adding label to assn (i=%s, scorer=%s)\n", Pipeline.detailedLog(), i, data);
+//					}
+					/// DEBUG
+//					if (data.fullName.contains("HYPERNYM")) {
+//						System.err.printf("sent=%s, i=%s, label=%s, scorer=%s, signal=%s: %s\n", sentNum, i, triggerLabel, data, signal, signal.history);
+//					}
+					///
+
+					
 					key.put("signal", data.basicName);
-					key.put("aggregator", data.aggregator.getClass().getSimpleName());
-					for (Entry<String, String> entry : details.entries()) {
+					key.put("agg", data.aggregatorTypeName);
+					for (Entry<String, String> entry : signal.history.entries()) {
 						
 						// No need to check if signal is positive - this is already done in SignalMechanismSpecIterator.addToHistory()
 						if (goldLabel.equals(triggerLabel)) { 
@@ -147,10 +153,42 @@ public class SignalAnalyzer {
 							docs.updateDocs(key, "SpecTextTokens", "FalsePositive", entry);
 						}
 					}
+					
+					if (sentNum % SENTENCE_PRINT_FREQ == 1 && i%10==0) {
+						System.out.printf("%s   Updated docs (i=%s, scorer=%s, len(history)=%s)\n", Pipeline.detailedLog(), i, data, signal.history.size());
+					}
+
 				}
+				
+//				LinkedHashMap<ScorerData, Multimap<String, String>> allDetailedSignals = new LinkedHashMap<ScorerData, Multimap<String, String>>();
+//				//System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] getTriggerDetails...", new Date());
+//				for (SignalMechanism mechanism : perceptron.signalMechanisms) {
+//					allDetailedSignals.putAll(mechanism.getTriggerDetails(problem.associatedSpec, problem, i));
+//				}
+				//System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] done.\n", new Date());
+//				for (ScorerData data : allDetailedSignals.keySet()) {
+//					Multimap<String, String> details = allDetailedSignals.get(data);
+//					key.put("signal", data.basicName);
+//					key.put("agg", data.aggregator.getClass().getSimpleName());
+//					for (Entry<String, String> entry : details.entries()) {
+//						
+//						// No need to check if signal is positive - this is already done in SignalMechanismSpecIterator.addToHistory()
+//						if (goldLabel.equals(triggerLabel)) { 
+//							docs.updateDocs(key, "SpecTokens", "TruePositive", entry.getKey());
+//							docs.updateDocs(key, "SpecTextTokens", "TruePositive", entry);
+//						}
+//						else {
+//							docs.updateDocs(key, "SpecTokens", "FalsePositive", entry.getKey());
+//							docs.updateDocs(key, "SpecTextTokens", "FalsePositive", entry);
+//						}
+//					}
+//				}
 			}
 
-			System.gc();
+			if (sentNum % SENTENCE_PRINT_FREQ == 1) {
+				System.out.printf("%s Sentence %s: finished token fields\n", Pipeline.detailedLog(), sentNum);
+			}
+			//System.gc();
 
 			for (ScorerData data : assignments.keySet()) {
 				SentenceAssignment assn = assignments.get(data);
@@ -160,17 +198,22 @@ public class SignalAnalyzer {
 //				}
 				///
 				key.put("signal", data.basicName);
-				key.put("aggregator", data.aggregatorTypeName);
+				key.put("agg", data.aggregatorTypeName);
 				docs.updateDocs(key, "Performance", "", assn);
 			}
+			
+			if (sentNum % SENTENCE_PRINT_FREQ == 1) {
+				System.out.printf("%s Sentence %s: finished perofrmance (and the sentence itself)\n", Pipeline.detailedLog(), sentNum);
+			}
+
 		}
 
 		System.out.printf("[%s] Finished processing %s sentences\n", new Date(), goldInstances.size());
 
-		System.gc();
+		//System.gc();
 
 		docs.dumpAsCsvFiles(triggerFile, argFile, globalFile);
-		System.out.printf("[%s] Done", new Date());
+		System.out.printf("[%s] Fully done!\n", new Date());
 	}
 	
 	public static void fileInit(File f) throws FileNotFoundException {

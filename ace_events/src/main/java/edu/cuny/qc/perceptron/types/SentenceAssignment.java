@@ -20,8 +20,8 @@ import edu.cuny.qc.ace.acetypes.AceMention;
 import edu.cuny.qc.perceptron.core.Controller;
 import edu.cuny.qc.perceptron.core.Perceptron;
 import edu.cuny.qc.perceptron.featureGenerator.GlobalFeatureGenerator;
-import edu.cuny.qc.perceptron.similarity_scorer.ScorerData;
 import edu.cuny.qc.perceptron.types.SentenceInstance.InstanceAnnotations;
+import edu.cuny.qc.scorer.ScorerData;
 import edu.cuny.qc.util.UnsupportedParameterException;
 
 /**

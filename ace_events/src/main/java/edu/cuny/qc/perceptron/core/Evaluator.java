@@ -1,10 +1,23 @@
 package edu.cuny.qc.perceptron.core;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.commons.math.util.FastMath;
+import org.apache.commons.math.util.MathUtils;
+
+import com.google.common.collect.ArrayListMultimap;
+import com.google.common.collect.Multimap;
+
+import ac.biu.nlp.nlp.ie.onthefly.input.SpecAnnotator;
+
 import edu.cuny.qc.perceptron.types.SentenceAssignment;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
+import edu.cuny.qc.perceptron.types.SignalInstance;
+import edu.cuny.qc.perceptron.types.SentenceInstance.InstanceAnnotations;
+import edu.cuny.qc.scorer.ScorerData;
+import edu.cuny.qc.util.InfoGainAndEntropy;
 
 /**
  * this is a scorer for ACE event assignment
@@ -19,18 +32,22 @@ public class Evaluator
 			System.err.println("??? Evaluator.Score: args are disables. Harmonic mean actually just takes triggers. Undo these when args are back in fashion.");
 		}
 		
+		public double trigger_info_gain = 0.0;
 		public double trigger_F1 = 0.0;
 		public double trigger_precision = 0.0;
 		public double trigger_recall = 0.0;
 		
+		public double arg_info_gain = 0.0;
 		public double arg_F1 = 0.0;
 		public double arg_precision = 0.0;
 		public double arg_recall = 0.0;
 	
+		public double count_trigger_total = 0;
 		public double count_trigger_ans = 0;
 		public double count_trigger_gold = 0;
 		public double count_trigger_correct = 0;
 
+		public double count_arg_total = 0;
 		public double count_arg_ans = 0;
 		public double count_arg_gold = 0;
 		public double count_arg_correct = 0;
@@ -84,10 +101,17 @@ public class Evaluator
 	
 	public void evaluteTrigger(List<SentenceAssignment> results, List<SentenceInstance> instancesGold, Score score)
 	{
+		double count_trigger_total = 0;
 		double count_trigger_ans = 0;
 		double count_trigger_gold = 0;
 		double count_trigger_correct = 0;
 		double count_trigger_correct_idt = 0;
+		
+		/// DEBUG
+//		Multimap<String, SignalInstance> positiveSignalsWithHistory = ArrayListMultimap.create();
+//		Multimap<String, SignalInstance> positiveSignalsEmptyHistory = ArrayListMultimap.create();
+//		int with=0, withHyp=0, empty=0, emptyHyp=0;
+		////
 		
 		for(int i=0; i<results.size(); i++)
 		{
@@ -97,6 +121,7 @@ public class Evaluator
 			// count num of gold args
 			for(int j=0; j<gold.getNodeAssignment().size(); j++)
 			{
+				count_trigger_total++;
 				String gold_trigger = gold.getLabelAtToken(j);
 				if(!gold_trigger.equals(SentenceAssignment.Default_Trigger_Label))
 				{
@@ -115,6 +140,18 @@ public class Evaluator
 			// count correct args
 			for(int j=0; j<gold.getNodeAssignment().size(); j++)
 			{
+				/// DEBUG
+//				String triggerLabel;
+//				try {
+//					triggerLabel = SpecAnnotator.getSpecLabel(goldInstance.associatedSpec);
+//				} catch (Exception e) {
+//					throw new RuntimeException(e);
+//				}
+//				List<Map<String, Map<ScorerData, SignalInstance>>> tokens = (List<Map<String, Map<ScorerData, SignalInstance>>>) goldInstance.get(InstanceAnnotations.NodeTextSignalsBySpec);
+//				Map<String, Map<ScorerData, SignalInstance>> token = tokens.get(j);
+//				Map<ScorerData, SignalInstance> scoredSignals = token.get(triggerLabel);
+				///
+				
 				String gold_trigger = gold.getLabelAtToken(j);
 				String ans_trigger;
 				try {
@@ -127,6 +164,29 @@ public class Evaluator
 				//if(gold_trigger.equals(ans_trigger))
 				if(!gold_trigger.equals(SentenceAssignment.Default_Trigger_Label) && !ans_trigger.equals(SentenceAssignment.Default_Trigger_Label))
 				{
+					/// DEBUG
+//					for (SignalInstance signal : scoredSignals.values()) {
+////						if (signal.name.startsWith("WN_HYPERNYM") && signal.positive) {
+////							System.out.printf(" --- Correct match between text and spec on %s\n", signal.name);
+////						}
+//						if (signal.positive) {
+//							if (signal.history.isEmpty()) {
+//								positiveSignalsEmptyHistory.put(signal.name, signal);
+//								empty++;
+//								if (signal.name.startsWith("WN_HYPERNYM")) {
+//									emptyHyp++;
+//								}
+//							}
+//							else {
+//								positiveSignalsWithHistory.put(signal.name, signal);
+//								with++;
+//								if (signal.name.startsWith("WN_HYPERNYM")) {
+//									withHyp++;
+//								}
+//							}
+//						}
+//					}
+					////
 					count_trigger_correct_idt++;
 					// trigger correct
 					if(gold_trigger.equals(ans_trigger))
@@ -137,6 +197,9 @@ public class Evaluator
 			}
 		}
 		
+		/// DEBUG
+//		System.out.printf("empty=%d, emptyHyp=%d, with=%d, withHyp=%d\n", empty, emptyHyp, with, withHyp);
+		///
 		double prec;
 		double prec_idt;
 		if(count_trigger_ans == 0.0)
@@ -164,6 +227,7 @@ public class Evaluator
 			f_measure_idt = 2 * (prec_idt * recall_idt) / (prec_idt + recall_idt);
 		}
 		
+		score.count_trigger_total = count_trigger_total;
 		score.count_trigger_ans = count_trigger_ans;
 		score.count_trigger_gold = count_trigger_gold;
 		score.count_trigger_correct = count_trigger_correct;
@@ -175,6 +239,13 @@ public class Evaluator
 		score.trigger_recall_idt = recall_idt;
 		score.trigger_F1 = f_measure;
 		score.trigger_F1_idt = f_measure_idt;
+		
+		double count_trigger_ans_not_correct = count_trigger_ans - count_trigger_correct;
+		score.trigger_info_gain = InfoGainAndEntropy.infoGain(
+				count_trigger_correct,
+				count_trigger_ans_not_correct,
+				count_trigger_gold - count_trigger_correct,
+				count_trigger_total - count_trigger_gold - count_trigger_ans_not_correct);
 	}
 	
 	/**
@@ -185,6 +256,7 @@ public class Evaluator
 	 */
 	public void evaluteArgument(List<SentenceAssignment> results, List<SentenceInstance> instancesGold, Score score)
 	{
+		double count_arg_total = 0;
 		double count_arg_ans = 0;
 		double count_arg_gold = 0;
 		double count_arg_correct = 0;
@@ -204,6 +276,7 @@ public class Evaluator
 					Map<Integer, Integer> gold_edges = gold.getEdgeAssignment().get(j);
 					for(int key : gold_edges.keySet())
 					{
+						count_arg_total++;
 						int value_gold = gold_edges.get(key);
 						if(!goldInstance.edgeTargetAlphabet.lookupObject(value_gold).equals(SentenceAssignment.Default_Argument_Label))
 						{
@@ -295,6 +368,7 @@ public class Evaluator
 			f_measure_idt = 2 * (prec_idt * recall_idt) / (prec_idt + recall_idt);
 		}
 		
+		score.count_arg_total = count_arg_total;
 		score.count_arg_ans = count_arg_ans;
 		score.count_arg_gold = count_arg_gold;
 		score.count_arg_correct = count_arg_correct;
@@ -306,5 +380,13 @@ public class Evaluator
 		score.arg_recall_idt = recall_idt;
 		score.arg_F1 = f_measure;
 		score.arg_F1_idt = f_measure_idt;
+		
+		double count_arg_ans_not_correct = count_arg_ans - count_arg_correct;
+		score.arg_info_gain = InfoGainAndEntropy.infoGain(
+				count_arg_correct,
+				count_arg_ans_not_correct,
+				count_arg_gold - count_arg_correct,
+				count_arg_total - count_arg_gold - count_arg_ans_not_correct);
+
 	}
 }

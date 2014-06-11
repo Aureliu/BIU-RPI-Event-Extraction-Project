@@ -24,16 +24,18 @@ import java.util.Set;
 import org.apache.commons.lang3.SerializationUtils;
 
 import edu.cuny.qc.perceptron.core.Evaluator.Score;
-import edu.cuny.qc.perceptron.similarity_scorer.ScorerData;
-import edu.cuny.qc.perceptron.similarity_scorer.SignalMechanism;
-import edu.cuny.qc.perceptron.similarity_scorer.SignalMechanismException;
-import edu.cuny.qc.perceptron.similarity_scorer.WordNetSignalMechanism;
 import edu.cuny.qc.perceptron.types.Alphabet;
 import edu.cuny.qc.perceptron.types.FeatureVector;
 import edu.cuny.qc.perceptron.types.SentenceAssignment;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
 import edu.cuny.qc.perceptron.types.SentenceInstance.InstanceAnnotations;
 import edu.cuny.qc.perceptron.types.SignalInstance;
+import edu.cuny.qc.scorer.ScorerData;
+import edu.cuny.qc.scorer.SignalMechanism;
+import edu.cuny.qc.scorer.SignalMechanismException;
+import edu.cuny.qc.scorer.mechanism.BrownClustersSignalMechanism;
+import edu.cuny.qc.scorer.mechanism.PlainSignalMechanism;
+import edu.cuny.qc.scorer.mechanism.WordNetSignalMechanism;
 import edu.cuny.qc.util.TokenAnnotations;
 import edu.cuny.qc.util.UnsupportedParameterException;
 import edu.cuny.qc.util.Utils;
@@ -109,7 +111,9 @@ public class Perceptron implements java.io.Serializable
 		
 		try {
 			
+			signalMechanisms.add(new PlainSignalMechanism());
 			signalMechanisms.add(new WordNetSignalMechanism());
+			signalMechanisms.add(new BrownClustersSignalMechanism());
 			
 		} catch (WordNetInitializationException e) {
 			throw new SignalMechanismException(e);

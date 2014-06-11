@@ -28,10 +28,10 @@ import edu.cuny.qc.ace.acetypes.AceMention;
 import edu.cuny.qc.perceptron.core.Controller;
 import edu.cuny.qc.perceptron.core.Perceptron;
 import edu.cuny.qc.perceptron.graph.DependencyGraph;
-import edu.cuny.qc.perceptron.similarity_scorer.ScorerData;
-import edu.cuny.qc.perceptron.similarity_scorer.SignalMechanism;
-import edu.cuny.qc.perceptron.similarity_scorer.SignalMechanismException;
 import edu.cuny.qc.perceptron.types.Sentence.Sent_Attribute;
+import edu.cuny.qc.scorer.ScorerData;
+import edu.cuny.qc.scorer.SignalMechanism;
+import edu.cuny.qc.scorer.SignalMechanismException;
 import edu.cuny.qc.util.FinalKeysMap;
 import edu.cuny.qc.util.Span;
 
@@ -55,6 +55,10 @@ import edu.cuny.qc.util.Span;
  */
 public class SentenceInstance
 {
+	static {
+		System.err.println("SentenceInstance: yes, even here I removed the args :)");
+	}
+	
 	public boolean learnable = false;
 	
 	public transient TypesContainer types;
@@ -155,7 +159,7 @@ public class SentenceInstance
 	}
 	
 	public SentenceInstance(TypesContainer types, Alphabet featureAlphabet, 
-			Controller controller, boolean learnable)
+			Controller controller, boolean learnable, boolean debug)
 	{
 		this.types = types;
 		this.nodeTargetAlphabet = types.nodeTargetAlphabet;
@@ -171,9 +175,9 @@ public class SentenceInstance
 	 * @param sent
 	 */
 	public SentenceInstance(Perceptron perceptron, Sentence sent, TypesContainer types, Alphabet featureAlphabet, 
-			boolean learnable, JCas associatedSpec, Integer specNum)
+			boolean learnable, JCas associatedSpec, Integer specNum, boolean debug)
 	{
-		this(types, featureAlphabet, perceptron.controller, learnable);
+		this(types, featureAlphabet, perceptron.controller, learnable, debug);
 		
 		// set the text of the doc
 		this.allText = sent.doc.allText;
@@ -278,7 +282,7 @@ public class SentenceInstance
 			AceDocument.filterBySpecs(types, filtered, eventMentions, null, null, null, null, null, null, null, null);
 		}
 		
-		getPersistentSignals(perceptron);
+		getPersistentSignals(perceptron, debug);
 		
 		// add target as gold-standard assignment
 		this.target = new SentenceAssignment(this, perceptron);
@@ -463,7 +467,7 @@ public class SentenceInstance
 	
 	
 	/// Ofer's new section - calcing signals!
-	private void getPersistentSignals(Perceptron perceptron) {
+	private void getPersistentSignals(Perceptron perceptron, boolean debug) {
 		try {
 			Map<Integer, List<Map<String, Map<ScorerData, SignalInstance>>>> allTriggerSignals = null;
 			Map<Integer, List<Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>>>> allArgSignals = null;
@@ -493,7 +497,7 @@ public class SentenceInstance
 			
 			this.textFeaturesMap.put(InstanceAnnotations.NodeTextSignalsBySpec, sentenceTriggerSignals);
 			this.textFeaturesMap.put(InstanceAnnotations.EdgeTextSignals, sentenceArgSignals);
-			calculatePersistentSignals(perceptron, sentenceTriggerSignals, sentenceArgSignals);
+			calculatePersistentSignals(perceptron, sentenceTriggerSignals, sentenceArgSignals, debug);
 		} catch (SignalMechanismException e) {
 			throw new RuntimeException(e);
 		} catch (CASException e) {
@@ -503,7 +507,8 @@ public class SentenceInstance
 	
 	private void calculatePersistentSignals(Perceptron perceptron,
 			List<Map<String, Map<ScorerData, SignalInstance>>> triggerSignals,
-			List<Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>>> argSignals) throws SignalMechanismException, CASException {
+			List<Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>>> argSignals,
+			boolean debug) throws SignalMechanismException, CASException {
 		//List<Map<String, Map<String, SignalInstance>>> triggerSignals = new ArrayList<Map<String, Map<String, SignalInstance>>>(size());
 		//List<Map<String, List<Map<String, Map<String, SignalInstance>>>>> argSignals = new ArrayList<Map<String, List<Map<String, Map<String, SignalInstance>>>>>(size());
 		for(int i=0; i<size(); i++)
@@ -557,7 +562,7 @@ public class SentenceInstance
 					tokenArgSpecSignals = tokenArgSignals.get(triggerLabel);
 				}
 				
-				addTriggerSignals(spec, i, perceptron, specSignals);
+				addTriggerSignals(spec, i, perceptron, specSignals, debug);
 					
 				for(int k=0; k<eventArgCandidates.size(); k++) {
 					AceMention mention = eventArgCandidates.get(k);
@@ -585,25 +590,18 @@ public class SentenceInstance
 							roleSignals = tokenArgSpecEntitySignals.get(role);
 						}
 						
-						addArgumentSignals(spec, i, argument, mention, perceptron, roleSignals);
+						//addArgumentSignals(spec, i, argument, mention, perceptron, roleSignals);
 					}
 				}
 			}
 		}
 	}
 	
-	public void addTriggerSignals(JCas spec, int i, Perceptron perceptron, Map<ScorerData, SignalInstance> specSignals) throws SignalMechanismException {
-		LinkedHashMap<ScorerData, BigDecimal> scoredSignals;
+	public void addTriggerSignals(JCas spec, int i, Perceptron perceptron, Map<ScorerData, SignalInstance> specSignals, boolean debug) throws SignalMechanismException {
+		//LinkedHashMap<ScorerData, BigDecimal> scoredSignals;
 		//Map<ScorerData, SignalInstance> result = new HashMap<ScorerData, SignalInstance>(); //technically, we could add ScorerData to "specSignals", but it's needed only for reports, and also I don't feel like changing the entire dumpSignals compound types AGAIN. 
 		for (SignalMechanism mechanism : perceptron.signalMechanisms) {
-			scoredSignals = mechanism.scoreTrigger(specSignals, spec, this, i);
-			for (Entry<ScorerData, BigDecimal> scoredSignal : scoredSignals.entrySet()) {
-				SignalInstance signal = new SignalInstance(scoredSignal.getKey().fullName, SignalType.TRIGGER, scoredSignal.getValue());
-				specSignals.put(scoredSignal.getKey(), signal);
-				//result.put(scoredSignal.getKey(), signal);
-				perceptron.triggerScorers.add(scoredSignal.getKey());
-				markSignalUpdate();
-			}
+			mechanism.scoreTrigger(specSignals, perceptron.triggerScorers, spec, this, i, debug);
 		}
 		//return result;
 	}

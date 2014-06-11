@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
+import java.util.TreeMap;
 
 import ac.biu.nlp.nlp.ace_uima.utils.Counter;
 
@@ -60,5 +61,5 @@ public class ListValuesField extends ListField {
 	}
 	
 	//private Multimap<String, String> elements = ArrayListMultimap.create();
-	private Map<String, Counter<String>> elements = new LinkedHashMap<String, Counter<String>>();
+	private Map<String, Counter<String>> elements = new TreeMap<String, Counter<String>>(); //sorted by key
 }

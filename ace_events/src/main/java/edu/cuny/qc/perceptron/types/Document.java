@@ -1040,7 +1040,7 @@ public class Document implements java.io.Serializable
 			throw new IllegalStateException("About to dump signals after finishing all SentenceInstances, but there is no BundledSignals in document: " + docID);
 		}
 		
-		if (signalsUpdated) {
+		if (perceptron.controller.useSignalFiles && signalsUpdated) {
 			File signalsFile = new File(docID + signalsFileExt + perceptron.controller.serialization.extension);
 			try {
 				OutputStream out = perceptron.controller.serialization.getOutputStream(new FileOutputStream(signalsFile));
@@ -1056,7 +1056,7 @@ public class Document implements java.io.Serializable
 				throw e;
 			}
 		}
-		else {
+		else if (!signalsUpdated) {
 			System.out.printf("Not dumping signals, already had them in full: Document %s\n", docID);
 		}
 	}
@@ -1068,7 +1068,7 @@ public class Document implements java.io.Serializable
 		File signalsFile = new File(docID + signalsFileExt + perceptron.controller.serialization.extension);
 
 		// 22.5.14 Kludge - not loading signals, due to some weird ClassCastException
-		if (signalsFile.isFile() /* && false */) {
+		if (perceptron.controller.useSignalFiles && signalsFile.isFile() /* && false */) {
 			try {
 				System.out.printf("Reading 'signals' file: [%1$tH:%1$tM:%1$tS.%1$tL]...", new Date());
 				InputStream in = perceptron.controller.serialization.getInputStream(new FileInputStream(signalsFile));

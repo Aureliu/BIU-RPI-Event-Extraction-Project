@@ -73,7 +73,7 @@ public class StatsDocument {
 	public void dumpAsCsv(File file) throws IOException {
 		StringBuffer title1 = new StringBuffer();
 		StringBuffer title2 = new StringBuffer();
-		StringBuffer subtitle = new StringBuffer();
+		StringBuffer subtitle = new StringBuffer("\n"); // Start line with a blank line, for Excel to sort+filter by it, not by first rows
 		StringBuffer content = new StringBuffer();
 		
 		title1.append(StringUtil.join(keyFields, SEPARATOR));
@@ -92,6 +92,11 @@ public class StatsDocument {
 				
 				if (first) {
 					List<String> subtitles = field.getValue().getSubtitles();
+					for (int i=0; i<subtitles.size(); i++) {
+						if (subtitles.get(i).isEmpty()) {
+							subtitles.set(i, " "); //absent subtitles should contain a single space, so that Excel will let the subtitles row be a filter+sort header
+						}
+					}
 					title1.append(SEPARATOR + StringUtil.join(Collections.nCopies(subtitles.size(), field.getKey().getLvl1()), SEPARATOR));
 					title2.append(SEPARATOR + StringUtil.join(Collections.nCopies(subtitles.size(), field.getKey().getLvl2()), SEPARATOR));
 					subtitle.append(SEPARATOR + StringUtil.join(subtitles, SEPARATOR));

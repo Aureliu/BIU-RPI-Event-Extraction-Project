@@ -30,7 +30,7 @@ public abstract class SignalPerformanceField extends StatsField {
 	public List<String> getSubtitles() {
 		//return Arrays.asList(new String[] {"gold", "signal", "F-correct", "F-precision", "F-recall", "F-F1", "I-correct", "I-precision", "I-recall", "I-F1", "F=I"});
 		// CONCLUSION: Well, it seems that F and I are always identical! so no need for them!!!
-		return Arrays.asList(new String[] {"total", "gold", "signal", "correct", "precision", "recall", "F1", "IG"});
+		return Arrays.asList(new String[] {"total", "gold", "signal", "correct", "precision", "recall", "F1", "GoldEntropy", "SignalEntropy", "NotSignalEntropy", "WeightedAvg(Signal,NonSignal)Entropy", "InfoGain"});
 	}
 
 	@Override
@@ -63,7 +63,8 @@ public abstract class SignalPerformanceField extends StatsField {
 		@Override public List<Double> getDoubles(Score s) {
 			//return Arrays.asList(new Double[] {s.count_trigger_gold, s.count_trigger_ans, s.count_trigger_correct, s.trigger_precision, s.trigger_recall, s.trigger_F1, s.count_trigger_correct_idt, s.trigger_precision_idt, s.trigger_recall_idt, s.trigger_F1_idt});
 			// see CONCLUSION
-			return Arrays.asList(new Double[] {s.count_trigger_total, s.count_trigger_gold, s.count_trigger_ans, s.count_trigger_correct, s.trigger_precision, s.trigger_recall, s.trigger_F1, s.trigger_info_gain});
+			return Arrays.asList(new Double[] {s.count_trigger_total, s.count_trigger_gold, s.count_trigger_ans, s.count_trigger_correct, s.trigger_precision, s.trigger_recall, s.trigger_F1,
+					s.trigger_info_gain.goldEntropy, s.trigger_info_gain.ansTrueEntropy, s.trigger_info_gain.ansFalseEntropy, s.trigger_info_gain.weightedAverageAnsEntropy, s.trigger_info_gain.informationGain});
 		}
 		@Override public Boolean getLastBool(Score s) {
 			return s.trigger_F1==s.trigger_F1_idt;
@@ -74,7 +75,8 @@ public abstract class SignalPerformanceField extends StatsField {
 		@Override public List<Double> getDoubles(Score s) {
 			//return Arrays.asList(new Double[] {s.count_arg_gold, s.count_arg_ans, s.count_arg_correct, s.arg_precision, s.arg_recall, s.arg_F1, s.count_arg_correct_idt, s.arg_precision_idt, s.arg_recall_idt, s.arg_F1_idt});
 			// see CONCLUSION
-			return Arrays.asList(new Double[] {s.count_arg_total, s.count_arg_gold, s.count_arg_ans, s.count_arg_correct, s.arg_precision, s.arg_recall, s.arg_F1, s.arg_info_gain});
+			return Arrays.asList(new Double[] {s.count_arg_total, s.count_arg_gold, s.count_arg_ans, s.count_arg_correct, s.arg_precision, s.arg_recall, s.arg_F1,
+					s.arg_info_gain.goldEntropy, s.arg_info_gain.ansTrueEntropy, s.arg_info_gain.ansFalseEntropy, s.arg_info_gain.weightedAverageAnsEntropy, s.arg_info_gain.informationGain});
 		}
 		@Override public Boolean getLastBool(Score s) {
 			return s.trigger_F1==s.trigger_F1_idt;

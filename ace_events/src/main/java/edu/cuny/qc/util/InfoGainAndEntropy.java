@@ -14,24 +14,29 @@ public class InfoGainAndEntropy {
 		System.err.println("InfoGainAndEntropy: getting NaN. It's when precision is either 0 or 1 (so there probably is some division in 0). fix somehow, maybe according to online presentation.");
 	}
 
-	public static double infoGain(double tp, double fp, double fn, double tn) {
-		double total = tp + fp + fn + tn;
-		double goldTrue = tp + fn;
-		double goldFalse = fp + tn;
-		double ansTrue = tp + fp;
-		double ansFalse = fn + tn;
+	public static InfoGainResult infoGain(double tp, double fp, double fn, double tn) {
+		InfoGainResult result = new InfoGainResult();
+		
+		result.total = tp + fp + fn + tn;
+		result.goldTrue = tp + fn;
+		result.goldFalse = fp + tn;
+		result.ansTrue = tp + fp;
+		result.ansFalse = fn + tn;
 				
-		double goldEntropy = entropy(goldTrue, goldFalse);
-		double ansTrueEntropy = entropy(tp, fp);
-		double ansFalseEntropy = entropy(fn, tn);
+		result.goldEntropy = entropy(result.goldTrue, result.goldFalse);
+		result.ansTrueEntropy = entropy(tp, fp);
+		result.ansFalseEntropy = entropy(fn, tn);
 		
-		double weightedAverageAnsEntropy = ansTrueEntropy*ansTrue/total + ansFalseEntropy*ansFalse/total;
-		double informationGain = goldEntropy - weightedAverageAnsEntropy;
+		result.weightedAverageAnsEntropy = result.ansTrueEntropy*result.ansTrue/result.total + result.ansFalseEntropy*result.ansFalse/result.total;
+		result.informationGain = result.goldEntropy - result.weightedAverageAnsEntropy;
 		
-		return informationGain;
+		return result;
 	}
 	
 	public static double entropy(double count1, double count2) {
+		if (count1==0 || count2==0) {
+			return 0;
+		}
 		double total = count1 + count2;
 		double ratio1 = count1 / total;
 		double ratio2 = count2 / total;
@@ -41,5 +46,18 @@ public class InfoGainAndEntropy {
 		return entropy;
 	}
 	
-
+	public static class InfoGainResult {
+		public double total;
+		public double goldTrue;
+		public double goldFalse;
+		public double ansTrue;
+		public double ansFalse;
+				
+		public double goldEntropy;
+		public double ansTrueEntropy;
+		public double ansFalseEntropy;
+		
+		public double weightedAverageAnsEntropy;
+		public double informationGain;
+	}
 }

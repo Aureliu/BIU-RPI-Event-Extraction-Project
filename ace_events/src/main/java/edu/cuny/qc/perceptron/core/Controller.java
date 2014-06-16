@@ -53,6 +53,10 @@ public class Controller implements java.io.Serializable
 	// Which of the four (A,B,C,D) methods should be used for the O features. No valid default value, must be explicitly supplied.
 	public String oMethod = null;
 	
+	public boolean usePreprocessFiles = true;
+	
+	public boolean useSignalFiles = true;
+	
 	public Controller()
 	{
 		System.out.printf("\n[%s] ******** Controller() **********\n", new Date());
@@ -136,6 +140,14 @@ public class Controller implements java.io.Serializable
 			else if(fields[0].equalsIgnoreCase("serialization"))
 			{
 				serialization = SerializationMethod.valueOf(fields[1].toUpperCase());
+			}
+			else if(fields[0].equalsIgnoreCase("usePreprocessFiles"))
+			{
+				usePreprocessFiles = Boolean.parseBoolean(fields[1]);
+			}
+			else if(fields[0].equalsIgnoreCase("useSignalFiles"))
+			{
+				useSignalFiles = Boolean.parseBoolean(fields[1]);
 			}
 		}
 	}

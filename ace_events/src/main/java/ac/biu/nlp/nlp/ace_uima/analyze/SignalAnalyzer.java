@@ -42,7 +42,7 @@ public class SignalAnalyzer {
 	private static final int SENTENCE_PRINT_FREQ = 1000;
 	private static final int SENTENCE_GC_FREQ = 20000;
 
-	public static void analyze(File inputFileList, File specList, File outputFolder, String triggerDocName, String argDocName, String globalDocName) throws Exception {
+	public static void analyze(File inputFileList, File specList, File outputFolder, boolean useDumps, String triggerDocName, String argDocName, String globalDocName) throws Exception {
 		(new PrintStream(new File(outputFolder, "start"))).close();
 		AceAnalyzer.fillCategories();
 
@@ -59,6 +59,8 @@ public class SignalAnalyzer {
 		Perceptron perceptron = new Perceptron(null);
 		perceptron.controller = new Controller();
 		perceptron.controller.setValueFromArguments(StringUtils.split(CONTROLLER_PARAMS));
+		perceptron.controller.usePreprocessFiles = useDumps;
+		perceptron.controller.useSignalFiles = useDumps;
 		
 		List<SentenceInstance> goldInstances = Pipeline.readInstanceList(perceptron, types, new File(CORPUS_DIR), inputFileList, new Alphabet(), false, true);
 		//SignalPerformanceField.goldInstances = goldInstances;
@@ -229,11 +231,11 @@ public class SignalAnalyzer {
 		p.close();
 	}
 	public static void main(String args[]) throws Exception {
-		if (args.length != 6) {
-			System.err.println("USAGE: SignalAnalyzer <input file list> <spec list> <output folder> <trigger doc> <arg doc> <global doc>");
+		if (args.length != 7) {
+			System.err.println("USAGE: SignalAnalyzer <input file list> <spec list> <output folder> <use dump files> <trigger doc> <arg doc> <global doc>");
 			return;
 		}
-		SignalAnalyzer.analyze(new File(args[0]), new File(args[1]), new File(args[2]), args[3], args[4], args[5]);
+		SignalAnalyzer.analyze(new File(args[0]), new File(args[1]), new File(args[2]), Boolean.parseBoolean(args[3]), args[4], args[5], args[6]);
 	}
 
 }

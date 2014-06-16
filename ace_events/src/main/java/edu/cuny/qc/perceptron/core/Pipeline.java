@@ -136,12 +136,12 @@ public class Pipeline
 			int num = 0;
 			while((line = reader.readLine()) != null)
 			{
-				num++;
 				if (num % DOCUMENT_GC_FREQ == 0) {
 					System.out.printf("***%s running gc...", detailedLog());
 					System.gc();
 					System.out.printf("%s done.\n", detailedLog());					
 				}
+				num++;
 				
 				boolean monoCase = line.contains("bn/") ? true : false;
 				String fileName = srcDir + "/" + line;
@@ -149,7 +149,7 @@ public class Pipeline
 				System.out.printf("[%s] %s\n", new Date(), fileName);
 				
 				
-				Document doc = Document.createAndPreprocess(fileName, true, monoCase, true, true, types, perceptron);
+				Document doc = Document.createAndPreprocess(fileName, true, monoCase, perceptron.controller.usePreprocessFiles, perceptron.controller.usePreprocessFiles, types, perceptron);
 				// fill in text feature vector for each token
 				//featGen.fillTextFeatures_NoPreprocessing(doc);
 				

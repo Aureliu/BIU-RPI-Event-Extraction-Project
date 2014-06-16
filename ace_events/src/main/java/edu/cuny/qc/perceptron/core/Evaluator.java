@@ -18,7 +18,7 @@ import edu.cuny.qc.perceptron.types.SignalInstance;
 import edu.cuny.qc.perceptron.types.SentenceInstance.InstanceAnnotations;
 import edu.cuny.qc.scorer.ScorerData;
 import edu.cuny.qc.util.InfoGainAndEntropy;
-
+import edu.cuny.qc.util.InfoGainAndEntropy.InfoGainResult;
 /**
  * this is a scorer for ACE event assignment
  * @author che
@@ -32,12 +32,12 @@ public class Evaluator
 			System.err.println("??? Evaluator.Score: args are disables. Harmonic mean actually just takes triggers. Undo these when args are back in fashion.");
 		}
 		
-		public double trigger_info_gain = 0.0;
+		public InfoGainResult trigger_info_gain = null;
 		public double trigger_F1 = 0.0;
 		public double trigger_precision = 0.0;
 		public double trigger_recall = 0.0;
 		
-		public double arg_info_gain = 0.0;
+		public InfoGainResult arg_info_gain = null;
 		public double arg_F1 = 0.0;
 		public double arg_precision = 0.0;
 		public double arg_recall = 0.0;

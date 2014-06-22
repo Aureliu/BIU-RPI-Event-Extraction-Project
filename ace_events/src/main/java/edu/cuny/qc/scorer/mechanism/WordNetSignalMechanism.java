@@ -4,6 +4,7 @@ import java.io.File;
 import java.util.AbstractMap;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedHashSet;
@@ -11,6 +12,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
+import java.util.concurrent.ExecutionException;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
@@ -42,6 +44,7 @@ import eu.excitementproject.eop.core.utilities.dictionary.wordnet.WordNetExcepti
 import eu.excitementproject.eop.core.utilities.dictionary.wordnet.WordNetInitializationException;
 import eu.excitementproject.eop.core.utilities.dictionary.wordnet.WordNetPartOfSpeech;
 import eu.excitementproject.eop.core.utilities.dictionary.wordnet.WordNetRelation;
+import eu.excitementproject.eop.core.utilities.dictionary.wordnet.jwi.JwiDictionary;
 import eu.excitementproject.eop.transformations.generic.truthteller.representation.BasicRuleAnnotations;
 
 public class WordNetSignalMechanism extends SignalMechanism {
@@ -52,6 +55,7 @@ public class WordNetSignalMechanism extends SignalMechanism {
 		System.err.println("??? WordNetSignalMechanism: if a word has a non-wordnet POS (anything but noun/verb/adj/adv) we return FALSE, but we should return IRRELEVANT (when I figure out what it means... :( )");
 		System.err.println("??? WordNetSignalMechanism: if a text or spec doesn't exist in wordnet, we return FALSE, although we should return IRRELEVANT");
 		System.err.println("??? WordNetSignalMechanism: We want to duplicate signals for different POSes (learn different weights), but currently can't, since we don't support (yet) IRRELEVANT");
+		System.err.println("??? WordNetSignalMechanism: get*Cousins methdos return lemmas, and when a lemma is MWE then there are '_' between tokens. Maybe I should address that somehow, like turn all '_' into space. But does it ever happen that I get a query with MWE?");
 	}
 
 	@SuppressWarnings("serial")
@@ -99,7 +103,8 @@ public class WordNetSignalMechanism extends SignalMechanism {
 
 		// A dictionary is created and kept in the WordnetLexicalResource,
 		// but we don't have access to it, so we create another one
-		dictionary =  WordNetDictionaryFactory.newDictionary(WORDNET_DIR, null);
+		//dictionary =  WordNetDictionaryFactory.newDictionary(WORDNET_DIR, null);
+		dictionary =  new JwiDictionary(WORDNET_DIR);
 		
 		resourceMap = new HashMap<Integer, WordnetLexicalResource>(){{
 			put(1, resource_chain1);
@@ -186,7 +191,8 @@ public class WordNetSignalMechanism extends SignalMechanism {
 
 	private enum Juxtaposition {
 		ANCESTOR,
-		COUSIN,
+		COUSIN_STRICT,
+		COUSIN_LOOSE,
 	}
 	private enum Derivation {
 		NONE,
@@ -223,35 +229,112 @@ public class WordNetSignalMechanism extends SignalMechanism {
 		
 		public WordnetLexicalResource resource;
 		
-		private LoadingCache<FullRulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>> cacheRules = CacheBuilder.newBuilder()
+		private LoadingCache<FullRulesQuery, Set<String>> cacheCousinsLoose = CacheBuilder.newBuilder()
 				.recordStats()
 				.maximumWeight(100000)
+				.weigher(new Weigher<FullRulesQuery, Set<String>>() {
+					public int weigh(FullRulesQuery k, Set<String> v) { return v.size(); }
+				})
+				.build(new CacheLoader<FullRulesQuery, Set<String>>() {
+					public Set<String> load(FullRulesQuery key) throws LexicalResourceException, WordNetException {
+						BasicRulesQuery q = key.basicQuery;
+						WordNetPartOfSpeech lWnPos = WordNetPartOfSpeech.toWordNetPartOfspeech(q.lPos);
+						Set<String> result;
+						if (key.synsetScope.leftSenseNum == 1) {
+							result = dictionary.getLooseCousinTerms(q.lLemma, lWnPos, 1, key.length);
+						}
+						else {
+							result = dictionary.getLooseCousinTerms(q.lLemma, lWnPos, key.length);
+						}
+						return result;
+					}
+				});
+		private LoadingCache<FullRulesQuery, Set<String>> cacheCousinsStrict = CacheBuilder.newBuilder()
+				.recordStats()
+				.maximumWeight(100000)
+				.weigher(new Weigher<FullRulesQuery, Set<String>>() {
+					public int weigh(FullRulesQuery k, Set<String> v) { return v.size(); }
+				})
+				.build(new CacheLoader<FullRulesQuery, Set<String>>() {
+					public Set<String> load(FullRulesQuery key) throws LexicalResourceException, WordNetException {
+						BasicRulesQuery q = key.basicQuery;
+						WordNetPartOfSpeech lWnPos = WordNetPartOfSpeech.toWordNetPartOfspeech(q.lPos);
+						Set<String> result;
+						if (key.synsetScope.leftSenseNum == 1) {
+							result = dictionary.getLooseCousinTerms(q.lLemma, lWnPos, 1, key.length);
+						}
+						else {
+							result = dictionary.getLooseCousinTerms(q.lLemma, lWnPos, key.length);
+						}
+						return result;
+					}
+				});
+		
+		private LoadingCache<FullRulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>> cacheRules = CacheBuilder.newBuilder()
+				.recordStats()
+				.maximumWeight(1000  /*100000*/)
 				.weigher(new Weigher<FullRulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>>() {
 					public int weigh(FullRulesQuery k, List<LexicalRule<? extends WordnetRuleInfo>> v) { return v.size(); }
 				})
 				.build(new CacheLoader<FullRulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>>() {
-					public List<LexicalRule<? extends WordnetRuleInfo>> load(FullRulesQuery key) {
+					public List<LexicalRule<? extends WordnetRuleInfo>> load(FullRulesQuery key) throws LexicalResourceException, WordNetException {
 						BasicRulesQuery q = key.basicQuery;
 						WordnetRuleInfo info = new WordnetRuleInfoWithSenseNumsOnly(key.synsetScope.leftSenseNum, key.synsetScope.rightSenseNum);
-						switch (key.juxt) {
-						case ANCESTOR: break;
-						case COUSIN: break;
-						default: throw new IllegalArgumentException("juxt=" + key.juxt);
-						}
 						List<LexicalRule<? extends WordnetRuleInfo>> rules = resource.getRules(q.lLemma, q.lPos, q.rLemma, q.rPos, key.relations, info);
-						if (!rules.isEmpty()) {
-							List<WordNetRelation> ruleRelations = new ArrayList<WordNetRelation>(rules.size());
-							for (LexicalRule<? extends WordnetRuleInfo> rule : rules) {
-								ruleRelations.add(rule.getInfo().getTypedRelation());
+						return rules;
+					}
+				});
+		
+		private LoadingCache<FullRulesQuery, Boolean> cacheBools = CacheBuilder.newBuilder()
+				.recordStats()
+				.maximumSize(100000)
+				.build(new CacheLoader<FullRulesQuery, Boolean>() {
+					public Boolean load(FullRulesQuery key) throws LexicalResourceException, ExecutionException {
+						BasicRulesQuery q = key.basicQuery;
+						String extra = "";
+						Boolean booleanScore;
+						if (key.juxt == Juxtaposition.ANCESTOR) {
+							List<LexicalRule<? extends WordnetRuleInfo>> rules = cacheRules.get(key);
+							booleanScore = !rules.isEmpty();
+							if (booleanScore) {
+								List<WordNetRelation> ruleRelations = new ArrayList<WordNetRelation>(rules.size());
+								for (LexicalRule<? extends WordnetRuleInfo> rule : rules) {
+									ruleRelations.add(rule.getInfo().getTypedRelation());
+								}
+								extra = String.format(", relations=%s", ruleRelations);
 							}
-							System.err.printf("Wordnet: TRUE! %s/%s-->%s/%s\t(juxt=%s, length=%s, scope=%s)\n",
-									q.lLemma, q.lPos, q.rLemma, q.rPos, key.juxt, key.length, key.synsetScope);
 						}
-			            return rules;
+						else if (key.juxt == Juxtaposition.COUSIN_STRICT || key.juxt == Juxtaposition.COUSIN_LOOSE) {
+							if (!key.relations.equals(HYPERNYM_RELATION)) {
+								throw new IllegalArgumentException("juxt=COUSIN_*, but relations is not exactly HYPONYM. relations=" + key.relations);
+							}
+
+							BasicRulesQuery basicQueryOnlyLeft = new BasicRulesQuery(q.lLemma, null, q.lPos, null);
+							FullRulesQuery keyOnlyLeft = new FullRulesQuery(null, key.length, null, synsetScope, basicQueryOnlyLeft);
+							Set<String> lemmas;
+							if (key.juxt == Juxtaposition.COUSIN_STRICT) {
+								lemmas = cacheCousinsStrict.get(keyOnlyLeft);
+
+							}
+							else {
+								lemmas = cacheCousinsLoose.get(keyOnlyLeft);
+
+							}
+							booleanScore = lemmas.contains(q.rLemma);
+						}
+						else {
+							throw new IllegalArgumentException("juxt=" + key.juxt);
+						}
+
+						if (booleanScore) {
+							System.err.printf("Wordnet: TRUE! %s/%s-->%s/%s\t(juxt=%s, length=%s, scope=%s%s)\n",
+									q.lLemma, q.lPos, q.rLemma, q.rPos, key.juxt, key.length, key.synsetScope, extra);
+						}
+						
+			            return booleanScore;
 					}
 				});
 
-		
 		@Override
 		public Boolean calcTokenBooleanScore(Token text, Map<Class<?>, Object> textTriggerTokenMap, Token spec) throws SignalMechanismException {
 			try {
@@ -522,21 +605,29 @@ public class WordNetSignalMechanism extends SignalMechanism {
 	
 	private static class FullRulesQuery {
 		@Override public int hashCode() {
-		     return new HashCodeBuilder(17, 37).append(relations).append(length).append(synsetScope).append(basicQuery).toHashCode();
+		     return new HashCodeBuilder(17, 37).append(relations).append(length).append(juxt).append(synsetScope).append(basicQuery).toHashCode();
 		}
 		@Override public boolean equals(Object obj) {
 		   if (obj == null) { return false; }
 		   if (obj == this) { return true; }
 		   if (obj.getClass() != getClass()) { return false; }
 		   FullRulesQuery rhs = (FullRulesQuery) obj;
-		   return new EqualsBuilder().append(relations, rhs.relations).append(length, rhs.length).append(synsetScope, rhs.synsetScope).append(basicQuery, rhs.basicQuery).isEquals();
+		   return new EqualsBuilder().append(relations, rhs.relations).append(length, rhs.length).append(juxt, rhs.juxt).append(synsetScope, rhs.synsetScope).append(basicQuery, rhs.basicQuery).isEquals();
+		}
+		public FullRulesQuery(Set<WordNetRelation> relations, int length, Juxtaposition juxt, SynsetScope synsetScope, BasicRulesQuery basicQuery) {
+			this.relations = relations;
+			this.length = length;
+			this.juxt = juxt;
+			this.synsetScope = synsetScope;
+			this.basicQuery = basicQuery;
 		}
 		public Set<WordNetRelation> relations;
 		public int length;
+		public Juxtaposition juxt;
 		//public Derivation derv;
 		public SynsetScope synsetScope;
 		//public LengthType lenType;
-		public BasicRulesQuery basicQuery; xxx
+		public BasicRulesQuery basicQuery;
 	}
 	
 	private static Boolean isOverlappingSynsets(String textLemma, PartOfSpeech textPos, String specLemma, PartOfSpeech specPos) throws WordNetException {
@@ -643,7 +734,7 @@ public class WordNetSignalMechanism extends SignalMechanism {
 	private static WordnetLexicalResource resource_chain3;
 	private static WordnetLexicalResource resource_chain4;
 	private static WordnetLexicalResource resource_chain5;
-	private static Dictionary dictionary;
+	private static JwiDictionary dictionary;
 	
 	private static Map<Entry<String, WordNetPartOfSpeech>, Set<Synset>> cacheSynset = new HashMap<Entry<String, WordNetPartOfSpeech>, Set<Synset>>();
 	private static Map<BasicRulesQuery, Boolean> cacheOverlappingSynsets = new HashMap<BasicRulesQuery, Boolean>();

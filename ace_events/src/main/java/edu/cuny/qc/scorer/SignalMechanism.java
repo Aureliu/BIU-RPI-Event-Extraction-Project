@@ -30,12 +30,18 @@ public abstract class SignalMechanism {
 		System.err.println("??? SignalMechanism: for argument, now considering only HEAD (not extent), and only FIRST WORD of head (could be more than one word). Need to think of handling MWEs.");
 	}
 	
-	public SignalMechanism() {
+	public SignalMechanism() throws SignalMechanismException {
 		scorers = new LinkedHashMap<SignalType, List<ScorerData>>(2);
 		scorers.put(SignalType.TRIGGER,   new ArrayList<ScorerData>());
 		scorers.put(SignalType.ARGUMENT,  new ArrayList<ScorerData>());
 		
-		addScorers();
+		try {
+			init();
+			addScorers();
+		}
+		catch (Exception e) {
+			throw new SignalMechanismException(e);
+		}
 	}
 	
 	public void addTrigger(ScorerData data) {
@@ -45,6 +51,12 @@ public abstract class SignalMechanism {
 	public void addArgument(ScorerData data) {
 		scorers.get(SignalType.ARGUMENT).add(data);
 	}
+	
+	// These are only entry points, any SignalMechanism can choose to implement any of them
+	public void init() throws Exception {}
+	public void logPreSentence() {}
+	public void logPreDocument() {}
+	public void logPreDocumentBunch() {}
 
 	public void scoreTrigger(Map<ScorerData, SignalInstance> existingSignals, Set<ScorerData> allTriggerScorers, JCas spec, SentenceInstance textSentence, int i, boolean debug) throws SignalMechanismException {
 		Token textTriggerToken = textSentence.getTokenAnnotation(i);
@@ -144,7 +156,7 @@ public abstract class SignalMechanism {
 		
 	}
 
-	public abstract void addScorers();
+	public abstract void addScorers() throws Exception;
 
 	/**
 	 * Optional operation

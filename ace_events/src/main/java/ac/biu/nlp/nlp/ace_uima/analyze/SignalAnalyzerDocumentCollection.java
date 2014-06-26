@@ -17,28 +17,30 @@ public class SignalAnalyzerDocumentCollection extends StatsDocumentCollection {
 
 	@Override
 	public void updateDocs(Map<String,String> key, String fieldNameLvl1, String fieldNameLvl2, Object element, boolean isDynamic) throws StatsException {
+		// Removing all lines containing docId, folder and category! We don't use it and it takes lots of memory!!!
+		
 		triggerDoc.startUpdate();
-		triggerDoc.update(key, fieldNameLvl1, fieldNameLvl2, element, isDynamic);
-		triggerDoc.update(without(key, new String[] {"label"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
-		triggerDoc.update(without(key, new String[] {"signal", "agg"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
-		triggerDoc.update(without(key, new String[] {"label", "signal", "agg"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
-		triggerDoc.update(without(key, new String[] {"folder", "docId"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
-		triggerDoc.update(without(key, new String[] {"folder", "docId", "signal", "agg"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
-		triggerDoc.update(without(key, new String[] {"folder", "docId", "label"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
-		triggerDoc.update(without(key, new String[] {"folder", "docId", "label", "signal", "agg"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
+		//triggerDoc.update(key, fieldNameLvl1, fieldNameLvl2, element, isDynamic);
+		//triggerDoc.update(without(key, new String[] {"label"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
+		//triggerDoc.update(without(key, new String[] {"signal", "agg"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
+		//triggerDoc.update(without(key, new String[] {"label", "signal", "agg"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
+		//triggerDoc.update(without(key, new String[] {"folder", "docId"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
+		//triggerDoc.update(without(key, new String[] {"folder", "docId", "signal", "agg"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
+		//triggerDoc.update(without(key, new String[] {"folder", "docId", "label"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
+		//triggerDoc.update(without(key, new String[] {"folder", "docId", "label", "signal", "agg"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
 		triggerDoc.update(without(key, new String[] {"folder", "category", "docId"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
 		triggerDoc.update(without(key, new String[] {"folder", "category", "docId", "signal", "agg"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
 		triggerDoc.update(without(key, new String[] {"folder", "category", "docId", "label"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
 		triggerDoc.update(without(key, new String[] {"folder", "category", "docId", "label", "signal", "agg"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
 		triggerDoc.endUpdate();
 		
-		argDoc.startUpdate();
-		argDoc.update(key, fieldNameLvl1, fieldNameLvl2, element, isDynamic);
+//		argDoc.startUpdate();
+//		argDoc.update(key, fieldNameLvl1, fieldNameLvl2, element, isDynamic);
 //		argDoc.update(without(key, new String[] {"EventSubType"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
 //		argDoc.update(without(key, new String[] {"EventSubType", "Role"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
 //		argDoc.update(without(key, new String[] {"EventSubType", "ArgType"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
 //		argDoc.update(without(key, new String[] {"EventSubType", "ArgType", "Role"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
-		argDoc.endUpdate();
+//		argDoc.endUpdate();
 		
 //		globalDoc.startUpdate();
 //		globalDoc.update(key, fieldNameLvl1, fieldNameLvl2, element, isDynamic);

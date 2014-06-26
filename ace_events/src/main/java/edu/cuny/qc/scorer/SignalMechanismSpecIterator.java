@@ -55,7 +55,7 @@ public abstract class SignalMechanismSpecIterator implements Iterator<BigDecimal
 	
 	public void addToHistory(BigDecimal result) {
 		if (debug && SignalInstance.isPositive.apply(result)) {
-			history.put(specElement.getCoveredText(), textAnno.getCoveredText());
+			history.put(specElement.getCoveredText().intern(), textAnno.getCoveredText().intern());
 		}
 	}
 	

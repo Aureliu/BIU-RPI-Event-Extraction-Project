@@ -2,6 +2,7 @@ package ac.biu.nlp.nlp.ace_uima.analyze;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.PrintStream;
 import java.util.Collection;
 import java.util.Date;
@@ -12,10 +13,12 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import org.apache.commons.lang3.StringUtils;
+import org.apache.log4j.Logger;
 
 import com.google.common.collect.LinkedHashMultiset;
 import com.google.common.collect.Multimap;
 import com.google.common.collect.Multiset;
+import com.google.common.io.Files;
 
 import ac.biu.nlp.nlp.ace_uima.stats.SignalPerformanceField;
 import ac.biu.nlp.nlp.ie.onthefly.input.SpecAnnotator;
@@ -39,8 +42,9 @@ public class SignalAnalyzer {
 					"addNeverSeenFeatures=true crossSent=false crossSentReranking=false order=0 evaluatorType=1 learnBigrams=true logLevel=3 " +
 					"oMethod=F serialization=BZ2";
 	private static SignalAnalyzerDocumentCollection docs = new SignalAnalyzerDocumentCollection();
-	private static final int SENTENCE_PRINT_FREQ = 1000;
+	private static final int SENTENCE_PRINT_FREQ = 200;
 	private static final int SENTENCE_GC_FREQ = 20000;
+	private static final int DEBUG_MIN_SENTENCE = 2602;
 
 	public static void analyze(File inputFileList, File specList, File outputFolder, boolean useDumps, String triggerDocName, String argDocName, String globalDocName) throws Exception {
 		(new PrintStream(new File(outputFolder, "start"))).close();
@@ -70,6 +74,11 @@ public class SignalAnalyzer {
 		// inspired by BeamSearch.beamSearch
 		int sentNum = 0;
 		for (SentenceInstance problem : goldInstances) {
+			
+			if (sentNum >= DEBUG_MIN_SENTENCE) {
+				System.err.printf("\n%s start %s, ", Pipeline.detailedLog(), sentNum);
+			}
+				
 			sentNum++;
 			if (sentNum % SENTENCE_PRINT_FREQ == 1) {
 				System.out.printf("%s Processing sentence %s\n", Pipeline.detailedLog(), sentNum);
@@ -94,7 +103,17 @@ public class SignalAnalyzer {
 				System.out.printf("%s done.\n", Pipeline.detailedLog());
 			}
 			
+			if (sentNum >= DEBUG_MIN_SENTENCE) {
+				System.err.printf("1 ");
+			}
+
+		
 			for(int i=0; i<problem.size(); i++) {
+
+				if (sentNum >= DEBUG_MIN_SENTENCE) {
+					System.err.printf("\n\t2(%s) ", i);
+				}
+
 				String goldLabel = problem.target.getLabelAtToken(i);
 				//Map<String, SignalInstance> specSignals = new HashMap<String, SignalInstance>();
 				
@@ -113,15 +132,40 @@ public class SignalAnalyzer {
 //				Multiset<SignalInstance> m2 = LinkedHashMultiset.create(c2);
 //				boolean b = m1.equals(m2);
 				///
+
+				if (sentNum >= DEBUG_MIN_SENTENCE) {
+					System.err.printf("3(%s) ", i);
+				}
+				
 				for (ScorerData data : scoredSignals.keySet()) {
+				
+//					if (sentNum >= DEBUG_MIN_SENTENCE) {
+//						System.err.printf("4(%s) ", i);
+//					}
+					
 					SignalInstance signal = scoredSignals.get(data);
 					SentenceAssignment assn = null;
 					if (assignments.containsKey(data)) {
+						
+//						if (sentNum >= DEBUG_MIN_SENTENCE) {
+//							System.err.printf("5(%s) ", i);
+//						}
+						
 						assn = assignments.get(data);
 					}
 					else {
+						
+//						if (sentNum >= DEBUG_MIN_SENTENCE) {
+//							System.err.printf("6(%s) ", i);
+//						}
+						
 						assn = new SentenceAssignment(problem.types, problem, problem.nodeTargetAlphabet, problem.edgeTargetAlphabet, problem.featureAlphabet, problem.controller);
 						assignments.put(data, assn);
+						
+//						if (sentNum >= DEBUG_MIN_SENTENCE) {
+//							System.err.printf("7(%s) ", i);
+//						}
+						
 					}
 					assn.incrementState();
 					if (signal.positive) {
@@ -141,6 +185,11 @@ public class SignalAnalyzer {
 					///
 
 					
+					
+//					if (sentNum >= DEBUG_MIN_SENTENCE) {
+//						System.err.printf("8(%s) ", i);
+//					}
+					
 					key.put("signal", data.basicName);
 					key.put("agg", data.aggregatorTypeName);
 					for (Entry<String, String> entry : signal.history.entries()) {
@@ -156,12 +205,22 @@ public class SignalAnalyzer {
 						}
 					}
 					
-					if (sentNum % SENTENCE_PRINT_FREQ == 1 && i%10==0) {
-						System.out.printf("%s   Updated docs (i=%s, scorer=%s, len(history)=%s)\n", Pipeline.detailedLog(), i, data, signal.history.size());
-					}
+//					if (sentNum >= DEBUG_MIN_SENTENCE) {
+//						System.err.printf("9(%s) ", i);
+//					}
+					
+					
+//					if (sentNum % SENTENCE_PRINT_FREQ == 1 && i%10==0) {
+//						System.out.printf("%s   Updated docs (i=%s, scorer=%s, len(history)=%s)\n", Pipeline.detailedLog(), i, data, signal.history.size());
+//					}
 
 				}
 				
+				if (sentNum >= DEBUG_MIN_SENTENCE) {
+					System.err.printf("10(%s) ", i);
+				}
+				
+
 //				LinkedHashMap<ScorerData, Multimap<String, String>> allDetailedSignals = new LinkedHashMap<ScorerData, Multimap<String, String>>();
 //				//System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] getTriggerDetails...", new Date());
 //				for (SignalMechanism mechanism : perceptron.signalMechanisms) {
@@ -192,6 +251,11 @@ public class SignalAnalyzer {
 			}
 			//System.gc();
 
+			
+			if (sentNum >= DEBUG_MIN_SENTENCE) {
+				System.err.printf("\n\t\t11 ");
+			}
+			
 			for (ScorerData data : assignments.keySet()) {
 				SentenceAssignment assn = assignments.get(data);
 				/// DEBUG
@@ -201,12 +265,22 @@ public class SignalAnalyzer {
 				///
 				key.put("signal", data.basicName);
 				key.put("agg", data.aggregatorTypeName);
+				
+//				if (sentNum >= DEBUG_MIN_SENTENCE) {
+//					System.err.printf("12 ");
+//				}
+				
 				docs.updateDocs(key, "Performance", "", assn);
 			}
 			
 			if (sentNum % SENTENCE_PRINT_FREQ == 1) {
 				System.out.printf("%s Sentence %s: finished perofrmance (and the sentence itself)\n", Pipeline.detailedLog(), sentNum);
 			}
+			
+			if (sentNum >= DEBUG_MIN_SENTENCE) {
+				System.err.printf("13 ");
+			}
+			
 
 		}
 
@@ -230,12 +304,25 @@ public class SignalAnalyzer {
 		p.printf("(file is writable - verified)");
 		p.close();
 	}
+	/**
+	 * Horrible horrible log stuff I must do, to keep jwnl from yelling "WARN data.PointerUtils: DICTIONARY_WARN_001" all the time
+	 * @throws IOException 
+	 */
+	public static void handleLog() throws IOException {
+		File target = new File("./target/classes/log4j.properties");
+		Files.createParentDirs(target);
+		Files.copy(new File("./log4j.properties"), target);
+		logger = Logger.getLogger(SignalAnalyzer.class);
+	}
 	public static void main(String args[]) throws Exception {
 		if (args.length != 7) {
 			System.err.println("USAGE: SignalAnalyzer <input file list> <spec list> <output folder> <use dump files> <trigger doc> <arg doc> <global doc>");
 			return;
 		}
+		handleLog();
 		SignalAnalyzer.analyze(new File(args[0]), new File(args[1]), new File(args[2]), Boolean.parseBoolean(args[3]), args[4], args[5], args[6]);
 	}
+
+	protected static Logger logger;
 
 }

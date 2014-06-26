@@ -511,6 +511,7 @@ public class SentenceInstance
 			boolean debug) throws SignalMechanismException, CASException {
 		//List<Map<String, Map<String, SignalInstance>>> triggerSignals = new ArrayList<Map<String, Map<String, SignalInstance>>>(size());
 		//List<Map<String, List<Map<String, Map<String, SignalInstance>>>>> argSignals = new ArrayList<Map<String, List<Map<String, Map<String, SignalInstance>>>>>(size());
+		perceptron.logSignalMechanismsPreSentence();
 		for(int i=0; i<size(); i++)
 		{
 
@@ -531,7 +532,7 @@ public class SentenceInstance
 				
 			Map<String, Map<ScorerData, SignalInstance>> tokenTriggerSignals = null;
 			if (triggerSignals.size() <= i) {
-				tokenTriggerSignals = new LinkedHashMap<String, Map<ScorerData, SignalInstance>>(types.specs.size());
+				tokenTriggerSignals = new HashMap<String, Map<ScorerData, SignalInstance>>(types.specs.size());
 				triggerSignals.add(tokenTriggerSignals);
 			}
 			else {
@@ -539,7 +540,7 @@ public class SentenceInstance
 			}
 			Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>> tokenArgSignals = null;
 			if (argSignals.size() <= i) {
-				tokenArgSignals = new LinkedHashMap<String, List<Map<String, Map<ScorerData, SignalInstance>>>>();
+				tokenArgSignals = new HashMap<String, List<Map<String, Map<ScorerData, SignalInstance>>>>();
 				argSignals.add(tokenArgSignals);
 			}
 			else {
@@ -552,7 +553,7 @@ public class SentenceInstance
 				Map<ScorerData, SignalInstance> specSignals = null;
 				List<Map<String, Map<ScorerData, SignalInstance>>> tokenArgSpecSignals = null;
 				if (!tokenTriggerSignals.containsKey(triggerLabel)) {
-					specSignals = new LinkedHashMap<ScorerData, SignalInstance>();
+					specSignals = new HashMap<ScorerData, SignalInstance>();
 					tokenTriggerSignals.put(triggerLabel, specSignals);
 					tokenArgSpecSignals = new ArrayList<Map<String, Map<ScorerData, SignalInstance>>>();
 					tokenArgSignals.put(triggerLabel, tokenArgSpecSignals);
@@ -570,7 +571,7 @@ public class SentenceInstance
 					
 					Map<String, Map<ScorerData, SignalInstance>> tokenArgSpecEntitySignals = null;
 					if (tokenArgSpecSignals.size() <= k) {
-						tokenArgSpecEntitySignals = new LinkedHashMap<String, Map<ScorerData, SignalInstance>>();
+						tokenArgSpecEntitySignals = new HashMap<String, Map<ScorerData, SignalInstance>>();
 						tokenArgSpecSignals.add(tokenArgSpecEntitySignals);
 					}
 					else {
@@ -583,7 +584,7 @@ public class SentenceInstance
 
 						Map<ScorerData, SignalInstance> roleSignals = null;
 						if (!tokenArgSpecEntitySignals.containsKey(role)) {
-							roleSignals = new LinkedHashMap<ScorerData, SignalInstance>();
+							roleSignals = new HashMap<ScorerData, SignalInstance>();
 							tokenArgSpecEntitySignals.put(role, roleSignals);
 						}
 						else {

@@ -723,7 +723,9 @@ public class Document implements java.io.Serializable
 			this.text += sgm.text;
 		}
 		
-		allText = before_text + text;
+		before_text = before_text.intern();
+		text = text.intern();
+		allText = (before_text + text).intern();
 		
 		return ret.toArray(new Span[ret.size()]);
 	}
@@ -806,6 +808,7 @@ public class Document implements java.io.Serializable
 			sgm.text = eraseXML(sgm.text);
 		}
 		
+		headline = headline.intern();
 		reader.close();
 		return segments;
 	}
@@ -1070,7 +1073,7 @@ public class Document implements java.io.Serializable
 		// 22.5.14 Kludge - not loading signals, due to some weird ClassCastException
 		if (perceptron.controller.useSignalFiles && signalsFile.isFile() /* && false */) {
 			try {
-				System.out.printf("Reading 'signals' file: [%1$tH:%1$tM:%1$tS.%1$tL]...", new Date());
+				System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] Reading 'signals' file: %2$s...", new Date(), signalsFile.getAbsolutePath());
 				InputStream in = perceptron.controller.serialization.getInputStream(new FileInputStream(signalsFile));
 //				byte b[] = new byte[1024*1024*20];
 //				System.out.printf("\nread array: [%1$tH:%1$tM:%1$tS.%1$tL]...", new Date());

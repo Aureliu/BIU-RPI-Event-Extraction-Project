@@ -48,7 +48,7 @@ public abstract class SignalMechanismSpecTokenIterator extends SignalMechanismSp
 	@Override
 	public void addToHistory(BigDecimal result) {
 		if (debug && SignalInstance.isPositive.apply(result)) {
-			history.put(specToken.getCoveredText(), textToken.getLemma().getCoveredText());
+			history.put(specToken.getCoveredText().intern(), textToken.getLemma().getCoveredText().intern());
 		}
 	}
 

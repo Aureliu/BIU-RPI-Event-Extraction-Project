@@ -2,9 +2,12 @@ package edu.cuny.qc.scorer;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
 import com.google.common.collect.Iterators;
+import com.google.common.collect.Lists;
 
 import edu.cuny.qc.perceptron.types.SignalInstance;
 
@@ -46,6 +49,40 @@ public abstract class Aggregator /*implements Serializable*/ {
 		public BigDecimal aggregate(Iterator<BigDecimal> scoreIterator) {
 			Iterator<BigDecimal> filtered = Iterators.filter(scoreIterator, SignalInstance.isPositive);
 			return SignalInstance.toDouble(Iterators.size(filtered) >= 2);
+		}
+	}
+	
+	public static class Min3 extends Aggregator {
+		public static final Aggregator inst = new Min3();
+		@Override public String getSuffix() { return "-Min3"; }
+
+		@Override
+		public BigDecimal aggregate(Iterator<BigDecimal> scoreIterator) {
+			Iterator<BigDecimal> filtered = Iterators.filter(scoreIterator, SignalInstance.isPositive);
+			return SignalInstance.toDouble(Iterators.size(filtered) >= 3);
+		}
+	}
+	
+	public static class Min4 extends Aggregator {
+		public static final Aggregator inst = new Min4();
+		@Override public String getSuffix() { return "-Min4"; }
+
+		@Override
+		public BigDecimal aggregate(Iterator<BigDecimal> scoreIterator) {
+			Iterator<BigDecimal> filtered = Iterators.filter(scoreIterator, SignalInstance.isPositive);
+			return SignalInstance.toDouble(Iterators.size(filtered) >= 4);
+		}
+	}
+	
+	public static class MinHalf extends Aggregator {
+		public static final Aggregator inst = new MinHalf();
+		@Override public String getSuffix() { return "-MinHalf"; }
+
+		@Override
+		public BigDecimal aggregate(Iterator<BigDecimal> scoreIterator) {
+			List<BigDecimal> allElements = Lists.newArrayList(scoreIterator);
+			Iterator<BigDecimal> filtered = Iterators.filter(allElements.iterator(), SignalInstance.isPositive);
+			return SignalInstance.toDouble(Iterators.size(filtered) >= allElements.size()/2);
 		}
 	}
 }

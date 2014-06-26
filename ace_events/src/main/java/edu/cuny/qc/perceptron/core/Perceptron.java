@@ -40,6 +40,7 @@ import edu.cuny.qc.util.TokenAnnotations;
 import edu.cuny.qc.util.UnsupportedParameterException;
 import edu.cuny.qc.util.Utils;
 import eu.excitementproject.eop.common.component.lexicalknowledge.LexicalResourceException;
+import eu.excitementproject.eop.common.representation.partofspeech.UnsupportedPosTagStringException;
 import eu.excitementproject.eop.core.utilities.dictionary.wordnet.WordNetInitializationException;
 
 
@@ -109,19 +110,34 @@ public class Perceptron implements java.io.Serializable
 	public void buildSignalMechanisms() throws SignalMechanismException {
 			signalMechanisms = new ArrayList<SignalMechanism>();
 		
-		try {
+//		try {
 			
 			signalMechanisms.add(new PlainSignalMechanism());
 			signalMechanisms.add(new WordNetSignalMechanism());
 			signalMechanisms.add(new BrownClustersSignalMechanism());
 			
-		} catch (WordNetInitializationException e) {
-			throw new SignalMechanismException(e);
-		} catch (LexicalResourceException e) {
-			throw new SignalMechanismException(e);
-		}
+//		} catch (UnsupportedPosTagStringException e) {
+//			throw new SignalMechanismException(e);
+//		} catch (WordNetInitializationException e) {
+//			throw new SignalMechanismException(e);
+//		}
 	}
 		
+	public void logSignalMechanismsPreSentence() {
+		for (SignalMechanism signalMechanism : signalMechanisms) {
+			signalMechanism.logPreSentence();
+		}
+	}
+	public void logSignalMechanismsPreDocument() {
+		for (SignalMechanism signalMechanism : signalMechanisms) {
+			signalMechanism.logPreDocument();
+		}
+	}
+	public void logSignalMechanismsPreDocumentBunch() {
+		for (SignalMechanism signalMechanism : signalMechanisms) {
+			signalMechanism.logPreDocumentBunch();
+		}
+	}
 	// default constructor 
 //	public Perceptron(Controller controller)
 //	{

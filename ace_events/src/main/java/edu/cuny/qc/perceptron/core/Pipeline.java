@@ -132,11 +132,12 @@ public class Pipeline
 		BufferedReader reader = new BufferedReader(new FileReader(file_list));
 		String line = "";
 		//TextFeatureGenerator featGen = new TextFeatureGenerator();
-		try {
+		//try {
 			int num = 0;
 			while((line = reader.readLine()) != null)
 			{
 				if (num % DOCUMENT_GC_FREQ == 0) {
+					perceptron.logSignalMechanismsPreDocumentBunch();
 					System.out.printf("***%s running gc...", detailedLog());
 					System.gc();
 					System.out.printf("%s done.\n", detailedLog());					
@@ -148,7 +149,7 @@ public class Pipeline
 				
 				System.out.printf("[%s] %s\n", new Date(), fileName);
 				
-				
+				perceptron.logSignalMechanismsPreDocument();
 				Document doc = Document.createAndPreprocess(fileName, true, monoCase, perceptron.controller.usePreprocessFiles, perceptron.controller.usePreprocessFiles, types, perceptron);
 				// fill in text feature vector for each token
 				//featGen.fillTextFeatures_NoPreprocessing(doc);
@@ -201,10 +202,10 @@ public class Pipeline
 //				System.out.println(b);
 //				////
 			}
-		}
-		finally {
-			reader.close();
-		}
+//		}
+//		finally {
+//			reader.close();
+//		}
 		
 		System.out.printf("%s FINAL GC...", detailedLog());
 		System.gc();

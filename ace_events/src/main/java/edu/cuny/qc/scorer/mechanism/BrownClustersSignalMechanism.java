@@ -27,6 +27,10 @@ public class BrownClustersSignalMechanism extends SignalMechanism {
 		addTrigger(new ScorerData("BR_LONGEST_CLUSTER_LEM",		SameLongestClusterLemma.inst,			Aggregator.Any.inst		));
 	}
 
+	public BrownClustersSignalMechanism() throws SignalMechanismException {
+		super();
+	}
+
 	private static class SameAllClustersToken extends SignalMechanismSpecTokenIterator {
 		public static final SameAllClustersToken inst = new SameAllClustersToken();
 		@Override

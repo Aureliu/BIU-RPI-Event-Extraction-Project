@@ -19,6 +19,10 @@ public class PlainSignalMechanism extends SignalMechanism {
 		addTrigger(new ScorerData("PL_SAME_LEMMA",		SameLemma.inst,				Aggregator.Any.inst		));
 	}
 
+	public PlainSignalMechanism() throws SignalMechanismException {
+		super();
+	}
+
 	private static class SameToken extends SignalMechanismSpecTokenIterator {
 		public static final SameToken inst = new SameToken();
 		@Override

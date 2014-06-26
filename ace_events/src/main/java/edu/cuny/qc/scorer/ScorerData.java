@@ -16,13 +16,17 @@ public class ScorerData implements Serializable {
 	public String aggregatorTypeName;
 	
 	public ScorerData(String basicName, SignalMechanismSpecIterator scorer,	Aggregator aggregator) {
-		this.basicName = basicName;
+		this.basicName = basicName.intern();
 		this.scorer = scorer;
 		this.aggregator = aggregator;
 		
-		this.fullName = getFullName();
-		this.scorerTypeName = scorer.getTypeName();
-		this.aggregatorTypeName = aggregator.getTypeName();
+		this.fullName = getFullName().intern();
+		this.scorerTypeName = scorer.getTypeName().intern();
+		this.aggregatorTypeName = aggregator.getTypeName().intern();
+	}
+	
+	public ScorerData(SignalMechanismSpecIterator scorer,	Aggregator aggregator) {
+		this(scorer.getTypeName(), scorer, aggregator);
 	}
 	
 	public String getFullName() {

@@ -1,7 +1,9 @@
 package ac.biu.nlp.nlp.ie.onthefly.input;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.regex.MatchResult;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -35,10 +37,19 @@ public class SpecXmlCasLoader {
 			type = JCasUtil.getAnnotationType(jcas, annotationType);
 		}
 		
+		Set<String> seenElements = new HashSet<String>();
 		String pattern = String.format(XML_ELEMENT, elementName, elementName);
 		Matcher matcher = Pattern.compile(pattern).matcher(container.getCoveredText());
 		while (matcher.find()) {
 			MatchResult result = matcher.toMatchResult();
+			String text = result.group(1);
+			
+			// Allow only one instance of the same string in the same section
+			if (seenElements.contains(text)) {
+				throw new SpecXmlException(String.format("Found duplicate element '%s' under '%s'", text, elementName));
+			}
+			seenElements.add(text);
+			
 			int begin = container.getBegin() + result.start(1);
 			int end   = container.getBegin() + result.end(1);
 			
@@ -135,6 +146,10 @@ public class SpecXmlCasLoader {
 			
 			List<AnnotationFS> examples = addItemsInSingleSection(tokenView, argumentAnno, "examples", "example", ArgumentExample.class);
 			argument.setExamples((FSArray) FSCollectionFactory.createFSArray(jcas, examples));
+			for (AnnotationFS exampleAnno : examples) {
+				ArgumentExample example = (ArgumentExample) exampleAnno;
+				example.setArgument((Argument) argumentAnno);
+			}
 		}
 		
 		// Usage Samples

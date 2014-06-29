@@ -244,4 +244,13 @@ public class TokenAnnotations
 	      return String.class;
 	  }
   }
+  
+//  /**
+//   * Stores all of the token's derivations
+//   * @author Ofer Bronstein
+//   *
+//   */
+//  public static class DervWordnetAnnotation { }
+//  public static class DervNomlexAnnotation { }
+//  public static class DervCatvarAnnotation { }
 }

@@ -35,7 +35,7 @@ public class SpecHandler {
 		return outList;
 	}
 
-	public static List<JCas> getSpecs(List<String> specXmlPaths) throws CASRuntimeException, AnalysisEngineProcessException, ResourceInitializationException, UimaUtilsException, IOException, AeException {
+	public static List<JCas> getSpecs(List<String> specXmlPaths) throws SpecException, IOException {
 		List<JCas> specs = new ArrayList<JCas>(specXmlPaths.size());
 		for (String specXmlPath : specXmlPaths) {
 			JCas spec = getPreprocessedSpec(specXmlPath);
@@ -77,7 +77,7 @@ public class SpecHandler {
 //		TypeConstraints.fillArgRolesAndTypesLists(linesForArgs);
 //	}
 	
-	private static JCas getPreprocessedSpec(String specXmlPath/*, Perceptron perceptron*/) throws UimaUtilsException, ResourceInitializationException, CASRuntimeException, IOException, AeException, AnalysisEngineProcessException {
+	private static JCas getPreprocessedSpec(String specXmlPath/*, Perceptron perceptron*/) throws SpecException, IOException {
 		JCas spec = null;
 		boolean shouldDeletePreprocessed = false;
 		File preprocessed = new File(specXmlPath + PREPROCESSED_SPEC_FILE_EXT);
@@ -134,6 +134,9 @@ public class SpecHandler {
 				UimaUtils.dumpXmi(preprocessed, spec);
 				shouldDeletePreprocessed = false;
 			}
+		}
+		catch (Exception e) {
+			throw new SpecException(String.format("Exception in processing spec\"%s\" - %s", specXmlPath, e.toString()));
 		}
 		finally {
 			if (shouldDeletePreprocessed) {

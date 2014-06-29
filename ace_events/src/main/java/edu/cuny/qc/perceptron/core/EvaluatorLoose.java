@@ -61,7 +61,7 @@ public class EvaluatorLoose extends Evaluator
 	 * @return
 	 */
 	@Override
-	public void evaluteArgument(List<SentenceAssignment> results, List<SentenceInstance> instancesGold, Score score)
+	public void evaluteArgument(List<SentenceAssignment> results, List<SentenceAssignment> goldTargets, Score score)
 	{
 		double count_arg_total = 0;
 		double count_arg_ans = 0;
@@ -71,12 +71,12 @@ public class EvaluatorLoose extends Evaluator
 		for(int i=0; i<results.size(); i++)
 		{
 			SentenceAssignment ans = results.get(i);
-			SentenceInstance goldInstance = instancesGold.get(i);
-			SentenceAssignment gold = goldInstance.target;
+			//SentenceInstance goldInstance = instancesGold.get(i);
+			SentenceAssignment gold = goldTargets.get(i);//goldInstance.target;
 			
 			// count num of args
-			List<Argument> args_ans = getArguments(goldInstance, ans, count_arg_total);
-			List<Argument> args_gold = getArguments(goldInstance, gold, null); 
+			List<Argument> args_ans = getArguments(gold, ans, count_arg_total);
+			List<Argument> args_gold = getArguments(gold, gold, null); 
 			count_arg_ans += args_ans.size();
 			count_arg_gold += args_gold.size();
 			
@@ -132,7 +132,7 @@ public class EvaluatorLoose extends Evaluator
 
 	}
 
-	protected static List<Argument> getArguments(SentenceInstance inst, SentenceAssignment ans, Double totalArgCandidates)
+	protected static List<Argument> getArguments(SentenceAssignment gold, SentenceAssignment ans, Double totalArgCandidates)
 	{
 		List<Argument> ret = new ArrayList<Argument>();
 		
@@ -148,10 +148,10 @@ public class EvaluatorLoose extends Evaluator
 					if (totalArgCandidates != null) {
 						totalArgCandidates++;
 					}
-					String role = (String) inst.edgeTargetAlphabet.lookupObject(edgeAssn.get(mentionIndex));
+					String role = (String) gold.edgeTargetAlphabet.lookupObject(edgeAssn.get(mentionIndex));
 					if(!role.equals(SentenceAssignment.Default_Argument_Label))
 					{
-						AceMention mention = inst.eventArgCandidates.get(mentionIndex);
+						AceMention mention = gold.eventArgCandidates.get(mentionIndex);
 						Argument argument = new Argument();
 						argument.eventType = nodeLabel;
 						argument.role = role;

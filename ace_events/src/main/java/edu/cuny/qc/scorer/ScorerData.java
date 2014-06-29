@@ -14,15 +14,28 @@ public class ScorerData implements Serializable {
 	public String scorerTypeName;
 	public transient Aggregator aggregator;
 	public String aggregatorTypeName;
+	public transient Deriver deriver;
+	public String deriverTypeName;
+	public Derivation derivation;
+	public int leftSenseNum;
+	public int rightSenseNum;
+	public transient boolean isSpecIndependent;
 	
-	public ScorerData(String basicName, SignalMechanismSpecIterator scorer,	Aggregator aggregator) {
+	public ScorerData(String basicName, SignalMechanismSpecIterator scorer,	Aggregator aggregator, Deriver deriver, Derivation derivation, int leftSenseNum, int rightSenseNum, boolean isSpecIndependent) {
 		this.basicName = basicName.intern();
 		this.scorer = scorer;
 		this.aggregator = aggregator;
+		this.deriver = deriver;
+		this.derivation = derivation;
+		this.leftSenseNum = leftSenseNum;
+		this.rightSenseNum = rightSenseNum;
 		
 		this.fullName = getFullName().intern();
 		this.scorerTypeName = scorer.getTypeName().intern();
 		this.aggregatorTypeName = aggregator.getTypeName().intern();
+		this.deriverTypeName = deriver.getTypeName().intern();
+		
+		this.isSpecIndependent = isSpecIndependent;
 	}
 	
 	public ScorerData(SignalMechanismSpecIterator scorer,	Aggregator aggregator) {

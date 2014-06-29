@@ -15,6 +15,7 @@ import org.dom4j.DocumentException;
 import org.xml.sax.SAXException;
 
 import ac.biu.nlp.nlp.ie.onthefly.input.AeException;
+import ac.biu.nlp.nlp.ie.onthefly.input.SpecException;
 import edu.cuny.qc.ace.acetypes.Scorer;
 import edu.cuny.qc.scorer.SignalMechanismException;
 import edu.cuny.qc.util.RecursiveFileListIterator;
@@ -36,7 +37,7 @@ public class DecoderOverPredicted {
 	public static String EXTENSION_ORIG = ".sgm.xml";
 	public static String EXTENSION_NEW =  ".apf.xml";
 
-	public static void main(String[] args) throws IOException, DocumentException, InstantiationException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException, SignalMechanismException {
+	public static void main(String[] args) throws IOException, DocumentException, InstantiationException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException, SignalMechanismException, SpecException {
 		System.out.printf("Args:\n%s\n\n", new ArrayList<String>(Arrays.asList(args)));
 		if(args.length < 5)	{
 			System.out.println("Usage:");

@@ -20,6 +20,7 @@ import org.dom4j.DocumentException;
 import org.xml.sax.SAXException;
 
 import ac.biu.nlp.nlp.ie.onthefly.input.AeException;
+import ac.biu.nlp.nlp.ie.onthefly.input.SpecException;
 import ac.biu.nlp.nlp.ie.onthefly.input.SpecHandler;
 import ac.biu.nlp.nlp.ie.onthefly.input.TypesContainer;
 import edu.cuny.qc.ace.acetypes.AceDocument;
@@ -75,13 +76,13 @@ public class Decoder
 	}
 
 
-	public static TypesContainer decode(String[] args, String filenameSuffix, String folderNamePrefix, File specListFile) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException, SignalMechanismException
+	public static TypesContainer decode(String[] args, String filenameSuffix, String folderNamePrefix, File specListFile) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException, SignalMechanismException, SpecException
 	{
 		List<String> specXmlPaths = SpecHandler.readSpecListFile(specListFile);
 		return decode(args, filenameSuffix, folderNamePrefix, specXmlPaths);
 	}
 	
-	public static TypesContainer decode(String[] args, String filenameSuffix, String folderNamePrefix, List<String> specXmlPaths) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException, SignalMechanismException
+	public static TypesContainer decode(String[] args, String filenameSuffix, String folderNamePrefix, List<String> specXmlPaths) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException, SignalMechanismException, SpecException
 	{		
 		System.err.println("(Decoding err stream)");
 		
@@ -188,7 +189,7 @@ public class Decoder
 		return types;
 	}
 	
-	public static Stats decodeAndScore(String[] args, String filenameSuffix, String folderNamePrefix, File specListFile) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException, SignalMechanismException {
+	public static Stats decodeAndScore(String[] args, String filenameSuffix, String folderNamePrefix, File specListFile) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException, SignalMechanismException, SpecException {
 		TypesContainer types = decode(args, filenameSuffix, folderNamePrefix, specListFile);
 		
 		File outputFile = new File(outDir + "/" + "Score" + filenameSuffix);
@@ -197,7 +198,7 @@ public class Decoder
 		return stats;
 	}
 
-	public static void main(String[] args) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException, SignalMechanismException {
+	public static void main(String[] args) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException, SignalMechanismException, SpecException {
 		//TODO the organization here is bad, should be improved:
 		// 1. there's no way to specify both a filenameSufix and NO_SCORING
 

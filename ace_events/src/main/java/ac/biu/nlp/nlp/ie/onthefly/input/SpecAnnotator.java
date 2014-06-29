@@ -15,14 +15,21 @@ import org.uimafit.util.JCasUtil;
 
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentExample;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.Predicate;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateInUsageSample;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateName;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateSeed;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.UsageSample;
 
+import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Iterators;
+import com.google.common.collect.Multimap;
 
+import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Lemma;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
+import eu.excitementproject.eop.common.utilities.uima.UimaUtils;
 
 public class SpecAnnotator extends JCasAnnotator_ImplBase {
 	//private Perceptron perceptron = null;
@@ -83,6 +90,20 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 	}
 	
 
+	public Multimap<String, Annotation> getLemmaToAnnotation(JCas view, Annotation covering, Class<? extends Annotation> elementType, String title) throws SpecXmlException {
+		Multimap<String, Annotation> result = HashMultimap.create();
+		for (Annotation element : JCasUtil.selectCovered(elementType, covering)) {
+			Lemma elementLemma = UimaUtils.selectCoveredSingle(view, Lemma.class, element);
+			String text = elementLemma.getValue();
+			if (result.containsKey(text)) {
+				String coveredText = elementLemma.getCoveredText();
+				throw new SpecXmlException(String.format("element '%s' has lemma '%s' that appears more than once in %s", coveredText, text, title));
+			}
+			result.put(text, element);
+		}
+		return result;
+	}
+	
 	@Override
 	public void process(JCas jcas) throws AnalysisEngineProcessException {
 		try {
@@ -118,9 +139,43 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 			tokenAE.process(tokenView);
 			sentenceAE.process(sentenceView);
 			
-//			for (FeatureMechanism featureMechanism : perceptron.featureMechanisms) {
-//				featureMechanism.preprocessSpec(jcas);
-//			}
+			// For each lemma value, remember all of its PredicateSeeds/ArgumentExamples
+			// this way we can verify if any of them appeared more than once - which is legit, but not for UsageSamples
+			Multimap<String, Annotation> lemmasToAnnotations = HashMultimap.create();
+			
+			Predicate predicate = JCasUtil.selectSingle(tokenView, Predicate.class);
+			lemmasToAnnotations.putAll(getLemmaToAnnotation(tokenView, predicate, PredicateSeed.class, "predicate"));
+			
+			for (Argument arg : JCasUtil.select(tokenView, Argument.class)) {
+				lemmasToAnnotations.putAll(getLemmaToAnnotation(tokenView, arg, ArgumentExample.class, "argument"));
+			}
+			
+			for (UsageSample sample : JCasUtil.select(sentenceView, UsageSample.class)) {
+				for (Lemma lemma : JCasUtil.selectCovered(Lemma.class, sample)) {
+					String text = lemma.getValue();
+					Collection<Annotation> elements = lemmasToAnnotations.get(text);
+					if (elements.size() > 1) {
+						// We don't allow in the usage samples lemmas that appear more than once in spec elements
+						throw new SpecXmlException(String.format("Usage example contains a token ('%s') with a lemma ('%s') that appears more than once in the spec - This is prohibited.",
+								lemma.getCoveredText(), text));
+					}
+					else if (elements.size() == 1) {
+						Annotation element = elements.iterator().next();
+						if (element instanceof PredicateSeed) {
+							PredicateInUsageSample pius = new PredicateInUsageSample(sentenceView, lemma.getBegin(), lemma.getEnd());
+							pius.setPredicateSeed((PredicateSeed) element);
+							pius.addToIndexes();
+						}
+						else { //element instanceof ArgumentExample
+							ArgumentInUsageSample aius = new ArgumentInUsageSample(sentenceView, lemma.getBegin(), lemma.getEnd());
+							aius.setArgumentExample((ArgumentExample) element);
+							aius.addToIndexes();
+						}
+					}
+					
+					// if elements.size() == 0, this lemma doesn't appear in the spec elements, so we ignore it
+				}
+			}
 			
 			Collection<Token> allTokens = JCasUtil.select(jcas, Token.class);
 			System.err.printf("%d tokens total in spec\n", allTokens.size());

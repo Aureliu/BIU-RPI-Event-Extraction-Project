@@ -11,6 +11,7 @@ import edu.cuny.qc.scorer.SignalMechanism;
 import edu.cuny.qc.scorer.SignalMechanismException;
 import edu.cuny.qc.scorer.SignalMechanismSpecTokenIterator;
 import edu.cuny.qc.util.BrownClusters;
+import eu.excitementproject.eop.common.representation.partofspeech.PartOfSpeech;
 
 public class BrownClustersSignalMechanism extends SignalMechanism {
 
@@ -25,21 +26,33 @@ public class BrownClustersSignalMechanism extends SignalMechanism {
 		addTrigger(new ScorerData("BR_ALL_CLUSTERS_LEM",		SameAllClustersLemma.inst,				Aggregator.Any.inst		));
 		addTrigger(new ScorerData("BR_LONGEST_CLUSTER_TOK",		SameLongestClusterToken.inst,			Aggregator.Any.inst		));
 		addTrigger(new ScorerData("BR_LONGEST_CLUSTER_LEM",		SameLongestClusterLemma.inst,			Aggregator.Any.inst		));
+		addTrigger(new ScorerData("BR_ALL_CLUSTERS_TOK",		SameAllClustersToken.inst,				Aggregator.Min2.inst		));
+		addTrigger(new ScorerData("BR_ALL_CLUSTERS_LEM",		SameAllClustersLemma.inst,				Aggregator.Min2.inst		));
+		addTrigger(new ScorerData("BR_LONGEST_CLUSTER_TOK",		SameLongestClusterToken.inst,			Aggregator.Min2.inst		));
+		addTrigger(new ScorerData("BR_LONGEST_CLUSTER_LEM",		SameLongestClusterLemma.inst,			Aggregator.Min2.inst		));
 	}
 
 	public BrownClustersSignalMechanism() throws SignalMechanismException {
 		super();
 	}
 
-	private static class SameAllClustersToken extends SignalMechanismSpecTokenIterator {
-		public static final SameAllClustersToken inst = new SameAllClustersToken();
+	private static abstract class BrownClustersScorer extends SignalMechanismSpecTokenIterator {
+		/**
+		 * Work on surface form, not lemma
+		 */
 		@Override
-		public Boolean calcTokenBooleanScore(Token text, Map<Class<?>, Object> textTriggerTokenMap, Token spec) throws SignalMechanismException
+		public String getForm(Token token) {
+			return token.getCoveredText();
+		}
+	}
+	private static class SameAllClustersToken extends BrownClustersScorer {
+		public static final SameAllClustersToken inst = new SameAllClustersToken();
+		@Override public String getForm(Token token) { return token.getCoveredText();}
+		@Override
+		public Boolean calcTokenBooleanScore(Token textToken, Map<Class<?>, Object> textTriggerTokenMap, String textStr, PartOfSpeech textPos, String specStr, PartOfSpeech specPos) throws SignalMechanismException
 		{
-			String textToken = text.getCoveredText();
-			String specToken = spec.getCoveredText();
-			List<String> textClusters = getBrownCluster(textToken);
-			List<String> specClusters = getBrownCluster(specToken);
+			List<String> textClusters = getBrownCluster(textStr);
+			List<String> specClusters = getBrownCluster(specStr);
 			if (textClusters == null || specClusters == null) {
 				return false;
 			}
@@ -47,15 +60,13 @@ public class BrownClustersSignalMechanism extends SignalMechanism {
 		}
 	}
 
-	private static class SameAllClustersLemma extends SignalMechanismSpecTokenIterator {
+	private static class SameAllClustersLemma extends BrownClustersScorer {
 		public static final SameAllClustersToken inst = new SameAllClustersToken();
 		@Override
-		public Boolean calcTokenBooleanScore(Token text, Map<Class<?>, Object> textTriggerTokenMap, Token spec) throws SignalMechanismException
+		public Boolean calcTokenBooleanScore(Token textToken, Map<Class<?>, Object> textTriggerTokenMap, String textStr, PartOfSpeech textPos, String specStr, PartOfSpeech specPos) throws SignalMechanismException
 		{
-			String textLemma = text.getLemma().getValue();
-			String specLemma = spec.getLemma().getValue();
-			List<String> textClusters = getBrownCluster(textLemma);
-			List<String> specClusters = getBrownCluster(specLemma);
+			List<String> textClusters = getBrownCluster(textStr);
+			List<String> specClusters = getBrownCluster(specStr);
 			if (textClusters == null || specClusters == null) {
 				return false;
 			}
@@ -63,15 +74,14 @@ public class BrownClustersSignalMechanism extends SignalMechanism {
 		}
 	}
 
-	private static class SameLongestClusterToken extends SignalMechanismSpecTokenIterator {
+	private static class SameLongestClusterToken extends BrownClustersScorer {
 		public static final SameLongestClusterToken inst = new SameLongestClusterToken();
+		@Override public String getForm(Token token) { return token.getCoveredText();}
 		@Override
-		public Boolean calcTokenBooleanScore(Token text, Map<Class<?>, Object> textTriggerTokenMap, Token spec) throws SignalMechanismException
+		public Boolean calcTokenBooleanScore(Token textToken, Map<Class<?>, Object> textTriggerTokenMap, String textStr, PartOfSpeech textPos, String specStr, PartOfSpeech specPos) throws SignalMechanismException
 		{
-			String textToken = text.getCoveredText();
-			String specToken = spec.getCoveredText();
-			List<String> textClusters = getBrownCluster(textToken);
-			List<String> specClusters = getBrownCluster(specToken);
+			List<String> textClusters = getBrownCluster(textStr);
+			List<String> specClusters = getBrownCluster(specStr);
 			if (textClusters == null || specClusters == null) {
 				return false;
 			}
@@ -81,15 +91,13 @@ public class BrownClustersSignalMechanism extends SignalMechanism {
 		}
 	}
 
-	private static class SameLongestClusterLemma extends SignalMechanismSpecTokenIterator {
+	private static class SameLongestClusterLemma extends BrownClustersScorer {
 		public static final SameLongestClusterLemma inst = new SameLongestClusterLemma();
 		@Override
-		public Boolean calcTokenBooleanScore(Token text, Map<Class<?>, Object> textTriggerTokenMap, Token spec) throws SignalMechanismException
+		public Boolean calcTokenBooleanScore(Token textToken, Map<Class<?>, Object> textTriggerTokenMap, String textStr, PartOfSpeech textPos, String specStr, PartOfSpeech specPos) throws SignalMechanismException
 		{
-			String textLemma = text.getLemma().getValue();
-			String specLemma = spec.getLemma().getValue();
-			List<String> textClusters = getBrownCluster(textLemma);
-			List<String> specClusters = getBrownCluster(specLemma);
+			List<String> textClusters = getBrownCluster(textStr);
+			List<String> specClusters = getBrownCluster(specStr);
 			if (textClusters == null || specClusters == null) {
 				return false;
 			}

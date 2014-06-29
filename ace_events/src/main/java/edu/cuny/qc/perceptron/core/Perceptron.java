@@ -98,7 +98,7 @@ public class Perceptron implements java.io.Serializable
 		
 		//labelBigram = new HashMap<String, List<String>>();
 		
-		buildSignalMechanisms();
+		//buildSignalMechanisms();
 	}
 	
 	public void close() {
@@ -162,28 +162,29 @@ public class Perceptron implements java.io.Serializable
 		if (!assn.featureToSignal.containsKey(i)) {
 			throw new IllegalArgumentException("Cannot find featureToSignal map for index: "+i+" in assignment: " + assn.toString());
 		}
-		Map<String, List<SignalInstance>> map = assn.featureToSignal.get(i);
+		Map<String, String> map = assn.featureToSignal.get(i);
 		if (!map.containsKey(strippedFeatureName)) {
 			String msg = "Cannot find feature (stripped) '"+strippedFeatureName+"' for i="+i+" in assignment: " + assn.toString();
 			//throw new IllegalArgumentException(msg);
 			//System.err.println(msg); //an even worse hack! cause I have no idea why we get this exception.
 			return "-";
 		}
-		List<SignalInstance> signals = map.get(strippedFeatureName);
+		String signals = map.get(strippedFeatureName);
 		if (signals == null) {
 			result = "N/A";
 		}
 		else {
-			List<String> strs = new ArrayList<String>(signals.size());
-			for (SignalInstance signal : signals) {
-				strs.add(signal.getPositiveString());
-			}
-			if (signals.size() == 1) {
-				result = strs.get(0);
-			}
-			else {
-				result = strs.toString();
-			}
+//			List<String> strs = new ArrayList<String>(signals.size());
+//			for (SignalInstance signal : signals) {
+//				strs.add(signal.getPositiveString());
+//			}
+//			if (signals.size() == 1) {
+//				result = strs.get(0);
+//			}
+//			else {
+//				result = strs.toString();
+//			}
+			result = signals;
 		}
 		return result;
 	}

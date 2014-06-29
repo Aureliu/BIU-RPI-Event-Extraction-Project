@@ -1,8 +1,6 @@
 package edu.cuny.qc.scorer;
 
-import java.io.Serializable;
 import java.math.BigDecimal;
-import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 

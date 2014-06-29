@@ -42,7 +42,7 @@ public class TypesContainer {
 
 
 	// second param - hack
-	public TypesContainer(List<String> specXmlPaths, boolean ignoreThis) throws CASRuntimeException, AnalysisEngineProcessException, ResourceInitializationException, UimaUtilsException, IOException, AeException, CASException { 
+	public TypesContainer(List<String> specXmlPaths, boolean ignoreThis) throws CASRuntimeException, AnalysisEngineProcessException, ResourceInitializationException, UimaUtilsException, IOException, AeException, CASException, SpecException { 
 		this(SpecHandler.getSpecs(specXmlPaths));
 	}
 	public TypesContainer(List<JCas> specs) throws CASRuntimeException, AnalysisEngineProcessException, ResourceInitializationException, UimaUtilsException, IOException, AeException, CASException {

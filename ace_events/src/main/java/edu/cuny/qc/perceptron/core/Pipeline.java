@@ -136,12 +136,12 @@ public class Pipeline
 			int num = 0;
 			while((line = reader.readLine()) != null)
 			{
-				if (num % DOCUMENT_GC_FREQ == 0) {
-					perceptron.logSignalMechanismsPreDocumentBunch();
-					System.out.printf("***%s running gc...", detailedLog());
-					System.gc();
-					System.out.printf("%s done.\n", detailedLog());					
-				}
+//				if (num % DOCUMENT_GC_FREQ == 0) {
+//					perceptron.logSignalMechanismsPreDocumentBunch();
+//					System.out.printf("***%s running gc...", detailedLog());
+//					System.gc();
+//					System.out.printf("%s done.\n", detailedLog());					
+//				}
 				num++;
 				
 				boolean monoCase = line.contains("bn/") ? true : false;
@@ -207,10 +207,10 @@ public class Pipeline
 //			reader.close();
 //		}
 		
-		System.out.printf("%s FINAL GC...", detailedLog());
-		System.gc();
-		System.out.printf("%s done.\n", detailedLog());
-		System.out.println("done");
+//		System.out.printf("%s FINAL GC...", detailedLog());
+//		System.gc();
+//		System.out.printf("%s done.\n", detailedLog());
+//		System.out.println("done");
 		return instancelist;
 	}
 	

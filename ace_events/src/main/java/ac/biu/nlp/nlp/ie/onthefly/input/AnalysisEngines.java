@@ -17,7 +17,7 @@ public class AnalysisEngines {
 			return build(viewName, new AnalysisEngineDescription[] {
 					// no need to do sentence splitting - there are no sentences in the token view!
 					// no need to do tokenizations - tokens are annotated directly when reading the spec
-					createPrimitiveDescription(StanfordLemmatizerAE.class)
+					createPrimitiveDescription(TypedStanfordLemmatizerAE.class)
 			});
 		}
 		catch (ResourceInitializationException e) {

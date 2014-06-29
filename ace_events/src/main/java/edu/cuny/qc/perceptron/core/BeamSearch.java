@@ -238,7 +238,7 @@ public class BeamSearch
 	public SentenceAssignment beamSearch(SentenceInstance problem, int beamSize, boolean isLearning)
 	{
 		List<SentenceAssignment> beam = new ArrayList<SentenceAssignment>();
-		SentenceAssignment initial = new SentenceAssignment(problem.types, null, problem.nodeTargetAlphabet, problem.edgeTargetAlphabet, problem.featureAlphabet, problem.controller);
+		SentenceAssignment initial = new SentenceAssignment(/*problem.types,*/problem.eventArgCandidates, null, problem.nodeTargetAlphabet, problem.edgeTargetAlphabet, problem.featureAlphabet, problem.controller);
 		beam.add(initial);
 		
 		// clear the feature vector of ground-truth assignment

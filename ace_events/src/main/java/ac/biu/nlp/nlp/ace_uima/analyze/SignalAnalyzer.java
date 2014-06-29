@@ -7,6 +7,7 @@ import java.io.PrintStream;
 import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -44,10 +45,15 @@ public class SignalAnalyzer {
 	private static SignalAnalyzerDocumentCollection docs = new SignalAnalyzerDocumentCollection();
 	private static final int SENTENCE_PRINT_FREQ = 200;
 	private static final int SENTENCE_GC_FREQ = 20000;
-	private static final int DEBUG_MIN_SENTENCE = 2602;
+	//private static final int debugMinSentence = 1310;
+	private static final boolean DO_VERBOSE_PRINTS = true; //warning! only use this for really fine-grained debugging - this prints a lot!!!
 
-	public static void analyze(File inputFileList, File specList, File outputFolder, boolean useDumps, String triggerDocName, String argDocName, String globalDocName) throws Exception {
+	public static void analyze(File inputFileList, File specList, File outputFolder, boolean useDumps, String triggerDocName, String argDocName, String globalDocName, Integer debugMinSentence) throws Exception {
 		(new PrintStream(new File(outputFolder, "start"))).close();
+		if (debugMinSentence < 0) {
+			debugMinSentence = Integer.MAX_VALUE;
+		}
+		
 		AceAnalyzer.fillCategories();
 
 		File triggerFile = new File(outputFolder, triggerDocName);
@@ -73,17 +79,19 @@ public class SignalAnalyzer {
 		// Iterating instances, and for each creating assignment - ONE FOR EACH SIGNAL
 		// inspired by BeamSearch.beamSearch
 		int sentNum = 0;
-		for (SentenceInstance problem : goldInstances) {
+		//for (SentenceInstance problem : goldInstances) {
+		for (Iterator<SentenceInstance> sentIter = goldInstances.iterator(); sentIter.hasNext();) {
+			SentenceInstance problem = sentIter.next();
 			
-			if (sentNum >= DEBUG_MIN_SENTENCE) {
-				System.err.printf("\n%s start %s, ", Pipeline.detailedLog(), sentNum);
+			if (sentNum >= debugMinSentence) {
+				System.err.printf("\n%s start %s (%s tokens), ", Pipeline.detailedLog(), sentNum, problem.size());
 			}
 				
 			sentNum++;
 			if (sentNum % SENTENCE_PRINT_FREQ == 1) {
 				System.out.printf("%s Processing sentence %s\n", Pipeline.detailedLog(), sentNum);
 			}
-			Map<ScorerData, SentenceAssignment> assignments = new LinkedHashMap<ScorerData, SentenceAssignment>();
+			Map<ScorerData, SentenceAssignment> assignments = new HashMap<ScorerData, SentenceAssignment>();
 			String triggerLabel = SpecAnnotator.getSpecLabel(problem.associatedSpec);
 			
 			String[] split = problem.docID.split("/");
@@ -97,21 +105,21 @@ public class SignalAnalyzer {
 			key.put("docId", docId);
 			key.put("label", triggerLabel);
 			
-			if (sentNum % SENTENCE_GC_FREQ == 1) {
-				System.out.printf("%s *** running gc... ", Pipeline.detailedLog());
-				System.gc();
-				System.out.printf("%s done.\n", Pipeline.detailedLog());
-			}
+//			if (sentNum % SENTENCE_GC_FREQ == 1) {
+//				System.out.printf("%s *** running gc... ", Pipeline.detailedLog());
+//				System.gc();
+//				System.out.printf("%s done.\n", Pipeline.detailedLog());
+//			}
 			
-			if (sentNum >= DEBUG_MIN_SENTENCE) {
+			if (sentNum >= debugMinSentence) {
 				System.err.printf("1 ");
 			}
 
 		
 			for(int i=0; i<problem.size(); i++) {
 
-				if (sentNum >= DEBUG_MIN_SENTENCE) {
-					System.err.printf("\n\t2(%s) ", i);
+				if (sentNum >= debugMinSentence) {
+					System.err.printf("\n\t2/%s ", i);
 				}
 
 				String goldLabel = problem.target.getLabelAtToken(i);
@@ -133,38 +141,41 @@ public class SignalAnalyzer {
 //				boolean b = m1.equals(m2);
 				///
 
-				if (sentNum >= DEBUG_MIN_SENTENCE) {
-					System.err.printf("3(%s) ", i);
+				if (sentNum >= debugMinSentence) {
+					System.err.printf("3/%s ", i);
 				}
 				
+				int k=-1;
 				for (ScorerData data : scoredSignals.keySet()) {
-				
-//					if (sentNum >= DEBUG_MIN_SENTENCE) {
-//						System.err.printf("4(%s) ", i);
-//					}
+					k++;
+					
+					if (sentNum >= debugMinSentence && DO_VERBOSE_PRINTS) {
+						//System.err.printf("4(%s, scorerData=%s) ", i, data);
+						System.err.printf("\n\t\t4/%s/%05d ", i, k);
+					}
 					
 					SignalInstance signal = scoredSignals.get(data);
 					SentenceAssignment assn = null;
 					if (assignments.containsKey(data)) {
 						
-//						if (sentNum >= DEBUG_MIN_SENTENCE) {
-//							System.err.printf("5(%s) ", i);
-//						}
+						if (sentNum >= debugMinSentence && DO_VERBOSE_PRINTS) {
+							System.err.printf("5/%s ", i);
+						}
 						
 						assn = assignments.get(data);
 					}
 					else {
 						
-//						if (sentNum >= DEBUG_MIN_SENTENCE) {
-//							System.err.printf("6(%s) ", i);
-//						}
+						if (sentNum >= debugMinSentence && DO_VERBOSE_PRINTS) {
+							System.err.printf("6/%s ", i);
+						}
 						
-						assn = new SentenceAssignment(problem.types, problem, problem.nodeTargetAlphabet, problem.edgeTargetAlphabet, problem.featureAlphabet, problem.controller);
+						assn = new SentenceAssignment(/*problem.types,*/problem.eventArgCandidates, problem.target, problem.nodeTargetAlphabet, problem.edgeTargetAlphabet, problem.featureAlphabet, problem.controller);
 						assignments.put(data, assn);
 						
-//						if (sentNum >= DEBUG_MIN_SENTENCE) {
-//							System.err.printf("7(%s) ", i);
-//						}
+						if (sentNum >= debugMinSentence && DO_VERBOSE_PRINTS) {
+							System.err.printf("7/%s ", i);
+						}
 						
 					}
 					assn.incrementState();
@@ -186,9 +197,9 @@ public class SignalAnalyzer {
 
 					
 					
-//					if (sentNum >= DEBUG_MIN_SENTENCE) {
-//						System.err.printf("8(%s) ", i);
-//					}
+					if (sentNum >= debugMinSentence && DO_VERBOSE_PRINTS) {
+						System.err.printf("8/%s/%s ", i, signal.history.size());
+					}
 					
 					key.put("signal", data.basicName);
 					key.put("agg", data.aggregatorTypeName);
@@ -205,9 +216,9 @@ public class SignalAnalyzer {
 						}
 					}
 					
-//					if (sentNum >= DEBUG_MIN_SENTENCE) {
-//						System.err.printf("9(%s) ", i);
-//					}
+					if (sentNum >= debugMinSentence && DO_VERBOSE_PRINTS) {
+						System.err.printf("9/%s ", i);
+					}
 					
 					
 //					if (sentNum % SENTENCE_PRINT_FREQ == 1 && i%10==0) {
@@ -216,8 +227,8 @@ public class SignalAnalyzer {
 
 				}
 				
-				if (sentNum >= DEBUG_MIN_SENTENCE) {
-					System.err.printf("10(%s) ", i);
+				if (sentNum >= debugMinSentence) {
+					System.err.printf("10/%s ", i);
 				}
 				
 
@@ -252,7 +263,7 @@ public class SignalAnalyzer {
 			//System.gc();
 
 			
-			if (sentNum >= DEBUG_MIN_SENTENCE) {
+			if (sentNum >= debugMinSentence) {
 				System.err.printf("\n\t\t11 ");
 			}
 			
@@ -273,11 +284,13 @@ public class SignalAnalyzer {
 				docs.updateDocs(key, "Performance", "", assn);
 			}
 			
+			sentIter.remove();
+			
 			if (sentNum % SENTENCE_PRINT_FREQ == 1) {
 				System.out.printf("%s Sentence %s: finished perofrmance (and the sentence itself)\n", Pipeline.detailedLog(), sentNum);
 			}
 			
-			if (sentNum >= DEBUG_MIN_SENTENCE) {
+			if (sentNum >= debugMinSentence) {
 				System.err.printf("13 ");
 			}
 			
@@ -315,12 +328,12 @@ public class SignalAnalyzer {
 		logger = Logger.getLogger(SignalAnalyzer.class);
 	}
 	public static void main(String args[]) throws Exception {
-		if (args.length != 7) {
-			System.err.println("USAGE: SignalAnalyzer <input file list> <spec list> <output folder> <use dump files> <trigger doc> <arg doc> <global doc>");
+		if (args.length != 8) {
+			System.err.println("USAGE: SignalAnalyzer <input file list> <spec list> <output folder> <use dump files> <trigger doc> <arg doc> <global doc> <debug min sentence>");
 			return;
 		}
 		handleLog();
-		SignalAnalyzer.analyze(new File(args[0]), new File(args[1]), new File(args[2]), Boolean.parseBoolean(args[3]), args[4], args[5], args[6]);
+		SignalAnalyzer.analyze(new File(args[0]), new File(args[1]), new File(args[2]), Boolean.parseBoolean(args[3]), args[4], args[5], args[6], Integer.parseInt(args[7]));
 	}
 
 	protected static Logger logger;

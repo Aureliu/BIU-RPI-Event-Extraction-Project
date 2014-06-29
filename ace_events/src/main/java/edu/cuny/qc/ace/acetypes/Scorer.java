@@ -17,6 +17,7 @@ import org.apache.uima.resource.ResourceInitializationException;
 import org.dom4j.DocumentException;
 
 import ac.biu.nlp.nlp.ie.onthefly.input.AeException;
+import ac.biu.nlp.nlp.ie.onthefly.input.SpecException;
 import ac.biu.nlp.nlp.ie.onthefly.input.SpecHandler;
 import ac.biu.nlp.nlp.ie.onthefly.input.TypesContainer;
 import edu.cuny.qc.util.Span;
@@ -357,7 +358,7 @@ public class Scorer
 		return ret;
 	}
 
-	static public Stats mainReturningStats(String[] args) throws DocumentException, IOException, CASRuntimeException, AnalysisEngineProcessException, ResourceInitializationException, UimaUtilsException, AeException, CASException
+	static public Stats mainReturningStats(String[] args) throws DocumentException, IOException, CASRuntimeException, AnalysisEngineProcessException, ResourceInitializationException, UimaUtilsException, AeException, CASException, SpecException
 	{
 		if(args.length < 4)
 		{
@@ -404,7 +405,7 @@ public class Scorer
 		return stats;
 	}
 	
-	static public void main(String[] args) throws DocumentException, IOException, CASRuntimeException, AnalysisEngineProcessException, ResourceInitializationException, UimaUtilsException, AeException, CASException {
+	static public void main(String[] args) throws DocumentException, IOException, CASRuntimeException, AnalysisEngineProcessException, ResourceInitializationException, UimaUtilsException, AeException, CASException, SpecException {
 		mainReturningStats(args);
 	}
 

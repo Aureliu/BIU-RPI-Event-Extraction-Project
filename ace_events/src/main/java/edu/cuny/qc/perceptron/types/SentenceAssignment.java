@@ -121,9 +121,11 @@ public class SentenceAssignment
 	
 	public Controller controller;
 	
-	public TypesContainer types;
+	//public TypesContainer types;
 	
-	public transient SentenceInstance inst = null;
+	//public transient SentenceInstance inst = null;
+	public transient SentenceAssignment target = null;
+	public List<AceMention> eventArgCandidates = null;
 	
 	// the feature vector of the current assignment
 	public FeatureVectorSequence featVecSequence;
@@ -132,7 +134,8 @@ public class SentenceAssignment
 	protected BigDecimal score = BigDecimal.ZERO;
 	protected List<BigDecimal> partial_scores;
 	
-	public Map<Integer, Map<String, List<SignalInstance>>> featureToSignal; 
+	//public Map<Integer, Map<String, List<SignalInstance>>> featureToSignal; 
+	public Map<Integer, Map<String, String>> featureToSignal; 
 	public List<BigDecimal> getPartialScores() {
 		return partial_scores;
 	}
@@ -190,7 +193,7 @@ public class SentenceAssignment
 	public SentenceAssignment clone()
 	{
 		// shallow copy the alphabets
-		SentenceAssignment assn = new SentenceAssignment(types, inst, nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet, controller);
+		SentenceAssignment assn = new SentenceAssignment(/*types,*/ eventArgCandidates, target, nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet, controller);
 		
 		// shallow copy the assignment
 		assn.nodeAssignment = (Vector<Integer>) this.nodeAssignment.clone();
@@ -223,11 +226,12 @@ public class SentenceAssignment
 		//assn.local_score = this.local_score;
 		assn.partial_scores.addAll(this.partial_scores);
 		
-		assn.featureToSignal = new HashMap<Integer, Map<String, List<SignalInstance>>>();
-		for (Entry<Integer, Map<String, List<SignalInstance>>> entry : featureToSignal.entrySet()) {
-			Map<String, List<SignalInstance>> map = new HashMap<String, List<SignalInstance>>();
+		//assn.featureToSignal = new HashMap<Integer, Map<String, List<SignalInstance>>>();
+		assn.featureToSignal = new HashMap<Integer, Map<String, String>>();
+		for (Entry<Integer, Map<String, String>> entry : featureToSignal.entrySet()) {
+			Map<String, String> map = new HashMap<String, String>();
 			assn.featureToSignal.put(new Integer(entry.getKey()), map);
-			for(Entry<String, List<SignalInstance>> entry2 : entry.getValue().entrySet()) {
+			for(Entry<String, String> entry2 : entry.getValue().entrySet()) {
 				map.put(entry2.getKey(), entry2.getValue());
 			}
 		}
@@ -376,21 +380,23 @@ public class SentenceAssignment
 		}
 	}
 	
-	public SentenceAssignment(TypesContainer types, SentenceInstance instance, Alphabet nodeTargetAlphabet, Alphabet edgeTargetAlphabet, Alphabet featureAlphabet, Controller controller)
+	public SentenceAssignment(/*TypesContainer types,*/ List<AceMention> eventArgCandidates, SentenceAssignment target, Alphabet nodeTargetAlphabet, Alphabet edgeTargetAlphabet, Alphabet featureAlphabet, Controller controller)
 	{
 		this.nodeTargetAlphabet = nodeTargetAlphabet;
 		this.edgeTargetAlphabet = edgeTargetAlphabet;
 		this.featureAlphabet = featureAlphabet;
 		this.controller = controller;
-		this.types = types;
-		this.inst = instance;
+		//this.types = types;
+		//this.inst = instance;
+		this.eventArgCandidates = eventArgCandidates;
+		this.target = target;
 		
 		nodeAssignment = new Vector<Integer>();
 		edgeAssignment = new HashMap<Integer, Map<Integer, Integer>>();
 		
 		featVecSequence = new FeatureVectorSequence();
 		partial_scores = new ArrayList<BigDecimal>();
-		featureToSignal = new HashMap<Integer, Map<String, List<SignalInstance>>>();
+		featureToSignal = new HashMap<Integer, Map<String, String>>();
 	}
 	
 	/**
@@ -400,7 +406,7 @@ public class SentenceAssignment
 	 */
 	public SentenceAssignment(SentenceInstance inst, Perceptron perceptron)
 	{
-		this(inst.types, inst, inst.nodeTargetAlphabet, inst.edgeTargetAlphabet, inst.featureAlphabet, inst.controller);
+		this(/*inst.types,*/inst.eventArgCandidates, inst.target, inst.nodeTargetAlphabet, inst.edgeTargetAlphabet, inst.featureAlphabet, inst.controller);
 		
 		for(int i=0; i < inst.size(); i++)
 		{
@@ -423,7 +429,7 @@ public class SentenceAssignment
 			}
 			//////////
 			// ignore the triggers that are with other POS
-			if(!types.isPossibleTriggerByPOS(inst, trigger_index))
+			if(!inst.types.isPossibleTriggerByPOS(inst, trigger_index))
 			{	
 				continue;
 			}
@@ -442,7 +448,7 @@ public class SentenceAssignment
 			{
 				AceMention can = inst.eventArgCandidates.get(can_id);
 				// ignore entity that are not compatible with the event
-				if(types.isEntityTypeEventCompatible(mention.getSubType(), can.getType()))
+				if(inst.types.isEntityTypeEventCompatible(mention.getSubType(), can.getType()))
 				{
 					feat_index = this.edgeTargetAlphabet.lookupIndex(Default_Argument_Label);
 					arguments.put(can_id, feat_index);
@@ -871,19 +877,27 @@ public class SentenceAssignment
 		
 		if (wasAdded) {
 			String strippedFeatureStr = stripLabel(featureStr);
-			Map<String, List<SignalInstance>> map = featureToSignal.get(i);
+			Map<String, String> map = featureToSignal.get(i);
 			if (!featureToSignal.containsKey(i)) {
-				map = new HashMap<String, List<SignalInstance>>();
+				map = new HashMap<String, String>();
 				featureToSignal.put(i, map);
 			}
 			if (map.containsKey(strippedFeatureStr)) {
-				List<SignalInstance> existingSignals = map.get(strippedFeatureStr);
+				//List<SignalInstance> existingSignals = map.get(strippedFeatureStr);
+				String existingSignals = map.get(strippedFeatureStr);
 				// TODO I have some feeling that this exception will rise whenever I switch back to multiple labels.
 				// Perhaps this would mean that featureToSignal should be even more complex and also have a distinct "label" level.
 				throw new IllegalArgumentException(String.format("Tried to store signals %s for feature (stripped) '%s' over i=%s, but this feature already exists over this i, it already has the signals %s",
 						signals, strippedFeatureStr, i, existingSignals));
 			}
-			map.put(strippedFeatureStr, signals);
+			String signalStr;
+			if (signals.size() == 1) {
+				signalStr = signals.get(0).getPositiveString();
+			}
+			else {
+				throw new RuntimeException("So, I didn't have the energy to implement this for multiple signals per feature, but now it's rising... So, please implement :)");
+			}
+			map.put(strippedFeatureStr, signalStr);
 		}
 	}
 	
@@ -1166,6 +1180,6 @@ public class SentenceAssignment
 		{
 			this.featVecSequence.sequence.set(i, new FeatureVector());
 		}
-		featureToSignal = new HashMap<Integer, Map<String, List<SignalInstance>>>();
+		featureToSignal = new HashMap<Integer, Map<String, String>>();
 	}
 }

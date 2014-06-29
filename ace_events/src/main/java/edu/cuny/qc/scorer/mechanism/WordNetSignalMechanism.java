@@ -10,8 +10,6 @@ import java.util.Set;
 import java.util.concurrent.ExecutionException;
 
 import org.apache.commons.lang3.StringUtils;
-import org.apache.commons.lang3.builder.EqualsBuilder;
-import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.joda.time.Period;
 
 import ac.biu.nlp.nlp.ie.onthefly.input.AnnotationUtils;
@@ -25,10 +23,18 @@ import com.google.common.cache.Weigher;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
 import edu.cuny.qc.perceptron.core.Pipeline;
 import edu.cuny.qc.scorer.Aggregator;
+import edu.cuny.qc.scorer.BasicRulesQuery;
+import edu.cuny.qc.scorer.Derivation;
+import edu.cuny.qc.scorer.Deriver;
+import edu.cuny.qc.scorer.DeriverException;
+import edu.cuny.qc.scorer.FullRulesQuery;
+import edu.cuny.qc.scorer.Juxtaposition;
 import edu.cuny.qc.scorer.ScorerData;
 import edu.cuny.qc.scorer.SignalMechanism;
 import edu.cuny.qc.scorer.SignalMechanismException;
 import edu.cuny.qc.scorer.SignalMechanismSpecTokenIterator;
+import edu.cuny.qc.scorer.Deriver.NoDerv;
+import edu.cuny.qc.util.TokenAnnotations.DervWordnetAnnotation;
 import eu.excitementproject.eop.common.component.lexicalknowledge.LexicalResourceException;
 import eu.excitementproject.eop.common.component.lexicalknowledge.LexicalRule;
 import eu.excitementproject.eop.common.representation.partofspeech.PartOfSpeech;
@@ -95,19 +101,20 @@ public class WordNetSignalMechanism extends SignalMechanism {
 	@Override
 	public void addScorers() {
 		//END of analysis1!
+		/// Group A
 		addTriggers(SYNONYM_RELATION,   Juxtaposition.ANCESTOR, new Integer[] {1}, DERVS_NONE, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN, /*VERB, ADJ, ADV*/}, AGG_ANY);
 		addTriggers(HYPERNYM_RELATIONS, Juxtaposition.ANCESTOR, ALL_LENGTHS_WITH_TOP, DERVS_NONE_AND, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN/*, VERB*/}, AGG_ANY);
 		addTriggers(HYPERNYM1_RELATION, Juxtaposition.ANCESTOR, ALL_LENGTHS_WITH_TOP, DERVS_NONE_AND, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN/*, VERB*/}, AGG_ANY);
 		addTriggers(HYPERNYM2_RELATION, Juxtaposition.ANCESTOR, ALL_LENGTHS_WITH_TOP, DERVS_NONE_AND, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN/*, VERB*/}, AGG_ANY);
 
+		/// Group B
 		addTriggers(HYPERNYM_RELATIONS, Juxtaposition.COUSIN_STRICT, new Integer[] {1}, DERVS_NONE_AND, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null/*, NOUN, VERB*/}, AGG_ANY_MIN2);
 		addTriggers(HYPERNYM_RELATIONS, Juxtaposition.COUSIN_STRICT, new Integer[] {2, 3}, DERVS_NONE_AND, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null/*, NOUN, VERB*/}, AGG_MIN2_MIN3);
 
-		
-		///////////////////////////////
 		addTriggers(ALL_RELATIONS_SMALL,   Juxtaposition.ANCESTOR, LENGTHS_1_2_3_TOP, DERVS_ALL, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN, VERB/*, ADJ, ADV*/}, ALL_AGGS);
 		addTriggers(ALL_RELATIONS_BIG,   Juxtaposition.ANCESTOR, LENGTHS_1_2_3_TOP, DERVS_ALL, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN, VERB/*, ADJ, ADV*/}, ALL_AGGS);
-		///////////////////////
+		
+		
 		
 		
 		///////////////////////////////
@@ -246,28 +253,17 @@ public class WordNetSignalMechanism extends SignalMechanism {
 		logCacheStats();
 	}
 
-	
-	private enum Juxtaposition {
-		ANCESTOR,
-		COUSIN_STRICT,
-		COUSIN_LOOSE,
-	}
-	private enum Derivation {
-		NONE(true, false, true, false),
-		TEXT_ORIG_AND_DERV(true, true, true, false),
-		TEXT_ONLY_DERV(false, true, true, false),
-		SPEC_ORIG_AND_DERV(true, false, true, true),
-		SPEC_ONLY_DERV(true, false, false, true);
-		// everything with both text and spec derv, sounds a little too far
-		private Derivation(boolean leftOriginal, boolean leftDerivation, boolean rightOriginal, boolean rightDerivation) {
-			this.leftOriginal = leftOriginal;
-			this.leftDerivation = leftDerivation;
-			this.rightOriginal = rightOriginal;
-			this.rightDerivation = rightDerivation;
-		}
-		public boolean leftOriginal, leftDerivation, rightOriginal, rightDerivation;
-	}
-//	private enum SynsetScope {
+	private static LoadingCache<Integer, WordnetLexicalResource> cacheResources = CacheBuilder.newBuilder()
+			.maximumSize(50)
+			.build(new CacheLoader<Integer, WordnetLexicalResource>() {
+				public WordnetLexicalResource load(Integer length) throws LexicalResourceException {
+					WordnetLexicalResource result = new WordnetLexicalResource(WORDNET_DIR,	false, false, null, length);
+					return result;
+				}
+			});
+
+
+	//	private enum SynsetScope {
 //		BOTH_FIRSTS(1,1),
 //		TEXT_ALL_SPEC_FIRST(-1,1),
 //		TEXT_FIRST_SPEC_ALL(1,-1),
@@ -282,6 +278,45 @@ public class WordNetSignalMechanism extends SignalMechanism {
 //		FIXED,
 //		RELATIVE
 //	}
+	
+	public static class WordnetDervRltdDeriver extends Deriver {
+		public static final WordnetDervRltdDeriver inst = new WordnetDervRltdDeriver();
+		@Override public String getSuffix() { return "-WnDrv";}
+		//@Override public Class<?> getTokenAnnotationMarker() { return DervWordnetAnnotation.class; }
+		@Override public Set<BasicRulesQuery> buildDerivations(FullRulesQuery query) throws DeriverException {
+			try {
+				return cacheDerv.get(query);
+			} catch (ExecutionException e) {
+				throw new DeriverException(e);
+			}
+		}
+		
+		private static LoadingCache<FullRulesQuery, Set<BasicRulesQuery>> cacheDerv = CacheBuilder.newBuilder()
+				.recordStats()
+				.maximumWeight(100000)
+				.weigher(new Weigher<FullRulesQuery, Set<BasicRulesQuery>>() {
+					public int weigh(FullRulesQuery k, Set<BasicRulesQuery> v) { return v.size(); }
+				})
+				.build(new CacheLoader<FullRulesQuery, Set<BasicRulesQuery>>() {
+					public Set<BasicRulesQuery> load(FullRulesQuery key) throws LexicalResourceException, ExecutionException {
+						Set<BasicRulesQuery> result = new HashSet<BasicRulesQuery>();
+						BasicRulesQuery q = key.basicQuery;
+						WordnetLexicalResource resource = cacheResources.get(1);
+						
+						// Take all derv-related forms (that's the -1)
+						WordnetRuleInfo info = new WordnetRuleInfoWithSenseNumsOnly(key.leftSenseNum, -1);
+						
+						List<LexicalRule<? extends WordnetRuleInfo>> rules = resource.getRulesForLeft(q.lLemma, q.lPos, DERVRTD_RELATION, info);
+						for (LexicalRule<? extends WordnetRuleInfo> rule : rules) {
+							// when a BasicRulesQuery represents only one lemma/POS, it's always on the Left side
+							BasicRulesQuery res = new BasicRulesQuery(rule.getRLemma(), null, rule.getRPos(), null);
+							result.add(res);
+						}
+						return result;
+					}
+				});
+	}
+	
 	private static class WordnetScorer extends SignalMechanismSpecTokenIterator {
 		public Set<WordNetRelation> relations;
 		public Juxtaposition juxt;
@@ -352,15 +387,6 @@ public class WordNetSignalMechanism extends SignalMechanism {
 			return String.format("WN__%s__%s_Len%s_Text%sSense_Spec%sSense_%s%s",
 					rels, juxt, lengthStr, leftSenseStr, rightSenseStr, dervStr, posStr);
 		}
-
-		private static LoadingCache<Integer, WordnetLexicalResource> cacheResources = CacheBuilder.newBuilder()
-				.maximumSize(50)
-				.build(new CacheLoader<Integer, WordnetLexicalResource>() {
-					public WordnetLexicalResource load(Integer length) throws LexicalResourceException {
-						WordnetLexicalResource result = new WordnetLexicalResource(WORDNET_DIR,	false, false, null, length);
-						return result;
-					}
-				});
 
 		private static LoadingCache<BasicRulesQuery, Boolean> cacheExist = CacheBuilder.newBuilder()
 				.recordStats()
@@ -492,37 +518,10 @@ public class WordNetSignalMechanism extends SignalMechanism {
 			            return booleanScore;
 					}
 				});
-
-		private static LoadingCache<FullRulesQuery, Set<BasicRulesQuery>> cacheDerv = CacheBuilder.newBuilder()
-				.recordStats()
-				.maximumWeight(100000)
-				.weigher(new Weigher<FullRulesQuery, Set<BasicRulesQuery>>() {
-					public int weigh(FullRulesQuery k, Set<BasicRulesQuery> v) { return v.size(); }
-				})
-				.build(new CacheLoader<FullRulesQuery, Set<BasicRulesQuery>>() {
-					public Set<BasicRulesQuery> load(FullRulesQuery key) throws LexicalResourceException, ExecutionException {
-						Set<BasicRulesQuery> result = new HashSet<BasicRulesQuery>();
-						BasicRulesQuery q = key.basicQuery;
-						WordnetLexicalResource resource = cacheResources.get(1);
-						
-						// Take all derv-related forms (that's the -1)
-						WordnetRuleInfo info = new WordnetRuleInfoWithSenseNumsOnly(key.leftSenseNum, -1);
-						
-						List<LexicalRule<? extends WordnetRuleInfo>> rules = resource.getRulesForLeft(q.lLemma, q.lPos, DERVRTD_RELATION, info);
-						for (LexicalRule<? extends WordnetRuleInfo> rule : rules) {
-							// when a BasicRulesQuery represents only one lemma/POS, it's always on the Left side
-							BasicRulesQuery res = new BasicRulesQuery(rule.getRLemma(), null, rule.getRPos(), null);
-							result.add(res);
-						}
-						return result;
-					}
-				});
-
 		
 		@Override
 		public Boolean calcTokenBooleanScore(Token text, Map<Class<?>, Object> textTriggerTokenMap, Token spec) throws SignalMechanismException {
 			try {
-				PartOfSpeech textPos = AnnotationUtils.tokenToPOS(text);
 				//hard-codedly, specificPos only refers to the original text token, not any derivations
 				if (this.specificPos != null && !this.specificPos.equals(textPos)) {
 					return false; //TODO: should be: IRRELEVANT
@@ -599,64 +598,6 @@ public class WordNetSignalMechanism extends SignalMechanism {
 		}
 	}
 	
-	private static class BasicRulesQuery {
-		@Override public int hashCode() {
-		     return new HashCodeBuilder(17, 37).append(lLemma).append(rLemma).append(lPos).append(rPos).toHashCode();
-		}
-		@Override public boolean equals(Object obj) {
-		   if (obj == null) { return false; }
-		   if (obj == this) { return true; }
-		   if (obj.getClass() != getClass()) { return false; }
-		   BasicRulesQuery rhs = (BasicRulesQuery) obj;
-		   return new EqualsBuilder().append(lLemma, rhs.lLemma).append(rLemma, rhs.rLemma).append(lPos, rhs.lPos).append(rPos, rhs.rPos).isEquals();
-		}
-		public String toString() {
-			return String.format("%s(%s/%s-->%s/%s)", BasicRulesQuery.class.getSimpleName(), lLemma, lPos, rLemma, rPos);
-		}
-		public BasicRulesQuery(String lLemma, String rLemma, PartOfSpeech lPos,
-				PartOfSpeech rPos/*, Set<WordNetRelation> relations*/) {
-			this.lLemma = lLemma;
-			this.rLemma = rLemma;
-			this.lPos = lPos;
-			this.rPos = rPos;
-			//this.relations = relations;
-		}
-		public String lLemma, rLemma;
-		public PartOfSpeech lPos, rPos;
-		//public Set<WordNetRelation> relations;
-	}
-	
-	private static class FullRulesQuery {
-		@Override public int hashCode() {
-		     return new HashCodeBuilder(17, 37).append(relations).append(length).append(juxt).append(leftSenseNum).append(rightSenseNum).append(basicQuery).toHashCode();
-		}
-		@Override public boolean equals(Object obj) {
-		   if (obj == null) { return false; }
-		   if (obj == this) { return true; }
-		   if (obj.getClass() != getClass()) { return false; }
-		   FullRulesQuery rhs = (FullRulesQuery) obj;
-		   return new EqualsBuilder().append(relations, rhs.relations).append(length, rhs.length).append(juxt, rhs.juxt)
-				   .append(leftSenseNum, rhs.leftSenseNum).append(rightSenseNum, rhs.rightSenseNum).append(basicQuery, rhs.basicQuery).isEquals();
-		}
-		public FullRulesQuery(Set<WordNetRelation> relations, int length, Juxtaposition juxt, int leftSenseNum, int rightSenseNum, BasicRulesQuery basicQuery) {
-			this.relations = relations;
-			this.length = length;
-			this.juxt = juxt;
-			this.leftSenseNum = leftSenseNum;
-			this.rightSenseNum = rightSenseNum;
-			this.basicQuery = basicQuery;
-		}
-		public Set<WordNetRelation> relations;
-		public int length;
-		public Juxtaposition juxt;
-		//public Derivation derv;
-		//public SynsetScope synsetScope;
-		public int leftSenseNum;
-		public int rightSenseNum;
-		//public LengthType lenType;
-		public BasicRulesQuery basicQuery;
-	}
-
 	private static JwiDictionary dictionary;
 	private static boolean usedCaches = false;
 	private static boolean reportedNoCaches = false;

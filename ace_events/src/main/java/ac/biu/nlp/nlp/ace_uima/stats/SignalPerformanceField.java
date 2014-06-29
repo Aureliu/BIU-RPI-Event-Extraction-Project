@@ -35,11 +35,15 @@ public abstract class SignalPerformanceField extends StatsField {
 
 	@Override
 	public List<String> getValues() {
-		List<SentenceInstance> goldInstances = new ArrayList<SentenceInstance>(elements.size());
+//		List<SentenceInstance> goldInstances = new ArrayList<SentenceInstance>(elements.size());
+//		for (SentenceAssignment assn : elements) {
+//			goldInstances.add(assn.inst);
+//		}
+		List<SentenceAssignment> goldTargets = new ArrayList<SentenceAssignment>(elements.size());
 		for (SentenceAssignment assn : elements) {
-			goldInstances.add(assn.inst);
+			goldTargets.add(assn.target);
 		}
-		Score s = evaluator.evaluate(elements, goldInstances);
+		Score s = evaluator.evaluate(elements, goldTargets, false);
 		
 		List<Double> doubles = getDoubles(s);
 		List<String> result = new ArrayList<String>(doubles.size());

@@ -200,6 +200,7 @@ public class AceAnalyzer {
 		key.put("Role", StatsDocument.ANY);
 		
 		//Yep, that's a good spot for that...
+		//Ofer of the future: No spot is a good spot for that!!!
 		System.gc();
 
 		docs.updateDocs(key, "NumSentences", "", JCasUtil.select(jcas, Sentence.class).size());

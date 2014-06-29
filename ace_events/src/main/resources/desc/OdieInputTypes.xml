@@ -18,6 +18,13 @@
       <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentExample</name>
       <description/>
       <supertypeName>uima.tcas.Annotation</supertypeName>
+      <features>
+        <featureDescription>
+          <name>argument</name>
+          <description/>
+          <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument</rangeTypeName>
+        </featureDescription>
+      </features>
     </typeDescription>
     <typeDescription>
       <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.Predicate</name>
@@ -75,6 +82,57 @@
       <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateName</name>
       <description/>
       <supertypeName>uima.tcas.Annotation</supertypeName>
+    </typeDescription>
+    <typeDescription>
+      <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateInUsageSample</name>
+      <description/>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+      <features>
+        <featureDescription>
+          <name>predicateSeed</name>
+          <description/>
+          <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateSeed</rangeTypeName>
+        </featureDescription>
+      </features>
+    </typeDescription>
+    <typeDescription>
+      <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample</name>
+      <description/>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+      <features>
+        <featureDescription>
+          <name>argumentExample</name>
+          <description/>
+          <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentExample</rangeTypeName>
+        </featureDescription>
+      </features>
+    </typeDescription>
+    <typeDescription>
+      <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.LemmaByPos</name>
+      <description/>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+      <features>
+        <featureDescription>
+          <name>value</name>
+          <description/>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>posStr</name>
+          <description/>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+      </features>
+    </typeDescription>
+    <typeDescription>
+      <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.NounLemma</name>
+      <description/>
+      <supertypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.LemmaByPos</supertypeName>
+    </typeDescription>
+    <typeDescription>
+      <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.VerbLemma</name>
+      <description/>
+      <supertypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.LemmaByPos</supertypeName>
     </typeDescription>
   </types>
 </typeSystemDescription>

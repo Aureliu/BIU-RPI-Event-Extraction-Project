@@ -8,6 +8,7 @@ import edu.cuny.qc.scorer.ScorerData;
 import edu.cuny.qc.scorer.SignalMechanism;
 import edu.cuny.qc.scorer.SignalMechanismException;
 import edu.cuny.qc.scorer.SignalMechanismSpecTokenIterator;
+import eu.excitementproject.eop.common.representation.partofspeech.PartOfSpeech;
 
 public class PlainSignalMechanism extends SignalMechanism {
 
@@ -25,43 +26,38 @@ public class PlainSignalMechanism extends SignalMechanism {
 
 	private static class SameToken extends SignalMechanismSpecTokenIterator {
 		public static final SameToken inst = new SameToken();
+		@Override public String getForm(Token token) { return token.getCoveredText();}
 		@Override
-		public Boolean calcTokenBooleanScore(Token text, Map<Class<?>, Object> textTriggerTokenMap, Token spec) throws SignalMechanismException
+		public Boolean calcTokenBooleanScore(Token textToken, Map<Class<?>, Object> textTriggerTokenMap, String textStr, PartOfSpeech textPos, String specStr, PartOfSpeech specPos) throws SignalMechanismException
 		{
-			String textToken = text.getCoveredText();
-			String specToken = spec.getCoveredText();
-			return textToken.equals(specToken);
+			return textStr.equals(specStr);
 		}
 	}
 	
 	private static class SameLemma extends SignalMechanismSpecTokenIterator {
 		public static final SameLemma inst = new SameLemma();
 		@Override
-		public Boolean calcTokenBooleanScore(Token text, Map<Class<?>, Object> textTriggerTokenMap, Token spec) throws SignalMechanismException
+		public Boolean calcTokenBooleanScore(Token textToken, Map<Class<?>, Object> textTriggerTokenMap, String textStr, PartOfSpeech textPos, String specStr, PartOfSpeech specPos) throws SignalMechanismException
 		{
-			String textLemma = text.getLemma().getValue();
-			String specLemma = spec.getLemma().getValue();
-			return textLemma.equals(specLemma);
+			return textStr.equals(specStr);
 		}
 	}
 	
 	private static class TextHasLetterE extends SignalMechanismSpecTokenIterator {
 		public static final TextHasLetterE inst = new TextHasLetterE();
 		@Override
-		public Boolean calcTokenBooleanScore(Token text, Map<Class<?>, Object> textTriggerTokenMap, Token spec) throws SignalMechanismException
+		public Boolean calcTokenBooleanScore(Token textToken, Map<Class<?>, Object> textTriggerTokenMap, String textStr, PartOfSpeech textPos, String specStr, PartOfSpeech specPos) throws SignalMechanismException
 		{
-			String textLemma = text.getLemma().getValue();
-			return textLemma.contains("e");
+			return textStr.contains("e");
 		}
 	}
 	
 	private static class TextHasLetterX extends SignalMechanismSpecTokenIterator {
 		public static final TextHasLetterX inst = new TextHasLetterX();
 		@Override
-		public Boolean calcTokenBooleanScore(Token text, Map<Class<?>, Object> textTriggerTokenMap, Token spec) throws SignalMechanismException
+		public Boolean calcTokenBooleanScore(Token textToken, Map<Class<?>, Object> textTriggerTokenMap, String textStr, PartOfSpeech textPos, String specStr, PartOfSpeech specPos) throws SignalMechanismException
 		{
-			String textLemma = text.getLemma().getValue();
-			return textLemma.contains("x");
+			return textStr.contains("x");
 		}
 	}
 }

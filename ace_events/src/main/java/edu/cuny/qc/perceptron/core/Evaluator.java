@@ -88,18 +88,27 @@ public class Evaluator
 		}
 	}
 	
-	public Score evaluate(List<SentenceAssignment> results, List<SentenceInstance> instancesGold)
+	public Score evaluate(List<SentenceAssignment> results, List<SentenceInstance> instancesGold) {
+		List<SentenceAssignment> goldTargets = new ArrayList<SentenceAssignment>(instancesGold.size());
+		for (SentenceInstance inst : instancesGold) {
+			goldTargets.add(inst.target);
+		}
+		
+		return evaluate(results, goldTargets, false);
+	}
+	
+	public Score evaluate(List<SentenceAssignment> results, List<SentenceAssignment> goldTargets, boolean fake)
 	{
 		Score score = new Score();
-		evaluteTrigger(results, instancesGold, score);
-		evaluteArgument(results, instancesGold, score);
+		evaluteTrigger(results, goldTargets, score);
+		evaluteArgument(results, goldTargets, score);
 		
 		score.calculateHarmonic_mean();
 		
 		return score;
 	}
 	
-	public void evaluteTrigger(List<SentenceAssignment> results, List<SentenceInstance> instancesGold, Score score)
+	public void evaluteTrigger(List<SentenceAssignment> results, List<SentenceAssignment> goldTargets, Score score)
 	{
 		double count_trigger_total = 0;
 		double count_trigger_ans = 0;
@@ -116,8 +125,8 @@ public class Evaluator
 		for(int i=0; i<results.size(); i++)
 		{
 			SentenceAssignment ans = results.get(i);
-			SentenceInstance goldInstance = instancesGold.get(i);
-			SentenceAssignment gold = goldInstance.target;
+			//SentenceInstance goldInstance = instancesGold.get(i);
+			SentenceAssignment gold = goldTargets.get(i);//goldInstance.target;
 			// count num of gold args
 			for(int j=0; j<gold.getNodeAssignment().size(); j++)
 			{
@@ -157,8 +166,8 @@ public class Evaluator
 				try {
 					ans_trigger = ans.getLabelAtToken(j);
 				} catch (Exception e) {
-					System.err.printf("\n\ninst=%s, i=%s, j=%s, ans=%s, gold=%s, ans.size=%s, gold.size=%s\n\n",
-							goldInstance, i, j, ans, gold, ans.getNodeAssignment().size(), gold.getNodeAssignment().size());
+					System.err.printf("\n\ni=%s, j=%s, ans=%s, gold=%s, ans.size=%s, gold.size=%s\n\n",
+							i, j, ans, gold, ans.getNodeAssignment().size(), gold.getNodeAssignment().size());
 					throw new IllegalStateException(e);
 				}
 				//if(gold_trigger.equals(ans_trigger))
@@ -254,7 +263,7 @@ public class Evaluator
 	 * @param instances
 	 * @return
 	 */
-	public void evaluteArgument(List<SentenceAssignment> results, List<SentenceInstance> instancesGold, Score score)
+	public void evaluteArgument(List<SentenceAssignment> results, List<SentenceAssignment> goldTargets, Score score)
 	{
 		double count_arg_total = 0;
 		double count_arg_ans = 0;
@@ -265,8 +274,8 @@ public class Evaluator
 		for(int i=0; i<results.size(); i++)
 		{
 			SentenceAssignment ans = results.get(i);
-			SentenceInstance goldInstance = instancesGold.get(i);
-			SentenceAssignment gold = goldInstance.target;
+			//SentenceInstance goldInstance = instancesGold.get(i);
+			SentenceAssignment gold = goldTargets.get(i);//goldInstance.target;
 			// count num of gold args
 			for(int j=0; j<gold.getNodeAssignment().size(); j++)
 			{
@@ -278,7 +287,7 @@ public class Evaluator
 					{
 						count_arg_total++;
 						int value_gold = gold_edges.get(key);
-						if(!goldInstance.edgeTargetAlphabet.lookupObject(value_gold).equals(SentenceAssignment.Default_Argument_Label))
+						if(!gold.edgeTargetAlphabet.lookupObject(value_gold).equals(SentenceAssignment.Default_Argument_Label))
 						{
 							count_arg_gold++;
 						}
@@ -325,8 +334,8 @@ public class Evaluator
 								int value_ans = ans_edges.get(key);
 								int value_gold = gold_edges.get(key);
 								
-								if( !goldInstance.edgeTargetAlphabet.lookupObject(value_ans).equals(SentenceAssignment.Default_Argument_Label) &&
-									!goldInstance.edgeTargetAlphabet.lookupObject(value_gold).equals(SentenceAssignment.Default_Argument_Label)) {
+								if( !gold.edgeTargetAlphabet.lookupObject(value_ans).equals(SentenceAssignment.Default_Argument_Label) &&
+									!gold.edgeTargetAlphabet.lookupObject(value_gold).equals(SentenceAssignment.Default_Argument_Label)) {
 									
 									count_arg_correct_idt++;
 									

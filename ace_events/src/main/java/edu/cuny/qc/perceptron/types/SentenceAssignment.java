@@ -571,7 +571,7 @@ public class SentenceAssignment
 			//Map<String, SignalInstance> signalsOfEntity = allEntitySignals.get(nodeLabel).get(edgeLabel);
 			for (SignalInstance signal : signals.values()) {
 				BigDecimal featureValue = signal.positive ? FEATURE_POSITIVE_VAL : FEATURE_NEGATIVE_VAL;
-				String featureStr = "EdgeLocalFeature:\t" + signal.name;// + "\t" + genericEdgeLabel;
+				String featureStr = "EdgeLocalFeature:\t" + signal.getName();// + "\t" + genericEdgeLabel;
 				
 				// TODO this line should DEFINITELY be uncommented when I incorporate edges back to the story
 				// of course, a policy regarding them should be decided and implemented
@@ -746,8 +746,8 @@ public class SentenceAssignment
 							BigDecimal featureValuePositive = signal.positive ? FEATURE_POSITIVE_VAL : FEATURE_NEGATIVE_VAL;
 							BigDecimal featureValueNegative = signal.positive ? FEATURE_NEGATIVE_VAL : FEATURE_POSITIVE_VAL;
 							
-							String featureStrPositive = "BigramFeature:\t" + signal.name + "\t" + "P+\t" + LABEL_MARKER + genericLabel;
-							String featureStrNegative = "BigramFeature:\t" + signal.name + "\t" + "P-\t" + LABEL_MARKER + genericLabel;
+							String featureStrPositive = "BigramFeature:\t" + signal.getName() + "\t" + "P+\t" + LABEL_MARKER + genericLabel;
+							String featureStrNegative = "BigramFeature:\t" + signal.getName() + "\t" + "P-\t" + LABEL_MARKER + genericLabel;
 							
 							makeFeature(featureStrPositive, this.getFV(i), featureValuePositive, i, signals, addIfNotPresent, useIfNotPresent);
 							makeFeature(featureStrNegative, this.getFV(i), featureValueNegative, i, signals, addIfNotPresent, useIfNotPresent);
@@ -765,10 +765,10 @@ public class SentenceAssignment
 							BigDecimal featureValue = signal.positive ? FEATURE_POSITIVE_VAL : FEATURE_NEGATIVE_VAL;
 							String featureStr = null;
 							if (this.controller.oMethod.equalsIgnoreCase("E")) {
-								featureStr = "BigramFeature:\t" + signal.name;// + "\t" + LABEL_MARKER + genericLabel;
+								featureStr = "BigramFeature:\t" + signal.getName();// + "\t" + LABEL_MARKER + genericLabel;
 							}
 							else {
-								featureStr = "BigramFeature:\t" + signal.name + "\t" + LABEL_MARKER + genericLabel;
+								featureStr = "BigramFeature:\t" + signal.getName() + "\t" + LABEL_MARKER + genericLabel;
 							}
 							makeFeature(featureStr, this.getFV(i), featureValue, i, signals, addIfNotPresent, useIfNotPresent);
 						}
@@ -829,7 +829,7 @@ public class SentenceAssignment
 							
 												
 							//String featureStr = "BigramFeature:\t" + signalName;
-							String featureStr = "BigramFeature:\t" + signalOfAttack.name + "\t" + LABEL_MARKER + genericLabel;
+							String featureStr = "BigramFeature:\t" + signalOfAttack.getName() + "\t" + LABEL_MARKER + genericLabel;
 							makeFeature(featureStr, this.getFV(i), featureValue, i, signals, addIfNotPresent, useIfNotPresent);
 						}
 					}
@@ -860,6 +860,7 @@ public class SentenceAssignment
 		// Feature feat = new Feature(null, featureStr);
 		// lookup the feature table to create an assignment with the new feature
 		boolean wasAdded = false;
+		featureStr = featureStr.intern();
 		if(!use_if_not_present || add_if_not_present)
 		{
 			int feat_index = lookupFeatures(this.featureAlphabet, featureStr, add_if_not_present);

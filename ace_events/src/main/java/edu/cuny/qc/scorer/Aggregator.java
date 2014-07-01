@@ -83,4 +83,10 @@ public abstract class Aggregator /*implements Serializable*/ {
 			return SignalInstance.toDouble(Iterators.size(filtered) >= allElements.size()/2);
 		}
 	}
+	
+	public static final Aggregator[] ALL_AGGS = {Aggregator.Any.inst, Aggregator.Min2.inst, Aggregator.Min3.inst, /*Aggregator.Min4.inst, */Aggregator.MinHalf.inst};
+	public static final Aggregator[] AGG_ANY = {Aggregator.Any.inst};
+	public static final Aggregator[] AGG_ANY_MIN2 = {Aggregator.Any.inst, Aggregator.Min2.inst};
+	public static final Aggregator[] AGG_MIN2_MIN3 = {Aggregator.Min2.inst, Aggregator.Min3.inst};
+
 }

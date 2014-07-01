@@ -25,6 +25,7 @@ import edu.cuny.qc.perceptron.types.BundledSignals;
 import edu.cuny.qc.perceptron.types.Document;
 import edu.cuny.qc.perceptron.types.Sentence;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
+import edu.cuny.qc.util.PosMap;
 import edu.cuny.qc.util.UnsupportedParameterException;
 import edu.cuny.qc.util.Utils;
 import eu.excitementproject.eop.common.utilities.uima.UimaUtilsException;
@@ -127,6 +128,7 @@ public class Pipeline
 			boolean learnable, boolean debug) throws IOException, DocumentException, CASRuntimeException, AnalysisEngineProcessException, ResourceInitializationException, CASException, UimaUtilsException, AeException
 	{
 		System.out.printf("%s Reading instance list ...\n", detailedLog());
+		new PosMap();
 		
 		List<SentenceInstance> instancelist = new ArrayList<SentenceInstance>();
 		BufferedReader reader = new BufferedReader(new FileReader(file_list));

@@ -63,21 +63,21 @@ public class SpecXmlCasLoader {
 			}
 			
 			// Debug
-			String c = container.getCoveredText();
-			System.err.printf("\n*Container(%s)[%d:%d], len=%d: '%s' {}\n\n", container.getType().getShortName(), container.getBegin(), container.getEnd(), c.length(), c);
-			
-			System.err.printf("\nAnno(%s)[%d:%d]", anno.getType().getShortName(), anno.getBegin(), anno.getEnd());
-			JCas main;
-			try {
-				main = jcas.getView("_InitialView");
-			} catch (CASException e) {
-				throw new SpecXmlException(e);
-			}
-			String doct = main.getDocumentText();
-			System.err.printf(" {%s}", doct.substring(begin, end));
-			String t = anno.getCoveredText();
-			System.err.printf(", t=%s: ", t);
-			System.err.printf(", len=%d \n\n", t.length());
+//			String c = container.getCoveredText();
+//			System.err.printf("\n*Container(%s)[%d:%d], len=%d: '%s' {}\n\n", container.getType().getShortName(), container.getBegin(), container.getEnd(), c.length(), c);
+//			
+//			System.err.printf("\nAnno(%s)[%d:%d]", anno.getType().getShortName(), anno.getBegin(), anno.getEnd());
+//			JCas main;
+//			try {
+//				main = jcas.getView("_InitialView");
+//			} catch (CASException e) {
+//				throw new SpecXmlException(e);
+//			}
+//			String doct = main.getDocumentText();
+//			System.err.printf(" {%s}", doct.substring(begin, end));
+//			String t = anno.getCoveredText();
+//			System.err.printf(", t=%s: ", t);
+//			System.err.printf(", len=%d \n\n", t.length());
 			
 			results.add(anno);
 		}
@@ -148,7 +148,7 @@ public class SpecXmlCasLoader {
 			argument.setExamples((FSArray) FSCollectionFactory.createFSArray(jcas, examples));
 			for (AnnotationFS exampleAnno : examples) {
 				ArgumentExample example = (ArgumentExample) exampleAnno;
-				example.setArgument((Argument) argumentAnno);
+				example.setArgument(argument);
 			}
 		}
 		

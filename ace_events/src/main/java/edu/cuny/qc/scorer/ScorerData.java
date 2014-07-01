@@ -5,10 +5,15 @@ import java.io.Serializable;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import eu.excitementproject.eop.common.representation.partofspeech.PartOfSpeech;
+
 public class ScorerData implements Serializable {
 	private static final long serialVersionUID = 1696282253769512311L;
 	
-	public String fullName;
+	//this is commented out in an attemt to save memory (very long unique string in many-many instances of this classes), although
+	//I'm not sure it would help, as the calculate fullName enters as SignalInstance's name, so it will still be around...
+	//public String fullName; 
+	
 	public String basicName;
 	public transient SignalMechanismSpecIterator scorer;
 	public String scorerTypeName;
@@ -19,41 +24,82 @@ public class ScorerData implements Serializable {
 	public Derivation derivation;
 	public int leftSenseNum;
 	public int rightSenseNum;
+	public PartOfSpeech specificPos;
 	public transient boolean isSpecIndependent;
 	
-	public ScorerData(String basicName, SignalMechanismSpecIterator scorer,	Aggregator aggregator, Deriver deriver, Derivation derivation, int leftSenseNum, int rightSenseNum, boolean isSpecIndependent) {
-		this.basicName = basicName.intern();
+	public ScorerData(String basicName, SignalMechanismSpecIterator scorer,	Deriver deriver, Derivation derivation, int leftSenseNum, int rightSenseNum, PartOfSpeech specificPos, Aggregator aggregator, boolean isSpecIndependent) {
+		this.scorerTypeName = scorer.getTypeName().intern();
+		this.aggregatorTypeName = aggregator.getTypeName().intern();
+		this.deriverTypeName = deriver.getTypeName().intern();
+
+		if (basicName != null) {
+			this.basicName = basicName.intern();
+		}
+		else {
+			this.basicName = this.scorerTypeName;
+		}
 		this.scorer = scorer;
 		this.aggregator = aggregator;
 		this.deriver = deriver;
 		this.derivation = derivation;
 		this.leftSenseNum = leftSenseNum;
 		this.rightSenseNum = rightSenseNum;
+		this.specificPos = specificPos;
 		
-		this.fullName = getFullName().intern();
-		this.scorerTypeName = scorer.getTypeName().intern();
-		this.aggregatorTypeName = aggregator.getTypeName().intern();
-		this.deriverTypeName = deriver.getTypeName().intern();
+		//this.fullName = getFullName();
 		
 		this.isSpecIndependent = isSpecIndependent;
 	}
 	
-	public ScorerData(SignalMechanismSpecIterator scorer,	Aggregator aggregator) {
-		this(scorer.getTypeName(), scorer, aggregator);
+	//X
+	public ScorerData(String basicName, SignalMechanismSpecIterator scorer, Deriver deriver, Derivation derivation, int leftSenseNum, int rightSenseNum, PartOfSpeech specificPos, Aggregator aggregator) {
+		this(basicName, scorer, deriver, derivation, leftSenseNum, rightSenseNum, specificPos, aggregator, false);
+	}
+	
+	//X
+	public ScorerData(String basicName, SignalMechanismSpecIterator scorer, Deriver deriver, Derivation derivation, Aggregator aggregator) {
+		this(basicName, scorer, deriver, derivation, 1, 1, null, aggregator);
+	}
+	
+	//X
+	public ScorerData(String basicName, SignalMechanismSpecIterator scorer, Aggregator aggregator) {
+		this(basicName, scorer, Deriver.NoDerv.inst, Derivation.NONE, aggregator);
+	}
+	
+	public ScorerData(String basicName, SignalMechanismSpecIterator scorer) {
+		this(basicName, scorer, Aggregator.Any.inst);
+	}
+	
+	
+	private String numSenseString(int senseNum, String title) {
+		switch(senseNum) {
+			case -1: return String.format("-%sAllSense", title);
+			case 0: return "";
+			default: return String.format("-%s%dSense", title, senseNum);
+		}
 	}
 	
 	public String getFullName() {
-		return String.format("%s%s", basicName, aggregator.getSuffix());
+		String posStr="";
+		if (specificPos != null) {
+			posStr = String.format("-just%s", specificPos);
+		}
+
+		return String.format("%s%s%s%s%s%s%s",
+				basicName,
+				numSenseString(leftSenseNum, "Text"), numSenseString(rightSenseNum, "Spec"),
+				deriver.getSuffix(), derivation, posStr, aggregator.getSuffix()).intern();
 	}
 	
 	public String toString() {
-		return String.format("%s(%s, %s, %s)", this.getClass().getSimpleName(), fullName, scorerTypeName, aggregatorTypeName);
+		return String.format("%s(%s)", this.getClass().getSimpleName(), getFullName());
 	}
 	
 	@Override
 	public int hashCode() {
-	     return new HashCodeBuilder(17, 37).append(fullName).append(basicName)
-	    		 .append(scorerTypeName).append(aggregatorTypeName).toHashCode();  // for these guys only take their type names, seems to be enough
+	     return new HashCodeBuilder(17, 37)/*.append(fullName)*/.append(basicName)
+	    		 .append(derivation).append(leftSenseNum).append(rightSenseNum).append(specificPos)
+	    		 .append(scorerTypeName).append(aggregatorTypeName).append(deriverTypeName).toHashCode();  // for these guys only take their type names, seems to be enough
 	}
 	@Override
 	public boolean equals(Object obj) {
@@ -63,8 +109,10 @@ public class ScorerData implements Serializable {
 	     return false;
 	   }
 	   ScorerData rhs = (ScorerData) obj;
-	   return new EqualsBuilder().append(fullName, rhs.fullName).append(basicName, rhs.basicName)
-			   .append(scorerTypeName, rhs.scorerTypeName).append(aggregatorTypeName, rhs.aggregatorTypeName).isEquals(); // for these guys only take their type names, seems to be enough
+	   return new EqualsBuilder()/*.append(fullName, rhs.fullName)*/.append(basicName, rhs.basicName)
+	    	   .append(derivation, rhs.derivation).append(leftSenseNum, rhs.leftSenseNum).append(rightSenseNum, rhs.rightSenseNum).append(specificPos, rhs.specificPos)
+			   .append(scorerTypeName, rhs.scorerTypeName).append(aggregatorTypeName, rhs.aggregatorTypeName)
+			   .append(deriverTypeName, rhs.deriverTypeName).isEquals(); // for these guys only take their type names, seems to be enough
 	}
 
 }

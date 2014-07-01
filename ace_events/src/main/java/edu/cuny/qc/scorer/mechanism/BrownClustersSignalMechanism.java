@@ -6,10 +6,13 @@ import java.util.Map;
 
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
 import edu.cuny.qc.scorer.Aggregator;
+import edu.cuny.qc.scorer.Derivation;
 import edu.cuny.qc.scorer.ScorerData;
 import edu.cuny.qc.scorer.SignalMechanism;
 import edu.cuny.qc.scorer.SignalMechanismException;
 import edu.cuny.qc.scorer.SignalMechanismSpecTokenIterator;
+import edu.cuny.qc.scorer.mechanism.NomlexSignalMechanism.NomlexDeriver;
+import edu.cuny.qc.scorer.mechanism.WordNetSignalMechanism.WordnetDervRltdDeriver;
 import edu.cuny.qc.util.BrownClusters;
 import eu.excitementproject.eop.common.representation.partofspeech.PartOfSpeech;
 
@@ -22,14 +25,20 @@ public class BrownClustersSignalMechanism extends SignalMechanism {
 	
 	@Override
 	public void addScorers() {
-		addTrigger(new ScorerData("BR_ALL_CLUSTERS_TOK",		SameAllClustersToken.inst,				Aggregator.Any.inst		));
-		addTrigger(new ScorerData("BR_ALL_CLUSTERS_LEM",		SameAllClustersLemma.inst,				Aggregator.Any.inst		));
+//		addTrigger(new ScorerData("BR_ALL_CLUSTERS_TOK",		SameAllClustersToken.inst,				Aggregator.Any.inst		));
+//		addTrigger(new ScorerData("BR_ALL_CLUSTERS_LEM",		SameAllClustersLemma.inst,				Aggregator.Any.inst		));
 		addTrigger(new ScorerData("BR_LONGEST_CLUSTER_TOK",		SameLongestClusterToken.inst,			Aggregator.Any.inst		));
 		addTrigger(new ScorerData("BR_LONGEST_CLUSTER_LEM",		SameLongestClusterLemma.inst,			Aggregator.Any.inst		));
-		addTrigger(new ScorerData("BR_ALL_CLUSTERS_TOK",		SameAllClustersToken.inst,				Aggregator.Min2.inst		));
-		addTrigger(new ScorerData("BR_ALL_CLUSTERS_LEM",		SameAllClustersLemma.inst,				Aggregator.Min2.inst		));
+//		addTrigger(new ScorerData("BR_ALL_CLUSTERS_TOK",		SameAllClustersToken.inst,				Aggregator.Min2.inst		));
+//		addTrigger(new ScorerData("BR_ALL_CLUSTERS_LEM",		SameAllClustersLemma.inst,				Aggregator.Min2.inst		));
 		addTrigger(new ScorerData("BR_LONGEST_CLUSTER_TOK",		SameLongestClusterToken.inst,			Aggregator.Min2.inst		));
 		addTrigger(new ScorerData("BR_LONGEST_CLUSTER_LEM",		SameLongestClusterLemma.inst,			Aggregator.Min2.inst		));
+		
+		addTrigger(new ScorerData("BR_LONGEST_CLUSTER_LEM",	SameLongestClusterLemma.inst, WordnetDervRltdDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, Aggregator.Any.inst));
+		addTrigger(new ScorerData("BR_LONGEST_CLUSTER_LEM",	SameLongestClusterLemma.inst, WordnetDervRltdDeriver.inst, Derivation.SPEC_ORIG_AND_DERV, Aggregator.Any.inst));
+		addTrigger(new ScorerData("BR_LONGEST_CLUSTER_LEM",	SameLongestClusterLemma.inst, NomlexDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, Aggregator.Any.inst));
+		addTrigger(new ScorerData("BR_LONGEST_CLUSTER_LEM",	SameLongestClusterLemma.inst, NomlexDeriver.inst, Derivation.SPEC_ORIG_AND_DERV, Aggregator.Any.inst));
+
 	}
 
 	public BrownClustersSignalMechanism() throws SignalMechanismException {
@@ -49,7 +58,7 @@ public class BrownClustersSignalMechanism extends SignalMechanism {
 		public static final SameAllClustersToken inst = new SameAllClustersToken();
 		@Override public String getForm(Token token) { return token.getCoveredText();}
 		@Override
-		public Boolean calcTokenBooleanScore(Token textToken, Map<Class<?>, Object> textTriggerTokenMap, String textStr, PartOfSpeech textPos, String specStr, PartOfSpeech specPos) throws SignalMechanismException
+		public Boolean calcTokenBooleanScore(Token textToken, Map<Class<?>, Object> textTriggerTokenMap, String textStr, PartOfSpeech textPos, String specStr, PartOfSpeech specPos, ScorerData scorerData) throws SignalMechanismException
 		{
 			List<String> textClusters = getBrownCluster(textStr);
 			List<String> specClusters = getBrownCluster(specStr);
@@ -63,7 +72,7 @@ public class BrownClustersSignalMechanism extends SignalMechanism {
 	private static class SameAllClustersLemma extends BrownClustersScorer {
 		public static final SameAllClustersToken inst = new SameAllClustersToken();
 		@Override
-		public Boolean calcTokenBooleanScore(Token textToken, Map<Class<?>, Object> textTriggerTokenMap, String textStr, PartOfSpeech textPos, String specStr, PartOfSpeech specPos) throws SignalMechanismException
+		public Boolean calcTokenBooleanScore(Token textToken, Map<Class<?>, Object> textTriggerTokenMap, String textStr, PartOfSpeech textPos, String specStr, PartOfSpeech specPos, ScorerData scorerData) throws SignalMechanismException
 		{
 			List<String> textClusters = getBrownCluster(textStr);
 			List<String> specClusters = getBrownCluster(specStr);
@@ -78,7 +87,7 @@ public class BrownClustersSignalMechanism extends SignalMechanism {
 		public static final SameLongestClusterToken inst = new SameLongestClusterToken();
 		@Override public String getForm(Token token) { return token.getCoveredText();}
 		@Override
-		public Boolean calcTokenBooleanScore(Token textToken, Map<Class<?>, Object> textTriggerTokenMap, String textStr, PartOfSpeech textPos, String specStr, PartOfSpeech specPos) throws SignalMechanismException
+		public Boolean calcTokenBooleanScore(Token textToken, Map<Class<?>, Object> textTriggerTokenMap, String textStr, PartOfSpeech textPos, String specStr, PartOfSpeech specPos, ScorerData scorerData) throws SignalMechanismException
 		{
 			List<String> textClusters = getBrownCluster(textStr);
 			List<String> specClusters = getBrownCluster(specStr);
@@ -94,7 +103,7 @@ public class BrownClustersSignalMechanism extends SignalMechanism {
 	private static class SameLongestClusterLemma extends BrownClustersScorer {
 		public static final SameLongestClusterLemma inst = new SameLongestClusterLemma();
 		@Override
-		public Boolean calcTokenBooleanScore(Token textToken, Map<Class<?>, Object> textTriggerTokenMap, String textStr, PartOfSpeech textPos, String specStr, PartOfSpeech specPos) throws SignalMechanismException
+		public Boolean calcTokenBooleanScore(Token textToken, Map<Class<?>, Object> textTriggerTokenMap, String textStr, PartOfSpeech textPos, String specStr, PartOfSpeech specPos, ScorerData scorerData) throws SignalMechanismException
 		{
 			List<String> textClusters = getBrownCluster(textStr);
 			List<String> specClusters = getBrownCluster(specStr);

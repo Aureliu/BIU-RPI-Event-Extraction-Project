@@ -10,8 +10,8 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Tue Mar 11 18:07:44 IST 2014
- * XML source: C:/Java/Git/breep/ace_events/src/main/resources/desc/SpecAnnotator.xml
+ * Updated by JCasGen Sun Jun 29 20:28:54 IDT 2014
+ * XML source: C:/Java/Git/breep/ace_events/src/main/resources/desc/OdieInputTypes.xml
  * @generated */
 public class ArgumentExample extends Annotation {
   /** @generated
@@ -59,6 +59,22 @@ public class ArgumentExample extends Annotation {
   @generated modifiable */
   private void readObject() {/*default - does nothing empty block */}
      
-}
+  //*--------------*
+  //* Feature: argument
+
+  /** getter for argument - gets 
+   * @generated */
+  public Argument getArgument() {
+    if (ArgumentExample_Type.featOkTst && ((ArgumentExample_Type)jcasType).casFeat_argument == null)
+      jcasType.jcas.throwFeatMissing("argument", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentExample");
+    return (Argument)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((ArgumentExample_Type)jcasType).casFeatCode_argument)));}
+    
+  /** setter for argument - sets  
+   * @generated */
+  public void setArgument(Argument v) {
+    if (ArgumentExample_Type.featOkTst && ((ArgumentExample_Type)jcasType).casFeat_argument == null)
+      jcasType.jcas.throwFeatMissing("argument", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentExample");
+    jcasType.ll_cas.ll_setRefValue(addr, ((ArgumentExample_Type)jcasType).casFeatCode_argument, jcasType.ll_cas.ll_getFSRef(v));}    
+  }
 
     

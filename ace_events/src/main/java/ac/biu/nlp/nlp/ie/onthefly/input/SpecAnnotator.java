@@ -16,13 +16,18 @@ import org.uimafit.util.JCasUtil;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentExample;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.LemmaByPos;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.NounLemma;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.Predicate;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateInUsageSample;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateName;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateSeed;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.UsageSample;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.VerbLemma;
 
 import com.google.common.collect.HashMultimap;
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Iterators;
 import com.google.common.collect.Multimap;
 
@@ -93,13 +98,16 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 	public Multimap<String, Annotation> getLemmaToAnnotation(JCas view, Annotation covering, Class<? extends Annotation> elementType, String title) throws SpecXmlException {
 		Multimap<String, Annotation> result = HashMultimap.create();
 		for (Annotation element : JCasUtil.selectCovered(elementType, covering)) {
-			Lemma elementLemma = UimaUtils.selectCoveredSingle(view, Lemma.class, element);
-			String text = elementLemma.getValue();
-			if (result.containsKey(text)) {
-				String coveredText = elementLemma.getCoveredText();
-				throw new SpecXmlException(String.format("element '%s' has lemma '%s' that appears more than once in %s", coveredText, text, title));
+			NounLemma nounLemma = UimaUtils.selectCoveredSingle(view, NounLemma.class, element);
+			VerbLemma verbLemma = UimaUtils.selectCoveredSingle(view, VerbLemma.class, element);
+			ImmutableSet<String> lemmas = ImmutableSet.of(nounLemma.getValue(), verbLemma.getValue()); //remove duplicates between two lemmas
+			for (String lemmaStr : lemmas) {
+				if (result.containsKey(lemmaStr)) {
+					String coveredText = element.getCoveredText();
+					throw new SpecXmlException(String.format("element '%s' has lemma '%s' that appears more than once in %s", coveredText, lemmaStr, title));
+				}
+				result.put(lemmaStr, element);
 			}
-			result.put(text, element);
 		}
 		return result;
 	}

@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.ExecutionException;
 
 import org.apache.uima.cas.CASException;
 import org.apache.uima.cas.text.AnnotationFS;
@@ -25,13 +26,14 @@ public abstract class SignalMechanismSpecTokenIterator extends SignalMechanismSp
 
 	static {System.err.println("Consider using Guava caches to cache signal values for specific textToken-specToken pairs (maybe also with their lemmas and/or POSes). Maybe also/instead, cache some intermediate values, like a lemma's WordNet sysnet.");}
 
-	public SignalMechanismSpecIterator init(JCas spec, String viewName, AnnotationFS covering, Class<? extends Annotation> type, Token textAnno, Map<Class<?>, Object> textTriggerTokenMap) throws SignalMechanismException {
-		return super.init(spec, viewName, covering, type, textAnno, textTriggerTokenMap);
+	public SignalMechanismSpecIterator init(JCas spec, String viewName, AnnotationFS covering, Class<? extends Annotation> type, Token textAnno, Map<Class<?>, Object> textTriggerTokenMap, ScorerData scorerData) throws SignalMechanismException {
+		return super.init(spec, viewName, covering, type, textAnno, textTriggerTokenMap, scorerData);
 	}
 	
 	@Override
 	public BigDecimal calcScore(Annotation text, Map<Class<?>, Object> textTriggerTokenMap, Annotation spec, ScorerData scorerData) throws SignalMechanismException {
 		try {
+			// Get text and spec token, according to their given annotations
 			if (text.getClass().equals(Token.class)) {
 				textToken = (Token) text;
 			}
@@ -48,9 +50,16 @@ public abstract class SignalMechanismSpecTokenIterator extends SignalMechanismSp
 			
 			textPos = AnnotationUtils.tokenToPOS(textToken);
 			
+			//hard-codedly, specificPos only refers to the original text token, not any derivations
+			if (scorerData.specificPos != null && !scorerData.specificPos.equals(textPos)) {
+				return SignalInstance.toDouble(false); //TODO: should be: IRRELEVANT
+			}			
+
+			// Get all text derivations
 			Set<BasicRulesQuery> textDerivations = scorerData.deriver.getDerivations(
 					getForm(textToken), textPos, scorerData.derivation.leftOriginal, scorerData.derivation.leftDerivation, scorerData.leftSenseNum);
 			
+			// Get all spec derivations, based on the spec token itself, and its possible noun-lemma and verb-lemma forms
 			Set<String> specForms = new HashSet<String>(Arrays.asList(new String[] {
 					specToken.getCoveredText(),
 					UimaUtils.selectCoveredSingle(specToken.getView().getJCas(), NounLemma.class, specToken).getValue(),
@@ -62,12 +71,15 @@ public abstract class SignalMechanismSpecTokenIterator extends SignalMechanismSp
 						specForm, textPos, scorerData.derivation.rightOriginal, scorerData.derivation.rightDerivation, scorerData.rightSenseNum));
 			}					
 			
+			// Calculate score on each combination of text-derivation and spec-derivation
+			// this is a hard-coded "or" methodology, with short-circuit
 			boolean result = false;
 			for (BasicRulesQuery textDerv : textDerivations) {
 				for (BasicRulesQuery specDerv : specDerivations) {
-					result = calcTokenBooleanScore(textToken, textTriggerTokenMap, textDerv.lLemma, textDerv.lPos, specDerv.lLemma, specDerv.lPos);
+					result = calcTokenBooleanScore(textToken, textTriggerTokenMap, textDerv.lLemma, textDerv.lPos, specDerv.lLemma, specDerv.lPos, scorerData);
 					if (result) {
 						if (debug) {
+							// when a BasicRulesQuery represents only one lemma/POS, it's always on the Left side
 							addToHistory(textDerv.lLemma, textDerv.lPos, specDerv.lLemma, specDerv.lPos);
 						}
 						break;
@@ -84,6 +96,8 @@ public abstract class SignalMechanismSpecTokenIterator extends SignalMechanismSp
 			throw new SignalMechanismException(e);
 		} catch (UnsupportedPosTagStringException e) {
 			throw new SignalMechanismException(e);
+		} catch (ExecutionException e) {
+			throw new SignalMechanismException(e);
 		}
 	}
 	
@@ -96,8 +110,13 @@ public abstract class SignalMechanismSpecTokenIterator extends SignalMechanismSp
 	}
 
 	public void addToHistory(String textStr, PartOfSpeech textPos, String specStr, PartOfSpeech specPos) throws SignalMechanismException {
-		String specHistory = String.format("%s(%s)/%s", specToken.getCoveredText(), specStr, specPos.getCanonicalPosTag());
-		String textHistory = String.format("%s(%s)/%s", getForm(textToken), textStr, textPos.getCanonicalPosTag());
+		String specBase = specToken.getCoveredText();
+		String textBase = getForm(textToken);
+		String specExtra = specBase.equals(specStr)?"":String.format("(%s)",specStr);
+		String textExtra = textBase.equals(textStr)?"":String.format("(%s)",textStr);
+		
+		String specHistory = String.format("%s%s/%s", specToken.getCoveredText(), specExtra, specPos.getCanonicalPosTag());
+		String textHistory = String.format("%s%s/%s", getForm(textToken), textExtra, textPos.getCanonicalPosTag());
 		history.put(specHistory.intern(), textHistory.intern());
 	}
 
@@ -109,7 +128,7 @@ public abstract class SignalMechanismSpecTokenIterator extends SignalMechanismSp
 //		return SignalInstance.toDouble(boolResult);
 //	}
 	
-	public Boolean calcTokenBooleanScore(Token textToken, Map<Class<?>, Object> textTriggerTokenMap, String textStr, PartOfSpeech textPos, String specStr, PartOfSpeech specPos) throws SignalMechanismException {
+	public Boolean calcTokenBooleanScore(Token textToken, Map<Class<?>, Object> textTriggerTokenMap, String textStr, PartOfSpeech textPos, String specStr, PartOfSpeech specPos, ScorerData scorerData) throws SignalMechanismException {
 		throw new UnsupportedOperationException("calcTokenBooleanScore must be implemented in subclass");
 	}
 	

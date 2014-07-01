@@ -27,6 +27,7 @@ import edu.cuny.qc.ace.acetypes.AceEventMentionArgument;
 import edu.cuny.qc.ace.acetypes.AceMention;
 import edu.cuny.qc.perceptron.core.Controller;
 import edu.cuny.qc.perceptron.core.Perceptron;
+import edu.cuny.qc.perceptron.core.Pipeline;
 import edu.cuny.qc.perceptron.graph.DependencyGraph;
 import edu.cuny.qc.perceptron.types.Sentence.Sent_Attribute;
 import edu.cuny.qc.scorer.ScorerData;
@@ -90,7 +91,7 @@ public class SentenceInstance
 	/**
 	 * Ofer: Add this for debugging purposes
 	 */
-	public String text;
+	public String textStart;
 	
 	private List<Token> tokenAnnos = null;
 	private de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence sentenceAnno = null;
@@ -132,7 +133,7 @@ public class SentenceInstance
 		try {
 			final int TEXT_DISPLAY_MAX = 10;
 			String label = (associatedSpec==null) ? "*" : SpecAnnotator.getSpecLabel(associatedSpec);
-			return String.format("%s(%s, %d events, %d argcands: %s...)", sentInstID, label, eventMentions.size(), eventArgCandidates.size(), StringUtils.substring(text, 0, TEXT_DISPLAY_MAX));
+			return String.format("%s(%s, %d events, %d argcands: %s...)", sentInstID, label, eventMentions.size(), eventArgCandidates.size(), StringUtils.substring(textStart, 0, TEXT_DISPLAY_MAX));
 		} catch (CASException e) {
 			throw new RuntimeException(e);
 		}
@@ -182,7 +183,7 @@ public class SentenceInstance
 		// set the text of the doc
 		this.allText = sent.doc.allText;
 		this.docID = sent.doc.docID;
-		this.text = sent.text;
+		this.textStart = sent.text;
 		this.doc = sent.doc;
 		this.sentID = sent.sentID;
 		if (specNum != null) {
@@ -599,28 +600,31 @@ public class SentenceInstance
 	}
 	
 	public void addTriggerSignals(JCas spec, int i, Perceptron perceptron, Map<ScorerData, SignalInstance> specSignals, boolean debug) throws SignalMechanismException {
-		//LinkedHashMap<ScorerData, BigDecimal> scoredSignals;
-		//Map<ScorerData, SignalInstance> result = new HashMap<ScorerData, SignalInstance>(); //technically, we could add ScorerData to "specSignals", but it's needed only for reports, and also I don't feel like changing the entire dumpSignals compound types AGAIN. 
 		for (SignalMechanism mechanism : perceptron.signalMechanisms) {
 			mechanism.scoreTrigger(specSignals, perceptron.triggerScorers, spec, this, i, debug);
+			
+			// Good debug info for signals and scorers!
+//			List<ScorerData> scorers = mechanism.scorers.get(SignalType.TRIGGER);
+//			System.out.printf("%s finished mechanism %s with %s scorers: %s\n", Pipeline.detailedLog(),
+//					mechanism.getClass().getSimpleName(), scorers.size(), scorers.toString().substring(0, 100) + "...");
 		}
 		//return result;
 	}
 	
 	public void addArgumentSignals(JCas spec, int i, Argument argument, AceMention mention, Perceptron perceptron, Map<ScorerData, SignalInstance> roleSignals) throws SignalMechanismException {
-		LinkedHashMap<ScorerData, BigDecimal> scoredSignals;
-		//Map<ScorerData, SignalInstance> result = new HashMap<ScorerData, SignalInstance>(); //Ditto.
-		for (SignalMechanism mechanism : perceptron.signalMechanisms) {
-			scoredSignals = mechanism.scoreArgument(roleSignals, spec, argument, this, i, mention);
-			for (Entry<ScorerData, BigDecimal> scoredSignal : scoredSignals.entrySet()) {
-				SignalInstance signal = new SignalInstance(scoredSignal.getKey().fullName, SignalType.ARGUMENT, scoredSignal.getValue());
-				roleSignals.put(scoredSignal.getKey(), signal);
-				//result.put(scoredSignal.getKey(), signal);
-				perceptron.argumentScorers.add(scoredSignal.getKey());
-				markSignalUpdate();
-			}
-		}
-		//return result;
+		//This is currently all very silly.
+		
+//		LinkedHashMap<ScorerData, BigDecimal> scoredSignals;
+//		for (SignalMechanism mechanism : perceptron.signalMechanisms) {
+//			scoredSignals = mechanism.scoreArgument(roleSignals, spec, argument, this, i, mention);
+//			for (Entry<ScorerData, BigDecimal> scoredSignal : scoredSignals.entrySet()) {
+//				SignalInstance signal = new SignalInstance(scoredSignal.getKey().fullName, SignalType.ARGUMENT, scoredSignal.getValue());
+//				roleSignals.put(scoredSignal.getKey(), signal);
+//				//result.put(scoredSignal.getKey(), signal);
+//				perceptron.argumentScorers.add(scoredSignal.getKey());
+//				markSignalUpdate();
+//			}
+//		}
 	}
 	
 	public void markSignalUpdate() {

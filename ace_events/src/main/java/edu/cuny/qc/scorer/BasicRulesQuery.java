@@ -5,13 +5,20 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 import eu.excitementproject.eop.common.representation.partofspeech.PartOfSpeech;
 
+/**
+ * Can represent:
+ * <ol>
+ * <li> A query of a single lemma/pos pair. In this case, the data will be on the left side, and the right side is ignored.
+ * <li> A query of two lemma/pos pairs.
+ * <li> A result - also of one lemma/pos pair (again on left side), or of two.
+ * </ol>
+ */
 public class BasicRulesQuery {
 	
 	public String lLemma, rLemma;
 	public PartOfSpeech lPos, rPos;
 	
-	public BasicRulesQuery(String lLemma, String rLemma, PartOfSpeech lPos,
-			PartOfSpeech rPos) {
+	public BasicRulesQuery(String lLemma, PartOfSpeech lPos, String rLemma, PartOfSpeech rPos) {
 		this.lLemma = lLemma;
 		this.rLemma = rLemma;
 		this.lPos = lPos;

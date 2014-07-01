@@ -9,24 +9,27 @@ import org.apache.commons.lang3.StringUtils;
 import org.apache.uima.jcas.tcas.Annotation;
 import org.hibernate.property.Getter;
 
-import edu.cuny.qc.perceptron.types.SignalInstance;
+import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
 
-public abstract class Compose extends SignalMechanismSpecIterator {
+import edu.cuny.qc.perceptron.types.SignalInstance;
+import eu.excitementproject.eop.common.representation.partofspeech.PartOfSpeech;
+
+public abstract class Compose extends SignalMechanismSpecTokenIterator {
 	
 	public static class Or extends Compose {
-		SignalMechanismSpecIterator[] scorers;
-		public Or(SignalMechanismSpecIterator... scorers) {
+		SignalMechanismSpecTokenIterator[] scorers;
+		public Or(SignalMechanismSpecTokenIterator... scorers) {
 			this.scorers = scorers;
 		}
 		@Override
-		public BigDecimal calcScore(Annotation text, Map<Class<?>, Object> textTriggerTokenMap, Annotation spec) throws SignalMechanismException {
-			for (SignalMechanismSpecIterator scorer : scorers) {
-				boolean positive = SignalInstance.isPositive.apply(scorer.calcScore(text, textTriggerTokenMap, spec));
+		public Boolean calcTokenBooleanScore(Token textToken, Map<Class<?>, Object> textTriggerTokenMap, String textStr, PartOfSpeech textPos, String specStr, PartOfSpeech specPos, ScorerData scorerData) throws SignalMechanismException {
+			for (SignalMechanismSpecTokenIterator scorer : scorers) {
+				boolean positive = scorer.calcTokenBooleanScore(textToken, textTriggerTokenMap, textStr, textPos, specStr, specPos, scorerData);
 				if (positive) {
-					return SignalInstance.toDouble(true);
+					return true;
 				}
 			}
-			return SignalInstance.toDouble(false);
+			return false;
 		}
 		@Override
 		public String getTypeName() {
@@ -38,19 +41,19 @@ public abstract class Compose extends SignalMechanismSpecIterator {
 		}
 	}
 	public static class And extends Compose {
-		SignalMechanismSpecIterator[] scorers;
-		public And(SignalMechanismSpecIterator... scorers) {
+		SignalMechanismSpecTokenIterator[] scorers;
+		public And(SignalMechanismSpecTokenIterator... scorers) {
 			this.scorers = scorers;
 		}
 		@Override
-		public BigDecimal calcScore(Annotation text, Map<Class<?>, Object> textTriggerTokenMap, Annotation spec) throws SignalMechanismException {
-			for (SignalMechanismSpecIterator scorer : scorers) {
-				boolean positive = SignalInstance.isPositive.apply(scorer.calcScore(text, textTriggerTokenMap, spec));
+		public Boolean calcTokenBooleanScore(Token textToken, Map<Class<?>, Object> textTriggerTokenMap, String textStr, PartOfSpeech textPos, String specStr, PartOfSpeech specPos, ScorerData scorerData) throws SignalMechanismException {
+			for (SignalMechanismSpecTokenIterator scorer : scorers) {
+				boolean positive = scorer.calcTokenBooleanScore(textToken, textTriggerTokenMap, textStr, textPos, specStr, specPos, scorerData);
 				if (!positive) {
-					return SignalInstance.toDouble(false);
+					return false;
 				}
 			}
-			return SignalInstance.toDouble(true);
+			return true;
 		}
 		@Override
 		public String getTypeName() {

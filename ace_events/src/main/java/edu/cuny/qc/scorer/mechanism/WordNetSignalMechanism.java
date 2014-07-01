@@ -1,5 +1,9 @@
 package edu.cuny.qc.scorer.mechanism;
 
+import static edu.cuny.qc.scorer.Aggregator.*;
+import static edu.cuny.qc.scorer.Derivation.*;
+import static edu.cuny.qc.scorer.Deriver.*;
+
 import java.io.File;
 import java.util.Arrays;
 import java.util.HashSet;
@@ -34,9 +38,10 @@ import edu.cuny.qc.scorer.SignalMechanism;
 import edu.cuny.qc.scorer.SignalMechanismException;
 import edu.cuny.qc.scorer.SignalMechanismSpecTokenIterator;
 import edu.cuny.qc.scorer.Deriver.NoDerv;
-import edu.cuny.qc.util.TokenAnnotations.DervWordnetAnnotation;
+import edu.cuny.qc.util.PosMap;
 import eu.excitementproject.eop.common.component.lexicalknowledge.LexicalResourceException;
 import eu.excitementproject.eop.common.component.lexicalknowledge.LexicalRule;
+import eu.excitementproject.eop.common.representation.partofspeech.CanonicalPosTag;
 import eu.excitementproject.eop.common.representation.partofspeech.PartOfSpeech;
 import eu.excitementproject.eop.common.representation.partofspeech.PennPartOfSpeech;
 import eu.excitementproject.eop.common.representation.partofspeech.PennPartOfSpeech.PennPosTag;
@@ -78,20 +83,20 @@ public class WordNetSignalMechanism extends SignalMechanism {
 	}
 	
 	@Override
-	public void init() throws WordNetInitializationException, UnsupportedPosTagStringException {
+	public void init() throws WordNetInitializationException, UnsupportedPosTagStringException, ExecutionException {
 		dictionary = new JwiDictionary(WORDNET_DIR);
 		
-		NOUN = new PennPartOfSpeech(PennPosTag.NN);
-		VERB = new PennPartOfSpeech(PennPosTag.VB);
-		ADJ = new PennPartOfSpeech(PennPosTag.JJ);
-		ADV = new PennPartOfSpeech(PennPosTag.RB);
+		NOUN = PosMap.byCanonical.get(CanonicalPosTag.N);
+		VERB = PosMap.byCanonical.get(CanonicalPosTag.V);
+		ADJ = PosMap.byCanonical.get(CanonicalPosTag.ADJ);
+		ADV = PosMap.byCanonical.get(CanonicalPosTag.ADV);
 
 	}
 	
 	@Override
 	public void close() {
 		dictionary.close();
-		for (WordnetLexicalResource resource : WordnetScorer.cacheResources.asMap().values()) {
+		for (WordnetLexicalResource resource : cacheResources.asMap().values()) {
 			resource.close();
 		}
 		super.close();
@@ -102,17 +107,17 @@ public class WordNetSignalMechanism extends SignalMechanism {
 	public void addScorers() {
 		//END of analysis1!
 		/// Group A
-		addTriggers(SYNONYM_RELATION,   Juxtaposition.ANCESTOR, new Integer[] {1}, DERVS_NONE, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN, /*VERB, ADJ, ADV*/}, AGG_ANY);
-		addTriggers(HYPERNYM_RELATIONS, Juxtaposition.ANCESTOR, ALL_LENGTHS_WITH_TOP, DERVS_NONE_AND, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN/*, VERB*/}, AGG_ANY);
-		addTriggers(HYPERNYM1_RELATION, Juxtaposition.ANCESTOR, ALL_LENGTHS_WITH_TOP, DERVS_NONE_AND, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN/*, VERB*/}, AGG_ANY);
-		addTriggers(HYPERNYM2_RELATION, Juxtaposition.ANCESTOR, ALL_LENGTHS_WITH_TOP, DERVS_NONE_AND, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN/*, VERB*/}, AGG_ANY);
+		addTriggers(SYNONYM_RELATION,   Juxtaposition.ANCESTOR, new Integer[] {1}, ALL_DERIVERS, DERVS_NONE, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN, /*VERB, ADJ, ADV*/}, AGG_ANY);
+		addTriggers(HYPERNYM_RELATIONS, Juxtaposition.ANCESTOR, ALL_LENGTHS_WITH_TOP, ALL_DERIVERS, DERVS_NONE_AND, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN/*, VERB*/}, AGG_ANY);
+		addTriggers(HYPERNYM1_RELATION, Juxtaposition.ANCESTOR, ALL_LENGTHS_WITH_TOP, ALL_DERIVERS, DERVS_NONE_AND, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN/*, VERB*/}, AGG_ANY);
+		addTriggers(HYPERNYM2_RELATION, Juxtaposition.ANCESTOR, ALL_LENGTHS_WITH_TOP, ALL_DERIVERS, DERVS_NONE_AND, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN/*, VERB*/}, AGG_ANY);
 
 		/// Group B
-		addTriggers(HYPERNYM_RELATIONS, Juxtaposition.COUSIN_STRICT, new Integer[] {1}, DERVS_NONE_AND, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null/*, NOUN, VERB*/}, AGG_ANY_MIN2);
-		addTriggers(HYPERNYM_RELATIONS, Juxtaposition.COUSIN_STRICT, new Integer[] {2, 3}, DERVS_NONE_AND, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null/*, NOUN, VERB*/}, AGG_MIN2_MIN3);
+		addTriggers(HYPERNYM_RELATIONS, Juxtaposition.COUSIN_STRICT, new Integer[] {1}, ALL_DERIVERS, DERVS_NONE_AND, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null/*, NOUN, VERB*/}, AGG_ANY_MIN2);
+		addTriggers(HYPERNYM_RELATIONS, Juxtaposition.COUSIN_STRICT, new Integer[] {2, 3}, ALL_DERIVERS, DERVS_NONE_AND, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null/*, NOUN, VERB*/}, AGG_MIN2_MIN3);
 
-		addTriggers(ALL_RELATIONS_SMALL,   Juxtaposition.ANCESTOR, LENGTHS_1_2_3_TOP, DERVS_ALL, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN, VERB/*, ADJ, ADV*/}, ALL_AGGS);
-		addTriggers(ALL_RELATIONS_BIG,   Juxtaposition.ANCESTOR, LENGTHS_1_2_3_TOP, DERVS_ALL, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN, VERB/*, ADJ, ADV*/}, ALL_AGGS);
+		addTriggers(ALL_RELATIONS_SMALL,   Juxtaposition.ANCESTOR, LENGTHS_1_2_3_TOP, ALL_DERIVERS, DERVS_ALL, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN, VERB/*, ADJ, ADV*/}, ALL_AGGS);
+		addTriggers(ALL_RELATIONS_BIG,   Juxtaposition.ANCESTOR, LENGTHS_1_2_3_TOP, ALL_DERIVERS, DERVS_ALL, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN, VERB/*, ADJ, ADV*/}, ALL_AGGS);
 		
 		
 		
@@ -190,7 +195,7 @@ public class WordNetSignalMechanism extends SignalMechanism {
 				totalLoadTime, averageLoadPenalty);
 	}
 	
-	public void addTriggers(Set<WordNetRelation> relations, Juxtaposition juxt, Integer[] lengths, Derivation[] dervs, Integer[] leftSenses, Integer[] rightSenses, PartOfSpeech[] specificPoses, Aggregator[] aggs) {
+	public void addTriggers(Set<WordNetRelation> relations, Juxtaposition juxt, Integer[] lengths, Deriver[] derivers, Derivation[] dervs, Integer[] leftSenses, Integer[] rightSenses, PartOfSpeech[] specificPoses, Aggregator[] aggs) {
 		System.out.printf("%s ^^^ addTriggers(): Building %s (%sx%sx%sx%sx%sx%s) combinations: lengths=%s, dervs=%s, leftSenses=%s, rightSenses=%s, specificPoses=%s, aggs=%s. Fixed options: relations=%s, juxt=%s\n",
 				Pipeline.detailedLog(),
 				lengths.length*dervs.length*leftSenses.length*rightSenses.length*specificPoses.length*aggs.length,
@@ -198,17 +203,19 @@ public class WordNetSignalMechanism extends SignalMechanism {
 				Arrays.toString(lengths), Arrays.toString(dervs), Arrays.toString(leftSenses), Arrays.toString(rightSenses), Arrays.toString(specificPoses), Arrays.toString(aggs),
 				relations, juxt);
 		for (Integer length : lengths) {
-			for (Derivation derv : dervs) {
-				for (Integer leftSense : leftSenses) {
-					for (Integer rightSense : rightSenses) {
-						for (PartOfSpeech specificPos : specificPoses) {
-							for (Aggregator agg : aggs) {
-//								System.out.printf("%s ^^^^^ addTriggers(): Starting single combination: relations=%s, just=%s, length=%s, derv=%s, leftSense=%s, rightSense=%s, specificPos=%s, agg=%s\n",
-//										Pipeline.detailedLog(),
-//										relations, juxt, length, derv, leftSense, rightSense, specificPos, agg);
-								
-								WordnetScorer scorer = new WordnetScorer(relations, juxt, length, derv, leftSense, rightSense, specificPos);
-								addTrigger(new ScorerData(scorer, agg));
+			for (Deriver deriver : derivers) {
+				for (Derivation derv : dervs) {
+					for (Integer leftSense : leftSenses) {
+						for (Integer rightSense : rightSenses) {
+							for (PartOfSpeech specificPos : specificPoses) {
+								for (Aggregator agg : aggs) {
+	//								System.out.printf("%s ^^^^^ addTriggers(): Starting single combination: relations=%s, just=%s, length=%s, derv=%s, leftSense=%s, rightSense=%s, specificPos=%s, agg=%s\n",
+	//										Pipeline.detailedLog(),
+	//										relations, juxt, length, derv, leftSense, rightSense, specificPos, agg);
+									
+									WordnetScorer scorer = new WordnetScorer(relations, juxt, length);
+									addTrigger(new ScorerData(null, scorer, deriver, derv, leftSense, rightSense, specificPos, agg));
+								}
 							}
 						}
 					}
@@ -223,8 +230,8 @@ public class WordNetSignalMechanism extends SignalMechanism {
 		System.out.printf("@@ CousinsStrict:%s\n", cacheStats(WordnetScorer.cacheCousinsStrict));
 		System.out.printf("@@ Rules:        %s\n", cacheStats(WordnetScorer.cacheRules));
 		System.out.printf("@@ Bools:        %s\n", cacheStats(WordnetScorer.cacheBools));
-		System.out.printf("@@ Derv:         %s\n", cacheStats(WordnetScorer.cacheDerv));
-		System.out.printf("@@ Resources:    %s\n", cacheStats(WordnetScorer.cacheResources));
+		System.out.printf("@@ Derv:         %s\n", cacheStats(WordnetDervRltdDeriver.cacheDerv));
+		System.out.printf("@@ Resources:    %s\n", cacheStats(cacheResources));
 	}
 	
 	@Override
@@ -309,7 +316,7 @@ public class WordNetSignalMechanism extends SignalMechanism {
 						List<LexicalRule<? extends WordnetRuleInfo>> rules = resource.getRulesForLeft(q.lLemma, q.lPos, DERVRTD_RELATION, info);
 						for (LexicalRule<? extends WordnetRuleInfo> rule : rules) {
 							// when a BasicRulesQuery represents only one lemma/POS, it's always on the Left side
-							BasicRulesQuery res = new BasicRulesQuery(rule.getRLemma(), null, rule.getRPos(), null);
+							BasicRulesQuery res = new BasicRulesQuery(rule.getRLemma(), rule.getRPos(), null, null);
 							result.add(res);
 						}
 						return result;
@@ -321,23 +328,18 @@ public class WordNetSignalMechanism extends SignalMechanism {
 		public Set<WordNetRelation> relations;
 		public Juxtaposition juxt;
 		public int length;
-		public Derivation derv; 
+		//public Derivation derv; 
 		//public SynsetScope synsetScope;
-		public int leftSenseNum;
-		public int rightSenseNum;
-		public PartOfSpeech specificPos;
+		//public int leftSenseNum;
+		//public int rightSenseNum;
+		//public PartOfSpeech specificPos;
 //		public LengthType lenType;
 				
 		public WordnetScorer(Set<WordNetRelation> relations,
-				Juxtaposition juxt, int length, Derivation derv,
-				int leftSenseNum, int rightSenseNum, PartOfSpeech specificPos) {
+				Juxtaposition juxt, int length) {
 			this.relations = relations;
 			this.juxt = juxt;
 			this.length = length;
-			this.derv = derv;
-			this.leftSenseNum = leftSenseNum;
-			this.rightSenseNum = rightSenseNum;
-			this.specificPos = specificPos;
 		}
 
 		@Override public String getTypeName() {
@@ -356,36 +358,8 @@ public class WordNetSignalMechanism extends SignalMechanism {
 			if (length == -1) {
 				lengthStr = "Top";
 			}
-			
-			String leftSenseStr="" + leftSenseNum, rightSenseStr="" + rightSenseNum;
-			if (leftSenseNum==-1) {
-				leftSenseStr = "All";
-			}
-			if (rightSenseNum==-1) {
-				rightSenseStr = "All";
-			}
-			
-			String dervStr="";
-			if (derv==Derivation.TEXT_ORIG_AND_DERV) {
-				dervStr = "_withTextDerv";
-			}
-			else if (derv==Derivation.TEXT_ONLY_DERV) {
-				dervStr = "_onlyTextDerv";
-			}
-			else if (derv==Derivation.SPEC_ORIG_AND_DERV) {
-				dervStr = "_withSpecDerv";
-			}
-			else if (derv==Derivation.SPEC_ONLY_DERV) {
-				dervStr = "_onlySpecDerv";
-			}
-			
-			String posStr="";
-			if (specificPos != null) {
-				posStr = String.format("_just%s", specificPos);
-			}
-			
-			return String.format("WN__%s__%s_Len%s_Text%sSense_Spec%sSense_%s%s",
-					rels, juxt, lengthStr, leftSenseStr, rightSenseStr, dervStr, posStr);
+	
+			return String.format("WN__%s__%s_Len%s", rels, juxt, lengthStr);
 		}
 
 		private static LoadingCache<BasicRulesQuery, Boolean> cacheExist = CacheBuilder.newBuilder()
@@ -452,6 +426,7 @@ public class WordNetSignalMechanism extends SignalMechanism {
 		
 		private static LoadingCache<FullRulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>> cacheRules = CacheBuilder.newBuilder()
 				.recordStats()
+				//TODO: perhaps change weight to size. This way we'll limit the number of entries (makes sense) and not maximum size of value's list (which doesn't seem to limit anything)
 				.maximumWeight(5000  /*100000*/)
 				.weigher(new Weigher<FullRulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>>() {
 					public int weigh(FullRulesQuery k, List<LexicalRule<? extends WordnetRuleInfo>> v) { return v.size(); }
@@ -472,11 +447,21 @@ public class WordNetSignalMechanism extends SignalMechanism {
 				.build(new CacheLoader<FullRulesQuery, Boolean>() {
 					public Boolean load(FullRulesQuery key) throws LexicalResourceException, ExecutionException {
 						BasicRulesQuery q = key.basicQuery;
-						String extra = "";
+						//String extra = "";
 						Boolean booleanScore;
 						if (key.juxt == Juxtaposition.ANCESTOR) {
-							List<LexicalRule<? extends WordnetRuleInfo>> rules = cacheRules.get(key);
+							// Original use of cacheRules - but that caches seemed to grow uncontrollably, and really contribute nothing
+//							List<LexicalRule<? extends WordnetRuleInfo>> rules = cacheRules.get(key);
+//							booleanScore = !rules.isEmpty();
+							
+							// Current use - get the rules directly, no caching
+							WordnetRuleInfo info = new WordnetRuleInfoWithSenseNumsOnly(key.leftSenseNum, key.rightSenseNum);
+							WordnetLexicalResource resource = cacheResources.get(key.length);
+							List<LexicalRule<? extends WordnetRuleInfo>> rules = resource.getRules(q.lLemma, q.lPos, q.rLemma, q.rPos, key.relations, info);
 							booleanScore = !rules.isEmpty();
+							
+							
+							
 							// because bottom part is commented out
 //							if (booleanScore) {
 //								List<WordNetRelation> ruleRelations = new ArrayList<WordNetRelation>(rules.size());
@@ -492,7 +477,7 @@ public class WordNetSignalMechanism extends SignalMechanism {
 								throw new IllegalArgumentException("juxt=COUSIN_*, but relations is not exactly HYPERNYM. relations=" + key.relations);
 							}
 
-							BasicRulesQuery basicQueryOnlyLeft = new BasicRulesQuery(q.lLemma, null, q.lPos, null);
+							BasicRulesQuery basicQueryOnlyLeft = new BasicRulesQuery(q.lLemma, q.lPos, null, null);
 							FullRulesQuery keyOnlyLeft = new FullRulesQuery(null, key.length, null, key.leftSenseNum, key.rightSenseNum, basicQueryOnlyLeft);
 							Set<String> lemmas;
 							if (key.juxt == Juxtaposition.COUSIN_STRICT) {
@@ -520,27 +505,20 @@ public class WordNetSignalMechanism extends SignalMechanism {
 				});
 		
 		@Override
-		public Boolean calcTokenBooleanScore(Token text, Map<Class<?>, Object> textTriggerTokenMap, Token spec) throws SignalMechanismException {
+		public Boolean calcTokenBooleanScore(Token textToken, Map<Class<?>, Object> textTriggerTokenMap, String textStr, PartOfSpeech textPos, String specStr, PartOfSpeech specPos, ScorerData scorerData) throws SignalMechanismException {
 			try {
-				//hard-codedly, specificPos only refers to the original text token, not any derivations
-				if (this.specificPos != null && !this.specificPos.equals(textPos)) {
-					return false; //TODO: should be: IRRELEVANT
-				}			
 				WordNetPartOfSpeech textWnPos = WordNetPartOfSpeech.toWordNetPartOfspeech(textPos);
 				if (textWnPos == null) {
 					return false;  //TODO: should be: IRRELEVANT
 				}				
 				
 				usedCaches = true;
-				String textLemma = text.getLemma().getValue();
-				BasicRulesQuery leftQuery = new BasicRulesQuery(textLemma, null, textPos, null); // when a BasicRulesQuery represents only one lemma/POS, it's always on the Left side
+				BasicRulesQuery leftQuery = new BasicRulesQuery(textStr, textPos, null, null); 
 				if (!cacheExist.get(leftQuery)) {
 					return false;  //TODO: should be: IRRELEVANT
 				}
 				
-				PartOfSpeech specPos = textPos; //spec is always as having the same POS as text, mostly since wordnet doesn't (hardly) have and cross-POS-relations 
-				String specLemma = spec.getLemma().getValue();
-				BasicRulesQuery rightQuery = new BasicRulesQuery(specLemma, null, specPos, null); // when a BasicRulesQuery represents only one lemma/POS, it's always on the Left side
+				BasicRulesQuery rightQuery = new BasicRulesQuery(specStr, specPos, null, null);
 				if (!cacheExist.get(rightQuery)) {
 					return false;  //TODO: should be: IRRELEVANT
 				}
@@ -551,47 +529,11 @@ public class WordNetSignalMechanism extends SignalMechanism {
 					realLength = MAXIMUM_WORDNET_LENGTH;
 				}
 				
-				Set<BasicRulesQuery> leftSides = new HashSet<BasicRulesQuery>(3);
-				if (this.derv.leftOriginal) {
-					leftSides.add(leftQuery);
-				}
-				Set<BasicRulesQuery> rightSides = new HashSet<BasicRulesQuery>(3);
-				if (this.derv.rightOriginal) {
-					rightSides.add(rightQuery);
-				}
-
-				// Note that we always put stuff on the left side. This way cacheDerv doesn't need to know on which real side it works on.
-				// Also, cacheDerv itself puts everything in the left side, so that we don't need to know later if there were any derivations or not 
-				if (this.derv.leftDerivation) {
-					FullRulesQuery dervQuery = new FullRulesQuery(null, 0, null, this.leftSenseNum, 0, leftQuery);
-					leftSides.addAll(cacheDerv.get(dervQuery));
-				}
-				if (this.derv.rightDerivation) {
-					FullRulesQuery dervQuery = new FullRulesQuery(null, 0, null, this.rightSenseNum, 0, rightQuery);
-					rightSides.addAll(cacheDerv.get(dervQuery));
-				}
-				
-				// Our queries are all combinations of left sides and right sides
-				// This is hard-coded "Any" mode - when we get one True, we stop and return true
-				boolean result = false;
-				for (BasicRulesQuery leftSide : leftSides) {
-					for (BasicRulesQuery rightSide : rightSides) {
-						BasicRulesQuery basicQuery = new BasicRulesQuery(leftSide.lLemma, rightSide.lLemma, leftSide.lPos, rightSide.lPos);
-						FullRulesQuery fullQuery = new FullRulesQuery(this.relations, realLength, this.juxt, this.leftSenseNum, this.rightSenseNum, basicQuery);
-						result = cacheBools.get(fullQuery);
-						if (result) {
-							break;
-						}
-					}
-					if (result) {
-						break;
-					}
-				}
-				
+				BasicRulesQuery basicQuery = new BasicRulesQuery(textStr, textPos, specStr, specPos);
+				FullRulesQuery fullQuery = new FullRulesQuery(this.relations, realLength, this.juxt, scorerData.leftSenseNum, scorerData.rightSenseNum, basicQuery);
+				boolean result = cacheBools.get(fullQuery);
 				return result;
 				
-			} catch (UnsupportedPosTagStringException e) {
-				throw new SignalMechanismException(e);
 			} catch (ExecutionException e) {
 				throw new SignalMechanismException(e);
 			}
@@ -632,35 +574,26 @@ public class WordNetSignalMechanism extends SignalMechanism {
 			WordNetRelation.CAUSE,
 			WordNetRelation.VERB_GROUP
 	}));
-	private static final Set<WordNetRelation> HYPERNYM_RELATIONS = new LinkedHashSet<WordNetRelation>(Arrays.asList(new WordNetRelation[] {
+	private static final Set<WordNetRelation> HYPERNYM_RELATIONS = new HashSet<WordNetRelation>(Arrays.asList(new WordNetRelation[] {
 			WordNetRelation.HYPERNYM,
 			WordNetRelation.INSTANCE_HYPERNYM
 	}));
-	private static final Set<WordNetRelation> HYPERNYM1_RELATION = new LinkedHashSet<WordNetRelation>(Arrays.asList(new WordNetRelation[] {
+	private static final Set<WordNetRelation> HYPERNYM1_RELATION = new HashSet<WordNetRelation>(Arrays.asList(new WordNetRelation[] {
 			WordNetRelation.HYPERNYM,
 	}));
-	private static final Set<WordNetRelation> HYPERNYM2_RELATION = new LinkedHashSet<WordNetRelation>(Arrays.asList(new WordNetRelation[] {
+	private static final Set<WordNetRelation> HYPERNYM2_RELATION = new HashSet<WordNetRelation>(Arrays.asList(new WordNetRelation[] {
 			WordNetRelation.INSTANCE_HYPERNYM
 	}));
-	private static final Set<WordNetRelation> DERVRTD_RELATION = new LinkedHashSet<WordNetRelation>(Arrays.asList(new WordNetRelation[] {
+	private static final Set<WordNetRelation> DERVRTD_RELATION = new HashSet<WordNetRelation>(Arrays.asList(new WordNetRelation[] {
 			WordNetRelation.DERIVATIONALLY_RELATED
 	}));
-	private static final Set<WordNetRelation> SYNONYM_RELATION = new LinkedHashSet<WordNetRelation>(Arrays.asList(new WordNetRelation[] {
+	private static final Set<WordNetRelation> SYNONYM_RELATION = new HashSet<WordNetRelation>(Arrays.asList(new WordNetRelation[] {
 			WordNetRelation.SYNONYM
 	}));
 	private static final Integer[] LENGTHS_1_2_3 = {1, 2, 3};
 	private static final Integer[] LENGTHS_1_2_3_TOP = {-1, 1, 2, 3};
 	private static final Integer[] ALL_LIMITED_LENGTHS = {1, 2, 3, 4, 5, 6, 7};
 	private static final Integer[] ALL_LENGTHS_WITH_TOP = {-1, 1, 2, 3, 4, 5, 6, 7};
-	private static final Derivation[] DERVS_NONE = {Derivation.NONE}; 
-	private static final Derivation[] DERVS_NONE_AND = {Derivation.NONE, Derivation.TEXT_ORIG_AND_DERV, Derivation.SPEC_ORIG_AND_DERV}; 
-	private static final Derivation[] DERVS_NONE_ONLY = {Derivation.NONE, Derivation.TEXT_ONLY_DERV, Derivation.SPEC_ONLY_DERV}; 
-	private static final Derivation[] DERVS_ONLY = {Derivation.TEXT_ONLY_DERV, Derivation.SPEC_ONLY_DERV}; 
-	private static final Derivation[] DERVS_ALL = {Derivation.NONE, Derivation.TEXT_ORIG_AND_DERV, Derivation.SPEC_ORIG_AND_DERV, Derivation.TEXT_ONLY_DERV, Derivation.SPEC_ONLY_DERV}; 
 	private static final Integer[] SENSE_NUMS = {1, -1};
-	private static final Aggregator[] ALL_AGGS = {Aggregator.Any.inst, Aggregator.Min2.inst, Aggregator.Min3.inst, /*Aggregator.Min4.inst, */Aggregator.MinHalf.inst};
-	private static final Aggregator[] AGG_ANY = {Aggregator.Any.inst};
-	private static final Aggregator[] AGG_ANY_MIN2 = {Aggregator.Any.inst, Aggregator.Min2.inst};
-	private static final Aggregator[] AGG_MIN2_MIN3 = {Aggregator.Min2.inst, Aggregator.Min3.inst};
 	private static PartOfSpeech NOUN, VERB, ADJ, ADV;
 }

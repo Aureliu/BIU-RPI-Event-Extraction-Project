@@ -98,7 +98,7 @@ public class Perceptron implements java.io.Serializable
 		
 		//labelBigram = new HashMap<String, List<String>>();
 		
-		//buildSignalMechanisms();
+		buildSignalMechanisms();
 	}
 	
 	public void close() {
@@ -546,7 +546,7 @@ public class Perceptron implements java.io.Serializable
 				}
 				
 				//DEBUG
-				String sentText = sentence(instance.text);
+				String sentText = sentence(instance.textStart);
 				//printf(w, "|%s%d|%s\n", wt.getFeaturesStringSkip(), i, wt.getFeaturesString());
 				printWeights(w, iter, instance.docID, instance.sentInstID, c, instance.size(), sentText);
 

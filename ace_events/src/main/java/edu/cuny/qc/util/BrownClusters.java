@@ -69,15 +69,15 @@ public class BrownClusters
 				{
 					continue;
 				}
-				String prefix = fields[0];
-				String token = fields[1];
+				String prefix = fields[0].intern();
+				String token = fields[1].intern();
 				
 				for(int i=0; i<Prefix_Length.length; i++)
 				{
 					int len = Prefix_Length[i];
 					if(prefix.length() >= len)
 					{
-						String catorgory = prefix.substring(0, len);
+						String catorgory = prefix.substring(0, len).intern();
 						List<String> cats = map.get(token);
 						if(cats == null)
 						{

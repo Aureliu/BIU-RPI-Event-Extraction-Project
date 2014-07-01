@@ -7,10 +7,13 @@ import com.google.common.base.Predicate;
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
 
+import edu.cuny.qc.scorer.ScorerData;
+
 public class SignalInstance implements Serializable {
 	private static final long serialVersionUID = 6105654845782902773L;
 	
-	public String name;
+	//public String name;
+	public ScorerData scorerData;
 	public SignalType type;
 	private /*public*/ BigDecimal score;
 	public boolean positive;
@@ -40,8 +43,9 @@ public class SignalInstance implements Serializable {
 	public static final BigDecimal POSITIVE_SCORE = new BigDecimal("1.0");
 	public static final BigDecimal NEGATIVE_SCORE = new BigDecimal("0.0");//new BigDecimal("-1.0");
 
-	public SignalInstance(String name, SignalType type, BigDecimal score) {
-		this.name = name;
+	public SignalInstance(ScorerData scorerData/*String name*/, SignalType type, BigDecimal score) {
+		//this.name = name;
+		this.scorerData = scorerData;
 		this.type = type;
 		this.score = score;
 		this.positive = isPositive.apply(score);
@@ -53,7 +57,11 @@ public class SignalInstance implements Serializable {
 	
 	@Override
 	public String toString() {
-		return String.format("_%s_(%s=%s[%s])", type.toString().toLowerCase(), name, positive, score);
+		return String.format("_%s_(%s=%s[%s])", type.toString().toLowerCase(), scorerData.getFullName(), positive, score);
+	}
+	
+	public String getName() {
+		return scorerData.getFullName();
 	}
 
 //	public void initHistory() {
@@ -64,7 +72,7 @@ public class SignalInstance implements Serializable {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		result = prime * result + ((scorerData == null) ? 0 : scorerData.hashCode());
 		result = prime * result + (positive ? 1231 : 1237);
 		result = prime * result + ((score == null) ? 0 : score.hashCode());
 		result = prime * result + ((type == null) ? 0 : type.hashCode());
@@ -80,10 +88,10 @@ public class SignalInstance implements Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		SignalInstance other = (SignalInstance) obj;
-		if (name == null) {
-			if (other.name != null)
+		if (scorerData == null) {
+			if (other.scorerData != null)
 				return false;
-		} else if (!name.equals(other.name))
+		} else if (!scorerData.equals(other.scorerData))
 			return false;
 		if (positive != other.positive)
 			return false;

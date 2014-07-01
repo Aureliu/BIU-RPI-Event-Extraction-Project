@@ -11,8 +11,8 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Tue Mar 11 18:07:45 IST 2014
- * XML source: C:/Java/Git/breep/ace_events/src/main/resources/desc/SpecAnnotator.xml
+ * Updated by JCasGen Sun Jun 29 20:28:54 IDT 2014
+ * XML source: C:/Java/Git/breep/ace_events/src/main/resources/desc/OdieInputTypes.xml
  * @generated */
 public class Predicate extends Annotation {
   /** @generated

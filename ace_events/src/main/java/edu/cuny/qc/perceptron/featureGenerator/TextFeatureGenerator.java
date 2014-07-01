@@ -176,7 +176,7 @@ public class TextFeatureGenerator
 					String lemma = ParserWrapper.lemmanize(tokens[idx], posTags[idx]).toLowerCase();
 					map.put(TokenAnnotations.LemmaAnnotation.class, lemma);
 					map.put(TokenAnnotations.ChunkingAnnotation.class, chunks[idx]);
-					map.put(TokenAnnotations.SpanAnnotation.class, tokenSpans[idx]);
+					//map.put(TokenAnnotations.SpanAnnotation.class, tokenSpans[idx]); //never used!
 					
 					// get base form of verb and noun according to Nomlex. e.g. retirement --> retire
 					if(posTags[idx].startsWith("V") && Nomlex.getSingleTon().contains(lemma))
@@ -488,21 +488,21 @@ public class TextFeatureGenerator
 				if(related_word.length() > 0)
 				{
 					String feature = label + "=" + edge.getRelation() + "_" + related_word;
-					dep_features.add(feature);
+					dep_features.add(feature.intern());
 				}
 				if(related_entity != null && related_entity.length() > 0)
 				{
 					String feature = label + "=" + edge.getRelation() + "_" + related_entity;
-					dep_features.add(feature);
+					dep_features.add(feature.intern());
 				}
 				if(related_pos.length() > 0)
 				{
 					String feature = label + "=" + edge.getRelation() + "_" + related_pos;
-					dep_features.add(feature);
+					dep_features.add(feature.intern());
 				}
 				// only consider the dependency type
 				String feature = label + "=" + edge.getRelation();
-				dep_features.add(feature);
+				dep_features.add(feature.intern());
 				
 				current_token.put(TokenAnnotations.DependencyAnnotation.class, dep_features);
 			}
@@ -561,7 +561,7 @@ public class TextFeatureGenerator
 	
 	public static void fillTextFeatures_NoPreprocessing(Document doc) throws IOException {
 		fillAceAnnotations(doc);
-		fillFeatures_local(doc);
+		//fillFeatures_local(doc); //Ofer: not using!
 		fillEntityInformation(doc);
 		fillDependencyFeatures(doc);
 		fillNearestEntityInformation(doc);
@@ -591,19 +591,21 @@ public class TextFeatureGenerator
 					token.put(TokenAnnotations.HypernymAnnotation.class, hypernym.getID().toString());
 				}
 				
+				//Ofer: not using!
 				// Wordnet Synonyms
-				List<String> synonyms = WordNetWrapper.getSingleTon().getSynonyms(lemma, pos);
-				if(synonyms != null)
-				{
-					token.put(TokenAnnotations.SynonymsAnnotation.class, synonyms);
-				}
+//				List<String> synonyms = WordNetWrapper.getSingleTon().getSynonyms(lemma, pos);
+//				if(synonyms != null)
+//				{
+//					token.put(TokenAnnotations.SynonymsAnnotation.class, synonyms);
+//				}
 				
+				//Ofer: not using!
 				// brown clusters
-				List<String> clusters = BrownClusters.getSingleton().getBrownCluster(text);
-				if(clusters != null)
-				{
-					token.put(TokenAnnotations.BrownClusterAnnotation.class, clusters);
-				}
+//				List<String> clusters = BrownClusters.getSingleton().getBrownCluster(text);
+//				if(clusters != null)
+//				{
+//					token.put(TokenAnnotations.BrownClusterAnnotation.class, clusters);
+//				}
 			}
 		}		
 	}

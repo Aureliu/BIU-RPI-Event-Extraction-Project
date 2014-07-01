@@ -2,6 +2,7 @@ package edu.cuny.qc.scorer;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -46,6 +47,12 @@ public abstract class SignalMechanism {
 		scorers.get(SignalType.TRIGGER).add(data);
 	}
 
+	public void addTriggers(Collection<ScorerData> datas) {
+		for (ScorerData data : datas) {
+			addTrigger(data);
+		}
+	}
+
 	public void addArgument(ScorerData data) {
 		scorers.get(SignalType.ARGUMENT).add(data);
 	}
@@ -66,9 +73,9 @@ public abstract class SignalMechanism {
 //				data.scorer.init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken, textTriggerTokenMap);
 //			}
 			if (!existingSignals.containsKey(data)) {
-				data.scorer.init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken, textTriggerTokenMap);
+				data.scorer.init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken, textTriggerTokenMap, data);
 				BigDecimal score = data.aggregator.aggregate(data.scorer);
-				signal = new SignalInstance(data.fullName, SignalType.TRIGGER, score);
+				signal = new SignalInstance(data, SignalType.TRIGGER, score);
 				existingSignals.put(data, signal);
 				allTriggerScorers.add(data);
 				textSentence.markSignalUpdate();
@@ -81,7 +88,7 @@ public abstract class SignalMechanism {
 //					signal.initHistory();
 					data.scorer.debug = true;
 					// need to init again because the inner iterator is already exhausted, need to get a new one
-					data.scorer.init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken, textTriggerTokenMap);
+					data.scorer.init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken, textTriggerTokenMap, data);
 					data.scorer.history = ArrayListMultimap.create();
 					debugAggregator.aggregate(data.scorer);
 					data.scorer.debug = false;
@@ -161,6 +168,6 @@ public abstract class SignalMechanism {
 	 */
 	public void close() { }
 	
-	private Map<SignalType, List<ScorerData>> scorers;
+	public Map<SignalType, List<ScorerData>> scorers;
 	private Aggregator debugAggregator = Aggregator.ScanAll.inst;
 }

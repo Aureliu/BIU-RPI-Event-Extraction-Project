@@ -87,9 +87,10 @@ public class Sentence implements java.io.Serializable
 
 	public Sentence(Document doc, int sentID, String text)
 	{
+		final int MAX_TEXT_LEN = 6;
 		this.doc = doc;
 		this.sentID = sentID;
-		this.text = text;
+		this.text = (StringUtils.substring(text, 0, MAX_TEXT_LEN) + "..").intern();
 	}
 	
 	@Override

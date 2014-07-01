@@ -203,6 +203,11 @@ public class SignalAnalyzer {
 					
 					key.put("signal", data.basicName);
 					key.put("agg", data.aggregatorTypeName);
+					key.put("deriver", data.deriverTypeName);
+					key.put("derivation", ""+data.derivation);
+					key.put("spec-ind", ""+data.isSpecIndependent);
+					key.put("left-sense", ""+data.leftSenseNum);
+					key.put("right-sense", ""+data.rightSenseNum);
 					for (Entry<String, String> entry : signal.history.entries()) {
 						
 						// No need to check if signal is positive - this is already done in SignalMechanismSpecIterator.addToHistory()
@@ -276,6 +281,11 @@ public class SignalAnalyzer {
 				///
 				key.put("signal", data.basicName);
 				key.put("agg", data.aggregatorTypeName);
+				key.put("deriver", data.deriverTypeName);
+				key.put("derivation", ""+data.derivation);
+				key.put("spec-ind", ""+data.isSpecIndependent);
+				key.put("left-sense", ""+data.leftSenseNum);
+				key.put("right-sense", ""+data.rightSenseNum);
 				
 //				if (sentNum >= DEBUG_MIN_SENTENCE) {
 //					System.err.printf("12 ");

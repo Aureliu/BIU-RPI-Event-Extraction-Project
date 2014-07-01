@@ -124,9 +124,23 @@ public class StatsDocument {
 				if (!iter2.hasNext()) {
 					return 1;
 				}
-				int cmp = iter1.next().compareTo(iter2.next());
-				if (cmp!=0) {
-					return cmp;
+				int cmp;
+				String s1 = iter1.next();
+				String s2 = iter2.next();
+				if (s1 == null && s2 == null) {
+					cmp = 0;
+				}
+				else if (s1 == null) {
+					return 1;
+				}
+				else if (s2 == null) {
+					return -1;
+				}
+				else {
+					cmp = s1.compareTo(s2);
+					if (cmp!=0) {
+						return cmp;
+					}
 				}
 			}
 			if (iter2.hasNext()) {

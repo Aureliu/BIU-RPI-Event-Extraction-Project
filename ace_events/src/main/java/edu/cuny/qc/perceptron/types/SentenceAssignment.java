@@ -13,12 +13,12 @@ import org.apache.commons.lang.StringUtils;
 import org.apache.uima.cas.CASException;
 
 import ac.biu.nlp.nlp.ie.onthefly.input.SpecAnnotator;
-import ac.biu.nlp.nlp.ie.onthefly.input.TypesContainer;
 import edu.cuny.qc.ace.acetypes.AceEventMention;
 import edu.cuny.qc.ace.acetypes.AceEventMentionArgument;
 import edu.cuny.qc.ace.acetypes.AceMention;
 import edu.cuny.qc.perceptron.core.Controller;
 import edu.cuny.qc.perceptron.core.Perceptron;
+import edu.cuny.qc.perceptron.core.Pipeline;
 import edu.cuny.qc.perceptron.featureGenerator.GlobalFeatureGenerator;
 import edu.cuny.qc.perceptron.types.SentenceInstance.InstanceAnnotations;
 import edu.cuny.qc.scorer.ScorerData;
@@ -476,6 +476,9 @@ public class SentenceAssignment
 				System.err.printf("\nGot -1! Here: %s\n\n", map);
 			}
 		}
+
+		System.out.printf("%s Starting features of target in SentenceInstance %s...\n", Pipeline.detailedLog(), inst.sentInstID);
+
 		///////
 		// create featureVectorSequence
 		for(int i=0; i<=state; i++)
@@ -553,8 +556,10 @@ public class SentenceAssignment
 		}
 		
 		String nodeLabel = getLabelAtToken(index);
-		List<Map<String, List<Map<String, Map<String, SignalInstance>>>>> edgeSignals = (List<Map<String, List<Map<String, Map<String, SignalInstance>>>>>) problem.get(InstanceAnnotations.EdgeTextSignals);
-		Map<String, SignalInstance> signals = edgeSignals.get(index).get(nodeLabel).get(entityIndex).get(edgeLabel);
+		List<Map<Integer, List<Map<String, Map<Integer, SignalInstance>>>>> edgeSignals = (List<Map<Integer, List<Map<String, Map<Integer, SignalInstance>>>>>) problem.get(InstanceAnnotations.EdgeTextSignals);
+		Integer nodeNum = problem.types.triggerTypes.get(nodeLabel);
+		Integer edgeNum = problem.types.argumentRoles.get(nodeLabel).get(edgeLabel);
+		Map<Integer, SignalInstance> signals = edgeSignals.get(index).get(nodeNum).get(entityIndex).get(edgeNum);
 		//Map<String, Map<String, Map<String, SignalInstance>>> allEntitySignals = edgeSignals.get(index).get(entityIndex);
 		//AceMention mention = problem.eventArgCandidates.get(entityIndex);
 		
@@ -697,13 +702,13 @@ public class SentenceAssignment
 	{
 		try {
 			// make node feature (bigram feature)
-			List<Map<String, Map<ScorerData, SignalInstance>>> tokens = (List<Map<String, Map<ScorerData, SignalInstance>>>) problem.get(InstanceAnnotations.NodeTextSignalsBySpec);
+			List<Map<Integer, Map<ScorerData, SignalInstance>>> tokens = (List<Map<Integer, Map<ScorerData, SignalInstance>>>) problem.get(InstanceAnnotations.NodeTextSignalsBySpec);
 			/// DEBUG
 			if (tokens == null) {
 				System.out.println(problem);
 			}
 			////
-			Map<String, Map<ScorerData, SignalInstance>> token = tokens.get(i);
+			Map<Integer, Map<ScorerData, SignalInstance>> token = tokens.get(i);
 			//String previousLabel = this.getLabelAtToken(i-1);
 			String label = this.getLabelAtToken(i);
 			String genericLabel = getGenericTriggerLabel(label);
@@ -735,7 +740,9 @@ public class SentenceAssignment
 	//						System.err.printf("associatedSpecLabel=%s, token=%s\n", associatedSpecLabel, token);
 	//					}
 	//					///
-						Map<ScorerData, SignalInstance> signalsOfLabel = token.get(associatedSpecLabel);
+						//Map<ScorerData, SignalInstance> signalsOfLabel = token.get(associatedSpecLabel);
+						Integer associatedSpecNum = problem.types.triggerTypes.get(associatedSpecLabel);
+						Map<ScorerData, SignalInstance> signalsOfLabel = token.get(associatedSpecNum);
 	//					/// DEBUG
 	//					if (signalsOfLabel == null) {
 	//						System.err.printf("associatedSpecLabel=%s, token=%s\n", associatedSpecLabel, token);
@@ -759,7 +766,8 @@ public class SentenceAssignment
 				}
 				else {
 					if (genericLabel == Generic_Existing_Trigger_Label) {
-						Map<ScorerData, SignalInstance> signalsOfLabel = token.get(label);
+						Integer specNum = problem.types.triggerTypes.get(label);
+						Map<ScorerData, SignalInstance> signalsOfLabel = token.get(specNum);
 						for (SignalInstance signal : signalsOfLabel.values()) {
 							List<SignalInstance> signals = Arrays.asList(new SignalInstance[] {signal});
 							BigDecimal featureValue = signal.positive ? FEATURE_POSITIVE_VAL : FEATURE_NEGATIVE_VAL;
@@ -876,7 +884,7 @@ public class SentenceAssignment
 			wasAdded = true;
 		}
 		
-		if (wasAdded) {
+		if (controller.saveFeatureSignalNames && wasAdded) {
 			String strippedFeatureStr = stripLabel(featureStr);
 			Map<String, String> map = featureToSignal.get(i);
 			if (!featureToSignal.containsKey(i)) {

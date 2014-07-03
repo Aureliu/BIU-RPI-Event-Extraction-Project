@@ -75,6 +75,13 @@ public abstract class SignalMechanism {
 //				data.scorer.init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken, textTriggerTokenMap);
 //			}
 			if (!existingSignals.containsKey(data)) {
+				///DEBUG
+//				int dataHash = data.hashCode();
+//				int existingHash;
+//				for (ScorerData existing : existingSignals.keySet()) {
+//					existingHash = existing.hashCode();
+//				}
+				////
 				//System.out.printf("%s NEW\n", Pipeline.detailedLog());
 				data.scorer.init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken, textTriggerTokenMap, data);
 				BigDecimal score = data.aggregator.aggregate(data.scorer);

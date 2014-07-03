@@ -71,11 +71,11 @@ public class ScorerData implements Serializable {
 	}
 	
 	public String getAggregatorTypeName() {
-		return aggregator.getTypeName();
+		return aggregator.getTypeName().intern();
 	}
 	
 	public String getDeriverTypeName() {
-		return deriver.getTypeName();
+		return deriver.getTypeName().intern();
 	}
 	
 	private String numSenseString(int senseNum, String title) {
@@ -108,9 +108,9 @@ public class ScorerData implements Serializable {
 	
 	@Override
 	public int hashCode() {
-	     return new HashCodeBuilder(17, 37)/*.append(fullName)*/.append(basicName).append(deriver).append(aggregator)
-	    		 .append(derivation).append(leftSenseNum).append(rightSenseNum).append(specificPos)
-	    		 /*.append(scorerTypeName).append(aggregatorTypeName).append(deriverTypeName)*/.toHashCode();  // for these guys only take their type names, seems to be enough
+	     int hash = new HashCodeBuilder(17, 37).append(basicName).append(deriver).append(aggregator)
+	    		 .append(derivation).append(leftSenseNum).append(rightSenseNum).append(specificPos).toHashCode();
+	     return hash;
 	}
 	@Override
 	public boolean equals(Object obj) {
@@ -120,10 +120,10 @@ public class ScorerData implements Serializable {
 	     return false;
 	   }
 	   ScorerData rhs = (ScorerData) obj;
-	   return new EqualsBuilder()/*.append(fullName, rhs.fullName)*/.append(basicName, rhs.basicName).append(deriver, rhs.deriver).append(aggregator, rhs.aggregator)
-	    	   .append(derivation, rhs.derivation).append(leftSenseNum, rhs.leftSenseNum).append(rightSenseNum, rhs.rightSenseNum).append(specificPos, rhs.specificPos)
-			   /*.append(scorerTypeName, rhs.scorerTypeName).append(aggregatorTypeName, rhs.aggregatorTypeName)
-			   .append(deriverTypeName, rhs.deriverTypeName)*/.isEquals(); // for these guys only take their type names, seems to be enough
+	   boolean result = new EqualsBuilder().append(basicName, rhs.basicName).append(deriver, rhs.deriver).append(aggregator, rhs.aggregator)
+	    	   .append(derivation, rhs.derivation).append(leftSenseNum, rhs.leftSenseNum).append(rightSenseNum, rhs.rightSenseNum)
+	    	   .append(specificPos, rhs.specificPos).isEquals();
+	   return result;
 	}
 
 }

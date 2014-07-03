@@ -537,7 +537,7 @@ public class AceDocument implements java.io.Serializable {
 		for (Iterator<AceEventMention> eventMentionIter = eventMentions.iterator(); eventMentionIter.hasNext();) {
 			AceEventMention em = eventMentionIter.next();
 			
-			if (!types.triggerTypes.contains(em.event.subtype)) {
+			if (!types.triggerTypes.keySet().contains(em.event.subtype)) {
 				eventMentionIter.remove();
 				remove(allMentionsList, em);
 				remove(events, em.event);
@@ -555,7 +555,7 @@ public class AceDocument implements java.io.Serializable {
 			}
 			
 			else {
-				Set<String> possibleRoles = types.argumentRoles.get(em.event.subtype);
+				Set<String> possibleRoles = types.argumentRoles.get(em.event.subtype).keySet();
 				for (Iterator<AceEventMentionArgument> argMentionIter = em.arguments.iterator(); argMentionIter.hasNext();) {
 					AceEventMentionArgument am = argMentionIter.next();
 					String role = types.getCanonicalRoleName(am.role);

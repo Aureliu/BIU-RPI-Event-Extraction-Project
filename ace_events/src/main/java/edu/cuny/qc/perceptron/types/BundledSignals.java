@@ -31,16 +31,16 @@ public class BundledSignals implements Serializable {
 	// These are the actual signals
 	
 	// Sentence\TriggerToken\Spec\Signals
-	public Map<Integer, List<Map<String, Map<ScorerData, SignalInstance>>>> triggerSignals;
+	public Map<Integer, List<Map<Integer, Map<ScorerData, SignalInstance>>>> triggerSignals;
 	
 	// Sentence\TriggerToken\Spec\ArgToken\Role\Signals
-	public Map<Integer, List<Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>>>> argSignals;
+	public Map<Integer, List<Map<Integer, List<Map<Integer, Map<ScorerData, SignalInstance>>>>>> argSignals;
 
 	public BundledSignals(
 			//TypesContainer types,
 			Perceptron perceptron,
-			Map<Integer, List<Map<String, Map<ScorerData, SignalInstance>>>> triggerSignals,
-			Map<Integer, List<Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>>>> argSignals) {
+			Map<Integer, List<Map<Integer, Map<ScorerData, SignalInstance>>>> triggerSignals,
+			Map<Integer, List<Map<Integer, List<Map<Integer, Map<ScorerData, SignalInstance>>>>>> argSignals) {
 //		this.eventEntityTypes = types.eventEntityTypes;
 //		this.argumentRoles = types.argumentRoles;
 //		this.roleEntityTypes = types.roleEntityTypes;

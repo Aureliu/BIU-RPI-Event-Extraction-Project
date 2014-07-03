@@ -1,8 +1,8 @@
 package edu.cuny.qc.util;
 
-import java.util.LinkedHashMap;
+import java.util.HashMap;
 
-public class FinalKeysMap<K, V> extends LinkedHashMap<K, V> {
+public class FinalKeysMap<K, V> extends HashMap<K, V> {
 	private static final long serialVersionUID = 9053646523055114466L;
 
 	public FinalKeysMap() {

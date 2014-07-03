@@ -14,6 +14,8 @@ import java.util.Set;
 import java.util.concurrent.ExecutionException;
 
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.joda.time.Period;
 
 import ac.biu.nlp.nlp.ie.onthefly.input.AnnotationUtils;
@@ -105,6 +107,10 @@ public class WordNetSignalMechanism extends SignalMechanism {
 
 	@Override
 	public void addScorers() {
+
+		// tiny amount for debug
+		//addTriggers(SYNONYM_RELATION,   Juxtaposition.ANCESTOR, new Integer[] {1}, ALL_DERIVERS, DERVS_NONE, new Integer[] {1}, new Integer[] {1}, new PartOfSpeech[] {null, /*NOUN, VERB, ADJ, ADV*/}, AGG_ANY_MIN2);
+		
 		//END of analysis2!
 		/// Group A
 		addTriggers(SYNONYM_RELATION,   Juxtaposition.ANCESTOR, new Integer[] {1}, ALL_DERIVERS, DERVS_NONE, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN, /*VERB, ADJ, ADV*/}, AGG_ANY);
@@ -360,6 +366,25 @@ public class WordNetSignalMechanism extends SignalMechanism {
 			this.juxt = juxt;
 			this.length = length;
 		}
+
+//		@Override
+//		public int hashCode() {
+//		     int hash = new HashCodeBuilder(127, 149).appendSuper(super.hashCode())
+//		    		 .append(relations).append(juxt).append(length).toHashCode();
+//		     return hash;
+//		}
+//		@Override
+//		public boolean equals(Object obj) {
+//		   if (obj == null) { return false; }
+//		   if (obj == this) { return true; }
+//		   if (obj.getClass() != getClass()) {
+//		     return false;
+//		   }
+//		   WordnetScorer rhs = (WordnetScorer) obj;
+//		   boolean result = new EqualsBuilder().appendSuper(super.equals(rhs)).append(relations, rhs.relations)
+//				   .append(juxt, rhs.juxt).append(length, rhs.length).isEquals();
+//		   return result;
+//		}
 
 		@Override public String getTypeName() {
 			String rels;

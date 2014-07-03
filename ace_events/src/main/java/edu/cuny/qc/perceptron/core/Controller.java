@@ -57,10 +57,12 @@ public class Controller implements java.io.Serializable
 	
 	public boolean useSignalFiles = true;
 	
+	public boolean saveFeatureSignalNames = false;
+	
 	public Controller()
 	{
-		System.out.printf("\n[%s] ******** Controller() **********\n", new Date());
-		System.out.printf("******** %s **********\n", this);
+//		System.out.printf("\n[%s] ******** Controller() **********\n", new Date());
+//		System.out.printf("******** %s **********\n", this);
 	}
 	
 	/**
@@ -147,9 +149,15 @@ public class Controller implements java.io.Serializable
 			}
 			else if(fields[0].equalsIgnoreCase("useSignalFiles"))
 			{
-				useSignalFiles = Boolean.parseBoolean(fields[1]);
+				usePreprocessFiles = Boolean.parseBoolean(fields[1]);
+			}
+			else if(fields[0].equalsIgnoreCase("saveFeatureSignalNames"))
+			{
+				saveFeatureSignalNames = Boolean.parseBoolean(fields[1]);
 			}
 		}
+		System.out.printf("\n[%s] ******** Controller() **********\n", new Date());
+		System.out.printf("******** %s **********\n", this);
 	}
 	
 	public String toString()
@@ -158,7 +166,9 @@ public class Controller implements java.io.Serializable
 		+ " averaged weights: " + avgArguments + " skipNonArgument: " + skipNonArgument
 		+ " useGlobalFeature:" + useGlobalFeature + " addNeverSeenFeatures: " + addNeverSeenFeatures
 		+ " crossSent:" + crossSent + " crossSentReranking:" + crossSentReranking + " order:" + order +
-		" evaluatorType:" + evaluatorType + " learnBigrams: " + learnBigrams;
+		" evaluatorType:" + evaluatorType + " learnBigrams: " + learnBigrams + " logLevel: " + logLevel +
+		" oMethod: " + oMethod + " serialization: " + serialization + " usePreprocessFiles: " + usePreprocessFiles
+		+ " usePreprocessFiles: " + usePreprocessFiles + " saveFeatureSignalNames: " + saveFeatureSignalNames;
 		return ret;
 	}
 	

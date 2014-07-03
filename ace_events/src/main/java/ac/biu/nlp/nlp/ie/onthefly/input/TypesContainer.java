@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -15,6 +16,10 @@ import org.apache.uima.cas.CASRuntimeException;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.uimafit.util.JCasUtil;
+
+import com.google.common.collect.BiMap;
+import com.google.common.collect.HashBiMap;
+import com.google.common.collect.Maps;
 
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentType;
@@ -30,13 +35,14 @@ public class TypesContainer {
 	public List<JCas> specs;
 	public Alphabet nodeTargetAlphabet;
 	public Alphabet edgeTargetAlphabet;
-	public Set<String> triggerTypes;
+	//public Set<String> triggerTypes;
+	public LinkedHashMap<String, Integer> triggerTypes; //The type here is a horrible, horrible hack
 	public List<String> possibleTriggerLabels;
 	
 	// map event subtype --> entity types
 	public Map<String, Set<String>> eventEntityTypes = new HashMap<String, Set<String>>();
 	// map event subtype --> argument role
-	public Map<String, Set<String>> argumentRoles = new HashMap<String, Set<String>>();
+	public Map<String, LinkedHashMap<String, Integer>> argumentRoles = new HashMap<String, LinkedHashMap<String, Integer>>();
 	// map argument_role --> entity types 
 	public Map<String, Set<String>> roleEntityTypes = new HashMap<String, Set<String>>();
 
@@ -47,7 +53,7 @@ public class TypesContainer {
 	}
 	public TypesContainer(List<JCas> specs) throws CASRuntimeException, AnalysisEngineProcessException, ResourceInitializationException, UimaUtilsException, IOException, AeException, CASException {
 		this.specs = specs;
-		triggerTypes = new HashSet<String>();
+		triggerTypes = Maps.newLinkedHashMap();
 
 		nodeTargetAlphabet = new Alphabet();
 		edgeTargetAlphabet = new Alphabet();
@@ -55,11 +61,13 @@ public class TypesContainer {
 		nodeTargetAlphabet.lookupIndex(SentenceAssignment.Default_Trigger_Label);
 		edgeTargetAlphabet.lookupIndex(SentenceAssignment.Default_Argument_Label);
 		
+		int specNum = 0;
 		for (JCas spec : specs) {
 
 			String triggerName = SpecAnnotator.getSpecLabel(spec);
-			triggerTypes.add(triggerName);
+			triggerTypes.put(triggerName, specNum);
 			nodeTargetAlphabet.lookupIndex(triggerName);
+			specNum++;
 			
 			JCas tokenView = spec.getView(SpecAnnotator.TOKEN_VIEW);
 			for (Argument arg : JCasUtil.select(tokenView, Argument.class)) {
@@ -73,7 +81,7 @@ public class TypesContainer {
 		
 		finalizeMaps();
 		possibleTriggerLabels = new ArrayList<String>(triggerTypes.size() + 1);
-		possibleTriggerLabels.addAll(triggerTypes);
+		possibleTriggerLabels.addAll(triggerTypes.keySet());
 		Collections.sort(possibleTriggerLabels);
 		possibleTriggerLabels.add(0, SentenceAssignment.Default_Trigger_Label); // First element!
 	}
@@ -122,7 +130,7 @@ public class TypesContainer {
 	public boolean isRoleCompatible(String subtype, String role)
 	{
 		role = getCanonicalRoleName(role);
-		Set<String> roles = argumentRoles.get(subtype);
+		Set<String> roles = argumentRoles.get(subtype).keySet();
 		if(roles != null && roles.contains(role))
 		{
 			return true;
@@ -170,13 +178,13 @@ public class TypesContainer {
 
 	
 	private void updateMaps(String triggerType, String role, List<String> types) {
-		Set<String> set = argumentRoles.get(triggerType);
-		if(set == null)
+		LinkedHashMap<String, Integer> map = argumentRoles.get(triggerType);
+		if(map == null)
 		{
-			set = new HashSet<String>();
+			map = Maps.newLinkedHashMap();
 		}
-		set.add(role);
-		argumentRoles.put(triggerType, set);
+		map.put(role, map.size());
+		argumentRoles.put(triggerType, map);
 		
 		for(String type : types)
 		{
@@ -194,7 +202,7 @@ public class TypesContainer {
 	{
 		for(String eventType : argumentRoles.keySet())
 		{
-			Set<String> roles = argumentRoles.get(eventType);
+			Set<String> roles = argumentRoles.get(eventType).keySet();
 			for(String role : roles)
 			{
 				Set<String> entityTypes = roleEntityTypes.get(role);

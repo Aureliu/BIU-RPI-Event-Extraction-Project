@@ -5,18 +5,31 @@ import java.math.BigDecimal;
 import java.util.Iterator;
 import java.util.List;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+
 import com.google.common.collect.Iterators;
 import com.google.common.collect.Lists;
 
 import edu.cuny.qc.perceptron.types.SignalInstance;
+import edu.cuny.qc.scorer.Deriver.Join;
 
 public abstract class Aggregator implements Serializable {
 
 	private static final long serialVersionUID = -8253852128019445603L;
-	public String getTypeName() {return getClass().getSimpleName().intern(); }
+	public String getTypeName() {return getClass().getSimpleName(); }
 	public abstract String getSuffix();
 	public abstract BigDecimal aggregate(Iterator<BigDecimal> scoreIterator);
 	
+	@Override public int hashCode() {
+	     return getClass().getSimpleName().hashCode();
+	}
+	@Override public boolean equals(Object obj) {
+		   if (obj == null) { return false; }
+		   if (obj == this) { return true; }
+		   return obj.getClass() == getClass();
+	}
+
 	public static class Any extends Aggregator {
 		private static final long serialVersionUID = 3748054145390188760L;
 		//private static final long serialVersionUID = -5751052602451116048L;

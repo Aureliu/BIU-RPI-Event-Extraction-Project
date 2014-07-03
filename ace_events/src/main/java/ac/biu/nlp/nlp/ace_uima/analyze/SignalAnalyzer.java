@@ -125,9 +125,10 @@ public class SignalAnalyzer {
 				String goldLabel = problem.target.getLabelAtToken(i);
 				//Map<String, SignalInstance> specSignals = new HashMap<String, SignalInstance>();
 				
-				List<Map<String, Map<ScorerData, SignalInstance>>> tokens = (List<Map<String, Map<ScorerData, SignalInstance>>>) problem.get(InstanceAnnotations.NodeTextSignalsBySpec);
-				Map<String, Map<ScorerData, SignalInstance>> token = tokens.get(i);
-				Map<ScorerData, SignalInstance> scoredSignals = token.get(triggerLabel);
+				List<Map<Integer, Map<ScorerData, SignalInstance>>> tokens = (List<Map<Integer, Map<ScorerData, SignalInstance>>>) problem.get(InstanceAnnotations.NodeTextSignalsBySpec);
+				Map<Integer, Map<ScorerData, SignalInstance>> token = tokens.get(i);
+				Integer triggerNum = problem.types.triggerTypes.get(triggerLabel);
+				Map<ScorerData, SignalInstance> scoredSignals = token.get(triggerNum);
 
 //				System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] addTriggerSignals...\n", new Date());
 //				Map<ScorerData, SignalInstance> scoredSignals = problem.addTriggerSignals(problem.associatedSpec, i, perceptron, specSignals);

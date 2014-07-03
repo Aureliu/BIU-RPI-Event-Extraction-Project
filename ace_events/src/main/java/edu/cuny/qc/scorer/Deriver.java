@@ -20,11 +20,19 @@ import eu.excitementproject.eop.common.representation.partofspeech.PartOfSpeech;
 public abstract class Deriver implements Serializable {
 	private static final long serialVersionUID = 2232471629182535996L;
 
-	public String getTypeName() {return getClass().getSimpleName().intern(); }
+	public String getTypeName() {return getClass().getSimpleName(); }
 	
 	public abstract String getSuffix();
 	public abstract Set<BasicRulesQuery> buildDerivations(FullRulesQuery query) throws DeriverException;
 	//public abstract Class<?> getTokenAnnotationMarker();
+	@Override public int hashCode() {
+	     return getClass().getSimpleName().hashCode();
+	}
+	@Override public boolean equals(Object obj) {
+		   if (obj == null) { return false; }
+		   if (obj == this) { return true; }
+		   return obj.getClass() == getClass();
+	}
 	
 	public Set<BasicRulesQuery> getDerivations(String lemma, PartOfSpeech pos, boolean takeOriginal, boolean takeDerivations, int senseNum) throws DeriverException {
 		Set<BasicRulesQuery> result = new HashSet<BasicRulesQuery>(3);

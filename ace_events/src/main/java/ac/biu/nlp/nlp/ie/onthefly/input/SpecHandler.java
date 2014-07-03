@@ -147,5 +147,5 @@ public class SpecHandler {
 		return spec;
 	}
 	
-	public static final String PREPROCESSED_SPEC_FILE_EXT = ".preprocessed";
+	public static final String PREPROCESSED_SPEC_FILE_EXT = ".preprocessed.xmi";
 }

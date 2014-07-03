@@ -16,6 +16,8 @@ import ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateSeed;
 
 import com.google.common.collect.ArrayListMultimap;
 
+import edu.cuny.qc.perceptron.core.Pipeline;
+
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
 import edu.cuny.qc.ace.acetypes.AceMention;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
@@ -73,6 +75,7 @@ public abstract class SignalMechanism {
 //				data.scorer.init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken, textTriggerTokenMap);
 //			}
 			if (!existingSignals.containsKey(data)) {
+				//System.out.printf("%s NEW\n", Pipeline.detailedLog());
 				data.scorer.init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken, textTriggerTokenMap, data);
 				BigDecimal score = data.aggregator.aggregate(data.scorer);
 				signal = new SignalInstance(data, SignalType.TRIGGER, score);

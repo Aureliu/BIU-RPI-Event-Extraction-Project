@@ -512,6 +512,7 @@ public class SentenceInstance
 			boolean debug) throws SignalMechanismException, CASException {
 		//List<Map<String, Map<String, SignalInstance>>> triggerSignals = new ArrayList<Map<String, Map<String, SignalInstance>>>(size());
 		//List<Map<String, List<Map<String, Map<String, SignalInstance>>>>> argSignals = new ArrayList<Map<String, List<Map<String, Map<String, SignalInstance>>>>>(size());
+		System.out.printf("%s Starting signals SentenceInstance %s...\n", Pipeline.detailedLog(), this.sentInstID);
 		perceptron.logSignalMechanismsPreSentence();
 		for(int i=0; i<size(); i++)
 		{
@@ -597,6 +598,7 @@ public class SentenceInstance
 				}
 			}
 		}
+		System.out.printf("%s Finished signals SentenceInstance %s.\n", Pipeline.detailedLog(), this.sentInstID);
 	}
 	
 	public void addTriggerSignals(JCas spec, int i, Perceptron perceptron, Map<ScorerData, SignalInstance> specSignals, boolean debug) throws SignalMechanismException {

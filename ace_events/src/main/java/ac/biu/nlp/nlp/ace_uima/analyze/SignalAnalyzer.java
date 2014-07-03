@@ -202,8 +202,8 @@ public class SignalAnalyzer {
 					}
 					
 					key.put("signal", data.basicName);
-					key.put("agg", data.aggregatorTypeName);
-					key.put("deriver", data.deriverTypeName);
+					key.put("agg", data.getAggregatorTypeName());
+					key.put("deriver", data.getDeriverTypeName());
 					key.put("derivation", ""+data.derivation);
 					key.put("spec-ind", ""+data.isSpecIndependent);
 					key.put("left-sense", ""+data.leftSenseNum);
@@ -280,8 +280,8 @@ public class SignalAnalyzer {
 //				}
 				///
 				key.put("signal", data.basicName);
-				key.put("agg", data.aggregatorTypeName);
-				key.put("deriver", data.deriverTypeName);
+				key.put("agg", data.getAggregatorTypeName());
+				key.put("deriver", data.getDeriverTypeName());
 				key.put("derivation", ""+data.derivation);
 				key.put("spec-ind", ""+data.isSpecIndependent);
 				key.put("left-sense", ""+data.leftSenseNum);

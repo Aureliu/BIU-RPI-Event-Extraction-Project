@@ -39,7 +39,9 @@ public class NomlexSignalMechanism extends SignalMechanism {
 	}
 
 	public static class NomlexDeriver extends Deriver {
+		private static final long serialVersionUID = -4749124787568723978L;
 		public static final NomlexDeriver inst = new NomlexDeriver();
+		private NomlexDeriver() {} //private c-tor
 		@Override public String getSuffix() { return "-NmxDrv"; }
 
 		@Override

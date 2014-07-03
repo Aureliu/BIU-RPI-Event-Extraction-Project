@@ -14,6 +14,7 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 import ac.biu.nlp.nlp.ie.onthefly.input.AnnotationUtils;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.NounLemma;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateSeed;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.VerbLemma;
 
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
@@ -22,8 +23,9 @@ import eu.excitementproject.eop.common.representation.partofspeech.PartOfSpeech;
 import eu.excitementproject.eop.common.representation.partofspeech.UnsupportedPosTagStringException;
 import eu.excitementproject.eop.common.utilities.uima.UimaUtils;
 
-public abstract class SignalMechanismSpecTokenIterator extends SignalMechanismSpecIterator {
+public abstract class PredicateSeedScorer extends SignalMechanismSpecIterator {
 
+	private static final long serialVersionUID = -2424604187161763995L;
 	static {System.err.println("Consider using Guava caches to cache signal values for specific textToken-specToken pairs (maybe also with their lemmas and/or POSes). Maybe also/instead, cache some intermediate values, like a lemma's WordNet sysnet.");}
 
 	public SignalMechanismSpecIterator init(JCas spec, String viewName, AnnotationFS covering, Class<? extends Annotation> type, Token textAnno, Map<Class<?>, Object> textTriggerTokenMap, ScorerData scorerData) throws SignalMechanismException {
@@ -33,7 +35,6 @@ public abstract class SignalMechanismSpecTokenIterator extends SignalMechanismSp
 	@Override
 	public BigDecimal calcScore(Annotation text, Map<Class<?>, Object> textTriggerTokenMap, Annotation spec, ScorerData scorerData) throws SignalMechanismException {
 		try {
-			// Get text and spec token, according to their given annotations
 			if (text.getClass().equals(Token.class)) {
 				textToken = (Token) text;
 			}
@@ -41,11 +42,11 @@ public abstract class SignalMechanismSpecTokenIterator extends SignalMechanismSp
 				textToken = UimaUtils.selectCoveredSingle(text.getView().getJCas(), Token.class, text);
 			}
 			
-			if (spec.getClass().equals(Token.class)) {
-				specToken = (Token) spec;
+			if (spec.getClass().equals(PredicateSeed.class)) {
+				specSeed = (PredicateSeed) spec;
 			}
 			else {
-				specToken = UimaUtils.selectCoveredSingle(spec.getView().getJCas(), Token.class, spec);
+				specSeed = UimaUtils.selectCoveredSingle(spec.getView().getJCas(), PredicateSeed.class, spec);
 			}
 			
 			textPos = AnnotationUtils.tokenToPOS(textToken);
@@ -61,9 +62,9 @@ public abstract class SignalMechanismSpecTokenIterator extends SignalMechanismSp
 			
 			// Get all spec derivations, based on the spec token itself, and its possible noun-lemma and verb-lemma forms
 			Set<String> specForms = new HashSet<String>(Arrays.asList(new String[] {
-					specToken.getCoveredText(),
-					UimaUtils.selectCoveredSingle(specToken.getView().getJCas(), NounLemma.class, specToken).getValue(),
-					UimaUtils.selectCoveredSingle(specToken.getView().getJCas(), VerbLemma.class, specToken).getValue(),
+					specSeed.getCoveredText(),
+					UimaUtils.selectCoveredSingle(specSeed.getView().getJCas(), NounLemma.class, specSeed).getValue(),
+					UimaUtils.selectCoveredSingle(specSeed.getView().getJCas(), VerbLemma.class, specSeed).getValue(),
 			}));
 			Set<BasicRulesQuery> specDerivations = new HashSet<BasicRulesQuery>(5);
 			for (String specForm : specForms) {
@@ -110,13 +111,13 @@ public abstract class SignalMechanismSpecTokenIterator extends SignalMechanismSp
 	}
 
 	public void addToHistory(String textStr, PartOfSpeech textPos, String specStr, PartOfSpeech specPos) throws SignalMechanismException {
-		String specBase = specToken.getCoveredText();
+		String specBase = specSeed.getCoveredText();
 		String textBase = getForm(textToken);
 		String specExtra = specBase.equals(specStr)?"":String.format("(%s)",specStr);
 		String textExtra = textBase.equals(textStr)?"":String.format("(%s)",textStr);
 		
-		String specHistory = String.format("%s%s/%s", specToken.getCoveredText(), specExtra, specPos.getCanonicalPosTag());
-		String textHistory = String.format("%s%s/%s", getForm(textToken), textExtra, textPos.getCanonicalPosTag());
+		String specHistory = String.format("%s%s/%s", specBase, specExtra, specPos.getCanonicalPosTag());
+		String textHistory = String.format("%s%s/%s", textBase, textExtra, textPos.getCanonicalPosTag());
 		history.put(specHistory.intern(), textHistory.intern());
 	}
 
@@ -132,7 +133,7 @@ public abstract class SignalMechanismSpecTokenIterator extends SignalMechanismSp
 		throw new UnsupportedOperationException("calcTokenBooleanScore must be implemented in subclass");
 	}
 	
-	public Token textToken;
-	public Token specToken;
-	public PartOfSpeech textPos;
+	public transient Token textToken;
+	public transient PredicateSeed specSeed;
+	public transient PartOfSpeech textPos;
 }

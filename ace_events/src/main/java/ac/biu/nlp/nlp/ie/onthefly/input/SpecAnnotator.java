@@ -16,6 +16,7 @@ import org.uimafit.util.JCasUtil;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentExample;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentType;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.LemmaByPos;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.NounLemma;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.Predicate;
@@ -34,6 +35,7 @@ import com.google.common.collect.Multimap;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Lemma;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
+import edu.cuny.qc.ace.acetypes.AceArgumentTypes;
 import eu.excitementproject.eop.common.utilities.uima.UimaUtils;
 
 public class SpecAnnotator extends JCasAnnotator_ImplBase {
@@ -111,6 +113,20 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 		}
 		return result;
 	}
+
+	@SuppressWarnings("unused")
+	public void validateArgumentTypes(JCas view) throws SpecXmlException {
+		String argTypeStr = null;
+		AceArgumentTypes enumvalue;
+		try {
+			for (ArgumentType argType : JCasUtil.select(view, ArgumentType.class)) {
+				argTypeStr = argType.getCoveredText();
+				enumvalue = AceArgumentTypes.valueOf(argTypeStr);
+			}
+		} catch (IllegalArgumentException e) {
+			throw new SpecXmlException("Bad value for argument type: " + argTypeStr, e);
+		}
+	}
 	
 	@Override
 	public void process(JCas jcas) throws AnalysisEngineProcessException {
@@ -128,14 +144,16 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 			SpecXmlCasLoader loader = new SpecXmlCasLoader();
 			loader.load(jcas, tokenView, sentenceView);
 			
+			// Make sure argument type adhere to ACE types
+			validateArgumentTypes(tokenView);
+			
 			// Add linguistic segmentation annotations - Token and Sentence
 			Annotation anno;
-			Iterator<Annotation> iterToken = Iterators.concat(JCasUtil.iterator(tokenView, PredicateSeed.class), JCasUtil.iterator(tokenView, ArgumentExample.class));
-			while (iterToken.hasNext()) {
-				anno = iterToken.next();
-				Token token = new Token(tokenView, anno.getBegin(), anno.getEnd());
-				token.addToIndexes();
-				token.setPos(null); // This is technically redundant, but is here to emphasize that these tokens have a "joker POS", meaning that any POS could be considered for them
+			Iterator<Annotation> iterElement = Iterators.concat(JCasUtil.iterator(tokenView, PredicateSeed.class), JCasUtil.iterator(tokenView, ArgumentExample.class));
+			while (iterElement.hasNext()) {
+				anno = iterElement.next();
+				Sentence sentence = new Sentence(tokenView, anno.getBegin(), anno.getEnd());
+				sentence.addToIndexes();
 			}
 			Iterator<UsageSample> iterSentence = JCasUtil.iterator(sentenceView, UsageSample.class);
 			while (iterSentence.hasNext()) {

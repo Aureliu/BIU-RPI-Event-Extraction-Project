@@ -10,7 +10,7 @@ import edu.cuny.qc.scorer.Derivation;
 import edu.cuny.qc.scorer.ScorerData;
 import edu.cuny.qc.scorer.SignalMechanism;
 import edu.cuny.qc.scorer.SignalMechanismException;
-import edu.cuny.qc.scorer.SignalMechanismSpecTokenIterator;
+import edu.cuny.qc.scorer.PredicateSeedScorer;
 import edu.cuny.qc.scorer.mechanism.NomlexSignalMechanism.NomlexDeriver;
 import edu.cuny.qc.scorer.mechanism.WordNetSignalMechanism.WordnetDervRltdDeriver;
 import edu.cuny.qc.util.BrownClusters;
@@ -45,7 +45,9 @@ public class BrownClustersSignalMechanism extends SignalMechanism {
 		super();
 	}
 
-	private static abstract class BrownClustersScorer extends SignalMechanismSpecTokenIterator {
+	private static abstract class BrownClustersScorer extends PredicateSeedScorer {
+		private static final long serialVersionUID = -1714460227125952358L;
+
 		/**
 		 * Work on surface form, not lemma
 		 */
@@ -55,6 +57,7 @@ public class BrownClustersSignalMechanism extends SignalMechanism {
 		}
 	}
 	private static class SameAllClustersToken extends BrownClustersScorer {
+		private static final long serialVersionUID = -6532617761639926991L;
 		public static final SameAllClustersToken inst = new SameAllClustersToken();
 		@Override public String getForm(Token token) { return token.getCoveredText();}
 		@Override
@@ -70,6 +73,7 @@ public class BrownClustersSignalMechanism extends SignalMechanism {
 	}
 
 	private static class SameAllClustersLemma extends BrownClustersScorer {
+		private static final long serialVersionUID = 5021813890271330667L;
 		public static final SameAllClustersToken inst = new SameAllClustersToken();
 		@Override
 		public Boolean calcTokenBooleanScore(Token textToken, Map<Class<?>, Object> textTriggerTokenMap, String textStr, PartOfSpeech textPos, String specStr, PartOfSpeech specPos, ScorerData scorerData) throws SignalMechanismException
@@ -84,6 +88,7 @@ public class BrownClustersSignalMechanism extends SignalMechanism {
 	}
 
 	private static class SameLongestClusterToken extends BrownClustersScorer {
+		private static final long serialVersionUID = -5466463577011200454L;
 		public static final SameLongestClusterToken inst = new SameLongestClusterToken();
 		@Override public String getForm(Token token) { return token.getCoveredText();}
 		@Override
@@ -101,6 +106,7 @@ public class BrownClustersSignalMechanism extends SignalMechanism {
 	}
 
 	private static class SameLongestClusterLemma extends BrownClustersScorer {
+		private static final long serialVersionUID = -1179275105750214514L;
 		public static final SameLongestClusterLemma inst = new SameLongestClusterLemma();
 		@Override
 		public Boolean calcTokenBooleanScore(Token textToken, Map<Class<?>, Object> textTriggerTokenMap, String textStr, PartOfSpeech textPos, String specStr, PartOfSpeech specPos, ScorerData scorerData) throws SignalMechanismException

@@ -15,28 +15,28 @@ public class ScorerData implements Serializable {
 	//public String fullName; 
 	
 	public String basicName;
-	public transient SignalMechanismSpecIterator scorer;
-	public String scorerTypeName;
-	public transient Aggregator aggregator;
-	public String aggregatorTypeName;
-	public transient Deriver deriver;
-	public String deriverTypeName;
+	public SignalMechanismSpecIterator scorer;
+	//public String scorerTypeName;
+	public Aggregator aggregator;
+	//public String aggregatorTypeName;
+	public Deriver deriver;
+	//public String deriverTypeName;
 	public Derivation derivation;
 	public int leftSenseNum;
 	public int rightSenseNum;
 	public PartOfSpeech specificPos;
-	public transient boolean isSpecIndependent;
+	public boolean isSpecIndependent;
 	
 	public ScorerData(String basicName, SignalMechanismSpecIterator scorer,	Deriver deriver, Derivation derivation, int leftSenseNum, int rightSenseNum, PartOfSpeech specificPos, Aggregator aggregator, boolean isSpecIndependent) {
-		this.scorerTypeName = scorer.getTypeName().intern();
-		this.aggregatorTypeName = aggregator.getTypeName().intern();
-		this.deriverTypeName = deriver.getTypeName().intern();
+		//this.scorerTypeName = scorer.getTypeName().intern();
+		//this.aggregatorTypeName = aggregator.getTypeName().intern();
+		//this.deriverTypeName = deriver.getTypeName().intern();
 
 		if (basicName != null) {
 			this.basicName = basicName.intern();
 		}
 		else {
-			this.basicName = this.scorerTypeName;
+			this.basicName = scorer.getTypeName();;
 		}
 		this.scorer = scorer;
 		this.aggregator = aggregator;
@@ -70,6 +70,13 @@ public class ScorerData implements Serializable {
 		this(basicName, scorer, Aggregator.Any.inst);
 	}
 	
+	public String getAggregatorTypeName() {
+		return aggregator.getTypeName();
+	}
+	
+	public String getDeriverTypeName() {
+		return deriver.getTypeName();
+	}
 	
 	private String numSenseString(int senseNum, String title) {
 		switch(senseNum) {
@@ -85,6 +92,10 @@ public class ScorerData implements Serializable {
 			posStr = String.format("-just%s", specificPos);
 		}
 
+		// DEBUG
+		String checkNull = deriver.getSuffix();
+		checkNull = aggregator.getSuffix();
+				
 		return String.format("%s%s%s%s%s%s%s",
 				basicName,
 				numSenseString(leftSenseNum, "Text"), numSenseString(rightSenseNum, "Spec"),
@@ -97,9 +108,9 @@ public class ScorerData implements Serializable {
 	
 	@Override
 	public int hashCode() {
-	     return new HashCodeBuilder(17, 37)/*.append(fullName)*/.append(basicName)
+	     return new HashCodeBuilder(17, 37)/*.append(fullName)*/.append(basicName).append(deriver).append(aggregator)
 	    		 .append(derivation).append(leftSenseNum).append(rightSenseNum).append(specificPos)
-	    		 .append(scorerTypeName).append(aggregatorTypeName).append(deriverTypeName).toHashCode();  // for these guys only take their type names, seems to be enough
+	    		 /*.append(scorerTypeName).append(aggregatorTypeName).append(deriverTypeName)*/.toHashCode();  // for these guys only take their type names, seems to be enough
 	}
 	@Override
 	public boolean equals(Object obj) {
@@ -109,10 +120,10 @@ public class ScorerData implements Serializable {
 	     return false;
 	   }
 	   ScorerData rhs = (ScorerData) obj;
-	   return new EqualsBuilder()/*.append(fullName, rhs.fullName)*/.append(basicName, rhs.basicName)
+	   return new EqualsBuilder()/*.append(fullName, rhs.fullName)*/.append(basicName, rhs.basicName).append(deriver, rhs.deriver).append(aggregator, rhs.aggregator)
 	    	   .append(derivation, rhs.derivation).append(leftSenseNum, rhs.leftSenseNum).append(rightSenseNum, rhs.rightSenseNum).append(specificPos, rhs.specificPos)
-			   .append(scorerTypeName, rhs.scorerTypeName).append(aggregatorTypeName, rhs.aggregatorTypeName)
-			   .append(deriverTypeName, rhs.deriverTypeName).isEquals(); // for these guys only take their type names, seems to be enough
+			   /*.append(scorerTypeName, rhs.scorerTypeName).append(aggregatorTypeName, rhs.aggregatorTypeName)
+			   .append(deriverTypeName, rhs.deriverTypeName)*/.isEquals(); // for these guys only take their type names, seems to be enough
 	}
 
 }

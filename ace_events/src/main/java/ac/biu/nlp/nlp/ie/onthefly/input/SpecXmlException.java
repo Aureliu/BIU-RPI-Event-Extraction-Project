@@ -12,4 +12,8 @@ public class SpecXmlException extends Exception {
 		super(cause);
 	}
 
+	public SpecXmlException(String message, Throwable cause) {
+		super(message, cause);
+	}
+
 }

@@ -1,5 +1,6 @@
 package edu.cuny.qc.scorer;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Iterator;
 import java.util.Map;
@@ -14,8 +15,9 @@ import com.google.common.collect.Multimap;
 
 import edu.cuny.qc.perceptron.types.SignalInstance;
 
-public abstract class SignalMechanismSpecIterator implements Iterator<BigDecimal> {
+public abstract class SignalMechanismSpecIterator implements Iterator<BigDecimal>, Serializable {
 	
+	private static final long serialVersionUID = -7666054959411686538L;
 	public SignalMechanismSpecIterator init(JCas spec, String viewName, AnnotationFS covering, Class<? extends Annotation> type, Annotation textAnno, Map<Class<?>, Object> textTriggerTokenMap, ScorerData scorerData) throws SignalMechanismException {
 		try {
 			if (covering != null) {
@@ -44,7 +46,7 @@ public abstract class SignalMechanismSpecIterator implements Iterator<BigDecimal
 	@Override
 	public BigDecimal next() {
 		try {
-			specElement = specIterator.next();
+			Annotation specElement = specIterator.next();
 			BigDecimal result = calcScore(textAnno, textTriggerTokenMap, specElement, scorerData);
 			return result;
 		} catch (SignalMechanismException e) {
@@ -72,10 +74,10 @@ public abstract class SignalMechanismSpecIterator implements Iterator<BigDecimal
 	
 	public abstract BigDecimal calcScore(Annotation text, Map<Class<?>, Object> textTriggerTokenMap, Annotation spec, ScorerData scorerData) throws SignalMechanismException;
 	
-	protected Iterator<? extends Annotation> specIterator;
-	protected Annotation textAnno;
-	protected Map<Class<?>, Object> textTriggerTokenMap;
-	protected Annotation specElement;
+	protected transient Iterator<? extends Annotation> specIterator;
+	protected transient Annotation textAnno;
+	protected transient Map<Class<?>, Object> textTriggerTokenMap;
+	//protected Annotation specElement;
 	protected ScorerData scorerData;
 	public Multimap<String, String> history;  // {specTok1 = [textTok1, textTok2], specTok2=[textTok3, textTok1, textTok3]}
 	public boolean debug = false;

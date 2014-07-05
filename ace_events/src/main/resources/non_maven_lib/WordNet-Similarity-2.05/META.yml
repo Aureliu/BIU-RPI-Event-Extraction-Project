@@ -1,0 +1,22 @@
+--- #YAML:1.0
+name:                WordNet-Similarity
+version:             2.05
+abstract:            WordNet-based measures of semantic relatedness.
+license:             gpl
+generated_by:        ExtUtils::MakeMaker version 6.36
+distribution_type:   module
+requires:     
+    CGI:                           0
+    Digest::SHA1:                  0
+    File::Find:                    0
+    File::Spec:                    0
+    File::Temp:                    0
+    Getopt::Long:                  0
+    IO:                            0
+    Text::Similarity:              0.02
+    WordNet::QueryData:            1.40
+meta-spec:
+    url:     http://module-build.sourceforge.net/META-spec-v1.2.html
+    version: 1.2
+author:
+    - Ted Pedersen, Siddharth Patwardhan, Satanjeev Banerjee, Jason Michelizzi

@@ -1,0 +1,150 @@
+=head1 NAME 
+
+TODO - Todo list for WordNet::Similarity
+
+=head1 DESCRIPTION
+
+As these items are completed, move them down into Recently Completed  
+Items,  make sure to date and initial. When we have  a version release,  
+all of the recently completed items  should be moved into changelog.pod. 
+
+=head1 TODO LIST FOR FUTURE VERSIONS
+
+=over
+
+=item * 
+
+Update hso to support new derivational relations introduced in 
+WordNet 2.0
+
+=item *
+
+Update hso to support the use of a hypothetical root node. Currently (as 
+of version 0.06 and 0.07) its paths (for hypernyms) are limited to a 
+particular taxonomy. This might be problematic when it comes to nouns, 
+which are split into 9(?) separate taxonomies within WordNet. And of
+course verbs are split into hundreds of taxonomies. Right now when hso
+is on a hypernym path it isn't able to cross "up and over". Seems like it 
+should be able to do so. 
+
+Note that as of WordNet 3.0 the nouns have been joined into a single 
+hierarchy, so perhaps hso will behave differently there. 
+
+=item * 
+
+Re-write hso to make it faster and more generic. check to see if hso 
+uses hypo root node, and consider adding ability to turn on/off. 
+
+Note that as of WordNet 3.0 the hypo root node is only relevant for 
+verbs, since nouns have been joined into a single large hierarchy. 
+
+=item *
+
+Re-write *Freq.pl programs to reduce redundancy and make faster. At 
+present there are bugs in all of these programs. Create test cases that 
+are manually verified and included in testing directory. 
+
+=item * 
+
+Support --trace option on info content programs to allow for wps format 
+to be displayed in addition to (or instead of?) offset. 
+
+=item * 
+
+Run profiles of rawtextFreq.pl and BNCFreq.pl to determine where time is 
+being spent. Brown, SemCor and Treebank all seem to run reasonably 
+quickly (20 minutes, 5 minutes, and 40 minutes, respectively). Run 1 
+million words worth of BNC in order to compare with Brown and Treebank.
+
+=item * 
+
+rawtextFreq.pl runs really slowly. It may have to do with the fact that 
+raw text has no markup in the text to identify sentence boundaries or 
+otherwise guide the programs. This might particularly slow down compound 
+identification. 
+
+=item * 
+
+Makefile.PL and semCorFreq.pl seem to be somewhat alike. Can Makefile.PL
+simply call /utils/SemCorFreq.pl, or can this duplication be avoided in
+some other way?
+
+=item *
+
+Update documentation to clarify that stoplists must also be all lowercase. 
+Consider adjusting stoplists to use regular expressions. 
+
+=item * 
+
+Speed up lesk, and make it more generic. string matching is the  big 
+offender with respect to speed, and wordnet specific  stuff is the   
+problem with respect to generality. 
+
+=item * 
+
+Update lesk/vector to support new derivational relations introduced in 
+WordNet 2.0
+
+=item *
+
+Use info content programs to create new cntlist files for WordNet? 
+
+=back
+
+=head1 WISH LIST FOR FUTURE RELEASES, DO WHEN POSSIBLE
+
+=over 
+
+=item *
+
+Edge/path and jcn are both distance measures. To convert them to 
+similarity measures, we currently use 1/distance. This shifts the scale of 
+the measures and changes the relative distance between pairs. Alternatives
+are to use -dist or maxdist-dist. Computation of maxdist for path is much 
+like computation for lch (with and without hypo root node). for jcn it 
+poses a new issue, in that we would need to find the pair of concepts that 
+had the greatest individual information content, and are subsumed by a 
+root node (either hypo or "real").
+
+=item * 
+
+Check if warnings are issued when there are version clashes between info  
+content files and wordnet version. 
+
+=back
+
+=head1 AUTHORS
+
+ Ted Pedersen, University of Minnesota Duluth
+ tpederse at d.umn.edu
+
+ Siddharth Patwardhan, University of Utah, Salt Lake City
+ sidd at cs.utah.edu
+
+ Satanjeev Banerjee, Carnegie Mellon University, Pittsburgh
+ banerjee+ at cs.cmu.edu
+
+ Jason Michelizzi
+
+Last modified: $Id: todo.pod,v 1.83 2008/04/12 17:41:52 tpederse Exp $
+
+=head1 SEE ALSO
+
+L<changelog.pod>
+
+=head1 COPYRIGHT
+
+Copyright (c) 2005-2008, Ted Pedersen, Siddharth Patwardhan, Satanjeev 
+Banerjee, and Jason Michelizzi. 
+
+Permission is granted to copy, distribute and/or modify this  document  
+under the terms of the GNU Free Documentation License, Version 1.2 or any  
+later version published by the Free Software Foundation; with no  
+Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+
+Note: a copy of the GNU Free Documentation License is available on the web   
+at L<http://www.gnu.org/copyleft/fdl.html> and is included in this    
+distribution as FDL.txt. 
+
+=cut
+

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>Measures</title>
+    <link rel="stylesheet" href="sim-style.css" type="text/css">
+  </head>
+
+  <body>
+    <h1>Measures</h1>
+
+    <h2>Path length</h2>
+    <p>A simple node-counting scheme (path).  The relatedness score is inversely
+      proportional to the number of nodes along the shortest path between
+      the synsets.  The shortest possible path occurs when the two synsets
+      are the same, in which case the length is 1.  Thus, the maximum
+      relatedness value is 1.
+    </p>
+
+    <h2>Leacock &amp; Chodorow</h2>
+    <p>The relatedness measure proposed by Leacock and Chodorow (lch) is
+      -log (length / (2 * D)), where length is the length of the shortest
+      path between the two synsets (using node-counting) and D is the
+      maximum depth of the taxonomy.
+    </p>
+    <p>The fact that the lch measure takes into account the depth of the
+      taxonomy in which the synsets are found means that the behavior of
+      the measure is profoundly affected by the presence or absence of a
+      unique root node. If there is a unique root node, then there are only
+      two taxonomies: one for nouns and one for verbs. All nouns, then,
+      will be in the same taxonomy and all verbs will be in the same taxonomy.
+      D for the noun taxonomy will be somewhere around 18, depending upon
+      the version of WordNet, and for verbs, it will be 14. If the root node
+      is not being used, however, then there are nine different noun
+      taxonomies and over 560 different verb taxonomies, each with a
+      different value for D.
+    </p>
+    <p>If the root node is not being used, then it is possible for synsets
+      to belong to more than one taxonomy. For example, the synset containing
+      turtledove#n#2 belongs to two taxonomies: one rooted at group#n#1 and
+      one rooted at entity#n#1. In such a case, the relatedness is computed
+      by finding the LCS that results in the shortest path between the
+      synsets. The value of D, then, is the maximum depth of the taxonomy
+      in which the LCS is found. If the LCS belongs to more than one taxonomy,
+      then the taxonomy with the greatest maximum depth is selected (i.e.,
+      the largest value for D).
+    </p>
+
+    <h2>Wu &amp; Palmer</h2>
+    <p>The Wu & Palmer measure (wup) calculates relatedness by considering the
+       depths of the two synsets in the WordNet taxonomies, along with the
+       depth of the LCS.  The formula is
+       score = 2*depth(lcs) / (depth(s1) + depth(s2)).  This means that
+       0 &lt; score &lt;= 1.  The score can never be zero because the depth
+       of the LCS is never zero (the depth of the root of a taxonomy is one).
+       The score is one if the two input synsets are the same.
+    </p>
+
+   <h2>Resnik</h2>
+   <p>The related value is equal to the information content (IC) of the
+      Least Common Subsumer (LCS) (most informative subsumer).  This means
+      that the value will always be greater-than or equal-to zero.  The
+      upper bound on the value is generally quite large and varies depending
+      upon the size of the corpus used to determine information content values.
+      To be precise, the upper bound should be ln (N) where N is the number of
+      words in the corpus.</p>
+
+    <h2>Jiang &amp; Conrath</h2>
+    <p>The relatedness value returned by the jcn measure is equal to
+       1 / jcn_distance, where jcn_distance is equal to
+      IC(synset1) + IC(synset2) - 2 * IC(lcs).
+    </p>
+    <p>There are two special cases that need to be handled carefully when
+      computing relatedness; both of these involve the case when jcn_distance
+      is zero.
+    </p>
+    <p>In the first case, we have ic(synset1) = ic(synset2) = ic(lcs) = 0.
+      In an ideal world, this would only happen when all three concepts,
+      viz. synset1, synset2, and lcs, are the root node. However, when a
+      synset has a frequency count of zero, we use the value 0 for the
+      information content. In this first case, we return 0 due to lack of
+      data.
+    </p>
+    <p>In the second case, we have ic(synset1) + ic(synset2) = 2 * ic(ics).
+      This is almost always found when synset1 = synset2 = lcs (i.e., the
+      two input synsets are the same). Intuitively this is the case of
+      maximum relatedness, which would be infinity, but it is impossible
+      to return infinity. Insteady we find the smallest possible distance
+      greater than zero and return the multiplicative inverse of that distance.
+    </p>
+
+    <h2>Lin</h2>
+    <p>The relatedness value returned by the lin measure is a number equal
+      to 2 * IC(lcs) / (IC(synset1) + IC(synset2)). Where IC(x) is the
+      information content of x. One can observe, then, that the relatedness
+      value will be greater-than or equal-to zero and less-than or equal-to
+      one.
+    </p>
+    <p>
+      If the information content of any of either synset1 or synset2 is zero,
+      then zero is returned as the relatedness score, due to lack of data.
+      Ideally, the information content of a synset would be zero only if
+      that synset were the root node, but when the frequency of a synset
+      is zero, we use the value of zero as the information content because
+      of a lack of better alternatives.
+    </p>
+
+    <h2>Adapted Lesk (Extended Gloss Overlaps) </h2>
+    <p>The Extended Gloss Overlaps measure (lesk) works by finding overlaps in the 
+      glosses of the two synsets.  The relatedness score is the sum of the
+      squares of the overlap lengths.  For example, a single word overlap
+      results in a score of 1.  Two single word overlaps results in a score of
+      2. A two word overlap (i.e., two consecutive words) results in a score of
+      4. A three word overlap results in a score of 9.    
+    </p>
+
+    <h2>Gloss Vector</h2>
+    <p>The Gloss Vector measure (vector) works by forming second-order co-occurrence
+      vectors from the glosses or WordNet definitions of concepts. The 
+      relatedness of two concepts is determined as the cosine of the angle
+      between their gloss vectors. In order to get around the data sparsity 
+      issues presented by extremely short glosses, this measure augments the 
+      glosses of concepts with glosses of adjacent concepts as defined by 
+      WordNet relations.
+    </p>
+      
+    <h2>Gloss Vector (pairwise)</h2>
+    <p>The Gloss Vector (pairwise) measure (vector_pairs) is very similar to the "regular" Gloss
+      Vector measure, except in the way it augments the glosses of concepts with
+      adjacent glosses. The regular Gloss Vector measure first combines the 
+      adjacent glosses to form one large "super-gloss" and creates a single vector
+      corresponding to each of the two concepts from the two "super-glosses". The
+      pairwise Gloss Vector measure, on the other hand, forms separate vectors
+      corresponding to each of the adjacent glosses (does not form a single super
+      gloss). For example separate vectors will be created for the hyponyms, the 
+      holonyms, the meronyms, etc. of the two concepts. The measure then takes the
+      sum of the individual cosines of the corresponding gloss vectors, i.e. the
+      cosine of the angle between the hyponym vectors is added to the cosine of the
+      angle between the hlonym vectors, and so on. From empirical studies, we have
+      found that the regular Gloss Vector measure performs better than the pairwise
+      Gloss Vector measure.
+    </p>
+
+    <h2>Hirst &amp; St-Onge</h2>
+    <p>This measure (hso) works by finding lexical chains linking the two word
+      senses.  There are three classes of relations that are considered:
+      extra-strong, strong, and medium-strong.  The maximum relatedness
+      score is 16.
+    </p>
+      
+    <h2>Random</h2>
+    <p>The relatedness values are simply randomly generated numbers. 
+     This is intended only to be used as a baseline. 
+    </p>
+  
+  </body>
+</html>

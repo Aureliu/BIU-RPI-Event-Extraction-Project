@@ -1,0 +1,222 @@
+NAME
+    README - [documentation] Introduction to WordNet::Similarity
+
+SYNOPSIS
+    There are a number of documentation files covering different aspects of
+    WordNet::Similarity available:
+
+    * intro.pod Introduction to WordNet::Similarity (this document)
+    * install.pod How to install
+    * utils.pod How to use the utility programs in /utls
+    * modules.pod How the measure modules are designed
+    * developers.pod How to write your own measure of semantic relatedness
+    * config.pod How to set configuration options for the measures
+
+    You can use pod2html, pod2latex, pod2man, or pod2text to get this
+    documentation in a different format. See the man pages for pod2html,
+    etc. These translators should come with Perl, but you can also download
+    them from <http://search.cpan.org>.
+
+DESCRIPTION
+    This package consists of Perl modules along with supporting Perl
+    programs that implement the semantic relatedness measures described by
+    Leacock & Chodorow (1998), Jiang & Conrath (1997), Resnik (1995), Lin
+    (1998), Hirst & St-Onge (1998), Wu & Palmer (1994), the extended gloss
+    overlap measure by Banerjee and Pedersen (2002), and two measures based
+    on context vectors by Patwardhan (2003). The details of the vector
+    measure are described in the Master's thesis work of Patwardhan (2003)
+    at the University of Minnesota Duluth, and the vector_pairs measure is
+    derived from that.
+
+    The Perl modules are designed as objects with methods that take as input
+    two word senses. The semantic relatedness of these word senses is
+    returned by these methods. A quantitative measure of the degree to which
+    two word senses are related has wide ranging applications in numerous
+    areas, such as word sense disambiguation, information retrieval, etc.
+    For example, in order to determine which sense of a given word is being
+    used in a particular context, the sense having the highest relatedness
+    with its context word senses is most likely to be the sense being used.
+    Similarly, in information retrieval, retrieving documents containing
+    highly related concepts are more likely to have higher precision and
+    recall values.
+
+    A command line interface to these modules is also present in the
+    package. The simple, user-friendly interface returns the relatedness
+    measure of two given words. A number of switches and options have been
+    provided to modify the output and enhance it with trace information and
+    other useful output. Details of the usage are provided in other sections
+    of this README. Supporting utilities for generating information content
+    files from various corpora are also available in the package. The
+    information content files are required by three of the measures for
+    computing the relatedness of concepts.
+
+    The following sections describe the organization of this software
+    package and how to use it. A few typical examples are given to help
+    clearly understand the usage of the modules and the supporting
+    utilities.
+
+SEMANTIC RELATEDNESS
+    We observe that humans find it extremely easy to say if two words are
+    related and if one word is more related to a given word than another.
+    For example, if we come across two words -- 'car' and 'bicycle', we know
+    they are related as both are means of transport. Also, we easily observe
+    that 'bicycle' is more related to 'car' than 'fork' is. But is there
+    some way to assign a quantitative value to this relatedness? Some ideas
+    have been put forth by researchers to quantify the concept of
+    relatedness of words, with encouraging results.
+
+    A number of different measures of relatedness have been implemented in
+    this software package. These include a simple edge counting approach and
+    a random method for measuring relatedness. The measures rely heavily on
+    the vast store of knowledge available in the online electronic
+    dictionary -- WordNet. So, we use a Perl interface for WordNet called
+    WordNet::QueryData to make it easier for us to access WordNet. The
+    modules in this package REQUIRE that the WordNet::QueryData module be
+    installed on the system before these modules are installed.
+
+CONTENTS
+    The package contains the semantic relatedness modules, some support Perl
+    utilities and some sample configuration files, data files and programs.
+
+  Modules
+    All the modules that will be installed in the Perl system directory are
+    present in the '/lib' directory tree of the package. These include the
+    semantic relatedness modules -- jcn.pm, res.pm, lin.pm, lch.pm, hso.pm,
+    lesk.pm, vector.pm, vector_pairs.pm, wup.pm, path.pm and random.pm --
+    present in the /lib/WordNet/Similarity subdirectory and the supporting
+    modules get_wn_info.pm and string_compare.pm. There also exists a
+    WordNet/Similarity.pm module that currently serves as a base class for
+    all the relatedness modules and contains Perl documentation. All these
+    modules, once installed in the Perl system directory, can be directly
+    used by Perl programs.
+
+  Supporting Utilities
+    The '/utils' subdirectory of the package contains supporting Perl
+    programs. 'similarity.pl' is a command-line interface to the relatedness
+    modules. A number of Perl programs, that generate information content
+    files from various corpora, are provided. As part of the standard
+    install, these are also installed into the system directories, and can
+    be accessed from any working directory if the common system directories
+    (/usr/bin, /usr/local/bin, etc) are in your path.
+
+  Samples
+    If you downloaded this package as a tar-gzipped file from the web, you
+    will find a '/samples' subdirectory in the package. There is a separate
+    README in that directory. The directory contains sample configuration
+    files for the modules, sample programs showing usage of the modules and
+    sample data files (e.g., relation files).
+
+REFERENCES
+    1   Wu Z. and Palmer M. 1994. Verb Semantics and Lexical Selection. In
+        Proceedings of the 32nd Annual Meeting of the Association for
+        Computational Linguistics. Las Cruces, New Mexico.
+
+    2   Resnik P. 1995. Using information content to evaluate semantic
+        similarity. In Proceedings of the 14th International Joint
+        Conference on Artificial Intelligence, pages 448-453. Montreal.
+
+    3   Jiang J. and Conrath D. 1997. Semantic similarity based on corpus
+        statistics and lexical taxonomy. In Proceedings of International
+        Conference on Research in Computational Linguistics. Taiwan.
+
+    4   Fellbaum C., editor. WordNet: An electronic lexical database. MIT
+        Press, 1998.
+
+    5   Leacock C. and Chodorow M. 1998. Combining local context and WordNet
+        similarity for word sense identification. In Fellbaum 1998, pp.
+        265-283.
+
+    6   Lin D. 1998. An information-theoretic definition of similarity. In
+        Proceedings of the 15th International Conference on Machine
+        Learning. Madison, WI.
+
+    7   Hirst G. and St-Onge D. 1998. Lexical Chains as representations of
+        context for the detection and correction of malapropisms. In
+        Fellbaum 1998, pp. 305-332.
+
+    8   Schütze H. 1998. Automatic Word Sense Discrimination. Computational
+        Linguistics, 24(1):97-123.
+
+    9   Resnik P. 1999. Semantic Similarity in a Taxonomy: An Information-
+        Based Measure and its Applications to Problems of Ambiguity in
+        Natural Language. Journal of Artificial Intelligence Research, 11,
+        95-130.
+
+    10  Budanitsky A. and Hirst G. 2001. Semantic distance in WordNet: An
+        experimental, application-oriented evaluation of five measures. In
+        Workshop on WordNet and Other Lexical Resources, Second meeting of
+        the North American Chapter of the Association for Computational
+        Linguistics. Pittsburgh, PA.
+
+    11  Banerjee S. and Pedersen T. 2002. An Adapted Lesk Algorithm for Word
+        Sense Disambiguation Using WordNet. In Proceeding of the Fourth
+        International Conference on Computational Linguistics and
+        Intelligent Text Processing (CICLING-02). Mexico City.
+
+    12  Patwardhan S., Banerjee S. and Pedersen T. 2002. Using Semantic
+        Relatedness for Word Sense Disambiguation. In Proceedings of the
+        Fourth International Conference on Intelligent Text Processing and
+        Computational Linguistics. Mexico City.
+
+    13  Banerjee S. and Pedersen T. 2003. Extended Gloss Overlaps as a
+        Measure of Semantic Relatedness. In the Proceedings of the
+        Eighteenth International Joint Conference on Artificial
+        Intelligence. Acapulco, Mexico.
+
+    14  Patwardhan S. and Pedersen T. 2006. Using WordNet-based Context
+        Vectors to Estimate the Semantic Relatedness of Concepts. In the
+        Proceedings of the EACL 2006 Workshop Making Sense of Sense -
+        Bringing Computational Linguistics and Psycholinguistics Together.
+        Trento, Italy.
+
+    15  Banerjee S. Adapting the Lesk algorithm for word sense
+        disambiguation to WordNet. Master Thesis, University of Minnesota,
+        Duluth, 2002.
+
+    16  Patwardhan S. Incorporating dictionary and corpus information into a
+        vector measure of semantic relatedness. Master Thesis, University of
+        Minnesota, Duluth, 2003.
+
+SEE ALSO
+    intro.pod
+
+    Mailing list: <http://groups.yahoo.com/group/wn-similarity>
+
+    Project Home page: <http://wn-similarity.sourceforge.net>
+
+ACKNOWLEDGEMENTS
+    We would like to thank the following for their support and contribution
+    towards the development of this package. We thank Jason Rennie for his
+    QueryData package, the WordNet guys at Princeton for WordNet, Resnik,
+    Hirst, St-Onge, Jiang, Conrath, Lin, Wu, Palmer, Leacock, and Chodorow
+    for their algorithms and work on the relatedness measures. We also thank
+    Bano (Satanjeev Banerjee) for his work on the extended gloss overlap
+    module. We are grateful to Wybo Wiersma for contributing his
+    optimizations to the GlossFinder code. We also appreciate the many
+    helpful suggestions and bug patches from Ben Haskell.
+
+AUTHORS
+     Ted Pedersen, University of Minnesota Duluth
+     tpederse at d.umn.edu
+
+     Siddharth Patwardhan, University of Utah, Salt Lake City
+     sidd at cs.utah.edu
+
+     Satanjeev Banerjee, Carnegie Mellon University, Pittsburgh
+     banerjee+ at cs.cmu.edu
+
+     Jason Michelizzi
+
+COPYRIGHT
+    Copyright (c) 2005-2008, Ted Pedersen, Siddharth Patwardhan, Satanjeev
+    Banerjee, and Jason Michelizzi
+
+    Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.2 or
+    any later version published by the Free Software Foundation; with no
+    Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+
+    Note: a copy of the GNU Free Documentation License is available on the
+    web at <http://www.gnu.org/copyleft/fdl.html> and is included in this
+    distribution as FDL.txt.
+

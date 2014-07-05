@@ -1,0 +1,691 @@
+# Run perldoc on this file to get nice, formatted documentation
+
+=head1 NAME
+
+UTILS - [documentation] WordNet::Similarity supporting utilities 
+
+=head1 SYNOPSIS
+
+The '/utils' subdirectory of the package contains supporting Perl
+programs. 'similarity.pl' is a command-line interface to the relatedness
+modules. A number of Perl programs that generate information content files
+from various corpora are provided. 'wnDepths.pl' is a program that will
+generate files with the depths of WordNet synsets and the maximum depths
+of WordNet taxonomies.  As part of the standard install, these
+are also installed into the system directories, and can be accessed from
+any working directory if the common system directories (/usr/bin,
+/usr/local/bin, etc.) are in your path.
+
+=head1 DESCRIPTION
+
+The '/utils' directory of the package contains a few support Perl programs,
+that use the WordNet::Similarity modules or generate data files for it. As
+part of the standard installation these are installed into the system
+directories (such as /usr/bin or /usr/local/bin) from where they can be
+easily accessed.
+
+
+=head2 similarity.pl
+
+The similarity.pl program provides a command-line interface to the
+relatedness modules. 
+
+=head3 Usage
+
+Usage: similarity.pl [{--type TYPE [--config CONFIGFILE] [--allsenses]
+                                   [--offsets] [--trace] [--wnpath PATH] 
+                                   [--simpath SIMPATH] 
+                      {--interact --file FILENAME | WORD1 WORD2}
+                     |--help
+                     |--version }]
+
+Displays the semantic similarity between the base forms of WORD1 and
+WORD2 using various similarity measures described in Budanitsky Hirst
+(2001). The parts of speech of WORD1 and/or WORD2 can be restricted
+by appending the part of speech (n, v, a, r) to the word.
+(For eg. car#n will consider only the noun forms of the word 'car' and
+walk#nv will consider the verb and noun forms of 'walk').
+Individual senses of can also be given as input, in the form of
+word#pos#sense strings (For eg., car#n#1 represents the first sense of
+the noun 'car').
+
+=head3 Options
+
+=over
+
+=item --type
+
+Switch to select the type of similarity measure
+to be used while calculating the semantic
+relatedness. The following strings are defined.
+
+  L<WordNet::Similarity::path>         Simple node-counts (inverted).
+  L<WordNet::Similarity::wup>          The Wu Palmer measure.
+  L<WordNet::Similarity::lch>          The Leacock Chodorow measure.
+  L<WordNet::Similarity::jcn>          The Jiang Conrath measure.
+  L<WordNet::Similarity::res>          The Resnik measure.
+  L<WordNet::Similarity::lin>          The Lin measure.
+  L<WordNet::Similarity::hso>          The Hirst St-Onge measure.
+  L<WordNet::Similarity::lesk>         Extended gloss overlap measure.
+  L<WordNet::Similarity::vector>       Gloss Vector measure.
+  LWordNet::Similarity::vector_pairs>  Gloss Vector measure (pairwise).
+  L<WordNet::Similarity::random>       A random-number "measure".
+
+=item --config
+
+Module-specific configuration file CONFIGFILE. This file
+contains the configuration that is used by the
+WordNet::Similarity modules during initialization. The format
+of this file is specific to each modules and is specified in
+the module man pages and in the documentation of the
+WordNet::Similarity package. See L<config.pod> for more details.
+
+=item --allsenses
+
+Displays the relatedness between every sense pair of the
+two input words WORD1 and WORD2.
+
+=item --offsets
+
+Displays all synsets (in the output, including traces) as
+synset offsets and part of speech, instead of the
+word#partOfSpeech#senseNumber format used by QueryData.
+With this option any WordNet synset is displayed as
+word#partOfSpeech#synsetOffset in the output.
+
+=item --trace
+
+Switches on 'Trace' mode. Displays as output on STDOUT,
+the various stages of the processing. This option overrides
+the trace option in the module configuration file (if
+specified).
+
+=item --interact
+
+Starts the interactive mode. Useful for demoes, debugging,
+and generally messing around with the measures.
+
+=item --file
+
+Allows the user to specify an input file FILENAME
+containing pairs of word whose semantic similarity needs
+to be measured. The file is assumed to be a plain text
+file with pairs of words separated by newlines, and the
+words of each pair separated by a space.
+
+=item --wnpath
+
+Option to specify the path of the WordNet data files
+as PATH. (Defaults to /usr/local/WordNet-2.0/dict on Unix
+systems and C:\WordNet\2.0\dict on Windows systems)
+
+=item --simpath
+
+If the relatedness module to be used, is locally installed,
+then SIMPATH can be used to indicate the location of the local
+install of the measure.
+
+=item --help
+
+Displays this help screen.
+
+=item --version
+
+Displays version information.
+
+=back
+
+NOTE: The environment variables WNHOME and WNSEARCHDIR, if present,
+are used to determine the location of the WordNet data files.
+Use '--wnpath' to override this.
+
+ANOTHER NOTE: For the information-content based measures, similarity.pl
+without the '--config' option invokes the relatedness modules using the
+default information content file generated during installation of the
+modules. If, however, the version of WordNet being used has changed since
+that time, or for some reason the modules are unable to locate the default
+information content files, then alternate information content files can be
+specified only via the configuration file. Utilities to generate
+information content files have been provided in the package. For the
+WordNet::Similarity::vector_pairs measure, it is mandatory to provide the
+location of a word vector data file and this can be only done by using the
+'--config' option. In short, the '--config' option is REQUIRED for the
+WordNet::Similarity::vector_pairs measure.
+
+YET ANOTHER NOTE: During any given session, only one of three modes of 
+input can be specified to the program -- command-line input (WORD1 WORD2), 
+file input (--file option) or the interactive input (--interact option). If 
+more than one mode of input is invoked at a given time, only one of those 
+modes will work, according to the following levels of priority:
+  interactive mode (--interact option) has highest priority.
+  file input (--file option) has medium priority.
+  command-line input (WORD1 WORD2) has lowest priority.
+
+Compound words may also be given as input to similarity.pl. They may be
+specified using underscores for spaces (as in WordNet) or may be enclosed
+within double quotes.
+
+For example:
+
+ similarity.pl --type WordNet::Similarity::jcn school private_school
+
+ similarity.pl --type WordNet::Similarity::lch "interest rate" bank
+
+Here 'private school' and 'interest rate' are the compound words intended
+in the two examples, respectively. 
+
+ANOTHER NOTE: Using the '--file' option however, does not allow us to use
+both methods of entering compound words in the input file. The compound
+words in the input file may be entered only using underscores for spaces
+(the double quotes option is not available for input via the input file).
+
+The part of speech of the input word(s) may be restricted to one or more 
+parts of speech by appending '#' followed by a combination of one or more
+of 'n', 'v', 'a' or 'r' (for nouns, verbs, adjectives and adverbs) to the
+one or both words. 
+
+A particular sense of a particular word may also be specified as input in
+the word#pos#sense format. Here 'pos' is exactly one of 'n', 'v', 'a' or
+'r'.
+
+For example:
+
+ similarity.pl --type WordNet::Similarity::jcn school#n child#n
+
+ similarity.pl --type WordNet::Similarity::lesk "interest rate#n" bank#nv
+
+ similarity.pl --type WordNet::Similarity::hso telephone talk#v
+
+ similarity.pl --type WordNet::Similarity::vector_pairs word#n#2 newspaper#v
+
+ similarity.pl --type WordNet::Similarity::random chat#n#1 talk#v#2
+
+- Interpreting the output
+
+In the simplest case interpreting the output is rather straightforward.
+This is the case when just the semantic relatedness of two words has been
+requested. The output, in this case, consists of the two words and the
+relatedness value. However, when the '--allsenses' option or the '--trace'
+option is specified, the program needs to display in the output, WordNet
+synsets. In order to do this, we decided to adopt the convention introduced
+by Jason Rennie in the WordNet::QueryData module to represent the WordNet
+synsets.According to this convention a synset is represented by
+
+=over
+
+=item (1)
+
+a representative word from that synset 
+
+=item (2)
+
+its part of speech and 
+
+=item (3)
+
+a number specifying the sense number of the word (in this synset) 
+
+=back
+
+For example, consider the synset (teacher, instructor) from the noun data
+file of WordNet. Here the words 'teacher' as well as 'instructor' are each
+in their first sense. Using the above convention this synset may be
+represented by 'teacher#n#1' or by 'instructor#n#1'.
+
+Besides this, if '--offsets' command-line option is used, a small variation
+of the above convention is used that displays the offset of the synset (in
+the WordNet data file) instead of the sense number. The above synset could
+then be represented by 'teacher#n#8562747' or 'instructor#n#8562747', since
+8562747 if the offset of this synset in the noun data file of WordNet 1.7.
+
+The first convention was adopted as the default, since synset offsets vary
+between different versions of WordNet, while sense numbers of words would
+more or less remain constant.
+
+=head3 Typical usage examples
+
+=over
+
+=item (1)
+
+Suppose you wanted to find the measure of relatedness between 'car' and
+'bicycle', using the Jiang-Conrath measure.
+
+    similarity.pl --type WordNet::Similarity::jcn car bicycle
+
+=item (2)
+
+Suppose you need to find the relatedness of the noun forms of 'comb'
+and 'hair' using the Leacock-Chodorow measure and also your WordNet
+database files happen to be located at /WordNet-2.0/dict, then you would
+have 
+
+    similarity.pl --type WordNet::Similarity::lch --wnpath /WordNet-2.0/dict comb#n hair#n
+
+If the --wnpath option is not given, the program looks for the path to
+the data files in the WNHOME and the WNSEARCHDIR environment
+variables. If these have also not been specified, then by default the
+program assumes that the WordNet data files reside in the directory
+/usr/local/WordNet-2.0/dict on a Unix machine and in C:\WordNet\2.0\dict
+on a Windows machine.
+
+=item (3)
+
+An example using a data file as input to the program (using the
+Jiang-Conrath measure for this example)
+
+    similarity.pl --type WordNet::Similarity::jcn --file testfile
+
+=item (4)
+
+Displaying relatedness between all senses of the two words along with
+traces.
+
+    similarity.pl --type WordNet::Similarity::lch --allsenses --trace paper pencil
+
+=item (5)
+
+Displaying the relatedness between the verb form of 'talk' and all
+parts of speech of 'speaker', with traces using the extended gloss
+overlap measure.
+
+ similarity.pl --type WordNet::Similarity::lesk --trace speaker talk#v
+
+=item (6)
+
+Using a configuration file "/home/sid/lesk.conf" to specify the
+configuration options to the WordNet::Similarity::lesk module.
+
+    similarity.pl --type WordNet::Similarity::lesk --config /home/sid/lesk.conf duck fowl
+
+=item (7)
+
+To display version information.
+
+    similarity.pl --version
+
+=item (8)
+
+To display detailed help.
+
+    similarity.pl --help
+
+=back
+
+=head2 Information content programs
+
+Three of the measures provided within the package require information
+content values of concepts (WordNet synsets) for computing the semantic
+relatedness of concepts. We provide these measures with frequency counts of
+WordNet synsets computed from large corpora of text, in files called
+information content files. A number of programs have been provided in the
+'/utils' subdirectory to generate information content files from various
+different corpora of text available. 
+
+  L<BNCFreq.pl>        -- from the BNC corpus. 
+  L<brownFreq.pl>      -- from the Brown corpus. 
+  L<semCorFreq.pl>     -- from SemCor X.X (using the sense tags). 
+  L<semCorRawFreq.pl>  -- from SemCor X.X (ignoring the sense tags). 
+  L<treebankFreq.pl>   -- from the Treebank corpus.
+  L<rawtextFreq.pl>    -- from raw text.
+
+All the six have a similar interface, however there are slight differences
+in the way the programs are called on the command-line due to the
+differences in the organization and format of the various corpora. But the
+following sub-sections give the typical usage and examples of all these
+programs. Please use the '--help' switch of each of the programs for the
+exact usage and help.
+
+=head3 Usage
+
+ <utility> [{--outfile OUTFILE 
+           [--stopfile STOPFILE] [--wnpath WNPATH] 
+           [--resnik] [--smooth SCHEME] PATH
+           | --help 
+           | --version }]
+
+Here <utility> is one of the Perl programs provided, that generates an
+information content file from a large corpus of text. This program computes
+the information content of concepts, by counting the frequency of their
+occurrence in a corpus. PATH specifies the files of the corpus or the root
+of the directory tree containing the text of the corpus. Each utility has a
+different way in which the input files may be specified to it. Please use
+
+  <utility> --help
+
+to get the <utility>-specific idiosyncrasies.
+
+=head3 Options:
+
+=over
+
+=item --outfile
+
+Specifies the output file OUTFILE.
+
+=item --stopfile
+
+STOPFILE is a list of stop listed words that will
+not be considered in the frequency count.
+
+=item --wnpath
+
+Option to specify WNPATH as the location of WordNet data
+files. If this option is not specified, the program tries
+to determine the path to the WordNet data files using the
+WNHOME environment variable.
+
+=item --resnik
+
+To enable the counting of frequencies using the method
+described by Resnik [3]. This was the method of counting
+originally used. We implemented a different scheme of
+counting described in our publication (Patwardhan,
+Banerjee and Pedersen [9]).
+
+=item --smooth
+
+Specifies the smoothing to be used on the probabilities
+computed. SCHEME specifies the type of smoothing to
+perform. It is a string, which can be only be 'ADD1'
+as of now. Other smoothing schemes will be added in
+future releases.
+
+=item --help
+
+Displays this help screen.
+
+=item --version
+
+Displays version information.
+
+=back
+
+A sample COMPFILE containing the list of compounds in WordNet 2.0 is
+present is the '/samples' subdirectory. A utility called compounds.pl has
+been provided in the '/utils' subdirectory. This utility generates a list
+of compounds present in your version of WordNet and can be used to generate
+a file containing the list of compounds in WordNet as follows:
+
+    compounds.pl > compounds.dat
+
+In this case compounds.pl detects the location of the WordNet data files
+using the WNHOME environment variable. If the WNHOME environment variable
+has not been set up it tries default locations (C:\Program Files\WordNet\2.0 
+on Windows and /usr/local/WordNet-2.0 on a Unix system). Another way to
+specify the location of the WordNet data files is by using the '--wnpath'
+option in compounds.pl, like so
+
+    compounds.pl --wnpath /usr/local/WordNet-2.0 > compounds.dat
+
+- The utility-specific idiosyncrasies
+
+=over
+
+=item (a)
+
+BNCFreq.pl -- This utility creates the information content file from
+the word frequencies counted from the British National Corpus. The data
+files in the BNC are XML tagged files present in a 2-level directory
+structure. In a typical BNC install, the data files of the BNC reside
+in /BNC-world/Texts subpath of the BNC installation. This is the path
+that needs to be specified to BNCFreq.pl to count the frequency of words:
+
+    BNCFreq.pl [OPTIONS] /home/sid/BNC-world/Texts
+
+=item (b)
+
+brownFreq.pl -- The version of the Brown corpus that we used
+contained the data files in the BROWN1 and BROWN2 subdirectories of the
+Brown corpus installation. Both directories contain the same data formatted
+a little differently. These files are provided to the brownFreq.pl
+utility as a list of files (commonly specified by wildcards, as follows):
+
+    brownFreq.pl [OPTIONS] /home/sid/Brown/BROWN1/*.TXT
+
+=item (c)
+
+semCorRawFreq.pl -- These information content files are computed using 
+SemCor, but ignore the sense tags. SemCor X.X was downloaded from Dr.  
+Rada Mihalcea's website http://www.cs.unt.edu/~rada/software.html and is a  
+sense tagged subset of the Brown Corpus and the Red Badge of Courage. The  
+tagged data files are present  in the /brown1/tagfiles subdirectory of the  
+extracted package. These files are provided to the semCorRawFreq.pl  
+utility as a list of files (using wildcards):
+
+    semCorRawFreq.pl [OPTIONS] /home/sid/semcorXX/brown1/tagfiles/*
+
+where XX is the the version of semCor appropriate for the version of 
+WordNet being used. 
+
+=item (d)
+
+semCorFreq.pl -- These information content files are computed from
+SemCor X.X (using the sense tags). The word frequencies for these have
+already been computed and are distributed as a part of the standard
+distribution of WordNet. Thus only the location of the WordNet data files
+need be specified for this utility (using the WNHOME environment variable
+or the '--wnpath' option).
+
+    semCorFreq.pl [OPTIONS]       
+
+=item (e)
+
+treebankFreq.pl -- This utility computes the information content files
+from the Treebank corpus (only the Wall Street Journal articles). The Wall
+Street Journal articles are usually present in the /raw/wsj subdirectory of
+the Treebank installation. Only this needs to be specified when using this
+utility:
+
+    treebankFreq.pl [OPTIONS] /home/sid/treebank/raw/wsj
+
+=item (f)
+
+rawtextFreq.pl -- To compute the information content files from raw
+text, only the raw text file(s) need to be specified as the input.  A good
+source of raw text files is the Gutenberg Project: http://www.gutenberg.org
+
+
+=back 
+
+=head3 Some typical examples
+
+=over
+
+=item (1)
+
+In order to generate the information content file from the BNC, we type
+the command:
+
+ BNCFreq.pl --outfile infoBNC.dat /home/sid/BNC-world/Texts
+
+Here '/home/sid/BNC-world/Texts' is the path containing the BNC. Ouptut
+information content file is infoBNC.dat.
+
+=item (2)
+
+Frequency counts generated from the Brown corpus, using a stop-list.
+
+ brownFreq.pl --outfile infoBrown.dat --stopfile stop.txt /home/sid/Brown/*
+
+Uses the file 'stop.txt' containing stop words -- words that are
+ignored while counting the frequencies.
+
+=item (3)
+
+Frequency counts generated from a raw text file, using Resnik
+counting.
+
+ rawtextFreq.pl --outfile infoRawText.dat --resnik /home/sid/Texts/WorldWar.txt
+
+WorldWar.txt is the raw text file. infoRawText.dat is the output
+information content file.
+
+=item (4)
+
+Using a the Treebank corpus (WSJ articles) to generate an information
+content file with the option for Add-1 smoothing.
+
+ treebankFreq.pl --outfile tbInfo.dat --smooth ADD1 /home/sid/treebank/raw/wsj
+
+'tbInfo.dat' is the output file. '/home/sid/treebank/raw/wsj' is the
+path to the Wall Street Journal articles of the Treebank corpus. The
+'--smooth ADD1' requests the program to use Add-1 smoothing of the
+frequency counts. It adds 1 to all frequency counts to prevent any 0
+frequency values.
+
+=back
+
+=head2 wordVectors.pl
+
+The WordNet::Similarity::vector_pairs module requires a file
+containing co-occurrence vectors for all the words in the WordNet
+glosses. The utility wordVectors.pl has been provided to generate such a
+database file. This utility generates co-occurrence vectors from the
+WordNet glosses themselves. Utilities to generate these from other corpora
+will be provided in future releases of this software.
+
+ Usage: wordVectors.pl [{ [--stopfile STOPLIST]
+                         [--wnpath WNPATH] [--noexamples] [--cutoff VALUE]
+                         [--rhigh RHIGH] [--rlow RLOW] [--chigh CHIGH] 
+                         [--clow CLOW] DBFILE 
+                      | --help
+                      | --version }]
+
+This program writes out word vectors computed from WordNet glosses in
+a database file specified by filename DBFILE.
+
+Options:
+
+=over
+
+=item --stopfile
+
+Option specifying a list of stopwords to not be
+considered while counting.
+
+=item --wnpath
+
+WNPATH specifies the path of the WordNet data files.
+Ordinarily, this path is determined from the $WNHOME
+environment variable. But this option overides this
+behavior.
+
+=item --noexamples
+
+Removes examples from the glosses before processing.
+
+=item --cutoff
+
+Option used to restrict the dimensions of the word
+vectors with an tf/idf cutoff. VALUE is the cutoff
+above which is an acceptable tf/idf value of a word.
+
+=item --rhigh
+
+RHIGH is the upper frequency cutoff of the words
+selected to have a word-vector entry in the database.
+
+=item --rlow
+
+RLOW is the lower frequency cutoff of the words
+selected to have a word-vector entry in the database.
+
+=item --chigh
+
+CHIGH is the upper frequency cutoff of words that form
+the dimensions of the word-vectors.
+
+=item --clow
+
+CLOW is the lower frequency cutoff of words that form
+the dimensions of the word-vectors.
+
+=item --help
+
+Displays help screen.
+
+=item --version
+
+Displays version information.
+
+=back
+
+A useful utility called 'readDB.pl' has been included in the package, so
+as to be able to view the word vectors formed and stored in the database.
+
+=head2 wnDepths.pl
+
+The lch and wup measures both need files that contain certain types of
+information about the WordNet taxonomies.  The wup measure needs a file
+that lists the depth of every synset in its taxonomy(-ies), and the lch
+measure needs a file that lists the maximum depth of each taxonomy.  The
+wnDepths.pl program can generate both of these files.
+
+ Usage: wnDepths.pl [[--wnpath=PATH] [--outfile=FILE] [--depthfile=FILE]
+                     [--wps] [--verbose]]
+                    | --help | --version]
+Options:
+
+=over
+
+=item --wnpath=PATH
+
+PATH is the path to WordNet.  The default is
+/usr/local/WordNet-2.0/dict on Unix and C:\WordNet\2.0\dict on Windows
+
+=item --outfile=FILE
+
+File to which the maximum depths of the taxonomies should be output.
+
+=item --depthfile=FILE
+
+File to which the depth of every synset should be output
+
+=item --wps
+
+output is in 'word#part_of_speech#sense format instead of offset format
+
+=item --verbose
+
+be verbose
+
+=item --help
+
+show this help message
+
+=item --version
+
+show version information
+
+=back
+
+=head1 AUTHORS
+
+ Ted Pedersen, University of Minnesota, Duluth
+ tpederse at d.umn.edu
+
+ Siddharth Patwardhan, University of Utah
+ sidd at cs.utah.edu
+
+ Satanjeev Banerjee, Carnegie-Mellon University
+ banerjee+ at cs.cmu.edu
+
+ Jason Michelizzi 
+
+=head1 COPYRIGHT
+
+Copyright (c) 2005 - 2008, Ted Pedersen, Siddharth Patwardhan, Satanjeev Banerjee,
+and Jason Michelizzi
+
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.2
+or any later version published by the Free Software Foundation;
+with no Invariant Sections, no Front-Cover Texts, and no Back-Cover
+Texts.
+
+Note: a copy of the GNU Free Documentation License is available on
+the web at L<http://www.gnu.org/copyleft/fdl.html> and is included in
+this distribution as FDL.txt.
+
+=cut

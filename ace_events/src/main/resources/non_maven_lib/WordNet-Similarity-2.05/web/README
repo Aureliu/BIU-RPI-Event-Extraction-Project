@@ -1,0 +1,126 @@
+WordNet::Similarity Web Interface
+=================================
+
+The web interface distribution contains two CGI scripts, which are in the
+cgi-bin directory:
+
+cgi-bin/similarity.cgi
+cgi-bin/wps.cgi
+
+The interface employs a client-server model.  The two CGI scripts,
+similarity.cgi and wps.cgi, are the clients that request information
+from the similarity server (similarity_server.pl) The similarity
+server is distributed as one of the utilities (in the /utils directory)
+in this package.
+
+The similarity server is a network interface to the WordNet::Similarity
+measures. It is similarity_server.pl that actually interacts with WordNet
+and computes relatedness scores. It loads all the similarity modules,
+and sits on a machine listening for network requests for relatedness
+information. A client can then connect to this similarity server and
+request information about semantic relatedness of words and concepts.
+This information, if available, will be returned by the similarity server
+to the client over the netwrok connection.
+
+In the web interface, similarity.cgi and wps.cgi are the clients that
+connect to the similarity server to request similarity/relatedness
+information. The information retrieved by these two clients from the
+server is then presented via web-pages to the end-user. Thus, wps.cgi
+and similarity.cgi form part of the web-server creating web pages to
+serve up to the end-user, using information obtained from the
+backend similarity server (similarity_server.pl). Here is a block
+schematic:
+
+
+[Similarity Server] <-----> [Web Server] <-----> [End User]
+                          (similarity.cgi)        (browser)
+                             (wps.cgi)
+
+
+The similarity_server.pl can be run on the same machine on which your
+webserver is running or it can be on a different machine.  Running
+similarity_server.pl on a different machine than the webserver can be
+useful if you have only limited control over the webserver machine (for
+example, you might not be able to install WordNet on the webserver
+machine).
+
+Quick Installation Instructions
+-------------------------------
+
+This guide assumes that you are using the Apache webserver as installed
+on a Fedora/RedHat based Linux distribution. If you are using a 
+different server or Linux distribution, then the setup process will 
+probably vary a little.
+
+Step 1
+------
+Put the similarity.cgi and wps.cgi scripts whereever CGI scripts go on your
+webserver (e.g., /usr/local/apache2/cgi-bin). In order to keep your system 
+somewhat organized, you may want to put them in a subdirectory in your cgi 
+directory (e.g., /usr/local/apache2/cgi-bin/similarity). These  
+instructions generally assume the latter.  
+
+There are various html, style sheets, and images in the 'doc' directory  
+of the distribution. These should be put wherever html documents go on  
+your webserver (e.g., /usr/local/apache2/htdocs). In order to keep your  
+system somewhat organized, you may want to put them in a subdirectory in  
+your html directory (e.g., /usr/local/apache2/htdocs/similarity). These 
+instructions generally assume the latter. 
+
+Note that if you are using Ubuntu Linux, your cgi-bin directory is 
+typically found at /usr/lib/cgi-bin and documents are found in /var/www
+
+Step 2
+------
+
+The following two files may need to be edited:
+
+similarity.cgi
+wps.cgi
+
+- similarity.cgi
+   * change $remote_host to be the hostname or IP addr of the machine
+     on which similarty_server.pl is located.  If similarity_server.pl is
+     running on the same machine as your web server, then 'localhost' or
+     '127.0.0.1' will work.  Note: the setting for $remote_host and
+     $remote_port in similarity.cgi are not related to Apache's LISTEN
+     setting.  In fact, $remote_port needs to be different than the
+     port on which Apache is listening.
+
+   * set $doc_base to be the relative path to the HTML files that are
+     in the 'doc' directory in the distribution. For example, if you
+     have the .cgi files in /usr/local/apache2/cgi-bin/similarity and 
+     the HTML files in /usr/local/apache2/htdocs/similarity, then you  
+     would set $doc_base to '../../similarity'.  Note: this  
+     variable is not (closely) related to Apache's DOCUMENT_ROOT setting.
+
+- wps.cgi
+   * $remote_host should be the same as $remote_host for similarity.cgi. 
+     $doc_base is the location of a style sheet (sim-style.css), which
+     is often the same as $doc_base in similarity.cgi. 
+
+Step 3
+------
+Start similarity_server.pl, by running:
+
+$ similarity_server.pl
+
+A number of options are available for running the server. Please see the
+documentation of similarity_server.pl for more information on this. This
+utility should be installed along with all the other utilities as part of
+the installation of the WordNet::Similarity package.
+
+COPYRIGHT
+---------
+
+Copyright (c) 2005-2008, Ted Pedersen and Jason Michelizzi
+
+This distribution is free software; you may redistribute and/or modify it
+under the terms of the GNU General Public License, version 2 or, at your
+option, any later version.
+
+SEE ALSO
+--------
+http://wn-similarity.sourceforge.net
+http://groups.yahoo.com/group/wn-similarity/
+

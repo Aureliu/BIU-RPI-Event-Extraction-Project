@@ -1,0 +1,276 @@
+=head1 NAME
+
+INSTALL - [documentation] How to install WordNet::Similarity
+
+=head1 SYNOPSIS
+
+ perl Makefile.PL
+
+ make
+
+ make test
+
+ make install
+
+=head1 DESCRIPTION
+
+=head2 Prerequisites
+
+You need to have WordNet (version 3.0) installed, L<WordNet::QueryData>
+(version 1.40 or later), and L<Text::Similarity> (version 0.04 or later)
+installed.
+
+ [NOTE: However, if you're using WordNet 3.0, you must use
+ WordNet::QueryData v1.46 or above. WordNet::QueryData v1.40 through
+ v1.45 can only be used with WordNet 2.1.]
+
+WordNet is available at L<http://wordnet.princeton.edu>, 
+L<WordNet::QueryData>
+is available from L<http://search.cpan.org/dist/WordNet-QueryData>, and
+L<Text::Similarity> is available from 
+L<http://search.cpan.org/dist/Text-Similarity>.
+
+You should set the WNHOME environment variable to the location where you
+have WordNet installed; see the L<WordNet::QueryData> documentation for 
+more information.
+
+=head2 Installing
+
+The usual way to install the package is to run the following commands:
+
+ perl Makefile.PL
+
+ make
+
+ make test
+
+ make install
+
+If you can't set the WNHOME environment variable, you can use the WNHOME
+option when running S<perl Makefile.PL>.  For example,
+
+ perl Makefile.PL WNHOME=/usr/local/WordNet-3.0
+
+You will often need root access/superuser priviledges to run S<make install>.
+The module can also be installed locally.  To do a local install, you need
+to specify a PREFIX option when you run 'perl Makefile.PL'.  For example,
+
+ perl Makefile.PL PREFIX=/home/sid
+
+or
+
+ perl Makefile.PL LIB=/home/sid/lib PREFIX=/home/sid
+
+will install Similarity into /home/sid.  The first method above will
+install the modules in /home/sid/lib/perl5/site_perl/5.8.3 (assuming
+you are using version 5.8.3 of Perl; otherwise, the directory will
+be slightly different).  The second method will install the modules
+in /home/sid/lib.  In either case the executable scripts will be
+installed in /home/sid/bin and the man pages will be installed in
+home/sid/share.
+
+Warning: do not put a dash or hyphen in front of PREFIX, LIB or WNHOME.
+
+In your perl programs that you may write using the modules, you may need
+to add a line like so
+
+ use lib '/home/sid/lib/perl5/site_perl/5.8.3';
+
+if you used the first method or
+
+ use lib '/home/sid/lib';
+
+if you used the second method.  By doing this, the installed
+modules are found by your program.  To run the similarity.pl program,
+you would need to do
+
+ perl -I/home/sid/lib/perl5/site_perl/5.8.3 similarity.pl
+
+or 
+
+ perl -I/home/sid/lib
+
+Of course, you could also add the 'use lib' line to the top of the program
+yourself, but you might not want to do that.  You will need to replace
+5.8.3 with whatever version of Perl you are using.  The preceeding
+instructions should be sufficient for standard and slightly non-standard
+installations. However, if you need to modify other makefile options you
+should look at the ExtUtils::MakeMaker documentation. Modifying other
+makefile options is not recommended unless you really, absolutely, and
+completely know what you're doing!
+
+NOTE: The information-content based measures (res, lin, jcn) are invoked
+using the default information content file generated during installation of
+the modules. If, however, the version of WordNet being used on your system
+has changed since that time, or for some reason the modules are unable to
+locate the default information content files, then alternate information
+content files can be specified only by using a configuration file
+corresponding to each of the modules. Format and creation of configuration
+files has been discussed in the documentation. Utilities to generate
+information content files have been provided in the package.
+
+NOTE: If one (or more) of the tests run by 'make test' fails, you will see
+a summary of the tests that failed, followed by a message of the form
+"make: *** [test_dynamic] Error Y"  where Y is a number between 1 and
+255 (inclusive).  If the number is less than 255, then it indicates how
+many test failed (if more than 254 tests failed, then 254 will still be
+shown).  If one or more tests died, then 255 will be shown.  For more
+details, see:
+
+http://search.cpan.org/dist/Test-Simple/lib/Test/Builder.pm#EXIT_CODES
+
+=head2 System Requirements
+
+=over
+
+=item 1.
+
+Perl version 5.6 or later.  This package has been written in Perl, which is
+freely available from www.perl.org. This package assumes that perl is
+installed in the directory /usr/bin.  If this is where perl is on
+your computer, then the support programs can be run directly at the
+command line as 'similarity.pl ...' or 'semCorFreq.pl...',
+etc. However, if Perl is not installed at this location,
+you would need to explicitly invoke them as 'perl similarity.pl ... ' or
+'perl freqCount.pl...', etc.
+
+=item 2.
+
+WordNet: All the measures are based on WordNet. WordNet must be
+installed on your system. WordNet is freely downloadable from
+L<http://wordnet.princeton.edu>. WordNet version 3.0 was used during
+the development and testing of the package. Unfortunately, due to major
+changes in WordNet (and L<WordNet::QueryData>) from version 2.0 to 2.1, 
+this version of L<WordNet::Similarity> supports only WordNet 2.1 (or 
+later).
+The L<WordNet::QueryData> Perl module is used to access WordNet. This 
+module
+requires that an environment variable 'WNHOME', containing the path to the
+WordNet files, be set up. For further details, please see the
+L<WordNet::QueryData> documentation.
+
+=item 3.
+
+L<WordNet::QueryData>: This is the Perl interface to WordNet written by
+Jason Rennie. QueryData should be accessible on the @INC path of Perl. (Can
+be freely downloaded from 
+L<http://search.cpan.org/dist/WordNet-QueryData>).
+QueryData 1.46 was used during the development. Also we observed that that
+due to some major changes in QueryData from its previous versions, this
+software does not work with the earlier versions of QueryData. If you have
+an earlier version of QueryData (1.38 or earlier) you may need to upgrade
+QueryData.
+
+=item 4.
+
+L<Text::Similarity>: This module is used by the 
+L<WordNet::Similarity::lesk>
+measure for finding runs of word overlaps in glosses.  The 
+L<Text::Similarity>
+module can be downloaded from 
+L<http://search.cpan.org/dist/Text-Similarity>.
+
+Version 0.04 or better is required in order to be compatible with 
+Perl version 5.6 and better.
+
+=back
+
+=head2 Optional Tests
+
+Running 'make install' after make will run a short series of tests.  These
+tests should not take more than a few minutes to run.  There is another
+series of more rigorous tests that may also be run; however, these tests
+can take quite some time to run (over an hour on some machines).  To 
+run these tests, run 'make test_all'.
+
+=head2 Example
+
+The following procedure will work on most Linux systems.
+
+ cd /tmp
+ wget http://wordnet.princeton.edu/3.0/WordNet-3.0.tar.gz
+ wget http://search.cpan.org/CPAN/authors/id/J/JR/JRENNIE/WordNet-QueryData-1.46.tar.gz
+ wget http://search.cpan.org/CPAN/authors/id/J/JA/JASONM/Text-Similarity-0.02.tar.gz
+ wget http://search.cpan.org/CPAN/authors/id/T/TP/TPEDERSE/WordNet-Similarity-2.01.tar.gz
+
+Then unpack each one:
+
+ tar -zxvf WordNet-3.0.tar.gz
+ tar -zxvf WordNet-QueryData-1.46.tar.gz
+ tar -zxvf Text-Similarity-0.02.tar.gz
+ tar -zxvf WordNet-Similarity-2.01.tar.gz
+
+Install WordNet:
+
+ cd /tmp/WordNet-3.0
+ ./configure
+ make
+ su
+ make install
+ exit
+
+Installing QueryData and Similarity:
+
+ cd /tmp/WordNet-QueryData-1.46
+ perl Makefile.PL
+ make
+ make test
+ su
+ make install
+ exit
+
+ cd /tmp/Text-Similarity-0.02
+ perl Makefile.PL
+ make
+ make test
+ su
+ make install
+ exit
+
+ cd /tmp/WordNet-Similarity-2.01
+ perl Makefile.PL
+ make
+ make test
+ su
+ make install
+ exit
+
+=head1 SEE ALSO
+
+L<intro.pod>
+
+Mailing list:
+ L<http://groups.yahoo.com/group/wn-similarity>
+
+Project Home page:
+ L<http://wn-similarity.sourceforge.net>
+
+=head1 AUTHORS
+
+ Ted Pedersen, University of Minnesota Duluth
+ tpederse at d.umn.edu
+
+ Siddharth Patwardhan, University of Utah, Salt Lake City
+ sidd at cs.utah.edu
+
+ Satanjeev Banerjee, Carnegie Mellon University, Pittsburgh
+ banerjee+ at cs.cmu.edu
+
+ Jason Michelizzi
+
+=head1 COPYRIGHT
+
+Copyright (c) 2005-2008, Ted Pedersen, Siddharth Patwardhan, Satanjeev Banerjee, 
+and Jason Michelizzi
+
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.2
+or any later version published by the Free Software Foundation;
+with no Invariant Sections, no Front-Cover Texts, and no Back-Cover
+Texts.
+
+Note: a copy of the GNU Free Documentation License is available on
+the web at L<http://www.gnu.org/copyleft/fdl.html> and is included in
+this distribution as FDL.txt.
+
+=cut

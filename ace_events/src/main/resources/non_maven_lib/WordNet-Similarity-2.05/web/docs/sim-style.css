@@ -1,0 +1,76 @@
+/* Stylesheet for the WordNet::Similarity web interface */
+
+/* Copyright (c) 2005,
+ * 
+ * Ted Pedersen, University of Minnesota Duluth
+ * tpederse at d.umn.edu
+ *
+ * Jason Michelizzi, University of Minnesota Duluth
+ * mich0212 at d.umn.edu
+ *
+ * This is free software; you may redistribute and/or modify it under
+ * the terms of the GNU General Public License, version 2 or, at your
+ * option, any later version.
+ */
+
+body { 
+    color: black;
+    background-color: #e0dfd9;
+}
+
+h1 { 
+    text-align: center;
+}
+
+hr {
+    width: 90%;
+}
+
+a:link { 
+    color: blue;
+    text-decoration: none;
+}
+
+a:active {
+    color: purple;
+    text-decoration: none;
+}
+
+a:hover {
+    color: green;
+    text-decoration: underline;
+}
+
+div.footer { 
+    font-size: smaller;
+}
+
+font.footer > i {
+    text-align: center;
+}
+
+label.leftlabel {
+    width: 10%;
+    float: left;
+    padding-left: 5px;
+}
+
+.results {
+    font-family: serif;
+}
+
+.trace { 
+    font-family: monospace;
+    font-size: smaller;
+}
+
+.gloss {
+    font-family: monospace;
+    font-size: smaller;
+}
+
+.synset {
+    font-family: monospace;
+    font-size: smaller;
+}
+

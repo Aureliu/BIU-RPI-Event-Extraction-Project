@@ -1,0 +1,14 @@
+
+The following scripts require "keys" for the tests to run correctly:
+
+pairs.t
+pairs-noroot.t
+tract.t
+utils/wnDepths.t
+
+These scripts support two command-line options:
+1) the --key option can be used to generate a key, in which case no actual
+   tests are run.
+2) the --keydir option can be used to specify where the key is or should be
+   stored.  The default value is t/keys.
+

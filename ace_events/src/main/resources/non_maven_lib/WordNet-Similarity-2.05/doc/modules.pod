@@ -1,0 +1,316 @@
+# run perldoc on this file to get nice, formatted documentation
+
+=head1 NAME
+
+modules - [documentation] Overview of WordNet::Similarity measure modules
+
+=head1 DESCRIPTION
+
+All the modules that will be installed in the Perl system directory are
+present in the '/lib' directory tree of the package. These include the
+semantic relatedness modules -- jcn.pm, res.pm, lin.pm, lch.pm, hso.pm,
+lesk.pm, vector_pairs.pm, wup.pm, path.pm and random.pm -- present in the 
+/lib/WordNet/Similarity subdirectory and the supporting modules
+PathFinder, ICFinder, DepthFinder, GlossFinder, et_wn_info.pm, and
+string_compare.pm. There also exists a WordNet/Similarity.pm module that
+currently serves as a base class for all the relatedness modules and
+contains Perl documentation. All these modules, once installed
+in the Perl system directory, can be directly used by Perl programs.
+
+A UML diagram showing how all the classes are organized is available from
+
+L<http://www.d.umn.edu/~tpederse/Docs/wn-similarity-v0.13-uml.pdf>
+
+=head2 Using the relatedness modules
+
+The semantic relatedness modules in this distribution are built as classes
+that define the following methods:
+
+  new()
+  getRelatedness()
+  getError()
+  getTraceString()
+
+=head3 new()
+
+The first thing that is done in order to use one of the semantic
+relatedness measures is to create an object of the measure. This is done by
+calling the 'new' method of that measure or module. For all the semantic
+relatedness measures provided in this package, the 'new' method takes two
+parameters -- 
+
+=over
+
+=item (a) 
+
+a WordNet::QueryData object (REQUIRED)
+
+=item (b)
+
+the name of a configuration file for that module (Optional)
+
+=back
+
+This method initializes an object of the requested measure, using the
+configuration file data, or with default values if a configuration file is
+not provided. A reference to this object is returned by the 'new' method
+and must be saved by the calling program, if any of the other methods of
+this module are to be called. It is possible to create multiple objects of
+the same module (possibly initialized differently by specifying different
+configuration files for each). The format of the configuration files is
+discussed later in this section.
+
+An 'undef' value returned by the 'new' method, indicates that it was unable
+to create an object. It is also possible that non-fatal errors occur during
+the creation of the object. In such a case an object is created by the 'new'
+method using default conditions. However, a non-fatal error condition flag
+is set within the object, which can be retrieved using the getError()
+method. It is advisable to check for this error condition after the
+creation of every such object.
+
+=head3 getRelatedness()
+
+The 'getRelatedness' method is called on the created object to determine
+the semantic relatedness of two concepts (synsets in WordNet) as computed
+by that measure. The input parameters are two WordNet synsets, represented
+in the word#pos#sense format returned/used by WordNet::QueryData. In this
+format each synset is represented by a word from that synset, its
+part-of-speech and its sense number. For example, if the second sense of
+'teacher' as a noun occurs in a synset containing synonyms for 'teacher',
+then this synset can be represented by the string 'teacher#n#2'. The
+'getRelatedness' method takes as input two strings of this form and returns
+a floating point value, which is the semantic relatedness of these (as
+computed by the measure).
+
+=head3 getError()
+
+During a call to either the 'new' method or the 'getRelatedness' method of
+a measure, if a fatal or non-fatal error occurs, the module sets an error
+flag within the created object and sets an error string within (the
+exception to this is when the module is unable to create an object upon a
+call to the 'new' method, in which case it simply returns 'undef'). Both
+the error condition flag and the error string can be retrieved using the
+'getError' method on the created object. The method is called without any
+parameters and it returns an array containing the error flag as the first
+element and the error string as the second element. The error flag can take
+the values 0, 1 or 2. A value of 0 indicates that there was no error or
+warning since the last call to 'getError'. 1 indicates that there was/were
+non-fatal error(s) (warnings) since the last call to 'getError'. A value of
+2 usually indicates that the errors were serious enough to warrant the
+termination of the program. However, how these errors are handled is
+completely upto the programmer writing the Perl program. It is advisable
+that the error flag be checked after every call to either 'new' or
+'getRelatedness', but this is not a necessary step and the error condition
+may be tested at less regular intervals also.
+
+=head3 getTraceString()
+
+If traces are enabled, a trace string generated during the last call to the
+'getRelatedness' method is stored within the object. This trace string can
+be retrieved using the 'getTraceString' method. This method is called with
+no parameters and returns a scalar containing the most recently generated
+trace string. By default traces are not enabled. Traces can be enabled by
+specifying this as an option in the configuration file for the
+measure. Instructions for writing configuration files for the measures
+follow later in this section.
+
+=head2 Examples of typical usage
+
+To create an object of the Resnik measure, we would have the following
+lines of code in the Perl program.
+
+   use WordNet::Similarity::res;
+   $object = WordNet::Similarity::res->new($wn, '/home/sid/resnik.conf');
+
+The reference of the initialized object is stored in the scalar variable
+'$object'. '$wn' contains a WordNet::QueryData object that should have been
+created earlier in the program. The second parameter to the 'new' method is
+the path of the configuration file for the resnik measure. If the 'new'
+method is unable to create the object, '$object' would be undefined. This,
+as well as any other error/warning may be tested.
+
+   die "Unable to create resnik object.\n" if(!defined $object);
+   ($err, $errString) = $object->getError();
+   die $errString."\n" if($err);
+
+To create a Leacock-Chodorow measure object, using default values, i.e. no
+configuration file, we would have the following:
+
+   use WordNet::Similarity::lch;
+   $measure = WordNet::Similarity::lch->new($wn);
+
+To find the semantic relatedness of the first sense of the noun 'car' and
+the second sense of the noun 'bus' using the resnik measure, we would write
+the following piece of code:
+
+   $relatedness = $object->getRelatedness('car#n#1', 'bus#n#2');
+
+To get traces for the above computation:
+
+   print $object->getTraceString();
+
+However, traces must be enabled using configuration files. By default
+traces are turned off.
+
+=head2 Configuration files
+
+The behavior of the measures of semantic relatedness can be controlled by
+using configuration files. These configuration files specify how certain
+parameters are initialized within the object. A configuration file may be
+specified as a parameter during the creation of an object using the new
+method. 
+
+The configuration files follow a fixed file format. Every configuration
+file starts with the name of the module ON THE FIRST LINE of the file. For
+example, a configuration file for the Resnik module will have on the first
+line 'WordNet::Similarity::res'. This is followed by the various
+parameters, each on a new line and having the form 'name::value'. The
+'value' of a parameter is optional (in case of boolean parameters). In case
+'value' is omitted, we would have just 'name::' on that line. Comments are
+supported in the configuration file. Anything following a '#' is ignored in
+the configuration file.
+
+Sample configuration files are present in the '/samples' subdirectory of
+the package. Each of the modules has specific parameters that can be
+set/reset using the configuration files. Please read the manpages or the
+perldocs of the respective modules for details on the parameters specific
+to each of the modules. For instance, 'man WordNet::Similarity::res' or
+'perldoc WordNet::Similarity::res' should display the documentation for the
+Resnik module.
+
+=head2 Information Content
+
+Three of the measures provided within the package require information
+content values of concepts (WordNet synsets) for computing the semantic
+relatedness of concepts. Resnik (1995) describes a method for computing the
+information content of concepts from large corpora of text. In order to
+compute information content of concepts, according to the method described
+in the paper, we require the frequency of occurrence of every concept in a
+large corpus of text. We provide these frequency counts to the three
+measures (Resnik, Jiang-Conrath and Lin measures) in files that we call
+information content files. These files contain a list of WordNet synset
+offsets along with their part of speech and frequency count. The files are
+also used to determine the topmost node of the noun and verb 'is-a'
+hierarchies in WordNet. The information content file that should be used by
+a module is specified in the configuration file of that module. If no
+information content file is specified, then the default information content
+file, generated at the time of the installation of the WordNet::Similarity
+modules, is used. A description of the format of these files follows. The
+FIRST LINE of this file must contain the version of WordNet that the file
+was created with. This should be present as a string of the form 
+
+ wnver::<hashcode>
+
+For example, if WordNet version 2.1 with a hash-code
+LL1BZMsWkr0YOuiewfbiL656+Q4 was used for creation of the information
+content file, the following line would be present at the start of the
+information content file.
+
+ wnver::LL1BZMsWkr0YOuiewfbiL656+Q4
+
+The rest of the file contains on each line a WordNet synset offset,
+part-of-speech and a frequency count, in the form
+
+ <offset><part-of-speech> <frequency> [ROOT]
+
+without any leading or trailing spaces. For example, one of the lines of an
+information content file may be as follows.
+
+ 63723n 667
+
+where '63723' is a 'noun' synset offset and 667 is its frequency
+count. Suppose the noun synset with offset 1740 is the root node of one of 
+the noun taxonomies and has a frequency count of 17625. Then this synset
+would appear in an information content file as follows:
+
+ 1740n 17625 ROOT
+
+The ROOT tags are extremely significant in determining the top of the 
+hierarchies and must not be omitted. Typically, frequency counts for the
+noun and verb hierarchies are present in each information content file. A
+number of support programs to generate these files from various corpora are
+present in the '/utils' directory of the package. A sample information
+content file has been provided in the '/samples' directory of the package.
+
+NOTE: Using the "Resnik" counting it is possible to get fractional values
+for the frequency counts.
+
+=head2 Depths Files
+
+The lch and wup measures make use of auxiliary files to determine certain
+types of depths information.  The lch measure uses a file to determine the
+maximum depth of each WordNet taxonomy.  The wup measure used a file to
+determine the depth of each synset in its taxonomy.  The files used by these
+measures are produced by the wnDepths.pl program that is in the 'utils'
+directory.
+
+The file used by lch has the version of WordNet that was used when generating
+the file on the first line of the file, similar to the information content
+files.  For example:
+
+ wnver::LL1BZMsWkr0YOuiewfbiL656+Q4
+
+The remaining lines of the file give the part of speech for each taxonomy,
+the offset of the root of each taxonomy, and the maximum depth of the
+taxonomy.  For example, the taxonomy that has the root entity#n#1 has
+this line:
+
+ n 00001740 17
+
+The file used by wup has also has the version of WordNet that was used when
+generating the file on the first line of the file.  The remaining lines
+have the part of speech for the synset, the offset of the synset, and a
+list of depths and offsets of taxonomy roots.  For example, the synset 
+amphibious_landing#n#1, has the following line:
+
+ n 00052540 4:00025950 4:00026194 5:00026194
+
+The first item is the part of speech, the second is the offset of
+amphibious_landing#n#1.  The next item, '4:00025950' means that there
+is a path from amphibious_landing#n#1 to the taxonomy root 00025950 (event#n#1)
+whose length is 4.  The next item means that there is a path from
+amphibious_landing#n#1 to a different taxonomy root, 00026194 (act#n#2)
+whose length is 4.  The last item means that there is another path to
+act#n#2 whose length is 5.  From this we can infer that the synset belongs
+to two different taxonomies, and there there are multiple paths to the root
+of the second taxonomy.
+
+=head1 SEE ALSO
+
+L<intro.pod> 
+
+Mailing list: 
+ L<http://groups.yahoo.com/group/wn-similarity>
+
+Project Home page:
+ L<http://wn-similarity.sourceforge.net>
+
+=head1 AUTHORS
+
+ Ted Pedersen, University of Minnesota, Duluth
+ tpederse at d.umn.edu
+
+ Siddharth Patwardhan, University of Utah, Salt Lake City
+ sidd at cs.utah.edu
+
+ Satanjeev Banerjee, Carnegie Mellon University, Pittsburgh
+ banerjee+ at cs.cmu.edu
+
+ Jason Michelizzi
+
+=head1 COPYRIGHT AND LICENSE
+
+Copyright (c) 2005-2008, Ted Pedersen, Siddharth Patwardhan, Satanjeev 
+Banerjee, and Jason Michelizzi
+
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.2
+or any later version published by the Free Software Foundation;
+with no Invariant Sections, no Front-Cover Texts, and no Back-Cover
+Texts.
+
+Note: a copy of the GNU Free Documentation License is available on
+the web at L<http://www.gnu.org/copyleft/fdl.html> and is included in
+this distribution as FDL.txt.
+
+=cut

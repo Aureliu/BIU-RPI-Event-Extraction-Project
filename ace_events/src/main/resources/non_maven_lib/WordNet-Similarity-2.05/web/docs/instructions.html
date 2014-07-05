@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>Similarity web interface instructions</title>
+    <link rel="stylesheet" href="sim-style.css" type="text/css" />
+  </head>
+
+  <body>
+    <h1>Similarity web interface instructions</h1>
+
+    <p>Enter the words whose relatedness you wish to compute into the
+       fields labeled <em>Word 1</em> and <em>Word 2</em>.  You can
+       enter the input in three formats:
+    </p>
+
+    <ol>
+      <li>word</li>
+      <li>word#part_of_speech</li>
+      <li>word#part_of_speech#sense</li>
+    </ol>
+
+    <p>The <tt>part_of_speech</tt> must be one of <tt>n</tt> (noun),
+      <tt>v</tt> (verb), <tt>a</tt> (adjective), or <tt>r</tt> (adverb).
+    </p>
+
+    <p>The sense must be an integer.  The noun <tt>tree#n</tt> has
+      three senses in WordNet, so <tt>tree#n#1</tt>, <tt>tree#n#2</tt>,
+      and <tt>tree#n#3</tt> designate the three different noun senses of
+      tree.
+    </p>
+
+    <p>
+      For each word that is entered, you have the choice of selecting
+      one of three options: using all senses of the word, choosing a
+      sense using glosses, and choosing a sense using the full synset
+      to which each word sense belongs.  Let's assume you entered
+      <tt>tree#n</tt> in one of the input fields and shrub#n#1 in the other.
+      If you select "use all senses", then the relatedness of each of the
+      three senses of tree#n and shrub#n#1 will be computed.  The sense of
+      tree#n that gives the highest relatedness score will be shown.
+    </p>
+    
+    <p>If, on the other hand, you select "select a sense by gloss", after
+      you click on the Compute button, you will be asked to select a sense
+      of tree#n from a selection box, and the gloss of each sense will be
+      shown.  If you select "select a sense by synset", after you click on
+      the Compute button, you will be asked to select a sense from a selection
+      box, and the synset that each sense of tree#n belongs to will be shown
+      in the box.
+    </p>
+
+  </body>
+</html>

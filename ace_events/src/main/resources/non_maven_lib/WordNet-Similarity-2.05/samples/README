@@ -1,0 +1,77 @@
+
+   		          /samples README
+
+This directory contains a number sample files that demonstrate various
+aspects of the WordNet::Similarity package and related utilities.
+
+We recommend that you save a copy of the files in this directory for 
+future use.  
+
+Information content
+===================
+
+The directory /Infocontent is intended to contain a large number of  
+precomputed information content files that can be downloaded from :
+
+http://www.d.umn.edu/~tpederse/similarity.html
+
+These files are the output of the word counting programs brownFreq.pl,
+BNCFreq.pl, treebankFreq.pl, etc. and are used by the information content
+measures: res, lin, and jcn.  You will find these files very useful if
+you plan on using the res, lin, or jcn measures. 
+
+The file Infocontent/README contains a complete description of the files  
+that are available, and how they were created. Make sure you download the
+version of the information content files that is for your version of
+WordNet (for e.g WordNet v3.0).
+
+WordNet Compounds
+=================
+
+The file wn30compounds.txt contains a list of "WordNet compounds" as 
+found in version 3.0 of WordNet. A WordNet compound is any multi word  
+expression that appears in WordNet that includes a _. These are mainly  
+nouns, and include proper nouns (winston_churchill), foreign words  
+(ipso_facto), expressions (face_to_face), etc. 
+
+This file of compounds are required if you are running one of the 
+information content programs (BNCFreq.pl, treebankFreq.pl, etc.). It is a 
+useful option for the lesk and vector measures as well. 
+
+stoplist
+========
+
+The file stoplist.txt contains a list of stop words.  Stop words are words
+excluded from some natural language processing task because the words are
+non-informative or misleading.  For example the word "a" has several 
+senses in WordNet: the blood type "A", an abbreviation for angstrom, 
+adenine, etc., but most often the word "a" is used as an indefinite article.
+
+Configuration files
+===================
+
+the /config-files sub-directory contains a sample configuration file for
+each measure module (WordNet::Similarity::res, WordNet::Similairyty::lesk,
+WordNet::Similarity::wup, etc.).
+
+Relation files
+==============
+
+The files vector-relation.dat and lesk-relation.dat are used by the 
+vector_pairs and lesk measures respectively. Run 
+'perldoc WordNet::Similarity::lesk' and 
+'perldoc WordNet::Similarity::vector_pairs' for more information.
+
+Word files
+==========
+
+The file millercharles.txt contains the 30 word pairs used in :
+
+Miller and Charles, 1991, Contextual Correlates of Semantic Similarity.  
+Language and Cognitive Processes, 6(1):1-28. 
+
+The file resnikdiab.txt contains the 27 verb pairs used in :
+
+Resnik and Diab, 2000, Measuring Verb Similarity, Appears in the  
+Proceedings of the Twenty Second  Annual Meeting of the Cognitive Science  
+Society (COGSCI2000), Philadelphia, August.

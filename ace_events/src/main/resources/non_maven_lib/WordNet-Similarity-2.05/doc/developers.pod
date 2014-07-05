@@ -1,0 +1,217 @@
+# run perldoc on this file to get nicely formatted output.
+
+=head1 NAME
+
+DEVELOPERS - [documentation] Instructions on how to write a new measure 
+for WordNet::Similarity
+
+=head1 WRITING A NEW MEASURE
+
+All the existing measures are written in an object-oriented manner, and
+if you are writing your own measure, you will need to write your measure in a
+like manner.  If object-oriented Perl is new to you, see the perldoc pages
+relating to object-oriented Perl: perlboot, perltoot, perltooc, and perlbot.
+
+The existing measure modules are found in lib/WordNet when you
+unpack the source tarball. The following methods are defined in
+WordNet::Similarity and are available to you:
+
+    sub new
+    sub initialize
+    sub configure
+    sub traceOptions
+    sub getTraceString
+    sub getError
+    sub getRelatedness
+    sub printSet
+    sub fetchFromCache
+    sub storeToCache
+    sub traceOptions
+
+If you are writing a measure based on information content, the
+module WordNet::Similarity::ICFinder defines some extra methods:
+
+    sub probability
+    sub IC
+    sub getFrequency
+
+And if you are writing a measure that does some sort of path-finding,
+the WordNet::Similarity::PathFinder module supplies some extra methods as
+well.
+
+    sub getShortestPath
+    sub getAllPaths
+
+If you are writing a measure where you need to know the depth of a synset
+in the WordNet taxonomies or the maximum depth of a particular taxonomy,
+the WordNet::Similarity::DepthFinder module has methods that will 
+be useful.
+
+    sub getSynsetDepth
+    sub getTaxonomyDepth
+    sub getTaxonomyRoot
+
+If you want to find LCSs (Least Common Subsumers), there are three
+different ways of doing so, depending upon whether you want
+to use path length, depth, or information content.  The three
+methods for finding LCSs are:
+
+    sub getLCSbyPath
+    sub getLCSbyDepth
+    sub getLCSbyIC
+
+They are found in WordNet::Similarity::PathFinder,
+WordNet::Similarity::DepthFinder, and WordNet::Similarity::ICFinder.
+
+For writing a measure that uses glosses (like vector, vector_pairs, and
+lesk), the WordNet::Similarity::GlossFinder module may be useful.
+
+The documentation for the respective modules has detailed descriptions
+of how each methods works, what parameters each one expects, etc.
+
+=head1 STEP BY STEP INSTRUCTIONS
+
+The following steps should get you started.
+
+=over
+
+=item 1.
+
+Create a file ending in .pm, such as newmeasure.pm.
+
+=item 2.
+
+Declare the name of the package.  This should be the same name as your
+filename (except for the .pm):
+
+    package newmeasure;
+
+=item 3.
+
+We need to 'use' WordNet::Similarity, or a sub-class of it.  We also need
+to declare that our module is-a (is inherited from) WordNet::Similarity.
+We do this by adding WordNet::Similarity to the ISA array in your module.
+If your measure uses information content, then you probably want to use
+WordNet::Similarity::ICFinder instead.  If you are doing some type
+of path-finding, then you might want to use WordNet::Similarity::PathFinder.
+Both PathFinder and ICFinder are sub-classes of Similarity, so if you put one
+of them in your @ISA array, you don't need WordNet::Similarity.
+
+In our case, let's try making a new information content measure:
+
+    use WordNet::Similarity::ICFinder;
+    our @ISA = qw/WordNet::Similarity::ICFinder/;
+
+=item 4.
+
+The Similarity.pm module provides a 'new' method for us, and it does
+everything for us that we need.
+
+=item 5.
+
+You need to write a getRelatedness function that actually computes the
+relatedness of two word senses.  In our example here, we'll define
+relatedness as the average information content of the two input synsets. 
+
+  # a simple example
+  sub getRelatedness {
+    my $self = shift;
+
+    # $wps1 and $wps2 need to be strings in
+    # word#part_of_speech#sense format
+    my $wps1 = shift;
+    my $wps2 = shift;
+
+    my $ref = $self->parseWps ($wps1, $wps2);
+
+    # if ref is not a reference, that means an error has occured;
+    # parseWps will have already set the error level to non-zero
+    # and generated an error string
+    ref $ref or return $ref;
+
+    # now from ref, get all the elements of the array
+    my (undef, $pos1, undef, $offset1, undef, $pos2, undef, $offset2) = @$ref;
+
+    my $score;
+    # first we check to see if relatedness was already computed
+    if ($self->{doCache}) { 
+       $score = $self->fetchFromCache ($wps1, $wps2);
+       defined $score and return $score;
+    }
+
+    my $wn = $self->{wn}; # get reference to WordNet::QueryData
+
+    # here's where we do the real work of finding relatedness 
+
+    my $ic1 = $self->IC ($offset1);
+    my $ic2 = $self->IC ($offset2);
+
+    $score = ($ic1 + $ic2) / 2;
+
+    # if tracing in enabled, print some information to traceString 
+    if ($self->{trace}) {
+        $self->{traceString} .= "IC(";
+        $self->printSet ($pos1, 'offset', $offset1);
+        $self->{traceString} .= ") = $ic1\n";
+        $self->{traceString} .= "IC(";
+        $self->printSet ($pos2, 'offset', $offset2);
+        $self->{traceString} .= ") = $ic2\n";
+    }
+
+    $self->storeToCache ($wps1, $wps2, $score) if $self->{doCache};
+
+    return $score;
+  }
+
+=back
+
+=head1 SUMMARY
+
+You should follow the same conventions for error handling and tracing as
+the other measure modules do.  Be sure to support cache as well (as
+demonstrated above).
+
+If you would like to contribute to the project, please see our SourceForge
+page: http://wn-similarity.sourceforge.net as well as our current todo
+list (in doc/todo.pod).  We especially welcome contributions of new  
+measures of relatedness!
+
+=head1 SEE ALSO
+
+L<intro.pod>
+
+Mailing list:
+ L<http://groups.yahoo.com/group/wn-similarity>
+
+Project Home page:
+ L<http://wn-similarity.sourceforge.net>
+
+=head1 AUTHORS
+
+ Ted Pedersen, University of Minnesota Duluth
+ tpederse at d.umn.edu
+
+ Siddharth Patwardhan, University of Utah, Salt Lake City
+ sidd at cs.utah.edu
+
+ Satanjeev Banerjee, Carnegie Mellon University, Pittsburgh
+ banerjee+ at cs.cmu.edu
+
+ Jason Michelizzi
+
+=head1 COPYRIGHT 
+
+Copyright (c) 2005-2008, Ted Pedersen, Siddharth Patwardhan, Satanjeev 
+Banerjee and Jason Michelizzi
+
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.2
+or any later version published by the Free Software Foundation;
+with no Invariant Sections, no Front-Cover Texts, and no Back-Cover
+Texts.
+
+Note: a copy of the GNU Free Documentation License is available on
+the web at L<http://www.gnu.org/copyleft/fdl.html> and is included in
+this distribution as FDL.txt.
+
+=cut

@@ -1,6 +1,6 @@
 package edu.cuny.qc.ace.acetypes;
 
-public enum AceArgumentTypes {
+public enum AceArgumentType {
 	
 	//Entity
 	PER,

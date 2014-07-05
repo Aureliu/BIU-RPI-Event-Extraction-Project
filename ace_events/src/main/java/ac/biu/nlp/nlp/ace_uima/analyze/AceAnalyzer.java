@@ -3,6 +3,8 @@ package ac.biu.nlp.nlp.ace_uima.analyze;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.util.AbstractMap;
+import java.util.AbstractMap.SimpleEntry;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
@@ -34,15 +36,21 @@ import org.apache.uima.util.InvalidXMLException;
 import org.uimafit.util.JCasUtil;
 import org.xml.sax.SAXException;
 
+import com.google.common.collect.ImmutableSet;
+import com.google.common.collect.Lists;
+
 import ac.biu.nlp.nlp.ace_uima.AceAbnormalMessage;
 import ac.biu.nlp.nlp.ace_uima.AceException;
 import ac.biu.nlp.nlp.ace_uima.analyze.TreeFragmentBuilder.TreeFragmentBuilderException;
 import ac.biu.nlp.nlp.ace_uima.stats.StatsDocument;
 import ac.biu.nlp.nlp.ace_uima.stats.StatsDocumentCollection;
 import ac.biu.nlp.nlp.ace_uima.stats.StatsException;
+import ac.biu.nlp.nlp.ace_uima.uima.BasicArgument;
 import ac.biu.nlp.nlp.ace_uima.uima.BasicArgumentMention;
 import ac.biu.nlp.nlp.ace_uima.uima.BasicArgumentMentionExtent;
 import ac.biu.nlp.nlp.ace_uima.uima.BasicArgumentMentionHead;
+import ac.biu.nlp.nlp.ace_uima.uima.Entity;
+import ac.biu.nlp.nlp.ace_uima.uima.EntityMention;
 import ac.biu.nlp.nlp.ace_uima.uima.Event;
 import ac.biu.nlp.nlp.ace_uima.uima.EventArgument;
 import ac.biu.nlp.nlp.ace_uima.uima.EventMention;
@@ -50,7 +58,9 @@ import ac.biu.nlp.nlp.ace_uima.uima.EventMentionAnchor;
 import ac.biu.nlp.nlp.ace_uima.uima.EventMentionArgument;
 import ac.biu.nlp.nlp.ace_uima.uima.EventMentionExtent;
 import ac.biu.nlp.nlp.ace_uima.uima.EventMentionLdcScope;
+import ac.biu.nlp.nlp.ace_uima.uima.Timex2;
 import ac.biu.nlp.nlp.ace_uima.uima.Timex2Mention;
+import ac.biu.nlp.nlp.ace_uima.uima.Value;
 import ac.biu.nlp.nlp.ace_uima.uima.ValueMention;
 import ac.biu.nlp.nlp.ace_uima.utils.AnotherBasicNodeUtils;
 import ac.biu.nlp.nlp.ace_uima.utils.FinalHashMap;
@@ -60,11 +70,11 @@ import de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS;
 import de.tudarmstadt.ukp.dkpro.core.api.metadata.type.DocumentMetaData;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
+import edu.cuny.qc.ace.acetypes.AceEntityMention;
 import eu.excitementproject.eop.common.datastructures.OneToManyBidiMultiHashMap;
 import eu.excitementproject.eop.common.datastructures.SimpleValueSetMap;
 import eu.excitementproject.eop.common.datastructures.ValueSetMap;
 import eu.excitementproject.eop.common.datastructures.immutable.ImmutableMap;
-import eu.excitementproject.eop.common.datastructures.immutable.ImmutableSet;
 import eu.excitementproject.eop.common.representation.parse.representation.basic.Info;
 import eu.excitementproject.eop.common.representation.parse.representation.basic.InfoGetFields;
 import eu.excitementproject.eop.common.representation.parse.tree.AbstractNodeUtils;
@@ -248,9 +258,13 @@ public class AceAnalyzer {
 					docs.updateDocs(key, "Anchor", "Tokens2", getNumTokens(eventAnchor).toString());						
 					docs.updateDocs(key, "Anchor", "SpecPOS", getSpecificPosString(eventAnchor));						
 					docs.updateDocs(key, "Anchor", "GenPOS", getGeneralPosString(eventAnchor));
+					docs.updateDocs(key, "Anchor", "TokenSpecPOS", getTokenAndSpecificPosString(eventAnchor));				
+					docs.updateDocs(key, "Anchor", "LemmaSpecPOS", getLemmaAndSpecificPosString(eventAnchor));				
+					docs.updateDocs(key, "Anchor", "TokenGenPOS", getTokenAndGeneralPosString(eventAnchor));				
 					
 					List<BasicNode> eventAnchorFrag = getTreeFragments(eventAnchor);
 					docs.updateDocs(key, "Anchor", "Dep", getParenthesesTreeOnlyDependencies(eventAnchorFrag));						
+					docs.updateDocs(key, "Anchor", "DepToken", getParenthesesTreeDependenciesToken(eventAnchorFrag));						
 					docs.updateDocs(key, "Anchor", "DepGenPOS", getParenthesesTreeDependenciesGeneralPOS(eventAnchorFrag));						
 					docs.updateDocs(key, "Anchor", "DepSpecPOS", getParenthesesTreeDependenciesSpecificPOS(eventAnchorFrag));						
 	
@@ -274,26 +288,35 @@ public class AceAnalyzer {
 				for (EventMentionArgument argMention : JCasUtil.select(mention.getEventMentionArguments(), EventMentionArgument.class)) {
 					key.put("Role", argMention.getRole());
 					key.put("ArgType", argMention.getArgMention().getArg().getType().getShortName());
+
+					/**
+					 * This entire block of code was originally under iterating events.
+					 * But I realized it counted wrong, since the same argument mention could appear
+					 * in several event mentions, so it would be wrongly counted multiple time.
+					 * This is the correct way - iterate through argument mentions directly.
+					 * UPDATE: I moved it back here, since we need "Role", which only exists in the context of an event.
+					 * So yes, the counts here stay wrong (or let's just call them "different" :) )
+					 */
+					BasicArgumentMention arg = argMention.getArgMention();
+					docs.updateDocs(key, "Argument", "SpecType", getSpecType(argMention.getArgMention()));					
 					
-					BasicArgumentMentionExtent argExtent = argMention.getArgMention().getExtent();
+					BasicArgumentMentionExtent argExtent = arg.getExtent();
 					if (selectCoveredByIndex(jcas, Token.class, argExtent.getBegin(), argExtent.getEnd(), tokenIndex).values().isEmpty()) {
 						logger.warn(String.format("Event argument extent '%s'[%s:%s] not covered by Sentence",
 								argExtent.getCoveredText(), argExtent.getBegin(), argExtent.getEnd()));
 					}
 					else {
-						BasicArgumentMentionHead argHead = argMention.getArgMention().getHead();
-//						if (argHead==null) {
-//							System.out.println("argHead is null for mention: " + argMention.getArgMention().toString());
-//						}
-						if (argHead==null && !(argMention.getArgMention() instanceof Timex2Mention || argMention.getArgMention() instanceof ValueMention)) {
-							throw new AceException("Got null arg head, for an arg that is not a timex2 nor a value. Arg mention: " + argMention.getArgMention());
-						}
+						BasicArgumentMentionHead argHead = getHead(arg);
 						
 						docs.updateDocs(key, "ArgExtent", "", getText(argExtent));						
 						docs.updateDocs(key, "ArgExtent", "Tokens", getNumTokens(argExtent));						
+						docs.updateDocs(key, "ArgExtent", "Lemmas", getLemmas(argExtent));						
 						docs.updateDocs(key, "ArgExtent", "Sentences", getNumSentences(argExtent, tokenIndex));						
 						docs.updateDocs(key, "ArgExtent", "SpecPOS", getSpecificPosString(argExtent));						
 						docs.updateDocs(key, "ArgExtent", "GenPOS", getGeneralPosString(argExtent));
+						docs.updateDocs(key, "ArgExtent", "TokenSpecPOS", getTokenAndSpecificPosString(argExtent));				
+						docs.updateDocs(key, "ArgExtent", "LemmaSpecPOS", getLemmaAndSpecificPosString(argExtent));				
+						docs.updateDocs(key, "ArgExtent", "TokenGenPOS", getTokenAndGeneralPosString(argExtent));				
 						
 						docs.updateDocs(key, "ArgHead", "", getText(argHead));						
 						docs.updateDocs(key, "ArgHead", "Lemmas", getLemmas(argHead));						
@@ -301,14 +324,35 @@ public class AceAnalyzer {
 						docs.updateDocs(key, "ArgHead", "Tokens2", getNumTokens(argHead).toString());						
 						docs.updateDocs(key, "ArgHead", "SpecPOS", getSpecificPosString(argHead));						
 						docs.updateDocs(key, "ArgHead", "GenPOS", getGeneralPosString(argHead));
-						
+						docs.updateDocs(key, "ArgHead", "TokenSpecPOS", getTokenAndSpecificPosString(argHead));				
+						docs.updateDocs(key, "ArgHead", "LemmaSpecPOS", getLemmaAndSpecificPosString(argHead));				
+						docs.updateDocs(key, "ArgHead", "TokenGenPOS", getTokenAndGeneralPosString(argHead));				
+						docs.updateDocs(key, "ArgHead", "SpecType", getSpecTypeTextEntry(argHead));					
+	
 						List<BasicNode> argHeadFrag = getTreeFragments(argHead);
 						docs.updateDocs(key, "ArgHead", "Dep", getParenthesesTreeOnlyDependencies(argHeadFrag));						
+						docs.updateDocs(key, "ArgHead", "DepToken", getParenthesesTreeDependenciesToken(argHeadFrag));						
 						docs.updateDocs(key, "ArgHead", "DepGenPOS", getParenthesesTreeDependenciesGeneralPOS(argHeadFrag));						
 						docs.updateDocs(key, "ArgHead", "DepSpecPOS", getParenthesesTreeDependenciesSpecificPOS(argHeadFrag));
 						updateLinkingTreeFrags(key, eventAnchor, argHead, "Link", "Dep", "DepGenPOS", "DepSpecPOS");
-						//logger.info("*****@@^^^ Size: " + ObjectSizeFetcher.getObjectSize(docs) + " bytes");
 						addDetails("ArgHead.GenPos_" + getGeneralPosString(argHead), getText(argHead) + ": " + getText(argExtent));
+						
+						for (BasicArgumentMention concreteMention : getConcreteArgumentMentions(arg)) {
+							BasicArgumentMentionHead concreteHead = getHead(concreteMention);
+							BasicArgumentMentionExtent concreteExtent = concreteMention.getExtent();
+							docs.updateDocs(key, "ConcreteArgHead", "", getText(concreteHead));						
+							docs.updateDocs(key, "ConcreteArgHead", "Lemmas", getLemmas(concreteHead));						
+							docs.updateDocs(key, "ConcreteArgHead", "Tokens", getNumTokens(concreteHead));						
+							docs.updateDocs(key, "ConcreteArgHead", "Tokens2", getNumTokens(concreteHead).toString());						
+							docs.updateDocs(key, "ConcreteArgHead", "SpecPOS", getSpecificPosString(concreteHead));						
+							docs.updateDocs(key, "ConcreteArgHead", "GenPOS", getGeneralPosString(concreteHead));
+							docs.updateDocs(key, "ConcreteArgHead", "TokenSpecPOS", getTokenAndSpecificPosString(concreteHead));				
+							docs.updateDocs(key, "ConcreteArgHead", "LemmaSpecPOS", getLemmaAndSpecificPosString(concreteHead));				
+							docs.updateDocs(key, "ConcreteArgHead", "TokenGenPOS", getTokenAndGeneralPosString(concreteHead));				
+							docs.updateDocs(key, "ConcreteArgHead", "SpecType", getSpecTypeTextEntry(concreteHead));					
+							addDetails("ConcreteArgHead.GenPos_" + getGeneralPosString(concreteHead), getText(concreteHead) + ": " + getText(concreteExtent));
+
+						}
 					}
 				}
 			}
@@ -423,7 +467,7 @@ public class AceAnalyzer {
 				docs.updateDocs(key, "EventTypesPerArg", "All", types.toString());
 				docs.updateDocs(key, "RolesPerArg", "All", roles.toString());
 			}
-			
+
 			for (EventMentionArgument mention : JCasUtil.select(arg.getEventMentionArguments(), EventMentionArgument.class)) {
 				String type = mention.getEventMention().getEvent().getSUBTYPE();
 				String role = mention.getRole();
@@ -461,7 +505,8 @@ public class AceAnalyzer {
 					continue;
 				}
 		
-				ImmutableSet<PredicateArgumentStructure<Info, BasicNode>> argPases = argToPas.get(argument);
+				eu.excitementproject.eop.common.datastructures.immutable.ImmutableSet<PredicateArgumentStructure<Info, BasicNode>> argPases;
+				argPases = argToPas.get(argument);
 				if (argPases.isEmpty()) {
 					docs.updateDocs(key, "FindLinks", "", "MissedArgument");
 					docs.updateDocs(key, "MissedArgument", "Dep", getParenthesesTreeOnlyDependencies(link));						
@@ -534,6 +579,61 @@ public class AceAnalyzer {
 			}
 			logger.debug("- finished reporting PASTA-related stats");
 		}
+	}
+
+	private List<BasicArgumentMention> getConcreteArgumentMentions(BasicArgumentMention argMention) {
+		final Set<String> CONCRETE_ENTITY_TYPES = ImmutableSet.of("NAM", "NOM");
+		List<BasicArgumentMention> result = Lists.newArrayList();
+		BasicArgument arg = argMention.getArg();
+		if (arg instanceof Entity) {
+			for (BasicArgumentMention mention : JCasUtil.select(arg.getMentions(), BasicArgumentMention.class)) {
+				EntityMention entityMention = (EntityMention) mention;
+				if (CONCRETE_ENTITY_TYPES.contains(entityMention.getTYPE())) {
+					result.add(entityMention);
+				}				
+			}
+		}
+		else {
+			result.add(argMention);
+		}
+		return result;	
+	}
+	
+	private BasicArgumentMentionHead getHead(BasicArgumentMention arg) throws AceException {
+		BasicArgumentMentionHead argHead = arg.getHead();
+		if (argHead==null && !(arg instanceof Timex2Mention || arg instanceof ValueMention)) {
+			throw new AceException("Got null arg head, for an arg that is not a timex2 nor a value. Arg mention: " + arg);
+		}
+		return argHead;
+	}
+	
+	private String getSpecType(BasicArgumentMention argMention) {
+		if (argMention == null) {
+			return "(null)";
+		}
+		BasicArgument basicArg = argMention.getArg();
+		if (basicArg instanceof Entity) {
+			Entity entityArg = (Entity) basicArg;
+			return entityArg.getTYPE();
+		}
+		else if (basicArg instanceof Timex2) {
+			return "Time";
+			
+		}
+		else if (basicArg instanceof Value) {
+			Value valueArg = (Value) basicArg;
+			return valueArg.getTYPE();
+		}
+		else {
+			throw new IllegalArgumentException("Bad type for argument: " + argMention);
+		}
+	}
+	
+	private Entry<String, String> getSpecTypeTextEntry(BasicArgumentMentionHead argHead) {
+		if (argHead == null) {
+			return null;
+		}
+		return new SimpleEntry<String, String>(getSpecType(argHead.getMention()), argHead.getCoveredText());
 	}
 	
 	private void updateDocsEnumSumField(Map<String, String> key, String fieldNameLvl1, String fieldNameLvl2, String enumValue, Integer amount) throws StatsException {
@@ -658,6 +758,48 @@ public class AceAnalyzer {
 				posTexts.add(pos.getPosValue());
 			}
 			return StringUtil.join(posTexts, " ");
+		}
+	}
+
+	protected String getLemmaAndSpecificPosString(Annotation covering) {
+		if (covering == null) {
+			return "(null)";
+		}
+		else {
+			List<Token> tokens = JCasUtil.selectCovered(Token.class, covering);
+			List<String> texts = new ArrayList<String>(tokens.size());
+			for (Token token : tokens) {
+				texts.add(String.format("%s/%s", token.getLemma().getValue(), token.getPos().getPosValue()));
+			}
+			return StringUtil.join(texts, " ");
+		}
+	}
+
+	protected String getTokenAndSpecificPosString(Annotation covering) {
+		if (covering == null) {
+			return "(null)";
+		}
+		else {
+			List<Token> tokens = JCasUtil.selectCovered(Token.class, covering);
+			List<String> texts = new ArrayList<String>(tokens.size());
+			for (Token token : tokens) {
+				texts.add(String.format("%s/%s", token.getCoveredText(), token.getPos().getPosValue()));
+			}
+			return StringUtil.join(texts, " ");
+		}
+	}
+
+	protected String getTokenAndGeneralPosString(Annotation covering) {
+		if (covering == null) {
+			return "(null)";
+		}
+		else {
+			List<Token> tokens = JCasUtil.selectCovered(Token.class, covering);
+			List<String> texts = new ArrayList<String>(tokens.size());
+			for (Token token : tokens) {
+				texts.add(String.format("%s/%s", token.getCoveredText(), token.getPos().getType().getShortName()));
+			}
+			return StringUtil.join(texts, " ");
 		}
 	}
 
@@ -839,6 +981,17 @@ public class AceAnalyzer {
 		return TreePrinter.getString(trees, "( ", " )", "#", new SimpleNodeString() {
 			@Override public String toString(BasicNode node) {
 				return " "+InfoGetFields.getRelation(node.getInfo(), "<ROOT>")+" ";
+			}
+		});
+	}
+
+	protected String getParenthesesTreeDependenciesToken(List<BasicNode> trees) {
+		if (trees.isEmpty()) {
+			return "(null)";
+		}
+		return TreePrinter.getString(trees, "( ", " )", "#", new SimpleNodeString() {
+			@Override public String toString(BasicNode node) {
+				return " "+InfoGetFields.getRelation(node.getInfo(), "<ROOT>")+"->"+InfoGetFields.getWord(node.getInfo())+" ";
 			}
 		});
 	}

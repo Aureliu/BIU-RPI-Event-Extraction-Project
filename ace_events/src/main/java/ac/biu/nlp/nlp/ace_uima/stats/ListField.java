@@ -4,8 +4,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map.Entry;
+import java.util.Scanner;
 
 import eu.excitementproject.eop.common.utilities.StringUtil;
 
@@ -33,7 +35,7 @@ public abstract class ListField extends StatsField {
 		List<String> toResult = new ArrayList<String>(getListSize());
 		for (Entry<? extends Object, ? extends Collection<String>> entry : getList()) {
 			List<String> vals = new ArrayList<String>(entry.getValue());
-			Collections.sort(vals);
+			Collections.sort(vals, getComparator());
 			String strings = StringUtil.join(vals, " | ");
 			toResult.add(String.format("%s = { %s }", entry.getKey(), strings));
 		}
@@ -41,6 +43,10 @@ public abstract class ListField extends StatsField {
 		String result = StringUtil.join(toResult, "   ");
 		
 		return Arrays.asList(new String[] {result});
+	}
+	
+	protected Comparator<String> getComparator() {
+		return null;
 	}
 
 	public abstract int getListSize();

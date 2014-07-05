@@ -477,7 +477,7 @@ public class SentenceAssignment
 			}
 		}
 
-		System.out.printf("%s Starting features of target in SentenceInstance %s...\n", Pipeline.detailedLog(), inst.sentInstID);
+		//System.out.printf("%s Starting features of target in SentenceInstance %s...\n", Pipeline.detailedLog(), inst.sentInstID);
 
 		///////
 		// create featureVectorSequence

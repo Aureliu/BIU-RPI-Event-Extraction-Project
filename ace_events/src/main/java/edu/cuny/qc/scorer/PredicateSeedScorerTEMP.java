@@ -23,7 +23,7 @@ import eu.excitementproject.eop.common.representation.partofspeech.PartOfSpeech;
 import eu.excitementproject.eop.common.representation.partofspeech.UnsupportedPosTagStringException;
 import eu.excitementproject.eop.common.utilities.uima.UimaUtils;
 
-public abstract class PredicateSeedScorer extends SignalMechanismSpecIterator {
+public abstract class PredicateSeedScorerTEMP extends SignalMechanismSpecIterator {
 
 	private static final long serialVersionUID = -2424604187161763995L;
 	static {System.err.println("Consider using Guava caches to cache signal values for specific textToken-specToken pairs (maybe also with their lemmas and/or POSes). Maybe also/instead, cache some intermediate values, like a lemma's WordNet sysnet.");}

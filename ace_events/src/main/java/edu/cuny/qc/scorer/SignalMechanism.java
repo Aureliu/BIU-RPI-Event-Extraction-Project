@@ -69,6 +69,7 @@ public abstract class SignalMechanism {
 		Token textTriggerToken = textSentence.getTokenAnnotation(i);
 		Map<Class<?>, Object> textTriggerTokenMap = ((List<Map<Class<?>, Object>>) textSentence.get(InstanceAnnotations.Token_FEATURE_MAPs)).get(i);
 
+		//XX somehow here do the same for PIUS scorers
 		for (ScorerData data : scorers.get(SignalType.TRIGGER)) {
 			SignalInstance signal = null;
 //			if (!existingSignals.containsKey(data) || (debug && existingSignals.get(data).history == null)) {

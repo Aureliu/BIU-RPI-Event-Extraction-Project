@@ -180,7 +180,7 @@ public class SentenceInstance
 	{
 		this(types, featureAlphabet, perceptron.controller, learnable, debug);
 		
-		System.out.printf("%s Starting c-tor SentenceInstance %s...\n", Pipeline.detailedLog(), this.sentInstID);
+		//System.out.printf("%s Starting c-tor SentenceInstance %s...\n", Pipeline.detailedLog(), this.sentInstID);
 
 		// set the text of the doc
 		this.allText = sent.doc.allText;
@@ -287,12 +287,12 @@ public class SentenceInstance
 		
 		getPersistentSignals(perceptron, debug);
 		
-		System.out.printf("%s Starting target of SentenceInstance %s...\n", Pipeline.detailedLog(), this.sentInstID);
+		//System.out.printf("%s Starting target of SentenceInstance %s...\n", Pipeline.detailedLog(), this.sentInstID);
 
 		// add target as gold-standard assignment
 		this.target = new SentenceAssignment(this, perceptron);
 		
-		System.out.printf("%s Finishing c-tor SentenceInstance %s...\n", Pipeline.detailedLog(), this.sentInstID);
+		//System.out.printf("%s Finishing c-tor SentenceInstance %s...\n", Pipeline.detailedLog(), this.sentInstID);
 
 	}
 
@@ -519,7 +519,7 @@ public class SentenceInstance
 			boolean debug) throws SignalMechanismException, CASException {
 		//List<Map<String, Map<String, SignalInstance>>> triggerSignals = new ArrayList<Map<String, Map<String, SignalInstance>>>(size());
 		//List<Map<String, List<Map<String, Map<String, SignalInstance>>>>> argSignals = new ArrayList<Map<String, List<Map<String, Map<String, SignalInstance>>>>>(size());
-		System.out.printf("%s Starting signals SentenceInstance %s...\n", Pipeline.detailedLog(), this.sentInstID);
+		//System.out.printf("%s Starting signals SentenceInstance %s...\n", Pipeline.detailedLog(), this.sentInstID);
 		perceptron.logSignalMechanismsPreSentence();
 		for(int i=0; i<size(); i++)
 		{
@@ -610,7 +610,7 @@ public class SentenceInstance
 				}
 			}
 		}
-		System.out.printf("%s Finished signals SentenceInstance %s.\n", Pipeline.detailedLog(), this.sentInstID);
+		//System.out.printf("%s Finished signals SentenceInstance %s.\n", Pipeline.detailedLog(), this.sentInstID);
 	}
 	
 	public void addTriggerSignals(JCas spec, int i, Perceptron perceptron, Map<ScorerData, SignalInstance> specSignals, boolean debug) throws SignalMechanismException {

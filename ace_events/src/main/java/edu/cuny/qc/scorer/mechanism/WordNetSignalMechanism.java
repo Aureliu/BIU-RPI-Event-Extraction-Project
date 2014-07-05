@@ -14,8 +14,6 @@ import java.util.Set;
 import java.util.concurrent.ExecutionException;
 
 import org.apache.commons.lang3.StringUtils;
-import org.apache.commons.lang3.builder.EqualsBuilder;
-import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.joda.time.Period;
 
 import ac.biu.nlp.nlp.ie.onthefly.input.AnnotationUtils;
@@ -38,7 +36,7 @@ import edu.cuny.qc.scorer.Juxtaposition;
 import edu.cuny.qc.scorer.ScorerData;
 import edu.cuny.qc.scorer.SignalMechanism;
 import edu.cuny.qc.scorer.SignalMechanismException;
-import edu.cuny.qc.scorer.PredicateSeedScorer;
+import edu.cuny.qc.scorer.PredicateSeedScorerTEMP;
 import edu.cuny.qc.scorer.Deriver.NoDerv;
 import edu.cuny.qc.util.PosMap;
 import eu.excitementproject.eop.common.component.lexicalknowledge.LexicalResourceException;
@@ -348,7 +346,7 @@ public class WordNetSignalMechanism extends SignalMechanism {
 				});
 	}
 	
-	private static class WordnetScorer extends PredicateSeedScorer {
+	private static class WordnetScorer extends PredicateSeedScorerTEMP {
 		private static final long serialVersionUID = 7293139399085559241L;
 		public Set<WordNetRelation> relations;
 		public Juxtaposition juxt;

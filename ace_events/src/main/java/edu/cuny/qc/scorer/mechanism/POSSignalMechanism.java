@@ -14,7 +14,7 @@ import edu.cuny.qc.scorer.Derivation;
 import edu.cuny.qc.scorer.ScorerData;
 import edu.cuny.qc.scorer.SignalMechanism;
 import edu.cuny.qc.scorer.SignalMechanismException;
-import edu.cuny.qc.scorer.PredicateSeedScorer;
+import edu.cuny.qc.scorer.PredicateSeedScorerTEMP;
 import edu.cuny.qc.scorer.mechanism.WordNetSignalMechanism.WordnetDervRltdDeriver;
 import eu.excitementproject.eop.common.representation.partofspeech.PartOfSpeech;
 
@@ -32,7 +32,7 @@ public class POSSignalMechanism extends SignalMechanism {
 		super();
 	}
 
-	private static class SpecificPOS extends PredicateSeedScorer {
+	private static class SpecificPOS extends PredicateSeedScorerTEMP {
 		@Override
 		public Boolean calcTokenBooleanScore(Token textToken, Map<Class<?>, Object> textTriggerTokenMap, String textStr, PartOfSpeech textPos, String specStr, PartOfSpeech specPos, ScorerData scorerData) throws SignalMechanismException
 		{

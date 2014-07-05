@@ -12,7 +12,7 @@ import edu.cuny.qc.scorer.Derivation;
 import edu.cuny.qc.scorer.ScorerData;
 import edu.cuny.qc.scorer.SignalMechanism;
 import edu.cuny.qc.scorer.SignalMechanismException;
-import edu.cuny.qc.scorer.PredicateSeedScorer;
+import edu.cuny.qc.scorer.PredicateSeedScorerTEMP;
 import edu.cuny.qc.scorer.mechanism.WordNetSignalMechanism.WordnetDervRltdDeriver;
 import eu.excitementproject.eop.common.representation.partofspeech.PartOfSpeech;
 
@@ -32,7 +32,7 @@ public class PlainSignalMechanism extends SignalMechanism {
 		super();
 	}
 
-	private static class SameToken extends PredicateSeedScorer {
+	private static class SameToken extends PredicateSeedScorerTEMP {
 		private static final long serialVersionUID = -2874181064215529174L;
 		public static final SameToken inst = new SameToken();
 		@Override public String getForm(Token token) { return token.getCoveredText();}
@@ -43,7 +43,7 @@ public class PlainSignalMechanism extends SignalMechanism {
 		}
 	}
 	
-	private static class SameLemma extends PredicateSeedScorer {
+	private static class SameLemma extends PredicateSeedScorerTEMP {
 		private static final long serialVersionUID = 3117453748881596932L;
 		public static final SameLemma inst = new SameLemma();
 		@Override
@@ -56,7 +56,7 @@ public class PlainSignalMechanism extends SignalMechanism {
 	/**
 	 * This class is actually identical to SameToken, but it's meant to be used with derivers.
 	 */
-	private static class TokenDerivation extends PredicateSeedScorer {
+	private static class TokenDerivation extends PredicateSeedScorerTEMP {
 		private static final long serialVersionUID = -7787465525225717077L;
 		public static final TokenDerivation inst = new TokenDerivation();
 		@Override public String getForm(Token token) { return token.getCoveredText();}
@@ -69,7 +69,7 @@ public class PlainSignalMechanism extends SignalMechanism {
 	/**
 	 * This class is actually identical to SameLemma, but it's meant to be used with derivers.
 	 */
-	private static class LemmaDerivation extends PredicateSeedScorer {
+	private static class LemmaDerivation extends PredicateSeedScorerTEMP {
 		private static final long serialVersionUID = 3247642100800512316L;
 		public static final LemmaDerivation inst = new LemmaDerivation();
 		@Override
@@ -79,7 +79,7 @@ public class PlainSignalMechanism extends SignalMechanism {
 		}
 	}
 	
-	private static class TextHasLetterE extends PredicateSeedScorer {
+	private static class TextHasLetterE extends PredicateSeedScorerTEMP {
 		private static final long serialVersionUID = -7752844963383651977L;
 		public static final TextHasLetterE inst = new TextHasLetterE();
 		@Override
@@ -89,7 +89,7 @@ public class PlainSignalMechanism extends SignalMechanism {
 		}
 	}
 	
-	private static class TextHasLetterX extends PredicateSeedScorer {
+	private static class TextHasLetterX extends PredicateSeedScorerTEMP {
 		private static final long serialVersionUID = 4984463409316221623L;
 		public static final TextHasLetterX inst = new TextHasLetterX();
 		@Override

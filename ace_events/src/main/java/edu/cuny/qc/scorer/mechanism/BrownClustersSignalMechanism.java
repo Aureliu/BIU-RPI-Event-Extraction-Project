@@ -10,7 +10,7 @@ import edu.cuny.qc.scorer.Derivation;
 import edu.cuny.qc.scorer.ScorerData;
 import edu.cuny.qc.scorer.SignalMechanism;
 import edu.cuny.qc.scorer.SignalMechanismException;
-import edu.cuny.qc.scorer.PredicateSeedScorer;
+import edu.cuny.qc.scorer.PredicateSeedScorerTEMP;
 import edu.cuny.qc.scorer.mechanism.NomlexSignalMechanism.NomlexDeriver;
 import edu.cuny.qc.scorer.mechanism.WordNetSignalMechanism.WordnetDervRltdDeriver;
 import edu.cuny.qc.util.BrownClusters;
@@ -45,7 +45,7 @@ public class BrownClustersSignalMechanism extends SignalMechanism {
 		super();
 	}
 
-	private static abstract class BrownClustersScorer extends PredicateSeedScorer {
+	private static abstract class BrownClustersScorer extends PredicateSeedScorerTEMP {
 		private static final long serialVersionUID = -1714460227125952358L;
 
 		/**

@@ -35,7 +35,7 @@ import com.google.common.collect.Multimap;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Lemma;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
-import edu.cuny.qc.ace.acetypes.AceArgumentTypes;
+import edu.cuny.qc.ace.acetypes.AceArgumentType;
 import eu.excitementproject.eop.common.utilities.uima.UimaUtils;
 
 public class SpecAnnotator extends JCasAnnotator_ImplBase {
@@ -117,11 +117,11 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 	@SuppressWarnings("unused")
 	public void validateArgumentTypes(JCas view) throws SpecXmlException {
 		String argTypeStr = null;
-		AceArgumentTypes enumvalue;
+		AceArgumentType enumvalue;
 		try {
 			for (ArgumentType argType : JCasUtil.select(view, ArgumentType.class)) {
 				argTypeStr = argType.getCoveredText();
-				enumvalue = AceArgumentTypes.valueOf(argTypeStr);
+				enumvalue = AceArgumentType.valueOf(argTypeStr);
 			}
 		} catch (IllegalArgumentException e) {
 			throw new SpecXmlException("Bad value for argument type: " + argTypeStr, e);

@@ -102,7 +102,11 @@ public class AceAnalyzerDocumentCollection extends StatsDocumentCollection {
 				put(new FieldName("Anchor", "Tokens2"), StatsFieldType.LIST_COUNTS);
 				put(new FieldName("Anchor", "SpecPOS"), StatsFieldType.LIST_COUNTS);
 				put(new FieldName("Anchor", "GenPOS"), StatsFieldType.LIST_COUNTS);
+				put(new FieldName("Anchor", "TokenSpecPOS"), StatsFieldType.LIST_COUNTS);
+				put(new FieldName("Anchor", "LemmaSpecPOS"), StatsFieldType.LIST_COUNTS);
+				put(new FieldName("Anchor", "TokenGenPOS"), StatsFieldType.LIST_COUNTS);
 				put(new FieldName("Anchor", "Dep"), StatsFieldType.LIST_COUNTS);
+				put(new FieldName("Anchor", "DepToken"), StatsFieldType.LIST_COUNTS);
 				put(new FieldName("Anchor", "DepGenPOS"), StatsFieldType.LIST_COUNTS);
 				put(new FieldName("Anchor", "DepSpecPOS"), StatsFieldType.LIST_COUNTS);
 				
@@ -141,6 +145,8 @@ public class AceAnalyzerDocumentCollection extends StatsDocumentCollection {
 					"EventSubType", "ArgType", "Role"
 			}),
 			new LinkedHashMap<FieldName,StatsFieldType>() {{
+				put(new FieldName("Argument", "SpecType"), StatsFieldType.LIST_COUNTS);
+				
 				put(new FieldName("EventsPerArg", "All"), StatsFieldType.LIST_COUNTS);
 				put(new FieldName("EventsPerArg", "PerRole"), StatsFieldType.LIST_COUNTS);
 				put(new FieldName("EventsPerArg2", "All"), StatsFieldType.COUNT_INT);
@@ -153,20 +159,44 @@ public class AceAnalyzerDocumentCollection extends StatsDocumentCollection {
 				put(new FieldName("TypedRolesPerArg", "PerRole"), StatsFieldType.LIST_COUNTS);
 
 				put(new FieldName("ArgHead", ""), StatsFieldType.LIST_COUNTS);
+				put(new FieldName("ArgHead", "SpecType"), StatsFieldType.LIST_VALUES);
 				put(new FieldName("ArgHead", "Lemmas"), StatsFieldType.LIST_COUNTS);
 				put(new FieldName("ArgHead", "Tokens"), StatsFieldType.COUNT_INT);
 				put(new FieldName("ArgHead", "Tokens2"), StatsFieldType.LIST_COUNTS);
 				put(new FieldName("ArgHead", "SpecPOS"), StatsFieldType.LIST_COUNTS);
 				put(new FieldName("ArgHead", "GenPOS"), StatsFieldType.LIST_COUNTS);
+				put(new FieldName("ArgHead", "TokenSpecPOS"), StatsFieldType.LIST_COUNTS);
+				put(new FieldName("ArgHead", "LemmaSpecPOS"), StatsFieldType.LIST_COUNTS);
+				put(new FieldName("ArgHead", "TokenGenPOS"), StatsFieldType.LIST_COUNTS);
 				put(new FieldName("ArgHead", "Dep"), StatsFieldType.LIST_COUNTS);
+				put(new FieldName("ArgHead", "DepToken"), StatsFieldType.LIST_COUNTS);
 				put(new FieldName("ArgHead", "DepGenPOS"), StatsFieldType.LIST_COUNTS);
 				put(new FieldName("ArgHead", "DepSpecPOS"), StatsFieldType.LIST_COUNTS);
 
+				put(new FieldName("ConcreteArgHead", ""), StatsFieldType.LIST_COUNTS);
+				put(new FieldName("ConcreteArgHead", "SpecType"), StatsFieldType.LIST_VALUES);
+				put(new FieldName("ConcreteArgHead", "Lemmas"), StatsFieldType.LIST_COUNTS);
+				put(new FieldName("ConcreteArgHead", "Tokens"), StatsFieldType.COUNT_INT);
+				put(new FieldName("ConcreteArgHead", "Tokens2"), StatsFieldType.LIST_COUNTS);
+				put(new FieldName("ConcreteArgHead", "SpecPOS"), StatsFieldType.LIST_COUNTS);
+				put(new FieldName("ConcreteArgHead", "GenPOS"), StatsFieldType.LIST_COUNTS);
+				put(new FieldName("ConcreteArgHead", "TokenSpecPOS"), StatsFieldType.LIST_COUNTS);
+				put(new FieldName("ConcreteArgHead", "LemmaSpecPOS"), StatsFieldType.LIST_COUNTS);
+				put(new FieldName("ConcreteArgHead", "TokenGenPOS"), StatsFieldType.LIST_COUNTS);
+				put(new FieldName("ConcreteArgHead", "Dep"), StatsFieldType.LIST_COUNTS);
+				put(new FieldName("ConcreteArgHead", "DepToken"), StatsFieldType.LIST_COUNTS);
+				put(new FieldName("ConcreteArgHead", "DepGenPOS"), StatsFieldType.LIST_COUNTS);
+				put(new FieldName("ConcreteArgHead", "DepSpecPOS"), StatsFieldType.LIST_COUNTS);
+
 				put(new FieldName("ArgExtent", ""), StatsFieldType.LIST_COUNTS);
 				put(new FieldName("ArgExtent", "Tokens"), StatsFieldType.COUNT_INT);
+				put(new FieldName("ArgExtent", "Lemmas"), StatsFieldType.LIST_COUNTS);
 				put(new FieldName("ArgExtent", "Sentences"), StatsFieldType.COUNT_INT);
 				put(new FieldName("ArgExtent", "SpecPOS"), StatsFieldType.LIST_COUNTS);
 				put(new FieldName("ArgExtent", "GenPOS"), StatsFieldType.LIST_COUNTS);
+				put(new FieldName("ArgExtent", "TokenSpecPOS"), StatsFieldType.LIST_COUNTS);
+				put(new FieldName("ArgExtent", "LemmaSpecPOS"), StatsFieldType.LIST_COUNTS);
+				put(new FieldName("ArgExtent", "TokenGenPOS"), StatsFieldType.LIST_COUNTS);
 
 			}});
 	

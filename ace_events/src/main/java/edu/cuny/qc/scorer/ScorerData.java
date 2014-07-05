@@ -108,9 +108,8 @@ public class ScorerData implements Serializable {
 	
 	@Override
 	public int hashCode() {
-	     int hash = new HashCodeBuilder(17, 37).append(basicName).append(deriver).append(aggregator)
+	     return new HashCodeBuilder(17, 37).append(basicName).append(deriver).append(aggregator)
 	    		 .append(derivation).append(leftSenseNum).append(rightSenseNum).append(specificPos).toHashCode();
-	     return hash;
 	}
 	@Override
 	public boolean equals(Object obj) {
@@ -120,10 +119,9 @@ public class ScorerData implements Serializable {
 	     return false;
 	   }
 	   ScorerData rhs = (ScorerData) obj;
-	   boolean result = new EqualsBuilder().append(basicName, rhs.basicName).append(deriver, rhs.deriver).append(aggregator, rhs.aggregator)
+	   return new EqualsBuilder().append(basicName, rhs.basicName).append(deriver, rhs.deriver).append(aggregator, rhs.aggregator)
 	    	   .append(derivation, rhs.derivation).append(leftSenseNum, rhs.leftSenseNum).append(rightSenseNum, rhs.rightSenseNum)
 	    	   .append(specificPos, rhs.specificPos).isEquals();
-	   return result;
 	}
 
 }

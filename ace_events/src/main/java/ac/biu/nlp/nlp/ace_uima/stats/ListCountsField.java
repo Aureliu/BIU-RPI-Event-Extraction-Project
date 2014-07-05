@@ -13,8 +13,7 @@ import com.google.common.collect.HashMultimap;
 import com.google.common.collect.HashMultiset;
 import com.google.common.collect.Multimap;
 import com.google.common.collect.Multiset;
-
-import ac.biu.nlp.nlp.ace_uima.utils.Counter;
+import com.google.common.collect.TreeMultimap;
 
 public class ListCountsField extends ListField {
 
@@ -36,11 +35,11 @@ public class ListCountsField extends ListField {
 	@Override
 	public <O extends Object, C extends Collection<String>, I extends Iterable<Entry<O, C>>> I getList() {
 		//Set<Entry<Integer, Set<String>>> set = elements.entrySetByCount();
-		Multimap<Integer, String> countToTerms = HashMultimap.create();
+		Multimap<Integer, String> countToTerms = TreeMultimap.create(); //keep multimap sorted by key, which is count
 		for(String term : elements.elementSet()) {
 			countToTerms.put(elements.count(term), term);
 		}
-		Set<Entry<O,C>> out = new HashSet<Entry<O,C>>(countToTerms.keySet().size());
+		Set<Entry<O,C>> out = new LinkedHashSet<Entry<O,C>>(countToTerms.keySet().size()); //LinkedHashSet to maintain ordering
 		for (Entry<Integer,Collection<String>> entry : countToTerms.asMap().entrySet()) {
 			out.add(new AbstractMap.SimpleEntry<O,C>((O) entry.getKey(), (C) entry.getValue()));
 		}

@@ -18,10 +18,10 @@ public enum Derivation {
 	public String toString() {
 		switch(this) {
 			case NONE: return ""; 
-			case TEXT_ORIG_AND_DERV: return "-withTextDerv";
-			case TEXT_ONLY_DERV: return "-onlyTextDerv";
-			case SPEC_ORIG_AND_DERV: return "-withSpecDerv";
-			case SPEC_ONLY_DERV: return "-onlySpecDerv";
+			case TEXT_ORIG_AND_DERV: return "_withTextDerv";
+			case TEXT_ONLY_DERV: return "_onlyTextDerv";
+			case SPEC_ORIG_AND_DERV: return "_withSpecDerv";
+			case SPEC_ONLY_DERV: return "_onlySpecDerv";
 			default: throw new IllegalArgumentException(this.name());
 		}
 	}

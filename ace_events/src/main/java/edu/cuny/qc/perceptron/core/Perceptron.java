@@ -30,10 +30,13 @@ import edu.cuny.qc.perceptron.types.SentenceAssignment;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
 import edu.cuny.qc.perceptron.types.SentenceInstance.InstanceAnnotations;
 import edu.cuny.qc.perceptron.types.SignalInstance;
+import edu.cuny.qc.perceptron.types.SignalType;
 import edu.cuny.qc.scorer.ScorerData;
 import edu.cuny.qc.scorer.SignalMechanism;
 import edu.cuny.qc.scorer.SignalMechanismException;
 import edu.cuny.qc.scorer.mechanism.BrownClustersSignalMechanism;
+import edu.cuny.qc.scorer.mechanism.DependencySignalMechanism;
+import edu.cuny.qc.scorer.mechanism.POSSignalMechanism;
 import edu.cuny.qc.scorer.mechanism.PlainSignalMechanism;
 import edu.cuny.qc.scorer.mechanism.WordNetSignalMechanism;
 import edu.cuny.qc.util.TokenAnnotations;
@@ -112,15 +115,20 @@ public class Perceptron implements java.io.Serializable
 		
 //		try {
 			
-			signalMechanisms.add(new PlainSignalMechanism());
-			signalMechanisms.add(new WordNetSignalMechanism());
-			signalMechanisms.add(new BrownClustersSignalMechanism());
+			signalMechanisms.add(new PlainSignalMechanism(this));
+			signalMechanisms.add(new WordNetSignalMechanism(this));
+			signalMechanisms.add(new BrownClustersSignalMechanism(this));
+			signalMechanisms.add(new POSSignalMechanism(this));
+			signalMechanisms.add(new DependencySignalMechanism(this));
 			
 //		} catch (UnsupportedPosTagStringException e) {
 //			throw new SignalMechanismException(e);
 //		} catch (WordNetInitializationException e) {
 //			throw new SignalMechanismException(e);
 //		}
+			for (SignalMechanism mechanism : signalMechanisms) {
+				triggerScorers.addAll(mechanism.scorers.get(SignalType.TRIGGER));
+			}
 	}
 		
 	public void logSignalMechanismsPreSentence() {
@@ -236,6 +244,22 @@ public class Perceptron implements java.io.Serializable
 		}
 	}
 	
+	public static String twoLabels(SentenceAssignment assn1, SentenceAssignment assn2, int j) {
+		return twoLabels(assn1, assn2.getLabelAtToken(j), j);
+	}
+	
+	public static String twoLabels(SentenceAssignment assn1, String assn2Label, int j) {
+		return String.format("%s,%s", assn1.getLabelAtToken(j), assn2Label);
+	}
+	
+	public static String twoLabelsAndScore(SentenceAssignment assn1, SentenceAssignment assn2, int j, Map<?, ?> map, String key) {
+		return twoLabelsAndScore(assn1, assn2.getLabelAtToken(j), j, str(map, key));
+	}
+	
+	public static String twoLabelsAndScore(SentenceAssignment assn1, String assn2Label, int j, String assnSignal) {
+		return String.format("%s,%s", twoLabels(assn1, assn2Label, j), assnSignal);
+	}
+	
 	public static String values(FeatureVector fv) {
 		if (fv == null) {
 			return "X";
@@ -296,9 +320,9 @@ public class Perceptron implements java.io.Serializable
 			}
 			Collections.sort(featureNames);
 			for (String name : featureNames) {
-				Utils.print(out, "", "\n", "|",					
+				Utils.print(out, "", "\n", "|", sentenceNo.toString(),			
 						iter,
-						//docId,
+						docId,
 						sentenceNo,
 						c,
 						//tokens,
@@ -316,9 +340,9 @@ public class Perceptron implements java.io.Serializable
 			}
 		}
 		if (controller.logLevel >= 3) {
-			Utils.print(out, "", "\n", "|",					
+			Utils.print(out, "", "\n", "|", sentenceNo.toString(),
 					iter,
-					//docId,
+					docId,
 					sentenceNo,
 					c,
 					//tokens,
@@ -337,7 +361,7 @@ public class Perceptron implements java.io.Serializable
 	}
 	
 	private void printScore(PrintStream out, String iter, int devSize, Score score) {
-		Utils.print(out, "", "\n", "|",
+		Utils.print(out, "", "\n", "|", null, 
 				iter, devSize,
 				score.count_trigger_gold, score.count_trigger_ans, score.count_trigger_correct,
 				score.trigger_precision, score.trigger_recall, score.trigger_F1, 
@@ -433,9 +457,9 @@ public class Perceptron implements java.io.Serializable
 			throw new RuntimeException(e);
 		}
 		//printf(w, "Iter|%sSentenceNo|%s\n", wt.getFeaturesStringTitle(), wt.getFeaturesStringTitle());
-		Utils.print(w, "", "\n", "|",					
+		Utils.print(w, "", "\n", "|", null,			
 				"Iter",
-				//"DocID",
+				"DocID",
 				"SentenceNo",
 				"c",
 				//"Tokens",
@@ -460,7 +484,7 @@ public class Perceptron implements java.io.Serializable
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
-		Utils.print(f, "", "\n", "|",					
+		Utils.print(f, "", "\n", "|", null,			
 				"Iter",
 				"DocID",
 				"SentenceNo",
@@ -471,6 +495,7 @@ public class Perceptron implements java.io.Serializable
 				"Lemma",
 				"target-label",
 				"assn-label",
+				"both-labels",
 				"Feature",
 				"target-size",
 				"target-signal",
@@ -478,6 +503,7 @@ public class Perceptron implements java.io.Serializable
 				"assn-size",
 				"assn-signal",
 				"assn",
+				"labels+assn",
 				"in-both",
 				"same-score",
 				"weights-size",
@@ -494,7 +520,7 @@ public class Perceptron implements java.io.Serializable
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
-		Utils.print(d, "", "\n", "|",					
+		Utils.print(d, "", "\n", "|", null,				
 				"Iter",
 				"DevSentences",
 				"Trigger-Gold",
@@ -592,7 +618,7 @@ public class Perceptron implements java.io.Serializable
 						}
 						
 						if (controller.logLevel >= 4) {
-							Utils.print(f, "", "\n", "|",					
+							Utils.print(f, "", "\n", "|", instance.sentInstID,				
 									iter,
 									"",//instance.docID,
 									instance.sentInstID,
@@ -603,6 +629,7 @@ public class Perceptron implements java.io.Serializable
 									lemma(lemma),
 									instance.target.getLabelAtToken(j),
 									assnLabel,
+									twoLabels(instance.target, assnLabel, j),
 									feature(s),
 									"",//mapTarget.size(),
 									targetSignal,
@@ -610,6 +637,7 @@ public class Perceptron implements java.io.Serializable
 									"",//mapAssn.size(),
 									assnSignal,
 									inAssn,
+									twoLabelsAndScore(instance.target, assnLabel, j, assnSignal),
 									bothTargetAndAssn,
 									sameTargetAndAssn,
 									"",//weights.size(),
@@ -620,7 +648,7 @@ public class Perceptron implements java.io.Serializable
 					}
 					if (controller.logLevel >= 2) {
 
-						Utils.print(f, "", "\n", "|",					
+						Utils.print(f, "", "\n", "|", instance.sentInstID,
 								iter,
 								docid(instance.docID),
 								instance.sentInstID,
@@ -631,11 +659,13 @@ public class Perceptron implements java.io.Serializable
 								lemma(lemma),
 								instance.target.getLabelAtToken(j),
 								assnLabel,
+								twoLabels(instance.target, assnLabel, j),
 								"",
 								size(mapTarget),
 								"",
 								"",
 								size(mapAssn),
+								"",
 								"",
 								"",
 								"",
@@ -684,7 +714,7 @@ public class Perceptron implements java.io.Serializable
 			}
 			
 			//DEBUG
-			//printf(w, "%d|%s\n", iter, wt.getFeaturesString());		
+			System.out.printf("%s Finished iteration %s\n", Pipeline.detailedLog(), iter);
 			////////////
 
 			
@@ -705,14 +735,14 @@ public class Perceptron implements java.io.Serializable
 		if(iter < this.controller.maxIterNum)
 		{
 			// converge
-			System.out.println("converge in iter " + iter + "\t time:" + totalTime);
+			System.out.println(Pipeline.detailedLog() + " converge in iter " + iter + "\t time:" + totalTime);
 			lastIter = String.format("Best(iter=%s, converged)", best_iter);
 			iter++;
 		}
 		else
 		{
 			// stop without convergency
-			System.out.println("Stop without convergency" + "\t time:" + totalTime);
+			System.out.println(Pipeline.detailedLog() + " Stop without convergency" + "\t time:" + totalTime);
 			lastIter = String.format("Best(iter=%s, NO converge)", best_iter);
 		}
 		printScore(d, lastIter, devList.size(), max_score);

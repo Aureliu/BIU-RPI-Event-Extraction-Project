@@ -13,6 +13,8 @@ import java.util.Map;
 import java.util.Queue;
 import java.util.Vector;
 
+import com.google.common.collect.Lists;
+
 import edu.cuny.qc.ace.acetypes.AceEntityMention;
 import edu.cuny.qc.ace.acetypes.AceMention;
 import edu.cuny.qc.ace.acetypes.AceTimexMention;
@@ -177,6 +179,22 @@ public class TextFeatureGenerator
 					map.put(TokenAnnotations.LemmaAnnotation.class, lemma);
 					map.put(TokenAnnotations.ChunkingAnnotation.class, chunks[idx]);
 					//map.put(TokenAnnotations.SpanAnnotation.class, tokenSpans[idx]); //never used!
+					
+					GraphNode node = graph.getVertices().get(idx);
+					List<GraphEdge> toParents = Lists.newArrayList();
+					List<GraphEdge> toChildren = Lists.newArrayList();
+					for (GraphEdge edge : node.edges) {
+						int otherIndex = edge.getGovernor();
+						if (otherIndex == idx) {
+							toChildren.add(edge);
+						}
+						else {
+							toParents.add(edge);
+						}
+					}
+					map.put(TokenAnnotations.EdgesToParents.class, toParents);
+					map.put(TokenAnnotations.EdgesToChildren.class, toChildren);
+
 					
 					// get base form of verb and noun according to Nomlex. e.g. retirement --> retire
 					if(posTags[idx].startsWith("V") && Nomlex.getSingleTon().contains(lemma))

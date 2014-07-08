@@ -90,7 +90,7 @@ public class Sentence implements java.io.Serializable
 		final int MAX_TEXT_LEN = 6;
 		this.doc = doc;
 		this.sentID = sentID;
-		this.text = (StringUtils.substring(text, 0, MAX_TEXT_LEN) + "..").intern();
+		this.text = (StringUtils.substring(text.replace("\"", "\\\""), 0, MAX_TEXT_LEN) + "..").intern();
 	}
 	
 	@Override

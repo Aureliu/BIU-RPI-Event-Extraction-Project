@@ -57,7 +57,7 @@ import edu.cuny.qc.util.Span;
 public class SentenceInstance
 {
 	static {
-		System.err.println("SentenceInstance: yes, even here I removed the args :)");
+		System.err.println("SentenceInstance: yes, even here I removed the args :) Epecially at the signal calcing thing (but not only)");
 	}
 	
 	public boolean learnable = false;
@@ -477,30 +477,30 @@ public class SentenceInstance
 	/// Ofer's new section - calcing signals!
 	private void getPersistentSignals(Perceptron perceptron, boolean debug) {
 		try {
-			Map<Integer, List<Map<Integer, Map<ScorerData, SignalInstance>>>> allTriggerSignals = null;
-			Map<Integer, List<Map<Integer, List<Map<Integer, Map<ScorerData, SignalInstance>>>>>> allArgSignals = null;
+//			Map<Integer, List<Map<Integer, Map<ScorerData, SignalInstance>>>> allTriggerSignals = null;
+//			Map<Integer, List<Map<Integer, List<Map<Integer, Map<ScorerData, SignalInstance>>>>>> allArgSignals = null;
 			if (doc.signals == null) {
-				allTriggerSignals = new FinalKeysMap<Integer, List<Map<Integer, Map<ScorerData, SignalInstance>>>>();
-				allArgSignals = new FinalKeysMap<Integer, List<Map<Integer, List<Map<Integer, Map<ScorerData, SignalInstance>>>>>>();
-				doc.signals = new BundledSignals(/*types,*/ perceptron, allTriggerSignals, allArgSignals);
+				doc.signals = new BundledSignals(/*types,*/ /*perceptron, allTriggerSignals, allArgSignals*/);
+//				allTriggerSignals = doc.signals.triggerSignals;
+//				allArgSignals = doc.signals.argSignals;
 				markSignalUpdate();
 			}
-			else {
-				allTriggerSignals = doc.signals.triggerSignals;
-				allArgSignals = doc.signals.argSignals;
-			}
+//			else {
+//				allTriggerSignals = doc.signals.triggerSignals;
+//				allArgSignals = doc.signals.argSignals;
+//			}
 			
 			List<Map<Integer, Map<ScorerData, SignalInstance>>> sentenceTriggerSignals;
 			List<Map<Integer, List<Map<Integer, Map<ScorerData, SignalInstance>>>>> sentenceArgSignals;
-			if (!allTriggerSignals.containsKey(sentID)) {
+			if (!doc.signals.triggerSignals.containsKey(sentID)) {
 				sentenceTriggerSignals = new ArrayList<Map<Integer, Map<ScorerData, SignalInstance>>>(size());
 				sentenceArgSignals = new ArrayList<Map<Integer, List<Map<Integer, Map<ScorerData, SignalInstance>>>>>(size());
-				allTriggerSignals.put(sentID, sentenceTriggerSignals);
-				allArgSignals.put(sentID, sentenceArgSignals);
+				doc.signals.triggerSignals.put(sentID, sentenceTriggerSignals);
+				doc.signals.argSignals.put(sentID, sentenceArgSignals);
 			}
 			else {
-				sentenceTriggerSignals = allTriggerSignals.get(sentID);
-				sentenceArgSignals = allArgSignals.get(sentID);
+				sentenceTriggerSignals = doc.signals.triggerSignals.get(sentID);
+				sentenceArgSignals = doc.signals.argSignals.get(sentID);
 			}
 			
 			this.textFeaturesMap.put(InstanceAnnotations.NodeTextSignalsBySpec, sentenceTriggerSignals);
@@ -547,67 +547,65 @@ public class SentenceInstance
 			else {
 				tokenTriggerSignals = triggerSignals.get(i);
 			}
-			Map<Integer, List<Map<Integer, Map<ScorerData, SignalInstance>>>> tokenArgSignals = null;
-			if (argSignals.size() <= i) {
-				tokenArgSignals = new HashMap<Integer, List<Map<Integer, Map<ScorerData, SignalInstance>>>>();
-				argSignals.add(tokenArgSignals);
-			}
-			else {
-				tokenArgSignals = argSignals.get(i);
-			}
+//			Map<Integer, List<Map<Integer, Map<ScorerData, SignalInstance>>>> tokenArgSignals = null;
+//			if (argSignals.size() <= i) {
+//				tokenArgSignals = new HashMap<Integer, List<Map<Integer, Map<ScorerData, SignalInstance>>>>();
+//				argSignals.add(tokenArgSignals);
+//			}
+//			else {
+//				tokenArgSignals = argSignals.get(i);
+//			}
 			
 			Integer specNum = -1;
 			for (JCas spec : types.specs) {
 				specNum++;
-			//for (Integer specNum=0; specNum < types.triggerTypes.size(); specNum++) {
-				//String triggerLabel = SpecAnnotator.getSpecLabel(spec);
 				
 				Map<ScorerData, SignalInstance> specSignals = null;
 				List<Map<Integer, Map<ScorerData, SignalInstance>>> tokenArgSpecSignals = null;
 				if (!tokenTriggerSignals.containsKey(specNum)) {
 					specSignals = new HashMap<ScorerData, SignalInstance>();
 					tokenTriggerSignals.put(specNum, specSignals);
-					tokenArgSpecSignals = new ArrayList<Map<Integer, Map<ScorerData, SignalInstance>>>();
-					tokenArgSignals.put(specNum, tokenArgSpecSignals);
+//					tokenArgSpecSignals = new ArrayList<Map<Integer, Map<ScorerData, SignalInstance>>>();
+//					tokenArgSignals.put(specNum, tokenArgSpecSignals);
 				} 
 				else {
 					specSignals = tokenTriggerSignals.get(specNum);
-					tokenArgSpecSignals = tokenArgSignals.get(specNum);
+//					tokenArgSpecSignals = tokenArgSignals.get(specNum);
 				}
 				
 				addTriggerSignals(spec, i, perceptron, specSignals, debug);
 					
-				for(int k=0; k<eventArgCandidates.size(); k++) {
-					AceMention mention = eventArgCandidates.get(k);
-					//if(types.isEntityTypeEventCompatible(triggerLabel, mention.getType())) {
-					
-					Map<Integer, Map<ScorerData, SignalInstance>> tokenArgSpecEntitySignals = null;
-					if (tokenArgSpecSignals.size() <= k) {
-						tokenArgSpecEntitySignals = new HashMap<Integer, Map<ScorerData, SignalInstance>>();
-						tokenArgSpecSignals.add(tokenArgSpecEntitySignals);
-					}
-					else {
-						tokenArgSpecEntitySignals = tokenArgSpecSignals.get(k);
-					}
-	
-					Integer roleNum = -1;
-					for (Argument argument : SpecAnnotator.getSpecArguments(spec)) {
-						roleNum++;
-						String role = argument.getRole().getCoveredText();								
-						//if(types.isRoleCompatible(mention.getType(), triggerLabel, role)) {
-
-						Map<ScorerData, SignalInstance> roleSignals = null;
-						if (!tokenArgSpecEntitySignals.containsKey(role)) {
-							roleSignals = new HashMap<ScorerData, SignalInstance>();
-							tokenArgSpecEntitySignals.put(roleNum, roleSignals);
-						}
-						else {
-							roleSignals = tokenArgSpecEntitySignals.get(roleNum);
-						}
-						
-						//addArgumentSignals(spec, i, argument, mention, perceptron, roleSignals);
-					}
-				}
+//				for(int k=0; k<eventArgCandidates.size(); k++) {
+//					AceMention mention = eventArgCandidates.get(k);
+//					//if(types.isEntityTypeEventCompatible(triggerLabel, mention.getType())) {
+//					
+//					Map<Integer, Map<ScorerData, SignalInstance>> tokenArgSpecEntitySignals = null;
+//					if (tokenArgSpecSignals.size() <= k) {
+//						tokenArgSpecEntitySignals = new HashMap<Integer, Map<ScorerData, SignalInstance>>();
+//						tokenArgSpecSignals.add(tokenArgSpecEntitySignals);
+//					}
+//					else {
+//						tokenArgSpecEntitySignals = tokenArgSpecSignals.get(k);
+//					}
+//	
+//					Integer roleNum = -1;
+//					for (Argument argument : SpecAnnotator.getSpecArguments(spec)) {
+//						roleNum++;
+//						String role = argument.getRole().getCoveredText();								
+//						//if(types.isRoleCompatible(mention.getType(), triggerLabel, role)) {
+//
+//						Map<ScorerData, SignalInstance> roleSignals = null;
+//						if (!tokenArgSpecEntitySignals.containsKey(role)) {
+//							roleSignals = new HashMap<ScorerData, SignalInstance>();
+//							tokenArgSpecEntitySignals.put(roleNum, roleSignals);
+//						}
+//						else {
+//							roleSignals = tokenArgSpecEntitySignals.get(roleNum);
+//						}
+//						
+//						//addArgumentSignals(spec, i, argument, mention, perceptron, roleSignals);
+//					}
+//				}
 			}
 		}
 		//System.out.printf("%s Finished signals SentenceInstance %s.\n", Pipeline.detailedLog(), this.sentInstID);
@@ -615,7 +613,7 @@ public class SentenceInstance
 	
 	public void addTriggerSignals(JCas spec, int i, Perceptron perceptron, Map<ScorerData, SignalInstance> specSignals, boolean debug) throws SignalMechanismException {
 		for (SignalMechanism mechanism : perceptron.signalMechanisms) {
-			mechanism.scoreTrigger(specSignals, perceptron.triggerScorers, spec, this, i, debug);
+			mechanism.scoreTrigger(specSignals, /*perceptron.triggerScorers,*/ spec, this, i, debug);
 			
 			// Good debug info for signals and scorers!
 //			List<ScorerData> scorers = mechanism.scorers.get(SignalType.TRIGGER);

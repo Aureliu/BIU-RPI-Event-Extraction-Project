@@ -1,6 +1,10 @@
 package edu.cuny.qc.util;
 
+import java.util.List;
 import java.util.Vector;
+
+import edu.cuny.qc.perceptron.graph.GraphEdge;
+import edu.cuny.qc.perceptron.graph.GraphNode;
 
 public class TokenAnnotations 
 {
@@ -242,6 +246,17 @@ public class TokenAnnotations
   {
 	  public Class<?> getType() {
 	      return String.class;
+	  }
+  }
+  
+  public class EdgesToParents implements TokenAnnotation {
+	  public Class<?> getType() {
+	      return List.class;
+	  }
+  }
+  public class EdgesToChildren implements TokenAnnotation {
+	  public Class<?> getType() {
+	      return List.class;
 	  }
   }
   

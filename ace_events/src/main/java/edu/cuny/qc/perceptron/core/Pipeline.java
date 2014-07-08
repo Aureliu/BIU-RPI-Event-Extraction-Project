@@ -338,11 +338,11 @@ public class Pipeline
 		// print out weights
 		if(model.controller.avgArguments)
 		{
-			Utils.print(out, "", "", "", model.getAvg_weights().toStringFull());			
+			Utils.print(out, "", "", "", null, model.getAvg_weights().toStringFull());			
 		}
 		else
 		{
-			Utils.print(out, "", "", "", model.getWeights().toStringFull());			
+			Utils.print(out, "", "", "", null, model.getWeights().toStringFull());			
 		}
 		
 		if (out != null	) {

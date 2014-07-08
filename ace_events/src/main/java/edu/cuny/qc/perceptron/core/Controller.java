@@ -1,6 +1,9 @@
 package edu.cuny.qc.perceptron.core;
 
+import java.util.Arrays;
 import java.util.Date;
+
+import edu.cuny.qc.util.Utils;
 
 // This is a controller of the settings in percetpron
 public class Controller implements java.io.Serializable
@@ -58,6 +61,12 @@ public class Controller implements java.io.Serializable
 	public boolean useSignalFiles = true;
 	
 	public boolean saveFeatureSignalNames = false;
+	
+	public boolean onlyAnalysis = false;
+	
+	public boolean singleTokenSentences = false;
+	
+	public String[] logOnlyTheseSentences = {};
 	
 	public Controller()
 	{
@@ -155,6 +164,19 @@ public class Controller implements java.io.Serializable
 			{
 				saveFeatureSignalNames = Boolean.parseBoolean(fields[1]);
 			}
+			else if(fields[0].equalsIgnoreCase("onlyAnalysis"))
+			{
+				onlyAnalysis = Boolean.parseBoolean(fields[1]);
+			}
+			else if(fields[0].equalsIgnoreCase("singleTokenSentences"))
+			{
+				singleTokenSentences = Boolean.parseBoolean(fields[1]);
+			}
+			else if(fields[0].equalsIgnoreCase("logOnlyTheseSentences"))
+			{
+				logOnlyTheseSentences = fields[1].split(",");
+				Utils.logOnlyTheseSentences = Arrays.asList(logOnlyTheseSentences);
+			}
 		}
 		System.out.printf("\n[%s] ******** Controller() **********\n", new Date());
 		System.out.printf("******** %s **********\n", this);
@@ -168,7 +190,9 @@ public class Controller implements java.io.Serializable
 		+ " crossSent:" + crossSent + " crossSentReranking:" + crossSentReranking + " order:" + order +
 		" evaluatorType:" + evaluatorType + " learnBigrams: " + learnBigrams + " logLevel: " + logLevel +
 		" oMethod: " + oMethod + " serialization: " + serialization + " usePreprocessFiles: " + usePreprocessFiles
-		+ " usePreprocessFiles: " + usePreprocessFiles + " saveFeatureSignalNames: " + saveFeatureSignalNames;
+		+ " usePreprocessFiles: " + usePreprocessFiles + " saveFeatureSignalNames: " + saveFeatureSignalNames +
+		" onlyAnalysis: " + onlyAnalysis + " singleTokenSentences: " + singleTokenSentences +
+		" logOnlyTheseSentences: " + logOnlyTheseSentences;
 		return ret;
 	}
 	

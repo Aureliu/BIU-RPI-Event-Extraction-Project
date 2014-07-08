@@ -159,7 +159,7 @@ public class Decoder
 			{
 				outputFile.getParentFile().mkdirs();
 			}
-			String docID = doc.docID.substring(doc.docID.lastIndexOf("/") + 1);
+			String docID = doc.docID;//.substring(doc.docID.lastIndexOf("/") + 1);
 			String id_prefix = docID + "-" + "EV";
 			PrintWriter out = new PrintWriter(outputFile);
 			

@@ -16,6 +16,8 @@ import ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateSeed;
 
 import com.google.common.collect.ArrayListMultimap;
 
+import edu.cuny.qc.perceptron.core.Controller;
+import edu.cuny.qc.perceptron.core.Perceptron;
 import edu.cuny.qc.perceptron.core.Pipeline;
 
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
@@ -31,7 +33,8 @@ public abstract class SignalMechanism {
 		System.err.println("??? SignalMechanism: for argument, now considering only HEAD (not extent), and only FIRST WORD of head (could be more than one word). Need to think of handling MWEs.");
 	}
 	
-	public SignalMechanism() throws SignalMechanismException {
+	public SignalMechanism(Perceptron perceptron) throws SignalMechanismException {
+		controller = perceptron.controller;
 		scorers = new LinkedHashMap<SignalType, List<ScorerData>>(2);
 		scorers.put(SignalType.TRIGGER,   new ArrayList<ScorerData>());
 		scorers.put(SignalType.ARGUMENT,  new ArrayList<ScorerData>());
@@ -65,7 +68,7 @@ public abstract class SignalMechanism {
 	public void logPreDocument() {}
 	public void logPreDocumentBunch() {}
 
-	public void scoreTrigger(Map<ScorerData, SignalInstance> existingSignals, Set<ScorerData> allTriggerScorers, JCas spec, SentenceInstance textSentence, int i, boolean debug) throws SignalMechanismException {
+	public void scoreTrigger(Map<ScorerData, SignalInstance> existingSignals, /*Set<ScorerData> allTriggerScorers,*/ JCas spec, SentenceInstance textSentence, int i, boolean debug) throws SignalMechanismException {
 		Token textTriggerToken = textSentence.getTokenAnnotation(i);
 		Map<Class<?>, Object> textTriggerTokenMap = ((List<Map<Class<?>, Object>>) textSentence.get(InstanceAnnotations.Token_FEATURE_MAPs)).get(i);
 
@@ -88,7 +91,7 @@ public abstract class SignalMechanism {
 				BigDecimal score = data.aggregator.aggregate(data.scorer);
 				signal = new SignalInstance(data, SignalType.TRIGGER, score);
 				existingSignals.put(data, signal);
-				allTriggerScorers.add(data);
+				//allTriggerScorers.add(data);
 				textSentence.markSignalUpdate();
 			}
 			if (debug) {
@@ -179,6 +182,7 @@ public abstract class SignalMechanism {
 	 */
 	public void close() { }
 	
+	public Controller controller;
 	public Map<SignalType, List<ScorerData>> scorers;
 	private Aggregator debugAggregator = Aggregator.ScanAll.inst;
 }

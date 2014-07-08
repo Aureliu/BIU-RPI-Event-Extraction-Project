@@ -8,6 +8,7 @@ import java.util.concurrent.ExecutionException;
 
 import com.google.common.collect.Sets;
 
+import edu.cuny.qc.perceptron.core.Perceptron;
 import edu.cuny.qc.scorer.BasicRulesQuery;
 import edu.cuny.qc.scorer.Deriver;
 import edu.cuny.qc.scorer.DeriverException;
@@ -22,8 +23,8 @@ import eu.excitementproject.eop.common.representation.partofspeech.PartOfSpeech;
 
 public class NomlexSignalMechanism extends SignalMechanism {
 
-	public NomlexSignalMechanism() throws SignalMechanismException {
-		super();
+	public NomlexSignalMechanism(Perceptron perceptron) throws SignalMechanismException {
+		super(perceptron);
 		try {
 			// no need to store the NomlexPlus object - we load it here,
 			// and all relevant info is references by the NomlexPlusDictionary enum values

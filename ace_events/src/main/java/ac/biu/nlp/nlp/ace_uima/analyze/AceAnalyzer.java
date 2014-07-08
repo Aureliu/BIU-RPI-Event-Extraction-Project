@@ -70,6 +70,7 @@ import de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS;
 import de.tudarmstadt.ukp.dkpro.core.api.metadata.type.DocumentMetaData;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
+import edu.cuny.qc.ace.acetypes.AceArgumentType;
 import edu.cuny.qc.ace.acetypes.AceEntityMention;
 import eu.excitementproject.eop.common.datastructures.OneToManyBidiMultiHashMap;
 import eu.excitementproject.eop.common.datastructures.SimpleValueSetMap;
@@ -335,6 +336,13 @@ public class AceAnalyzer {
 						docs.updateDocs(key, "ArgHead", "DepGenPOS", getParenthesesTreeDependenciesGeneralPOS(argHeadFrag));						
 						docs.updateDocs(key, "ArgHead", "DepSpecPOS", getParenthesesTreeDependenciesSpecificPOS(argHeadFrag));
 						updateLinkingTreeFrags(key, eventAnchor, argHead, "Link", "Dep", "DepGenPOS", "DepSpecPOS");
+
+						if (argHead!=null) {
+							String specTypeStr = getSpecType(argHead.getMention());
+							if (!specTypeStr.equals("(null)")) {
+								docs.updateDocs(key, "ArgHead", specTypeStr, getText(argHead));					
+							}
+						}
 						addDetails("ArgHead.GenPos_" + getGeneralPosString(argHead), getText(argHead) + ": " + getText(argExtent));
 						
 						for (BasicArgumentMention concreteMention : getConcreteArgumentMentions(arg)) {
@@ -349,7 +357,14 @@ public class AceAnalyzer {
 							docs.updateDocs(key, "ConcreteArgHead", "TokenSpecPOS", getTokenAndSpecificPosString(concreteHead));				
 							docs.updateDocs(key, "ConcreteArgHead", "LemmaSpecPOS", getLemmaAndSpecificPosString(concreteHead));				
 							docs.updateDocs(key, "ConcreteArgHead", "TokenGenPOS", getTokenAndGeneralPosString(concreteHead));				
-							docs.updateDocs(key, "ConcreteArgHead", "SpecType", getSpecTypeTextEntry(concreteHead));					
+							docs.updateDocs(key, "ConcreteArgHead", "SpecType", getSpecTypeTextEntry(concreteHead));
+
+							if (concreteHead!=null) {
+								String specTypeStr = getSpecType(concreteHead.getMention());
+								if (!specTypeStr.equals("(null)")) {
+									docs.updateDocs(key, "ConcreteArgHead", specTypeStr, getText(concreteHead));					
+								}
+							}
 							addDetails("ConcreteArgHead.GenPos_" + getGeneralPosString(concreteHead), getText(concreteHead) + ": " + getText(concreteExtent));
 
 						}

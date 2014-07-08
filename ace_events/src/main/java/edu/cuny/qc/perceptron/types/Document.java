@@ -14,8 +14,10 @@ import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -44,6 +46,7 @@ import edu.cuny.qc.perceptron.core.Perceptron;
 import edu.cuny.qc.perceptron.core.SerializationMethod;
 import edu.cuny.qc.perceptron.featureGenerator.TextFeatureGenerator;
 import edu.cuny.qc.perceptron.types.Sentence.Sent_Attribute;
+import edu.cuny.qc.scorer.ScorerData;
 import edu.cuny.qc.util.SentDetectorWrapper;
 import edu.cuny.qc.util.Span;
 import edu.cuny.qc.util.TokenizerWrapper;
@@ -71,6 +74,7 @@ public class Document implements java.io.Serializable
 	
 	// the id (base file name) of the document
 	public String docID;
+	public String docPath;
 	public String text;
 	/**
 	 * the difference between text and all text is that, alltext includes headline etc.
@@ -132,6 +136,7 @@ public class Document implements java.io.Serializable
 		System.err.println("??? Document: Still need to make sure XMI is not saved inside preprocessed doc, only in separate file");
 		System.err.println("??? Document: Running both my UIMA-preprocessing and Qi's old preprocessing. Consider discarding Qi's.");
 		System.err.println("??? Document: Not dumping processed document (and jcas), because annotations are referenced not only in cas but also in cuny.Sentence and cuny.SentenceInstance. To solve, I should load annotations to these classes separately, like by finding in Document.jcas rlevant single annotations in [begin, end] spans.");
+		System.err.println("??? Document: Args args args!!! (when checking the Bundledsignals thingie)");
 		
 		// initialize priorityQueueEntities
 		try
@@ -379,7 +384,8 @@ public class Document implements java.io.Serializable
 	public Document(String baseFileName, boolean hasLabel, boolean monoCase, JCas existingJCas) throws IOException
 	{
 		this.monoCase = monoCase;
-		docID = baseFileName;
+		docPath = baseFileName;
+		docID = baseFileName.substring(baseFileName.lastIndexOf("/") + 1);
 		File txtFile = new File(baseFileName + textFileExt);
 		
 		this.setHasLabel(hasLabel);
@@ -468,7 +474,7 @@ public class Document implements java.io.Serializable
 				}
 			}
 			
-			doc.loadSignals(perceptron, types);
+			doc.loadSignalsIntoDocument(perceptron);
 
 			//System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] CreateAndPreprocess - Done.\n\n", new Date());
 			return doc;
@@ -895,7 +901,7 @@ public class Document implements java.io.Serializable
 					else if(!tokenText.equalsIgnoreCase("its"))
 					{	
 						
-						System.err.print(tokenText + "\t--->\t" + headText);
+						//System.err.print(tokenText + "\t--->\t" + headText);
 						
 						// just breakdown the token into 2 or 3 pieces
 						Span token_1 = new Span(token.start(), extent.start()-1);
@@ -1035,19 +1041,25 @@ public class Document implements java.io.Serializable
 		if (signals.triggerSignals.size() != sentences.size()) {
 			throw new IllegalStateException(String.format("Document %s has %s (non-skipped) sentences, but trigger signals are for %s sentences", docID, sentences.size(), signals.triggerSignals.size()));
 		}
-		if (signals.argSignals.size() != sentences.size()) {
-			throw new IllegalStateException(String.format("Document %s has %s (non-skipped) sentences, but arg signals re for %s sentences", docID, sentences.size(), signals.argSignals.size()));
-		}
+//		if (signals.argSignals.size() != sentences.size()) {
+//			throw new IllegalStateException(String.format("Document %s has %s (non-skipped) sentences, but arg signals re for %s sentences", docID, sentences.size(), signals.argSignals.size()));
+//		}
 
 		if (signals == null	) {
 			throw new IllegalStateException("About to dump signals after finishing all SentenceInstances, but there is no BundledSignals in document: " + docID);
 		}
 		
 		if (perceptron.controller.useSignalFiles && signalsUpdated) {
-			File signalsFile = new File(docID + signalsFileExt + perceptron.controller.serialization.extension);
+			BundledSignals stored = loadSignals(perceptron);
+			if (stored == null) {
+				stored = new BundledSignals();
+			}
+			stored.absorb(signals);
+			
+			File signalsFile = new File(docPath + signalsFileExt + perceptron.controller.serialization.extension);
 			try {
 				OutputStream out = perceptron.controller.serialization.getOutputStream(new FileOutputStream(signalsFile));
-				SerializationUtils.serialize(signals, out);
+				SerializationUtils.serialize(stored, out);
 				out.close();
 			}
 			catch (IOException e) {
@@ -1064,17 +1076,38 @@ public class Document implements java.io.Serializable
 		}
 	}
 	
-	public void loadSignals(Perceptron perceptron, TypesContainer types) throws IOException {
+	public void loadSignalsIntoDocument(Perceptron perceptron) throws IOException {
+		signals = loadSignals(perceptron);
+		if (signals != null) {
+
+			// Filter out scorers that are not currently relevant
+			for (List<Map<Integer, Map<ScorerData, SignalInstance>>> iter1 : signals.triggerSignals.values()) {
+				for (Map<Integer, Map<ScorerData, SignalInstance>> iter2 : iter1) {
+					for (Map<ScorerData, SignalInstance> iter3 : iter2.values()) {
+						for (Iterator<Entry<ScorerData, SignalInstance>> iterator = iter3.entrySet().iterator(); iterator.hasNext();) {
+							Entry<ScorerData, SignalInstance> entry = iterator.next();
+							if (!perceptron.triggerScorers.contains(entry.getKey())) {
+								iterator.remove();
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	public BundledSignals loadSignals(Perceptron perceptron) throws IOException {
 		//List<List<Map<String, Map<String, SignalInstance>>>> triggerSignals = new ArrayList<List<Map<String, Map<String, SignalInstance>>>>();
 		//List<List<Map<String, Map<String, Map<String, SignalInstance>>>>> argSignals = new ArrayList<List<Map<String, Map<String, Map<String, SignalInstance>>>>>();
 		// read file 
-		File signalsFile = new File(docID + signalsFileExt + perceptron.controller.serialization.extension);
+		File signalsFile = new File(docPath + signalsFileExt + perceptron.controller.serialization.extension);
 
 		// 22.5.14 Kludge - not loading signals, due to some weird ClassCastException
 		if (perceptron.controller.useSignalFiles && signalsFile.isFile() /* && false */) {
+			InputStream in = null;
 			try {
 				System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] Reading 'signals' file: %2$s...", new Date(), signalsFile.getAbsolutePath());
-				InputStream in = perceptron.controller.serialization.getInputStream(new FileInputStream(signalsFile));
+				in = perceptron.controller.serialization.getInputStream(new FileInputStream(signalsFile));
 //				byte b[] = new byte[1024*1024*20];
 //				System.out.printf("\nread array: [%1$tH:%1$tM:%1$tS.%1$tL]...", new Date());
 //				int num = in.read(b);
@@ -1082,9 +1115,10 @@ public class Document implements java.io.Serializable
 //				in = perceptron.controller.serialization.getInputStream(new FileInputStream(signalsFile));
 				//System.out.printf("read object: [%1$tH:%1$tM:%1$tS.%1$tL]...", new Date());
 				BundledSignals input = (BundledSignals) SerializationUtils.deserialize(in);
+				//in.close();
+				//in = null;
 				System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] done.\n", new Date());
-				signals = input;
-				in.close();
+				return input;
 				
 				/// DEBUG
 //				OutputStream out = SerializationMethod.NONE.getOutputStream(new FileOutputStream(new File(docID + signalsFileExt + SerializationMethod.NONE.extension)));
@@ -1096,11 +1130,17 @@ public class Document implements java.io.Serializable
 				// it might be corrupted due to a previous bad run - we'll just overwrite it.
 				System.err.printf("Got an IOException (%s) when trying to decompress and deserialize file: '%s'. Continuing as if this file doesn't exist.", e.toString(), signalsFile.getAbsolutePath());
 			}
+			finally {
+				if (in != null) {
+					in.close();
+				}
+			}
 		}
+		return null;
 		
-		if (signals != null) {
-			perceptron.triggerScorers = signals.triggerScorers;
-			perceptron.argumentScorers = signals.argumentScorers;
+//		if (signals != null) {
+//			perceptron.triggerScorers = signals.triggerScorers;
+//			perceptron.argumentScorers = signals.argumentScorers;
 			
 			// We can't have the check of the number of sentences be here, as we should check the number of SentenceInstances, which we don't have here yet
 			// we only have the number of Sentences, but many of them may be later skipped and thus should be ignored)
@@ -1133,7 +1173,7 @@ public class Document implements java.io.Serializable
 //					throw new IllegalStateException(String.format("For trigger %s, working on these entity types: %s - but loaded signals for this trigger type in document %s has these entity types: %s", triggerType, workingEntityTypes, docID, loadedEntityTypes));
 //				}
 //			}
-		}
+//		}
 	}
 
 	public List<SentenceInstance> getInstances(Perceptron perceptron, TypesContainer types, Alphabet featureAlphabet, 
@@ -1153,7 +1193,7 @@ public class Document implements java.io.Serializable
 	public static List<SentenceInstance> getInstancesForSentence(Perceptron perceptron, Sentence sent, TypesContainer types, Alphabet featureAlphabet, 
 			boolean learnable, boolean debug) throws CASRuntimeException, AnalysisEngineProcessException, ResourceInitializationException, CASException, UimaUtilsException, IOException, AeException {
 		List<SentenceInstance> result = new ArrayList<SentenceInstance>();
-		if (perceptron.controller.oMethod.equalsIgnoreCase("F")) {
+		if (perceptron.controller.oMethod.startsWith("F")) {
 			for (int specNum=0; specNum < types.specs.size(); specNum++) {
 				JCas spec = types.specs.get(specNum);
 				List<JCas> oneSpec = Arrays.asList(new JCas[] {spec});

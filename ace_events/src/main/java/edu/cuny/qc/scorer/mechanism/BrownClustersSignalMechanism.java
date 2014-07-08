@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
+import edu.cuny.qc.perceptron.core.Perceptron;
 import edu.cuny.qc.scorer.Aggregator;
 import edu.cuny.qc.scorer.Derivation;
 import edu.cuny.qc.scorer.ScorerData;
@@ -25,24 +26,27 @@ public class BrownClustersSignalMechanism extends SignalMechanism {
 	
 	@Override
 	public void addScorers() {
-//		addTrigger(new ScorerData("BR_ALL_CLUSTERS_TOK",		SameAllClustersToken.inst,				Aggregator.Any.inst		));
-//		addTrigger(new ScorerData("BR_ALL_CLUSTERS_LEM",		SameAllClustersLemma.inst,				Aggregator.Any.inst		));
-		addTrigger(new ScorerData("BR_LONGEST_CLUSTER_TOK",		SameLongestClusterToken.inst,			Aggregator.Any.inst		));
-		addTrigger(new ScorerData("BR_LONGEST_CLUSTER_LEM",		SameLongestClusterLemma.inst,			Aggregator.Any.inst		));
-//		addTrigger(new ScorerData("BR_ALL_CLUSTERS_TOK",		SameAllClustersToken.inst,				Aggregator.Min2.inst		));
-//		addTrigger(new ScorerData("BR_ALL_CLUSTERS_LEM",		SameAllClustersLemma.inst,				Aggregator.Min2.inst		));
-		addTrigger(new ScorerData("BR_LONGEST_CLUSTER_TOK",		SameLongestClusterToken.inst,			Aggregator.Min2.inst		));
-		addTrigger(new ScorerData("BR_LONGEST_CLUSTER_LEM",		SameLongestClusterLemma.inst,			Aggregator.Min2.inst		));
-		
-		addTrigger(new ScorerData("BR_LONGEST_CLUSTER_LEM",	SameLongestClusterLemma.inst, WordnetDervRltdDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, Aggregator.Any.inst));
-		addTrigger(new ScorerData("BR_LONGEST_CLUSTER_LEM",	SameLongestClusterLemma.inst, WordnetDervRltdDeriver.inst, Derivation.SPEC_ORIG_AND_DERV, Aggregator.Any.inst));
-		addTrigger(new ScorerData("BR_LONGEST_CLUSTER_LEM",	SameLongestClusterLemma.inst, NomlexDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, Aggregator.Any.inst));
-		addTrigger(new ScorerData("BR_LONGEST_CLUSTER_LEM",	SameLongestClusterLemma.inst, NomlexDeriver.inst, Derivation.SPEC_ORIG_AND_DERV, Aggregator.Any.inst));
+		if (controller.onlyAnalysis) {
 
+	//		addTrigger(new ScorerData("BR_ALL_CLUSTERS_TOK",		SameAllClustersToken.inst,				Aggregator.Any.inst		));
+	//		addTrigger(new ScorerData("BR_ALL_CLUSTERS_LEM",		SameAllClustersLemma.inst,				Aggregator.Any.inst		));
+			addTrigger(new ScorerData("BR_LONGEST_CLUSTER_TOK",		SameLongestClusterToken.inst,			Aggregator.Any.inst		));
+			addTrigger(new ScorerData("BR_LONGEST_CLUSTER_LEM",		SameLongestClusterLemma.inst,			Aggregator.Any.inst		));
+	//		addTrigger(new ScorerData("BR_ALL_CLUSTERS_TOK",		SameAllClustersToken.inst,				Aggregator.Min2.inst		));
+	//		addTrigger(new ScorerData("BR_ALL_CLUSTERS_LEM",		SameAllClustersLemma.inst,				Aggregator.Min2.inst		));
+			//addTrigger(new ScorerData("BR_LONGEST_CLUSTER_TOK",		SameLongestClusterToken.inst,			Aggregator.Min2.inst		));
+			//addTrigger(new ScorerData("BR_LONGEST_CLUSTER_LEM",		SameLongestClusterLemma.inst,			Aggregator.Min2.inst		));
+			
+			addTrigger(new ScorerData("BR_LONGEST_CLUSTER_LEM",	SameLongestClusterLemma.inst, WordnetDervRltdDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, Aggregator.Any.inst));
+			addTrigger(new ScorerData("BR_LONGEST_CLUSTER_LEM",	SameLongestClusterLemma.inst, WordnetDervRltdDeriver.inst, Derivation.SPEC_ORIG_AND_DERV, Aggregator.Any.inst));
+			addTrigger(new ScorerData("BR_LONGEST_CLUSTER_LEM",	SameLongestClusterLemma.inst, NomlexDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, Aggregator.Any.inst));
+			addTrigger(new ScorerData("BR_LONGEST_CLUSTER_LEM",	SameLongestClusterLemma.inst, NomlexDeriver.inst, Derivation.SPEC_ORIG_AND_DERV, Aggregator.Any.inst));
+
+		}
 	}
 
-	public BrownClustersSignalMechanism() throws SignalMechanismException {
-		super();
+	public BrownClustersSignalMechanism(Perceptron perceptron) throws SignalMechanismException {
+		super(perceptron);
 	}
 
 	private static abstract class BrownClustersScorer extends PredicateSeedScorerTEMP {

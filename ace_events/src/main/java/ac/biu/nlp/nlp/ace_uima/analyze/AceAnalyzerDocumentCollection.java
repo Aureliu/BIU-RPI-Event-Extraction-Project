@@ -6,6 +6,8 @@ import java.util.Arrays;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+import edu.cuny.qc.ace.acetypes.AceArgumentType;
+
 import ac.biu.nlp.nlp.ace_uima.stats.FieldName;
 import ac.biu.nlp.nlp.ace_uima.stats.StatsDocument;
 import ac.biu.nlp.nlp.ace_uima.stats.StatsDocumentCollection;
@@ -168,6 +170,9 @@ public class AceAnalyzerDocumentCollection extends StatsDocumentCollection {
 				put(new FieldName("ArgHead", "TokenSpecPOS"), StatsFieldType.LIST_COUNTS);
 				put(new FieldName("ArgHead", "LemmaSpecPOS"), StatsFieldType.LIST_COUNTS);
 				put(new FieldName("ArgHead", "TokenGenPOS"), StatsFieldType.LIST_COUNTS);
+				for (AceArgumentType specType : AceArgumentType.values()) {
+					put(new FieldName("ArgHead", specType.toString()), StatsFieldType.LIST_COUNTS);
+				}
 				put(new FieldName("ArgHead", "Dep"), StatsFieldType.LIST_COUNTS);
 				put(new FieldName("ArgHead", "DepToken"), StatsFieldType.LIST_COUNTS);
 				put(new FieldName("ArgHead", "DepGenPOS"), StatsFieldType.LIST_COUNTS);
@@ -183,6 +188,9 @@ public class AceAnalyzerDocumentCollection extends StatsDocumentCollection {
 				put(new FieldName("ConcreteArgHead", "TokenSpecPOS"), StatsFieldType.LIST_COUNTS);
 				put(new FieldName("ConcreteArgHead", "LemmaSpecPOS"), StatsFieldType.LIST_COUNTS);
 				put(new FieldName("ConcreteArgHead", "TokenGenPOS"), StatsFieldType.LIST_COUNTS);
+				for (AceArgumentType specType : AceArgumentType.values()) {
+					put(new FieldName("ConcreteArgHead", specType.toString()), StatsFieldType.LIST_COUNTS);
+				}
 				put(new FieldName("ConcreteArgHead", "Dep"), StatsFieldType.LIST_COUNTS);
 				put(new FieldName("ConcreteArgHead", "DepToken"), StatsFieldType.LIST_COUNTS);
 				put(new FieldName("ConcreteArgHead", "DepGenPOS"), StatsFieldType.LIST_COUNTS);

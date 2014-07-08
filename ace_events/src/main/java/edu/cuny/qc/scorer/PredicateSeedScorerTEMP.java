@@ -56,6 +56,12 @@ public abstract class PredicateSeedScorerTEMP extends SignalMechanismSpecIterato
 				return SignalInstance.toDouble(false); //TODO: should be: IRRELEVANT
 			}			
 
+			/// DEBUG
+			if (getForm(textToken).equals("war")) {
+				System.out.printf("\n\n\n DEBUG %s\n\n\n", getClass().getSimpleName());
+				System.out.println();
+			}
+			
 			// Get all text derivations
 			Set<BasicRulesQuery> textDerivations = scorerData.deriver.getDerivations(
 					getForm(textToken), textPos, scorerData.derivation.leftOriginal, scorerData.derivation.leftDerivation, scorerData.leftSenseNum);

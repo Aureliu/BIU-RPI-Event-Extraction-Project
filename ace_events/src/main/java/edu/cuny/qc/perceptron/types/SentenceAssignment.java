@@ -46,8 +46,8 @@ public class SentenceAssignment
 	public static final String LABEL_MARKER = "\tcurrentLabel:";
 	public static final String BIAS_FEATURE = "BIAS_FEATURE";
 	
-	public static final BigDecimal FEATURE_POSITIVE_VAL = BigDecimal.ONE;
-	public static final BigDecimal FEATURE_NEGATIVE_VAL = BigDecimal.ZERO;
+	public /*static*/ final BigDecimal FEATURE_POSITIVE_VAL;
+	public /*static*/ final BigDecimal FEATURE_NEGATIVE_VAL;
 
 	/**
 	 * the index of last processed (assigned/searched) token
@@ -57,6 +57,7 @@ public class SentenceAssignment
 	static {
 		System.err.println("??? SentenceAssignment: Assumes binary labels O,ATTACK (around oMethod)");
 		System.err.println("??? SentenceAssignment: Edge features are currently excluded, until I stabalize a policy with triggers. Then some policy should be decided for edges (that should handle, for example, the fact that if only the guess has some trigger that the gold doesn't have, then it would physically have more features than target (not same features just with different scores, like in the triggers' case), and this violated my assumption that guess and gold have the same features. Relevant methods: equals() (3 methods), makeEdgeLocalFeature(), BeamSearch.printBeam (check compatible)");
+		System.err.println("??? SentenceAssignment: Removed P- for now, should return");
 		System.err.println("??? SentenceAssignment: GLOBAL FEATURES ARE NOT IMPORTED YET!!!");
 	}
 	
@@ -397,6 +398,16 @@ public class SentenceAssignment
 		featVecSequence = new FeatureVectorSequence();
 		partial_scores = new ArrayList<BigDecimal>();
 		featureToSignal = new HashMap<Integer, Map<String, String>>();
+
+		if (this.controller.oMethod.startsWith("Fb")) {
+			FEATURE_POSITIVE_VAL = BigDecimal.ONE;
+			FEATURE_NEGATIVE_VAL = BigDecimal.ZERO;
+		}
+		else {
+			FEATURE_POSITIVE_VAL = BigDecimal.ONE;
+			FEATURE_NEGATIVE_VAL = new BigDecimal("-1");
+		}
+
 	}
 	
 	/**
@@ -537,6 +548,12 @@ public class SentenceAssignment
 	public void makeEdgeLocalFeature(SentenceInstance problem, int index, boolean addIfNotPresent, 
 			int entityIndex, boolean useIfNotPresent, Perceptron perceptron)
 	{	
+		// Burn!
+		if (1 + 1 == 2)	 {
+			return;
+		}
+		
+		
 		if(this.edgeAssignment.get(index) == null)
 		{
 			// skip assignments that don't have edgeAssignment for index-th node
@@ -728,7 +745,7 @@ public class SentenceAssignment
 	//				makeFeature(featureStr, this.getFV(i), featureValue, i, signals, addIfNotPresent, useIfNotPresent);
 	//			}
 				
-				if (this.controller.oMethod.equalsIgnoreCase("F")) {
+				if (this.controller.oMethod.startsWith("F")) {
 					// We don't check what is the label of this token, as the feature value is always according
 					// to the associated spec, even when the token's label is O.
 					// The only place in which the current label is expressed, is the "genericLabel" that is
@@ -754,10 +771,10 @@ public class SentenceAssignment
 							BigDecimal featureValueNegative = signal.positive ? FEATURE_NEGATIVE_VAL : FEATURE_POSITIVE_VAL;
 							
 							String featureStrPositive = "BigramFeature:\t" + signal.getName() + "\t" + "P+\t" + LABEL_MARKER + genericLabel;
-							String featureStrNegative = "BigramFeature:\t" + signal.getName() + "\t" + "P-\t" + LABEL_MARKER + genericLabel;
+							//String featureStrNegative = "BigramFeature:\t" + signal.getName() + "\t" + "P-\t" + LABEL_MARKER + genericLabel;
 							
 							makeFeature(featureStrPositive, this.getFV(i), featureValuePositive, i, signals, addIfNotPresent, useIfNotPresent);
-							makeFeature(featureStrNegative, this.getFV(i), featureValueNegative, i, signals, addIfNotPresent, useIfNotPresent);
+							//makeFeature(featureStrNegative, this.getFV(i), featureValueNegative, i, signals, addIfNotPresent, useIfNotPresent);
 						}
 					} catch (CASException e) {
 						throw new RuntimeException(e);
@@ -772,7 +789,7 @@ public class SentenceAssignment
 							List<SignalInstance> signals = Arrays.asList(new SignalInstance[] {signal});
 							BigDecimal featureValue = signal.positive ? FEATURE_POSITIVE_VAL : FEATURE_NEGATIVE_VAL;
 							String featureStr = null;
-							if (this.controller.oMethod.equalsIgnoreCase("E")) {
+							if (this.controller.oMethod.startsWith("E")) {
 								featureStr = "BigramFeature:\t" + signal.getName();// + "\t" + LABEL_MARKER + genericLabel;
 							}
 							else {
@@ -781,7 +798,7 @@ public class SentenceAssignment
 							makeFeature(featureStr, this.getFV(i), featureValue, i, signals, addIfNotPresent, useIfNotPresent);
 						}
 					}
-					else if (this.controller.oMethod.equalsIgnoreCase("E")) { //genericLabel == Default_Trigger_Label + "E"
+					else if (this.controller.oMethod.startsWith("E")) { //genericLabel == Default_Trigger_Label + "E"
 						String featureStr = "BigramFeature:\t" + BIAS_FEATURE;
 						makeFeature(featureStr, this.getFV(i), BigDecimal.ONE, i, new ArrayList<SignalInstance>(), addIfNotPresent, useIfNotPresent);
 					}
@@ -819,16 +836,16 @@ public class SentenceAssignment
 		
 							// Set feature value according to requested O Method
 							BigDecimal featureValue = null;
-							if (this.controller.oMethod.equalsIgnoreCase("A")) {
+							if (this.controller.oMethod.startsWith("A")) {
 								featureValue = signalOfAttack.positive ? BigDecimal.ZERO : BigDecimal.ONE;
 							}
-							else if (this.controller.oMethod.equalsIgnoreCase("B")) {
+							else if (this.controller.oMethod.startsWith("B")) {
 								featureValue = signalOfAttack.positive ? BigDecimal.ONE : BigDecimal.ZERO;
 							}
-							else if (this.controller.oMethod.equalsIgnoreCase("C")) {
+							else if (this.controller.oMethod.startsWith("C")) {
 								featureValue = BigDecimal.ZERO;
 							}
-							else if (this.controller.oMethod.equalsIgnoreCase("D")) {
+							else if (this.controller.oMethod.startsWith("D")) {
 								featureValue = BigDecimal.ONE;
 							}
 							else {

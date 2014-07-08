@@ -25,6 +25,7 @@ import com.google.common.cache.LoadingCache;
 import com.google.common.cache.Weigher;
 
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
+import edu.cuny.qc.perceptron.core.Perceptron;
 import edu.cuny.qc.perceptron.core.Pipeline;
 import edu.cuny.qc.scorer.Aggregator;
 import edu.cuny.qc.scorer.BasicRulesQuery;
@@ -38,6 +39,7 @@ import edu.cuny.qc.scorer.SignalMechanism;
 import edu.cuny.qc.scorer.SignalMechanismException;
 import edu.cuny.qc.scorer.PredicateSeedScorerTEMP;
 import edu.cuny.qc.scorer.Deriver.NoDerv;
+import edu.cuny.qc.scorer.mechanism.NomlexSignalMechanism.NomlexDeriver;
 import edu.cuny.qc.util.PosMap;
 import eu.excitementproject.eop.common.component.lexicalknowledge.LexicalResourceException;
 import eu.excitementproject.eop.common.component.lexicalknowledge.LexicalRule;
@@ -78,19 +80,25 @@ public class WordNetSignalMechanism extends SignalMechanism {
 //		ADV = new PennPartOfSpeech(PennPosTag.RB);
 //	}
 //	
-	public WordNetSignalMechanism() throws SignalMechanismException {
-		super();
+	public WordNetSignalMechanism(Perceptron perceptron) throws SignalMechanismException {
+		super(perceptron);
 	}
 	
 	@Override
 	public void init() throws WordNetInitializationException, UnsupportedPosTagStringException, ExecutionException {
-		dictionary = new JwiDictionary(WORDNET_DIR);
+		initDictionary();
 		
 		NOUN = PosMap.byCanonical.get(CanonicalPosTag.N);
 		VERB = PosMap.byCanonical.get(CanonicalPosTag.V);
 		ADJ = PosMap.byCanonical.get(CanonicalPosTag.ADJ);
 		ADV = PosMap.byCanonical.get(CanonicalPosTag.ADV);
 
+	}
+	
+	public static void initDictionary() throws WordNetInitializationException {
+		if (dictionary == null) {
+			dictionary = new JwiDictionary(WORDNET_DIR);
+		}
 	}
 	
 	@Override
@@ -106,24 +114,63 @@ public class WordNetSignalMechanism extends SignalMechanism {
 	@Override
 	public void addScorers() {
 
-		// tiny amount for debug
-		//addTriggers(SYNONYM_RELATION,   Juxtaposition.ANCESTOR, new Integer[] {1}, ALL_DERIVERS, DERVS_NONE, new Integer[] {1}, new Integer[] {1}, new PartOfSpeech[] {null, /*NOUN, VERB, ADJ, ADV*/}, AGG_ANY_MIN2);
-		
-		//END of analysis2!
-		/// Group A
-		addTriggers(SYNONYM_RELATION,   Juxtaposition.ANCESTOR, new Integer[] {1}, ALL_DERIVERS, DERVS_NONE, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN, /*VERB, ADJ, ADV*/}, AGG_ANY);
-		addTriggers(HYPERNYM_RELATIONS, Juxtaposition.ANCESTOR, LENGTHS_1_2_3, ALL_DERIVERS, DERVS_NONE_AND, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN/*, VERB*/}, AGG_ANY);
-		addTriggers(HYPERNYM1_RELATION, Juxtaposition.ANCESTOR, LENGTHS_1_2_3, ALL_DERIVERS, DERVS_NONE_AND, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN/*, VERB*/}, AGG_ANY);
-		addTriggers(HYPERNYM2_RELATION, Juxtaposition.ANCESTOR, LENGTHS_1_2_3, ALL_DERIVERS, DERVS_NONE_AND, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN/*, VERB*/}, AGG_ANY);
+		if (controller.onlyAnalysis) {
+			// tiny amount for debug
+			//addTriggers(SYNONYM_RELATION,   Juxtaposition.ANCESTOR, new Integer[] {1}, ALL_DERIVERS, DERVS_NONE, new Integer[] {1}, new Integer[] {1}, new PartOfSpeech[] {null, /*NOUN, VERB, ADJ, ADV*/}, AGG_ANY_MIN2);
+			
+			//END of analysis2!
+			/// Group A
+			addTriggers(SYNONYM_RELATION,   Juxtaposition.ANCESTOR, new Integer[] {1}, ALL_DERIVERS, DERVS_NONE, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN, /*VERB, ADJ, ADV*/}, AGG_ANY);
+			addTriggers(HYPERNYM_RELATIONS, Juxtaposition.ANCESTOR, LENGTHS_1_2_3, ALL_DERIVERS, DERVS_NONE_AND, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN/*, VERB*/}, AGG_ANY);
+			addTriggers(HYPERNYM1_RELATION, Juxtaposition.ANCESTOR, LENGTHS_1_2_3, ALL_DERIVERS, DERVS_NONE_AND, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN/*, VERB*/}, AGG_ANY);
+			addTriggers(HYPERNYM2_RELATION, Juxtaposition.ANCESTOR, LENGTHS_1_2_3, ALL_DERIVERS, DERVS_NONE_AND, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN/*, VERB*/}, AGG_ANY);
+	
+			/// Group B
+			addTriggers(HYPERNYM_RELATIONS, Juxtaposition.COUSIN_STRICT, new Integer[] {1}, ALL_DERIVERS, DERVS_NONE_AND, new Integer[] {1}, SENSE_NUMS, new PartOfSpeech[] {null/*, NOUN, VERB*/}, AGG_MIN2);
+			addTriggers(HYPERNYM_RELATIONS, Juxtaposition.COUSIN_STRICT, new Integer[] {2}, ALL_DERIVERS, DERVS_NONE_AND, new Integer[] {1}, SENSE_NUMS, new PartOfSpeech[] {null/*, NOUN, VERB*/}, AGG_MIN3);
+			addTriggers(HYPERNYM_RELATIONS, Juxtaposition.COUSIN_STRICT, new Integer[] {3}, ALL_DERIVERS, DERVS_TEXT_ORIG_AND_DERV, new Integer[] {-1}, SENSE_NUMS, new PartOfSpeech[] {null/*, NOUN, VERB*/}, AGG_MIN2_MIN3);
+	
+			addTriggers(ALL_RELATIONS_SMALL,   Juxtaposition.ANCESTOR, LENGTHS_1_2_3_TOP, ALL_DERIVERS, DERVS_ALL, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN, VERB/*, ADJ, ADV*/}, ALL_AGGS);
+			addTriggers(ALL_RELATIONS_BIG,   Juxtaposition.ANCESTOR, LENGTHS_1_2_3_TOP, ALL_DERIVERS, DERVS_ALL, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN, VERB/*, ADJ, ADV*/}, ALL_AGGS);
+		}
+		else {
+			// Built from 2014.07.02..1__SignalAnalyzer_medium__TESRV2
+			// Top F1
+			addTrigger(new ScorerData(null, new WordnetScorer(SYNONYM_RELATION, Juxtaposition.ANCESTOR, 1), NoDerv.inst, Derivation.NONE, -1, 1, null, Any.inst));
+			//addTrigger(new ScorerData(null, new WordnetScorer(SYNONYM_RELATION, Juxtaposition.ANCESTOR, 1), new Join(WordnetDervRltdDeriver.inst, NomlexDeriver.inst), Derivation.TEXT_ORIG_AND_DERV, -1, 1, null, Any.inst));
+			//addTrigger(new ScorerData(null, new WordnetScorer(SYNONYM_RELATION, Juxtaposition.ANCESTOR, 1), NoDerv.inst, Derivation.NONE, 1, 1, null, Any.inst));
 
-		/// Group B
-		addTriggers(HYPERNYM_RELATIONS, Juxtaposition.COUSIN_STRICT, new Integer[] {1}, ALL_DERIVERS, DERVS_NONE_AND, new Integer[] {1}, SENSE_NUMS, new PartOfSpeech[] {null/*, NOUN, VERB*/}, AGG_MIN2);
-		addTriggers(HYPERNYM_RELATIONS, Juxtaposition.COUSIN_STRICT, new Integer[] {2}, ALL_DERIVERS, DERVS_NONE_AND, new Integer[] {1}, SENSE_NUMS, new PartOfSpeech[] {null/*, NOUN, VERB*/}, AGG_MIN3);
-		addTriggers(HYPERNYM_RELATIONS, Juxtaposition.COUSIN_STRICT, new Integer[] {3}, ALL_DERIVERS, DERVS_TEXT_ORIG_AND_DERV, new Integer[] {-1}, SENSE_NUMS, new PartOfSpeech[] {null/*, NOUN, VERB*/}, AGG_MIN2_MIN3);
+			//addTrigger(new ScorerData(null, new WordnetScorer(HYPERNYM_RELATIONS, Juxtaposition.ANCESTOR, 1), WordnetDervRltdDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, 1, null, Any.inst));
+			addTrigger(new ScorerData(null, new WordnetScorer(HYPERNYM_RELATIONS, Juxtaposition.ANCESTOR, 2), WordnetDervRltdDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, 1, null, Any.inst));
+			//addTrigger(new ScorerData(null, new WordnetScorer(HYPERNYM_RELATIONS, Juxtaposition.ANCESTOR, 3), WordnetDervRltdDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, 1, null, Any.inst));
 
-		addTriggers(ALL_RELATIONS_SMALL,   Juxtaposition.ANCESTOR, LENGTHS_1_2_3_TOP, ALL_DERIVERS, DERVS_ALL, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN, VERB/*, ADJ, ADV*/}, ALL_AGGS);
-		addTriggers(ALL_RELATIONS_BIG,   Juxtaposition.ANCESTOR, LENGTHS_1_2_3_TOP, ALL_DERIVERS, DERVS_ALL, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN, VERB/*, ADJ, ADV*/}, ALL_AGGS);
+			addTrigger(new ScorerData(null, new WordnetScorer(ALL_RELATIONS_SMALL, Juxtaposition.ANCESTOR, 2), NoDerv.inst, Derivation.NONE, -1, 1, null, Any.inst));
+			//addTrigger(new ScorerData(null, new WordnetScorer(ALL_RELATIONS_BIG,   Juxtaposition.ANCESTOR, 2), NoDerv.inst, Derivation.NONE, -1, 1, null, Any.inst));
 
+			//addTrigger(new ScorerData(null, new WordnetScorer(HYPERNYM_RELATIONS, Juxtaposition.ANCESTOR, 2), NoDerv.inst, Derivation.NONE, -1, 1, null, Any.inst));
+
+			// Top Precision
+			// ONLY_DERVs are horrible!!! remove them!!!
+//			addTrigger(new ScorerData(null, new WordnetScorer(ALL_RELATIONS_SMALL, Juxtaposition.ANCESTOR, 3), WordnetDervRltdDeriver.inst, Derivation.SPEC_ONLY_DERV, -1, 1, null, Min3.inst));
+//			addTrigger(new ScorerData(null, new WordnetScorer(ALL_RELATIONS_SMALL, Juxtaposition.ANCESTOR, 3), WordnetDervRltdDeriver.inst, Derivation.TEXT_ONLY_DERV, -1, 1, null, Min3.inst));
+//			addTrigger(new ScorerData(null, new WordnetScorer(ALL_RELATIONS_SMALL, Juxtaposition.ANCESTOR, 3), WordnetDervRltdDeriver.inst, Derivation.SPEC_ONLY_DERV, 1, -1, null, Min3.inst));
+//			addTrigger(new ScorerData(null, new WordnetScorer(ALL_RELATIONS_SMALL, Juxtaposition.ANCESTOR, 3), WordnetDervRltdDeriver.inst, Derivation.SPEC_ONLY_DERV, -1, -1, null, Min3.inst));
+
+			addTrigger(new ScorerData(null, new WordnetScorer(ALL_RELATIONS_BIG, Juxtaposition.ANCESTOR, 2), NomlexSignalMechanism.NomlexDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, 1, 1, null, Any.inst));
+			//addTrigger(new ScorerData(null, new WordnetScorer(ALL_RELATIONS_BIG, Juxtaposition.ANCESTOR, 1), WordnetDervRltdDeriver.inst, Derivation.SPEC_ORIG_AND_DERV, -1, -1, null, Min3.inst));
+			
+			// Top Recall
+			addTrigger(new ScorerData(null, new WordnetScorer(HYPERNYM_RELATIONS, Juxtaposition.COUSIN_STRICT, 2), WordnetDervRltdDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, -1, null, Min2.inst));
+			addTrigger(new ScorerData(null, new WordnetScorer(HYPERNYM_RELATIONS, Juxtaposition.COUSIN_STRICT, 2), WordnetDervRltdDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, -1, null, Any.inst));
+			//addTrigger(new ScorerData(null, new WordnetScorer(HYPERNYM_RELATIONS, Juxtaposition.COUSIN_STRICT, 3), WordnetDervRltdDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, -1, null, Min3.inst));
+			
+			//addTrigger(new ScorerData(null, new WordnetScorer(SYNONYM_RELATION, Juxtaposition.ANCESTOR, 1), NoDerv.inst, Derivation.NONE, -1, -1, null, Any.inst));
+			//addTrigger(new ScorerData(null, new WordnetScorer(SYNONYM_RELATION, Juxtaposition.ANCESTOR, 1), NoDerv.inst, Derivation.NONE, 1, -1, null, Any.inst));
+			
+			// Top InfoGain - contained in other categories
+			
+
+		}
 		
 		//END of analysis1!
 //		/// Group A
@@ -346,7 +393,7 @@ public class WordNetSignalMechanism extends SignalMechanism {
 				});
 	}
 	
-	private static class WordnetScorer extends PredicateSeedScorerTEMP {
+	public static class WordnetScorer extends PredicateSeedScorerTEMP {
 		private static final long serialVersionUID = 7293139399085559241L;
 		public Set<WordNetRelation> relations;
 		public Juxtaposition juxt;
@@ -358,11 +405,20 @@ public class WordNetSignalMechanism extends SignalMechanism {
 		//public PartOfSpeech specificPos;
 //		public LengthType lenType;
 				
+		static {
+			try {
+				initDictionary();
+			} catch (Exception e) {
+				System.err.printf("\n\n\nGot exception '%s' while initing dict in %s - This should never happen, as it is supposed to be inited beforehand in the signal mechanism!!!!\n\n\n",
+						e, WordnetScorer.class.getSimpleName());
+			}
+		}
+		
 		public WordnetScorer(Set<WordNetRelation> relations,
 				Juxtaposition juxt, int length) {
 			this.relations = relations;
 			this.juxt = juxt;
-			this.length = length;
+			this.length = length;			
 		}
 
 //		@Override
@@ -391,6 +447,9 @@ public class WordNetSignalMechanism extends SignalMechanism {
 			}
 			else if (this.relations.equals(ALL_RELATIONS_SMALL)) {
 				rels = "AllRelsSmall";
+			}
+			else if (this.relations.equals(HYPERNYM_RELATIONS)) {
+				rels = "Hypernyms";
 			}
 			else {
 				rels = StringUtils.join(this.relations, "_");
@@ -582,13 +641,13 @@ public class WordNetSignalMechanism extends SignalMechanism {
 		}
 	}
 	
-	private static JwiDictionary dictionary;
+	private static JwiDictionary dictionary = null;
 	private static boolean usedCaches = false;
 	private static boolean reportedNoCaches = false;
 	private static boolean DO_SENTENCE_LOGGING = false;
 	
-	private static final String WORDNET_DIR_PATH = "src/main/resources/data/Wordnet3.0";
-	private static final File WORDNET_DIR = new File(WORDNET_DIR_PATH);
+	//public static String WORDNET_DIR_PATH = ;
+	public static File WORDNET_DIR = new File("src/main/resources/data/Wordnet3.0");
 	private static final int MAXIMUM_WORDNET_LENGTH = 100;
 	
 	private static final Set<WordNetRelation> ALL_RELATIONS_SMALL = new LinkedHashSet<WordNetRelation>(Arrays.asList(new WordNetRelation[] {
@@ -616,7 +675,8 @@ public class WordNetSignalMechanism extends SignalMechanism {
 			WordNetRelation.CAUSE,
 			WordNetRelation.VERB_GROUP
 	}));
-	private static final Set<WordNetRelation> HYPERNYM_RELATIONS = new HashSet<WordNetRelation>(Arrays.asList(new WordNetRelation[] {
+	private static final Set<WordNetRelation> HYPERNYM_RELATIONS = new LinkedHashSet<WordNetRelation>(Arrays.asList(new WordNetRelation[] {
+			WordNetRelation.SYNONYM,
 			WordNetRelation.HYPERNYM,
 			WordNetRelation.INSTANCE_HYPERNYM
 	}));

@@ -57,6 +57,11 @@ public class ScorerData implements Serializable {
 	}
 	
 	//X
+	public ScorerData(String basicName, SignalMechanismSpecIterator scorer, boolean isSpecIndependent) {
+		this(basicName, scorer, Deriver.NoDerv.inst, Derivation.NONE, 1, 1, null, Aggregator.Any.inst, isSpecIndependent);
+	}
+	
+	//X
 	public ScorerData(String basicName, SignalMechanismSpecIterator scorer, Deriver deriver, Derivation derivation, Aggregator aggregator) {
 		this(basicName, scorer, deriver, derivation, 1, 1, null, aggregator);
 	}

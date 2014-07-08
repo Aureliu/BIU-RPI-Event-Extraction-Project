@@ -22,6 +22,7 @@ import com.google.common.collect.Multiset;
 import com.google.common.io.Files;
 
 import ac.biu.nlp.nlp.ace_uima.stats.SignalPerformanceField;
+import ac.biu.nlp.nlp.ace_uima.stats.StatsDocument;
 import ac.biu.nlp.nlp.ie.onthefly.input.SpecAnnotator;
 import ac.biu.nlp.nlp.ie.onthefly.input.SpecHandler;
 import ac.biu.nlp.nlp.ie.onthefly.input.TypesContainer;
@@ -41,7 +42,7 @@ public class SignalAnalyzer {
 	private static final String CONTROLLER_PARAMS =
 					"beamSize=4 maxIterNum=20 skipNonEventSent=true avgArguments=true skipNonArgument=true useGlobalFeature=false " +
 					"addNeverSeenFeatures=true crossSent=false crossSentReranking=false order=0 evaluatorType=1 learnBigrams=true logLevel=3 " +
-					"oMethod=F serialization=BZ2";
+					"oMethod=F serialization=BZ2 onlyAnalysis=true";
 	private static SignalAnalyzerDocumentCollection docs = new SignalAnalyzerDocumentCollection();
 	private static final int SENTENCE_PRINT_FREQ = 200;
 	private static final int SENTENCE_GC_FREQ = 20000;
@@ -94,15 +95,16 @@ public class SignalAnalyzer {
 			Map<ScorerData, SentenceAssignment> assignments = new HashMap<ScorerData, SentenceAssignment>();
 			String triggerLabel = SpecAnnotator.getSpecLabel(problem.associatedSpec);
 			
-			String[] split = problem.docID.split("/");
-			String docId = split[split.length-1];
-			String folder = split[0];
-			String category = AceAnalyzer.getCategory(docId);
+			 // I removed the full path from docId, and anyway I don't want to use it here anymore. If I ever do, just have SentenceInstance also save docPath separately.
+//			String[] split = problem.docID.split("/");
+//			String docId = split[split.length-1];
+//			String folder = split[0];
+//			String category = AceAnalyzer.getCategory(docId);
 			
 			Map<String,String> key = new HashMap<String,String>();
-			key.put("folder", folder);
-			key.put("category", category);
-			key.put("docId", docId);
+			key.put("folder", StatsDocument.ANY /*folder*/);
+			key.put("category", StatsDocument.ANY /*category*/);
+			key.put("docId", StatsDocument.ANY /*docId*/);
 			key.put("label", triggerLabel);
 			
 //			if (sentNum % SENTENCE_GC_FREQ == 1) {

@@ -7,6 +7,7 @@ import static edu.cuny.qc.scorer.Deriver.*;
 import java.util.Map;
 
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
+import edu.cuny.qc.perceptron.core.Perceptron;
 import edu.cuny.qc.scorer.Aggregator;
 import edu.cuny.qc.scorer.Derivation;
 import edu.cuny.qc.scorer.ScorerData;
@@ -18,18 +19,29 @@ import eu.excitementproject.eop.common.representation.partofspeech.PartOfSpeech;
 
 public class PlainSignalMechanism extends SignalMechanism {
 
+	static {
+		System.err.printf("??? PlainSignalMechanism: remove one of PL_DERIVATION scorers - they are bot hthere only as an experiment!!!\n");
+	}
 	@Override
 	public void addScorers() {
 //		addTrigger(new ScorerData("FAKE_LETTER_E",		TextHasLetterE.inst,		Aggregator.Any.inst		));
 //		addTrigger(new ScorerData("FAKE_LETTER_X",		TextHasLetterX.inst,		Aggregator.Any.inst		));
-		addTrigger(new ScorerData("PL_SAME_TOKEN",		SameToken.inst,				Aggregator.Any.inst		));
+		if (controller.onlyAnalysis) {
+			// I just can't see its advantage over lemma...
+			addTrigger(new ScorerData("PL_SAME_TOKEN",		SameToken.inst,				Aggregator.Any.inst		));
+		}
 		addTrigger(new ScorerData("PL_SAME_LEMMA",		SameLemma.inst,				Aggregator.Any.inst		));
 		
-		addTrigger(new ScorerData("PL_DERIVATION_OD", TokenDerivation.inst, WordnetDervRltdDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, Aggregator.Any.inst));
+		// they are both here only as an experiment - they should behave the same due to TEXT_ORIG_AND_DERV!!!!
+		// Later, remove one of them
+		// Shit, and now the first one gets an exception, since NoDerv doesn't like to be inside of a Join. Maybe solve at some point.
+		//addTrigger(new ScorerData("PL_DERIVATION+LEMMA", TokenDerivation.inst, new Join(NoDerv.inst, WordnetDervRltdDeriver.inst), Derivation.TEXT_ORIG_AND_DERV, Aggregator.Any.inst));
+		addTrigger(new ScorerData("PL_DERIVATION", TokenDerivation.inst, WordnetDervRltdDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, Aggregator.Any.inst));
+		
 	}
 
-	public PlainSignalMechanism() throws SignalMechanismException {
-		super();
+	public PlainSignalMechanism(Perceptron perceptron) throws SignalMechanismException {
+		super(perceptron);
 	}
 
 	private static class SameToken extends PredicateSeedScorerTEMP {
@@ -56,13 +68,17 @@ public class PlainSignalMechanism extends SignalMechanism {
 	/**
 	 * This class is actually identical to SameToken, but it's meant to be used with derivers.
 	 */
-	private static class TokenDerivation extends PredicateSeedScorerTEMP {
+	public static class TokenDerivation extends PredicateSeedScorerTEMP {
 		private static final long serialVersionUID = -7787465525225717077L;
 		public static final TokenDerivation inst = new TokenDerivation();
 		@Override public String getForm(Token token) { return token.getCoveredText();}
 		@Override
 		public Boolean calcTokenBooleanScore(Token textToken, Map<Class<?>, Object> textTriggerTokenMap, String textStr, PartOfSpeech textPos, String specStr, PartOfSpeech specPos, ScorerData scorerData) throws SignalMechanismException
 		{
+			///DEBUG
+			if (textStr.equals("war")) {
+				System.out.printf("\n\nWar!!! in TokenDerivation!!!\n\n textStr.equals(specStr) is: %s\n\n", textStr.equals(specStr));
+			}
 			return textStr.equals(specStr);
 		}
 	}

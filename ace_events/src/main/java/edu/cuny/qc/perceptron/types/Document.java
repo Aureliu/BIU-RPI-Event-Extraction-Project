@@ -399,6 +399,10 @@ public class Document implements java.io.Serializable
 		readDoc(txtFile, this.monoCase, existingJCas);
 	}
 	
+	public String toString() {
+		return String.format("%s(%s)", getClass().getSimpleName(), docID);
+	}
+	
 	public static Document createAndPreprocess(String baseFileName, boolean hasLabel, boolean monoCase, boolean tryLoadExisting, boolean dumpNewDoc, TypesContainer types, Perceptron perceptron) throws IOException {
 		try {
 			// Kludge - don't serialize for now
@@ -1193,7 +1197,7 @@ public class Document implements java.io.Serializable
 	public static List<SentenceInstance> getInstancesForSentence(Perceptron perceptron, Sentence sent, TypesContainer types, Alphabet featureAlphabet, 
 			boolean learnable, boolean debug) throws CASRuntimeException, AnalysisEngineProcessException, ResourceInitializationException, CASException, UimaUtilsException, IOException, AeException {
 		List<SentenceInstance> result = new ArrayList<SentenceInstance>();
-		if (perceptron.controller.oMethod.startsWith("F")) {
+		if (perceptron.controller.oMethod.startsWith("G")) {
 			for (int specNum=0; specNum < types.specs.size(); specNum++) {
 				JCas spec = types.specs.get(specNum);
 				List<JCas> oneSpec = Arrays.asList(new JCas[] {spec});

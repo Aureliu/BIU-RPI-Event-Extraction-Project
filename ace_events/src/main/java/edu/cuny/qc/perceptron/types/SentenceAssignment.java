@@ -399,15 +399,23 @@ public class SentenceAssignment
 		partial_scores = new ArrayList<BigDecimal>();
 		featureToSignal = new HashMap<Integer, Map<String, String>>();
 
-		if (this.controller.oMethod.startsWith("Fb")) {
-			FEATURE_POSITIVE_VAL = BigDecimal.ONE;
-			FEATURE_NEGATIVE_VAL = BigDecimal.ZERO;
+		if (this.controller.oMethod.startsWith("G")) {
+			
+			if (this.controller.oMethod.contains("0")) {
+				FEATURE_POSITIVE_VAL = BigDecimal.ONE;
+				FEATURE_NEGATIVE_VAL = BigDecimal.ZERO;
+			}
+			else if (this.controller.oMethod.contains("-1")) {
+				FEATURE_POSITIVE_VAL = BigDecimal.ONE;
+				FEATURE_NEGATIVE_VAL = new BigDecimal("-1");
+			}
+			else {
+				throw new IllegalStateException("G method must get '0' or '-1' as neg_val, got: " + this.controller.oMethod);
+			}
 		}
 		else {
-			FEATURE_POSITIVE_VAL = BigDecimal.ONE;
-			FEATURE_NEGATIVE_VAL = new BigDecimal("-1");
+			throw new IllegalStateException("Supporting only 'G' oMethdos for now! Got: " + this.controller.oMethod);
 		}
-
 	}
 	
 	/**
@@ -745,7 +753,7 @@ public class SentenceAssignment
 	//				makeFeature(featureStr, this.getFV(i), featureValue, i, signals, addIfNotPresent, useIfNotPresent);
 	//			}
 				
-				if (this.controller.oMethod.startsWith("F")) {
+				if (this.controller.oMethod.startsWith("G")) {
 					// We don't check what is the label of this token, as the feature value is always according
 					// to the associated spec, even when the token's label is O.
 					// The only place in which the current label is expressed, is the "genericLabel" that is
@@ -768,13 +776,22 @@ public class SentenceAssignment
 						for (SignalInstance signal : signalsOfLabel.values()) {
 							List<SignalInstance> signals = Arrays.asList(new SignalInstance[] {signal});
 							BigDecimal featureValuePositive = signal.positive ? FEATURE_POSITIVE_VAL : FEATURE_NEGATIVE_VAL;
-							BigDecimal featureValueNegative = signal.positive ? FEATURE_NEGATIVE_VAL : FEATURE_POSITIVE_VAL;
 							
 							String featureStrPositive = "BigramFeature:\t" + signal.getName() + "\t" + "P+\t" + LABEL_MARKER + genericLabel;
-							//String featureStrNegative = "BigramFeature:\t" + signal.getName() + "\t" + "P-\t" + LABEL_MARKER + genericLabel;
 							
 							makeFeature(featureStrPositive, this.getFV(i), featureValuePositive, i, signals, addIfNotPresent, useIfNotPresent);
-							//makeFeature(featureStrNegative, this.getFV(i), featureValueNegative, i, signals, addIfNotPresent, useIfNotPresent);
+							
+							if (this.controller.oMethod.contains("P+")) {
+								// do nothing, we did P+ before and nothing to do further
+							}
+							else if (this.controller.oMethod.contains("P-")) {
+								BigDecimal featureValueNegative = signal.positive ? FEATURE_NEGATIVE_VAL : FEATURE_POSITIVE_VAL;
+								String featureStrNegative = "BigramFeature:\t" + signal.getName() + "\t" + "P-\t" + LABEL_MARKER + genericLabel;
+								makeFeature(featureStrNegative, this.getFV(i), featureValueNegative, i, signals, addIfNotPresent, useIfNotPresent);
+							}
+							else {
+								throw new IllegalStateException("Method G must explicitly state P+ or P-, got: " + this.controller.oMethod);
+							}
 						}
 					} catch (CASException e) {
 						throw new RuntimeException(e);

@@ -19,7 +19,7 @@ public class FeatureVector implements Serializable
 	private static final long serialVersionUID = 9029197104497329900L;
 
 	// different from Mallet, just use a JDK HashMap to restore the sparse vector
-	HashMap<Object, BigDecimal> map;
+	public HashMap<Object, BigDecimal> map;
 	
 	static {
 		System.err.printf("??? FeatureVector.addDelta2: comparing to Double values, probably a bad idea. Maybe they should just be boolean? must they really be Double?");
@@ -76,6 +76,7 @@ public class FeatureVector implements Serializable
 			value_exist = value_exist.add(value);
 			map.put(feat, value_exist);
 		}
+		xxx if required by log, in some "diff" map save _value_ for _feat_
 	}
 
 	public FeatureVector clone()

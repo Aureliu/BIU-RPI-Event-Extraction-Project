@@ -11,6 +11,7 @@ import edu.cuny.qc.scorer.Aggregator;
 import edu.cuny.qc.scorer.Compose.Or;
 import edu.cuny.qc.scorer.Derivation;
 import edu.cuny.qc.scorer.Deriver.NoDerv;
+import edu.cuny.qc.scorer.mechanism.POSSignalMechanism.SpecificPOS;
 import edu.cuny.qc.scorer.PredicateSeedScorerTEMP;
 import edu.cuny.qc.scorer.ScorerData;
 import edu.cuny.qc.scorer.SignalMechanism;
@@ -24,7 +25,17 @@ public class DependencySignalMechanism extends SignalMechanism {
 
 	@Override
 	public void addScorers() throws UnsupportedPosTagStringException {
-		//addTrigger(new ScorerData(null, new Or(new OneDepUp("pobj"), new OneDepUp("dobj"), new OneDepUp("nsubj")), true));
+		switch(controller.featureProfile) {
+		case TOKEN_BASELINE: break;
+		case ANALYSIS: //fall-through, analyze exactly all normal scorers 
+		case NORMAL:
+			addTrigger(new ScorerData(null, new Or(new OneDepUp("pobj"), new OneDepUp("dobj"), new OneDepUp("nsubj")), true));
+			
+			break;
+		default:
+			throw new IllegalStateException("Bad FeatureProfile enum value: " + controller.featureProfile);
+		}
+
 	}
 
 	public DependencySignalMechanism(Perceptron perceptron) throws SignalMechanismException {

@@ -56,12 +56,6 @@ public abstract class PredicateSeedScorerTEMP extends SignalMechanismSpecIterato
 				return SignalInstance.toDouble(false); //TODO: should be: IRRELEVANT
 			}			
 
-			/// DEBUG
-			if (getForm(textToken).equals("war")) {
-				System.out.printf("\n\n\n DEBUG %s\n\n\n", getClass().getSimpleName());
-				System.out.println();
-			}
-			
 			// Get all text derivations
 			Set<BasicRulesQuery> textDerivations = scorerData.deriver.getDerivations(
 					getForm(textToken), textPos, scorerData.derivation.leftOriginal, scorerData.derivation.leftDerivation, scorerData.leftSenseNum);
@@ -77,7 +71,7 @@ public abstract class PredicateSeedScorerTEMP extends SignalMechanismSpecIterato
 				specDerivations.addAll(scorerData.deriver.getDerivations(
 						specForm, textPos, scorerData.derivation.rightOriginal, scorerData.derivation.rightDerivation, scorerData.rightSenseNum));
 			}					
-			
+
 			// Calculate score on each combination of text-derivation and spec-derivation
 			// this is a hard-coded "or" methodology, with short-circuit
 			boolean result = false;

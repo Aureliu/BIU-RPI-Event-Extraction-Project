@@ -14,6 +14,8 @@ import edu.cuny.qc.scorer.ScorerData;
 import edu.cuny.qc.scorer.SignalMechanism;
 import edu.cuny.qc.scorer.SignalMechanismException;
 import edu.cuny.qc.scorer.PredicateSeedScorerTEMP;
+import edu.cuny.qc.scorer.Compose.Or;
+import edu.cuny.qc.scorer.mechanism.POSSignalMechanism.SpecificPOS;
 import edu.cuny.qc.scorer.mechanism.WordNetSignalMechanism.WordnetDervRltdDeriver;
 import eu.excitementproject.eop.common.representation.partofspeech.PartOfSpeech;
 
@@ -24,19 +26,26 @@ public class PlainSignalMechanism extends SignalMechanism {
 	}
 	@Override
 	public void addScorers() {
-//		addTrigger(new ScorerData("FAKE_LETTER_E",		TextHasLetterE.inst,		Aggregator.Any.inst		));
-//		addTrigger(new ScorerData("FAKE_LETTER_X",		TextHasLetterX.inst,		Aggregator.Any.inst		));
-		if (controller.onlyAnalysis) {
-			// I just can't see its advantage over lemma...
+		switch(controller.featureProfile) {
+		case TOKEN_BASELINE:
 			addTrigger(new ScorerData("PL_SAME_TOKEN",		SameToken.inst,				Aggregator.Any.inst		));
+			break;
+		case ANALYSIS: //fall-through, analyze exactly all normal scorers 
+		case NORMAL:
+			addTrigger(new ScorerData("PL_SAME_LEMMA",		SameLemma.inst,				Aggregator.Any.inst		));
+			
+			break;
+		default:
+			throw new IllegalStateException("Bad FeatureProfile enum value: " + controller.featureProfile);
 		}
-		addTrigger(new ScorerData("PL_SAME_LEMMA",		SameLemma.inst,				Aggregator.Any.inst		));
-		
+
 		// they are both here only as an experiment - they should behave the same due to TEXT_ORIG_AND_DERV!!!!
 		// Later, remove one of them
 		// Shit, and now the first one gets an exception, since NoDerv doesn't like to be inside of a Join. Maybe solve at some point.
 		//addTrigger(new ScorerData("PL_DERIVATION+LEMMA", TokenDerivation.inst, new Join(NoDerv.inst, WordnetDervRltdDeriver.inst), Derivation.TEXT_ORIG_AND_DERV, Aggregator.Any.inst));
-		addTrigger(new ScorerData("PL_DERIVATION", TokenDerivation.inst, WordnetDervRltdDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, Aggregator.Any.inst));
+		
+		// This guy annoys me and probably has a bug - spec words are ignored!!!
+		//addTrigger(new ScorerData("PL_DERIVATION", TokenDerivation.inst, WordnetDervRltdDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, Aggregator.Any.inst));
 		
 	}
 
@@ -75,10 +84,6 @@ public class PlainSignalMechanism extends SignalMechanism {
 		@Override
 		public Boolean calcTokenBooleanScore(Token textToken, Map<Class<?>, Object> textTriggerTokenMap, String textStr, PartOfSpeech textPos, String specStr, PartOfSpeech specPos, ScorerData scorerData) throws SignalMechanismException
 		{
-			///DEBUG
-			if (textStr.equals("war")) {
-				System.out.printf("\n\nWar!!! in TokenDerivation!!!\n\n textStr.equals(specStr) is: %s\n\n", textStr.equals(specStr));
-			}
 			return textStr.equals(specStr);
 		}
 	}

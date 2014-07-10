@@ -5,6 +5,7 @@ import static edu.cuny.qc.scorer.Derivation.*;
 import static edu.cuny.qc.scorer.Deriver.*;
 
 import java.io.File;
+import java.nio.channels.IllegalSelectorException;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
@@ -114,7 +115,9 @@ public class WordNetSignalMechanism extends SignalMechanism {
 	@Override
 	public void addScorers() {
 
-		if (controller.onlyAnalysis) {
+		switch (controller.featureProfile) {
+		case TOKEN_BASELINE: break;
+		case ANALYSIS:
 			// tiny amount for debug
 			//addTriggers(SYNONYM_RELATION,   Juxtaposition.ANCESTOR, new Integer[] {1}, ALL_DERIVERS, DERVS_NONE, new Integer[] {1}, new Integer[] {1}, new PartOfSpeech[] {null, /*NOUN, VERB, ADJ, ADV*/}, AGG_ANY_MIN2);
 			
@@ -132,8 +135,9 @@ public class WordNetSignalMechanism extends SignalMechanism {
 	
 			addTriggers(ALL_RELATIONS_SMALL,   Juxtaposition.ANCESTOR, LENGTHS_1_2_3_TOP, ALL_DERIVERS, DERVS_ALL, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN, VERB/*, ADJ, ADV*/}, ALL_AGGS);
 			addTriggers(ALL_RELATIONS_BIG,   Juxtaposition.ANCESTOR, LENGTHS_1_2_3_TOP, ALL_DERIVERS, DERVS_ALL, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN, VERB/*, ADJ, ADV*/}, ALL_AGGS);
-		}
-		else {
+		
+			break;
+		case NORMAL:
 			// Built from 2014.07.02..1__SignalAnalyzer_medium__TESRV2
 			// Top F1
 			addTrigger(new ScorerData(null, new WordnetScorer(SYNONYM_RELATION, Juxtaposition.ANCESTOR, 1), NoDerv.inst, Derivation.NONE, -1, 1, null, Any.inst));
@@ -145,6 +149,7 @@ public class WordNetSignalMechanism extends SignalMechanism {
 			//addTrigger(new ScorerData(null, new WordnetScorer(HYPERNYM_RELATIONS, Juxtaposition.ANCESTOR, 3), WordnetDervRltdDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, 1, null, Any.inst));
 
 			addTrigger(new ScorerData(null, new WordnetScorer(ALL_RELATIONS_SMALL, Juxtaposition.ANCESTOR, 2), NoDerv.inst, Derivation.NONE, -1, 1, null, Any.inst));
+			addTrigger(new ScorerData(null, new WordnetScorer(ALL_RELATIONS_SMALL, Juxtaposition.ANCESTOR, 2), WordnetDervRltdDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, 1, null, Any.inst));
 			//addTrigger(new ScorerData(null, new WordnetScorer(ALL_RELATIONS_BIG,   Juxtaposition.ANCESTOR, 2), NoDerv.inst, Derivation.NONE, -1, 1, null, Any.inst));
 
 			//addTrigger(new ScorerData(null, new WordnetScorer(HYPERNYM_RELATIONS, Juxtaposition.ANCESTOR, 2), NoDerv.inst, Derivation.NONE, -1, 1, null, Any.inst));
@@ -156,11 +161,12 @@ public class WordNetSignalMechanism extends SignalMechanism {
 //			addTrigger(new ScorerData(null, new WordnetScorer(ALL_RELATIONS_SMALL, Juxtaposition.ANCESTOR, 3), WordnetDervRltdDeriver.inst, Derivation.SPEC_ONLY_DERV, 1, -1, null, Min3.inst));
 //			addTrigger(new ScorerData(null, new WordnetScorer(ALL_RELATIONS_SMALL, Juxtaposition.ANCESTOR, 3), WordnetDervRltdDeriver.inst, Derivation.SPEC_ONLY_DERV, -1, -1, null, Min3.inst));
 
-			addTrigger(new ScorerData(null, new WordnetScorer(ALL_RELATIONS_BIG, Juxtaposition.ANCESTOR, 2), NomlexSignalMechanism.NomlexDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, 1, 1, null, Any.inst));
+			addTrigger(new ScorerData(null, new WordnetScorer(ALL_RELATIONS_BIG, Juxtaposition.ANCESTOR, 2), NomlexSignalMechanism.NomlexDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, 1, null, Any.inst));
+			//addTrigger(new ScorerData(null, new WordnetScorer(ALL_RELATIONS_BIG, Juxtaposition.ANCESTOR, 2), NomlexSignalMechanism.NomlexDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, 1, 1, null, Any.inst));
 			//addTrigger(new ScorerData(null, new WordnetScorer(ALL_RELATIONS_BIG, Juxtaposition.ANCESTOR, 1), WordnetDervRltdDeriver.inst, Derivation.SPEC_ORIG_AND_DERV, -1, -1, null, Min3.inst));
 			
 			// Top Recall
-			addTrigger(new ScorerData(null, new WordnetScorer(HYPERNYM_RELATIONS, Juxtaposition.COUSIN_STRICT, 2), WordnetDervRltdDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, -1, null, Min2.inst));
+			//addTrigger(new ScorerData(null, new WordnetScorer(HYPERNYM_RELATIONS, Juxtaposition.COUSIN_STRICT, 2), WordnetDervRltdDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, -1, null, Min2.inst));
 			addTrigger(new ScorerData(null, new WordnetScorer(HYPERNYM_RELATIONS, Juxtaposition.COUSIN_STRICT, 2), WordnetDervRltdDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, -1, null, Any.inst));
 			//addTrigger(new ScorerData(null, new WordnetScorer(HYPERNYM_RELATIONS, Juxtaposition.COUSIN_STRICT, 3), WordnetDervRltdDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, -1, null, Min3.inst));
 			
@@ -169,7 +175,9 @@ public class WordNetSignalMechanism extends SignalMechanism {
 			
 			// Top InfoGain - contained in other categories
 			
-
+			break;
+		default:
+			throw new IllegalStateException("Bad FeatureProfile enum value: " + controller.featureProfile);
 		}
 		
 		//END of analysis1!

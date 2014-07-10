@@ -3,6 +3,7 @@ package edu.cuny.qc.perceptron.core;
 import java.util.Arrays;
 import java.util.Date;
 
+import edu.cuny.qc.scorer.FeatureProfile;
 import edu.cuny.qc.util.Utils;
 
 // This is a controller of the settings in percetpron
@@ -42,14 +43,14 @@ public class Controller implements java.io.Serializable
 	
 	/**
 	 * 0 - only model file
-	 * 1 - model, weights, performance
-	 * 2 - model, weights, performance, features (only label per token)
-	 * 3 - model, weights, performance, features (only label per token), weights (only vector summary per sentence)
-	 * 4 - model, weights, performance, features, weights (only vector summary per sentence)
-	 * 5 - model, weights, performance, features, weights (only vector summary per sentence), beam (only full assignments)
-	 * 6 - model, weights, performance, features, weights (only vector summary per sentence), beam
-	 * 7 - model, weights, performance, features, weights (vector summary per sentence + all weights only for PostItr), beam
-	 * 8 - model, weights, performance, features, weights, beam
+	 * 1 - model, final weights, performance
+	 * 2 - model, final weights, performance, features (only label per token)
+	 * 3 - model, final weights, performance, features (only label per token), weights (only vector summary per sentence)
+	 * 4 - model, final weights, performance, updates, features, weights (only vector summary per sentence)
+	 * 5 - model, final weights, performance, updates, features, weights (only vector summary per sentence), beam (only full assignments)
+	 * 6 - model, final weights, performance, updates, features, weights (only vector summary per sentence), beam
+	 * 7 - model, final weights, performance, updates, features, weights (vector summary per sentence + all weights only for PostItr), beam
+	 * 8 - model, final weights, performance, updates, features, weights, beam
 	 */
 	public int logLevel = 1;
 
@@ -62,7 +63,7 @@ public class Controller implements java.io.Serializable
 	
 	public boolean saveFeatureSignalNames = false;
 	
-	public boolean onlyAnalysis = false;
+	public FeatureProfile featureProfile = FeatureProfile.NORMAL;
 	
 	public boolean singleTokenSentences = false;
 	
@@ -164,9 +165,9 @@ public class Controller implements java.io.Serializable
 			{
 				saveFeatureSignalNames = Boolean.parseBoolean(fields[1]);
 			}
-			else if(fields[0].equalsIgnoreCase("onlyAnalysis"))
+			else if(fields[0].equalsIgnoreCase("featureProfile"))
 			{
-				onlyAnalysis = Boolean.parseBoolean(fields[1]);
+				featureProfile = FeatureProfile.valueOf(fields[1].toUpperCase());
 			}
 			else if(fields[0].equalsIgnoreCase("singleTokenSentences"))
 			{
@@ -191,7 +192,7 @@ public class Controller implements java.io.Serializable
 		" evaluatorType:" + evaluatorType + " learnBigrams: " + learnBigrams + " logLevel: " + logLevel +
 		" oMethod: " + oMethod + " serialization: " + serialization + " usePreprocessFiles: " + usePreprocessFiles
 		+ " usePreprocessFiles: " + usePreprocessFiles + " saveFeatureSignalNames: " + saveFeatureSignalNames +
-		" onlyAnalysis: " + onlyAnalysis + " singleTokenSentences: " + singleTokenSentences +
+		" featureProfile: " + featureProfile + " singleTokenSentences: " + singleTokenSentences +
 		" logOnlyTheseSentences: " + logOnlyTheseSentences;
 		return ret;
 	}

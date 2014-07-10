@@ -331,7 +331,7 @@ public class Perceptron implements java.io.Serializable
 		// feature cutoff
 		if(cutoff > 0)
 		{
-			featureCutOff(trainingList, cutoff);
+			throw new UnsupportedParameterException("cutoff > 0");
 		}
 		
 		//DEBUG

@@ -1,6 +1,9 @@
 package edu.cuny.qc.perceptron.core;
 
+import java.util.Arrays;
 import java.util.Date;
+
+import edu.cuny.qc.util.Utils;
 
 // This is a controller of the settings in percetpron
 public class Controller implements java.io.Serializable
@@ -37,21 +40,25 @@ public class Controller implements java.io.Serializable
 	
 	/**
 	 * 0 - only model file
-	 * 1 - model, weights, performance
-	 * 2 - model, weights, performance, features (only label per token)
-	 * 3 - model, weights, performance, features (only label per token), weights (only vector summary per sentence)
-	 * 4 - model, weights, performance, features, weights (only vector summary per sentence)
-	 * 5 - model, weights, performance, features, weights (only vector summary per sentence), beam (only full assignments)
-	 * 6 - model, weights, performance, features, weights (only vector summary per sentence), beam
-	 * 7 - model, weights, performance, features, weights (vector summary per sentence + all weights only for PostItr), beam
-	 * 8 - model, weights, performance, features, weights, beam
+	 * 1 - model, final weights, performance
+	 * 2 - model, final weights, performance, features (only label per token)
+	 * 3 - model, final weights, performance, features (only label per token), weights (only vector summary per sentence)
+	 * 4 - model, final weights, performance, updates, features, weights (only vector summary per sentence)
+	 * 5 - model, final weights, performance, updates, features, weights (only vector summary per sentence), beam (only full assignments)
+	 * 6 - model, final weights, performance, updates, features, weights (only vector summary per sentence), beam
+	 * 7 - model, final weights, performance, updates, features, weights (vector summary per sentence + all weights only for PostItr), beam
+	 * 8 - model, final weights, performance, updates, features, weights, beam
 	 */
 	public int logLevel = 1;
 	
+	
+
+	public String[] logOnlyTheseSentences = {};
+	
 	public Controller()
 	{
-		System.out.printf("\n[%s] ******** Controller() **********\n", new Date());
-		System.out.printf("******** %s **********\n", this);
+//		System.out.printf("\n[%s] ******** Controller() **********\n", new Date());
+//		System.out.printf("******** %s **********\n", this);
 	}
 	
 	/**
@@ -124,7 +131,14 @@ public class Controller implements java.io.Serializable
 			{
 				logLevel = Integer.parseInt(fields[1]);
 			}
+			else if(fields[0].equalsIgnoreCase("logOnlyTheseSentences"))
+			{
+				logOnlyTheseSentences = fields[1].split(",");
+				Utils.logOnlyTheseSentences = Arrays.asList(logOnlyTheseSentences);
+			}
 		}
+		System.out.printf("\n[%s] ******** Controller() **********\n", new Date());
+		System.out.printf("******** %s **********\n", this);
 	}
 	
 	public String toString()
@@ -133,7 +147,8 @@ public class Controller implements java.io.Serializable
 		+ " averaged weights: " + avgArguments + " skipNonArgument: " + skipNonArgument
 		+ " useGlobalFeature:" + useGlobalFeature + " addNeverSeenFeatures: " + addNeverSeenFeatures
 		+ " crossSent:" + crossSent + " crossSentReranking:" + crossSentReranking + " order:" + order +
-		" evaluatorType:" + evaluatorType + " learnBigrams: " + learnBigrams;
+		" evaluatorType:" + evaluatorType + " learnBigrams: " + learnBigrams + " logLevel: " + logLevel +
+		" logOnlyTheseSentences: " + logOnlyTheseSentences;
 		return ret;
 	}
 	

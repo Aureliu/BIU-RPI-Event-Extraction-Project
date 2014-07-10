@@ -7,6 +7,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.commons.lang3.StringUtils;
+
 import edu.cuny.qc.ace.acetypes.AceEntityMention;
 import edu.cuny.qc.ace.acetypes.AceEvent;
 import edu.cuny.qc.ace.acetypes.AceEventMention;
@@ -94,6 +96,12 @@ public class SentenceInstance
 		NodeTextFeatureVectors,		// node feature Vectors
 		EdgeTextFeatureVectors,		// node feature Vectors
 		ParseTree					// parse tree
+	}
+	
+	@Override
+	public String toString() {
+		final int TEXT_DISPLAY_MAX = 10;
+		return String.format("%s(%d events, %d argcands: %s...)", sentID, eventMentions.size(), eventArgCandidates.size(), StringUtils.substring(text, 0, TEXT_DISPLAY_MAX));
 	}
 	
 	public Object get(InstanceAnnotations key)

@@ -9,6 +9,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.commons.lang3.StringUtils;
+
 import edu.cuny.qc.ace.acetypes.AceEntityMention;
 import edu.cuny.qc.ace.acetypes.AceEventMention;
 import edu.cuny.qc.ace.acetypes.AceMention;
@@ -45,7 +47,7 @@ public class Sentence implements java.io.Serializable
 	/**
 	 * the sentID, the number of sentence in its document
 	 */
-	protected int sentID;
+	public int sentID;
 	
 	/**
 	 * Ofer: Add this for debugging purposes
@@ -81,9 +83,16 @@ public class Sentence implements java.io.Serializable
 	
 	public Sentence(Document doc, int sentID, String text)
 	{
+		final int MAX_TEXT_LEN = 6;
 		this.doc = doc;
 		this.sentID = sentID;
-		this.text = text;
+		this.text = (StringUtils.substring(text.replace("\"", "\\\""), 0, MAX_TEXT_LEN) + "..").intern();
+	}
+	
+	@Override
+	public String toString() {
+		final int TEXT_DISPLAY_MAX = 10;
+		return String.format("%s[%s events: %s...]", sentID, eventMentions.size(), StringUtils.substring(text, 0, TEXT_DISPLAY_MAX));
 	}
 	
 	public void fillAceAnnotaions()

@@ -271,22 +271,22 @@ public class LearningCurve {
 		return result;
 	}
 	
-	protected void doTraining() throws IOException, DocumentException {
+	protected void doTraining() throws Exception {
 		//doAction("train", new TrainAction(), filePointerTrain, lastTrainIteration, lastTrainChunk, OUT_ALL_FILENAME, ERR_ALL_FILENAME);
 		doAction("train", new TrainAction(), filePointerTrain, OUT_ALL_FILENAME, ERR_ALL_FILENAME);
 	}
 	
-	protected void doDecoding() throws IOException, DocumentException {
+	protected void doDecoding() throws Exception {
 		//doAction("decode", new DecodeAction(), filePointerDecode, lastDecodeIteration, lastDecodeChunk, OUT_ALL_FILENAME, ERR_ALL_FILENAME);
 		doAction("decode", new DecodeAction(), filePointerDecode, OUT_ALL_FILENAME, ERR_ALL_FILENAME);
 	}
 	
-	protected void doScoring() throws IOException, DocumentException {
+	protected void doScoring() throws Exception {
 		//doAction("score", new ScoreAction(), filePointerScore, lastScoreIteration, lastScoreChunk, OUT_ALL_FILENAME, ERR_ALL_FILENAME);
 		doAction("score", new ScoreAction(), filePointerScore, OUT_ALL_FILENAME, ERR_ALL_FILENAME);
 	}
 	
-	protected void doAction(String actionLabel, Action action, File filePointer, String outFileName, String errFileName) throws IOException, DocumentException {
+	protected void doAction(String actionLabel, Action action, File filePointer, String outFileName, String errFileName) throws Exception {
 		logger.info(String.format("##### Starting %s", actionLabel));
 		int tFirst = -800;
 		int tLast = -800;
@@ -441,12 +441,12 @@ public class LearningCurve {
 	}
 	
 	private interface Action {
-		public void go(String outputFolder, int i, int t, int j, String eventType, List<String> trainSet, int mentionsInTrainSet, String devDocsList, String testDocsList, int devMentions, int testMentions) throws IOException, DocumentException;
+		public void go(String outputFolder, int i, int t, int j, String eventType, List<String> trainSet, int mentionsInTrainSet, String devDocsList, String testDocsList, int devMentions, int testMentions) throws Exception;
 	}
 	
 	private class TrainAction implements Action {
 		@Override
-		public void go(String outputFolder, int i, int t, int j, String eventType, List<String> trainSet, int mentionsInTrainSet, String devDocsList, String testDocsList, int devMentions, int testMentions) throws IOException {
+		public void go(String outputFolder, int i, int t, int j, String eventType, List<String> trainSet, int mentionsInTrainSet, String devDocsList, String testDocsList, int devMentions, int testMentions) throws Exception {
 			String tempTrainDocList = String.format(TRAIN_LIST_FILENAME, outputFolder, i, t, j, trainSet.size(), mentionsInTrainSet);
 			PrintWriter f = null;
 			try {

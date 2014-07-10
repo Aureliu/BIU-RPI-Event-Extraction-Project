@@ -62,9 +62,10 @@ public class BeamSearch
 			} catch (IOException e) {
 				throw new RuntimeException(e);
 			}
-			Utils.print(b, "", "\n", "|",		
+			Utils.print(b, "", "\n", "|", null,	
 					//general
 					"Iter",
+					"DocID",
 					"SentenceNo",
 					"violation",
 					"beam-size",
@@ -82,12 +83,14 @@ public class BeamSearch
 					"Lemma",
 					"target-label",
 					"assn-label",
+					"both-labels",
 					"partial-score",
 					
 					//feature
 					"Feature",
 					"target",
 					"assn",
+					"labels+assn",
 					"Weight",
 					"AvgWeight"
 			);
@@ -129,9 +132,10 @@ public class BeamSearch
 						Collections.sort(allFeaturesList);
 		
 						for (String s : allFeaturesList) {						
-							Utils.print(b, "", "\n", "|",		
+							Utils.print(b, "", "\n", "|", Perceptron.i,
 									//general
 									Perceptron.iter,//"Iter",
+									instance.docID,//"DocID"
 									Perceptron.i,//"SentenceNo",
 									violation,//"violation",
 									beam.size(),//"beam-size",
@@ -149,12 +153,14 @@ public class BeamSearch
 									Perceptron.lemma(lemma),//"Lemma",
 									instance.target.getLabelAtToken(j),//"target-label",
 									assn.getLabelAtToken(j),//"assn-label",
+									Perceptron.twoLabels(instance.target, assn, j),//"both-labels"
 									assn.getPartialScores().get(j),//"partial-score",
 									
 									//feature
 									Perceptron.feature(s),//"Feature",
 									Perceptron.str(mapTarget, s),//"target"
 									Perceptron.str(mapAssn, s),//"assn"
+									Perceptron.twoLabelsAndScore(instance.target, assn, j, mapAssn, s),//"labels+assn"
 									Perceptron.str(model.getWeights(), s),//"Weight",
 									Perceptron.str(model.getAvg_weights(), s)//"AvgWeight"
 							);
@@ -194,9 +200,10 @@ public class BeamSearch
 				}
 				
 				if (model.controller.logLevel >= 5) {
-					Utils.print(b, "", "\n", "|",		
+					Utils.print(b, "", "\n", "|", Perceptron.i,
 							//general
 							Perceptron.iter,//"Iter",
+							instance.docID,//"DocID"
 							Perceptron.i,//"SentenceNo",
 							violation,//"violation",
 							beam.size(),//"beam-size",
@@ -214,10 +221,14 @@ public class BeamSearch
 							"",//"Lemma",
 							"",//"target-label",
 							"",//"assn-label",
+							"",//both-labels
 							"",//"partial-score",
 							
 							//feature
 							"",//"Feature",
+							"",//target
+							"",//assn
+							"",//labels+assn
 							"",//"Weight",
 							""//"AvgWeight"
 					);

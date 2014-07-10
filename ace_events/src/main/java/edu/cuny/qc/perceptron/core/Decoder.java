@@ -85,14 +85,14 @@ public class Decoder
 		
 		//Intermediate output - all features+weights to text files
 		String s;
-		PrintStream featuresOut = new PrintStream(new File(outDir + File.separator + "FeatureAlphabet" + filenameSuffix));
+		PrintStream featuresOut = new PrintStream(new File(outDir + "/" + "FeatureAlphabet" + filenameSuffix));
 		for (Object o : featureAlphabet.toArray()) {
 			s = (String) o;
 			featuresOut.printf("%s\n", s);
 		}
 		featuresOut.close();
 		
-		PrintStream weightsOut = new PrintStream(new File(outDir + File.separator + "Weights" + filenameSuffix));
+		PrintStream weightsOut = new PrintStream(new File(outDir + "/" + "Weights" + filenameSuffix));
 		weightsOut.printf("%s", perceptron.getWeights().toStringFull());
 		weightsOut.close();
 		
@@ -110,7 +110,7 @@ public class Decoder
 		{
 			List<SentenceInstance> localInstanceList = null;
 			boolean monoCase = line.contains("bn/") ? true : false;
-			String fileName = srcDir + File.separator + line;
+			String fileName = srcDir + "/" + line;
 			System.out.println(fileName);
 			Document doc = null;
 			if(perceptron.controller.crossSent)
@@ -133,12 +133,12 @@ public class Decoder
 			List<SentenceAssignment> localResults = perceptron.decoding(localInstanceList);
 			
 			// print to docs
-			File outputFile = new File(outDir + File.separator + folderNamePrefix + line + ".apf.xml");
+			File outputFile = new File(outDir + "/" + folderNamePrefix + line + ".apf.xml");
 			if(!outputFile.getParentFile().exists())
 			{
 				outputFile.getParentFile().mkdirs();
 			}
-			String docID = doc.docID.substring(doc.docID.lastIndexOf(File.separator) + 1);
+			String docID = doc.docID;//.substring(doc.docID.lastIndexOf("/") + 1);
 			String id_prefix = docID + "-" + "EV";
 			PrintWriter out = new PrintWriter(outputFile);
 			
@@ -165,7 +165,7 @@ public class Decoder
 	public static Stats decodeAndScore(String[] args, String filenameSuffix, String folderNamePrefix, String singleEventType) throws IOException, DocumentException {
 		decode(args, filenameSuffix, folderNamePrefix, singleEventType);
 		
-		File outputFile = new File(outDir + File.separator + "Score" + filenameSuffix);
+		File outputFile = new File(outDir + "/" + "Score" + filenameSuffix);
 		Stats stats = Scorer.mainMultiRunReturningStats(folderNamePrefix, singleEventType, new String[]{args[1], args[3], args[2], outputFile.getAbsolutePath()});
 		return stats;
 	}
@@ -175,7 +175,7 @@ public class Decoder
 		// 1. there's no way to specify both a filenameSufix and NO_SCORING
 
 		System.out.printf("Args:\n%s\n\n", new ArrayList<String>(Arrays.asList(args)));
-		if((args.length < 4) || (args.length>5))
+		if((args.length < 5) || (args.length>6))
 		{
 			System.out.println("Usage:");
 			System.out.println("args[0]: model");

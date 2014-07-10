@@ -11,6 +11,7 @@ import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -51,6 +52,7 @@ public class Document implements java.io.Serializable
 	
 	// the id (base file name) of the document
 	public String docID;
+	public String docPath;
 	public String text;
 	/**
 	 * the difference between text and all text is that, alltext includes headline etc.
@@ -334,7 +336,8 @@ public class Document implements java.io.Serializable
 	public Document(String baseFileName, boolean hasLabel, boolean monoCase) throws IOException
 	{
 		this.monoCase = monoCase;
-		docID = baseFileName;
+		docPath = baseFileName;
+		docID = baseFileName.substring(baseFileName.lastIndexOf("/") + 1);
 		File txtFile = new File(baseFileName + textFileExt);
 		
 		this.setHasLabel(hasLabel);
@@ -348,10 +351,14 @@ public class Document implements java.io.Serializable
 		readDoc(txtFile, this.monoCase);
 	}
 	
+	public String toString() {
+		return String.format("%s(%s)", getClass().getSimpleName(), docID);
+	}
 	public static Document createAndPreprocess(String baseFileName, boolean hasLabel, boolean monoCase, boolean tryLoadExisting, boolean dumpNewDoc, String singleEventType) throws IOException, SerializationException {
 		Document doc = null;
 		File preprocessed = new File(baseFileName + preprocessedFileExt);
 		if (tryLoadExisting && preprocessed.isFile()) {
+			System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] reading 'preprocessed' file...", new Date());
 			doc = (Document) SerializationUtils.deserialize(new FileInputStream(preprocessed));
 			if (singleEventType != null) {
 				doc.aceAnnotations.setSingleEventType(singleEventType);
@@ -363,7 +370,9 @@ public class Document implements java.io.Serializable
 			
 			if (dumpNewDoc) {
 				try {
+					System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] dumping 'preprocessed' file...", new Date());
 					SerializationUtils.serialize(doc, new FileOutputStream(preprocessed));
+						System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] Done.\n", new Date());
 				}
 				catch (IOException e) {
 					Files.deleteIfExists(preprocessed.toPath());
@@ -547,7 +556,9 @@ public class Document implements java.io.Serializable
 			this.text += sgm.text;
 		}
 		
-		allText = before_text + text;
+		before_text = before_text.intern();
+		text = text.intern();
+		allText = (before_text + text).intern();
 		
 		return ret.toArray(new Span[ret.size()]);
 	}
@@ -630,6 +641,7 @@ public class Document implements java.io.Serializable
 			sgm.text = eraseXML(sgm.text);
 		}
 		
+		headline = headline.intern();
 		reader.close();
 		return segments;
 	}
@@ -716,7 +728,7 @@ public class Document implements java.io.Serializable
 					else if(!tokenText.equalsIgnoreCase("its"))
 					{	
 						
-						System.err.print(tokenText + "\t--->\t" + headText);
+						//System.err.print(tokenText + "\t--->\t" + headText);
 						
 						// just breakdown the token into 2 or 3 pieces
 						Span token_1 = new Span(token.start(), extent.start()-1);

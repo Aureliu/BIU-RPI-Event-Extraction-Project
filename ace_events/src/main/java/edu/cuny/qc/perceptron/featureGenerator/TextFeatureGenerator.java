@@ -488,21 +488,21 @@ public class TextFeatureGenerator
 				if(related_word.length() > 0)
 				{
 					String feature = label + "=" + edge.getRelation() + "_" + related_word;
-					dep_features.add(feature);
+					dep_features.add(feature.intern());
 				}
 				if(related_entity != null && related_entity.length() > 0)
 				{
 					String feature = label + "=" + edge.getRelation() + "_" + related_entity;
-					dep_features.add(feature);
+					dep_features.add(feature.intern());
 				}
 				if(related_pos.length() > 0)
 				{
 					String feature = label + "=" + edge.getRelation() + "_" + related_pos;
-					dep_features.add(feature);
+					dep_features.add(feature.intern());
 				}
 				// only consider the dependency type
 				String feature = label + "=" + edge.getRelation();
-				dep_features.add(feature);
+				dep_features.add(feature.intern());
 				
 				current_token.put(TokenAnnotations.DependencyAnnotation.class, dep_features);
 			}

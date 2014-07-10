@@ -26,15 +26,31 @@ public class Pipeline
 {
 	//DEBUG
 	public static File modelFile = null;
+	public static final int DOCUMENT_GC_FREQ = 100;
+	private static final Runtime runtime = Runtime.getRuntime();
+	public static final double MB = 1024.0*1024;
 	///////////
-	
+
+	public static double inMB(long bytes) {
+		return bytes / MB;
+	}
+	public static String detailedLog() {
+		//Runtime runtime = Runtime.getRuntime();
+		long max = runtime.maxMemory();
+		long total = runtime.totalMemory();
+		return String.format("[%1$tH:%1$tM:%1$tS.%1$tL max=%2$.2f, total=%3$.2f, used=%4$.2f]",
+				new Date(),
+				max==Long.MAX_VALUE? "no limit" : inMB(max), 
+				inMB(total), 
+				inMB(total - runtime.freeMemory()));
+	}
 	/**
 	 * Given the document list, train a perceptron model, and write to modelFile
 	 * @param srcDir
 	 * @param trainingFileList
 	 * @param modelFile
 	 */
-	public static Perceptron trainPerceptron(File srcDir, File trainingFileList, File modelFile, File devFileList, Controller controller, String singleEventType)
+	public static Perceptron trainPerceptron(File srcDir, File trainingFileList, File modelFile, File devFileList, Controller controller, String singleEventType) throws Exception
 	{
 		
 		Alphabet nodeTargetAlphabet = new Alphabet();
@@ -42,66 +58,54 @@ public class Pipeline
 		Alphabet featureAlphabet = new Alphabet();
 		
 		File prevModelFile = new File(modelFile.getAbsolutePath() + ".previous");
-		try
-		{
-			if (modelFile.isFile()) {
-				prevModelFile.delete();
-				modelFile.renameTo(prevModelFile);
-			}
-			
-			// Make sure model file is writable
-			PrintStream stream = new PrintStream(modelFile);
-			stream.printf("(file is writable - verified)");
-			stream.close();
-
-			// start marker
-			PrintStream m = new PrintStream(new File(modelFile.getAbsolutePath() + ".start"));
-			m.close();
-
-			// read instance list from training data (and dev data)
-			List<SentenceInstance> trainInstanceList = null;
-			List<SentenceInstance> devInstanceList = null;
-			Perceptron model = null;
-			
-			if(!controller.crossSent)
-			{
-				System.out.printf("[%s] Reading instance list of train...\n", new Date());
-				trainInstanceList = readInstanceList(srcDir, trainingFileList, nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet, controller, true, singleEventType);
-				System.out.printf("[%s] Finished reading instance list of train, got %d instances\n", new Date(), trainInstanceList.size());
-				System.out.printf("[%s] Reading instance list of dev\n", new Date());
-				devInstanceList = readInstanceList(srcDir, devFileList, nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet, controller, false, singleEventType);
-				System.out.printf("[%s] Finished reading instance list of dev, got %d instances\n", new Date(), devInstanceList.size());
-				// perceptron training
-				System.out.printf("[%s] Building perceptron...\n", new Date());
-				model = new Perceptron(nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet);
-				System.out.printf("[%s] Finished building perceptron. It's LabelBigramis: %s\n", new Date(), model.getLabelBigram());
-			}
-			else
-			{
-				throw new UnsupportedParameterException("crossSent = true");
-			}
-			
-			//DEBUG
-			Pipeline.modelFile = modelFile;
-			//////////////////
-			
-			model.controller = controller;
-			// learning
-			model.learning(trainInstanceList, devInstanceList, 0, singleEventType);
-			// save learned perceptron to file
-			Perceptron.serializeObject(model, modelFile);
-			
-			return model;
-		} 
-		catch (IOException e)
-		{
-			e.printStackTrace();
-		} 
-		catch (DocumentException e)
-		{
-			e.printStackTrace();
+		if (modelFile.isFile()) {
+			prevModelFile.delete();
+			modelFile.renameTo(prevModelFile);
 		}
-		return null;
+			
+		// Make sure model file is writable
+		PrintStream stream = new PrintStream(modelFile);
+		stream.printf("(file is writable - verified)");
+		stream.close();
+
+		// start marker
+		PrintStream m = new PrintStream(new File(modelFile.getAbsolutePath() + ".start"));
+		m.close();
+
+		// read instance list from training data (and dev data)
+		List<SentenceInstance> trainInstanceList = null;
+		List<SentenceInstance> devInstanceList = null;
+		Perceptron model = null;
+		
+		if(!controller.crossSent)
+		{
+			System.out.printf("%s Reading instance list of train...\n", detailedLog());
+			trainInstanceList = readInstanceList(srcDir, trainingFileList, nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet, controller, true, singleEventType);
+			System.out.printf("%s Finished reading instance list of train, got %d instances\n", detailedLog(), trainInstanceList.size());
+			System.out.printf("%s Reading instance list of dev\n", detailedLog());
+			devInstanceList = readInstanceList(srcDir, devFileList, nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet, controller, false, singleEventType);
+			System.out.printf("%s Finished reading instance list of dev, got %d instances\n", detailedLog(), devInstanceList.size());
+			// perceptron training
+			System.out.printf("%s Building perceptron...\n", detailedLog());
+			model = new Perceptron(nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet);
+			System.out.printf("%s Finished building perceptron. It's LabelBigramis: %s\n", detailedLog(), model.getLabelBigram());
+		}
+		else
+		{
+			throw new UnsupportedParameterException("crossSent = true");
+		}
+		
+		//DEBUG
+		Pipeline.modelFile = modelFile;
+		//////////////////
+		
+		model.controller = controller;
+		// learning
+		model.learning(trainInstanceList, devInstanceList, 0, singleEventType);
+		// save learned perceptron to file
+		Perceptron.serializeObject(model, modelFile);
+		
+		return model;
 	}
 	
 	/**
@@ -124,9 +128,9 @@ public class Pipeline
 		while((line = reader.readLine()) != null)
 		{
 			boolean monoCase = line.contains("bn/") ? true : false;
-			String fileName = srcDir + File.separator + line;
+			String fileName = srcDir + "/" + line;
 			
-			System.out.println(fileName);
+			System.out.printf("[%s] %s\n", new Date(), fileName);
 			
 			Document doc = Document.createAndPreprocess(fileName, true, monoCase, true, true, singleEventType);
 			// fill in text feature vector for each token
@@ -153,7 +157,7 @@ public class Pipeline
 			}
 		}
 		
-		System.out.println("done");
+//		System.out.println("done");
 		return instancelist;
 	}
 	
@@ -231,13 +235,13 @@ public class Pipeline
 	 * @param args
 	 * @throws IOException
 	 */
-	static public void main(String[] args) throws IOException
+	static public void main(String[] args) throws Exception
 	{
 		//mainWithSingleEventType(args, null);
 		mainWithSingleEventType(args);
 	}
 	
-	public static void mainWithSingleEventType(String[] args) throws IOException {
+	public static void mainWithSingleEventType(String[] args) throws Exception {
 		System.out.printf("Args:\n%s\n\n", new ArrayList<String>(Arrays.asList(args)));
 		if(args.length < 4)
 		{
@@ -251,7 +255,7 @@ public class Pipeline
 			System.exit(-1);
 		}
 		
-		System.err.println("(Training err stream)");
+		System.out.printf("\n[%s] Starting Pipeline...\n", new Date());
 
 		File srcDir = new File(args[0]);
 		File trainingFileList = new File(args[1]);
@@ -279,15 +283,16 @@ public class Pipeline
 		// print out weights
 		if(model.controller.avgArguments)
 		{
-			Utils.print(out, "", "", "", model.getAvg_weights().toStringFull());			
+			Utils.print(out, "", "", "", null, model.getAvg_weights().toStringFull());			
 		}
 		else
 		{
-			Utils.print(out, "", "", "", model.getWeights().toStringFull());			
+			Utils.print(out, "", "", "", null, model.getWeights().toStringFull());			
 		}
 		
 		if (out != null	) {
 			out.close();
+		System.out.printf("\n[%s] Finished Pipeline successfully\n", new Date());
 		}
 	}
 }

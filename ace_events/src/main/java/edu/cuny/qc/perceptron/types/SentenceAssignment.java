@@ -443,9 +443,9 @@ public class SentenceAssignment
 			int trigger_index = headIndices.get(0);  
 			
 			/// DEBUG
-			if (trigger_index == -1) {
-				System.err.printf("\nGot -1 for 0's location in: %s, which are head indices of: %s\n\n", headIndices, mention);
-			}
+			//if (trigger_index == -1) {
+			//	System.err.printf("\nGot -1 for 0's location in: %s, which are head indices of: %s\n\n", headIndices, mention);
+			//}
 			//////////
 			// ignore the triggers that are with other POS
 			if(!inst.types.isPossibleTriggerByPOS(inst, trigger_index))
@@ -480,9 +480,9 @@ public class SentenceAssignment
 				AceMention arg_mention = arg.value;
 				int arg_index = inst.eventArgCandidates.indexOf(arg_mention);
 				/// DEBUG
-				if (arg_index == -1) {
-					System.err.printf("\n-1\n\n");
-				}
+				//if (arg_index == -1) {
+				//	System.err.printf("\n-1\n\n");
+				//}
 				//////
 				feat_index = this.edgeTargetAlphabet.lookupIndex(arg.role);
 				arguments.put(arg_index, feat_index);
@@ -490,11 +490,11 @@ public class SentenceAssignment
 		}
 		
 		//// DEBUG
-		for (Map<Integer, Integer> map : edgeAssignment.values()) {
-			if (map.keySet().contains(-1)) {
-				System.err.printf("\nGot -1! Here: %s\n\n", map);
-			}
-		}
+		//for (Map<Integer, Integer> map : edgeAssignment.values()) {
+		//	if (map.keySet().contains(-1)) {
+		//		System.err.printf("\nGot -1! Here: %s\n\n", map);
+		//	}
+		//}
 
 		//System.out.printf("%s Starting features of target in SentenceInstance %s...\n", Pipeline.detailedLog(), inst.sentInstID);
 

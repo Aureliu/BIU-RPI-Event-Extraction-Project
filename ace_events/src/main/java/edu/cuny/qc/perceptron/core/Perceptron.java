@@ -403,10 +403,8 @@ public class Perceptron implements java.io.Serializable
 				"both-labels",
 				"Feature",
 				"target-size",
-				"target-signal",
 				"target",
 				"assn-size",
-				"assn-signal",
 				"assn",
 				"labels+assn",
 				"in-both",
@@ -415,6 +413,29 @@ public class Perceptron implements java.io.Serializable
 				"weights",
 				"avg_weights"
 		);
+		
+//		String updatesOutputFilePath = Pipeline.modelFile.getParent() + "/AllUpdates-" + LOG_NAME_ID + "." + controller.logLevel + ".tsv";
+//		PrintStream u = null;
+//		try {
+//			if (controller.logLevel >= 4) {
+//				u = new PrintStream(updatesOutputFilePath);
+//			}
+//		} catch (IOException e) {
+//			throw new RuntimeException(e);
+//		}
+//		String featureNameTitle = "Weight:TRG";
+//		if (singleEventType != null) {
+//			String chosenLabel = (String) this.nodeTargetAlphabet.lookupObject(1);
+//			featureNameTitle = "Weight:" + chosenLabel;
+//		}
+//		Utils.print(u, "", "\n", "|", null,			
+//				"Iter",
+//				"DocID:SentenceNo",
+//				"Feature",
+//				featureNameTitle,
+//				"Weight:O",
+//				...
+//		);
 		
 		String devOutputFilePath = Pipeline.modelFile.getParent() + "/DevPerformance-" + LOG_NAME_ID + "." + controller.logLevel + ".tsv";
 		PrintStream d = null;

@@ -61,7 +61,7 @@ public class Controller implements java.io.Serializable
 	
 	public boolean useSignalFiles = true;
 	
-	public boolean saveFeatureSignalNames = false;
+	public boolean saveSignalsToValues = false;
 	
 	public FeatureProfile featureProfile = FeatureProfile.NORMAL;
 	
@@ -161,9 +161,9 @@ public class Controller implements java.io.Serializable
 			{
 				usePreprocessFiles = Boolean.parseBoolean(fields[1]);
 			}
-			else if(fields[0].equalsIgnoreCase("saveFeatureSignalNames"))
+			else if(fields[0].equalsIgnoreCase("saveSignalsToValues"))
 			{
-				saveFeatureSignalNames = Boolean.parseBoolean(fields[1]);
+				saveSignalsToValues = Boolean.parseBoolean(fields[1]);
 			}
 			else if(fields[0].equalsIgnoreCase("featureProfile"))
 			{
@@ -191,7 +191,7 @@ public class Controller implements java.io.Serializable
 		+ " crossSent:" + crossSent + " crossSentReranking:" + crossSentReranking + " order:" + order +
 		" evaluatorType:" + evaluatorType + " learnBigrams: " + learnBigrams + " logLevel: " + logLevel +
 		" oMethod: " + oMethod + " serialization: " + serialization + " usePreprocessFiles: " + usePreprocessFiles
-		+ " usePreprocessFiles: " + usePreprocessFiles + " saveFeatureSignalNames: " + saveFeatureSignalNames +
+		+ " usePreprocessFiles: " + usePreprocessFiles + " saveFeatureSignalNames: " + saveSignalsToValues +
 		" featureProfile: " + featureProfile + " singleTokenSentences: " + singleTokenSentences +
 		" logOnlyTheseSentences: " + logOnlyTheseSentences;
 		return ret;

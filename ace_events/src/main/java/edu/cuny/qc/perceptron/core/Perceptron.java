@@ -167,10 +167,10 @@ public class Perceptron implements java.io.Serializable
 		if (strippedFeatureName.contains(SentenceAssignment.BIAS_FEATURE)) { //TODO: horrible, horrible hack. Shold have a more generic treatment for features that are known not to exist for non-O situations (or just "not exist sometimes").
 			return "BIAS";
 		}
-		if (!assn.featureToSignal.containsKey(i)) {
+		if (!assn.signalsToValues.containsKey(i)) {
 			throw new IllegalArgumentException("Cannot find featureToSignal map for index: "+i+" in assignment: " + assn.toString());
 		}
-		Map<String, String> map = assn.featureToSignal.get(i);
+		Map<String, String> map = assn.signalsToValues.get(i);
 		if (!map.containsKey(strippedFeatureName)) {
 			String msg = "Cannot find feature (stripped) '"+strippedFeatureName+"' for i="+i+" in assignment: " + assn.toString();
 			//throw new IllegalArgumentException(msg);

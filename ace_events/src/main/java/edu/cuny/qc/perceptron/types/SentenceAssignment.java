@@ -12,6 +12,8 @@ import java.util.Vector;
 import org.apache.commons.lang.StringUtils;
 import org.apache.uima.cas.CASException;
 
+import com.google.common.collect.ImmutableList;
+
 import ac.biu.nlp.nlp.ie.onthefly.input.SpecAnnotator;
 import edu.cuny.qc.ace.acetypes.AceEventMention;
 import edu.cuny.qc.ace.acetypes.AceEventMentionArgument;
@@ -42,8 +44,14 @@ public class SentenceAssignment
 	public static final String Generic_Existing_Trigger_Label = "TRIGGER\t";
 	public static final String Default_Argument_Label = "X\t";//"NON\t";
 	public static final String Generic_Existing_Argument_Label = "IS_ARG\t";
+	public static final String Really_Generic_Existing_Label = "LBL";
 	
-	public static final String LABEL_MARKER = "\tcurrentLabel:";
+	public static final String CURRENT_LABEL_MARKER = "\tcurrentLabel:";
+	public static final String TRIGGER_LABEL_MARKER = "triggerLabel:";
+	public static final String ARG_ROLE_MARKER = "\tArgRole:";
+	public static final String IS_ARG_MARKER = "IsArg";
+	public static final List<String> ALL_FEATURE_NAME_MARKERS = ImmutableList.of(CURRENT_LABEL_MARKER, TRIGGER_LABEL_MARKER, ARG_ROLE_MARKER, IS_ARG_MARKER);
+
 	public static final String BIAS_FEATURE = "BIAS_FEATURE";
 	
 	public /*static*/ final BigDecimal FEATURE_POSITIVE_VAL;
@@ -79,19 +87,20 @@ public class SentenceAssignment
 		}
 	}
 	
+	public static String getReallyGenericLabel(String label) {
+		if (label.equals(Default_Trigger_Label) || label.equals(Default_Argument_Label)) {
+			return Default_Trigger_Label.trim();
+		}
+		else {
+			return Really_Generic_Existing_Label;
+		}
+	}
 	public static String stripLabel(String featureName) {
-		int count = StringUtils.countMatches(featureName, LABEL_MARKER);
-		if (count>1) {
-			throw new IllegalArgumentException("Got feature name with more than one marker label: '"+featureName+"'");
+		String result = featureName;
+		for (String marker : ALL_FEATURE_NAME_MARKERS) {
+			result = result.replaceFirst(String.format("%s\\S+",  marker), "");
 		}
-		else if (count == 1) {
-			final String LABAEL_REGEX = String.format("%s\\S+", LABEL_MARKER);
-			String result = featureName.replaceFirst(LABAEL_REGEX, "");
-			return result;
-		}
-		else { //count == 0
-			return featureName;
-		}
+		return result;
 	}
 	
 	public void retSetState()
@@ -136,7 +145,7 @@ public class SentenceAssignment
 	protected List<BigDecimal> partial_scores;
 	
 	//public Map<Integer, Map<String, List<SignalInstance>>> featureToSignal; 
-	public Map<Integer, Map<String, String>> featureToSignal; 
+	public Map<Integer, Map<String, String>> signalsToValues; 
 	public List<BigDecimal> getPartialScores() {
 		return partial_scores;
 	}
@@ -228,10 +237,10 @@ public class SentenceAssignment
 		assn.partial_scores.addAll(this.partial_scores);
 		
 		//assn.featureToSignal = new HashMap<Integer, Map<String, List<SignalInstance>>>();
-		assn.featureToSignal = new HashMap<Integer, Map<String, String>>();
-		for (Entry<Integer, Map<String, String>> entry : featureToSignal.entrySet()) {
+		assn.signalsToValues = new HashMap<Integer, Map<String, String>>();
+		for (Entry<Integer, Map<String, String>> entry : signalsToValues.entrySet()) {
 			Map<String, String> map = new HashMap<String, String>();
-			assn.featureToSignal.put(new Integer(entry.getKey()), map);
+			assn.signalsToValues.put(new Integer(entry.getKey()), map);
 			for(Entry<String, String> entry2 : entry.getValue().entrySet()) {
 				map.put(entry2.getKey(), entry2.getValue());
 			}
@@ -397,7 +406,7 @@ public class SentenceAssignment
 		
 		featVecSequence = new FeatureVectorSequence();
 		partial_scores = new ArrayList<BigDecimal>();
-		featureToSignal = new HashMap<Integer, Map<String, String>>();
+		signalsToValues = new HashMap<Integer, Map<String, String>>();
 
 		if (this.controller.oMethod.startsWith("G")) {
 			
@@ -777,7 +786,7 @@ public class SentenceAssignment
 							List<SignalInstance> signals = Arrays.asList(new SignalInstance[] {signal});
 							BigDecimal featureValuePositive = signal.positive ? FEATURE_POSITIVE_VAL : FEATURE_NEGATIVE_VAL;
 							
-							String featureStrPositive = "BigramFeature:\t" + signal.getName() + "\t" + "P+\t" + LABEL_MARKER + genericLabel;
+							String featureStrPositive = "BigramFeature:\t" + signal.getName() + "\t" + "P+\t" + CURRENT_LABEL_MARKER + genericLabel;
 							
 							makeFeature(featureStrPositive, this.getFV(i), featureValuePositive, i, signals, addIfNotPresent, useIfNotPresent);
 							
@@ -786,7 +795,7 @@ public class SentenceAssignment
 							}
 							else if (this.controller.oMethod.contains("P-")) {
 								BigDecimal featureValueNegative = signal.positive ? FEATURE_NEGATIVE_VAL : FEATURE_POSITIVE_VAL;
-								String featureStrNegative = "BigramFeature:\t" + signal.getName() + "\t" + "P-\t" + LABEL_MARKER + genericLabel;
+								String featureStrNegative = "BigramFeature:\t" + signal.getName() + "\t" + "P-\t" + CURRENT_LABEL_MARKER + genericLabel;
 								makeFeature(featureStrNegative, this.getFV(i), featureValueNegative, i, signals, addIfNotPresent, useIfNotPresent);
 							}
 							else {
@@ -810,7 +819,7 @@ public class SentenceAssignment
 								featureStr = "BigramFeature:\t" + signal.getName();// + "\t" + LABEL_MARKER + genericLabel;
 							}
 							else {
-								featureStr = "BigramFeature:\t" + signal.getName() + "\t" + LABEL_MARKER + genericLabel;
+								featureStr = "BigramFeature:\t" + signal.getName() + "\t" + CURRENT_LABEL_MARKER + genericLabel;
 							}
 							makeFeature(featureStr, this.getFV(i), featureValue, i, signals, addIfNotPresent, useIfNotPresent);
 						}
@@ -871,7 +880,7 @@ public class SentenceAssignment
 							
 												
 							//String featureStr = "BigramFeature:\t" + signalName;
-							String featureStr = "BigramFeature:\t" + signalOfAttack.getName() + "\t" + LABEL_MARKER + genericLabel;
+							String featureStr = "BigramFeature:\t" + signalOfAttack.getName() + "\t" + CURRENT_LABEL_MARKER + genericLabel;
 							makeFeature(featureStr, this.getFV(i), featureValue, i, signals, addIfNotPresent, useIfNotPresent);
 						}
 					}
@@ -918,12 +927,12 @@ public class SentenceAssignment
 			wasAdded = true;
 		}
 		
-		if (controller.saveFeatureSignalNames && wasAdded) {
+		if (controller.saveSignalsToValues && wasAdded) {
 			String strippedFeatureStr = stripLabel(featureStr);
-			Map<String, String> map = featureToSignal.get(i);
-			if (!featureToSignal.containsKey(i)) {
+			Map<String, String> map = signalsToValues.get(i);
+			if (!signalsToValues.containsKey(i)) {
 				map = new HashMap<String, String>();
-				featureToSignal.put(i, map);
+				signalsToValues.put(i, map);
 			}
 			if (map.containsKey(strippedFeatureStr)) {
 				//List<SignalInstance> existingSignals = map.get(strippedFeatureStr);
@@ -1223,6 +1232,6 @@ public class SentenceAssignment
 		{
 			this.featVecSequence.sequence.set(i, new FeatureVector());
 		}
-		featureToSignal = new HashMap<Integer, Map<String, String>>();
+		signalsToValues = new HashMap<Integer, Map<String, String>>();
 	}
 }

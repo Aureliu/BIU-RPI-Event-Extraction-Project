@@ -21,7 +21,10 @@ import java.util.Set;
 
 import org.apache.commons.lang3.SerializationUtils;
 
+import com.google.common.collect.HashMultimap;
+import com.google.common.collect.Multimap;
 import com.google.common.collect.Sets;
+import com.google.common.collect.TreeMultimap;
 
 import edu.cuny.qc.perceptron.core.Evaluator.Score;
 import edu.cuny.qc.perceptron.types.Alphabet;
@@ -436,7 +439,8 @@ public class Perceptron implements java.io.Serializable
 		Utils.print(u, "", "\n", "|", null,			
 				"Iter",
 				"DocID:SentenceNo",
-				"Feature",
+				"Signal",
+				"Label",
 				String.format("Weight:%s", updatesLogTriggerLabel),
 				"Weight:O",
 				"AnyChange",
@@ -613,13 +617,14 @@ public class Perceptron implements java.io.Serializable
 				}
 				
 				if (controller.logLevel >= 4) {
-					Set<String> signalNameSet = Sets.newHashSet();
+					Multimap<String, String> signalNameToFeatures = TreeMultimap.create();
 					for (Object featureObj : featureAlphabet.entries) {
-						
+						String signalName = feature(SentenceAssignment.stripLabel((String) featureObj));
+						signalNameToFeatures.put(signalName, (String) featureObj);
 					}
-					for (Object featureObj : featureAlphabet.entries) {
+					for (String signalName : signalNameToFeatures.keySet()) {
 						String s = (String) featureObj;
-						Utils.print(u, "", "\n", "|", i,
+						Utils.print(u, "", "\n", "|", null,
 								iter, //Iter
 								String.format("%s:%s", instance.docID, i),
 								feature(s),
@@ -627,7 +632,8 @@ public class Perceptron implements java.io.Serializable
 
 								"Iter",
 								"DocID:SentenceNo",
-								"Feature",
+								"Signal",
+								"Label",
 								String.format("Weight:%s", updatesLogTriggerLabel),
 								"Weight:O",
 								"AnyChange",

@@ -51,8 +51,8 @@ public class SentenceAssignment
 	public static final String IS_ARG_MARKER = "IsArg";
 	public static final List<String> ALL_FEATURE_NAME_MARKERS = ImmutableList.of(CURRENT_LABEL_MARKER, TRIGGER_LABEL_MARKER, ARG_ROLE_MARKER, IS_ARG_MARKER);
 
-	// {signalName : {category : (featureName, label)}}
-	public static Map<String, FinalKeysMap<String, Entry<String, String>>> signalCategoryFeature = Maps.newHashMap();
+	// {(signalName, label) : {category : featureName)}}
+	public static Map<Entry<String, String>, FinalKeysMap<String, String>> signalCategoryFeature = Maps.newTreeMap();
 	public static List<String> storedLabels;
 	public static int numStoredTriggerLabels = 0;
 	public static int numStoredArgLabels = 0;
@@ -698,7 +698,7 @@ public class SentenceAssignment
 			String signalNameNormalized = Perceptron.feature(signalName).intern();
 			Set<String> storedSignals = signalCategoryFeature.keySet();
 			if (!storedSignals.contains(signalNameNormalized) && storedSignals.size()>=SIGNALS_TO_STORE) {
-				
+				// do nothing, not storing signals
 			}
 			else if (storedLabels.contains(label)) {
 				shouldSaveSignal = true;

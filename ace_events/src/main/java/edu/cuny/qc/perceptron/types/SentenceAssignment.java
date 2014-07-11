@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Vector;
 
+import org.apache.commons.lang3.StringUtils;
+
 import edu.cuny.qc.ace.acetypes.AceEventMention;
 import edu.cuny.qc.ace.acetypes.AceEventMentionArgument;
 import edu.cuny.qc.ace.acetypes.AceMention;
@@ -33,10 +35,31 @@ public class SentenceAssignment
 	public static final String Default_Trigger_Label = PAD_Trigger_Label;
 	public static final String Default_Argument_Label = "X\t";//"NON\t";
 	
+	public static final String CURRENT_LABEL_MARKER = "\tcurrentLabel:";
+	public static final String TRIGGER_LABEL_MARKER = "triggerLabel:";
+	public static final String ARG_ROLE_MARKER = "\tArgRole:";
+	public static final String IS_ARG_MARKER = "IsArg";
+	xx
+
 	/**
 	 * the index of last processed (assigned/searched) token
 	 */
 	int state = -1;
+	
+	public static String stripLabel(String featureName) {
+		int count = StringUtils.countMatches(featureName, LABEL_MARKER);
+		if (count>1) {
+			throw new IllegalArgumentException("Got feature name with more than one marker label: '"+featureName+"'");
+		}
+		else if (count == 1) {
+			final String LABAEL_REGEX = String.format("%s\\S+", LABEL_MARKER);
+			String result = featureName.replaceFirst(LABAEL_REGEX, "");
+			return result;
+		}
+		else { //count == 0
+			return featureName;
+		}
+	}
 	
 	public void retSetState()
 	{
@@ -469,7 +492,7 @@ public class SentenceAssignment
 		
 			if(!edgeLabel.equals(SentenceAssignment.Default_Argument_Label))
 			{
-				if(!TypeConstraints.isIndependentRole(edgeLabel))
+				if(!TypeConstraints.isIndependentRole(edgeLabel)) xx
 				{
 					// if the role is dependent on event type, then creat feature based on nodeLabel + edge label
 					featureStr = "EdgeLocalFeature:\t" + textFeature + "\t" + "triggerLabel:" + nodeLabel + "\tArgRole:" + edgeLabel;
@@ -599,13 +622,13 @@ public class SentenceAssignment
 			{
 				// unigram features, for history reason, we still call them BigramFeature
 				// create a bigram feature
-				String featureStr = "BigramFeature:\t" + textFeature + "\t" + "\tcurrentLabel:" + outcome;
+				String featureStr = "BigramFeature:\t" + textFeature + "\t" + CURRENT_LABEL_MARKER + outcome;
 				makeFeature(featureStr, this.getFV(i), addIfNotPresent, useIfNotPresent);
 				// this is a backoff feature for event, use super event type/ except Transport, since Movement only have one subtype
 				if(!outcome.equals(Default_Trigger_Label) && !outcome.equals("Transport"))
 				{
 					String superType = TypeConstraints.getEventSuperType(outcome);
-					featureStr = "BigramFeature:\t" + textFeature + "\t" + "\tcurrentLabel:" + superType;
+					featureStr = "BigramFeature:\t" + textFeature + "\t" + CURRENT_LABEL_MARKER + superType;
 					makeFeature(featureStr, this.getFV(i), addIfNotPresent, useIfNotPresent);
 				}
 			}
@@ -614,7 +637,7 @@ public class SentenceAssignment
 		// if the previous label is a trigger, then get the bigram labels
 		if(!previousLabel.equals(SentenceAssignment.Default_Trigger_Label))
 		{
-			String featureStr = "BigramFeature:\t" + "PreLabel:" + previousLabel + "\tcurrentLabel:" + outcome;
+			String featureStr = "BigramFeature:\t" + "PreLabel:" + previousLabel + CURRENT_LABEL_MARKER + outcome;
 			makeFeature(featureStr, this.getFV(i), addIfNotPresent, useIfNotPresent);
 		}
 	}

@@ -45,8 +45,8 @@ public class Alphabet implements Serializable
 	private static final long serialVersionUID = 491382627057328065L;
 	
 //	HashMap<Object, Integer> map;
-	TObjectIntHashMap<Object> map;
-	ArrayList<Object> entries;
+	public TObjectIntHashMap<Object> map;
+	public ArrayList<Object> entries;
 	
 	public Alphabet (int capacity)
 	{

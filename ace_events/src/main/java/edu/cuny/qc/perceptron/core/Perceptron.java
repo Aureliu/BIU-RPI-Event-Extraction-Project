@@ -21,6 +21,8 @@ import java.util.Set;
 
 import org.apache.commons.lang3.SerializationUtils;
 
+import com.google.common.collect.Sets;
+
 import edu.cuny.qc.perceptron.core.Evaluator.Score;
 import edu.cuny.qc.perceptron.types.Alphabet;
 import edu.cuny.qc.perceptron.types.FeatureVector;
@@ -206,10 +208,10 @@ public class Perceptron implements java.io.Serializable
 		}
 	}
 	
-	public static String docid(String id) {
-		File f = new File(id);
-		return f.getName();
-	}
+//	public static String docid(String id) {
+//		File f = new File(id);
+//		return f.getName();
+//	}
 	
 	private void printWeights(PrintStream out, Object iter, Object docId, Object sentenceNo, Object c, Object tokens, Object sentenceText) {
 		if (  (controller.logLevel >= 7 && sentenceNo.equals(POST_ITERATION_MARK))   ||
@@ -414,28 +416,42 @@ public class Perceptron implements java.io.Serializable
 				"avg_weights"
 		);
 		
-//		String updatesOutputFilePath = Pipeline.modelFile.getParent() + "/AllUpdates-" + LOG_NAME_ID + "." + controller.logLevel + ".tsv";
-//		PrintStream u = null;
-//		try {
-//			if (controller.logLevel >= 4) {
-//				u = new PrintStream(updatesOutputFilePath);
-//			}
-//		} catch (IOException e) {
-//			throw new RuntimeException(e);
-//		}
-//		String featureNameTitle = "Weight:TRG";
-//		if (singleEventType != null) {
-//			String chosenLabel = (String) this.nodeTargetAlphabet.lookupObject(1);
-//			featureNameTitle = "Weight:" + chosenLabel;
-//		}
-//		Utils.print(u, "", "\n", "|", null,			
-//				"Iter",
-//				"DocID:SentenceNo",
-//				"Feature",
-//				featureNameTitle,
-//				"Weight:O",
-//				...
-//		);
+		String updatesOutputFilePath = Pipeline.modelFile.getParent() + "/AllUpdates-" + LOG_NAME_ID + "." + controller.logLevel + ".tsv";
+		PrintStream u = null;
+		try {
+			if (controller.logLevel >= 4) {
+				u = new PrintStream(updatesOutputFilePath);
+			}
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		}
+		String noTrigger = SentenceAssignment.PAD_Trigger_Label;
+		String updatesLogTriggerLabel = "TRG";
+		if (singleEventType != null) {
+			updatesLogTriggerLabel = (String) this.nodeTargetAlphabet.lookupObject(1);
+			if (updatesLogTriggerLabel.equals(noTrigger)) {
+				throw new IllegalStateException("Somehow got " + noTrigger + " as the *second* trigger label...");
+			}
+		}
+		Utils.print(u, "", "\n", "|", null,			
+				"Iter",
+				"DocID:SentenceNo",
+				"Feature",
+				String.format("Weight:%s", updatesLogTriggerLabel),
+				"Weight:O",
+				"AnyChange",
+				String.format("Change:%s", updatesLogTriggerLabel),
+				"Change:O",
+				
+				String.format("%s,%s,%s", noTrigger, noTrigger, "F"),
+				String.format("%s,%s,%s", updatesLogTriggerLabel, noTrigger, "T"),
+				String.format("%s,%s,%s", noTrigger, updatesLogTriggerLabel, "F"),
+				String.format("%s,%s,%s", updatesLogTriggerLabel, updatesLogTriggerLabel, "T"),
+				String.format("%s,%s,%s", noTrigger, updatesLogTriggerLabel, "T"),
+				String.format("%s,%s,%s", updatesLogTriggerLabel, noTrigger, "F"),
+				String.format("%s,%s,%s", noTrigger, noTrigger, "T"),
+				String.format("%s,%s,%s", updatesLogTriggerLabel, updatesLogTriggerLabel, "F")
+		);
 		
 		String devOutputFilePath = Pipeline.modelFile.getParent() + "/DevPerformance-" + LOG_NAME_ID + "." + controller.logLevel + ".tsv";
 		PrintStream d = null;
@@ -571,7 +587,7 @@ public class Perceptron implements java.io.Serializable
 
 						Utils.print(f, "", "\n", "|", i,
 								iter,
-								docid(instance.docID),
+								instance.docID,
 								i,
 								c,
 								instance.size(),
@@ -592,6 +608,42 @@ public class Perceptron implements java.io.Serializable
 								size(weights),
 								"",
 								""
+						);
+					}
+				}
+				
+				if (controller.logLevel >= 4) {
+					Set<String> signalNameSet = Sets.newHashSet();
+					for (Object featureObj : featureAlphabet.entries) {
+						
+					}
+					for (Object featureObj : featureAlphabet.entries) {
+						String s = (String) featureObj;
+						Utils.print(u, "", "\n", "|", i,
+								iter, //Iter
+								String.format("%s:%s", instance.docID, i),
+								feature(s),
+								
+
+								"Iter",
+								"DocID:SentenceNo",
+								"Feature",
+								String.format("Weight:%s", updatesLogTriggerLabel),
+								"Weight:O",
+								"AnyChange",
+								String.format("Change:%s", updatesLogTriggerLabel),
+								"Change:O",
+								
+								String.format("%s,%s,%s", noTrigger, noTrigger, "F"),
+								String.format("%s,%s,%s", updatesLogTriggerLabel, noTrigger, "T"),
+								String.format("%s,%s,%s", noTrigger, updatesLogTriggerLabel, "F"),
+								String.format("%s,%s,%s", updatesLogTriggerLabel, updatesLogTriggerLabel, "T"),
+								String.format("%s,%s,%s", noTrigger, updatesLogTriggerLabel, "T"),
+								String.format("%s,%s,%s", updatesLogTriggerLabel, noTrigger, "F"),
+								String.format("%s,%s,%s", noTrigger, noTrigger, "T"),
+								String.format("%s,%s,%s", updatesLogTriggerLabel, updatesLogTriggerLabel, "F")
+
+								xx
 						);
 					}
 				}

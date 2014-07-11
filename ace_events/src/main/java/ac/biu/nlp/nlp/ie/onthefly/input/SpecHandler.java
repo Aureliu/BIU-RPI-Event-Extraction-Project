@@ -136,7 +136,7 @@ public class SpecHandler {
 			}
 		}
 		catch (Exception e) {
-			throw new SpecException(String.format("Exception in processing spec\"%s\" - %s", specXmlPath, e.toString()));
+			throw new SpecException(String.format("Exception in processing spec \"%s\" - %s", specXmlPath, e.toString()));
 		}
 		finally {
 			if (shouldDeletePreprocessed) {

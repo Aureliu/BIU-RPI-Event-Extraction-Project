@@ -76,7 +76,7 @@ public class FeatureVector implements Serializable
 			value_exist = value_exist.add(value);
 			map.put(feat, value_exist);
 		}
-		xxx if required by log, in some "diff" map save _value_ for _feat_
+		//xxx if required by log, in some "diff" map save _value_ for _feat_
 	}
 
 	public FeatureVector clone()

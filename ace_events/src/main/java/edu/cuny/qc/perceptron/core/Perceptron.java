@@ -306,11 +306,11 @@ public class Perceptron implements java.io.Serializable
 		}
 	}
 	
-	public static String docid(String id) {
-		File f = new File(id);
-		return f.getName();
-	}
-	
+//	public static String docid(String id) {
+//		File f = new File(id);
+//		return f.getName();
+//	}
+//	
 	private void printWeights(PrintStream out, Object iter, Object docId, Object sentenceNo, Object c, Object tokens, Object sentenceText) {
 		if (  (controller.logLevel >= 7 && sentenceNo.equals(POST_ITERATION_MARK))   ||
 			  (controller.logLevel >= 8)  ) {
@@ -650,7 +650,7 @@ public class Perceptron implements java.io.Serializable
 
 						Utils.print(f, "", "\n", "|", instance.sentInstID,
 								iter,
-								docid(instance.docID),
+								instance.docID,
 								instance.sentInstID,
 								c,
 								instance.size(),

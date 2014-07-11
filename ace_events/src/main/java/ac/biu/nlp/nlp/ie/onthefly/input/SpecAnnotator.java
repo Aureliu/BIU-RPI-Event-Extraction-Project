@@ -2,6 +2,7 @@ package ac.biu.nlp.nlp.ie.onthefly.input;
 
 import java.util.Collection;
 import java.util.Iterator;
+import java.util.List;
 
 import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_engine.AnalysisEngine;
@@ -104,9 +105,58 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 			VerbLemma verbLemma = UimaUtils.selectCoveredSingle(view, VerbLemma.class, element);
 			ImmutableSet<String> lemmas = ImmutableSet.of(nounLemma.getValue(), verbLemma.getValue()); //remove duplicates between two lemmas
 			for (String lemmaStr : lemmas) {
+				
+				// There is quite a complicated treatment here in case two elements has some joint lemmas by some POSes
+				// E.g.: 'meet'-->meet/N,meet/V. 'meeting'-->meeting/N,meet/V.
+				// So in case the current element, or some other element that has the same lemmas, also have other lemmas -
+				// then leave it only with the other lemmas and remove the current one.
+				// However, if both elements have exactly one lemma - throw an exception.
+
 				if (result.containsKey(lemmaStr)) {
-					String coveredText = element.getCoveredText();
-					throw new SpecXmlException(String.format("element '%s' has lemma '%s' that appears more than once in %s", coveredText, lemmaStr, title));
+					
+					if (lemmas.size() > 1) {
+						System.err.printf("SpecAnnotator: in %s, removing lemma '%s' from element '%s' since another element already has it, and the current element has other lemmas as well",
+								title, lemmaStr, element.getCoveredText());
+						continue;
+					}
+					else {
+						Collection<Annotation> otherElementsWithSameLemma = result.get(lemmaStr);
+						if (otherElementsWithSameLemma.size() > 1) {
+							throw new SpecXmlException(String.format("Got %s elements with the lemma % in %s, should have up to 1", otherElementsWithSameLemma.size(), lemmaStr, title));
+						}
+						Annotation otherSingleElementWithSameLemma = otherElementsWithSameLemma.iterator().next();
+						List<LemmaByPos> allLemmasOfEvilElement = JCasUtil.selectCovered(LemmaByPos.class, otherSingleElementWithSameLemma);
+						if (allLemmasOfEvilElement.size() == 1) {
+							
+							// This is really the only bad situation - the only other element
+							// with the current lemma, also has just a single lemma. this cannot be
+							// resolved, so we throw an exception, and the spec must be manually fixed
+							throw new SpecXmlException(String.format("In %s, element '%s' has only a single lemma '%s', " +
+									"and another elemnt also has the same lemma as a *single* lemma. Please remove one of these elements " +
+									"from the spec, or conjucate one of them to have other lemmas (with other parts-of-speech).",
+									title, element.getCoveredText(), lemmaStr));
+
+						}
+						else {
+							// other (evil) element has more lemmas, so we'll remove the current lemma from it.
+							boolean removed = false;
+							for (Iterator<LemmaByPos> iterator = allLemmasOfEvilElement.iterator(); iterator.hasNext();) {
+								LemmaByPos currLemma = iterator.next();
+								if (currLemma.getValue().equals(lemmaStr)) {
+									iterator.remove();
+									removed = true;
+									System.err.printf("SpecAnnotator: in %s, removing lemma '%s' from element '%s', but leaving it in element '%s'",
+											title, lemmaStr, otherSingleElementWithSameLemma.getCoveredText(), element.getCoveredText());
+									break;
+								}
+							}
+							if (!removed) {
+								throw new SpecXmlException(String.format("Internal error - in %s, element '%s' " +
+										"is supposed to contain lemma '%s', but it doesn't!", title,
+										otherSingleElementWithSameLemma.getCoveredText(), lemmaStr));
+							}
+						}
+					}
 				}
 				result.put(lemmaStr, element);
 			}

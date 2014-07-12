@@ -44,6 +44,8 @@ public class SentenceAssignment
 	public static final String Default_Trigger_Label = PAD_Trigger_Label;
 	public static final String Default_Argument_Label = "X\t";
 	public static final String Really_Generic_Existing_Label = "LBL";
+	public static final String GLOBAL_LABEL = "GLOBAL";
+	
 	
 	public static final String CURRENT_LABEL_MARKER = "\tcurrentLabel:";
 	public static final String TRIGGER_LABEL_MARKER = "triggerLabel:";
@@ -51,12 +53,12 @@ public class SentenceAssignment
 	public static final String IS_ARG_MARKER = "IsArg";
 	public static final List<String> ALL_FEATURE_NAME_MARKERS = ImmutableList.of(CURRENT_LABEL_MARKER, TRIGGER_LABEL_MARKER, ARG_ROLE_MARKER, IS_ARG_MARKER);
 
-	// {(signalName, label) : {category : featureName)}}
-	public static Map<Entry<String, String>, FinalKeysMap<String, String>> signalCategoryFeature = Maps.newTreeMap();
+	// {signalName : {label : {moreParams : featureName}}}
+	public static Map<String, Map<String, Map<String, String>>> signalCategoryFeature = Maps.newTreeMap();
 	public static List<String> storedLabels;
 	public static int numStoredTriggerLabels = 0;
 	public static int numStoredArgLabels = 0;
-	public static final int SIGNALS_TO_STORE = 50;
+	public static final int SIGNALS_TO_STORE = 100;
 	public static final int TRIGGER_LABELS_TO_STORE = 3;
 	public static final int ARGUMENT_LABELS_TO_STORE = 3;
 	/**
@@ -509,35 +511,41 @@ public class SentenceAssignment
 		for(String textFeature : textFeatures)
 		{
 			String featureStr = "";
+			String signalStr = "";
 		
 			if(!edgeLabel.equals(SentenceAssignment.Default_Argument_Label))
 			{
 				if(!TypeConstraints.isIndependentRole(edgeLabel))
 				{
 					// if the role is dependent on event type, then creat feature based on nodeLabel + edge label
-					featureStr = "EdgeLocalFeature:\t" + textFeature + "\t" + TRIGGER_LABEL_MARKER + nodeLabel + ARG_ROLE_MARKER + edgeLabel;
-					makeFeature(featureStr, fv, addIfNotPresent, useIfNotPresent);
+					signalStr = "EdgeLocalFeature:\t" + textFeature;
+					featureStr = signalStr + "\t" + TRIGGER_LABEL_MARKER + nodeLabel + ARG_ROLE_MARKER + edgeLabel;
+					makeFeature(featureStr, fv, signalStr, edgeLabel, null, addIfNotPresent, useIfNotPresent);
 				}
 				else
 				{
 					// if the role (like Place or Timex) is independent on event type, then creat feature only based on edge label
-					featureStr = "EdgeLocalFeature:\t" + textFeature + "\t" + ARG_ROLE_MARKER + edgeLabel;
-					makeFeature(featureStr, fv, addIfNotPresent, useIfNotPresent);
+					signalStr = "EdgeLocalFeature:\t" + textFeature;
+					featureStr = signalStr + "\t" + ARG_ROLE_MARKER + edgeLabel;
+					makeFeature(featureStr, fv, signalStr, edgeLabel, null, addIfNotPresent, useIfNotPresent);
 				}
 			
 				// add backoff feature for argument
-				featureStr = "EdgeLocalFeature:\t" + textFeature + "\t" + IS_ARG_MARKER;
-				makeFeature(featureStr, fv, addIfNotPresent, useIfNotPresent);
+				signalStr = "EdgeLocalFeature:\t" + textFeature;
+				featureStr = signalStr + "\t" + IS_ARG_MARKER;
+				makeFeature(featureStr, fv, signalStr, "ARG", null, addIfNotPresent, useIfNotPresent);
 			}
 			else
 			{
 				// feature for NON
-				featureStr = "EdgeLocalFeature:\t" + textFeature + "\t" + edgeLabel;
-				makeFeature(featureStr, fv, addIfNotPresent, useIfNotPresent);
+				signalStr = "EdgeLocalFeature:\t" + textFeature;
+				featureStr = signalStr + "\t" + edgeLabel;
+				makeFeature(featureStr, fv, signalStr, edgeLabel, null, addIfNotPresent, useIfNotPresent);
 			}
 		}
-		String featureStr = "EdgeLocalFeature:\tTriggerType=" + nodeLabel + "\t" + ARG_ROLE_MARKER + edgeLabel;
-		makeFeature(featureStr, fv, addIfNotPresent, useIfNotPresent);
+		String signalStr = "EdgeLocalFeature:\tTriggerType=" + nodeLabel;
+		String featureStr = signalStr + "\t" + ARG_ROLE_MARKER + edgeLabel;
+		makeFeature(featureStr, fv, signalStr, edgeLabel, null, addIfNotPresent, useIfNotPresent);
 	}
 	
 	/**
@@ -555,7 +563,7 @@ public class SentenceAssignment
 		for(String feature : featureStrs)
 		{
 			String featureStr = "TriggerLevelGlobalFeature:\t" + feature;
-			makeFeature(featureStr, fv, addIfNotPresent, useIfNotPresent);
+			makeFeature(featureStr, fv, featureStr, GLOBAL_LABEL, null, addIfNotPresent, useIfNotPresent);
 		}
 	} 
 	
@@ -573,7 +581,7 @@ public class SentenceAssignment
 		for(String feature : featureStrs)
 		{
 			String featureStr = "NodeLevelGlobalFeature:\t" + feature;
-			makeFeature(featureStr, fv, addIfNotPresent, useIfNotPresent);
+			makeFeature(featureStr, fv, featureStr, GLOBAL_LABEL, null, addIfNotPresent, useIfNotPresent);
 		}
 	}
 	
@@ -592,13 +600,13 @@ public class SentenceAssignment
 		for(String feature : featureStrs)
 		{
 			String featureStr = "NodeLevelGlobalFeature:\t" + feature;
-			makeFeature(featureStr, fv, addIfNotPresent, useIfNotPresent);
+			makeFeature(featureStr, fv, featureStr, GLOBAL_LABEL, null, addIfNotPresent, useIfNotPresent);
 		}
 		featureStrs = GlobalFeatureGenerator.get_global_features_sent_level(problem, index, this, entityIndex);
 		for(String feature : featureStrs)
 		{
 			String featureStr = "SentLevelGlobalFeature:\t" + feature;
-			makeFeature(featureStr, fv, addIfNotPresent, useIfNotPresent);
+			makeFeature(featureStr, fv, featureStr, GLOBAL_LABEL, null, addIfNotPresent, useIfNotPresent);
 		}
 		
 	}
@@ -630,7 +638,7 @@ public class SentenceAssignment
 		List<String> token = ((List<List<String>>) problem.get(InstanceAnnotations.NodeTextFeatureVectors)).get(i);
 		String previousLabel = this.getLabelAtToken(i-1);
 		String outcome = this.getLabelAtToken(i);
-		String reallyGenericLabel = getReallyGenericLabel(outcome);
+		//String reallyGenericLabel = getReallyGenericLabel(outcome);
 		
 		// traverse each text feature of the token to explore the bigram featurs
 		for(String textFeature : token)
@@ -645,13 +653,13 @@ public class SentenceAssignment
 				// create a bigram feature
 				String signalStr = "BigramFeature:\t" + textFeature;
 				String featureStr = signalStr + "\t" + CURRENT_LABEL_MARKER + outcome;
-				makeFeature(featureStr, this.getFV(i), signalStr, reallyGenericLabel, outcome, addIfNotPresent, useIfNotPresent);
+				makeFeature(featureStr, this.getFV(i), signalStr, outcome, null, addIfNotPresent, useIfNotPresent);
 				// this is a backoff feature for event, use super event type/ except Transport, since Movement only have one subtype
 				if(!outcome.equals(Default_Trigger_Label) && !outcome.equals("Transport"))
 				{
 					String superType = TypeConstraints.getEventSuperType(outcome);
-					featureStr = "BigramFeature:\t" + textFeature + "\t" + CURRENT_LABEL_MARKER + superType;
-					makeFeature(featureStr, this.getFV(i), addIfNotPresent, useIfNotPresent);
+					featureStr = signalStr + "\t" + CURRENT_LABEL_MARKER + superType;
+					makeFeature(featureStr, this.getFV(i), signalStr, superType, null, addIfNotPresent, useIfNotPresent);
 				}
 			}
 		}
@@ -659,8 +667,9 @@ public class SentenceAssignment
 		// if the previous label is a trigger, then get the bigram labels
 		if(!previousLabel.equals(SentenceAssignment.Default_Trigger_Label))
 		{
-			String featureStr = "BigramFeature:\t" + "PreLabel:" + previousLabel + CURRENT_LABEL_MARKER + outcome;
-			makeFeature(featureStr, this.getFV(i), addIfNotPresent, useIfNotPresent);
+			String signalStr = "BigramFeature:\t" + "PreLabel:" + previousLabel;
+			String featureStr = signalStr + CURRENT_LABEL_MARKER + outcome;
+			makeFeature(featureStr, this.getFV(i), signalStr, outcome, null, addIfNotPresent, useIfNotPresent);
 		}
 	}
 	
@@ -672,7 +681,7 @@ public class SentenceAssignment
 	 * @param use_if_not_present true if the feature is not in featureAlphaebt, still use it in FV
 	 */
 	protected void makeFeature(String featureStr, FeatureVector fv,
-			String signalName, String category, String label,
+			String signalName, String label, String moreParams,
 			boolean add_if_not_present, boolean use_if_not_present)
 	{
 		// Feature feat = new Feature(null, featureStr);
@@ -697,38 +706,52 @@ public class SentenceAssignment
 			boolean shouldSaveSignal= false;
 			String signalNameNormalized = Perceptron.feature(signalName).intern();
 			Set<String> storedSignals = signalCategoryFeature.keySet();
-			if (!storedSignals.contains(signalNameNormalized) && storedSignals.size()>=SIGNALS_TO_STORE) {
-				// do nothing, not storing signals
-			}
-			else if (storedLabels.contains(label)) {
-				shouldSaveSignal = true;
-			}
-			else if (signalNameNormalized.startsWith("B")) {
-				if (numStoredTriggerLabels < TRIGGER_LABELS_TO_STORE) {
-					storedLabels.add(label);
-					numStoredTriggerLabels++;
-					shouldSaveSignal = true;
-				}
-			}
-			else if (signalNameNormalized.startsWith("E")) {
-				if (numStoredArgLabels < ARGUMENT_LABELS_TO_STORE) {
-					storedLabels.add(label);
-					numStoredArgLabels++;
-					shouldSaveSignal = true;
-				}
-			}
-			else {
+			
+			// This entire block is good for limiting not just the amount of the signals, btu also the amount of the labels
+			// Currently, I'm not doing that, so this is commented out
+			
+//			if (!storedSignals.contains(signalNameNormalized) && storedSignals.size()>=SIGNALS_TO_STORE) {
+//				// do nothing, not storing signals
+//			}
+//			else if (storedLabels.contains(label)) {
+//				shouldSaveSignal = true;
+//			}
+//			else if (signalNameNormalized.startsWith("B")) {
+//				if (numStoredTriggerLabels < TRIGGER_LABELS_TO_STORE) {
+//					storedLabels.add(label);
+//					numStoredTriggerLabels++;
+//					shouldSaveSignal = true;
+//				}
+//			}
+//			else if (signalNameNormalized.startsWith("E")) {
+//				if (numStoredArgLabels < ARGUMENT_LABELS_TO_STORE) {
+//					storedLabels.add(label);
+//					numStoredArgLabels++;
+//					shouldSaveSignal = true;
+//				}
+//			}
+//			else {
+//				shouldSaveSignal = true;
+//			}
+
+			if (storedSignals.contains(signalNameNormalized) || storedSignals.size()<SIGNALS_TO_STORE) {
 				shouldSaveSignal = true;
 			}
 			
 			if (shouldSaveSignal) {
-				FinalKeysMap<String, Entry<String, String>> forSignal = signalCategoryFeature.get(signalNameNormalized);
+				Map<String, Map<String, String>> forSignal = signalCategoryFeature.get(signalNameNormalized);
 				if (forSignal == null) {
-					forSignal = new FinalKeysMap<String, Entry<String, String>>();
+					forSignal = new HashMap<String, Map<String, String>>();
 					signalCategoryFeature.put(signalNameNormalized, forSignal);
 				}
-				Entry<String, String> forCategory = new AbstractMap.SimpleEntry<String, String>(featureStr, label);
-				forSignal.put(category, forCategory);
+				//Entry<String, String> forCategory = new AbstractMap.SimpleEntry<String, String>(featureStr, label);
+				Map<String, String> forLabel = forSignal.get(label);
+				if (forLabel == null) {
+					forLabel = new HashMap<String, String>();
+					forSignal.put(label, forLabel);
+				}
+				
+				forLabel.put(moreParams, featureStr);
 			}
 		}
 	}

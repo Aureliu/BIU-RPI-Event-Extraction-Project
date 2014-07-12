@@ -23,6 +23,7 @@ import org.apache.commons.lang3.SerializationUtils;
 
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Lists;
+import com.google.common.collect.Maps;
 import com.google.common.collect.Multimap;
 import com.google.common.collect.Sets;
 import com.google.common.collect.TreeMultimap;
@@ -217,6 +218,34 @@ public class Perceptron implements java.io.Serializable
 //		return f.getName();
 //	}
 	
+	public static <T> void add(Map<T, Double> map, T key, Double toAdd) {
+		Double currVal = map.get(key);
+		if (currVal == null) {
+			currVal = 0.0;
+		}
+		Double newVal = currVal + toAdd;
+		map.put(key, newVal);
+	}
+	
+	public static <S,T> void add(Map<S, Map<T, Double>> map, S key1, T key2, Double toAdd) {
+		Map<T, Double> mapInner = map.get(key1);
+		if (mapInner == null) {
+			mapInner = Maps.newLinkedHashMap();
+			map.put(key1, mapInner);
+		}
+		add(mapInner, key2, toAdd);
+	}
+	
+	public static void addAccordingly(Map<Object, Double> mapAssn, Map<String, Map<String, Double>> forSignalName,
+			String label, String tCategory, String fCatefory, String featureName) {
+		if (mapAssn.containsKey(featureName)) {
+			add(forSignalName, label, tCategory, mapAssn.get(featureName));
+		}
+		else {
+			add(forSignalName, label, fCatefory, 1.0);
+		}
+
+	}
 	private void printWeights(PrintStream out, Object iter, Object docId, Object sentenceNo, Object c, Object tokens, Object sentenceText) {
 		if (  (controller.logLevel >= 7 && sentenceNo.equals(POST_ITERATION_MARK))   ||
 			  (controller.logLevel >= 8)  ) {
@@ -429,33 +458,35 @@ public class Perceptron implements java.io.Serializable
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
-		String noTrigger = SentenceAssignment.PAD_Trigger_Label;
-		String updatesLogTriggerLabel = "TRG";
-		if (singleEventType != null) {
-			updatesLogTriggerLabel = (String) this.nodeTargetAlphabet.lookupObject(1);
-			if (updatesLogTriggerLabel.equals(noTrigger)) {
-				throw new IllegalStateException("Somehow got " + noTrigger + " as the *second* trigger label...");
-			}
-		}
+//		String noTrigger = SentenceAssignment.PAD_Trigger_Label;
+//		String updatesLogTriggerLabel = "TRG";
+//		if (singleEventType != null) {
+//			updatesLogTriggerLabel = (String) this.nodeTargetAlphabet.lookupObject(1);
+//			if (updatesLogTriggerLabel.equals(noTrigger)) {
+//				throw new IllegalStateException("Somehow got " + noTrigger + " as the *second* trigger label...");
+//			}
+//		}
 		Utils.print(u, "", "\n", "|", null,			
 				"Iter",
 				"DocID:SentenceNo",
 				"Signal",
 				"Label",
-				String.format("Weight:%s", updatesLogTriggerLabel),
+				"Weight:LBL",
 				"Weight:O",
 				"AnyChange",
-				String.format("Change:%s", updatesLogTriggerLabel),
+				"Change:LBL",
 				"Change:O",
-				
-				String.format("%s,%s,%s", noTrigger, noTrigger, "F"),
-				String.format("%s,%s,%s", updatesLogTriggerLabel, noTrigger, "T"),
-				String.format("%s,%s,%s", noTrigger, updatesLogTriggerLabel, "F"),
-				String.format("%s,%s,%s", updatesLogTriggerLabel, updatesLogTriggerLabel, "T"),
-				String.format("%s,%s,%s", noTrigger, updatesLogTriggerLabel, "T"),
-				String.format("%s,%s,%s", updatesLogTriggerLabel, noTrigger, "F"),
-				String.format("%s,%s,%s", noTrigger, noTrigger, "T"),
-				String.format("%s,%s,%s", updatesLogTriggerLabel, updatesLogTriggerLabel, "F")
+
+				"O,O,F",
+				"LBL,O,T",
+				"O,LBL,F",
+				"LBL,LBL,T",
+				"O,LBL,T",
+				"LBL,O,F",
+				"O,O,T",
+				"LBL,LBL,F",
+				"weird,weird,T",
+				"weird,weird,F"
 		);
 		
 		String devOutputFilePath = Pipeline.modelFile.getParent() + "/DevPerformance-" + LOG_NAME_ID + "." + controller.logLevel + ".tsv";
@@ -500,6 +531,7 @@ public class Perceptron implements java.io.Serializable
 			int error_num = 0;	
 			/*int*/ i=0;
 			int countNoViolation = 0;
+			FeatureVector.updates = Maps.newHashMap();
 			for(SentenceInstance instance : trainingList)
 			{
 				SentenceAssignment assn = beamSearcher.beamSearch(instance, controller.beamSize, true);
@@ -522,6 +554,14 @@ public class Perceptron implements java.io.Serializable
 				String sentText = sentence(instance.text);
 				//printf(w, "|%s%d|%s\n", wt.getFeaturesStringSkip(), i, wt.getFeaturesString());
 				printWeights(w, iter, instance.docID, i, c, instance.size(), sentText);
+
+
+				// {SignalName : {Label : {SignalValue : AmountInSentence}}}
+				Map<String, Map<String, Map<String, Double>>> amounts = Maps.newTreeMap();
+//				Map<String, Map<String, Map<String, Double>>> amountsTarget = Maps.newTreeMap();
+//				Map<String, Map<String, Map<String, Double>>> amountsAssn = Maps.newTreeMap();
+				Double oof = 0.0;
+				Double oot = 0.0;
 
 				List<Map<Class<?>, Object>> tokens = (List<Map<Class<?>, Object>>) instance.get(InstanceAnnotations.Token_FEATURE_MAPs);
 				for (int j=0; j<instance.size(); j++) {
@@ -615,42 +655,83 @@ public class Perceptron implements java.io.Serializable
 								""
 						);
 					}
+					
+					if (controller.logLevel >= 4 && j<assn.getFeatureVectorSequence().size()) {
+						String targetLabel = instance.target.getLabelAtToken(j);
+						for (String signalName : SentenceAssignment.signalCategoryFeature.keySet()) {
+							String featureName = SentenceAssignment.signalCategoryFeature.get(signalName).get(assnLabel).get(null);
+							// {label : {category : amount}}
+							Map<String, Map<String, Double>> forSignalName = amounts.get(signalName);
+							if (forSignalName == null) {
+								forSignalName = Maps.newLinkedHashMap();
+								amounts.put(signalName, forSignalName);
+							}
+							
+							boolean targetIsO = targetLabel.equals(SentenceAssignment.PAD_Trigger_Label);
+							boolean assnIsO = assnLabel.equals(SentenceAssignment.PAD_Trigger_Label);
+							
+							if (targetIsO && assnIsO) {
+								if (mapAssn.containsKey(featureName)) {
+									oot += mapAssn.get(featureName);
+								}
+								else {
+									oof += 1.0;
+								}
+							}
+							else if (targetIsO && !assnIsO) {
+								addAccordingly(mapAssn, forSignalName, assnLabel, "O,LBL,T", "O,LBL,F", featureName);
+							}
+							else if (!targetIsO && assnIsO) {
+								addAccordingly(mapAssn, forSignalName, targetLabel, "LBL,O,T", "LBL,O,F", featureName);
+							}
+							else if (!targetIsO && !assnIsO) {
+								if (targetLabel.equals(assnLabel)) {
+									addAccordingly(mapAssn, forSignalName, targetLabel, "LBL,LBL,T", "LBL,LBL,F", featureName);
+								}
+								else {
+									addAccordingly(mapAssn, forSignalName, assnLabel, "weird,weird,T", "weird,weird,F", featureName);
+									addAccordingly(mapAssn, forSignalName, targetLabel, "weird,weird,T", "weird,weird,F", featureName);
+								}
+							}
+						}
+					}
 				}
 				
 				if (controller.logLevel >= 4) {
-//					Multimap<String, String> signalNameToFeatures = TreeMultimap.create();
-//					for (Object featureObj : featureAlphabet.entries) {
-//						String signalName = feature(SentenceAssignment.stripLabel((String) featureObj));
-//						signalNameToFeatures.put(signalName, (String) featureObj);
-//					}
 					for (String signalName : SentenceAssignment.signalCategoryFeature.keySet()) {
-						Utils.print(u, "", "\n", "|", null,
-								iter, //Iter
-								String.format("%s:%s", instance.docID, i),
-								feature(s),
-								
-
-								"Iter",
-								"DocID:SentenceNo",
-								"Signal",
-								"Label",
-								String.format("Weight:%s", updatesLogTriggerLabel),
-								"Weight:O",
-								"AnyChange",
-								String.format("Change:%s", updatesLogTriggerLabel),
-								"Change:O",
-								
-								String.format("%s,%s,%s", noTrigger, noTrigger, "F"),
-								String.format("%s,%s,%s", updatesLogTriggerLabel, noTrigger, "T"),
-								String.format("%s,%s,%s", noTrigger, updatesLogTriggerLabel, "F"),
-								String.format("%s,%s,%s", updatesLogTriggerLabel, updatesLogTriggerLabel, "T"),
-								String.format("%s,%s,%s", noTrigger, updatesLogTriggerLabel, "T"),
-								String.format("%s,%s,%s", updatesLogTriggerLabel, noTrigger, "F"),
-								String.format("%s,%s,%s", noTrigger, noTrigger, "T"),
-								String.format("%s,%s,%s", updatesLogTriggerLabel, updatesLogTriggerLabel, "F")
-
-								xx
-						);
+						Map<String, Map<String, Double>> forSignalName = amounts.get(signalName);
+						for (String label : forSignalName.keySet()) {
+							Map<String, Double> forLabel = forSignalName.get(label);
+							String featureNameLBL = SentenceAssignment.signalCategoryFeature.get(signalName).get(label).get(null);
+							String featureNameO = SentenceAssignment.signalCategoryFeature.get(signalName).get(SentenceAssignment.PAD_Trigger_Label).get(null);
+							Double changeLBL = FeatureVector.updates.get(featureNameLBL); 
+							Double changeO = FeatureVector.updates.get(featureNameO); 
+							boolean anyChange = (changeLBL+changeO!=0);
+						
+							Utils.print(u, "", "\n", "|", null,
+									iter, //Iter
+									String.format("%s:%s", instance.docID, i), //"DocID:SentenceNo"
+									signalName, //"SignalName"
+									label, //"Label"
+									
+									weights.get(featureNameLBL), //"Weight:LBL"
+									weights.get(featureNameO), //"Weight:O"
+									anyChange, //"AnyChange"
+									changeLBL, // "Change:LBL"
+									changeO, // "Change:O"
+									
+									oof,
+									forLabel.get("LBL,O,T"),
+									forLabel.get("O,LBL,F"),
+									forLabel.get("LBL,LBL,T"),
+									forLabel.get("O,LBL,T"),
+									forLabel.get("LBL,O,F"),
+									oot,
+									forLabel.get("LBL,LBL,F"),
+									forLabel.get("weird,weird,F"),
+									forLabel.get("weird,weird,T")								
+							);
+						}
 					}
 				}
 				////////////

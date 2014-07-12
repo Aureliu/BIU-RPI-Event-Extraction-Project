@@ -16,6 +16,8 @@ import java.util.Set;
 
 import org.apache.commons.lang3.StringUtils;
 
+import com.google.common.collect.Maps;
+
 import edu.cuny.qc.perceptron.core.Decoder;
 import edu.cuny.qc.perceptron.core.Perceptron;
 
@@ -25,6 +27,8 @@ public class FeatureVector implements Serializable
 
 	// different from Mallet, just use a JDK HashMap to restore the sparse vector
 	HashMap<Object, Double> map;
+	
+	public static Map<Object, Double> updates = Maps.newHashMap();
 	
 	public Map<Object, Double> getMap()
 	{
@@ -76,6 +80,14 @@ public class FeatureVector implements Serializable
 			value_exist += value;
 			map.put(feat, value_exist);
 		}
+		
+		//for log
+		Double currVal = updates.get(feat);
+		if (currVal == null) {
+			currVal = 0.0;
+		}
+		Double newVal = currVal + value;
+		updates.put(feat, newVal);
 	}
 
 	public FeatureVector clone()

@@ -88,7 +88,7 @@ public class Pipeline
 			// perceptron training
 			System.out.printf("%s Building perceptron...\n", detailedLog());
 			model = new Perceptron(nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet);
-			System.out.printf("%s Finished building perceptron. It's LabelBigramis: %s\n", detailedLog(), model.getLabelBigram());
+			System.out.printf("%s Finished building perceptron. Its LabelBigrams: %s\n", detailedLog(), model.getLabelBigram());
 		}
 		else
 		{

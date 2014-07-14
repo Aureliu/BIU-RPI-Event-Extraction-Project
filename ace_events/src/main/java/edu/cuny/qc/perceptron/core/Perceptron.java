@@ -239,8 +239,9 @@ public class Perceptron implements java.io.Serializable
 	
 	public static void addAccordingly(Map<Object, Double> mapAssn, Map<String, Map<String, Double>> forSignalName,
 			String label, String tCategory, String fCatefory, String featureName) {
-		if (mapAssn.containsKey(featureName)) {
-			add(forSignalName, label, tCategory, mapAssn.get(featureName));
+		Double value = mapAssn.get(featureName);
+		if (value!=null && value!=0.0) {
+			add(forSignalName, label, tCategory, value);
 		}
 		else {
 			add(forSignalName, label, fCatefory, 1.0);
@@ -249,8 +250,9 @@ public class Perceptron implements java.io.Serializable
 	
 	public static void addAccordingly(Map<Object, Double> mapAssn, Map<String, Double> forSignalName,
 			String tCategory, String fCatefory, String featureName) {
-		if (mapAssn.containsKey(featureName)) {
-			add(forSignalName, tCategory, mapAssn.get(featureName));
+		Double value = mapAssn.get(featureName);
+		if (value!=null && value!=0.0) {
+			add(forSignalName, tCategory, value);
 		}
 		else {
 			add(forSignalName, fCatefory, 1.0);
@@ -483,11 +485,11 @@ public class Perceptron implements java.io.Serializable
 				"TokensProcessed",
 				"Signal",
 				"Label",
-				"Weight:LBL",
-				"Weight:O",
+				"We:LBL",
+				"W:O",
 				"AnyChange",
-				"Change:LBL",
-				"Change:O",
+				"C:LBL",
+				"C:O",
 				"Summary",
 
 				"O,O,F",
@@ -852,7 +854,7 @@ public class Perceptron implements java.io.Serializable
 				printScore(d, new Integer(iter).toString(), devList.size(), dev_score);
 				
 				if (!controller.useArguments) {
-					System.out.printf("Since useArguments, switching harmonic_mean=%s with trigger_F1=%s\n", dev_score.harmonic_mean, dev_score.trigger_F1);
+					//System.out.printf("Since useArguments, switching harmonic_mean=%s with trigger_F1=%s\n", dev_score.harmonic_mean, dev_score.trigger_F1);
 					dev_score.harmonic_mean = dev_score.trigger_F1;
 				}
 

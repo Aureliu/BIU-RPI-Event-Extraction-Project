@@ -24,9 +24,9 @@ import edu.cuny.qc.ace.acetypes.Scorer.Stats;
 import edu.cuny.qc.perceptron.featureGenerator.TextFeatureGenerator;
 import edu.cuny.qc.perceptron.types.Alphabet;
 import edu.cuny.qc.perceptron.types.Document;
-import edu.cuny.qc.perceptron.types.DocumentCrossSent;
 import edu.cuny.qc.perceptron.types.SentenceAssignment;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
+import edu.cuny.qc.util.UnsupportedParameterException;
 
 public class Decoder
 {
@@ -115,10 +115,7 @@ public class Decoder
 			Document doc = null;
 			if(perceptron.controller.crossSent)
 			{
-				doc = new DocumentCrossSent(fileName, true, monoCase);
-				// fill in text feature vector for each token
-				featGen.fillTextFeatures(doc);
-				((DocumentCrossSent) doc).setSentenceClustersByTokens();	
+				throw new UnsupportedParameterException("crossSent = true");
 			}
 			else
 			{

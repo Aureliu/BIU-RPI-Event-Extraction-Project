@@ -76,8 +76,7 @@ public class Evaluator
 		// calculate harmonic mean of trigger F1 and argument F1
 		public void calculateHarmonic_mean()
 		{
-			//harmonic_mean = 2 * trigger_F1 * arg_F1 / (trigger_F1 + arg_F1);
-			harmonic_mean = trigger_F1;
+			harmonic_mean = 2 * trigger_F1 * arg_F1 / (trigger_F1 + arg_F1);
 		}
 		
 		public String toString()

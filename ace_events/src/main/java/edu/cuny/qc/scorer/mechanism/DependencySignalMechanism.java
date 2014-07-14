@@ -29,7 +29,7 @@ public class DependencySignalMechanism extends SignalMechanism {
 		case TOKEN_BASELINE: break;
 		case ANALYSIS: //fall-through, analyze exactly all normal scorers 
 		case NORMAL:
-			addTrigger(new ScorerData(null, new Or(new OneDepUp("pobj"), new OneDepUp("dobj"), new OneDepUp("nsubj")), true));
+			//addTrigger(new ScorerData(null, new Or(new OneDepUp("pobj"), new OneDepUp("dobj"), new OneDepUp("nsubj")), true));
 			
 			break;
 		default:

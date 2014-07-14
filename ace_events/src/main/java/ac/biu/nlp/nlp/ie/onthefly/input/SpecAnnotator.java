@@ -31,12 +31,14 @@ import com.google.common.collect.HashMultimap;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Iterators;
+import com.google.common.collect.Lists;
 import com.google.common.collect.Multimap;
 
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Lemma;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
 import edu.cuny.qc.ace.acetypes.AceArgumentType;
+import edu.cuny.qc.perceptron.core.Perceptron;
 import eu.excitementproject.eop.common.utilities.uima.UimaUtils;
 
 public class SpecAnnotator extends JCasAnnotator_ImplBase {
@@ -115,7 +117,7 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 				if (result.containsKey(lemmaStr)) {
 					
 					if (lemmas.size() > 1) {
-						System.err.printf("SpecAnnotator: in %s, removing lemma '%s' from element '%s' since another element already has it, and the current element has other lemmas as well",
+						System.err.printf("SpecAnnotator: in %s, removing lemma '%s' from element '%s' since another element already has it, and the current element has other lemmas as well\n",
 								title, lemmaStr, element.getCoveredText());
 						continue;
 					}
@@ -125,7 +127,9 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 							throw new SpecXmlException(String.format("Got %s elements with the lemma % in %s, should have up to 1", otherElementsWithSameLemma.size(), lemmaStr, title));
 						}
 						Annotation otherSingleElementWithSameLemma = otherElementsWithSameLemma.iterator().next();
-						List<LemmaByPos> allLemmasOfEvilElement = JCasUtil.selectCovered(LemmaByPos.class, otherSingleElementWithSameLemma);
+						// wrap in a new list since the one returned by JCasUtil in unmodifiable,
+						// and we may need to remove() from it later
+						List<LemmaByPos> allLemmasOfEvilElement = Lists.newArrayList(JCasUtil.selectCovered(LemmaByPos.class, otherSingleElementWithSameLemma));
 						if (allLemmasOfEvilElement.size() == 1) {
 							
 							// This is really the only bad situation - the only other element
@@ -145,7 +149,7 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 								if (currLemma.getValue().equals(lemmaStr)) {
 									iterator.remove();
 									removed = true;
-									System.err.printf("SpecAnnotator: in %s, removing lemma '%s' from element '%s', but leaving it in element '%s'",
+									System.err.printf("SpecAnnotator: in %s, removing lemma '%s' from element '%s', but leaving it in element '%s'\n",
 											title, lemmaStr, otherSingleElementWithSameLemma.getCoveredText(), element.getCoveredText());
 									break;
 								}
@@ -213,7 +217,9 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 			}
 			
 			tokenAE.process(tokenView);
-			sentenceAE.process(sentenceView);
+			if (Perceptron.controller.useArguments) {
+				sentenceAE.process(sentenceView);
+			}
 			
 			// For each lemma value, remember all of its PredicateSeeds/ArgumentExamples
 			// this way we can verify if any of them appeared more than once - which is legit, but not for UsageSamples

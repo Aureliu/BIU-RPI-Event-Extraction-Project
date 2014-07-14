@@ -18,6 +18,7 @@ public enum AceArgumentType {
 	CONTACT_INFO,
 	NUMERIC,
 	CRIME,
-	JOB_TITLE,
+	//JOB_TITLE,
+	JOB,
 	SENTENCE,
 }

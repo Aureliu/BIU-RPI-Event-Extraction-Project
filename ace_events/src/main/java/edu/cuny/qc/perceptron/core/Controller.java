@@ -45,7 +45,7 @@ public class Controller implements java.io.Serializable
 	 * 0 - only model file
 	 * 1 - model, final weights, performance
 	 * 2 - model, final weights, performance, features (only label per token)
-	 * 3 - model, final weights, performance, features (only label per token), weights (only vector summary per sentence)
+	 * 3 - model, final weights, performance, updates, features (only label per token), weights (only vector summary per sentence)
 	 * 4 - model, final weights, performance, updates, features, weights (only vector summary per sentence)
 	 * 5 - model, final weights, performance, updates, features, weights (only vector summary per sentence), beam (only full assignments)
 	 * 6 - model, final weights, performance, updates, features, weights (only vector summary per sentence), beam
@@ -68,6 +68,8 @@ public class Controller implements java.io.Serializable
 	public boolean singleTokenSentences = false;
 	
 	public String[] logOnlyTheseSentences = {};
+	
+	public boolean useArguments = true;
 	
 	public Controller()
 	{
@@ -178,6 +180,10 @@ public class Controller implements java.io.Serializable
 				logOnlyTheseSentences = fields[1].split(",");
 				Utils.logOnlyTheseSentences = Arrays.asList(logOnlyTheseSentences);
 			}
+			else if(fields[0].equalsIgnoreCase("useArguments"))
+			{
+				useArguments = Boolean.parseBoolean(fields[1]);
+			}
 		}
 		System.out.printf("\n[%s] ******** Controller() **********\n", new Date());
 		System.out.printf("******** %s **********\n", this);
@@ -193,7 +199,7 @@ public class Controller implements java.io.Serializable
 		" oMethod: " + oMethod + " serialization: " + serialization + " usePreprocessFiles: " + usePreprocessFiles
 		+ " usePreprocessFiles: " + usePreprocessFiles + " saveFeatureSignalNames: " + saveSignalsToValues +
 		" featureProfile: " + featureProfile + " singleTokenSentences: " + singleTokenSentences +
-		" logOnlyTheseSentences: " + logOnlyTheseSentences;
+		" logOnlyTheseSentences: " + logOnlyTheseSentences + " useArguments: " + useArguments;
 		return ret;
 	}
 	

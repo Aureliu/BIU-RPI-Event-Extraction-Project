@@ -1,0 +1,17 @@
+<spec>
+  <predicate>
+    <name>TransferMoney</name>
+    <seeds>
+      <seed>borrowing</seed>
+      <seed>lending</seed>
+      <seed>giving</seed>
+      <seed>donations</seed>
+      <seed>borrowed</seed>
+      <seed>donated</seed>
+    </seeds>
+  </predicate>
+  <arguments>
+  </arguments>
+  <usage_samples>
+  </usage_samples>
+</spec>

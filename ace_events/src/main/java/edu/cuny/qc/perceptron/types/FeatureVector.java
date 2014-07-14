@@ -12,6 +12,8 @@ import java.util.Random;
 
 import org.apache.commons.lang3.StringUtils;
 
+import com.google.common.collect.Maps;
+
 import edu.cuny.qc.perceptron.core.Perceptron;
 
 public class FeatureVector implements Serializable
@@ -21,6 +23,8 @@ public class FeatureVector implements Serializable
 	// different from Mallet, just use a JDK HashMap to restore the sparse vector
 	public HashMap<Object, BigDecimal> map;
 	
+	public Map<Integer, Map<Object, BigDecimal>> updates = Maps.newHashMap();
+
 	static {
 		System.err.printf("??? FeatureVector.addDelta2: comparing to Double values, probably a bad idea. Maybe they should just be boolean? must they really be Double?");
 		System.err.printf("??? FeatureVector.addDelta2: Currently ignoring if the signal made a mistake. Maybe its weight should be punished.");
@@ -76,7 +80,24 @@ public class FeatureVector implements Serializable
 			value_exist = value_exist.add(value);
 			map.put(feat, value_exist);
 		}
-		//xxx if required by log, in some "diff" map save _value_ for _feat_
+	}
+	
+	public void addAndLogChanges(Object feat, BigDecimal value, int i) {
+		add(feat, value);
+		
+		//for log
+		Map<Object, BigDecimal> forToken = updates.get(i);
+		if (forToken == null) {
+			forToken = Maps.newHashMap();
+			updates.put(i, forToken);
+		}
+		BigDecimal currVal = forToken.get(feat);
+		if (currVal == null) {
+			currVal = BigDecimal.ZERO;
+		}
+		BigDecimal newVal = currVal.add(value);
+		
+		forToken.put(feat, newVal);
 	}
 
 	public FeatureVector clone()
@@ -170,7 +191,7 @@ public class FeatureVector implements Serializable
 	 * @param fv2
 	 * @param factor
 	 */
-	public void addDelta(FeatureVector fv1, FeatureVector fv2, BigDecimal factor)
+	public void addDelta(FeatureVector fv1, FeatureVector fv2, BigDecimal factor, int i)
 	{
 		for(Object key : fv1.map.keySet())
 		{
@@ -183,7 +204,7 @@ public class FeatureVector implements Serializable
 			BigDecimal value = factor.multiply(value1.subtract(value2));//(value1 - value2) * factor;
 			if(!value.equals(BigDecimal.ZERO))
 			{
-				this.add(key, value);
+				this.addAndLogChanges(key, value, i);
 				//System.out.printf("  - [%s,%s,%s] %-70s\t += %s\n", value1, value2, factor, key, value);
 			}
 		}
@@ -196,7 +217,7 @@ public class FeatureVector implements Serializable
 				BigDecimal value = factor.multiply(value2.negate());//(0.0 - value2) * factor;
 				if(!value.equals(BigDecimal.ZERO))
 				{
-					this.add(key, value);
+					this.addAndLogChanges(key, value, i);
 					//System.out.printf("  @ [%s,%s,%s] %-70s\t += %s\n", value1, value2, factor, key, value);
 				}
 			}

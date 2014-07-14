@@ -24,9 +24,9 @@ public class POSSignalMechanism extends SignalMechanism {
 		case TOKEN_BASELINE: break;
 		case ANALYSIS: //fall-through, analyze exactly all normal scorers 
 		case NORMAL:
-			addTrigger(new ScorerData(null, new SpecificPOS("NN"), true));
-			addTrigger(new ScorerData(null, new SpecificPOS("VBN"), true));
-			addTrigger(new ScorerData(null, new Or(new SpecificPOS("NN"), new SpecificPOS("VBN"), new SpecificPOS("NNS"), new SpecificPOS("VBD")), true));
+//			addTrigger(new ScorerData(null, new SpecificPOS("NN"), true));
+//			addTrigger(new ScorerData(null, new SpecificPOS("VBN"), true));
+//			addTrigger(new ScorerData(null, new Or(new SpecificPOS("NN"), new SpecificPOS("VBN"), new SpecificPOS("NNS"), new SpecificPOS("VBD")), true));
 			
 			break;
 		default:

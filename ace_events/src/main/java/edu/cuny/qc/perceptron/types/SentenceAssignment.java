@@ -7,12 +7,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Set;
 import java.util.Vector;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.uima.cas.CASException;
 
 import com.google.common.collect.ImmutableList;
+import com.google.common.collect.Maps;
 
 import ac.biu.nlp.nlp.ie.onthefly.input.SpecAnnotator;
 import edu.cuny.qc.ace.acetypes.AceEventMention;
@@ -45,12 +47,22 @@ public class SentenceAssignment
 	public static final String Default_Argument_Label = "X\t";//"NON\t";
 	public static final String Generic_Existing_Argument_Label = "IS_ARG\t";
 	public static final String Really_Generic_Existing_Label = "LBL";
+	public static final String GLOBAL_LABEL = "GLOBAL";
 	
 	public static final String CURRENT_LABEL_MARKER = "\tcurrentLabel:";
 	public static final String TRIGGER_LABEL_MARKER = "triggerLabel:";
 	public static final String ARG_ROLE_MARKER = "\tArgRole:";
 	public static final String IS_ARG_MARKER = "IsArg";
 	public static final List<String> ALL_FEATURE_NAME_MARKERS = ImmutableList.of(CURRENT_LABEL_MARKER, TRIGGER_LABEL_MARKER, ARG_ROLE_MARKER, IS_ARG_MARKER);
+
+	// {signalName : {label : {moreParams : featureName}}}
+	public static Map<String, Map<String, Map<String, String>>> signalToFeature = Maps.newTreeMap();
+	public static List<String> storedLabels;
+	public static int numStoredTriggerLabels = 0;
+	public static int numStoredArgLabels = 0;
+	public static final int SIGNALS_TO_STORE = 100;
+	public static final int TRIGGER_LABELS_TO_STORE = 3;
+	public static final int ARGUMENT_LABELS_TO_STORE = 3;
 
 	public static final String BIAS_FEATURE = "BIAS_FEATURE";
 	
@@ -65,7 +77,7 @@ public class SentenceAssignment
 	static {
 		System.err.println("??? SentenceAssignment: Assumes binary labels O,ATTACK (around oMethod)");
 		System.err.println("??? SentenceAssignment: Edge features are currently excluded, until I stabalize a policy with triggers. Then some policy should be decided for edges (that should handle, for example, the fact that if only the guess has some trigger that the gold doesn't have, then it would physically have more features than target (not same features just with different scores, like in the triggers' case), and this violated my assumption that guess and gold have the same features. Relevant methods: equals() (3 methods), makeEdgeLocalFeature(), BeamSearch.printBeam (check compatible)");
-		System.err.println("??? SentenceAssignment: Removed P- for now, should return");
+		System.err.println("??? SentenceAssignment: Perhaps should do P- also for Edge and Global features");
 		System.err.println("??? SentenceAssignment: GLOBAL FEATURES ARE NOT IMPORTED YET!!!");
 	}
 	
@@ -95,6 +107,7 @@ public class SentenceAssignment
 			return Really_Generic_Existing_Label;
 		}
 	}
+	
 	public static String stripLabel(String featureName) {
 		String result = featureName;
 		for (String marker : ALL_FEATURE_NAME_MARKERS) {
@@ -450,12 +463,6 @@ public class SentenceAssignment
 			
 			// for event, only pick up the first token as trigger
 			int trigger_index = headIndices.get(0);  
-			
-			/// DEBUG
-			//if (trigger_index == -1) {
-			//	System.err.printf("\nGot -1 for 0's location in: %s, which are head indices of: %s\n\n", headIndices, mention);
-			//}
-			//////////
 			// ignore the triggers that are with other POS
 			if(!inst.types.isPossibleTriggerByPOS(inst, trigger_index))
 			{	
@@ -488,26 +495,11 @@ public class SentenceAssignment
 			{
 				AceMention arg_mention = arg.value;
 				int arg_index = inst.eventArgCandidates.indexOf(arg_mention);
-				/// DEBUG
-				//if (arg_index == -1) {
-				//	System.err.printf("\n-1\n\n");
-				//}
-				//////
 				feat_index = this.edgeTargetAlphabet.lookupIndex(arg.role);
 				arguments.put(arg_index, feat_index);
 			}
 		}
 		
-		//// DEBUG
-		//for (Map<Integer, Integer> map : edgeAssignment.values()) {
-		//	if (map.keySet().contains(-1)) {
-		//		System.err.printf("\nGot -1! Here: %s\n\n", map);
-		//	}
-		//}
-
-		//System.out.printf("%s Starting features of target in SentenceInstance %s...\n", Pipeline.detailedLog(), inst.sentInstID);
-
-		///////
 		// create featureVectorSequence
 		for(int i=0; i<=state; i++)
 		{
@@ -550,11 +542,6 @@ public class SentenceAssignment
 			return;
 		}
 		
-		// DEBUG
-		if (edge.keySet().contains(-1)) {
-			System.err.printf("\nGot a -1!!! keys: %s\n\n", edge.keySet());
-		}
-		/////
 		for(Integer key : edge.keySet())
 		{
 			// edge label
@@ -565,11 +552,9 @@ public class SentenceAssignment
 	public void makeEdgeLocalFeature(SentenceInstance problem, int index, boolean addIfNotPresent, 
 			int entityIndex, boolean useIfNotPresent, Perceptron perceptron)
 	{	
-		// Burn!
-		if (1 + 1 == 2)	 {
+		if (!controller.useArguments) {
 			return;
 		}
-		
 		
 		if(this.edgeAssignment.get(index) == null)
 		{
@@ -663,7 +648,7 @@ public class SentenceAssignment
 		for(String feature : featureStrs)
 		{
 			String featureStr = "TriggerLevelGlobalFeature:\t" + feature;
-			makeFeature(featureStr, fv, null, null, addIfNotPresent, useIfNotPresent);
+			makeFeature(featureStr, fv, null, null, featureStr, GLOBAL_LABEL, null, addIfNotPresent, useIfNotPresent);
 		}
 	} 
 	
@@ -681,7 +666,7 @@ public class SentenceAssignment
 		for(String feature : featureStrs)
 		{
 			String featureStr = "NodeLevelGlobalFeature:\t" + feature;
-			makeFeature(featureStr, fv, null, null, addIfNotPresent, useIfNotPresent);
+			makeFeature(featureStr, fv, null, null, featureStr, GLOBAL_LABEL, null, addIfNotPresent, useIfNotPresent);
 		}
 	}
 	
@@ -700,13 +685,13 @@ public class SentenceAssignment
 		for(String feature : featureStrs)
 		{
 			String featureStr = "NodeLevelGlobalFeature:\t" + feature;
-			makeFeature(featureStr, fv, null, null, addIfNotPresent, useIfNotPresent);
+			makeFeature(featureStr, fv, null, null, featureStr, GLOBAL_LABEL, null, addIfNotPresent, useIfNotPresent);
 		}
 		featureStrs = GlobalFeatureGenerator.get_global_features_sent_level(problem, index, this, entityIndex);
 		for(String feature : featureStrs)
 		{
 			String featureStr = "SentLevelGlobalFeature:\t" + feature;
-			makeFeature(featureStr, fv, null, null, addIfNotPresent, useIfNotPresent);
+			makeFeature(featureStr, fv, null, null, featureStr, GLOBAL_LABEL, null, addIfNotPresent, useIfNotPresent);
 		}
 		
 	}
@@ -786,17 +771,18 @@ public class SentenceAssignment
 							List<SignalInstance> signals = Arrays.asList(new SignalInstance[] {signal});
 							BigDecimal featureValuePositive = signal.positive ? FEATURE_POSITIVE_VAL : FEATURE_NEGATIVE_VAL;
 							
-							String featureStrPositive = "BigramFeature:\t" + signal.getName() + "\t" + "P+\t" + CURRENT_LABEL_MARKER + genericLabel;
+							String signalFullStr = "BigramFeature:\t" + signal.getName();
+							String featureStrPositive = signalFullStr + "\t" + "P+\t" + CURRENT_LABEL_MARKER + genericLabel;
 							
-							makeFeature(featureStrPositive, this.getFV(i), featureValuePositive, i, signals, addIfNotPresent, useIfNotPresent);
+							makeFeature(featureStrPositive, this.getFV(i), featureValuePositive, i, signals, signalFullStr, label, "P+", addIfNotPresent, useIfNotPresent);
 							
 							if (this.controller.oMethod.contains("P+")) {
 								// do nothing, we did P+ before and nothing to do further
 							}
 							else if (this.controller.oMethod.contains("P-")) {
 								BigDecimal featureValueNegative = signal.positive ? FEATURE_NEGATIVE_VAL : FEATURE_POSITIVE_VAL;
-								String featureStrNegative = "BigramFeature:\t" + signal.getName() + "\t" + "P-\t" + CURRENT_LABEL_MARKER + genericLabel;
-								makeFeature(featureStrNegative, this.getFV(i), featureValueNegative, i, signals, addIfNotPresent, useIfNotPresent);
+								String featureStrNegative = signalFullStr + "\t" + "P-\t" + CURRENT_LABEL_MARKER + genericLabel;
+								makeFeature(featureStrNegative, this.getFV(i), featureValueNegative, i, signals, signalFullStr, label, "P-", addIfNotPresent, useIfNotPresent);
 							}
 							else {
 								throw new IllegalStateException("Method G must explicitly state P+ or P-, got: " + this.controller.oMethod);
@@ -808,82 +794,84 @@ public class SentenceAssignment
 	
 				}
 				else {
-					if (genericLabel == Generic_Existing_Trigger_Label) {
-						Integer specNum = problem.types.triggerTypes.get(label);
-						Map<ScorerData, SignalInstance> signalsOfLabel = token.get(specNum);
-						for (SignalInstance signal : signalsOfLabel.values()) {
-							List<SignalInstance> signals = Arrays.asList(new SignalInstance[] {signal});
-							BigDecimal featureValue = signal.positive ? FEATURE_POSITIVE_VAL : FEATURE_NEGATIVE_VAL;
-							String featureStr = null;
-							if (this.controller.oMethod.startsWith("E")) {
-								featureStr = "BigramFeature:\t" + signal.getName();// + "\t" + LABEL_MARKER + genericLabel;
-							}
-							else {
-								featureStr = "BigramFeature:\t" + signal.getName() + "\t" + CURRENT_LABEL_MARKER + genericLabel;
-							}
-							makeFeature(featureStr, this.getFV(i), featureValue, i, signals, addIfNotPresent, useIfNotPresent);
-						}
-					}
-					else if (this.controller.oMethod.startsWith("E")) { //genericLabel == Default_Trigger_Label + "E"
-						String featureStr = "BigramFeature:\t" + BIAS_FEATURE;
-						makeFeature(featureStr, this.getFV(i), BigDecimal.ONE, i, new ArrayList<SignalInstance>(), addIfNotPresent, useIfNotPresent);
-					}
-					else { //genericLabel == Default_Trigger_Label
-						for (ScorerData scorerData : perceptron.triggerScorers) {
-							//String signalName = (String) signalNameObj;
-							List<SignalInstance> signals = new ArrayList<SignalInstance>();
-							//double numFalse = 0.0;
-							
-		//					/**
-		//					 * If at least one spec has a positive signal - then the value is FEATURE_NEGATIVE_VAL,
-		//					 * meaning that the token doesn't fit Default_Trigger_Label ("O").
-		//					 * 
-		//					 * Otherwise (no spec fits), the value is FEATURE_POSITIVE_VAL - the token fits "O". 
-		//					 */
-		//					BigDecimal featureValue = FEATURE_NEGATIVE_VAL;//FEATURE_POSITIVE_VAL;
-		//					for (Map<String, SignalInstance> signalsOfLabel : token.values()) {
-		//						SignalInstance signal = signalsOfLabel.get(signalName);
-		//						if (signal == null) {
-		//							throw new IllegalArgumentException(String.format("Cannot find feature '%s' for non-label token %d", signalName, i));
-		//						}
-		//						signals.add(signal);
-		//						if (signal.positive) {
-		//							featureValue = FEATURE_POSITIVE_VAL;//FEATURE_NEGATIVE_VAL;//0.0 //-1.0;
-		//							break;
-		//						}
-		//					}
-							
-							if (token.size() != 1) {
-								throw new IllegalStateException("token.size() should be 1 (1 non-O label, ATTACK), but it's " + token.size());
-							}
-							Map<ScorerData, SignalInstance> signalsOfAttack = token.values().iterator().next();
-							SignalInstance signalOfAttack = signalsOfAttack.get(scorerData);
-							signals.add(signalOfAttack);
-		
-							// Set feature value according to requested O Method
-							BigDecimal featureValue = null;
-							if (this.controller.oMethod.startsWith("A")) {
-								featureValue = signalOfAttack.positive ? BigDecimal.ZERO : BigDecimal.ONE;
-							}
-							else if (this.controller.oMethod.startsWith("B")) {
-								featureValue = signalOfAttack.positive ? BigDecimal.ONE : BigDecimal.ZERO;
-							}
-							else if (this.controller.oMethod.startsWith("C")) {
-								featureValue = BigDecimal.ZERO;
-							}
-							else if (this.controller.oMethod.startsWith("D")) {
-								featureValue = BigDecimal.ONE;
-							}
-							else {
-								throw new IllegalArgumentException("Illegal value for 'oMethod': '" + this.controller.oMethod + "'");
-							}
-							
-												
-							//String featureStr = "BigramFeature:\t" + signalName;
-							String featureStr = "BigramFeature:\t" + signalOfAttack.getName() + "\t" + CURRENT_LABEL_MARKER + genericLabel;
-							makeFeature(featureStr, this.getFV(i), featureValue, i, signals, addIfNotPresent, useIfNotPresent);
-						}
-					}
+					// Yeah, I don't really care about other methdos right now :)
+					
+//					if (genericLabel == Generic_Existing_Trigger_Label) {
+//						Integer specNum = problem.types.triggerTypes.get(label);
+//						Map<ScorerData, SignalInstance> signalsOfLabel = token.get(specNum);
+//						for (SignalInstance signal : signalsOfLabel.values()) {
+//							List<SignalInstance> signals = Arrays.asList(new SignalInstance[] {signal});
+//							BigDecimal featureValue = signal.positive ? FEATURE_POSITIVE_VAL : FEATURE_NEGATIVE_VAL;
+//							String featureStr = null;
+//							if (this.controller.oMethod.startsWith("E")) {
+//								featureStr = "BigramFeature:\t" + signal.getName();// + "\t" + LABEL_MARKER + genericLabel;
+//							}
+//							else {
+//								featureStr = "BigramFeature:\t" + signal.getName() + "\t" + CURRENT_LABEL_MARKER + genericLabel;
+//							}
+//							makeFeature(featureStr, this.getFV(i), featureValue, i, signals, addIfNotPresent, useIfNotPresent);
+//						}
+//					}
+//					else if (this.controller.oMethod.startsWith("E")) { //genericLabel == Default_Trigger_Label + "E"
+//						String featureStr = "BigramFeature:\t" + BIAS_FEATURE;
+//						makeFeature(featureStr, this.getFV(i), BigDecimal.ONE, i, new ArrayList<SignalInstance>(), addIfNotPresent, useIfNotPresent);
+//					}
+//					else { //genericLabel == Default_Trigger_Label
+//						for (ScorerData scorerData : perceptron.triggerScorers) {
+//							//String signalName = (String) signalNameObj;
+//							List<SignalInstance> signals = new ArrayList<SignalInstance>();
+//							//double numFalse = 0.0;
+//							
+//		//					/**
+//		//					 * If at least one spec has a positive signal - then the value is FEATURE_NEGATIVE_VAL,
+//		//					 * meaning that the token doesn't fit Default_Trigger_Label ("O").
+//		//					 * 
+//		//					 * Otherwise (no spec fits), the value is FEATURE_POSITIVE_VAL - the token fits "O". 
+//		//					 */
+//		//					BigDecimal featureValue = FEATURE_NEGATIVE_VAL;//FEATURE_POSITIVE_VAL;
+//		//					for (Map<String, SignalInstance> signalsOfLabel : token.values()) {
+//		//						SignalInstance signal = signalsOfLabel.get(signalName);
+//		//						if (signal == null) {
+//		//							throw new IllegalArgumentException(String.format("Cannot find feature '%s' for non-label token %d", signalName, i));
+//		//						}
+//		//						signals.add(signal);
+//		//						if (signal.positive) {
+//		//							featureValue = FEATURE_POSITIVE_VAL;//FEATURE_NEGATIVE_VAL;//0.0 //-1.0;
+//		//							break;
+//		//						}
+//		//					}
+//							
+//							if (token.size() != 1) {
+//								throw new IllegalStateException("token.size() should be 1 (1 non-O label, ATTACK), but it's " + token.size());
+//							}
+//							Map<ScorerData, SignalInstance> signalsOfAttack = token.values().iterator().next();
+//							SignalInstance signalOfAttack = signalsOfAttack.get(scorerData);
+//							signals.add(signalOfAttack);
+//		
+//							// Set feature value according to requested O Method
+//							BigDecimal featureValue = null;
+//							if (this.controller.oMethod.startsWith("A")) {
+//								featureValue = signalOfAttack.positive ? BigDecimal.ZERO : BigDecimal.ONE;
+//							}
+//							else if (this.controller.oMethod.startsWith("B")) {
+//								featureValue = signalOfAttack.positive ? BigDecimal.ONE : BigDecimal.ZERO;
+//							}
+//							else if (this.controller.oMethod.startsWith("C")) {
+//								featureValue = BigDecimal.ZERO;
+//							}
+//							else if (this.controller.oMethod.startsWith("D")) {
+//								featureValue = BigDecimal.ONE;
+//							}
+//							else {
+//								throw new IllegalArgumentException("Illegal value for 'oMethod': '" + this.controller.oMethod + "'");
+//							}
+//							
+//												
+//							//String featureStr = "BigramFeature:\t" + signalName;
+//							String featureStr = "BigramFeature:\t" + signalOfAttack.getName() + "\t" + CURRENT_LABEL_MARKER + genericLabel;
+//							makeFeature(featureStr, this.getFV(i), featureValue, i, signals, addIfNotPresent, useIfNotPresent);
+//						}
+//					}
 				}
 			}
 		}
@@ -892,10 +880,11 @@ public class SentenceAssignment
 		}
 	}
 	
-	protected void makeFeature(String featureStr, FeatureVector fv, Integer i, List<SignalInstance> signals, boolean add_if_not_present,
-			boolean use_if_not_present)
+	protected void makeFeature(String featureStr, FeatureVector fv, Integer i, List<SignalInstance> signals,
+			String signalName, String label, String moreParams,
+			boolean add_if_not_present,	boolean use_if_not_present)
 	{
-		makeFeature(featureStr, fv, BigDecimal.ONE, i, signals, add_if_not_present, use_if_not_present);
+		makeFeature(featureStr, fv, BigDecimal.ONE, i, signals, signalName, label, moreParams, add_if_not_present, use_if_not_present);
 	}
 	
 	/**
@@ -905,8 +894,10 @@ public class SentenceAssignment
 	 * @param add_if_not_present true if the feature is not in featureAlphabet, add it
 	 * @param use_if_not_present true if the feature is not in featureAlphaebt, still use it in FV
 	 */
-	protected void makeFeature(String featureStr, FeatureVector fv, BigDecimal value, Integer i, List<SignalInstance> signals, boolean add_if_not_present,
-			boolean use_if_not_present)
+	protected void makeFeature(String featureStr, FeatureVector fv,
+			BigDecimal value, Integer i, List<SignalInstance> signals,
+			String signalName, String label, String moreParams,
+			boolean add_if_not_present,	boolean use_if_not_present)
 	{
 		// Feature feat = new Feature(null, featureStr);
 		// lookup the feature table to create an assignment with the new feature
@@ -950,6 +941,25 @@ public class SentenceAssignment
 				throw new RuntimeException("So, I didn't have the energy to implement this for multiple signals per feature, but now it's rising... So, please implement :)");
 			}
 			map.put(strippedFeatureStr, signalStr);
+		}
+		
+		if (wasAdded) {
+			String signalNameNormalized = Perceptron.feature(signalName).intern();
+			Set<String> storedSignals = signalToFeature.keySet();
+			if (storedSignals.contains(signalNameNormalized) || storedSignals.size()<SIGNALS_TO_STORE) {
+				Map<String, Map<String, String>> forSignal = signalToFeature.get(signalNameNormalized);
+				if (forSignal == null) {
+					forSignal = new HashMap<String, Map<String, String>>();
+					signalToFeature.put(signalNameNormalized, forSignal);
+				}
+				Map<String, String> forLabel = forSignal.get(label);
+				if (forLabel == null) {
+					forLabel = new HashMap<String, String>();
+					forSignal.put(label, forLabel);
+				}
+				
+				forLabel.put(moreParams, featureStr);
+			}
 		}
 	}
 	

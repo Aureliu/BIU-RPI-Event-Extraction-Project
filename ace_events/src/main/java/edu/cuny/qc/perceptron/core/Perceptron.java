@@ -23,6 +23,9 @@ import java.util.Set;
 
 import org.apache.commons.lang3.SerializationUtils;
 
+import com.google.common.collect.Lists;
+import com.google.common.collect.Maps;
+
 import edu.cuny.qc.perceptron.core.Evaluator.Score;
 import edu.cuny.qc.perceptron.types.Alphabet;
 import edu.cuny.qc.perceptron.types.FeatureVector;
@@ -69,7 +72,7 @@ public class Perceptron implements java.io.Serializable
 	// the alphabet of features, shared by the whole application
 	public Alphabet featureAlphabet;
 	// the settings of the perceptron
-	public Controller controller = new Controller();
+	public static Controller controller = new Controller();
 	
 	// label bigram
 	//private Map<String, List<String>> labelBigram;
@@ -85,9 +88,10 @@ public class Perceptron implements java.io.Serializable
 	public Set<ScorerData> triggerScorers = new LinkedHashSet<ScorerData>();
 	public Set<ScorerData> argumentScorers = new LinkedHashSet<ScorerData>();
 	
-	public static int iter; // num of current iteration - public and static for logging
+	public static int iter=-1; // num of current iteration - public and static for logging
 	public static int i; // num of current sentence - public and static for logging
-
+	public static boolean inEarlyUpdate=false; //DEBUG
+	
 	// default constructor 
 	public Perceptron(Alphabet featureAlphabet) throws SignalMechanismException
 	{
@@ -310,7 +314,54 @@ public class Perceptron implements java.io.Serializable
 //		File f = new File(id);
 //		return f.getName();
 //	}
-//	
+	
+	public static <T> void add(Map<T, BigDecimal> map, T key, BigDecimal toAdd) {
+		BigDecimal currVal = map.get(key);
+		if (currVal == null) {
+			currVal = BigDecimal.ZERO;
+		}
+		BigDecimal newVal = currVal.add(toAdd);
+		map.put(key, newVal);
+	}
+	
+	public static <S,T> void add(Map<S, Map<T, BigDecimal>> map, S key1, T key2, BigDecimal toAdd) {
+		Map<T, BigDecimal> mapInner = map.get(key1);
+		if (mapInner == null) {
+			mapInner = Maps.newLinkedHashMap();
+			map.put(key1, mapInner);
+		}
+		add(mapInner, key2, toAdd);
+	}
+	
+	public static void addAccordingly(Map<Object, BigDecimal> mapAssn, Map<String, Map<String, BigDecimal>> forSignalName,
+			String label, String tCategory, String fCatefory, String featureName) {
+		BigDecimal value = mapAssn.get(featureName);
+		if (value!=null && value.compareTo(BigDecimal.ZERO)!=0) {
+			add(forSignalName, label, tCategory, mapAssn.get(featureName));
+		}
+		else {
+			add(forSignalName, label, fCatefory, BigDecimal.ONE);
+		}
+	}
+	
+	public static void addAccordingly(Map<Object, BigDecimal> mapAssn, Map<String, BigDecimal> forSignalName,
+			String tCategory, String fCatefory, String featureName) {
+		BigDecimal value = mapAssn.get(featureName);
+		if (value!=null && value.compareTo(BigDecimal.ZERO)!=0) {
+			add(forSignalName, tCategory, value);
+		}
+		else {
+			add(forSignalName, fCatefory, BigDecimal.ONE);
+		}
+	}
+	
+	public static <T> void addSummary(List<String> summary, Map<T, BigDecimal> map, String category) {
+		BigDecimal result = map.get(category);
+		if (result != null && result.compareTo(BigDecimal.ZERO) > 0) {
+			summary.add(category);
+		}
+	}
+	
 	private void printWeights(PrintStream out, Object iter, Object docId, Object sentenceNo, Object c, Object tokens, Object sentenceText) {
 		if (  (controller.logLevel >= 7 && sentenceNo.equals(POST_ITERATION_MARK))   ||
 			  (controller.logLevel >= 8)  ) {
@@ -511,6 +562,48 @@ public class Perceptron implements java.io.Serializable
 				"avg_weights"
 		);
 		
+		String updatesOutputFilePath = Pipeline.modelFile.getParent() + "/AllUpdates-" + LOG_NAME_ID + "." + controller.logLevel + ".tsv";
+		PrintStream u = null;
+		try {
+			if (controller.logLevel >= 3) {
+				u = new PrintStream(updatesOutputFilePath);
+			}
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		}
+		Utils.print(u, "", "\n", "|", null,			
+				"Iter",
+				"DocID:SentenceNo",
+				"Tokens",
+				"TokensProcessed",
+				"Signal",
+				"Label",
+				"W:LBL:P+",
+				"W:LBL:P-",
+				"W:O:P+",
+				"W:O:P-",
+				"AnyChange",
+				"C:P+",
+				"C:P-",
+				"C:LBL:P+",
+				"C:LBL:P-",
+				"C:O:P+",
+				"C:O:P-",
+				"Summary",
+
+				"O,O,F",
+				"LBL,O,T",
+				"O,LBL,F",
+				"LBL,LBL,T",
+				"O,LBL,T",
+				"LBL,O,F",
+				"O,O,T",
+				"LBL,LBL,F",
+				"weird,weird,T",
+				"weird,weird,F"
+				
+		);
+		
 		String devOutputFilePath = Pipeline.modelFile.getParent() + "/DevPerformance-" + LOG_NAME_ID + "." + controller.logLevel + ".tsv";
 		PrintStream d = null;
 		try {
@@ -561,10 +654,13 @@ public class Perceptron implements java.io.Serializable
 				{
 					c = c.add(BigDecimal.ONE);
 				}
+				weights.updates = Maps.newHashMap();
 				if(assn.getViolate())
 				{
+					inEarlyUpdate = true;
 					earlyUpdate(assn, instance.target, c);
 					error_num ++;
+					inEarlyUpdate = false;
 				}
 				else {
 					//System.out.printf("  %d. No violation! (iter=%d) assn: %s\n", countNoViolation+1, iter, assn.toString());
@@ -575,6 +671,13 @@ public class Perceptron implements java.io.Serializable
 				String sentText = sentence(instance.textStart);
 				//printf(w, "|%s%d|%s\n", wt.getFeaturesStringSkip(), i, wt.getFeaturesString());
 				printWeights(w, iter, instance.docID, instance.sentInstID, c, instance.size(), sentText);
+
+
+				// {SignalName : {Label : {Category : AmountInSentence}}}
+				Map<String, Map<String, Map<String, BigDecimal>>> amounts = Maps.newTreeMap();
+
+				// {SignalName: {Category : AmountInSentence}} - oof and oot ignore labels
+				Map<String, Map<String, BigDecimal>> amountsOO = Maps.newTreeMap();
 
 				List<Map<Class<?>, Object>> tokens = (List<Map<Class<?>, Object>>) instance.get(InstanceAnnotations.Token_FEATURE_MAPs);
 				for (int j=0; j<instance.size(); j++) {
@@ -618,7 +721,7 @@ public class Perceptron implements java.io.Serializable
 						}
 						
 						if (controller.logLevel >= 4) {
-							Utils.print(f, "", "\n", "|", instance.sentInstID,				
+							Utils.print(f, "", "\n", "|", instance.sentInstID,
 									iter,
 									"",//instance.docID,
 									instance.sentInstID,
@@ -637,7 +740,7 @@ public class Perceptron implements java.io.Serializable
 									"",//mapAssn.size(),
 									assnSignal,
 									inAssn,
-									twoLabelsAndScore(instance.target, assnLabel, j, assnSignal),
+									twoLabelsAndScore(instance.target, assnLabel, j, inAssn),
 									bothTargetAndAssn,
 									sameTargetAndAssn,
 									"",//weights.size(),
@@ -675,6 +778,220 @@ public class Perceptron implements java.io.Serializable
 								""
 						);
 					}
+					
+					if (controller.logLevel >= 3 && j<assn.getFeatureVectorSequence().size()) {
+						String targetLabel = instance.target.getLabelAtToken(j);
+						
+						for (String signalName : SentenceAssignment.signalToFeature.keySet()) {
+							try {
+								String featureName = null;
+								if (SentenceAssignment.signalToFeature.get(signalName).containsKey(assnLabel)) {
+									// Due to deisgn limitations of the table, all data under categories (eg LBL,O,T)
+									// would refer only to P+. P- won't be mentioned there (but is basically the opposite of the third portion).
+									featureName = SentenceAssignment.signalToFeature.get(signalName).get(assnLabel).get("P+");
+								}
+								// {label : {category : amount}}
+								Map<String, Map<String, BigDecimal>> forSignalName = amounts.get(signalName);
+								if (forSignalName == null) {
+									forSignalName = Maps.newLinkedHashMap();
+									amounts.put(signalName, forSignalName);
+								}
+								Map<String, BigDecimal> forSignalNameOO = amountsOO.get(signalName);
+								if (forSignalNameOO == null) {
+									forSignalNameOO = Maps.newLinkedHashMap();
+									amountsOO.put(signalName, forSignalNameOO);
+								}
+								
+								boolean targetIsO = targetLabel.equals(SentenceAssignment.PAD_Trigger_Label);
+								boolean assnIsO = assnLabel.equals(SentenceAssignment.PAD_Trigger_Label);
+								
+								/// DEBUG
+//								if (instance.sentInstID.equals("5a")) {
+//									System.err.printf("\n\n\n5a\n\n\n");
+//								}
+								///
+								
+								if (targetIsO && assnIsO) {
+									addAccordingly(mapAssn, forSignalNameOO, "O,O,T", "O,O,F", featureName);
+								}
+								else if (targetIsO && !assnIsO) {
+									addAccordingly(mapAssn, forSignalName, assnLabel, "O,LBL,T", "O,LBL,F", featureName);
+								}
+								else if (!targetIsO && assnIsO) {
+									addAccordingly(mapAssn, forSignalName, targetLabel, "LBL,O,T", "LBL,O,F", featureName);
+								}
+								else if (!targetIsO && !assnIsO) {
+									if (targetLabel.equals(assnLabel)) {
+										addAccordingly(mapAssn, forSignalName, targetLabel, "LBL,LBL,T", "LBL,LBL,F", featureName);
+									}
+									else {
+										addAccordingly(mapAssn, forSignalName, assnLabel, "weird,weird,T", "weird,weird,F", featureName);
+										addAccordingly(mapAssn, forSignalName, targetLabel, "weird,weird,T", "weird,weird,F", featureName);
+									}
+								}
+							}
+							catch (RuntimeException e) {
+								throw new RuntimeException(
+										String.format("Exception in inst=%s, j=%s, targetLabel=%s, assnLabel=%s sig=%s.", instance, j, targetLabel, assnLabel, signalName), e);
+							}
+						}
+					}
+				}
+				
+				if (controller.logLevel >= 3) {
+					for (String signalName : SentenceAssignment.signalToFeature.keySet()) {
+						Map<String, Map<String, BigDecimal>> forSignalName = amounts.get(signalName);
+						Map<String, BigDecimal> forSignalNameOO = amountsOO.get(signalName);
+						for (String label : forSignalName.keySet()) {
+							try {
+								Map<String, BigDecimal> forLabel = forSignalName.get(label);
+								
+								// Explaining this horrible convention: pp=P+ (p plus), pm=P- (p minus)
+								// and if you get a similar weird null regarding O (and not some LBL), then maybe do an if for it as well :)
+								String featureNameLBLpp="";
+								String featureNameLBLpm="";
+								String featureNameOpp="";
+								String featureNameOpm="";
+								BigDecimal weightLBLpp=BigDecimal.ZERO;
+								BigDecimal weightLBLpm=BigDecimal.ZERO;
+								BigDecimal weightOpp=BigDecimal.ZERO;
+								BigDecimal weightOpm=BigDecimal.ZERO;
+								String weightLBLStrpp="X";
+								String weightLBLStrpm="X";
+								String weightOStrpp="X";
+								String weightOStrpm="X";
+								BigDecimal changeLBLpp=BigDecimal.ZERO;
+								BigDecimal changeLBLpm=BigDecimal.ZERO;
+								BigDecimal changeOpp=BigDecimal.ZERO;
+								BigDecimal changeOpm=BigDecimal.ZERO;
+								String changeLBLStrpp="X";
+								String changeLBLStrpm="X";
+								String changeOStrpp="X";
+								String changeOStrpm="X";
+								
+								// this is a rather subtle point - we have this feature only if makeFeature() was called on it,
+								// but it must also be in weight (makeFeature() could have been called on an assn that
+								// was eventually not the one chosen in the beam)
+								boolean featureLBLppExists = false;
+								if (SentenceAssignment.signalToFeature.get(signalName).get(label) != null &&
+									SentenceAssignment.signalToFeature.get(signalName).get(label).get("P+") != null) {
+									featureNameLBLpp = SentenceAssignment.signalToFeature.get(signalName).get(label).get("P+");
+									weightLBLpp = weights.get(featureNameLBLpp);
+									if (weightLBLpp!=null) {
+										featureLBLppExists = true;
+										weightLBLStrpp = FMT.format(weightLBLpp);
+									}
+								}
+								boolean featureLBLpmExists = false;
+								if (SentenceAssignment.signalToFeature.get(signalName).get(label) != null &&
+									SentenceAssignment.signalToFeature.get(signalName).get(label).get("P-") != null) {
+									featureNameLBLpm = SentenceAssignment.signalToFeature.get(signalName).get(label).get("P-");
+									weightLBLpm = weights.get(featureNameLBLpm);
+									if (weightLBLpm!=null) {
+										featureLBLpmExists = true;
+										weightLBLStrpm = FMT.format(weightLBLpm);
+									}
+								}
+								boolean featureOppExists = false;
+								if (SentenceAssignment.signalToFeature.get(signalName).get(SentenceAssignment.PAD_Trigger_Label) != null &&
+									SentenceAssignment.signalToFeature.get(signalName).get(SentenceAssignment.PAD_Trigger_Label).get("P+") != null) {
+									featureNameOpp = SentenceAssignment.signalToFeature.get(signalName).get(SentenceAssignment.PAD_Trigger_Label).get("P+");
+									weightOpp = weights.get(featureNameOpp);
+									if (weightOpp!=null) {
+										featureOppExists = true;
+										weightOStrpp = FMT.format(weightOpp);
+									}
+								}
+								boolean featureOpmExists = false;
+								if (SentenceAssignment.signalToFeature.get(signalName).get(SentenceAssignment.PAD_Trigger_Label) != null &&
+									SentenceAssignment.signalToFeature.get(signalName).get(SentenceAssignment.PAD_Trigger_Label).get("P-") != null) {
+									featureNameOpm = SentenceAssignment.signalToFeature.get(signalName).get(SentenceAssignment.PAD_Trigger_Label).get("P-");
+									weightOpm = weights.get(featureNameOpm);
+									if (weightOpm!=null) {
+										featureOpmExists = true;
+										weightOStrpm = FMT.format(weightOpm);
+									}
+								}
+
+								// we are only marking "change", if it happened to both features in the same token
+								// otherwise, most-likely O was changed with a different LBL, so we don't want to show it in this row
+								// (if we would, it would make weird distortions, like showing there was change even though
+								// only none-change categories are on)
+								if ((featureLBLppExists && featureOppExists) || (featureLBLpmExists && featureOpmExists)) {
+									for (Map<Object, BigDecimal> featureChangesOnSameToken : weights.updates.values()) {
+										if (featureChangesOnSameToken.containsKey(featureNameLBLpp) && featureChangesOnSameToken.containsKey(featureNameOpp)) {
+											changeLBLpp = featureChangesOnSameToken.get(featureNameLBLpp);
+											changeOpp = featureChangesOnSameToken.get(featureNameOpp);
+											changeLBLStrpp = FMT.format(changeLBLpp);
+											changeOStrpp = FMT.format(changeOpp);
+										}
+										if (featureChangesOnSameToken.containsKey(featureNameLBLpm) && featureChangesOnSameToken.containsKey(featureNameOpm)) {
+											changeLBLpm = featureChangesOnSameToken.get(featureNameLBLpm);
+											changeOpm = featureChangesOnSameToken.get(featureNameOpm);
+											changeLBLStrpm = FMT.format(changeLBLpm);
+											changeOStrpm = FMT.format(changeOpm);
+										}
+									}
+								}
+								
+								boolean changePp = (changeLBLpp!=BigDecimal.ZERO || changeOpp!=BigDecimal.ZERO);
+								boolean changePm = (changeLBLpm!=BigDecimal.ZERO || changeOpm!=BigDecimal.ZERO);
+								boolean anyChange = (changePp || changePm);
+								String changePpStr = changePp?"T":"F";
+								String changePmStr = changePm?"T":"F";
+								String anyChangeStr = anyChange?"T":"F";
+								
+								List<String> summary = Lists.newArrayList();
+								addSummary(summary, forSignalNameOO, "O,O,F");
+								addSummary(summary, forSignalNameOO, "O,O,T");
+								addSummary(summary, forLabel, "LBL,O,T");
+								addSummary(summary, forLabel, "O,LBL,F");
+								addSummary(summary, forLabel, "LBL,LBL,T");
+								addSummary(summary, forLabel, "O,LBL,T");
+								addSummary(summary, forLabel, "LBL,O,F");
+								addSummary(summary, forLabel, "LBL,LBL,F");
+								addSummary(summary, forLabel, "weird,weird,F");
+								addSummary(summary, forLabel, "weird,weird,T");
+							
+								Utils.print(u, "", "\n", "|", null,
+										iter, //Iter
+										String.format("%s:%s", instance.docID, instance.sentInstID), //"DocID:SentenceNo"
+										instance.target.getState(),//"Tokens"
+										assn.getState(),//"TokensProcessed"
+										signalName, //"SignalName"
+										label, //"Label"
+										
+										weightLBLStrpp, //"Weight:LBL:P+"
+										weightLBLStrpm, //"Weight:LBL:P-"
+										weightOStrpp, //"Weight:O:P+"
+										weightOStrpm, //"Weight:O:P-"
+										anyChangeStr, //"AnyChange"
+										changePpStr, //
+										changePmStr,
+										changeLBLStrpp, // "Change:LBL:P+"
+										changeLBLStrpm, // "Change:LBL:P-"
+										changeOStrpp, // "Change:O:P+"
+										changeOStrpm, // "Change:O:P-"
+										String.format("Change=%s:%s*%s", changePpStr, changePmStr, summary), //"Summary"
+
+										forSignalNameOO.get("O,O,F"),
+										forLabel.get("LBL,O,T"),
+										forLabel.get("O,LBL,F"),
+										forLabel.get("LBL,LBL,T"),
+										forLabel.get("O,LBL,T"),
+										forLabel.get("LBL,O,F"),
+										forSignalNameOO.get("O,O,T"),
+										forLabel.get("LBL,LBL,F"),
+										forLabel.get("weird,weird,F"),
+										forLabel.get("weird,weird,T")
+										
+								);
+							}
+							catch (RuntimeException e) {
+								throw new RuntimeException(String.format("Exception for instance=%s, sig=%s, label=%s", instance, signalName, label), e);
+							}
+						}
+					}
 				}
 				////////////
 
@@ -698,6 +1015,11 @@ public class Perceptron implements java.io.Serializable
 				List<SentenceAssignment> devResult = decoding(devList);
 				Evaluator.Score dev_score = evaluator.evaluate(devResult, getCanonicalInstanceList(devList));
 				printScore(d, new Integer(iter).toString(), devList.size(), dev_score);
+				
+				if (!controller.useArguments) {
+					//System.out.printf("Since useArguments, switching harmonic_mean=%s with trigger_F1=%s\n", dev_score.harmonic_mean, dev_score.trigger_F1);
+					dev_score.harmonic_mean = dev_score.trigger_F1;
+				}
 
 
 				if((dev_score.harmonic_mean - max_score.harmonic_mean) >= 0.001)
@@ -926,12 +1248,12 @@ public class Perceptron implements java.io.Serializable
 		for(int i=0; i <= assn.getState(); i++)
 		{
 			// weights = \phi(y*) - \phi(y)
-			this.getWeights().addDelta(target.featVecSequence.get(i), assn.featVecSequence.get(i), BigDecimal.ONE);
+			this.getWeights().addDelta(target.featVecSequence.get(i), assn.featVecSequence.get(i), BigDecimal.ONE, i);
 			//this.getWeights().addDelta(target.featVecSequence.get(i), assn.featVecSequence.get(i), 1.0);
 			
 			if(this.controller.avgArguments)
 			{
-				this.avg_weights_base.addDelta(target.featVecSequence.get(i), assn.featVecSequence.get(i), c);
+				this.avg_weights_base.addDelta(target.featVecSequence.get(i), assn.featVecSequence.get(i), c, i);
 			}
 		}
 	}

@@ -46,7 +46,6 @@ public class SentenceAssignment
 	public static final String Really_Generic_Existing_Label = "LBL";
 	public static final String GLOBAL_LABEL = "GLOBAL";
 	
-	
 	public static final String CURRENT_LABEL_MARKER = "\tcurrentLabel:";
 	public static final String TRIGGER_LABEL_MARKER = "triggerLabel:";
 	public static final String ARG_ROLE_MARKER = "\tArgRole:";
@@ -54,7 +53,7 @@ public class SentenceAssignment
 	public static final List<String> ALL_FEATURE_NAME_MARKERS = ImmutableList.of(CURRENT_LABEL_MARKER, TRIGGER_LABEL_MARKER, ARG_ROLE_MARKER, IS_ARG_MARKER);
 
 	// {signalName : {label : {moreParams : featureName}}}
-	public static Map<String, Map<String, Map<String, String>>> signalCategoryFeature = Maps.newTreeMap();
+	public static Map<String, Map<String, Map<String, String>>> signalToFeature = Maps.newTreeMap();
 	public static List<String> storedLabels;
 	public static int numStoredTriggerLabels = 0;
 	public static int numStoredArgLabels = 0;
@@ -74,7 +73,7 @@ public class SentenceAssignment
 			return Really_Generic_Existing_Label;
 		}
 	}
-
+	
 	public static String stripLabel(String featureName) {
 		String result = featureName;
 		for (String marker : ALL_FEATURE_NAME_MARKERS) {
@@ -479,6 +478,10 @@ public class SentenceAssignment
 	public void makeEdgeLocalFeature(SentenceInstance problem, int index, boolean addIfNotPresent, 
 			int entityIndex, boolean useIfNotPresent)
 	{	
+		if (!controller.useArguments) {
+			return;
+		}
+		
 		if(this.edgeAssignment.get(index) == null)
 		{
 			// skip assignments that don't have edgeAssignment for index-th node
@@ -640,6 +643,13 @@ public class SentenceAssignment
 		String outcome = this.getLabelAtToken(i);
 		//String reallyGenericLabel = getReallyGenericLabel(outcome);
 		
+		/// DEBUG
+//		System.err.printf("\nmakeNodeFeatures, i=%s, inst=%s, token=%s:\n", i, problem, token);
+//		if (problem.sentID==40) {
+//			//System.err.printf("\n\nDebug point!!!\n\n");
+//		}
+		///
+
 		// traverse each text feature of the token to explore the bigram featurs
 		for(String textFeature : token)
 		{
@@ -705,7 +715,7 @@ public class SentenceAssignment
 		if (wasAdded) {
 			boolean shouldSaveSignal= false;
 			String signalNameNormalized = Perceptron.feature(signalName).intern();
-			Set<String> storedSignals = signalCategoryFeature.keySet();
+			Set<String> storedSignals = signalToFeature.keySet();
 			
 			// This entire block is good for limiting not just the amount of the signals, btu also the amount of the labels
 			// Currently, I'm not doing that, so this is commented out
@@ -739,10 +749,10 @@ public class SentenceAssignment
 			}
 			
 			if (shouldSaveSignal) {
-				Map<String, Map<String, String>> forSignal = signalCategoryFeature.get(signalNameNormalized);
+				Map<String, Map<String, String>> forSignal = signalToFeature.get(signalNameNormalized);
 				if (forSignal == null) {
 					forSignal = new HashMap<String, Map<String, String>>();
-					signalCategoryFeature.put(signalNameNormalized, forSignal);
+					signalToFeature.put(signalNameNormalized, forSignal);
 				}
 				//Entry<String, String> forCategory = new AbstractMap.SimpleEntry<String, String>(featureStr, label);
 				Map<String, String> forLabel = forSignal.get(label);
@@ -752,6 +762,10 @@ public class SentenceAssignment
 				}
 				
 				forLabel.put(moreParams, featureStr);
+				
+				/// DEBUG
+				//System.err.printf("  %s, sig=%s, label=%s, feat=%s.\n", state, signalName, label, featureStr);
+				///
 			}
 		}
 	}

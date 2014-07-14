@@ -28,7 +28,7 @@ public class FeatureVector implements Serializable
 	// different from Mallet, just use a JDK HashMap to restore the sparse vector
 	HashMap<Object, Double> map;
 	
-	public static Map<Object, Double> updates = Maps.newHashMap();
+	public Map<Integer, Map<Object, Double>> updates = Maps.newHashMap();
 	
 	public Map<Object, Double> getMap()
 	{
@@ -80,14 +80,24 @@ public class FeatureVector implements Serializable
 			value_exist += value;
 			map.put(feat, value_exist);
 		}
+	}
+	
+	public void addAndLogChanges(Object feat, double value, int i) {
+		add(feat, value);
 		
 		//for log
-		Double currVal = updates.get(feat);
+		Map<Object, Double> forToken = updates.get(i);
+		if (forToken == null) {
+			forToken = Maps.newHashMap();
+			updates.put(i, forToken);
+		}
+		Double currVal = forToken.get(feat);
 		if (currVal == null) {
 			currVal = 0.0;
 		}
 		Double newVal = currVal + value;
-		updates.put(feat, newVal);
+		
+		forToken.put(feat, newVal);
 	}
 
 	public FeatureVector clone()
@@ -181,7 +191,7 @@ public class FeatureVector implements Serializable
 	 * @param fv2
 	 * @param factor
 	 */
-	public void addDelta(FeatureVector fv1, FeatureVector fv2, double factor)
+	public void addDelta(FeatureVector fv1, FeatureVector fv2, double factor, int i)
 	{
 		for(Object key : fv1.map.keySet())
 		{
@@ -194,7 +204,7 @@ public class FeatureVector implements Serializable
 			double value = (value1 - value2) * factor;
 			if(value != 0.0)
 			{
-				this.add(key, value);
+				this.addAndLogChanges(key, value, i);
 				//System.out.printf("  - [%s,%s,%s] %-70s\t += %s\n", value1, value2, factor, key, value);
 			}
 		}
@@ -207,7 +217,7 @@ public class FeatureVector implements Serializable
 				double value = (0.0 - value2) * factor;
 				if(value != 0.0)
 				{
-					this.add(key, value);
+					this.addAndLogChanges(key, value, i);
 					//System.out.printf("  @ [%s,%s,%s] %-70s\t += %s\n", value1, value2, factor, key, value);
 				}
 			}

@@ -119,7 +119,7 @@ public class Pipeline
 			Alphabet nodeTargetAlphabet, Alphabet edgeTargetAlphabet, Alphabet featureAlphabet, 
 			Controller controller, boolean learnable, String singleEventType) throws IOException, DocumentException
 	{
-		System.out.println("Reading training instance ...");
+		System.out.printf("%s Reading instance list ...\n", detailedLog());
 		
 		List<SentenceInstance> instancelist = new ArrayList<SentenceInstance>();
 		BufferedReader reader = new BufferedReader(new FileReader(file_list));

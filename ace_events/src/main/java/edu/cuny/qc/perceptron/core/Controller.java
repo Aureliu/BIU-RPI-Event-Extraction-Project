@@ -42,7 +42,7 @@ public class Controller implements java.io.Serializable
 	 * 0 - only model file
 	 * 1 - model, final weights, performance
 	 * 2 - model, final weights, performance, features (only label per token)
-	 * 3 - model, final weights, performance, features (only label per token), weights (only vector summary per sentence)
+	 * 3 - model, final weights, performance, updates, features (only label per token), weights (only vector summary per sentence)
 	 * 4 - model, final weights, performance, updates, features, weights (only vector summary per sentence)
 	 * 5 - model, final weights, performance, updates, features, weights (only vector summary per sentence), beam (only full assignments)
 	 * 6 - model, final weights, performance, updates, features, weights (only vector summary per sentence), beam
@@ -50,10 +50,10 @@ public class Controller implements java.io.Serializable
 	 * 8 - model, final weights, performance, updates, features, weights, beam
 	 */
 	public int logLevel = 1;
-	
-	
 
 	public String[] logOnlyTheseSentences = {};
+	
+	public boolean useArguments = true;
 	
 	public Controller()
 	{
@@ -136,6 +136,10 @@ public class Controller implements java.io.Serializable
 				logOnlyTheseSentences = fields[1].split(",");
 				Utils.logOnlyTheseSentences = Arrays.asList(logOnlyTheseSentences);
 			}
+			else if(fields[0].equalsIgnoreCase("useArguments"))
+			{
+				useArguments = Boolean.parseBoolean(fields[1]);
+			}
 		}
 		System.out.printf("\n[%s] ******** Controller() **********\n", new Date());
 		System.out.printf("******** %s **********\n", this);
@@ -148,7 +152,7 @@ public class Controller implements java.io.Serializable
 		+ " useGlobalFeature:" + useGlobalFeature + " addNeverSeenFeatures: " + addNeverSeenFeatures
 		+ " crossSent:" + crossSent + " crossSentReranking:" + crossSentReranking + " order:" + order +
 		" evaluatorType:" + evaluatorType + " learnBigrams: " + learnBigrams + " logLevel: " + logLevel +
-		" logOnlyTheseSentences: " + logOnlyTheseSentences;
+		" logOnlyTheseSentences: " + logOnlyTheseSentences + " useArguments: " + useArguments;
 		return ret;
 	}
 	

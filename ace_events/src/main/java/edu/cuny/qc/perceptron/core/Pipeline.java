@@ -17,9 +17,13 @@ import org.apache.uima.cas.CASRuntimeException;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.dom4j.DocumentException;
 
+import com.google.common.collect.HashMultimap;
+import com.google.common.collect.Multimap;
+
 import ac.biu.nlp.nlp.ie.onthefly.input.AeException;
 import ac.biu.nlp.nlp.ie.onthefly.input.SpecHandler;
 import ac.biu.nlp.nlp.ie.onthefly.input.TypesContainer;
+import edu.cuny.qc.ace.acetypes.AceEventMention;
 import edu.cuny.qc.perceptron.types.Alphabet;
 import edu.cuny.qc.perceptron.types.BundledSignals;
 import edu.cuny.qc.perceptron.types.Document;
@@ -85,17 +89,21 @@ public class Pipeline
 		if(!controller.crossSent)
 		{
 			model = new Perceptron(featureAlphabet);
-			model.controller = controller;
+			Perceptron.controller = controller;
 			TypesContainer trainTypes = new TypesContainer(trainSpecXmlPaths, false);
 			TypesContainer devTypes = new TypesContainer(devSpecXmlPaths, false);
 			trainInstanceList = readInstanceList(model, trainTypes, srcDir, trainingFileList, featureAlphabet, true, false);
+			System.out.printf("=== Finished Training Documents (%s Sentence Instances) =====================================\n", trainInstanceList.size());
 			devInstanceList = readInstanceList(model, devTypes, srcDir, devFileList, featureAlphabet, false, false);
+			System.out.printf("=== Finished Dev Documents (%s Sentence Instances) =====================================\n", devInstanceList.size());
 		}
 		else
 		{
 			throw new UnsupportedParameterException("crossSent = true");
 		}
 		
+		System.out.printf("%s Finished reading %s train sentence instances and %s sentence instances.\n=================================\n",
+				detailedLog(), trainInstanceList.size(), devInstanceList.size());
 		//DEBUG
 		Pipeline.modelFile = modelFile;
 		//////////////////
@@ -133,6 +141,7 @@ public class Pipeline
 		List<SentenceInstance> instancelist = new ArrayList<SentenceInstance>();
 		BufferedReader reader = new BufferedReader(new FileReader(file_list));
 		String line = "";
+		Multimap<String, AceEventMention> allEventMentions = HashMultimap.create();
 		//TextFeatureGenerator featGen = new TextFeatureGenerator();
 		//try {
 			int num = 0;
@@ -151,8 +160,8 @@ public class Pipeline
 				
 				System.out.printf("[%s] %s\n", new Date(), fileName);
 				
-				perceptron.logSignalMechanismsPreDocument();
-				Document doc = Document.createAndPreprocess(fileName, true, monoCase, perceptron.controller.usePreprocessFiles, perceptron.controller.usePreprocessFiles, types, perceptron);
+				//perceptron.logSignalMechanismsPreDocument();
+				Document doc = Document.createAndPreprocess(fileName, true, monoCase, Perceptron.controller.usePreprocessFiles, Perceptron.controller.usePreprocessFiles, types, perceptron);
 				// fill in text feature vector for each token
 				//featGen.fillTextFeatures_NoPreprocessing(doc);
 				
@@ -173,7 +182,7 @@ public class Pipeline
 					//System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] done(%2$d).", new Date(), insts.size());
 					docInstancelist.addAll(insts);
 					
-					if(learnable && perceptron.controller.skipNonEventSent)
+					if(learnable && Perceptron.controller.skipNonEventSent)
 					{
 						if(sent.eventMentions != null && sent.eventMentions.size() > 0)
 						{
@@ -187,22 +196,13 @@ public class Pipeline
 						//System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] add\n", new Date());
 						instancelist.addAll(insts);
 					}
-					
-					//System.gc();
-
 				}
-				/// DEBUG
-//				if (doc.docID.contains("CNN_ENG_20030506_160524.18")) {
-//					System.out.println(docInstancelist.size());
-//				}
-				///
+
 				doc.dumpSignals(docInstancelist, types, perceptron);
-				/// DEBUG
-//				BundledSignals dumpedSignals = doc.signals;
-//				doc.loadSignals(types);
-//				boolean b = dumpedSignals.equals(doc.signals);
-//				System.out.println(b);
-//				////
+				for (AceEventMention evMention : doc.getAceAnnotations().eventMentions) {
+					allEventMentions.put(evMention.event.subtype, evMention);
+				}
+
 			}
 //		}
 //		finally {
@@ -213,6 +213,15 @@ public class Pipeline
 //		System.gc();
 //		System.out.printf("%s done.\n", detailedLog());
 //		System.out.println("done");
+			
+		// DEBUG
+		System.out.printf("Finished loading %s documents, in them %s sentence instances\n", num, instancelist.size());
+		System.out.printf("Total of %s event mentions, in %s types:\n", allEventMentions.size(), allEventMentions.keySet().size());
+		for (String eventType : allEventMentions.keySet()) {
+			System.out.printf(" - %s: %s mentions\n", eventType, allEventMentions.get(eventType).size());
+		}
+		/////
+			
 		return instancelist;
 	}
 	
@@ -336,7 +345,7 @@ public class Pipeline
 		Perceptron model = trainPerceptron(srcDir, trainingFileList, modelFile, devFileList, controller, trainSpecXmlPaths, devSpecXmlPaths);
 		
 		// print out weights
-		if(model.controller.avgArguments)
+		if(Perceptron.controller.avgArguments)
 		{
 			Utils.print(out, "", "", "", null, model.getAvg_weights().toStringFull());			
 		}

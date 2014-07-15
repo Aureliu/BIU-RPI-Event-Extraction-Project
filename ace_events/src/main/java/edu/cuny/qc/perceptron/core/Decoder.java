@@ -151,7 +151,7 @@ public class Decoder
 			doc.dumpSignals(localInstanceList, types, perceptron);
 			
 			// decoding
-			List<SentenceAssignment> localResults = perceptron.decoding(localInstanceList);
+			List<SentenceAssignment> localResults = perceptron.decoding(localInstanceList, null, null, null);
 			
 			// print to docs
 			File outputFile = new File(outDir + "/" + folderNamePrefix + line + ".apf.xml");

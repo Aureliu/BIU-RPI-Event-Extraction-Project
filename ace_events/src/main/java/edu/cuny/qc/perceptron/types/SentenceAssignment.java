@@ -9,6 +9,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 import java.util.Vector;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.uima.cas.CASException;
@@ -54,6 +56,8 @@ public class SentenceAssignment
 	public static final String ARG_ROLE_MARKER = "\tArgRole:";
 	public static final String IS_ARG_MARKER = "IsArg";
 	public static final List<String> ALL_FEATURE_NAME_MARKERS = ImmutableList.of(CURRENT_LABEL_MARKER, TRIGGER_LABEL_MARKER, ARG_ROLE_MARKER, IS_ARG_MARKER);
+	
+	public static final Pattern methodPattern = Pattern.compile("G(.+)P");
 
 	// {signalName : {label : {moreParams : featureName}}}
 	public static Map<String, Map<String, Map<String, String>>> signalToFeature = Maps.newTreeMap();
@@ -423,16 +427,14 @@ public class SentenceAssignment
 
 		if (this.controller.oMethod.startsWith("G")) {
 			
-			if (this.controller.oMethod.contains("0")) {
-				FEATURE_POSITIVE_VAL = BigDecimal.ONE;
-				FEATURE_NEGATIVE_VAL = BigDecimal.ZERO;
-			}
-			else if (this.controller.oMethod.contains("-1")) {
-				FEATURE_POSITIVE_VAL = BigDecimal.ONE;
-				FEATURE_NEGATIVE_VAL = new BigDecimal("-1");
+			FEATURE_POSITIVE_VAL = BigDecimal.ONE;
+			Matcher matcher1 = methodPattern.matcher(this.controller.oMethod);
+			if (matcher1.find()) {
+				String negValStr = matcher1.group(1);
+				FEATURE_NEGATIVE_VAL = new BigDecimal(negValStr);
 			}
 			else {
-				throw new IllegalStateException("G method must get '0' or '-1' as neg_val, got: " + this.controller.oMethod);
+				throw new IllegalStateException("G method must get some number for neg_val before P+\\-, got: " + this.controller.oMethod);
 			}
 		}
 		else {

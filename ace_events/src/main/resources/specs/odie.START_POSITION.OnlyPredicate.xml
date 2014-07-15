@@ -1,6 +1,6 @@
 <spec>
   <predicate>
-    <name>StartPosition</name>
+    <name>Start-Position</name>
     <seeds>
       <seed>hired</seed>
       <seed>joined</seed>
@@ -10,6 +10,49 @@
     </seeds>
   </predicate>
   <arguments>
+    <argument>
+      <role>Person</role>
+      <types>
+      	<type>PER</type>
+      </types>
+      <examples>
+      </examples>
+    </argument>
+    <argument>
+      <role>Entity</role>
+      <types>
+      	<type>ORG</type>
+      	<type>GPE</type>
+      </types>
+      <examples>
+      </examples>
+    </argument>
+    <argument>
+      <role>Position</role>
+      <types>
+      	<type>JOB</type>
+      </types>
+      <examples>
+      </examples>
+    </argument>
+    <argument>
+      <role>Time</role>
+      <types>
+      	<type>TIME</type>
+      </types>
+      <examples>
+      </examples>
+    </argument>
+    <argument>
+      <role>Place</role>
+      <types>
+      	<type>GPE</type>
+      	<type>LOC</type>
+      	<type>FAC</type>
+      </types>
+      <examples>
+      </examples>
+    </argument>
   </arguments>
   <usage_samples>
   </usage_samples>

@@ -30,7 +30,6 @@ public class BeamSearch
 {
 	Perceptron model;
 	boolean isTraining = true;
-	private PrintStream b;
 	
 	private static final boolean PRINT_BEAM = false;
 	private static final boolean PRINT_BEAM_DETAILED = false;
@@ -59,51 +58,11 @@ public class BeamSearch
 		this.isTraining = isTraining;
 		
 		if (this.isTraining) {
-			String beamsOutputFilePath = Pipeline.modelFile.getParent() + "/AllBeams-" + Perceptron.LOG_NAME_ID + "." + model.controller.logLevel + ".tsv";
-			this.b = null;
-			try {
-				if (model.controller.logLevel >= 5) {
-					this.b = new PrintStream(beamsOutputFilePath);
-				}
-			} catch (IOException e) {
-				throw new RuntimeException(e);
-			}
-			Utils.print(b, "", "\n", "|", null,	
-					//general
-					"Iter",
-					"DocID",
-					"SentenceNo",
-					"violation",
-					"beam-size",
-					
-					//assignment
-					"pos",
-					"assignment", //toString()
-					"target",
-					"compatible",
-					"score",
-					"state",
-					
-					//token
-					"i",
-					"Lemma",
-					"target-label",
-					"assn-label",
-					"both-labels",
-					"partial-score",
-					
-					//feature
-					"Feature",
-					"target",
-					"assn",
-					"labels+assn",
-					"Weight",
-					"AvgWeight"
-			);
+
 		}
 	}
 	
-	public void printBeam(PrintStream out, SentenceInstance instance, List<SentenceAssignment> beam, String violation) {
+	public void printBeam(PrintStream b, SentenceInstance instance, List<SentenceAssignment> beam, String violation) {
 		if (this.isTraining) {
 			for (int pos=0; pos<beam.size(); pos++) {
 				SentenceAssignment assn = beam.get(pos);
@@ -246,7 +205,7 @@ public class BeamSearch
 		}
 	}
 	
-	public SentenceAssignment beamSearch(SentenceInstance problem, int beamSize, boolean isLearning)
+	public SentenceAssignment beamSearch(SentenceInstance problem, int beamSize, boolean isLearning, PrintStream b)
 	{
 		List<SentenceAssignment> beam = new ArrayList<SentenceAssignment>();
 		SentenceAssignment initial = new SentenceAssignment(/*problem.types,*/problem.eventArgCandidates, null, problem.nodeTargetAlphabet, problem.edgeTargetAlphabet, problem.featureAlphabet, problem.controller);

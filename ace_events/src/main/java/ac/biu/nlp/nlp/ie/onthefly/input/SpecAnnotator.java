@@ -259,8 +259,8 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 				}
 			}
 			
-			Collection<Token> allTokens = JCasUtil.select(jcas, Token.class);
-			System.err.printf("%d tokens total in spec\n", allTokens.size());
+			System.err.printf("- In spec '%s': %d tokens in token view, %s tokens in sentence view\n", 
+					getSpecLabel(jcas), JCasUtil.select(tokenView, Token.class).size(), JCasUtil.select(sentenceView, Token.class).size());
 		}
 		catch (Exception e) {
 			throw new AnalysisEngineProcessException(AnalysisEngineProcessException.ANNOTATOR_EXCEPTION, null, e); 

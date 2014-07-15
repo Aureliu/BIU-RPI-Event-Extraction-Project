@@ -146,7 +146,7 @@ public class Evaluator
 				}
 			}
 			// count correct args
-			for(int j=0; j<gold.getNodeAssignment().size(); j++)
+			for(int j=0; j<ans.getNodeAssignment().size(); j++)
 			{
 				/// DEBUG
 //				String triggerLabel;

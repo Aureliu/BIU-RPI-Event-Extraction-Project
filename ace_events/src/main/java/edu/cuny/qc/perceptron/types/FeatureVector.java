@@ -15,6 +15,7 @@ import org.apache.commons.lang3.StringUtils;
 import com.google.common.collect.Maps;
 
 import edu.cuny.qc.perceptron.core.Perceptron;
+import edu.cuny.qc.util.Logs;
 
 public class FeatureVector implements Serializable
 {	
@@ -336,7 +337,7 @@ public class FeatureVector implements Serializable
 	private static String stringify(List<?> list) {
 		ArrayList<String> strs = new ArrayList<String>(list.size());
 		for (Object o : list) {
-			strs.add(Perceptron.FMT.format(o));
+			strs.add(Logs.FMT.format(o));
 		}
 		return StringUtils.join(strs, ',');
 	}

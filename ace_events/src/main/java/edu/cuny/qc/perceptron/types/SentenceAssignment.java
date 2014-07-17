@@ -28,6 +28,7 @@ import edu.cuny.qc.perceptron.core.Pipeline;
 import edu.cuny.qc.perceptron.featureGenerator.GlobalFeatureGenerator;
 import edu.cuny.qc.perceptron.types.SentenceInstance.InstanceAnnotations;
 import edu.cuny.qc.scorer.ScorerData;
+import edu.cuny.qc.util.Logs;
 import edu.cuny.qc.util.UnsupportedParameterException;
 
 /**
@@ -949,7 +950,7 @@ public class SentenceAssignment
 		}
 		
 		if (wasAdded) {
-			String signalNameNormalized = Perceptron.feature(signalName).intern();
+			String signalNameNormalized = Logs.feature(signalName).intern();
 			Set<String> storedSignals = signalToFeature.keySet();
 			if (storedSignals.contains(signalNameNormalized) || storedSignals.size()<SIGNALS_TO_STORE) {
 				Map<String, Map<String, String>> forSignal = signalToFeature.get(signalNameNormalized);

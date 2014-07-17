@@ -67,11 +67,11 @@ public class SignalAnalyzer {
 
 		List<String> specXmlPaths = SpecHandler.readSpecListFile(specList);
 		TypesContainer types = new TypesContainer(specXmlPaths, false);
-		Perceptron perceptron = new Perceptron(null);
-		perceptron.controller = new Controller();
-		perceptron.controller.setValueFromArguments(StringUtils.split(CONTROLLER_PARAMS));
-		perceptron.controller.usePreprocessFiles = useDumps;
-		perceptron.controller.useSignalFiles = useDumps;
+		Controller controller = new Controller();
+		controller.setValueFromArguments(StringUtils.split(CONTROLLER_PARAMS));
+		controller.usePreprocessFiles = useDumps;
+		controller.useSignalFiles = useDumps;
+		Perceptron perceptron = new Perceptron(null, controller, outputFolder);
 		
 		List<SentenceInstance> goldInstances = Pipeline.readInstanceList(perceptron, types, new File(CORPUS_DIR), inputFileList, new Alphabet(), false, true);
 		//SignalPerformanceField.goldInstances = goldInstances;

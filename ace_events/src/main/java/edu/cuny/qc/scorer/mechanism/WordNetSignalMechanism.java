@@ -525,11 +525,6 @@ public class WordNetSignalMechanism extends SignalMechanism {
 						BasicRulesQuery q = key.basicQuery;
 						WordNetPartOfSpeech lWnPos = WordNetPartOfSpeech.toWordNetPartOfspeech(q.lPos);
 						Set<String> result;
-						/// DEBUG
-						if (q.lLemma.contains("election")) {
-							System.out.printf("\n\n\n\n\nelection\n\n\n");
-						}
-						///
 						if (key.leftSenseNum == 1) {
 							//if (dictionary.getNumberOfSynsets(q.lLemma, lWnPos)!=0) {
 								result = dictionary.getStrictCousinTerms(q.lLemma, lWnPos, 1, key.length);

@@ -14,6 +14,7 @@ import edu.cuny.qc.perceptron.types.FeatureVector;
 import edu.cuny.qc.perceptron.types.SentenceAssignment;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
 import edu.cuny.qc.perceptron.types.SentenceInstance.InstanceAnnotations;
+import edu.cuny.qc.util.Logs;
 import edu.cuny.qc.util.TokenAnnotations;
 import edu.cuny.qc.util.Utils;
 
@@ -117,19 +118,19 @@ public class BeamSearch
 									
 									//token
 									j,//"i",
-									Perceptron.lemma(lemma),//"Lemma",
+									Logs.lemma(lemma),//"Lemma",
 									instance.target.getLabelAtToken(j),//"target-label",
 									assn.getLabelAtToken(j),//"assn-label",
-									Perceptron.twoLabels(instance.target, assn, j),//"both-labels"
+									Logs.twoLabels(instance.target, assn, j),//"both-labels"
 									assn.getPartialScores().get(j),//"partial-score",
 									
 									//feature
-									Perceptron.feature(s),//"Feature",
-									Perceptron.str(mapTarget, s),//"target"
-									Perceptron.str(mapAssn, s),//"assn"
-									Perceptron.twoLabelsAndScore(instance.target, assn, j, mapAssn, s),//"labels+assn"
-									Perceptron.str(model.getWeights(), s),//"Weight",
-									Perceptron.str(model.getAvg_weights(), s)//"AvgWeight"
+									Logs.feature(s),//"Feature",
+									Logs.str(mapTarget, s),//"target"
+									Logs.str(mapAssn, s),//"assn"
+									Logs.twoLabelsAndScore(instance.target, assn, j, mapAssn, s),//"labels+assn"
+									Logs.str(model.getWeights(), s),//"Weight",
+									Logs.str(model.getAvg_weights(), s)//"AvgWeight"
 							);
 						}
 						
@@ -177,8 +178,8 @@ public class BeamSearch
 							
 							//assignment
 							posStr, //"pos",
-							Perceptron.assn(assn),//"assignment", //toString()
-							Perceptron.assn(instance.target),//"target"
+							Logs.assn(assn),//"assignment", //toString()
+							Logs.assn(instance.target),//"target"
 							targetAssnCompatible,//"copmatible"
 							assn.getScore(),//"score",
 							assn.getState(),//"state",

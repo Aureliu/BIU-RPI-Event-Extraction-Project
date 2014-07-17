@@ -10,22 +10,21 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
-import org.apache.commons.io.FileUtils;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.cas.CASException;
 import org.apache.uima.cas.CASRuntimeException;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.dom4j.DocumentException;
 
-import com.google.common.collect.HashMultimap;
-import com.google.common.collect.Multimap;
-
 import ac.biu.nlp.nlp.ie.onthefly.input.AeException;
 import ac.biu.nlp.nlp.ie.onthefly.input.SpecHandler;
 import ac.biu.nlp.nlp.ie.onthefly.input.TypesContainer;
+
+import com.google.common.collect.HashMultimap;
+import com.google.common.collect.Multimap;
+
 import edu.cuny.qc.ace.acetypes.AceEventMention;
 import edu.cuny.qc.perceptron.types.Alphabet;
-import edu.cuny.qc.perceptron.types.BundledSignals;
 import edu.cuny.qc.perceptron.types.Document;
 import edu.cuny.qc.perceptron.types.Sentence;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
@@ -62,9 +61,10 @@ public class Pipeline
 	 * @param trainingFileList
 	 * @param modelFile
 	 */
-	public static Perceptron trainPerceptron(File srcDir, File trainingFileList, File modelFile, File devFileList, Controller controller, List<String> trainSpecXmlPaths, List<String> devSpecXmlPaths) throws Exception
+	public static Perceptron trainPerceptron(File srcDir, File trainingFileList, File modelFile, File devFileList, Controller controller, List<String> trainSpecXmlPaths, List<String> devSpecXmlPaths, String logSuffix) throws Exception
 	{
 		Alphabet featureAlphabet = new Alphabet();
+		File outFolder = new File(modelFile.getParent());
 		
 		File prevModelFile = new File(modelFile.getAbsolutePath() + ".previous");
 		if (modelFile.isFile()) {
@@ -78,7 +78,7 @@ public class Pipeline
 		stream.close();
 
 		// start marker
-		PrintStream m = new PrintStream(new File(modelFile.getAbsolutePath() + ".start"));
+		PrintStream m = new PrintStream(new File(modelFile.getAbsolutePath() + logSuffix + ".start"));
 		m.close();
 
 		// read instance list from training data (and dev data)
@@ -88,8 +88,7 @@ public class Pipeline
 		
 		if(!controller.crossSent)
 		{
-			Perceptron.controller = controller;
-			model = new Perceptron(featureAlphabet);
+			model = new Perceptron(featureAlphabet, controller, outFolder);
 			TypesContainer trainTypes = new TypesContainer(trainSpecXmlPaths, false);
 			TypesContainer devTypes = new TypesContainer(devSpecXmlPaths, false);
 			trainInstanceList = readInstanceList(model, trainTypes, srcDir, trainingFileList, featureAlphabet, true, false);
@@ -111,7 +110,7 @@ public class Pipeline
 		
 
 		// learning
-		model.learning(trainInstanceList, devInstanceList, 0);
+		model.learning(trainInstanceList, devInstanceList, 0, logSuffix);
 		// save learned perceptron to file
 		Perceptron.serializeObject(model, modelFile);
 		
@@ -161,7 +160,7 @@ public class Pipeline
 				System.out.printf("[%s] %s\n", new Date(), fileName);
 				
 				//perceptron.logSignalMechanismsPreDocument();
-				Document doc = Document.createAndPreprocess(fileName, true, monoCase, Perceptron.controller.usePreprocessFiles, Perceptron.controller.usePreprocessFiles, types, perceptron);
+				Document doc = Document.createAndPreprocess(fileName, true, monoCase, perceptron.controller.usePreprocessFiles, perceptron.controller.usePreprocessFiles, types, perceptron);
 				// fill in text feature vector for each token
 				//featGen.fillTextFeatures_NoPreprocessing(doc);
 				
@@ -182,7 +181,7 @@ public class Pipeline
 					//System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] done(%2$d).", new Date(), insts.size());
 					docInstancelist.addAll(insts);
 					
-					if(learnable && Perceptron.controller.skipNonEventSent)
+					if(learnable && perceptron.controller.skipNonEventSent)
 					{
 						if(sent.eventMentions != null && sent.eventMentions.size() > 0)
 						{
@@ -306,7 +305,7 @@ public class Pipeline
 //	
 //	public static void mainWithSingleEventType(String[] args, String singleEventType) throws IOException {
 		System.out.printf("Args:\n%s\n\n", new ArrayList<String>(Arrays.asList(args)));
-		if(args.length < 5)
+		if(args.length < 6)
 		{
 			System.out.println("Training perceptron Usage:");
 			System.out.println("args[0]: source dir of training data");
@@ -315,7 +314,8 @@ public class Pipeline
 			System.out.println("args[3]: file list of dev data");
 			System.out.println("args[4]: training spec list");
 			System.out.println("args[5]: dev spec list");
-			System.out.println("args[6+]: controller arguments");
+			System.out.println("args[6]: log file name suffix");
+			System.out.println("args[7+]: controller arguments");
 			System.exit(-1);
 		}
 		
@@ -327,39 +327,48 @@ public class Pipeline
 		File devFileList = new File(args[3]);
 		File trainSpecListFile = new File(args[4]);
 		File devSpecListFile = new File(args[5]);
+		String logSuffix = args[6];
 		List<String> trainSpecXmlPaths = SpecHandler.readSpecListFile(trainSpecListFile);
 		List<String> devSpecXmlPaths = SpecHandler.readSpecListFile(devSpecListFile);
 		
 		// set settings
 		Controller controller = new Controller();
-		String[] settings = Arrays.copyOfRange(args, 6, args.length);
+		String[] settings = Arrays.copyOfRange(args, 7, args.length);
 		controller.setValueFromArguments(settings);
 		System.out.println("\n" + controller.toString() + "\n");
 		
-		PrintStream out = null;
+		if (logSuffix.equals("null")) {
+			logSuffix = "";
+		}
+		else {
+			logSuffix = "." + logSuffix;
+		}
+		
+		PrintStream weightsOut = null;
+		PrintStream weightsAvgOut = null;
 		if (controller.logLevel >= 1) {
-			out = new PrintStream(modelFile.getAbsoluteFile() + "." + controller.logLevel + ".weights");
+			weightsOut = new PrintStream(modelFile.getAbsoluteFile() + "." + controller.logLevel + logSuffix + ".weights");
+			weightsAvgOut = new PrintStream(modelFile.getAbsoluteFile() + "." + controller.logLevel + logSuffix + ".avg_weights");
 		}
 
 		// train model
-		Perceptron model = trainPerceptron(srcDir, trainingFileList, modelFile, devFileList, controller, trainSpecXmlPaths, devSpecXmlPaths);
+		Perceptron model = trainPerceptron(srcDir, trainingFileList, modelFile, devFileList, controller, trainSpecXmlPaths, devSpecXmlPaths, logSuffix);
 		
 		// print out weights
-		if(Perceptron.controller.avgArguments)
+		Utils.print(weightsOut, "", "", "", null, model.getWeights().toStringFull());			
+		if(model.controller.avgArguments)
 		{
-			Utils.print(out, "", "", "", null, model.getAvg_weights().toStringFull());			
+			Utils.print(weightsAvgOut, "", "", "", null, model.getAvg_weights().toStringFull());			
 		}
-		else
-		{
-			Utils.print(out, "", "", "", null, model.getWeights().toStringFull());			
-		}
+
 		
-		if (out != null	) {
-			out.close();
+		if (weightsOut != null	) {
+			weightsOut.close();
+			weightsAvgOut.close();
+		}
 		
 		model.close();
 		
 		System.out.printf("\n[%s] Finished Pipeline successfully\n", new Date());
-		}
 	}
 }

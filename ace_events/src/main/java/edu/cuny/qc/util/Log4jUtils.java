@@ -11,7 +11,7 @@ import org.apache.log4j.FileAppender;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
-public class LoggerUtils {
+public class Log4jUtils {
 	public static final String LOG4J_PROPERTIES = "log4j.properties";
 
 	public static Set<Appender> getAllAppendersIncludingParents(Logger logger)

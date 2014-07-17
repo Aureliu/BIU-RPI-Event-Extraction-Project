@@ -217,7 +217,7 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 			}
 			
 			tokenAE.process(tokenView);
-			if (Perceptron.controller.useArguments) {
+			if (Perceptron.controllerStatic.useArguments) {
 				sentenceAE.process(sentenceView);
 			}
 			

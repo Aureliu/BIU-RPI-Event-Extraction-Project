@@ -2,6 +2,7 @@ package edu.cuny.qc.perceptron.core;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintStream;
@@ -19,6 +20,9 @@ import org.apache.uima.util.InvalidXMLException;
 import org.dom4j.DocumentException;
 import org.xml.sax.SAXException;
 
+import com.google.common.collect.HashMultimap;
+import com.google.common.collect.Multimap;
+
 import ac.biu.nlp.nlp.ie.onthefly.input.AeException;
 import ac.biu.nlp.nlp.ie.onthefly.input.SpecException;
 import ac.biu.nlp.nlp.ie.onthefly.input.SpecHandler;
@@ -26,6 +30,7 @@ import ac.biu.nlp.nlp.ie.onthefly.input.TypesContainer;
 import edu.cuny.qc.ace.acetypes.AceDocument;
 import edu.cuny.qc.ace.acetypes.AceEntity;
 import edu.cuny.qc.ace.acetypes.AceEvent;
+import edu.cuny.qc.ace.acetypes.AceEventMention;
 import edu.cuny.qc.ace.acetypes.AceRelation;
 import edu.cuny.qc.ace.acetypes.AceTimex;
 import edu.cuny.qc.ace.acetypes.AceValue;
@@ -36,6 +41,7 @@ import edu.cuny.qc.perceptron.types.Document;
 import edu.cuny.qc.perceptron.types.SentenceAssignment;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
 import edu.cuny.qc.scorer.SignalMechanismException;
+import edu.cuny.qc.util.Logs;
 import edu.cuny.qc.util.UnsupportedParameterException;
 import eu.excitementproject.eop.common.utilities.uima.UimaUtilsException;
 
@@ -44,6 +50,13 @@ public class Decoder
 	public static final String OPTION_NO_SCORING = "-n";
 	public static File outDir = null; //TODO DEBUG
 	
+	// logs
+	public static PrintStream wTrain = null, wDev = null;
+	public static PrintStream fTrain = null, fDev = null;
+	public static PrintStream pTrain = null, pDev = null;
+	public static PrintStream uTrain = null, uDev = null;
+	public static PrintStream bTrain = null, bDev = null;
+
 	public static void writeEntities (PrintWriter w, AceDocument aceDoc, List<AceEvent> events) {
 		w.println ("<?xml version=\"1.0\"?>");
 		w.println ("<!DOCTYPE source_file SYSTEM \"apf.v5.1.1.dtd\">");
@@ -84,7 +97,7 @@ public class Decoder
 	
 	public static TypesContainer decode(String[] args, String filenameSuffix, String folderNamePrefix, List<String> specXmlPaths) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException, SignalMechanismException, SpecException
 	{		
-		System.err.println("(Decoding err stream)");
+		//System.err.println("(Decoding err stream)");
 		
 		File srcDir = new File(args[1]);
 		File fileList = new File(args[2]);
@@ -99,19 +112,38 @@ public class Decoder
 		
 		// Perceptron read model from the serialized file
 		Perceptron perceptron = Perceptron.deserializeObject(new File(args[0]));
-		Alphabet nodeTargetAlphabet = types.nodeTargetAlphabet;
-		Alphabet edgeTargetAlphabet = types.edgeTargetAlphabet;
+		//Alphabet nodeTargetAlphabet = types.nodeTargetAlphabet;
+		//Alphabet edgeTargetAlphabet = types.edgeTargetAlphabet;
 		Alphabet featureAlphabet = perceptron.featureAlphabet;
+		perceptron.setController(perceptron.controller); //Yes, I know this looks weird - it's because of the static controller hack
 		perceptron.buildSignalMechanisms();
+
+		Logs logs = new Logs(outDir, perceptron.controller, "");
+		try {
+			wTrain = logs.getW("Train");
+			fTrain = logs.getF("Train");
+			fDev =   logs.getF("Dev");
+			pTrain = logs.getP("Train");
+			pDev =   logs.getP("Dev");
+			uTrain = logs.getU("Train");
+			uDev =   logs.getU("Dev");
+			bTrain = logs.getB("Train");
+			bDev =   logs.getB("Dev");
+		} catch (FileNotFoundException e) {
+			throw new RuntimeException(e);
+		}
+
+		logs.logTitles(wTrain, fTrain, pTrain, uTrain, bTrain);
+		logs.logTitles(null, fDev, pDev, uDev, bDev);
 		
 		//Intermediate output - all features+weights to text files
-		String s;
-		PrintStream featuresOut = new PrintStream(new File(outDir + "/" + "FeatureAlphabet" + filenameSuffix));
-		for (Object o : featureAlphabet.toArray()) {
-			s = (String) o;
-			featuresOut.printf("%s\n", s);
-		}
-		featuresOut.close();
+//		String s;
+//		PrintStream featuresOut = new PrintStream(new File(outDir + "/" + "FeatureAlphabet" + filenameSuffix));
+//		for (Object o : featureAlphabet.toArray()) {
+//			s = (String) o;
+//			featuresOut.printf("%s\n", s);
+//		}
+//		featuresOut.close();
 		
 		PrintStream weightsOut = new PrintStream(new File(outDir + "/" + "Weights" + filenameSuffix));
 		weightsOut.printf("%s", perceptron.getWeights().toStringFull());
@@ -128,12 +160,15 @@ public class Decoder
 		BufferedReader reader = new BufferedReader(new FileReader(fileList));
 		String line = "";
 		//TextFeatureGenerator featGen = new TextFeatureGenerator();
+		int num = 0;
 		while((line = reader.readLine()) != null)
 		{
+			num++;
+			
 			List<SentenceInstance> localInstanceList = null;
 			boolean monoCase = line.contains("bn/") ? true : false;
 			String fileName = srcDir + "/" + line;
-			System.out.println(fileName);
+			System.out.printf("[%s] %s\n", new Date(), fileName);
 			Document doc = null;
 			if(perceptron.controller.crossSent)
 			{
@@ -149,9 +184,10 @@ public class Decoder
 					perceptron.controller, true, false);
 			
 			doc.dumpSignals(localInstanceList, types, perceptron);
-			
+
 			// decoding
-			List<SentenceAssignment> localResults = perceptron.decoding(localInstanceList, null, null, null);
+			List<SentenceAssignment> localResults = perceptron.decoding(logs, localInstanceList, -1, -1,
+					perceptron.weights, perceptron.avg_weights, perceptron.avg_weights_base, null, null, null);
 			
 			// print to docs
 			File outputFile = new File(outDir + "/" + folderNamePrefix + line + ".apf.xml");
@@ -180,12 +216,13 @@ public class Decoder
 			writeEntities(out, doc.getAceAnnotations(), eventsInDoc);
 			out.close();
 			
+			System.out.printf("%s Finished processing document %s\n", Pipeline.detailedLog(), doc.docID);
 		}
 		
+		System.out.printf("%s Dcoder: Finished processing all %s documents.\n", Pipeline.detailedLog(), num);
+
 		perceptron.close();
 
-		System.out.printf("[%s] --------------\r\nPerceptron.controller =\r\n%s\r\n\r\n--------------------------\r\n\r\n", new Date(), perceptron.controller);
-		
 		return types;
 	}
 	

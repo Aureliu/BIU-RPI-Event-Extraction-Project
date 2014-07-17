@@ -138,6 +138,13 @@ public class WordNetSignalMechanism extends SignalMechanism {
 		
 			break;
 		case NORMAL:
+			//17.7.14 Some conclusions:
+			// - all three AllRelations (one big, two smalls) do exactly the same on batch1)
+			// - they all so ALMOST exactly the same as hypernym, and he seems to be sligtly better. But this might be circumstantial, I wouldn't take it into account.
+			// - cousins suck. From just looking up some examples, they just get weird stuff, nothing useful (yes, almost nothing useful according to AceAnalyzer, and a LOT of garbage)! So remove!
+			//    - but if I do decide to use cousins, at least hardocdedly at to it the synset itself - now it says no on the word itself!!!
+			// - maybe could add derivations to synonyms.
+			
 			// Built from 2014.07.02..1__SignalAnalyzer_medium__TESRV2
 			// Top F1
 			addTrigger(new ScorerData(null, new WordnetScorer(SYNONYM_RELATION, Juxtaposition.ANCESTOR, 1), NoDerv.inst, Derivation.NONE, -1, 1, null, Any.inst));
@@ -518,6 +525,11 @@ public class WordNetSignalMechanism extends SignalMechanism {
 						BasicRulesQuery q = key.basicQuery;
 						WordNetPartOfSpeech lWnPos = WordNetPartOfSpeech.toWordNetPartOfspeech(q.lPos);
 						Set<String> result;
+						/// DEBUG
+						if (q.lLemma.contains("election")) {
+							System.out.printf("\n\n\n\n\nelection\n\n\n");
+						}
+						///
 						if (key.leftSenseNum == 1) {
 							//if (dictionary.getNumberOfSynsets(q.lLemma, lWnPos)!=0) {
 								result = dictionary.getStrictCousinTerms(q.lLemma, lWnPos, 1, key.length);

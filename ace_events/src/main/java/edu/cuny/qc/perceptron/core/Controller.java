@@ -71,6 +71,8 @@ public class Controller implements java.io.Serializable
 	
 	public boolean useArguments = true;
 	
+	public boolean updateOnlyOnViolation = true;
+	
 	public Controller()
 	{
 //		System.out.printf("\n[%s] ******** Controller() **********\n", new Date());
@@ -184,6 +186,10 @@ public class Controller implements java.io.Serializable
 			{
 				useArguments = Boolean.parseBoolean(fields[1]);
 			}
+			else if(fields[0].equalsIgnoreCase("updateOnlyOnViolation"))
+			{
+				updateOnlyOnViolation = Boolean.parseBoolean(fields[1]);
+			}
 		}
 		System.out.printf("\n[%s] ******** Controller() **********\n", new Date());
 		System.out.printf("******** %s **********\n", this);
@@ -199,7 +205,8 @@ public class Controller implements java.io.Serializable
 		" oMethod: " + oMethod + " serialization: " + serialization + " usePreprocessFiles: " + usePreprocessFiles
 		+ " usePreprocessFiles: " + usePreprocessFiles + " saveFeatureSignalNames: " + saveSignalsToValues +
 		" featureProfile: " + featureProfile + " singleTokenSentences: " + singleTokenSentences +
-		" logOnlyTheseSentences: " + logOnlyTheseSentences + " useArguments: " + useArguments;
+		" logOnlyTheseSentences: " + logOnlyTheseSentences + " useArguments: " + useArguments +
+		" updateOnlyOnViolation: " + updateOnlyOnViolation;
 		return ret;
 	}
 	

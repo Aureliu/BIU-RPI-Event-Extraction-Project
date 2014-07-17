@@ -88,8 +88,8 @@ public class Pipeline
 		
 		if(!controller.crossSent)
 		{
-			model = new Perceptron(featureAlphabet);
 			Perceptron.controller = controller;
+			model = new Perceptron(featureAlphabet);
 			TypesContainer trainTypes = new TypesContainer(trainSpecXmlPaths, false);
 			TypesContainer devTypes = new TypesContainer(devSpecXmlPaths, false);
 			trainInstanceList = readInstanceList(model, trainTypes, srcDir, trainingFileList, featureAlphabet, true, false);

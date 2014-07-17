@@ -1085,8 +1085,8 @@ public class Document implements java.io.Serializable
 		if (signals != null) {
 
 			// Filter out scorers that are not currently relevant
-			for (List<Map<Integer, Map<ScorerData, SignalInstance>>> iter1 : signals.triggerSignals.values()) {
-				for (Map<Integer, Map<ScorerData, SignalInstance>> iter2 : iter1) {
+			for (List<Map<String, Map<ScorerData, SignalInstance>>> iter1 : signals.triggerSignals.values()) {
+				for (Map<String, Map<ScorerData, SignalInstance>> iter2 : iter1) {
 					for (Map<ScorerData, SignalInstance> iter3 : iter2.values()) {
 						for (Iterator<Entry<ScorerData, SignalInstance>> iterator = iter3.entrySet().iterator(); iterator.hasNext();) {
 							Entry<ScorerData, SignalInstance> entry = iterator.next();

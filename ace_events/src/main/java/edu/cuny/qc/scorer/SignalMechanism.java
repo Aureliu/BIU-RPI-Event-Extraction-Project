@@ -34,7 +34,7 @@ public abstract class SignalMechanism {
 	}
 	
 	public SignalMechanism(Perceptron perceptron) throws SignalMechanismException {
-		controller = perceptron.controller;
+		controller = Perceptron.controller;
 		scorers = new LinkedHashMap<SignalType, List<ScorerData>>(2);
 		scorers.put(SignalType.TRIGGER,   new ArrayList<ScorerData>());
 		scorers.put(SignalType.ARGUMENT,  new ArrayList<ScorerData>());

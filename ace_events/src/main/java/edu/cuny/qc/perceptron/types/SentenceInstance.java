@@ -15,6 +15,8 @@ import org.apache.uima.cas.CASException;
 import org.apache.uima.cas.FeatureStructure;
 import org.apache.uima.jcas.JCas;
 
+import com.google.common.collect.Lists;
+
 import ac.biu.nlp.nlp.ie.onthefly.input.SpecAnnotator;
 import ac.biu.nlp.nlp.ie.onthefly.input.TypesContainer;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument;
@@ -490,10 +492,10 @@ public class SentenceInstance
 //				allArgSignals = doc.signals.argSignals;
 //			}
 			
-			List<Map<Integer, Map<ScorerData, SignalInstance>>> sentenceTriggerSignals;
+			List<Map<String, Map<ScorerData, SignalInstance>>> sentenceTriggerSignals;
 			List<Map<Integer, List<Map<Integer, Map<ScorerData, SignalInstance>>>>> sentenceArgSignals;
 			if (!doc.signals.triggerSignals.containsKey(sentID)) {
-				sentenceTriggerSignals = new ArrayList<Map<Integer, Map<ScorerData, SignalInstance>>>(size());
+				sentenceTriggerSignals = Lists.newArrayListWithCapacity(size());
 				sentenceArgSignals = new ArrayList<Map<Integer, List<Map<Integer, Map<ScorerData, SignalInstance>>>>>(size());
 				doc.signals.triggerSignals.put(sentID, sentenceTriggerSignals);
 				doc.signals.argSignals.put(sentID, sentenceArgSignals);
@@ -514,7 +516,7 @@ public class SentenceInstance
 	}
 	
 	private void calculatePersistentSignals(Perceptron perceptron,
-			List<Map<Integer, Map<ScorerData, SignalInstance>>> triggerSignals,
+			List<Map<String, Map<ScorerData, SignalInstance>>> triggerSignals,
 			List<Map<Integer, List<Map<Integer, Map<ScorerData, SignalInstance>>>>> argSignals,
 			boolean debug) throws SignalMechanismException, CASException {
 		//List<Map<String, Map<String, SignalInstance>>> triggerSignals = new ArrayList<Map<String, Map<String, SignalInstance>>>(size());
@@ -539,9 +541,9 @@ public class SentenceInstance
 				tokenArgSignals = new LinkedHashMap<String, List<Map<String, Map<String, SignalInstance>>>>();
 			*****/
 				
-			Map<Integer, Map<ScorerData, SignalInstance>> tokenTriggerSignals = null;
+			Map<String, Map<ScorerData, SignalInstance>> tokenTriggerSignals = null;
 			if (triggerSignals.size() <= i) {
-				tokenTriggerSignals = new HashMap<Integer, Map<ScorerData, SignalInstance>>(types.specs.size());
+				tokenTriggerSignals = new HashMap<String, Map<ScorerData, SignalInstance>>(types.specs.size());
 				triggerSignals.add(tokenTriggerSignals);
 			}
 			else {
@@ -556,20 +558,21 @@ public class SentenceInstance
 //				tokenArgSignals = argSignals.get(i);
 //			}
 			
-			Integer specNum = -1;
+			//Integer specNum = -1;
 			for (JCas spec : types.specs) {
-				specNum++;
+				//specNum++;
+				String specLabel = SpecAnnotator.getSpecLabel(spec);
 				
 				Map<ScorerData, SignalInstance> specSignals = null;
 				List<Map<Integer, Map<ScorerData, SignalInstance>>> tokenArgSpecSignals = null;
-				if (!tokenTriggerSignals.containsKey(specNum)) {
+				if (!tokenTriggerSignals.containsKey(specLabel)) {
 					specSignals = new HashMap<ScorerData, SignalInstance>();
-					tokenTriggerSignals.put(specNum, specSignals);
+					tokenTriggerSignals.put(specLabel, specSignals);
 //					tokenArgSpecSignals = new ArrayList<Map<Integer, Map<ScorerData, SignalInstance>>>();
 //					tokenArgSignals.put(specNum, tokenArgSpecSignals);
 				} 
 				else {
-					specSignals = tokenTriggerSignals.get(specNum);
+					specSignals = tokenTriggerSignals.get(specLabel);
 //					tokenArgSpecSignals = tokenArgSignals.get(specNum);
 				}
 				
@@ -613,6 +616,18 @@ public class SentenceInstance
 	
 	public void addTriggerSignals(JCas spec, int i, Perceptron perceptron, Map<ScorerData, SignalInstance> specSignals, boolean debug) throws SignalMechanismException {
 		for (SignalMechanism mechanism : perceptron.signalMechanisms) {
+			
+			///DEBUG
+//			if (sentInstID.equals("5a") && docID.equals("CNN_CF_20030303.1900.00") && i==3) {
+//				System.out.printf("\n\n\n\n\ngot it\n\n\n");
+//			}
+//			if (sentInstID.equals("5b") && docID.equals("CNN_CF_20030303.1900.00") && i==3) {
+//				System.out.printf("\n\n\n\n\ngot it\n\n\n");
+//			}
+//			if (sentInstID.equals("5c") && docID.equals("CNN_CF_20030303.1900.00") && i==3) {
+//				System.out.printf("\n\n\n\n\ngot it\n\n\n");
+//			}
+			///
 			mechanism.scoreTrigger(specSignals, /*perceptron.triggerScorers,*/ spec, this, i, debug);
 			
 			// Good debug info for signals and scorers!

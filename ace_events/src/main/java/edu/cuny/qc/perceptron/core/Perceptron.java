@@ -80,7 +80,7 @@ public class Perceptron implements java.io.Serializable
 	// the alphabet of features, shared by the whole application
 	public Alphabet featureAlphabet;
 	// the settings of the perceptron
-	public static Controller controller = new Controller();
+	public static Controller controller;// = new Controller();
 	
 	// label bigram
 	//private Map<String, List<String>> labelBigram;
@@ -98,7 +98,7 @@ public class Perceptron implements java.io.Serializable
 	
 	public static int iter=-1; // num of current iteration - public and static for logging
 	public static int i; // num of current sentence - public and static for logging
-	public static boolean inEarlyUpdate=false; //DEBUG
+	//public static boolean inEarlyUpdate=false; //DEBUG
 	
 	// default constructor 
 	public Perceptron(Alphabet featureAlphabet) throws SignalMechanismException
@@ -974,7 +974,7 @@ public class Perceptron implements java.io.Serializable
 			devScore.harmonic_mean = devScore.trigger_F1;
 		}
 
-		if ((devScore.harmonic_mean - maxScore.harmonic_mean) >= 0.001) {
+		if ((devScore.harmonic_mean - maxScore.harmonic_mean) >= 0.00001) {
 			return devScore;
 		}
 		return null;
@@ -1058,12 +1058,13 @@ public class Perceptron implements java.io.Serializable
 					c = c.add(BigDecimal.ONE);
 				}
 				weights.updates = Maps.newHashMap();
+				if(assn.getViolate() || !Perceptron.controller.updateOnlyOnViolation)
+				{
+					earlyUpdate(assn, instance.target, c);
+				}
 				if(assn.getViolate())
 				{
-					inEarlyUpdate = true;
-					earlyUpdate(assn, instance.target, c);
 					error_num ++;
-					inEarlyUpdate = false;
 				}
 				
 				logPostBeamSearch(instance, assn, c, i, wTrain, fTrain, uTrain);

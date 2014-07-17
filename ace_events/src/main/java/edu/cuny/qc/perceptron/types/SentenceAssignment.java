@@ -723,13 +723,13 @@ public class SentenceAssignment
 	{
 		try {
 			// make node feature (bigram feature)
-			List<Map<Integer, Map<ScorerData, SignalInstance>>> tokens = (List<Map<Integer, Map<ScorerData, SignalInstance>>>) problem.get(InstanceAnnotations.NodeTextSignalsBySpec);
+			List<Map<String, Map<ScorerData, SignalInstance>>> tokens = (List<Map<String, Map<ScorerData, SignalInstance>>>) problem.get(InstanceAnnotations.NodeTextSignalsBySpec);
 			/// DEBUG
 			if (tokens == null) {
 				System.out.println(problem);
 			}
 			////
-			Map<Integer, Map<ScorerData, SignalInstance>> token = tokens.get(i);
+			Map<String, Map<ScorerData, SignalInstance>> token = tokens.get(i);
 			//String previousLabel = this.getLabelAtToken(i-1);
 			String label = this.getLabelAtToken(i);
 			String genericLabel = getGenericTriggerLabel(label);
@@ -762,13 +762,16 @@ public class SentenceAssignment
 	//					}
 	//					///
 						//Map<ScorerData, SignalInstance> signalsOfLabel = token.get(associatedSpecLabel);
-						Integer associatedSpecNum = problem.types.triggerTypes.get(associatedSpecLabel);
-						Map<ScorerData, SignalInstance> signalsOfLabel = token.get(associatedSpecNum);
+						
+						//Integer associatedSpecNum = problem.types.triggerTypes.get(associatedSpecLabel);
+						Map<ScorerData, SignalInstance> signalsOfLabel = token.get(associatedSpecLabel);//token.get(associatedSpecNum);
+						
 	//					/// DEBUG
-	//					if (signalsOfLabel == null) {
-	//						System.err.printf("associatedSpecLabel=%s, token=%s\n", associatedSpecLabel, token);
-	//					}
+//						if (problem.sentInstID.equals("5b") && i==3) {
+//							System.err.printf("\n\n\n\nand again...\n\n\n");
+//						}
 	//					///
+						
 						for (SignalInstance signal : signalsOfLabel.values()) {
 							List<SignalInstance> signals = Arrays.asList(new SignalInstance[] {signal});
 							BigDecimal featureValuePositive = signal.positive ? FEATURE_POSITIVE_VAL : FEATURE_NEGATIVE_VAL;

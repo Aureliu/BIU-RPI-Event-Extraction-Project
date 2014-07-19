@@ -90,9 +90,9 @@ public class Perceptron implements java.io.Serializable
 	//private Map<String, List<String>> labelBigram;
 	
 	// the weights of features, however, 
-	protected FeatureVector weights;
-	protected FeatureVector avg_weights;
-	protected FeatureVector avg_weights_base; // for average weights update
+	public FeatureVector weights;
+	public FeatureVector avg_weights;
+	public FeatureVector avg_weights_base; // for average weights update
 	
 	public transient List<SignalMechanism> signalMechanisms = new ArrayList<SignalMechanism>();
 	
@@ -225,7 +225,7 @@ public class Perceptron implements java.io.Serializable
 	 * @param trainingList
 	 * @param maxIter
 	 */
-	public void learning(Collection<SentenceInstance> trainingList, Collection<SentenceInstance> devList, int cutoff, String logSuffix)
+	public Score learning(Collection<SentenceInstance> trainingList, Collection<SentenceInstance> devList, int cutoff, String logSuffix)
 	{	
 		Logs logs = new Logs(outFolder, controller, logSuffix);
 		
@@ -269,8 +269,8 @@ public class Perceptron implements java.io.Serializable
 			throw new RuntimeException(e);
 		}
 
-		logs.logTitles(wTrain, fTrain, pTrain, uTrain, bTrain);
-		logs.logTitles(null, fDev, pDev, uDev, bDev);
+		logs.logTitles(wTrain, fTrain, pTrain, uTrain, bTrain, null);
+		logs.logTitles(null, fDev, pDev, uDev, bDev, null);
 		
 		// online learning with beam search and early update
 		long totalTime = 0;
@@ -409,6 +409,7 @@ public class Perceptron implements java.io.Serializable
 		logs.printWeights(wTrain, lastTrainIter, "", Logs.POST_ITERATION_MARK, c, "", "", weights, avg_weights, avg_weights_base);
 		logs.printWeights(wTrain, lastDevIter, "", Logs.POST_ITERATION_MARK, c, "", "", weights, avg_weights, avg_weights_base);
 		
+		return max_score;
 	}
 	
 //	protected List<SentenceInstance> getCanonicalInstanceList(

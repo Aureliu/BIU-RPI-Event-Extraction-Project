@@ -43,8 +43,8 @@ public class Controller implements java.io.Serializable
 	
 	/**
 	 * 0 - only model file
-	 * 1 - model, final weights, performance
-	 * 2 - model, final weights, performance, features (only label per token)
+	 * 1 - model, final weights, performance, updates  - [also "runs" when applicable]
+	 * 2 - model, final weights, performance, updates, features (only label per token)
 	 * 3 - model, final weights, performance, updates, features (only label per token), weights (only vector summary per sentence)
 	 * 4 - model, final weights, performance, updates, features, weights (only vector summary per sentence)
 	 * 5 - model, final weights, performance, updates, features, weights (only vector summary per sentence), beam (only full assignments)

@@ -86,7 +86,7 @@ public class BeamSearch
 					posStr = "" + pos + "-";
 				}
 	
-				if (model.controller.logLevel >= 6) {
+				if (model.controller.logLevel >= Logs.LEVEL_B_2) {
 					List<Map<Class<?>, Object>> tokens = (List<Map<Class<?>, Object>>) instance.get(InstanceAnnotations.Token_FEATURE_MAPs);
 					for (int j=0; j<=assn.getState(); j++) {
 						String lemma = (String) tokens.get(j).get(TokenAnnotations.LemmaAnnotation.class);
@@ -167,7 +167,7 @@ public class BeamSearch
 					}
 				}
 				
-				if (model.controller.logLevel >= 5) {
+				if (model.controller.logLevel >= Logs.LEVEL_B_1) {
 					Utils.print(b, "", "\n", "|", instance.sentInstID,
 							//general
 							Perceptron.iter,//"Iter",

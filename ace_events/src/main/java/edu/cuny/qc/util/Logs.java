@@ -6,6 +6,7 @@ import java.io.PrintStream;
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -13,11 +14,14 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import org.apache.uima.jcas.JCas;
+
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 
 import edu.cuny.qc.perceptron.core.Controller;
 import edu.cuny.qc.perceptron.core.Evaluator.Score;
+import edu.cuny.qc.perceptron.folds.Run;
 import edu.cuny.qc.perceptron.types.FeatureVector;
 import edu.cuny.qc.perceptron.types.SentenceAssignment;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
@@ -28,6 +32,21 @@ public class Logs {
 	public static final String POST_ITERATION_MARK = "PostItr";
 	public static final String LOG_NAME_ID = "ODIE";
 	public static final BigDecimal MINUS_ONE = new BigDecimal("-1"); 
+	
+	public static final int LEVEL_U = 1;
+	public static final int LEVEL_F_1 = 2;
+	public static final int LEVEL_F_2 = 4;
+	public static final int LEVEL_W_1 = 3;
+	public static final int LEVEL_W_2 = 7;
+	public static final int LEVEL_W_3 = 8;
+	public static final int LEVEL_P = 1;
+	public static final int LEVEL_B_1 = 5;
+	public static final int LEVEL_B_2 = 6;
+	public static final int LEVEL_R = 1;
+	public static final int LEVEL_WEIGHTS = 1;
+	public static final int LEVEL_MIN_F_U_W = Math.min(Math.min(LEVEL_U, LEVEL_F_1), LEVEL_W_1);
+	
+	
 	
 	private Controller controller;
 	private String logSuffix; 
@@ -238,8 +257,8 @@ public class Logs {
 	
 	public void printWeights(PrintStream out, Object iter, Object docId, Object sentenceNo, Object c, Object tokens, Object sentenceText,
 			FeatureVector weights, FeatureVector avg_weights, FeatureVector avg_weights_base) {
-		if (  (controller.logLevel >= 7 && sentenceNo.equals(POST_ITERATION_MARK))   ||
-			  (controller.logLevel >= 8)  ) {
+		if (  (controller.logLevel >= Logs.LEVEL_W_2 && sentenceNo.equals(POST_ITERATION_MARK))   ||
+			  (controller.logLevel >= Logs.LEVEL_W_3)  ) {
 			List<String> featureNames = new ArrayList<String>();
 			for (Object feat : weights.getMap().keySet()) {
 				featureNames.add((String) feat);
@@ -265,7 +284,7 @@ public class Logs {
 				);
 			}
 		}
-		if (controller.logLevel >= 3) {
+		if (controller.logLevel >= Logs.LEVEL_W_1) {
 			Utils.print(out, "", "\n", "|", sentenceNo.toString(),
 					iter,
 					docId,
@@ -297,7 +316,7 @@ public class Logs {
 	}
 	
 	public PrintStream getW(String mode) throws FileNotFoundException {
-		if (controller.logLevel >= 3) {
+		if (controller.logLevel >= LEVEL_W_1) {
 			String weightsOutputFilePath = outFolder.getAbsolutePath() + "/" + mode + "-AllWeights-" + LOG_NAME_ID + "." + controller.logLevel + logSuffix + ".tsv";
 			return new PrintStream(weightsOutputFilePath);
 		}
@@ -305,7 +324,7 @@ public class Logs {
 	}
 	
 	public PrintStream getF(String mode) throws FileNotFoundException {
-		if (controller.logLevel >= 2) {
+		if (controller.logLevel >= LEVEL_F_1) {
 			String featuresOutputFilePath = outFolder.getAbsolutePath() + "/" + mode + "-AllFeatures-" + LOG_NAME_ID + "." + controller.logLevel + logSuffix + ".tsv";
 			return new PrintStream(featuresOutputFilePath);
 		}
@@ -313,7 +332,7 @@ public class Logs {
 	}
 	
 	public PrintStream getU(String mode) throws FileNotFoundException {
-		if (controller.logLevel >= 3) {
+		if (controller.logLevel >= LEVEL_U) {
 			String updatesOutputFilePath = outFolder.getAbsolutePath() + "/" + mode + "-AllUpdates-" + LOG_NAME_ID + "." + controller.logLevel + logSuffix + ".tsv";
 			return new PrintStream(updatesOutputFilePath);
 		}
@@ -321,7 +340,7 @@ public class Logs {
 	}
 	
 	public PrintStream getP(String mode) throws FileNotFoundException {
-		if (controller.logLevel >= 1) {
+		if (controller.logLevel >= LEVEL_P) {
 			String performanceOutputFilePath = outFolder.getAbsolutePath() + "/" + mode + "-Performance-" + LOG_NAME_ID + "." + controller.logLevel + logSuffix + ".tsv";
 			return new PrintStream(performanceOutputFilePath);
 		}
@@ -329,14 +348,64 @@ public class Logs {
 	}
 	
 	public PrintStream getB(String mode) throws FileNotFoundException {
-		if (controller.logLevel >= 5) {
+		if (controller.logLevel >= LEVEL_B_1) {
 			String beamsOutputFilePath = outFolder.getAbsolutePath() + "/" + mode + "-AllBeams-" + LOG_NAME_ID + "." + controller.logLevel + logSuffix + ".tsv";
 			return new PrintStream(beamsOutputFilePath);
 		}
 		return null;
 	}
 	
-	public void logTitles(PrintStream w, PrintStream f, PrintStream p, PrintStream u, PrintStream b) {
+	public PrintStream getR(String mode) throws FileNotFoundException {
+		if (controller.logLevel >= LEVEL_R) {
+			String runsOutputFilePath = outFolder.getAbsolutePath() + "/" + mode + "-AllRuns-" + LOG_NAME_ID + "." + controller.logLevel + logSuffix + ".tsv";
+			return new PrintStream(runsOutputFilePath);
+		}
+		return null;
+	}
+	
+	public void logTitles(PrintStream w, PrintStream f, PrintStream p, PrintStream u, PrintStream b, PrintStream r) {
+		if (r != null && controller.logLevel >= LEVEL_R) {
+			Utils.print(r, "", "\n", "|", null,
+					"", //"Id",
+					"", //"IdPerTest",
+					"Train-Triggers", //"Precision",
+					"", //"Recall",
+					"", //"F1",
+					"Dev-Triggers", //"Precision",
+					"", //"Recall",
+					"", //"F1",
+					"Trst-Triggers", //"Precision",
+					"", //"Recall",
+					"", //"F1",
+					"EventLists", //"Train",
+					"", //"TrainMens",
+					"", //"Dev",
+					"", //"DevMens",
+					"", //"Test",
+					"" //"TestMens"
+			);
+			Utils.print(r, "", "\n", "|", null, "");
+			Utils.print(r, "", "\n", "|", null,
+					"Id",
+					"IdPerTest",
+					"Precision",
+					"Recall",
+					"F1",
+					"Precision",
+					"Recall",
+					"F1",
+					"Precision",
+					"Recall",
+					"F1",
+					"Train",
+					"TrainMens",
+					"Dev",
+					"DevMens",
+					"Test",
+					"TestMens"
+			);
+		}
+
 		Utils.print(w, "", "\n", "|", null,			
 				"Iter",
 				"DocID",
@@ -470,333 +539,360 @@ public class Logs {
 	
 	public void logPostBeamSearch(SentenceInstance instance, SentenceAssignment assn, BigDecimal c, Integer iter, int i,
 			FeatureVector weights, FeatureVector avg_weights, FeatureVector avg_weights_base, PrintStream w, PrintStream f, PrintStream u) {
-		//DEBUG
-		String sentText = sentence(instance.textStart);
-		//printf(w, "|%s%d|%s\n", wt.getFeaturesStringSkip(), i, wt.getFeaturesString());
-		printWeights(w, iter, instance.docID, instance.sentInstID, c, instance.size(), sentText, weights, avg_weights, avg_weights_base);
-
-
-		// {SignalName : {Label : {Category : AmountInSentence}}}
-		Map<String, Map<String, Map<String, BigDecimal>>> amounts = Maps.newTreeMap();
-
-		// {SignalName: {Category : AmountInSentence}} - oof and oot ignore labels
-		Map<String, Map<String, BigDecimal>> amountsOO = Maps.newTreeMap();
-
-		List<Map<Class<?>, Object>> tokens = (List<Map<Class<?>, Object>>) instance.get(InstanceAnnotations.Token_FEATURE_MAPs);
-		for (int j=0; j<instance.size(); j++) {
-			String lemma = (String) tokens.get(j).get(TokenAnnotations.LemmaAnnotation.class);
-			Set<Object> allFeaturesSet = new HashSet<Object>();
-			Map<Object, BigDecimal> mapTarget = instance.target.getFeatureVectorSequence().get(j).getMap();
-			
-			String assnLabel = "X";
-			Map<Object, BigDecimal> mapAssn = new HashMap<Object, BigDecimal>();
-			if (j<assn.getFeatureVectorSequence().size()) {
-				mapAssn = assn.getFeatureVectorSequence().get(j).getMap();
-				assnLabel = assn.getLabelAtToken(j);
-			}
-			
-			allFeaturesSet.addAll(mapTarget.keySet());
-			allFeaturesSet.addAll(mapAssn.keySet());
-			List<String> allFeaturesList = new ArrayList<String>(allFeaturesSet.size());
-			for (Object o : allFeaturesSet) {
-				allFeaturesList.add((String) o);
-			}
-			Collections.sort(allFeaturesList);
-			for (String s : allFeaturesList) {						
-				String inTarget = str(mapTarget, s);
-				String inAssn = str(mapAssn, s);
-				String inWeights = str(weights, s);
-				String inAvg = str(avg_weights, s);
+		if (controller.logLevel >= LEVEL_MIN_F_U_W) {
+			//DEBUG
+			String sentText = sentence(instance.textStart);
+			//printf(w, "|%s%d|%s\n", wt.getFeaturesStringSkip(), i, wt.getFeaturesString());
+			printWeights(w, iter, instance.docID, instance.sentInstID, c, instance.size(), sentText, weights, avg_weights, avg_weights_base);
+	
+	
+			// {SignalName : {Label : {Category : AmountInSentence}}}
+			Map<String, Map<String, Map<String, BigDecimal>>> amounts = Maps.newTreeMap();
+	
+			// {SignalName: {Category : AmountInSentence}} - oof and oot ignore labels
+			Map<String, Map<String, BigDecimal>> amountsOO = Maps.newTreeMap();
+	
+			List<Map<Class<?>, Object>> tokens = (List<Map<Class<?>, Object>>) instance.get(InstanceAnnotations.Token_FEATURE_MAPs);
+			for (int j=0; j<instance.size(); j++) {
+				String lemma = (String) tokens.get(j).get(TokenAnnotations.LemmaAnnotation.class);
+				Set<Object> allFeaturesSet = new HashSet<Object>();
+				Map<Object, BigDecimal> mapTarget = instance.target.getFeatureVectorSequence().get(j).getMap();
 				
-				String targetSignal = "N/A"; //getSignalScore(instance.target, j, s);
-				String assnSignal = "N/A"; //getSignalScore(assn, j, s);
+				String assnLabel = "X";
+				Map<Object, BigDecimal> mapAssn = new HashMap<Object, BigDecimal>();
+				if (j<assn.getFeatureVectorSequence().size()) {
+					mapAssn = assn.getFeatureVectorSequence().get(j).getMap();
+					assnLabel = assn.getLabelAtToken(j);
+				}
 				
-				String bothTargetAndAssn = null;
-				String sameTargetAndAssn = "F";
-				if (!inTarget.equals("X") && !inAssn.equals("X")) {
-					bothTargetAndAssn = "T";
-					if (inTarget.equals(inAssn)) {
-						sameTargetAndAssn = "T";
+				if (controller.logLevel >= LEVEL_F_1) {
+				
+					allFeaturesSet.addAll(mapTarget.keySet());
+					allFeaturesSet.addAll(mapAssn.keySet());
+					List<String> allFeaturesList = new ArrayList<String>(allFeaturesSet.size());
+					for (Object o : allFeaturesSet) {
+						allFeaturesList.add((String) o);
 					}
-				}
-				else {
-					bothTargetAndAssn ="F";
-				}
-				
-				if (controller.logLevel >= 4) {
-					Utils.print(f, "", "\n", "|", instance.sentInstID,
-							iter,
-							instance.docID,
-							instance.sentInstID,
-							c,
-							instance.size(),
-							"",//sentText,
-							j,
-							lemma(lemma),
-							instance.target.getLabelAtToken(j),
-							assnLabel,
-							twoLabels(instance.target, assnLabel, j),
-							feature(s),
-							"",//mapTarget.size(),
-							targetSignal,
-							inTarget,
-							"",//mapAssn.size(),
-							assnSignal,
-							inAssn,
-							twoLabelsAndScore(instance.target, assnLabel, j, inAssn),
-							bothTargetAndAssn,
-							sameTargetAndAssn,
-							"",//weights.size(),
-							inWeights,
-							inAvg
-					);
-				}
-			}
-			if (controller.logLevel >= 2) {
-
-				Utils.print(f, "", "\n", "|", instance.sentInstID,
-						iter,
-						instance.docID,
-						instance.sentInstID,
-						c,
-						instance.size(),
-						sentText,
-						j,
-						lemma(lemma),
-						instance.target.getLabelAtToken(j),
-						assnLabel,
-						twoLabels(instance.target, assnLabel, j),
-						"",
-						size(mapTarget),
-						"",
-						"",
-						size(mapAssn),
-						"",
-						"",
-						"",
-						"",
-						"",
-						size(weights),
-						"",
-						""
-				);
-			}
-			
-			if (controller.logLevel >= 3 && j<assn.getFeatureVectorSequence().size()) {
-				String targetLabel = instance.target.getLabelAtToken(j);
-				
-				for (String signalName : SentenceAssignment.signalToFeature.keySet()) {
-					try {
-						String featureName = null;
-						if (SentenceAssignment.signalToFeature.get(signalName).containsKey(assnLabel)) {
-							// Due to deisgn limitations of the table, all data under categories (eg LBL,O,T)
-							// would refer only to P+. P- won't be mentioned there (but is basically the opposite of the third portion).
-							featureName = SentenceAssignment.signalToFeature.get(signalName).get(assnLabel).get("P+");
-						}
-						// {label : {category : amount}}
-						Map<String, Map<String, BigDecimal>> forSignalName = amounts.get(signalName);
-						if (forSignalName == null) {
-							forSignalName = Maps.newLinkedHashMap();
-							amounts.put(signalName, forSignalName);
-						}
-						Map<String, BigDecimal> forSignalNameOO = amountsOO.get(signalName);
-						if (forSignalNameOO == null) {
-							forSignalNameOO = Maps.newLinkedHashMap();
-							amountsOO.put(signalName, forSignalNameOO);
-						}
+					Collections.sort(allFeaturesList);
+					for (String s : allFeaturesList) {						
+						String inTarget = str(mapTarget, s);
+						String inAssn = str(mapAssn, s);
+						String inWeights = str(weights, s);
+						String inAvg = str(avg_weights, s);
 						
-						boolean targetIsO = targetLabel.equals(SentenceAssignment.PAD_Trigger_Label);
-						boolean assnIsO = assnLabel.equals(SentenceAssignment.PAD_Trigger_Label);
+						String targetSignal = "N/A"; //getSignalScore(instance.target, j, s);
+						String assnSignal = "N/A"; //getSignalScore(assn, j, s);
 						
-						/// DEBUG
-//						if (instance.sentInstID.equals("5a")) {
-//							System.err.printf("\n\n\n5a\n\n\n");
-//						}
-						///
-						
-						if (targetIsO && assnIsO) {
-							addAccordingly(mapAssn, forSignalNameOO, "O,O,T", "O,O,F", featureName);
-						}
-						else if (targetIsO && !assnIsO) {
-							addAccordingly(mapAssn, forSignalName, assnLabel, "O,LBL,T", "O,LBL,F", featureName);
-						}
-						else if (!targetIsO && assnIsO) {
-							addAccordingly(mapAssn, forSignalName, targetLabel, "LBL,O,T", "LBL,O,F", featureName);
-						}
-						else if (!targetIsO && !assnIsO) {
-							if (targetLabel.equals(assnLabel)) {
-								addAccordingly(mapAssn, forSignalName, targetLabel, "LBL,LBL,T", "LBL,LBL,F", featureName);
-							}
-							else {
-								addAccordingly(mapAssn, forSignalName, assnLabel, "weird,weird,T", "weird,weird,F", featureName);
-								addAccordingly(mapAssn, forSignalName, targetLabel, "weird,weird,T", "weird,weird,F", featureName);
+						String bothTargetAndAssn = null;
+						String sameTargetAndAssn = "F";
+						if (!inTarget.equals("X") && !inAssn.equals("X")) {
+							bothTargetAndAssn = "T";
+							if (inTarget.equals(inAssn)) {
+								sameTargetAndAssn = "T";
 							}
 						}
+						else {
+							bothTargetAndAssn ="F";
+						}
+						
+						if (controller.logLevel >= LEVEL_F_2) {
+							Utils.print(f, "", "\n", "|", instance.sentInstID,
+									iter,
+									instance.docID,
+									instance.sentInstID,
+									c,
+									instance.size(),
+									"",//sentText,
+									j,
+									lemma(lemma),
+									instance.target.getLabelAtToken(j),
+									assnLabel,
+									twoLabels(instance.target, assnLabel, j),
+									feature(s),
+									"",//mapTarget.size(),
+									targetSignal,
+									inTarget,
+									"",//mapAssn.size(),
+									assnSignal,
+									inAssn,
+									twoLabelsAndScore(instance.target, assnLabel, j, inAssn),
+									bothTargetAndAssn,
+									sameTargetAndAssn,
+									"",//weights.size(),
+									inWeights,
+									inAvg
+							);
+						}
 					}
-					catch (RuntimeException e) {
-						throw new RuntimeException(
-								String.format("Exception in inst=%s, j=%s, targetLabel=%s, assnLabel=%s sig=%s.", instance, j, targetLabel, assnLabel, signalName), e);
-					}
-				}
-			}
-		}
+					if (controller.logLevel >= LEVEL_F_1) {
 		
-		if (controller.logLevel >= 3) {
-			for (String signalName : SentenceAssignment.signalToFeature.keySet()) {
-				Map<String, Map<String, BigDecimal>> forSignalName = amounts.get(signalName);
-				Map<String, BigDecimal> forSignalNameOO = amountsOO.get(signalName);
-				for (String label : forSignalName.keySet()) {
-					try {
-						Map<String, BigDecimal> forLabel = forSignalName.get(label);
-						
-						// Explaining this horrible convention: pp=P+ (p plus), pm=P- (p minus)
-						// and if you get a similar weird null regarding O (and not some LBL), then maybe do an if for it as well :)
-						String featureNameLBLpp="";
-						String featureNameLBLpm="";
-						String featureNameOpp="";
-						String featureNameOpm="";
-						BigDecimal weightLBLpp=BigDecimal.ZERO;
-						BigDecimal weightLBLpm=BigDecimal.ZERO;
-						BigDecimal weightOpp=BigDecimal.ZERO;
-						BigDecimal weightOpm=BigDecimal.ZERO;
-						String weightLBLStrpp="X";
-						String weightLBLStrpm="X";
-						String weightOStrpp="X";
-						String weightOStrpm="X";
-						BigDecimal changeLBLpp=BigDecimal.ZERO;
-						BigDecimal changeLBLpm=BigDecimal.ZERO;
-						BigDecimal changeOpp=BigDecimal.ZERO;
-						BigDecimal changeOpm=BigDecimal.ZERO;
-						String changeLBLStrpp="X";
-						String changeLBLStrpm="X";
-						String changeOStrpp="X";
-						String changeOStrpm="X";
-						
-						// this is a rather subtle point - we have this feature only if makeFeature() was called on it,
-						// but it must also be in weight (makeFeature() could have been called on an assn that
-						// was eventually not the one chosen in the beam)
-						boolean featureLBLppExists = false;
-						if (SentenceAssignment.signalToFeature.get(signalName).get(label) != null &&
-							SentenceAssignment.signalToFeature.get(signalName).get(label).get("P+") != null) {
-							featureNameLBLpp = SentenceAssignment.signalToFeature.get(signalName).get(label).get("P+");
-							weightLBLpp = weights.get(featureNameLBLpp);
-							if (weightLBLpp!=null) {
-								featureLBLppExists = true;
-								weightLBLStrpp = FMT.format(weightLBLpp);
-							}
-						}
-						boolean featureLBLpmExists = false;
-						if (SentenceAssignment.signalToFeature.get(signalName).get(label) != null &&
-							SentenceAssignment.signalToFeature.get(signalName).get(label).get("P-") != null) {
-							featureNameLBLpm = SentenceAssignment.signalToFeature.get(signalName).get(label).get("P-");
-							weightLBLpm = weights.get(featureNameLBLpm);
-							if (weightLBLpm!=null) {
-								featureLBLpmExists = true;
-								weightLBLStrpm = FMT.format(weightLBLpm);
-							}
-						}
-						boolean featureOppExists = false;
-						if (SentenceAssignment.signalToFeature.get(signalName).get(SentenceAssignment.PAD_Trigger_Label) != null &&
-							SentenceAssignment.signalToFeature.get(signalName).get(SentenceAssignment.PAD_Trigger_Label).get("P+") != null) {
-							featureNameOpp = SentenceAssignment.signalToFeature.get(signalName).get(SentenceAssignment.PAD_Trigger_Label).get("P+");
-							weightOpp = weights.get(featureNameOpp);
-							if (weightOpp!=null) {
-								featureOppExists = true;
-								weightOStrpp = FMT.format(weightOpp);
-							}
-						}
-						boolean featureOpmExists = false;
-						if (SentenceAssignment.signalToFeature.get(signalName).get(SentenceAssignment.PAD_Trigger_Label) != null &&
-							SentenceAssignment.signalToFeature.get(signalName).get(SentenceAssignment.PAD_Trigger_Label).get("P-") != null) {
-							featureNameOpm = SentenceAssignment.signalToFeature.get(signalName).get(SentenceAssignment.PAD_Trigger_Label).get("P-");
-							weightOpm = weights.get(featureNameOpm);
-							if (weightOpm!=null) {
-								featureOpmExists = true;
-								weightOStrpm = FMT.format(weightOpm);
-							}
-						}
-
-						// we are only marking "change", if it happened to both features in the same token
-						// otherwise, most-likely O was changed with a different LBL, so we don't want to show it in this row
-						// (if we would, it would make weird distortions, like showing there was change even though
-						// only none-change categories are on)
-						if ((featureLBLppExists && featureOppExists) || (featureLBLpmExists && featureOpmExists)) {
-							for (Map<Object, BigDecimal> featureChangesOnSameToken : weights.updates.values()) {
-								if (featureChangesOnSameToken.containsKey(featureNameLBLpp) && featureChangesOnSameToken.containsKey(featureNameOpp)) {
-									changeLBLpp = featureChangesOnSameToken.get(featureNameLBLpp);
-									changeOpp = featureChangesOnSameToken.get(featureNameOpp);
-									changeLBLStrpp = FMT.format(changeLBLpp);
-									changeOStrpp = FMT.format(changeOpp);
-								}
-								if (featureChangesOnSameToken.containsKey(featureNameLBLpm) && featureChangesOnSameToken.containsKey(featureNameOpm)) {
-									changeLBLpm = featureChangesOnSameToken.get(featureNameLBLpm);
-									changeOpm = featureChangesOnSameToken.get(featureNameOpm);
-									changeLBLStrpm = FMT.format(changeLBLpm);
-									changeOStrpm = FMT.format(changeOpm);
-								}
-							}
-						}
-						
-						boolean changePp = (changeLBLpp!=BigDecimal.ZERO || changeOpp!=BigDecimal.ZERO);
-						boolean changePm = (changeLBLpm!=BigDecimal.ZERO || changeOpm!=BigDecimal.ZERO);
-						boolean anyChange = (changePp || changePm);
-						String changePpStr = changePp?"T":"F";
-						String changePmStr = changePm?"T":"F";
-						String anyChangeStr = anyChange?"T":"F";
-						
-						List<String> summary = Lists.newArrayList();
-						addSummary(summary, forSignalNameOO, "O,O,F");
-						addSummary(summary, forSignalNameOO, "O,O,T");
-						addSummary(summary, forLabel, "LBL,O,T");
-						addSummary(summary, forLabel, "O,LBL,F");
-						addSummary(summary, forLabel, "LBL,LBL,T");
-						addSummary(summary, forLabel, "O,LBL,T");
-						addSummary(summary, forLabel, "LBL,O,F");
-						addSummary(summary, forLabel, "LBL,LBL,F");
-						addSummary(summary, forLabel, "weird,weird,F");
-						addSummary(summary, forLabel, "weird,weird,T");
-					
-						Utils.print(u, "", "\n", "|", null,
-								iter, //Iter
-								String.format("%s:%s", instance.docID, instance.sentInstID), //"DocID:SentenceNo"
-								instance.target.getState(),//"Tokens"
-								assn.getState(),//"TokensProcessed"
-								signalName, //"SignalName"
-								label, //"Label"
-								
-								weightLBLStrpp, //"Weight:LBL:P+"
-								weightLBLStrpm, //"Weight:LBL:P-"
-								weightOStrpp, //"Weight:O:P+"
-								weightOStrpm, //"Weight:O:P-"
-								anyChangeStr, //"AnyChange"
-								changePpStr, //
-								changePmStr,
-								changeLBLStrpp, // "Change:LBL:P+"
-								changeLBLStrpm, // "Change:LBL:P-"
-								changeOStrpp, // "Change:O:P+"
-								changeOStrpm, // "Change:O:P-"
-								String.format("Change=%s:%s*%s", changePpStr, changePmStr, summary), //"Summary"
-
-								forSignalNameOO.get("O,O,F"),
-								forLabel.get("LBL,O,T"),
-								forLabel.get("O,LBL,F"),
-								forLabel.get("LBL,LBL,T"),
-								forLabel.get("O,LBL,T"),
-								forLabel.get("LBL,O,F"),
-								forSignalNameOO.get("O,O,T"),
-								forLabel.get("LBL,LBL,F"),
-								forLabel.get("weird,weird,F"),
-								forLabel.get("weird,weird,T")
-								
+						Utils.print(f, "", "\n", "|", instance.sentInstID,
+								iter,
+								instance.docID,
+								instance.sentInstID,
+								c,
+								instance.size(),
+								sentText,
+								j,
+								lemma(lemma),
+								instance.target.getLabelAtToken(j),
+								assnLabel,
+								twoLabels(instance.target, assnLabel, j),
+								"",
+								size(mapTarget),
+								"",
+								"",
+								size(mapAssn),
+								"",
+								"",
+								"",
+								"",
+								"",
+								size(weights),
+								"",
+								""
 						);
 					}
-					catch (RuntimeException e) {
-						throw new RuntimeException(String.format("Exception for instance=%s, sig=%s, label=%s", instance, signalName, label), e);
+				}
+				
+				if (controller.logLevel >= LEVEL_U && j<assn.getFeatureVectorSequence().size()) {
+					String targetLabel = instance.target.getLabelAtToken(j);
+					
+					for (String signalName : SentenceAssignment.signalToFeature.keySet()) {
+						try {
+							String featureName = null;
+							if (SentenceAssignment.signalToFeature.get(signalName).containsKey(assnLabel)) {
+								// Due to deisgn limitations of the table, all data under categories (eg LBL,O,T)
+								// would refer only to P+. P- won't be mentioned there (but is basically the opposite of the third portion).
+								featureName = SentenceAssignment.signalToFeature.get(signalName).get(assnLabel).get("P+");
+							}
+							// {label : {category : amount}}
+							Map<String, Map<String, BigDecimal>> forSignalName = amounts.get(signalName);
+							if (forSignalName == null) {
+								forSignalName = Maps.newLinkedHashMap();
+								amounts.put(signalName, forSignalName);
+							}
+							Map<String, BigDecimal> forSignalNameOO = amountsOO.get(signalName);
+							if (forSignalNameOO == null) {
+								forSignalNameOO = Maps.newLinkedHashMap();
+								amountsOO.put(signalName, forSignalNameOO);
+							}
+							
+							boolean targetIsO = targetLabel.equals(SentenceAssignment.PAD_Trigger_Label);
+							boolean assnIsO = assnLabel.equals(SentenceAssignment.PAD_Trigger_Label);
+							
+							/// DEBUG
+	//						if (instance.sentInstID.equals("5a")) {
+	//							System.err.printf("\n\n\n5a\n\n\n");
+	//						}
+							///
+							
+							if (targetIsO && assnIsO) {
+								addAccordingly(mapAssn, forSignalNameOO, "O,O,T", "O,O,F", featureName);
+							}
+							else if (targetIsO && !assnIsO) {
+								addAccordingly(mapAssn, forSignalName, assnLabel, "O,LBL,T", "O,LBL,F", featureName);
+							}
+							else if (!targetIsO && assnIsO) {
+								addAccordingly(mapAssn, forSignalName, targetLabel, "LBL,O,T", "LBL,O,F", featureName);
+							}
+							else if (!targetIsO && !assnIsO) {
+								if (targetLabel.equals(assnLabel)) {
+									addAccordingly(mapAssn, forSignalName, targetLabel, "LBL,LBL,T", "LBL,LBL,F", featureName);
+								}
+								else {
+									addAccordingly(mapAssn, forSignalName, assnLabel, "weird,weird,T", "weird,weird,F", featureName);
+									addAccordingly(mapAssn, forSignalName, targetLabel, "weird,weird,T", "weird,weird,F", featureName);
+								}
+							}
+						}
+						catch (RuntimeException e) {
+							throw new RuntimeException(
+									String.format("Exception in inst=%s, j=%s, targetLabel=%s, assnLabel=%s sig=%s.", instance, j, targetLabel, assnLabel, signalName), e);
+						}
+					}
+				}
+			}
+			
+			if (controller.logLevel >= LEVEL_U) {
+				for (String signalName : SentenceAssignment.signalToFeature.keySet()) {
+					Map<String, Map<String, BigDecimal>> forSignalName = amounts.get(signalName);
+					Map<String, BigDecimal> forSignalNameOO = amountsOO.get(signalName);
+					for (String label : forSignalName.keySet()) {
+						try {
+							Map<String, BigDecimal> forLabel = forSignalName.get(label);
+							
+							// Explaining this horrible convention: pp=P+ (p plus), pm=P- (p minus)
+							// and if you get a similar weird null regarding O (and not some LBL), then maybe do an if for it as well :)
+							String featureNameLBLpp="";
+							String featureNameLBLpm="";
+							String featureNameOpp="";
+							String featureNameOpm="";
+							BigDecimal weightLBLpp=BigDecimal.ZERO;
+							BigDecimal weightLBLpm=BigDecimal.ZERO;
+							BigDecimal weightOpp=BigDecimal.ZERO;
+							BigDecimal weightOpm=BigDecimal.ZERO;
+							String weightLBLStrpp="X";
+							String weightLBLStrpm="X";
+							String weightOStrpp="X";
+							String weightOStrpm="X";
+							BigDecimal changeLBLpp=BigDecimal.ZERO;
+							BigDecimal changeLBLpm=BigDecimal.ZERO;
+							BigDecimal changeOpp=BigDecimal.ZERO;
+							BigDecimal changeOpm=BigDecimal.ZERO;
+							String changeLBLStrpp="X";
+							String changeLBLStrpm="X";
+							String changeOStrpp="X";
+							String changeOStrpm="X";
+							
+							// this is a rather subtle point - we have this feature only if makeFeature() was called on it,
+							// but it must also be in weight (makeFeature() could have been called on an assn that
+							// was eventually not the one chosen in the beam)
+							boolean featureLBLppExists = false;
+							if (SentenceAssignment.signalToFeature.get(signalName).get(label) != null &&
+								SentenceAssignment.signalToFeature.get(signalName).get(label).get("P+") != null) {
+								featureNameLBLpp = SentenceAssignment.signalToFeature.get(signalName).get(label).get("P+");
+								weightLBLpp = weights.get(featureNameLBLpp);
+								if (weightLBLpp!=null) {
+									featureLBLppExists = true;
+									weightLBLStrpp = FMT.format(weightLBLpp);
+								}
+							}
+							boolean featureLBLpmExists = false;
+							if (SentenceAssignment.signalToFeature.get(signalName).get(label) != null &&
+								SentenceAssignment.signalToFeature.get(signalName).get(label).get("P-") != null) {
+								featureNameLBLpm = SentenceAssignment.signalToFeature.get(signalName).get(label).get("P-");
+								weightLBLpm = weights.get(featureNameLBLpm);
+								if (weightLBLpm!=null) {
+									featureLBLpmExists = true;
+									weightLBLStrpm = FMT.format(weightLBLpm);
+								}
+							}
+							boolean featureOppExists = false;
+							if (SentenceAssignment.signalToFeature.get(signalName).get(SentenceAssignment.PAD_Trigger_Label) != null &&
+								SentenceAssignment.signalToFeature.get(signalName).get(SentenceAssignment.PAD_Trigger_Label).get("P+") != null) {
+								featureNameOpp = SentenceAssignment.signalToFeature.get(signalName).get(SentenceAssignment.PAD_Trigger_Label).get("P+");
+								weightOpp = weights.get(featureNameOpp);
+								if (weightOpp!=null) {
+									featureOppExists = true;
+									weightOStrpp = FMT.format(weightOpp);
+								}
+							}
+							boolean featureOpmExists = false;
+							if (SentenceAssignment.signalToFeature.get(signalName).get(SentenceAssignment.PAD_Trigger_Label) != null &&
+								SentenceAssignment.signalToFeature.get(signalName).get(SentenceAssignment.PAD_Trigger_Label).get("P-") != null) {
+								featureNameOpm = SentenceAssignment.signalToFeature.get(signalName).get(SentenceAssignment.PAD_Trigger_Label).get("P-");
+								weightOpm = weights.get(featureNameOpm);
+								if (weightOpm!=null) {
+									featureOpmExists = true;
+									weightOStrpm = FMT.format(weightOpm);
+								}
+							}
+	
+							// we are only marking "change", if it happened to both features in the same token
+							// otherwise, most-likely O was changed with a different LBL, so we don't want to show it in this row
+							// (if we would, it would make weird distortions, like showing there was change even though
+							// only none-change categories are on)
+							if ((featureLBLppExists && featureOppExists) || (featureLBLpmExists && featureOpmExists)) {
+								for (Map<Object, BigDecimal> featureChangesOnSameToken : weights.updates.values()) {
+									if (featureChangesOnSameToken.containsKey(featureNameLBLpp) && featureChangesOnSameToken.containsKey(featureNameOpp)) {
+										changeLBLpp = featureChangesOnSameToken.get(featureNameLBLpp);
+										changeOpp = featureChangesOnSameToken.get(featureNameOpp);
+										changeLBLStrpp = FMT.format(changeLBLpp);
+										changeOStrpp = FMT.format(changeOpp);
+									}
+									if (featureChangesOnSameToken.containsKey(featureNameLBLpm) && featureChangesOnSameToken.containsKey(featureNameOpm)) {
+										changeLBLpm = featureChangesOnSameToken.get(featureNameLBLpm);
+										changeOpm = featureChangesOnSameToken.get(featureNameOpm);
+										changeLBLStrpm = FMT.format(changeLBLpm);
+										changeOStrpm = FMT.format(changeOpm);
+									}
+								}
+							}
+							
+							boolean changePp = (changeLBLpp!=BigDecimal.ZERO || changeOpp!=BigDecimal.ZERO);
+							boolean changePm = (changeLBLpm!=BigDecimal.ZERO || changeOpm!=BigDecimal.ZERO);
+							boolean anyChange = (changePp || changePm);
+							String changePpStr = changePp?"T":"F";
+							String changePmStr = changePm?"T":"F";
+							String anyChangeStr = anyChange?"T":"F";
+							
+							List<String> summary = Lists.newArrayList();
+							addSummary(summary, forSignalNameOO, "O,O,F");
+							addSummary(summary, forSignalNameOO, "O,O,T");
+							addSummary(summary, forLabel, "LBL,O,T");
+							addSummary(summary, forLabel, "O,LBL,F");
+							addSummary(summary, forLabel, "LBL,LBL,T");
+							addSummary(summary, forLabel, "O,LBL,T");
+							addSummary(summary, forLabel, "LBL,O,F");
+							addSummary(summary, forLabel, "LBL,LBL,F");
+							addSummary(summary, forLabel, "weird,weird,F");
+							addSummary(summary, forLabel, "weird,weird,T");
+						
+							Utils.print(u, "", "\n", "|", null,
+									iter, //Iter
+									String.format("%s:%s", instance.docID, instance.sentInstID), //"DocID:SentenceNo"
+									instance.target.getState(),//"Tokens"
+									assn.getState(),//"TokensProcessed"
+									signalName, //"SignalName"
+									label, //"Label"
+									
+									weightLBLStrpp, //"Weight:LBL:P+"
+									weightLBLStrpm, //"Weight:LBL:P-"
+									weightOStrpp, //"Weight:O:P+"
+									weightOStrpm, //"Weight:O:P-"
+									anyChangeStr, //"AnyChange"
+									changePpStr, //
+									changePmStr,
+									changeLBLStrpp, // "Change:LBL:P+"
+									changeLBLStrpm, // "Change:LBL:P-"
+									changeOStrpp, // "Change:O:P+"
+									changeOStrpm, // "Change:O:P-"
+									String.format("Change=%s:%s*%s", changePpStr, changePmStr, summary), //"Summary"
+	
+									forSignalNameOO.get("O,O,F"),
+									forLabel.get("LBL,O,T"),
+									forLabel.get("O,LBL,F"),
+									forLabel.get("LBL,LBL,T"),
+									forLabel.get("O,LBL,T"),
+									forLabel.get("LBL,O,F"),
+									forSignalNameOO.get("O,O,T"),
+									forLabel.get("LBL,LBL,F"),
+									forLabel.get("weird,weird,F"),
+									forLabel.get("weird,weird,T")
+									
+							);
+						}
+						catch (RuntimeException e) {
+							throw new RuntimeException(String.format("Exception for instance=%s, sig=%s, label=%s", instance, signalName, label), e);
+						}
 					}
 				}
 			}
 		}
-		////////////
 	}
 	
+	public void logRun(PrintStream r, Run run, Score bestDevScore, Collection<JCas> trainTypes, Collection<JCas> devTypes, Collection<JCas> testTypes) {
+		if (controller.logLevel >= LEVEL_R) {
+			Utils.print(r, "", "\n", "|", null,
+					run.id, //"Id",
+					run.idPerTest,//"IdPerTest",
+					"",//"Precision",
+					"",//"Recall",
+					"",//"F1",
+					bestDevScore.trigger_precision,//"Precision",
+					bestDevScore.trigger_recall,//"Recall",
+					bestDevScore.trigger_F1,//"F1",
+					"",//"Precision",
+					"",//"Recall",
+					"",//"F1",
+					labelList(trainTypes),//"Train",
+					"TrainMens",
+					"Dev",
+					"DevMens",
+					"Test",
+					"TestMens"
+					
+		}
+	}
 }

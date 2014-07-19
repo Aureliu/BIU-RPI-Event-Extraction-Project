@@ -34,6 +34,7 @@ import edu.cuny.qc.perceptron.types.Document;
 import edu.cuny.qc.perceptron.types.Sentence;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
 import edu.cuny.qc.scorer.SignalMechanismsContainer;
+import edu.cuny.qc.util.Logs;
 import edu.cuny.qc.util.PosMap;
 import edu.cuny.qc.util.UnsupportedParameterException;
 import edu.cuny.qc.util.Utils;
@@ -338,7 +339,7 @@ public class Pipeline
 		
 		PrintStream weightsOut = null;
 		PrintStream weightsAvgOut = null;
-		if (controller.logLevel >= 1) {
+		if (controller.logLevel >= Logs.LEVEL_WEIGHTS) {
 			weightsOut = new PrintStream(modelFile.getAbsoluteFile() + "." + controller.logLevel + logSuffix + ".weights");
 			weightsAvgOut = new PrintStream(modelFile.getAbsoluteFile() + "." + controller.logLevel + logSuffix + ".avg_weights");
 		}

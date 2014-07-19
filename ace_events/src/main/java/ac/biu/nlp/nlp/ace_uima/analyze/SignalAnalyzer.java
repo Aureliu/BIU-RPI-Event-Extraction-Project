@@ -36,13 +36,15 @@ import edu.cuny.qc.perceptron.types.SignalInstance;
 import edu.cuny.qc.perceptron.types.SentenceInstance.InstanceAnnotations;
 import edu.cuny.qc.scorer.ScorerData;
 import edu.cuny.qc.scorer.SignalMechanism;
+import edu.cuny.qc.scorer.SignalMechanismsContainer;
+import edu.cuny.qc.util.Utils;
 
 public class SignalAnalyzer {
 	private static final String CORPUS_DIR = "src/main/resources/corpus/qi";
 	private static final String CONTROLLER_PARAMS =
 					"beamSize=4 maxIterNum=20 skipNonEventSent=true avgArguments=true skipNonArgument=true useGlobalFeature=false " +
 					"addNeverSeenFeatures=true crossSent=false crossSentReranking=false order=0 evaluatorType=1 learnBigrams=true logLevel=3 " +
-					"oMethod=F serialization=BZ2 onlyAnalysis=true";
+					"oMethod=F serialization=BZ2 featureProfile=ANALYSIS";
 	private static SignalAnalyzerDocumentCollection docs = new SignalAnalyzerDocumentCollection();
 	private static final int SENTENCE_PRINT_FREQ = 200;
 	private static final int SENTENCE_GC_FREQ = 20000;
@@ -61,9 +63,9 @@ public class SignalAnalyzer {
 		File argFile = new File(outputFolder, argDocName);
 		File globalFile = new File(outputFolder, globalDocName);
 		
-		fileInit(triggerFile);
-		fileInit(argFile);
-		fileInit(globalFile);
+		Utils.fileInit(triggerFile);
+		Utils.fileInit(argFile);
+		Utils.fileInit(globalFile);
 
 		List<String> specXmlPaths = SpecHandler.readSpecListFile(specList);
 		TypesContainer types = new TypesContainer(specXmlPaths, false);
@@ -71,9 +73,10 @@ public class SignalAnalyzer {
 		controller.setValueFromArguments(StringUtils.split(CONTROLLER_PARAMS));
 		controller.usePreprocessFiles = useDumps;
 		controller.useSignalFiles = useDumps;
-		Perceptron perceptron = new Perceptron(null, controller, outputFolder);
+		SignalMechanismsContainer signalMechanismsContainer = new SignalMechanismsContainer(controller);
+		//Perceptron perceptron = new Perceptron(null, controller, outputFolder, signalMechanismsContainer);
 		
-		List<SentenceInstance> goldInstances = Pipeline.readInstanceList(perceptron, types, new File(CORPUS_DIR), inputFileList, new Alphabet(), false, true);
+		Collection<SentenceInstance> goldInstances = Pipeline.readInstanceList(controller, signalMechanismsContainer, types, new File(CORPUS_DIR), inputFileList, new Alphabet(), false, true).values();
 		//SignalPerformanceField.goldInstances = goldInstances;
 		System.out.printf("[%s] Finished reading documents, starting to process %s sentences\n", new Date(), goldInstances.size());
 		
@@ -85,12 +88,12 @@ public class SignalAnalyzer {
 			SentenceInstance problem = sentIter.next();
 			
 			if (sentNum >= debugMinSentence) {
-				System.err.printf("\n%s start %s (%s tokens), ", Pipeline.detailedLog(), sentNum, problem.size());
+				System.err.printf("\n%s start %s (%s tokens), ", Utils.detailedLog(), sentNum, problem.size());
 			}
 				
 			sentNum++;
 			if (sentNum % SENTENCE_PRINT_FREQ == 1) {
-				System.out.printf("%s Processing sentence %s\n", Pipeline.detailedLog(), sentNum);
+				System.out.printf("%s Processing sentence %s\n", Utils.detailedLog(), sentNum);
 			}
 			Map<ScorerData, SentenceAssignment> assignments = new HashMap<ScorerData, SentenceAssignment>();
 			String triggerLabel = SpecAnnotator.getSpecLabel(problem.associatedSpec);
@@ -266,7 +269,7 @@ public class SignalAnalyzer {
 			}
 
 			if (sentNum % SENTENCE_PRINT_FREQ == 1) {
-				System.out.printf("%s Sentence %s: finished token fields\n", Pipeline.detailedLog(), sentNum);
+				System.out.printf("%s Sentence %s: finished token fields\n", Utils.detailedLog(), sentNum);
 			}
 			//System.gc();
 
@@ -300,7 +303,7 @@ public class SignalAnalyzer {
 			sentIter.remove();
 			
 			if (sentNum % SENTENCE_PRINT_FREQ == 1) {
-				System.out.printf("%s Sentence %s: finished perofrmance (and the sentence itself)\n", Pipeline.detailedLog(), sentNum);
+				System.out.printf("%s Sentence %s: finished perofrmance (and the sentence itself)\n", Utils.detailedLog(), sentNum);
 			}
 			
 			if (sentNum >= debugMinSentence) {
@@ -318,18 +321,6 @@ public class SignalAnalyzer {
 		System.out.printf("[%s] Fully done!\n", new Date());
 	}
 	
-	public static void fileInit(File f) throws FileNotFoundException {
-		File prev = new File(f.getAbsolutePath() + ".previous");
-		if (prev.isFile()) {
-			prev.delete();
-		}
-		if (f.isFile()) {
-			f.renameTo(prev);
-		}
-		PrintStream p = new PrintStream(f);
-		p.printf("(file is writable - verified)");
-		p.close();
-	}
 	/**
 	 * Horrible horrible log stuff I must do, to keep jwnl from yelling "WARN data.PointerUtils: DICTIONARY_WARN_001" all the time
 	 * @throws IOException 

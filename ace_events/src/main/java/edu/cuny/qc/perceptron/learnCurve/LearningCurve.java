@@ -29,6 +29,9 @@ import org.apache.uima.util.InvalidXMLException;
 import org.dom4j.DocumentException;
 import org.xml.sax.SAXException;
 
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.Lists;
+
 import ac.biu.nlp.nlp.ie.onthefly.input.AeException;
 
 import edu.cuny.qc.ace.acetypes.AceDocument;
@@ -36,7 +39,7 @@ import edu.cuny.qc.ace.acetypes.Scorer;
 import edu.cuny.qc.ace.acetypes.Scorer.Stats;
 import edu.cuny.qc.perceptron.core.Decoder;
 import edu.cuny.qc.perceptron.core.Pipeline;
-import edu.cuny.qc.util.LoggerUtils;
+import edu.cuny.qc.util.Log4jUtils;
 import eu.excitementproject.eop.common.utilities.uima.UimaUtilsException;
 ***/
 
@@ -99,7 +102,7 @@ public class LearningCurve {
 	public static final String JOKER_TYPE_NAME = "#ALL";
 
 	protected static final Random RANDOM = new Random();
-	protected static Logger logger = LoggerUtils.initLog(LearningCurve.class);
+	protected static Logger logger = Log4jUtils.initLog(LearningCurve.class);
 
 	protected static List<String> loadFileToList(File f) throws IOException {
 		Reader reader = new FileReader(f);
@@ -470,20 +473,27 @@ public class LearningCurve {
 			String singleEventType = "null";
 			if (!eventType.equals(JOKER_TYPE_NAME)) {
 				singleEventType = eventType;
-				TRAIN_OTHER_ARGS_ARR[TRAIN_OTHER_ARGS_ARR.length-1] = "learnBigrams=false"; //in a single type scenario, bigrams must include just the single type, and not be learned.
+				//TRAIN_OTHER_ARGS_ARR[TRAIN_OTHER_ARGS_ARR.length-1] = "learnBigrams=false"; //in a single type scenario, bigrams must include just the single type, and not be learned.
 			}
 
+			System.err.printf("## Hack#1: shamefully manipulating command line args for training\n");
 			String[] args = new String[] {
 					ACE_PATH,
 					tempTrainDocList,
 					String.format(MODEL_FILENAME, outputFolder, i, t, j, trainSet.size(), mentionsInTrainSet),
 					devDocsList,
-					singleEventType,
+					//singleEventType,
+					
+					//////##Hack#1
+					"src/main/resources/specs/speclist-only_ATTACK.txt",
+					"src/main/resources/specs/speclist-only_DIE.txt",
+					"null"
+					//////
 			};
 			args = ArrayUtils.addAll(args, TRAIN_OTHER_ARGS_ARR);
 
 			logger.info(String.format("Running training with args: " + Arrays.asList(args)));
-			Pipeline.mainWithSingleEventType(args);
+			Pipeline.main(args);
 			logger.info("Returned from training");		}
 		
 	}
@@ -503,9 +513,12 @@ public class LearningCurve {
 			if (!eventType.equals(JOKER_TYPE_NAME)) {
 				singleEventType = eventType;
 			}
+			
+			System.err.printf("##Hack#2 - manipulating args of decode\n");
+			List<String> testSpecs = ImmutableList.of("src/main/resources/specs/odie.MEET.xml");
 
 			logger.info(String.format("Running decoding (no scoring) with args: " + Arrays.asList(args)));
-			Decoder.decode(args, filenameSuffix, folderNamePrefix, singleEventType, new File("")); //the "empty file" at the end is a kludge - is this "learning curve" thing really relevant for my system?
+			Decoder.decode(args, filenameSuffix, folderNamePrefix, testSpecs);
 			logger.info("Returned from decoding");
 		}
 	}
@@ -586,5 +599,5 @@ public class LearningCurve {
 		//TODO END DEBUG
 		LearningCurve prog = new LearningCurve();
 		prog.run(args);
-	}***/
+	} ***/
 }

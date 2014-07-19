@@ -9,7 +9,9 @@ import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
 
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
@@ -41,8 +43,10 @@ import edu.cuny.qc.perceptron.types.Document;
 import edu.cuny.qc.perceptron.types.SentenceAssignment;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
 import edu.cuny.qc.scorer.SignalMechanismException;
+import edu.cuny.qc.scorer.SignalMechanismsContainer;
 import edu.cuny.qc.util.Logs;
 import edu.cuny.qc.util.UnsupportedParameterException;
+import edu.cuny.qc.util.Utils;
 import eu.excitementproject.eop.common.utilities.uima.UimaUtilsException;
 
 public class Decoder
@@ -116,7 +120,8 @@ public class Decoder
 		//Alphabet edgeTargetAlphabet = types.edgeTargetAlphabet;
 		Alphabet featureAlphabet = perceptron.featureAlphabet;
 		perceptron.setController(perceptron.controller); //Yes, I know this looks weird - it's because of the static controller hack
-		perceptron.buildSignalMechanisms();
+		SignalMechanismsContainer signalMechanismsContainer = new SignalMechanismsContainer(perceptron.controller);
+		perceptron.setSignalMechanismsContainer(signalMechanismsContainer);
 
 		Logs logs = new Logs(outDir, perceptron.controller, "");
 		try {
@@ -165,7 +170,7 @@ public class Decoder
 		{
 			num++;
 			
-			List<SentenceInstance> localInstanceList = null;
+			Collection<SentenceInstance> localInstanceList = null;
 			boolean monoCase = line.contains("bn/") ? true : false;
 			String fileName = srcDir + "/" + line;
 			System.out.printf("[%s] %s\n", new Date(), fileName);
@@ -176,14 +181,14 @@ public class Decoder
 			}
 			else
 			{
-				doc = Document.createAndPreprocess(fileName, true, monoCase, perceptron.controller.usePreprocessFiles, perceptron.controller.usePreprocessFiles, types, perceptron);
+				doc = Document.createAndPreprocess(fileName, true, monoCase, perceptron.controller.usePreprocessFiles, perceptron.controller.usePreprocessFiles, types, perceptron.controller, signalMechanismsContainer);
 				// fill in text feature vector for each token
 				//featGen.fillTextFeatures_NoPreprocessing(doc);
 			}
-			localInstanceList = doc.getInstances(perceptron, types, featureAlphabet, 
-					perceptron.controller, true, false);
+			localInstanceList = doc.getInstances(signalMechanismsContainer, types, featureAlphabet, 
+					perceptron.controller, true, false).values();
 			
-			doc.dumpSignals(localInstanceList, types, perceptron);
+			doc.dumpSignals(/*localInstanceList, types, */perceptron.controller);
 
 			// decoding
 			List<SentenceAssignment> localResults = perceptron.decoding(logs, localInstanceList, -1, -1,
@@ -202,24 +207,26 @@ public class Decoder
 			// output entities and predicted events from doc
 			List<AceEvent> eventsInDoc = new ArrayList<AceEvent>();
 			
-			List<SentenceInstance> canonicalList = perceptron.getCanonicalInstanceList(localInstanceList);
-			for(int inst_id=0; inst_id < canonicalList.size(); inst_id++)
+			//List<SentenceInstance> canonicalList = perceptron.getCanonicalInstanceList(localInstanceList);
+			int inst_id=0;
+			for (Iterator<SentenceInstance> iter = localInstanceList.iterator(); iter.hasNext();)
 			{
 				SentenceAssignment assn = localResults.get(inst_id);
-				SentenceInstance inst = canonicalList.get(inst_id);
+				SentenceInstance inst = iter.next();
 				String id = id_prefix + inst_id;
 				// each event only contains one single event mention
 				List<AceEvent> events = inst.getEvents(assn, id, doc.allText);
 				eventsInDoc.addAll(events);
+				inst_id++;
 			}
 			System.err.println("??? Decoder: Calls SentenceInstance.getEvents(), which uses TypeConstraints.eventTypeMap, which is not consistent with specs, so I'm not sure what should happen here...");
 			writeEntities(out, doc.getAceAnnotations(), eventsInDoc);
 			out.close();
 			
-			System.out.printf("%s Finished processing document %s\n", Pipeline.detailedLog(), doc.docID);
+			System.out.printf("%s Finished processing document %s\n", Utils.detailedLog(), doc.docID);
 		}
 		
-		System.out.printf("%s Dcoder: Finished processing all %s documents.\n", Pipeline.detailedLog(), num);
+		System.out.printf("%s Decoder: Finished processing all %s documents.\n", Utils.detailedLog(), num);
 
 		perceptron.close();
 

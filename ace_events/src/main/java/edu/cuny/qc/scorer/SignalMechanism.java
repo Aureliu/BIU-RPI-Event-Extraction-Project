@@ -33,8 +33,8 @@ public abstract class SignalMechanism {
 		System.err.println("??? SignalMechanism: for argument, now considering only HEAD (not extent), and only FIRST WORD of head (could be more than one word). Need to think of handling MWEs.");
 	}
 	
-	public SignalMechanism(Perceptron perceptron) throws SignalMechanismException {
-		controller = perceptron.controller;
+	public SignalMechanism(Controller controller) throws SignalMechanismException {
+		this.controller = controller;
 		scorers = new LinkedHashMap<SignalType, List<ScorerData>>(2);
 		scorers.put(SignalType.TRIGGER,   new ArrayList<ScorerData>());
 		scorers.put(SignalType.ARGUMENT,  new ArrayList<ScorerData>());

@@ -13,6 +13,7 @@ import java.math.BigDecimal;
 import java.math.MathContext;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -37,6 +38,7 @@ import edu.cuny.qc.perceptron.types.SignalType;
 import edu.cuny.qc.scorer.ScorerData;
 import edu.cuny.qc.scorer.SignalMechanism;
 import edu.cuny.qc.scorer.SignalMechanismException;
+import edu.cuny.qc.scorer.SignalMechanismsContainer;
 import edu.cuny.qc.scorer.mechanism.BrownClustersSignalMechanism;
 import edu.cuny.qc.scorer.mechanism.DependencySignalMechanism;
 import edu.cuny.qc.scorer.mechanism.POSSignalMechanism;
@@ -77,6 +79,7 @@ public class Perceptron implements java.io.Serializable
 	public Alphabet featureAlphabet;
 	// the settings of the perceptron
 	public Controller controller;// = new Controller();
+	public SignalMechanismsContainer signalMechanismsContainer;
 	
 	// horrible hack - this way I can both use Controller as a static and not have to pass the goddamn perceptron to every method
 	// but I also keep a non-static version of it, so it will be serialized to the file (which is mandatory for decoding)
@@ -94,15 +97,13 @@ public class Perceptron implements java.io.Serializable
 	public transient List<SignalMechanism> signalMechanisms = new ArrayList<SignalMechanism>();
 	
 	public File outFolder;
-	public Set<ScorerData> triggerScorers = new LinkedHashSet<ScorerData>();
-	public Set<ScorerData> argumentScorers = new LinkedHashSet<ScorerData>();
 	
 	public static int iter=-1; // num of current iteration - public and static for logging
 	public static int i; // num of current sentence - public and static for logging
 	//public static boolean inEarlyUpdate=false; //DEBUG
 	
 	// default constructor 
-	public Perceptron(Alphabet featureAlphabet, Controller controller, File outFolder) throws SignalMechanismException
+	public Perceptron(Alphabet featureAlphabet, Controller controller, File outFolder, SignalMechanismsContainer signalMechanismsContainer) throws SignalMechanismException
 	{
 //		this.nodeTargetAlphabet = nodeTargetAlphabet;
 //		this.edgeTargetAlphabet = edgeTargetAlphabet;
@@ -117,7 +118,7 @@ public class Perceptron implements java.io.Serializable
 		//labelBigram = new HashMap<String, List<String>>();
 		
 		setController(controller);
-		buildSignalMechanisms();
+		//buildSignalMechanisms();
 	}
 	
 	public void setController(Controller controller) {
@@ -125,48 +126,35 @@ public class Perceptron implements java.io.Serializable
 		Perceptron.controllerStatic = controller;
 	}
 	
-	public void close() {
-		for (SignalMechanism signalMechanism : signalMechanisms) {
-			signalMechanism.close();
-		}
+	public void setSignalMechanismsContainer(SignalMechanismsContainer signalMechanismsContainer) {
+		this.signalMechanismsContainer = signalMechanismsContainer;
 	}
 	
-	public void buildSignalMechanisms() throws SignalMechanismException {
-			signalMechanisms = new ArrayList<SignalMechanism>();
+	public void close() {
+		signalMechanismsContainer.close();
+	}
+	
+//	public void buildSignalMechanisms() throws SignalMechanismException {
+//			signalMechanisms = new ArrayList<SignalMechanism>();
+//		
+////		try {
+//			
+//			signalMechanisms.add(new PlainSignalMechanism(this));
+//			signalMechanisms.add(new WordNetSignalMechanism(this));
+//			signalMechanisms.add(new BrownClustersSignalMechanism(this));
+//			signalMechanisms.add(new POSSignalMechanism(this));
+//			signalMechanisms.add(new DependencySignalMechanism(this));
+//			
+////		} catch (UnsupportedPosTagStringException e) {
+////			throw new SignalMechanismException(e);
+////		} catch (WordNetInitializationException e) {
+////			throw new SignalMechanismException(e);
+////		}
+//			for (SignalMechanism mechanism : signalMechanisms) {
+//				triggerScorers.addAll(mechanism.scorers.get(SignalType.TRIGGER));
+//			}
+//	}
 		
-//		try {
-			
-			signalMechanisms.add(new PlainSignalMechanism(this));
-			signalMechanisms.add(new WordNetSignalMechanism(this));
-			signalMechanisms.add(new BrownClustersSignalMechanism(this));
-			signalMechanisms.add(new POSSignalMechanism(this));
-			signalMechanisms.add(new DependencySignalMechanism(this));
-			
-//		} catch (UnsupportedPosTagStringException e) {
-//			throw new SignalMechanismException(e);
-//		} catch (WordNetInitializationException e) {
-//			throw new SignalMechanismException(e);
-//		}
-			for (SignalMechanism mechanism : signalMechanisms) {
-				triggerScorers.addAll(mechanism.scorers.get(SignalType.TRIGGER));
-			}
-	}
-		
-	public void logSignalMechanismsPreSentence() {
-		for (SignalMechanism signalMechanism : signalMechanisms) {
-			signalMechanism.logPreSentence();
-		}
-	}
-	public void logSignalMechanismsPreDocument() {
-		for (SignalMechanism signalMechanism : signalMechanisms) {
-			signalMechanism.logPreDocument();
-		}
-	}
-	public void logSignalMechanismsPreDocumentBunch() {
-		for (SignalMechanism signalMechanism : signalMechanisms) {
-			signalMechanism.logPreDocumentBunch();
-		}
-	}
 	// default constructor 
 //	public Perceptron(Controller controller)
 //	{
@@ -188,7 +176,7 @@ public class Perceptron implements java.io.Serializable
 	 * @param instance
 	 * @return
 	 */
-	public List<SentenceAssignment> decoding(Logs logs, List<? extends SentenceInstance> instanceList, Integer iter, Integer i,
+	public List<SentenceAssignment> decoding(Logs logs, Collection<? extends SentenceInstance> instanceList, Integer iter, Integer i,
 			FeatureVector weights, FeatureVector avg_weights, FeatureVector avg_weights_base, PrintStream w, PrintStream f, PrintStream u)
 	{
 		List<SentenceAssignment> ret = new ArrayList<SentenceAssignment>();
@@ -215,9 +203,9 @@ public class Perceptron implements java.io.Serializable
 //		learning(trainingList, devList, cutoff, null);
 //	}
 	
-	public Score evaluateAndCheckBest(Logs logs, Evaluator evaluator, List<SentenceInstance> instances, List<SentenceAssignment> assns,
+	public Score evaluateAndCheckBest(Logs logs, Evaluator evaluator, Collection<SentenceInstance> instances, List<SentenceAssignment> assns,
 			Integer iter, Score maxScore, PrintStream p) {
-		Evaluator.Score devScore = evaluator.evaluate(assns, getCanonicalInstanceList(instances));
+		Evaluator.Score devScore = evaluator.evaluate(assns, instances);
 		logs.printScore(p, Integer.toString(iter), instances.size(), devScore);
 		
 		if (!controller.useArguments) {
@@ -237,7 +225,7 @@ public class Perceptron implements java.io.Serializable
 	 * @param trainingList
 	 * @param maxIter
 	 */
-	public void learning(List<SentenceInstance> trainingList, List<SentenceInstance> devList, int cutoff, String logSuffix)
+	public void learning(Collection<SentenceInstance> trainingList, Collection<SentenceInstance> devList, int cutoff, String logSuffix)
 	{	
 		Logs logs = new Logs(outFolder, controller, logSuffix);
 		
@@ -367,7 +355,7 @@ public class Perceptron implements java.io.Serializable
 			}
 			
 			//DEBUG
-			System.out.printf("%s Finished iteration %s\n", Pipeline.detailedLog(), iter);
+			System.out.printf("%s Finished iteration %s\n", Utils.detailedLog(), iter);
 			////////////
 
 			
@@ -389,7 +377,7 @@ public class Perceptron implements java.io.Serializable
 		if(iter < this.controller.maxIterNum)
 		{
 			// converge
-			System.out.println(Pipeline.detailedLog() + " converge in iter " + iter + "\t time:" + totalTime);
+			System.out.println(Utils.detailedLog() + " converge in iter " + iter + "\t time:" + totalTime);
 			lastDevIter = String.format("BestDev(iter=%s, converged)", best_iter);
 			lastTrainIter = String.format("BestTrain(iter=%s, converged)", bestTrainIter);
 			iter++;
@@ -397,7 +385,7 @@ public class Perceptron implements java.io.Serializable
 		else
 		{
 			// stop without convergency
-			System.out.println(Pipeline.detailedLog() + " Stop without convergency" + "\t time:" + totalTime);
+			System.out.println(Utils.detailedLog() + " Stop without convergency" + "\t time:" + totalTime);
 			lastDevIter = String.format("BestDev(iter=%s, NO converge)", best_iter);
 			lastTrainIter = String.format("BestTrain(iter=%s, NO converge)", bestTrainIter);
 		}
@@ -423,11 +411,11 @@ public class Perceptron implements java.io.Serializable
 		
 	}
 	
-	protected List<SentenceInstance> getCanonicalInstanceList(
-			List<? extends SentenceInstance> devList)
-	{
-		return (List<SentenceInstance>) devList;
-	}
+//	protected List<SentenceInstance> getCanonicalInstanceList(
+//			List<? extends SentenceInstance> devList)
+//	{
+//		return (List<SentenceInstance>) devList;
+//	}
 
 	protected BeamSearch createBeamSearcher(Perceptron perceptron, boolean b)
 	{

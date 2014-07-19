@@ -26,6 +26,7 @@ import com.google.common.cache.LoadingCache;
 import com.google.common.cache.Weigher;
 
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
+import edu.cuny.qc.perceptron.core.Controller;
 import edu.cuny.qc.perceptron.core.Perceptron;
 import edu.cuny.qc.perceptron.core.Pipeline;
 import edu.cuny.qc.scorer.Aggregator;
@@ -42,6 +43,7 @@ import edu.cuny.qc.scorer.PredicateSeedScorerTEMP;
 import edu.cuny.qc.scorer.Deriver.NoDerv;
 import edu.cuny.qc.scorer.mechanism.NomlexSignalMechanism.NomlexDeriver;
 import edu.cuny.qc.util.PosMap;
+import edu.cuny.qc.util.Utils;
 import eu.excitementproject.eop.common.component.lexicalknowledge.LexicalResourceException;
 import eu.excitementproject.eop.common.component.lexicalknowledge.LexicalRule;
 import eu.excitementproject.eop.common.representation.partofspeech.CanonicalPosTag;
@@ -81,8 +83,8 @@ public class WordNetSignalMechanism extends SignalMechanism {
 //		ADV = new PennPartOfSpeech(PennPosTag.RB);
 //	}
 //	
-	public WordNetSignalMechanism(Perceptron perceptron) throws SignalMechanismException {
-		super(perceptron);
+	public WordNetSignalMechanism(Controller controller) throws SignalMechanismException {
+		super(controller);
 	}
 	
 	@Override
@@ -279,7 +281,7 @@ public class WordNetSignalMechanism extends SignalMechanism {
 	
 	public void addTriggers(Set<WordNetRelation> relations, Juxtaposition juxt, Integer[] lengths, Deriver[] derivers, Derivation[] dervs, Integer[] leftSenses, Integer[] rightSenses, PartOfSpeech[] specificPoses, Aggregator[] aggs) {
 		System.out.printf("%s ^^^ addTriggers(): Building %s (%sx%sx%sx%sx%sx%s) combinations: lengths=%s, dervs=%s, leftSenses=%s, rightSenses=%s, specificPoses=%s, aggs=%s. Fixed options: relations=%s, juxt=%s\n",
-				Pipeline.detailedLog(),
+				Utils.detailedLog(),
 				lengths.length*dervs.length*leftSenses.length*rightSenses.length*specificPoses.length*aggs.length,
 				lengths.length, dervs.length, leftSenses.length, rightSenses.length, specificPoses.length, aggs.length,
 				Arrays.toString(lengths), Arrays.toString(dervs), Arrays.toString(leftSenses), Arrays.toString(rightSenses), Arrays.toString(specificPoses), Arrays.toString(aggs),
@@ -320,7 +322,7 @@ public class WordNetSignalMechanism extends SignalMechanism {
 	public void logPreSentence() {
 		if (DO_SENTENCE_LOGGING) {
 			if (usedCaches) {
-				System.out.printf("%s @@@ PreSentence cache stats:\n", Pipeline.detailedLog());
+				System.out.printf("%s @@@ PreSentence cache stats:\n", Utils.detailedLog());
 				logCacheStats();
 			}
 			else {
@@ -333,12 +335,12 @@ public class WordNetSignalMechanism extends SignalMechanism {
 	}
 	@Override
 	public void logPreDocument() {
-		System.out.printf("%s @@@@ PreDocument cache stats:\n", Pipeline.detailedLog());
+		System.out.printf("%s @@@@ PreDocument cache stats:\n", Utils.detailedLog());
 		logCacheStats();
 	}
 	@Override
 	public void logPreDocumentBunch() {
-		System.out.printf("%s @@@@@ PreDocumentBunch cache stats:\n", Pipeline.detailedLog());
+		System.out.printf("%s @@@@@ PreDocumentBunch cache stats:\n", Utils.detailedLog());
 		logCacheStats();
 	}
 

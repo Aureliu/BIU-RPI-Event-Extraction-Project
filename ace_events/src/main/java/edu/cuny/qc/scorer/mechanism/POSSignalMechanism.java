@@ -3,6 +3,7 @@ package edu.cuny.qc.scorer.mechanism;
 import java.util.Map;
 
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
+import edu.cuny.qc.perceptron.core.Controller;
 import edu.cuny.qc.perceptron.core.Perceptron;
 import edu.cuny.qc.scorer.Aggregator;
 import edu.cuny.qc.scorer.Compose.Or;
@@ -34,8 +35,8 @@ public class POSSignalMechanism extends SignalMechanism {
 		}
 	}
 
-	public POSSignalMechanism(Perceptron perceptron) throws SignalMechanismException {
-		super(perceptron);
+	public POSSignalMechanism(Controller controller) throws SignalMechanismException {
+		super(controller);
 	}
 
 	public static class SpecificPOS extends PredicateSeedScorerTEMP {

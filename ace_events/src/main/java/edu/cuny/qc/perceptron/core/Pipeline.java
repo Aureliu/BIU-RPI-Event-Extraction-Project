@@ -7,20 +7,25 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.Date;
+import java.util.LinkedHashMap;
 import java.util.List;
 
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.cas.CASException;
 import org.apache.uima.cas.CASRuntimeException;
+import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.dom4j.DocumentException;
+import org.springframework.util.LinkedMultiValueMap;
 
 import ac.biu.nlp.nlp.ie.onthefly.input.AeException;
 import ac.biu.nlp.nlp.ie.onthefly.input.SpecHandler;
 import ac.biu.nlp.nlp.ie.onthefly.input.TypesContainer;
 
 import com.google.common.collect.HashMultimap;
+import com.google.common.collect.LinkedHashMultimap;
 import com.google.common.collect.Multimap;
 
 import edu.cuny.qc.ace.acetypes.AceEventMention;
@@ -28,6 +33,7 @@ import edu.cuny.qc.perceptron.types.Alphabet;
 import edu.cuny.qc.perceptron.types.Document;
 import edu.cuny.qc.perceptron.types.Sentence;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
+import edu.cuny.qc.scorer.SignalMechanismsContainer;
 import edu.cuny.qc.util.PosMap;
 import edu.cuny.qc.util.UnsupportedParameterException;
 import edu.cuny.qc.util.Utils;
@@ -38,23 +44,7 @@ public class Pipeline
 	//DEBUG
 	public static File modelFile = null;
 	public static final int DOCUMENT_GC_FREQ = 100;
-	private static final Runtime runtime = Runtime.getRuntime();
-	public static final double MB = 1024.0*1024;
-	///////////
-
-	public static double inMB(long bytes) {
-		return bytes / MB;
-	}
-	public static String detailedLog() {
-		//Runtime runtime = Runtime.getRuntime();
-		long max = runtime.maxMemory();
-		long total = runtime.totalMemory();
-		return String.format("[%1$tH:%1$tM:%1$tS.%1$tL max=%2$.2f, total=%3$.2f, used=%4$.2f]",
-				new Date(),
-				max==Long.MAX_VALUE? "no limit" : inMB(max), 
-				inMB(total), 
-				inMB(total - runtime.freeMemory()));
-	}
+	
 	/**
 	 * Given the document list, train a perceptron model, and write to modelFile
 	 * @param srcDir
@@ -82,18 +72,19 @@ public class Pipeline
 		m.close();
 
 		// read instance list from training data (and dev data)
-		List<SentenceInstance> trainInstanceList = null;
-		List<SentenceInstance> devInstanceList = null;
+		Collection<SentenceInstance> trainInstanceList = null;
+		Collection<SentenceInstance> devInstanceList = null;
 		Perceptron model = null;
+		SignalMechanismsContainer signalMechanismsContainer = new SignalMechanismsContainer(controller);
 		
 		if(!controller.crossSent)
 		{
-			model = new Perceptron(featureAlphabet, controller, outFolder);
+			model = new Perceptron(featureAlphabet, controller, outFolder, signalMechanismsContainer);
 			TypesContainer trainTypes = new TypesContainer(trainSpecXmlPaths, false);
 			TypesContainer devTypes = new TypesContainer(devSpecXmlPaths, false);
-			trainInstanceList = readInstanceList(model, trainTypes, srcDir, trainingFileList, featureAlphabet, true, false);
+			trainInstanceList = readInstanceList(controller, signalMechanismsContainer, trainTypes, srcDir, trainingFileList, featureAlphabet, true, false).values();
 			System.out.printf("=== Finished Training Documents (%s Sentence Instances) =====================================\n", trainInstanceList.size());
-			devInstanceList = readInstanceList(model, devTypes, srcDir, devFileList, featureAlphabet, false, false);
+			devInstanceList = readInstanceList(controller, signalMechanismsContainer, devTypes, srcDir, devFileList, featureAlphabet, false, false).values();
 			System.out.printf("=== Finished Dev Documents (%s Sentence Instances) =====================================\n", devInstanceList.size());
 		}
 		else
@@ -102,7 +93,7 @@ public class Pipeline
 		}
 		
 		System.out.printf("%s Finished reading %s train sentence instances and %s sentence instances.\n=================================\n",
-				detailedLog(), trainInstanceList.size(), devInstanceList.size());
+				Utils.detailedLog(), trainInstanceList.size(), devInstanceList.size());
 		//DEBUG
 		Pipeline.modelFile = modelFile;
 		//////////////////
@@ -130,14 +121,15 @@ public class Pipeline
 	 * @throws AnalysisEngineProcessException 
 	 * @throws CASRuntimeException 
 	 */
-	public static List<SentenceInstance> readInstanceList(Perceptron perceptron,
+	public static Multimap<JCas, SentenceInstance> readInstanceList(/*Perceptron perceptron,*/
+			Controller controller, SignalMechanismsContainer signalMechanismsContainer,
 			TypesContainer types, File srcDir, File file_list, Alphabet featureAlphabet, 
 			boolean learnable, boolean debug) throws IOException, DocumentException, CASRuntimeException, AnalysisEngineProcessException, ResourceInitializationException, CASException, UimaUtilsException, AeException
 	{
-		System.out.printf("%s Reading instance list ...\n", detailedLog());
+		System.out.printf("%s Reading instance list ...\n", Utils.detailedLog());
 		new PosMap();
 		
-		List<SentenceInstance> instancelist = new ArrayList<SentenceInstance>();
+		Multimap<JCas, SentenceInstance> result = LinkedHashMultimap.create(types.specs.size(), 20);
 		BufferedReader reader = new BufferedReader(new FileReader(file_list));
 		String line = "";
 		Multimap<String, AceEventMention> allEventMentions = HashMultimap.create();
@@ -160,7 +152,7 @@ public class Pipeline
 				System.out.printf("[%s] %s\n", new Date(), fileName);
 				
 				//perceptron.logSignalMechanismsPreDocument();
-				Document doc = Document.createAndPreprocess(fileName, true, monoCase, perceptron.controller.usePreprocessFiles, perceptron.controller.usePreprocessFiles, types, perceptron);
+				Document doc = Document.createAndPreprocess(fileName, true, monoCase, controller.usePreprocessFiles, controller.usePreprocessFiles, types, controller, signalMechanismsContainer);
 				// fill in text feature vector for each token
 				//featGen.fillTextFeatures_NoPreprocessing(doc);
 				
@@ -169,7 +161,7 @@ public class Pipeline
 				//System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] done.\n", new Date());
 
 				
-				List<SentenceInstance> docInstancelist = new ArrayList<SentenceInstance>();
+				//List<SentenceInstance> docInstancelist = new ArrayList<SentenceInstance>();
 				for(int sent_id=0 ; sent_id<doc.getSentences().size(); sent_id++)
 				{
 					Sentence sent = doc.getSentences().get(sent_id);
@@ -177,27 +169,27 @@ public class Pipeline
 					
 					// 1.6.14: Create instances even if we skip them - to fully create their signals  
 					//System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] sent_id=%2$s, insts..", new Date(), sent_id);
-					List<SentenceInstance> insts = Document.getInstancesForSentence(perceptron, sent, types, featureAlphabet, learnable, debug);
+					LinkedHashMap<JCas,SentenceInstance> insts = Document.getInstancesForSentence(controller, signalMechanismsContainer, sent, types, featureAlphabet, learnable, debug);
 					//System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] done(%2$d).", new Date(), insts.size());
-					docInstancelist.addAll(insts);
+					//docInstancelist.addAll(insts);
 					
-					if(learnable && perceptron.controller.skipNonEventSent)
+					if(learnable && controller.skipNonEventSent)
 					{
 						if(sent.eventMentions != null && sent.eventMentions.size() > 0)
 						{
 							//System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] add\n", new Date());
-							instancelist.addAll(insts);
+							Utils.addToMultimap(result, insts);
 						}
 					}
 					else // add all instances
 					{
 						//List<SentenceInstance> insts = Document.getInstancesForSentence(perceptron, sent, types, featureAlphabet, learnable);
 						//System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] add\n", new Date());
-						instancelist.addAll(insts);
+						Utils.addToMultimap(result, insts);
 					}
 				}
 
-				doc.dumpSignals(docInstancelist, types, perceptron);
+				doc.dumpSignals(/*docInstancelist, types, */controller);
 				for (AceEventMention evMention : doc.getAceAnnotations().eventMentions) {
 					allEventMentions.put(evMention.event.subtype, evMention);
 				}
@@ -214,14 +206,14 @@ public class Pipeline
 //		System.out.println("done");
 			
 		// DEBUG
-		System.out.printf("Finished loading %s documents, in them %s sentence instances\n", num, instancelist.size());
+		System.out.printf("Finished loading %s documents, in them %s sentence instances (total for all types)\n", num, result.size());
 		System.out.printf("Total of %s event mentions, in %s types:\n", allEventMentions.size(), allEventMentions.keySet().size());
 		for (String eventType : allEventMentions.keySet()) {
 			System.out.printf(" - %s: %s mentions\n", eventType, allEventMentions.get(eventType).size());
 		}
 		/////
 			
-		return instancelist;
+		return result;
 	}
 	
 	/**

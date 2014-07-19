@@ -7,6 +7,7 @@ import static edu.cuny.qc.scorer.Deriver.*;
 import java.util.Map;
 
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
+import edu.cuny.qc.perceptron.core.Controller;
 import edu.cuny.qc.perceptron.core.Perceptron;
 import edu.cuny.qc.scorer.Aggregator;
 import edu.cuny.qc.scorer.Derivation;
@@ -49,8 +50,8 @@ public class PlainSignalMechanism extends SignalMechanism {
 		
 	}
 
-	public PlainSignalMechanism(Perceptron perceptron) throws SignalMechanismException {
-		super(perceptron);
+	public PlainSignalMechanism(Controller controller) throws SignalMechanismException {
+		super(controller);
 	}
 
 	private static class SameToken extends PredicateSeedScorerTEMP {

@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
+import edu.cuny.qc.perceptron.core.Controller;
 import edu.cuny.qc.perceptron.core.Perceptron;
 import edu.cuny.qc.perceptron.graph.GraphEdge;
 import edu.cuny.qc.perceptron.graph.GraphNode;
@@ -38,8 +39,8 @@ public class DependencySignalMechanism extends SignalMechanism {
 
 	}
 
-	public DependencySignalMechanism(Perceptron perceptron) throws SignalMechanismException {
-		super(perceptron);
+	public DependencySignalMechanism(Controller controller) throws SignalMechanismException {
+		super(controller);
 	}
 
 	public static class OneDepUp extends PredicateSeedScorerTEMP {

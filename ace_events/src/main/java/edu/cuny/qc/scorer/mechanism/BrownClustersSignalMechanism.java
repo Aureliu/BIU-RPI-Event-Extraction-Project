@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
+import edu.cuny.qc.perceptron.core.Controller;
 import edu.cuny.qc.perceptron.core.Perceptron;
 import edu.cuny.qc.scorer.Aggregator;
 import edu.cuny.qc.scorer.Derivation;
@@ -56,8 +57,8 @@ public class BrownClustersSignalMechanism extends SignalMechanism {
 
 	}
 
-	public BrownClustersSignalMechanism(Perceptron perceptron) throws SignalMechanismException {
-		super(perceptron);
+	public BrownClustersSignalMechanism(Controller controller) throws SignalMechanismException {
+		super(controller);
 	}
 
 	private static abstract class BrownClustersScorer extends PredicateSeedScorerTEMP {

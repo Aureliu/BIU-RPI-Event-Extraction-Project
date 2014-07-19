@@ -1,6 +1,7 @@
 package edu.cuny.qc.perceptron.core;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
@@ -87,7 +88,7 @@ public class Evaluator
 		}
 	}
 	
-	public Score evaluate(List<SentenceAssignment> results, List<SentenceInstance> instancesGold) {
+	public Score evaluate(List<SentenceAssignment> results, Collection<SentenceInstance> instancesGold) {
 		List<SentenceAssignment> goldTargets = new ArrayList<SentenceAssignment>(instancesGold.size());
 		for (SentenceInstance inst : instancesGold) {
 			goldTargets.add(inst.target);

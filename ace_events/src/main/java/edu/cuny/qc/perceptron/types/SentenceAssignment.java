@@ -448,7 +448,7 @@ public class SentenceAssignment
 	 * also create a full featureVectorSequence
 	 * @param inst
 	 */
-	public SentenceAssignment(SentenceInstance inst, Perceptron perceptron)
+	public SentenceAssignment(SentenceInstance inst)
 	{
 		this(/*inst.types,*/inst.eventArgCandidates, inst.target, inst.nodeTargetAlphabet, inst.edgeTargetAlphabet, inst.featureAlphabet, inst.controller);
 		
@@ -506,21 +506,21 @@ public class SentenceAssignment
 		// create featureVectorSequence
 		for(int i=0; i<=state; i++)
 		{
-			makeAllFeatureForSingleState(inst, i, inst.learnable, inst.learnable, perceptron);
+			makeAllFeatureForSingleState(inst, i, inst.learnable, inst.learnable);
 		}
 	}
 	
 	private void makeAllFeatureForSingleState(SentenceInstance problem, int i, boolean addIfNotPresent,
-			boolean useIfNotPresent, Perceptron perceptron)
+			boolean useIfNotPresent)
 	{
 		// make basic bigram features for event trigger
-		this.makeNodeFeatures(problem, i, addIfNotPresent, useIfNotPresent, perceptron);
+		this.makeNodeFeatures(problem, i, addIfNotPresent, useIfNotPresent);
 		// make basic features of the argument-trigger link
-		this.makeEdgeFeatures(problem, i, addIfNotPresent, useIfNotPresent, perceptron);
+		this.makeEdgeFeatures(problem, i, addIfNotPresent, useIfNotPresent);
 		if(problem.controller.useGlobalFeature)
 		{
 			// make various global features
-			this.makeGlobalFeatures(problem, i, addIfNotPresent, useIfNotPresent, perceptron);
+			this.makeGlobalFeatures(problem, i, addIfNotPresent, useIfNotPresent);
 		}
 	}
 
@@ -530,7 +530,7 @@ public class SentenceAssignment
 	 * @param problem
 	 */
 	public void makeEdgeFeatures(SentenceInstance problem, int index, boolean addIfNotPresent, 
-			boolean useIfNotPresent, Perceptron perceptron)
+			boolean useIfNotPresent)
 	{
 		// node label
 		String nodeLabel = this.getLabelAtToken(index);
@@ -548,12 +548,12 @@ public class SentenceAssignment
 		for(Integer key : edge.keySet())
 		{
 			// edge label
-			makeEdgeLocalFeature(problem, index, addIfNotPresent, key, useIfNotPresent, perceptron);
+			makeEdgeLocalFeature(problem, index, addIfNotPresent, key, useIfNotPresent);
 		}
 	}
 
 	public void makeEdgeLocalFeature(SentenceInstance problem, int index, boolean addIfNotPresent, 
-			int entityIndex, boolean useIfNotPresent, Perceptron perceptron)
+			int entityIndex, boolean useIfNotPresent)
 	{	
 		if (!controller.useArguments) {
 			return;
@@ -707,7 +707,7 @@ public class SentenceAssignment
 	 * @param addIfNotPresent
 	 */
 	public void makeGlobalFeatures(SentenceInstance problem, int index, boolean addIfNotPresent, 
-			boolean useIfNotPresent, Perceptron perceptron)
+			boolean useIfNotPresent)
 	{
 		if(this.edgeAssignment.get(index) == null)
 		{
@@ -720,7 +720,7 @@ public class SentenceAssignment
 		}
 	}
 	
-	public void makeNodeFeatures(SentenceInstance problem, int i, boolean addIfNotPresent, boolean useIfNotPresent, Perceptron perceptron)
+	public void makeNodeFeatures(SentenceInstance problem, int i, boolean addIfNotPresent, boolean useIfNotPresent)
 	{
 		try {
 			// make node feature (bigram feature)

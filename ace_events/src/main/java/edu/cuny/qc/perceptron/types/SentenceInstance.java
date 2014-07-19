@@ -35,6 +35,7 @@ import edu.cuny.qc.perceptron.types.Sentence.Sent_Attribute;
 import edu.cuny.qc.scorer.ScorerData;
 import edu.cuny.qc.scorer.SignalMechanism;
 import edu.cuny.qc.scorer.SignalMechanismException;
+import edu.cuny.qc.scorer.SignalMechanismsContainer;
 import edu.cuny.qc.util.FinalKeysMap;
 import edu.cuny.qc.util.Span;
 
@@ -177,10 +178,11 @@ public class SentenceInstance
 	 * the SentenceInstance object can also be initialized by a file
 	 * @param sent
 	 */
-	public SentenceInstance(Perceptron perceptron, Sentence sent, TypesContainer types, Alphabet featureAlphabet, 
+	public SentenceInstance(Controller controller, SignalMechanismsContainer signalMechanismsContainer,
+			Sentence sent, TypesContainer types, Alphabet featureAlphabet, 
 			boolean learnable, JCas associatedSpec, Integer specNum, boolean debug)
 	{
-		this(types, featureAlphabet, perceptron.controller, learnable, debug);
+		this(types, featureAlphabet, controller, learnable, debug);
 		
 		//System.out.printf("%s Starting c-tor SentenceInstance %s...\n", Pipeline.detailedLog(), this.sentInstID);
 
@@ -287,12 +289,12 @@ public class SentenceInstance
 			AceDocument.filterBySpecs(types, filtered, eventMentions, null, null, null, null, null, null, null, null);
 		}
 		
-		getPersistentSignals(perceptron, debug);
+		getPersistentSignals(signalMechanismsContainer, debug);
 		
 		//System.out.printf("%s Starting target of SentenceInstance %s...\n", Pipeline.detailedLog(), this.sentInstID);
 
 		// add target as gold-standard assignment
-		this.target = new SentenceAssignment(this, perceptron);
+		this.target = new SentenceAssignment(this);
 		
 		//System.out.printf("%s Finishing c-tor SentenceInstance %s...\n", Pipeline.detailedLog(), this.sentInstID);
 
@@ -477,7 +479,7 @@ public class SentenceInstance
 	
 	
 	/// Ofer's new section - calcing signals!
-	private void getPersistentSignals(Perceptron perceptron, boolean debug) {
+	private void getPersistentSignals(SignalMechanismsContainer signalMechanismsContainer, boolean debug) {
 		try {
 //			Map<Integer, List<Map<Integer, Map<ScorerData, SignalInstance>>>> allTriggerSignals = null;
 //			Map<Integer, List<Map<Integer, List<Map<Integer, Map<ScorerData, SignalInstance>>>>>> allArgSignals = null;
@@ -507,7 +509,7 @@ public class SentenceInstance
 			
 			this.textFeaturesMap.put(InstanceAnnotations.NodeTextSignalsBySpec, sentenceTriggerSignals);
 			this.textFeaturesMap.put(InstanceAnnotations.EdgeTextSignals, sentenceArgSignals);
-			calculatePersistentSignals(perceptron, sentenceTriggerSignals, sentenceArgSignals, debug);
+			calculatePersistentSignals(signalMechanismsContainer, sentenceTriggerSignals, sentenceArgSignals, debug);
 		} catch (SignalMechanismException e) {
 			throw new RuntimeException(e);
 		} catch (CASException e) {
@@ -515,14 +517,14 @@ public class SentenceInstance
 		}
 	}
 	
-	private void calculatePersistentSignals(Perceptron perceptron,
+	private void calculatePersistentSignals(SignalMechanismsContainer signalMechanismsContainer,
 			List<Map<String, Map<ScorerData, SignalInstance>>> triggerSignals,
 			List<Map<Integer, List<Map<Integer, Map<ScorerData, SignalInstance>>>>> argSignals,
 			boolean debug) throws SignalMechanismException, CASException {
 		//List<Map<String, Map<String, SignalInstance>>> triggerSignals = new ArrayList<Map<String, Map<String, SignalInstance>>>(size());
 		//List<Map<String, List<Map<String, Map<String, SignalInstance>>>>> argSignals = new ArrayList<Map<String, List<Map<String, Map<String, SignalInstance>>>>>(size());
 		//System.out.printf("%s Starting signals SentenceInstance %s...\n", Pipeline.detailedLog(), this.sentInstID);
-		perceptron.logSignalMechanismsPreSentence();
+		signalMechanismsContainer.logSignalMechanismsPreSentence();
 		for(int i=0; i<size(); i++)
 		{
 
@@ -576,7 +578,7 @@ public class SentenceInstance
 //					tokenArgSpecSignals = tokenArgSignals.get(specNum);
 				}
 				
-				addTriggerSignals(spec, i, perceptron, specSignals, debug);
+				addTriggerSignals(spec, i, signalMechanismsContainer, specSignals, debug);
 					
 //				for(int k=0; k<eventArgCandidates.size(); k++) {
 //					AceMention mention = eventArgCandidates.get(k);
@@ -614,8 +616,8 @@ public class SentenceInstance
 		//System.out.printf("%s Finished signals SentenceInstance %s.\n", Pipeline.detailedLog(), this.sentInstID);
 	}
 	
-	public void addTriggerSignals(JCas spec, int i, Perceptron perceptron, Map<ScorerData, SignalInstance> specSignals, boolean debug) throws SignalMechanismException {
-		for (SignalMechanism mechanism : perceptron.signalMechanisms) {
+	public void addTriggerSignals(JCas spec, int i, SignalMechanismsContainer signalMechanismsContainer, Map<ScorerData, SignalInstance> specSignals, boolean debug) throws SignalMechanismException {
+		for (SignalMechanism mechanism : signalMechanismsContainer.signalMechanisms) {
 			
 			///DEBUG
 //			if (sentInstID.equals("5a") && docID.equals("CNN_CF_20030303.1900.00") && i==3) {
@@ -638,7 +640,7 @@ public class SentenceInstance
 		//return result;
 	}
 	
-	public void addArgumentSignals(JCas spec, int i, Argument argument, AceMention mention, Perceptron perceptron, Map<ScorerData, SignalInstance> roleSignals) throws SignalMechanismException {
+	public void addArgumentSignals(JCas spec, int i, Argument argument, AceMention mention, SignalMechanismsContainer signalMechanismsContainer, Map<ScorerData, SignalInstance> roleSignals) throws SignalMechanismException {
 		//This is currently all very silly.
 		
 //		LinkedHashMap<ScorerData, BigDecimal> scoredSignals;

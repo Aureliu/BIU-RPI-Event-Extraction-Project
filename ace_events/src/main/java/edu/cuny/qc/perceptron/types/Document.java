@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.Iterator;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -33,6 +34,10 @@ import org.apache.uima.cas.impl.Serialization;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
 
+import com.google.common.collect.LinkedHashMultimap;
+import com.google.common.collect.Maps;
+import com.google.common.collect.Multimap;
+
 import ac.biu.nlp.nlp.ie.onthefly.input.AeException;
 import ac.biu.nlp.nlp.ie.onthefly.input.AnalysisEngines;
 import ac.biu.nlp.nlp.ie.onthefly.input.TypesContainer;
@@ -47,6 +52,7 @@ import edu.cuny.qc.perceptron.core.SerializationMethod;
 import edu.cuny.qc.perceptron.featureGenerator.TextFeatureGenerator;
 import edu.cuny.qc.perceptron.types.Sentence.Sent_Attribute;
 import edu.cuny.qc.scorer.ScorerData;
+import edu.cuny.qc.scorer.SignalMechanismsContainer;
 import edu.cuny.qc.util.SentDetectorWrapper;
 import edu.cuny.qc.util.Span;
 import edu.cuny.qc.util.TokenizerWrapper;
@@ -403,7 +409,7 @@ public class Document implements java.io.Serializable
 		return String.format("%s(%s)", getClass().getSimpleName(), docID);
 	}
 	
-	public static Document createAndPreprocess(String baseFileName, boolean hasLabel, boolean monoCase, boolean tryLoadExisting, boolean dumpNewDoc, TypesContainer types, Perceptron perceptron) throws IOException {
+	public static Document createAndPreprocess(String baseFileName, boolean hasLabel, boolean monoCase, boolean tryLoadExisting, boolean dumpNewDoc, TypesContainer types, Controller controller, SignalMechanismsContainer signalMechanismsContainer) throws IOException {
 		try {
 			// Kludge - don't serialize for now
 			//dumpNewDoc = false;
@@ -412,12 +418,12 @@ public class Document implements java.io.Serializable
 			//System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] CreateAndPreprocess - start\n", new Date());
 
 			Document doc = null;
-			File preprocessed = new File(baseFileName + preprocessedFileExt + perceptron.controller.serialization.extension);
+			File preprocessed = new File(baseFileName + preprocessedFileExt + controller.serialization.extension);
 			//File xmi = new File(baseFileName + xmiFileExt);
 			if (tryLoadExisting && preprocessed.isFile()) {
 				try {
 					System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] reading 'preprocessed' file...", new Date());
-					InputStream in = perceptron.controller.serialization.getInputStream(new FileInputStream(preprocessed));
+					InputStream in = controller.serialization.getInputStream(new FileInputStream(preprocessed));
 					Document input = (Document) SerializationUtils.deserialize(in);
 					doc = input;
 					in.close();
@@ -454,7 +460,7 @@ public class Document implements java.io.Serializable
 					try {
 						System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] dumping 'preprocessed' file...", new Date());
 
-						OutputStream out = perceptron.controller.serialization.getOutputStream(new FileOutputStream(preprocessed));
+						OutputStream out = controller.serialization.getOutputStream(new FileOutputStream(preprocessed));
 						SerializationUtils.serialize(doc, out);
 						out.close();
 						System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] Done.\n", new Date());
@@ -478,7 +484,7 @@ public class Document implements java.io.Serializable
 				}
 			}
 			
-			doc.loadSignalsIntoDocument(perceptron);
+			doc.loadSignalsIntoDocument(controller, signalMechanismsContainer);
 
 			//System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] CreateAndPreprocess - Done.\n\n", new Date());
 			return doc;
@@ -1017,7 +1023,7 @@ public class Document implements java.io.Serializable
 		return hasLabel;
 	}
 
-	public void dumpSignals(List<SentenceInstance> instances, TypesContainer types, Perceptron perceptron) throws IOException {
+	public void dumpSignals(Controller controller /*List<SentenceInstance> instances, TypesContainer types, */ /*Perceptron perceptron*/) throws IOException {
 		// 2.6.14: Now BundledSignals() is built lazily before.
 //		if (signals == null) {
 //			Map<Integer, List<Map<String, Map<String, SignalInstance>>>> triggerSignals = new HashMap<Integer, List<Map<String, Map<String, SignalInstance>>>>(sentences.size());
@@ -1053,16 +1059,16 @@ public class Document implements java.io.Serializable
 			throw new IllegalStateException("About to dump signals after finishing all SentenceInstances, but there is no BundledSignals in document: " + docID);
 		}
 		
-		if (perceptron.controller.useSignalFiles && signalsUpdated) {
-			BundledSignals stored = loadSignals(perceptron);
+		if (controller.useSignalFiles && signalsUpdated) {
+			BundledSignals stored = loadSignals(controller);
 			if (stored == null) {
 				stored = new BundledSignals();
 			}
 			stored.absorb(signals);
 			
-			File signalsFile = new File(docPath + signalsFileExt + perceptron.controller.serialization.extension);
+			File signalsFile = new File(docPath + signalsFileExt + controller.serialization.extension);
 			try {
-				OutputStream out = perceptron.controller.serialization.getOutputStream(new FileOutputStream(signalsFile));
+				OutputStream out = controller.serialization.getOutputStream(new FileOutputStream(signalsFile));
 				SerializationUtils.serialize(stored, out);
 				out.close();
 			}
@@ -1080,8 +1086,8 @@ public class Document implements java.io.Serializable
 		}
 	}
 	
-	public void loadSignalsIntoDocument(Perceptron perceptron) throws IOException {
-		signals = loadSignals(perceptron);
+	public void loadSignalsIntoDocument(Controller controller, SignalMechanismsContainer signalMechanismsContainer) throws IOException {
+		signals = loadSignals(controller);
 		if (signals != null) {
 
 			// Filter out scorers that are not currently relevant
@@ -1090,7 +1096,7 @@ public class Document implements java.io.Serializable
 					for (Map<ScorerData, SignalInstance> iter3 : iter2.values()) {
 						for (Iterator<Entry<ScorerData, SignalInstance>> iterator = iter3.entrySet().iterator(); iterator.hasNext();) {
 							Entry<ScorerData, SignalInstance> entry = iterator.next();
-							if (!perceptron.triggerScorers.contains(entry.getKey())) {
+							if (!signalMechanismsContainer.triggerScorers.contains(entry.getKey())) {
 								iterator.remove();
 							}
 						}
@@ -1100,18 +1106,18 @@ public class Document implements java.io.Serializable
 		}
 	}
 	
-	public BundledSignals loadSignals(Perceptron perceptron) throws IOException {
+	public BundledSignals loadSignals(Controller controller) throws IOException {
 		//List<List<Map<String, Map<String, SignalInstance>>>> triggerSignals = new ArrayList<List<Map<String, Map<String, SignalInstance>>>>();
 		//List<List<Map<String, Map<String, Map<String, SignalInstance>>>>> argSignals = new ArrayList<List<Map<String, Map<String, Map<String, SignalInstance>>>>>();
 		// read file 
-		File signalsFile = new File(docPath + signalsFileExt + perceptron.controller.serialization.extension);
+		File signalsFile = new File(docPath + signalsFileExt + controller.serialization.extension);
 
 		// 22.5.14 Kludge - not loading signals, due to some weird ClassCastException
-		if (perceptron.controller.useSignalFiles && signalsFile.isFile() /* && false */) {
+		if (controller.useSignalFiles && signalsFile.isFile() /* && false */) {
 			InputStream in = null;
 			try {
 				System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] Reading 'signals' file: %2$s...", new Date(), signalsFile.getAbsolutePath());
-				in = perceptron.controller.serialization.getInputStream(new FileInputStream(signalsFile));
+				in = controller.serialization.getInputStream(new FileInputStream(signalsFile));
 //				byte b[] = new byte[1024*1024*20];
 //				System.out.printf("\nread array: [%1$tH:%1$tM:%1$tS.%1$tL]...", new Date());
 //				int num = in.read(b);
@@ -1180,37 +1186,37 @@ public class Document implements java.io.Serializable
 //		}
 	}
 
-	public List<SentenceInstance> getInstances(Perceptron perceptron, TypesContainer types, Alphabet featureAlphabet, 
+	public Map<JCas, SentenceInstance> getInstances(SignalMechanismsContainer signalMechanismsContainer, TypesContainer types, Alphabet featureAlphabet, 
 			Controller controller, boolean learnable, boolean debug) throws CASRuntimeException, AnalysisEngineProcessException, ResourceInitializationException, CASException, UimaUtilsException, IOException, AeException
 	{		
-		List<SentenceInstance> instancelist = new ArrayList<SentenceInstance>();
+		Map<JCas, SentenceInstance> fullMap = Maps.newLinkedHashMap();
 		for(int sent_id=0 ; sent_id<this.getSentences().size(); sent_id++)
 		{
 			Sentence sent = this.getSentences().get(sent_id);
 			// add all instances
-			List<SentenceInstance> insts = Document.getInstancesForSentence(perceptron, sent, types, featureAlphabet, learnable, debug);
-			instancelist.addAll(insts);
+			Map<JCas, SentenceInstance> sentenceMap = Document.getInstancesForSentence(controller, signalMechanismsContainer, sent, types, featureAlphabet, learnable, debug);
+			fullMap.putAll(sentenceMap);
 		}
-		return instancelist;
+		return fullMap;
 	}
 	
-	public static List<SentenceInstance> getInstancesForSentence(Perceptron perceptron, Sentence sent, TypesContainer types, Alphabet featureAlphabet, 
+	public static LinkedHashMap<JCas, SentenceInstance> getInstancesForSentence(Controller controller, SignalMechanismsContainer signalMechanismsContainer, Sentence sent, TypesContainer types, Alphabet featureAlphabet, 
 			boolean learnable, boolean debug) throws CASRuntimeException, AnalysisEngineProcessException, ResourceInitializationException, CASException, UimaUtilsException, IOException, AeException {
-		List<SentenceInstance> result = new ArrayList<SentenceInstance>();
-		if (perceptron.controller.oMethod.startsWith("G")) {
+		LinkedHashMap<JCas, SentenceInstance> result = Maps.newLinkedHashMap();
+		if (controller.oMethod.startsWith("G")) {
 			for (int specNum=0; specNum < types.specs.size(); specNum++) {
 				JCas spec = types.specs.get(specNum);
 				List<JCas> oneSpec = Arrays.asList(new JCas[] {spec});
-				TypesContainer oneType = new TypesContainer(oneSpec); 
-				//System.out.printf("\n\t[%1$tH:%1$tM:%1$tS.%1$tL] adding inst...", new Date());
-				result.add(new SentenceInstance(perceptron, sent, oneType, featureAlphabet,
-						learnable, spec, specNum, debug));
-				//System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] done.\n", new Date());
+				TypesContainer oneType = new TypesContainer(oneSpec);
+				SentenceInstance inst = new SentenceInstance(controller, signalMechanismsContainer, sent, oneType, featureAlphabet,
+						learnable, spec, specNum, debug);
+				result.put(spec, inst);
 			}
 		}
 		else {
-			result.add(new SentenceInstance(perceptron, sent, types, featureAlphabet,
-					learnable, null, null, debug));
+			SentenceInstance inst = new SentenceInstance(controller, signalMechanismsContainer, sent, types, featureAlphabet,
+					learnable, null, null, debug);
+			result.put(null, inst);
 		}
 		
 		return result;

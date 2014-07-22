@@ -93,6 +93,15 @@ public class Scorer
 					f1_trigger_idt, prec_trigger_idt, recall_trigger_idt, f1_arg_idt, prec_arg_idt, recall_arg_idt);
 			return ret;
 		}
+		
+		public void printFullOutput(PrintStream out) {
+			out.println("\n\n---------------------------");
+			out.printf("num_trigger_gold=%f, num_trigger_ans=%f  /  num_trigger_correct=%f, num_trigger_idt_correct=%f\n", this.num_trigger_gold, this.num_trigger_ans, this.num_trigger_correct, this.num_trigger_idt_correct);
+			out.printf("num_arg_gold=%f, num_arg_ans=%f  /  num_arg_correct=%f, num_arg_idt_correct=%f\n", this.num_arg_gold, this.num_arg_ans, this.num_arg_correct, this.num_arg_idt_correct);
+			out.println("\n---------------------------");
+			out.println("Summary:\n");
+			out.println(this);
+		}
 	}
 	
 	public static Stats doAnalysis(File goldDir, File ansDir, File file_list, TypesContainer types, PrintStream out, String dirNamePrefix) throws IOException, DocumentException
@@ -125,31 +134,23 @@ public class Scorer
 			if (types.specs != null) {
 				doc_gold.filterBySpecs(types);
 			}
-			// There no need to call setSingleEventType on doc_gold, as it already has just the single type (if indeed only one is required)
 
-			out.printf("----------------\n%s\n", line);
-			doAnalysisForFile(doc_ans, doc_gold, stats, out);
-			out.printf("----------------\n\n");
+			doAnalysisForFile(doc_ans, doc_gold, stats, line, out);
 		}
 		
 		stats.calc();
-		
-		out.println("\n\n---------------------------");
-		out.printf("num_trigger_gold=%f, num_trigger_ans=%f  /  num_trigger_correct=%f, num_trigger_idt_correct=%f\n", stats.num_trigger_gold, stats.num_trigger_ans, stats.num_trigger_correct, stats.num_trigger_idt_correct);
-		out.printf("num_arg_gold=%f, num_arg_ans=%f  /  num_arg_correct=%f, num_arg_idt_correct=%f\n", stats.num_arg_gold, stats.num_arg_ans, stats.num_arg_correct, stats.num_arg_idt_correct);
-		out.println("\n---------------------------");
-		out.println("Summary:\n");
-		out.println(stats);
-		
+		stats.printFullOutput(out);
 		return stats;
 	}
 	
-	private static void doAnalysisForFile(AceDocument doc_ans, AceDocument doc_gold, Stats stats, PrintStream out)
+	public static void doAnalysisForFile(AceDocument doc_ans, AceDocument doc_gold, Stats stats, String line, PrintStream out)
 	{
 		List<AceEventMention> mentions_ans = doc_ans.eventMentions;
 		List<AceEventMention> mentions_gold = doc_gold.eventMentions;
 		
+		out.printf("----------------\n%s\n", line);
 		evaluate(stats, mentions_ans, mentions_gold, out);
+		out.printf("----------------\n\n");
 	}
 
 	public static void evaluate(Stats stats,

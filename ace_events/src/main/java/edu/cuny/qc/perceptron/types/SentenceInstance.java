@@ -98,7 +98,7 @@ public class SentenceInstance
 	
 	private List<Token> tokenAnnos = null;
 	private de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence sentenceAnno = null;
-	private Document doc;
+	public Document doc;
 	public JCas associatedSpec = null;
 	private Boolean filtered = false;
 

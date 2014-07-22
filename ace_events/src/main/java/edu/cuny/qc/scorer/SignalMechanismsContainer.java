@@ -54,4 +54,7 @@ public class SignalMechanismsContainer {
 		}
 	}
 
+	public String toString() {
+		return signalMechanisms.toString();
+	}
 }

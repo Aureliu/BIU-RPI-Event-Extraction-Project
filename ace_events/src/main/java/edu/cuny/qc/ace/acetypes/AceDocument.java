@@ -184,12 +184,8 @@ public class AceDocument implements java.io.Serializable {
 			}
 			
 			
-		} catch (SAXException e) {
-			System.err.println ("AceDocument:  Exception in initializing APF reader: " + e);
-		} catch (IOException e) {
-			System.err.println ("AceDocument:  Exception in initializing APF reader: " + e);
-		} catch (ParserConfigurationException e) {
-			System.err.println ("AceDocument:  Exception in initializing APF reader: " + e);
+		} catch (Exception e) {
+			throw new RuntimeException(e);
 		}
 	}
 

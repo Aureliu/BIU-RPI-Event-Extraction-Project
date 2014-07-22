@@ -56,6 +56,7 @@ import edu.cuny.qc.scorer.SignalMechanismsContainer;
 import edu.cuny.qc.util.SentDetectorWrapper;
 import edu.cuny.qc.util.Span;
 import edu.cuny.qc.util.TokenizerWrapper;
+import edu.cuny.qc.util.Utils;
 import eu.excitementproject.eop.common.utilities.uima.UimaUtilsException;
 
 /**
@@ -80,6 +81,7 @@ public class Document implements java.io.Serializable
 	
 	// the id (base file name) of the document
 	public String docID;
+	public String docLine;
 	public String docPath;
 	public String text;
 	/**
@@ -350,7 +352,13 @@ public class Document implements java.io.Serializable
 	public Document(String baseFileName) throws IOException
 	{
 		// by default, the hasLabel is true
-		this(baseFileName, true, false);
+		this(baseFileName, null, true, false);
+	}
+	
+	public Document(String baseFileName, String docLine) throws IOException
+	{
+		// by default, the hasLabel is true
+		this(baseFileName, docLine, true, false);
 	}
 	
 	/**
@@ -384,14 +392,25 @@ public class Document implements java.io.Serializable
 	 */
 	public Document(String baseFileName, boolean hasLabel, boolean monoCase) throws IOException
 	{
-		this(baseFileName, hasLabel, monoCase, null);
+		this(baseFileName, null, hasLabel, monoCase);
+	}
+	
+	public Document(String baseFileName, String docLine, boolean hasLabel, boolean monoCase) throws IOException
+	{
+		this(baseFileName, docLine, hasLabel, monoCase, null);
 	}
 	
 	public Document(String baseFileName, boolean hasLabel, boolean monoCase, JCas existingJCas) throws IOException
 	{
+		this(baseFileName, null, hasLabel, monoCase, existingJCas);
+	}
+	
+	public Document(String baseFileName, String docLine, boolean hasLabel, boolean monoCase, JCas existingJCas) throws IOException
+	{
 		this.monoCase = monoCase;
 		docPath = baseFileName;
-		docID = baseFileName.substring(baseFileName.lastIndexOf("/") + 1);
+		this.docLine = docLine; 
+		docID = baseFileName.substring(baseFileName.lastIndexOf("/") + 1).intern();
 		File txtFile = new File(baseFileName + textFileExt);
 		
 		this.setHasLabel(hasLabel);
@@ -409,7 +428,7 @@ public class Document implements java.io.Serializable
 		return String.format("%s(%s)", getClass().getSimpleName(), docID);
 	}
 	
-	public static Document createAndPreprocess(String baseFileName, boolean hasLabel, boolean monoCase, boolean tryLoadExisting, boolean dumpNewDoc, TypesContainer types, Controller controller, SignalMechanismsContainer signalMechanismsContainer) throws IOException {
+	public static Document createAndPreprocess(String baseFileName, String docLine, boolean hasLabel, boolean monoCase, boolean tryLoadExisting, boolean dumpNewDoc, TypesContainer types, Controller controller, SignalMechanismsContainer signalMechanismsContainer) throws IOException {
 		try {
 			// Kludge - don't serialize for now
 			//dumpNewDoc = false;
@@ -447,7 +466,7 @@ public class Document implements java.io.Serializable
 			}
 			if (doc==null) {
 				System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] building document...", new Date());
-				doc = new Document(baseFileName, hasLabel, monoCase);
+				doc = new Document(baseFileName, docLine, hasLabel, monoCase);
 				
 				// These two are separated only for historical reasons, and could be joint back.
 				TextFeatureGenerator.doPreprocess(doc);
@@ -1211,6 +1230,7 @@ public class Document implements java.io.Serializable
 				SentenceInstance inst = new SentenceInstance(controller, signalMechanismsContainer, sent, oneType, featureAlphabet,
 						learnable, spec, specNum, debug);
 				result.put(spec, inst);
+				//System.out.printf("%s %s\n", Utils.detailedLog(), inst.sentInstID);
 			}
 		}
 		else {

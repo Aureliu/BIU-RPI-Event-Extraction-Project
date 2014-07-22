@@ -90,8 +90,7 @@ public class Controller implements java.io.Serializable
 			String[] fields = arg.split("=");
 			if(fields.length != 2)
 			{
-				System.out.println("Malform argument: " + arg);
-				System.exit(-1);
+				throw new IllegalArgumentException(String.format("Malform argument in controller '%s', got %s part instead of 2", arg, fields.length));
 			}
 			else if(fields[0].equalsIgnoreCase("beamSize"))
 			{

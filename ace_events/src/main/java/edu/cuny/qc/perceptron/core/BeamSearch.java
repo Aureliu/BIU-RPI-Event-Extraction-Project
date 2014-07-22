@@ -63,8 +63,8 @@ public class BeamSearch
 		}
 	}
 	
-	public void printBeam(PrintStream b, SentenceInstance instance, List<SentenceAssignment> beam, String violation) {
-		if (this.isTraining) {
+	public void printBeam(PrintStream b, SentenceInstance instance, List<SentenceAssignment> beam, String violation, boolean doLogging) {
+		if (this.isTraining && doLogging && b != null) {
 			for (int pos=0; pos<beam.size(); pos++) {
 				SentenceAssignment assn = beam.get(pos);
 				
@@ -287,7 +287,7 @@ public class BeamSearch
 				if(violation)
 				{
 					beam.get(0).setViolate(true);
-					printBeam(b, problem, beam, "trg");
+					printBeam(b, problem, beam, "trg", true);
 					return beam.get(0);
 				}
 			}
@@ -377,7 +377,7 @@ public class BeamSearch
 					if(violation)
 					{
 						beam.get(0).setViolate(true);
-						printBeam(b, problem, beam, "arg");
+						printBeam(b, problem, beam, "arg", true);
 						return beam.get(0);
 					}
 				}
@@ -390,10 +390,10 @@ public class BeamSearch
 		if(isLearning && problem.violateGoldStandard(beam.get(0)))
 		{
 			beam.get(0).setViolate(true);
-			printBeam(b, problem, beam, "end");
+			printBeam(b, problem, beam, "end", true);
 		}
 		else {
-			printBeam(b, problem, beam, "no");
+			printBeam(b, problem, beam, "no", true);
 		}
 		
 		if (PRINT_BEAM) {

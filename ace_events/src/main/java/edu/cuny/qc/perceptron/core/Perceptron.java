@@ -27,6 +27,7 @@ import org.apache.commons.lang3.SerializationUtils;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 
+import edu.cuny.qc.perceptron.core.AllTrainingScores.ScoresList;
 import edu.cuny.qc.perceptron.core.Evaluator.Score;
 import edu.cuny.qc.perceptron.types.Alphabet;
 import edu.cuny.qc.perceptron.types.FeatureVector;
@@ -189,7 +190,7 @@ public class Perceptron implements java.io.Serializable
 		{
 			SentenceAssignment assn = beamSearcher.beamSearch(inst, controller.beamSize, false, bDev);
 			ret.add(assn);
-			logs.logPostBeamSearch(inst, assn, Logs.MINUS_ONE, iter, i, weights, avg_weights, avg_weights_base, w, f, u);
+			logs.logPostBeamSearch(inst, assn, Logs.MINUS_ONE, iter, i, weights, avg_weights, avg_weights_base, w, f, u, true);
 		}
 		return ret;
 	}
@@ -203,20 +204,29 @@ public class Perceptron implements java.io.Serializable
 //		learning(trainingList, devList, cutoff, null);
 //	}
 	
-	public Score evaluateAndCheckBest(Logs logs, Evaluator evaluator, Collection<SentenceInstance> instances, List<SentenceAssignment> assns,
-			Integer iter, Score maxScore, PrintStream p) {
-		Evaluator.Score devScore = evaluator.evaluate(assns, instances);
-		logs.printScore(p, Integer.toString(iter), instances.size(), devScore);
+	/**
+	 * Returns the score only if the current is the best one so far. Null otherwise.
+	 */
+	public void evaluateAndUpdateBest(Logs logs, Evaluator evaluator, Collection<SentenceInstance> instances, List<SentenceAssignment> assns,
+			Integer iter, ScoresList currScores, FeatureVector weights, FeatureVector avgWeights, PrintStream p) {
+		Evaluator.Score score = evaluator.evaluate(assns, instances, iter);
+		currScores.scores.put(iter, score);
+		logs.printScore(p, Integer.toString(iter), instances.size(), score, true);
 		
 		if (!controller.useArguments) {
-			//System.out.printf("Since useArguments, switching harmonic_mean=%s with trigger_F1=%s\n", dev_score.harmonic_mean, dev_score.trigger_F1);
-			devScore.harmonic_mean = devScore.trigger_F1;
+			score.harmonic_mean = score.trigger_F1;
 		}
 
-		if ((devScore.harmonic_mean - maxScore.harmonic_mean) >= 0.00001) {
-			return devScore;
+		if ((score.harmonic_mean - currScores.bestScore.harmonic_mean) >= 0.00001) {
+			currScores.bestScore = score;
+			currScores.bestWeights = weights.clone();
+			if(this.controller.avgArguments)
+			{
+				currScores.bestAvgWeights = avgWeights.clone();
+			}
+
 		}
-		return null;
+
 	}
 	
 	/**
@@ -225,7 +235,8 @@ public class Perceptron implements java.io.Serializable
 	 * @param trainingList
 	 * @param maxIter
 	 */
-	public Score learning(Collection<SentenceInstance> trainingList, Collection<SentenceInstance> devList, int cutoff, String logSuffix)
+	public AllTrainingScores learning(Collection<SentenceInstance> trainingList, Collection<SentenceInstance> devList, int cutoff,
+			String logSuffix, boolean doLogging, boolean createNewLogs)
 	{	
 		Logs logs = new Logs(outFolder, controller, logSuffix);
 		
@@ -255,33 +266,33 @@ public class Perceptron implements java.io.Serializable
 			throw new UnsupportedParameterException("cutoff > 0");
 		}
 		
-		try {
-			wTrain = logs.getW("Train");
-			fTrain = logs.getF("Train");
-			fDev =   logs.getF("Dev");
-			pTrain = logs.getP("Train");
-			pDev =   logs.getP("Dev");
-			uTrain = logs.getU("Train");
-			uDev =   logs.getU("Dev");
-			bTrain = logs.getB("Train");
-			bDev =   logs.getB("Dev");
-		} catch (FileNotFoundException e) {
-			throw new RuntimeException(e);
+		if (doLogging && createNewLogs) {
+			try {
+				wTrain = logs.getW("Train");
+				fTrain = logs.getF("Train");
+				fDev =   logs.getF("Dev");
+				pTrain = logs.getP("Train");
+				pDev =   logs.getP("Dev");
+				uTrain = logs.getU("Train");
+				uDev =   logs.getU("Dev");
+				bTrain = logs.getB("Train");
+				bDev =   logs.getB("Dev");
+			} catch (FileNotFoundException e) {
+				throw new RuntimeException(e);
+			}	
 		}
-
-		logs.logTitles(wTrain, fTrain, pTrain, uTrain, bTrain, null);
-		logs.logTitles(null, fDev, pDev, uDev, bDev, null);
 		
 		// online learning with beam search and early update
 		long totalTime = 0;
-		Evaluator.Score max_score = new Evaluator.Score();
-		Evaluator.Score maxTrainScore = new Evaluator.Score();
-		Integer best_iter = 0;
-		Integer bestTrainIter = 0;
-		FeatureVector best_weights = null;
-		FeatureVector bestTrainWeights = null;
-		FeatureVector best_avg_weights = null;
-		FeatureVector bestTrainAvgWeights = null;
+//		Evaluator.Score max_score = new Evaluator.Score();
+//		Evaluator.Score maxTrainScore = new Evaluator.Score();
+//		Integer best_iter = 0;
+//		Integer bestTrainIter = 0;
+//		FeatureVector best_weights = null;
+//		FeatureVector bestTrainWeights = null;
+//		FeatureVector best_avg_weights = null;
+//		FeatureVector bestTrainAvgWeights = null;
+		AllTrainingScores result = new AllTrainingScores();
 		/*int*/ iter = 0;
 		BigDecimal c = BigDecimal.ZERO; // for averaged parameter
 		for(iter=0; iter<this.controller.maxIterNum; iter++)
@@ -308,7 +319,7 @@ public class Perceptron implements java.io.Serializable
 					error_num ++;
 				}
 				
-				logs.logPostBeamSearch(instance, assn, c, iter, i, weights, avg_weights, avg_weights_base, wTrain, fTrain, uTrain);
+				logs.logPostBeamSearch(instance, assn, c, iter, i, weights, avg_weights, avg_weights_base, wTrain, fTrain, uTrain, true);
 				assnsTrain.add(assn);
 
 				i++;
@@ -316,16 +327,17 @@ public class Perceptron implements java.io.Serializable
 			
 			makeAveragedWeights(c);
 
-			Score score = evaluateAndCheckBest(logs, evaluator, trainingList, assnsTrain, iter, maxTrainScore, pTrain);
-			if (score != null) {
-				maxTrainScore = score;
-				bestTrainIter = iter;
-				bestTrainWeights = this.weights.clone();
-				if(this.controller.avgArguments)
-				{
-					bestTrainAvgWeights = this.avg_weights.clone();
-				}
-			}
+			//Score score = evaluateAndCheckBest(logs, evaluator, trainingList, assnsTrain, iter, maxTrainScore, pTrain);
+			evaluateAndUpdateBest(logs, evaluator, trainingList, assnsTrain, iter, result.train, this.weights, this.avg_weights, pTrain);
+//			if (score != null) {
+//				maxTrainScore = score;
+//				bestTrainIter = iter;
+//				bestTrainWeights = this.weights.clone();
+//				if(this.controller.avgArguments)
+//				{
+//					bestTrainAvgWeights = this.avg_weights.clone();
+//				}
+//			}
 			
 			long endTime = System.currentTimeMillis();
 			long iterTime = endTime - startTime;
@@ -337,20 +349,20 @@ public class Perceptron implements java.io.Serializable
 			{
 				
 				//TODO DEBUG
-				logs.printWeights(wTrain, iter, "", Logs.POST_ITERATION_MARK, c, "", "", weights, avg_weights, avg_weights_base);
+				logs.printWeights(wTrain, iter, "", Logs.POST_ITERATION_MARK, c, "", "", weights, avg_weights, avg_weights_base, true);
 				/// TODO END DEBUG
 				
 				List<SentenceAssignment> devResult = decoding(logs, devList, iter, i, weights, avg_weights, avg_weights_base, wTrain, fDev, uDev);
-				score = evaluateAndCheckBest(logs, evaluator, devList, devResult, iter, max_score, pDev);
-				if (score != null) {
-					max_score = score;
-					best_iter = iter;
-					best_weights = this.weights.clone();
-					if(this.controller.avgArguments)
-					{
-						best_avg_weights = this.avg_weights.clone();
-					}
-				}
+				evaluateAndUpdateBest(logs, evaluator, devList, devResult, iter, result.dev, this.weights, this.avg_weights, pDev);
+//				if (score != null) {
+//					max_score = score;
+//					best_iter = iter;
+//					best_weights = this.weights.clone();
+//					if(this.controller.avgArguments)
+//					{
+//						best_avg_weights = this.avg_weights.clone();
+//					}
+//				}
 
 			}
 			
@@ -378,38 +390,38 @@ public class Perceptron implements java.io.Serializable
 		{
 			// converge
 			System.out.println(Utils.detailedLog() + " converge in iter " + iter + "\t time:" + totalTime);
-			lastDevIter = String.format("BestDev(iter=%s, converged)", best_iter);
-			lastTrainIter = String.format("BestTrain(iter=%s, converged)", bestTrainIter);
+			lastDevIter = String.format("BestDev(iter=%s, converged)", result.dev.bestScore.iteration);
+			lastTrainIter = String.format("BestTrain(iter=%s, converged)", result.train.bestScore.iteration);
 			iter++;
 		}
 		else
 		{
 			// stop without convergency
 			System.out.println(Utils.detailedLog() + " Stop without convergency" + "\t time:" + totalTime);
-			lastDevIter = String.format("BestDev(iter=%s, NO converge)", best_iter);
-			lastTrainIter = String.format("BestTrain(iter=%s, NO converge)", bestTrainIter);
+			lastDevIter = String.format("BestDev(iter=%s, NO converge)", result.dev.bestScore.iteration);
+			lastTrainIter = String.format("BestTrain(iter=%s, NO converge)", result.train.bestScore.iteration);
 		}
-		logs.printScore(pDev, lastDevIter, devList.size(), max_score);
-		logs.printScore(pTrain, lastTrainIter, trainingList.size(), maxTrainScore);
+		logs.printScore(pTrain, lastTrainIter, trainingList.size(), result.train.bestScore, true);
+		logs.printScore(pDev, lastDevIter, devList.size(), result.dev.bestScore, true);
 
 		
-		if(devList != null && best_weights != null)
+		if(devList != null && result.dev.bestWeights != null)
 		{
-			this.weights = best_weights;
+			this.weights = result.dev.bestWeights;
 			if(this.controller.avgArguments)
 			{
-				this.avg_weights = best_avg_weights;
+				this.avg_weights = result.dev.bestAvgWeights;
 			}
-			System.out.println("best performance on dev set: iter " + best_iter + " :" + max_score);
+			System.out.println("best performance on dev set: iter " + result.dev.bestScore.iteration + " :" + result.dev.bestScore);
 		}
 		else if(this.controller.avgArguments)
 		{
 			makeAveragedWeights(c);
 		}
-		logs.printWeights(wTrain, lastTrainIter, "", Logs.POST_ITERATION_MARK, c, "", "", weights, avg_weights, avg_weights_base);
-		logs.printWeights(wTrain, lastDevIter, "", Logs.POST_ITERATION_MARK, c, "", "", weights, avg_weights, avg_weights_base);
+		logs.printWeights(wTrain, lastTrainIter, "", Logs.POST_ITERATION_MARK, c, "", "", weights, avg_weights, avg_weights_base, true);
+		logs.printWeights(wTrain, lastDevIter, "", Logs.POST_ITERATION_MARK, c, "", "", weights, avg_weights, avg_weights_base, true);
 		
-		return max_score;
+		return result;
 	}
 	
 //	protected List<SentenceInstance> getCanonicalInstanceList(

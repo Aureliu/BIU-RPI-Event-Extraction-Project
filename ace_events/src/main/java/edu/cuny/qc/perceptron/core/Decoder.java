@@ -92,6 +92,42 @@ public class Decoder
 		w.close();
 	}
 
+	public static File decodeAndOutputFile(Logs logs, Perceptron perceptron, String folderNamePrefix, File outDir, Collection<SentenceInstance> insts, Document doc) throws FileNotFoundException {
+		
+		List<SentenceAssignment> localResults = perceptron.decoding(logs, insts, -1, -1,
+				perceptron.weights, perceptron.avg_weights, perceptron.avg_weights_base, null, null, null);
+		
+		// print to docs
+		File outputFile = new File(outDir + "/" + folderNamePrefix + doc.docLine + ".apf.xml");
+		if(!outputFile.getParentFile().exists())
+		{
+			outputFile.getParentFile().mkdirs();
+		}
+		String docID = doc.docID;//.substring(doc.docID.lastIndexOf("/") + 1);
+		String id_prefix = docID + "-" + "EV";
+		PrintWriter out = new PrintWriter(outputFile);
+		
+		// output entities and predicted events from doc
+		List<AceEvent> eventsInDoc = new ArrayList<AceEvent>();
+		
+		//List<SentenceInstance> canonicalList = perceptron.getCanonicalInstanceList(localInstanceList);
+		int inst_id=0;
+		for (Iterator<SentenceInstance> iter = insts.iterator(); iter.hasNext();)
+		{
+			SentenceAssignment assn = localResults.get(inst_id);
+			SentenceInstance inst = iter.next();
+			String id = id_prefix + inst_id;
+			// each event only contains one single event mention
+			List<AceEvent> events = inst.getEvents(assn, id, doc.allText);
+			eventsInDoc.addAll(events);
+			inst_id++;
+		}
+		//System.err.println("??? Decoder: Calls SentenceInstance.getEvents(), which uses TypeConstraints.eventTypeMap, which is not consistent with specs, so I'm not sure what should happen here...");
+		writeEntities(out, doc.getAceAnnotations(), eventsInDoc);
+		out.close();
+		
+		return outputFile;
+	}
 
 	public static TypesContainer decode(String[] args, String filenameSuffix, String folderNamePrefix, File specListFile) throws IOException, DocumentException, AnalysisEngineProcessException, InvalidXMLException, ResourceInitializationException, SAXException, CASRuntimeException, CASException, UimaUtilsException, AeException, SignalMechanismException, SpecException
 	{
@@ -138,8 +174,8 @@ public class Decoder
 			throw new RuntimeException(e);
 		}
 
-		logs.logTitles(wTrain, fTrain, pTrain, uTrain, bTrain);
-		logs.logTitles(null, fDev, pDev, uDev, bDev);
+//		logs.logTitles(wTrain, fTrain, pTrain, uTrain, bTrain, null);
+//		logs.logTitles(null, fDev, pDev, uDev, bDev, null);
 		
 		//Intermediate output - all features+weights to text files
 //		String s;
@@ -181,7 +217,7 @@ public class Decoder
 			}
 			else
 			{
-				doc = Document.createAndPreprocess(fileName, true, monoCase, perceptron.controller.usePreprocessFiles, perceptron.controller.usePreprocessFiles, types, perceptron.controller, signalMechanismsContainer);
+				doc = Document.createAndPreprocess(fileName, line, true, monoCase, perceptron.controller.usePreprocessFiles, perceptron.controller.usePreprocessFiles, types, perceptron.controller, signalMechanismsContainer);
 				// fill in text feature vector for each token
 				//featGen.fillTextFeatures_NoPreprocessing(doc);
 			}
@@ -190,38 +226,7 @@ public class Decoder
 			
 			doc.dumpSignals(/*localInstanceList, types, */perceptron.controller);
 
-			// decoding
-			List<SentenceAssignment> localResults = perceptron.decoding(logs, localInstanceList, -1, -1,
-					perceptron.weights, perceptron.avg_weights, perceptron.avg_weights_base, null, null, null);
-			
-			// print to docs
-			File outputFile = new File(outDir + "/" + folderNamePrefix + line + ".apf.xml");
-			if(!outputFile.getParentFile().exists())
-			{
-				outputFile.getParentFile().mkdirs();
-			}
-			String docID = doc.docID;//.substring(doc.docID.lastIndexOf("/") + 1);
-			String id_prefix = docID + "-" + "EV";
-			PrintWriter out = new PrintWriter(outputFile);
-			
-			// output entities and predicted events from doc
-			List<AceEvent> eventsInDoc = new ArrayList<AceEvent>();
-			
-			//List<SentenceInstance> canonicalList = perceptron.getCanonicalInstanceList(localInstanceList);
-			int inst_id=0;
-			for (Iterator<SentenceInstance> iter = localInstanceList.iterator(); iter.hasNext();)
-			{
-				SentenceAssignment assn = localResults.get(inst_id);
-				SentenceInstance inst = iter.next();
-				String id = id_prefix + inst_id;
-				// each event only contains one single event mention
-				List<AceEvent> events = inst.getEvents(assn, id, doc.allText);
-				eventsInDoc.addAll(events);
-				inst_id++;
-			}
-			System.err.println("??? Decoder: Calls SentenceInstance.getEvents(), which uses TypeConstraints.eventTypeMap, which is not consistent with specs, so I'm not sure what should happen here...");
-			writeEntities(out, doc.getAceAnnotations(), eventsInDoc);
-			out.close();
+			decodeAndOutputFile(logs, perceptron, folderNamePrefix, outDir, localInstanceList, doc);
 			
 			System.out.printf("%s Finished processing document %s\n", Utils.detailedLog(), doc.docID);
 		}

@@ -43,7 +43,7 @@ public abstract class SignalPerformanceField extends StatsField {
 		for (SentenceAssignment assn : elements) {
 			goldTargets.add(assn.target);
 		}
-		Score s = evaluator.evaluate(elements, goldTargets, false);
+		Score s = evaluator.evaluate(elements, goldTargets, -1, false);
 		
 		List<Double> doubles = getDoubles(s);
 		List<String> result = new ArrayList<String>(doubles.size());

@@ -2,20 +2,35 @@ package edu.cuny.qc.util;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.PrintStream;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 import java.util.Map.Entry;
+import java.util.Set;
 
 import org.apache.commons.lang3.StringUtils;
+import org.apache.log4j.Logger;
 
+import ac.biu.nlp.nlp.ace_uima.analyze.SignalAnalyzer;
+
+import com.google.common.collect.ContiguousSet;
+import com.google.common.collect.DiscreteDomain;
+import com.google.common.collect.ImmutableSortedSet;
+import com.google.common.collect.Lists;
 import com.google.common.collect.Multimap;
+import com.google.common.collect.Range;
+import com.google.common.collect.Sets;
+import com.google.common.io.Files;
 
 public class Utils {
 	public static List<String> logOnlyTheseSentences = null;
 	private static final Runtime runtime = Runtime.getRuntime();
 	public static final double MB = 1024.0*1024;
+	private static final Random random = new Random();
 
 	public static double inMB(long bytes) {
 		return bytes / MB;
@@ -61,4 +76,35 @@ public class Utils {
 			multi.put(entry.getKey(), entry.getValue());
 		}
 	}
+	
+	public static int randInt(int minInclusive, int maxInclusive) {
+		int result = random.nextInt((maxInclusive - minInclusive) + 1) + minInclusive;
+		return result;
+	}
+	
+	/**
+	 * Doesn't keep original order.
+	 */
+	public static <T> List<T> sample(List<T> elements, int amount) {
+		if (amount > elements.size()) {
+			throw new IllegalArgumentException(String.format("Got amount %s which is more than the list's size (%s)", amount, elements.size()));
+		}
+		List<T> result = Lists.newArrayListWithCapacity(amount);
+		ImmutableSortedSet<Integer> indexesImm = ContiguousSet.create(Range.closed(0, elements.size()-1), DiscreteDomain.integers());
+		List<Integer> indexes = Lists.newArrayList(indexesImm);
+		for (int i=0; i<amount; i++) {
+			int ii = randInt(0, indexes.size()-1);
+			int index = indexes.remove(ii);
+			T element = elements.get(index);
+			result.add(element);
+		}
+		return result;
+	}
+	public static Logger handleLog() throws IOException {
+		File target = new File("./target/classes/log4j.properties");
+		Files.createParentDirs(target);
+		Files.copy(new File("./log4j.properties"), target);
+		return Logger.getLogger(SignalAnalyzer.class);
+	}
+
 }

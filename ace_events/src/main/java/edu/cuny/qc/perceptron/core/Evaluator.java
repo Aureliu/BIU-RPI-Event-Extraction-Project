@@ -30,8 +30,14 @@ public class Evaluator
 	public static class Score
 	{
 		static {
-			System.err.println("??? Evaluator.Score: args are disables. Harmonic mean actually just takes triggers. Undo these when args are back in fashion.");
+			System.err.println("??? Evaluator.Score: args are disabled. Harmonic mean actually just takes triggers. Undo these when args are back in fashion.");
 		}
+		
+		public Score(int iteration) {
+			this.iteration = iteration;
+		}
+		
+		public int iteration;
 		
 		public InfoGainResult trigger_info_gain = null;
 		public double trigger_F1 = 0.0;
@@ -88,18 +94,18 @@ public class Evaluator
 		}
 	}
 	
-	public Score evaluate(List<SentenceAssignment> results, Collection<SentenceInstance> instancesGold) {
+	public Score evaluate(List<SentenceAssignment> results, Collection<SentenceInstance> instancesGold, int iteration) {
 		List<SentenceAssignment> goldTargets = new ArrayList<SentenceAssignment>(instancesGold.size());
 		for (SentenceInstance inst : instancesGold) {
 			goldTargets.add(inst.target);
 		}
 		
-		return evaluate(results, goldTargets, false);
+		return evaluate(results, goldTargets, iteration, false);
 	}
 	
-	public Score evaluate(List<SentenceAssignment> results, List<SentenceAssignment> goldTargets, boolean fake)
+	public Score evaluate(List<SentenceAssignment> results, List<SentenceAssignment> goldTargets, int iteration, boolean fake)
 	{
-		Score score = new Score();
+		Score score = new Score(iteration);
 		evaluteTrigger(results, goldTargets, score);
 		evaluteArgument(results, goldTargets, score);
 		

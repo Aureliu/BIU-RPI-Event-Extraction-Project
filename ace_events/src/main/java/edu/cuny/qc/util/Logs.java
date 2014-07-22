@@ -14,11 +14,17 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import org.apache.commons.lang3.StringUtils;
+import org.apache.uima.cas.CASException;
 import org.apache.uima.jcas.JCas;
+
+import ac.biu.nlp.nlp.ie.onthefly.input.SpecAnnotator;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 
+import edu.cuny.qc.ace.acetypes.Scorer.Stats;
+import edu.cuny.qc.perceptron.core.AllTrainingScores;
 import edu.cuny.qc.perceptron.core.Controller;
 import edu.cuny.qc.perceptron.core.Evaluator.Score;
 import edu.cuny.qc.perceptron.folds.Run;
@@ -46,11 +52,9 @@ public class Logs {
 	public static final int LEVEL_WEIGHTS = 1;
 	public static final int LEVEL_MIN_F_U_W = Math.min(Math.min(LEVEL_U, LEVEL_F_1), LEVEL_W_1);
 	
-	
-	
-	private Controller controller;
-	private String logSuffix; 
-	private File outFolder;
+	public Controller controller;
+	public String logSuffix; 
+	public File outFolder;
 	
 	public Logs(File outFolder, Controller controller, String logSuffix) {
 		this.controller = controller;
@@ -208,6 +212,16 @@ public class Logs {
 //		return f.getName();
 //	}
 	
+
+	public static String labelList(Collection<JCas> types) throws CASException {
+		List<String> labels = Lists.newArrayListWithCapacity(types.size());
+		for (JCas spec : types) {
+			labels.add(SpecAnnotator.getSpecLabel(spec));
+		}
+		Collections.sort(labels);
+		return StringUtils.join(labels, ",");
+	}
+	
 	public static <T> void add(Map<T, BigDecimal> map, T key, BigDecimal toAdd) {
 		BigDecimal currVal = map.get(key);
 		if (currVal == null) {
@@ -255,10 +269,19 @@ public class Logs {
 		}
 	}
 	
+	public static int getNumMentions(Collection<SentenceInstance> insts) {
+		int count = 0;
+		for (SentenceInstance inst : insts) {
+			count += inst.eventMentions.size();
+		}
+		return count;
+	}
+	
 	public void printWeights(PrintStream out, Object iter, Object docId, Object sentenceNo, Object c, Object tokens, Object sentenceText,
-			FeatureVector weights, FeatureVector avg_weights, FeatureVector avg_weights_base) {
-		if (  (controller.logLevel >= Logs.LEVEL_W_2 && sentenceNo.equals(POST_ITERATION_MARK))   ||
-			  (controller.logLevel >= Logs.LEVEL_W_3)  ) {
+			FeatureVector weights, FeatureVector avg_weights, FeatureVector avg_weights_base, boolean doLogging) {
+		if (  doLogging && out!=null &&
+			  (  (controller.logLevel >= Logs.LEVEL_W_2 && sentenceNo.equals(POST_ITERATION_MARK))   ||
+			     (controller.logLevel >= Logs.LEVEL_W_3)  )  ) {
 			List<String> featureNames = new ArrayList<String>();
 			for (Object feat : weights.getMap().keySet()) {
 				featureNames.add((String) feat);
@@ -305,20 +328,42 @@ public class Logs {
 		}
 	}
 	
-	public void printScore(PrintStream out, String iter, int numSentences, Score score) {
-		Utils.print(out, "", "\n", "|", null, 
-				iter, numSentences,
-				score.count_trigger_gold, score.count_trigger_ans, score.count_trigger_correct,
-				score.trigger_precision, score.trigger_recall, score.trigger_F1, 
-				score.count_arg_gold, score.count_arg_ans, score.count_arg_correct,
-				score.arg_precision, score.arg_recall, score.arg_F1, 
-				score.harmonic_mean);
+	public void printScore(PrintStream out, String iter, int numSentences, Score score, boolean doLogging) {
+		if (doLogging && out != null) {
+			Utils.print(out, "", "\n", "|", null, 
+					iter, numSentences,
+					score.count_trigger_gold, score.count_trigger_ans, score.count_trigger_correct,
+					score.trigger_precision, score.trigger_recall, score.trigger_F1, 
+					score.count_arg_gold, score.count_arg_ans, score.count_arg_correct,
+					score.arg_precision, score.arg_recall, score.arg_F1, 
+					score.harmonic_mean);
+		}
 	}
 	
 	public PrintStream getW(String mode) throws FileNotFoundException {
 		if (controller.logLevel >= LEVEL_W_1) {
 			String weightsOutputFilePath = outFolder.getAbsolutePath() + "/" + mode + "-AllWeights-" + LOG_NAME_ID + "." + controller.logLevel + logSuffix + ".tsv";
-			return new PrintStream(weightsOutputFilePath);
+			PrintStream w = new PrintStream(weightsOutputFilePath);
+			
+			Utils.print(w, "", "\n", "|", null,			
+					"Iter",
+					"DocID",
+					"SentenceNo",
+					"c",
+					//"Tokens",
+					//"Sentence"
+					"Weights",
+					"AvgWeights",
+					"Feature",
+					"Weight",
+					"BaseWeight",
+					"AvgWeight",
+					"len-Weights",
+					"len-BaseWeights",
+					"len-AvgWeights"
+			);
+			
+			return w;
 		}
 		return null;
 	}
@@ -326,7 +371,36 @@ public class Logs {
 	public PrintStream getF(String mode) throws FileNotFoundException {
 		if (controller.logLevel >= LEVEL_F_1) {
 			String featuresOutputFilePath = outFolder.getAbsolutePath() + "/" + mode + "-AllFeatures-" + LOG_NAME_ID + "." + controller.logLevel + logSuffix + ".tsv";
-			return new PrintStream(featuresOutputFilePath);
+			PrintStream f = new PrintStream(featuresOutputFilePath);
+			
+			Utils.print(f, "", "\n", "|", null,			
+					"Iter",
+					"DocID",
+					"SentenceNo",
+					"c",
+					"Tokens",
+					"Sentence",
+					"i",
+					"Lemma",
+					"target-label",
+					"assn-label",
+					"both-labels",
+					"Feature",
+					"target-size",
+					"target-signal",
+					"target",
+					"assn-size",
+					"assn-signal",
+					"assn",
+					"labels+assn",
+					"in-both",
+					"same-score",
+					"weights-size",
+					"weights",
+					"avg_weights"
+			);
+			
+			return f;
 		}
 		return null;
 	}
@@ -334,7 +408,42 @@ public class Logs {
 	public PrintStream getU(String mode) throws FileNotFoundException {
 		if (controller.logLevel >= LEVEL_U) {
 			String updatesOutputFilePath = outFolder.getAbsolutePath() + "/" + mode + "-AllUpdates-" + LOG_NAME_ID + "." + controller.logLevel + logSuffix + ".tsv";
-			return new PrintStream(updatesOutputFilePath);
+			PrintStream u = new PrintStream(updatesOutputFilePath);
+			
+			Utils.print(u, "", "\n", "|", null,			
+					"Iter",
+					"DocID:SentenceNo",
+					"Tokens",
+					"TokensProcessed",
+					"Signal",
+					"Label",
+					"W:LBL:P+",
+					"W:LBL:P-",
+					"W:O:P+",
+					"W:O:P-",
+					"AnyChange",
+					"C:P+",
+					"C:P-",
+					"C:LBL:P+",
+					"C:LBL:P-",
+					"C:O:P+",
+					"C:O:P-",
+					"Summary",
+
+					"O,O,F",
+					"LBL,O,T",
+					"O,LBL,F",
+					"LBL,LBL,T",
+					"O,LBL,T",
+					"LBL,O,F",
+					"O,O,T",
+					"LBL,LBL,F",
+					"weird,weird,T",
+					"weird,weird,F"
+					
+			);
+			
+			return u;
 		}
 		return null;
 	}
@@ -342,7 +451,27 @@ public class Logs {
 	public PrintStream getP(String mode) throws FileNotFoundException {
 		if (controller.logLevel >= LEVEL_P) {
 			String performanceOutputFilePath = outFolder.getAbsolutePath() + "/" + mode + "-Performance-" + LOG_NAME_ID + "." + controller.logLevel + logSuffix + ".tsv";
-			return new PrintStream(performanceOutputFilePath);
+			PrintStream p = new PrintStream(performanceOutputFilePath);
+			
+			Utils.print(p, "", "\n", "|", null,				
+					"Iter",
+					"DevSentences",
+					"Trigger-Gold",
+					"Trigger-System",
+					"Trigger-Correct",
+					"Trigger-Precision",
+					"Trigger-Recall",
+					"Trigger-F1",
+					"Arg-Gold",
+					"Arg-System",
+					"Arg-Correct",
+					"Arg-Precision",
+					"Arg-Recall",
+					"Arg-F1",
+					"HarmonicMean-F1"
+			);	
+
+			return p;
 		}
 		return null;
 	}
@@ -350,200 +479,137 @@ public class Logs {
 	public PrintStream getB(String mode) throws FileNotFoundException {
 		if (controller.logLevel >= LEVEL_B_1) {
 			String beamsOutputFilePath = outFolder.getAbsolutePath() + "/" + mode + "-AllBeams-" + LOG_NAME_ID + "." + controller.logLevel + logSuffix + ".tsv";
-			return new PrintStream(beamsOutputFilePath);
+			PrintStream b = new PrintStream(beamsOutputFilePath);
+			
+			Utils.print(b, "", "\n", "|", null,	
+					//general
+					"Iter",
+					"DocID",
+					"SentenceNo",
+					"violation",
+					"beam-size",
+					
+					//assignment
+					"pos",
+					"assignment", //toString()
+					"target",
+					"compatible",
+					"score",
+					"state",
+					
+					//token
+					"i",
+					"Lemma",
+					"target-label",
+					"assn-label",
+					"both-labels",
+					"partial-score",
+					
+					//feature
+					"Feature",
+					"target",
+					"assn",
+					"labels+assn",
+					"Weight",
+					"AvgWeight"
+			);
+			
+			return b;
 		}
 		return null;
 	}
 	
 	public PrintStream getR(String mode) throws FileNotFoundException {
 		if (controller.logLevel >= LEVEL_R) {
-			String runsOutputFilePath = outFolder.getAbsolutePath() + "/" + mode + "-AllRuns-" + LOG_NAME_ID + "." + controller.logLevel + logSuffix + ".tsv";
-			return new PrintStream(runsOutputFilePath);
-		}
-		return null;
-	}
-	
-	public void logTitles(PrintStream w, PrintStream f, PrintStream p, PrintStream u, PrintStream b, PrintStream r) {
-		if (r != null && controller.logLevel >= LEVEL_R) {
+			String runsOutputFilePath = outFolder.getAbsolutePath() + "/" + mode + "AllRuns-" + LOG_NAME_ID + "." + controller.logLevel + logSuffix + ".tsv";
+			PrintStream r = new PrintStream(runsOutputFilePath);
+			
 			Utils.print(r, "", "\n", "|", null,
 					"", //"Id",
 					"", //"IdPerTest",
-					"Train-Triggers", //"Precision",
+					"Train-Triggers", //"Iteration",
+					"", //"Gold",
+					"", //"System",
+					"", //"Correct",
+					"", //"Precision",
 					"", //"Recall",
 					"", //"F1",
-					"Dev-Triggers", //"Precision",
+					"Dev-Triggers", //"Iteration",
+					"", //"Gold",
+					"", //"System",
+					"", //"Correct",
+					"", //"Precision",
 					"", //"Recall",
 					"", //"F1",
-					"Trst-Triggers", //"Precision",
+					"Test-Triggers", //"Gold",
+					"", //"System",
+					"", //"Correct",
+					"", //"Precision",
 					"", //"Recall",
 					"", //"F1",
-					"EventLists", //"Train",
-					"", //"TrainMens",
-					"", //"Dev",
-					"", //"DevMens",
-					"", //"Test",
-					"" //"TestMens"
+					"TrainEvents", //"List",
+					"", //"Types",
+					"", //"Sentences",
+					"", //"Mentions",
+					"DevEvents", //"List",
+					"", //"Types",
+					"", //"Sentences",
+					"", //"Mentions",
+					"TestEvents", //"List",
+					//"", //"Types",
+					"", //"Sentences",
+					"" //"Mentions"
 			);
 			Utils.print(r, "", "\n", "|", null, "");
 			Utils.print(r, "", "\n", "|", null,
 					"Id",
 					"IdPerTest",
+					"Iteration",
+					"Gold",
+					"System",
+					"Correct",
 					"Precision",
 					"Recall",
 					"F1",
+					"Iteration",
+					"Gold",
+					"System",
+					"Correct",
 					"Precision",
 					"Recall",
 					"F1",
+					"Gold",
+					"System",
+					"Correct",
 					"Precision",
 					"Recall",
 					"F1",
-					"Train",
-					"TrainMens",
-					"Dev",
-					"DevMens",
-					"Test",
-					"TestMens"
+					"List",
+					"Types",
+					"Sentences",
+					"Mentions",
+					"List",
+					"Types",
+					"Sentences",
+					"Mentions",
+					"List",
+					"Types",
+					"Sentences",
+					"Mentions"
 			);
+
+			return r;
 		}
-
-		Utils.print(w, "", "\n", "|", null,			
-				"Iter",
-				"DocID",
-				"SentenceNo",
-				"c",
-				//"Tokens",
-				//"Sentence"
-				"Weights",
-				"AvgWeights",
-				"Feature",
-				"Weight",
-				"BaseWeight",
-				"AvgWeight",
-				"len-Weights",
-				"len-BaseWeights",
-				"len-AvgWeights"
-		);
-
-		Utils.print(f, "", "\n", "|", null,			
-				"Iter",
-				"DocID",
-				"SentenceNo",
-				"c",
-				"Tokens",
-				"Sentence",
-				"i",
-				"Lemma",
-				"target-label",
-				"assn-label",
-				"both-labels",
-				"Feature",
-				"target-size",
-				"target-signal",
-				"target",
-				"assn-size",
-				"assn-signal",
-				"assn",
-				"labels+assn",
-				"in-both",
-				"same-score",
-				"weights-size",
-				"weights",
-				"avg_weights"
-		);
-		
-		Utils.print(u, "", "\n", "|", null,			
-				"Iter",
-				"DocID:SentenceNo",
-				"Tokens",
-				"TokensProcessed",
-				"Signal",
-				"Label",
-				"W:LBL:P+",
-				"W:LBL:P-",
-				"W:O:P+",
-				"W:O:P-",
-				"AnyChange",
-				"C:P+",
-				"C:P-",
-				"C:LBL:P+",
-				"C:LBL:P-",
-				"C:O:P+",
-				"C:O:P-",
-				"Summary",
-
-				"O,O,F",
-				"LBL,O,T",
-				"O,LBL,F",
-				"LBL,LBL,T",
-				"O,LBL,T",
-				"LBL,O,F",
-				"O,O,T",
-				"LBL,LBL,F",
-				"weird,weird,T",
-				"weird,weird,F"
-				
-		);
-		
-		Utils.print(p, "", "\n", "|", null,				
-				"Iter",
-				"DevSentences",
-				"Trigger-Gold",
-				"Trigger-System",
-				"Trigger-Correct",
-				"Trigger-Precision",
-				"Trigger-Recall",
-				"Trigger-F1",
-				"Arg-Gold",
-				"Arg-System",
-				"Arg-Correct",
-				"Arg-Precision",
-				"Arg-Recall",
-				"Arg-F1",
-				"HarmonicMean-F1"
-		);	
-		
-		Utils.print(b, "", "\n", "|", null,	
-				//general
-				"Iter",
-				"DocID",
-				"SentenceNo",
-				"violation",
-				"beam-size",
-				
-				//assignment
-				"pos",
-				"assignment", //toString()
-				"target",
-				"compatible",
-				"score",
-				"state",
-				
-				//token
-				"i",
-				"Lemma",
-				"target-label",
-				"assn-label",
-				"both-labels",
-				"partial-score",
-				
-				//feature
-				"Feature",
-				"target",
-				"assn",
-				"labels+assn",
-				"Weight",
-				"AvgWeight"
-		);
+		return null;
 	}
-
 	
 	public void logPostBeamSearch(SentenceInstance instance, SentenceAssignment assn, BigDecimal c, Integer iter, int i,
-			FeatureVector weights, FeatureVector avg_weights, FeatureVector avg_weights_base, PrintStream w, PrintStream f, PrintStream u) {
-		if (controller.logLevel >= LEVEL_MIN_F_U_W) {
+			FeatureVector weights, FeatureVector avg_weights, FeatureVector avg_weights_base, PrintStream w, PrintStream f, PrintStream u, boolean doLogging) {
+		if (controller.logLevel >= LEVEL_MIN_F_U_W && doLogging) {
 			//DEBUG
 			String sentText = sentence(instance.textStart);
 			//printf(w, "|%s%d|%s\n", wt.getFeaturesStringSkip(), i, wt.getFeaturesString());
-			printWeights(w, iter, instance.docID, instance.sentInstID, c, instance.size(), sentText, weights, avg_weights, avg_weights_base);
+			printWeights(w, iter, instance.docID, instance.sentInstID, c, instance.size(), sentText, weights, avg_weights, avg_weights_base, doLogging);
 	
 	
 			// {SignalName : {Label : {Category : AmountInSentence}}}
@@ -872,27 +938,56 @@ public class Logs {
 		}
 	}
 	
-	public void logRun(PrintStream r, Run run, Score bestDevScore, Collection<JCas> trainTypes, Collection<JCas> devTypes, Collection<JCas> testTypes) {
+	public void logRun(PrintStream r, Run run, AllTrainingScores scores, Stats testStats, Collection<JCas> trainTypes, Collection<JCas> devTypes, JCas testType, Collection<SentenceInstance> runTrain, Collection<SentenceInstance> runDev, Collection<SentenceInstance> runTest) throws CASException {
 		if (controller.logLevel >= LEVEL_R) {
+			int trainMentions = getNumMentions(runTrain);
+			int devMentions = getNumMentions(runDev);
+			int testMentions = getNumMentions(runTest);
+
 			Utils.print(r, "", "\n", "|", null,
 					run.id, //"Id",
 					run.idPerTest,//"IdPerTest",
-					"",//"Precision",
-					"",//"Recall",
-					"",//"F1",
-					bestDevScore.trigger_precision,//"Precision",
-					bestDevScore.trigger_recall,//"Recall",
-					bestDevScore.trigger_F1,//"F1",
-					"",//"Precision",
-					"",//"Recall",
-					"",//"F1",
-					labelList(trainTypes),//"Train",
-					"TrainMens",
-					"Dev",
-					"DevMens",
-					"Test",
-					"TestMens"
 					
+					// Train-Triggers
+					scores.train.bestScore.iteration,//"Iteration",
+					scores.train.bestScore.count_trigger_gold,//"Gold",
+					scores.train.bestScore.count_trigger_ans,//"System",
+					scores.train.bestScore.count_trigger_correct,//"Correct",
+					scores.train.bestScore.trigger_precision,//"Precision",
+					scores.train.bestScore.trigger_recall,//"Recall",
+					scores.train.bestScore.trigger_F1,//"F1",
+					
+					// Dev-Triggers
+					scores.dev.bestScore.iteration,//"Iteration",
+					scores.dev.bestScore.count_trigger_gold,//"Gold",
+					scores.dev.bestScore.count_trigger_ans,//"System",
+					scores.dev.bestScore.count_trigger_correct,//"Correct",
+					scores.dev.bestScore.trigger_precision,//"Precision",
+					scores.dev.bestScore.trigger_recall,//"Recall",
+					scores.dev.bestScore.trigger_F1,//"F1",
+					
+					// Test-Triggers
+					testStats.num_trigger_gold,//"Gold",
+					testStats.num_trigger_ans,//"System",
+					testStats.num_trigger_correct,//"Correct",
+					testStats.prec_trigger,//"Precision",
+					testStats.recall_trigger,//"Recall",
+					testStats.f1_trigger,//"F1",
+
+					labelList(trainTypes),//"List",
+					trainTypes.size(),//"Types",
+					runTrain.size(),//"Sentences",
+					trainMentions,//"Mentions",
+					labelList(devTypes),//"List",
+					devTypes.size(),//"Types",
+					runDev.size(),//"Sentences",
+					devMentions,//"Mentions",
+					SpecAnnotator.getSpecLabel(testType),//"List",
+					//testTypes.size(),//"Types",
+					runTest.size(),//"Sentences",
+					testMentions//"Mentions",
+			);					
 		}
 	}
+
 }

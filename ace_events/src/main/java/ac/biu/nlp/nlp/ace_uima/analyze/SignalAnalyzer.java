@@ -76,7 +76,7 @@ public class SignalAnalyzer {
 		SignalMechanismsContainer signalMechanismsContainer = new SignalMechanismsContainer(controller);
 		//Perceptron perceptron = new Perceptron(null, controller, outputFolder, signalMechanismsContainer);
 		
-		Collection<SentenceInstance> goldInstances = Pipeline.readInstanceList(controller, signalMechanismsContainer, types, new File(CORPUS_DIR), inputFileList, new Alphabet(), false, true).values();
+		Collection<SentenceInstance> goldInstances = Pipeline.readInstanceList(controller, signalMechanismsContainer, types, new File(CORPUS_DIR), inputFileList, new Alphabet(), null, false, true).values();
 		//SignalPerformanceField.goldInstances = goldInstances;
 		System.out.printf("[%s] Finished reading documents, starting to process %s sentences\n", new Date(), goldInstances.size());
 		
@@ -325,18 +325,12 @@ public class SignalAnalyzer {
 	 * Horrible horrible log stuff I must do, to keep jwnl from yelling "WARN data.PointerUtils: DICTIONARY_WARN_001" all the time
 	 * @throws IOException 
 	 */
-	public static void handleLog() throws IOException {
-		File target = new File("./target/classes/log4j.properties");
-		Files.createParentDirs(target);
-		Files.copy(new File("./log4j.properties"), target);
-		logger = Logger.getLogger(SignalAnalyzer.class);
-	}
 	public static void main(String args[]) throws Exception {
 		if (args.length != 8) {
 			System.err.println("USAGE: SignalAnalyzer <input file list> <spec list> <output folder> <use dump files> <trigger doc> <arg doc> <global doc> <debug min sentence>");
 			return;
 		}
-		handleLog();
+		logger = Utils.handleLog();
 		SignalAnalyzer.analyze(new File(args[0]), new File(args[1]), new File(args[2]), Boolean.parseBoolean(args[3]), args[4], args[5], args[6], Integer.parseInt(args[7]));
 	}
 

@@ -15,6 +15,8 @@ import ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateSeed;
 
 import com.google.common.collect.ArrayListMultimap;
+import com.google.common.collect.LinkedHashMultimap;
+import com.google.common.collect.Multimap;
 
 import edu.cuny.qc.perceptron.core.Controller;
 import edu.cuny.qc.perceptron.core.Perceptron;
@@ -35,9 +37,9 @@ public abstract class SignalMechanism {
 	
 	public SignalMechanism(Controller controller) throws SignalMechanismException {
 		this.controller = controller;
-		scorers = new LinkedHashMap<SignalType, List<ScorerData>>(2);
-		scorers.put(SignalType.TRIGGER,   new ArrayList<ScorerData>());
-		scorers.put(SignalType.ARGUMENT,  new ArrayList<ScorerData>());
+		scorers = LinkedHashMultimap.create(2, 5);
+//		scorers.put(SignalType.TRIGGER,   new ArrayList<ScorerData>());
+//		scorers.put(SignalType.ARGUMENT,  new ArrayList<ScorerData>());
 		
 		try {
 			init();
@@ -49,7 +51,7 @@ public abstract class SignalMechanism {
 	}
 	
 	public void addTrigger(ScorerData data) {
-		scorers.get(SignalType.TRIGGER).add(data);
+		scorers.put(SignalType.TRIGGER, data);
 	}
 
 	public void addTriggers(Collection<ScorerData> datas) {
@@ -59,7 +61,7 @@ public abstract class SignalMechanism {
 	}
 
 	public void addArgument(ScorerData data) {
-		scorers.get(SignalType.ARGUMENT).add(data);
+		scorers.put(SignalType.ARGUMENT, data);
 	}
 	
 	// These are only entry points, any SignalMechanism can choose to implement any of them
@@ -174,6 +176,10 @@ public abstract class SignalMechanism {
 		return ret;
 		
 	}
+	
+	public String toString() {
+		return String.format("%s(%s scorers)", getClass().getSimpleName(), scorers.size());
+	}
 
 	public abstract void addScorers() throws Exception;
 
@@ -183,6 +189,6 @@ public abstract class SignalMechanism {
 	public void close() { }
 	
 	public Controller controller;
-	public Map<SignalType, List<ScorerData>> scorers;
+	public Multimap<SignalType, ScorerData> scorers;
 	private Aggregator debugAggregator = Aggregator.ScanAll.inst;
 }

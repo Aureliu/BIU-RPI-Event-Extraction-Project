@@ -82,6 +82,9 @@ public class Controller implements java.io.Serializable
 	public List<String> devOnlyTypes = null;
 	public List<String> testOnlyTypes = null;
 	
+	public SentenceSortingMethod sentenceSortingMethod = SentenceSortingMethod.DOC_SENT_SPEC; // this was the implied default long before I came up with this enum
+	
+	public boolean filterSentenceInstance = false;
 	
 	public Controller()
 	{
@@ -172,7 +175,7 @@ public class Controller implements java.io.Serializable
 			}
 			else if(fields[0].equalsIgnoreCase("useSignalFiles"))
 			{
-				usePreprocessFiles = Boolean.parseBoolean(fields[1]);
+				useSignalFiles = Boolean.parseBoolean(fields[1]);
 			}
 			else if(fields[0].equalsIgnoreCase("saveSignalsToValues"))
 			{
@@ -223,6 +226,14 @@ public class Controller implements java.io.Serializable
 			{
 				testOnlyTypes = Arrays.asList(fields[1].split(","));
 			}
+			else if(fields[0].equalsIgnoreCase("sentenceSortingMethod"))
+			{
+				sentenceSortingMethod = SentenceSortingMethod.valueOf(fields[1]);
+			}
+			else if(fields[0].equalsIgnoreCase("filterSentenceInstance"))
+			{
+				filterSentenceInstance = Boolean.parseBoolean(fields[1]);
+			}
 		}
 		System.out.printf("\n[%s] ******** Controller() **********\n", new Date());
 		System.out.printf("******** %s **********\n", this);
@@ -230,19 +241,22 @@ public class Controller implements java.io.Serializable
 	
 	public String toString()
 	{
-		String ret = "beam size: " + beamSize + " max iter: " + maxIterNum + " skipNonEventSent: " + skipNonEventSent
+		String ret = "Controller:\n" +
+		"\tbeamSize: " + beamSize + " maxIterNum: " + maxIterNum + " skipNonEventSent: " + skipNonEventSent
 		+ " averaged weights: " + avgArguments + " skipNonArgument: " + skipNonArgument
 		+ " useGlobalFeature:" + useGlobalFeature + " addNeverSeenFeatures: " + addNeverSeenFeatures
-		+ " crossSent:" + crossSent + " crossSentReranking:" + crossSentReranking + " order:" + order +
+		+ "\n\tcrossSent:" + crossSent + " crossSentReranking:" + crossSentReranking + " order:" + order +
 		" evaluatorType:" + evaluatorType + " learnBigrams: " + learnBigrams + " logLevel: " + logLevel +
 		" oMethod: " + oMethod + " serialization: " + serialization + " usePreprocessFiles: " + usePreprocessFiles
-		+ " usePreprocessFiles: " + usePreprocessFiles + " saveFeatureSignalNames: " + saveSignalsToValues +
+		+ "\n\tuseSignalFiles: " + useSignalFiles + " saveFeatureSignalNames: " + saveSignalsToValues +
 		" featureProfile: " + featureProfile + " singleTokenSentences: " + singleTokenSentences +
 		" logOnlyTheseSentences: " + logOnlyTheseSentences + " useArguments: " + useArguments +
-		" updateOnlyOnViolation: " + updateOnlyOnViolation + " trainList: " + trainList + " devList: " + devList +
-		" testType: " + testType + " trainOnlyTypes: " + trainOnlyTypes + " devOnlyTypes: " + devOnlyTypes + 
-		" testOnlyTypes: " + testOnlyTypes;
-		return ret;
+		"\n\tupdateOnlyOnViolation: " + updateOnlyOnViolation + " trainList: " + trainList + " devList: " + devList +
+		" testType: " + testType + "\n\ttrainOnlyTypes: " + trainOnlyTypes + " devOnlyTypes: " + devOnlyTypes + 
+		" testOnlyTypes: " + testOnlyTypes + " sentenceSortingMethod: " + sentenceSortingMethod +
+		"\n\tfilterSentenceInstance: " + filterSentenceInstance;
+		
+		return ret + "\n";
 	}
 	
 	public static void main(String[] args)

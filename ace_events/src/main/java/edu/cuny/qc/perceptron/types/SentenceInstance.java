@@ -89,14 +89,16 @@ public class SentenceInstance
 	
 	public Integer sentID;
 	public String sentInstID;
+	public Character specLetter = null;
 
+	public Sentence sent;
 	
 	/**
 	 * Ofer: Add this for debugging purposes
 	 */
 	public String textStart;
 	
-	private List<Token> tokenAnnos = null;
+	public List<Token> tokenAnnos = null;
 	private de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence sentenceAnno = null;
 	public Document doc;
 	public JCas associatedSpec = null;
@@ -193,13 +195,14 @@ public class SentenceInstance
 		this.doc = sent.doc;
 		this.sentID = sent.sentID;
 		if (specNum != null) {
-			this.sentInstID =  calcSentInstID(sent.sentID, specNum);
+			calcSentInstID(sent.sentID, specNum);
 		}
 		else {
 			this.sentInstID = Integer.toString(sent.sentID);
 		}
 		//this.sentID = sent.sentID;
 		this.associatedSpec = associatedSpec;
+		this.sent = sent;
 
 		// fill in entity information
 		this.eventArgCandidates.addAll(sent.entityMentions);
@@ -312,7 +315,7 @@ public class SentenceInstance
 	 * <br>53 --> IllegalArgumentException
 	 * <br>-1 --> IllegalArgumentException
 	 */
-	public static String calcSentInstID(int id, int specNum) {
+	public void calcSentInstID(int id, int specNum) {
 		char mark;
 		if (specNum >= 0 && specNum <= 'z' - 'a') {
 			mark = (char) ('a' + specNum);
@@ -326,7 +329,8 @@ public class SentenceInstance
 				throw new IllegalArgumentException(String.format("Given specNum out of range, got %d, can handle only 0..%d", specNum, 'z'-'a' + 'Z'-'A'+1));
 			}
 		}
-		return String.format("%d%c", id, mark);
+		this.sentInstID = String.format("%d%c", id, mark);
+		this.specLetter = mark;
 	}
 	
 	/**

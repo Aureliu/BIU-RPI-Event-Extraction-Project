@@ -39,6 +39,7 @@ import edu.cuny.qc.perceptron.core.Perceptron;
 import edu.cuny.qc.perceptron.core.Pipeline;
 import edu.cuny.qc.perceptron.types.Alphabet;
 import edu.cuny.qc.perceptron.types.Document;
+import edu.cuny.qc.perceptron.types.Sentence;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
 import edu.cuny.qc.scorer.SignalMechanismsContainer;
 import edu.cuny.qc.util.Logs;
@@ -225,18 +226,44 @@ public class Folds {
 		}
 		return result;
 	}
-	
+
 	/**
 	 * this doesn't filter or clone anything, as this is not required for train and dev
 	 * (they only use the SentenceInstances for decoding and evaluating, not the Document).
+	 * 
+	 * NOTE: We don't perform any inner-filtering in Documents, but we do filter out some
+	 * of the SentenceInstances (under some super-complicated conditions).
 	 */
-	public static Multimap<Document, SentenceInstance> getInstancesForTypes(Multimap<JCas, SentenceInstance> insts, Collection<JCas> events) {
+	public static Multimap<Document, SentenceInstance> getInstancesForTypes(Controller controller, Multimap<JCas, SentenceInstance> insts, Collection<JCas> events, boolean learnable) throws CASRuntimeException, AnalysisEngineProcessException, ResourceInitializationException, CASException, UimaUtilsException, IOException, AeException {
 		Multimap<Document, SentenceInstance> result = HashMultimap.create();
+		Map<Sentence, Sentence> clones = Maps.newHashMap();
+		TypesContainer types = new TypesContainer(Lists.newArrayList(events));
+
 		for (JCas spec : events) {
 			Collection<SentenceInstance> instsOfSpec = insts.get(spec);
 			if (instsOfSpec != null) {
 				for (SentenceInstance inst : instsOfSpec) {
-					result.put(inst.doc, inst);
+					if (learnable && controller.skipNonEventSent) {
+						if (controller.filterSentenceInstance) {
+							if (inst.eventMentions!=null && inst.eventMentions.size() > 0) {
+								result.put(inst.doc, inst);
+							}
+						}
+						else {
+							Sentence filteredClone = clones.get(inst.sent);
+							if (filteredClone == null) {
+								filteredClone = Sentence.partiallyDeepCopy(inst.sent);
+								filteredClone.filterBySpecs(types);
+								clones.put(inst.sent, filteredClone);
+							}
+							if (filteredClone.eventMentions!=null && filteredClone.eventMentions.size() > 0) {
+								result.put(inst.doc, inst);
+							}
+						}
+					}
+					else {
+						result.put(inst.doc, inst);
+					}
 				}
 			}
 		}
@@ -264,7 +291,7 @@ public class Folds {
 		File trainDocs = new File(args[9]);
 		File devDocs = new File(args[10]);
 		File testDocs = new File(args[11]);
-		System.out.printf("Args:\noutputFolder=%s specsFile=%s (with %s specs) numRuns=%s minTrainEvents=%s maxTrainEvents=%s minDevEvents=%s maxDevEvents=%s minTrainMentions=%s minDevMentions=%s\ntrainDocs=%s devDocs=%s testDocs=%s\n\n",
+		System.out.printf("Args:\n\toutputFolder=%s\n\tspecsFile=%s (with %s specs)\n\tnumRuns=%s\n\tminTrainEvents=%s\n\tmaxTrainEvents=%s\n\tminDevEvents=%s\n\tmaxDevEvents=%s\n\tminTrainMentions=%s\n\tminDevMentions=%s\n\ttrainDocs=%s\n\tdevDocs=%s\n\ttestDocs=%s\n\n",
 				outputFolder, args[1], allSpecs.size(), numRuns, minTrainEvents, maxTrainEvents, minDevEvents, maxDevEvents, minTrainMentions, minDevMentions, trainDocs, devDocs, testDocs);
 		
 		File corpusDir = new File(CORPUS_DIR);
@@ -294,8 +321,8 @@ public class Folds {
 		for (Run run : runs) {
 			Alphabet featureAlphabet = new Alphabet();
 			perceptron = new Perceptron(featureAlphabet, controller, outputFolder, signalMechanismsContainer);
-			Multimap<Document, SentenceInstance> runTrain = getInstancesForTypes(trainInstances, run.trainEvents);
-			Multimap<Document, SentenceInstance> runDev = getInstancesForTypes(devInstances, run.devEvents);
+			Multimap<Document, SentenceInstance> runTrain = getInstancesForTypes(controller, trainInstances, run.trainEvents, true);
+			Multimap<Document, SentenceInstance> runDev = getInstancesForTypes(controller, devInstances, run.devEvents, false);
 			
 			String dirPrefix = "DIR_" + run.suffix + "__";
 			String modelFileName = CORPUS_DIR + "/Model_" + run.suffix;

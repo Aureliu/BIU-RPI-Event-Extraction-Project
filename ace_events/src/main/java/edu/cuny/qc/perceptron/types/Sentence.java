@@ -10,6 +10,8 @@ import java.util.Map;
 
 import org.apache.commons.lang3.StringUtils;
 
+import com.google.common.collect.Lists;
+
 import ac.biu.nlp.nlp.ie.onthefly.input.TypesContainer;
 import edu.cuny.qc.ace.acetypes.AceDocument;
 import edu.cuny.qc.ace.acetypes.AceEntityMention;
@@ -85,6 +87,8 @@ public class Sentence implements java.io.Serializable
 	
 	private Boolean filtered = false;
 
+	private Sentence() {}
+	
 	public Sentence(Document doc, int sentID, String text)
 	{
 		final int MAX_TEXT_LEN = 6;
@@ -93,6 +97,34 @@ public class Sentence implements java.io.Serializable
 		this.text = (StringUtils.substring(text.replace("\"", "\\\""), 0, MAX_TEXT_LEN) + "..").intern();
 	}
 	
+	/**
+	 * Similarity to {@link edu.cuny.qc.ace.acetypes.AceDocument#deepCopy(AceDocument)},
+	 * this clones the instance, while creating new objects for the lists. It doesn't
+	 * clone the lists' elements, as we assume they are immutable.<BR>
+	 * 
+	 * Also, this deep-copy is partial as it doesn't create a new object for the map
+	 * (we don't need that for our purposes).
+	 * @param orig
+	 * @return
+	 */
+	public static Sentence partiallyDeepCopy(Sentence orig) {
+		Sentence newSent = new Sentence();
+		
+		newSent.sentID = orig.sentID;
+		newSent.text = orig.text;
+		newSent.doc = orig.doc;
+		newSent.extent = orig.extent;
+		newSent.map = orig.map;
+		newSent.filtered = orig.filtered;
+		newSent.eventMentions = Lists.newArrayList(orig.eventMentions);
+		newSent.entityMentions = Lists.newArrayList(orig.entityMentions);
+		newSent.valueMentions = Lists.newArrayList(orig.valueMentions);
+		newSent.timexMentions = Lists.newArrayList(orig.timexMentions);
+		newSent.relationMentions = Lists.newArrayList(orig.relationMentions);
+		
+		return newSent;
+	}
+
 	@Override
 	public String toString() {
 		final int TEXT_DISPLAY_MAX = 10;

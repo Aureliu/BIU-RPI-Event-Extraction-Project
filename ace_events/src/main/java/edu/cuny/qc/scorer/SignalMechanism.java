@@ -89,8 +89,22 @@ public abstract class SignalMechanism {
 //				}
 				////
 				//System.out.printf("%s NEW\n", Pipeline.detailedLog());
+				
+				//// DEBUG
+//				if (	(textSentence.sentInstID.equals("1b") && i==0 && textSentence.docID.equals("APW_ENG_20030424.0532")) /*||
+//						(textSentence.sentInstID.equals("2a") && i==20)*/) {
+//					System.out.printf("\n\n\n\n\nvoo\n\n\n\n\n\n");
+//				}
+				////
 				data.scorer.init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken, textTriggerTokenMap, data);
 				BigDecimal score = data.aggregator.aggregate(data.scorer);
+				
+				///// DEBUG
+//				if (textTriggerToken.getCoveredText().equals("attack") && !SignalInstance.isPositive.apply(score)) {
+//					System.out.printf("\n\n\n\n\nGot a bad one!!!!!!! '%s'", textTriggerToken.getCoveredText());
+//				}
+				/////
+				
 				signal = new SignalInstance(data, SignalType.TRIGGER, score);
 				existingSignals.put(data, signal);
 				//allTriggerScorers.add(data);

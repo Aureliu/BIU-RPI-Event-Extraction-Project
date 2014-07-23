@@ -23,6 +23,8 @@ import ac.biu.nlp.nlp.ie.onthefly.input.SpecAnnotator;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 
+import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
+
 import edu.cuny.qc.ace.acetypes.Scorer.Stats;
 import edu.cuny.qc.perceptron.core.AllTrainingScores;
 import edu.cuny.qc.perceptron.core.Controller;
@@ -382,6 +384,7 @@ public class Logs {
 					"Tokens",
 					"Sentence",
 					"i",
+					"Token",
 					"Lemma",
 					"target-label",
 					"assn-label",
@@ -456,7 +459,7 @@ public class Logs {
 			
 			Utils.print(p, "", "\n", "|", null,				
 					"Iter",
-					"DevSentences",
+					"Sentences",
 					"Trigger-Gold",
 					"Trigger-System",
 					"Trigger-Correct",
@@ -629,6 +632,8 @@ public class Logs {
 	
 			List<Map<Class<?>, Object>> tokens = (List<Map<Class<?>, Object>>) instance.get(InstanceAnnotations.Token_FEATURE_MAPs);
 			for (int j=0; j<instance.size(); j++) {
+				Token tokenAnno = instance.tokenAnnos.get(j);
+				String surface = tokenAnno.getCoveredText();
 				String lemma = (String) tokens.get(j).get(TokenAnnotations.LemmaAnnotation.class);
 				Set<Object> allFeaturesSet = new HashSet<Object>();
 				Map<Object, BigDecimal> mapTarget = instance.target.getFeatureVectorSequence().get(j).getMap();
@@ -680,6 +685,7 @@ public class Logs {
 									instance.size(),
 									"",//sentText,
 									j,
+									lemma(surface),
 									lemma(lemma),
 									instance.target.getLabelAtToken(j),
 									assnLabel,
@@ -711,6 +717,7 @@ public class Logs {
 								instance.size(),
 								sentText,
 								j,
+								lemma(surface),
 								lemma(lemma),
 								instance.target.getLabelAtToken(j),
 								assnLabel,

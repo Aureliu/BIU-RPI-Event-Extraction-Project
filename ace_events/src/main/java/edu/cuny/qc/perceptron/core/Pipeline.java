@@ -12,6 +12,7 @@ import java.util.Date;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.cas.CASException;
@@ -177,12 +178,23 @@ public class Pipeline
 					//System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] done(%2$d).", new Date(), insts.size());
 					//docInstancelist.addAll(insts);
 					
+					// Do the very-very conditional filtering!
 					if(learnable && controller.skipNonEventSent)
 					{
-						if(sent.eventMentions != null && sent.eventMentions.size() > 0)
-						{
-							//System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] add\n", new Date());
-							Utils.addToMultimap(result, insts);
+						if (controller.filterSentenceInstance) {
+							for (Entry<JCas,SentenceInstance> entry : insts.entrySet()) {
+								SentenceInstance inst = entry.getValue();
+								if (inst.eventMentions != null && inst.eventMentions.size() > 0) {
+									result.put(entry.getKey(), inst);
+								}
+							}
+						}
+						else {
+							if(sent.eventMentions != null && sent.eventMentions.size() > 0)
+							{
+								//System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] add\n", new Date());
+								Utils.addToMultimap(result, insts);
+							}
 						}
 					}
 					else // add all instances

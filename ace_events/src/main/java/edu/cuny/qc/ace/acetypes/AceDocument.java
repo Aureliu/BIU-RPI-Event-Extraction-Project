@@ -30,6 +30,8 @@ import org.xml.sax.EntityResolver;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
+import com.google.common.collect.Lists;
+
 import ac.biu.nlp.nlp.ie.onthefly.input.TypesContainer;
 
 /**
@@ -115,6 +117,10 @@ public class AceDocument implements java.io.Serializable {
 	
 	private static final String encoding = "UTF-8";//"ISO-8859-1";  // default:  ISO-LATIN-1
 
+	protected AceDocument() {
+		
+	}
+	
 	public AceDocument (String sourceFile, String sourceType, String docID, String docText) {
 		this.sourceFile = sourceFile;
 		this.sourceType = sourceType;
@@ -187,6 +193,34 @@ public class AceDocument implements java.io.Serializable {
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
+	}
+
+	/**
+	 * Deep copy. This is with respect only to the lists themselves and not to the elements within them -
+	 * We assume that all the ACE objects (e.g. AceEventMention) are immutable.
+	 */
+	public static AceDocument deepCopy(AceDocument orig) {
+		AceDocument newDoc = new AceDocument();
+
+		newDoc.fileText = orig.fileText;
+		newDoc.fileTextWithXML = orig.fileTextWithXML;
+		newDoc.sourceFile = orig.sourceFile;
+		newDoc.sourceType = orig.sourceType;
+		newDoc.docID = orig.docID;
+		newDoc.entities = Lists.newArrayList(orig.entities);
+		newDoc.timeExpressions = Lists.newArrayList(orig.timeExpressions);
+		newDoc.values = Lists.newArrayList(orig.values);
+		newDoc.relations = Lists.newArrayList(orig.relations);
+		newDoc.events = Lists.newArrayList(orig.events);
+		newDoc.eventMentions = Lists.newArrayList(orig.eventMentions);
+		newDoc.entityMentions = Lists.newArrayList(orig.entityMentions);
+		newDoc.valueMentions = Lists.newArrayList(orig.valueMentions);
+		newDoc.timexMentions = Lists.newArrayList(orig.timexMentions);
+		newDoc.relationMentions = Lists.newArrayList(orig.relationMentions);
+		newDoc.allMentionsList = Lists.newArrayList(orig.allMentionsList);
+		newDoc.filtered = orig.filtered;
+		
+		return newDoc;
 	}
 
 	/**

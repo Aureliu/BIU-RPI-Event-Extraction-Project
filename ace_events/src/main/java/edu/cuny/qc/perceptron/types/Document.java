@@ -34,21 +34,18 @@ import org.apache.uima.cas.impl.Serialization;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
 
-import com.google.common.collect.LinkedHashMultimap;
-import com.google.common.collect.Maps;
-import com.google.common.collect.Multimap;
-
 import ac.biu.nlp.nlp.ie.onthefly.input.AeException;
 import ac.biu.nlp.nlp.ie.onthefly.input.AnalysisEngines;
 import ac.biu.nlp.nlp.ie.onthefly.input.TypesContainer;
+
+import com.google.common.collect.Maps;
+
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
 import edu.cuny.qc.ace.acetypes.AceDocument;
 import edu.cuny.qc.ace.acetypes.AceEntityMention;
 import edu.cuny.qc.ace.acetypes.AceEventMention;
 import edu.cuny.qc.ace.acetypes.AceMention;
 import edu.cuny.qc.perceptron.core.Controller;
-import edu.cuny.qc.perceptron.core.Perceptron;
-import edu.cuny.qc.perceptron.core.SerializationMethod;
 import edu.cuny.qc.perceptron.featureGenerator.TextFeatureGenerator;
 import edu.cuny.qc.perceptron.types.Sentence.Sent_Attribute;
 import edu.cuny.qc.scorer.ScorerData;
@@ -56,7 +53,6 @@ import edu.cuny.qc.scorer.SignalMechanismsContainer;
 import edu.cuny.qc.util.SentDetectorWrapper;
 import edu.cuny.qc.util.Span;
 import edu.cuny.qc.util.TokenizerWrapper;
-import edu.cuny.qc.util.Utils;
 import eu.excitementproject.eop.common.utilities.uima.UimaUtilsException;
 
 /**
@@ -116,7 +112,7 @@ public class Document implements java.io.Serializable
 	 * this object contains the parsed information from apf file (pretty much everything)
 	 * it can be considered as gold standard for event extraction or can provide perfect entities etc.
 	 */
-	protected AceDocument aceAnnotations;
+	public AceDocument aceAnnotations;
 	
 //	// Event type --> Trigger token
 //	public static Map<String, List<String>> triggerTokens = new HashMap<String, List<String>>();
@@ -424,9 +420,30 @@ public class Document implements java.io.Serializable
 		readDoc(txtFile, this.monoCase, existingJCas);
 	}
 	
+	public static Document shallowCopy(Document orig) {
+		Document newDoc = new Document();
+		newDoc.docID = orig.docID;
+		newDoc.docLine = orig.docLine;
+		newDoc.docPath = orig.docPath;
+		newDoc.text = orig.text;
+		newDoc.allText = orig.allText;
+		newDoc.headline = orig.headline;
+		newDoc.before_text = orig.before_text;
+		newDoc.textoffset = orig.textoffset;
+		newDoc.hasLabel = orig.hasLabel;
+		newDoc.signalsUpdated = orig.signalsUpdated;
+		newDoc.monoCase = orig.monoCase;
+		newDoc.sentences = orig.sentences;
+		newDoc.jcas = orig.jcas;
+		newDoc.signals = orig.signals;
+		newDoc.aceAnnotations = orig.aceAnnotations;
+		return newDoc;
+	}
+	
 	public String toString() {
 		return String.format("%s(%s)", getClass().getSimpleName(), docID);
 	}
+	
 	
 	public static Document createAndPreprocess(String baseFileName, String docLine, boolean hasLabel, boolean monoCase, boolean tryLoadExisting, boolean dumpNewDoc, TypesContainer types, Controller controller, SignalMechanismsContainer signalMechanismsContainer) throws IOException {
 		try {
@@ -1241,7 +1258,6 @@ public class Document implements java.io.Serializable
 		
 		return result;
 	}
-	
 
 //	static public void main(String[] args) throws IOException
 //	{

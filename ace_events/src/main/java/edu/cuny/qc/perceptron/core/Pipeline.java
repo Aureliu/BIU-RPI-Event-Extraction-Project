@@ -95,7 +95,7 @@ public class Pipeline
 			throw new UnsupportedParameterException("crossSent = true");
 		}
 		
-		System.out.printf("%s Finished reading %s train sentence instances and %s sentence instances.\n=================================\n",
+		System.out.printf("%s Finished reading %s train sentence instances and %s dev sentence instances.\n=================================\n",
 				Utils.detailedLog(), trainInstanceList.size(), devInstanceList.size());
 		//DEBUG
 		Pipeline.modelFile = modelFile;

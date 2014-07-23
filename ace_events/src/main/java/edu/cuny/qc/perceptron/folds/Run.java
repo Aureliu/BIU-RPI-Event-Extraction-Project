@@ -16,7 +16,9 @@ import com.google.common.collect.Lists;
 
 public class Run {
 	//public Map<String, JCas> trainEvents, devEvents, testEvents;
-	public LinkedHashSet<JCas> trainEvents, devEvents;
+	
+	public List<JCas> trainEvents;
+	public LinkedHashSet<JCas> devEvents; // this is a set and not a list since for dev, the order doesn't matter (for train it does)
 	public JCas testEvent;
 	public String suffix;
 	public int id, idPerTest, trainMentions, devMentions;
@@ -54,7 +56,7 @@ public class Run {
 		for (JCas ev : trainEvents) {
 			trainLabels.add(SpecAnnotator.getSpecLabel(ev));
 		}
-		Collections.sort(trainLabels);
+		//Collections.sort(trainLabels);
 		List<String> devLabels = Lists.newArrayListWithCapacity(devEvents.size());
 		for (JCas ev : devEvents) {
 			devLabels.add(SpecAnnotator.getSpecLabel(ev));

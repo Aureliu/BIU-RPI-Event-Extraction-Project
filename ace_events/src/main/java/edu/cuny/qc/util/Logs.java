@@ -218,7 +218,7 @@ public class Logs {
 		for (JCas spec : types) {
 			labels.add(SpecAnnotator.getSpecLabel(spec));
 		}
-		Collections.sort(labels);
+		//Collections.sort(labels);
 		return StringUtils.join(labels, ",");
 	}
 	
@@ -377,6 +377,7 @@ public class Logs {
 					"Iter",
 					"DocID",
 					"SentenceNo",
+					"AssocSpec",
 					"c",
 					"Tokens",
 					"Sentence",
@@ -593,7 +594,7 @@ public class Logs {
 					"Sentences",
 					"Mentions",
 					"List",
-					"Types",
+					//"Types",
 					"Sentences",
 					"Mentions"
 			);
@@ -608,6 +609,14 @@ public class Logs {
 		if (controller.logLevel >= LEVEL_MIN_F_U_W && doLogging) {
 			//DEBUG
 			String sentText = sentence(instance.textStart);
+			
+			String assocLabel;
+			try {
+				assocLabel = SpecAnnotator.getSpecLabel(instance.associatedSpec);
+			} catch (CASException e) {
+				throw new RuntimeException(e);
+			}
+			
 			//printf(w, "|%s%d|%s\n", wt.getFeaturesStringSkip(), i, wt.getFeaturesString());
 			printWeights(w, iter, instance.docID, instance.sentInstID, c, instance.size(), sentText, weights, avg_weights, avg_weights_base, doLogging);
 	
@@ -666,6 +675,7 @@ public class Logs {
 									iter,
 									instance.docID,
 									instance.sentInstID,
+									assocLabel,
 									c,
 									instance.size(),
 									"",//sentText,
@@ -696,6 +706,7 @@ public class Logs {
 								iter,
 								instance.docID,
 								instance.sentInstID,
+								assocLabel,
 								c,
 								instance.size(),
 								sentText,

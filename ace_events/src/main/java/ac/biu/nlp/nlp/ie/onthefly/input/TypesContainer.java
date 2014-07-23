@@ -19,6 +19,7 @@ import org.uimafit.util.JCasUtil;
 
 import com.google.common.collect.BiMap;
 import com.google.common.collect.HashBiMap;
+import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument;
@@ -39,6 +40,8 @@ public class TypesContainer {
 	public LinkedHashMap<String, Integer> triggerTypes; //The type here is a horrible, horrible hack
 	public List<String> possibleTriggerLabels;
 	
+	public LinkedHashMap<String, JCas> namedSpecs; // This is because I don't have the energy to change all references to this.specs, so it's basically duplicated...
+	
 	// map event subtype --> entity types
 	public Map<String, Set<String>> eventEntityTypes = new HashMap<String, Set<String>>();
 	// map event subtype --> argument role
@@ -54,6 +57,7 @@ public class TypesContainer {
 	public TypesContainer(List<JCas> specs) throws CASRuntimeException, AnalysisEngineProcessException, ResourceInitializationException, UimaUtilsException, IOException, AeException, CASException {
 		this.specs = specs;
 		triggerTypes = Maps.newLinkedHashMap();
+		namedSpecs = Maps.newLinkedHashMap();
 
 		nodeTargetAlphabet = new Alphabet();
 		edgeTargetAlphabet = new Alphabet();
@@ -68,6 +72,7 @@ public class TypesContainer {
 			triggerTypes.put(triggerName, specNum);
 			nodeTargetAlphabet.lookupIndex(triggerName);
 			specNum++;
+			namedSpecs.put(triggerName, spec);
 			
 			JCas tokenView = spec.getView(SpecAnnotator.TOKEN_VIEW);
 			for (Argument arg : JCasUtil.select(tokenView, Argument.class)) {
@@ -84,6 +89,18 @@ public class TypesContainer {
 		possibleTriggerLabels.addAll(triggerTypes.keySet());
 		Collections.sort(possibleTriggerLabels);
 		possibleTriggerLabels.add(0, SentenceAssignment.Default_Trigger_Label); // First element!
+	}
+	
+	public List<JCas> getPartialSpecList(List<String> names) {
+		List<JCas> result = Lists.newArrayListWithCapacity(names.size());
+		for (String name : names) {
+			JCas spec = namedSpecs.get(name);
+			if (spec == null) {
+				throw new IllegalArgumentException("Spec for name '" + name + "' doesn't exist");
+			}
+			result.add(spec);
+		}
+		return result;
 	}
 		
 	public boolean isEntityTypeCompatible(String role, String type)
@@ -173,7 +190,8 @@ public class TypesContainer {
 	}
 	
 	public String toString() {
-		return argumentRoles.toString();
+		//return argumentRoles.toString();
+		return String.format("%s(%s)", getClass().getSimpleName(), namedSpecs.keySet());
 	}
 
 	

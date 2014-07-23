@@ -80,7 +80,7 @@ public class Perceptron implements java.io.Serializable
 	public Alphabet featureAlphabet;
 	// the settings of the perceptron
 	public Controller controller;// = new Controller();
-	public SignalMechanismsContainer signalMechanismsContainer;
+	public transient SignalMechanismsContainer signalMechanismsContainer;
 	
 	// horrible hack - this way I can both use Controller as a static and not have to pass the goddamn perceptron to every method
 	// but I also keep a non-static version of it, so it will be serialized to the file (which is mandatory for decoding)
@@ -95,7 +95,7 @@ public class Perceptron implements java.io.Serializable
 	public FeatureVector avg_weights;
 	public FeatureVector avg_weights_base; // for average weights update
 	
-	public transient List<SignalMechanism> signalMechanisms = new ArrayList<SignalMechanism>();
+	//public transient List<SignalMechanism> signalMechanisms = new ArrayList<SignalMechanism>();
 	
 	public File outFolder;
 	
@@ -120,6 +120,7 @@ public class Perceptron implements java.io.Serializable
 		
 		setController(controller);
 		//buildSignalMechanisms();
+		this.signalMechanismsContainer = signalMechanismsContainer;
 	}
 	
 	public void setController(Controller controller) {
@@ -132,7 +133,9 @@ public class Perceptron implements java.io.Serializable
 	}
 	
 	public void close() {
-		signalMechanismsContainer.close();
+		if (signalMechanismsContainer != null) {
+			signalMechanismsContainer.close();
+		}
 	}
 	
 //	public void buildSignalMechanisms() throws SignalMechanismException {

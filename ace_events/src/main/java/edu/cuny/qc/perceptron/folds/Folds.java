@@ -3,20 +3,27 @@ package edu.cuny.qc.perceptron.folds;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintStream;
+import java.util.Arrays;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.collections15.ListUtils;
 import org.apache.log4j.Logger;
+import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.cas.CASException;
+import org.apache.uima.cas.CASRuntimeException;
 import org.apache.uima.jcas.JCas;
+import org.apache.uima.resource.ResourceInitializationException;
 
+import ac.biu.nlp.nlp.ie.onthefly.input.AeException;
 import ac.biu.nlp.nlp.ie.onthefly.input.SpecAnnotator;
 import ac.biu.nlp.nlp.ie.onthefly.input.SpecHandler;
 import ac.biu.nlp.nlp.ie.onthefly.input.TypesContainer;
 
 import com.google.common.collect.HashMultimap;
+import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Multimap;
@@ -36,6 +43,7 @@ import edu.cuny.qc.perceptron.types.SentenceInstance;
 import edu.cuny.qc.scorer.SignalMechanismsContainer;
 import edu.cuny.qc.util.Logs;
 import edu.cuny.qc.util.Utils;
+import eu.excitementproject.eop.common.utilities.uima.UimaUtilsException;
 
 public class Folds {
 	protected static Logger logger;
@@ -44,21 +52,32 @@ public class Folds {
 //	private static final File TRAIN_DOCS = new File("src/main/resources/doclists/new_filelist_ACE_training.txt");
 //	private static final File DEV_DOCS = new File("src/main/resources/doclists/new_filelist_ACE_dev.txt");
 //	private static final File TEST_DOCS = new File("src/main/resources/doclists/new_filelist_ACE_test.txt");
-	private static final String CONTROLLER_PARAMS =
-			"beamSize=4 maxIterNum=5 skipNonEventSent=true avgArguments=true skipNonArgument=true useGlobalFeature=false " +
-			"addNeverSeenFeatures=true crossSent=false crossSentReranking=false order=0 evaluatorType=1 learnBigrams=true logLevel=3 " +
-			"oMethod=G0P- serialization=BZ2 featureProfile=NORMAL usePreprocessedFiles=true useSignalFiles=true useArguments=false " +
-			"logOnlyTheseSentences=5b";
+//	private static final String CONTROLLER_PARAMS =
+//			"beamSize=4 maxIterNum=5 skipNonEventSent=true avgArguments=true skipNonArgument=true useGlobalFeature=false " +
+//			"addNeverSeenFeatures=true crossSent=false crossSentReranking=false order=0 evaluatorType=1 learnBigrams=true logLevel=7 " +
+//			"oMethod=G0P- serialization=BZ2 featureProfile=NORMAL usePreprocessedFiles=true useSignalFiles=true useArguments=false " +
+//			"logOnlyTheseSentences=5b";
 	
-	public static List<Run> buildRuns(TypesContainer types, Map<String, Integer> trainMentionsByType, Map<String, Integer> devMentionsByType, int numRuns, int minTrainEvents, int maxTrainEvents, int minDevEvents, int maxDevEvents, int minTrainMentions, int minDevMentions) throws CASException {
+	public static List<Run> buildRuns(Controller controller, TypesContainer types, Map<String, Integer> trainMentionsByType, Map<String, Integer> devMentionsByType, int numRuns, int minTrainEvents, int maxTrainEvents, int minDevEvents, int maxDevEvents, int minTrainMentions, int minDevMentions) throws CASException {
 		int totalTries = BUILD_RUN_FAIL_RATIO * numRuns;
 		List<Run> result = Lists.newArrayListWithCapacity(numRuns*types.specs.size());
 		//int prevAmountResult = 0;
 		int totalCounter = 0;
-		for (JCas testSpec : types.specs) {
+		List<JCas> allTestSpecs;
+		if (controller.testType != null) {
+			allTestSpecs = types.getPartialSpecList(ImmutableList.of(controller.testType));
+		}
+		else if (controller.testOnlyTypes != null) {
+			allTestSpecs = types.getPartialSpecList(controller.testOnlyTypes);			
+		}
+		else {
+			allTestSpecs = types.specs;
+		}
+		
+		for (JCas testSpec : allTestSpecs) {
 			int perTestCounter = 0;
 			System.out.printf("Starting %s tries for spec...\n", totalTries);
-			List<Run> runsForType = Lists.newArrayListWithCapacity(numRuns*types.specs.size());
+			List<Run> runsForType = Lists.newArrayListWithCapacity(numRuns*allTestSpecs.size());
 			for (int n=0; n<totalTries; n++) {
 				Run run = new Run();
 				
@@ -67,22 +86,53 @@ public class Folds {
 				run.testEvent = testSpec;
 				specsCopy.remove(run.testEvent);
 				
-				int numTrainEvents = Utils.randInt(minTrainEvents, maxTrainEvents);
-				// not enough event types left - ignore current run
-				if (numTrainEvents > specsCopy.size()) {
-					//System.out.printf("%s. numTrainEvents=%s > specsCopy.size()=%s\n", n, numTrainEvents, specsCopy.size());
-					continue;
+				
+				if (controller.trainList != null) {
+					run.trainEvents = types.getPartialSpecList(controller.trainList);
+					if (run.trainEvents.contains(run.testEvent)) { //a little hacky - we have to check for this explicitly, as here we don't the train events from specsCopy
+						continue;
+					}
 				}
-				run.trainEvents = Sets.newLinkedHashSet(Utils.sample(specsCopy, numTrainEvents));
+				else {
+					List<JCas> specsToChooseFrom = specsCopy;
+					if (controller.trainOnlyTypes != null) {
+						specsToChooseFrom = types.getPartialSpecList(controller.trainOnlyTypes);
+						specsToChooseFrom.remove(run.testEvent); // just in case testEvent is part of the list (we don't check if it was actually there or not)
+					}
+					int numTrainEvents = Utils.randInt(minTrainEvents, maxTrainEvents);
+					// not enough event types left - ignore current run
+					if (numTrainEvents > specsToChooseFrom.size()) {
+						//System.out.printf("%s. numTrainEvents=%s > specsCopy.size()=%s\n", n, numTrainEvents, specsCopy.size());
+						continue;
+					}
+					run.trainEvents = Utils.sample(specsToChooseFrom, numTrainEvents);
+				}
 				specsCopy.removeAll(run.trainEvents);
 
-				int numDevEvents = Utils.randInt(minDevEvents, maxDevEvents);
-				// not enough event types left - ignore current run
-				if (numDevEvents > specsCopy.size()) {
-					//System.out.printf("%s. numDevEvents=%s > specsCopy.size()=%s\n", n, numDevEvents, specsCopy.size());
-					continue;
+				
+				List<JCas> devEventsList = null;
+				if (controller.devList != null) {
+					devEventsList = types.getPartialSpecList(controller.devList);
+					if (devEventsList.contains(run.testEvent) || !ListUtils.intersection(devEventsList, run.trainEvents).isEmpty()) { //also hacky, see above
+						continue;
+					}
 				}
-				run.devEvents = Sets.newLinkedHashSet(Utils.sample(specsCopy, numDevEvents));
+				else {
+					List<JCas> specsToChooseFrom = specsCopy;
+					if (controller.devOnlyTypes != null) {
+						specsToChooseFrom = types.getPartialSpecList(controller.devOnlyTypes);
+						specsToChooseFrom.remove(run.testEvent); // just in case any of these is part of the list (we don't check if it was actually there or not)
+						specsToChooseFrom.removeAll(run.trainEvents);
+					}
+					int numDevEvents = Utils.randInt(minDevEvents, maxDevEvents);
+					// not enough event types left - ignore current run
+					if (numDevEvents > specsToChooseFrom.size()) {
+						//System.out.printf("%s. numDevEvents=%s > specsCopy.size()=%s\n", n, numDevEvents, specsCopy.size());
+						continue;
+					}
+					devEventsList = Utils.sample(specsToChooseFrom, numDevEvents);
+				}
+				run.devEvents = Sets.newLinkedHashSet(devEventsList);
 				specsCopy.removeAll(run.devEvents);
 
 				run.trainMentions = 0;
@@ -146,21 +196,49 @@ public class Folds {
 		return result;
 	}
 	
-	public static Multimap<Document, SentenceInstance> getInstancesForType(Multimap<JCas, SentenceInstance> insts, JCas event) {
+	/**
+	 * For each new Document we encounter - we do a shallow copy of it, replace its AceDocument
+	 * with a deep copy of the original one, and then filter it by the type.<BR>
+	 * This way, the returned document are filtered by the given type, without modifying the original document.<BR>
+	 * 
+	 * NOTE that this filters only the AceDocument, and not the Sentence objects!!!
+	 * So this is not a general and full copy-and-filter, it's specifically good for our scenario. 
+	 */
+	public static Multimap<Document, SentenceInstance> getInstancesWithFilteredDocsForType(Multimap<JCas, SentenceInstance> insts, JCas event) throws CASRuntimeException, AnalysisEngineProcessException, ResourceInitializationException, CASException, UimaUtilsException, IOException, AeException {
 		Multimap<Document, SentenceInstance> result = HashMultimap.create();
+		Map<Document, Document> clones = Maps.newHashMap();
+		TypesContainer oneType = new TypesContainer(ImmutableList.of(event));
+		
 		Collection<SentenceInstance> instsOfSpec = insts.get(event);
 		if (instsOfSpec != null) {
 			for (SentenceInstance inst : instsOfSpec) {
-				result.put(inst.doc, inst);
+				Document filteredClone = clones.get(inst.doc);
+				if (filteredClone == null) {
+					filteredClone = Document.shallowCopy(inst.doc);
+					AceDocument aceDocCloned = AceDocument.deepCopy(filteredClone.aceAnnotations);
+					aceDocCloned.filterBySpecs(oneType);
+					filteredClone.aceAnnotations = aceDocCloned;
+					clones.put(inst.doc, filteredClone);
+				}
+				result.put(filteredClone, inst);
 			}
 		}
 		return result;
 	}
 	
+	/**
+	 * this doesn't filter or clone anything, as this is not required for train and dev
+	 * (they only use the SentenceInstances for decoding and evaluating, not the Document).
+	 */
 	public static Multimap<Document, SentenceInstance> getInstancesForTypes(Multimap<JCas, SentenceInstance> insts, Collection<JCas> events) {
 		Multimap<Document, SentenceInstance> result = HashMultimap.create();
 		for (JCas spec : events) {
-			result.putAll(getInstancesForType(insts, spec));
+			Collection<SentenceInstance> instsOfSpec = insts.get(spec);
+			if (instsOfSpec != null) {
+				for (SentenceInstance inst : instsOfSpec) {
+					result.put(inst.doc, inst);
+				}
+			}
 		}
 		return result;
 	}
@@ -168,7 +246,7 @@ public class Folds {
 	public static void calcTestScore(Run run, File outputFolder, File ansApfFile, Document doc, Stats stats, PrintStream scoreFile) throws IOException {
 		String sgmPath = CORPUS_DIR + "/" + doc.docLine + ".sgm";
 		AceDocument ansDoc = new AceDocument(sgmPath, ansApfFile.getAbsolutePath());
-		Scorer.doAnalysisForFile(ansDoc,  doc.getAceAnnotations(), stats, doc.docLine, scoreFile);
+		Scorer.doAnalysisForFile(ansDoc, doc.getAceAnnotations(), stats, doc.docLine, scoreFile);
 	}
 	
 	public static void main(String args[]) throws Exception {
@@ -192,7 +270,7 @@ public class Folds {
 		File corpusDir = new File(CORPUS_DIR);
 		TypesContainer types = new TypesContainer(allSpecs, false);
 		Controller controller = new Controller();
-		controller.setValueFromArguments(StringUtils.split(CONTROLLER_PARAMS));
+		controller.setValueFromArguments(Arrays.copyOfRange(args, 12, args.length));//(StringUtils.split(CONTROLLER_PARAMS));
 		SignalMechanismsContainer signalMechanismsContainer = new SignalMechanismsContainer(controller);
 		Perceptron perceptron = null;
 		
@@ -210,7 +288,7 @@ public class Folds {
 		Multimap<JCas, SentenceInstance> testInstances = Pipeline.readInstanceList(controller, signalMechanismsContainer, types, corpusDir, testDocs, new Alphabet(), null, true, false);
 		System.out.printf("%s Finished reading test documents: %s sentence instances (total for all %s types)\n", Utils.detailedLog(), testInstances.size(), testInstances.keySet().size());
 
-		List<Run> runs = buildRuns(types, trainMentions, devMentions, numRuns, minTrainEvents, maxTrainEvents, minDevEvents, maxDevEvents, minTrainMentions, minDevMentions);
+		List<Run> runs = buildRuns(controller, types, trainMentions, devMentions, numRuns, minTrainEvents, maxTrainEvents, minDevEvents, maxDevEvents, minTrainMentions, minDevMentions);
 		
 		System.out.printf("%s ############################ Starting %s runs: %s\n", Utils.detailedLog(), runs.size(), runs);
 		for (Run run : runs) {
@@ -224,6 +302,8 @@ public class Folds {
 			logs.logSuffix = "." + run.suffix;
 			Perceptron.uTrain = logs.getU("Train");
 			Perceptron.wTrain = logs.getW("Train");
+			Perceptron.pTrain = logs.getP("Train");
+			Perceptron.pDev   = logs.getP("Dev");
 			//logs.logTitles(w,  null,  null,  u,  null,  null);
 			String scoreFileName = outputFolder.getAbsolutePath() + "/TestScore." + run.suffix + ".txt";
 			PrintStream scoreFile = new PrintStream(scoreFileName);
@@ -231,7 +311,7 @@ public class Folds {
 			AllTrainingScores scores = perceptron.learning(runTrain.values(), runDev.values(), 0, logs.logSuffix, true, false);
 			Perceptron.serializeObject(perceptron, new File(modelFileName));
 			
-			Multimap<Document, SentenceInstance> runTest = getInstancesForType(testInstances, run.testEvent);
+			Multimap<Document, SentenceInstance> runTest = getInstancesWithFilteredDocsForType(testInstances, run.testEvent);
 			Stats testStats = new Stats();
 			for (Document doc : runTest.keySet()) {
 				Collection<SentenceInstance> docInsts = runTest.get(doc);

@@ -2,6 +2,7 @@ package edu.cuny.qc.perceptron.core;
 
 import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 
 import edu.cuny.qc.scorer.FeatureProfile;
 import edu.cuny.qc.util.Utils;
@@ -72,6 +73,15 @@ public class Controller implements java.io.Serializable
 	public boolean useArguments = true;
 	
 	public boolean updateOnlyOnViolation = true;
+	
+	public List<String> trainList = null;
+	public List<String> devList = null;
+	public String testType = null;
+	
+	public List<String> trainOnlyTypes = null;
+	public List<String> devOnlyTypes = null;
+	public List<String> testOnlyTypes = null;
+	
 	
 	public Controller()
 	{
@@ -189,6 +199,30 @@ public class Controller implements java.io.Serializable
 			{
 				updateOnlyOnViolation = Boolean.parseBoolean(fields[1]);
 			}
+			else if(fields[0].equalsIgnoreCase("trainList"))
+			{
+				trainList = Arrays.asList(fields[1].split(","));
+			}
+			else if(fields[0].equalsIgnoreCase("devList"))
+			{
+				devList = Arrays.asList(fields[1].split(","));
+			}
+			else if(fields[0].equalsIgnoreCase("testType"))
+			{
+				testType = fields[1];
+			}
+			else if(fields[0].equalsIgnoreCase("trainOnlyTypes"))
+			{
+				trainOnlyTypes = Arrays.asList(fields[1].split(","));
+			}
+			else if(fields[0].equalsIgnoreCase("devOnlyTypes"))
+			{
+				devOnlyTypes = Arrays.asList(fields[1].split(","));
+			}
+			else if(fields[0].equalsIgnoreCase("testOnlyTypes"))
+			{
+				testOnlyTypes = Arrays.asList(fields[1].split(","));
+			}
 		}
 		System.out.printf("\n[%s] ******** Controller() **********\n", new Date());
 		System.out.printf("******** %s **********\n", this);
@@ -205,7 +239,9 @@ public class Controller implements java.io.Serializable
 		+ " usePreprocessFiles: " + usePreprocessFiles + " saveFeatureSignalNames: " + saveSignalsToValues +
 		" featureProfile: " + featureProfile + " singleTokenSentences: " + singleTokenSentences +
 		" logOnlyTheseSentences: " + logOnlyTheseSentences + " useArguments: " + useArguments +
-		" updateOnlyOnViolation: " + updateOnlyOnViolation;
+		" updateOnlyOnViolation: " + updateOnlyOnViolation + " trainList: " + trainList + " devList: " + devList +
+		" testType: " + testType + " trainOnlyTypes: " + trainOnlyTypes + " devOnlyTypes: " + devOnlyTypes + 
+		" testOnlyTypes: " + testOnlyTypes;
 		return ret;
 	}
 	

@@ -37,6 +37,7 @@ import edu.cuny.qc.perceptron.core.Controller;
 import edu.cuny.qc.perceptron.core.Decoder;
 import edu.cuny.qc.perceptron.core.Perceptron;
 import edu.cuny.qc.perceptron.core.Pipeline;
+import edu.cuny.qc.perceptron.core.SentenceSortingMethod;
 import edu.cuny.qc.perceptron.types.Alphabet;
 import edu.cuny.qc.perceptron.types.Document;
 import edu.cuny.qc.perceptron.types.Sentence;
@@ -81,6 +82,7 @@ public class Folds {
 			List<Run> runsForType = Lists.newArrayListWithCapacity(numRuns*allTestSpecs.size());
 			for (int n=0; n<totalTries; n++) {
 				Run run = new Run();
+				run.sentenceSortingMethod = controller.sentenceSortingMethod;
 				
 				List<JCas> specsCopy = Lists.newArrayList(types.specs);
 				
@@ -193,7 +195,24 @@ public class Folds {
 			}
 			//prevAmountResult = result.size();
 		}
-		System.out.printf("Finished creating a total of %s runs.\n\n", result.size());
+		System.out.printf("\nFinished creating a total of %s runs.\n\n", result.size());
+		
+		if (controller.sentenceSortingMethod==SentenceSortingMethod.ITERATE) {
+			int expectedTotalRuns = result.size() * (SentenceSortingMethod.values().length-1);
+			List<Run> newResult = Lists.newArrayListWithCapacity(expectedTotalRuns);
+			for (SentenceSortingMethod method : SentenceSortingMethod.values()) {
+				if (method != SentenceSortingMethod.ITERATE) {
+					for (Run run : result) {
+						Run newRun = Run.shallowCopy(run);
+						newRun.sentenceSortingMethod = method;
+						newResult.add(newRun);
+					}
+				}
+			}
+			System.out.printf("... and now due to method=%s, we changed it from %s to %s runs (should be %s runs, I hope it is...)\n\n", SentenceSortingMethod.ITERATE, result.size(), newResult.size(), expectedTotalRuns);
+			result = newResult;
+		}
+		
 		return result;
 	}
 	
@@ -316,9 +335,11 @@ public class Folds {
 		System.out.printf("%s Finished reading test documents: %s sentence instances (total for all %s types)\n", Utils.detailedLog(), testInstances.size(), testInstances.keySet().size());
 
 		List<Run> runs = buildRuns(controller, types, trainMentions, devMentions, numRuns, minTrainEvents, maxTrainEvents, minDevEvents, maxDevEvents, minTrainMentions, minDevMentions);
-		
+
 		System.out.printf("%s ############################ Starting %s runs: %s\n", Utils.detailedLog(), runs.size(), runs);
 		for (Run run : runs) {
+			controller.sentenceSortingMethod = run.sentenceSortingMethod;
+			
 			Alphabet featureAlphabet = new Alphabet();
 			perceptron = new Perceptron(featureAlphabet, controller, outputFolder, signalMechanismsContainer);
 			Multimap<Document, SentenceInstance> runTrain = getInstancesForTypes(controller, trainInstances, run.trainEvents, true);

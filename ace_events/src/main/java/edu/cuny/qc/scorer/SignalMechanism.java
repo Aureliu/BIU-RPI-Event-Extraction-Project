@@ -91,8 +91,8 @@ public abstract class SignalMechanism {
 				//System.out.printf("%s NEW\n", Pipeline.detailedLog());
 				
 				//// DEBUG
-//				if (	(textSentence.sentInstID.equals("1b") && i==0 && textSentence.docID.equals("APW_ENG_20030424.0532")) /*||
-//						(textSentence.sentInstID.equals("2a") && i==20)*/) {
+//				if (	/*(textSentence.sentInstID.equals("1b") && i==0 && textSentence.docID.equals("APW_ENG_20030424.0532")) ||*/
+//						(textSentence.sentInstID.equals("1a") && i==17)) {
 //					System.out.printf("\n\n\n\n\nvoo\n\n\n\n\n\n");
 //				}
 				////

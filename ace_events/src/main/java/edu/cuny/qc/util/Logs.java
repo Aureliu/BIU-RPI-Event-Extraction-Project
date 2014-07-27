@@ -531,6 +531,7 @@ public class Logs {
 			Utils.print(r, "", "\n", "|", null,
 					"", //"Id",
 					"", //"IdPerTest",
+					"", //"SortMethod",
 					"Train-Triggers", //"Iteration",
 					"", //"Gold",
 					"", //"System",
@@ -568,6 +569,7 @@ public class Logs {
 			Utils.print(r, "", "\n", "|", null,
 					"Id",
 					"IdPerTest",
+					"SortMethod",
 					"Iteration",
 					"Gold",
 					"System",
@@ -965,6 +967,7 @@ public class Logs {
 			Utils.print(r, "", "\n", "|", null,
 					run.id, //"Id",
 					run.idPerTest,//"IdPerTest",
+					run.sentenceSortingMethod,//"SortMethod",
 					
 					// Train-Triggers
 					scores.train.bestScore.iteration,//"Iteration",

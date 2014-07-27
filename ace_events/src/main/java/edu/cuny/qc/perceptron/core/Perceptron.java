@@ -241,18 +241,18 @@ public class Perceptron implements java.io.Serializable
 	public AllTrainingScores learning(Collection<SentenceInstance> trainingInsts, Collection<SentenceInstance> devInsts, int cutoff,
 			String logSuffix, boolean doLogging, boolean createNewLogs)
 	{	
-		System.out.printf("\n\n%s Before sort - Perceptron.learning: trainingInsts (%s) =\n", Utils.detailedLog(), trainingInsts.size());
-		for (SentenceInstance inst : trainingInsts) {
-			System.out.printf(" - %s (%s, %s)\t/ %s\n", inst.sentInstID, inst.sentID, inst.specLetter, inst.docID);
-		}
-		System.out.printf("\n%s\n", Utils.detailedLog());
+//		System.out.printf("\n\n%s Before sort - Perceptron.learning: trainingInsts (%s) =\n", Utils.detailedLog(), trainingInsts.size());
+//		for (SentenceInstance inst : trainingInsts) {
+//			System.out.printf(" - %s\t/ %s\n", inst.sentInstID, /*inst.sentID, inst.specLetter,*/ inst.docID);
+//		}
+//		System.out.printf("\n%s\n", Utils.detailedLog());
 		List<SentenceInstance> trainingList = Lists.newArrayList(trainingInsts);
 		List<SentenceInstance> devList = Lists.newArrayList(devInsts);
 		Collections.sort(trainingList, controller.sentenceSortingMethod.comparator);
 		Collections.sort(devList, controller.sentenceSortingMethod.comparator);
-		System.out.printf("\n\n%s After sort - Perceptron.learning: trainingInsts (%s) =\n", Utils.detailedLog(), trainingList.size());
+		System.out.printf("\n\n%s After sort (%s) - Perceptron.learning: trainingInsts (%s) =\n", Utils.detailedLog(), controller.sentenceSortingMethod, trainingList.size());
 		for (SentenceInstance inst : trainingList) {
-			System.out.printf(" - %s (%s, %s)\t/ %s\n", inst.sentInstID, inst.sentID, inst.specLetter, inst.docID);
+			System.out.printf("- %s\t/ %s\n", inst.sentInstID, /*inst.sentID, inst.specLetter,*/ inst.docID);
 		}
 			
 			

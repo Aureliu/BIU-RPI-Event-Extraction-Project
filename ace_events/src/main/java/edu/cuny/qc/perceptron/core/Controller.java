@@ -4,6 +4,8 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
+import com.google.common.collect.Lists;
+
 import edu.cuny.qc.scorer.FeatureProfile;
 import edu.cuny.qc.util.Utils;
 
@@ -250,7 +252,7 @@ public class Controller implements java.io.Serializable
 		" oMethod: " + oMethod + " serialization: " + serialization + " usePreprocessFiles: " + usePreprocessFiles
 		+ "\n\tuseSignalFiles: " + useSignalFiles + " saveFeatureSignalNames: " + saveSignalsToValues +
 		" featureProfile: " + featureProfile + " singleTokenSentences: " + singleTokenSentences +
-		" logOnlyTheseSentences: " + logOnlyTheseSentences + " useArguments: " + useArguments +
+		" logOnlyTheseSentences: " + Lists.newArrayList(logOnlyTheseSentences) + " useArguments: " + useArguments +
 		"\n\tupdateOnlyOnViolation: " + updateOnlyOnViolation + " trainList: " + trainList + " devList: " + devList +
 		" testType: " + testType + "\n\ttrainOnlyTypes: " + trainOnlyTypes + " devOnlyTypes: " + devOnlyTypes + 
 		" testOnlyTypes: " + testOnlyTypes + " sentenceSortingMethod: " + sentenceSortingMethod +

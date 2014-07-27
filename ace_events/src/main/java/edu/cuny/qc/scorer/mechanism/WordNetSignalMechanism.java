@@ -71,6 +71,7 @@ public class WordNetSignalMechanism extends SignalMechanism {
 		System.err.println("??? WordNetSignalMechanism: get*Cousins methdos return lemmas, and when a lemma is MWE then there are '_' between tokens. Maybe I should address that somehow, like turn all '_' into space. But does it ever happen that I get a query with MWE?");
 		System.err.println("??? WordNetSignalMechanism: Probably won't solve and it's just for documentation: when I get a DervRelated, I'm not getting just lemmas, I'm getting synsets (actually, a single term from some synset). So when I continue calculation, techincally the most accurate thing to do would have been to use only this synset as LHS, and not first/all synsets of the lemma.");
 		System.err.println("??? WordNetSignalMechanism: When getting DervRelated, I only take words related to my lemma, and not to other lemmas in its synset (that's what I automatically get from the resource, and what makes somewhat more sense). I don't think this behavior needs changing - using all synset sounds a bit too noisy.");
+		System.err.println("??? WordNetSignalMechanism: Using the text's lemma and POS causes errors on some lemmatization errors: like having injured/JJ be lemmatized as injure/JJ which doesn't exist (2014.07.23..8:APW_ENG_20030520.0081:1b:17), or wound/NN lemmatized as wind/NN, which doesn't entail wound/NN (2014.07.23..8:CNN_ENG_20030610_130042.17:2b:4)");
 	}
 
 //	public WordNetSignalMechanism() throws UnsupportedPosTagStringException, WordNetInitializationException {
@@ -176,7 +177,7 @@ public class WordNetSignalMechanism extends SignalMechanism {
 			
 			// Top Recall
 			//addTrigger(new ScorerData(null, new WordnetScorer(HYPERNYM_RELATIONS, Juxtaposition.COUSIN_STRICT, 2), WordnetDervRltdDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, -1, null, Min2.inst));
-			addTrigger(new ScorerData(null, new WordnetScorer(HYPERNYM_RELATIONS, Juxtaposition.COUSIN_STRICT, 2), WordnetDervRltdDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, -1, null, Any.inst));
+			///////////////addTrigger(new ScorerData(null, new WordnetScorer(HYPERNYM_RELATIONS, Juxtaposition.COUSIN_STRICT, 2), WordnetDervRltdDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, -1, null, Any.inst));
 			//addTrigger(new ScorerData(null, new WordnetScorer(HYPERNYM_RELATIONS, Juxtaposition.COUSIN_STRICT, 3), WordnetDervRltdDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, -1, null, Min3.inst));
 			
 			//addTrigger(new ScorerData(null, new WordnetScorer(SYNONYM_RELATION, Juxtaposition.ANCESTOR, 1), NoDerv.inst, Derivation.NONE, -1, -1, null, Any.inst));
@@ -667,7 +668,7 @@ public class WordNetSignalMechanism extends SignalMechanism {
 	public static File WORDNET_DIR = new File("src/main/resources/data/Wordnet3.0");
 	private static final int MAXIMUM_WORDNET_LENGTH = 100;
 	
-	private static final Set<WordNetRelation> ALL_RELATIONS_SMALL = new LinkedHashSet<WordNetRelation>(Arrays.asList(new WordNetRelation[] {
+	public static final Set<WordNetRelation> ALL_RELATIONS_SMALL = new LinkedHashSet<WordNetRelation>(Arrays.asList(new WordNetRelation[] {
 			WordNetRelation.SYNONYM,
 			WordNetRelation.DERIVATIONALLY_RELATED,
 			WordNetRelation.HYPERNYM,
@@ -677,7 +678,7 @@ public class WordNetSignalMechanism extends SignalMechanism {
 			WordNetRelation.ENTAILMENT,
 			WordNetRelation.SUBSTANCE_MERONYM
 	}));
-	private static final Set<WordNetRelation> ALL_RELATIONS_BIG = new LinkedHashSet<WordNetRelation>(Arrays.asList(new WordNetRelation[] {
+	public static final Set<WordNetRelation> ALL_RELATIONS_BIG = new LinkedHashSet<WordNetRelation>(Arrays.asList(new WordNetRelation[] {
 			WordNetRelation.SYNONYM,
 			WordNetRelation.DERIVATIONALLY_RELATED,
 			WordNetRelation.HYPERNYM,
@@ -692,21 +693,21 @@ public class WordNetSignalMechanism extends SignalMechanism {
 			WordNetRelation.CAUSE,
 			WordNetRelation.VERB_GROUP
 	}));
-	private static final Set<WordNetRelation> HYPERNYM_RELATIONS = new LinkedHashSet<WordNetRelation>(Arrays.asList(new WordNetRelation[] {
+	public static final Set<WordNetRelation> HYPERNYM_RELATIONS = new LinkedHashSet<WordNetRelation>(Arrays.asList(new WordNetRelation[] {
 			WordNetRelation.SYNONYM,
 			WordNetRelation.HYPERNYM,
 			WordNetRelation.INSTANCE_HYPERNYM
 	}));
-	private static final Set<WordNetRelation> HYPERNYM1_RELATION = new HashSet<WordNetRelation>(Arrays.asList(new WordNetRelation[] {
+	public static final Set<WordNetRelation> HYPERNYM1_RELATION = new HashSet<WordNetRelation>(Arrays.asList(new WordNetRelation[] {
 			WordNetRelation.HYPERNYM,
 	}));
-	private static final Set<WordNetRelation> HYPERNYM2_RELATION = new HashSet<WordNetRelation>(Arrays.asList(new WordNetRelation[] {
+	public static final Set<WordNetRelation> HYPERNYM2_RELATION = new HashSet<WordNetRelation>(Arrays.asList(new WordNetRelation[] {
 			WordNetRelation.INSTANCE_HYPERNYM
 	}));
-	private static final Set<WordNetRelation> DERVRTD_RELATION = new HashSet<WordNetRelation>(Arrays.asList(new WordNetRelation[] {
+	public static final Set<WordNetRelation> DERVRTD_RELATION = new HashSet<WordNetRelation>(Arrays.asList(new WordNetRelation[] {
 			WordNetRelation.DERIVATIONALLY_RELATED
 	}));
-	private static final Set<WordNetRelation> SYNONYM_RELATION = new HashSet<WordNetRelation>(Arrays.asList(new WordNetRelation[] {
+	public static final Set<WordNetRelation> SYNONYM_RELATION = new HashSet<WordNetRelation>(Arrays.asList(new WordNetRelation[] {
 			WordNetRelation.SYNONYM
 	}));
 	private static final Integer[] LENGTHS_1_2_3 = {1, 2, 3};

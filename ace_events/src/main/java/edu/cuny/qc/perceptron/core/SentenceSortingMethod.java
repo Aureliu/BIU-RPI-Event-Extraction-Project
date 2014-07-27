@@ -21,7 +21,8 @@ public enum SentenceSortingMethod {
 		@Override public int compare(SentenceInstance inst1, SentenceInstance inst2) {
 			return new CompareToBuilder().append(inst1.specLetter, inst2.specLetter).append(inst1.doc.docLine, inst2.doc.docLine).append(inst1.sentID, inst2.sentID).toComparison();
 		}
-	});
+	}),
+	ITERATE(null);
 	
 	// Technically there are 3 more option (e.g. SENT_DOC_SPEC), but they don't preserve the order of doc-sent, which doesn't seem to make much sense or be effective
 	

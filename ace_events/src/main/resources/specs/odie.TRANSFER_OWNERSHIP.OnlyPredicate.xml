@@ -11,7 +11,7 @@
   </predicate>
   <arguments>
     <argument>
-      <role>Buyer</role>
+      <role marker="BUY">Buyer</role>
       <types>
       	<type>PER</type>
       	<type>ORG</type>
@@ -27,7 +27,7 @@
       </examples>
     </argument>
     <argument>
-      <role>Seller</role>
+      <role marker="SLR">Seller</role>
       <types>
       	<type>PER</type>
       	<type>ORG</type>
@@ -38,7 +38,7 @@
       </examples>
     </argument>
     <argument>
-      <role>Beneficiary</role>
+      <role marker="BNF">Beneficiary</role>
       <types>
       	<type>PER</type>
       	<type>ORG</type>
@@ -48,7 +48,7 @@
       </examples>
     </argument>
     <argument>
-      <role>Artifact</role>
+      <role marker="ATF">Artifact</role>
       <types>
       	<type>VEH</type>
       	<type>WEA</type>
@@ -65,7 +65,7 @@
       </examples>
     </argument>
     <argument>
-      <role>Price</role>
+      <role marker="PRC">Price</role>
       <types>
       	<type>MONEY</type>
       </types>
@@ -73,7 +73,7 @@
       </examples>
     </argument>
     <argument>
-      <role>Time</role>
+      <role marker="TIM">Time</role>
       <types>
       	<type>TIME</type>
       </types>
@@ -82,7 +82,7 @@
       </examples>
     </argument>
     <argument>
-      <role>Place</role>
+      <role marker="PLC">Place</role>
       <types>
       	<type>GPE</type>
       	<type>LOC</type>

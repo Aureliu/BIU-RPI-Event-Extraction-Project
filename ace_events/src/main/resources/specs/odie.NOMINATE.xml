@@ -8,7 +8,7 @@
   </predicate>
   <arguments>
     <argument>
-      <role>Person</role>
+      <role marker="PRS">Person</role>
       <types>
       	<type>PER</type>
       </types>
@@ -18,7 +18,7 @@
       </examples>
     </argument>
     <argument>
-      <role>Agent</role>
+      <role marker="AGT">Agent</role>
       <types>
       	<type>PER</type>
       	<type>ORG</type>
@@ -30,7 +30,7 @@
       </examples>
     </argument>
     <argument>
-      <role>Position</role>
+      <role marker="PST">Position</role>
       <types>
       	<type>JOB</type>
       </types>
@@ -39,7 +39,7 @@
       </examples>
     </argument>
     <argument>
-      <role>Time</role>
+      <role marker="TIM">Time</role>
       <types>
       	<type>TIME</type>
       </types>
@@ -47,7 +47,7 @@
       </examples>
     </argument>
     <argument>
-      <role>Place</role>
+      <role marker="PLC">Place</role>
       <types>
       	<type>GPE</type>
       	<type>LOC</type>

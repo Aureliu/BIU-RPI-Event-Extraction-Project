@@ -4,6 +4,7 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map.Entry;
+import java.util.regex.Pattern;
 import java.util.Set;
 
 import org.apache.uima.UimaContext;
@@ -186,6 +187,50 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 		}
 	}
 	
+	public void organizeUsageSamples(JCas tokenView, JCas sentenceView) {
+		Pattern USAGE_SAMPLE_ELEMENT = Pattern.compile("([^\\[]*)\\[(\\w{3}) ([^\\]]+)\\]([^\\[]*)");
+		
+		
+		
+		- Args_by_marker = {marker : Argument}
+		- Args_by_marke["PRD"] = Predicate
+		- PATT = "([^[]*)\[(\w\w\w) ([^]]+)\]([^[]*)"
+		- int offsetInOldText = samples[0].begin;
+		- int offsetInNewText = offsetInOldText;
+		- StringBuilder newSection = oldText[0:offsetInOldText];
+		- allSamples = JCasUtils.select(UsageSample.class)
+		- For sample in allSamples:
+			o elements = LinkedHashMap{elementNum : ArgumentExample\PredicateSeed}
+			o matcher = PATT.matcher(sample.getCoveredText)
+			o StringBuilder sb = "";
+			o List<String> tokens = [];
+			o while (matcher.find):
+				* // some update of "elements"
+				* if matcher.group(1) != "":
+					` sb += matcher.group(1)
+					` tokens.add(matcher.group(1))
+				* sb += matcher.group(3)
+				* tokens.add(matcher.group(3))
+				* if matcher.group(4) != "":
+					` sb += matcher.group(4)
+					` tokens.add(matcher.group(4))
+			o String newText = sb.toString()
+			o int oldTextSampleEnd = offsetInOldText + sample.getCoveredText().size()
+			o offsetInOldText = beginningOfNextSampleOrEndOfDoc(currSampleNum)
+			o newSection += newText + oldText[oldTextSampleEnd : offsetInOldText];
+			o sortedmap = DockedTokenFinder.find(newText, tokens)
+			o for Entry<elementNum, anno> : elements:
+				* DockedToken docked = sortedmap.get(elementNum)
+				* if anno instanceof PredicateSeed:
+					` PIUS pius = new PIUS(docked.begin+offsetInNewText, docked.end+offsetInNewText)
+					` anno.piuses.add(pius)
+				* else: //arg
+					` AIUS ...
+			o offsetInNewText += newText.size() + (offsetInOldText - oldTextSampleEnd)
+		- sentenceView.setDocumentText(newSection.toString())
+
+	}
+	
 	@Override
 	public void process(JCas jcas) throws AnalysisEngineProcessException {
 		try {
@@ -196,11 +241,18 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 			tokenView.setDocumentLanguage("EN");
 			tokenView.setDocumentText(jcas.getDocumentText());
 			sentenceView.setDocumentLanguage("EN");
-			sentenceView.setDocumentText(jcas.getDocumentText());
+			sentenceView.setDocumentText(jcas.getDocumentText()); //NOTE that later we will rebuild the text, by removing all marks - and then set a new Document to the view
 			
 			// Load basic spec annotation types
 			SpecXmlCasLoader loader = new SpecXmlCasLoader();
 			loader.load(jcas, tokenView, sentenceView);
+			
+			organizeUsageSamples(tokenView, sentenceView);
+			
+			
+			
+			
+			
 			
 			// Build once, use many times
 			Collection<UsageSample> usageSamples = JCasUtil.select(sentenceView, UsageSample.class);

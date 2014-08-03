@@ -16,7 +16,7 @@
   </predicate>
   <arguments>
     <argument>
-      <role>Giver</role>
+      <role marker="GVR">Giver</role>
       <types>
       	<type>PER</type>
       	<type>ORG</type>
@@ -32,7 +32,7 @@
       </examples>
     </argument>
     <argument>
-      <role>Recipient</role>
+      <role marker="RCP">Recipient</role>
       <types>
       	<type>PER</type>
       	<type>ORG</type>
@@ -45,7 +45,7 @@
       </examples>
     </argument>
     <argument>
-      <role>Beneficiary</role>
+      <role marker="BNF">Beneficiary</role>
       <types>
       	<type>PER</type>
       	<type>ORG</type>
@@ -55,7 +55,7 @@
       </examples>
     </argument>
     <argument>
-      <role>Money</role>
+      <role marker="MNY">Money</role>
       <types>
       	<type>NUM</type>
       </types>
@@ -63,7 +63,7 @@
       </examples>
     </argument>
     <argument>
-      <role>Time</role>
+      <role marker="TIM">Time</role>
       <types>
       	<type>TIME</type>
       </types>
@@ -71,7 +71,7 @@
       </examples>
     </argument>
     <argument>
-      <role>Place</role>
+      <role marker="PLC">Place</role>
       <types>
       	<type>GPE</type>
       	<type>LOC</type>

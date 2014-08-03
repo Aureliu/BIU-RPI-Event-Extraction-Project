@@ -8,7 +8,7 @@
   </predicate>
   <arguments>
     <argument>
-      <role>Defendant</role>
+      <role marker="DFN">Defendant</role>
       <types>
       	<type>PER</type>
       	<type>ORG</type>
@@ -22,7 +22,7 @@
       </examples>
     </argument>
     <argument>
-      <role>Adjudicator</role>
+      <role marker="ADJ">Adjudicator</role>
       <types>
       	<type>PER</type>
       	<type>ORG</type>
@@ -32,7 +32,7 @@
       </examples>
     </argument>
     <argument>
-      <role>Crime</role>
+      <role marker="CRM">Crime</role>
       <types>
       	<type>CRIME</type>
       </types>
@@ -42,7 +42,7 @@
       </examples>
     </argument>
     <argument>
-      <role>Time</role>
+      <role marker="TIM">Time</role>
       <types>
       	<type>TIME</type>
       </types>
@@ -50,7 +50,7 @@
       </examples>
     </argument>
     <argument>
-      <role>Place</role>
+      <role marker="PLC">Place</role>
       <types>
       	<type>GPE</type>
       	<type>LOC</type>

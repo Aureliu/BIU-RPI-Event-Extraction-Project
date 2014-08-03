@@ -17,7 +17,7 @@
   </predicate>
   <arguments>
     <argument>
-      <role>Agent</role>
+      <role marker="AGT">Agent</role>
       <types>
       	<type>PER</type>
       	<type>ORG</type>
@@ -27,7 +27,7 @@
       </examples>
     </argument>
     <argument>
-      <role>Artifact</role>
+      <role marker="ATF">Artifact</role>
       <types>
       	<type>PER</type>
       	<type>WEA</type>
@@ -42,7 +42,7 @@
       </examples>
     </argument>
     <argument>
-      <role>Vehicle</role>
+      <role marker="VHL">Vehicle</role>
       <types>
       	<type>VEH</type>
       </types>
@@ -51,7 +51,7 @@
       </examples>
     </argument>
     <argument>
-      <role>Price</role>
+      <role marker="PRC">Price</role>
       <types>
       	<type>NUM</type>
       </types>
@@ -59,7 +59,7 @@
       </examples>
     </argument>
     <argument>
-      <role>Origin</role>
+      <role marker="ORI">Origin</role>
       <types>
       	<type>GPE</type>
       	<type>LOC</type>
@@ -73,7 +73,7 @@
       </examples>
     </argument>
     <argument>
-      <role>Destination</role>
+      <role marker="DST">Destination</role>
       <types>
       	<type>GPE</type>
       	<type>LOC</type>
@@ -87,7 +87,7 @@
       </examples>
     </argument>
     <argument>
-      <role>Time</role>
+      <role marker="TIM">Time</role>
       <types>
       	<type>TIME</type>
       </types>

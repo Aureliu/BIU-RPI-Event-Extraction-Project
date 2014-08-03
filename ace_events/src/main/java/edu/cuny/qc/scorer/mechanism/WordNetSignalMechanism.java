@@ -39,7 +39,7 @@ import edu.cuny.qc.scorer.Juxtaposition;
 import edu.cuny.qc.scorer.ScorerData;
 import edu.cuny.qc.scorer.SignalMechanism;
 import edu.cuny.qc.scorer.SignalMechanismException;
-import edu.cuny.qc.scorer.PredicateSeedScorerTEMP;
+import edu.cuny.qc.scorer.PredicateSeedScorer;
 import edu.cuny.qc.scorer.Deriver.NoDerv;
 import edu.cuny.qc.scorer.mechanism.NomlexSignalMechanism.NomlexDeriver;
 import edu.cuny.qc.util.PosMap;
@@ -411,7 +411,7 @@ public class WordNetSignalMechanism extends SignalMechanism {
 				});
 	}
 	
-	public static class WordnetScorer extends PredicateSeedScorerTEMP {
+	public static class WordnetScorer extends PredicateSeedScorer {
 		private static final long serialVersionUID = 7293139399085559241L;
 		public Set<WordNetRelation> relations;
 		public Juxtaposition juxt;
@@ -624,7 +624,7 @@ public class WordNetSignalMechanism extends SignalMechanism {
 				});
 		
 		@Override
-		public Boolean calcTokenBooleanScore(Token textToken, Map<Class<?>, Object> textTriggerTokenMap, String textStr, PartOfSpeech textPos, String specStr, PartOfSpeech specPos, ScorerData scorerData) throws SignalMechanismException {
+		public Boolean calcBoolPredicateSeedScore(Token textToken, Map<Class<?>, Object> textTriggerTokenMap, String textStr, PartOfSpeech textPos, String specStr, PartOfSpeech specPos, ScorerData scorerData) throws SignalMechanismException {
 			try {
 				WordNetPartOfSpeech textWnPos = WordNetPartOfSpeech.toWordNetPartOfspeech(textPos);
 				if (textWnPos == null) {

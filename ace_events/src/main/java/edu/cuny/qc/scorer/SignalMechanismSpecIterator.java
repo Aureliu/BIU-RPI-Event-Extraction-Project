@@ -13,51 +13,31 @@ import org.uimafit.util.JCasUtil;
 
 import com.google.common.collect.Multimap;
 
+import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
+
 import edu.cuny.qc.perceptron.types.SignalInstance;
 
-public abstract class SignalMechanismSpecIterator implements Iterator<BigDecimal>, Serializable {
+public abstract class SignalMechanismSpecIterator<T extends Annotation> implements Iterator<BigDecimal>, Serializable {
 	
 	private static final long serialVersionUID = -7666054959411686538L;
-	public SignalMechanismSpecIterator init(JCas spec, String viewName, AnnotationFS covering, Class<? extends Annotation> type, Annotation textAnno, Map<Class<?>, Object> textTriggerTokenMap, ScorerData scorerData) throws SignalMechanismException {
-		try {
-			if (covering != null) {
-				specIterator = JCasUtil.iterator(covering, type, true, true);
-			}
-			else {
-				JCas view = spec.getView(viewName);
-				specIterator = JCasUtil.iterator(view, type);
-			}
-			this.textAnno = textAnno;
-			this.textTriggerTokenMap = textTriggerTokenMap;
-			this.scorerData = scorerData;
-	
-//			if (debug) {
-//				history = ArrayListMultimap.create();
-//			}
-			
-			// A little Java trick, to allow doing several things in a one-liner:
-			// instantiate this object, call init(), and use it inside an Aggregator method
-			return this;
-		} catch (CASException e) {
-			throw new SignalMechanismException(e);
-		}
-	}
+//	public void prepareCalc(JCas spec, String viewName, Token textAnno, Map<Class<?>, Object> textTriggerTokenMap, ScorerData scorerData) throws SignalMechanismException {
+//		prepareSpecIteration(spec);
+////		this.textAnno = textAnno;
+////		this.textTriggerTokenMap = textTriggerTokenMap;
+//		this.scorerData = scorerData;
+//	}
 	
 	@Override
 	public BigDecimal next() {
 		try {
-			Annotation specElement = specIterator.next();
-			BigDecimal result = calcScore(textAnno, textTriggerTokenMap, specElement, scorerData);
-			return result;
+			T specElement = specIterator.next();
+			Boolean result = calcScore(specElement, scorerData);
+			return SignalInstance.toDouble(result);
 		} catch (SignalMechanismException e) {
 			throw new SignalMechanismRuntimeException(e);
 		}
 	}
 		
-//	public void addToHistory(BigDecimal result) throws SignalMechanismException {
-//		history.put(specElement.getCoveredText().intern(), textAnno.getCoveredText().intern());
-//	}
-	
 	public String getTypeName() {
 		return getClass().getSimpleName();
 	}
@@ -72,12 +52,12 @@ public abstract class SignalMechanismSpecIterator implements Iterator<BigDecimal
 		throw new UnsupportedOperationException(String.format("%s does not support removing spec items", this.getClass().getSimpleName()));
 	}
 	
-	public abstract BigDecimal calcScore(Annotation text, Map<Class<?>, Object> textTriggerTokenMap, Annotation spec, ScorerData scorerData) throws SignalMechanismException;
+	public abstract Boolean calcScore(T spec, ScorerData scorerData) throws SignalMechanismException;
+//	public abstract void prepareSpecIteration(JCas spec) throws SignalMechanismException;
 	
-	protected transient Iterator<? extends Annotation> specIterator;
-	protected transient Annotation textAnno;
-	protected transient Map<Class<?>, Object> textTriggerTokenMap;
-	//protected Annotation specElement;
+	protected transient Iterator<T> specIterator;
+//	protected transient Annotation textAnno;
+//	protected transient Map<Class<?>, Object> textTriggerTokenMap;
 	protected ScorerData scorerData;
 	public Multimap<String, String> history;  // {specTok1 = [textTok1, textTok2], specTok2=[textTok3, textTok1, textTok3]}
 	public boolean debug = false;

@@ -13,7 +13,7 @@ import edu.cuny.qc.scorer.Compose.Or;
 import edu.cuny.qc.scorer.Derivation;
 import edu.cuny.qc.scorer.Deriver.NoDerv;
 import edu.cuny.qc.scorer.mechanism.POSSignalMechanism.SpecificPOS;
-import edu.cuny.qc.scorer.PredicateSeedScorerTEMP;
+import edu.cuny.qc.scorer.PredicateSeedScorer;
 import edu.cuny.qc.scorer.ScorerData;
 import edu.cuny.qc.scorer.SignalMechanism;
 import edu.cuny.qc.scorer.SignalMechanismException;
@@ -43,7 +43,7 @@ public class DependencySignalMechanism extends SignalMechanism {
 		super(controller);
 	}
 
-	public static class OneDepUp extends PredicateSeedScorerTEMP {
+	public static class OneDepUp extends PredicateSeedScorer {
 		private static final long serialVersionUID = 5805470654188632623L;
 		public String relation;
 		public OneDepUp(String relation) {
@@ -53,7 +53,7 @@ public class DependencySignalMechanism extends SignalMechanism {
 			return "DepUp_" + relation;
 		}
 		@Override
-		public Boolean calcTokenBooleanScore(Token textToken, Map<Class<?>, Object> textTriggerTokenMap, String textStr, PartOfSpeech textPos, String specStr, PartOfSpeech specPos, ScorerData scorerData) throws SignalMechanismException
+		public Boolean calcBoolPredicateSeedScore(Token textToken, Map<Class<?>, Object> textTriggerTokenMap, String textStr, PartOfSpeech textPos, String specStr, PartOfSpeech specPos, ScorerData scorerData) throws SignalMechanismException
 		{
 			List<GraphEdge> toParents = (List<GraphEdge>) textTriggerTokenMap.get(TokenAnnotations.EdgesToParents.class);
 			for (GraphEdge edge : toParents) {

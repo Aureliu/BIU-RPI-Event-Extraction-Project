@@ -13,7 +13,7 @@
       	<type>PER</type>
       </types>
       <examples>
-        <example>princess</example>
+        <example>Princess</example>
         <example>heir</example>
         <example>couple</example>
         <example>John</example>
@@ -22,6 +22,8 @@
         <example>woman</example>
         <example>mother</example>
         <example>father</example>
+        <example>women</example>
+        <example>them</example>
       </examples>
     </argument>
     <argument>
@@ -46,9 +48,16 @@
     </argument>
   </arguments>
   <usage_samples>
-    <sample>The couple divorced in 1996.</sample>
-    <sample>Her divorce became final four years later.</sample>
-    <sample>The woman divorced John.</sample>
-    <sample>The divorced mother is single again.</sample>
+    <sample src="synth">The couple divorced in 1996.</sample>
+    <sample src="synth">Her divorce became final four years later.</sample>
+    <sample src="synth">The woman divorced John.</sample>
+    <sample src="synth">The divorced mother is single again.</sample>
+    <sample src="orig" >The couple divorced four years later.</sample>
+    <sample src="orig" >John is a divorced father of three.</sample>
+    <sample_out src="orig" >Jephson, who was also Prince Charles' secretary for two years, said that the Princess confided in him a great deal, especially in the years preceding her divorce from the heir to the throne in 1996.</sample>
+    <sample src="orig" >The Princess confided in him a great deal, especially in the years preceding her divorce from the heir to the throne in 1996.</sample>
+    <sample src="orig" >This year in Egypt, for example, avid campaigning helped women reverse laws that prevented them from obtaining divorce and traveling abroad without their husbands' permission. </sample>
+    <sample src="orig" >But the Simpson trial and the jury's findings marked a turning point in the career of the twice-divorced mother of two.</sample>
+    <sample src="orig_l">He is divorced.</sample>
   </usage_samples>
 </spec>

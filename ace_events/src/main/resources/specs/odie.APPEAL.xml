@@ -1,31 +1,15 @@
 <spec>
   <predicate>
-    <name>Start-Position</name>
+    <name>Appeal</name>
     <seeds>
-      <seed>hired</seed>
-      <!--seed>joined</seed-->
-      <seed>started office</seed>
-      <seed>hire</seed>
-      <seed>succeeded</seed>
-      <seed>take over</seed>
-      <seed>appointed</seed>
-      <seed>become</seed>
+      <seed>appeal</seed>
     </seeds>
   </predicate>
   <arguments>
     <argument>
-      <role>Person</role>
+      <role>Defendant</role>
       <types>
       	<type>PER</type>
-      </types>
-      <examples>
-        <example>John D. Idol</example>
-        <example>he</example>
-      </examples>
-    </argument>
-    <argument>
-      <role>Entity</role>
-      <types>
       	<type>ORG</type>
       	<type>GPE</type>
       </types>
@@ -33,13 +17,31 @@
       </examples>
     </argument>
     <argument>
-      <role>Position</role>
+      <role>Prosecutor</role>
       <types>
-      	<type>JOB</type>
+      	<type>PER</type>
+      	<type>ORG</type>
+      	<type>GPE</type>
       </types>
       <examples>
-        <example>Chief Executive</example>
-        <example>President</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Adjudicator</role>
+      <types>
+      	<type>PER</type>
+      	<type>ORG</type>
+      	<type>GPE</type>
+      </types>
+      <examples>
+      </examples>
+    </argument>
+    <argument>
+      <role>Crime</role>
+      <types>
+      	<type>CRIME</type>
+      </types>
+      <examples>
       </examples>
     </argument>
     <argument>
@@ -60,9 +62,8 @@
       <examples>
       </examples>
     </argument>
-  </arguments>
+  </arguments> 
   <usage_samples>
-    <sample src="orig">John D. Idol will take over as Chief Executive.</sample>
-    <sample src="orig_p">This was a demonstration of how he would behave if he were to become President.</sample>
- </usage_samples>
+    <sample src="orig">?</sample>
+  </usage_samples>
 </spec>

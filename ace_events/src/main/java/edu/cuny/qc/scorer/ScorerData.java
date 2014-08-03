@@ -15,7 +15,7 @@ public class ScorerData implements Serializable {
 	//public String fullName; 
 	
 	public String basicName;
-	public SignalMechanismSpecIterator scorer;
+	public SignalMechanismSpecIterator<?> scorer;
 	//public String scorerTypeName;
 	public Aggregator aggregator;
 	//public String aggregatorTypeName;

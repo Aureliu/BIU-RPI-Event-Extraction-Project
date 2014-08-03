@@ -3,15 +3,19 @@ package ac.biu.nlp.nlp.ie.onthefly.input;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map.Entry;
+import java.util.Set;
 
 import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_engine.AnalysisEngine;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.cas.CASException;
 import org.apache.uima.jcas.JCas;
+import org.apache.uima.jcas.cas.FSArray;
 import org.apache.uima.jcas.tcas.Annotation;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.uimafit.component.JCasAnnotator_ImplBase;
+import org.uimafit.util.FSCollectionFactory;
 import org.uimafit.util.JCasUtil;
 
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument;
@@ -28,11 +32,11 @@ import ac.biu.nlp.nlp.ie.onthefly.input.uima.UsageSample;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.VerbLemma;
 
 import com.google.common.collect.HashMultimap;
-import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Iterators;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Multimap;
+import com.google.common.collect.Sets;
 
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Lemma;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence;
@@ -198,6 +202,16 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 			SpecXmlCasLoader loader = new SpecXmlCasLoader();
 			loader.load(jcas, tokenView, sentenceView);
 			
+			// Build once, use many times
+			Collection<UsageSample> usageSamples = JCasUtil.select(sentenceView, UsageSample.class);
+			
+			// Make sure usage samples don't have exact duplicates
+			List<String> sampleTextsList = JCasUtil.toText(usageSamples);
+			Set<String> sampleTextsSet = Sets.newHashSet(sampleTextsList);
+			if (sampleTextsList.size() != sampleTextsSet.size()) {
+				throw new SpecXmlException(String.format("Found duplicates in Usage Samples! There are %d samples, but only %s unique ones", sampleTextsList.size(), sampleTextsSet.size()));
+			}
+			
 			// Make sure argument type adhere to ACE types
 			validateArgumentTypes(tokenView);
 			
@@ -209,10 +223,8 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 				Sentence sentence = new Sentence(tokenView, anno.getBegin(), anno.getEnd());
 				sentence.addToIndexes();
 			}
-			Iterator<UsageSample> iterSentence = JCasUtil.iterator(sentenceView, UsageSample.class);
-			while (iterSentence.hasNext()) {
-				anno = iterSentence.next();
-				Sentence sentence = new Sentence(sentenceView, anno.getBegin(), anno.getEnd());
+			for (UsageSample sample : usageSamples) {
+				Sentence sentence = new Sentence(sentenceView, sample.getBegin(), sample.getEnd());
 				sentence.addToIndexes();
 			}
 			
@@ -225,6 +237,10 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 			// this way we can verify if any of them appeared more than once - which is legit, but not for UsageSamples
 			Multimap<String, Annotation> lemmasToAnnotations = HashMultimap.create();
 			
+			// Maps each PredicateSeed/ArgumentExample to all of its instances in the usage samples
+			// Of course, not every PredicateSeed/ArgumentExample needs an instance in the usage sample, and the ones that do have, can have 1 or many
+			Multimap<Annotation, Annotation> toUsage = HashMultimap.create();
+			
 			Predicate predicate = JCasUtil.selectSingle(tokenView, Predicate.class);
 			lemmasToAnnotations.putAll(getLemmaToAnnotation(tokenView, predicate, PredicateSeed.class, "predicate"));
 			
@@ -232,7 +248,7 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 				lemmasToAnnotations.putAll(getLemmaToAnnotation(tokenView, arg, ArgumentExample.class, "argument"));
 			}
 			
-			for (UsageSample sample : JCasUtil.select(sentenceView, UsageSample.class)) {
+			for (UsageSample sample : usageSamples) {
 				for (Lemma lemma : JCasUtil.selectCovered(Lemma.class, sample)) {
 					String text = lemma.getValue();
 					Collection<Annotation> elements = lemmasToAnnotations.get(text);
@@ -245,17 +261,50 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 						Annotation element = elements.iterator().next();
 						if (element instanceof PredicateSeed) {
 							PredicateInUsageSample pius = new PredicateInUsageSample(sentenceView, lemma.getBegin(), lemma.getEnd());
-							pius.setPredicateSeed((PredicateSeed) element);
+							PredicateSeed seed = (PredicateSeed) element;
+							toUsage.put(seed, pius);
+							//seed.setPius(pius);
+							pius.setPredicateSeed(seed);
 							pius.addToIndexes();
 						}
 						else { //element instanceof ArgumentExample
 							ArgumentInUsageSample aius = new ArgumentInUsageSample(sentenceView, lemma.getBegin(), lemma.getEnd());
-							aius.setArgumentExample((ArgumentExample) element);
+							ArgumentExample example = (ArgumentExample) element;
+							toUsage.put(example, aius);
+							//example.setAius(aius);
+							aius.setArgumentExample(example);
 							aius.addToIndexes();
 						}
 					}
 					
 					// if elements.size() == 0, this lemma doesn't appear in the spec elements, so we ignore it
+				}
+				
+				// Now set a pius for each aius!
+				// Assuming exactly one pius per sample
+				List<PredicateInUsageSample> piuses = JCasUtil.selectCovered(jcas, PredicateInUsageSample.class, sample);
+				if (piuses.size() == 0) {
+					throw new SpecXmlException(String.format("Usage example does not contain any predicate seed! '%s'", sample.getCoveredText()));
+				}
+				else if (piuses.size() > 1) {
+					throw new SpecXmlException(String.format("Usage example has more than one predicate seed (%s), in: '%s'",
+							JCasUtil.toText(piuses), sample.getCoveredText()));
+				}
+				else {
+					PredicateInUsageSample pius = piuses.get(0);
+					for (ArgumentInUsageSample aius : JCasUtil.selectCovered(ArgumentInUsageSample.class, sample)) {
+						aius.setPius(pius);
+					}
+				}
+				
+				// And now, set sample instances for each PredicateSeed/ArgumentExample
+				for (PredicateSeed seed : JCasUtil.select(tokenView, PredicateSeed.class)) {
+					Collection<Annotation> piusesOfSeed = toUsage.get(seed);
+					seed.setPiuses((FSArray) FSCollectionFactory.createFSArray(jcas, piusesOfSeed));
+				}
+				for (ArgumentExample example : JCasUtil.select(tokenView, ArgumentExample.class)) {
+					Collection<Annotation> aiusesOfExample = toUsage.get(example);
+					example.setAiuses((FSArray) FSCollectionFactory.createFSArray(jcas, aiusesOfExample));
 				}
 			}
 			

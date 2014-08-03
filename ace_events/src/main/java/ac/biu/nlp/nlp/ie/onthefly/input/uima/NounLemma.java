@@ -10,7 +10,7 @@ import org.apache.uima.jcas.cas.TOP_Type;
 
 
 /** 
- * Updated by JCasGen Sun Jun 29 20:28:54 IDT 2014
+ * Updated by JCasGen Thu Jul 31 10:00:22 IDT 2014
  * XML source: C:/Java/Git/breep/ace_events/src/main/resources/desc/OdieInputTypes.xml
  * @generated */
 public class NounLemma extends LemmaByPos {

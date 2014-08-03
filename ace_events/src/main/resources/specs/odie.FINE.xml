@@ -1,31 +1,26 @@
 <spec>
   <predicate>
-    <name>Start-Position</name>
+    <name>Fine</name>
     <seeds>
-      <seed>hired</seed>
-      <!--seed>joined</seed-->
-      <seed>started office</seed>
-      <seed>hire</seed>
-      <seed>succeeded</seed>
-      <seed>take over</seed>
-      <seed>appointed</seed>
-      <seed>become</seed>
+      <seed>fine</seed>
     </seeds>
   </predicate>
   <arguments>
     <argument>
-      <role>Person</role>
+      <role>Entity</role>
       <types>
       	<type>PER</type>
+      	<type>ORG</type>
+      	<type>GPE</type>
       </types>
       <examples>
-        <example>John D. Idol</example>
-        <example>he</example>
+        <example>company</example>
       </examples>
     </argument>
     <argument>
-      <role>Entity</role>
+      <role>Adjudicator</role>
       <types>
+      	<type>PER</type>
       	<type>ORG</type>
       	<type>GPE</type>
       </types>
@@ -33,13 +28,20 @@
       </examples>
     </argument>
     <argument>
-      <role>Position</role>
+      <role>Money</role>
       <types>
-      	<type>JOB</type>
+      	<type>NUM</type>
       </types>
       <examples>
-        <example>Chief Executive</example>
-        <example>President</example>
+        <example>$300,000</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Crime</role>
+      <types>
+      	<type>CRIME</type>
+      </types>
+      <examples>
       </examples>
     </argument>
     <argument>
@@ -62,7 +64,6 @@
     </argument>
   </arguments>
   <usage_samples>
-    <sample src="orig">John D. Idol will take over as Chief Executive.</sample>
-    <sample src="orig_p">This was a demonstration of how he would behave if he were to become President.</sample>
- </usage_samples>
+    <sample src="orig">The company was ordered to pay a fine of $300,000. </sample>
+  </usage_samples>
 </spec>

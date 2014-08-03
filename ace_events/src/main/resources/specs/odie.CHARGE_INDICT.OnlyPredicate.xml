@@ -6,6 +6,7 @@
       <seed>indicted</seed>
       <seed>indictment</seed>
       <seed>charged</seed>
+      <seed>charges</seed>
     </seeds>
   </predicate>
   <arguments>
@@ -17,6 +18,9 @@
       	<type>GPE</type>
       </types>
       <examples>
+        <example>Milosovic</example>
+        <example>Einhorn</example>
+        <example>Ali Mohammed</example>
       </examples>
     </argument>
     <argument>
@@ -45,6 +49,9 @@
       	<type>CRIME</type>
       </types>
       <examples>
+        <example>war crimes</example>
+        <example>killing Maddux</example>
+        <example>conspiring with a Saudi born dissident Osama bin Laden to attack US targets in the Middle-East</example>
       </examples>
     </argument>
     <argument>
@@ -53,6 +60,7 @@
       	<type>TIME</type>
       </types>
       <examples>
+        <example>yesterday</example>
       </examples>
     </argument>
     <argument>
@@ -67,5 +75,8 @@
     </argument>
   </arguments> 
   <usage_samples>
+    <sample src="orig">Milosovic was indicted yesterday for war crimes.</sample>
+    <sample src="orig">Einhorn is accused of killing Maddux.</sample>
+    <sample src="orig">Ali Mohammed, a native of Egypt, has admitted to five charges of conspiring with a Saudi born dissident Osama bin Laden to attack US targets in the Middle-East.</sample>
   </usage_samples>
 </spec>

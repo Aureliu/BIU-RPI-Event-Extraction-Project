@@ -9,7 +9,7 @@ import edu.cuny.qc.scorer.Aggregator;
 import edu.cuny.qc.scorer.Compose.Or;
 import edu.cuny.qc.scorer.Derivation;
 import edu.cuny.qc.scorer.Deriver.NoDerv;
-import edu.cuny.qc.scorer.PredicateSeedScorerTEMP;
+import edu.cuny.qc.scorer.PredicateSeedScorer;
 import edu.cuny.qc.scorer.ScorerData;
 import edu.cuny.qc.scorer.SignalMechanism;
 import edu.cuny.qc.scorer.SignalMechanismException;
@@ -39,7 +39,7 @@ public class POSSignalMechanism extends SignalMechanism {
 		super(controller);
 	}
 
-	public static class SpecificPOS extends PredicateSeedScorerTEMP {
+	public static class SpecificPOS extends PredicateSeedScorer {
 		private static final long serialVersionUID = 1722107959748327810L;
 		public PartOfSpeech pos;
 		public SpecificPOS(String specificPosTagStr) throws UnsupportedPosTagStringException {
@@ -49,7 +49,7 @@ public class POSSignalMechanism extends SignalMechanism {
 			return "POS_" + pos;
 		}
 		@Override
-		public Boolean calcTokenBooleanScore(Token textToken, Map<Class<?>, Object> textTriggerTokenMap, String textStr, PartOfSpeech textPos, String specStr, PartOfSpeech specPos, ScorerData scorerData) throws SignalMechanismException
+		public Boolean calcBoolPredicateSeedScore(Token textToken, Map<Class<?>, Object> textTriggerTokenMap, String textStr, PartOfSpeech textPos, String specStr, PartOfSpeech specPos, ScorerData scorerData) throws SignalMechanismException
 		{
 			return textPos.equals(pos);
 		}

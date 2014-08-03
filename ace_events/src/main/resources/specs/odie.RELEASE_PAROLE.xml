@@ -1,15 +1,10 @@
 <spec>
   <predicate>
-    <name>Start-Position</name>
+    <name>Release-Parole</name>
     <seeds>
-      <seed>hired</seed>
-      <!--seed>joined</seed-->
-      <seed>started office</seed>
-      <seed>hire</seed>
-      <seed>succeeded</seed>
-      <seed>take over</seed>
-      <seed>appointed</seed>
-      <seed>become</seed>
+      <seed>release</seed>
+      <seed>released</seed>
+      <seed>freed</seed>
     </seeds>
   </predicate>
   <arguments>
@@ -19,13 +14,15 @@
       	<type>PER</type>
       </types>
       <examples>
-        <example>John D. Idol</example>
-        <example>he</example>
+        <example>prisoners</example>
+        <example>Chapman</example>
+        <example>him</example>
       </examples>
     </argument>
     <argument>
       <role>Entity</role>
       <types>
+      	<type>PER</type>
       	<type>ORG</type>
       	<type>GPE</type>
       </types>
@@ -33,13 +30,11 @@
       </examples>
     </argument>
     <argument>
-      <role>Position</role>
+      <role>Crime</role>
       <types>
-      	<type>JOB</type>
+      	<type>CRIME</type>
       </types>
       <examples>
-        <example>Chief Executive</example>
-        <example>President</example>
       </examples>
     </argument>
     <argument>
@@ -62,7 +57,8 @@
     </argument>
   </arguments>
   <usage_samples>
-    <sample src="orig">John D. Idol will take over as Chief Executive.</sample>
-    <sample src="orig_p">This was a demonstration of how he would behave if he were to become President.</sample>
- </usage_samples>
+    <sample src="orig">Lennon was a liberal and would have wanted him to be released.</sample>
+    <sample src="orig">Chapman would be concerned for his safety if released.</sample>
+    <sample src="orig_p">The freed prisoners joined their families.</sample>
+  </usage_samples>
 </spec>

@@ -1,8 +1,9 @@
 <spec>
   <predicate>
-    <name>Sentence</name>
+    <name>Convict</name>
     <seeds>
-      <seed>sentenced</seed>
+      <seed>convicted</seed>
+      <seed>guilty</seed>
     </seeds>
   </predicate>
   <arguments>
@@ -14,7 +15,10 @@
       	<type>GPE</type>
       </types>
       <examples>
-        <example>Solomon</example>
+        <example>people</example>
+        <example>Smith</example>
+        <example>Jones</example>
+        <example>Carruth</example>
       </examples>
     </argument>
     <argument>
@@ -33,15 +37,8 @@
       	<type>CRIME</type>
       </types>
       <examples>
-      </examples>
-    </argument>
-    <argument>
-      <role>Sentence</role>
-      <types>
-      	<type>SENTENCE</type>
-      </types>
-      <examples>
-        <example>211 years in prison.</example>
+        <example>selling guns to straw purchasers</example>
+        <example>masterminding the shooting</example>
       </examples>
     </argument>
     <argument>
@@ -62,8 +59,10 @@
       <examples>
       </examples>
     </argument>
-  </arguments>
+  </arguments> 
   <usage_samples>
-    <sample src="orig">Solomon could be sentencedto up to 211 years in prison.</sample>
+    <sample src="orig">Three people have been convicted in the operation, including Smith and Jones.</sample>
+    <sample src="orig">Smith and Jones were found guilty of selling guns to straw purchasers.</sample>
+    <sample src="orig">Carruth, 26, could be executed if convicted of masterminding the shooting.</sample>
   </usage_samples>
 </spec>

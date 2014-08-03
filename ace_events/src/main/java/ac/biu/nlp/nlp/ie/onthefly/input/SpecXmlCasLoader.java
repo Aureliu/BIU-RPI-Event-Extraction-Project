@@ -157,6 +157,7 @@ public class SpecXmlCasLoader {
 
 	}
 
-	public static final String XML_ELEMENT ="(?s)<%s[^>]*>(.*?)</%s>";
+	// NOTE: this trims any whitespace in the beginning and ending of the element value
+	public static final String XML_ELEMENT ="(?s)<%s[^>]*>\\s*(.*?)\\s*</%s>";
 
 }

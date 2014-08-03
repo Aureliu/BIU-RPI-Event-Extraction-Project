@@ -1,29 +1,22 @@
 package edu.cuny.qc.scorer;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 import org.apache.uima.jcas.JCas;
 
-import ac.biu.nlp.nlp.ie.onthefly.input.SpecAnnotator;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument;
-import ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateSeed;
 
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.LinkedHashMultimap;
 import com.google.common.collect.Multimap;
 
-import edu.cuny.qc.perceptron.core.Controller;
-import edu.cuny.qc.perceptron.core.Perceptron;
-import edu.cuny.qc.perceptron.core.Pipeline;
-
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
 import edu.cuny.qc.ace.acetypes.AceMention;
+import edu.cuny.qc.perceptron.core.Controller;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
 import edu.cuny.qc.perceptron.types.SentenceInstance.InstanceAnnotations;
 import edu.cuny.qc.perceptron.types.SignalInstance;
@@ -96,8 +89,9 @@ public abstract class SignalMechanism {
 //					System.out.printf("\n\n\n\n\nvoo\n\n\n\n\n\n");
 //				}
 				////
-				data.scorer.init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken, textTriggerTokenMap, data);
-				BigDecimal score = data.aggregator.aggregate(data.scorer);
+				PredicateScorer<?> scorer = (PredicateScorer<?>) data.scorer;
+				scorer.prepareCalc(spec, textTriggerToken, textTriggerTokenMap, data);
+				BigDecimal score = data.aggregator.aggregate(scorer);
 				
 				///// DEBUG
 //				if (textTriggerToken.getCoveredText().equals("attack") && !SignalInstance.isPositive.apply(score)) {
@@ -117,10 +111,11 @@ public abstract class SignalMechanism {
 				if (signal.history == null) {
 //					signal.initHistory();
 					data.scorer.debug = true;
-					// need to init again because the inner iterator is already exhausted, need to get a new one
-					data.scorer.init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken, textTriggerTokenMap, data);
 					data.scorer.history = ArrayListMultimap.create();
-					debugAggregator.aggregate(data.scorer);
+					// need to init again because the inner iterator is already exhausted, need to get a new one
+					PredicateScorer<?> scorer = (PredicateScorer<?>) data.scorer;
+					scorer.prepareCalc(spec, textTriggerToken, textTriggerTokenMap, data);
+					debugAggregator.aggregate(scorer);
 					data.scorer.debug = false;
 					signal.history = data.scorer.history;
 					textSentence.markSignalUpdate();

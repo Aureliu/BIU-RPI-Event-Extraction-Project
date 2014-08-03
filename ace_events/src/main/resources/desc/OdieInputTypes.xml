@@ -13,6 +13,14 @@
       <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateSeed</name>
       <description/>
       <supertypeName>uima.tcas.Annotation</supertypeName>
+      <features>
+        <featureDescription>
+          <name>piuses</name>
+          <description/>
+          <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+          <elementType>ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateInUsageSample</elementType>
+        </featureDescription>
+      </features>
     </typeDescription>
     <typeDescription>
       <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentExample</name>
@@ -23,6 +31,12 @@
           <name>argument</name>
           <description/>
           <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>aiuses</name>
+          <description/>
+          <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+          <elementType>ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample</elementType>
         </featureDescription>
       </features>
     </typeDescription>
@@ -104,6 +118,11 @@
           <name>argumentExample</name>
           <description/>
           <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentExample</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>pius</name>
+          <description/>
+          <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateInUsageSample</rangeTypeName>
         </featureDescription>
       </features>
     </typeDescription>

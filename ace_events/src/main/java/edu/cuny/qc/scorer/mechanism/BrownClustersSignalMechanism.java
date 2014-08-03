@@ -12,7 +12,7 @@ import edu.cuny.qc.scorer.Derivation;
 import edu.cuny.qc.scorer.ScorerData;
 import edu.cuny.qc.scorer.SignalMechanism;
 import edu.cuny.qc.scorer.SignalMechanismException;
-import edu.cuny.qc.scorer.PredicateSeedScorerTEMP;
+import edu.cuny.qc.scorer.PredicateSeedScorer;
 import edu.cuny.qc.scorer.Compose.Or;
 import edu.cuny.qc.scorer.mechanism.NomlexSignalMechanism.NomlexDeriver;
 import edu.cuny.qc.scorer.mechanism.POSSignalMechanism.SpecificPOS;
@@ -61,7 +61,7 @@ public class BrownClustersSignalMechanism extends SignalMechanism {
 		super(controller);
 	}
 
-	private static abstract class BrownClustersScorer extends PredicateSeedScorerTEMP {
+	private static abstract class BrownClustersScorer extends PredicateSeedScorer {
 		private static final long serialVersionUID = -1714460227125952358L;
 
 		/**
@@ -77,7 +77,7 @@ public class BrownClustersSignalMechanism extends SignalMechanism {
 		public static final SameAllClustersToken inst = new SameAllClustersToken();
 		@Override public String getForm(Token token) { return token.getCoveredText();}
 		@Override
-		public Boolean calcTokenBooleanScore(Token textToken, Map<Class<?>, Object> textTriggerTokenMap, String textStr, PartOfSpeech textPos, String specStr, PartOfSpeech specPos, ScorerData scorerData) throws SignalMechanismException
+		public Boolean calcBoolPredicateSeedScore(Token textToken, Map<Class<?>, Object> textTriggerTokenMap, String textStr, PartOfSpeech textPos, String specStr, PartOfSpeech specPos, ScorerData scorerData) throws SignalMechanismException
 		{
 			List<String> textClusters = getBrownCluster(textStr);
 			List<String> specClusters = getBrownCluster(specStr);
@@ -92,7 +92,7 @@ public class BrownClustersSignalMechanism extends SignalMechanism {
 		private static final long serialVersionUID = 5021813890271330667L;
 		public static final SameAllClustersToken inst = new SameAllClustersToken();
 		@Override
-		public Boolean calcTokenBooleanScore(Token textToken, Map<Class<?>, Object> textTriggerTokenMap, String textStr, PartOfSpeech textPos, String specStr, PartOfSpeech specPos, ScorerData scorerData) throws SignalMechanismException
+		public Boolean calcBoolPredicateSeedScore(Token textToken, Map<Class<?>, Object> textTriggerTokenMap, String textStr, PartOfSpeech textPos, String specStr, PartOfSpeech specPos, ScorerData scorerData) throws SignalMechanismException
 		{
 			List<String> textClusters = getBrownCluster(textStr);
 			List<String> specClusters = getBrownCluster(specStr);
@@ -108,7 +108,7 @@ public class BrownClustersSignalMechanism extends SignalMechanism {
 		public static final SameLongestClusterToken inst = new SameLongestClusterToken();
 		@Override public String getForm(Token token) { return token.getCoveredText();}
 		@Override
-		public Boolean calcTokenBooleanScore(Token textToken, Map<Class<?>, Object> textTriggerTokenMap, String textStr, PartOfSpeech textPos, String specStr, PartOfSpeech specPos, ScorerData scorerData) throws SignalMechanismException
+		public Boolean calcBoolPredicateSeedScore(Token textToken, Map<Class<?>, Object> textTriggerTokenMap, String textStr, PartOfSpeech textPos, String specStr, PartOfSpeech specPos, ScorerData scorerData) throws SignalMechanismException
 		{
 			List<String> textClusters = getBrownCluster(textStr);
 			List<String> specClusters = getBrownCluster(specStr);
@@ -125,7 +125,7 @@ public class BrownClustersSignalMechanism extends SignalMechanism {
 		private static final long serialVersionUID = -1179275105750214514L;
 		public static final SameLongestClusterLemma inst = new SameLongestClusterLemma();
 		@Override
-		public Boolean calcTokenBooleanScore(Token textToken, Map<Class<?>, Object> textTriggerTokenMap, String textStr, PartOfSpeech textPos, String specStr, PartOfSpeech specPos, ScorerData scorerData) throws SignalMechanismException
+		public Boolean calcBoolPredicateSeedScore(Token textToken, Map<Class<?>, Object> textTriggerTokenMap, String textStr, PartOfSpeech textPos, String specStr, PartOfSpeech specPos, ScorerData scorerData) throws SignalMechanismException
 		{
 			List<String> textClusters = getBrownCluster(textStr);
 			List<String> specClusters = getBrownCluster(specStr);

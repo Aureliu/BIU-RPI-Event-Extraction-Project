@@ -14,7 +14,7 @@ import org.apache.uima.jcas.JCasRegistry;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** 
- * Updated by JCasGen Sun Jun 29 20:28:54 IDT 2014
+ * Updated by JCasGen Thu Jul 31 10:00:20 IDT 2014
  * @generated */
 public class ArgumentExample_Type extends Annotation_Type {
   /** @generated */
@@ -63,6 +63,43 @@ public class ArgumentExample_Type extends Annotation_Type {
     ll_cas.ll_setRefValue(addr, casFeatCode_argument, v);}
     
   
+ 
+  /** @generated */
+  final Feature casFeat_aiuses;
+  /** @generated */
+  final int     casFeatCode_aiuses;
+  /** @generated */ 
+  public int getAiuses(int addr) {
+        if (featOkTst && casFeat_aiuses == null)
+      jcas.throwFeatMissing("aiuses", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentExample");
+    return ll_cas.ll_getRefValue(addr, casFeatCode_aiuses);
+  }
+  /** @generated */    
+  public void setAiuses(int addr, int v) {
+        if (featOkTst && casFeat_aiuses == null)
+      jcas.throwFeatMissing("aiuses", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentExample");
+    ll_cas.ll_setRefValue(addr, casFeatCode_aiuses, v);}
+    
+   /** @generated */
+  public int getAiuses(int addr, int i) {
+        if (featOkTst && casFeat_aiuses == null)
+      jcas.throwFeatMissing("aiuses", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentExample");
+    if (lowLevelTypeChecks)
+      return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_aiuses), i, true);
+    jcas.checkArrayBounds(ll_cas.ll_getRefValue(addr, casFeatCode_aiuses), i);
+  return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_aiuses), i);
+  }
+   
+  /** @generated */ 
+  public void setAiuses(int addr, int i, int v) {
+        if (featOkTst && casFeat_aiuses == null)
+      jcas.throwFeatMissing("aiuses", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentExample");
+    if (lowLevelTypeChecks)
+      ll_cas.ll_setRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_aiuses), i, v, true);
+    jcas.checkArrayBounds(ll_cas.ll_getRefValue(addr, casFeatCode_aiuses), i);
+    ll_cas.ll_setRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_aiuses), i, v);
+  }
+ 
 
 
 
@@ -75,6 +112,10 @@ public class ArgumentExample_Type extends Annotation_Type {
  
     casFeat_argument = jcas.getRequiredFeatureDE(casType, "argument", "ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument", featOkTst);
     casFeatCode_argument  = (null == casFeat_argument) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_argument).getCode();
+
+ 
+    casFeat_aiuses = jcas.getRequiredFeatureDE(casType, "aiuses", "uima.cas.FSArray", featOkTst);
+    casFeatCode_aiuses  = (null == casFeat_aiuses) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_aiuses).getCode();
 
   }
 }

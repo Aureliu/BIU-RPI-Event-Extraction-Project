@@ -38,6 +38,17 @@
         <example>minister</example>
         <example>Israeli</example>
         <example>Palestinian</example>
+        <example>leaders</example>
+        <example>he</example>
+        <example>Ehud Barak</example>
+        <example>Prime Minister</example>
+        <example>leader</example>
+        <example>Yasser Arafat</example>
+        <example>officials</example>
+        <example>trade officials</example>
+        <example>lawmakers</example>
+        <example>Sudnikovich</example>
+        <example>him</example>
       </examples>
     </argument>
     <argument>
@@ -52,6 +63,7 @@
         <example>Friday</example>
         <example>tomorrow</example>
         <example>Monday</example>
+        <example>May 17</example>
       </examples>
     </argument>
     <argument>
@@ -64,12 +76,22 @@
       <examples>
         <example>Washington</example>
         <example>Egypt</example>
+        <example>Boston</example>
+        <example>London</example>
       </examples>
     </argument>
   </arguments>
   <usage_samples>
-    <sample>Officials would meet ministers on Friday in Egypt.</sample>
-    <sample>Korea, Japan and China held a summit on Monday in Washington.</sample>
-    <sample>The governor is in talks with the representatives this Month.</sample>
+    <sample src="synth">Officials would meet ministers on Friday in Egypt.</sample>
+    <sample src="synth">Korea, Japan and China held a summit on Monday in Washington.</sample>
+    <sample src="synth">The governor is in talks with the representatives this Month.</sample>
+    <sample src="orig" >Protestors interrupted their meeting.</sample>
+    <sample src="orig" >The talks ended without agreement on Monday.</sample>
+    <sample src="orig" >The leaders held their meeting in Boston.</sample>
+    <sample src="orig" >There are reports that he could meet separately with Israeli Prime Minister Ehud Barak and Palestinian leader Yasser Arafat.</sample>
+    <sample src="orig" >Russian and U.S. trade officials will meet in London on May 17.</sample>
+    <sample src="orig" >He plans to meet with lawmakers from both parties.</sample>
+    <sample src="orig" >It is obvious that it was simply impossible not to meet with Mr. Sudnikovich.</sample>
+    <sample src="orig" >He decided it would probably be a good idea to meet with him.</sample>
   </usage_samples>
 </spec>

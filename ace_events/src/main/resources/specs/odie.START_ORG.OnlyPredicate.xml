@@ -1,24 +1,13 @@
 <spec>
   <predicate>
-    <name>Sentence</name>
+    <name>Start-Org</name>
     <seeds>
-      <seed>sentenced</seed>
+      <seed>launched</seed>
     </seeds>
   </predicate>
   <arguments>
     <argument>
-      <role>Defendant</role>
-      <types>
-      	<type>PER</type>
-      	<type>ORG</type>
-      	<type>GPE</type>
-      </types>
-      <examples>
-        <example>Solomon</example>
-      </examples>
-    </argument>
-    <argument>
-      <role>Adjudicator</role>
+      <role>Agent</role>
       <types>
       	<type>PER</type>
       	<type>ORG</type>
@@ -28,20 +17,11 @@
       </examples>
     </argument>
     <argument>
-      <role>Crime</role>
+      <role>Org</role>
       <types>
-      	<type>CRIME</type>
+      	<type>ORG</type>
       </types>
       <examples>
-      </examples>
-    </argument>
-    <argument>
-      <role>Sentence</role>
-      <types>
-      	<type>SENTENCE</type>
-      </types>
-      <examples>
-        <example>211 years in prison.</example>
       </examples>
     </argument>
     <argument>
@@ -64,6 +44,6 @@
     </argument>
   </arguments>
   <usage_samples>
-    <sample src="orig">Solomon could be sentencedto up to 211 years in prison.</sample>
+    <sample src="orig">?</sample>
   </usage_samples>
 </spec>

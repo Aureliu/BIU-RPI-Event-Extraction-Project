@@ -11,9 +11,9 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
 import eu.excitementproject.eop.common.representation.partofspeech.PartOfSpeech;
 
-public abstract class Compose extends PredicateSeedScorerTEMP {
+public abstract class Compose extends PredicateSeedScorer {
 	private static final long serialVersionUID = -6327210445951007729L;
-	protected PredicateSeedScorerTEMP[] scorers;
+	protected PredicateSeedScorer[] scorers;
 	@Override public int hashCode() {
 	     return new HashCodeBuilder(1231, 1237).append(scorers).toHashCode();
 	}
@@ -27,7 +27,7 @@ public abstract class Compose extends PredicateSeedScorerTEMP {
 	@Override
 	public String getTypeName() {
 		List<String> names = new ArrayList<String>(scorers.length);
-		for (SignalMechanismSpecIterator scorer : scorers) {
+		for (SignalMechanismSpecIterator<?> scorer : scorers) {
 			names.add(scorer.getTypeName());
 		}
 		return String.format("%s(%s)", getClass().getSimpleName(), StringUtils.join(names, ','));
@@ -35,13 +35,13 @@ public abstract class Compose extends PredicateSeedScorerTEMP {
 
 	public static class Or extends Compose {
 		private static final long serialVersionUID = -9172233066400279525L;
-		public Or(PredicateSeedScorerTEMP... scorers) {
+		public Or(PredicateSeedScorer... scorers) {
 			this.scorers = scorers;
 		}
 		@Override
-		public Boolean calcTokenBooleanScore(Token textToken, Map<Class<?>, Object> textTriggerTokenMap, String textStr, PartOfSpeech textPos, String specStr, PartOfSpeech specPos, ScorerData scorerData) throws SignalMechanismException {
-			for (PredicateSeedScorerTEMP scorer : scorers) {
-				boolean positive = scorer.calcTokenBooleanScore(textToken, textTriggerTokenMap, textStr, textPos, specStr, specPos, scorerData);
+		public Boolean calcBoolPredicateSeedScore(Token textToken, Map<Class<?>, Object> textTriggerTokenMap, String textStr, PartOfSpeech textPos, String specStr, PartOfSpeech specPos, ScorerData scorerData) throws SignalMechanismException {
+			for (PredicateSeedScorer scorer : scorers) {
+				boolean positive = scorer.calcBoolPredicateSeedScore(textToken, textTriggerTokenMap, textStr, textPos, specStr, specPos, scorerData);
 				if (positive) {
 					return true;
 				}
@@ -54,14 +54,14 @@ public abstract class Compose extends PredicateSeedScorerTEMP {
 		 * 
 		 */
 		private static final long serialVersionUID = 201053223418406937L;
-		PredicateSeedScorerTEMP[] scorers;
-		public And(PredicateSeedScorerTEMP... scorers) {
+		PredicateSeedScorer[] scorers;
+		public And(PredicateSeedScorer... scorers) {
 			this.scorers = scorers;
 		}
 		@Override
-		public Boolean calcTokenBooleanScore(Token textToken, Map<Class<?>, Object> textTriggerTokenMap, String textStr, PartOfSpeech textPos, String specStr, PartOfSpeech specPos, ScorerData scorerData) throws SignalMechanismException {
-			for (PredicateSeedScorerTEMP scorer : scorers) {
-				boolean positive = scorer.calcTokenBooleanScore(textToken, textTriggerTokenMap, textStr, textPos, specStr, specPos, scorerData);
+		public Boolean calcBoolPredicateSeedScore(Token textToken, Map<Class<?>, Object> textTriggerTokenMap, String textStr, PartOfSpeech textPos, String specStr, PartOfSpeech specPos, ScorerData scorerData) throws SignalMechanismException {
+			for (PredicateSeedScorer scorer : scorers) {
+				boolean positive = scorer.calcBoolPredicateSeedScore(textToken, textTriggerTokenMap, textStr, textPos, specStr, specPos, scorerData);
 				if (!positive) {
 					return false;
 				}

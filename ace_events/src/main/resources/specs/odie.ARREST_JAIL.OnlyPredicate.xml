@@ -8,6 +8,8 @@
       <seed>incarcerated</seed>
       <seed>imprisoned</seed>
       <seed>arrest</seed>
+      <seed>arresting</seed>
+      <seed>arrests</seed>
     </seeds>
   </predicate>
   <arguments>
@@ -17,6 +19,10 @@
       	<type>PER</type>
       </types>
       <examples>
+        <example>officer</example>
+        <example>leaders</example>
+        <example>opposition leaders</example>
+        <example>son</example>
       </examples>
     </argument>
     <argument>
@@ -35,6 +41,7 @@
       	<type>CRIME</type>
       </types>
       <examples>
+        <example>corruption</example>
       </examples>
     </argument>
     <argument>
@@ -57,5 +64,9 @@
     </argument>
   </arguments> 
   <usage_samples>
+    <sample src="orig">He said security officials had found documents on the arrested opposition leaders.</sample>
+    <sample src="orig">The youngest son of ex-dictator Suharto disobeyed a summons to surrender himself to prosecutors Monday and be imprisoned for corruption.</sample>
+    <sample src="orig">Rumors of arrests circulated in Vancouver.</sample>
+    <sample src="orig_p">The arresting officer arrived at the station.</sample>
   </usage_samples>
 </spec>

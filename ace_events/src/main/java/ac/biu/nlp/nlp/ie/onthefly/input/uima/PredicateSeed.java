@@ -6,11 +6,12 @@ package ac.biu.nlp.nlp.ie.onthefly.input.uima;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
 import org.apache.uima.jcas.cas.TOP_Type;
+import org.apache.uima.jcas.cas.FSArray;
 import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Sun Jun 29 20:28:54 IDT 2014
+ * Updated by JCasGen Thu Jul 31 10:00:22 IDT 2014
  * XML source: C:/Java/Git/breep/ace_events/src/main/resources/desc/OdieInputTypes.xml
  * @generated */
 public class PredicateSeed extends Annotation {
@@ -59,6 +60,38 @@ public class PredicateSeed extends Annotation {
   @generated modifiable */
   private void readObject() {/*default - does nothing empty block */}
      
-}
+  //*--------------*
+  //* Feature: piuses
+
+  /** getter for piuses - gets 
+   * @generated */
+  public FSArray getPiuses() {
+    if (PredicateSeed_Type.featOkTst && ((PredicateSeed_Type)jcasType).casFeat_piuses == null)
+      jcasType.jcas.throwFeatMissing("piuses", "ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateSeed");
+    return (FSArray)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((PredicateSeed_Type)jcasType).casFeatCode_piuses)));}
+    
+  /** setter for piuses - sets  
+   * @generated */
+  public void setPiuses(FSArray v) {
+    if (PredicateSeed_Type.featOkTst && ((PredicateSeed_Type)jcasType).casFeat_piuses == null)
+      jcasType.jcas.throwFeatMissing("piuses", "ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateSeed");
+    jcasType.ll_cas.ll_setRefValue(addr, ((PredicateSeed_Type)jcasType).casFeatCode_piuses, jcasType.ll_cas.ll_getFSRef(v));}    
+    
+  /** indexed getter for piuses - gets an indexed value - 
+   * @generated */
+  public PredicateInUsageSample getPiuses(int i) {
+    if (PredicateSeed_Type.featOkTst && ((PredicateSeed_Type)jcasType).casFeat_piuses == null)
+      jcasType.jcas.throwFeatMissing("piuses", "ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateSeed");
+    jcasType.jcas.checkArrayBounds(jcasType.ll_cas.ll_getRefValue(addr, ((PredicateSeed_Type)jcasType).casFeatCode_piuses), i);
+    return (PredicateInUsageSample)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefArrayValue(jcasType.ll_cas.ll_getRefValue(addr, ((PredicateSeed_Type)jcasType).casFeatCode_piuses), i)));}
+
+  /** indexed setter for piuses - sets an indexed value - 
+   * @generated */
+  public void setPiuses(int i, PredicateInUsageSample v) { 
+    if (PredicateSeed_Type.featOkTst && ((PredicateSeed_Type)jcasType).casFeat_piuses == null)
+      jcasType.jcas.throwFeatMissing("piuses", "ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateSeed");
+    jcasType.jcas.checkArrayBounds(jcasType.ll_cas.ll_getRefValue(addr, ((PredicateSeed_Type)jcasType).casFeatCode_piuses), i);
+    jcasType.ll_cas.ll_setRefArrayValue(jcasType.ll_cas.ll_getRefValue(addr, ((PredicateSeed_Type)jcasType).casFeatCode_piuses), i, jcasType.ll_cas.ll_getFSRef(v));}
+  }
 
     

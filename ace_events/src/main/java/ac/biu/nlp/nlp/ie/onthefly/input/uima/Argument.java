@@ -11,8 +11,8 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Thu Jul 31 10:00:20 IDT 2014
- * XML source: C:/Java/Git/breep/ace_events/src/main/resources/desc/OdieInputTypes.xml
+ * Updated by JCasGen Mon Aug 04 21:24:44 IDT 2014
+ * XML source: C:/Java/Git/breep/ace_events/TypeSystem.xml
  * @generated */
 public class Argument extends Annotation {
   /** @generated
@@ -146,6 +146,24 @@ public class Argument extends Annotation {
       jcasType.jcas.throwFeatMissing("examples", "ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument");
     jcasType.jcas.checkArrayBounds(jcasType.ll_cas.ll_getRefValue(addr, ((Argument_Type)jcasType).casFeatCode_examples), i);
     jcasType.ll_cas.ll_setRefArrayValue(jcasType.ll_cas.ll_getRefValue(addr, ((Argument_Type)jcasType).casFeatCode_examples), i, jcasType.ll_cas.ll_getFSRef(v));}
+   
+    
+  //*--------------*
+  //* Feature: marker
+
+  /** getter for marker - gets 
+   * @generated */
+  public Marker getMarker() {
+    if (Argument_Type.featOkTst && ((Argument_Type)jcasType).casFeat_marker == null)
+      jcasType.jcas.throwFeatMissing("marker", "ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument");
+    return (Marker)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((Argument_Type)jcasType).casFeatCode_marker)));}
+    
+  /** setter for marker - sets  
+   * @generated */
+  public void setMarker(Marker v) {
+    if (Argument_Type.featOkTst && ((Argument_Type)jcasType).casFeat_marker == null)
+      jcasType.jcas.throwFeatMissing("marker", "ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument");
+    jcasType.ll_cas.ll_setRefValue(addr, ((Argument_Type)jcasType).casFeatCode_marker, jcasType.ll_cas.ll_getFSRef(v));}    
   }
 
     

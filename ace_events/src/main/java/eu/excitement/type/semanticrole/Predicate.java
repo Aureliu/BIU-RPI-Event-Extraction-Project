@@ -10,11 +10,9 @@ import org.apache.uima.jcas.cas.TOP_Type;
 import org.apache.uima.jcas.tcas.Annotation;
 
 
-/** Predicate is a uima.tcas.Annotation. It represents a predicate. It holds the predicate sense as string and links to its arguments (An array of Argument). It has the following features:
-- predicateName (uima.cas.String): This feature represents the name of this predicate. It actually refers to the sense of the predicate in PropBank or FrameNet.
- -arguments (uima.cas.FSArray):This feature is an array of EXCITEMENT.semanticrole.Argument. It holds the predicate's arguments.
- * Updated by JCasGen Tue Mar 11 18:07:46 IST 2014
- * XML source: C:/Java/Git/breep/ace_events/src/main/resources/desc/SpecAnnotator.xml
+/** 
+ * Updated by JCasGen Mon Aug 04 21:24:55 IDT 2014
+ * XML source: C:/Java/Git/breep/ace_events/TypeSystem.xml
  * @generated */
 public class Predicate extends Annotation {
   /** @generated

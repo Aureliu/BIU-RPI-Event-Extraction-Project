@@ -88,6 +88,8 @@ public class Controller implements java.io.Serializable
 	
 	public boolean filterSentenceInstance = false;
 	
+	public boolean enhanceSpecs = false;
+	
 	public Controller()
 	{
 //		System.out.printf("\n[%s] ******** Controller() **********\n", new Date());
@@ -236,6 +238,10 @@ public class Controller implements java.io.Serializable
 			{
 				filterSentenceInstance = Boolean.parseBoolean(fields[1]);
 			}
+			else if(fields[0].equalsIgnoreCase("enhanceSpecs"))
+			{
+				enhanceSpecs = Boolean.parseBoolean(fields[1]);
+			}
 		}
 		System.out.printf("\n[%s] ******** Controller() **********\n", new Date());
 		System.out.printf("******** %s **********\n", this);
@@ -256,7 +262,7 @@ public class Controller implements java.io.Serializable
 		"\n\tupdateOnlyOnViolation: " + updateOnlyOnViolation + " trainList: " + trainList + " devList: " + devList +
 		" testType: " + testType + "\n\ttrainOnlyTypes: " + trainOnlyTypes + " devOnlyTypes: " + devOnlyTypes + 
 		" testOnlyTypes: " + testOnlyTypes + " sentenceSortingMethod: " + sentenceSortingMethod +
-		"\n\tfilterSentenceInstance: " + filterSentenceInstance;
+		"\n\tfilterSentenceInstance: " + filterSentenceInstance + " enhanceSpecs: " + enhanceSpecs;
 		
 		return ret + "\n";
 	}

@@ -10,8 +10,8 @@ import org.apache.uima.jcas.cas.TOP_Type;
 
 
 /** 
- * Updated by JCasGen Tue Mar 11 18:07:45 IST 2014
- * XML source: C:/Java/Git/breep/ace_events/src/main/resources/desc/SpecAnnotator.xml
+ * Updated by JCasGen Mon Aug 04 21:24:49 IDT 2014
+ * XML source: C:/Java/Git/breep/ace_events/TypeSystem.xml
  * @generated */
 public class LST extends Constituent {
   /** @generated

@@ -12,8 +12,8 @@ import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
 
 
 /** 
- * Updated by JCasGen Tue Mar 11 18:07:45 IST 2014
- * XML source: C:/Java/Git/breep/ace_events/src/main/resources/desc/SpecAnnotator.xml
+ * Updated by JCasGen Mon Aug 04 21:24:53 IDT 2014
+ * XML source: C:/Java/Git/breep/ace_events/TypeSystem.xml
  * @generated */
 public class Governor extends Annotation {
   /** @generated

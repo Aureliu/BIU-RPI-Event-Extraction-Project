@@ -11,9 +11,8 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
-/** This type represents a text part of a T-H pair. This type annotates a text item within
-the TextView. It can occur multiple times (for multi-text problems).
- * Updated by JCasGen Tue Mar 11 18:07:46 IST 2014
+/** 
+ * Updated by JCasGen Mon Aug 04 21:24:55 IDT 2014
  * @generated */
 public class Text_Type extends Annotation_Type {
   /** @generated */

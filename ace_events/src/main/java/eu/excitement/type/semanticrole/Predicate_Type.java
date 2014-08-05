@@ -13,10 +13,8 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
-/** Predicate is a uima.tcas.Annotation. It represents a predicate. It holds the predicate sense as string and links to its arguments (An array of Argument). It has the following features:
-- predicateName (uima.cas.String): This feature represents the name of this predicate. It actually refers to the sense of the predicate in PropBank or FrameNet.
- -arguments (uima.cas.FSArray):This feature is an array of EXCITEMENT.semanticrole.Argument. It holds the predicate's arguments.
- * Updated by JCasGen Tue Mar 11 18:07:46 IST 2014
+/** 
+ * Updated by JCasGen Mon Aug 04 21:24:55 IDT 2014
  * @generated */
 public class Predicate_Type extends Annotation_Type {
   /** @generated */
@@ -87,7 +85,7 @@ public class Predicate_Type extends Annotation_Type {
     if (lowLevelTypeChecks)
       return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_arguments), i, true);
     jcas.checkArrayBounds(ll_cas.ll_getRefValue(addr, casFeatCode_arguments), i);
-	return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_arguments), i);
+  return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_arguments), i);
   }
    
   /** @generated */ 

@@ -12,7 +12,7 @@ import org.apache.uima.jcas.JCasRegistry;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** 
- * Updated by JCasGen Thu Jul 31 10:00:22 IDT 2014
+ * Updated by JCasGen Mon Aug 04 21:24:44 IDT 2014
  * @generated */
 public class UsageSample_Type extends Annotation_Type {
   /** @generated */

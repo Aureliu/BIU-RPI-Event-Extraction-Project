@@ -13,8 +13,8 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
-/** It represents an argument (of semantic role labeling). It has two features; the argument's semantic role (type), and a backward reference to the predicate that governs the argument.
- * Updated by JCasGen Tue Mar 11 18:07:46 IST 2014
+/** 
+ * Updated by JCasGen Mon Aug 04 21:24:55 IDT 2014
  * @generated */
 public class Argument_Type extends Annotation_Type {
   /** @generated */
@@ -85,7 +85,7 @@ public class Argument_Type extends Annotation_Type {
     if (lowLevelTypeChecks)
       return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_predicates), i, true);
     jcas.checkArrayBounds(ll_cas.ll_getRefValue(addr, casFeatCode_predicates), i);
-	return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_predicates), i);
+  return ll_cas.ll_getRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_predicates), i);
   }
    
   /** @generated */ 

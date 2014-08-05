@@ -3,6 +3,7 @@ package ac.biu.nlp.nlp.ie.onthefly.input;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.regex.MatchResult;
 import java.util.regex.Matcher;
@@ -17,10 +18,15 @@ import org.apache.uima.jcas.tcas.Annotation;
 import org.uimafit.util.FSCollectionFactory;
 import org.uimafit.util.JCasUtil;
 
+import com.google.common.collect.HashMultimap;
+import com.google.common.collect.Maps;
+import com.google.common.collect.Multimap;
+
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentExample;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentRole;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentType;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.Marker;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.Predicate;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateName;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateSeed;
@@ -116,7 +122,17 @@ public class SpecXmlCasLoader {
 		return results.get(0);
 	}
 	
-	public void load(JCas jcas, JCas tokenView, JCas sentenceView) throws CASException, SpecXmlException {
+	private Map<String, Annotation> getTextElementMap(List<AnnotationFS> elements) {
+		Map<String, Annotation> result = Maps.newLinkedHashMap();
+		for (AnnotationFS element : elements) {
+			result.put(element.getCoveredText(), (Annotation) element);
+		}
+		return result;
+	}
+
+	public Map<String, Map<String, Annotation>> load(JCas jcas, JCas tokenView, JCas sentenceView) throws CASException, SpecXmlException {
+		Map<String, Map<String, Annotation>> markerMap = Maps.newHashMap();
+		
 		Annotation annoFullDocument = new Annotation(jcas, 0, jcas.getDocumentText().length());
 
 		// Predicate
@@ -130,6 +146,7 @@ public class SpecXmlCasLoader {
 		List<AnnotationFS> seeds = addItemsInSingleSection(tokenView, predicateSection, "seeds", "seed", PredicateSeed.class);
 		predicate.setSeeds((FSArray) FSCollectionFactory.createFSArray(jcas, seeds));
 		
+		markerMap.put(PREDICATE_MARKER, getTextElementMap(seeds));
 		
 		// Arguments
 		AnnotationFS argumentsSection = getSingleSection(annoFullDocument, "arguments");
@@ -150,14 +167,26 @@ public class SpecXmlCasLoader {
 				ArgumentExample example = (ArgumentExample) exampleAnno;
 				example.setArgument(argument);
 			}
+			
+			Marker marker = (Marker) addSingleItem(tokenView, argumentAnno, "marker", Marker.class);
+			argument.setMarker(marker);
+			String markerText = marker.getCoveredText();
+			if (markerMap.keySet().contains(markerText)) {
+				throw new SpecXmlException(String.format("Found argument marker that already exists in this spec: %s", markerText));
+			}
+			if (markerText.equals(PREDICATE_MARKER)) {
+				throw new SpecXmlException(String.format("Argument marker cannot be the unique predicate-marker: %s", markerText));
+			}
+			markerMap.put(markerText, getTextElementMap(examples));
 		}
 		
 		// Usage Samples
 		addItemsInSingleSection(sentenceView, annoFullDocument, "usage_samples", "sample", UsageSample.class);
 
+		return markerMap;
 	}
 
 	// NOTE: this trims any whitespace in the beginning and ending of the element value
 	public static final String XML_ELEMENT ="(?s)<%s[^>]*>\\s*(.*?)\\s*</%s>";
-
+	public static final String PREDICATE_MARKER = "PRD";
 }

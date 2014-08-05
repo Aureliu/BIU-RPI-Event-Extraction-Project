@@ -10,8 +10,8 @@ import org.apache.uima.cas.impl.TypeImpl;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
 
-/** This type represents a temporal expression of type Duration. The expression describes a duration with explicit durations: 2 months, 48 hours, all last night, 20 days, etc.
- * Updated by JCasGen Tue Mar 11 18:07:46 IST 2014
+/** 
+ * Updated by JCasGen Mon Aug 04 21:24:55 IDT 2014
  * @generated */
 public class Duration_Type extends TemporalExpression_Type {
   /** @generated */

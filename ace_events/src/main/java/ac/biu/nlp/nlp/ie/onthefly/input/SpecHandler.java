@@ -15,6 +15,7 @@ import org.apache.uima.cas.CASRuntimeException;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
 
+import edu.cuny.qc.perceptron.core.Perceptron;
 import eu.excitementproject.eop.common.utilities.file.FileUtils;
 import eu.excitementproject.eop.common.utilities.uima.UimaUtils;
 import eu.excitementproject.eop.common.utilities.uima.UimaUtilsException;
@@ -38,9 +39,15 @@ public class SpecHandler {
 	public static List<JCas> getSpecs(List<String> specXmlPaths) throws SpecException, IOException {
 		List<JCas> specs = new ArrayList<JCas>(specXmlPaths.size());
 		for (String specXmlPath : specXmlPaths) {
+			System.out.printf("Loading spec: %s\n", specXmlPath);
 			JCas spec = getPreprocessedSpec(specXmlPath);
 			specs.add(spec);
 		}
+		
+		if (Perceptron.controllerStatic.enhanceSpecs) {
+			throw new SpecException("That's it! We had our fun, we printed out some help for you to enhance the specs - but obviously we cannot get an actual system run from this :)");
+		}
+		
 		return specs;
 	}
 	

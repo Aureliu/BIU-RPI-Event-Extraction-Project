@@ -11,8 +11,8 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Thu Jul 31 10:00:21 IDT 2014
- * XML source: C:/Java/Git/breep/ace_events/src/main/resources/desc/OdieInputTypes.xml
+ * Updated by JCasGen Mon Aug 04 21:24:44 IDT 2014
+ * XML source: C:/Java/Git/breep/ace_events/TypeSystem.xml
  * @generated */
 public class ArgumentInUsageSample extends Annotation {
   /** @generated

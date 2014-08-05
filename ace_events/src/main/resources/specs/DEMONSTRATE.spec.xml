@@ -1,0 +1,51 @@
+<spec>
+  <predicate>
+    <name>Demonstrate</name>
+    <seeds>
+      <seed>walkout</seed>
+      <seed>rioting</seed>
+      <seed>strike</seed>
+    </seeds>
+  </predicate>
+  <arguments>
+    <argument>
+      <role>Entity</role>
+      <marker>ENT</marker>
+      <types>
+      	<type>PER</type>
+      	<type>ORG</type>
+      </types>
+      <examples>
+        <example>John Robert Bond</example>
+        <example>crowd</example>
+        <example>union</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Time</role>
+      <marker>TIM</marker>
+      <types>
+      	<type>TIME</type>
+      </types>
+      <examples>
+        <example>monday</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Place</role>
+      <marker>PLC</marker>
+      <types>
+      	<type>GPE</type>
+      	<type>LOC</type>
+      	<type>FAC</type>
+      </types>
+      <examples>
+        <example>Capitol</example>
+      </examples>
+    </argument>
+  </arguments>
+  <usage_samples>
+    <sample src="orig">The rioting crowd approached the Capitol.</sample>
+    <sample src="orig">The union began its strike on Monday.</sample>
+  </usage_samples>
+</spec>

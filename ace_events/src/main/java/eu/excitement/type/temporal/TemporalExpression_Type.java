@@ -13,8 +13,8 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
-/** TemporalExpression annotates a temporal expression. It is a uima.tcas.Annotation that annotates a temporal expression within a passage, adding a normalized time representation. It holds two string features: One contains the original temporal expression, and the other contains a normalized time representation, using ISO 8601. This is the top annotation for temporal expressions, with a normalized time representation. It has four subtypes, which reflects TIMEX3 temporal types of Date, Time, Duration and Set
- * Updated by JCasGen Tue Mar 11 18:07:46 IST 2014
+/** 
+ * Updated by JCasGen Mon Aug 04 21:24:55 IDT 2014
  * @generated */
 public class TemporalExpression_Type extends Annotation_Type {
   /** @generated */

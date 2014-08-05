@@ -13,8 +13,8 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
 import org.apache.uima.jcas.cas.TOP_Type;
 
-/** Information about a CAS processor such as a reader, analysis engine, multiplier, or consumer.
- * Updated by JCasGen Tue Mar 11 18:07:45 IST 2014
+/** 
+ * Updated by JCasGen Mon Aug 04 21:24:45 IDT 2014
  * @generated */
 public class ProcessorMetaData_Type extends TOP_Type {
   /** @generated */

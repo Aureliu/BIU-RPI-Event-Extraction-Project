@@ -3,7 +3,10 @@ package ac.biu.nlp.nlp.ie.onthefly.input;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.Map.Entry;
+import java.util.SortedMap;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.Set;
 
@@ -33,9 +36,11 @@ import ac.biu.nlp.nlp.ie.onthefly.input.uima.UsageSample;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.VerbLemma;
 
 import com.google.common.collect.HashMultimap;
+import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Iterators;
 import com.google.common.collect.Lists;
+import com.google.common.collect.Maps;
 import com.google.common.collect.Multimap;
 import com.google.common.collect.Sets;
 
@@ -44,6 +49,9 @@ import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
 import edu.cuny.qc.ace.acetypes.AceArgumentType;
 import edu.cuny.qc.perceptron.core.Perceptron;
+import eu.excitementproject.eop.common.utilities.DockedToken;
+import eu.excitementproject.eop.common.utilities.DockedTokenFinder;
+import eu.excitementproject.eop.common.utilities.DockedTokenFinderException;
 import eu.excitementproject.eop.common.utilities.uima.UimaUtils;
 
 public class SpecAnnotator extends JCasAnnotator_ImplBase {
@@ -186,49 +194,187 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 			throw new SpecXmlException("Bad value for argument type: " + argTypeStr, e);
 		}
 	}
-	
-	public void organizeUsageSamples(JCas tokenView, JCas sentenceView) {
-		Pattern USAGE_SAMPLE_ELEMENT = Pattern.compile("([^\\[]*)\\[(\\w{3}) ([^\\]]+)\\]([^\\[]*)");
-		
-		
-		
-		- Args_by_marker = {marker : Argument}
-		- Args_by_marke["PRD"] = Predicate
-		- PATT = "([^[]*)\[(\w\w\w) ([^]]+)\]([^[]*)"
-		- int offsetInOldText = samples[0].begin;
-		- int offsetInNewText = offsetInOldText;
-		- StringBuilder newSection = oldText[0:offsetInOldText];
-		- allSamples = JCasUtils.select(UsageSample.class)
-		- For sample in allSamples:
-			o elements = LinkedHashMap{elementNum : ArgumentExample\PredicateSeed}
-			o matcher = PATT.matcher(sample.getCoveredText)
-			o StringBuilder sb = "";
-			o List<String> tokens = [];
-			o while (matcher.find):
-				* // some update of "elements"
-				* if matcher.group(1) != "":
-					` sb += matcher.group(1)
-					` tokens.add(matcher.group(1))
-				* sb += matcher.group(3)
-				* tokens.add(matcher.group(3))
-				* if matcher.group(4) != "":
-					` sb += matcher.group(4)
-					` tokens.add(matcher.group(4))
-			o String newText = sb.toString()
-			o int oldTextSampleEnd = offsetInOldText + sample.getCoveredText().size()
-			o offsetInOldText = beginningOfNextSampleOrEndOfDoc(currSampleNum)
-			o newSection += newText + oldText[oldTextSampleEnd : offsetInOldText];
-			o sortedmap = DockedTokenFinder.find(newText, tokens)
-			o for Entry<elementNum, anno> : elements:
-				* DockedToken docked = sortedmap.get(elementNum)
-				* if anno instanceof PredicateSeed:
-					` PIUS pius = new PIUS(docked.begin+offsetInNewText, docked.end+offsetInNewText)
-					` anno.piuses.add(pius)
-				* else: //arg
-					` AIUS ...
-			o offsetInNewText += newText.size() + (offsetInOldText - oldTextSampleEnd)
-		- sentenceView.setDocumentText(newSection.toString())
 
+	private Annotation getElement(Map<String, Map<String, Annotation>> markerMap, String marker, String elementText) throws SpecXmlException {
+		if (markerMap.get(marker).keySet().contains(elementText)) {
+			return markerMap.get(marker).get(elementText);
+		}
+		else {
+			if (Perceptron.controllerStatic.enhanceSpecs) {
+				String xmlElem = "example";
+				String title = marker;
+				String spaces = "        ";
+				if (marker.equals(SpecXmlCasLoader.PREDICATE_MARKER)) {
+					xmlElem = "seed";
+					title = "***Predicate";
+					spaces = "      ";
+				}
+				System.err.printf("\n\n    %s:\n%s<%s>%s</%s>\n\n", title, spaces, xmlElem, elementText, xmlElem);
+				return null;
+			}
+			else {
+				throw new SpecXmlException(String.format("Cannot find element '%s' for marker '%s'", elementText, marker));
+			}
+		}
+	}
+
+	
+	public Multimap<Annotation, Annotation> organizeUsageSamples(JCas tokenView, JCas sentenceViewTemp, JCas sentenceView, Map<String, Map<String, Annotation>> markerMap) throws SpecXmlException {
+		final Pattern USAGE_SAMPLE_ELEMENT = Pattern.compile("([^\\[]*)\\[(\\w{3}) ([^\\]]+)\\]([^\\[]*)");
+		String oldDocText = sentenceViewTemp.getDocumentText(); 
+		Multimap<Annotation, Annotation> toUsage = HashMultimap.create();
+		//List<UsageSample> oldUsageSamples = Lists.newArrayList();
+		
+		// We want to have a list and not a direct iterator, so that we could remove and add samples to the CAS without a Concurrency Exception
+		List<UsageSample> allUsageSamples = ImmutableList.copyOf(JCasUtil.select(sentenceViewTemp, UsageSample.class));
+		Iterator<UsageSample> iterSamples = allUsageSamples.iterator();//JCasUtil.iterator(sentenceView, UsageSample.class);
+		if (!iterSamples.hasNext()) {
+			throw new SpecXmlException("Spec doesn't have any usage samples. It must have at least one.");
+		}
+		
+		UsageSample nextSample = iterSamples.next();
+		String nextSampleText = nextSample.getCoveredText();
+		int nextOffsetInOldText = nextSample.getBegin();
+		//int nextOffsetInNewText = nextOffsetInOldText;
+		
+		UsageSample sample;
+		String sampleText;
+		int offsetInOldText;
+		
+		int offsetInNewText = nextOffsetInOldText;		
+		
+		boolean hasMoreSamples = true;		
+		StringBuilder newSectionBuilder = new StringBuilder(oldDocText.substring(0, nextOffsetInOldText));
+		
+		while (hasMoreSamples) {
+			sample = nextSample;
+			sampleText = nextSampleText;
+			offsetInOldText = nextOffsetInOldText;
+			//offsetInNewText = nextOffsetInNewText;
+			sample.removeFromIndexes(); //No need for the old sample, we are creating a new one to replace it
+			//oldUsageSamples.add(sample);
+			
+			Map<Integer, Annotation> elements = Maps.newLinkedHashMap();
+			StringBuilder newSampleBuilder = new StringBuilder();
+			List<String> tokens = Lists.newArrayList();
+			Matcher matcher = USAGE_SAMPLE_ELEMENT.matcher(sampleText);
+			
+			for (int i=0; matcher.find(); i++) {
+				String preElement = matcher.group(1);
+				String marker = matcher.group(2);
+				String elementText = matcher.group(3);
+				String postElement = matcher.group(4);
+				
+				Annotation element = getElement(markerMap, marker, elementText);
+				elements.put(i, element);
+				
+				tokens.add(preElement);		newSampleBuilder.append(preElement);
+				tokens.add(elementText);	newSampleBuilder.append(elementText);
+				tokens.add(postElement);	newSampleBuilder.append(postElement);
+			}
+			
+			String newSample = newSampleBuilder.toString();
+					
+			hasMoreSamples = iterSamples.hasNext();
+			if (hasMoreSamples) {
+				nextSample = iterSamples.next();
+				nextSampleText = nextSample.getCoveredText();
+				nextOffsetInOldText = nextSample.getBegin();
+			}
+			else {
+				nextOffsetInOldText = oldDocText.length();
+			}
+			
+			SortedMap<Integer, DockedToken> dockedTokens;
+			try {
+				dockedTokens = DockedTokenFinder.find(newSample, tokens);
+			} catch (DockedTokenFinderException e) {
+				throw new SpecXmlException(e);
+			}
+			
+			for (Entry<Integer, Annotation> entry : elements.entrySet()) {
+				Annotation element = entry.getValue();
+				int numInDocked = 1 + 3*entry.getKey(); //This formula comes from the unique structure of the regex pattern - each match has 3 textual parts, the 2nd of which is our element
+				DockedToken docked = dockedTokens.get(numInDocked);
+				int begin = docked.getCharOffsetStart()+offsetInNewText;
+				int end = docked.getCharOffsetEnd()+offsetInNewText;
+				
+				if (element instanceof PredicateSeed) {
+					PredicateInUsageSample pius = new PredicateInUsageSample(sentenceView, begin, end);
+					PredicateSeed seed = (PredicateSeed) element;
+					toUsage.put(seed, pius);
+					//seed.setPius(pius);
+					pius.setPredicateSeed(seed);
+					pius.addToIndexes();
+				}
+				else { //element instanceof ArgumentExample
+					ArgumentInUsageSample aius = new ArgumentInUsageSample(sentenceView, begin, end);
+					ArgumentExample example = (ArgumentExample) element;
+					toUsage.put(example, aius);
+					//example.setAius(aius);
+					aius.setArgumentExample(example);
+					aius.addToIndexes();
+				}
+			}
+			
+			int oldTextSampleEnd = offsetInOldText + sampleText.length();
+			String betweenSamples = oldDocText.substring(oldTextSampleEnd, nextOffsetInOldText);
+			newSectionBuilder.append(newSample);
+			newSectionBuilder.append(betweenSamples);
+			
+			UsageSample newUsageSample = new UsageSample(sentenceView, offsetInNewText, offsetInNewText+newSample.length());
+			newUsageSample.addToIndexes();
+			
+			offsetInNewText += newSample.length() + betweenSamples.length();
+
+		}
+		
+		String newSection = newSectionBuilder.toString();
+		sentenceView.setDocumentText(newSection);
+		
+//		// Remove old usage examples, we created new ones to replace them
+//		for (UsageSample oldSample : oldUsageSamples) {
+//			oldSample.removeFromIndexes();
+//		}
+		
+		return toUsage;
+		
+//		- Args_by_marker = {marker : Argument}
+//		- Args_by_marke["PRD"] = Predicate
+//		- PATT = "([^[]*)\[(\w\w\w) ([^]]+)\]([^[]*)"
+//		- int offsetInOldText = samples[0].begin;
+//		- int offsetInNewText = offsetInOldText;
+//		- StringBuilder newSection = oldText[0:offsetInOldText];
+//		- allSamples = JCasUtils.select(UsageSample.class)
+//		- For sample in allSamples:
+//			o elements = LinkedHashMap{elementNum : ArgumentExample\PredicateSeed}
+//			o matcher = PATT.matcher(sample.getCoveredText)
+//			o StringBuilder sb = "";
+//			o List<String> tokens = [];
+//			o while (matcher.find):
+//				* // some update of "elements"
+//				* if matcher.group(1) != "":
+//					` sb += matcher.group(1)
+//					` tokens.add(matcher.group(1))
+//				* sb += matcher.group(3)
+//				* tokens.add(matcher.group(3))
+//				* if matcher.group(4) != "":
+//					` sb += matcher.group(4)
+//					` tokens.add(matcher.group(4))
+//			o String newText = sb.toString()
+//			o int oldTextSampleEnd = offsetInOldText + sample.getCoveredText().size()
+//			o offsetInOldText = beginningOfNextSampleOrEndOfDoc(currSampleNum)
+//			o newSection += newText + oldText[oldTextSampleEnd : offsetInOldText];
+//			o sortedmap = DockedTokenFinder.find(newText, tokens)
+//			o for Entry<elementNum, anno> : elements:
+//				* DockedToken docked = sortedmap.get(elementNum)
+//				* if anno instanceof PredicateSeed:
+//					` PIUS pius = new PIUS(docked.begin+offsetInNewText, docked.end+offsetInNewText)
+//					` anno.piuses.add(pius)
+//				* else: //arg
+//					` AIUS ...
+//			o offsetInNewText += newText.size() + (offsetInOldText - oldTextSampleEnd)
+//		- sentenceView.setDocumentText(newSection.toString())
 	}
 	
 	@Override
@@ -237,22 +383,23 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 			jcas.setDocumentLanguage("EN");
 			JCas tokenView = jcas.createView(TOKEN_VIEW);
 			JCas sentenceView = jcas.createView(SENTENCE_VIEW);
+			JCas sentenceViewTemp = jcas.createView(SENTENCE_VIEW_TEMP);
 
 			tokenView.setDocumentLanguage("EN");
 			tokenView.setDocumentText(jcas.getDocumentText());
 			sentenceView.setDocumentLanguage("EN");
-			sentenceView.setDocumentText(jcas.getDocumentText()); //NOTE that later we will rebuild the text, by removing all marks - and then set a new Document to the view
+			// not setting sentenceView's DocumentText - this is done when organizing usage samples
+			sentenceViewTemp.setDocumentLanguage("EN");
+			sentenceViewTemp.setDocumentText(jcas.getDocumentText()); //NOTE that later we will rebuild the text, by removing all marks - and then set a new Document to the view
 			
 			// Load basic spec annotation types
 			SpecXmlCasLoader loader = new SpecXmlCasLoader();
-			loader.load(jcas, tokenView, sentenceView);
+			Map<String, Map<String, Annotation>> markerMap = loader.load(jcas, tokenView, sentenceViewTemp);
 			
-			organizeUsageSamples(tokenView, sentenceView);
-			
-			
-			
-			
-			
+			// Remove markers and add pius\aius
+			// Also maps each PredicateSeed/ArgumentExample to all of its instances in the usage samples
+			// Of course, not every PredicateSeed/ArgumentExample needs an instance in the usage sample, and the ones that do have, can have 1 or many
+			Multimap<Annotation, Annotation> toUsage = organizeUsageSamples(tokenView, sentenceViewTemp, sentenceView, markerMap);
 			
 			// Build once, use many times
 			Collection<UsageSample> usageSamples = JCasUtil.select(sentenceView, UsageSample.class);
@@ -287,11 +434,9 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 			
 			// For each lemma value, remember all of its PredicateSeeds/ArgumentExamples
 			// this way we can verify if any of them appeared more than once - which is legit, but not for UsageSamples
+			// NOTE: now things have changed, and we don't use this lemma mapping for Usage Samples anymore
+			// However, we still call, it, as it has the side-effect of making sure there are no illegitimate repetitions
 			Multimap<String, Annotation> lemmasToAnnotations = HashMultimap.create();
-			
-			// Maps each PredicateSeed/ArgumentExample to all of its instances in the usage samples
-			// Of course, not every PredicateSeed/ArgumentExample needs an instance in the usage sample, and the ones that do have, can have 1 or many
-			Multimap<Annotation, Annotation> toUsage = HashMultimap.create();
 			
 			Predicate predicate = JCasUtil.selectSingle(tokenView, Predicate.class);
 			lemmasToAnnotations.putAll(getLemmaToAnnotation(tokenView, predicate, PredicateSeed.class, "predicate"));
@@ -301,40 +446,40 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 			}
 			
 			for (UsageSample sample : usageSamples) {
-				for (Lemma lemma : JCasUtil.selectCovered(Lemma.class, sample)) {
-					String text = lemma.getValue();
-					Collection<Annotation> elements = lemmasToAnnotations.get(text);
-					if (elements.size() > 1) {
-						// We don't allow in the usage samples lemmas that appear more than once in spec elements
-						throw new SpecXmlException(String.format("Usage example contains a token ('%s') with a lemma ('%s') that appears more than once in the spec - This is prohibited.",
-								lemma.getCoveredText(), text));
-					}
-					else if (elements.size() == 1) {
-						Annotation element = elements.iterator().next();
-						if (element instanceof PredicateSeed) {
-							PredicateInUsageSample pius = new PredicateInUsageSample(sentenceView, lemma.getBegin(), lemma.getEnd());
-							PredicateSeed seed = (PredicateSeed) element;
-							toUsage.put(seed, pius);
-							//seed.setPius(pius);
-							pius.setPredicateSeed(seed);
-							pius.addToIndexes();
-						}
-						else { //element instanceof ArgumentExample
-							ArgumentInUsageSample aius = new ArgumentInUsageSample(sentenceView, lemma.getBegin(), lemma.getEnd());
-							ArgumentExample example = (ArgumentExample) element;
-							toUsage.put(example, aius);
-							//example.setAius(aius);
-							aius.setArgumentExample(example);
-							aius.addToIndexes();
-						}
-					}
-					
-					// if elements.size() == 0, this lemma doesn't appear in the spec elements, so we ignore it
-				}
+//				for (Lemma lemma : JCasUtil.selectCovered(Lemma.class, sample)) {
+//					String text = lemma.getValue();
+//					Collection<Annotation> elements = lemmasToAnnotations.get(text);
+//					if (elements.size() > 1) {
+//						// We don't allow in the usage samples lemmas that appear more than once in spec elements
+//						throw new SpecXmlException(String.format("Usage example contains a token ('%s') with a lemma ('%s') that appears more than once in the spec - This is prohibited.",
+//								lemma.getCoveredText(), text));
+//					}
+//					else if (elements.size() == 1) {
+//						Annotation element = elements.iterator().next();
+//						if (element instanceof PredicateSeed) {
+//							PredicateInUsageSample pius = new PredicateInUsageSample(sentenceView, lemma.getBegin(), lemma.getEnd());
+//							PredicateSeed seed = (PredicateSeed) element;
+//							toUsage.put(seed, pius);
+//							//seed.setPius(pius);
+//							pius.setPredicateSeed(seed);
+//							pius.addToIndexes();
+//						}
+//						else { //element instanceof ArgumentExample
+//							ArgumentInUsageSample aius = new ArgumentInUsageSample(sentenceView, lemma.getBegin(), lemma.getEnd());
+//							ArgumentExample example = (ArgumentExample) element;
+//							toUsage.put(example, aius);
+//							//example.setAius(aius);
+//							aius.setArgumentExample(example);
+//							aius.addToIndexes();
+//						}
+//					}
+//					
+//					// if elements.size() == 0, this lemma doesn't appear in the spec elements, so we ignore it
+//				}
 				
 				// Now set a pius for each aius!
 				// Assuming exactly one pius per sample
-				List<PredicateInUsageSample> piuses = JCasUtil.selectCovered(jcas, PredicateInUsageSample.class, sample);
+				List<PredicateInUsageSample> piuses = JCasUtil.selectCovered(sentenceView, PredicateInUsageSample.class, sample);
 				if (piuses.size() == 0) {
 					throw new SpecXmlException(String.format("Usage example does not contain any predicate seed! '%s'", sample.getCoveredText()));
 				}
@@ -352,11 +497,11 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 				// And now, set sample instances for each PredicateSeed/ArgumentExample
 				for (PredicateSeed seed : JCasUtil.select(tokenView, PredicateSeed.class)) {
 					Collection<Annotation> piusesOfSeed = toUsage.get(seed);
-					seed.setPiuses((FSArray) FSCollectionFactory.createFSArray(jcas, piusesOfSeed));
+					seed.setPiuses((FSArray) FSCollectionFactory.createFSArray(tokenView, piusesOfSeed));
 				}
 				for (ArgumentExample example : JCasUtil.select(tokenView, ArgumentExample.class)) {
 					Collection<Annotation> aiusesOfExample = toUsage.get(example);
-					example.setAiuses((FSArray) FSCollectionFactory.createFSArray(jcas, aiusesOfExample));
+					example.setAiuses((FSArray) FSCollectionFactory.createFSArray(tokenView, aiusesOfExample));
 				}
 			}
 			
@@ -372,4 +517,5 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 	public static final String ANNOTATOR_FILE_PATH = "/desc/SpecAnnotator.xml";
 	public static final String TOKEN_VIEW = "TokenBasedView";
 	public static final String SENTENCE_VIEW = "SentenceBasedView";
+	public static final String SENTENCE_VIEW_TEMP = "SentenceBasedView_WithMarkers";
 }

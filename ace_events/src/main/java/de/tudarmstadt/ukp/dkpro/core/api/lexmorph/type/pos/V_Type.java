@@ -10,8 +10,8 @@ import org.apache.uima.cas.impl.TypeImpl;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
 
-/** Verb and verb phrase
- * Updated by JCasGen Tue Mar 11 18:07:45 IST 2014
+/** 
+ * Updated by JCasGen Mon Aug 04 21:24:45 IDT 2014
  * @generated */
 public class V_Type extends POS_Type {
   /** @generated */

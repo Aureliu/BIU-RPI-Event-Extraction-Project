@@ -14,7 +14,7 @@ import org.apache.uima.jcas.JCasRegistry;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** 
- * Updated by JCasGen Thu Jul 31 10:00:20 IDT 2014
+ * Updated by JCasGen Mon Aug 04 21:24:44 IDT 2014
  * @generated */
 public class Argument_Type extends Annotation_Type {
   /** @generated */
@@ -135,6 +135,24 @@ public class Argument_Type extends Annotation_Type {
     ll_cas.ll_setRefArrayValue(ll_cas.ll_getRefValue(addr, casFeatCode_examples), i, v);
   }
  
+ 
+  /** @generated */
+  final Feature casFeat_marker;
+  /** @generated */
+  final int     casFeatCode_marker;
+  /** @generated */ 
+  public int getMarker(int addr) {
+        if (featOkTst && casFeat_marker == null)
+      jcas.throwFeatMissing("marker", "ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument");
+    return ll_cas.ll_getRefValue(addr, casFeatCode_marker);
+  }
+  /** @generated */    
+  public void setMarker(int addr, int v) {
+        if (featOkTst && casFeat_marker == null)
+      jcas.throwFeatMissing("marker", "ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument");
+    ll_cas.ll_setRefValue(addr, casFeatCode_marker, v);}
+    
+  
 
 
 
@@ -155,6 +173,10 @@ public class Argument_Type extends Annotation_Type {
  
     casFeat_examples = jcas.getRequiredFeatureDE(casType, "examples", "uima.cas.FSArray", featOkTst);
     casFeatCode_examples  = (null == casFeat_examples) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_examples).getCode();
+
+ 
+    casFeat_marker = jcas.getRequiredFeatureDE(casType, "marker", "ac.biu.nlp.nlp.ie.onthefly.input.uima.Marker", featOkTst);
+    casFeatCode_marker  = (null == casFeat_marker) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_marker).getCode();
 
   }
 }

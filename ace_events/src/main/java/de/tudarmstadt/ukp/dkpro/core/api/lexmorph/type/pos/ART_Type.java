@@ -10,8 +10,8 @@ import org.apache.uima.cas.impl.TypeImpl;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.JCasRegistry;
 
-/** Article
- * Updated by JCasGen Tue Mar 11 18:07:45 IST 2014
+/** 
+ * Updated by JCasGen Mon Aug 04 21:24:44 IDT 2014
  * @generated */
 public class ART_Type extends POS_Type {
   /** @generated */

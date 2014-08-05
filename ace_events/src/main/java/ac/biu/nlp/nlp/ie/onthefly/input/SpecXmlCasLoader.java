@@ -125,7 +125,8 @@ public class SpecXmlCasLoader {
 	private Map<String, Annotation> getTextElementMap(List<AnnotationFS> elements) {
 		Map<String, Annotation> result = Maps.newLinkedHashMap();
 		for (AnnotationFS element : elements) {
-			result.put(element.getCoveredText(), (Annotation) element);
+			// We are documenting everything in lowercase, since we don't care about the case
+			result.put(element.getCoveredText().toLowerCase(), (Annotation) element);
 		}
 		return result;
 	}
@@ -187,6 +188,6 @@ public class SpecXmlCasLoader {
 	}
 
 	// NOTE: this trims any whitespace in the beginning and ending of the element value
-	public static final String XML_ELEMENT ="(?s)<%s[^>]*>\\s*(.*?)\\s*</%s>";
+	public static final String XML_ELEMENT ="(?s)<%s\\b[^>]*>\\s*(.*?)\\s*</%s>";
 	public static final String PREDICATE_MARKER = "PRD";
 }

@@ -84,6 +84,8 @@
         <example>son</example>
         <example>US targets</example>
         <example>targets</example>
+        <example>headquarters</example>
+        <example>army headquarters</example>
       </examples>
     </argument>
     <argument>
@@ -106,8 +108,6 @@
         <example>AK-47</example>
         <example>car</example>
         <example>car bomb</example>
-        <example>headquarters</example>
-        <example>army headquarters</example>
       </examples>
     </argument>
     <argument>
@@ -165,25 +165,25 @@
     <sample_out src="synth">Forces had a 45-Minute gun battle with Palestinians at the market.</sample>
 
     <sample src="orig">The [PRD explosion] killed 7 and injured 20.</sample> <!-- NOTE that the dead and injured people are not considered targets of the attack! They are noly victims of the Die and Injure events! -->
-    <sample src="orig">The attack killed 7 and injured 20.</sample> <!-- see previous comment -->
-    <sample src="orig">Yesterday's attack was entirely unexpected.</sample>
-    <sample src="orig">Hamas launched an attack.</sample>
-    <sample src="orig">An officer witnessed the attack.</sample>
-    <sample src="orig">Men in civilian clothes in the crowd began firing with AK-47 assault rifles.</sample>
-    <sample src="orig">U.S. forces continued to bomb Fallujah.</sample>
-    <sample src="orig" >A Palestinian worker was shot dead in the Gaza Strip.</sample>
-    <sample src="orig" >Kennedy was shot dead by Oswald.</sample>
+    <sample src="orig">The [PRD attack] killed 7 and injured 20.</sample> <!-- see previous comment -->
+    <sample src="orig">[TIM Yesterday]'s [PRD attack] was entirely unexpected.</sample>
+    <sample src="orig">[ATR Hamas] launched an [PRD attack].</sample>
+    <sample src="orig">An officer witnessed the [PRD attack].</sample>
+    <sample src="orig">[ATR Men] in civilian clothes in the crowd began [PRD firing] with AK-47 assault [INT rifles].</sample>
+    <sample src="orig">U.S. [ATR forces] continued to [PRD bomb] [TRG Fallujah].</sample>
+    <sample src="orig" >A Palestinian [TRG worker] was [PRD shot] dead in the [PLC Gaza Strip].</sample>
+    <sample src="orig" >[TRG Kennedy] was [PRD shot] dead by [ATR Oswald].</sample>
     <sample_out src="orig" >There have been concerns the clashes in southern Serbia could explode into violence similar to the 1999 conflict in Kosovo.</sample> <!-- not used, since it has multiple triggers (multiple seeds) in the same sentence. Instead, it will be split to 3 legitimate sample sentences. -->
-    <sample src="orig" >A car bomb exploded Thursday in the heart of Jerusalem.</sample>
-    <sample src="orig" >The gunmen shot Smith and his son.</sample>
-    <sample src="orig" >India blamed Islamic militants for the attack.</sample>
-    <sample src="orig" >A car bomb went off outside army headquarters.</sample>
-    <sample src="orig">Ali Mohammed, a native of Egypt, has admitted to five charges of conspiring with a Saudi born dissident Osama bin Laden to attack US targets in the Middle-East.</sample>
-    <sample src="orig_p" >The investigation of the attempted coup in 1991 was finished.</sample>
-    <sample src="orig_l" >There have been concerns regarding the clashes in southern Serbia.</sample>
-    <sample src="orig_l" >There have been concerns the events in southern Serbia could explode into violence.</sample>
-    <sample src="orig_l" >There have been concerns the events in southern Serbia could eventually be similar to the 1999 conflict in Kosovo.</sample>
-    <sample src="orig_l" >The explosion in Lahore caused a fire that burned makeshift stalls.</sample>
-    <sample src="orig_l" >Bombs went off in three Pakistani cities Monday.</sample>
+    <sample src="orig" >A car [INT bomb] [PRD exploded] [TIM Thursday] in the heart of [PLC Jerusalem].</sample>
+    <sample src="orig" >The [ATR gunmen] [PRD shot] [TRG Smith] and his [TRG son].</sample>
+    <sample src="orig" >India blamed Islamic [ATR militants] for the [PRD attack].</sample>
+    <sample src="orig" >A car [INT bomb] [PRD went off] outside army [TRG headquarters].</sample>
+    <sample src="orig">[ATR Ali Mohammed], a native of Egypt, has admitted to five charges of conspiring with a Saudi born dissident [ATR Osama bin Laden] to [PRD attack] US [TRG targets] in the [PLC Middle-East].</sample>
+    <sample src="orig_p" >The investigation of the attempted [PRD coup] in [TIM 1991] was finished.</sample>
+    <sample src="orig_l" >There have been concerns regarding the [PRD clashes] in southern [PLC Serbia].</sample>
+    <sample_out src="orig_l" >There have been concerns the events in southern Serbia could [PRD explode] into violence.</sample> <!-- I don't think is an actual instance of an attack - it's just a figure of speech -->
+    <sample src="orig_l" >There have been concerns the events in southern Serbia could eventually be similar to the [TIM 1999] [PRD conflict] in [PLC Kosovo].</sample>
+    <sample src="orig_l" >The [PRD explosion] in [PLC Lahore] caused a fire that burned makeshift stalls.</sample>
+    <sample src="orig_l" >[INT Bombs] [PRD went off] in three Pakistani [PLC cities] [TIM Monday].</sample>
   </usage_samples>
 </spec>

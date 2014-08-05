@@ -89,7 +89,7 @@ public class SpecHandler {
 		boolean shouldDeletePreprocessed = false;
 		File preprocessed = new File(specXmlPath + PREPROCESSED_SPEC_FILE_EXT);
 		try {
-			if (preprocessed.isFile()) {
+			if (preprocessed.isFile() && !Perceptron.controllerStatic.enhanceSpecs) {
 				spec = UimaUtils.loadXmi(preprocessed, SpecAnnotator.ANNOTATOR_FILE_PATH);
 			}
 			else {
@@ -136,10 +136,11 @@ public class SpecHandler {
 	//			ae3.process(spec);
 	
 				
-				
-				shouldDeletePreprocessed = true;
-				UimaUtils.dumpXmi(preprocessed, spec);
-				shouldDeletePreprocessed = false;
+				if (!Perceptron.controllerStatic.enhanceSpecs) {
+					shouldDeletePreprocessed = true;
+					UimaUtils.dumpXmi(preprocessed, spec);
+					shouldDeletePreprocessed = false;
+				}
 			}
 		}
 		catch (Exception e) {

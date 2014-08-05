@@ -196,8 +196,9 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 	}
 
 	private Annotation getElement(Map<String, Map<String, Annotation>> markerMap, String marker, String elementText) throws SpecXmlException {
-		if (markerMap.get(marker).keySet().contains(elementText)) {
-			return markerMap.get(marker).get(elementText);
+		String lowercaseElementText = elementText.toLowerCase(); //We don't care about capitalization in spec element
+		if (markerMap.get(marker).keySet().contains(lowercaseElementText)) {
+			return markerMap.get(marker).get(lowercaseElementText);
 		}
 		else {
 			if (Perceptron.controllerStatic.enhanceSpecs) {
@@ -209,7 +210,7 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 					title = "***Predicate";
 					spaces = "      ";
 				}
-				System.err.printf("\n\n    %s:\n%s<%s>%s</%s>\n\n", title, spaces, xmlElem, elementText, xmlElem);
+				System.err.printf("\n    %s:\n%s<%s>%s</%s>\n", title, spaces, xmlElem, elementText, xmlElem);
 				return null;
 			}
 			else {
@@ -264,6 +265,12 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 				String marker = matcher.group(2);
 				String elementText = matcher.group(3);
 				String postElement = matcher.group(4);
+				
+				/// DEBUG
+//				if (sampleText.contains("Reims")) {
+//					System.out.printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n%s\n\n\n\n\n", sampleText);					
+//				}
+				////
 				
 				Annotation element = getElement(markerMap, marker, elementText);
 				elements.put(i, element);
@@ -481,7 +488,13 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 				// Assuming exactly one pius per sample
 				List<PredicateInUsageSample> piuses = JCasUtil.selectCovered(sentenceView, PredicateInUsageSample.class, sample);
 				if (piuses.size() == 0) {
-					throw new SpecXmlException(String.format("Usage example does not contain any predicate seed! '%s'", sample.getCoveredText()));
+					if (Perceptron.controllerStatic.enhanceSpecs) {
+						System.err.printf("Found a sample without predicate, during enhanceSpecs - skipping: %s\n\n", sample.getCoveredText());
+						continue;
+					}
+					else {
+						throw new SpecXmlException(String.format("Usage example does not contain any predicate seed! '%s'", sample.getCoveredText()));
+					}
 				}
 				else if (piuses.size() > 1) {
 					throw new SpecXmlException(String.format("Usage example has more than one predicate seed (%s), in: '%s'",

@@ -39,7 +39,7 @@ public class SpecHandler {
 	public static List<JCas> getSpecs(List<String> specXmlPaths) throws SpecException, IOException {
 		List<JCas> specs = new ArrayList<JCas>(specXmlPaths.size());
 		for (String specXmlPath : specXmlPaths) {
-			System.out.printf("Loading spec: %s\n", specXmlPath);
+			System.out.printf("\nLoading spec: %s\n", specXmlPath);
 			JCas spec = getPreprocessedSpec(specXmlPath);
 			specs.add(spec);
 		}

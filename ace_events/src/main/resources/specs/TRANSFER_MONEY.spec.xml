@@ -2,16 +2,6 @@
   <predicate>
     <name>Transfer-Money</name>
     <seeds>
-      <seed>borrowing</seed>
-      <seed>lending</seed>
-      <seed>giving</seed>
-      <seed>donations</seed>
-      <seed>borrowed</seed>
-      <seed>donated</seed>
-      <seed>pay</seed>
-      <seed>aid</seed>
-      <seed>give</seed>
-      <seed>paying</seed>
     </seeds>
   </predicate>
   <arguments>
@@ -24,12 +14,6 @@
       	<type>GPE</type>
       </types>
       <examples>
-        <example>he</example>
-        <example>countries</example>
-        <example>charity</example>
-        <example>United States</example>
-        <example>Arab countries</example>
-        <example>European countries</example>
       </examples>
     </argument>
     <argument>
@@ -41,9 +25,6 @@
       	<type>GPE</type>
       </types>
       <examples>
-        <example>Al Qaeda</example>
-        <example>they</example>
-        <example>country</example>
       </examples>
     </argument>
     <argument>

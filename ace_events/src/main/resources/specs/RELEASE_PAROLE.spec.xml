@@ -2,9 +2,6 @@
   <predicate>
     <name>Release-Parole</name>
     <seeds>
-      <seed>release</seed>
-      <seed>released</seed>
-      <seed>freed</seed>
     </seeds>
   </predicate>
   <arguments>
@@ -15,9 +12,6 @@
       	<type>PER</type>
       </types>
       <examples>
-        <example>prisoners</example>
-        <example>Chapman</example>
-        <example>him</example>
       </examples>
     </argument>
     <argument>

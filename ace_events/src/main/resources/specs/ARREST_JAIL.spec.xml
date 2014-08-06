@@ -2,14 +2,6 @@
   <predicate>
     <name>Arrest-Jail</name>
     <seeds>
-      <seed>custody</seed>
-      <seed>arrested</seed>
-      <seed>jailed</seed>
-      <seed>incarcerated</seed>
-      <seed>imprisoned</seed>
-      <seed>arrest</seed>
-      <seed>arresting</seed>
-      <seed>arrests</seed>
     </seeds>
   </predicate>
   <arguments>
@@ -20,10 +12,6 @@
       	<type>PER</type>
       </types>
       <examples>
-        <example>officer</example>
-        <example>leaders</example>
-        <example>opposition leaders</example>
-        <example>son</example>
       </examples>
     </argument>
     <argument>
@@ -44,7 +32,6 @@
       	<type>CRIME</type>
       </types>
       <examples>
-        <example>corruption</example>
       </examples>
     </argument>
     <argument>

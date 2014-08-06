@@ -2,7 +2,6 @@
   <predicate>
     <name>Phone-Write</name>
     <seeds>
-      <seed>communicate</seed>
     </seeds>
   </predicate>
   <arguments>
@@ -15,8 +14,6 @@
       	<type>GPE</type>
       </types>
       <examples>
-        <example>people</example>
-        <example>friends</example>
       </examples>
     </argument>
     <argument>

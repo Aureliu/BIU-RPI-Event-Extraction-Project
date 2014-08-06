@@ -40,7 +40,7 @@ Markers for predicates and arguments in the ACE On-Demand Information Extraction
 #t=Price
 [PRC ^!]
 #t=Person
-[PRS ^!]
+[PER ^!]
 #t=Prosecutor
 [PSC ^!]
 #t=Position

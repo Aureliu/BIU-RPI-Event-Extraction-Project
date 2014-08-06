@@ -2,14 +2,7 @@
   <predicate>
     <name>Start-Position</name>
     <seeds>
-      <seed>hired</seed>
       <!--seed>joined</seed-->
-      <seed>started office</seed>
-      <seed>hire</seed>
-      <seed>succeeded</seed>
-      <seed>take over</seed>
-      <seed>appointed</seed>
-      <seed>become</seed>
     </seeds>
   </predicate>
   <arguments>
@@ -20,8 +13,6 @@
       	<type>PER</type>
       </types>
       <examples>
-        <example>John D. Idol</example>
-        <example>he</example>
       </examples>
     </argument>
     <argument>
@@ -41,8 +32,6 @@
       	<type>JOB</type>
       </types>
       <examples>
-        <example>Chief Executive</example>
-        <example>President</example>
       </examples>
     </argument>
     <argument>

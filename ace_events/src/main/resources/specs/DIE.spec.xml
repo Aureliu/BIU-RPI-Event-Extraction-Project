@@ -2,23 +2,23 @@
   <predicate>
     <name>Die</name>
     <seeds>
-      <seed>die</seed>
-      <seed>died</seed>
+      <seed>assassinate</seed>
+      <seed>assassination</seed>
+      <seed>dead</seed>
       <seed>death</seed>
       <seed>deaths</seed>
-      <seed>dead</seed>
-      <seed>assassinate</seed>
+      <seed>deceased</seed>
+      <seed>died</seed>
+      <seed>dying</seed>
+      <seed>fatal</seed>
       <seed>kill</seed>
       <seed>killed</seed>
       <seed>killing</seed>
-      <seed>slain</seed>
-      <seed>assassination</seed>
-      <!--seed>late</seed-->
-      <seed>fatal</seed>
-      <seed>suicide</seed>
-      <seed>dying</seed>
-      <seed>deceased</seed>
+      <seed>murdered</seed>
       <seed>murders</seed>
+      <seed>slain</seed>
+      <seed>suicide</seed>
+      <!--seed>late</seed-->
     </seeds>
   </predicate>
   <arguments>
@@ -31,19 +31,16 @@
       	<type>GPE</type>
       </types>
       <examples>
-        <example>man</example>
-        <example>John Hinckley</example>
-        <example>terrorist groups</example>
+        <example>accomplices</example>
+        <example>Einhorn</example>
         <example>groups</example>
-        <example>Richard Farnsworth</example>
-        <example>bomber</example>
         <example>he</example>
         <example>John</example>
         <example>John Hinkley</example>
+        <example>men</example>
         <example>Oswald</example>
+        <example>person</example>
         <example>they</example>
-        <example>accomplices</example>
-        <example>Einhorn</example>
       </examples>
     </argument>
     <argument>
@@ -53,37 +50,36 @@
       	<type>PER</type>
       </types>
       <examples>
-        <example>passenger</example>
-        <example>member</example>
-        <example>members</example>
-        <example>crew member</example>
-        <example>Pierre Trudeau</example>
-        <example>Ronald Reagan</example>
-        <example>leader</example>
-        <example>she</example>
-        <example>Obaiyat</example>
-        <example>Pope John Paul II</example>
-        <example>worker</example>
-        <example>Richard Farnsworth</example>
-        <example>person</example>
+        <example>30</example>
+        <example>7</example>
+        <example>Bob</example>
+        <example>bombers</example>
         <example>grandparents</example>
         <example>he</example>
-        <example>7</example>
-        <example>sailors</example>
-        <example>mother</example>
-        <example>30</example>
-        <example>John</example>
-        <example>people</example>
-        <example>Mary</example>
-        <example>hostages</example>
-        <example>Kennedy</example>
         <example>him</example>
-        <example>Tatum</example>
-        <example>Maddux</example>
-        <example>Bob</example>
+        <example>hostages</example>
         <example>Joe</example>
+        <example>John</example>
+        <example>Kennedy</example>
+        <example>leader</example>
+        <example>Maddux</example>
+        <example>man</example>
+        <example>Mary</example>
+        <example>members</example>
         <example>men</example>
+        <example>mother</example>
+        <example>Obaiyat</example>
         <example>Palestinians</example>
+        <example>passengers</example>
+        <example>people</example>
+        <example>person</example>
+        <example>Pierre Trudeau</example>
+        <example>Richard Farnsworth</example>
+        <example>Ronald Reagan</example>
+        <example>sailors</example>
+        <example>she</example>
+        <example>Tatum</example>
+        <example>worker</example>
       </examples>
     </argument>
     <argument>
@@ -95,8 +91,11 @@
       </types>
       <examples>
         <example>automobile</example>
+        <example>car bomb</example>
+        <example>explosives</example>
         <example>helicopter</example>
-        <example>explosive</example>
+        <example>vehicle</example>
+        <example>weapon</example>
       </examples>
     </argument>
     <argument>
@@ -108,10 +107,10 @@
       <examples>
         <example>1985</example>
         <example>last week</example>
+        <example>Oct. 12</example>
+        <example>Saturday afternoon</example>
         <example>Thursday</example>
         <example>yesterday</example>
-        <example>Saturday afternoon</example>
-        <example>Oct. 12</example>
       </examples>
     </argument>
     <argument>
@@ -123,17 +122,18 @@
       	<type>FAC</type>
       </types>
       <examples>
-        <example>Irish Sea</example>
+        <example>Cole</example>
+        <example>France</example>
         <example>Gaza Strip</example>
         <example>Gush Katif</example>
-        <example>Aden</example>
+        <example>Irish Sea</example>
         <example>Jerusalem</example>
-        <example>Philadelphia</example>
-        <example>France</example>
         <example>Paris</example>
+        <example>Philadelphia</example>
         <example>Reims</example>
-        <example>Cole</example>
-      </examples>
+
+        <example>settlement</example>
+     </examples>
     </argument>
   </arguments>
   <usage_samples>
@@ -171,7 +171,6 @@
     <sample src="orig_l" >Six attacks occurred in France, including the [PRD killing] of [VCT Joe].</sample>
     <sample src="orig_l" >Two [VCT Palestinians] were [PRD killed] as they staged a drive-by ambush on an Israeli jeep in the [PLC Gaza Strip] near the Israeli settlement of [PLC Gush Katif] [TIM Saturday afternoon].</sample>
 
-    <sample src="orig" ></sample>
     <sample src="orig_p" >The [PRD slain] [VCT leader] was buried.</sample>
     <sample src="orig" >[VCT She] was [PRD killed] in an [INT automobile] accident.</sample>
     <sample src="orig" >The commander of Israeli troops in the West Bank said there was a simple goal to the [INT helicopter] [PRD assassination] on [TIM Thursday] of a gun-wielding local Palestinian [VCT leader].</sample>

@@ -1,6 +1,7 @@
 package ac.biu.nlp.nlp.ie.onthefly.input;
 
 import java.util.Collection;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -195,27 +196,29 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 		}
 	}
 
-	private Annotation getElement(Map<String, Map<String, Annotation>> markerMap, String marker, String elementText) throws SpecXmlException {
-		String lowercaseElementText = elementText.toLowerCase(); //We don't care about capitalization in spec element
-		if (markerMap.get(marker).keySet().contains(lowercaseElementText)) {
-			return markerMap.get(marker).get(lowercaseElementText);
-		}
-		else {
-			if (Perceptron.controllerStatic.enhanceSpecs) {
-				String xmlElem = "example";
-				String title = marker;
-				String spaces = "        ";
-				if (marker.equals(SpecXmlCasLoader.PREDICATE_MARKER)) {
-					xmlElem = "seed";
-					title = "***Predicate";
-					spaces = "      ";
-				}
-				System.err.printf("\n    %s:\n%s<%s>%s</%s>\n", title, spaces, xmlElem, elementText, xmlElem);
-				return null;
+	private Annotation getElement(Map<String, Map<String, Annotation>> markerMap, Multimap<String, String> absents, String marker, String elementText) throws SpecXmlException {
+		try {
+			///DEBUG
+	//		if (elementText.contains("late")) {
+	//			System.out.printf("\n\n\n\n\nlate\n\n\n\n\n");
+	//		}
+			////
+			String lowercaseElementText = elementText.toLowerCase(); //We don't care about capitalization in spec element
+			if (markerMap.get(marker).keySet().contains(lowercaseElementText)) {
+				return markerMap.get(marker).get(lowercaseElementText);
 			}
 			else {
-				throw new SpecXmlException(String.format("Cannot find element '%s' for marker '%s'", elementText, marker));
+				if (Perceptron.controllerStatic.enhanceSpecs) {
+					absents.put(marker, elementText);
+					return null;
+				}
+				else {
+					throw new SpecXmlException(String.format("Cannot find element '%s' for marker '%s'", elementText, marker));
+				}
 			}
+		}
+		catch (Exception e) {
+			throw new SpecXmlException(String.format("Exception while getting element '%s' for marker '%s' (Maybe this spec doesn't support this marker?)", elementText, marker), e);
 		}
 	}
 
@@ -224,6 +227,7 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 		final Pattern USAGE_SAMPLE_ELEMENT = Pattern.compile("([^\\[]*)\\[(\\w{3}) ([^\\]]+)\\]([^\\[]*)");
 		String oldDocText = sentenceViewTemp.getDocumentText(); 
 		Multimap<Annotation, Annotation> toUsage = HashMultimap.create();
+		Multimap<String, String> absents = HashMultimap.create(); //for enhanceSpecs
 		//List<UsageSample> oldUsageSamples = Lists.newArrayList();
 		
 		// We want to have a list and not a direct iterator, so that we could remove and add samples to the CAS without a Concurrency Exception
@@ -272,7 +276,7 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 //				}
 				////
 				
-				Annotation element = getElement(markerMap, marker, elementText);
+				Annotation element = getElement(markerMap, absents, marker, elementText);
 				elements.put(i, element);
 				
 				tokens.add(preElement);		newSampleBuilder.append(preElement);
@@ -344,6 +348,28 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 //			oldSample.removeFromIndexes();
 //		}
 		
+		if (Perceptron.controllerStatic.enhanceSpecs) {
+			for (Entry<String, Collection<String>> absent : absents.asMap().entrySet()) {
+				String marker = absent.getKey();
+
+				String xmlElem = "example";
+				String title = marker;
+				String spaces = "        ";
+				if (marker.equals(SpecXmlCasLoader.PREDICATE_MARKER)) {
+					xmlElem = "seed";
+					title = "***Predicate";
+					spaces = "      ";
+				}
+				
+				System.err.printf("\n    %s:\n", title);
+				List<String> sortedElements = Lists.newArrayList(absent.getValue());
+				Collections.sort(sortedElements, String.CASE_INSENSITIVE_ORDER);
+				for (String elem : sortedElements) {
+					System.err.printf("%s<%s>%s</%s>\n", spaces, xmlElem, elem, xmlElem);
+				}
+			}
+		}
+
 		return toUsage;
 		
 //		- Args_by_marker = {marker : Argument}
@@ -517,7 +543,7 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 					example.setAiuses((FSArray) FSCollectionFactory.createFSArray(tokenView, aiusesOfExample));
 				}
 			}
-			
+						
 			System.err.printf("- In spec '%s': %d tokens in token view, %s tokens in sentence view\n", 
 					getSpecLabel(jcas), JCasUtil.select(tokenView, Token.class).size(), JCasUtil.select(sentenceView, Token.class).size());
 		}

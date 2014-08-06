@@ -14,17 +14,17 @@
       	<type>PER</type>
       </types>
       <examples>
-        <example>Princess</example>
-        <example>heir</example>
         <example>couple</example>
-        <example>John</example>
-        <example>he</example>
-        <example>her</example>
-        <example>woman</example>
-        <example>mother</example>
         <example>father</example>
-        <example>women</example>
+        <example>he</example>
+        <example>heir</example>
+        <example>her</example>
+        <example>John</example>
+        <example>mother</example>
+        <example>person</example>
+        <example>princess</example>
         <example>them</example>
+        <example>women</example>
       </examples>
     </argument>
     <argument>
@@ -51,16 +51,18 @@
     </argument>
   </arguments>
   <usage_samples>
-    <sample src="synth">The couple divorced in 1996.</sample>
-    <sample src="synth">Her divorce became final four years later.</sample>
-    <sample src="synth">The woman divorced John.</sample>
-    <sample src="synth">The divorced mother is single again.</sample>
-    <sample src="orig" >The couple divorced four years later.</sample>
-    <sample src="orig" >John is a divorced father of three.</sample>
-    <sample_out src="orig" >Jephson, who was also Prince Charles' secretary for two years, said that the Princess confided in him a great deal, especially in the years preceding her divorce from the heir to the throne in 1996.</sample>
-    <sample src="orig" >The Princess confided in him a great deal, especially in the years preceding her divorce from the heir to the throne in 1996.</sample>
-    <sample src="orig" >This year in Egypt, for example, avid campaigning helped women reverse laws that prevented them from obtaining divorce and traveling abroad without their husbands' permission. </sample>
-    <sample src="orig" >But the Simpson trial and the jury's findings marked a turning point in the career of the twice-divorced mother of two.</sample>
-    <sample src="orig_l">He is divorced.</sample>
+  <!-- ignoring synth fo rnow -->
+    <sample_out src="synth">The [PER couple] [PRD divorced] in [TIM 1996].</sample>
+    <sample_out src="synth">[PER Her] [PRD divorce] became final [TIM four years later].</sample>
+    <sample_out src="synth">The [PER woman] [PRD divorced] [PER John].</sample>
+    <sample_out src="synth">The [PRD divorced] [PER mother] is single again.</sample>
+
+    <sample src="orig" >The [PER couple] [PRD divorced] [TIM four years later].</sample>
+    <sample src="orig" >[PER John] is a [PRD divorced] [PER father] of three.</sample>
+    <sample_out src="orig" >Jephson, who was also Prince Charles' secretary for two years, said that the [PER Princess] confided in him a great deal, especially in the years preceding [PER her] [PRD divorce] from the [PER heir] to the throne in [TIM 1996].</sample>
+    <sample src="orig" >The [PER Princess] confided in him a great deal, especially in the years preceding [PER her] [PRD divorce] from the [PER heir] to the throne in [TIM 1996].</sample>
+    <sample src="orig" >This year in Egypt, for example, avid campaigning helped [PER women] reverse laws that prevented [PER them] from obtaining [PRD divorce] and traveling abroad without their husbands' permission. </sample>
+    <sample src="orig" >But the Simpson trial and the jury's findings marked a turning point in the career of the twice-[PRD divorced] [PER mother] of two.</sample>
+    <sample src="orig_l">[PER He] is [PRD divorced].</sample>
   </usage_samples>
 </spec>

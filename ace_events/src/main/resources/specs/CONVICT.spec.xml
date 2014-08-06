@@ -2,8 +2,6 @@
   <predicate>
     <name>Convict</name>
     <seeds>
-      <seed>convicted</seed>
-      <seed>guilty</seed>
     </seeds>
   </predicate>
   <arguments>
@@ -16,10 +14,6 @@
       	<type>GPE</type>
       </types>
       <examples>
-        <example>people</example>
-        <example>Smith</example>
-        <example>Jones</example>
-        <example>Carruth</example>
       </examples>
     </argument>
     <argument>
@@ -40,8 +34,6 @@
       	<type>CRIME</type>
       </types>
       <examples>
-        <example>selling guns to straw purchasers</example>
-        <example>masterminding the shooting</example>
       </examples>
     </argument>
     <argument>

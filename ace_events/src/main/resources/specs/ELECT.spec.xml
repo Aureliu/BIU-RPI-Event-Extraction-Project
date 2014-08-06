@@ -2,9 +2,6 @@
   <predicate>
     <name>Elect</name>
     <seeds>
-      <seed>elect</seed>
-      <seed>elected</seed>
-      <seed>election</seed>
     </seeds>
   </predicate>
   <arguments>
@@ -15,8 +12,6 @@
       	<type>PER</type>
       </types>
       <examples>
-        <example>Greg Lashutka</example>
-        <example>Sheila Johnson</example>
       </examples>
     </argument>
     <argument>
@@ -28,7 +23,6 @@
       	<type>GPE</type>
       </types>
       <examples>
-        <example>shareholder</example>
       </examples>
     </argument>
     <argument>
@@ -38,10 +32,6 @@
       	<type>JOB</type>
       </types>
       <examples>
-        <example>mayor</example>
-        <example>mayor of Columbia</example>
-        <example>Board of Directors</example>
-        <example>a second term on the Board of Directors</example>
       </examples>
     </argument>
     <argument>
@@ -51,7 +41,6 @@
       	<type>TIME</type>
       </types>
       <examples>
-        <example>1993</example>
       </examples>
     </argument>
     <argument>
@@ -63,7 +52,6 @@
       	<type>FAC</type>
       </types>
       <examples>
-        <example>Columbus</example>
       </examples>
     </argument>
   </arguments>

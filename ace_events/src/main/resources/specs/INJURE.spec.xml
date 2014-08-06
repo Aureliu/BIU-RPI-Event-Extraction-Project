@@ -2,13 +2,11 @@
   <predicate>
     <name>Injure</name>
     <seeds>
-      <seed>harm</seed>
-      <seed>injure</seed>
-      <seed>injured</seed>
-      <seed>hurt</seed>
-      <seed>wounded</seed>
       <seed>hospitalized</seed>
-      <seed>disabled</seed>
+      <seed>hurt</seed>
+      <seed>injured</seed>
+      <seed>injuring</seed>
+      <seed>wounded</seed>
     </seeds>
   </predicate>
   <arguments>
@@ -22,6 +20,7 @@
       </types>
       <examples>
         <example>Palestinians</example>
+        <example>person</example>
         <example>soldiers</example>
       </examples>
     </argument>
@@ -32,20 +31,17 @@
       	<type>PER</type>
       </types>
       <examples>
+        <example>100</example>
+        <example>20</example>
+        <example>demonstrators</example>
+        <example>members</example>
+        <example>Palestinians</example>
+        <example>person</example>
+        <example>people</example>
+        <example>she</example>
         <example>soldier</example>
         <example>soldiers</example>
-        <example>she</example>
-        <example>demonstrators</example>
-        <example>person</example>
-        <example>passengers</example>
-        <example>Palestinians</example>
-        <example>members</example>
-        <example>20</example>
         <example>wife</example>
-        <example>people</example>
-        <example>two</example>
-        <example>one</example>
-        <example>100</example>
       </examples>
     </argument>
     <argument>
@@ -57,11 +53,14 @@
       </types>
       <examples>
         <example>automobile</example>
-        <example>gas</example>
-        <example>tear gas</example>
-        <example>bullets</example>
-        <example>rubber bullets</example>
         <example>fire</example>
+        <example>rubber bullets</example>
+        <example>tear gas</example>
+        <example>vehicle</example>
+        <example>weapon</example>
+
+        <example>gas</example>
+        <example>bullets</example>
       </examples>
     </argument>
     <argument>
@@ -71,10 +70,10 @@
       	<type>TIME</type>
       </types>
       <examples>
-        <example>Saturday afternoon</example>
-        <example>Saturday</example>
-        <example>this morning</example>
         <example>Monday</example>
+        <example>Saturday</example>
+        <example>Saturday afternoon</example>
+        <example>this morning</example>
       </examples>
     </argument>
     <argument>
@@ -86,37 +85,40 @@
       	<type>FAC</type>
       </types>
       <examples>
-        <example>Gush Katif</example>
         <example>Alabama</example>
-        <example>Rafah</example>
-        <example>Lahore</example>
         <example>cities</example>
-        <example>Pakistani cities</example>
         <example>factory</example>
-        <example>garment factory</example>
-        <example>bangladeshi garment factory</example>
-        <example>bangladeshi</example>
+        <example>Gaza Strip</example>
+        <example>Gush Katif</example>
+        <example>Lahore</example>
+        <example>Rafah</example>
+
+        <example>Pakistan</example>
+        <example>settlement</example>
+        <example>Bangladesh</example>
       </examples>
     </argument>
   </arguments>
   <usage_samples>
-    <sample_out src="synth">The people were injured on Saturday</sample>
-    <sample src="synth">The disabled passengers boarded the bus.</sample>
-    <sample src="synth">The soldiers wounded the demonstrators with bullets.</sample>
-    <sample src="orig" >The explosion killed 7 and injured 20.</sample>
-    <sample src="orig" >Fifteen Palestinians were injured this morning in the town of Rafah </sample>
-    <sample src="orig" >He said he had no information about any dead or injured members of the submarine crew.</sample>
-    <sample src="orig" >His wife was sitting on the backseat and was not hurt.</sample>
-    <sample src="orig" >The explosion in Lahore caused a fire that burned makeshift stalls and wounded 36 people.</sample>
-    <sample src="orig" >Bombs went off in three Pakistani cities Monday, injuring 45 people.</sample>
-    <sample src="orig" >Two soldiers were wounded in the attack.</sample>
-    <sample src="orig" >She was badly hurt in an automobile accident.</sample>
-    <sample_out src="orig" >Two Palestinians were killed as they staged a drive-by ambush on an Israeli jeep in the Gaza Strip near the Israeli settlement of Gush Katif Saturday afternoon, and two Israeli soldiers were wounded, one critically.</sample> <!--I used the shorter version and not this, since I fear that this contains words that can be argument examples, but not arguments of the INJURE event in this sample. -->
-    <sample src="orig" >Witnesses said the soldiers responded by firing tear gas and rubber bullets, which led to ten demonstrators being injured. </sample>
-    <sample src="orig" >Tornadoes destroyed homes and overturned cars in several areas of Alabama on Saturday and more than two dozen people were reported injured.</sample>
-    <sample src="orig" >The disabled passengers were helped off of the train.</sample>
-    <sample src="orig_p">The injured soldier was taken to the hospital.</sample>
-    <sample src="orig_l" >On Saturday afternoon, two Israeli soldiers were wounded, one critically.</sample>
-    <sample src="orig_l" >A fire in a bangladeshi garment factory has left at least 100 hospitalized.</sample>
+    <!-- ignoring synth for now -->
+    <sample_out src="synth">The people were injured on Saturday.</sample>
+    <sample_out src="synth">The disabled passengers boarded the bus.</sample>
+    <sample_out src="synth">The soldiers wounded the demonstrators with bullets.</sample>
+
+    <sample src="orig" >The explosion killed 7 and [PRD injured] [VCT 20].</sample>
+    <sample src="orig" >Fifteen [VCT Palestinians] were [PRD injured] [TIM this morning] in the town of [PLC Rafah].</sample>
+    <sample src="orig" >He said he had no information about any dead or [PRD injured] [VCT members] of the submarine crew.</sample>
+    <sample src="orig" >His [VCT wife] was sitting on the backseat and was not [PRD hurt].</sample>
+    <sample src="orig" >The explosion in [PLC Lahore] caused a fire that burned makeshift stalls and [PRD wounded] 36 [VCT people].</sample>
+    <sample src="orig" >Bombs went off in three Pakistani [PLC cities] [TIM Monday], [PRD injuring] 45 [VCT people].</sample>
+    <sample src="orig" >Two [VCT soldiers] were [PRD wounded] in the attack.</sample>
+    <sample src="orig" >[VCT She] was badly [PRD hurt] in an [INT automobile] accident.</sample>
+    <sample src="orig" >Two [AGT Palestinians] were killed as they staged a drive-by ambush on an Israeli jeep in the [PLC Gaza Strip] near the Israeli settlement of [PLC Gush Katif] [TIM Saturday afternoon], and two Israeli [VCT soldiers] were [PRD wounded], one critically.</sample> <!-- Has some "argument distraction" risks, but that shouldn't be a problem anymore. -->
+    <sample src="orig" >Witnesses said the [AGT soldiers] responded by firing [INT tear gas] and [INT rubber bullets], which led to ten [VCT demonstrators] being [PRD injured]. </sample>
+    <sample src="orig" >Tornadoes destroyed homes and overturned cars in several areas of [PLC Alabama] on [TIM Saturday] and more than two dozen [VCT people] were reported [PRD injured].</sample>
+    <sample_out src="orig" >The [PRD disabled] [VCT passengers] were helped off of the train.</sample>
+    <sample src="orig_p">The [PRD injured] [VCT soldier] was taken to the hospital.</sample>
+    <sample_out src="orig_l" >On Saturday afternoon, two Israeli soldiers were wounded, one critically.</sample> <!-- This was the version I used when I didn't want to use the full version, as it contained many "argument distractions". But now that problem is (suuposedly) gone, so I'm back to the original. -->
+    <sample src="orig_l" >A [INT fire] in a bangladeshi garment [PLC factory] has left at least [VCT 100] [PRD hospitalized].</sample>
   </usage_samples>
 </spec>

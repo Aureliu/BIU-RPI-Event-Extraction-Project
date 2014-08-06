@@ -346,7 +346,7 @@ public class Folds {
 			Multimap<Document, SentenceInstance> runDev = getInstancesForTypes(controller, devInstances, run.devEvents, false);
 			
 			String dirPrefix = "DIR_" + run.suffix + "__";
-			String modelFileName = CORPUS_DIR + "/Model_" + run.suffix;
+			String modelFileName = outputFolder.getAbsolutePath() + "/Model_" + run.suffix;
 			logs.logSuffix = "." + run.suffix;
 			Perceptron.uTrain = logs.getU("Train");
 			Perceptron.wTrain = logs.getW("Train");

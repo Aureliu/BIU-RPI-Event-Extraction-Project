@@ -2,13 +2,6 @@
   <predicate>
     <name>Meet</name>
     <seeds>
-      <seed>meet</seed>
-      <seed>talks</seed>
-      <seed>summit</seed>
-      <seed>conference</seed>
-      <seed>meeting</seed>
-      <seed>visit</seed>
-      <seed>met</seed>
     </seeds>
   </predicate>
   <arguments>
@@ -21,34 +14,6 @@
       	<type>GPE</type>
       </types>
       <examples>
-        <example>Bush</example>
-        <example>Putin</example>
-        <example>China</example>
-        <example>Japan</example>
-        <example>United States</example>
-        <example>Korea</example>
-        <example>representatives</example>
-        <example>Tommy</example>
-        <example>prosecutors</example>
-        <example>governor</example>
-        <example>John Coburn</example>
-        <example>Erekat</example>
-        <example>Madeleine Albright</example>
-        <example>Albright</example>
-        <example>officials</example>
-        <example>minister</example>
-        <example>Israelis</example>
-        <example>Palestinians</example>
-        <example>leaders</example>
-        <example>he</example>
-        <example>Ehud Barak</example>
-        <example>Prime Minister</example>
-        <example>leader</example>
-        <example>Yasser Arafat</example>
-        <example>trade officials</example>
-        <example>lawmakers</example>
-        <example>Sudnikovich</example>
-        <example>him</example>
       </examples>
     </argument>
     <argument>
@@ -58,13 +23,6 @@
       	<type>TIME</type>
       </types>
       <examples>
-        <example>this week</example>
-        <example>this month</example>
-        <example>Wednesday</example>
-        <example>Friday</example>
-        <example>tomorrow</example>
-        <example>Monday</example>
-        <example>May 17</example>
       </examples>
     </argument>
     <argument>
@@ -76,10 +34,6 @@
       	<type>FAC</type>
       </types>
       <examples>
-        <example>Washington</example>
-        <example>Egypt</example>
-        <example>Boston</example>
-        <example>London</example>
       </examples>
     </argument>
   </arguments>

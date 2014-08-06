@@ -1,0 +1,80 @@
+<spec>
+  <predicate>
+    <name>Be-Born</name>
+    <seeds>
+      <seed>born</seed>
+      <seed>birth</seed>
+    </seeds>
+  </predicate>
+  <arguments>
+    <argument>
+      <role>Person</role>
+      <marker>PER</marker>
+      <types>
+      	<type>PER</type>
+      </types>
+      <examples>
+        <example>John Robert Bond</example>
+        <example>Shenson</example>
+        <example>Palestinian</example>
+        <example>people</example>
+        <example>he</example>
+        <example>Jane Doe</example>
+        <example>John Bobert Bond</example>
+        <example>suspect</example>
+        <example>dissident</example>
+        <example>Osama bin Laden</example>
+        <example>Bin Laden</example>
+        <example>I</example>
+        <example>Jesus</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Time</role>
+      <marker>TIM</marker>
+      <types>
+      	<type>TIME</type>
+      </types>
+      <examples>
+        <example>the war ended</example>
+        <example>March 18, 1964</example>
+        <example>1964</example>
+        <example>March</example>
+        <example>March 18</example>
+        <example>532 years earlier</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Place</role>
+      <marker>PLC</marker>
+      <types>
+      	<type>GPE</type>
+      	<type>LOC</type>
+      	<type>FAC</type>
+      </types>
+      <examples>
+        <example>San Francisco</example>
+        <example>Egyptian</example>
+        <example>Casper, Wyoming</example>
+        <example>Casper</example>
+        <example>Wyoming</example>
+        <example>England</example>
+        <example>Massachusetts</example>
+        <example>Saudi</example>
+      </examples>
+    </argument>
+  </arguments>
+  <usage_samples>
+    <sample src="orig">[PER Shenson], who was [PRD born] in [PLC San Francisco], was working in London at the time.</sample>
+    <sample src="orig">The [PLC Egyptian]-[PRD born] [PER Palestinian] told judges that he deserted the Egyptian army in the mid-1970s.</sample>
+    <sample src="orig">79 million [PER people] have been [PRD born] since [TIM the war ended].</sample>
+    <sample src="orig">When [PER he]'s [PRD born], he'll be named after his father.</sample>
+    <sample src="orig">[PER Jane Doe] was [PRD born] in [PLC Casper, Wyoming] on [TIM March 18, 1964].</sample>
+    <sample src="orig">[PER John Bobert Bond] was [PRD born] in [PLC England].</sample>
+    <sample src="orig">Ali Mohammed, a native of Egypt, has admitted to five charges of conspiring with a [PLC Saudi] [PRD born] dissident [PER Osama bin Laden] to attack US targets in the Middle-East.</sample>
+    <sample src="orig">For me, it's not difficult, because [PER I] was [PRD born] without my hand, and I've never known any different.</sample>
+    <sample src="orig">They have been linked to cancer, [PRD birth] defects, and other genetic abnormalities.</sample>
+    <sample src="orig">He calculated that [PER Jesus]' [PRD birth] had occurred [TIM 532 years earlier]. </sample>
+    <sample src="orig_l">Investigators said they did not yet know where the [PLC Massachusetts]-[PRD born] [PER suspect] got his guns.</sample>
+  </usage_samples>
+</spec>

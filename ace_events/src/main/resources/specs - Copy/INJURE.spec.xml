@@ -1,0 +1,122 @@
+<spec>
+  <predicate>
+    <name>Injure</name>
+    <seeds>
+      <seed>harm</seed>
+      <seed>injure</seed>
+      <seed>injured</seed>
+      <seed>hurt</seed>
+      <seed>wounded</seed>
+      <seed>hospitalized</seed>
+      <seed>disabled</seed>
+    </seeds>
+  </predicate>
+  <arguments>
+    <argument>
+      <role>Agent</role>
+      <marker>AGT</marker>
+      <types>
+      	<type>PER</type>
+      	<type>ORG</type>
+      	<type>GPE</type>
+      </types>
+      <examples>
+        <example>Palestinians</example>
+        <example>soldiers</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Victim</role>
+      <marker>VCT</marker>
+      <types>
+      	<type>PER</type>
+      </types>
+      <examples>
+        <example>soldier</example>
+        <example>soldiers</example>
+        <example>she</example>
+        <example>demonstrators</example>
+        <example>person</example>
+        <example>passengers</example>
+        <example>Palestinians</example>
+        <example>members</example>
+        <example>20</example>
+        <example>wife</example>
+        <example>people</example>
+        <example>two</example>
+        <example>one</example>
+        <example>100</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Instrument</role>
+      <marker>INT</marker>
+      <types>
+      	<type>VEH</type>
+      	<type>WEA</type>
+      </types>
+      <examples>
+        <example>automobile</example>
+        <example>gas</example>
+        <example>tear gas</example>
+        <example>bullets</example>
+        <example>rubber bullets</example>
+        <example>fire</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Time</role>
+      <marker>TIM</marker>
+      <types>
+      	<type>TIME</type>
+      </types>
+      <examples>
+        <example>Saturday afternoon</example>
+        <example>Saturday</example>
+        <example>this morning</example>
+        <example>Monday</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Place</role>
+      <marker>PLC</marker>
+      <types>
+      	<type>GPE</type>
+      	<type>LOC</type>
+      	<type>FAC</type>
+      </types>
+      <examples>
+        <example>Gush Katif</example>
+        <example>Alabama</example>
+        <example>Rafah</example>
+        <example>Lahore</example>
+        <example>cities</example>
+        <example>Pakistani cities</example>
+        <example>factory</example>
+        <example>garment factory</example>
+        <example>bangladeshi garment factory</example>
+        <example>bangladeshi</example>
+      </examples>
+    </argument>
+  </arguments>
+  <usage_samples>
+    <sample_out src="synth">The people were injured on Saturday</sample>
+    <sample src="synth">The disabled passengers boarded the bus.</sample>
+    <sample src="synth">The soldiers wounded the demonstrators with bullets.</sample>
+    <sample src="orig" >The explosion killed 7 and injured 20.</sample>
+    <sample src="orig" >Fifteen Palestinians were injured this morning in the town of Rafah </sample>
+    <sample src="orig" >He said he had no information about any dead or injured members of the submarine crew.</sample>
+    <sample src="orig" >His wife was sitting on the backseat and was not hurt.</sample>
+    <sample src="orig" >The explosion in Lahore caused a fire that burned makeshift stalls and wounded 36 people.</sample>
+    <sample src="orig" >Bombs went off in three Pakistani cities Monday, injuring 45 people.</sample>
+    <sample src="orig" >Two soldiers were wounded in the attack.</sample>
+    <sample src="orig" >She was badly hurt in an automobile accident.</sample>
+    <sample_out src="orig" >Two Palestinians were killed as they staged a drive-by ambush on an Israeli jeep in the Gaza Strip near the Israeli settlement of Gush Katif Saturday afternoon, and two Israeli soldiers were wounded, one critically.</sample> <!--I used the shorter version and not this, since I fear that this contains words that can be argument examples, but not arguments of the INJURE event in this sample. -->
+    <sample src="orig" >Witnesses said the soldiers responded by firing tear gas and rubber bullets, which led to ten demonstrators being injured. </sample>
+    <sample src="orig" >Tornadoes destroyed homes and overturned cars in several areas of Alabama on Saturday and more than two dozen people were reported injured.</sample>
+    <sample src="orig" >The disabled passengers were helped off of the train.</sample>
+    <sample src="orig_p">The injured soldier was taken to the hospital.</sample>
+    <sample src="orig_l" >On Saturday afternoon, two Israeli soldiers were wounded, one critically.</sample>
+    <sample src="orig_l" >A fire in a bangladeshi garment factory has left at least 100 hospitalized.</sample>
+  </usage_samples>
+</spec>

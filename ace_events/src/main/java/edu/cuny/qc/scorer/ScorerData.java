@@ -10,14 +10,15 @@ import eu.excitementproject.eop.common.representation.partofspeech.PartOfSpeech;
 public class ScorerData implements Serializable {
 	private static final long serialVersionUID = 1696282253769512311L;
 	
-	//this is commented out in an attemt to save memory (very long unique string in many-many instances of this classes), although
+	//this is commented out in an attempt to save memory (very long unique string in many-many instances of this classes), although
 	//I'm not sure it would help, as the calculate fullName enters as SignalInstance's name, so it will still be around...
 	//public String fullName; 
 	
 	public String basicName;
 	public SignalMechanismSpecIterator<?> scorer;
 	//public String scorerTypeName;
-	public Aggregator aggregator;
+	public Aggregator elementAggregator;
+	public Aggregator usageSampleAggregator;
 	//public String aggregatorTypeName;
 	public Deriver deriver;
 	//public String deriverTypeName;
@@ -27,7 +28,7 @@ public class ScorerData implements Serializable {
 	public PartOfSpeech specificPos;
 	public boolean isSpecIndependent;
 	
-	public ScorerData(String basicName, SignalMechanismSpecIterator scorer,	Deriver deriver, Derivation derivation, int leftSenseNum, int rightSenseNum, PartOfSpeech specificPos, Aggregator aggregator, boolean isSpecIndependent) {
+	public ScorerData(String basicName, SignalMechanismSpecIterator<?> scorer,	Deriver deriver, Derivation derivation, int leftSenseNum, int rightSenseNum, PartOfSpeech specificPos, Aggregator elementAggregator, Aggregator usageSampleAggregator, boolean isSpecIndependent) {
 		//this.scorerTypeName = scorer.getTypeName().intern();
 		//this.aggregatorTypeName = aggregator.getTypeName().intern();
 		//this.deriverTypeName = deriver.getTypeName().intern();
@@ -39,7 +40,8 @@ public class ScorerData implements Serializable {
 			this.basicName = scorer.getTypeName();;
 		}
 		this.scorer = scorer;
-		this.aggregator = aggregator;
+		this.elementAggregator = elementAggregator;
+		this.usageSampleAggregator = usageSampleAggregator;
 		this.deriver = deriver;
 		this.derivation = derivation;
 		this.leftSenseNum = leftSenseNum;
@@ -52,31 +54,40 @@ public class ScorerData implements Serializable {
 	}
 	
 	//X
-	public ScorerData(String basicName, SignalMechanismSpecIterator scorer, Deriver deriver, Derivation derivation, int leftSenseNum, int rightSenseNum, PartOfSpeech specificPos, Aggregator aggregator) {
-		this(basicName, scorer, deriver, derivation, leftSenseNum, rightSenseNum, specificPos, aggregator, false);
+	public ScorerData(String basicName, SignalMechanismSpecIterator<?> scorer, Deriver deriver, Derivation derivation, int leftSenseNum, int rightSenseNum, PartOfSpeech specificPos, Aggregator elementAggregator, Aggregator usageSampleAggregator) {
+		this(basicName, scorer, deriver, derivation, leftSenseNum, rightSenseNum, specificPos, elementAggregator, usageSampleAggregator, false);
 	}
 	
 	//X
-	public ScorerData(String basicName, SignalMechanismSpecIterator scorer, boolean isSpecIndependent) {
-		this(basicName, scorer, Deriver.NoDerv.inst, Derivation.NONE, 1, 1, null, Aggregator.Any.inst, isSpecIndependent);
+	public ScorerData(String basicName, SignalMechanismSpecIterator<?> scorer, Deriver deriver, Derivation derivation, int leftSenseNum, int rightSenseNum, PartOfSpeech specificPos, Aggregator elementAggregator) {
+		this(basicName, scorer, deriver, derivation, leftSenseNum, rightSenseNum, specificPos, elementAggregator, Aggregator.Any.inst);
 	}
 	
 	//X
-	public ScorerData(String basicName, SignalMechanismSpecIterator scorer, Deriver deriver, Derivation derivation, Aggregator aggregator) {
-		this(basicName, scorer, deriver, derivation, 1, 1, null, aggregator);
+	public ScorerData(String basicName, SignalMechanismSpecIterator<?> scorer, boolean isSpecIndependent) {
+		this(basicName, scorer, Deriver.NoDerv.inst, Derivation.NONE, 1, 1, null, Aggregator.Any.inst, Aggregator.Any.inst, isSpecIndependent);
 	}
 	
 	//X
-	public ScorerData(String basicName, SignalMechanismSpecIterator scorer, Aggregator aggregator) {
-		this(basicName, scorer, Deriver.NoDerv.inst, Derivation.NONE, aggregator);
+	public ScorerData(String basicName, SignalMechanismSpecIterator<?> scorer, Deriver deriver, Derivation derivation, Aggregator elementAggregator) {
+		this(basicName, scorer, deriver, derivation, 1, 1, null, elementAggregator);
 	}
 	
-	public ScorerData(String basicName, SignalMechanismSpecIterator scorer) {
+	//X
+	public ScorerData(String basicName, SignalMechanismSpecIterator<?> scorer, Aggregator elementAggregator) {
+		this(basicName, scorer, Deriver.NoDerv.inst, Derivation.NONE, elementAggregator);
+	}
+	
+	public ScorerData(String basicName, SignalMechanismSpecIterator<?> scorer) {
 		this(basicName, scorer, Aggregator.Any.inst);
 	}
 	
-	public String getAggregatorTypeName() {
-		return aggregator.getTypeName().intern();
+	public String getElementAggregatorTypeName() {
+		return elementAggregator.getTypeName().intern();
+	}
+	
+	public String getUsageSampleAggregatorTypeName() {
+		return usageSampleAggregator.getTypeName().intern();
 	}
 	
 	public String getDeriverTypeName() {
@@ -98,13 +109,14 @@ public class ScorerData implements Serializable {
 		}
 
 		// DEBUG
-		String checkNull = deriver.getSuffix();
-		checkNull = aggregator.getSuffix();
+//		String checkNull = deriver.getSuffix();
+//		checkNull = elementAggregator.getSuffix();
 				
-		return String.format("%s%s%s%s%s%s%s",
+		return String.format("%s%s%s%s%s%s%s%s",
 				basicName,
 				numSenseString(leftSenseNum, "Text"), numSenseString(rightSenseNum, "Spec"),
-				deriver.getSuffix(), derivation, posStr, aggregator.getSuffix()).intern();
+				deriver.getSuffix(), derivation, posStr, elementAggregator.getSuffix(),
+				usageSampleAggregator.getSuffix()).intern();
 	}
 	
 	public String toString() {
@@ -113,7 +125,7 @@ public class ScorerData implements Serializable {
 	
 	@Override
 	public int hashCode() {
-	     return new HashCodeBuilder(17, 37).append(basicName).append(deriver).append(aggregator)
+	     return new HashCodeBuilder(17, 37).append(basicName).append(deriver).append(elementAggregator).append(usageSampleAggregator)
 	    		 .append(derivation).append(leftSenseNum).append(rightSenseNum).append(specificPos).toHashCode();
 	}
 	@Override
@@ -124,9 +136,9 @@ public class ScorerData implements Serializable {
 	     return false;
 	   }
 	   ScorerData rhs = (ScorerData) obj;
-	   return new EqualsBuilder().append(basicName, rhs.basicName).append(deriver, rhs.deriver).append(aggregator, rhs.aggregator)
-	    	   .append(derivation, rhs.derivation).append(leftSenseNum, rhs.leftSenseNum).append(rightSenseNum, rhs.rightSenseNum)
-	    	   .append(specificPos, rhs.specificPos).isEquals();
+	   return new EqualsBuilder().append(basicName, rhs.basicName).append(deriver, rhs.deriver).append(elementAggregator, rhs.elementAggregator)
+			   .append(usageSampleAggregator, rhs.usageSampleAggregator).append(derivation, rhs.derivation).append(leftSenseNum, rhs.leftSenseNum)
+			   .append(rightSenseNum, rhs.rightSenseNum).append(specificPos, rhs.specificPos).isEquals();
 	}
 
 }

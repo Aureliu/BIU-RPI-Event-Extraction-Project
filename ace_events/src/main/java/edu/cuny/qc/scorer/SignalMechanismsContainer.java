@@ -29,6 +29,7 @@ public class SignalMechanismsContainer {
 		
 		for (SignalMechanism mechanism : signalMechanisms) {
 			triggerScorers.addAll(mechanism.scorers.get(SignalType.TRIGGER));
+			argumentScorers.addAll(mechanism.scorers.get(SignalType.ARGUMENT));
 		}
 	}
 	

@@ -84,7 +84,8 @@ public class Controller implements java.io.Serializable
 	public List<String> devOnlyTypes = null;
 	public List<String> testOnlyTypes = null;
 	
-	public SentenceSortingMethod sentenceSortingMethod = SentenceSortingMethod.DOC_SENT_SPEC; // this was the implied default long before I came up with this enum
+	// The previous default was DOC_SENT_SPEC(_ROLE), but SPEC(_ROLE)_DOC_SENT proved to be almost always better
+	public SentenceSortingMethod sentenceSortingMethod = SentenceSortingMethod.SPEC_ROLE_DOC_SENT;// SentenceSortingMethod.DOC_SENT_SPEC; // this was the implied default long before I came up with this enum
 	
 	public boolean filterSentenceInstance = false;
 	

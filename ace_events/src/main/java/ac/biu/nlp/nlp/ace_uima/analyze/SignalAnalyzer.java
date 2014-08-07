@@ -176,7 +176,7 @@ public class SignalAnalyzer {
 							System.err.printf("6/%s ", i);
 						}
 						
-						assn = new SentenceAssignment(/*problem.types,*/problem.eventArgCandidates, problem.target, problem.nodeTargetAlphabet, problem.edgeTargetAlphabet, problem.featureAlphabet, problem.controller);
+						assn = new SentenceAssignment(/*problem.types,*/signalMechanismsContainer, problem.eventArgCandidates, problem.target, problem.nodeTargetAlphabet, problem.edgeTargetAlphabet, problem.featureAlphabet, problem.controller);
 						assignments.put(data, assn);
 						
 						if (sentNum >= debugMinSentence && DO_VERBOSE_PRINTS) {
@@ -208,7 +208,8 @@ public class SignalAnalyzer {
 					}
 					
 					key.put("signal", data.basicName);
-					key.put("agg", data.getAggregatorTypeName());
+					key.put("el-agg", data.getElementAggregatorTypeName());
+					key.put("us-agg", data.getUsageSampleAggregatorTypeName());
 					key.put("deriver", data.getDeriverTypeName());
 					key.put("derivation", ""+data.derivation);
 					key.put("spec-ind", ""+data.isSpecIndependent);
@@ -286,7 +287,8 @@ public class SignalAnalyzer {
 //				}
 				///
 				key.put("signal", data.basicName);
-				key.put("agg", data.getAggregatorTypeName());
+				key.put("el-agg", data.getElementAggregatorTypeName());
+				key.put("us-agg", data.getUsageSampleAggregatorTypeName());
 				key.put("deriver", data.getDeriverTypeName());
 				key.put("derivation", ""+data.derivation);
 				key.put("spec-ind", ""+data.isSpecIndependent);

@@ -7,19 +7,31 @@ import org.apache.commons.lang3.builder.CompareToBuilder;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
 
 public enum SentenceSortingMethod {
-	DOC_SENT_SPEC(new Comparator<SentenceInstance>() {
+	DOC_SENT_SPEC_ROLE(new Comparator<SentenceInstance>() {
 		@Override public int compare(SentenceInstance inst1, SentenceInstance inst2) {
-			return new CompareToBuilder().append(inst1.doc.docLine, inst2.doc.docLine).append(inst1.sentID, inst2.sentID).append(inst1.specLetter, inst2.specLetter).toComparison();
+			return new CompareToBuilder().append(inst1.doc.docLine, inst2.doc.docLine)
+										 .append(inst1.sentID, inst2.sentID)
+										 .append(inst1.specLetter, inst2.specLetter)
+										 .append(inst1.roleLetter, inst2.roleLetter)
+										 .toComparison();
 		}
 	}),
-	DOC_SPEC_SENT(new Comparator<SentenceInstance>() {
+	DOC_SPEC_ROLE_SENT(new Comparator<SentenceInstance>() {
 		@Override public int compare(SentenceInstance inst1, SentenceInstance inst2) {
-			return new CompareToBuilder().append(inst1.doc.docLine, inst2.doc.docLine).append(inst1.specLetter, inst2.specLetter).append(inst1.sentID, inst2.sentID).toComparison();
+			return new CompareToBuilder().append(inst1.doc.docLine, inst2.doc.docLine)
+					 					 .append(inst1.specLetter, inst2.specLetter)
+										 .append(inst1.roleLetter, inst2.roleLetter)
+										 .append(inst1.sentID, inst2.sentID)
+										 .toComparison();
 		}
 	}),
-	SPEC_DOC_SENT(new Comparator<SentenceInstance>() {
+	SPEC_ROLE_DOC_SENT(new Comparator<SentenceInstance>() {
 		@Override public int compare(SentenceInstance inst1, SentenceInstance inst2) {
-			return new CompareToBuilder().append(inst1.specLetter, inst2.specLetter).append(inst1.doc.docLine, inst2.doc.docLine).append(inst1.sentID, inst2.sentID).toComparison();
+			return new CompareToBuilder().append(inst1.specLetter, inst2.specLetter)
+										 .append(inst1.roleLetter, inst2.roleLetter)
+										 .append(inst1.doc.docLine, inst2.doc.docLine)
+										 .append(inst1.sentID, inst2.sentID)
+										 .toComparison();
 		}
 	}),
 	ITERATE(null);

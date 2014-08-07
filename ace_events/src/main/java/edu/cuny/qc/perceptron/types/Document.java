@@ -36,8 +36,10 @@ import org.apache.uima.resource.ResourceInitializationException;
 
 import ac.biu.nlp.nlp.ie.onthefly.input.AeException;
 import ac.biu.nlp.nlp.ie.onthefly.input.AnalysisEngines;
+import ac.biu.nlp.nlp.ie.onthefly.input.SpecAnnotator;
 import ac.biu.nlp.nlp.ie.onthefly.input.TypesContainer;
 
+import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Maps;
 
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
@@ -1236,23 +1238,46 @@ public class Document implements java.io.Serializable
 		return fullMap;
 	}
 	
+	/**
+	 * NOTE that even though we allow to duplicate both by spec (trigger label) and by role -
+	 * the output map need to be indexed only be specs, since this is used in Folds to only take some specific list
+	 * of event types for a fold. And since Folds doesn't need to also filter by roles (we never do a "partial event type"),
+	 * then we don't need more indexing here. 
+	 */
 	public static LinkedHashMap<JCas, SentenceInstance> getInstancesForSentence(Controller controller, SignalMechanismsContainer signalMechanismsContainer, Sentence sent, TypesContainer types, Alphabet featureAlphabet, 
 			boolean learnable, boolean debug) throws CASRuntimeException, AnalysisEngineProcessException, ResourceInitializationException, CASException, UimaUtilsException, IOException, AeException {
 		LinkedHashMap<JCas, SentenceInstance> result = Maps.newLinkedHashMap();
 		if (controller.oMethod.startsWith("G")) {
 			for (int specNum=0; specNum < types.specs.size(); specNum++) {
 				JCas spec = types.specs.get(specNum);
-				List<JCas> oneSpec = Arrays.asList(new JCas[] {spec});
-				TypesContainer oneType = new TypesContainer(oneSpec);
-				SentenceInstance inst = new SentenceInstance(controller, signalMechanismsContainer, sent, oneType, featureAlphabet,
-						learnable, spec, specNum, debug);
-				result.put(spec, inst);
-				//System.out.printf("%s %s\n", Utils.detailedLog(), inst.sentInstID);
+				
+				if (controller.oMethod.contains("a")) { //duplicate by role!
+					Map<String, JCas> singleRoleSpecs = SpecAnnotator.getSingleRoleSpecs(spec);
+					int roleNum=-1;
+					for (String role : singleRoleSpecs.keySet()) {
+						roleNum++;
+						JCas singleRoleSpec = singleRoleSpecs.get(role);
+						TypesContainer oneTypeOneRole = new TypesContainer(ImmutableList.of(singleRoleSpec));
+						SentenceInstance inst = new SentenceInstance(controller, signalMechanismsContainer, sent, oneTypeOneRole, featureAlphabet,
+								learnable, spec, specNum, role, roleNum, debug);
+					}
+				}
+				else if (controller.oMethod.contains("b")) { //don't duplicate by role!
+					List<JCas> oneSpec = Arrays.asList(new JCas[] {spec});
+					TypesContainer oneType = new TypesContainer(oneSpec);
+					SentenceInstance inst = new SentenceInstance(controller, signalMechanismsContainer, sent, oneType, featureAlphabet,
+							learnable, spec, specNum, null, null, debug);
+					result.put(spec, inst);
+					//System.out.printf("%s %s\n", Utils.detailedLog(), inst.sentInstID);
+				}
+				else { // WTF!
+					throw new IllegalArgumentException("Currently supporting an oMethod that must explicitly state 'a' or 'b' for handling roles, got: " + controller.oMethod);
+				}
 			}
 		}
 		else {
 			SentenceInstance inst = new SentenceInstance(controller, signalMechanismsContainer, sent, types, featureAlphabet,
-					learnable, null, null, debug);
+					learnable, null, null, null, null, debug);
 			result.put(null, inst);
 		}
 		

@@ -16,6 +16,7 @@ import org.apache.commons.lang.StringUtils;
 import org.apache.uima.cas.CASException;
 
 import com.google.common.collect.ImmutableList;
+import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 
 import ac.biu.nlp.nlp.ie.onthefly.input.SpecAnnotator;
@@ -28,6 +29,7 @@ import edu.cuny.qc.perceptron.core.Pipeline;
 import edu.cuny.qc.perceptron.featureGenerator.GlobalFeatureGenerator;
 import edu.cuny.qc.perceptron.types.SentenceInstance.InstanceAnnotations;
 import edu.cuny.qc.scorer.ScorerData;
+import edu.cuny.qc.scorer.SignalMechanismsContainer;
 import edu.cuny.qc.util.Logs;
 import edu.cuny.qc.util.UnsupportedParameterException;
 
@@ -48,7 +50,7 @@ public class SentenceAssignment
 	public static final String Default_Trigger_Label = PAD_Trigger_Label;
 	public static final String Generic_Existing_Trigger_Label = "TRIGGER\t";
 	public static final String Default_Argument_Label = "X\t";//"NON\t";
-	public static final String Generic_Existing_Argument_Label = "IS_ARG\t";
+	public static final String Generic_Existing_Argument_Label = "ARG\t";
 	public static final String Really_Generic_Existing_Label = "LBL";
 	public static final String GLOBAL_LABEL = "GLOBAL";
 	
@@ -58,7 +60,7 @@ public class SentenceAssignment
 	public static final String IS_ARG_MARKER = "IsArg";
 	public static final List<String> ALL_FEATURE_NAME_MARKERS = ImmutableList.of(CURRENT_LABEL_MARKER, TRIGGER_LABEL_MARKER, ARG_ROLE_MARKER, IS_ARG_MARKER);
 	
-	public static final Pattern methodPattern = Pattern.compile("G(.+)P");
+	public static final Pattern methodPattern = Pattern.compile("G\\w(.+)P");
 
 	// {signalName : {label : {moreParams : featureName}}}
 	public static Map<String, Map<String, Map<String, String>>> signalToFeature = Maps.newTreeMap();
@@ -80,10 +82,13 @@ public class SentenceAssignment
 	int state = -1;
 	
 	static {
-		System.err.println("??? SentenceAssignment: Assumes binary labels O,ATTACK (around oMethod)");
+		//System.err.println("??? SentenceAssignment: Assumes binary labels O,ATTACK (around oMethod)");
 		System.err.println("??? SentenceAssignment: Edge features are currently excluded, until I stabalize a policy with triggers. Then some policy should be decided for edges (that should handle, for example, the fact that if only the guess has some trigger that the gold doesn't have, then it would physically have more features than target (not same features just with different scores, like in the triggers' case), and this violated my assumption that guess and gold have the same features. Relevant methods: equals() (3 methods), makeEdgeLocalFeature(), BeamSearch.printBeam (check compatible)");
+		System.err.println("??? SentenceAssignment:    7.8.14 Update to previous comment: I am not sure I entriely understand the thing with 'more features', but I do think this is solved when I decided that ALL argcands have their signals calculated with ALL roles. This was initially decided since we need these signals even for an O assgnemtn, but I think this also solves this case. We'll see.");
 		System.err.println("??? SentenceAssignment: Perhaps should do P- also for Edge and Global features");
 		System.err.println("??? SentenceAssignment: GLOBAL FEATURES ARE NOT IMPORTED YET!!!");
+		//System.err.println("??? SentenceAssignment: in makeEdgeLocal..(), I am pretty sure that I am doing wrong use of all the superfluous arguments of makeFeatures() (The ones that documents signals and such). I just use it sorta like in triggers, but at least some of it has GOT to be wrong.");
+		System.err.println("??? SentenceAssignment: makeFeature() still doesn't support log stuff normaly. I probably have to add a 'String roleLabel' parameter, where the current 'label' param wil become 'triggerLabel', and add another level to the Map-Map-Map that will also save the role (or PRD for the predicate). But the question is - what is the signal name? Maybe I need to pass several, since an O is affected by all roles... I dunno, think about it :)");
 	}
 	
 	public static String getGenericTriggerLabel(String label) {
@@ -162,6 +167,8 @@ public class SentenceAssignment
 	protected BigDecimal score = BigDecimal.ZERO;
 	protected List<BigDecimal> partial_scores;
 	
+	public SignalMechanismsContainer signalMechanismsContainer;
+	
 	//public Map<Integer, Map<String, List<SignalInstance>>> featureToSignal; 
 	public Map<Integer, Map<String, String>> signalsToValues; 
 	public List<BigDecimal> getPartialScores() {
@@ -221,7 +228,7 @@ public class SentenceAssignment
 	public SentenceAssignment clone()
 	{
 		// shallow copy the alphabets
-		SentenceAssignment assn = new SentenceAssignment(/*types,*/ eventArgCandidates, target, nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet, controller);
+		SentenceAssignment assn = new SentenceAssignment(/*types,*/ signalMechanismsContainer, eventArgCandidates, target, nodeTargetAlphabet, edgeTargetAlphabet, featureAlphabet, controller);
 		
 		// shallow copy the assignment
 		assn.nodeAssignment = (Vector<Integer>) this.nodeAssignment.clone();
@@ -408,7 +415,7 @@ public class SentenceAssignment
 		}
 	}
 	
-	public SentenceAssignment(/*TypesContainer types,*/ List<AceMention> eventArgCandidates, SentenceAssignment target, Alphabet nodeTargetAlphabet, Alphabet edgeTargetAlphabet, Alphabet featureAlphabet, Controller controller)
+	public SentenceAssignment(/*TypesContainer types,*/SignalMechanismsContainer signalMechanismsContainer, List<AceMention> eventArgCandidates, SentenceAssignment target, Alphabet nodeTargetAlphabet, Alphabet edgeTargetAlphabet, Alphabet featureAlphabet, Controller controller)
 	{
 		this.nodeTargetAlphabet = nodeTargetAlphabet;
 		this.edgeTargetAlphabet = edgeTargetAlphabet;
@@ -425,6 +432,7 @@ public class SentenceAssignment
 		featVecSequence = new FeatureVectorSequence();
 		partial_scores = new ArrayList<BigDecimal>();
 		signalsToValues = new HashMap<Integer, Map<String, String>>();
+		this.signalMechanismsContainer = signalMechanismsContainer;
 
 		if (this.controller.oMethod.startsWith("G")) {
 			
@@ -448,9 +456,9 @@ public class SentenceAssignment
 	 * also create a full featureVectorSequence
 	 * @param inst
 	 */
-	public SentenceAssignment(SentenceInstance inst)
+	public SentenceAssignment(SentenceInstance inst, SignalMechanismsContainer signalMechanismsContainer)
 	{
-		this(/*inst.types,*/inst.eventArgCandidates, inst.target, inst.nodeTargetAlphabet, inst.edgeTargetAlphabet, inst.featureAlphabet, inst.controller);
+		this(/*inst.types,*/signalMechanismsContainer, inst.eventArgCandidates, inst.target, inst.nodeTargetAlphabet, inst.edgeTargetAlphabet, inst.featureAlphabet, inst.controller);
 		
 		for(int i=0; i < inst.size(); i++)
 		{
@@ -555,85 +563,110 @@ public class SentenceAssignment
 	public void makeEdgeLocalFeature(SentenceInstance problem, int index, boolean addIfNotPresent, 
 			int entityIndex, boolean useIfNotPresent)
 	{	
-		if (!controller.useArguments) {
-			return;
-		}
-		
-		if(this.edgeAssignment.get(index) == null)
-		{
-			// skip assignments that don't have edgeAssignment for index-th node
-			return;
-		}
-		Integer edgeLabelIndx = this.edgeAssignment.get(index).get(entityIndex);
-		if(edgeLabelIndx == null)
-		{
-			return;
-		}
-		String edgeLabel = (String) this.edgeTargetAlphabet.lookupObject(edgeLabelIndx);
-		String genericEdgeLabel = getGenericArgumentLabel(edgeLabel);
-		// if the argument role is NON, then do not produce any feature for it
-		if(controller.skipNonArgument && edgeLabel.equals(SentenceAssignment.Default_Argument_Label))
-		{
-			return; 
-		}
-		
-		String nodeLabel = getLabelAtToken(index);
-		List<Map<Integer, List<Map<String, Map<Integer, SignalInstance>>>>> edgeSignals = (List<Map<Integer, List<Map<String, Map<Integer, SignalInstance>>>>>) problem.get(InstanceAnnotations.EdgeTextSignals);
-		Integer nodeNum = problem.types.triggerTypes.get(nodeLabel);
-		Integer edgeNum = problem.types.argumentRoles.get(nodeLabel).get(edgeLabel);
-		Map<Integer, SignalInstance> signals = edgeSignals.get(index).get(nodeNum).get(entityIndex).get(edgeNum);
-		//Map<String, Map<String, Map<String, SignalInstance>>> allEntitySignals = edgeSignals.get(index).get(entityIndex);
-		//AceMention mention = problem.eventArgCandidates.get(entityIndex);
-		
-		//int nodeLabelIndex = this.nodeAssignment.get(index);
-		//String nodeLabel = (String) this.nodeTargetAlphabet.lookupObject(nodeLabelIndex);
-		//FeatureVector fv = this.getFeatureVectorSequence().get(index);
-//		if(allEntitySignals == null)
-//		{
-//			allEntitySignals = EdgeSignalGenerator.get_edge_text_signals(problem, index, mention, perceptron);
-//			edgeSignals.get(index).set(entityIndex, allEntitySignals);
-//		}
-		
-		if (genericEdgeLabel == Generic_Existing_Argument_Label) {
-			//Map<String, SignalInstance> signalsOfEntity = allEntitySignals.get(nodeLabel).get(edgeLabel);
-			for (SignalInstance signal : signals.values()) {
-				BigDecimal featureValue = signal.positive ? FEATURE_POSITIVE_VAL : FEATURE_NEGATIVE_VAL;
-				String featureStr = "EdgeLocalFeature:\t" + signal.getName();// + "\t" + genericEdgeLabel;
-				
-				// TODO this line should DEFINITELY be uncommented when I incorporate edges back to the story
-				// of course, a policy regarding them should be decided and implemented
-				//makeFeature(featureStr, fv, featureValue, index, signal, addIfNotPresent, useIfNotPresent);
+		try {
+			if (!controller.useArguments) {
+				return;
+			}
+			
+			if(this.edgeAssignment.get(index) == null)
+			{
+				// skip assignments that don't have edgeAssignment for index-th node
+				return;
+			}
+			Integer edgeLabelIndx = this.edgeAssignment.get(index).get(entityIndex);
+			if(edgeLabelIndx == null)
+			{
+				return;
+			}
+			String edgeLabel = (String) this.edgeTargetAlphabet.lookupObject(edgeLabelIndx);
+			String genericEdgeLabel = getGenericArgumentLabel(edgeLabel);
+			// if the argument role is NON, then do not produce any feature for it
+			if(controller.skipNonArgument && edgeLabel.equals(SentenceAssignment.Default_Argument_Label))
+			{
+				return; 
+			}
+			
+			String nodeLabel = getLabelAtToken(index);
+			List<Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>>> edgeSignals   = (List<Map<String,  List<Map<String, Map<ScorerData, SignalInstance>>>>>) problem.get(InstanceAnnotations.EdgeTextSignals);
+	
+			//Integer nodeNum = problem.types.triggerTypes.get(nodeLabel);
+			//Integer edgeNum = problem.types.argumentRoles.get(nodeLabel).get(edgeLabel);
+			//Map<ScorerData, SignalInstance> signals = edgeSignals.get(index).get(nodeLabel).get(entityIndex).get(edgeLabel);
+			Map<String, Map<ScorerData, SignalInstance>> signalsForEntity = edgeSignals.get(index).get(nodeLabel).get(entityIndex);
+						
+			if (this.controller.oMethod.startsWith("G")) {
+				if (genericEdgeLabel == Generic_Existing_Argument_Label) {
+					Map<ScorerData, SignalInstance> signalsForRole = signalsForEntity.get(edgeLabel);
+					
+					for (SignalInstance signal : signalsForRole.values()) {
+						List<SignalInstance> signals = Arrays.asList(new SignalInstance[] {signal});
+						makeEdgeLocalFeatureInner(signals, signal.positive, signal.getName(), genericEdgeLabel, index, edgeLabel, addIfNotPresent, useIfNotPresent);
+					}
+				}
+				else { //genericEdgeLabel == Default_Argument_Label
+					if (this.controller.oMethod.contains("a")) { //duplicate by role!
+						Map<ScorerData, SignalInstance> signalsForRole = signalsForEntity.get(problem.associatedRole);
+						
+						for (SignalInstance signal : signalsForRole.values()) {
+							List<SignalInstance> signals = Arrays.asList(new SignalInstance[] {signal});
+							makeEdgeLocalFeatureInner(signals, signal.positive, signal.getName(), genericEdgeLabel, index, edgeLabel, addIfNotPresent, useIfNotPresent);
+						}
+					}
+					else if (this.controller.oMethod.contains("b")) { //don't duplicate by role!
+						for (ScorerData data : signalMechanismsContainer.argumentScorers) {
+							List<SignalInstance> allSignalsAllRolesSameScorer = Lists.newArrayListWithCapacity(signalsForEntity.keySet().size());
+							for (String role : signalsForEntity.keySet()) {
+								Map<ScorerData, SignalInstance> signalsOfRole = signalsForEntity.get(role);
+								SignalInstance signalOfRoleAndScorer = signalsOfRole.get(data);
+								allSignalsAllRolesSameScorer.add(signalOfRoleAndScorer);
+							}
+							// "or" method - the value is true if ANY of the signals' value is true
+							boolean boolValue = false;
+							for (SignalInstance signal : allSignalsAllRolesSameScorer) {
+								if (signal.positive) {
+									boolValue = true;
+									break;
+								}
+							}
+							String signalName = allSignalsAllRolesSameScorer.iterator().next().getName();
+							makeEdgeLocalFeatureInner(allSignalsAllRolesSameScorer, boolValue, signalName, genericEdgeLabel, index, edgeLabel, addIfNotPresent, useIfNotPresent);
+						}
+					}
+					else {
+						throw new IllegalStateException("Method G must explicitly state a or b for role duplicating, got: " + this.controller.oMethod);
+					}
+				}
+			}
+			else {
+				// Yeah, I don't really care about other methods right now :)
+				throw new RuntimeException("Currently not supporting non-G methods");				
 			}
 		}
-		else {
-//			Map<String, Map<String, SignalInstance>> signalsOfNodeLabel = allEntitySignals.get(nodeLabel);
-//			for (Object signalNameObj : perceptron.argumentSignalNames) {
-//				String signalName = (String) signalNameObj;
-//				//BigDecimal numFalse = BigDecimal.ZERO;
-//				BigDecimal featureValue = FEATURE_POSITIVE_VAL;
-//				for (Map<String, SignalInstance> signalsOfLabel : signalsOfNodeLabel.values()) {
-//					SignalInstance signal = signalsOfLabel.get(signalName);
-//					if (signal.positive) {
-//						featureValue = FEATURE_NEGATIVE_VAL;
-//						break;
-//					}
-////					if (!signal.positive) {
-////						numFalse = numFalse.add(BigDecimal.ONE); //numFalse += 1.0;
-////					}
-//				}
-//				
-//				//BigDecimal numRolesiInSpec = new BigDecimal(signalsOfNodeLabel.size());
-//				//BigDecimal falseRatio = numFalse.divide(numRolesiInSpec);// divide by number of roles in current spec
-//				
-//				String featureStr = "EdgeLocalFeature:\t" + signalName;// + "\t" + genericEdgeLabel;
-//
-//				
-//				// TODO this line should DEFINITELY be uncommented when I incorporate edges back to the story
-//				// of course, a policy regarding them should be decided and implemented
-//				//makeFeature(featureStr, fv, featureValue, index, null, addIfNotPresent, useIfNotPresent);
-//
-//			}
+		catch (Exception e) {
+			throw new RuntimeException(String.format("Exception when building edge features, index=%s, entityIndex=%s, SentenceInstance=%s", index, entityIndex, problem), e);
 		}
+	}
+	
+	private void makeEdgeLocalFeatureInner(List<SignalInstance> signals, boolean signalValue, String signalName, String genericEdgeLabel, int index, String edgeLabel, boolean addIfNotPresent, boolean useIfNotPresent) {
+		BigDecimal featureValuePositive = signalValue ? FEATURE_POSITIVE_VAL : FEATURE_NEGATIVE_VAL;
+		
+		String signalFullStr = "EdgeLocalFeature:\t" + signalName;
+		String featureStrPositive = signalFullStr + "\t" + "P+\t" + CURRENT_LABEL_MARKER + genericEdgeLabel;
+		
+		makeFeature(featureStrPositive, this.getFV(index), featureValuePositive, index, signals, signalFullStr, edgeLabel, "P+", addIfNotPresent, useIfNotPresent);
+		
+		if (this.controller.oMethod.contains("P+")) {
+			// do nothing, we did P+ before and nothing to do further
+		}
+		else if (this.controller.oMethod.contains("P-")) {
+			BigDecimal featureValueNegative = signalValue ? FEATURE_NEGATIVE_VAL : FEATURE_POSITIVE_VAL;
+			String featureStrNegative = signalFullStr + "\t" + "P-\t" + CURRENT_LABEL_MARKER + genericEdgeLabel;
+			makeFeature(featureStrNegative, this.getFV(index), featureValueNegative, index, signals, signalFullStr, edgeLabel, "P-", addIfNotPresent, useIfNotPresent);
+		}
+		else {
+			throw new IllegalStateException("Method G must explicitly state P+ or P-, got: " + this.controller.oMethod);
+		}
+
 	}
 	
 	/**
@@ -800,7 +833,8 @@ public class SentenceAssignment
 	
 				}
 				else {
-					// Yeah, I don't really care about other methdos right now :)
+					// Yeah, I don't really care about other methods right now :)
+					throw new RuntimeException("Currently not supporting non-G methods");
 					
 //					if (genericLabel == Generic_Existing_Trigger_Label) {
 //						Integer specNum = problem.types.triggerTypes.get(label);
@@ -882,7 +916,7 @@ public class SentenceAssignment
 			}
 		}
 		catch (Exception e) {
-			throw new RuntimeException(String.format("Exception when building features, i=%s, SentenceInstance=%s", i, problem), e);
+			throw new RuntimeException(String.format("Exception when building node features, i=%s, SentenceInstance=%s", i, problem), e);
 		}
 	}
 	
@@ -1032,18 +1066,18 @@ public class SentenceAssignment
 				return false;
 			}
 			
-			//// TODO Ofer 13.5 - uncomment this when re-introducing args!
-//			if(assn.edgeAssignment.get(i) != null && !assn.edgeAssignment.get(i).equals(this.edgeAssignment.get(i)))
-//			{
-//				return false;
-//			}
-//			// Qi: added April 11th, 2013
-//			if(assn.edgeAssignment.get(i) == null && this.edgeAssignment.get(i) != null)
-//			{
-//				System.err.println("SentenceAssignment:" + 721);
-//				return false;
-//			}
-			//////
+			if (controller.useArguments) {
+				if(assn.edgeAssignment.get(i) != null && !assn.edgeAssignment.get(i).equals(this.edgeAssignment.get(i)))
+				{
+					return false;
+				}
+				// Qi: added April 11th, 2013
+				if(assn.edgeAssignment.get(i) == null && this.edgeAssignment.get(i) != null)
+				{
+					System.err.println("SentenceAssignment:" + 721);
+					return false;
+				}
+			}
 		}
 		return true;
 	}
@@ -1072,12 +1106,12 @@ public class SentenceAssignment
 				return false;
 			}
 			
-			//// TODO Ofer 13.5 - uncomment this when re-introducing args!
-//			if(assn.edgeAssignment.get(i) != null && !assn.edgeAssignment.get(i).equals(this.edgeAssignment.get(i)))
-//			{
-//				return false;
-//			}
-			/////
+			if (controller.useArguments) {
+				if(assn.edgeAssignment.get(i) != null && !assn.edgeAssignment.get(i).equals(this.edgeAssignment.get(i)))
+				{
+					return false;
+				}
+			}
 		}
 		return true;
 	}
@@ -1096,19 +1130,18 @@ public class SentenceAssignment
 				return false;
 			}
 			
-			//// TODO Ofer 12.5 - uncomment this when re-introducing args!
-//			if(assn.edgeAssignment.get(i) != null && !assn.edgeAssignment.get(i).equals(this.edgeAssignment.get(i)))
-//			{
-//				return false;
-//			}
-//			// Qi: added April 11th, 2013
-//			if(assn.edgeAssignment.get(i) == null && this.edgeAssignment.get(i) != null)
-//			{
-//				System.err.println("SentenceAssignment:" + 779);
-//				return false;
-//			}
-			/////
-			
+			if (controller.useArguments) {
+				if(assn.edgeAssignment.get(i) != null && !assn.edgeAssignment.get(i).equals(this.edgeAssignment.get(i)))
+				{
+					return false;
+				}
+				// Qi: added April 11th, 2013
+				if(assn.edgeAssignment.get(i) == null && this.edgeAssignment.get(i) != null)
+				{
+					System.err.println("SentenceAssignment:" + 779);
+					return false;
+				}
+			}			
 		}
 		if(!assn.nodeAssignment.get(step).equals(this.nodeAssignment.get(step)))
 		{
@@ -1120,37 +1153,36 @@ public class SentenceAssignment
 			return true;
 		}
 		
-		//// TODO Ofer 12.5 - uncomment this when re-introducing args!
-//		else
-//		{
-//			Map<Integer, Integer> map_assn = assn.edgeAssignment.get(step);
-//			Map<Integer, Integer> map = this.edgeAssignment.get(step);
-//			if(map_assn == null && map == null)
-//			{
-//				return true;
-//			}
-//			for(int k=0; k<=argNum; k++)
-//			{
-//				Integer label_assn = null;
-//				Integer label = null;
-//				if(map_assn != null)
-//				{
-//					label_assn = map_assn.get(k);
-//				}
-//				if(map != null)
-//				{
-//					label = map.get(k);
-//				}
-//				if(label == null && label_assn != null || label != null && label_assn == null)
-//				{
-//					return false;
-//				}
-//				if(label != null && label_assn != null && (!label.equals(label_assn)))
-//				{
-//					return false;
-//				}
-//			}
-//		}
+		else if (controller.useArguments)
+		{
+			Map<Integer, Integer> map_assn = assn.edgeAssignment.get(step);
+			Map<Integer, Integer> map = this.edgeAssignment.get(step);
+			if(map_assn == null && map == null)
+			{
+				return true;
+			}
+			for(int k=0; k<=argNum; k++)
+			{
+				Integer label_assn = null;
+				Integer label = null;
+				if(map_assn != null)
+				{
+					label_assn = map_assn.get(k);
+				}
+				if(map != null)
+				{
+					label = map.get(k);
+				}
+				if(label == null && label_assn != null || label != null && label_assn == null)
+				{
+					return false;
+				}
+				if(label != null && label_assn != null && (!label.equals(label_assn)))
+				{
+					return false;
+				}
+			}
+		}
 		/////////
 		
 		return true;

@@ -58,6 +58,10 @@ public class Logs {
 	public String logSuffix; 
 	public File outFolder;
 	
+	static {
+		System.err.println("??? Logs: Now that I am returning args, I'm still not doing that for logging. I'll only do it on a need-to basis.");
+	}
+	
 	public Logs(File outFolder, Controller controller, String logSuffix) {
 		this.controller = controller;
 		this.logSuffix = logSuffix;

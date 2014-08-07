@@ -91,7 +91,7 @@ public abstract class SignalMechanism {
 				////
 				PredicateScorer<?> scorer = (PredicateScorer<?>) data.scorer;
 				scorer.prepareCalc(spec, textTriggerToken, textTriggerTokenMap, data);
-				BigDecimal score = data.aggregator.aggregate(scorer);
+				BigDecimal score = data.elementAggregator.aggregate(scorer);
 				
 				///// DEBUG
 //				if (textTriggerToken.getCoveredText().equals("attack") && !SignalInstance.isPositive.apply(score)) {
@@ -142,48 +142,6 @@ public abstract class SignalMechanism {
 		Map<Class<?>, Object> textArgTokenMap = textSentenceMaps.get(argHeadFirstTokenIndex);
 		
 		return scoreArgumentFirstHeadToken(existingSignals, spec, argument, textSentence, textTriggerToken, textTriggerTokenMap, textArgToken, textArgTokenMap);
-	}
-	
-	// not doing right now the arg equivalent of getTriggerDetails
-	
-	
-//	public LinkedHashMap<ScorerData, BigDecimal> scoreTriggerToken(Map<ScorerData, SignalInstance> existingSignalNames, JCas spec, SentenceInstance textSentence, Token textTriggerToken, Map<Class<?>, Object> textTriggerTokenMap, boolean debug) throws SignalMechanismException {
-//		LinkedHashMap<ScorerData, BigDecimal> ret = new LinkedHashMap<ScorerData, BigDecimal>();
-//
-//		for (ScorerData data : scorers.get(SignalType.TRIGGER)) {
-//			if (existingSignalNames == null || !existingSignalNames.containsKey(data)) {
-//				data.scorer.init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken);
-//				ret.put(data, data.aggregator.aggregate(data.scorer));
-//			}
-//		}
-//		return ret;
-//	}
-	
-//	public LinkedHashMap<ScorerData, Multimap<String, String>> getTriggerTokenDetails(JCas spec, SentenceInstance textSentence, Token textTriggerToken, Map<Class<?>, Object> textTriggerTokenMap) throws SignalMechanismException {
-//		LinkedHashMap<ScorerData, Multimap<String, String>> ret = new LinkedHashMap<ScorerData, Multimap<String, String>>();
-//
-//		for (ScorerData data : scorers.get(SignalType.TRIGGER)) {
-//			data.scorer.debug = true;
-//			data.scorer.init(spec, SpecAnnotator.TOKEN_VIEW, null, PredicateSeed.class, textTriggerToken);
-//			Iterators.frequency(data.scorer, null); // consume all of it - it will build the history. THIS SHOULD ACTUALLY BE AN AGGREGATOR.
-//			ret.put(data, ArrayListMultimap.create(data.scorer.history)); //store a copy, we are re-using history
-//			data.scorer.debug = false;
-//		}
-//		return ret;
-//	}
-	
-	public LinkedHashMap<ScorerData, BigDecimal> scoreArgumentFirstHeadToken(Map<ScorerData, SignalInstance> existingSignalNames, JCas spec, Argument argument, SentenceInstance textSentence, Token textTriggerToken, Map<Class<?>, Object> textTriggerTokenMap, Token textArgToken, Map<Class<?>, Object> textArgTokenMap) throws SignalMechanismException {
-		LinkedHashMap<ScorerData, BigDecimal> ret = new LinkedHashMap<ScorerData, BigDecimal>();
-
-		for (ScorerData data : scorers.get(SignalType.ARGUMENT)) {
-			if (existingSignalNames == null || !existingSignalNames.containsKey(data)) {
-				throw new RuntimeException("you should fix this call to init!!! add the maps thingy!");
-				//data.scorer.init(spec, null, argument, ArgumentExample.class, textArgToken);
-				//ret.put(data, data.aggregator.aggregate(data.scorer));
-			}
-		}
-		return ret;
-		
 	}
 	
 	public String toString() {

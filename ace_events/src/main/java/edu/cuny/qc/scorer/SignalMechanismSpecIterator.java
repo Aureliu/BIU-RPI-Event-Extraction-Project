@@ -3,17 +3,10 @@ package edu.cuny.qc.scorer;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Iterator;
-import java.util.Map;
 
-import org.apache.uima.cas.CASException;
-import org.apache.uima.cas.text.AnnotationFS;
-import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.tcas.Annotation;
-import org.uimafit.util.JCasUtil;
 
 import com.google.common.collect.Multimap;
-
-import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
 
 import edu.cuny.qc.perceptron.types.SignalInstance;
 

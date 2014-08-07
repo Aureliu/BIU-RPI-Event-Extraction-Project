@@ -39,6 +39,7 @@ public class BeamSearch
 		System.err.println("??? BeamSearch: Calcing target's features (node, edge, global), multiple times here, even though they are needed only when there's a violation, Qi approves. Consider changing.");
 		System.err.println("??? BeamSearch: In ScoreComparator, can try to use the compareTo() of both BigDecimals (I temporarily converted back to working on doubles, due to consistency problems with master).");
 		System.err.println("??? BeamSearch: Completely removing the part handling args - working only on triggers. Mostly to avoid arg-related violations, but also reduce run-time (since it's possible...).");
+		System.err.println("??? BeamSearch: Now that I am returning args, I'm still not doing that for logging. I'll only do it on a need-to basis.");
 	}
 	
 	protected FeatureVector getWeights()
@@ -209,7 +210,7 @@ public class BeamSearch
 	public SentenceAssignment beamSearch(SentenceInstance problem, int beamSize, boolean isLearning, PrintStream b)
 	{
 		List<SentenceAssignment> beam = new ArrayList<SentenceAssignment>();
-		SentenceAssignment initial = new SentenceAssignment(/*problem.types,*/problem.eventArgCandidates, null, problem.nodeTargetAlphabet, problem.edgeTargetAlphabet, problem.featureAlphabet, problem.controller);
+		SentenceAssignment initial = new SentenceAssignment(/*problem.types,*/model.signalMechanismsContainer, problem.eventArgCandidates, null, problem.nodeTargetAlphabet, problem.edgeTargetAlphabet, problem.featureAlphabet, problem.controller);
 		beam.add(initial);
 		
 		// clear the feature vector of ground-truth assignment
@@ -292,98 +293,101 @@ public class BeamSearch
 				}
 			}
 			
-			boolean DO_ARGS = false;
-			if (DO_ARGS) { // hack - don't do args! and mostly - don't look for violation on args!
+			//boolean DO_ARGS = false;
+			//if (DO_ARGS) { // hack - don't do args! and mostly - don't look for violation on args!
+			
+			// If not necessary - don't do args! and mostly - don't look for violation on args!
+			if (problem.controller.useArguments) {
 
-			// expand the arguments for assignments in beam
-			for(int k=0; k<problem.eventArgCandidates.size(); k++)
-			{
-				successor = new ArrayList<SentenceAssignment>();
-				for(SentenceAssignment assn : beam)
+				// expand the arguments for assignments in beam
+				for(int k=0; k<problem.eventArgCandidates.size(); k++)
 				{
-					if(SentenceAssignment.isArgumentable(assn.getCurrentNodeLabel()))
+					successor = new ArrayList<SentenceAssignment>();
+					for(SentenceAssignment assn : beam)
 					{
-						List<SentenceAssignment> partial_successor = expandArg(problem, assn, i, k, isLearning);
-						if(partial_successor != null)
+						if(SentenceAssignment.isArgumentable(assn.getCurrentNodeLabel()))
 						{
-							successor.addAll(partial_successor);
+							List<SentenceAssignment> partial_successor = expandArg(problem, assn, i, k, isLearning);
+							if(partial_successor != null)
+							{
+								successor.addAll(partial_successor);
+							}
+							else
+							{
+								// if there is no sucessor on this entity, then add the assn to the successor
+								successor.add(assn);
+							}
 						}
 						else
 						{
-							// if there is no sucessor on this entity, then add the assn to the successor
 							successor.add(assn);
 						}
 					}
-					else
-					{
-						successor.add(assn);
-					}
-				}
-				problem.target.makeEdgeLocalFeature(problem, i, false, k, model.controller.addNeverSeenFeatures);
-				if(problem.controller.useGlobalFeature)
-				{
-					// in each step of argument expansion, feed global feature if exists
-					problem.target.makeGlobalFeaturesProgress(problem, i, k, false, model.controller.addNeverSeenFeatures);
-					if(k == problem.eventArgCandidates.size() - 1)
-					{
-						problem.target.makeGlobalFeaturesComplete(problem, i, false, model.controller.addNeverSeenFeatures);
-					}
-				}
-				
-				for(SentenceAssignment assn : successor)
-				{
-					// fill in local edge feature for the new argument
-					assn.makeEdgeLocalFeature(problem, i, false, k, model.controller.addNeverSeenFeatures);
+					problem.target.makeEdgeLocalFeature(problem, i, false, k, model.controller.addNeverSeenFeatures);
 					if(problem.controller.useGlobalFeature)
 					{
-						assn.makeGlobalFeaturesProgress(problem, i, k, false, model.controller.addNeverSeenFeatures);
+						// in each step of argument expansion, feed global feature if exists
+						problem.target.makeGlobalFeaturesProgress(problem, i, k, false, model.controller.addNeverSeenFeatures);
 						if(k == problem.eventArgCandidates.size() - 1)
 						{
-							assn.makeGlobalFeaturesComplete(problem, i, false, model.controller.addNeverSeenFeatures);
+							problem.target.makeGlobalFeaturesComplete(problem, i, false, model.controller.addNeverSeenFeatures);
 						}
 					}
-					// evaluate the score of the assignment
-					evaluate(assn, getWeights());
-				}
-				
-				//DEBUG
-				if (PRINT_BEAM_DETAILED) {
-					System.out.printf("*** i=%s, k=%s, pre-sort:\n", i, k);
-					for (int q=0; q<successor.size(); q++) {
-						SentenceAssignment a = successor.get(q);
-						System.out.printf("  %d. score=%s : %s\n", q, a.getScore(), a);
-					}
-				}
-				//////////
-				
-				// rank according to score
-				Collections.sort(successor, new ScoreComparator());
-
-				//DEBUG
-				if (PRINT_BEAM_DETAILED) {
-					System.out.printf("******** i=%s, k=%s, post-sort:\n", i, k);
-					for (int q=0; q<successor.size(); q++) {
-						SentenceAssignment a = successor.get(q);
-						System.out.printf("  %d. score=%s : %s\n", q, a.getScore(), a);
-					}
-				}
-				//////////
-
-				beam = successor.subList(0, Math.min(successor.size(), beamSize));
-				// System.out.println("sucessor size 2: " + successor.size());
-				if(isLearning)
-				{	
-					boolean violation = problem.violateGoldStandard(beam, k); // only consider the trigger labeling and k-th argument labeling
-					if(violation)
+					
+					for(SentenceAssignment assn : successor)
 					{
-						beam.get(0).setViolate(true);
-						printBeam(b, problem, beam, "arg", true);
-						return beam.get(0);
+						// fill in local edge feature for the new argument
+						assn.makeEdgeLocalFeature(problem, i, false, k, model.controller.addNeverSeenFeatures);
+						if(problem.controller.useGlobalFeature)
+						{
+							assn.makeGlobalFeaturesProgress(problem, i, k, false, model.controller.addNeverSeenFeatures);
+							if(k == problem.eventArgCandidates.size() - 1)
+							{
+								assn.makeGlobalFeaturesComplete(problem, i, false, model.controller.addNeverSeenFeatures);
+							}
+						}
+						// evaluate the score of the assignment
+						evaluate(assn, getWeights());
 					}
-				}
-			} // end of expanding args
+					
+					//DEBUG
+					if (PRINT_BEAM_DETAILED) {
+						System.out.printf("*** i=%s, k=%s, pre-sort:\n", i, k);
+						for (int q=0; q<successor.size(); q++) {
+							SentenceAssignment a = successor.get(q);
+							System.out.printf("  %d. score=%s : %s\n", q, a.getScore(), a);
+						}
+					}
+					//////////
+					
+					// rank according to score
+					Collections.sort(successor, new ScoreComparator());
+	
+					//DEBUG
+					if (PRINT_BEAM_DETAILED) {
+						System.out.printf("******** i=%s, k=%s, post-sort:\n", i, k);
+						for (int q=0; q<successor.size(); q++) {
+							SentenceAssignment a = successor.get(q);
+							System.out.printf("  %d. score=%s : %s\n", q, a.getScore(), a);
+						}
+					}
+					//////////
+	
+					beam = successor.subList(0, Math.min(successor.size(), beamSize));
+					// System.out.println("sucessor size 2: " + successor.size());
+					if(isLearning)
+					{	
+						boolean violation = problem.violateGoldStandard(beam, k); // only consider the trigger labeling and k-th argument labeling
+						if(violation)
+						{
+							beam.get(0).setViolate(true);
+							printBeam(b, problem, beam, "arg", true);
+							return beam.get(0);
+						}
+					}
+				} // end of expanding args
 			
-			} // end of fake "if" to not do args
+			} // end of if (problem.controller.useArgument)
 		}
 		
 		// check if final result is correct

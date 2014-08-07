@@ -40,7 +40,7 @@ public class BundledSignals implements Serializable {
 	public Map<Integer, List<Map<String, Map<ScorerData, SignalInstance>>>> triggerSignals;
 	
 	// Sentence\TriggerToken\Spec\ArgToken\Role\Signals
-	public Map<Integer, List<Map<Integer, List<Map<Integer, Map<ScorerData, SignalInstance>>>>>> argSignals;
+	public Map<Integer, List<Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>>>> argSignals;
 
 	public BundledSignals(
 			//TypesContainer types,
@@ -55,7 +55,7 @@ public class BundledSignals implements Serializable {
 //		this.argumentScorers = perceptron.argumentScorers;
 		
 		this.triggerSignals = new FinalKeysMap<Integer, List<Map<String, Map<ScorerData, SignalInstance>>>>();
-		this.argSignals = new FinalKeysMap<Integer, List<Map<Integer, List<Map<Integer, Map<ScorerData, SignalInstance>>>>>>();
+		this.argSignals = new FinalKeysMap<Integer, List<Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>>>>();
 	}
 
 	public void absorb(BundledSignals other) {
@@ -84,6 +84,55 @@ public class BundledSignals implements Serializable {
 								Entry<ScorerData, SignalInstance> entry4 = iter4.next();
 								if (!this3.containsKey(entry4.getKey())) {
 									this3.put(entry4.getKey(), entry4.getValue());
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		for (Iterator<Entry<Integer, List<Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>>>>> iter1b = other.argSignals.entrySet().iterator(); iter1b.hasNext();) {
+			Entry<Integer, List<Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>>>> entry1b = iter1b.next();
+			if (!this.argSignals.containsKey(entry1b.getKey())) {
+				this.argSignals.put(entry1b.getKey(), entry1b.getValue());
+			}
+			else {
+				List<Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>>> this1b = this.argSignals.get(entry1b.getKey());
+				int nb=0;
+				for (Iterator<Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>>> iter2b = entry1b.getValue().iterator(); iter2b.hasNext();) {
+					Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>> elem2b = iter2b.next();
+					Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>> this2b = this1b.get(nb);
+					nb++;
+					
+					for (Iterator<Entry<String, List<Map<String, Map<ScorerData, SignalInstance>>>>> iter3b = elem2b.entrySet().iterator(); iter3b.hasNext();) {
+						Entry<String, List<Map<String, Map<ScorerData, SignalInstance>>>> entry3b = iter3b.next();
+						if (!this2b.containsKey(entry3b.getKey())) {
+							this2b.put(entry3b.getKey(), entry3b.getValue());
+						}
+						else {
+							List<Map<String, Map<ScorerData, SignalInstance>>> this3b = this2b.get(entry3b.getKey());
+							int mb=0;
+							for (Iterator<Map<String, Map<ScorerData, SignalInstance>>> iter4b = entry3b.getValue().iterator(); iter4b.hasNext();) {
+								Map<String, Map<ScorerData, SignalInstance>> elem4b = iter4b.next();
+								Map<String, Map<ScorerData, SignalInstance>> this4b = this3b.get(mb);
+								mb++;
+								
+								for (Iterator<Entry<String, Map<ScorerData, SignalInstance>>> iter5b = elem4b.entrySet().iterator(); iter5b.hasNext();) {
+									Entry<String, Map<ScorerData, SignalInstance>> entry5b = iter5b.next();
+									if (!this4b.containsKey(entry5b.getKey())) {
+										this4b.put(entry5b.getKey(), entry5b.getValue());
+									}
+									else {
+										Map<ScorerData, SignalInstance> this5b = this4b.get(entry5b.getKey());
+										
+										for (Iterator<Entry<ScorerData, SignalInstance>> iter6b = entry5b.getValue().entrySet().iterator(); iter6b.hasNext();) {
+											Entry<ScorerData, SignalInstance> entry6b = iter6b.next();
+											if (!this5b.containsKey(entry6b.getKey())) {
+												this5b.put(entry6b.getKey(), entry6b.getValue());
+											}
+										}
+									}
 								}
 							}
 						}

@@ -19,6 +19,7 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.cas.FSArray;
 import org.apache.uima.jcas.tcas.Annotation;
 import org.apache.uima.resource.ResourceInitializationException;
+import org.apache.uima.util.CasCopier;
 import org.uimafit.component.JCasAnnotator_ImplBase;
 import org.uimafit.util.FSCollectionFactory;
 import org.uimafit.util.JCasUtil;
@@ -54,6 +55,7 @@ import eu.excitementproject.eop.common.utilities.DockedToken;
 import eu.excitementproject.eop.common.utilities.DockedTokenFinder;
 import eu.excitementproject.eop.common.utilities.DockedTokenFinderException;
 import eu.excitementproject.eop.common.utilities.uima.UimaUtils;
+import eu.excitementproject.eop.common.utilities.uima.UimaUtilsException;
 
 public class SpecAnnotator extends JCasAnnotator_ImplBase {
 	//private Perceptron perceptron = null;
@@ -103,6 +105,28 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 	
 	public static String getSpecLabel(JCas spec) throws CASException {
 		return getValue(spec, TOKEN_VIEW, PredicateName.class);
+	}
+
+	/**
+	 * It's enough to just remove Argument annotations (no need to remove all other covered annotations like ArgRole etc),
+	 * since for iterating a spec's argument list, always the list of Argument annotations is iterated.
+	 * This happens in TypesContainer() and in SentenceInstance.getPersistentSignals().
+	 */
+	public static Map<String, JCas> getSingleRoleSpecs(JCas spec) throws CASException, UimaUtilsException {
+		Map<String, JCas> result = Maps.newLinkedHashMap();
+		int numArgs = getSpecArguments(spec).size();
+		for (int num=0; num<numArgs; num++) {
+			JCas singleRoleSpec = UimaUtils.newJcas();
+			CasCopier.copyCas(spec.getCas(), singleRoleSpec.getCas(), true);
+			List<Argument> copyOfArguments = Lists.newArrayList(getSpecArguments(singleRoleSpec));
+			Argument remainingArg = copyOfArguments.remove(num); //in this iteration, only the num'th argument will remain
+			String role = remainingArg.getRole().getCoveredText();
+			for (Argument argToRemove : copyOfArguments) {
+				argToRemove.removeFromIndexes();
+			}
+			result.put(role, singleRoleSpec);
+		}
+		return result;
 	}
 
 //	public static List<String> getSpecRoles(JCas spec) throws CASException {

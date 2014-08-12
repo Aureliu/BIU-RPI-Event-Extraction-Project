@@ -11,18 +11,21 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
+import java.util.concurrent.ExecutionException;
 
 import org.BIU.NLP.corpora.ACE.training_set.jaxb.LdcScope;
 import org.apache.commons.collections15.BidiMap;
 import org.apache.commons.collections15.MultiMap;
 import org.apache.commons.collections15.bidimap.DualHashBidiMap;
 import org.apache.commons.collections15.multimap.MultiHashMap;
+import org.apache.commons.lang3.text.WordUtils;
 import org.apache.log4j.Appender;
 import org.apache.log4j.FileAppender;
 import org.apache.log4j.Logger;
@@ -38,6 +41,7 @@ import org.xml.sax.SAXException;
 
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Lists;
+import com.google.common.collect.Sets;
 
 import ac.biu.nlp.nlp.ace_uima.AceAbnormalMessage;
 import ac.biu.nlp.nlp.ace_uima.AceException;
@@ -66,12 +70,17 @@ import ac.biu.nlp.nlp.ace_uima.utils.AnotherBasicNodeUtils;
 import ac.biu.nlp.nlp.ace_uima.utils.FinalHashMap;
 import ac.biu.nlp.nlp.ace_uima.utils.IgnoreNullFinalHashMap;
 import ac.biu.nlp.nlp.ace_uima.utils.UimaUtils;
+import ac.biu.nlp.nlp.ie.onthefly.input.AnnotationUtils;
 import de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS;
 import de.tudarmstadt.ukp.dkpro.core.api.metadata.type.DocumentMetaData;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
 import edu.cuny.qc.ace.acetypes.AceArgumentType;
 import edu.cuny.qc.ace.acetypes.AceEntityMention;
+import edu.cuny.qc.scorer.mechanism.WordNetSignalMechanism;
+import edu.cuny.qc.util.PosMap;
+import eu.excitementproject.eop.common.component.lexicalknowledge.LexicalResourceException;
+import eu.excitementproject.eop.common.component.lexicalknowledge.LexicalRule;
 import eu.excitementproject.eop.common.datastructures.OneToManyBidiMultiHashMap;
 import eu.excitementproject.eop.common.datastructures.SimpleValueSetMap;
 import eu.excitementproject.eop.common.datastructures.ValueSetMap;
@@ -82,6 +91,8 @@ import eu.excitementproject.eop.common.representation.parse.tree.AbstractNodeUti
 import eu.excitementproject.eop.common.representation.parse.tree.TreeAndParentMap;
 import eu.excitementproject.eop.common.representation.parse.tree.TreeAndParentMap.TreeAndParentMapException;
 import eu.excitementproject.eop.common.representation.parse.tree.dependency.basic.BasicNode;
+import eu.excitementproject.eop.common.representation.partofspeech.CanonicalPosTag;
+import eu.excitementproject.eop.common.representation.partofspeech.PartOfSpeech;
 import eu.excitementproject.eop.common.representation.partofspeech.UnsupportedPosTagStringException;
 import eu.excitementproject.eop.common.representation.pasta.ClausalArgument;
 import eu.excitementproject.eop.common.representation.pasta.PredicateArgumentStructure;
@@ -91,6 +102,8 @@ import eu.excitementproject.eop.common.utilities.StringUtil;
 import eu.excitementproject.eop.common.utilities.file.FileFilters;
 import eu.excitementproject.eop.common.utilities.file.FileUtils;
 import eu.excitementproject.eop.common.utilities.log4j.LoggerUtilities;
+import eu.excitementproject.eop.core.component.lexicalknowledge.wordnet.WordnetLexicalResource;
+import eu.excitementproject.eop.core.component.lexicalknowledge.wordnet.WordnetRuleInfo;
 import eu.excitementproject.eop.lap.LAPException;
 import eu.excitementproject.eop.lap.biu.en.pasta.PredicateArgumentStructureBuilderFactory;
 import eu.excitementproject.eop.lap.biu.en.pasta.nomlex.Nominalization;
@@ -110,7 +123,7 @@ import eu.excitementproject.eop.lap.biu.uima.CasTreeConverterException;
  */
 public class AceAnalyzer {
 
-	protected void analyzeOneJcas(JCas jcas) throws StatsException, CASException, CasTreeConverterException, UnsupportedPosTagStringException, AceException, TreeAndParentMapException, TreeFragmentBuilderException, PredicateArgumentIdentificationException {
+	protected void analyzeOneJcas(JCas jcas) throws Exception {
 		DocumentMetaData meta = JCasUtil.selectSingle(jcas, DocumentMetaData.class);
 		String folder = meta.getCollectionId();
 		String docId = meta.getDocumentId();
@@ -364,9 +377,40 @@ public class AceAnalyzer {
 								if (!specTypeStr.equals("(null)")) {
 									docs.updateDocs(key, "ConcreteArgHead", specTypeStr, getText(concreteHead));					
 								}
+								
+								if (concreteMention instanceof EntityMention) {
+									EntityMention concreteEntityMention = (EntityMention) concreteMention;
+									Collection<Token> headTokens = JCasUtil.selectCovered(Token.class, concreteHead);
+									String textCase = getCase(concreteHead); 
+									if (concreteEntityMention.getTYPE().equalsIgnoreCase("NAM")) { //Proper noun
+										docs.updateDocs(key, "PROPER", "", Integer.toString(headTokens.size()));
+										if (headTokens.size() > 1) { // multiple tokens
+											Token headToken = getHeadToken(concreteHead);
+											String headTokenCase = getCase(headToken);
+											addConcreteHeadStats(key, headTokens.size(), "PR,Multi", textCase, concreteHead, headTokenCase, headToken);
+										}
+										else if (headTokens.size() == 1) { // single token
+											Token singleToken = eu.excitementproject.eop.common.utilities.uima.UimaUtils.selectCoveredSingle(jcas, Token.class, concreteHead);
+											String singleTokenCase = getCase(singleToken);
+											addConcreteHeadStats(key, headTokens.size(), "PR,Single", textCase, concreteHead, singleTokenCase, singleToken);
+										}
+									}
+									else { // TYPE=NOM, Common noun
+										docs.updateDocs(key, "COMMON", "", Integer.toString(headTokens.size()));
+										if (headTokens.size() > 1) { // multiple tokens
+											docs.updateDocs(key, "CO,Multi", "", new SimpleEntry<String, String>(textCase, concreteHead.getCoveredText()));
+										}
+										else if (headTokens.size() == 1) { // single token
+											Token singleToken = eu.excitementproject.eop.common.utilities.uima.UimaUtils.selectCoveredSingle(jcas, Token.class, concreteHead);
+											String singleTokenCase = getCase(singleToken);
+											addConcreteHeadStats(key, headTokens.size(), "CO,Single", textCase, concreteHead, singleTokenCase, singleToken);
+										}
+									}
+								}
 							}
 							addDetails("ConcreteArgHead.GenPos_" + getGeneralPosString(concreteHead), getText(concreteHead) + ": " + getText(concreteExtent));
-
+							
+							
 						}
 					}
 				}
@@ -651,6 +695,85 @@ public class AceAnalyzer {
 		return new SimpleEntry<String, String>(getSpecType(argHead.getMention()), argHead.getCoveredText());
 	}
 	
+	private String toTitleCase(String str) {
+		return WordUtils.capitalizeFully(str, ' ', '.', '\t', '-');
+	}
+	private String getCase(Annotation anno) {
+		if (anno==null) {
+			return "(null)";
+		}
+		String text = anno.getCoveredText();
+		if (toTitleCase(text).equals(text)) {
+			return "Title";			
+		}
+		if (text.toUpperCase().equals(text)) {
+			return "UPPER";
+		}
+		if (text.toLowerCase().equals(text)) {
+			return "lower";
+		}
+		return "oThEr";
+	}
+	
+	private Token getHeadToken(Annotation covering) throws UnsupportedPosTagStringException, ExecutionException {
+		if (covering == null) {
+			return null;
+		}
+		Collection<Token> tokens = JCasUtil.selectCovered(Token.class, covering);
+		//int i=-1;
+		Token prev = null;
+		for (Iterator<Token> iter = tokens.iterator(); iter.hasNext(); ) {
+			//i++;
+			Token curr = iter.next();
+			String text = curr.getCoveredText();
+			PartOfSpeech pos = AnnotationUtils.tokenToPOS(curr);
+			if (pos.getCanonicalPosTag()==CanonicalPosTag.PP ||
+				PUNCTUATION.contains(text) ||
+				(ORG_SUFFIXES.contains(text) && prev!=null) ||
+				(text.length()>1 && text.charAt(text.length()-1)=='.' && ORG_SUFFIXES.contains(text.substring(0, text.length()-1)) && prev!=null) ) {
+				
+				break; 
+			}
+			prev = curr;
+		}
+		return prev;
+	}
+	
+	private boolean isInWordnet(String text) throws LexicalResourceException, ExecutionException {
+		List<LexicalRule<? extends WordnetRuleInfo>> allRules = Lists.newArrayList();
+		allRules.addAll(wordnet.getRulesForLeft(text, null));
+		return !allRules.isEmpty();
+	}
+	
+	private void addConcreteHeadStats(Map<String,String> key, int numTokens, String title, String textCase, BasicArgumentMentionHead concreteHead, String singleTokenCase, Token singleToken) throws StatsException, UnsupportedPosTagStringException, ExecutionException, LexicalResourceException {
+		docs.updateDocs(key, title, "", new SimpleEntry<String, String>(textCase, concreteHead.getCoveredText()));
+		if (isInWordnet(concreteHead.getCoveredText())) {
+			docs.updateDocs(key, title, "WN", new SimpleEntry<String, String>(textCase, concreteHead.getCoveredText()));
+		}
+		
+		String prefix = "";
+		if (numTokens > 1) {
+			if (singleToken == null) {
+				docs.updateDocs(key, title, "NullHead", concreteHead.getCoveredText());
+				return;
+			}
+			else {
+				docs.updateDocs(key, title, "Head", new SimpleEntry<String, String>(singleTokenCase, singleToken.getCoveredText()));
+				prefix = "He";
+			}
+		}
+		docs.updateDocs(key, title, prefix+"Lemma", singleToken.getLemma().getValue());
+		if (!singleToken.getCoveredText().equalsIgnoreCase(singleToken.getLemma().getValue())) {
+			docs.updateDocs(key, title, prefix+"LemChange", new SimpleEntry<String, String>(singleTokenCase, String.format("%s/%s", singleToken.getCoveredText(), singleToken.getLemma().getValue())));
+		}
+		if (isInWordnet(singleToken.getCoveredText()) && (numTokens > 1)) {
+			docs.updateDocs(key, title, prefix+"WN", new SimpleEntry<String, String>(singleTokenCase, singleToken.getCoveredText()));
+		}
+		if (isInWordnet(singleToken.getLemma().getValue())) {
+			docs.updateDocs(key, title, prefix+"WNLem", singleToken.getLemma().getValue());
+		}
+	}
+
 	private void updateDocsEnumSumField(Map<String, String> key, String fieldNameLvl1, String fieldNameLvl2, String enumValue, Integer amount) throws StatsException {
 		for (int i=0; i<amount; i++) {
 			docs.updateDocs(key, fieldNameLvl1, fieldNameLvl2, enumValue);
@@ -1054,7 +1177,7 @@ public class AceAnalyzer {
 		testFileIds = FileUtils.loadFileToString(AceAnalyzer.class.getResource("/doclists/new_filelist_ACE_test.txt").getPath());
 	}
 	
-	public void analyzeFolder(String xmiFolderPath, String entityStatsOutputPath, String roleStatsOutputFile, String typePerDocOutputFile, String detailedOutputFolderPath) throws AceException, LAPException, IOException, StatsException, InvalidXMLException, ResourceInitializationException, SAXException, CASException, CasTreeConverterException, UnsupportedPosTagStringException, TreeAndParentMapException, TreeFragmentBuilderException, PredicateArgumentIdentificationException {
+	public void analyzeFolder(String xmiFolderPath, String entityStatsOutputPath, String roleStatsOutputFile, String typePerDocOutputFile, String detailedOutputFolderPath) throws Exception {
 		
 		File detailedFolder = new File(detailedOutputFolderPath);
 		if (!detailedFolder.isDirectory()) {
@@ -1118,7 +1241,7 @@ public class AceAnalyzer {
 		}
 		
 	}
-	public static void main(String args[]) throws AnalysisEngineProcessException, ResourceInitializationException, LAPException, InstantiationException, IOException, AceException, InvalidXMLException, SAXException, StatsException, CASException, CasTreeConverterException, UnsupportedPosTagStringException, TreeAndParentMapException, TreeFragmentBuilderException, PredicateArgumentIdentificationException {
+	public static void main(String args[]) throws Exception {
 		if (args.length != 5) {
 			System.err.println("USAGE: AceAnalyzer <xmi input folder> <entity stats output file> <role stats output file> <type-per-doc output file> <detailed output folder>");
 			return;
@@ -1126,6 +1249,7 @@ public class AceAnalyzer {
 		//initLog();
 		File nomlexFile = new File("C:\\Java\\Git\\lab\\nlp-lab\\Trunk\\asher\\predargs\\src\\main\\resources\\nomlex\\nomlex-plus.txt");
 		File classRoleTableFile = new File("C:\\Java\\Git\\lab\\nlp-lab\\Trunk\\asher\\predargs\\src\\main\\resources\\nomlex\\ClassRoleTable.txt");
+		wordnet = new WordnetLexicalResource(WORDNET_DIR, WordNetSignalMechanism.ALL_RELATIONS_SMALL);
 		new AceAnalyzer(nomlexFile, classRoleTableFile).analyzeFolder(args[0], args[1], args[2], args[3], args[4]);
 	}
 	
@@ -1146,6 +1270,15 @@ public class AceAnalyzer {
 	protected static String devFileIds;
 	protected static String trainFileIds;
 	protected static String testFileIds;
+	
+	public static Set<String> ORG_SUFFIXES = Sets.newHashSet(Arrays.asList(new String[] {
+			"Inc", "Incorporated", "Corp", "Corporation", "Ltd", "Limited", "Co"
+	}));
+	public static Set<String> PUNCTUATION = Sets.newHashSet(Arrays.asList(new String[] {
+			".", ",", "!", "?", ":", "@", "#", "$", "%"
+	}));
+	public static File WORDNET_DIR = new File("C:/Java/git/breep/ace_events/src/main/resources/data/Wordnet3.0");
+	private static WordnetLexicalResource wordnet;
 	
 
 	protected static Logger logger = Logger.getLogger(AceAnalyzer.class);

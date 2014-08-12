@@ -33,7 +33,7 @@ public class ListCountsField extends ListField {
 	}
 
 	@Override
-	public <O extends Object, C extends Collection<String>, I extends Iterable<Entry<O, C>>> I getList() {
+	public <O extends Object, C extends Collection<String>, I extends Collection<Entry<O, C>>> I getList() {
 		//Set<Entry<Integer, Set<String>>> set = elements.entrySetByCount();
 		Multimap<Integer, String> countToTerms = TreeMultimap.create(); //keep multimap sorted by key, which is count
 		for(String term : elements.elementSet()) {

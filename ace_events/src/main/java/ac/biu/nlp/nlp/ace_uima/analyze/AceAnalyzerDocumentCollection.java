@@ -188,6 +188,34 @@ public class AceAnalyzerDocumentCollection extends StatsDocumentCollection {
 				put(new FieldName("ConcreteArgHead", "TokenSpecPOS"), StatsFieldType.LIST_COUNTS);
 				put(new FieldName("ConcreteArgHead", "LemmaSpecPOS"), StatsFieldType.LIST_COUNTS);
 				put(new FieldName("ConcreteArgHead", "TokenGenPOS"), StatsFieldType.LIST_COUNTS);
+				
+				
+				put(new FieldName("PROPER", ""), StatsFieldType.LIST_COUNTS);
+				put(new FieldName("PR,Multi", ""), StatsFieldType.LIST_VALUES);
+				put(new FieldName("PR,Multi", "NullHead"), StatsFieldType.LIST_COUNTS);
+				put(new FieldName("PR,Multi", "Head"), StatsFieldType.LIST_VALUES);
+				put(new FieldName("PR,Multi", "HeLemma"), StatsFieldType.LIST_COUNTS);
+				put(new FieldName("PR,Multi", "HeLemChange"), StatsFieldType.LIST_VALUES);
+				put(new FieldName("PR,Multi", "WN"), StatsFieldType.LIST_VALUES);
+				put(new FieldName("PR,Multi", "HeWN"), StatsFieldType.LIST_VALUES);
+				put(new FieldName("PR,Multi", "HeWNLem"), StatsFieldType.LIST_COUNTS);
+				
+				put(new FieldName("PR,Single", ""), StatsFieldType.LIST_VALUES);
+				put(new FieldName("PR,Single", "Lemma"), StatsFieldType.LIST_COUNTS);
+				put(new FieldName("PR,Single", "LemChange"), StatsFieldType.LIST_VALUES);
+				put(new FieldName("PR,Single", "WN"), StatsFieldType.LIST_VALUES);
+				put(new FieldName("PR,Single", "WNLem"), StatsFieldType.LIST_COUNTS);
+				
+				put(new FieldName("COMMON", ""), StatsFieldType.LIST_COUNTS);
+				put(new FieldName("CO,Multi", ""), StatsFieldType.LIST_VALUES);
+				
+				put(new FieldName("CO,Single", ""), StatsFieldType.LIST_VALUES);
+				put(new FieldName("CO,Single", "Lemma"), StatsFieldType.LIST_COUNTS);
+				put(new FieldName("CO,Single", "LemChange"), StatsFieldType.LIST_VALUES);
+				put(new FieldName("CO,Single", "WN"), StatsFieldType.LIST_VALUES);
+				put(new FieldName("CO,Single", "WNLem"), StatsFieldType.LIST_COUNTS);
+				
+				
 				for (AceArgumentType specType : AceArgumentType.values()) {
 					put(new FieldName("ConcreteArgHead", specType.toString()), StatsFieldType.LIST_COUNTS);
 				}

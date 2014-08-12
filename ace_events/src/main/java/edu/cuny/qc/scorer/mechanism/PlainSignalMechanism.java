@@ -6,10 +6,14 @@ import static edu.cuny.qc.scorer.Deriver.*;
 
 import java.util.Map;
 
+import org.apache.uima.jcas.tcas.Annotation;
+
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
+import edu.cuny.qc.ace.acetypes.AceEntityMention;
 import edu.cuny.qc.perceptron.core.Controller;
 import edu.cuny.qc.perceptron.core.Perceptron;
 import edu.cuny.qc.scorer.Aggregator;
+import edu.cuny.qc.scorer.ArgumentExampleScorer;
 import edu.cuny.qc.scorer.Derivation;
 import edu.cuny.qc.scorer.ScorerData;
 import edu.cuny.qc.scorer.SignalMechanism;
@@ -29,11 +33,15 @@ public class PlainSignalMechanism extends SignalMechanism {
 	public void addScorers() {
 		switch(controller.featureProfile) {
 		case TOKEN_BASELINE:
-			addTrigger(new ScorerData("PL_SAME_TOKEN",		SameToken.inst,				Aggregator.Any.inst		));
+			addTrigger(new ScorerData("PL_SAME_TOKEN",				SameTriggerToken.inst,				Aggregator.Any.inst		));
+			addArgument(new ScorerData("PL_SAME_FULLHEAD",			SameArgumentText.inst,				Aggregator.Any.inst		));
 			break;
 		case ANALYSIS: //fall-through, analyze exactly all normal scorers 
 		case NORMAL:
-			addTrigger(new ScorerData("PL_SAME_LEMMA",		SameLemma.inst,				Aggregator.Any.inst		));
+			addTrigger(new ScorerData("PL_SAME_LEMMA",				SameTriggerLemma.inst,				Aggregator.Any.inst		));
+			
+			addArgument(new ScorerData("PL_SAME_FULLHEAD",			SameArgumentText.inst,				Aggregator.Any.inst		));
+			addArgument(new ScorerData("PL_SAME_LEMMA_HEADTOKEN",	SameArgumentHeadTokenLemma.inst,	Aggregator.Any.inst		));
 			
 			break;
 		default:
@@ -54,9 +62,9 @@ public class PlainSignalMechanism extends SignalMechanism {
 		super(controller);
 	}
 
-	private static class SameToken extends PredicateSeedScorer {
+	private static class SameTriggerToken extends PredicateSeedScorer {
 		private static final long serialVersionUID = -2874181064215529174L;
-		public static final SameToken inst = new SameToken();
+		public static final SameTriggerToken inst = new SameTriggerToken();
 		@Override public String getForm(Token token) { return token.getCoveredText();}
 		@Override
 		public Boolean calcBoolPredicateSeedScore(Token textToken, Map<Class<?>, Object> textTriggerTokenMap, String textStr, PartOfSpeech textPos, String specStr, PartOfSpeech specPos, ScorerData scorerData) throws SignalMechanismException
@@ -65,13 +73,33 @@ public class PlainSignalMechanism extends SignalMechanism {
 		}
 	}
 	
-	private static class SameLemma extends PredicateSeedScorer {
+	private static class SameTriggerLemma extends PredicateSeedScorer {
 		private static final long serialVersionUID = 3117453748881596932L;
-		public static final SameLemma inst = new SameLemma();
+		public static final SameTriggerLemma inst = new SameTriggerLemma();
 		@Override
 		public Boolean calcBoolPredicateSeedScore(Token textToken, Map<Class<?>, Object> textTriggerTokenMap, String textStr, PartOfSpeech textPos, String specStr, PartOfSpeech specPos, ScorerData scorerData) throws SignalMechanismException
 		{
 			return textStr.equals(specStr);
+		}
+	}
+	
+	private static class SameArgumentText extends ArgumentExampleScorer {
+		private static final long serialVersionUID = 756493837201510988L;
+		public static final SameArgumentText inst = new SameArgumentText();
+		@Override
+		public Boolean calcBoolArgumentExampleScore(AceEntityMention concreteMention, Annotation headAnno, String textHeadTokenStr, PartOfSpeech textHeadTokenPos, String specStr, PartOfSpeech specPos, ScorerData scorerData) throws SignalMechanismException
+		{
+			return headAnno.getCoveredText().equalsIgnoreCase(specStr);
+		}
+	}
+	
+	private static class SameArgumentHeadTokenLemma extends ArgumentExampleScorer {
+		private static final long serialVersionUID = 5682579893362232185L;
+		public static final SameArgumentHeadTokenLemma inst = new SameArgumentHeadTokenLemma();
+		@Override
+		public Boolean calcBoolArgumentExampleScore(AceEntityMention concreteMention, Annotation headAnno, String textHeadTokenStr, PartOfSpeech textHeadTokenPos, String specStr, PartOfSpeech specPos, ScorerData scorerData) throws SignalMechanismException
+		{
+			return textHeadTokenStr.equals(specStr);
 		}
 	}
 	

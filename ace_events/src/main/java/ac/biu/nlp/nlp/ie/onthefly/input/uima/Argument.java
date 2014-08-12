@@ -11,8 +11,8 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Mon Aug 04 21:24:44 IDT 2014
- * XML source: C:/Java/Git/breep/ace_events/TypeSystem.xml
+ * Updated by JCasGen Sun Aug 10 13:57:30 IDT 2014
+ * XML source: C:/Java/Git/breep/ace_events/src/main/resources/desc/OdieInputTypes.xml
  * @generated */
 public class Argument extends Annotation {
   /** @generated
@@ -164,6 +164,40 @@ public class Argument extends Annotation {
     if (Argument_Type.featOkTst && ((Argument_Type)jcasType).casFeat_marker == null)
       jcasType.jcas.throwFeatMissing("marker", "ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument");
     jcasType.ll_cas.ll_setRefValue(addr, ((Argument_Type)jcasType).casFeatCode_marker, jcasType.ll_cas.ll_getFSRef(v));}    
+   
+    
+  //*--------------*
+  //* Feature: aiuses
+
+  /** getter for aiuses - gets 
+   * @generated */
+  public FSArray getAiuses() {
+    if (Argument_Type.featOkTst && ((Argument_Type)jcasType).casFeat_aiuses == null)
+      jcasType.jcas.throwFeatMissing("aiuses", "ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument");
+    return (FSArray)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((Argument_Type)jcasType).casFeatCode_aiuses)));}
+    
+  /** setter for aiuses - sets  
+   * @generated */
+  public void setAiuses(FSArray v) {
+    if (Argument_Type.featOkTst && ((Argument_Type)jcasType).casFeat_aiuses == null)
+      jcasType.jcas.throwFeatMissing("aiuses", "ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument");
+    jcasType.ll_cas.ll_setRefValue(addr, ((Argument_Type)jcasType).casFeatCode_aiuses, jcasType.ll_cas.ll_getFSRef(v));}    
+    
+  /** indexed getter for aiuses - gets an indexed value - 
+   * @generated */
+  public ArgumentInUsageSample getAiuses(int i) {
+    if (Argument_Type.featOkTst && ((Argument_Type)jcasType).casFeat_aiuses == null)
+      jcasType.jcas.throwFeatMissing("aiuses", "ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument");
+    jcasType.jcas.checkArrayBounds(jcasType.ll_cas.ll_getRefValue(addr, ((Argument_Type)jcasType).casFeatCode_aiuses), i);
+    return (ArgumentInUsageSample)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefArrayValue(jcasType.ll_cas.ll_getRefValue(addr, ((Argument_Type)jcasType).casFeatCode_aiuses), i)));}
+
+  /** indexed setter for aiuses - sets an indexed value - 
+   * @generated */
+  public void setAiuses(int i, ArgumentInUsageSample v) { 
+    if (Argument_Type.featOkTst && ((Argument_Type)jcasType).casFeat_aiuses == null)
+      jcasType.jcas.throwFeatMissing("aiuses", "ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument");
+    jcasType.jcas.checkArrayBounds(jcasType.ll_cas.ll_getRefValue(addr, ((Argument_Type)jcasType).casFeatCode_aiuses), i);
+    jcasType.ll_cas.ll_setRefArrayValue(jcasType.ll_cas.ll_getRefValue(addr, ((Argument_Type)jcasType).casFeatCode_aiuses), i, jcasType.ll_cas.ll_getFSRef(v));}
   }
 
     

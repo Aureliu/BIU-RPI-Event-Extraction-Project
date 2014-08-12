@@ -15,6 +15,7 @@ import java.util.Set;
 import java.util.concurrent.ExecutionException;
 
 import org.apache.commons.lang3.StringUtils;
+import org.apache.uima.jcas.tcas.Annotation;
 import org.joda.time.Period;
 
 import ac.biu.nlp.nlp.ie.onthefly.input.AnnotationUtils;
@@ -24,12 +25,15 @@ import com.google.common.cache.CacheLoader;
 import com.google.common.cache.CacheStats;
 import com.google.common.cache.LoadingCache;
 import com.google.common.cache.Weigher;
+import com.google.common.collect.Lists;
 
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
+import edu.cuny.qc.ace.acetypes.AceEntityMention;
 import edu.cuny.qc.perceptron.core.Controller;
 import edu.cuny.qc.perceptron.core.Perceptron;
 import edu.cuny.qc.perceptron.core.Pipeline;
 import edu.cuny.qc.scorer.Aggregator;
+import edu.cuny.qc.scorer.ArgumentExampleScorer;
 import edu.cuny.qc.scorer.BasicRulesQuery;
 import edu.cuny.qc.scorer.Derivation;
 import edu.cuny.qc.scorer.Deriver;
@@ -72,6 +76,7 @@ public class WordNetSignalMechanism extends SignalMechanism {
 		System.err.println("??? WordNetSignalMechanism: Probably won't solve and it's just for documentation: when I get a DervRelated, I'm not getting just lemmas, I'm getting synsets (actually, a single term from some synset). So when I continue calculation, techincally the most accurate thing to do would have been to use only this synset as LHS, and not first/all synsets of the lemma.");
 		System.err.println("??? WordNetSignalMechanism: When getting DervRelated, I only take words related to my lemma, and not to other lemmas in its synset (that's what I automatically get from the resource, and what makes somewhat more sense). I don't think this behavior needs changing - using all synset sounds a bit too noisy.");
 		System.err.println("??? WordNetSignalMechanism: Using the text's lemma and POS causes errors on some lemmatization errors: like having injured/JJ be lemmatized as injure/JJ which doesn't exist (2014.07.23..8:APW_ENG_20030520.0081:1b:17), or wound/NN lemmatized as wind/NN, which doesn't entail wound/NN (2014.07.23..8:CNN_ENG_20030610_130042.17:2b:4)");
+		System.err.println("??? WordNetSignalMechanism: In the argument scorer - maybe remove the duplicity (in Proper Nouns) and make it two scorers?");
 	}
 
 //	public WordNetSignalMechanism() throws UnsupportedPosTagStringException, WordNetInitializationException {
@@ -150,16 +155,16 @@ public class WordNetSignalMechanism extends SignalMechanism {
 			
 			// Built from 2014.07.02..1__SignalAnalyzer_medium__TESRV2
 			// Top F1
-			addTrigger(new ScorerData(null, new WordnetScorer(SYNONYM_RELATION, Juxtaposition.ANCESTOR, 1), NoDerv.inst, Derivation.NONE, -1, 1, null, Any.inst));
+			addTrigger(new ScorerData(null, new WordnetTriggerScorer(SYNONYM_RELATION, Juxtaposition.ANCESTOR, 1), NoDerv.inst, Derivation.NONE, -1, 1, null, Any.inst));
 			//addTrigger(new ScorerData(null, new WordnetScorer(SYNONYM_RELATION, Juxtaposition.ANCESTOR, 1), new Join(WordnetDervRltdDeriver.inst, NomlexDeriver.inst), Derivation.TEXT_ORIG_AND_DERV, -1, 1, null, Any.inst));
 			//addTrigger(new ScorerData(null, new WordnetScorer(SYNONYM_RELATION, Juxtaposition.ANCESTOR, 1), NoDerv.inst, Derivation.NONE, 1, 1, null, Any.inst));
 
 			//addTrigger(new ScorerData(null, new WordnetScorer(HYPERNYM_RELATIONS, Juxtaposition.ANCESTOR, 1), WordnetDervRltdDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, 1, null, Any.inst));
-			addTrigger(new ScorerData(null, new WordnetScorer(HYPERNYM_RELATIONS, Juxtaposition.ANCESTOR, 2), WordnetDervRltdDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, 1, null, Any.inst));
+			addTrigger(new ScorerData(null, new WordnetTriggerScorer(HYPERNYM_RELATIONS, Juxtaposition.ANCESTOR, 2), WordnetDervRltdDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, 1, null, Any.inst));
 			//addTrigger(new ScorerData(null, new WordnetScorer(HYPERNYM_RELATIONS, Juxtaposition.ANCESTOR, 3), WordnetDervRltdDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, 1, null, Any.inst));
 
-			addTrigger(new ScorerData(null, new WordnetScorer(ALL_RELATIONS_SMALL, Juxtaposition.ANCESTOR, 2), NoDerv.inst, Derivation.NONE, -1, 1, null, Any.inst));
-			addTrigger(new ScorerData(null, new WordnetScorer(ALL_RELATIONS_SMALL, Juxtaposition.ANCESTOR, 2), WordnetDervRltdDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, 1, null, Any.inst));
+			addTrigger(new ScorerData(null, new WordnetTriggerScorer(ALL_RELATIONS_SMALL, Juxtaposition.ANCESTOR, 2), NoDerv.inst, Derivation.NONE, -1, 1, null, Any.inst));
+			addTrigger(new ScorerData(null, new WordnetTriggerScorer(ALL_RELATIONS_SMALL, Juxtaposition.ANCESTOR, 2), WordnetDervRltdDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, 1, null, Any.inst));
 			//addTrigger(new ScorerData(null, new WordnetScorer(ALL_RELATIONS_BIG,   Juxtaposition.ANCESTOR, 2), NoDerv.inst, Derivation.NONE, -1, 1, null, Any.inst));
 
 			//addTrigger(new ScorerData(null, new WordnetScorer(HYPERNYM_RELATIONS, Juxtaposition.ANCESTOR, 2), NoDerv.inst, Derivation.NONE, -1, 1, null, Any.inst));
@@ -171,7 +176,7 @@ public class WordNetSignalMechanism extends SignalMechanism {
 //			addTrigger(new ScorerData(null, new WordnetScorer(ALL_RELATIONS_SMALL, Juxtaposition.ANCESTOR, 3), WordnetDervRltdDeriver.inst, Derivation.SPEC_ONLY_DERV, 1, -1, null, Min3.inst));
 //			addTrigger(new ScorerData(null, new WordnetScorer(ALL_RELATIONS_SMALL, Juxtaposition.ANCESTOR, 3), WordnetDervRltdDeriver.inst, Derivation.SPEC_ONLY_DERV, -1, -1, null, Min3.inst));
 
-			addTrigger(new ScorerData(null, new WordnetScorer(ALL_RELATIONS_BIG, Juxtaposition.ANCESTOR, 2), NomlexSignalMechanism.NomlexDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, 1, null, Any.inst));
+			addTrigger(new ScorerData(null, new WordnetTriggerScorer(ALL_RELATIONS_BIG, Juxtaposition.ANCESTOR, 2), NomlexSignalMechanism.NomlexDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, 1, null, Any.inst));
 			//addTrigger(new ScorerData(null, new WordnetScorer(ALL_RELATIONS_BIG, Juxtaposition.ANCESTOR, 2), NomlexSignalMechanism.NomlexDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, 1, 1, null, Any.inst));
 			//addTrigger(new ScorerData(null, new WordnetScorer(ALL_RELATIONS_BIG, Juxtaposition.ANCESTOR, 1), WordnetDervRltdDeriver.inst, Derivation.SPEC_ORIG_AND_DERV, -1, -1, null, Min3.inst));
 			
@@ -184,6 +189,12 @@ public class WordNetSignalMechanism extends SignalMechanism {
 			//addTrigger(new ScorerData(null, new WordnetScorer(SYNONYM_RELATION, Juxtaposition.ANCESTOR, 1), NoDerv.inst, Derivation.NONE, 1, -1, null, Any.inst));
 			
 			// Top InfoGain - contained in other categories
+			
+			addArgument(new ScorerData(null, new WordnetArgumentScorer(SYNONYM_RELATION, Juxtaposition.ANCESTOR, 1), NoDerv.inst, Derivation.NONE, -1, 1, null, Any.inst));
+			addArgument(new ScorerData(null, new WordnetArgumentScorer(HYPERNYM_RELATIONS, Juxtaposition.ANCESTOR, 2), WordnetDervRltdDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, 1, null, Any.inst));
+			addArgument(new ScorerData(null, new WordnetArgumentScorer(ALL_RELATIONS_SMALL, Juxtaposition.ANCESTOR, 2), NoDerv.inst, Derivation.NONE, -1, 1, null, Any.inst));
+			addArgument(new ScorerData(null, new WordnetArgumentScorer(ALL_RELATIONS_SMALL, Juxtaposition.ANCESTOR, 2), WordnetDervRltdDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, 1, null, Any.inst));
+			addArgument(new ScorerData(null, new WordnetArgumentScorer(ALL_RELATIONS_BIG, Juxtaposition.ANCESTOR, 2), NomlexSignalMechanism.NomlexDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, 1, null, Any.inst));
 			
 			break;
 		default:
@@ -298,7 +309,7 @@ public class WordNetSignalMechanism extends SignalMechanism {
 	//										Pipeline.detailedLog(),
 	//										relations, juxt, length, derv, leftSense, rightSense, specificPos, agg);
 									
-									WordnetScorer scorer = new WordnetScorer(relations, juxt, length);
+									WordnetTriggerScorer scorer = new WordnetTriggerScorer(relations, juxt, length);
 									addTrigger(new ScorerData(null, scorer, deriver, derv, leftSense, rightSense, specificPos, agg));
 								}
 							}
@@ -310,11 +321,11 @@ public class WordNetSignalMechanism extends SignalMechanism {
 	}
 	
 	public void logCacheStats() {
-		System.out.printf("@@ Exist:        %s\n", cacheStats(WordnetScorer.cacheExist));
-		System.out.printf("@@ CousinsLoose: %s\n", cacheStats(WordnetScorer.cacheCousinsLoose));
-		System.out.printf("@@ CousinsStrict:%s\n", cacheStats(WordnetScorer.cacheCousinsStrict));
-		System.out.printf("@@ Rules:        %s\n", cacheStats(WordnetScorer.cacheRules));
-		System.out.printf("@@ Bools:        %s\n", cacheStats(WordnetScorer.cacheBools));
+		System.out.printf("@@ Exist:        %s\n", cacheStats(cacheExist));
+		System.out.printf("@@ CousinsLoose: %s\n", cacheStats(cacheCousinsLoose));
+		System.out.printf("@@ CousinsStrict:%s\n", cacheStats(cacheCousinsStrict));
+		System.out.printf("@@ Rules:        %s\n", cacheStats(cacheRules));
+		System.out.printf("@@ Bools:        %s\n", cacheStats(cacheBools));
 		System.out.printf("@@ Derv:         %s\n", cacheStats(WordnetDervRltdDeriver.cacheDerv));
 		System.out.printf("@@ Resources:    %s\n", cacheStats(cacheResources));
 	}
@@ -411,52 +422,27 @@ public class WordNetSignalMechanism extends SignalMechanism {
 				});
 	}
 	
-	public static class WordnetScorer extends PredicateSeedScorer {
+	public static class WordnetTriggerScorer extends PredicateSeedScorer {
 		private static final long serialVersionUID = 7293139399085559241L;
 		public Set<WordNetRelation> relations;
 		public Juxtaposition juxt;
 		public int length;
-		//public Derivation derv; 
-		//public SynsetScope synsetScope;
-		//public int leftSenseNum;
-		//public int rightSenseNum;
-		//public PartOfSpeech specificPos;
-//		public LengthType lenType;
 				
 		static {
 			try {
 				initDictionary();
 			} catch (Exception e) {
 				System.err.printf("\n\n\nGot exception '%s' while initing dict in %s - This should never happen, as it is supposed to be inited beforehand in the signal mechanism!!!!\n\n\n",
-						e, WordnetScorer.class.getSimpleName());
+						e, WordnetTriggerScorer.class.getSimpleName());
 			}
 		}
 		
-		public WordnetScorer(Set<WordNetRelation> relations,
+		public WordnetTriggerScorer(Set<WordNetRelation> relations,
 				Juxtaposition juxt, int length) {
 			this.relations = relations;
 			this.juxt = juxt;
 			this.length = length;			
 		}
-
-//		@Override
-//		public int hashCode() {
-//		     int hash = new HashCodeBuilder(127, 149).appendSuper(super.hashCode())
-//		    		 .append(relations).append(juxt).append(length).toHashCode();
-//		     return hash;
-//		}
-//		@Override
-//		public boolean equals(Object obj) {
-//		   if (obj == null) { return false; }
-//		   if (obj == this) { return true; }
-//		   if (obj.getClass() != getClass()) {
-//		     return false;
-//		   }
-//		   WordnetScorer rhs = (WordnetScorer) obj;
-//		   boolean result = new EqualsBuilder().appendSuper(super.equals(rhs)).append(relations, rhs.relations)
-//				   .append(juxt, rhs.juxt).append(length, rhs.length).isEquals();
-//		   return result;
-//		}
 
 		@Override public String getTypeName() {
 			String rels;
@@ -481,148 +467,7 @@ public class WordNetSignalMechanism extends SignalMechanism {
 			return String.format("WN__%s__%s_Len%s", rels, juxt, lengthStr);
 		}
 
-		private static LoadingCache<BasicRulesQuery, Boolean> cacheExist = CacheBuilder.newBuilder()
-				.recordStats()
-				.maximumSize(10000000)
-				.build(new CacheLoader<BasicRulesQuery, Boolean>() {
-					public Boolean load(BasicRulesQuery key) throws WordNetException {
-						WordNetPartOfSpeech lWnPos = WordNetPartOfSpeech.toWordNetPartOfspeech(key.lPos);
-						int synsets = dictionary.getNumberOfSynsets(key.lLemma, lWnPos);
-						return synsets > 0;
-					}
-				});
 
-		private static LoadingCache<FullRulesQuery, Set<String>> cacheCousinsLoose = CacheBuilder.newBuilder()
-				.recordStats()
-				.maximumWeight(2000000000)
-				.weigher(new Weigher<FullRulesQuery, Set<String>>() {
-					public int weigh(FullRulesQuery k, Set<String> v) { return v.size(); }
-				})
-				.build(new CacheLoader<FullRulesQuery, Set<String>>() {
-					public Set<String> load(FullRulesQuery key) throws LexicalResourceException, WordNetException {
-						BasicRulesQuery q = key.basicQuery;
-						WordNetPartOfSpeech lWnPos = WordNetPartOfSpeech.toWordNetPartOfspeech(q.lPos);
-						Set<String> result;
-						if (key.leftSenseNum == 1) {
-							//if (dictionary.getNumberOfSynsets(q.lLemma, lWnPos)!=0) {
-								result = dictionary.getLooseCousinTerms(q.lLemma, lWnPos, 1, key.length);
-							//}
-							//else {
-							//	result = new HashSet<String>();  //TODO: should be: IRRELEVANT
-							//}
-						}
-						else {
-							result = dictionary.getLooseCousinTerms(q.lLemma, lWnPos, key.length);
-						}
-						return result;
-					}
-				});
-		private static LoadingCache<FullRulesQuery, Set<String>> cacheCousinsStrict = CacheBuilder.newBuilder()
-				.recordStats()
-				.maximumWeight(2000000000)
-				.weigher(new Weigher<FullRulesQuery, Set<String>>() {
-					public int weigh(FullRulesQuery k, Set<String> v) { return v.size(); }
-				})
-				.build(new CacheLoader<FullRulesQuery, Set<String>>() {
-					public Set<String> load(FullRulesQuery key) throws LexicalResourceException, WordNetException {
-						BasicRulesQuery q = key.basicQuery;
-						WordNetPartOfSpeech lWnPos = WordNetPartOfSpeech.toWordNetPartOfspeech(q.lPos);
-						Set<String> result;
-						if (key.leftSenseNum == 1) {
-							//if (dictionary.getNumberOfSynsets(q.lLemma, lWnPos)!=0) {
-								result = dictionary.getStrictCousinTerms(q.lLemma, lWnPos, 1, key.length);
-							//}
-							//else {
-							//	result = new HashSet<String>();  //TODO: should be: IRRELEVANT
-							//}
-						}
-						else {
-							result = dictionary.getStrictCousinTerms(q.lLemma, lWnPos, key.length);
-						}
-						return result;
-					}
-				});
-		
-		private static LoadingCache<FullRulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>> cacheRules = CacheBuilder.newBuilder()
-				.recordStats()
-				//TODO: perhaps change weight to size. This way we'll limit the number of entries (makes sense) and not maximum size of value's list (which doesn't seem to limit anything)
-				.maximumWeight(5000  /*100000*/)
-				.weigher(new Weigher<FullRulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>>() {
-					public int weigh(FullRulesQuery k, List<LexicalRule<? extends WordnetRuleInfo>> v) { return v.size(); }
-				})
-				.build(new CacheLoader<FullRulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>>() {
-					public List<LexicalRule<? extends WordnetRuleInfo>> load(FullRulesQuery key) throws LexicalResourceException, WordNetException, ExecutionException {
-						BasicRulesQuery q = key.basicQuery;
-						WordnetRuleInfo info = new WordnetRuleInfoWithSenseNumsOnly(key.leftSenseNum, key.rightSenseNum);
-						WordnetLexicalResource resource = cacheResources.get(key.length);
-						List<LexicalRule<? extends WordnetRuleInfo>> rules = resource.getRules(q.lLemma, q.lPos, q.rLemma, q.rPos, key.relations, info);
-						return rules;
-					}
-				});
-		
-		private static LoadingCache<FullRulesQuery, Boolean> cacheBools = CacheBuilder.newBuilder()
-				.recordStats()
-				.maximumSize(7500000)
-				.build(new CacheLoader<FullRulesQuery, Boolean>() {
-					public Boolean load(FullRulesQuery key) throws LexicalResourceException, ExecutionException {
-						BasicRulesQuery q = key.basicQuery;
-						//String extra = "";
-						Boolean booleanScore;
-						if (key.juxt == Juxtaposition.ANCESTOR) {
-							// Original use of cacheRules - but that caches seemed to grow uncontrollably, and really contribute nothing
-//							List<LexicalRule<? extends WordnetRuleInfo>> rules = cacheRules.get(key);
-//							booleanScore = !rules.isEmpty();
-							
-							// Current use - get the rules directly, no caching
-							WordnetRuleInfo info = new WordnetRuleInfoWithSenseNumsOnly(key.leftSenseNum, key.rightSenseNum);
-							WordnetLexicalResource resource = cacheResources.get(key.length);
-							List<LexicalRule<? extends WordnetRuleInfo>> rules = resource.getRules(q.lLemma, q.lPos, q.rLemma, q.rPos, key.relations, info);
-							booleanScore = !rules.isEmpty();
-							
-							
-							
-							// because bottom part is commented out
-//							if (booleanScore) {
-//								List<WordNetRelation> ruleRelations = new ArrayList<WordNetRelation>(rules.size());
-//								for (LexicalRule<? extends WordnetRuleInfo> rule : rules) {
-//									ruleRelations.add(rule.getInfo().getTypedRelation());
-//								}
-//								extra = String.format(", relations=%s", ruleRelations);
-//							}
-						}
-						else if (key.juxt == Juxtaposition.COUSIN_STRICT || key.juxt == Juxtaposition.COUSIN_LOOSE) {
-							//TODO: this is messy, with the different kinds of hypernyms...
-							if (!key.relations.equals(HYPERNYM_RELATIONS)) {
-								throw new IllegalArgumentException("juxt=COUSIN_*, but relations is not exactly HYPERNYM. relations=" + key.relations);
-							}
-
-							BasicRulesQuery basicQueryOnlyLeft = new BasicRulesQuery(q.lLemma, q.lPos, null, null);
-							FullRulesQuery keyOnlyLeft = new FullRulesQuery(null, key.length, null, key.leftSenseNum, key.rightSenseNum, basicQueryOnlyLeft);
-							Set<String> lemmas;
-							if (key.juxt == Juxtaposition.COUSIN_STRICT) {
-								lemmas = cacheCousinsStrict.get(keyOnlyLeft);
-
-							}
-							else {
-								lemmas = cacheCousinsLoose.get(keyOnlyLeft);
-
-							}
-							booleanScore = lemmas.contains(q.rLemma);
-						}
-						else {
-							throw new IllegalArgumentException("juxt=" + key.juxt);
-						}
-
-						//Ofer: not that useful, takes a lot of space and time
-//						if (booleanScore) {
-//							System.err.printf("Wordnet: TRUE! %s/%s-->%s/%s\t(juxt=%s, length=%s, leftSenseNum=%s, rightSenseNum=%s%s)\n",
-//									q.lLemma, q.lPos, q.rLemma, q.rPos, key.juxt, key.length, key.leftSenseNum, key.rightSenseNum, extra);
-//						}
-						
-			            return booleanScore;
-					}
-				});
-		
 		@Override
 		public Boolean calcBoolPredicateSeedScore(Token textToken, Map<Class<?>, Object> textTriggerTokenMap, String textStr, PartOfSpeech textPos, String specStr, PartOfSpeech specPos, ScorerData scorerData) throws SignalMechanismException {
 			try {
@@ -658,6 +503,246 @@ public class WordNetSignalMechanism extends SignalMechanism {
 			}
 		}
 	}
+	
+	public static class WordnetArgumentScorer extends ArgumentExampleScorer {
+		public Set<WordNetRelation> relations;
+		public Juxtaposition juxt;
+		public int length;
+				
+		static {
+			try {
+				initDictionary();
+			} catch (Exception e) {
+				System.err.printf("\n\n\nGot exception '%s' while initing dict in %s - This should never happen, as it is supposed to be inited beforehand in the signal mechanism!!!!\n\n\n",
+						e, WordnetTriggerScorer.class.getSimpleName());
+			}
+		}
+		
+		public WordnetArgumentScorer(Set<WordNetRelation> relations,
+				Juxtaposition juxt, int length) {
+			this.relations = relations;
+			this.juxt = juxt;
+			this.length = length;			
+		}
+
+		@Override public String getTypeName() {
+			String rels;
+			if (this.relations.equals(ALL_RELATIONS_BIG)) {
+				rels = "AllRelsBig";
+			}
+			else if (this.relations.equals(ALL_RELATIONS_SMALL)) {
+				rels = "AllRelsSmall";
+			}
+			else if (this.relations.equals(HYPERNYM_RELATIONS)) {
+				rels = "Hypernyms";
+			}
+			else {
+				rels = StringUtils.join(this.relations, "_");
+			}
+			
+			String lengthStr = "" + length;
+			if (length == -1) {
+				lengthStr = "Top";
+			}
+	
+			return String.format("WN__%s__%s_Len%s", rels, juxt, lengthStr);
+		}
+
+
+		@Override
+		public Boolean calcBoolArgumentExampleScore(AceEntityMention concreteMention, Annotation headAnno, String textHeadTokenStr, PartOfSpeech textHeadTokenPos, String specStr, PartOfSpeech specPos, ScorerData scorerData) throws SignalMechanismException {
+			try {
+				BasicRulesQuery rightQuery = new BasicRulesQuery(specStr, specPos, null, null);
+				if (!cacheExist.get(rightQuery)) {
+					return false;  //TODO: should be: IRRELEVANT
+				}
+				
+				List<BasicRulesQuery> queries = Lists.newArrayListWithCapacity(2);
+				if (concreteMention.type.equalsIgnoreCase("NAM")) { // Proper Noun
+					queries.add(new BasicRulesQuery(headAnno.getCoveredText(), PosMap.byCanonical.get(CanonicalPosTag.N), null, null)); //all tokens
+					queries.add(new BasicRulesQuery(textHeadTokenStr, textHeadTokenPos, null, null)); //only head token
+				}
+				else if (concreteMention.type.equalsIgnoreCase("NOM")) { // Common Noun
+					queries.add(new BasicRulesQuery(textHeadTokenStr, textHeadTokenPos, null, null)); //only head token
+				}
+				
+				// Hard-coded "or" method
+				boolean result = false;
+				for (BasicRulesQuery leftQuery : queries) {
+					WordNetPartOfSpeech textWnPos = WordNetPartOfSpeech.toWordNetPartOfspeech(leftQuery.lPos);
+					if (textWnPos == null) {
+						continue;  //TODO: should be: IRRELEVANT
+					}
+					
+					usedCaches = true;
+					if (!cacheExist.get(leftQuery)) {
+						return false;  //TODO: should be: IRRELEVANT
+					}
+					
+					int realLength = length;
+					if (length == -1) {
+						// Go all the way up the wordnet tree
+						realLength = MAXIMUM_WORDNET_LENGTH;
+					}
+					
+					BasicRulesQuery basicQuery = new BasicRulesQuery(leftQuery.lLemma, leftQuery.lPos, specStr, specPos);
+					FullRulesQuery fullQuery = new FullRulesQuery(this.relations, realLength, this.juxt, scorerData.leftSenseNum, scorerData.rightSenseNum, basicQuery);
+					
+					result = cacheBools.get(fullQuery);
+					if (result) {
+						break;
+					}
+				}
+				
+				return result;
+				
+			} catch (ExecutionException e) {
+				throw new SignalMechanismException(e);
+			}
+		}
+	}
+	
+	private static LoadingCache<BasicRulesQuery, Boolean> cacheExist = CacheBuilder.newBuilder()
+			.recordStats()
+			.maximumSize(10000000)
+			.build(new CacheLoader<BasicRulesQuery, Boolean>() {
+				public Boolean load(BasicRulesQuery key) throws WordNetException {
+					WordNetPartOfSpeech lWnPos = WordNetPartOfSpeech.toWordNetPartOfspeech(key.lPos);
+					int synsets = dictionary.getNumberOfSynsets(key.lLemma, lWnPos);
+					return synsets > 0;
+				}
+			});
+
+	private static LoadingCache<FullRulesQuery, Set<String>> cacheCousinsLoose = CacheBuilder.newBuilder()
+			.recordStats()
+			.maximumWeight(2000000000)
+			.weigher(new Weigher<FullRulesQuery, Set<String>>() {
+				public int weigh(FullRulesQuery k, Set<String> v) { return v.size(); }
+			})
+			.build(new CacheLoader<FullRulesQuery, Set<String>>() {
+				public Set<String> load(FullRulesQuery key) throws LexicalResourceException, WordNetException {
+					BasicRulesQuery q = key.basicQuery;
+					WordNetPartOfSpeech lWnPos = WordNetPartOfSpeech.toWordNetPartOfspeech(q.lPos);
+					Set<String> result;
+					if (key.leftSenseNum == 1) {
+						//if (dictionary.getNumberOfSynsets(q.lLemma, lWnPos)!=0) {
+							result = dictionary.getLooseCousinTerms(q.lLemma, lWnPos, 1, key.length);
+						//}
+						//else {
+						//	result = new HashSet<String>();  //TODO: should be: IRRELEVANT
+						//}
+					}
+					else {
+						result = dictionary.getLooseCousinTerms(q.lLemma, lWnPos, key.length);
+					}
+					return result;
+				}
+			});
+	private static LoadingCache<FullRulesQuery, Set<String>> cacheCousinsStrict = CacheBuilder.newBuilder()
+			.recordStats()
+			.maximumWeight(2000000000)
+			.weigher(new Weigher<FullRulesQuery, Set<String>>() {
+				public int weigh(FullRulesQuery k, Set<String> v) { return v.size(); }
+			})
+			.build(new CacheLoader<FullRulesQuery, Set<String>>() {
+				public Set<String> load(FullRulesQuery key) throws LexicalResourceException, WordNetException {
+					BasicRulesQuery q = key.basicQuery;
+					WordNetPartOfSpeech lWnPos = WordNetPartOfSpeech.toWordNetPartOfspeech(q.lPos);
+					Set<String> result;
+					if (key.leftSenseNum == 1) {
+						//if (dictionary.getNumberOfSynsets(q.lLemma, lWnPos)!=0) {
+							result = dictionary.getStrictCousinTerms(q.lLemma, lWnPos, 1, key.length);
+						//}
+						//else {
+						//	result = new HashSet<String>();  //TODO: should be: IRRELEVANT
+						//}
+					}
+					else {
+						result = dictionary.getStrictCousinTerms(q.lLemma, lWnPos, key.length);
+					}
+					return result;
+				}
+			});
+	
+	private static LoadingCache<FullRulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>> cacheRules = CacheBuilder.newBuilder()
+			.recordStats()
+			//TODO: perhaps change weight to size. This way we'll limit the number of entries (makes sense) and not maximum size of value's list (which doesn't seem to limit anything)
+			.maximumWeight(5000  /*100000*/)
+			.weigher(new Weigher<FullRulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>>() {
+				public int weigh(FullRulesQuery k, List<LexicalRule<? extends WordnetRuleInfo>> v) { return v.size(); }
+			})
+			.build(new CacheLoader<FullRulesQuery, List<LexicalRule<? extends WordnetRuleInfo>>>() {
+				public List<LexicalRule<? extends WordnetRuleInfo>> load(FullRulesQuery key) throws LexicalResourceException, WordNetException, ExecutionException {
+					BasicRulesQuery q = key.basicQuery;
+					WordnetRuleInfo info = new WordnetRuleInfoWithSenseNumsOnly(key.leftSenseNum, key.rightSenseNum);
+					WordnetLexicalResource resource = cacheResources.get(key.length);
+					List<LexicalRule<? extends WordnetRuleInfo>> rules = resource.getRules(q.lLemma, q.lPos, q.rLemma, q.rPos, key.relations, info);
+					return rules;
+				}
+			});
+	
+	private static LoadingCache<FullRulesQuery, Boolean> cacheBools = CacheBuilder.newBuilder()
+			.recordStats()
+			.maximumSize(7500000)
+			.build(new CacheLoader<FullRulesQuery, Boolean>() {
+				public Boolean load(FullRulesQuery key) throws LexicalResourceException, ExecutionException {
+					BasicRulesQuery q = key.basicQuery;
+					//String extra = "";
+					Boolean booleanScore;
+					if (key.juxt == Juxtaposition.ANCESTOR) {
+						// Original use of cacheRules - but that caches seemed to grow uncontrollably, and really contribute nothing
+//						List<LexicalRule<? extends WordnetRuleInfo>> rules = cacheRules.get(key);
+//						booleanScore = !rules.isEmpty();
+						
+						// Current use - get the rules directly, no caching
+						WordnetRuleInfo info = new WordnetRuleInfoWithSenseNumsOnly(key.leftSenseNum, key.rightSenseNum);
+						WordnetLexicalResource resource = cacheResources.get(key.length);
+						List<LexicalRule<? extends WordnetRuleInfo>> rules = resource.getRules(q.lLemma, q.lPos, q.rLemma, q.rPos, key.relations, info);
+						booleanScore = !rules.isEmpty();
+						
+						
+						
+						// because bottom part is commented out
+//						if (booleanScore) {
+//							List<WordNetRelation> ruleRelations = new ArrayList<WordNetRelation>(rules.size());
+//							for (LexicalRule<? extends WordnetRuleInfo> rule : rules) {
+//								ruleRelations.add(rule.getInfo().getTypedRelation());
+//							}
+//							extra = String.format(", relations=%s", ruleRelations);
+//						}
+					}
+					else if (key.juxt == Juxtaposition.COUSIN_STRICT || key.juxt == Juxtaposition.COUSIN_LOOSE) {
+						//TODO: this is messy, with the different kinds of hypernyms...
+						if (!key.relations.equals(HYPERNYM_RELATIONS)) {
+							throw new IllegalArgumentException("juxt=COUSIN_*, but relations is not exactly HYPERNYM. relations=" + key.relations);
+						}
+
+						BasicRulesQuery basicQueryOnlyLeft = new BasicRulesQuery(q.lLemma, q.lPos, null, null);
+						FullRulesQuery keyOnlyLeft = new FullRulesQuery(null, key.length, null, key.leftSenseNum, key.rightSenseNum, basicQueryOnlyLeft);
+						Set<String> lemmas;
+						if (key.juxt == Juxtaposition.COUSIN_STRICT) {
+							lemmas = cacheCousinsStrict.get(keyOnlyLeft);
+
+						}
+						else {
+							lemmas = cacheCousinsLoose.get(keyOnlyLeft);
+
+						}
+						booleanScore = lemmas.contains(q.rLemma);
+					}
+					else {
+						throw new IllegalArgumentException("juxt=" + key.juxt);
+					}
+
+					//Ofer: not that useful, takes a lot of space and time
+//					if (booleanScore) {
+//						System.err.printf("Wordnet: TRUE! %s/%s-->%s/%s\t(juxt=%s, length=%s, leftSenseNum=%s, rightSenseNum=%s%s)\n",
+//								q.lLemma, q.lPos, q.rLemma, q.rPos, key.juxt, key.length, key.leftSenseNum, key.rightSenseNum, extra);
+//					}
+					
+		            return booleanScore;
+				}
+			});
 	
 	private static JwiDictionary dictionary = null;
 	private static boolean usedCaches = false;

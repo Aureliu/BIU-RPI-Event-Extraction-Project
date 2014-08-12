@@ -2,7 +2,6 @@ package edu.cuny.qc.scorer;
 
 import java.math.BigDecimal;
 import java.util.Collection;
-import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -21,6 +20,7 @@ import edu.cuny.qc.perceptron.types.SentenceInstance;
 import edu.cuny.qc.perceptron.types.SentenceInstance.InstanceAnnotations;
 import edu.cuny.qc.perceptron.types.SignalInstance;
 import edu.cuny.qc.perceptron.types.SignalType;
+import edu.cuny.qc.util.Utils;
 
 public abstract class SignalMechanism {
 	
@@ -59,13 +59,18 @@ public abstract class SignalMechanism {
 	
 	// These are only entry points, any SignalMechanism can choose to implement any of them
 	public void init() throws Exception {}
-	public void logPreSentence() {}
+	public void logPreSentence() {
+		/// DEBUG
+		System.out.printf("%s %s: PreSentence\n", Utils.detailedLog(), this.getClass().getSimpleName());
+		////
+	}
 	public void logPreDocument() {}
 	public void logPreDocumentBunch() {}
 
 	public void scoreTrigger(Map<ScorerData, SignalInstance> existingSignals, /*Set<ScorerData> allTriggerScorers,*/ JCas spec, SentenceInstance textSentence, int i, boolean debug) throws SignalMechanismException {
 		Token textTriggerToken = textSentence.getTokenAnnotation(i);
 		Map<Class<?>, Object> textTriggerTokenMap = ((List<Map<Class<?>, Object>>) textSentence.get(InstanceAnnotations.Token_FEATURE_MAPs)).get(i);
+		String docAllText = textSentence.doc.allText;
 
 		//XX somehow here do the same for PIUS scorers
 		for (ScorerData data : scorers.get(SignalType.TRIGGER)) {
@@ -90,7 +95,7 @@ public abstract class SignalMechanism {
 //				}
 				////
 				PredicateScorer<?> scorer = (PredicateScorer<?>) data.scorer;
-				scorer.prepareCalc(spec, textTriggerToken, textTriggerTokenMap, data);
+				scorer.prepareCalc(spec, textTriggerToken, textTriggerTokenMap, docAllText, data);
 				BigDecimal score = data.elementAggregator.aggregate(scorer);
 				
 				///// DEBUG
@@ -114,7 +119,7 @@ public abstract class SignalMechanism {
 					data.scorer.history = ArrayListMultimap.create();
 					// need to init again because the inner iterator is already exhausted, need to get a new one
 					PredicateScorer<?> scorer = (PredicateScorer<?>) data.scorer;
-					scorer.prepareCalc(spec, textTriggerToken, textTriggerTokenMap, data);
+					scorer.prepareCalc(spec, textTriggerToken, textTriggerTokenMap, docAllText, data);
 					debugAggregator.aggregate(scorer);
 					data.scorer.debug = false;
 					signal.history = data.scorer.history;
@@ -131,19 +136,44 @@ public abstract class SignalMechanism {
 //		return getTriggerTokenDetails(spec, textSentence, textTriggerToken, textTriggerTokenMap);
 //	}
 
-	public LinkedHashMap<ScorerData, BigDecimal> scoreArgument(Map<ScorerData, SignalInstance> existingSignals, JCas spec, Argument argument, SentenceInstance textSentence, int i, AceMention mention) throws SignalMechanismException {
-		int argHeadFirstTokenIndex = mention.getHeadIndices().get(0);
-		
+	public void scoreArgument(Map<ScorerData, SignalInstance> existingSignals, JCas spec, SentenceInstance textSentence, int i,	Argument argument, AceMention mention, boolean debug) throws SignalMechanismException {
 		Token textTriggerToken = textSentence.getTokenAnnotation(i);
-		Token textArgToken = textSentence.getTokenAnnotation(argHeadFirstTokenIndex);
-		
-		List<Map<Class<?>, Object>> textSentenceMaps = (List<Map<Class<?>, Object>>) textSentence.get(InstanceAnnotations.Token_FEATURE_MAPs);
-		Map<Class<?>, Object> textTriggerTokenMap = textSentenceMaps.get(i);
-		Map<Class<?>, Object> textArgTokenMap = textSentenceMaps.get(argHeadFirstTokenIndex);
-		
-		return scoreArgumentFirstHeadToken(existingSignals, spec, argument, textSentence, textTriggerToken, textTriggerTokenMap, textArgToken, textArgTokenMap);
+		Map<Class<?>, Object> textTriggerTokenMap = ((List<Map<Class<?>, Object>>) textSentence.get(InstanceAnnotations.Token_FEATURE_MAPs)).get(i);
+		String docAllText = textSentence.doc.allText;
+
+		for (ScorerData data : scorers.get(SignalType.ARGUMENT)) {
+			SignalInstance signal = null;
+			if (!existingSignals.containsKey(data)) {
+				///DEBUG
+				ArgumentScorer<?> scorer = (ArgumentScorer<?>) data.scorer;
+				scorer.prepareCalc(spec, textTriggerToken, textTriggerTokenMap, argument, mention, docAllText, data);
+				BigDecimal score = data.elementAggregator.aggregate(scorer);
+				
+				signal = new SignalInstance(data, SignalType.TRIGGER, score);
+				existingSignals.put(data, signal);
+				//allTriggerScorers.add(data);
+				textSentence.markSignalUpdate();
+			}
+			if (debug) {
+				if (signal == null) {
+					signal = existingSignals.get(data);
+				}
+				if (signal.history == null) {
+					data.scorer.debug = true;
+					data.scorer.history = ArrayListMultimap.create();
+					// need to init again because the inner iterator is already exhausted, need to get a new one
+					ArgumentScorer<?> scorer = (ArgumentScorer<?>) data.scorer;
+					scorer.prepareCalc(spec, textTriggerToken, textTriggerTokenMap, argument, mention, docAllText, data);
+					debugAggregator.aggregate(scorer);
+					data.scorer.debug = false;
+					signal.history = data.scorer.history;
+					textSentence.markSignalUpdate();
+				}
+			}
+		}
 	}
-	
+
+
 	public String toString() {
 		return String.format("%s(%s scorers)", getClass().getSimpleName(), scorers.size());
 	}

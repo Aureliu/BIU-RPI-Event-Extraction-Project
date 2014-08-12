@@ -10,8 +10,8 @@ import org.apache.uima.jcas.cas.TOP_Type;
 
 
 /** 
- * Updated by JCasGen Mon Aug 04 21:24:44 IDT 2014
- * XML source: C:/Java/Git/breep/ace_events/TypeSystem.xml
+ * Updated by JCasGen Sun Aug 10 13:57:31 IDT 2014
+ * XML source: C:/Java/Git/breep/ace_events/src/main/resources/desc/OdieInputTypes.xml
  * @generated */
 public class VerbLemma extends LemmaByPos {
   /** @generated

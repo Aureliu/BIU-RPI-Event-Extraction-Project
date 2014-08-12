@@ -161,5 +161,5 @@ public class StatsDocument {
 	public static final String ANY = "*";
 	public static final String SEPARATOR = "^";
 	public static final String SEPARATOR_SUBSTITUTE = "~";
-	private static final int MAX_CHARS = 5000;
+	public static final int MAX_CHARS = 8000;
 }

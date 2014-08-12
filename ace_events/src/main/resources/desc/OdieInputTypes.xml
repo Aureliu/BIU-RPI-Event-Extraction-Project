@@ -85,6 +85,12 @@
           <description/>
           <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.Marker</rangeTypeName>
         </featureDescription>
+        <featureDescription>
+          <name>aiuses</name>
+          <description/>
+          <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+          <elementType>ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample</elementType>
+        </featureDescription>
       </features>
     </typeDescription>
     <typeDescription>

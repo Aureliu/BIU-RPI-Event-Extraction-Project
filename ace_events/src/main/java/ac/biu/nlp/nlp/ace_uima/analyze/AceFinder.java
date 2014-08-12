@@ -100,7 +100,7 @@ public class AceFinder extends AceAnalyzer {
 		dumpDetailedFiles(detailedOutputFolderPath, "\n");
 	}
 
-	public static void main(String args[]) throws AnalysisEngineProcessException, ResourceInitializationException, LAPException, InstantiationException, IOException, AceException, InvalidXMLException, SAXException, StatsException, CASException, CasTreeConverterException, UnsupportedPosTagStringException, TreeAndParentMapException, TreeFragmentBuilderException, PredicateArgumentIdentificationException {
+	public static void main(String args[]) throws Exception {
 		if (args.length != 2) {
 			System.err.println("USAGE: Acefinder <xmi input folder> <detailed output folder>");
 			return;

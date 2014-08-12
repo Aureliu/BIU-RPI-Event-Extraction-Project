@@ -14,21 +14,23 @@ public abstract class PredicateScorer<T extends Annotation> extends SignalMechan
 		System.err.println("??? PredicateScorer: should add here hard-codedly all the tests of text tokens that exist in BeamSearch.expandTriggers (like if the POS is right), and just return false.");
 	}
 
-	public void prepareCalc(JCas spec, Token textToken, Map<Class<?>, Object> textTriggerTokenMap, ScorerData scorerData) throws SignalMechanismException {
+	public void prepareCalc(JCas spec, Token textToken, Map<Class<?>, Object> textTriggerTokenMap, String docAllText, ScorerData scorerData) throws SignalMechanismException {
 		prepareSpecIteration(spec);
+		this.scorerData = scorerData;
+		this.docAllText = docAllText;
 		this.textToken = textToken;
 		this.textTriggerTokenMap = textTriggerTokenMap;
-		this.scorerData = scorerData;
 	}
 	
 	@Override
-	public Boolean calcScore(T spec, ScorerData scorerData) throws SignalMechanismException {
-		return calcBooleanPredicateScore(textToken, textTriggerTokenMap, spec, scorerData);
+	public Boolean calcScore(T spec) throws SignalMechanismException {
+		return calcBooleanPredicateScore(spec);
 	}
 
-	public abstract Boolean calcBooleanPredicateScore(Token text, Map<Class<?>, Object> textTriggerTokenMap, T spec, ScorerData scorerData) throws SignalMechanismException;
+	public abstract Boolean calcBooleanPredicateScore(T spec) throws SignalMechanismException;
 	protected abstract void prepareSpecIteration(JCas spec) throws SignalMechanismException;
 	
+	//protected transient ScorerData scorerData;
 	protected transient Token textToken;
 	protected transient Map<Class<?>, Object> textTriggerTokenMap;
 

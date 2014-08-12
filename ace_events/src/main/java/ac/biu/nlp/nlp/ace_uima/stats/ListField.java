@@ -24,25 +24,34 @@ public abstract class ListField extends StatsField {
 
 	@Override
 	public List<String> getValues() {
-		// First alternative: hello(3)|table(5)|chair(2) 
-//		List<String> toResult = new ArrayList<String>(elements.size());
-//		for (Entry<String, Integer> entry : elements.entrySet()) {
-//			toResult.add(String.format("%s(%s)", entry.getKey(), entry.getValue()));
-//		}
-//		String result = StringUtil.join(toResult, "|");
-		
 		// Second alternative: 1 = { ball | umbrella | pan }   2 = { dog | cat }
-		List<String> toResult = new ArrayList<String>(getListSize());
-		for (Entry<? extends Object, ? extends Collection<String>> entry : getList()) {
-			List<String> vals = new ArrayList<String>(entry.getValue());
-			Collections.sort(vals, getComparator());
-			String strings = StringUtil.join(vals, " | ");
-			toResult.add(String.format("%s = { %s }", entry.getKey(), strings));
-		}
-		finalizeResults(toResult);
-		String result = StringUtil.join(toResult, "   ");
 		
-		return Arrays.asList(new String[] {result});
+		throw new RuntimeException("All the rest of the code in the method is great and works! But I have some weird maven compilation problem on te-srv2 with it (generics-related), so this hsould be solved.... GL :)");
+		
+//		List<String> toResult = new ArrayList<String>(getListSize());
+//		Collection<Entry<? extends Object, ? extends Collection<String>>> list = getList();
+//		int charsLeft = StatsDocument.MAX_CHARS;
+//		int keysLeft = list.size();
+//		for (Entry<? extends Object, ? extends Collection<String>> entry : list) {
+//			List<String> vals = new ArrayList<String>(entry.getValue());
+//			Collections.sort(vals, getComparator());
+//			String strings = StringUtil.join(vals, " | ");
+//			
+//			int charsAllowed = charsLeft/keysLeft;
+//			if (strings.length() > charsAllowed) {
+//				strings = strings.substring(0, charsAllowed) + "...";
+//			}
+//			
+//			String keyAndVal = String.format("___%s = { %s }", entry.getKey(), strings);
+//			toResult.add(keyAndVal);
+//			
+//			charsLeft -= keyAndVal.length();
+//			keysLeft -= 1;
+//		}
+//		finalizeResults(toResult);
+//		String result = StringUtil.join(toResult, "   ");
+//		
+//		return Arrays.asList(new String[] {result});
 	}
 	
 	protected Comparator<String> getComparator() {
@@ -50,6 +59,6 @@ public abstract class ListField extends StatsField {
 	}
 
 	public abstract int getListSize();
-	public abstract <O extends Object, C extends Collection<String>, I extends Iterable<Entry<O, C>>> I getList();
+	public abstract <O extends Object, C extends Collection<String>, I extends Collection<Entry<O, C>>> I getList();
 	public abstract void finalizeResults(List<String> toResult);
 }

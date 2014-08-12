@@ -46,7 +46,7 @@ public class ListValuesField extends ListField {
 	}
 
 	@Override
-	public <O extends Object, C extends Collection<String>, I extends Iterable<Entry<O, C>>> I getList() {
+	public <O extends Object, C extends Collection<String>, I extends Collection<Entry<O, C>>> I getList() {
 		Set<Entry<O,C>> out = new HashSet<Entry<O,C>>(elements.keySet().size());
 		for (Entry<String, Collection<String>> en : elements.asMap().entrySet()) {
 			Multiset<String> valueTerms = HashMultiset.create(en.getValue());

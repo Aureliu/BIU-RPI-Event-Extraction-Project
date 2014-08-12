@@ -6,10 +6,10 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Set;
 import java.util.SortedMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import java.util.Set;
 
 import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_engine.AnalysisEngine;
@@ -46,7 +46,6 @@ import com.google.common.collect.Maps;
 import com.google.common.collect.Multimap;
 import com.google.common.collect.Sets;
 
-import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Lemma;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
 import edu.cuny.qc.ace.acetypes.AceArgumentType;
@@ -346,6 +345,7 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 					ArgumentInUsageSample aius = new ArgumentInUsageSample(sentenceView, begin, end);
 					ArgumentExample example = (ArgumentExample) element;
 					toUsage.put(example, aius);
+					toUsage.put(example.getArgument(), aius); //a little abuse of the format - put aius also directly for the Argument (the one that has many examples)
 					//example.setAius(aius);
 					aius.setArgumentExample(example);
 					aius.addToIndexes();
@@ -557,7 +557,7 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 					}
 				}
 				
-				// And now, set sample instances for each PredicateSeed/ArgumentExample
+				// And now, set sample instances for each PredicateSeed/ArgumentExample (and also for Arguments)
 				for (PredicateSeed seed : JCasUtil.select(tokenView, PredicateSeed.class)) {
 					Collection<Annotation> piusesOfSeed = toUsage.get(seed);
 					seed.setPiuses((FSArray) FSCollectionFactory.createFSArray(tokenView, piusesOfSeed));
@@ -565,6 +565,10 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 				for (ArgumentExample example : JCasUtil.select(tokenView, ArgumentExample.class)) {
 					Collection<Annotation> aiusesOfExample = toUsage.get(example);
 					example.setAiuses((FSArray) FSCollectionFactory.createFSArray(tokenView, aiusesOfExample));
+				}
+				for (Argument arg : JCasUtil.select(tokenView, Argument.class)) {
+					Collection<Annotation> aiusesOfArg = toUsage.get(arg);
+					arg.setAiuses((FSArray) FSCollectionFactory.createFSArray(tokenView, aiusesOfArg));
 				}
 			}
 						

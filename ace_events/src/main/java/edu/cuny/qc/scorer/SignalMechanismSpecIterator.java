@@ -24,7 +24,7 @@ public abstract class SignalMechanismSpecIterator<T extends Annotation> implemen
 	public BigDecimal next() {
 		try {
 			T specElement = specIterator.next();
-			Boolean result = calcScore(specElement, scorerData);
+			Boolean result = calcScore(specElement);
 			return SignalInstance.toDouble(result);
 		} catch (SignalMechanismException e) {
 			throw new SignalMechanismRuntimeException(e);
@@ -45,13 +45,14 @@ public abstract class SignalMechanismSpecIterator<T extends Annotation> implemen
 		throw new UnsupportedOperationException(String.format("%s does not support removing spec items", this.getClass().getSimpleName()));
 	}
 	
-	public abstract Boolean calcScore(T spec, ScorerData scorerData) throws SignalMechanismException;
+	public abstract Boolean calcScore(T spec) throws SignalMechanismException;
 //	public abstract void prepareSpecIteration(JCas spec) throws SignalMechanismException;
 	
 	protected transient Iterator<T> specIterator;
 //	protected transient Annotation textAnno;
 //	protected transient Map<Class<?>, Object> textTriggerTokenMap;
 	protected ScorerData scorerData;
+	protected transient String docAllText;
 	public Multimap<String, String> history;  // {specTok1 = [textTok1, textTok2], specTok2=[textTok3, textTok1, textTok3]}
 	public boolean debug = false;
 }

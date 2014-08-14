@@ -8,6 +8,7 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import org.apache.commons.collections15.ListUtils;
 import org.apache.log4j.Logger;
@@ -30,6 +31,7 @@ import com.google.common.collect.Multimap;
 import com.google.common.collect.Sets;
 
 import edu.cuny.qc.ace.acetypes.AceDocument;
+import edu.cuny.qc.ace.acetypes.AceEventMention;
 import edu.cuny.qc.ace.acetypes.Scorer;
 import edu.cuny.qc.ace.acetypes.Scorer.Stats;
 import edu.cuny.qc.perceptron.core.AllTrainingScores;
@@ -286,6 +288,24 @@ public class Folds {
 				}
 			}
 		}
+		
+		// Calculate final number of mentions - it should be the same as the original!
+		int countEvents = 0;
+		int countInsts = 0;
+		Multimap<String, AceEventMention> mentionByType = HashMultimap.create();
+		for (SentenceInstance inst : result.values()) {
+			for (AceEventMention e : inst.eventMentions) {
+				mentionByType.put(e.getSubType(), e);
+				countEvents++;
+			}
+			countInsts++;
+		}
+		System.out.printf("Built final list of SentenceInstances (learnable=%s): %d Documents, %d SentenceInstances, %d event mentions:\n\t\t", learnable, result.keySet().size(), countInsts, countEvents);
+		for (Entry<String, Collection<AceEventMention>> entry : mentionByType.asMap().entrySet()) {
+			System.out.printf("%s: %d mentions\t", entry.getKey(), entry.getValue().size());
+		}
+		System.out.printf("\n");
+
 		return result;
 	}
 	
@@ -314,9 +334,10 @@ public class Folds {
 				outputFolder, args[1], allSpecs.size(), numRuns, minTrainEvents, maxTrainEvents, minDevEvents, maxDevEvents, minTrainMentions, minDevMentions, trainDocs, devDocs, testDocs);
 		
 		File corpusDir = new File(CORPUS_DIR);
-		TypesContainer types = new TypesContainer(allSpecs, false);
 		Controller controller = new Controller();
 		controller.setValueFromArguments(Arrays.copyOfRange(args, 12, args.length));//(StringUtils.split(CONTROLLER_PARAMS));
+		Perceptron.controllerStatic = controller;
+		TypesContainer types = new TypesContainer(allSpecs, false);
 		SignalMechanismsContainer signalMechanismsContainer = new SignalMechanismsContainer(controller);
 		Perceptron perceptron = null;
 		
@@ -350,7 +371,10 @@ public class Folds {
 			logs.logSuffix = "." + run.suffix;
 			Perceptron.uTrain = logs.getU("Train");
 			Perceptron.wTrain = logs.getW("Train");
+			Perceptron.fTrain = logs.getF("Train");
 			Perceptron.pTrain = logs.getP("Train");
+			Perceptron.uDev = logs.getU("Dev");
+			Perceptron.fDev = logs.getF("Dev");
 			Perceptron.pDev   = logs.getP("Dev");
 			//logs.logTitles(w,  null,  null,  u,  null,  null);
 			String scoreFileName = outputFolder.getAbsolutePath() + "/TestScore." + run.suffix + ".txt";

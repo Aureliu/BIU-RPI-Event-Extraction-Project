@@ -38,7 +38,7 @@ public class AnalysisEngines {
 					createPrimitiveDescription(StanfordLemmatizerAE.class),
 					createPrimitiveDescription(StanfordPosTaggerAE.class,
 							StanfordPosTaggerAE.PARAM_MODEL_FILE , MAXENT_POS_TAGGER_MODEL_FILE),
-					createPrimitiveDescription(StanfordParser.class),
+					//createPrimitiveDescription(StanfordParser.class),
 			});
 		}
 		catch (ResourceInitializationException e) {

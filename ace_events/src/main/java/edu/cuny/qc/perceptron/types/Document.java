@@ -48,6 +48,7 @@ import edu.cuny.qc.ace.acetypes.AceEntityMention;
 import edu.cuny.qc.ace.acetypes.AceEventMention;
 import edu.cuny.qc.ace.acetypes.AceMention;
 import edu.cuny.qc.perceptron.core.Controller;
+import edu.cuny.qc.perceptron.core.Perceptron;
 import edu.cuny.qc.perceptron.featureGenerator.TextFeatureGenerator;
 import edu.cuny.qc.perceptron.types.Sentence.Sent_Attribute;
 import edu.cuny.qc.scorer.ScorerData;
@@ -142,7 +143,9 @@ public class Document implements java.io.Serializable
 		System.err.println("??? Document: Still need to make sure XMI is not saved inside preprocessed doc, only in separate file");
 		System.err.println("??? Document: Running both my UIMA-preprocessing and Qi's old preprocessing. Consider discarding Qi's.");
 		System.err.println("??? Document: Not dumping processed document (and jcas), because annotations are referenced not only in cas but also in cuny.Sentence and cuny.SentenceInstance. To solve, I should load annotations to these classes separately, like by finding in Document.jcas rlevant single annotations in [begin, end] spans.");
-		System.err.println("??? Document: Args args args!!! (when checking the Bundledsignals thingie)");
+		//System.err.println("??? Document: Args args args!!! (when checking the Bundledsignals thingie)");
+		System.err.println("??? Document: Document 'un/timex2norm/alt.vacation.las-vegas_20050109.0133' is still problematic, all offsets are off. Can probably fix, or just remove from lists.");
+		System.err.println("??? Document: ***********************************************************\n************************************\n******************************************\n***********************************\n                loadSignalsIntoDocument(): filter also Args scorers!!!!!\n******************************************\n**************************************************\n");
 		
 		// initialize priorityQueueEntities
 		try
@@ -641,6 +644,17 @@ public class Document implements java.io.Serializable
 				this.text = rawText;
 			}
 		}
+		
+		@Override
+		public String toString() {
+			final int MAX_LEN_CHARS = 20; 
+			final String TAIL = "...";
+			String textTrunc = text;
+			if (text.length() > MAX_LEN_CHARS) {
+				textTrunc = text.substring(0, MAX_LEN_CHARS-TAIL.length()) + TAIL;
+			}
+			return String.format("%s(%s: '%s')", getClass().getSimpleName(), tag, textTrunc);
+		}
 	}
 	
 	/**
@@ -746,7 +760,11 @@ public class Document implements java.io.Serializable
 	
 	private Span[] splitSents(List<TextSegment> segments) throws InvalidFormatException, IOException
 	{
-		final String tagWhiteList = "SUBJECT";
+		String tagWhiteList = "SUBJECT";
+		
+		if (Perceptron.controllerStatic.takeExtendedTags) {
+			tagWhiteList = "SUBJECT|SPEAKER|POSTER";
+		}
 		
 		this.text = "";
 		this.allText = "";
@@ -1141,6 +1159,8 @@ public class Document implements java.io.Serializable
 					}
 				}
 			}
+			
+			/// TODO!!!! Do the same for args!!!
 		}
 	}
 	

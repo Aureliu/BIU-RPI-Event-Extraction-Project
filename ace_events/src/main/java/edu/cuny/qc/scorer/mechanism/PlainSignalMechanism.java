@@ -87,7 +87,7 @@ public class PlainSignalMechanism extends SignalMechanism {
 		private static final long serialVersionUID = 756493837201510988L;
 		public static final SameArgumentText inst = new SameArgumentText();
 		@Override
-		public Boolean calcBoolArgumentExampleScore(AceEntityMention concreteMention, Annotation headAnno, String textHeadTokenStr, PartOfSpeech textHeadTokenPos, String specStr, PartOfSpeech specPos, ScorerData scorerData) throws SignalMechanismException
+		public Boolean calcBoolArgumentExampleScore(AceEntityMention corefMention, Annotation headAnno, String textHeadTokenStr, PartOfSpeech textHeadTokenPos, String specStr, PartOfSpeech specPos, ScorerData scorerData) throws SignalMechanismException
 		{
 			return headAnno.getCoveredText().equalsIgnoreCase(specStr);
 		}
@@ -97,7 +97,7 @@ public class PlainSignalMechanism extends SignalMechanism {
 		private static final long serialVersionUID = 5682579893362232185L;
 		public static final SameArgumentHeadTokenLemma inst = new SameArgumentHeadTokenLemma();
 		@Override
-		public Boolean calcBoolArgumentExampleScore(AceEntityMention concreteMention, Annotation headAnno, String textHeadTokenStr, PartOfSpeech textHeadTokenPos, String specStr, PartOfSpeech specPos, ScorerData scorerData) throws SignalMechanismException
+		public Boolean calcBoolArgumentExampleScore(AceEntityMention corefMention, Annotation headAnno, String textHeadTokenStr, PartOfSpeech textHeadTokenPos, String specStr, PartOfSpeech specPos, ScorerData scorerData) throws SignalMechanismException
 		{
 			return textHeadTokenStr.equals(specStr);
 		}

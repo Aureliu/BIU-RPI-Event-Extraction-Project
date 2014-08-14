@@ -550,7 +550,7 @@ public class WordNetSignalMechanism extends SignalMechanism {
 
 
 		@Override
-		public Boolean calcBoolArgumentExampleScore(AceEntityMention concreteMention, Annotation headAnno, String textHeadTokenStr, PartOfSpeech textHeadTokenPos, String specStr, PartOfSpeech specPos, ScorerData scorerData) throws SignalMechanismException {
+		public Boolean calcBoolArgumentExampleScore(AceEntityMention corefMention, Annotation headAnno, String textHeadTokenStr, PartOfSpeech textHeadTokenPos, String specStr, PartOfSpeech specPos, ScorerData scorerData) throws SignalMechanismException {
 			try {
 				BasicRulesQuery rightQuery = new BasicRulesQuery(specStr, specPos, null, null);
 				if (!cacheExist.get(rightQuery)) {
@@ -558,11 +558,11 @@ public class WordNetSignalMechanism extends SignalMechanism {
 				}
 				
 				List<BasicRulesQuery> queries = Lists.newArrayListWithCapacity(2);
-				if (concreteMention.type.equalsIgnoreCase("NAM")) { // Proper Noun
+				if (corefMention.type.equalsIgnoreCase("NAM")) { // Proper Noun
 					queries.add(new BasicRulesQuery(headAnno.getCoveredText(), PosMap.byCanonical.get(CanonicalPosTag.N), null, null)); //all tokens
 					queries.add(new BasicRulesQuery(textHeadTokenStr, textHeadTokenPos, null, null)); //only head token
 				}
-				else if (concreteMention.type.equalsIgnoreCase("NOM")) { // Common Noun
+				else { // Common Noun ("NOM"), Pronouns, etc.
 					queries.add(new BasicRulesQuery(textHeadTokenStr, textHeadTokenPos, null, null)); //only head token
 				}
 				

@@ -94,6 +94,15 @@ public abstract class AceMention implements Comparable, java.io.Serializable {
 	 *  the text of the extent.
 	 */
 	public String text;
+	
+	
+	//////
+	public String headTokenText = null; 
+	public String headTokenLemma = null; 
+	
+	
+	//////
+	
 	/**
 	 *  the parent (the entity, value, or timex containing this mention)
 	 */

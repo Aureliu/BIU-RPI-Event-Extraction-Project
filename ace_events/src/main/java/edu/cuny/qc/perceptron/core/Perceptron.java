@@ -213,6 +213,10 @@ public class Perceptron implements java.io.Serializable
 	public void evaluateAndUpdateBest(Logs logs, Evaluator evaluator, Collection<SentenceInstance> instances, List<SentenceAssignment> assns,
 			Integer iter, ScoresList currScores, FeatureVector weights, FeatureVector avgWeights, PrintStream p) {
 		Evaluator.Score score = evaluator.evaluate(assns, instances, iter);
+		//// DEBUG
+		System.out.printf("** Just returned from evaluator.evaluate(). It got %s instances with %s mentions. Now, the score reports: count_trigger_gold=%s, count_trigger_ans=%s, count_trigger_correct=%s, count_trigger_total=%s\n",
+				instances.size(), SentenceInstance.getNumEventMentions(instances), score.count_trigger_gold, score.count_trigger_ans, score.count_trigger_correct, score.count_trigger_total);
+		////
 		currScores.scores.put(iter, score);
 		logs.printScore(p, Integer.toString(iter), instances.size(), score, true);
 		
@@ -256,6 +260,11 @@ public class Perceptron implements java.io.Serializable
 		}
 			
 			
+		/// DEBUG
+		System.out.printf("*** About to start learning(). %s input  dev instances, in them - %s mentions.\n", devInsts.size(), SentenceInstance.getNumEventMentions(devInsts));
+		System.out.printf("*** About to start learning(). %s copied dev instances, in them - %s mentions.\n", devList.size(), SentenceInstance.getNumEventMentions(devList));
+		/////
+		
 		Logs logs = new Logs(outFolder, controller, logSuffix);
 		
 		// the evaluator for dev set
@@ -370,7 +379,14 @@ public class Perceptron implements java.io.Serializable
 				logs.printWeights(wTrain, iter, "", Logs.POST_ITERATION_MARK, c, "", "", weights, avg_weights, avg_weights_base, true);
 				/// TODO END DEBUG
 				
+				/// DEBUG
+				System.out.printf("*** About to dev-decode. %s dev instances, in them - %s mentions.\n", devList.size(), SentenceInstance.getNumEventMentions(devList));
+				/////
+				
 				List<SentenceAssignment> devResult = decoding(logs, devList, iter, i, weights, avg_weights, avg_weights_base, wTrain, fDev, uDev);
+				/// DEBUG
+				System.out.printf("*** After dev-decode. %s dev instances, in them - %s mentions.\n", devList.size(), SentenceInstance.getNumEventMentions(devList));
+				/////
 				evaluateAndUpdateBest(logs, evaluator, devList, devResult, iter, result.dev, this.weights, this.avg_weights, pDev);
 //				if (score != null) {
 //					max_score = score;

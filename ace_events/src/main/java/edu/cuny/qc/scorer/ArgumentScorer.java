@@ -22,7 +22,6 @@ public abstract class ArgumentScorer<T extends Annotation> extends SignalMechani
 		this.docAllText = docAllText;
 		this.textTriggerToken = textTriggerToken;
 		this.textTriggerTokenMap = textTriggerTokenMap;
-		this.scorerData = scorerData;
 		this.argument = argument;
 		this.aceMention = aceMention;
 		prepareSpecIteration(spec);

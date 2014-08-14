@@ -7,6 +7,8 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ExecutionException;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.uima.cas.CASException;
 import org.apache.uima.jcas.JCas;
 import org.uimafit.util.JCasUtil;
@@ -62,8 +64,11 @@ public abstract class PredicateSeedScorer extends PredicateScorer<PredicateSeed>
 				return false; //TODO: should be: IRRELEVANT
 			}
 			
-			Set<BasicRulesQuery> textDerivations = cacheTextDerivations.get(getForm(textToken));
-			Set<BasicRulesQuery> specDerivations = cacheSpecDerivations.get(spec);					
+			BasicRulesQuery textQuery = new BasicRulesQuery(getForm(textToken), textPos, null, null);
+			Set<BasicRulesQuery> textDerivations = cacheTextDerivations.get(textQuery);
+			
+			PredicateSeedQuery specQuery = new PredicateSeedQuery(spec, textPos);
+			Set<BasicRulesQuery> specDerivations = cacheSpecDerivations.get(specQuery);					
 
 			// Calculate score on each combination of text-derivation and spec-derivation
 			// this is a hard-coded "or" methodology, with short-circuit
@@ -109,32 +114,51 @@ public abstract class PredicateSeedScorer extends PredicateScorer<PredicateSeed>
 		history.put(specHistory.intern(), textHistory.intern());
 	}
 	
+	public static class PredicateSeedQuery {
+		public PredicateSeed predicateSeed;
+		public PartOfSpeech specPos;
+		public PredicateSeedQuery(PredicateSeed predicateSeed, PartOfSpeech specPos) {
+			this.predicateSeed = predicateSeed;
+			this.specPos = specPos;
+		}
+		@Override public int hashCode() {
+		     return new HashCodeBuilder(19, 37).append(predicateSeed).append(specPos).toHashCode();
+		}
+		@Override public boolean equals(Object obj) {
+		   if (obj == null) { return false; }
+		   if (obj == this) { return true; }
+		   if (obj.getClass() != getClass()) { return false; }
+		   PredicateSeedQuery rhs = (PredicateSeedQuery) obj;
+		   return new EqualsBuilder().append(predicateSeed, rhs.predicateSeed).append(specPos, rhs.specPos).isEquals();
+		}
+	}
+	
 	public abstract Boolean calcBoolPredicateSeedScore(Token textToken, Map<Class<?>, Object> textTriggerTokenMap, String textStr, PartOfSpeech textPos, String specStr, PartOfSpeech specPos, ScorerData scorerData) throws SignalMechanismException;
 	
 	private transient PartOfSpeech textPos;	
-	private transient LoadingCache<String, Set<BasicRulesQuery>> cacheTextDerivations = CacheBuilder.newBuilder()
+	private transient LoadingCache<BasicRulesQuery, Set<BasicRulesQuery>> cacheTextDerivations = CacheBuilder.newBuilder()
 			.maximumSize(10000)
-			.build(new CacheLoader<String, Set<BasicRulesQuery>>() {
-				public Set<BasicRulesQuery> load(String textForm) throws DeriverException {
+			.build(new CacheLoader<BasicRulesQuery, Set<BasicRulesQuery>>() {
+				public Set<BasicRulesQuery> load(BasicRulesQuery query) throws DeriverException {
 					Set<BasicRulesQuery> result = scorerData.deriver.getDerivations(
-							textForm, textPos, scorerData.derivation.leftOriginal, scorerData.derivation.leftDerivation, scorerData.leftSenseNum);
+							query.lLemma, query.lPos, scorerData.derivation.leftOriginal, scorerData.derivation.leftDerivation, scorerData.leftSenseNum);
 					return result;
 				}
 			});
-	private transient LoadingCache<PredicateSeed, Set<BasicRulesQuery>> cacheSpecDerivations = CacheBuilder.newBuilder()
+	private transient LoadingCache<PredicateSeedQuery, Set<BasicRulesQuery>> cacheSpecDerivations = CacheBuilder.newBuilder()
 			.maximumSize(10000)
-			.build(new CacheLoader<PredicateSeed, Set<BasicRulesQuery>>() {
-				public Set<BasicRulesQuery> load(PredicateSeed spec) throws CASException, DeriverException {
+			.build(new CacheLoader<PredicateSeedQuery, Set<BasicRulesQuery>>() {
+				public Set<BasicRulesQuery> load(PredicateSeedQuery spec) throws CASException, DeriverException {
 					// Get all spec derivations, based on the spec token itself, and its possible noun-lemma and verb-lemma forms
 					Set<String> specForms = new HashSet<String>(Arrays.asList(new String[] {
-							spec.getCoveredText(),
-							UimaUtils.selectCoveredSingle(spec.getView().getJCas(), NounLemma.class, spec).getValue(),
-							UimaUtils.selectCoveredSingle(spec.getView().getJCas(), VerbLemma.class, spec).getValue(),
+							spec.predicateSeed.getCoveredText(),
+							UimaUtils.selectCoveredSingle(spec.predicateSeed.getView().getJCas(), NounLemma.class, spec.predicateSeed).getValue(),
+							UimaUtils.selectCoveredSingle(spec.predicateSeed.getView().getJCas(), VerbLemma.class, spec.predicateSeed).getValue(),
 					}));
 					Set<BasicRulesQuery> result = new HashSet<BasicRulesQuery>(5);
 					for (String specForm : specForms) {
 						result.addAll(scorerData.deriver.getDerivations(
-								specForm, textPos, scorerData.derivation.rightOriginal, scorerData.derivation.rightDerivation, scorerData.rightSenseNum));
+								specForm, spec.specPos, scorerData.derivation.rightOriginal, scorerData.derivation.rightDerivation, scorerData.rightSenseNum));
 					}					
 					return result;
 				}

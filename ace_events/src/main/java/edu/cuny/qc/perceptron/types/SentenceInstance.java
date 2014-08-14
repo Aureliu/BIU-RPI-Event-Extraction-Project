@@ -2,6 +2,7 @@ package edu.cuny.qc.perceptron.types;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
@@ -138,6 +139,7 @@ public class SentenceInstance {
 		ParseTree, // parse tree
 		SentenceAnnotation, // UIMA Sentence Annotation
 		TokenAnnotations, // UIMA Token Annotations
+		//Entity_FEATURE_MAPs, //same as Token_FEATURE_MAPs, but for each token, this maps all of its possible argument candidates
 	}
 
 	@Override
@@ -729,4 +731,53 @@ public class SentenceInstance {
 	public void markSignalUpdate() {
 		doc.signalsUpdated = true;
 	}
+	
+	public static int getNumEventMentions(Collection<SentenceInstance> insts) {
+		int count = 0;
+		for (SentenceInstance inst : insts) {
+			count += inst.eventMentions.size();
+		}
+		return count;
+	}
+
+	/**
+	 * Just counts how many total argcands are in the sentences, without addressing triggers.
+	 */
+	public static int getNumArgCandsFlat(Collection<SentenceInstance> insts) {
+		int count = 0;
+		for (SentenceInstance inst : insts) {
+			count += inst.eventArgCandidates.size();
+		}
+		return count;
+	}
+
+	/**
+	 * Counts how many argcands are considered by triggers in these sentences.
+	 * This is actually much more than the flat number of argcands, since if a sentence has multiple triggers,
+	 * then the same argcand would be considered multiple times (and could even be eventually labeled as an arg
+	 * multiple times). So this method returns this larger number.
+	 */
+	public static int getNumArgCandsForTriggers(Collection<SentenceInstance> insts) {
+		int count = 0;
+		for (SentenceInstance inst : insts) {
+			count += inst.eventArgCandidates.size() * inst.eventMentions.size();
+		}
+		return count;
+	}
+
+	/**
+	 * Counts how many args do all the triggers in the sentences have.
+	 * Note that the same argcand can be an arg for more than one trigger, where in this case
+	 * it will indeed be counted multiple times.
+	 */
+	public static int getNumArgsForTriggers(Collection<SentenceInstance> insts) {
+		int count = 0;
+		for (SentenceInstance inst : insts) {
+			for (AceEventMention ev : inst.eventMentions) {
+				count += ev.arguments.size();
+			}
+		}
+		return count;
+	}
+
 }

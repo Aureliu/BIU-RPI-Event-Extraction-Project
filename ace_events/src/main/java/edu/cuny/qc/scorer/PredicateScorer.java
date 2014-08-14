@@ -15,11 +15,11 @@ public abstract class PredicateScorer<T extends Annotation> extends SignalMechan
 	}
 
 	public void prepareCalc(JCas spec, Token textToken, Map<Class<?>, Object> textTriggerTokenMap, String docAllText, ScorerData scorerData) throws SignalMechanismException {
-		prepareSpecIteration(spec);
 		this.scorerData = scorerData;
 		this.docAllText = docAllText;
 		this.textToken = textToken;
 		this.textTriggerTokenMap = textTriggerTokenMap;
+		prepareSpecIteration(spec);
 	}
 	
 	@Override

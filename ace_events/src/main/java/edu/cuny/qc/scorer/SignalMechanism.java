@@ -61,7 +61,7 @@ public abstract class SignalMechanism {
 	public void init() throws Exception {}
 	public void logPreSentence() {
 		/// DEBUG
-		System.out.printf("%s %s: PreSentence\n", Utils.detailedLog(), this.getClass().getSimpleName());
+		//System.out.printf("%s %s: PreSentence\n", Utils.detailedLog(), this.getClass().getSimpleName());
 		////
 	}
 	public void logPreDocument() {}

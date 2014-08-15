@@ -23,6 +23,7 @@ import ac.biu.nlp.nlp.ie.onthefly.input.SpecAnnotator;
 import edu.cuny.qc.ace.acetypes.AceEventMention;
 import edu.cuny.qc.ace.acetypes.AceEventMentionArgument;
 import edu.cuny.qc.ace.acetypes.AceMention;
+import edu.cuny.qc.perceptron.core.ArgOMethod;
 import edu.cuny.qc.perceptron.core.Controller;
 import edu.cuny.qc.perceptron.core.Perceptron;
 import edu.cuny.qc.perceptron.core.Pipeline;
@@ -60,7 +61,8 @@ public class SentenceAssignment
 	public static final String IS_ARG_MARKER = "IsArg";
 	public static final List<String> ALL_FEATURE_NAME_MARKERS = ImmutableList.of(CURRENT_LABEL_MARKER, TRIGGER_LABEL_MARKER, ARG_ROLE_MARKER, IS_ARG_MARKER);
 	
-	public static final Pattern methodPattern = Pattern.compile("G\\w(.+)P");
+	//public static final Pattern methodPattern = Pattern.compile("G\\w(.+)P"); //for "a"\"b"
+	public static final Pattern methodPattern = Pattern.compile("G(.+)P");
 
 	// {signalName : {label : {moreParams : featureName}}}
 	public static Map<String, Map<String, Map<String, String>>> signalToFeature = Maps.newTreeMap();
@@ -512,6 +514,12 @@ public class SentenceAssignment
 		}
 		
 		// create featureVectorSequence
+		if (!controller.lazyTargetFeatures) {
+			makeAllFeatures(inst);
+		}
+	}
+	
+	public void makeAllFeatures(SentenceInstance inst) {
 		for(int i=0; i<=state; i++)
 		{
 			makeAllFeatureForSingleState(inst, i, inst.learnable, inst.learnable);
@@ -581,7 +589,7 @@ public class SentenceAssignment
 			String edgeLabel = (String) this.edgeTargetAlphabet.lookupObject(edgeLabelIndx);
 			String genericEdgeLabel = getGenericArgumentLabel(edgeLabel);
 			// if the argument role is NON, then do not produce any feature for it
-			if(controller.skipNonArgument && edgeLabel.equals(SentenceAssignment.Default_Argument_Label))
+			if(controller.argOMethod==ArgOMethod.SKIP_O && edgeLabel.equals(SentenceAssignment.Default_Argument_Label))
 			{
 				return; 
 			}
@@ -604,7 +612,7 @@ public class SentenceAssignment
 					}
 				}
 				else { //genericEdgeLabel == Default_Argument_Label
-					if (this.controller.oMethod.contains("a")) { //duplicate by role!
+					if (this.controller.argOMethod==ArgOMethod.DUPLICATE_BY_ROLE) { //duplicate by role!
 						Map<ScorerData, SignalInstance> signalsForRole = signalsForEntity.get(problem.associatedRole);
 						
 						for (SignalInstance signal : signalsForRole.values()) {
@@ -612,7 +620,7 @@ public class SentenceAssignment
 							makeEdgeLocalFeatureInner(signals, signal.positive, signal.getName(), genericEdgeLabel, index, edgeLabel, addIfNotPresent, useIfNotPresent);
 						}
 					}
-					else if (this.controller.oMethod.contains("b")) { //don't duplicate by role!
+					else if (this.controller.argOMethod==ArgOMethod.OR_ALL) { //don't duplicate by role!
 						for (ScorerData data : signalMechanismsContainer.argumentScorers) {
 							List<SignalInstance> allSignalsAllRolesSameScorer = Lists.newArrayListWithCapacity(signalsForEntity.keySet().size());
 							for (String role : signalsForEntity.keySet()) {
@@ -633,7 +641,7 @@ public class SentenceAssignment
 						}
 					}
 					else {
-						throw new IllegalStateException("Method G must explicitly state a or b for role duplicating, got: " + this.controller.oMethod);
+						throw new IllegalStateException("Got unsupported argOMethod: " + this.controller.argOMethod);
 					}
 				}
 			}

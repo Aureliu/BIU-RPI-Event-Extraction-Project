@@ -14,6 +14,7 @@ import ac.biu.nlp.nlp.ie.onthefly.input.SpecAnnotator;
 
 import com.google.common.collect.Lists;
 
+import edu.cuny.qc.perceptron.core.ArgOMethod;
 import edu.cuny.qc.perceptron.core.SentenceSortingMethod;
 
 public class Run {
@@ -25,6 +26,7 @@ public class Run {
 	public String suffix;
 	public int id, idPerTest, trainMentions, devMentions;
 	public SentenceSortingMethod sentenceSortingMethod;
+	public ArgOMethod argOMethod;
 	
 	public void calcSuffix() {
 		suffix = String.format("%03d_%02d_Train%02d_Dev%02d", id, idPerTest, trainEvents.size(), devEvents.size());
@@ -32,7 +34,7 @@ public class Run {
 	
 	@Override
 	public int hashCode() {
-	     return new HashCodeBuilder(131, 97).append(trainEvents).append(devEvents).append(testEvent).append(sentenceSortingMethod).toHashCode();
+	     return new HashCodeBuilder(131, 97).append(trainEvents).append(devEvents).append(testEvent).append(sentenceSortingMethod).append(argOMethod).toHashCode();
 	}
 	@Override
 	public boolean equals(Object obj) {
@@ -43,13 +45,14 @@ public class Run {
 	   }
 	   Run rhs = (Run) obj;
 	   return new EqualsBuilder().append(trainEvents, rhs.trainEvents).append(devEvents, rhs.devEvents)
-			   .append(testEvent, rhs.testEvent).append(sentenceSortingMethod, rhs.sentenceSortingMethod).isEquals();
+			   .append(testEvent, rhs.testEvent).append(sentenceSortingMethod, rhs.sentenceSortingMethod)
+			   .append(argOMethod, rhs.argOMethod).isEquals();
 	}
 
 	public String toString() {
 		try {
 			String testEventLabel = SpecAnnotator.getSpecLabel(testEvent);
-			return String.format("%s(%s,%s, test=%s, %s train, %s dev, method=%s)", getClass().getSimpleName(), id, idPerTest, testEventLabel, trainEvents.size(), devEvents.size(), sentenceSortingMethod);
+			return String.format("%s(%s,%s, test=%s, %s train, %s dev, method=%s argO=%s)", getClass().getSimpleName(), id, idPerTest, testEventLabel, trainEvents.size(), devEvents.size(), sentenceSortingMethod, argOMethod);
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
@@ -67,9 +70,9 @@ public class Run {
 		}
 		Collections.sort(devLabels);
 		String testLabel = SpecAnnotator.getSpecLabel(testEvent);
-		return String.format("%s(%s,%s, test=%s\n\ttrain(%s, %s mentions)=%s\n\tdev(%s, %s mentions)=%s\n\tsentenceSortingMethod=%s  )",
+		return String.format("%s(%s,%s, test=%s\n\ttrain(%s, %s mentions)=%s\n\tdev(%s, %s mentions)=%s\n\tsentenceSortingMethod=%s\n\targOMethod=%s  )",
 				getClass().getSimpleName(), id, idPerTest, testLabel, trainEvents.size(), trainMentions, StringUtils.join(trainLabels, ", "),
-				devEvents.size(), devMentions, StringUtils.join(devLabels, ", "), sentenceSortingMethod);
+				devEvents.size(), devMentions, StringUtils.join(devLabels, ", "), sentenceSortingMethod, argOMethod);
 	}
 	
 	public static Run shallowCopy(Run orig) {
@@ -83,6 +86,7 @@ public class Run {
 		newRun.trainMentions = orig.trainMentions;
 		newRun.devMentions = orig.devMentions;
 		newRun.sentenceSortingMethod = orig.sentenceSortingMethod;
+		newRun.argOMethod = orig.argOMethod;
 		return newRun;
 	}		
 }

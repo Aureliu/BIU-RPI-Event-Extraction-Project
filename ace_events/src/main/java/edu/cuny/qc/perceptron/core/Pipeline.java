@@ -174,18 +174,20 @@ public class Pipeline
 					
 					// 1.6.14: Create instances even if we skip them - to fully create their signals  
 					//System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] sent_id=%2$s, insts..", new Date(), sent_id);
-					LinkedHashMap<JCas,SentenceInstance> insts = Document.getInstancesForSentence(controller, signalMechanismsContainer, sent, types, featureAlphabet, learnable, debug);
+					LinkedHashMultimap<JCas,SentenceInstance> insts = Document.getInstancesForSentence(controller, signalMechanismsContainer, sent, types, featureAlphabet, learnable, debug);
 					//System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] done(%2$d).", new Date(), insts.size());
 					//docInstancelist.addAll(insts);
 					
 					// Do the very-very conditional filtering!
+					int count = 0;
 					if(learnable && controller.skipNonEventSent)
 					{
 						if (controller.filterSentenceInstance) {
-							for (Entry<JCas,SentenceInstance> entry : insts.entrySet()) {
+							for (Entry<JCas,SentenceInstance> entry : insts.entries()) {
 								SentenceInstance inst = entry.getValue();
 								if (inst.eventMentions != null && inst.eventMentions.size() > 0) {
 									result.put(entry.getKey(), inst);
+									count++;
 								}
 							}
 						}
@@ -193,7 +195,9 @@ public class Pipeline
 							if(sent.eventMentions != null && sent.eventMentions.size() > 0)
 							{
 								//System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] add\n", new Date());
-								Utils.addToMultimap(result, insts);
+								//Utils.addToMultimap(result, insts);
+								result.putAll(insts);
+								count += insts.size();
 							}
 						}
 					}
@@ -201,8 +205,14 @@ public class Pipeline
 					{
 						//List<SentenceInstance> insts = Document.getInstancesForSentence(perceptron, sent, types, featureAlphabet, learnable);
 						//System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] add\n", new Date());
-						Utils.addToMultimap(result, insts);
+						//Utils.addToMultimap(result, insts);
+						result.putAll(insts);
+						count += insts.size();
 					}
+					
+					/// DEBUG
+					System.out.printf("         ^^^ Document.readInstanceList: got %s instances, but added only %s of them to result. Now result is of size %s.\n", insts.size(), count, result.size());
+					////
 				}
 				System.out.printf("%s Finished reading sentence instances - now we have a total of %d instances from all documents.\n", Utils.detailedLog(), result.size());
 				

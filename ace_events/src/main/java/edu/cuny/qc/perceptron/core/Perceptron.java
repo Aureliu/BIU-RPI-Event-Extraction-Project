@@ -259,6 +259,11 @@ public class Perceptron implements java.io.Serializable
 			System.out.printf("- %s\t/ %s\n", inst.sentInstID, /*inst.sentID, inst.specLetter,*/ inst.docID);
 		}
 			
+		if (controller.lazyTargetFeatures) {
+			SentenceInstance.makeAllTargetFeatures(trainingList);
+			SentenceInstance.makeAllTargetFeatures(devList);
+		}
+
 			
 		/// DEBUG
 		System.out.printf("*** About to start learning(). %s input  dev instances, in them - %s mentions.\n", devInsts.size(), SentenceInstance.getNumEventMentions(devInsts));

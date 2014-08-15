@@ -60,7 +60,7 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 	//private Perceptron perceptron = null;
 	private AnalysisEngine tokenAE;
 	private AnalysisEngine sentenceAE;
-	
+		
 //	public static final String PARAM_PERCEPTRON = "perceptron_object";
 //	@ConfigurationParameter(name = PARAM_PERCEPTRON, mandatory = true)
 //	private Perceptron perceptron;
@@ -111,11 +111,11 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 	 * since for iterating a spec's argument list, always the list of Argument annotations is iterated.
 	 * This happens in TypesContainer() and in SentenceInstance.getPersistentSignals().
 	 */
-	public static Map<String, JCas> getSingleRoleSpecs(JCas spec) throws CASException, UimaUtilsException {
+	public static Map<String, JCas> getSingleRoleSpecs(JCas spec) throws CASException, UimaUtilsException, ResourceInitializationException {
 		Map<String, JCas> result = Maps.newLinkedHashMap();
 		int numArgs = getSpecArguments(spec).size();
 		for (int num=0; num<numArgs; num++) {
-			JCas singleRoleSpec = UimaUtils.newJcas();
+			JCas singleRoleSpec = SpecHandler.ae.newJCas();
 			CasCopier.copyCas(spec.getCas(), singleRoleSpec.getCas(), true);
 			List<Argument> copyOfArguments = Lists.newArrayList(getSpecArguments(singleRoleSpec));
 			Argument remainingArg = copyOfArguments.remove(num); //in this iteration, only the num'th argument will remain

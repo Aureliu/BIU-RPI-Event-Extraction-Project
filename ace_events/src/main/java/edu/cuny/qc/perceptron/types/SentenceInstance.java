@@ -145,13 +145,14 @@ public class SentenceInstance {
 	@Override
 	public String toString() {
 		try {
-			final int TEXT_DISPLAY_MAX = 10;
+			//final int TEXT_DISPLAY_MAX = 10;
 			String label = (associatedSpec == null) ? "*" : SpecAnnotator
 					.getSpecLabel(associatedSpec);
-			return String.format("%s(%s, %d events, %d argcands: %s...)",
-					sentInstID, label, eventMentions.size(),
+			String role = (associatedRole == null) ? "*" : associatedRole;
+			return String.format("%s(%s, %s, %d events, %d argcands: %s)",
+					sentInstID, label, role, eventMentions.size(),
 					eventArgCandidates.size(),
-					StringUtils.substring(textStart, 0, TEXT_DISPLAY_MAX));
+					textStart);
 		} catch (CASException e) {
 			throw new RuntimeException(e);
 		}
@@ -778,6 +779,12 @@ public class SentenceInstance {
 			}
 		}
 		return count;
+	}
+	
+	public static void makeAllTargetFeatures(Collection<SentenceInstance> insts) {
+		for (SentenceInstance inst : insts) {
+			inst.target.makeAllFeatures(inst);
+		}
 	}
 
 }

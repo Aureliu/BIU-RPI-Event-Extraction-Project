@@ -89,11 +89,12 @@ public class SpecHandler {
 		boolean shouldDeletePreprocessed = false;
 		File preprocessed = new File(specXmlPath + PREPROCESSED_SPEC_FILE_EXT);
 		try {
+			ae = UimaUtils.loadAE(SpecAnnotator.ANNOTATOR_FILE_PATH);
+
 			if (preprocessed.isFile() && !Perceptron.controllerStatic.enhanceSpecs) {
 				spec = UimaUtils.loadXmi(preprocessed, SpecAnnotator.ANNOTATOR_FILE_PATH);
 			}
 			else {
-				AnalysisEngine ae = UimaUtils.loadAE(SpecAnnotator.ANNOTATOR_FILE_PATH);
 				
 				//AnalysisEngine ae = AnalysisEngineFactory.createPrimitive(SpecAnnotator.class);
 	//			AnalysisEngine ae;
@@ -155,5 +156,6 @@ public class SpecHandler {
 		return spec;
 	}
 	
+	public static AnalysisEngine ae;  //convenience hack - statically store the single instance of the annotator
 	public static final String PREPROCESSED_SPEC_FILE_EXT = ".preprocessed.xmi";
 }

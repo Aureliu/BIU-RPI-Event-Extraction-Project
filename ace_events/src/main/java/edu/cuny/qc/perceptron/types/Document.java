@@ -40,13 +40,16 @@ import ac.biu.nlp.nlp.ie.onthefly.input.SpecAnnotator;
 import ac.biu.nlp.nlp.ie.onthefly.input.TypesContainer;
 
 import com.google.common.collect.ImmutableList;
+import com.google.common.collect.LinkedHashMultimap;
 import com.google.common.collect.Maps;
+import com.google.common.collect.Multimap;
 
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
 import edu.cuny.qc.ace.acetypes.AceDocument;
 import edu.cuny.qc.ace.acetypes.AceEntityMention;
 import edu.cuny.qc.ace.acetypes.AceEventMention;
 import edu.cuny.qc.ace.acetypes.AceMention;
+import edu.cuny.qc.perceptron.core.ArgOMethod;
 import edu.cuny.qc.perceptron.core.Controller;
 import edu.cuny.qc.perceptron.core.Perceptron;
 import edu.cuny.qc.perceptron.featureGenerator.TextFeatureGenerator;
@@ -1244,15 +1247,15 @@ public class Document implements java.io.Serializable
 //		}
 	}
 
-	public Map<JCas, SentenceInstance> getInstances(SignalMechanismsContainer signalMechanismsContainer, TypesContainer types, Alphabet featureAlphabet, 
+	public LinkedHashMultimap<JCas, SentenceInstance> getInstances(SignalMechanismsContainer signalMechanismsContainer, TypesContainer types, Alphabet featureAlphabet, 
 			Controller controller, boolean learnable, boolean debug) throws CASRuntimeException, AnalysisEngineProcessException, ResourceInitializationException, CASException, UimaUtilsException, IOException, AeException
 	{		
-		Map<JCas, SentenceInstance> fullMap = Maps.newLinkedHashMap();
+		LinkedHashMultimap<JCas, SentenceInstance> fullMap = LinkedHashMultimap.create();
 		for(int sent_id=0 ; sent_id<this.getSentences().size(); sent_id++)
 		{
 			Sentence sent = this.getSentences().get(sent_id);
 			// add all instances
-			Map<JCas, SentenceInstance> sentenceMap = Document.getInstancesForSentence(controller, signalMechanismsContainer, sent, types, featureAlphabet, learnable, debug);
+			Multimap<JCas, SentenceInstance> sentenceMap = Document.getInstancesForSentence(controller, signalMechanismsContainer, sent, types, featureAlphabet, learnable, debug);
 			fullMap.putAll(sentenceMap);
 		}
 		return fullMap;
@@ -1264,14 +1267,20 @@ public class Document implements java.io.Serializable
 	 * of event types for a fold. And since Folds doesn't need to also filter by roles (we never do a "partial event type"),
 	 * then we don't need more indexing here. 
 	 */
-	public static LinkedHashMap<JCas, SentenceInstance> getInstancesForSentence(Controller controller, SignalMechanismsContainer signalMechanismsContainer, Sentence sent, TypesContainer types, Alphabet featureAlphabet, 
+	public static LinkedHashMultimap<JCas, SentenceInstance> getInstancesForSentence(Controller controller, SignalMechanismsContainer signalMechanismsContainer, Sentence sent, TypesContainer types, Alphabet featureAlphabet, 
 			boolean learnable, boolean debug) throws CASRuntimeException, AnalysisEngineProcessException, ResourceInitializationException, CASException, UimaUtilsException, IOException, AeException {
-		LinkedHashMap<JCas, SentenceInstance> result = Maps.newLinkedHashMap();
+		/// DEBUG
+		System.out.printf("  Document.getInstancesForSentence: sent=%s, types=%s (%s types), controller.argOMethod=%s\n", sent, types, types.specs.size(), controller.argOMethod);
+		///
+		LinkedHashMultimap<JCas, SentenceInstance> result = LinkedHashMultimap.create();
 		if (controller.oMethod.startsWith("G")) {
 			for (int specNum=0; specNum < types.specs.size(); specNum++) {
 				JCas spec = types.specs.get(specNum);
 				
-				if (controller.oMethod.contains("a")) { //duplicate by role!
+				/// DEBUG
+				System.out.printf("  Document.getInstancesForSentence:   making sentence for spec=%s, specNum=%s\n", SpecAnnotator.getSpecLabel(spec), specNum);
+				///
+				if (controller.argOMethod==ArgOMethod.DUPLICATE_BY_ROLE) { //duplicate by role!
 					Map<String, JCas> singleRoleSpecs = SpecAnnotator.getSingleRoleSpecs(spec);
 					int roleNum=-1;
 					for (String role : singleRoleSpecs.keySet()) {
@@ -1280,9 +1289,13 @@ public class Document implements java.io.Serializable
 						TypesContainer oneTypeOneRole = new TypesContainer(ImmutableList.of(singleRoleSpec));
 						SentenceInstance inst = new SentenceInstance(controller, signalMechanismsContainer, sent, oneTypeOneRole, featureAlphabet,
 								learnable, spec, specNum, role, roleNum, debug);
+						result.put(spec, inst);
+						/// DEBUG
+						System.out.printf("  Document.getInstancesForSentence:      adding for role=%s, roleNum=%s\n", role, roleNum);
+						///
 					}
 				}
-				else if (controller.oMethod.contains("b")) { //don't duplicate by role!
+				else if (controller.argOMethod==ArgOMethod.OR_ALL || controller.argOMethod==ArgOMethod.SKIP_O) { //don't duplicate by role!
 					List<JCas> oneSpec = Arrays.asList(new JCas[] {spec});
 					TypesContainer oneType = new TypesContainer(oneSpec);
 					SentenceInstance inst = new SentenceInstance(controller, signalMechanismsContainer, sent, oneType, featureAlphabet,
@@ -1291,7 +1304,7 @@ public class Document implements java.io.Serializable
 					//System.out.printf("%s %s\n", Utils.detailedLog(), inst.sentInstID);
 				}
 				else { // WTF!
-					throw new IllegalArgumentException("Currently supporting an oMethod that must explicitly state 'a' or 'b' for handling roles, got: " + controller.oMethod);
+					throw new IllegalArgumentException("Got unsupported argOMethod: " + controller.argOMethod);
 				}
 			}
 		}

@@ -35,6 +35,7 @@ import edu.cuny.qc.ace.acetypes.AceEventMention;
 import edu.cuny.qc.ace.acetypes.Scorer;
 import edu.cuny.qc.ace.acetypes.Scorer.Stats;
 import edu.cuny.qc.perceptron.core.AllTrainingScores;
+import edu.cuny.qc.perceptron.core.ArgOMethod;
 import edu.cuny.qc.perceptron.core.Controller;
 import edu.cuny.qc.perceptron.core.Decoder;
 import edu.cuny.qc.perceptron.core.Perceptron;
@@ -85,6 +86,7 @@ public class Folds {
 			for (int n=0; n<totalTries; n++) {
 				Run run = new Run();
 				run.sentenceSortingMethod = controller.sentenceSortingMethod;
+				run.argOMethod = controller.argOMethod;
 				
 				List<JCas> specsCopy = Lists.newArrayList(types.specs);
 				
@@ -211,9 +213,27 @@ public class Folds {
 					}
 				}
 			}
-			System.out.printf("... and now due to method=%s, we changed it from %s to %s runs (should be %s runs, I hope it is...)\n\n", SentenceSortingMethod.ITERATE, result.size(), newResult.size(), expectedTotalRuns);
+			System.out.printf("... and now due to sentenceSortingMethod=%s, we changed it from %s to %s runs (should be %s runs, I hope it is...)\n\n",
+					SentenceSortingMethod.ITERATE, result.size(), newResult.size(), expectedTotalRuns);
 			result = newResult;
 		}
+		
+//		if (controller.argOMethod==ArgOMethod.ITERATE) {
+//			int expectedTotalRuns = result.size() * (ArgOMethod.values().length-1);
+//			List<Run> newResult = Lists.newArrayListWithCapacity(expectedTotalRuns);
+//			for (ArgOMethod method : ArgOMethod.values()) {
+//				if (method != ArgOMethod.ITERATE) {
+//					for (Run run : result) {
+//						Run newRun = Run.shallowCopy(run);
+//						newRun.argOMethod = method;
+//						newResult.add(newRun);
+//					}
+//				}
+//			}
+//			System.out.printf("... and now due to argOMethod=%s, we changed it from %s to %s runs (should be %s runs, I hope it is...)\n\n",
+//					ArgOMethod.ITERATE, result.size(), newResult.size(), expectedTotalRuns);
+//			result = newResult;
+//		}
 		
 		return result;
 	}
@@ -360,6 +380,7 @@ public class Folds {
 		System.out.printf("%s ############################ Starting %s runs: %s\n", Utils.detailedLog(), runs.size(), runs);
 		for (Run run : runs) {
 			controller.sentenceSortingMethod = run.sentenceSortingMethod;
+			controller.argOMethod = run.argOMethod;
 			
 			Alphabet featureAlphabet = new Alphabet();
 			perceptron = new Perceptron(featureAlphabet, controller, outputFolder, signalMechanismsContainer);

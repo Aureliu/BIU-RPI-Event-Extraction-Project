@@ -27,8 +27,8 @@ public class FeatureVector implements Serializable
 	public Map<Integer, Map<Object, BigDecimal>> updates = Maps.newHashMap();
 
 	static {
-		System.err.printf("??? FeatureVector.addDelta2: comparing to Double values, probably a bad idea. Maybe they should just be boolean? must they really be Double?");
-		System.err.printf("??? FeatureVector.addDelta2: Currently ignoring if the signal made a mistake. Maybe its weight should be punished.");
+		System.err.printf("??? FeatureVector.addDelta2: comparing to Double values, probably a bad idea. Maybe they should just be boolean? must they really be Double?\n");
+		System.err.printf("??? FeatureVector.addDelta2: Currently ignoring if the signal made a mistake. Maybe its weight should be punished.\n");
 	}
 	
 	public Map<Object, BigDecimal> getMap()

@@ -19,7 +19,7 @@ public class Controller implements java.io.Serializable
 	public boolean skipNonEventSent = true;
 	public boolean avgArguments = true;
 	// skip the features of NON argument link assignment
-	public boolean skipNonArgument = false;
+	//public boolean skipNonArgument = false;
 	// use global feature
 	public boolean useGlobalFeature = true;
 	// true if during training, skip arguments expansion for triggers 
@@ -87,11 +87,16 @@ public class Controller implements java.io.Serializable
 	// The previous default was DOC_SENT_SPEC(_ROLE), but SPEC(_ROLE)_DOC_SENT proved to be almost always better
 	public SentenceSortingMethod sentenceSortingMethod = SentenceSortingMethod.SPEC_ROLE_DOC_SENT;// SentenceSortingMethod.DOC_SENT_SPEC; // this was the implied default long before I came up with this enum
 	
-	public boolean filterSentenceInstance = false;
+	public boolean filterSentenceInstance = true;
 	
 	public boolean enhanceSpecs = false;
 	
 	public boolean takeExtendedTags = false;
+	
+	public ArgOMethod argOMethod = ArgOMethod.SKIP_O;
+	
+	// This param is special since we don't get it from command line - it's a calculated param!
+	public boolean lazyTargetFeatures = false;
 	
 	public Controller()
 	{
@@ -130,7 +135,8 @@ public class Controller implements java.io.Serializable
 			}
 			else if(fields[0].equalsIgnoreCase("skipNonArgument"))
 			{
-				skipNonArgument = Boolean.parseBoolean(fields[1]);
+				//skipNonArgument = Boolean.parseBoolean(fields[1]);
+				throw new IllegalArgumentException("'skipNonArgument' is not supported anymore, use argOMethod=SKIP_O instead");
 			}
 			else if(fields[0].equalsIgnoreCase("useGlobalFeature"))
 			{
@@ -249,7 +255,15 @@ public class Controller implements java.io.Serializable
 			{
 				takeExtendedTags = Boolean.parseBoolean(fields[1]);
 			}
+			else if(fields[0].equalsIgnoreCase("argOMethod"))
+			{
+				argOMethod = ArgOMethod.valueOf(fields[1]);
+			}
 		}
+		
+		
+		lazyTargetFeatures = false;//(argOMethod==ArgOMethod.ITERATE);
+		
 		System.out.printf("\n[%s] ******** Controller() **********\n", new Date());
 		System.out.printf("******** %s **********\n", this);
 	}
@@ -258,8 +272,8 @@ public class Controller implements java.io.Serializable
 	{
 		String ret = "Controller:\n" +
 		"\tbeamSize: " + beamSize + " maxIterNum: " + maxIterNum + " skipNonEventSent: " + skipNonEventSent
-		+ " averaged weights: " + avgArguments + " skipNonArgument: " + skipNonArgument
-		+ " useGlobalFeature:" + useGlobalFeature + " addNeverSeenFeatures: " + addNeverSeenFeatures
+		+ " averaged weights: " + avgArguments + //" skipNonArgument: " + skipNonArgument +
+		" useGlobalFeature:" + useGlobalFeature + " addNeverSeenFeatures: " + addNeverSeenFeatures
 		+ "\n\tcrossSent:" + crossSent + " crossSentReranking:" + crossSentReranking + " order:" + order +
 		" evaluatorType:" + evaluatorType + " learnBigrams: " + learnBigrams + " logLevel: " + logLevel +
 		" oMethod: " + oMethod + " serialization: " + serialization + " usePreprocessFiles: " + usePreprocessFiles
@@ -270,7 +284,7 @@ public class Controller implements java.io.Serializable
 		" testType: " + testType + "\n\ttrainOnlyTypes: " + trainOnlyTypes + " devOnlyTypes: " + devOnlyTypes + 
 		" testOnlyTypes: " + testOnlyTypes + " sentenceSortingMethod: " + sentenceSortingMethod +
 		"\n\tfilterSentenceInstance: " + filterSentenceInstance + " enhanceSpecs: " + enhanceSpecs +
-		" takeExtendedTags: " + takeExtendedTags;
+		" takeExtendedTags: " + takeExtendedTags + " argOMethod: " + argOMethod + " lazyTargetFeatures: " + lazyTargetFeatures;
 		
 		return ret + "\n";
 	}

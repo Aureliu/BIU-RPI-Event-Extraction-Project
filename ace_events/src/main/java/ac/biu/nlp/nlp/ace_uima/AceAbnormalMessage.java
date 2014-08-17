@@ -8,7 +8,12 @@ public class AceAbnormalMessage extends Throwable {
 
     public AceAbnormalMessage(String shortMessage, String longMessage, Logger logger) {
     	super(shortMessage);
-    	logger.error(longMessage);
+    	if (logger != null) {
+        	logger.error(longMessage);
+    	}
+    	else {
+    		System.err.println(longMessage);
+    	}
     }
     
     public AceAbnormalMessage(String shortMessage) {

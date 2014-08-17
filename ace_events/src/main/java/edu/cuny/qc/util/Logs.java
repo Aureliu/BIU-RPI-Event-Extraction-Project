@@ -742,7 +742,7 @@ public class Logs {
 	
 			List<Map<Class<?>, Object>> tokens = (List<Map<Class<?>, Object>>) instance.get(InstanceAnnotations.Token_FEATURE_MAPs);
 			for (int j=0; j<instance.size(); j++) {
-				Token tokenAnno = instance.tokenAnnos.get(j);
+				Token tokenAnno = instance.sent.getTokenAnnotation(j);
 				String surface = tokenAnno.getCoveredText();
 				String lemma = (String) tokens.get(j).get(TokenAnnotations.LemmaAnnotation.class);
 				Set<Object> allFeaturesSet = new HashSet<Object>();

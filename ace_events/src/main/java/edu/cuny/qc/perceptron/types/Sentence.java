@@ -3,14 +3,18 @@ package edu.cuny.qc.perceptron.types;
 import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.lang3.StringUtils;
+import org.apache.uima.cas.FeatureStructure;
 
 import com.google.common.collect.Lists;
+
+import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
 
 import ac.biu.nlp.nlp.ie.onthefly.input.TypesContainer;
 import edu.cuny.qc.ace.acetypes.AceDocument;
@@ -20,6 +24,7 @@ import edu.cuny.qc.ace.acetypes.AceMention;
 import edu.cuny.qc.ace.acetypes.AceRelationMention;
 import edu.cuny.qc.ace.acetypes.AceTimexMention;
 import edu.cuny.qc.ace.acetypes.AceValueMention;
+import edu.cuny.qc.perceptron.types.SentenceInstance.InstanceAnnotations;
 import edu.cuny.qc.util.Span;
 
 /**
@@ -87,6 +92,10 @@ public class Sentence implements java.io.Serializable
 	
 	private Boolean filtered = false;
 
+	private transient List<Token> tokenAnnos = null;
+	private transient de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence sentenceAnno = null;
+
+	
 	private Sentence() {}
 	
 	public Sentence(Document doc, int sentID, String text)
@@ -284,4 +293,35 @@ public class Sentence implements java.io.Serializable
 			}
 		}
 	}
+	
+	public Token getTokenAnnotation(int i) {
+		Token token = tokenAnnos.get(i);
+		if (token == null) {
+			List<Integer> tokenAddrs = (List<Integer>) this
+					.get(Sent_Attribute.TokenAnnotations);
+			Integer addr = tokenAddrs.get(i);
+			FeatureStructure fs = doc.jcas.getLowLevelCas()
+					.ll_getFSForRef(addr);
+			token = (Token) fs;
+			tokenAnnos.set(i, token);
+		}
+		return token;
+	}
+
+	public de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence getSentenceAnnotation() {
+		if (sentenceAnno == null) {
+			Integer addr = (Integer) this
+					.get(Sent_Attribute.SentenceAnnotation);
+			sentenceAnno = (de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence) doc.jcas
+					.getLowLevelCas().ll_getFSForRef(addr);
+		}
+		return sentenceAnno;
+	}
+
+	public void initTokenAnnos() {
+		tokenAnnos = new ArrayList<Token>(Collections.nCopies(size(),
+				(Token) null));
+	}
+
+
 }

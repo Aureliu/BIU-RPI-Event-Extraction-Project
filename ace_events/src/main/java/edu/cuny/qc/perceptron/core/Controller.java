@@ -93,7 +93,7 @@ public class Controller implements java.io.Serializable
 	
 	public boolean takeExtendedTags = false;
 	
-	public ArgOMethod argOMethod = ArgOMethod.SKIP_O;
+	public ArgOMethod argOMethod = ArgOMethod.OR_ALL;//ArgOMethod.SKIP_O;
 	
 	// This param is special since we don't get it from command line - it's a calculated param!
 	public boolean lazyTargetFeatures = false;

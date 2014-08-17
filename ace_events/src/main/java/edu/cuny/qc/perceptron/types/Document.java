@@ -59,6 +59,7 @@ import edu.cuny.qc.scorer.SignalMechanismsContainer;
 import edu.cuny.qc.util.SentDetectorWrapper;
 import edu.cuny.qc.util.Span;
 import edu.cuny.qc.util.TokenizerWrapper;
+import edu.cuny.qc.util.fragment.CasTreeConverter;
 import eu.excitementproject.eop.common.utilities.uima.UimaUtilsException;
 
 /**
@@ -108,6 +109,8 @@ public class Document implements java.io.Serializable
 	// transient - to not be serialized
 	public transient JCas jcas = null;
 	protected static AnalysisEngine ae = null;
+
+	public static CasTreeConverter converter = new CasTreeConverter();
 	
 //	public transient List<List<Map<String, Map<String, SignalInstance>>>> triggerSignals;
 //	public transient List<List<Map<String, Map<String, Map<String, SignalInstance>>>>> argSignals;
@@ -493,12 +496,13 @@ public class Document implements java.io.Serializable
 				System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] building document...", new Date());
 				doc = new Document(baseFileName, docLine, hasLabel, monoCase);
 				
+				ae.process(doc.jcas);
+				
 				// These two are separated only for historical reasons, and could be joint back.
 				TextFeatureGenerator.doPreprocess(doc);
 				TextFeatureGenerator.fillTextFeatures_NoPreprocessing(doc);
-				
-				ae.process(doc.jcas);
-				System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] Done.\n", new Date());
+
+				//System.out.printf("[%1$tH:%1$tM:%1$tS.%1$tL] Done.\n", new Date());
 
 				if (dumpNewDoc) {
 					try {
@@ -734,9 +738,10 @@ public class Document implements java.io.Serializable
 				tokenAddrs.add(tokenAnno.getAddress());
 			}
 			
-			sent.put(Sent_Attribute.TokenAnnotations, tokenAddrs);
 
 			sent.put(Sent_Attribute.TOKENS, tokens);
+			sent.initTokenAnnos();
+			sent.put(Sent_Attribute.TokenAnnotations, tokenAddrs);
 			// save span of the sent
 			sent.setExtent(sentSpan);
 			List<Map<Class<?>, Object>> tokenFeatureMaps = new ArrayList<Map<Class<?>, Object>>();

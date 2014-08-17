@@ -26,32 +26,32 @@ public abstract class ListField extends StatsField {
 	public List<String> getValues() {
 		// Second alternative: 1 = { ball | umbrella | pan }   2 = { dog | cat }
 		
-		throw new RuntimeException("All the rest of the code in the method is great and works! But I have some weird maven compilation problem on te-srv2 with it (generics-related), so this hsould be solved.... GL :)");
+//		throw new RuntimeException("All the rest of the code in the method is great and works! But I have some weird maven compilation problem on te-srv2 with it (generics-related), so this hsould be solved.... GL :)");
 		
-//		List<String> toResult = new ArrayList<String>(getListSize());
-//		Collection<Entry<? extends Object, ? extends Collection<String>>> list = getList();
-//		int charsLeft = StatsDocument.MAX_CHARS;
-//		int keysLeft = list.size();
-//		for (Entry<? extends Object, ? extends Collection<String>> entry : list) {
-//			List<String> vals = new ArrayList<String>(entry.getValue());
-//			Collections.sort(vals, getComparator());
-//			String strings = StringUtil.join(vals, " | ");
-//			
-//			int charsAllowed = charsLeft/keysLeft;
-//			if (strings.length() > charsAllowed) {
-//				strings = strings.substring(0, charsAllowed) + "...";
-//			}
-//			
-//			String keyAndVal = String.format("___%s = { %s }", entry.getKey(), strings);
-//			toResult.add(keyAndVal);
-//			
-//			charsLeft -= keyAndVal.length();
-//			keysLeft -= 1;
-//		}
-//		finalizeResults(toResult);
-//		String result = StringUtil.join(toResult, "   ");
-//		
-//		return Arrays.asList(new String[] {result});
+		List<String> toResult = new ArrayList<String>(getListSize());
+		Collection<Entry<? extends Object, ? extends Collection<String>>> list = getList();
+		int charsLeft = StatsDocument.MAX_CHARS;
+		int keysLeft = list.size();
+		for (Entry<? extends Object, ? extends Collection<String>> entry : list) {
+			List<String> vals = new ArrayList<String>(entry.getValue());
+			Collections.sort(vals, getComparator());
+			String strings = StringUtil.join(vals, " | ");
+			
+			int charsAllowed = charsLeft/keysLeft;
+			if (strings.length() > charsAllowed) {
+				strings = strings.substring(0, charsAllowed) + "...";
+			}
+			
+			String keyAndVal = String.format("___%s = { %s }", entry.getKey(), strings);
+			toResult.add(keyAndVal);
+			
+			charsLeft -= keyAndVal.length();
+			keysLeft -= 1;
+		}
+		finalizeResults(toResult);
+		String result = StringUtil.join(toResult, "   ");
+		
+		return Arrays.asList(new String[] {result});
 	}
 	
 	protected Comparator<String> getComparator() {

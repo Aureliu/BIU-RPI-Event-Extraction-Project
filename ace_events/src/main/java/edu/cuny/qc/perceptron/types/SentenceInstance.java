@@ -104,8 +104,8 @@ public class SentenceInstance {
 	 */
 	public String textStart;
 
-	public List<Token> tokenAnnos = null;
-	private de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence sentenceAnno = null;
+//	public List<Token> tokenAnnos = null;
+//	private de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence sentenceAnno = null;
 	public Document doc;
 	public JCas associatedSpec = null;
 	public String associatedRole = null;
@@ -277,12 +277,12 @@ public class SentenceInstance {
 		this.textFeaturesMap.put(InstanceAnnotations.POSTAGS,
 				sent.get(Sent_Attribute.POSTAGS));
 
-		this.textFeaturesMap.put(InstanceAnnotations.SentenceAnnotation,
-				sent.get(Sent_Attribute.SentenceAnnotation));
-		this.textFeaturesMap.put(InstanceAnnotations.TokenAnnotations,
-				sent.get(Sent_Attribute.TokenAnnotations));
-		tokenAnnos = new ArrayList<Token>(Collections.nCopies(size(),
-				(Token) null));
+//		this.textFeaturesMap.put(InstanceAnnotations.SentenceAnnotation,
+//				sent.get(Sent_Attribute.SentenceAnnotation));
+//		this.textFeaturesMap.put(InstanceAnnotations.TokenAnnotations,
+//				sent.get(Sent_Attribute.TokenAnnotations));
+//		tokenAnnos = new ArrayList<Token>(Collections.nCopies(size(),
+//				(Token) null));
 
 		// get node text feature vectors
 		// List<Map<String, Map<String, SignalInstance>>> tokenSignalBySpec =
@@ -377,30 +377,30 @@ public class SentenceInstance {
 		return this.getTokenSpans().length;
 	}
 
-	public Token getTokenAnnotation(int i) {
-		Token token = tokenAnnos.get(i);
-		if (token == null) {
-			List<Integer> tokenAddrs = (List<Integer>) this
-					.get(InstanceAnnotations.TokenAnnotations);
-			Integer addr = tokenAddrs.get(i);
-			FeatureStructure fs = doc.jcas.getLowLevelCas()
-					.ll_getFSForRef(addr);
-			token = (Token) fs;
-			tokenAnnos.set(i, token);
-		}
-		return token;
-	}
-
-	public de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence getSentenceAnnotation() {
-		if (sentenceAnno == null) {
-			Integer addr = (Integer) this
-					.get(InstanceAnnotations.SentenceAnnotation);
-			sentenceAnno = (de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence) doc.jcas
-					.getLowLevelCas().ll_getFSForRef(addr);
-		}
-		return sentenceAnno;
-	}
-
+//	public Token getTokenAnnotation(int i) {
+//		Token token = tokenAnnos.get(i);
+//		if (token == null) {
+//			List<Integer> tokenAddrs = (List<Integer>) this
+//					.get(InstanceAnnotations.TokenAnnotations);
+//			Integer addr = tokenAddrs.get(i);
+//			FeatureStructure fs = doc.jcas.getLowLevelCas()
+//					.ll_getFSForRef(addr);
+//			token = (Token) fs;
+//			tokenAnnos.set(i, token);
+//		}
+//		return token;
+//	}
+//
+//	public de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence getSentenceAnnotation() {
+//		if (sentenceAnno == null) {
+//			Integer addr = (Integer) this
+//					.get(InstanceAnnotations.SentenceAnnotation);
+//			sentenceAnno = (de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence) doc.jcas
+//					.getLowLevelCas().ll_getFSForRef(addr);
+//		}
+//		return sentenceAnno;
+//	}
+//
 	/**
 	 * given a SentenceAssignment, convert the results as List of
 	 * AceEventMentions
@@ -584,7 +584,7 @@ public class SentenceInstance {
 		// SignalInstance>>>>>(size());
 		// System.out.printf("%s Starting signals SentenceInstance %s...\n",
 		// Pipeline.detailedLog(), this.sentInstID);
-		signalMechanismsContainer.logSignalMechanismsPreSentence();
+		signalMechanismsContainer.entrypointSignalMechanismsPreSentence(this);
 		for (int i = 0; i < size(); i++) {
 
 			/****

@@ -51,4 +51,8 @@ public class GraphEdge implements java.io.Serializable
 		dependent = td.dep().index() - 1;
 		relation = td.reln().toString();
 	}
+	
+	public String toString() {
+		return String.format("%s(gov=%s, dep=%s)", relation, governor, dependent);
+	}
 }

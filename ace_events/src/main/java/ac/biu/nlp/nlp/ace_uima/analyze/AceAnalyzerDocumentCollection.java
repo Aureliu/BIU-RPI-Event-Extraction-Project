@@ -125,19 +125,28 @@ public class AceAnalyzerDocumentCollection extends StatsDocumentCollection {
 				put(new FieldName("LdcScope", "GenPOS"), StatsFieldType.LIST_COUNTS);
 				
 				put(new FieldName("Link", "Dep"), StatsFieldType.LIST_COUNTS);
+				put(new FieldName("Link", "*Dep"), StatsFieldType.LIST_COUNTS);
 				put(new FieldName("Link", "DepGenPOS"), StatsFieldType.LIST_COUNTS);
+				put(new FieldName("Link", "*DepGenPOS"), StatsFieldType.LIST_COUNTS);
 				put(new FieldName("Link", "DepSpecPOS"), StatsFieldType.LIST_COUNTS);
+				put(new FieldName("Link", "*DepSpecPOS"), StatsFieldType.LIST_COUNTS);
 
 				if (USE_PASTA) {
 					put(new FieldName("FindLinks", ""), StatsFieldType.ENUM_REL);
-					put(new FieldName("MissedPredicate", "Dep"), StatsFieldType.LIST_COUNTS);
-					put(new FieldName("MissedPredicate", "DepGenPOS"), StatsFieldType.LIST_COUNTS);
-					put(new FieldName("MissedArgument", "Dep"), StatsFieldType.LIST_COUNTS);
-					put(new FieldName("MissedArgument", "DepGenPOS"), StatsFieldType.LIST_COUNTS);
-					put(new FieldName("MissedLink", "Dep"), StatsFieldType.LIST_COUNTS);
-					put(new FieldName("MissedLink", "DepGenPOS"), StatsFieldType.LIST_COUNTS);
-					put(new FieldName("LinkFound", "Dep"), StatsFieldType.LIST_COUNTS);
-					put(new FieldName("LinkFound", "DepGenPOS"), StatsFieldType.LIST_COUNTS);
+					put(new FieldName("PredMissed", "*Dep"), StatsFieldType.LIST_COUNTS);
+					put(new FieldName("PredMissed", "*DepGenPOS"), StatsFieldType.LIST_COUNTS);
+					put(new FieldName("ArgMissed", "*Dep"), StatsFieldType.LIST_COUNTS);
+					put(new FieldName("ArgMissed", "*DepGenPOS"), StatsFieldType.LIST_COUNTS);
+					put(new FieldName("LinkMissed", "*Dep"), StatsFieldType.LIST_COUNTS);
+					put(new FieldName("LinkMissed", "*DepGenPOS"), StatsFieldType.LIST_COUNTS);
+					put(new FieldName("LinkFound", "*Dep"), StatsFieldType.LIST_COUNTS);
+					put(new FieldName("LinkFound", "*DepGenPOS"), StatsFieldType.LIST_COUNTS);
+					
+					put(new FieldName("FindLinkList", "LinkFound"), StatsFieldType.SUM_INT);
+					put(new FieldName("FindLinkList", "MissedPredicate"), StatsFieldType.SUM_INT);
+					put(new FieldName("FindLinkList", "MissedArgument"), StatsFieldType.SUM_INT);
+					put(new FieldName("FindLinkList", "MissedLink"), StatsFieldType.SUM_INT);
+					put(new FieldName("FindLinkList", "PastaOnly"), StatsFieldType.SUM_INT);
 				}
 			}});
 	
@@ -233,6 +242,31 @@ public class AceAnalyzerDocumentCollection extends StatsDocumentCollection {
 				put(new FieldName("ArgExtent", "TokenSpecPOS"), StatsFieldType.LIST_COUNTS);
 				put(new FieldName("ArgExtent", "LemmaSpecPOS"), StatsFieldType.LIST_COUNTS);
 				put(new FieldName("ArgExtent", "TokenGenPOS"), StatsFieldType.LIST_COUNTS);
+
+				put(new FieldName("Link", "Dep"), StatsFieldType.LIST_COUNTS);
+				put(new FieldName("Link", "*Dep"), StatsFieldType.LIST_COUNTS);
+				put(new FieldName("Link", "DepGenPOS"), StatsFieldType.LIST_COUNTS);
+				put(new FieldName("Link", "*DepGenPOS"), StatsFieldType.LIST_COUNTS);
+				put(new FieldName("Link", "DepSpecPOS"), StatsFieldType.LIST_COUNTS);
+				put(new FieldName("Link", "*DepSpecPOS"), StatsFieldType.LIST_COUNTS);
+
+				if (USE_PASTA) {
+					put(new FieldName("FindLinks", ""), StatsFieldType.ENUM_REL);
+					put(new FieldName("PredMissed", "*Dep"), StatsFieldType.LIST_COUNTS);
+					put(new FieldName("PredMissed", "*DepGenPOS"), StatsFieldType.LIST_COUNTS);
+					put(new FieldName("ArgMissed", "*Dep"), StatsFieldType.LIST_COUNTS);
+					put(new FieldName("ArgMissed", "*DepGenPOS"), StatsFieldType.LIST_COUNTS);
+					put(new FieldName("LinkMissed", "*Dep"), StatsFieldType.LIST_COUNTS);
+					put(new FieldName("LinkMissed", "*DepGenPOS"), StatsFieldType.LIST_COUNTS);
+					put(new FieldName("LinkFound", "*Dep"), StatsFieldType.LIST_COUNTS);
+					put(new FieldName("LinkFound", "*DepGenPOS"), StatsFieldType.LIST_COUNTS);
+					
+					put(new FieldName("FindLinkList", "LinkFound"), StatsFieldType.SUM_INT);
+					put(new FieldName("FindLinkList", "MissedPredicate"), StatsFieldType.SUM_INT);
+					put(new FieldName("FindLinkList", "MissedArgument"), StatsFieldType.SUM_INT);
+					put(new FieldName("FindLinkList", "MissedLink"), StatsFieldType.SUM_INT);
+					put(new FieldName("FindLinkList", "PastaOnly"), StatsFieldType.SUM_INT);
+				}
 
 			}});
 	

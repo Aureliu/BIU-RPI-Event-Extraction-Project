@@ -1,4 +1,4 @@
-package ac.biu.nlp.nlp.ace_uima.analyze;
+package edu.cuny.qc.util.fragment;
 
 import java.util.Collection;
 import java.util.HashSet;
@@ -8,19 +8,20 @@ import java.util.Set;
 import org.apache.commons.collections15.BidiMap;
 import org.apache.commons.collections15.bidimap.DualHashBidiMap;
 
+
 import eu.excitementproject.eop.common.representation.parse.representation.basic.Info;
 import eu.excitementproject.eop.common.representation.parse.tree.TreeAndParentMap;
 import eu.excitementproject.eop.common.representation.parse.tree.TreeAndParentMap.TreeAndParentMapException;
 import eu.excitementproject.eop.common.representation.parse.tree.dependency.basic.BasicNode;
 
 public class TreeFragmentBuilder {
-	public FragmentAndReference build(BasicNode fullTreeRoot, Set<BasicNode> targetNodes) throws TreeAndParentMapException, TreeFragmentBuilderException {
+	public FragmentAndReference build(BasicNode fullTreeRoot, Set<BasicNode> targetNodes, Facet facet) throws TreeAndParentMapException, TreeFragmentBuilderException {
 		//System.out.println("^^^^^^^ 1");
 		Set<SimplePathInTree> paths = getAllTargetPaths(fullTreeRoot, targetNodes);
 		//System.out.println("^^^^^^^ 2");
 		Set<BasicNode> nodesInAllPaths = getAllNodesInPaths(paths);
 		//System.out.println("^^^^^^^ 3");
-		FragmentAndReference rootFragAndRef = createTreeFragmentByNodes(fullTreeRoot, nodesInAllPaths);
+		FragmentAndReference rootFragAndRef = createTreeFragmentByNodes(fullTreeRoot, nodesInAllPaths, facet);
 		//System.out.println("^^^^^^^ 4");
 		return rootFragAndRef;
 	}
@@ -89,7 +90,7 @@ public class TreeFragmentBuilder {
 		return nodes;
 	}
 	
-	private FragmentAndReference createTreeFragmentByNodes(BasicNode fullTreeRoot, Set<BasicNode> requiredNodes) throws TreeFragmentBuilderException {
+	private FragmentAndReference createTreeFragmentByNodes(BasicNode fullTreeRoot, Set<BasicNode> requiredNodes, Facet facet) throws TreeFragmentBuilderException {
 		origToNew = new DualHashBidiMap<BasicNode, BasicNode>();
 		BasicNode foundRoot = findNewTreeRoot(fullTreeRoot, requiredNodes);
 		if (foundRoot != null) {
@@ -98,7 +99,7 @@ public class TreeFragmentBuilder {
 			if (!origToNew.keySet().equals(requiredNodes)) {
 				throw new TreeFragmentBuilderException("Generated tree nodes do not exactly match required nodes");
 			}
-			return new FragmentAndReference(newRoot, origToNew.getKey(newRoot));
+			return new FragmentAndReference(newRoot, origToNew.getKey(newRoot), facet);
 		}
 		return null;
 	}

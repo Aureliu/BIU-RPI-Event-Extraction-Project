@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** 
- * Updated by JCasGen Sun Aug 10 13:57:30 IDT 2014
+ * Updated by JCasGen Sat Aug 16 17:46:46 IDT 2014
  * @generated */
 public class ArgumentInUsageSample_Type extends Annotation_Type {
   /** @generated */
@@ -79,6 +79,24 @@ public class ArgumentInUsageSample_Type extends Annotation_Type {
     ll_cas.ll_setRefValue(addr, casFeatCode_pius, v);}
     
   
+ 
+  /** @generated */
+  final Feature casFeat_sample;
+  /** @generated */
+  final int     casFeatCode_sample;
+  /** @generated */ 
+  public int getSample(int addr) {
+        if (featOkTst && casFeat_sample == null)
+      jcas.throwFeatMissing("sample", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
+    return ll_cas.ll_getRefValue(addr, casFeatCode_sample);
+  }
+  /** @generated */    
+  public void setSample(int addr, int v) {
+        if (featOkTst && casFeat_sample == null)
+      jcas.throwFeatMissing("sample", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
+    ll_cas.ll_setRefValue(addr, casFeatCode_sample, v);}
+    
+  
 
 
 
@@ -95,6 +113,10 @@ public class ArgumentInUsageSample_Type extends Annotation_Type {
  
     casFeat_pius = jcas.getRequiredFeatureDE(casType, "pius", "ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateInUsageSample", featOkTst);
     casFeatCode_pius  = (null == casFeat_pius) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_pius).getCode();
+
+ 
+    casFeat_sample = jcas.getRequiredFeatureDE(casType, "sample", "ac.biu.nlp.nlp.ie.onthefly.input.uima.UsageSample", featOkTst);
+    casFeatCode_sample  = (null == casFeat_sample) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_sample).getCode();
 
   }
 }

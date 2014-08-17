@@ -32,6 +32,7 @@ import edu.cuny.qc.ace.acetypes.AceTimexMention;
 import edu.cuny.qc.ace.acetypes.AceValueMention;
 import edu.cuny.qc.scorer.PredicateSeedScorer.PredicateSeedQuery;
 import edu.cuny.qc.util.PosMap;
+import edu.cuny.qc.util.Utils;
 import eu.excitementproject.eop.common.representation.partofspeech.CanonicalPosTag;
 import eu.excitementproject.eop.common.representation.partofspeech.PartOfSpeech;
 import eu.excitementproject.eop.common.representation.partofspeech.UnsupportedPosTagStringException;
@@ -50,7 +51,7 @@ public abstract class ArgumentExampleScorer extends ArgumentScorer<ArgumentExamp
 		try {
 			Collection<ArgumentExample> examples = JCasUtil.select(argument.getExamples(), ArgumentExample.class);
 			specIterator = examples.iterator();
-			jcas = textTriggerToken.getCAS().getJCas();
+			docJcas = textTriggerToken.getCAS().getJCas();
 		} catch (CASException e) {
 			throw new SignalMechanismException(e);
 		}
@@ -134,7 +135,7 @@ public abstract class ArgumentExampleScorer extends ArgumentScorer<ArgumentExamp
 			String text = curr.getCoveredText();
 			PartOfSpeech pos = AnnotationUtils.tokenToPOS(curr);
 			if (pos.getCanonicalPosTag()==CanonicalPosTag.PP ||
-				PUNCTUATION.contains(text) ||
+				Utils.PUNCTUATION.contains(text) ||
 				(ORG_SUFFIXES.contains(text) && prev!=null) ||
 				(text.length()>1 && text.charAt(text.length()-1)=='.' && ORG_SUFFIXES.contains(text.substring(0, text.length()-1)) && prev!=null) ) {
 				
@@ -181,11 +182,8 @@ public abstract class ArgumentExampleScorer extends ArgumentScorer<ArgumentExamp
 	public static Set<String> ORG_SUFFIXES = Sets.newHashSet(Arrays.asList(new String[] {
 			"Inc", "Incorporated", "Corp", "Corporation", "Ltd", "Limited", "Co"
 	}));
-	public static Set<String> PUNCTUATION = Sets.newHashSet(Arrays.asList(new String[] {
-			".", ",", "!", "?", ":", "@", "#", "$", "%"
-	}));
 
-	private static JCas jcas = null;
+	private static JCas docJcas = null;
 	private static LoadingCache<AceEntity, Set<EntityMentionInfo>> cacheTextEntityInfoStatic = CacheBuilder.newBuilder()
 			.maximumSize(10000)
 			.build(new CacheLoader<AceEntity, Set<EntityMentionInfo>>() {
@@ -207,7 +205,7 @@ public abstract class ArgumentExampleScorer extends ArgumentScorer<ArgumentExamp
 						
 						// Basically I am not allowed to use textTriggerToken as it changes with each call to prepareSpecIteration()
 						// But here I only use it for the JCas, which stays the same for the entire document, so it's fine
-						info.headAnno = AnnotationUtils.spanToAnnotation(jcas, corefMention.head);
+						info.headAnno = AnnotationUtils.spanToAnnotation(docJcas, corefMention.head);
 						/// DEBUG
 //						String headSpan = concreteMention.head.getCoveredText(docAllText);
 //						if (headSpan.contains("addam")) {

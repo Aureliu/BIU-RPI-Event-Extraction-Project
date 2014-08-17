@@ -15,6 +15,8 @@ import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_engine.AnalysisEngine;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.cas.CASException;
+import org.apache.uima.cas.Type;
+import org.apache.uima.cas.text.AnnotationFS;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.cas.FSArray;
 import org.apache.uima.jcas.tcas.Annotation;
@@ -24,6 +26,7 @@ import org.uimafit.component.JCasAnnotator_ImplBase;
 import org.uimafit.util.FSCollectionFactory;
 import org.uimafit.util.JCasUtil;
 
+import ac.biu.nlp.nlp.ace_uima.AceAbnormalMessage;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentExample;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample;
@@ -34,6 +37,14 @@ import ac.biu.nlp.nlp.ie.onthefly.input.uima.Predicate;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateInUsageSample;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateName;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateSeed;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepGenPosNoContext;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepGenPosWithContext;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepNoContext;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepSpecPosNoContext;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepSpecPosWithContext;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepWithContext;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutSampleText;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.UsageSample;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.VerbLemma;
 
@@ -50,6 +61,10 @@ import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
 import edu.cuny.qc.ace.acetypes.AceArgumentType;
 import edu.cuny.qc.perceptron.core.Perceptron;
+import edu.cuny.qc.perceptron.types.Document;
+import edu.cuny.qc.util.fragment.FragmentAndReference;
+import edu.cuny.qc.util.fragment.FragmentLayer;
+import eu.excitementproject.eop.common.representation.parse.tree.dependency.basic.BasicNode;
 import eu.excitementproject.eop.common.utilities.DockedToken;
 import eu.excitementproject.eop.common.utilities.DockedTokenFinder;
 import eu.excitementproject.eop.common.utilities.DockedTokenFinderException;
@@ -434,6 +449,15 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 //		- sentenceView.setDocumentText(newSection.toString())
 	}
 	
+	private static void addTreeout(Class<? extends Treeout> cls, Annotation covering, String value) throws CASException {
+		JCas jcas = covering.getCAS().getJCas();
+		Type type = jcas.getTypeSystem().getType(cls.getName());
+		AnnotationFS newAnno = jcas.getCas().createAnnotation(type, covering.getBegin(), covering.getEnd());
+		Treeout treeout = (Treeout) newAnno;
+		treeout.setValue(value);
+		treeout.addToIndexes();
+	}
+	
 	@Override
 	public void process(JCas jcas) throws AnalysisEngineProcessException {
 		try {
@@ -486,6 +510,9 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 			
 			tokenAE.process(tokenView);
 			if (Perceptron.controllerStatic.useArguments) {
+				System.out.printf("\n\n\n**** the class: \n");
+				System.out.println(edu.stanford.nlp.tagger.maxent.ExtractorFrames.class.getProtectionDomain().getCodeSource().getLocation().getPath());
+
 				sentenceAE.process(sentenceView);
 			}
 			
@@ -501,6 +528,8 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 			for (Argument arg : JCasUtil.select(tokenView, Argument.class)) {
 				lemmasToAnnotations.putAll(getLemmaToAnnotation(tokenView, arg, ArgumentExample.class, "argument"));
 			}
+			
+			FragmentLayer fragmentLayer = new FragmentLayer(sentenceView, Document.converter);
 			
 			for (UsageSample sample : usageSamples) {
 //				for (Lemma lemma : JCasUtil.selectCovered(Lemma.class, sample)) {
@@ -554,6 +583,19 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 					PredicateInUsageSample pius = piuses.get(0);
 					for (ArgumentInUsageSample aius : JCasUtil.selectCovered(ArgumentInUsageSample.class, sample)) {
 						aius.setPius(pius);
+						aius.setSample(sample);
+						
+						// Build fragment layer stuff
+						FragmentAndReference linkFrag = fragmentLayer.getRootLinkingTreeFragment(pius, aius, null);
+						List<BasicNode> subroots = ImmutableList.of(linkFrag.getFragmentRoot());
+
+						addTreeout(TreeoutSampleText.class, sample, sample.getCoveredText());
+						addTreeout(TreeoutDepNoContext.class, sample, FragmentLayer.getTreeoutOnlyDependencies(subroots, false));
+						addTreeout(TreeoutDepGenPosNoContext.class, sample, FragmentLayer.getTreeoutDependenciesGeneralPOS(subroots, false));
+						addTreeout(TreeoutDepSpecPosNoContext.class, sample, FragmentLayer.getTreeoutDependenciesSpecificPOS(subroots, false));
+						addTreeout(TreeoutDepWithContext.class, sample, FragmentLayer.getTreeoutOnlyDependencies(subroots, true));
+						addTreeout(TreeoutDepGenPosWithContext.class, sample, FragmentLayer.getTreeoutDependenciesGeneralPOS(subroots, true));
+						addTreeout(TreeoutDepSpecPosWithContext.class, sample, FragmentLayer.getTreeoutDependenciesSpecificPOS(subroots, true));
 					}
 				}
 				
@@ -570,12 +612,16 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 					Collection<Annotation> aiusesOfArg = toUsage.get(arg);
 					arg.setAiuses((FSArray) FSCollectionFactory.createFSArray(tokenView, aiusesOfArg));
 				}
+				
 			}
 						
 			System.err.printf("- In spec '%s': %d tokens in token view, %s tokens in sentence view\n", 
 					getSpecLabel(jcas), JCasUtil.select(tokenView, Token.class).size(), JCasUtil.select(sentenceView, Token.class).size());
 		}
 		catch (Exception e) {
+			throw new AnalysisEngineProcessException(AnalysisEngineProcessException.ANNOTATOR_EXCEPTION, null, e); 
+		}
+		catch (AceAbnormalMessage e) {
 			throw new AnalysisEngineProcessException(AnalysisEngineProcessException.ANNOTATOR_EXCEPTION, null, e); 
 		}
 

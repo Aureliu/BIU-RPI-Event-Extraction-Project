@@ -32,6 +32,8 @@ import edu.cuny.qc.ace.acetypes.AceEntityMention;
 import edu.cuny.qc.perceptron.core.Controller;
 import edu.cuny.qc.perceptron.core.Perceptron;
 import edu.cuny.qc.perceptron.core.Pipeline;
+import edu.cuny.qc.perceptron.types.Document;
+import edu.cuny.qc.perceptron.types.SentenceInstance;
 import edu.cuny.qc.scorer.Aggregator;
 import edu.cuny.qc.scorer.ArgumentExampleScorer;
 import edu.cuny.qc.scorer.BasicRulesQuery;
@@ -331,7 +333,7 @@ public class WordNetSignalMechanism extends SignalMechanism {
 	}
 	
 	@Override
-	public void logPreSentence() {
+	public void entrypointPreSentence(SentenceInstance inst) {
 		if (DO_SENTENCE_LOGGING) {
 			if (usedCaches) {
 				System.out.printf("%s @@@ PreSentence cache stats:\n", Utils.detailedLog());
@@ -346,15 +348,15 @@ public class WordNetSignalMechanism extends SignalMechanism {
 		}
 	}
 	@Override
-	public void logPreDocument() {
+	public void entrypointPreDocument(Document doc) {
 		System.out.printf("%s @@@@ PreDocument cache stats:\n", Utils.detailedLog());
 		logCacheStats();
 	}
-	@Override
-	public void logPreDocumentBunch() {
-		System.out.printf("%s @@@@@ PreDocumentBunch cache stats:\n", Utils.detailedLog());
-		logCacheStats();
-	}
+//	@Override
+//	public void entrypointPreDocumentBunch() {
+//		System.out.printf("%s @@@@@ PreDocumentBunch cache stats:\n", Utils.detailedLog());
+//		logCacheStats();
+//	}
 
 	private static LoadingCache<Integer, WordnetLexicalResource> cacheResources = CacheBuilder.newBuilder()
 			.maximumSize(50)
@@ -608,9 +610,17 @@ public class WordNetSignalMechanism extends SignalMechanism {
 			.build(new CacheLoader<BasicRulesQuery, Boolean>() {
 				public Boolean load(BasicRulesQuery key) throws WordNetException {
 					WordNetPartOfSpeech lWnPos = WordNetPartOfSpeech.toWordNetPartOfspeech(key.lPos);
-					int synsets = dictionary.getNumberOfSynsets(key.lLemma, lWnPos);
+
+					
+					///DEBUG
+					System.err.printf("\n\n\n\nWordnetSignalMechanism: removed some code!!!!\n\n\n");
+					return false;
+					/////
+					
+					
+/*					int synsets = dictionary.getNumberOfSynsets(key.lLemma, lWnPos);
 					return synsets > 0;
-				}
+*/				}
 			});
 
 	private static LoadingCache<FullRulesQuery, Set<String>> cacheCousinsLoose = CacheBuilder.newBuilder()

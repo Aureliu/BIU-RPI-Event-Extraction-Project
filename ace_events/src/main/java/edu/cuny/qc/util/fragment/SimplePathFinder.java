@@ -1,4 +1,4 @@
-package ac.biu.nlp.nlp.ace_uima.analyze;
+package edu.cuny.qc.util.fragment;
 
 import java.util.Collection;
 import java.util.Collections;

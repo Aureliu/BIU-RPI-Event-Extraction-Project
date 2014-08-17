@@ -119,6 +119,6 @@
     <sample_out src="orig" >The [PRD disabled] [VCT passengers] were helped off of the train.</sample>
     <sample src="orig_p">The [PRD injured] [VCT soldier] was taken to the hospital.</sample>
     <sample_out src="orig_l" >On Saturday afternoon, two Israeli soldiers were wounded, one critically.</sample> <!-- This was the version I used when I didn't want to use the full version, as it contained many "argument distractions". But now that problem is (suuposedly) gone, so I'm back to the original. -->
-    <sample src="orig_l" >A [INT fire] in a bangladeshi garment [PLC factory] has left at least [VCT 100] [PRD hospitalized].</sample>
+    <sample_out src="orig_l" >A [INT fire] in a bangladeshi garment [PLC factory] has left at least [VCT 100] [PRD hospitalized].</sample> <!-- weird parser error - 'least' has two non-seep parents (actually they are both 'at', but once as a 'pobj' and once as 'mwe'. Weird.-->
   </usage_samples>
 </spec>

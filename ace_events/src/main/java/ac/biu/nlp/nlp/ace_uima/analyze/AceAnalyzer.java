@@ -39,13 +39,13 @@ import org.apache.uima.util.InvalidXMLException;
 import org.uimafit.util.JCasUtil;
 import org.xml.sax.SAXException;
 
+import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 
 import ac.biu.nlp.nlp.ace_uima.AceAbnormalMessage;
 import ac.biu.nlp.nlp.ace_uima.AceException;
-import ac.biu.nlp.nlp.ace_uima.analyze.TreeFragmentBuilder.TreeFragmentBuilderException;
 import ac.biu.nlp.nlp.ace_uima.stats.StatsDocument;
 import ac.biu.nlp.nlp.ace_uima.stats.StatsDocumentCollection;
 import ac.biu.nlp.nlp.ace_uima.stats.StatsException;
@@ -79,6 +79,15 @@ import edu.cuny.qc.ace.acetypes.AceArgumentType;
 import edu.cuny.qc.ace.acetypes.AceEntityMention;
 import edu.cuny.qc.scorer.mechanism.WordNetSignalMechanism;
 import edu.cuny.qc.util.PosMap;
+import edu.cuny.qc.util.Utils;
+import edu.cuny.qc.util.fragment.CasTreeConverter;
+import edu.cuny.qc.util.fragment.Facet;
+import edu.cuny.qc.util.fragment.FragmentAndReference;
+import edu.cuny.qc.util.fragment.FragmentLayer;
+import edu.cuny.qc.util.fragment.SimpleNodeString;
+import edu.cuny.qc.util.fragment.TreeFragmentBuilder;
+import edu.cuny.qc.util.fragment.TreePrinter;
+import edu.cuny.qc.util.fragment.TreeFragmentBuilder.TreeFragmentBuilderException;
 import eu.excitementproject.eop.common.component.lexicalknowledge.LexicalResourceException;
 import eu.excitementproject.eop.common.component.lexicalknowledge.LexicalRule;
 import eu.excitementproject.eop.common.datastructures.OneToManyBidiMultiHashMap;
@@ -109,10 +118,9 @@ import eu.excitementproject.eop.lap.biu.en.pasta.PredicateArgumentStructureBuild
 import eu.excitementproject.eop.lap.biu.en.pasta.nomlex.Nominalization;
 import eu.excitementproject.eop.lap.biu.en.pasta.nomlex.NomlexException;
 import eu.excitementproject.eop.lap.biu.en.pasta.nomlex.NomlexMapBuilder;
+import eu.excitementproject.eop.lap.biu.en.pasta.stanforddependencies.easyfirst.PastaMode;
 import eu.excitementproject.eop.lap.biu.pasta.identification.PredicateArgumentIdentificationException;
 import eu.excitementproject.eop.lap.biu.pasta.identification.PredicateArgumentStructureBuilder;
-import eu.excitementproject.eop.lap.biu.uima.CasTreeConverter;
-import eu.excitementproject.eop.lap.biu.uima.CasTreeConverterException;
 
 /**
  * Performs various statistics (using the stats mechanism) on the ACE XMIs, and outputs
@@ -135,13 +143,14 @@ public class AceAnalyzer {
 //			System.out.println("Got it!");
 //		}
 		////
-		tokenIndex = JCasUtil.indexCovering(jcas, Token.class, Sentence.class);
+//		tokenIndex = JCasUtil.indexCovering(jcas, Token.class, Sentence.class);
 		
 		// get BIU trees equivalent representation
 		converter = new CasTreeConverter();
-		converter.convertCasToTrees(jcas);
-		token2nodes = converter.getAllTokensToNodes();
-		sentence2root = converter.getSentenceToRootMap();
+		fragmentLayer = new FragmentLayer(jcas, converter);
+		//converter.convertCasToTrees(jcas);
+//		token2nodes = converter.getAllTokensToNodes();
+//		sentence2root = converter.getSentenceToRootMap();
 		//logger.trace("--- token2nodes: " + AnotherBasicNodeUtils.getNodesAnnotationString(token2nodes));
 		//logger.trace("--- sentence2root: " + AnotherBasicNodeUtils.getNodesAnnotationString(sentence2root));
 		
@@ -157,7 +166,7 @@ public class AceAnalyzer {
 			predicateToPas = new /*zzz*/IgnoreNullFinalHashMap<BasicNode, PredicateArgumentStructure<Info, BasicNode>>(); //TODO these maps should final!!! we're missing stuff!
 			argToPas = new SimpleValueSetMap<BasicNode, PredicateArgumentStructure<Info, BasicNode>>();
 			//clauseArgToPas = new /*zzz*/IgnoreNullFinalHashMap<BasicNode, PredicateArgumentStructure<Info, BasicNode>>();
-			for (BasicNode root : sentence2root.values()) {
+			for (BasicNode root : fragmentLayer.sentence2root.values()) {
 				TreeAndParentMap<Info, BasicNode> map = new TreeAndParentMap<Info, BasicNode>(root);
 				PredicateArgumentStructureBuilder<Info, BasicNode> pastaBuilder = pastaFactory.createBuilder(map);
 				pastaBuilder.build();
@@ -205,8 +214,8 @@ public class AceAnalyzer {
 			logger.debug("- ran PASTA and indexed output");
 		}
 		
-		fragmenter = new TreeFragmentBuilder();
-		linkToFacet = new LinkedHashMap<BasicNode, Facet>();
+//		fragmenter = new TreeFragmentBuilder();
+//		linkToFacet = new LinkedHashMap<BasicNode, Facet>();
 		
 		Map<String,String> key = new HashMap<String,String>();
 		key.put("folder", folder);
@@ -261,7 +270,7 @@ public class AceAnalyzer {
 				docs.updateDocs(key, "ArgsPerMention", "", mention.getEventMentionArguments().size());
 				
 				EventMentionAnchor eventAnchor = mention.getAnchor();
-				if (selectCoveredByIndex(jcas, Token.class, eventAnchor.getBegin(), eventAnchor.getEnd(), tokenIndex).values().isEmpty()) {
+				if (Utils.selectCoveredByIndex(jcas, Token.class, eventAnchor.getBegin(), eventAnchor.getEnd(), fragmentLayer.tokenIndex).values().isEmpty()) {
 					logger.warn(String.format("Event anchor '%s'[%s:%s] not covered by Sentence",
 							eventAnchor.getCoveredText(), eventAnchor.getBegin(), eventAnchor.getEnd()));
 				}
@@ -276,16 +285,16 @@ public class AceAnalyzer {
 					docs.updateDocs(key, "Anchor", "LemmaSpecPOS", getLemmaAndSpecificPosString(eventAnchor));				
 					docs.updateDocs(key, "Anchor", "TokenGenPOS", getTokenAndGeneralPosString(eventAnchor));				
 					
-					List<BasicNode> eventAnchorFrag = getTreeFragments(eventAnchor);
-					docs.updateDocs(key, "Anchor", "Dep", getParenthesesTreeOnlyDependencies(eventAnchorFrag));						
-					docs.updateDocs(key, "Anchor", "DepToken", getParenthesesTreeDependenciesToken(eventAnchorFrag));						
-					docs.updateDocs(key, "Anchor", "DepGenPOS", getParenthesesTreeDependenciesGeneralPOS(eventAnchorFrag));						
-					docs.updateDocs(key, "Anchor", "DepSpecPOS", getParenthesesTreeDependenciesSpecificPOS(eventAnchorFrag));						
+					List<BasicNode> eventAnchorFrag = fragmentLayer.getTreeFragments(eventAnchor);
+					docs.updateDocs(key, "Anchor", "Dep", FragmentLayer.getTreeoutOnlyDependencies(eventAnchorFrag, true));						
+					docs.updateDocs(key, "Anchor", "DepToken", FragmentLayer.getTreeoutDependenciesToken(eventAnchorFrag, true));						
+					docs.updateDocs(key, "Anchor", "DepGenPOS", FragmentLayer.getTreeoutDependenciesGeneralPOS(eventAnchorFrag, true));						
+					docs.updateDocs(key, "Anchor", "DepSpecPOS", FragmentLayer.getTreeoutDependenciesSpecificPOS(eventAnchorFrag, true));						
 	
 					EventMentionExtent eventExtent = mention.getExtent();
 					docs.updateDocs(key, "Extent", "", getText(eventExtent));
 					docs.updateDocs(key, "Extent", "Tokens", getNumTokens(eventExtent));						
-					docs.updateDocs(key, "Extent", "Sentences", getNumSentences(eventExtent, tokenIndex));						
+					docs.updateDocs(key, "Extent", "Sentences", getNumSentences(eventExtent, fragmentLayer.tokenIndex));						
 					docs.updateDocs(key, "Extent", "SpecPOS", getSpecificPosString(eventExtent));						
 					docs.updateDocs(key, "Extent", "GenPOS", getGeneralPosString(eventExtent));
 					addDetails("Anchor.GenPos_" + getGeneralPosString(eventAnchor), getText(eventAnchor) + ": " + getText(eventExtent));
@@ -293,7 +302,7 @@ public class AceAnalyzer {
 					EventMentionLdcScope eventLdcScope = mention.getLdcScope();
 					docs.updateDocs(key, "LdcScope", "", getText(eventLdcScope));
 					docs.updateDocs(key, "LdcScope", "Tokens", getNumTokens(eventLdcScope));						
-					docs.updateDocs(key, "LdcScope", "Sentences", getNumSentences(eventLdcScope, tokenIndex));						
+					docs.updateDocs(key, "LdcScope", "Sentences", getNumSentences(eventLdcScope, fragmentLayer.tokenIndex));						
 					docs.updateDocs(key, "LdcScope", "SpecPOS", getSpecificPosString(eventLdcScope));						
 					docs.updateDocs(key, "LdcScope", "GenPOS", getGeneralPosString(eventLdcScope));
 					//logger.info("*****@@ Size: " + ObjectSizeFetcher.getObjectSize(docs) + " bytes");
@@ -315,7 +324,7 @@ public class AceAnalyzer {
 					docs.updateDocs(key, "Argument", "SpecType", getSpecType(argMention.getArgMention()));					
 					
 					BasicArgumentMentionExtent argExtent = arg.getExtent();
-					if (selectCoveredByIndex(jcas, Token.class, argExtent.getBegin(), argExtent.getEnd(), tokenIndex).values().isEmpty()) {
+					if (Utils.selectCoveredByIndex(jcas, Token.class, argExtent.getBegin(), argExtent.getEnd(), fragmentLayer.tokenIndex).values().isEmpty()) {
 						logger.warn(String.format("Event argument extent '%s'[%s:%s] not covered by Sentence",
 								argExtent.getCoveredText(), argExtent.getBegin(), argExtent.getEnd()));
 					}
@@ -325,7 +334,7 @@ public class AceAnalyzer {
 						docs.updateDocs(key, "ArgExtent", "", getText(argExtent));						
 						docs.updateDocs(key, "ArgExtent", "Tokens", getNumTokens(argExtent));						
 						docs.updateDocs(key, "ArgExtent", "Lemmas", getLemmas(argExtent));						
-						docs.updateDocs(key, "ArgExtent", "Sentences", getNumSentences(argExtent, tokenIndex));						
+						docs.updateDocs(key, "ArgExtent", "Sentences", getNumSentences(argExtent, fragmentLayer.tokenIndex));						
 						docs.updateDocs(key, "ArgExtent", "SpecPOS", getSpecificPosString(argExtent));						
 						docs.updateDocs(key, "ArgExtent", "GenPOS", getGeneralPosString(argExtent));
 						docs.updateDocs(key, "ArgExtent", "TokenSpecPOS", getTokenAndSpecificPosString(argExtent));				
@@ -343,12 +352,13 @@ public class AceAnalyzer {
 						docs.updateDocs(key, "ArgHead", "TokenGenPOS", getTokenAndGeneralPosString(argHead));				
 						docs.updateDocs(key, "ArgHead", "SpecType", getSpecTypeTextEntry(argHead));					
 	
-						List<BasicNode> argHeadFrag = getTreeFragments(argHead);
-						docs.updateDocs(key, "ArgHead", "Dep", getParenthesesTreeOnlyDependencies(argHeadFrag));						
-						docs.updateDocs(key, "ArgHead", "DepToken", getParenthesesTreeDependenciesToken(argHeadFrag));						
-						docs.updateDocs(key, "ArgHead", "DepGenPOS", getParenthesesTreeDependenciesGeneralPOS(argHeadFrag));						
-						docs.updateDocs(key, "ArgHead", "DepSpecPOS", getParenthesesTreeDependenciesSpecificPOS(argHeadFrag));
-						updateLinkingTreeFrags(key, eventAnchor, argHead, "Link", "Dep", "DepGenPOS", "DepSpecPOS");
+						List<BasicNode> argHeadFrag = fragmentLayer.getTreeFragments(argHead);
+						docs.updateDocs(key, "ArgHead", "Dep", FragmentLayer.getTreeoutOnlyDependencies(argHeadFrag, true));						
+						docs.updateDocs(key, "ArgHead", "DepToken", FragmentLayer.getTreeoutDependenciesToken(argHeadFrag, true));						
+						docs.updateDocs(key, "ArgHead", "DepGenPOS", FragmentLayer.getTreeoutDependenciesGeneralPOS(argHeadFrag, true));						
+						docs.updateDocs(key, "ArgHead", "DepSpecPOS", FragmentLayer.getTreeoutDependenciesSpecificPOS(argHeadFrag, true));
+						updateLinkingTreeFrags(key, eventAnchor, argHead, argMention, "Link", "Dep", "DepGenPOS", "DepSpecPOS",    true);
+						updateLinkingTreeFrags(key, eventAnchor, argHead, argMention, "Link", "*Dep", "*DepGenPOS", "*DepSpecPOS", false);
 
 						if (argHead!=null) {
 							String specTypeStr = getSpecType(argHead.getMention());
@@ -545,21 +555,34 @@ public class AceAnalyzer {
 
 		if (AceAnalyzerDocumentCollection.USE_PASTA) {
 			// some PASTA post-processing
-			key.put("EventSubType", StatsDocument.ANY); // reset key - not relevant here
-			key.put("ArgType", StatsDocument.ANY);
-			key.put("Role", StatsDocument.ANY);
+//			key.put("EventSubType", StatsDocument.ANY); // reset key - not relevant here
+//			key.put("ArgType", StatsDocument.ANY);
+//			key.put("Role", StatsDocument.ANY);
+			int countMissingPredicate = 0;
+			int countMissingArg = 0;
+			int countMissingLink = 0;
+			int countLinkFound = 0;
+			int countPastaOnly = 0;
 			Set<PredicateArgumentStructure<Info, BasicNode>> foundPases = new HashSet<PredicateArgumentStructure<Info, BasicNode>>();
-			for (Entry<BasicNode, Facet> entry : linkToFacet.entrySet()) {
+			for (Entry<BasicNode, Facet> entry : fragmentLayer.linkToFacet.entrySet()) {
 				List<BasicNode> link = Arrays.asList(new BasicNode[] {entry.getKey()});
-				BasicNode predicate = entry.getValue().getPredicateHead();
-				BasicNode argument = entry.getValue().getArgumentHead();
+				Facet facet = entry.getValue();
+				BasicNode predicate = facet.getPredicateHead();
+				BasicNode argument = facet.getArgumentHead();
+				String eventType = facet.argAnno.getEventMention().getEvent().getSUBTYPE();
+				String argType = facet.argAnno.getArgMention().getArg().getType().getShortName();
+				String argRole = facet.argAnno.getRole();
+				key.put("EventSubType", eventType);
+				key.put("ArgType", argType);
+				key.put("Role", argRole);
 				
 				PredicateArgumentStructure<Info, BasicNode> predicatePas = predicateToPas.get(predicate);
 				if (predicatePas == null) {
-					docs.updateDocs(key, "FindLinks", "", "MissedPredicate");
-					docs.updateDocs(key, "MissedPredicate", "Dep", getParenthesesTreeOnlyDependencies(link));						
-					docs.updateDocs(key, "MissedPredicate", "DepGenPOS", getParenthesesTreeDependenciesGeneralPOS(link));
-					addDetails("MissedPredicate", printIndented(link));
+					countMissingPredicate++;
+					docs.updateDocs(key, "FindLinks", "", "PredMissed");
+					docs.updateDocs(key, "PredMissed", "*Dep", FragmentLayer.getTreeoutOnlyDependencies(link, false));						
+					docs.updateDocs(key, "PredMissed", "*DepGenPOS", FragmentLayer.getTreeoutDependenciesGeneralPOS(link, false));
+					addDetails("__PredMissed", printIndented(link, facet.sentence, eventType, argRole));
 					//TODO if pasta didn't find this link, check also if this link is a coreference to something that pasta did find
 					continue;
 				}
@@ -567,75 +590,52 @@ public class AceAnalyzer {
 				eu.excitementproject.eop.common.datastructures.immutable.ImmutableSet<PredicateArgumentStructure<Info, BasicNode>> argPases;
 				argPases = argToPas.get(argument);
 				if (argPases.isEmpty()) {
-					docs.updateDocs(key, "FindLinks", "", "MissedArgument");
-					docs.updateDocs(key, "MissedArgument", "Dep", getParenthesesTreeOnlyDependencies(link));						
-					docs.updateDocs(key, "MissedArgument", "DepGenPOS", getParenthesesTreeDependenciesGeneralPOS(link));						
-					addDetails("MissedArgument", printIndented(link));
+					countMissingArg++;
+					docs.updateDocs(key, "FindLinks", "", "ArgMissed");
+					docs.updateDocs(key, "ArgMissed", "*Dep", FragmentLayer.getTreeoutOnlyDependencies(link, false));						
+					docs.updateDocs(key, "ArgMissed", "*DepGenPOS", FragmentLayer.getTreeoutDependenciesGeneralPOS(link, false));						
+					addDetails("__ArgMissed", printIndented(link, facet.sentence, eventType, argRole));
 					continue;
 				}
 				if (!argPases.contains(predicatePas)) {
-					docs.updateDocs(key, "FindLinks", "", "MissedLink");
-					docs.updateDocs(key, "MissedLink", "Dep", getParenthesesTreeOnlyDependencies(link));						
-					docs.updateDocs(key, "MissedLink", "DepGenPOS", getParenthesesTreeDependenciesGeneralPOS(link));						
-					addDetails("MissedLink", printIndented(link));
+					countMissingLink++;
+					docs.updateDocs(key, "FindLinks", "", "LinkMissed");
+					docs.updateDocs(key, "LinkMissed", "*Dep", FragmentLayer.getTreeoutOnlyDependencies(link, false));						
+					docs.updateDocs(key, "LinkMissed", "*DepGenPOS", FragmentLayer.getTreeoutDependenciesGeneralPOS(link, false));						
+					addDetails("__LinkMissed", printIndented(link, facet.sentence, eventType, argRole));
 					continue;
 				}
+				countLinkFound++;
 				docs.updateDocs(key, "FindLinks", "", "LinkFound");
-				docs.updateDocs(key, "LinkFoundLink", "Dep", getParenthesesTreeOnlyDependencies(link));						
-				docs.updateDocs(key, "LinkFoundLink", "DepGenPOS", getParenthesesTreeDependenciesGeneralPOS(link));						
-				addDetails("LinkFound", printIndented(link));
+				docs.updateDocs(key, "LinkFound", "*Dep", FragmentLayer.getTreeoutOnlyDependencies(link, false));						
+				docs.updateDocs(key, "LinkFound", "*DepGenPOS", FragmentLayer.getTreeoutDependenciesGeneralPOS(link, false));						
+				addDetails("__LinkFound", printIndented(link, facet.sentence, eventType, argRole));
 				foundPases.add(predicatePas);
-	
-				
-	//			PredicateArgumentStructure<Info, BasicNode> argPas = null;
-	//			PredicateArgumentStructure<Info, BasicNode> regularArgPas = argToPas.get(argument);
-	//			PredicateArgumentStructure<Info, BasicNode> clauseArgPas = clauseArgToPas.get(argument);
-	//			if (regularArgPas == null) {
-	//				if (clauseArgPas == null) {
-	//					docs.updateDocs(key, "FindingLinks", "MissedArgument");
-	//					docs.updateDocs(key, "MissedArgumentLinkDependencies", getParenthesesTreeOnlyDependencies(link));						
-	//					docs.updateDocs(key, "MissedArgumentLinkDependenciesGenPOS", getParenthesesTreeDependenciesGeneralPOS(link));						
-	//					continue;
-	//				}
-	//				else {
-	//					argPas = clauseArgPas;
-	//				}
-	//			}
-	//			else {
-	//				if (clauseArgPas == null) {
-	//					argPas = regularArgPas;
-	//				}
-	//				else {
-	//					throw new AceException("Got node that is both regular argument and clausal argument: " + argument);
-	//				}
-	//			}
-	//			
-	//			if (argPas != predicatePas) {
-	//				docs.updateDocs(key, "FindingLinks", "MissedPredArgLink");
-	//				docs.updateDocs(key, "MissedPredArgLinkLinkDependencies", getParenthesesTreeOnlyDependencies(link));						
-	//				docs.updateDocs(key, "MissedPredArgLinkLinkDependenciesGenPOS", getParenthesesTreeDependenciesGeneralPOS(link));						
-	//				continue;
-	//			}
-	//			
-	//			docs.updateDocs(key, "FindingLinks", "LinkFound");
-	//			docs.updateDocs(key, "LinkFoundLinkDependencies", getParenthesesTreeOnlyDependencies(link));						
-	//			docs.updateDocs(key, "LinkFoundLinkDependenciesGenPOS", getParenthesesTreeDependenciesGeneralPOS(link));						
-	//			foundPases.add(predicatePas);
 			}
+			
+			docs.updateDocs(key, "FindLinkList", "LinkFound", countLinkFound);
+			docs.updateDocs(key, "FindLinkList", "MissedPredicate", countMissingPredicate);
+			docs.updateDocs(key, "FindLinkList", "MissedArgument", countMissingArg);
+			docs.updateDocs(key, "FindLinkList", "MissedLink", countMissingLink);
+
+			
 			logger.debug("- reported most PASTA-related stats");
 	
 			// report PASTA's pases that are not annotated in ACE
 			for (PredicateArgumentStructure<Info, BasicNode> pas : predicateToPas.values()) {
 				if (!foundPases.contains(pas)) {
-					docs.updateDocs(key, "FindLinks", "", "PastaOnly");
+					//docs.updateDocs(key, "FindLinks", "", "PastaOnly");
 					//TODO also add printed dependency fragments of the pasta-only links
 					// The difficulty is that we don't have them in fragment form - you have to dig
 					// in the pas, and for every argument+clausel argument take the list of nodes which
 					// is the path to the predicate and somehow restore the tree-structure to make
 					// it a fragment (maybe use similar ways to how we build the current fragments)
 					// TODO and also with details
+					
+					countPastaOnly++;
 				}
 			}
+			docs.updateDocs(key, "FindLinkList", "PastaOnly", countPastaOnly);
 			logger.debug("- finished reporting PASTA-related stats");
 		}
 	}
@@ -728,7 +728,7 @@ public class AceAnalyzer {
 			String text = curr.getCoveredText();
 			PartOfSpeech pos = AnnotationUtils.tokenToPOS(curr);
 			if (pos.getCanonicalPosTag()==CanonicalPosTag.PP ||
-				PUNCTUATION.contains(text) ||
+				Utils.PUNCTUATION.contains(text) ||
 				(ORG_SUFFIXES.contains(text) && prev!=null) ||
 				(text.length()>1 && text.charAt(text.length()-1)=='.' && ORG_SUFFIXES.contains(text.substring(0, text.length()-1)) && prev!=null) ) {
 				
@@ -823,30 +823,30 @@ public class AceAnalyzer {
 	}
 	
 	protected Integer getNumSentences(Annotation covered, Map<Token, Collection<Sentence>> tokenIndex) throws CASException, AceException {
-		return getCoveringSentences(covered, tokenIndex).size();
+		return Utils.getCoveringSentences(covered, tokenIndex).size();
 	}
 	
-	protected MultiMap<Sentence,Token> getCoveringSentences(Annotation covered, Map<Token, Collection<Sentence>> tokenIndex) throws CASException, AceException {
-		MultiMap<Sentence,Token> result = new MultiHashMap<Sentence,Token>();
-		// TODO Horrible HACK!!!!
-		// This is because qi's modified dataset sometimes just doesn't have an ldc scope, so we skip it silently.
-		// and since it's null, we can't event check: covered instanceof EventMentionLdcScope :(
-		if (covered==null) {
-			return result;
-		}
-		
-		MultiMap<Token,Sentence> map = selectCoveredByIndex(covered.getCAS().getJCas(), Token.class, covered.getBegin(), covered.getEnd(), tokenIndex);
-
-		// A token can only have one sentence
-		for (Entry<Token,Collection<Sentence>> entry : map.entrySet()) {
-			if (entry.getValue().size() != 1) {
-				throw new AceException("Found token that does not have exactly one sentence, it has " + entry.getValue().size() + " sentences: " + entry.getKey());
-			}
-			result.put(entry.getValue().iterator().next(), entry.getKey());
-		}
-		return result;
-	}
-	
+//	protected MultiMap<Sentence,Token> getCoveringSentences(Annotation covered, Map<Token, Collection<Sentence>> tokenIndex) throws CASException, AceException {
+//		MultiMap<Sentence,Token> result = new MultiHashMap<Sentence,Token>();
+//		// TODO Horrible HACK!!!!
+//		// This is because qi's modified dataset sometimes just doesn't have an ldc scope, so we skip it silently.
+//		// and since it's null, we can't event check: covered instanceof EventMentionLdcScope :(
+//		if (covered==null) {
+//			return result;
+//		}
+//		
+//		MultiMap<Token,Sentence> map = selectCoveredByIndex(covered.getCAS().getJCas(), Token.class, covered.getBegin(), covered.getEnd(), tokenIndex);
+//
+//		// A token can only have one sentence
+//		for (Entry<Token,Collection<Sentence>> entry : map.entrySet()) {
+//			if (entry.getValue().size() != 1) {
+//				throw new AceException("Found token that does not have exactly one sentence, it has " + entry.getValue().size() + " sentences: " + entry.getKey());
+//			}
+//			result.put(entry.getValue().iterator().next(), entry.getKey());
+//		}
+//		return result;
+//	}
+//	
 	protected Integer getNumTokens(Annotation covering) {
 		if (covering == null) {
 			return -1;
@@ -856,34 +856,34 @@ public class AceAnalyzer {
 		}
 	}
 	
-	/**
-	 * Given some begin..end span, gets all annotations of type {@code T} (usually {@link Token})
-	 * in the span, and returns a mapping between each one of them, and its covering annotation of
-	 * type {@code S} (usually {@link Sentence}). Each {@code T} annotation may have more than
-	 * a single covering {@code S} annotation.
-	 * This uses a pre-constructed index of {@code T}-type annotations to their covering 
-	 * {@code S}-type annotations.<BR>
-	 * <BR>
-	 * For example, this is good for finding all the sentences that this span is under (note that the span
-	 * does NOT need to cover each sentence fully, even sentences that only have one token in the span are
-	 * retrieved).
-	 * @param jcas JCas holding the annotations
-	 * @param tClass type of mediating annotation, used in the index (usually {@link Token})
-	 * @param begin begin offset of requested span
-	 * @param end end offset of requested span
-	 * @param t2sIndex an pre-constructed index between {@code T} and {@code S} annotations. Can
-	 * be constructed using {@link JCasUtil#indexCovering(JCas, Class, Class)}
-	 * @return a multimap between {@code T} annotations and their covering {@code S} annotations
-	 */
-	protected <T extends Annotation,S extends Annotation> MultiMap<T,S> selectCoveredByIndex(JCas jcas, Class<T> tClass, int begin, int end, Map<T, Collection<S>> t2sIndex) {
-		List<T> tList = JCasUtil.selectCovered(jcas, tClass, begin, end);
-		MultiMap<T,S> t2s = new MultiHashMap<T,S>();
-		for (T t : tList) {
-			t2s.putAll(t, t2sIndex.get(t));
-		}
-		return t2s;
-		
-	}
+//	/**
+//	 * Given some begin..end span, gets all annotations of type {@code T} (usually {@link Token})
+//	 * in the span, and returns a mapping between each one of them, and its covering annotation of
+//	 * type {@code S} (usually {@link Sentence}). Each {@code T} annotation may have more than
+//	 * a single covering {@code S} annotation.
+//	 * This uses a pre-constructed index of {@code T}-type annotations to their covering 
+//	 * {@code S}-type annotations.<BR>
+//	 * <BR>
+//	 * For example, this is good for finding all the sentences that this span is under (note that the span
+//	 * does NOT need to cover each sentence fully, even sentences that only have one token in the span are
+//	 * retrieved).
+//	 * @param jcas JCas holding the annotations
+//	 * @param tClass type of mediating annotation, used in the index (usually {@link Token})
+//	 * @param begin begin offset of requested span
+//	 * @param end end offset of requested span
+//	 * @param t2sIndex an pre-constructed index between {@code T} and {@code S} annotations. Can
+//	 * be constructed using {@link JCasUtil#indexCovering(JCas, Class, Class)}
+//	 * @return a multimap between {@code T} annotations and their covering {@code S} annotations
+//	 */
+//	protected <T extends Annotation,S extends Annotation> MultiMap<T,S> selectCoveredByIndex(JCas jcas, Class<T> tClass, int begin, int end, Map<T, Collection<S>> t2sIndex) {
+//		List<T> tList = JCasUtil.selectCovered(jcas, tClass, begin, end);
+//		MultiMap<T,S> t2s = new MultiHashMap<T,S>();
+//		for (T t : tList) {
+//			t2s.putAll(t, t2sIndex.get(t));
+//		}
+//		return t2s;
+//		
+//	}
 
 	protected String getSpecificPosString(Annotation covering) {
 		if (covering == null) {
@@ -969,118 +969,118 @@ public class AceAnalyzer {
 		}
 	}
 	
-	protected List<BasicNode> getTreeFragments(Annotation covering) throws CASException, AceException, TreeAndParentMapException, TreeFragmentBuilderException {
-		List<BasicNode> result = new ArrayList<BasicNode>();
-		if (covering != null) {
-			MultiMap<Sentence, Token> sentence2tokens = getCoveringSentences(covering, tokenIndex);
-			for (Entry<Sentence,Collection<Token>> entry : sentence2tokens.entrySet()) {
-				FragmentAndReference frag = getFragmentBySentenceAndTokens(entry.getKey(), entry.getValue());
-				result.add(frag.getFragmentRoot());
-			}
-		}
-		return result;
-	}
-
-	/**
-	 * Returns a tree fragment of the connection between the roots of the two covering annotations.<BR><BR>
-	 * This method assumes that each covering annotation is within sentence boundaries,
-	 * otherwise it doesn't make much sense. This is in contrary to {@link #getTreeFragments(Annotation)}
-	 * which does not assume that and may return multiple fragments.
-	 * @param covering
-	 * @return
-	 * @throws CASException
-	 * @throws AceException
-	 * @throws TreeAndParentMapException
-	 * @throws TreeFragmentBuilderException
-	 * @throws AceAbnormalMessage 
-	 */
-	protected BasicNode getRootLinkingTreeFragment(Annotation covering1, Annotation covering2) throws CASException, AceException, TreeAndParentMapException, TreeFragmentBuilderException, AceAbnormalMessage {
-		if (covering1 == null || covering2 == null) {
-			throw new AceAbnormalMessage("NullParam");
-		}
-		
-		//logger.trace("%%% 1");
-		
-		MultiMap<Sentence, Token> sentence2tokens_1 = getCoveringSentences(covering1, tokenIndex);
-		MultiMap<Sentence, Token> sentence2tokens_2 = getCoveringSentences(covering2, tokenIndex);
-		if (sentence2tokens_1.size() == 0 || sentence2tokens_2.size() == 0) {
-			throw new AceAbnormalMessage("ERR:No Covering Sentence"
-					//, String.format("Got at least one of the two annotations, that is not covered by any sentence: " +
-					//"(%s sentences, %s sentences)", sentence2tokens_1.size(), sentence2tokens_2.size()), logger
-					);
-		}
-		if (sentence2tokens_1.size() > 1 || sentence2tokens_2.size() > 1) {
-			throw new AceAbnormalMessage("ERR:Multiple Sentence Annotation", String.format("Got at least one of the two annotations, that does not cover exactly one sentence: " +
-					"(%s sentences, %s sentences)", sentence2tokens_1.size(), sentence2tokens_2.size()), logger);
-		}
-		Entry<Sentence,Collection<Token>> s2t1 = sentence2tokens_1.entrySet().iterator().next();
-		Entry<Sentence,Collection<Token>> s2t2 = sentence2tokens_2.entrySet().iterator().next();
-		if (s2t1.getKey() != s2t2.getKey()) {
-			throw new AceAbnormalMessage("ERR:Different Sentences", String.format("Got two annotations in different sentences: sentence1=%s, sentence2=%s",
-					s2t1.getKey(), s2t2.getKey()), logger);
-		}
-		Sentence sentence = s2t1.getKey();
-
-		//logger.trace("%%% 2");
-
-		// get the fragment of each covering annotation
-		FragmentAndReference frag1 = getFragmentBySentenceAndTokens(sentence, s2t1.getValue());
-		FragmentAndReference frag2 = getFragmentBySentenceAndTokens(sentence, s2t2.getValue());
-		//logger.trace("%%% 3");
-
-		// and now... get the fragment containing the roots of both fragments!
-		// this is the connecting fragment
-		Token root1 = token2nodes.getSingleKeyOf(frag1.getOrigReference());
-		Token root2 = token2nodes.getSingleKeyOf(frag2.getOrigReference());
-//		Token root1 = info2token.get(frag1.getInfo());
-//		Token root2 = info2token.get(frag2.getInfo());
-		//logger.trace("%%% 4");
-
-		//TODO remove, for debug
-//		List<BasicNode> n = new ArrayList<BasicNode>();
-//		for (BasicNode nn : token2nodes.values()) {
-//			if (frag1.getInfo().getNodeInfo().getWord().equals(nn.getInfo().getNodeInfo().getWord())) {
-//				n.add(nn);
+//	protected List<BasicNode> getTreeFragments(Annotation covering) throws CASException, AceException, TreeAndParentMapException, TreeFragmentBuilderException {
+//		List<BasicNode> result = new ArrayList<BasicNode>();
+//		if (covering != null) {
+//			MultiMap<Sentence, Token> sentence2tokens = getCoveringSentences(covering, tokenIndex);
+//			for (Entry<Sentence,Collection<Token>> entry : sentence2tokens.entrySet()) {
+//				FragmentAndReference frag = getFragmentBySentenceAndTokens(entry.getKey(), entry.getValue());
+//				result.add(frag.getFragmentRoot());
 //			}
 //		}
-		//TODO finish
-		
-		List<Token> bothRoots = Arrays.asList(new Token[] {root1, root2});
-		FragmentAndReference connectingFrag = getFragmentBySentenceAndTokens(sentence, bothRoots);
-		//logger.trace("%%% 5");
-
-		// Store this
-		Facet facet = new Facet(frag1.getOrigReference(), frag2.getOrigReference());
-		linkToFacet.put(connectingFrag.getFragmentRoot(), facet);
-		return connectingFrag.getFragmentRoot();
-	}
-	
-	protected FragmentAndReference getFragmentBySentenceAndTokens(Sentence sentence, Collection<Token> tokens) throws TreeAndParentMapException, TreeFragmentBuilderException {
-		BasicNode root = sentence2root.get(sentence);
-		Set<BasicNode> targetNodes = new LinkedHashSet<BasicNode>(tokens.size());
-		for (Token token : tokens) {
-			targetNodes.addAll(token2nodes.get(token)); //Also get duplicated nodes!
-		}
-		//logger.trace("-------- fragmenter.build(" + AnotherBasicNodeUtils.getNodeString(root) + ", " + AnotherBasicNodeUtils.getNodesString(targetNodes) + ")");
-		FragmentAndReference fragRef = fragmenter.build(root, targetNodes);
-		return fragRef;
-	}
-	
+//		return result;
+//	}
+//
+//	/**
+//	 * Returns a tree fragment of the connection between the roots of the two covering annotations.<BR><BR>
+//	 * This method assumes that each covering annotation is within sentence boundaries,
+//	 * otherwise it doesn't make much sense. This is in contrary to {@link #getTreeFragments(Annotation)}
+//	 * which does not assume that and may return multiple fragments.
+//	 * @param covering
+//	 * @return
+//	 * @throws CASException
+//	 * @throws AceException
+//	 * @throws TreeAndParentMapException
+//	 * @throws TreeFragmentBuilderException
+//	 * @throws AceAbnormalMessage 
+//	 */
+//	protected FragmentAndReference getRootLinkingTreeFragment(Annotation /*EventMentionAnchor*/ eventAnchor, Annotation /*BasicArgumentMentionHead*/ argHead, Object /*EventMentionArgument*/ argMention) throws CASException, AceException, TreeAndParentMapException, TreeFragmentBuilderException, AceAbnormalMessage {
+//		if (eventAnchor == null || argHead == null) {
+//			throw new AceAbnormalMessage("NullParam");
+//		}
+//		
+//		//logger.trace("%%% 1");
+//		
+//		MultiMap<Sentence, Token> sentence2tokens_1 = getCoveringSentences(eventAnchor, tokenIndex);
+//		MultiMap<Sentence, Token> sentence2tokens_2 = getCoveringSentences(argHead, tokenIndex);
+//		if (sentence2tokens_1.size() == 0 || sentence2tokens_2.size() == 0) {
+//			throw new AceAbnormalMessage("ERR:No Covering Sentence"
+//					//, String.format("Got at least one of the two annotations, that is not covered by any sentence: " +
+//					//"(%s sentences, %s sentences)", sentence2tokens_1.size(), sentence2tokens_2.size()), logger
+//					);
+//		}
+//		if (sentence2tokens_1.size() > 1 || sentence2tokens_2.size() > 1) {
+//			throw new AceAbnormalMessage("ERR:Multiple Sentence Annotation", String.format("Got at least one of the two annotations, that does not cover exactly one sentence: " +
+//					"(%s sentences, %s sentences)", sentence2tokens_1.size(), sentence2tokens_2.size()), logger);
+//		}
+//		Entry<Sentence,Collection<Token>> s2t1 = sentence2tokens_1.entrySet().iterator().next();
+//		Entry<Sentence,Collection<Token>> s2t2 = sentence2tokens_2.entrySet().iterator().next();
+//		if (s2t1.getKey() != s2t2.getKey()) {
+//			throw new AceAbnormalMessage("ERR:Different Sentences", String.format("Got two annotations in different sentences: sentence1=%s, sentence2=%s",
+//					s2t1.getKey(), s2t2.getKey()), logger);
+//		}
+//		Sentence sentence = s2t1.getKey();
+//
+//		//logger.trace("%%% 2");
+//
+//		// get the fragment of each covering annotation
+//		FragmentAndReference frag1 = getFragmentBySentenceAndTokens(sentence, s2t1.getValue());
+//		FragmentAndReference frag2 = getFragmentBySentenceAndTokens(sentence, s2t2.getValue());
+//		//logger.trace("%%% 3");
+//
+//		// and now... get the fragment containing the roots of both fragments!
+//		// this is the connecting fragment
+//		Token root1 = token2nodes.getSingleKeyOf(frag1.getOrigReference());
+//		Token root2 = token2nodes.getSingleKeyOf(frag2.getOrigReference());
+////		Token root1 = info2token.get(frag1.getInfo());
+////		Token root2 = info2token.get(frag2.getInfo());
+//		//logger.trace("%%% 4");
+//
+//		//TODO remove, for debug
+////		List<BasicNode> n = new ArrayList<BasicNode>();
+////		for (BasicNode nn : token2nodes.values()) {
+////			if (frag1.getInfo().getNodeInfo().getWord().equals(nn.getInfo().getNodeInfo().getWord())) {
+////				n.add(nn);
+////			}
+////		}
+//		//TODO finish
+//		
+//		Facet facet = new Facet(frag1.getOrigReference(), frag2.getOrigReference(), eventAnchor, (EventMentionArgument) argMention, sentence);
+//
+//		List<Token> bothRoots = Arrays.asList(new Token[] {root1, root2});
+//		FragmentAndReference connectingFrag = getFragmentBySentenceAndTokens(sentence, bothRoots, facet);
+//		//logger.trace("%%% 5");
+//
+//		linkToFacet.put(connectingFrag.getFragmentRoot(), facet);
+//		return connectingFrag;
+//	}
+//	
+//	protected FragmentAndReference getFragmentBySentenceAndTokens(Sentence sentence, Collection<Token> tokens) throws TreeAndParentMapException, TreeFragmentBuilderException {
+//		BasicNode root = sentence2root.get(sentence);
+//		Set<BasicNode> targetNodes = new LinkedHashSet<BasicNode>(tokens.size());
+//		for (Token token : tokens) {
+//			targetNodes.addAll(token2nodes.get(token)); //Also get duplicated nodes!
+//		}
+//		//logger.trace("-------- fragmenter.build(" + AnotherBasicNodeUtils.getNodeString(root) + ", " + AnotherBasicNodeUtils.getNodesString(targetNodes) + ")");
+//		FragmentAndReference fragRef = fragmenter.build(root, targetNodes);
+//		return fragRef;
+//	}
+//	
 	protected void updateLinkingTreeFrags(Map<String, String> key, EventMentionAnchor eventAnchor,
-			BasicArgumentMentionHead argHead, String field, String fieldDep, String fieldDepGenPos,
-			String fieldDepSpecPos) throws CASException, AceException, TreeAndParentMapException, TreeFragmentBuilderException, StatsException {
+			BasicArgumentMentionHead argHead, EventMentionArgument argMention, String field, String fieldDep, String fieldDepGenPos,
+			String fieldDepSpecPos, boolean withContext) throws CASException, AceException, TreeAndParentMapException, TreeFragmentBuilderException, StatsException {
 		List<BasicNode> roots = null;
 		String abnormal = null;
 		try {
-			//throw new AceAbnormalMessage("Frags disabled");
-			roots = Arrays.asList(new BasicNode[] {getRootLinkingTreeFragment(eventAnchor, argHead)});
+			FragmentAndReference frag = fragmentLayer.getRootLinkingTreeFragment(eventAnchor, argHead, argMention);
+			roots = ImmutableList.of(frag.getFragmentRoot());
 		} catch (AceAbnormalMessage e) {
 			abnormal = e.getMessage();
 		}
 		
-		docs.updateDocs(key, field, fieldDep,        abnormal!=null ? abnormal : getParenthesesTreeOnlyDependencies(roots));
-		docs.updateDocs(key, field, fieldDepGenPos,  abnormal!=null ? abnormal : getParenthesesTreeDependenciesGeneralPOS(roots));
-		docs.updateDocs(key, field, fieldDepSpecPos, abnormal!=null ? abnormal : getParenthesesTreeDependenciesSpecificPOS(roots));
+		docs.updateDocs(key, field, fieldDep,        abnormal!=null ? abnormal : FragmentLayer.getTreeoutOnlyDependencies(roots, withContext));
+		docs.updateDocs(key, field, fieldDepGenPos,  abnormal!=null ? abnormal : FragmentLayer.getTreeoutDependenciesGeneralPOS(roots, withContext));
+		docs.updateDocs(key, field, fieldDepSpecPos, abnormal!=null ? abnormal : FragmentLayer.getTreeoutDependenciesSpecificPOS(roots, withContext));
 	}
 
 
@@ -1104,57 +1104,66 @@ public class AceAnalyzer {
 //			}
 //		});
 //	}
-	protected String printIndented(List<BasicNode> roots) {
+	protected String printIndented(List<BasicNode> roots, Sentence sentence, String eventType, String argRole) {
 		List<String> strs = new ArrayList<String>(roots.size());
 		for (BasicNode root : roots) {
-			strs.add(AbstractNodeUtils.getIndentedString(root));
+//			Token token = token2nodes.getSingleKeyOf(root);
+//			if (token == null) {
+//				return "InternalError!!!";
+//			}
+//			Collection<Sentence> sentences = tokenIndex.get(token);
+//			if (sentences.size() != 1) {
+//				throw new IllegalStateException(String.format("Expected exactly one sentence for token '%s', got %s sentences.", token.getCoveredText(), sentences.size()));
+//			}
+//			Sentence sentence = sentences.iterator().next();
+			String treeStr = AbstractNodeUtils.getIndentedString(root);
+			strs.add(String.format("- %s\n* %s/%s\n%s", sentence.getCoveredText(), eventType, argRole, treeStr));
 		}
 		return StringUtil.join(strs, "\n");
 	}
-	
-	protected String getParenthesesTreeOnlyDependencies(List<BasicNode> trees) {
-		if (trees.isEmpty()) {
-			return "(null)";
-		}
-		return TreePrinter.getString(trees, "( ", " )", "#", new SimpleNodeString() {
-			@Override public String toString(BasicNode node) {
-				return " "+InfoGetFields.getRelation(node.getInfo(), "<ROOT>")+" ";
-			}
-		});
-	}
 
-	protected String getParenthesesTreeDependenciesToken(List<BasicNode> trees) {
-		if (trees.isEmpty()) {
-			return "(null)";
-		}
-		return TreePrinter.getString(trees, "( ", " )", "#", new SimpleNodeString() {
-			@Override public String toString(BasicNode node) {
-				return " "+InfoGetFields.getRelation(node.getInfo(), "<ROOT>")+"->"+InfoGetFields.getWord(node.getInfo())+" ";
-			}
-		});
-	}
-
-	protected String getParenthesesTreeDependenciesSpecificPOS(List<BasicNode> trees) {
-		if (trees.isEmpty()) {
-			return "(null)";
-		}
-		return TreePrinter.getString(trees, "( ", " )", "#", new SimpleNodeString() {
-			@Override public String toString(BasicNode node) {
-				return " "+InfoGetFields.getRelation(node.getInfo(), "<ROOT>")+"->"+InfoGetFields.getPartOfSpeech(node.getInfo())+" ";
-			}
-		});
-	}
-
-	protected String getParenthesesTreeDependenciesGeneralPOS(List<BasicNode> trees) {
-		if (trees.isEmpty()) {
-			return "(null)";
-		}
-		return TreePrinter.getString(trees, "( ", " )", "#", new SimpleNodeString() {
-			@Override public String toString(BasicNode node) {
-				return " "+InfoGetFields.getRelation(node.getInfo(), "<ROOT>")+"->"+node.getInfo().getNodeInfo().getSyntacticInfo().getPartOfSpeech().getCanonicalPosTag()+" ";
-			}
-		});
-	}
+//	public static String getTreeout(List<BasicNode> trees, boolean withContext, SimpleNodeString nodeStr) {
+//		if (trees.isEmpty()) {
+//			return "(empty-tree)";
+//		}
+//		String subrootDep = null;
+//		if (!withContext) {
+//			subrootDep = "<SUBROOT>";
+//		}
+//		return TreePrinter.getString(trees, "( ", " )", "#", subrootDep, nodeStr);
+//	}
+//	
+//	public static String getTreeoutOnlyDependencies(List<BasicNode> trees, boolean withContext) {
+//		return getTreeout(trees, withContext, new SimpleNodeString() {
+//			@Override public String toString(BasicNode node) {
+//				return " "+InfoGetFields.getRelation(node.getInfo(), "<ROOT>")+" ";
+//			}
+//		});
+//	}
+//
+//	public static String getTreeoutDependenciesToken(List<BasicNode> trees, boolean withContext) {
+//		return getTreeout(trees, withContext, new SimpleNodeString() {
+//			@Override public String toString(BasicNode node) {
+//				return " "+InfoGetFields.getRelation(node.getInfo(), "<ROOT>")+"->"+InfoGetFields.getWord(node.getInfo())+" ";
+//			}
+//		});
+//	}
+//
+//	public static String getTreeoutDependenciesSpecificPOS(List<BasicNode> trees, boolean withContext) {
+//		return getTreeout(trees, withContext, new SimpleNodeString() {
+//			@Override public String toString(BasicNode node) {
+//				return " "+InfoGetFields.getRelation(node.getInfo(), "<ROOT>")+"->"+InfoGetFields.getPartOfSpeech(node.getInfo())+" ";
+//			}
+//		});
+//	}
+//
+//	public static String getTreeoutDependenciesGeneralPOS(List<BasicNode> trees, boolean withContext) {
+//		return getTreeout(trees, withContext, new SimpleNodeString() {
+//			@Override public String toString(BasicNode node) {
+//				return " "+InfoGetFields.getRelation(node.getInfo(), "<ROOT>")+"->"+node.getInfo().getNodeInfo().getSyntacticInfo().getPartOfSpeech().getCanonicalPosTag()+" ";
+//			}
+//		});
+//	}
 
 	protected AceAnalyzer() {
 		//do nothing
@@ -1165,7 +1174,7 @@ public class AceAnalyzer {
 		NomlexMapBuilder nomlexMapBuilder = new NomlexMapBuilder(nomlexFile.getPath(),classRoleTableFile.getPath());
 		nomlexMapBuilder.build();
 		ImmutableMap<String, Nominalization> nomlexMap = nomlexMapBuilder.getNomlexMap(); 
-		pastaFactory = new PredicateArgumentStructureBuilderFactory<Info, BasicNode>(nomlexMap);
+		pastaFactory = new PredicateArgumentStructureBuilderFactory<Info, BasicNode>(nomlexMap/*, PastaMode.EXPANDED*/);
 		
 		// doc categories init
 		fillCategories();
@@ -1256,17 +1265,18 @@ public class AceAnalyzer {
 	protected AceAnalyzerDocumentCollection docs = new AceAnalyzerDocumentCollection();
 	protected Map<String, List<String>> detailedFiles = new LinkedHashMap<String, List<String>>();
 	
-	protected Map<Token, Collection<Sentence>> tokenIndex;	
+//	protected Map<Token, Collection<Sentence>> tokenIndex;	
 	protected CasTreeConverter converter;
-	protected OneToManyBidiMultiHashMap<Token, BasicNode> token2nodes;
+//	protected OneToManyBidiMultiHashMap<Token, BasicNode> token2nodes;
 	//protected BidiMap<Info, Token> info2token;
-	protected BidiMap<Sentence, BasicNode> sentence2root;
-	protected TreeFragmentBuilder fragmenter;
+//	protected BidiMap<Sentence, BasicNode> sentence2root;
+//	protected TreeFragmentBuilder fragmenter;
+	protected FragmentLayer fragmentLayer;
 	protected PredicateArgumentStructureBuilderFactory<Info, BasicNode> pastaFactory;
 	protected Map<BasicNode, PredicateArgumentStructure<Info, BasicNode>> predicateToPas;
 	protected ValueSetMap<BasicNode, PredicateArgumentStructure<Info, BasicNode>> argToPas;
 	//protected MultiMap<BasicNode, PredicateArgumentStructure<Info, BasicNode>> clauseArgToPas;
-	protected Map<BasicNode, Facet> linkToFacet;
+//	protected Map<BasicNode, Facet> linkToFacet;
 	protected static String devFileIds;
 	protected static String trainFileIds;
 	protected static String testFileIds;
@@ -1274,9 +1284,9 @@ public class AceAnalyzer {
 	public static Set<String> ORG_SUFFIXES = Sets.newHashSet(Arrays.asList(new String[] {
 			"Inc", "Incorporated", "Corp", "Corporation", "Ltd", "Limited", "Co"
 	}));
-	public static Set<String> PUNCTUATION = Sets.newHashSet(Arrays.asList(new String[] {
-			".", ",", "!", "?", ":", "@", "#", "$", "%"
-	}));
+//	public static Set<String> PUNCTUATION = Sets.newHashSet(Arrays.asList(new String[] {
+//			".", ",", "!", "?", ":", "@", "#", "$", "%"
+//	}));
 	public static File WORDNET_DIR = new File("C:/Java/git/breep/ace_events/src/main/resources/data/Wordnet3.0");
 	private static WordnetLexicalResource wordnet;
 	

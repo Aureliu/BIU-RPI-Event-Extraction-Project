@@ -36,6 +36,7 @@ import edu.cuny.qc.perceptron.types.Alphabet;
 import edu.cuny.qc.perceptron.types.Document;
 import edu.cuny.qc.perceptron.types.Sentence;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
+import edu.cuny.qc.scorer.SignalMechanismException;
 import edu.cuny.qc.scorer.SignalMechanismsContainer;
 import edu.cuny.qc.util.Logs;
 import edu.cuny.qc.util.PosMap;
@@ -124,11 +125,12 @@ public class Pipeline
 	 * @throws ResourceInitializationException 
 	 * @throws AnalysisEngineProcessException 
 	 * @throws CASRuntimeException 
+	 * @throws SignalMechanismException 
 	 */
 	public static Multimap<JCas, SentenceInstance> readInstanceList(/*Perceptron perceptron,*/
 			Controller controller, SignalMechanismsContainer signalMechanismsContainer,
 			TypesContainer types, File srcDir, File file_list, Alphabet featureAlphabet, 
-			Map<String, Integer> numMentions, boolean learnable, boolean debug) throws IOException, DocumentException, CASRuntimeException, AnalysisEngineProcessException, ResourceInitializationException, CASException, UimaUtilsException, AeException
+			Map<String, Integer> numMentions, boolean learnable, boolean debug) throws Exception
 	{
 		System.out.printf("\n%s Reading instance list. srcDir=%s, file_list=%s, numMentions=%s, learnable=%s, debug=%s, featureAlphabet=%s, types=%s, signals=%s\n",
 				Utils.detailedLog(), srcDir, file_list, numMentions, learnable, debug, featureAlphabet, types, signalMechanismsContainer);
@@ -156,8 +158,8 @@ public class Pipeline
 				
 				System.out.printf("[%s] %s\n", new Date(), fileName);
 				
-				//perceptron.logSignalMechanismsPreDocument();
 				Document doc = Document.createAndPreprocess(fileName, line, true, monoCase, controller.usePreprocessFiles, controller.usePreprocessFiles, types, controller, signalMechanismsContainer);
+				signalMechanismsContainer.entrypointSignalMechanismsPreDocument(doc);
 				// fill in text feature vector for each token
 				//featGen.fillTextFeatures_NoPreprocessing(doc);
 				
@@ -323,6 +325,26 @@ public class Pipeline
 	 */
 	static public void main(String[] args) throws Exception
 	{
+		
+
+		
+		Class<?> cls = Class.forName("edu.stanford.nlp.tagger.maxent.ExtractorFrames"/*$ExtractorContinuousTagConjunction"*/);
+
+		System.out.println(cls.toString());
+		
+		//edu.stanford.nlp.tagger.maxent.ExtractorFrames$ExtractorContinuousTagConjunction
+		//System.out.println(edu.stanford.nlp.tagger.maxent.ExtractorFrames.class.getProtectionDomain().getCodeSource().getLocation().getPath());
+		System.out.println(cls.getProtectionDomain().getCodeSource().getLocation().getPath());
+		//System.out.println(edu.stanford.nlp.tagger.maxent.ExtractorFrames.ExtractorContinuousTagConjunction.class.getProtectionDomain().getCodeSource().getLocation().getPath());
+		System.out.println();
+		
+		
+		
+		
+		edu.stanford.nlp.tagger.maxent.ExtractorFrames e;
+		edu.stanford.nlp.tagger.maxent.Extractor[] e2 = edu.stanford.nlp.tagger.maxent.ExtractorFrames.getExtractorFrames("moo");
+
+		
 //		mainWithSingleEventType(args, null);
 //	}
 //	

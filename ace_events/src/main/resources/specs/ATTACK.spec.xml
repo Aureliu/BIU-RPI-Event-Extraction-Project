@@ -68,7 +68,7 @@
       </types>
       <examples>
         <example>businessman</example>
-        <example>café</example>
+        <example>cafe</example>
         <example>car</example>
         <example>Fallujah</example>
         <example>headquarters</example>
@@ -136,7 +136,7 @@
       </types>
       <examples>
         <example>Baghdad</example>
-        <example>café</example>
+        <example>cafe</example>
         <example>cities</example>
         <example>entrance</example>
         <example>Gaza Strip</example>
@@ -154,7 +154,7 @@
 
         <example>Pakistan</example>
         <example>building</example>
-        <example>cafe</example>
+        <!--example>cafe</example--> <!-- duplicate when there are no unicode chars -->
         <example>garage</example>
       </examples>
     </argument>
@@ -175,7 +175,8 @@
     <sample src="orig" >A Palestinian [TRG worker] was [PRD shot] dead in the [PLC Gaza Strip].</sample>
     <sample src="orig" >[TRG Kennedy] was [PRD shot] dead by [ATR Oswald].</sample>
     <sample_out src="orig" >There have been concerns the clashes in southern Serbia could explode into violence similar to the 1999 conflict in Kosovo.</sample> <!-- not used, since it has multiple triggers (multiple seeds) in the same sentence. Instead, it will be split to 3 legitimate sample sentences. -->
-    <sample src="orig" >A [INT car bomb] [PRD exploded] [TIM Thursday] in the heart of [PLC Jerusalem], killing at least two people, police said.</sample>
+    <sample_out src="orig" >A [INT car bomb] [PRD exploded] [TIM Thursday] in the heart of [PLC Jerusalem], killing at least two people, police said.</sample> <!-- parser error: 'least' has more than one non-deep parent -->
+    <sample src="orig_l" >A [INT car bomb] [PRD exploded] [TIM Thursday] in the heart of [PLC Jerusalem], police said.</sample>
     <sample src="orig" >The [ATR gunmen] [PRD shot] [TRG Smith] and his [TRG son].</sample>
     <sample src="orig" >India blamed Islamic [ATR militants] for the [PRD attack].</sample>
     <sample src="orig" >A [INT car bomb] [PRD went off] outside army [TRG headquarters].</sample>
@@ -188,27 +189,28 @@
     <sample src="orig_p">Experts warn of a possible [PRD coup].</sample>
     <sample src="orig_l">[ATR Israel] retaliated with [INT rocket] [PRD attacks].</sample>
     <sample src="orig_l">[ATR Terrorists] [PRD blew] a hole in a United States [TRG warship] in [PLC Yemen].</sample>
-    <sample src="orig">A [INT car bomb] [PRD exploded] [TIM Thursday] in a crowded outdoor [PLC market] in the heart of [PLC Jerusalem], killing at least two people, police said.</sample>
+    <sample_out src="orig">A [INT car bomb] [PRD exploded] [TIM Thursday] in a crowded outdoor [PLC market] in the heart of [PLC Jerusalem], killing at least two people, police said.</sample>  <!-- parser error: 'least' has more than one non-deep parent -->
+    <sample src="orig_l">A [INT car bomb] [PRD exploded] [TIM Thursday] in a crowded outdoor [PLC market] in the heart of [PLC Jerusalem], police said.</sample>
     <sample src="orig_l">A [TIM 45-minute] gun [PRD battle] broke out.</sample>
     <sample src="orig">A number of [ATR demonstrators] [PRD threw] [INT stones] and empty [INT bottles] at Israeli [TRG soldiers] positioned near a Jewish holy [PLC site] at the town's [PLC entrance].</sample>
 
     <sample src="orig">A [ATR gunman] [PRD shoots] a [TRG woman] in her [PLC Mercedes].</sample>
     <sample src="orig_p">The [PRD bombing] in [PLC Baghdad] was reported.</sample>
-    <sample src="orig_p">The [PRD bombing] in the [TRG café] was reported.</sample>
-    <sample src="orig">In [PLC Baghdad], the [TRG café] was [PRD bombed].</sample>
-    <sample src="orig">The [ATR terrorists] [PRD attacked] the [TRG café].</sample>
-    <sample src="orig_p">The [PLC café] [PRD stabbings] was reported.</sample>
-    <sample src="orig_p">The [PRD gunfire] in the [PLC café] was reported.</sample>
-    <sample src="orig">The [ATR gunmen] [PRD shot] the [TRG businessman] in the [PLC café].</sample>
+    <sample src="orig_p">The [PRD bombing] in the [TRG cafe] was reported.</sample>
+    <sample src="orig">In [PLC Baghdad], the [TRG cafe] was [PRD bombed].</sample>
+    <sample src="orig">The [ATR terrorists] [PRD attacked] the [TRG cafe].</sample>
+    <sample src="orig_p">The [PLC cafe] [PRD stabbings] was reported.</sample>
+    <sample src="orig_p">The [PRD gunfire] in the [PLC cafe] was reported.</sample>
+    <sample src="orig">The [ATR gunmen] [PRD shot] the [TRG businessman] in the [PLC cafe].</sample>
     <sample src="orig">The [TRG car] [PRD exploded] in the [PLC parking garage].</sample>
     <sample src="orig_p">The [TRG parking garage] [PRD explosion] was reported.</sample>
     <sample_out src="orig_p">The [TRG car] [INT bomb] [PRD exploded].</sample>
-    <sample src="orig">The [TRG café] [PRD bombing] killed three people.</sample>
+    <sample src="orig">The [TRG cafe] [PRD bombing] killed three people.</sample>
 
     <sample src="orig_p" >The investigation of the attempted [PRD coup] in [TIM 1991] was finished.</sample>
     <sample src="orig_l" >There have been concerns regarding the [PRD clashes] in southern [PLC Serbia].</sample>
     <sample_out src="orig_l" >There have been concerns the events in southern Serbia could [PRD explode] into violence.</sample> <!-- I don't think is an actual instance of an attack - it's just a figure of speech -->
-    <sample src="orig_l" >There have been concerns the events in southern Serbia could eventually be similar to the [TIM 1999] [PRD conflict] in [PLC Kosovo].</sample>
+    <sample_out src="orig_l" >There have been concerns the events in southern Serbia could eventually be similar to the [TIM 1999] [PRD conflict] in [PLC Kosovo].</sample> <!-- parser error ->
     <sample src="orig_l" >The [PRD explosion] in [PLC Lahore] caused a fire that burned makeshift stalls.</sample>
     <sample src="orig_l" >[INT Bombs] [PRD went off] in three Pakistani [PLC cities] [TIM Monday].</sample>
   </usage_samples>

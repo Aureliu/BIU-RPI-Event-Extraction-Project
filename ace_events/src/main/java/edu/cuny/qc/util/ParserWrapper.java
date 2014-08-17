@@ -38,9 +38,9 @@ public class ParserWrapper
 		return parser;
 	}
 	
-	protected LexicalizedParser lp;
-	protected TreebankLanguagePack tlp;
-	protected GrammaticalStructureFactory gsf;
+	public LexicalizedParser lp;
+	public TreebankLanguagePack tlp;
+	public GrammaticalStructureFactory gsf;
 	
 	ParserWrapper(File modelFile)
 	{
@@ -60,7 +60,7 @@ public class ParserWrapper
 		return morphology.lemma(token, pos);
 	}
 	
-	public Tree getParseTree(String[] tokens)
+	private Tree getParseTree(String[] tokens)
 	{
 		List<HasWord> sentence = new ArrayList<HasWord>();
 		for(int i=0; i<tokens.length; i++)
@@ -79,7 +79,7 @@ public class ParserWrapper
 	 * @param postags
 	 * @return
 	 */
-	public Tree getParseTree(String[] tokens, String[] postags)
+	private Tree getParseTree(String[] tokens, String[] postags)
 	{
 		List<HasWord> sentence = new ArrayList<HasWord>();
 		for(int i=0; i<tokens.length; i++)
@@ -98,7 +98,7 @@ public class ParserWrapper
 	 * @param parseTree
 	 * @return
 	 */
-	Collection<TypedDependency> getTypedDeps(Tree parseTree)
+	private Collection<TypedDependency> getTypedDeps(Tree parseTree)
 	{
 		GrammaticalStructure gs = gsf.newGrammaticalStructure(parseTree);
 		Collection<TypedDependency> tdl = gs.typedDependenciesCCprocessed(true);
@@ -122,7 +122,7 @@ public class ParserWrapper
 	 * @param tokens
 	 * @return
 	 */
-	public ParseResult getTypedDeps(String[] tokens)
+	private ParseResult getTypedDeps(String[] tokens)
 	{
 		Tree tree = getParseTree(tokens);
 		Collection<TypedDependency> deps = getTypedDeps(tree);
@@ -131,10 +131,22 @@ public class ParserWrapper
 		return result;
 	}
 	
-	public Collection<TypedDependency> getTypedDeps(String[] tokens, String[] postags)
+	private Collection<TypedDependency> getTypedDeps(String[] tokens, String[] postags)
 	{
 		Tree tree = getParseTree(tokens, postags);
 		return getTypedDeps(tree);
+	}
+	
+	/**
+	 * This is the method required for ODIE, as we cannot have the collapsed (e.g. prep_in)
+	 * relations - it is incompatible with dkpro types!
+	 */
+	public ParseResult getTypedDepsUncollapsed(String[] tokens, String[] postags)
+	{
+		Tree tree = getParseTree(tokens, postags);
+		GrammaticalStructure gs = gsf.newGrammaticalStructure(tree);
+		Collection<TypedDependency> tdl = gs.typedDependencies(true);
+		return new ParseResult(tree, tdl);
 	}
 	
 	/**
@@ -142,14 +154,14 @@ public class ParserWrapper
 	 * @param parseTree
 	 * @return
 	 */
-	public Collection<TypedDependency> getTypedDepsCollapsed(Tree parseTree)
+	private Collection<TypedDependency> getTypedDepsCollapsed(Tree parseTree)
 	{
 		GrammaticalStructure gs = gsf.newGrammaticalStructure(parseTree);
 		Collection<TypedDependency> tdl = gs.typedDependenciesCollapsed(true);
 		return tdl;
 	}
 	
-	public Collection<TypedDependency> getTypedDepsCollapsed(String[] tokens, String[] postags)
+	private Collection<TypedDependency> getTypedDepsCollapsed(String[] tokens, String[] postags)
 	{
 		Tree tree = getParseTree(tokens, postags);
 		return getTypedDepsCollapsed(tree);

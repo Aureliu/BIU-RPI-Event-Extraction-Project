@@ -143,7 +143,7 @@
     <sample_out src="synth">A terrorist group killed the hostages with explosives in 1985.</sample>
 
     <sample src="synth">We heard of the [PRD death] of [VCT Obaiyat] on the radio.</sample>
-    <sample src="orig" >All her [VCT grandparents] are [PRD dead].</sample>
+    <sample_out src="orig" >All her [VCT grandparents] are [PRD dead].</sample> <!--parser error: All-->
     <sample src="orig" >The explosion [PRD killed] [VCT 7] and injured 20.</sample>
     <sample src="orig" >[VCT He] [PRD died] [TIM yesterday] of renal failure.</sample>
     <sample src="orig" >17 [VCT sailors] were [PRD killed].</sample>
@@ -157,7 +157,7 @@
     <sample src="orig" >A Palestinian [VCT worker] was shot [PRD dead] in the [PLC Gaza Strip].</sample>
     <sample src="orig" >[VCT Kennedy] was shot [PRD dead] by [AGT Oswald].</sample>
     <sample src="orig" >He prevented the [PRD assassination].</sample>
-    <sample src="orig" >A [INT car bomb] exploded [TIM Thursday] in the heart of [PLC Jerusalem], [PRD killing] at least two [VCT people], police said.</sample>
+    <sample_out src="orig" >A [INT car bomb] exploded [TIM Thursday] in the heart of [PLC Jerusalem], [PRD killing] at least two [VCT people], police said.</sample>  <!-- parser errors, both on 'least' and 'killing' -->
     <sample src="orig" >Should he not pay the money, [AGT they] would [PRD kill] [VCT him].</sample>
     <sample src="orig" >The mayor's [AGT accomplices] had threatened to [PRD kill] Mr. [VCT Tatum] if he refused.</sample>
     <sample src="orig" >[VCT Maddux] was [PRD killed] in [PLC Philadelphia].</sample>

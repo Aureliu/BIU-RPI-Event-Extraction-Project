@@ -16,6 +16,7 @@ import com.google.common.collect.Multimap;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
 import edu.cuny.qc.ace.acetypes.AceMention;
 import edu.cuny.qc.perceptron.core.Controller;
+import edu.cuny.qc.perceptron.types.Document;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
 import edu.cuny.qc.perceptron.types.SentenceInstance.InstanceAnnotations;
 import edu.cuny.qc.perceptron.types.SignalInstance;
@@ -59,16 +60,17 @@ public abstract class SignalMechanism {
 	
 	// These are only entry points, any SignalMechanism can choose to implement any of them
 	public void init() throws Exception {}
-	public void logPreSentence() {
+	public void entrypointPreSpec(JCas spec) throws SignalMechanismException {}
+	public void entrypointPreSentence(SentenceInstance inst) throws SignalMechanismException {
 		/// DEBUG
 		//System.out.printf("%s %s: PreSentence\n", Utils.detailedLog(), this.getClass().getSimpleName());
 		////
 	}
-	public void logPreDocument() {}
-	public void logPreDocumentBunch() {}
+	public void entrypointPreDocument(Document doc) throws SignalMechanismException {}
+	//public void entrypointPreDocumentBunch() throws SignalMechanismException {}
 
 	public void scoreTrigger(Map<ScorerData, SignalInstance> existingSignals, /*Set<ScorerData> allTriggerScorers,*/ JCas spec, SentenceInstance textSentence, int i, boolean debug) throws SignalMechanismException {
-		Token textTriggerToken = textSentence.getTokenAnnotation(i);
+		Token textTriggerToken = textSentence.sent.getTokenAnnotation(i);
 		Map<Class<?>, Object> textTriggerTokenMap = ((List<Map<Class<?>, Object>>) textSentence.get(InstanceAnnotations.Token_FEATURE_MAPs)).get(i);
 		String docAllText = textSentence.doc.allText;
 
@@ -137,7 +139,7 @@ public abstract class SignalMechanism {
 //	}
 
 	public void scoreArgument(Map<ScorerData, SignalInstance> existingSignals, JCas spec, SentenceInstance textSentence, int i,	Argument argument, AceMention mention, boolean debug) throws SignalMechanismException {
-		Token textTriggerToken = textSentence.getTokenAnnotation(i);
+		Token textTriggerToken = textSentence.sent.getTokenAnnotation(i);
 		Map<Class<?>, Object> textTriggerTokenMap = ((List<Map<Class<?>, Object>>) textSentence.get(InstanceAnnotations.Token_FEATURE_MAPs)).get(i);
 		String docAllText = textSentence.doc.allText;
 

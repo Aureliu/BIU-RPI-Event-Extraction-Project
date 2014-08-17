@@ -12,7 +12,7 @@ import org.apache.uima.jcas.JCasRegistry;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** 
- * Updated by JCasGen Sun Aug 10 13:57:31 IDT 2014
+ * Updated by JCasGen Sat Aug 16 17:46:46 IDT 2014
  * @generated */
 public class PredicateName_Type extends Annotation_Type {
   /** @generated */

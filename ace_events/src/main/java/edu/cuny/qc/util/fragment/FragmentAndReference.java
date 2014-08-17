@@ -1,4 +1,4 @@
-package ac.biu.nlp.nlp.ace_uima.analyze;
+package edu.cuny.qc.util.fragment;
 
 import eu.excitementproject.eop.common.representation.parse.tree.dependency.basic.BasicNode;
 
@@ -17,9 +17,10 @@ import eu.excitementproject.eop.common.representation.parse.tree.dependency.basi
  */
 public class FragmentAndReference {
 
-	public FragmentAndReference(BasicNode fragmentRoot, BasicNode origReference) {
+	public FragmentAndReference(BasicNode fragmentRoot, BasicNode origReference, Facet facet) {
 		this.fragmentRoot = fragmentRoot;
 		this.origReference = origReference;
+		this.facet = facet;
 	}
 	public BasicNode getFragmentRoot() {
 		return fragmentRoot;
@@ -30,4 +31,5 @@ public class FragmentAndReference {
 	
 	private BasicNode fragmentRoot;
 	private BasicNode origReference;
+	public Facet facet;
 }

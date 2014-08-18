@@ -35,6 +35,9 @@ import edu.cuny.qc.perceptron.types.Sentence.Sent_Attribute;
 import edu.cuny.qc.util.BrownClusters;
 import edu.cuny.qc.util.ChunkWrapper;
 import edu.cuny.qc.util.Nomlex;
+import edu.cuny.qc.util.POSTaggerWrapperStanford;
+import edu.cuny.qc.util.ParserWrapper;
+import edu.cuny.qc.util.ParserWrapper.ParseResult;
 //import edu.cuny.qc.util.POSTaggerWrapperStanford;
 //import edu.cuny.qc.util.ParserWrapper;
 //import edu.cuny.qc.util.ParserWrapper.ParseResult;
@@ -149,104 +152,93 @@ public class TextFeatureGenerator
 	
 	public static void doPreprocess(Document doc)
 	{
-		System.err.printf("TextFeatureGenerator.doPreprocess: Trying without it for a while.\n");
-//		for(Sentence sent : doc.getSentences())
-//		{
-//			if (1+2==3) {
-//				continue;
-//			}
-//			
-//			
-//			
-//			
-//			
-//			
-//			
-//			String[] tokens = (String[]) sent.get(Sent_Attribute.TOKENS); 
-//			Span[] tokenSpans = (Span[]) sent.get(Sent_Attribute.TOKEN_SPANS);
-//			try
-//			{
-//				// get pos tags
-//				String[] posTags;
-//				posTags = POSTaggerWrapperStanford.getPosTagger().posTag(tokens);
-//				sent.put(Sent_Attribute.POSTAGS, posTags);
-//				
-//				// get parse/deps tree
-//				//ParseResult parse = ParserWrapper.getParserWrapper().getTypedDeps(tokens);
-//				//Collection<TypedDependency> tdl = parse.deps;
-//
-//				// We are switching to the only allowed method of parsing in our system - to avoid collapsed dependencies
-//				// (we can't handle prep_in and the like since they're not in DKPro)
-//				ParseResult parse = ParserWrapper.getParserWrapper().getTypedDepsUncollapsed(tokens, posTags);
-//				
-//				
-//				// create dependency graph representation, in order to faciliate graph manupulation
-//				DependencyGraph graph = new DependencyGraph(parse.deps, tokens.length);
-//				sent.put(Sentence.Sent_Attribute.DepGraph, graph);
-//				sent.put(Sent_Attribute.ParseTree, parse.tree);
-//				
-//				// get chunks
-//				String[] chunks = ChunkWrapper.getChunker().chunk(tokens, posTags);
-//				sent.put(Sent_Attribute.CHUNKS, chunks);
-//				
-//				List<Map<Class<?>, Object>> tokenFeatureMaps = new ArrayList<Map<Class<?>, Object>>();
-//				sent.put(Sent_Attribute.Token_FEATURE_MAPs, tokenFeatureMaps);
-//				for(int idx=0; idx < tokenSpans.length; idx++)
-//				{
-//					HashMap<Class<?>, Object> map = new HashMap<Class<?>, Object>();
-//					// change the first token in each sentence to lowercase
-//					if(idx == 0 && tokens[0] != null && Character.isUpperCase(tokens[0].charAt(0)))
-//					{
-//						tokens[0] = tokens[0].toLowerCase();
-//					}
-//					map.put(TokenAnnotations.TextAnnotation.class, tokens[idx]);
-//					map.put(TokenAnnotations.PartOfSpeechAnnotation.class, posTags[idx]);
-//					String lemma = ParserWrapper.lemmanize(tokens[idx], posTags[idx]).toLowerCase();
-//					map.put(TokenAnnotations.LemmaAnnotation.class, lemma);
-//					map.put(TokenAnnotations.ChunkingAnnotation.class, chunks[idx]);
-//					//map.put(TokenAnnotations.SpanAnnotation.class, tokenSpans[idx]); //never used!
-//					
-//					GraphNode node = graph.getVertices().get(idx);
-//					List<GraphEdge> toParents = Lists.newArrayList();
-//					List<GraphEdge> toChildren = Lists.newArrayList();
-//					for (GraphEdge edge : node.edges) {
-//						int otherIndex = edge.getGovernor();
-//						if (otherIndex == idx) {
-//							toChildren.add(edge);
-//							addDependencyToJCas(edge, doc, sent);
-//						}
-//						else {
-//							toParents.add(edge);
-//						}
-//					}
-//					map.put(TokenAnnotations.EdgesToParents.class, toParents);
-//					map.put(TokenAnnotations.EdgesToChildren.class, toChildren);
-//
-//					
-//					// get base form of verb and noun according to Nomlex. e.g. retirement --> retire
-//					if(posTags[idx].startsWith("V") && Nomlex.getSingleTon().contains(lemma))
-//					{
-//						map.put(TokenAnnotations.NomlexbaseAnnotation.class, lemma);
-//					}
-//					else if(posTags[idx].startsWith("N"))
-//					{	
-//						String comlexBase = Nomlex.getSingleTon().getBaseForm(lemma);
-//						if(comlexBase != null)
-//						{
-//							map.put(TokenAnnotations.NomlexbaseAnnotation.class, comlexBase);
-//						}
-//					}
-//					
-//					tokenFeatureMaps.add(map);
-//				}
-//				
-//			} 
-//			catch (IOException e)
-//			{
-//				e.printStackTrace();
-//				return;
-//			}
-//		}
+		for(Sentence sent : doc.getSentences())
+		{
+			String[] tokens = (String[]) sent.get(Sent_Attribute.TOKENS); 
+			Span[] tokenSpans = (Span[]) sent.get(Sent_Attribute.TOKEN_SPANS);
+			try
+			{
+				// get pos tags
+				String[] posTags;
+				posTags = POSTaggerWrapperStanford.getPosTagger().posTag(tokens);
+				sent.put(Sent_Attribute.POSTAGS, posTags);
+				
+				// get parse/deps tree
+				//ParseResult parse = ParserWrapper.getParserWrapper().getTypedDeps(tokens);
+				//Collection<TypedDependency> tdl = parse.deps;
+
+				// We are switching to the only allowed method of parsing in our system - to avoid collapsed dependencies
+				// (we can't handle prep_in and the like since they're not in DKPro)
+				ParseResult parse = ParserWrapper.getParserWrapper().getTypedDepsUncollapsed(tokens, posTags);
+				
+				
+				// create dependency graph representation, in order to faciliate graph manupulation
+				DependencyGraph graph = new DependencyGraph(parse.deps, tokens.length);
+				sent.put(Sentence.Sent_Attribute.DepGraph, graph);
+				sent.put(Sent_Attribute.ParseTree, parse.tree);
+				
+				// get chunks
+				String[] chunks = ChunkWrapper.getChunker().chunk(tokens, posTags);
+				sent.put(Sent_Attribute.CHUNKS, chunks);
+				
+				List<Map<Class<?>, Object>> tokenFeatureMaps = new ArrayList<Map<Class<?>, Object>>();
+				sent.put(Sent_Attribute.Token_FEATURE_MAPs, tokenFeatureMaps);
+				for(int idx=0; idx < tokenSpans.length; idx++)
+				{
+					HashMap<Class<?>, Object> map = new HashMap<Class<?>, Object>();
+					// change the first token in each sentence to lowercase
+					if(idx == 0 && tokens[0] != null && Character.isUpperCase(tokens[0].charAt(0)))
+					{
+						tokens[0] = tokens[0].toLowerCase();
+					}
+					map.put(TokenAnnotations.TextAnnotation.class, tokens[idx]);
+					map.put(TokenAnnotations.PartOfSpeechAnnotation.class, posTags[idx]);
+					String lemma = ParserWrapper.lemmanize(tokens[idx], posTags[idx]).toLowerCase();
+					map.put(TokenAnnotations.LemmaAnnotation.class, lemma);
+					map.put(TokenAnnotations.ChunkingAnnotation.class, chunks[idx]);
+					//map.put(TokenAnnotations.SpanAnnotation.class, tokenSpans[idx]); //never used!
+					
+					GraphNode node = graph.getVertices().get(idx);
+					List<GraphEdge> toParents = Lists.newArrayList();
+					List<GraphEdge> toChildren = Lists.newArrayList();
+					for (GraphEdge edge : node.edges) {
+						int otherIndex = edge.getGovernor();
+						if (otherIndex == idx) {
+							toChildren.add(edge);
+							//addDependencyToJCas(edge, doc, sent);
+						}
+						else {
+							toParents.add(edge);
+						}
+					}
+					map.put(TokenAnnotations.EdgesToParents.class, toParents);
+					map.put(TokenAnnotations.EdgesToChildren.class, toChildren);
+
+					
+					// get base form of verb and noun according to Nomlex. e.g. retirement --> retire
+					if(posTags[idx].startsWith("V") && Nomlex.getSingleTon().contains(lemma))
+					{
+						map.put(TokenAnnotations.NomlexbaseAnnotation.class, lemma);
+					}
+					else if(posTags[idx].startsWith("N"))
+					{	
+						String comlexBase = Nomlex.getSingleTon().getBaseForm(lemma);
+						if(comlexBase != null)
+						{
+							map.put(TokenAnnotations.NomlexbaseAnnotation.class, comlexBase);
+						}
+					}
+					
+					tokenFeatureMaps.add(map);
+				}
+				
+			} 
+			catch (IOException e)
+			{
+				e.printStackTrace();
+				return;
+			}
+		}
 	}
 	
 	/**

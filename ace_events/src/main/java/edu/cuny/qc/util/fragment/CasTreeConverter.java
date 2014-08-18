@@ -214,7 +214,12 @@ public class CasTreeConverter {
 			
 			// Create a node for dependent
 			else {
-				int serialAndId = tokenPositions.get(dependent);
+				Integer serialAndId = tokenPositions.get(dependent);
+				/// DEBUG
+				if (serialAndId == null) {
+					System.out.printf("");
+				}
+				////
 				buildNode(jcas, serialAndId, serialAndId, dependent, depType, governor);
 			}
 			
@@ -272,12 +277,27 @@ public class CasTreeConverter {
 //					"Got %d nodes that are tokens and not children and thus should be root - there should be exactly one: %s",
 //					tokensThatAreNotchildren.size(), tokensThatAreNotchildren));
 			logger.error(String.format(
-					"Got %d nodes that are tokens and not children and thus should be root - there should be exactly one: %s",
-					tokensThatAreNotchildren.size(), tokensThatAreNotchildren));
-			Token root = tokensThatAreNotchildren.iterator().next();
-			tokensThatAreNotchildren = new LinkedHashSet<Token>();
-			tokensThatAreNotchildren.add(root);
-			//TODO finish temp solution
+					"Got %d nodes that are tokens and not children and thus should be root - there should be exactly one",
+					tokensThatAreNotchildren.size()/*, tokensThatAreNotchildren*/));
+			
+			// New idea for improvement - consider only tokens that HAVE children
+			for (Iterator<Token> iter = tokensThatAreNotchildren.iterator(); iter.hasNext();) {
+				Token curr = iter.next();
+				Set<BasicNode> children = childrenByParent.get(curr);
+				if (children==null || children.isEmpty()) {
+					iter.remove();
+				}
+			}
+			
+			if (tokensThatAreNotchildren.size() > 1) {
+				logger.error(String.format(
+						"Even after removing tokens witout children, still has %s candidates for root (where there should be exactly one): %s",
+						tokensThatAreNotchildren.size(), tokensThatAreNotchildren));
+				Token root = tokensThatAreNotchildren.iterator().next();
+				tokensThatAreNotchildren = new LinkedHashSet<Token>();
+				tokensThatAreNotchildren.add(root);
+				//TODO finish temp solution				
+			}
 		}
 		
 		// Build root

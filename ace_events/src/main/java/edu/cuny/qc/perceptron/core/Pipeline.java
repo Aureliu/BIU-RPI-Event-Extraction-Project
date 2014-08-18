@@ -172,6 +172,7 @@ public class Pipeline
 				for(int sent_id=0 ; sent_id<doc.getSentences().size(); sent_id++)
 				{
 					Sentence sent = doc.getSentences().get(sent_id);
+					sent.initTokenAnnos();
 					// during learning, skip instances that do not have event mentions 
 					
 					// 1.6.14: Create instances even if we skip them - to fully create their signals  
@@ -325,25 +326,6 @@ public class Pipeline
 	 */
 	static public void main(String[] args) throws Exception
 	{
-		
-
-		
-		Class<?> cls = Class.forName("edu.stanford.nlp.tagger.maxent.ExtractorFrames"/*$ExtractorContinuousTagConjunction"*/);
-
-		System.out.println(cls.toString());
-		
-		//edu.stanford.nlp.tagger.maxent.ExtractorFrames$ExtractorContinuousTagConjunction
-		//System.out.println(edu.stanford.nlp.tagger.maxent.ExtractorFrames.class.getProtectionDomain().getCodeSource().getLocation().getPath());
-		System.out.println(cls.getProtectionDomain().getCodeSource().getLocation().getPath());
-		//System.out.println(edu.stanford.nlp.tagger.maxent.ExtractorFrames.ExtractorContinuousTagConjunction.class.getProtectionDomain().getCodeSource().getLocation().getPath());
-		System.out.println();
-		
-		
-		
-		
-		edu.stanford.nlp.tagger.maxent.ExtractorFrames e;
-		edu.stanford.nlp.tagger.maxent.Extractor[] e2 = edu.stanford.nlp.tagger.maxent.ExtractorFrames.getExtractorFrames("moo");
-
 		
 //		mainWithSingleEventType(args, null);
 //	}

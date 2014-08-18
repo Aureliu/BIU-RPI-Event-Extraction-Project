@@ -19,7 +19,7 @@ public class AnalysisEngines {
 	
 	public static AnalysisEngine forSpecTokenView(String viewName) throws AeException {
 		try {
-			System.err.printf("\nAnalysisEngines.forSpecTokenView: removing lemmztizer for now.\n\n");
+			//System.err.printf("\nAnalysisEngines.forSpecTokenView: removing lemmztizer for now.\n\n");
 			
 			return build(viewName, new AnalysisEngineDescription[] {
 					// no need to do sentence splitting - there are no sentences in the token view!
@@ -27,10 +27,7 @@ public class AnalysisEngines {
 					// Update: we are adding a tokenizer to handle multi-word values
 					createPrimitiveDescription(OpenNlpTokenizerAE.class),
 					
-					
-					/// DEBUG
-					/// commenting out for now
-					///createPrimitiveDescription(TypedStanfordLemmatizerAE.class)
+					createPrimitiveDescription(TypedStanfordLemmatizerAE.class)
 			});
 		}
 		catch (ResourceInitializationException e) {
@@ -43,24 +40,24 @@ public class AnalysisEngines {
 		try {
 			return build(viewName, new AnalysisEngineDescription[] {
 					// no need to do sentence splitting - sentences are annotated directly when reading the spec
-					createPrimitiveDescription(MaxentTokenizerAE.class),
+					createPrimitiveDescription(OpenNlpTokenizerAE.class),
 					
 					// do stuff like split-by-hyphen
 					//createPrimitiveDescription(TokenFixerAE.class),
 					
-					//createPrimitiveDescription(StanfordLemmatizerAE.class),
-					createPrimitiveDescription(MaxentPosTaggerAE.class,
-							MaxentPosTaggerAE.PARAM_MODEL_FILE , MAXENT_POS_TAGGER_MODEL_FILE),
+					createPrimitiveDescription(StanfordLemmatizerAE.class),
+					createPrimitiveDescription(StanfordPosTaggerAE.class,
+							StanfordPosTaggerAE.PARAM_MODEL_FILE , MAXENT_POS_TAGGER_MODEL_FILE),
 							
-					createPrimitiveDescription(EasyFirstParserAE.class,
-							EasyFirstParserAE.PARAM_HOST , "127.0.0.1",
-							EasyFirstParserAE.PARAM_PORT , 8080
-							),
+//					createPrimitiveDescription(EasyFirstParserAE.class,
+//							EasyFirstParserAE.PARAM_HOST , "127.0.0.1",
+//							EasyFirstParserAE.PARAM_PORT , 8080
+//							),
 							
-//					createPrimitiveDescription(StanfordParserAE.class),
-//					
-//					// This must be invoked AFTER THE PARSER - to give the parser everything, even punctuation (and even if he doesn't give punctuations any dependencies)
-//					createPrimitiveDescription(PunctuationTokenRemoverAE.class),
+					createPrimitiveDescription(StanfordParserAE.class),
+					
+					// This must be invoked AFTER THE PARSER - to give the parser everything, even punctuation (and even if he doesn't give punctuations any dependencies)
+					createPrimitiveDescription(PunctuationTokenRemoverAE.class),
 			});
 		}
 		catch (ResourceInitializationException e) {
@@ -73,21 +70,19 @@ public class AnalysisEngines {
 		try {
 			return build(viewName, new AnalysisEngineDescription[] {
 					// No need to do sentence splitting and tokenization - these are done directly when reading the document, in Document.readDoc()
-					createPrimitiveDescription(MaxentTokenizerAE.class),
-					
-					//createPrimitiveDescription(StanfordLemmatizerAE.class),
-					createPrimitiveDescription(MaxentPosTaggerAE.class,
-							MaxentPosTaggerAE.PARAM_MODEL_FILE , MAXENT_POS_TAGGER_MODEL_FILE),
+					createPrimitiveDescription(StanfordLemmatizerAE.class),
+					createPrimitiveDescription(StanfordPosTaggerAE.class,
+							StanfordPosTaggerAE.PARAM_MODEL_FILE , MAXENT_POS_TAGGER_MODEL_FILE),
 							
-					createPrimitiveDescription(EasyFirstParserAE.class,
-							EasyFirstParserAE.PARAM_HOST , "127.0.0.1",
-							EasyFirstParserAE.PARAM_PORT , 8080
-							),
+//					createPrimitiveDescription(EasyFirstParserAE.class,
+//							EasyFirstParserAE.PARAM_HOST , "127.0.0.1",
+//							EasyFirstParserAE.PARAM_PORT , 8080
+//							),
 
-//							createPrimitiveDescription(StanfordParserAE.class),
-//							
-//							// This must be invoked AFTER THE PARSER - to give the parser everything, even punctuation (and even if he doesn't give punctuations any dependencies)
-//							createPrimitiveDescription(PunctuationTokenRemoverAE.class),
+							createPrimitiveDescription(StanfordParserAE.class),
+							
+							// This must be invoked AFTER THE PARSER - to give the parser everything, even punctuation (and even if he doesn't give punctuations any dependencies)
+							createPrimitiveDescription(PunctuationTokenRemoverAE.class),
 			});
 		}
 		catch (ResourceInitializationException e) {

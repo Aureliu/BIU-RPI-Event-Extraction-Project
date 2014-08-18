@@ -740,7 +740,7 @@ public class Document implements java.io.Serializable
 			
 
 			sent.put(Sent_Attribute.TOKENS, tokens);
-			sent.initTokenAnnos();
+			//sent.initTokenAnnos();
 			sent.put(Sent_Attribute.TokenAnnotations, tokenAddrs);
 			// save span of the sent
 			sent.setExtent(sentSpan);
@@ -1259,6 +1259,7 @@ public class Document implements java.io.Serializable
 		for(int sent_id=0 ; sent_id<this.getSentences().size(); sent_id++)
 		{
 			Sentence sent = this.getSentences().get(sent_id);
+			sent.initTokenAnnos();
 			// add all instances
 			Multimap<JCas, SentenceInstance> sentenceMap = Document.getInstancesForSentence(controller, signalMechanismsContainer, sent, types, featureAlphabet, learnable, debug);
 			fullMap.putAll(sentenceMap);

@@ -39,15 +39,19 @@ public class FragmentLayer {
 	public TreeFragmentBuilder fragmenter;
 	public Map<BasicNode, Facet> linkToFacet;
 	
+	static {
+		System.err.printf("??? FragmentLayer: I am letting quite a few erorrs from the converter get away, which costs me in lost sentence.s Maybe I should inspect them and reduce them (like by removing some more weird tokens).\n");
+	}
+	
 	public FragmentLayer(JCas jcas, CasTreeConverter converter) throws FragmentLayerException {
-		try {
+//		try {
 			this.jcas = jcas;
 			tokenIndex = JCasUtil.indexCovering(jcas, Token.class, Sentence.class);
 			
 			token2nodes = new OneToManyBidiMultiHashMap<Token,BasicNode>();
 			sentence2root = new DualHashBidiMap<Sentence, BasicNode>();
 			
-			boolean errors = false;
+			int errors = 0;
 			for (Sentence sentence : JCasUtil.select(jcas, Sentence.class)) {
 				try {
 					BasicNode root = converter.convertSingleSentenceToTree(jcas, sentence);
@@ -59,16 +63,18 @@ public class FragmentLayer {
 					token2nodes.putAll(converter.getAllTokensToNodes());
 					sentence2root.put(sentence, root);
 				}
-				catch (CasTreeConverterException e) {
+				catch (Exception e) {
 					System.err.printf("\n- Got error while working on sentence: '%s'\n", sentence.getCoveredText());
 					e.printStackTrace(System.err);
 					System.err.printf("================\n\n");
-					errors = true;
+					errors++;
 				}
 			}
 			
-			if (errors) {
-				throw new FragmentLayerException("got errors while converting CAS (detailed before) - aborting."); 
+			// Yes, we would allow a certain amount of sentences to slip by due to parsing related errors...
+			final int ALLOWED_ERRORS = 20;
+			if (errors > ALLOWED_ERRORS) {
+				throw new FragmentLayerException("got " + errors + " errors while converting CAS (detailed before) - aborting."); 
 			}
 			
 			//converter.convertCasToTrees(jcas);
@@ -77,10 +83,10 @@ public class FragmentLayer {
 			
 			fragmenter = new TreeFragmentBuilder();
 			linkToFacet = new LinkedHashMap<BasicNode, Facet>();
-		}
-		catch (UnsupportedPosTagStringException e) {
-			throw new FragmentLayerException(e);
-		}
+//		}
+//		catch (UnsupportedPosTagStringException e) {
+//			throw new FragmentLayerException(e);
+//		}
 	}
 	
 	public List<BasicNode> getTreeFragments(Annotation covering) throws CASException, AceException, TreeAndParentMapException, TreeFragmentBuilderException {

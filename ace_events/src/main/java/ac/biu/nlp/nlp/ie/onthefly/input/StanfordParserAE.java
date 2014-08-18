@@ -93,7 +93,8 @@ public class StanfordParserAE extends JCasAnnotator_ImplBase {
 				}
 				/// DEBUG
 				System.out.printf("\nSentence: %s\n", sentence.getCoveredText());
-				System.out.printf("All edges: %s\nMy edges: %s", Utils.edgesToStr(allEdges, tokensList), Utils.edgesToStr(onlyMyEdges, tokensList));
+				//System.out.printf("All edges: %s\nMy edges: %s", Utils.edgesToStr(allEdges, tokensList), Utils.edgesToStr(onlyMyEdges, tokensList));
+				System.out.printf("Edges to jcas: %s", Utils.edgesToStr(onlyMyEdges, tokensList));
 				System.out.printf("\n");
 				///
 			}

@@ -51,7 +51,7 @@ public class Utils {
 	private static final Random random = new Random();
 
 	public static Set<String> PUNCTUATION = Sets.newHashSet(Arrays.asList(new String[] {
-			".", ",", "!", "?", ":", "@", "#", "$", "%", "|", "'"
+			".", ",", "!", "?", ":", "@", "#", "%", "|", "'", "_"
 	}));
 	
 	public static double inMB(long bytes) {

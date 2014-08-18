@@ -1,25 +1,24 @@
 
 
-/* First created by JCasGen Mon Aug 04 11:59:22 IDT 2014 */
+/* First created by JCasGen Mon Aug 18 12:29:49 IDT 2014 */
 package ac.biu.nlp.nlp.ie.onthefly.input.uima;
 
 import org.apache.uima.jcas.JCas; 
 import org.apache.uima.jcas.JCasRegistry;
 import org.apache.uima.jcas.cas.TOP_Type;
 
-import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Mon Aug 18 12:56:03 IDT 2014
+ * Updated by JCasGen Mon Aug 18 12:56:04 IDT 2014
  * XML source: C:/Java/Git/breep/ace_events/src/main/resources/desc/OdieInputTypes.xml
  * @generated */
-public class Marker extends Annotation {
+public class TreeoutTokenDepGenPosWithContext extends Treeout {
   /** @generated
    * @ordered 
    */
   @SuppressWarnings ("hiding")
-  public final static int typeIndexID = JCasRegistry.register(Marker.class);
+  public final static int typeIndexID = JCasRegistry.register(TreeoutTokenDepGenPosWithContext.class);
   /** @generated
    * @ordered 
    */
@@ -31,23 +30,23 @@ public class Marker extends Annotation {
  
   /** Never called.  Disable default constructor
    * @generated */
-  protected Marker() {/* intentionally empty block */}
+  protected TreeoutTokenDepGenPosWithContext() {/* intentionally empty block */}
     
   /** Internal - constructor used by generator 
    * @generated */
-  public Marker(int addr, TOP_Type type) {
+  public TreeoutTokenDepGenPosWithContext(int addr, TOP_Type type) {
     super(addr, type);
     readObject();
   }
   
   /** @generated */
-  public Marker(JCas jcas) {
+  public TreeoutTokenDepGenPosWithContext(JCas jcas) {
     super(jcas);
     readObject();   
   } 
 
   /** @generated */  
-  public Marker(JCas jcas, int begin, int end) {
+  public TreeoutTokenDepGenPosWithContext(JCas jcas, int begin, int end) {
     super(jcas);
     setBegin(begin);
     setEnd(end);

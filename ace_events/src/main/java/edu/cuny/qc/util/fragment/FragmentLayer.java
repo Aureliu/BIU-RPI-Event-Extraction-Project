@@ -7,8 +7,8 @@ import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 import java.util.Map.Entry;
+import java.util.Set;
 
 import org.apache.commons.collections15.BidiMap;
 import org.apache.commons.collections15.MultiMap;
@@ -29,7 +29,8 @@ import eu.excitementproject.eop.common.datastructures.OneToManyBidiMultiHashMap;
 import eu.excitementproject.eop.common.representation.parse.representation.basic.InfoGetFields;
 import eu.excitementproject.eop.common.representation.parse.tree.TreeAndParentMap.TreeAndParentMapException;
 import eu.excitementproject.eop.common.representation.parse.tree.dependency.basic.BasicNode;
-import eu.excitementproject.eop.common.representation.partofspeech.UnsupportedPosTagStringException;
+import eu.excitementproject.eop.common.utilities.uima.UimaUtils;
+import eu.excitementproject.eop.lap.biu.uima.CasTreeConverter;
 
 public class FragmentLayer {
 	public JCas jcas;
@@ -99,6 +100,15 @@ public class FragmentLayer {
 			}
 		}
 		return result;
+	}
+	
+	public BasicNode getRoot(Annotation covering) throws CASException, FragmentLayerException {
+		Sentence sentence = UimaUtils.selectCoveredSingle(Sentence.class, covering);
+		BasicNode root = sentence2root.get(sentence);
+		if (root == null) {
+			throw new FragmentLayerException(String.format("No root for sentence: '%s'", sentence.getCoveredText()));
+		}
+		return root;
 	}
 
 	public FragmentAndReference getFragmentBySentenceAndTokens(Sentence sentence, Collection<Token> tokens, Facet facet) throws TreeAndParentMapException, TreeFragmentBuilderException {
@@ -201,6 +211,14 @@ public class FragmentLayer {
 		return getTreeout(tree, new SimpleNodeString() {
 			@Override public String toString(BasicNode node) {
 				return InfoGetFields.getRelation(node.getInfo(), "<ROOT>")+"->"+InfoGetFields.getWord(node.getInfo());
+			}
+		});
+	}
+	
+	public static String getTreeoutDependenciesTokensGeneralPos(BasicNode tree) {
+		return getTreeout(tree, new SimpleNodeString() {
+			@Override public String toString(BasicNode node) {
+				return InfoGetFields.getRelation(node.getInfo(), "<ROOT>")+"->"+InfoGetFields.getWord(node.getInfo()) +"/"+node.getInfo().getNodeInfo().getSyntacticInfo().getPartOfSpeech().getCanonicalPosTag();
 			}
 		});
 	}

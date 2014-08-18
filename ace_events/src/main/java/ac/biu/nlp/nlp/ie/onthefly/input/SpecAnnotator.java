@@ -44,7 +44,6 @@ import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepNoContext;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepSpecPosNoContext;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepSpecPosWithContext;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepWithContext;
-import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutSampleText;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.UsageSample;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.VerbLemma;
 
@@ -510,9 +509,8 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 			
 			tokenAE.process(tokenView);
 			if (Perceptron.controllerStatic.useArguments) {
-				System.out.printf("\n\n\n**** the class: \n");
-				System.out.println(edu.stanford.nlp.tagger.maxent.ExtractorFrames.class.getProtectionDomain().getCodeSource().getLocation().getPath());
-
+//				System.out.printf("\n\n\n**** the class: \n");
+//				System.out.println(edu.stanford.nlp.tagger.maxent.ExtractorFrames.class.getProtectionDomain().getCodeSource().getLocation().getPath());
 				sentenceAE.process(sentenceView);
 			}
 			
@@ -563,6 +561,10 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 //					// if elements.size() == 0, this lemma doesn't appear in the spec elements, so we ignore it
 //				}
 				
+				sample.setText(sample.getCoveredText());
+				BasicNode sampleRoot = fragmentLayer.getRoot(sample);
+				sample.setTreeout(FragmentLayer.getTreeoutDependenciesTokensGeneralPos(sampleRoot));
+				
 				// Now set a pius for each aius!
 				// Assuming exactly one pius per sample
 				List<PredicateInUsageSample> piuses = JCasUtil.selectCovered(sentenceView, PredicateInUsageSample.class, sample);
@@ -589,13 +591,12 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 						FragmentAndReference linkFrag = fragmentLayer.getRootLinkingTreeFragment(pius, aius, null);
 						List<BasicNode> subroots = ImmutableList.of(linkFrag.getFragmentRoot());
 
-						addTreeout(TreeoutSampleText.class, sample, sample.getCoveredText());
-						addTreeout(TreeoutDepNoContext.class, sample, FragmentLayer.getTreeoutOnlyDependencies(subroots, false));
-						addTreeout(TreeoutDepGenPosNoContext.class, sample, FragmentLayer.getTreeoutDependenciesGeneralPOS(subroots, false));
-						addTreeout(TreeoutDepSpecPosNoContext.class, sample, FragmentLayer.getTreeoutDependenciesSpecificPOS(subroots, false));
-						addTreeout(TreeoutDepWithContext.class, sample, FragmentLayer.getTreeoutOnlyDependencies(subroots, true));
-						addTreeout(TreeoutDepGenPosWithContext.class, sample, FragmentLayer.getTreeoutDependenciesGeneralPOS(subroots, true));
-						addTreeout(TreeoutDepSpecPosWithContext.class, sample, FragmentLayer.getTreeoutDependenciesSpecificPOS(subroots, true));
+						addTreeout(TreeoutDepNoContext.class, aius, FragmentLayer.getTreeoutOnlyDependencies(subroots, false));
+						addTreeout(TreeoutDepGenPosNoContext.class, aius, FragmentLayer.getTreeoutDependenciesGeneralPOS(subroots, false));
+						addTreeout(TreeoutDepSpecPosNoContext.class, aius, FragmentLayer.getTreeoutDependenciesSpecificPOS(subroots, false));
+						addTreeout(TreeoutDepWithContext.class, aius, FragmentLayer.getTreeoutOnlyDependencies(subroots, true));
+						addTreeout(TreeoutDepGenPosWithContext.class, aius, FragmentLayer.getTreeoutDependenciesGeneralPOS(subroots, true));
+						addTreeout(TreeoutDepSpecPosWithContext.class, aius, FragmentLayer.getTreeoutDependenciesSpecificPOS(subroots, true));
 					}
 				}
 				

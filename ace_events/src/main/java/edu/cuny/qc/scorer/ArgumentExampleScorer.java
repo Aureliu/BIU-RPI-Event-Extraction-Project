@@ -269,7 +269,7 @@ public abstract class ArgumentExampleScorer extends ArgumentScorer<ArgumentExamp
 					// Get all spec derivations, based on the spec token itself, and its possible noun-lemma form (no verb-lemma for arguments! only nouns!)
 					Set<String> specForms = new HashSet<String>(Arrays.asList(new String[] {
 							spec.getCoveredText(),
-							UimaUtils.selectCoveredSingle(spec.getView().getJCas(), NounLemma.class, spec).getValue(),
+							UimaUtils.selectCoveredSingle(NounLemma.class, spec).getValue(),
 							//UimaUtils.selectCoveredSingle(spec.getView().getJCas(), VerbLemma.class, spec).getValue(),
 					}));
 					

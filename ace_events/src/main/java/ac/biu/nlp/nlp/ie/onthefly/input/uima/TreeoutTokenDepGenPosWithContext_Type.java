@@ -1,5 +1,5 @@
 
-/* First created by JCasGen Sat Aug 16 16:05:42 IDT 2014 */
+/* First created by JCasGen Mon Aug 18 12:29:49 IDT 2014 */
 package ac.biu.nlp.nlp.ie.onthefly.input.uima;
 
 import org.apache.uima.jcas.JCas;
@@ -13,7 +13,7 @@ import org.apache.uima.cas.Type;
 /** 
  * Updated by JCasGen Mon Aug 18 12:56:04 IDT 2014
  * @generated */
-public class TreeoutDepSpecPosWithContext_Type extends Treeout_Type {
+public class TreeoutTokenDepGenPosWithContext_Type extends Treeout_Type {
   /** @generated */
   @Override
   protected FSGenerator getFSGenerator() {return fsGenerator;}
@@ -21,31 +21,31 @@ public class TreeoutDepSpecPosWithContext_Type extends Treeout_Type {
   private final FSGenerator fsGenerator = 
     new FSGenerator() {
       public FeatureStructure createFS(int addr, CASImpl cas) {
-  			 if (TreeoutDepSpecPosWithContext_Type.this.useExistingInstance) {
+  			 if (TreeoutTokenDepGenPosWithContext_Type.this.useExistingInstance) {
   			   // Return eq fs instance if already created
-  		     FeatureStructure fs = TreeoutDepSpecPosWithContext_Type.this.jcas.getJfsFromCaddr(addr);
+  		     FeatureStructure fs = TreeoutTokenDepGenPosWithContext_Type.this.jcas.getJfsFromCaddr(addr);
   		     if (null == fs) {
-  		       fs = new TreeoutDepSpecPosWithContext(addr, TreeoutDepSpecPosWithContext_Type.this);
-  			   TreeoutDepSpecPosWithContext_Type.this.jcas.putJfsFromCaddr(addr, fs);
+  		       fs = new TreeoutTokenDepGenPosWithContext(addr, TreeoutTokenDepGenPosWithContext_Type.this);
+  			   TreeoutTokenDepGenPosWithContext_Type.this.jcas.putJfsFromCaddr(addr, fs);
   			   return fs;
   		     }
   		     return fs;
-        } else return new TreeoutDepSpecPosWithContext(addr, TreeoutDepSpecPosWithContext_Type.this);
+        } else return new TreeoutTokenDepGenPosWithContext(addr, TreeoutTokenDepGenPosWithContext_Type.this);
   	  }
     };
   /** @generated */
   @SuppressWarnings ("hiding")
-  public final static int typeIndexID = TreeoutDepSpecPosWithContext.typeIndexID;
+  public final static int typeIndexID = TreeoutTokenDepGenPosWithContext.typeIndexID;
   /** @generated 
      @modifiable */
   @SuppressWarnings ("hiding")
-  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepSpecPosWithContext");
+  public final static boolean featOkTst = JCasRegistry.getFeatOkTst("ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutTokenDepGenPosWithContext");
 
 
 
   /** initialize variables to correspond with Cas Type and Features
 	* @generated */
-  public TreeoutDepSpecPosWithContext_Type(JCas jcas, Type casType) {
+  public TreeoutTokenDepGenPosWithContext_Type(JCas jcas, Type casType) {
     super(jcas, casType);
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());
 

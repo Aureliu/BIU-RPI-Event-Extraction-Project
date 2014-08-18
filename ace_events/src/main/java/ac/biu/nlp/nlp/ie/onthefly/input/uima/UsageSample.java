@@ -10,7 +10,7 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Sat Aug 16 17:46:46 IDT 2014
+ * Updated by JCasGen Mon Aug 18 12:56:04 IDT 2014
  * XML source: C:/Java/Git/breep/ace_events/src/main/resources/desc/OdieInputTypes.xml
  * @generated */
 public class UsageSample extends Annotation {
@@ -59,6 +59,40 @@ public class UsageSample extends Annotation {
   @generated modifiable */
   private void readObject() {/*default - does nothing empty block */}
      
-}
+  //*--------------*
+  //* Feature: text
+
+  /** getter for text - gets 
+   * @generated */
+  public String getText() {
+    if (UsageSample_Type.featOkTst && ((UsageSample_Type)jcasType).casFeat_text == null)
+      jcasType.jcas.throwFeatMissing("text", "ac.biu.nlp.nlp.ie.onthefly.input.uima.UsageSample");
+    return jcasType.ll_cas.ll_getStringValue(addr, ((UsageSample_Type)jcasType).casFeatCode_text);}
+    
+  /** setter for text - sets  
+   * @generated */
+  public void setText(String v) {
+    if (UsageSample_Type.featOkTst && ((UsageSample_Type)jcasType).casFeat_text == null)
+      jcasType.jcas.throwFeatMissing("text", "ac.biu.nlp.nlp.ie.onthefly.input.uima.UsageSample");
+    jcasType.ll_cas.ll_setStringValue(addr, ((UsageSample_Type)jcasType).casFeatCode_text, v);}    
+   
+    
+  //*--------------*
+  //* Feature: treeout
+
+  /** getter for treeout - gets 
+   * @generated */
+  public String getTreeout() {
+    if (UsageSample_Type.featOkTst && ((UsageSample_Type)jcasType).casFeat_treeout == null)
+      jcasType.jcas.throwFeatMissing("treeout", "ac.biu.nlp.nlp.ie.onthefly.input.uima.UsageSample");
+    return jcasType.ll_cas.ll_getStringValue(addr, ((UsageSample_Type)jcasType).casFeatCode_treeout);}
+    
+  /** setter for treeout - sets  
+   * @generated */
+  public void setTreeout(String v) {
+    if (UsageSample_Type.featOkTst && ((UsageSample_Type)jcasType).casFeat_treeout == null)
+      jcasType.jcas.throwFeatMissing("treeout", "ac.biu.nlp.nlp.ie.onthefly.input.uima.UsageSample");
+    jcasType.ll_cas.ll_setStringValue(addr, ((UsageSample_Type)jcasType).casFeatCode_treeout, v);}    
+  }
 
     

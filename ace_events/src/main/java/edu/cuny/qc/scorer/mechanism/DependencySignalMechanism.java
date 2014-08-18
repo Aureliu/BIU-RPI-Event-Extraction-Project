@@ -133,7 +133,7 @@ public class DependencySignalMechanism extends SignalMechanism {
 		@Override
 		public Boolean calcBoolPredicateSeedScore(Token textTriggerToken, AceMention textMention, Annotation textHeadAnno, ArgumentInUsageSample specAius, ScorerData scorerData) throws SignalMechanismException {
 			try {
-				Treeout specTreeoutAnno = UimaUtils.selectCoveredSingle(specAius.getCAS().getJCas(), specClass, specAius.getSample());
+				Treeout specTreeoutAnno = UimaUtils.selectCoveredSingle(specClass, specAius.getSample());
 				specTreeout = specTreeoutAnno.getCoveredText();
 
 				Map<String, String> outsMap = cacheTextTreeouts.get(new SimpleEntry<Annotation, Annotation>(textTriggerToken, textTriggerToken));

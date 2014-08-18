@@ -40,7 +40,7 @@ public abstract class PredicateInUsageSampleScorer extends PredicateScorer<Predi
 		try {
 			boolean result = false;
 			PartOfSpeech textPos = AnnotationUtils.tokenToPOS(textToken);
-			Token specToken = UimaUtils.selectCoveredSingle(spec.getCAS().getJCas(), Token.class, spec);
+			Token specToken = UimaUtils.selectCoveredSingle(Token.class, spec);
 			PartOfSpeech specPos = AnnotationUtils.tokenToPOS(specToken);
 			
 			result = calcBoolPredicateInUsageSampleScore(textToken, textTriggerTokenMap, textPos, spec, specPos, scorerData);

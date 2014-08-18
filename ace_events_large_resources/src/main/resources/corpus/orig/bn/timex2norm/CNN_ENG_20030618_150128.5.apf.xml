@@ -1,0 +1,338 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030618_150128.5.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030618_150128.5">
+<entity ID="CNN_ENG_20030618_150128.5-E1" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030618_150128.5-E1-2" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="67" END="117">the head of the catholic church in phoenix, arizona</charseq>
+    </extent>
+    <head>
+      <charseq START="71" END="74">head</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_150128.5-E1-7" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="120" END="140">bishop thomas
+o'brien</charseq>
+    </extent>
+    <head>
+      <charseq START="127" END="140">thomas
+o'brien</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_150128.5-E1-8" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="120" END="125">bishop</charseq>
+    </extent>
+    <head>
+      <charseq START="120" END="125">bishop</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_150128.5-E1-9" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="204" END="205">he</charseq>
+    </extent>
+    <head>
+      <charseq START="204" END="205">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_150128.5-E1-10" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="279" END="285">o'brien</charseq>
+    </extent>
+    <head>
+      <charseq START="279" END="285">o'brien</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_150128.5-E1-11" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="321" END="323">his</charseq>
+    </extent>
+    <head>
+      <charseq START="321" END="323">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="thomas o'brien">
+      <charseq START="127" END="140">thomas
+o'brien</charseq>
+    </name>
+    <name NAME="o'brien">
+      <charseq START="279" END="285">o'brien</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030618_150128.5-E2" TYPE="ORG" SUBTYPE="Religious" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030618_150128.5-E2-3" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="79" END="117">the catholic church in phoenix, arizona</charseq>
+    </extent>
+    <head>
+      <charseq START="92" END="97">church</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_150128.5-E2-6" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="83" END="90">catholic</charseq>
+    </extent>
+    <head>
+      <charseq START="83" END="90">catholic</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="catholic">
+      <charseq START="83" END="90">catholic</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030618_150128.5-E3" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030618_150128.5-E3-4" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="102" END="117">phoenix, arizona</charseq>
+    </extent>
+    <head>
+      <charseq START="102" END="108">phoenix</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="phoenix">
+      <charseq START="102" END="108">phoenix</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030618_150128.5-E4" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030618_150128.5-E4-5" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="111" END="117">arizona</charseq>
+    </extent>
+    <head>
+      <charseq START="111" END="117">arizona</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="arizona">
+      <charseq START="111" END="117">arizona</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030618_150128.5-E8" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030618_150128.5-E8-12" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="370" END="376">priests</charseq>
+    </extent>
+    <head>
+      <charseq START="370" END="376">priests</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<value ID="CNN_ENG_20030618_150128.5-V1" TYPE="Crime">
+  <value_mention ID="CNN_ENG_20030618_150128.5-V1-1">
+    <extent>
+      <charseq START="321" END="376">his handling of sexual
+abuse allegations against priests</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_ENG_20030618_150128.5-V2" TYPE="Job-Title">
+  <value_mention ID="CNN_ENG_20030618_150128.5-V2-1">
+    <extent>
+      <charseq START="120" END="125">bishop</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_ENG_20030618_150128.5-V3" TYPE="Crime">
+  <value_mention ID="CNN_ENG_20030618_150128.5-V3-1">
+    <extent>
+      <charseq START="194" END="201">a felony</charseq>
+    </extent>
+  </value_mention>
+</value>
+<timex2 ID="CNN_ENG_20030618_150128.5-T1" VAL="2003-06-18T15:22:21">
+  <timex2_mention ID="CNN_ENG_20030618_150128.5-T1-1">
+    <extent>
+      <charseq START="43" END="61">2003-06-18 15:22:21</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030618_150128.5-T2" VAL="2003-06-18">
+  <timex2_mention ID="CNN_ENG_20030618_150128.5-T2-1">
+    <extent>
+      <charseq START="156" END="201">just one day after being charged with a felony</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030618_150128.5-T3" VAL="2003-06" MOD="START">
+  <timex2_mention ID="CNN_ENG_20030618_150128.5-T3-1">
+    <extent>
+      <charseq START="268" END="277">this
+month</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030618_150128.5-R1" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030618_150128.5-E3" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030618_150128.5-E4" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030618_150128.5-R1-1" LEXICALCONDITION="Formulaic">
+    <extent>
+      <charseq START="102" END="117">phoenix, arizona</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030618_150128.5-E3-4" ROLE="Arg-1">
+      <extent>
+        <charseq START="102" END="117">phoenix, arizona</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030618_150128.5-E4-5" ROLE="Arg-2">
+      <extent>
+        <charseq START="111" END="117">arizona</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030618_150128.5-R2" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030618_150128.5-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030618_150128.5-E2" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030618_150128.5-R2-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="67" END="117">the head of the catholic church in phoenix, arizona</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030618_150128.5-E1-2" ROLE="Arg-1">
+      <extent>
+        <charseq START="67" END="117">the head of the catholic church in phoenix, arizona</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030618_150128.5-E2-3" ROLE="Arg-2">
+      <extent>
+        <charseq START="79" END="117">the catholic church in phoenix, arizona</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030618_150128.5-R3" TYPE="GEN-AFF" SUBTYPE="Org-Location" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030618_150128.5-E2" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030618_150128.5-E3" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030618_150128.5-R3-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="79" END="117">the catholic church in phoenix, arizona</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030618_150128.5-E2-3" ROLE="Arg-1">
+      <extent>
+        <charseq START="79" END="117">the catholic church in phoenix, arizona</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030618_150128.5-E3-4" ROLE="Arg-2">
+      <extent>
+        <charseq START="102" END="117">phoenix, arizona</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030618_150128.5-EV1" TYPE="Personnel" SUBTYPE="End-Position" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030618_150128.5-V2" ROLE="Position"/>
+  <event_argument REFID="CNN_ENG_20030618_150128.5-E1" ROLE="Person"/>
+  <event_argument REFID="CNN_ENG_20030618_150128.5-E2" ROLE="Entity"/>
+  <event_mention ID="CNN_ENG_20030618_150128.5-EV1-1">
+    <extent>
+      <charseq START="67" END="153">the head of the catholic church in phoenix, arizona, bishop thomas
+o'brien has resigned</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="67" END="153">the head of the catholic church in phoenix, arizona, bishop thomas
+o'brien has resigned</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="146" END="153">resigned</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030618_150128.5-V2-1" ROLE="Position">
+      <extent>
+        <charseq START="120" END="125">bishop</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030618_150128.5-E1-2" ROLE="Person">
+      <extent>
+        <charseq START="67" END="117">the head of the catholic church in phoenix, arizona</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030618_150128.5-E2-3" ROLE="Entity">
+      <extent>
+        <charseq START="79" END="117">the catholic church in phoenix, arizona</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030618_150128.5-EV2" TYPE="Justice" SUBTYPE="Charge-Indict" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030618_150128.5-V3" ROLE="Crime"/>
+  <event_mention ID="CNN_ENG_20030618_150128.5-EV2-1">
+    <extent>
+      <charseq START="181" END="201">charged with a felony</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="156" END="201">just one day after being charged with a felony</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="181" END="187">charged</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030618_150128.5-V3-1" ROLE="Crime">
+      <extent>
+        <charseq START="194" END="201">a felony</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030618_150128.5-EV3" TYPE="Justice" SUBTYPE="Trial-Hearing" MODALITY="Other" POLARITY="Negative" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030618_150128.5-E1" ROLE="Defendant"/>
+  <event_argument REFID="CNN_ENG_20030618_150128.5-V1" ROLE="Crime"/>
+  <event_argument REFID="CNN_ENG_20030618_150128.5-T3" ROLE="Time-Within"/>
+  <event_mention ID="CNN_ENG_20030618_150128.5-EV3-1">
+    <extent>
+      <charseq START="268" END="376">this
+month o'brien narrowly escaped prosecution over his handling of sexual
+abuse allegations against priests</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="260" END="376">earlier this
+month o'brien narrowly escaped prosecution over his handling of sexual
+abuse allegations against priests</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="304" END="314">prosecution</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030618_150128.5-E1-10" ROLE="Defendant">
+      <extent>
+        <charseq START="279" END="285">o'brien</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030618_150128.5-E1-11" ROLE="Defendant">
+      <extent>
+        <charseq START="321" END="323">his</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030618_150128.5-V1-1" ROLE="Crime">
+      <extent>
+        <charseq START="321" END="376">his handling of sexual
+abuse allegations against priests</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030618_150128.5-T3-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="268" END="277">this
+month</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030618_150128.5-EV4" TYPE="Life" SUBTYPE="Die" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_mention ID="CNN_ENG_20030618_150128.5-EV4-1">
+    <extent>
+      <charseq START="244" END="248">fatal</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="204" END="257">he is accused of leaving the scene of a fatal accident</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="244" END="248">fatal</charseq>
+    </anchor>
+  </event_mention>
+</event>
+</document>
+</source_file>

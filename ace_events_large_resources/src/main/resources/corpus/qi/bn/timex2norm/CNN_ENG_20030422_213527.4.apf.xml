@@ -1,0 +1,1607 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030422_213527.4.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030422_213527.4">
+<entity ID="CNN_ENG_20030422_213527.4-E1" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E1-87" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="461" END="462">we</charseq>
+    </extent>
+    <head>
+      <charseq START="461" END="462">we</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030422_213527.4-E2" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E2-2" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="481" END="498">the
+iraqi refugees</charseq>
+    </extent>
+    <head>
+      <charseq START="491" END="498">refugees</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E2-8" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="609" END="617">the iraqi</charseq>
+    </extent>
+    <head>
+      <charseq START="613" END="617">iraqi</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030422_213527.4-E3" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E3-3" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="485" END="489">iraqi</charseq>
+    </extent>
+    <head>
+      <charseq START="485" END="489">iraqi</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E3-5" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="548" END="551">iraq</charseq>
+    </extent>
+    <head>
+      <charseq START="548" END="551">iraq</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E3-14" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="820" END="823">iraq</charseq>
+    </extent>
+    <head>
+      <charseq START="820" END="823">iraq</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E3-23" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="1035" END="1039">iraqi</charseq>
+    </extent>
+    <head>
+      <charseq START="1035" END="1039">iraqi</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E3-37" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1491" END="1495">iraqi</charseq>
+    </extent>
+    <head>
+      <charseq START="1491" END="1495">iraqi</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E3-75" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="208" END="211">iraq</charseq>
+    </extent>
+    <head>
+      <charseq START="208" END="211">iraq</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="iraqi">
+      <charseq START="485" END="489">iraqi</charseq>
+    </name>
+    <name NAME="iraq">
+      <charseq START="548" END="551">iraq</charseq>
+    </name>
+    <name NAME="iraq">
+      <charseq START="820" END="823">iraq</charseq>
+    </name>
+    <name NAME="iraqi">
+      <charseq START="1035" END="1039">iraqi</charseq>
+    </name>
+    <name NAME="iraqi">
+      <charseq START="1491" END="1495">iraqi</charseq>
+    </name>
+    <name NAME="iraq">
+      <charseq START="208" END="211">iraq</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030422_213527.4-E5" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E5-4" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="513" END="520">everyone</charseq>
+    </extent>
+    <head>
+      <charseq START="513" END="520">everyone</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030422_213527.4-E6" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E6-6" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="562" END="568">baghdad</charseq>
+    </extent>
+    <head>
+      <charseq START="562" END="568">baghdad</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E6-20" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="984" END="990">baghdad</charseq>
+    </extent>
+    <head>
+      <charseq START="984" END="990">baghdad</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E6-21" TYPE="PRO" LDCTYPE="PRO" ROLE="LOC">
+    <extent>
+      <charseq START="1001" END="1004">here</charseq>
+    </extent>
+    <head>
+      <charseq START="1001" END="1004">here</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="baghdad">
+      <charseq START="562" END="568">baghdad</charseq>
+    </name>
+    <name NAME="baghdad">
+      <charseq START="984" END="990">baghdad</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030422_213527.4-E7" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E7-10" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="714" END="734">a couple of reporters</charseq>
+    </extent>
+    <head>
+      <charseq START="726" END="734">reporters</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030422_213527.4-E8" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E8-15" TYPE="NAM" LDCTYPE="NAMPRE">
+    <extent>
+      <charseq START="845" END="850">saddam</charseq>
+    </extent>
+    <head>
+      <charseq START="845" END="850">saddam</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="saddam">
+      <charseq START="845" END="850">saddam</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030422_213527.4-E9" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E9-26" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1192" END="1208">the whole college</charseq>
+    </extent>
+    <head>
+      <charseq START="1202" END="1208">college</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E9-76" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1085" END="1096">this college</charseq>
+    </extent>
+    <head>
+      <charseq START="1090" END="1096">college</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030422_213527.4-E10" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E10-9" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="703" END="708">myself</charseq>
+    </extent>
+    <head>
+      <charseq START="703" END="708">myself</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E10-17" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="917" END="917">i</charseq>
+    </extent>
+    <head>
+      <charseq START="917" END="917">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E10-18" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="922" END="957">a photographer at detroit free press</charseq>
+    </extent>
+    <head>
+      <charseq START="924" END="935">photographer</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E10-64" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="893" END="894">my</charseq>
+    </extent>
+    <head>
+      <charseq START="893" END="894">my</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E10-66" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="904" END="914">eric salees</charseq>
+    </extent>
+    <head>
+      <charseq START="904" END="914">eric salees</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E10-79" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="239" END="274">eric seals of knight-ridder trainchl</charseq>
+    </extent>
+    <head>
+      <charseq START="239" END="248">eric seals</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E10-82" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="313" END="314">he</charseq>
+    </extent>
+    <head>
+      <charseq START="313" END="314">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E10-83" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="323" END="325">his</charseq>
+    </extent>
+    <head>
+      <charseq START="323" END="325">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E10-85" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="444" END="444">i</charseq>
+    </extent>
+    <head>
+      <charseq START="444" END="444">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="eric salees">
+      <charseq START="904" END="914">eric salees</charseq>
+    </name>
+    <name NAME="eric seals">
+      <charseq START="239" END="248">eric seals</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030422_213527.4-E11" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E11-22" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1031" END="1055">156 iraqi police officers</charseq>
+    </extent>
+    <head>
+      <charseq START="1048" END="1055">officers</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030422_213527.4-E13" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E13-24" TYPE="PRO" LDCTYPE="HLS">
+    <extent>
+      <charseq START="1131" END="1135">2,000</charseq>
+    </extent>
+    <head>
+      <charseq START="1131" END="1135">2,000</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E13-25" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1155" END="1158">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1155" END="1158">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E13-27" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1227" END="1265">police officers
+wanting their jobs back</charseq>
+    </extent>
+    <head>
+      <charseq START="1234" END="1241">officers</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E13-28" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1251" END="1255">their</charseq>
+    </extent>
+    <head>
+      <charseq START="1251" END="1255">their</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030422_213527.4-E14" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E14-29" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1272" END="1285">this gentleman</charseq>
+    </extent>
+    <head>
+      <charseq START="1277" END="1285">gentleman</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E14-32" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1371" END="1373">him</charseq>
+    </extent>
+    <head>
+      <charseq START="1371" END="1373">him</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030422_213527.4-E15" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E15-30" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1336" END="1342">one man</charseq>
+    </extent>
+    <head>
+      <charseq START="1340" END="1342">man</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E15-31" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1348" END="1350">his</charseq>
+    </extent>
+    <head>
+      <charseq START="1348" END="1350">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E15-33" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="1390" END="1405">an angry officer</charseq>
+    </extent>
+    <head>
+      <charseq START="1399" END="1405">officer</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E15-34" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1417" END="1419">his</charseq>
+    </extent>
+    <head>
+      <charseq START="1417" END="1419">his</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030422_213527.4-E17" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E17-35" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1426" END="1427">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1426" END="1427">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E17-43" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1666" END="1667">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1666" END="1667">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E17-49" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1837" END="1838">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1837" END="1838">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E17-52" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1927" END="1928">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1927" END="1928">we</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030422_213527.4-E18" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E18-36" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1469" END="1526">about maybe five, six iraqi locals with
+ak-47 machine guns</charseq>
+    </extent>
+    <head>
+      <charseq START="1497" END="1502">locals</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030422_213527.4-E20" TYPE="WEA" SUBTYPE="Shooting" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E20-38" TYPE="NOM" LDCTYPE="BAR" LDCATR="FALSE">
+    <extent>
+      <charseq START="1509" END="1526">ak-47 machine guns</charseq>
+    </extent>
+    <head>
+      <charseq START="1523" END="1526">guns</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E20-67" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1509" END="1513">ak-47</charseq>
+    </extent>
+    <head>
+      <charseq START="1509" END="1513">ak-47</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="ak-47">
+      <charseq START="1509" END="1513">ak-47</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030422_213527.4-E21" TYPE="PER" SUBTYPE="Indeterminate" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E21-1" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="70" END="72">you</charseq>
+    </extent>
+    <head>
+      <charseq START="70" END="72">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E21-59" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="106" END="108">you</charseq>
+    </extent>
+    <head>
+      <charseq START="106" END="108">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E21-69" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="120" END="122">you</charseq>
+    </extent>
+    <head>
+      <charseq START="120" END="122">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E21-70" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="125" END="127">you</charseq>
+    </extent>
+    <head>
+      <charseq START="125" END="127">you</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030422_213527.4-E22" TYPE="VEH" SUBTYPE="Land" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E22-39" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1541" END="1544">cars</charseq>
+    </extent>
+    <head>
+      <charseq START="1541" END="1544">cars</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030422_213527.4-E23" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E23-40" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1571" END="1580">the
+iraqis</charseq>
+    </extent>
+    <head>
+      <charseq START="1575" END="1580">iraqis</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E23-42" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1654" END="1663">themselves</charseq>
+    </extent>
+    <head>
+      <charseq START="1654" END="1663">themselves</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030422_213527.4-E24" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E24-41" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1614" END="1623">the regime</charseq>
+    </extent>
+    <head>
+      <charseq START="1618" END="1623">regime</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030422_213527.4-E25" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E25-44" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1689" END="1709">an underground
+prison</charseq>
+    </extent>
+    <head>
+      <charseq START="1704" END="1709">prison</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E25-47" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1784" END="1806">this underground prison</charseq>
+    </extent>
+    <head>
+      <charseq START="1801" END="1806">prison</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E25-68" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1877" END="1884">a prison</charseq>
+    </extent>
+    <head>
+      <charseq START="1879" END="1884">prison</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030422_213527.4-E26" TYPE="LOC" SUBTYPE="Boundary" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E26-12" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="767" END="776">the border</charseq>
+    </extent>
+    <head>
+      <charseq START="771" END="776">border</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030422_213527.4-E27" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E27-45" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1739" END="1757">a bunch of kuwaitis</charseq>
+    </extent>
+    <head>
+      <charseq START="1750" END="1757">kuwaitis</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030422_213527.4-E28" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E28-46" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1763" END="1774">one
+american</charseq>
+    </extent>
+    <head>
+      <charseq START="1767" END="1774">american</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030422_213527.4-E29" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E29-48" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1813" END="1818">people</charseq>
+    </extent>
+    <head>
+      <charseq START="1813" END="1818">people</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030422_213527.4-E30" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E30-50" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1850" END="1860">this bunker</charseq>
+    </extent>
+    <head>
+      <charseq START="1855" END="1860">bunker</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030422_213527.4-E31" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E31-51" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1899" END="1913">these
+prisoners</charseq>
+    </extent>
+    <head>
+      <charseq START="1905" END="1913">prisoners</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030422_213527.4-E32" TYPE="FAC" SUBTYPE="Subarea-Facility" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E32-53" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1939" END="2029">a room fulls of weapons from bullets
+to hand grenade, land mines, rocket-propelled grenades</charseq>
+    </extent>
+    <head>
+      <charseq START="1941" END="1944">room</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030422_213527.4-E33" TYPE="WEA" SUBTYPE="Underspecified" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E33-54" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1955" END="2029">weapons from bullets
+to hand grenade, land mines, rocket-propelled grenades</charseq>
+    </extent>
+    <head>
+      <charseq START="1955" END="1961">weapons</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E33-58" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="2040" END="2045">weapon</charseq>
+    </extent>
+    <head>
+      <charseq START="2040" END="2045">weapon</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030422_213527.4-E34" TYPE="WEA" SUBTYPE="Exploding" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E34-55" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1979" END="1990">hand grenade</charseq>
+    </extent>
+    <head>
+      <charseq START="1984" END="1990">grenade</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030422_213527.4-E35" TYPE="WEA" SUBTYPE="Exploding" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E35-56" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1993" END="2002">land mines</charseq>
+    </extent>
+    <head>
+      <charseq START="1998" END="2002">mines</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030422_213527.4-E36" TYPE="WEA" SUBTYPE="Exploding" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E36-57" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="2005" END="2029">rocket-propelled grenades</charseq>
+    </extent>
+    <head>
+      <charseq START="2022" END="2029">grenades</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030422_213527.4-E37" TYPE="WEA" SUBTYPE="Projectile" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E37-60" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1968" END="1974">bullets</charseq>
+    </extent>
+    <head>
+      <charseq START="1968" END="1974">bullets</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030422_213527.4-E38" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E38-61" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1441" END="1452">a
+checkpoint</charseq>
+    </extent>
+    <head>
+      <charseq START="1443" END="1452">checkpoint</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030422_213527.4-E39" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E39-62" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1035" END="1046">iraqi police</charseq>
+    </extent>
+    <head>
+      <charseq START="1041" END="1046">police</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E39-63" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1227" END="1232">police</charseq>
+    </extent>
+    <head>
+      <charseq START="1227" END="1232">police</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030422_213527.4-E43" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E43-71" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="139" END="140">we</charseq>
+    </extent>
+    <head>
+      <charseq START="139" END="140">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E43-72" TYPE="NOM" LDCTYPE="BAR" LDCATR="TRUE">
+    <extent>
+      <charseq START="146" END="172">fans of still photographers</charseq>
+    </extent>
+    <head>
+      <charseq START="146" END="149">fans</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E43-77" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="232" END="233">we</charseq>
+    </extent>
+    <head>
+      <charseq START="232" END="233">we</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030422_213527.4-E45" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E45-73" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="154" END="172">still photographers</charseq>
+    </extent>
+    <head>
+      <charseq START="160" END="172">photographers</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E45-74" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="194" END="198">their</charseq>
+    </extent>
+    <head>
+      <charseq START="194" END="198">their</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030422_213527.4-E46" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E46-11" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="737" END="738">we</charseq>
+    </extent>
+    <head>
+      <charseq START="737" END="738">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E46-13" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="786" END="787">we</charseq>
+    </extent>
+    <head>
+      <charseq START="786" END="787">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E46-16" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="868" END="869">we</charseq>
+    </extent>
+    <head>
+      <charseq START="868" END="869">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E46-65" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="794" END="796">all</charseq>
+    </extent>
+    <head>
+      <charseq START="794" END="796">all</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E46-78" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="649" END="734">about 130 journalists from around the
+world including myself and a couple of reporters</charseq>
+    </extent>
+    <head>
+      <charseq START="659" END="669">journalists</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030422_213527.4-E48" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E48-80" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="253" END="274">knight-ridder trainchl</charseq>
+    </extent>
+    <head>
+      <charseq START="253" END="274">knight-ridder trainchl</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="knight-ridder trainchl">
+      <charseq START="253" END="274">knight-ridder trainchl</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030422_213527.4-E49" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E49-19" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="940" END="957">detroit free press</charseq>
+    </extent>
+    <head>
+      <charseq START="940" END="957">detroit free press</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E49-81" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="289" END="310">the detroit free press</charseq>
+    </extent>
+    <head>
+      <charseq START="293" END="310">detroit free press</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="detroit free press">
+      <charseq START="940" END="957">detroit free press</charseq>
+    </name>
+    <name NAME="detroit free press">
+      <charseq START="293" END="310">detroit free press</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030422_213527.4-E50" TYPE="LOC" SUBTYPE="Celestial" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E50-84" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="683" END="691">the
+world</charseq>
+    </extent>
+    <head>
+      <charseq START="687" END="691">world</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030422_213527.4-E51" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E51-7" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="575" END="584">the jordan</charseq>
+    </extent>
+    <head>
+      <charseq START="579" END="584">jordan</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030422_213527.4-E51-86" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="453" END="458">jordan</charseq>
+    </extent>
+    <head>
+      <charseq START="453" END="458">jordan</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="jordan">
+      <charseq START="579" END="584">jordan</charseq>
+    </name>
+    <name NAME="jordan">
+      <charseq START="453" END="458">jordan</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<timex2 ID="CNN_ENG_20030422_213527.4-T1" VAL="2003-04-22TNI">
+  <timex2_mention ID="CNN_ENG_20030422_213527.4-T1-1">
+    <extent>
+      <charseq START="217" END="223">tonight</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030422_213527.4-T2" VAL="2003-04-22T23:00:06">
+  <timex2_mention ID="CNN_ENG_20030422_213527.4-T2-1">
+    <extent>
+      <charseq START="43" END="61">2003-04-22 23:00:06</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030422_213527.4-T3" VAL="1991">
+  <timex2_mention ID="CNN_ENG_20030422_213527.4-T3-1">
+    <extent>
+      <charseq START="599" END="602">1991</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030422_213527.4-T4" VAL="2003-04-09">
+  <timex2_mention ID="CNN_ENG_20030422_213527.4-T4-1">
+    <extent>
+      <charseq START="638" END="646">april 9th</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030422_213527.4-T5" VAL="2003-04-09">
+  <timex2_mention ID="CNN_ENG_20030422_213527.4-T5-1">
+    <extent>
+      <charseq START="826" END="862">two days after the saddam statue fell</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030422_213527.4-T6" VAL="P1.5W" MOD="APPROX" ANCHOR_VAL="2003-W17-2" ANCHOR_DIR="ENDING">
+  <timex2_mention ID="CNN_ENG_20030422_213527.4-T6-1">
+    <extent>
+      <charseq START="1006" END="1028">about a week and a half</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030422_213527.4-T7" VAL="PRESENT_REF" ANCHOR_VAL="2003-04-22T23:00:06" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_ENG_20030422_213527.4-T7-1">
+    <extent>
+      <charseq START="963" END="971">currently</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030422_213527.4-R1" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Present" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030422_213527.4-E10" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030422_213527.4-E49" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030422_213527.4-R1-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="239" END="310">eric seals of knight-ridder trainchl
+shooting for the detroit free press</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030422_213527.4-E10-79" ROLE="Arg-1">
+      <extent>
+        <charseq START="239" END="274">eric seals of knight-ridder trainchl</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030422_213527.4-E49-81" ROLE="Arg-2">
+      <extent>
+        <charseq START="289" END="310">the detroit free press</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_ENG_20030422_213527.4-R1-2" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="893" END="1028">my
+name is eric salees, i am a photographer at detroit free press and
+currently working in baghdad and been here about a week and a half</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030422_213527.4-E10-18" ROLE="Arg-1">
+      <extent>
+        <charseq START="922" END="957">a photographer at detroit free press</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030422_213527.4-E49-19" ROLE="Arg-2">
+      <extent>
+        <charseq START="940" END="957">detroit free press</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030422_213527.4-R2" TYPE="PHYS" SUBTYPE="Near" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="CNN_ENG_20030422_213527.4-E46" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030422_213527.4-E26" ROLE="Arg-2"/>
+  <relation_argument REFID="CNN_ENG_20030422_213527.4-T4" ROLE="Time-Within"/>
+  <relation_argument REFID="CNN_ENG_20030422_213527.4-T5" ROLE="Time-At-End"/>
+  <relation_mention ID="CNN_ENG_20030422_213527.4-R2-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="635" END="890">on april 9th, about 130 journalists from around the
+world including myself and a couple of reporters, we were going to try
+to cross the border because we were all desperate to get into iraq,
+two days after the saddam statue fell and we all knew it was over</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030422_213527.4-E46-78" ROLE="Arg-1">
+      <extent>
+        <charseq START="649" END="734">about 130 journalists from around the
+world including myself and a couple of reporters</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030422_213527.4-E26-12" ROLE="Arg-2">
+      <extent>
+        <charseq START="767" END="776">the border</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030422_213527.4-T4-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="638" END="646">april 9th</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030422_213527.4-T5-1" ROLE="Time-At-End">
+      <extent>
+        <charseq START="826" END="862">two days after the saddam statue fell</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030422_213527.4-R3" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="CNN_ENG_20030422_213527.4-E46" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030422_213527.4-E50" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030422_213527.4-R3-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="649" END="734">about 130 journalists from around the
+world including myself and a couple of reporters</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030422_213527.4-E46-78" ROLE="Arg-1">
+      <extent>
+        <charseq START="649" END="734">about 130 journalists from around the
+world including myself and a couple of reporters</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030422_213527.4-E50-84" ROLE="Arg-2">
+      <extent>
+        <charseq START="683" END="691">the
+world</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030422_213527.4-R4" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030422_213527.4-E10" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030422_213527.4-E48" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030422_213527.4-R4-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="239" END="274">eric seals of knight-ridder trainchl</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030422_213527.4-E10-79" ROLE="Arg-1">
+      <extent>
+        <charseq START="239" END="274">eric seals of knight-ridder trainchl</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030422_213527.4-E48-80" ROLE="Arg-2">
+      <extent>
+        <charseq START="253" END="274">knight-ridder trainchl</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030422_213527.4-R5" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030422_213527.4-E10" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030422_213527.4-E51" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030422_213527.4-R5-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="428" END="458">before the war, i was in jordan</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030422_213527.4-E10-85" ROLE="Arg-1">
+      <extent>
+        <charseq START="444" END="444">i</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030422_213527.4-E51-86" ROLE="Arg-2">
+      <extent>
+        <charseq START="453" END="458">jordan</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030422_213527.4-R6" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030422_213527.4-E2" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030422_213527.4-E3" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030422_213527.4-R6-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="481" END="498">the
+iraqi refugees</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030422_213527.4-E2-2" ROLE="Arg-1">
+      <extent>
+        <charseq START="481" END="498">the
+iraqi refugees</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030422_213527.4-E3-3" ROLE="Arg-2">
+      <extent>
+        <charseq START="485" END="489">iraqi</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030422_213527.4-R8" TYPE="PHYS" SUBTYPE="Located" TENSE="Present" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030422_213527.4-E10" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030422_213527.4-E6" ROLE="Arg-2"/>
+  <relation_argument REFID="CNN_ENG_20030422_213527.4-T6" ROLE="Time-Within"/>
+  <relation_mention ID="CNN_ENG_20030422_213527.4-R8-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="893" END="1028">my
+name is eric salees, i am a photographer at detroit free press and
+currently working in baghdad and been here about a week and a half</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030422_213527.4-E10-17" ROLE="Arg-1">
+      <extent>
+        <charseq START="917" END="917">i</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030422_213527.4-E6-20" ROLE="Arg-2">
+      <extent>
+        <charseq START="984" END="990">baghdad</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030422_213527.4-T6-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="1006" END="1028">about a week and a half</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030422_213527.4-R9" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030422_213527.4-E11" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030422_213527.4-E39" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030422_213527.4-R9-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="1031" END="1055">156 iraqi police officers</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030422_213527.4-E11-22" ROLE="Arg-1">
+      <extent>
+        <charseq START="1031" END="1055">156 iraqi police officers</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030422_213527.4-E39-62" ROLE="Arg-2">
+      <extent>
+        <charseq START="1035" END="1046">iraqi police</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030422_213527.4-R10" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="CNN_ENG_20030422_213527.4-E11" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030422_213527.4-E9" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030422_213527.4-R10-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="1031" END="1115">156 iraqi police officers were supposed to show up to this college to
+report for work</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030422_213527.4-E11-22" ROLE="Arg-1">
+      <extent>
+        <charseq START="1031" END="1055">156 iraqi police officers</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030422_213527.4-E9-76" ROLE="Arg-2">
+      <extent>
+        <charseq START="1085" END="1096">this college</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030422_213527.4-R11" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030422_213527.4-E13" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030422_213527.4-E9" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030422_213527.4-R11-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="1189" END="1265">so the whole college was swarmed with police officers
+wanting their jobs back</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030422_213527.4-E13-27" ROLE="Arg-1">
+      <extent>
+        <charseq START="1227" END="1265">police officers
+wanting their jobs back</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030422_213527.4-E9-26" ROLE="Arg-2">
+      <extent>
+        <charseq START="1192" END="1208">the whole college</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030422_213527.4-R12" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030422_213527.4-E18" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030422_213527.4-E3" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030422_213527.4-R12-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="1469" END="1526">about maybe five, six iraqi locals with
+ak-47 machine guns</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030422_213527.4-E18-36" ROLE="Arg-1">
+      <extent>
+        <charseq START="1469" END="1526">about maybe five, six iraqi locals with
+ak-47 machine guns</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030422_213527.4-E3-37" ROLE="Arg-2">
+      <extent>
+        <charseq START="1491" END="1495">iraqi</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030422_213527.4-R13" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030422_213527.4-E18" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030422_213527.4-E20" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030422_213527.4-R13-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="1469" END="1526">about maybe five, six iraqi locals with
+ak-47 machine guns</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030422_213527.4-E18-36" ROLE="Arg-1">
+      <extent>
+        <charseq START="1469" END="1526">about maybe five, six iraqi locals with
+ak-47 machine guns</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030422_213527.4-E20-38" ROLE="Arg-2">
+      <extent>
+        <charseq START="1509" END="1526">ak-47 machine guns</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030422_213527.4-R14" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="CNN_ENG_20030422_213527.4-E28" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030422_213527.4-E25" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030422_213527.4-R14-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="1712" END="1831">and rumor had it there was a bunch of kuwaitis and one
+american held in this underground prison that people forgot about</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030422_213527.4-E28-46" ROLE="Arg-1">
+      <extent>
+        <charseq START="1763" END="1774">one
+american</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030422_213527.4-E25-47" ROLE="Arg-2">
+      <extent>
+        <charseq START="1784" END="1806">this underground prison</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030422_213527.4-R15" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="CNN_ENG_20030422_213527.4-E27" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030422_213527.4-E25" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030422_213527.4-R15-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="1712" END="1831">and rumor had it there was a bunch of kuwaitis and one
+american held in this underground prison that people forgot about</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030422_213527.4-E27-45" ROLE="Arg-1">
+      <extent>
+        <charseq START="1739" END="1757">a bunch of kuwaitis</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030422_213527.4-E25-47" ROLE="Arg-2">
+      <extent>
+        <charseq START="1784" END="1806">this underground prison</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030422_213527.4-R16" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030422_213527.4-E17" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030422_213527.4-E30" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030422_213527.4-R16-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="1834" END="2029">so
+we went into this bunker hoping to find a prison and run into these
+prisoners and instead we ran into a room fulls of weapons from bullets
+to hand grenade, land mines, rocket-propelled grenades</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030422_213527.4-E17-49" ROLE="Arg-1">
+      <extent>
+        <charseq START="1837" END="1838">we</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030422_213527.4-E30-50" ROLE="Arg-2">
+      <extent>
+        <charseq START="1850" END="1860">this bunker</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030422_213527.4-R17" TYPE="PART-WHOLE" SUBTYPE="Subsidiary" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030422_213527.4-E39" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030422_213527.4-E3" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030422_213527.4-R17-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="1035" END="1046">iraqi police</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030422_213527.4-E39-62" ROLE="Arg-1">
+      <extent>
+        <charseq START="1035" END="1046">iraqi police</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030422_213527.4-E3-23" ROLE="Arg-2">
+      <extent>
+        <charseq START="1035" END="1039">iraqi</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030422_213527.4-R18" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030422_213527.4-E13" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030422_213527.4-E39" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030422_213527.4-R18-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="1227" END="1265">police officers
+wanting their jobs back</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030422_213527.4-E13-27" ROLE="Arg-1">
+      <extent>
+        <charseq START="1227" END="1265">police officers
+wanting their jobs back</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030422_213527.4-E39-63" ROLE="Arg-2">
+      <extent>
+        <charseq START="1227" END="1232">police</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030422_213527.4-R19" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030422_213527.4-E38" ROLE="Arg-2"/>
+  <relation_argument REFID="CNN_ENG_20030422_213527.4-E17" ROLE="Arg-1"/>
+  <relation_mention ID="CNN_ENG_20030422_213527.4-R19-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="1426" END="1544">we came across a
+checkpoint and there were about maybe five, six iraqi locals with
+ak-47 machine guns and checking cars</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030422_213527.4-E38-61" ROLE="Arg-2">
+      <extent>
+        <charseq START="1441" END="1452">a
+checkpoint</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030422_213527.4-E17-35" ROLE="Arg-1">
+      <extent>
+        <charseq START="1426" END="1427">we</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030422_213527.4-R20" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030422_213527.4-E38" ROLE="Arg-2"/>
+  <relation_argument REFID="CNN_ENG_20030422_213527.4-E18" ROLE="Arg-1"/>
+  <relation_mention ID="CNN_ENG_20030422_213527.4-R20-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="1426" END="1544">we came across a
+checkpoint and there were about maybe five, six iraqi locals with
+ak-47 machine guns and checking cars</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030422_213527.4-E38-61" ROLE="Arg-2">
+      <extent>
+        <charseq START="1441" END="1452">a
+checkpoint</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030422_213527.4-E18-36" ROLE="Arg-1">
+      <extent>
+        <charseq START="1469" END="1526">about maybe five, six iraqi locals with
+ak-47 machine guns</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030422_213527.4-R21" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030422_213527.4-E17" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030422_213527.4-E32" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030422_213527.4-R21-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="1834" END="2029">so
+we went into this bunker hoping to find a prison and run into these
+prisoners and instead we ran into a room fulls of weapons from bullets
+to hand grenade, land mines, rocket-propelled grenades</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030422_213527.4-E17-52" ROLE="Arg-1">
+      <extent>
+        <charseq START="1927" END="1928">we</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030422_213527.4-E32-53" ROLE="Arg-2">
+      <extent>
+        <charseq START="1939" END="2029">a room fulls of weapons from bullets
+to hand grenade, land mines, rocket-propelled grenades</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030422_213527.4-EV1" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_mention ID="CNN_ENG_20030422_213527.4-EV1-1">
+    <extent>
+      <charseq START="439" END="441">war</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="428" END="458">before the war, i was in jordan</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="439" END="441">war</charseq>
+    </anchor>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030422_213527.4-EV2" TYPE="Movement" SUBTYPE="Transport" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030422_213527.4-E46" ROLE="Artifact"/>
+  <event_argument REFID="CNN_ENG_20030422_213527.4-E3" ROLE="Destination"/>
+  <event_mention ID="CNN_ENG_20030422_213527.4-EV2-1">
+    <extent>
+      <charseq START="786" END="823">we were all desperate to get into iraq</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="635" END="890">on april 9th, about 130 journalists from around the
+world including myself and a couple of reporters, we were going to try
+to cross the border because we were all desperate to get into iraq,
+two days after the saddam statue fell and we all knew it was over</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="811" END="818">get into</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030422_213527.4-E46-13" ROLE="Artifact">
+      <extent>
+        <charseq START="786" END="787">we</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030422_213527.4-E3-14" ROLE="Destination">
+      <extent>
+        <charseq START="820" END="823">iraq</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030422_213527.4-EV3" TYPE="Movement" SUBTYPE="Transport" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030422_213527.4-E46" ROLE="Artifact"/>
+  <event_argument REFID="CNN_ENG_20030422_213527.4-E26" ROLE="Destination"/>
+  <event_argument REFID="CNN_ENG_20030422_213527.4-T4" ROLE="Time-Within"/>
+  <event_argument REFID="CNN_ENG_20030422_213527.4-T5" ROLE="Time-At-End"/>
+  <event_mention ID="CNN_ENG_20030422_213527.4-EV3-1">
+    <extent>
+      <charseq START="638" END="862">april 9th, about 130 journalists from around the
+world including myself and a couple of reporters, we were going to try
+to cross the border because we were all desperate to get into iraq,
+two days after the saddam statue fell</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="635" END="890">on april 9th, about 130 journalists from around the
+world including myself and a couple of reporters, we were going to try
+to cross the border because we were all desperate to get into iraq,
+two days after the saddam statue fell and we all knew it was over</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="761" END="765">cross</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030422_213527.4-E46-78" ROLE="Artifact">
+      <extent>
+        <charseq START="649" END="734">about 130 journalists from around the
+world including myself and a couple of reporters</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030422_213527.4-E26-12" ROLE="Destination">
+      <extent>
+        <charseq START="767" END="776">the border</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030422_213527.4-T4-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="638" END="646">april 9th</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030422_213527.4-T5-1" ROLE="Time-At-End">
+      <extent>
+        <charseq START="826" END="862">two days after the saddam statue fell</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030422_213527.4-EV4" TYPE="Movement" SUBTYPE="Transport" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030422_213527.4-E11" ROLE="Artifact"/>
+  <event_argument REFID="CNN_ENG_20030422_213527.4-E9" ROLE="Destination"/>
+  <event_mention ID="CNN_ENG_20030422_213527.4-EV4-1">
+    <extent>
+      <charseq START="1031" END="1096">156 iraqi police officers were supposed to show up to this college</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1031" END="1115">156 iraqi police officers were supposed to show up to this college to
+report for work</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1074" END="1080">show up</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030422_213527.4-E11-22" ROLE="Artifact">
+      <extent>
+        <charseq START="1031" END="1055">156 iraqi police officers</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030422_213527.4-E9-76" ROLE="Destination">
+      <extent>
+        <charseq START="1085" END="1096">this college</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030422_213527.4-EV5" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030422_213527.4-E13" ROLE="Artifact"/>
+  <event_mention ID="CNN_ENG_20030422_213527.4-EV5-1">
+    <extent>
+      <charseq START="1131" END="1145">2,000 showed up</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1118" END="1186">but instead, 2,000 showed up because they heard about
+it on the radio</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1137" END="1145">showed up</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030422_213527.4-E13-24" ROLE="Artifact">
+      <extent>
+        <charseq START="1131" END="1135">2,000</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030422_213527.4-EV6" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030422_213527.4-E38" ROLE="Destination"/>
+  <event_argument REFID="CNN_ENG_20030422_213527.4-E17" ROLE="Artifact"/>
+  <event_mention ID="CNN_ENG_20030422_213527.4-EV6-1">
+    <extent>
+      <charseq START="1426" END="1452">we came across a
+checkpoint</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1426" END="1544">we came across a
+checkpoint and there were about maybe five, six iraqi locals with
+ak-47 machine guns and checking cars</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1429" END="1439">came across</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030422_213527.4-E38-61" ROLE="Destination">
+      <extent>
+        <charseq START="1441" END="1452">a
+checkpoint</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030422_213527.4-E17-35" ROLE="Artifact">
+      <extent>
+        <charseq START="1426" END="1427">we</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030422_213527.4-EV7" TYPE="Business" SUBTYPE="End-Org" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030422_213527.4-E24" ROLE="Org"/>
+  <event_mention ID="CNN_ENG_20030422_213527.4-EV7-1">
+    <extent>
+      <charseq START="1606" END="1623">fall of the regime</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1547" END="1663">those kind of neat that the
+iraqis are taking pride in the fall of the regime and wanting to
+restore order themselves</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1606" END="1609">fall</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030422_213527.4-E24-41" ROLE="Org">
+      <extent>
+        <charseq START="1614" END="1623">the regime</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030422_213527.4-EV8" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030422_213527.4-E17" ROLE="Artifact"/>
+  <event_argument REFID="CNN_ENG_20030422_213527.4-E30" ROLE="Destination"/>
+  <event_mention ID="CNN_ENG_20030422_213527.4-EV8-1">
+    <extent>
+      <charseq START="1837" END="1860">we went into this bunker</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1834" END="2029">so
+we went into this bunker hoping to find a prison and run into these
+prisoners and instead we ran into a room fulls of weapons from bullets
+to hand grenade, land mines, rocket-propelled grenades</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1840" END="1843">went</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030422_213527.4-E17-49" ROLE="Artifact">
+      <extent>
+        <charseq START="1837" END="1838">we</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030422_213527.4-E30-50" ROLE="Destination">
+      <extent>
+        <charseq START="1850" END="1860">this bunker</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030422_213527.4-EV9" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030422_213527.4-E17" ROLE="Artifact"/>
+  <event_argument REFID="CNN_ENG_20030422_213527.4-E32" ROLE="Destination"/>
+  <event_mention ID="CNN_ENG_20030422_213527.4-EV9-1">
+    <extent>
+      <charseq START="1890" END="2029">run into these
+prisoners and instead we ran into a room fulls of weapons from bullets
+to hand grenade, land mines, rocket-propelled grenades</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1834" END="2029">so
+we went into this bunker hoping to find a prison and run into these
+prisoners and instead we ran into a room fulls of weapons from bullets
+to hand grenade, land mines, rocket-propelled grenades</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1890" END="1897">run into</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030422_213527.4-E17-52" ROLE="Artifact">
+      <extent>
+        <charseq START="1927" END="1928">we</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030422_213527.4-E32-53" ROLE="Destination">
+      <extent>
+        <charseq START="1939" END="2029">a room fulls of weapons from bullets
+to hand grenade, land mines, rocket-propelled grenades</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

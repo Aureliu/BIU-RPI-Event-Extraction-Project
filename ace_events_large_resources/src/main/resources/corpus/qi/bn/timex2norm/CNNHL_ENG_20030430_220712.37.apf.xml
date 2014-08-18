@@ -1,0 +1,777 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNNHL_ENG_20030430_220712.37.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNNHL_ENG_20030430_220712.37">
+<entity ID="CNNHL_ENG_20030430_220712.37-E1" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E1-2" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="632" END="637">people</charseq>
+    </extent>
+    <head>
+      <charseq START="632" END="637">people</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030430_220712.37-E2" TYPE="FAC" SUBTYPE="Path" CLASS="GEN">
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E2-3" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="704" END="711">the road</charseq>
+    </extent>
+    <head>
+      <charseq START="708" END="711">road</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030430_220712.37-E3" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E3-4" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="726" END="741">the scott
+family</charseq>
+    </extent>
+    <head>
+      <charseq START="736" END="741">family</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E3-7" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="821" END="822">we</charseq>
+    </extent>
+    <head>
+      <charseq START="821" END="822">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E3-8" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="835" END="837">our</charseq>
+    </extent>
+    <head>
+      <charseq START="835" END="837">our</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E3-10" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="998" END="1009">the families</charseq>
+    </extent>
+    <head>
+      <charseq START="1002" END="1009">families</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E3-11" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1296" END="1311">the scott family</charseq>
+    </extent>
+    <head>
+      <charseq START="1306" END="1311">family</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E3-12" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1314" END="1317">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1314" END="1317">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E3-15" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1571" END="1580">the scotts</charseq>
+    </extent>
+    <head>
+      <charseq START="1575" END="1580">scotts</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E3-17" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1594" END="1598">their</charseq>
+    </extent>
+    <head>
+      <charseq START="1594" END="1598">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E3-19" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1624" END="1629">the em</charseq>
+    </extent>
+    <head>
+      <charseq START="1624" END="1629">the em</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E3-20" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1719" END="1728">the family</charseq>
+    </extent>
+    <head>
+      <charseq START="1723" END="1728">family</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E3-36" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="FALSE">
+    <extent>
+      <charseq START="730" END="734">scott</charseq>
+    </extent>
+    <head>
+      <charseq START="730" END="734">scott</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E3-37" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1300" END="1304">scott</charseq>
+    </extent>
+    <head>
+      <charseq START="1300" END="1304">scott</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E3-38" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="785" END="789">their</charseq>
+    </extent>
+    <head>
+      <charseq START="785" END="789">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="scotts">
+      <charseq START="1575" END="1580">scotts</charseq>
+    </name>
+    <name NAME="scott">
+      <charseq START="730" END="734">scott</charseq>
+    </name>
+    <name NAME="scott">
+      <charseq START="1300" END="1304">scott</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030430_220712.37-E4" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E4-5" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="541" END="556">kezi in portland</charseq>
+    </extent>
+    <head>
+      <charseq START="541" END="544">kezi</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="kezi">
+      <charseq START="541" END="544">kezi</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030430_220712.37-E5" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E5-6" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="549" END="556">portland</charseq>
+    </extent>
+    <head>
+      <charseq START="549" END="556">portland</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="portland">
+      <charseq START="549" END="556">portland</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030430_220712.37-E6" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E6-9" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1031" END="1038">the coop</charseq>
+    </extent>
+    <head>
+      <charseq START="1035" END="1038">coop</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030430_220712.37-E7" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E7-13" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="1388" END="1391">baby</charseq>
+    </extent>
+    <head>
+      <charseq START="1388" END="1391">baby</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030430_220712.37-E8" TYPE="PER" SUBTYPE="Individual" CLASS="USP">
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E8-14" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1522" END="1522">i</charseq>
+    </extent>
+    <head>
+      <charseq START="1522" END="1522">i</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030430_220712.37-E9" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E9-16" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1594" END="1602">their vet</charseq>
+    </extent>
+    <head>
+      <charseq START="1600" END="1602">vet</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E9-18" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1608" END="1614">the vet</charseq>
+    </extent>
+    <head>
+      <charseq START="1612" END="1614">vet</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030430_220712.37-E10" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E10-21" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2475" END="2476">we</charseq>
+    </extent>
+    <head>
+      <charseq START="2475" END="2476">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E10-22" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2503" END="2505">our</charseq>
+    </extent>
+    <head>
+      <charseq START="2503" END="2505">our</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E10-23" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2523" END="2524">we</charseq>
+    </extent>
+    <head>
+      <charseq START="2523" END="2524">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E10-30" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2690" END="2691">we</charseq>
+    </extent>
+    <head>
+      <charseq START="2690" END="2691">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E10-34" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="2797" END="2799">cnn</charseq>
+    </extent>
+    <head>
+      <charseq START="2797" END="2799">cnn</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="cnn">
+      <charseq START="2797" END="2799">cnn</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030430_220712.37-E11" TYPE="PER" SUBTYPE="Indeterminate" CLASS="USP">
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E11-24" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2533" END="2535">you</charseq>
+    </extent>
+    <head>
+      <charseq START="2533" END="2535">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E11-31" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2699" END="2701">you</charseq>
+    </extent>
+    <head>
+      <charseq START="2699" END="2701">you</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030430_220712.37-E12" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E12-25" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2542" END="2548">the ftc</charseq>
+    </extent>
+    <head>
+      <charseq START="2546" END="2548">ftc</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="ftc">
+      <charseq START="2546" END="2548">ftc</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030430_220712.37-E13" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E13-26" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2647" END="2647">i</charseq>
+    </extent>
+    <head>
+      <charseq START="2647" END="2647">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E13-27" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="2651" END="2662">mike galanos</charseq>
+    </extent>
+    <head>
+      <charseq START="2651" END="2662">mike galanos</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="mike galanos">
+      <charseq START="2651" END="2662">mike galanos</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030430_220712.37-E15" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E15-28" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2671" END="2671">i</charseq>
+    </extent>
+    <head>
+      <charseq START="2671" END="2671">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E15-29" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="2675" END="2687">rudi bakhtiar</charseq>
+    </extent>
+    <head>
+      <charseq START="2675" END="2687">rudi bakhtiar</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="rudi bakhtiar">
+      <charseq START="2675" END="2687">rudi bakhtiar</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030430_220712.37-E17" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E17-32" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2721" END="2733">willie nelson</charseq>
+    </extent>
+    <head>
+      <charseq START="2721" END="2733">willie nelson</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E17-33" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2770" END="2772">his</charseq>
+    </extent>
+    <head>
+      <charseq START="2770" END="2772">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E17-39" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="2736" END="2753">the country legend</charseq>
+    </extent>
+    <head>
+      <charseq START="2748" END="2753">legend</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="willie nelson">
+      <charseq START="2721" END="2733">willie nelson</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030430_220712.37-E18" TYPE="ORG" SUBTYPE="Entertainment" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E18-1" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="74" END="89">the dixie chicks</charseq>
+    </extent>
+    <head>
+      <charseq START="78" END="89">dixie chicks</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E18-40" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="96" END="100">their</charseq>
+    </extent>
+    <head>
+      <charseq START="96" END="100">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E18-45" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="158" END="173">the popular band</charseq>
+    </extent>
+    <head>
+      <charseq START="170" END="173">band</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E18-55" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="391" END="408">those dixie chicks</charseq>
+    </extent>
+    <head>
+      <charseq START="397" END="408">dixie chicks</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="dixie chicks">
+      <charseq START="78" END="89">dixie chicks</charseq>
+    </name>
+    <name NAME="dixie chicks">
+      <charseq START="397" END="408">dixie chicks</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030430_220712.37-E20" TYPE="PER" SUBTYPE="Individual" CLASS="NEG">
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E20-35" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2158" END="2163">no one</charseq>
+    </extent>
+    <head>
+      <charseq START="2158" END="2163">no one</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030430_220712.37-E24" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E24-41" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="102" END="104">u.s</charseq>
+    </extent>
+    <head>
+      <charseq START="102" END="104">u.s</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="u.s">
+      <charseq START="102" END="104">u.s</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030430_220712.37-E25" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E25-43" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="130" END="155">greenville, south carolina</charseq>
+    </extent>
+    <head>
+      <charseq START="130" END="139">greenville</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="greenville">
+      <charseq START="130" END="139">greenville</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030430_220712.37-E26" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E26-44" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="142" END="155">south carolina</charseq>
+    </extent>
+    <head>
+      <charseq START="142" END="155">south carolina</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="south carolina">
+      <charseq START="142" END="155">south carolina</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030430_220712.37-E27" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E27-46" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="240" END="265">lead singer natalie maines</charseq>
+    </extent>
+    <head>
+      <charseq START="252" END="265">natalie maines</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E27-47" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="240" END="250">lead singer</charseq>
+    </extent>
+    <head>
+      <charseq START="245" END="250">singer</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E27-48" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="268" END="270">she</charseq>
+    </extent>
+    <head>
+      <charseq START="268" END="270">she</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E27-49" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="277" END="279">she</charseq>
+    </extent>
+    <head>
+      <charseq START="277" END="279">she</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E27-53" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="342" END="344">she</charseq>
+    </extent>
+    <head>
+      <charseq START="342" END="344">she</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E27-54" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="371" END="373">her</charseq>
+    </extent>
+    <head>
+      <charseq START="371" END="373">her</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="natalie maines">
+      <charseq START="252" END="265">natalie maines</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030430_220712.37-E29" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E29-50" TYPE="NOM" LDCTYPE="NOM" ROLE="GPE">
+    <extent>
+      <charseq START="308" END="339">the same state as president bush</charseq>
+    </extent>
+    <head>
+      <charseq START="317" END="321">state</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030430_220712.37-E30" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E30-51" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="326" END="339">president bush</charseq>
+    </extent>
+    <head>
+      <charseq START="336" END="339">bush</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E30-52" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="326" END="334">president</charseq>
+    </extent>
+    <head>
+      <charseq START="326" END="334">president</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="bush">
+      <charseq START="336" END="339">bush</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030430_220712.37-E32" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E32-56" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="525" END="556">andrea ash from kezi in portland</charseq>
+    </extent>
+    <head>
+      <charseq START="525" END="534">andrea ash</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="andrea ash">
+      <charseq START="525" END="534">andrea ash</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030430_220712.37-E33" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNNHL_ENG_20030430_220712.37-E33-42" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="202" END="222">country music circles</charseq>
+    </extent>
+    <head>
+      <charseq START="216" END="222">circles</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<timex2 ID="CNNHL_ENG_20030430_220712.37-T1" VAL="TDT">
+  <timex2_mention ID="CNNHL_ENG_20030430_220712.37-T1-1">
+    <extent>
+      <charseq START="611" END="613">day</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNNHL_ENG_20030430_220712.37-T2" VAL="2003-04-20">
+  <timex2_mention ID="CNNHL_ENG_20030430_220712.37-T2-1">
+    <extent>
+      <charseq START="964" END="976">easter sunday</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNNHL_ENG_20030430_220712.37-T3" VAL="P1W" ANCHOR_VAL="2003-04-30" ANCHOR_DIR="ENDING">
+  <timex2_mention ID="CNNHL_ENG_20030430_220712.37-T3-1">
+    <extent>
+      <charseq START="2102" END="2116">only a week old</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNNHL_ENG_20030430_220712.37-T4" VAL="2003-04-30T23:30:25">
+  <timex2_mention ID="CNNHL_ENG_20030430_220712.37-T4-1">
+    <extent>
+      <charseq START="46" END="64">2003-04-30 23:30:25</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNNHL_ENG_20030430_220712.37-T5" VAL="PT2M" ANCHOR_VAL="2003-04-30-T23:30:25" ANCHOR_DIR="AFTER">
+  <timex2_mention ID="CNNHL_ENG_20030430_220712.37-T5-1">
+    <extent>
+      <charseq START="2629" END="2644">just two
+minutes</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNNHL_ENG_20030430_220712.37-T6" VAL="P70Y" ANCHOR_VAL="2003-04-30" ANCHOR_DIR="ENDING">
+  <timex2_mention ID="CNNHL_ENG_20030430_220712.37-T6-1">
+    <extent>
+      <charseq START="2770" END="2786">his 70th
+birthday</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNNHL_ENG_20030430_220712.37-T7" VAL="2003-04-30TNI">
+  <timex2_mention ID="CNNHL_ENG_20030430_220712.37-T7-1">
+    <extent>
+      <charseq START="2816" END="2822">tonight</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNNHL_ENG_20030430_220712.37-T8" VAL="PT30M" ANCHOR_VAL="2003-04-30-T23:30:25" ANCHOR_DIR="AFTER">
+  <timex2_mention ID="CNNHL_ENG_20030430_220712.37-T8-1">
+    <extent>
+      <charseq START="2507" END="2520">next half hour</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNNHL_ENG_20030430_220712.37-T9" VAL="2003-05-01TNI">
+  <timex2_mention ID="CNNHL_ENG_20030430_220712.37-T9-1">
+    <extent>
+      <charseq START="112" END="125">tomorrow night</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNNHL_ENG_20030430_220712.37-R1" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030430_220712.37-E27" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030430_220712.37-E29" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030430_220712.37-R1-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="268" END="339">she said she was embarrassed to
+be from the same state as president bush</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030430_220712.37-E27-49" ROLE="Arg-1">
+      <extent>
+        <charseq START="277" END="279">she</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030430_220712.37-E29-50" ROLE="Arg-2">
+      <extent>
+        <charseq START="308" END="339">the same state as president bush</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030430_220712.37-R2" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030430_220712.37-E30" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030430_220712.37-E29" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030430_220712.37-R2-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="268" END="339">she said she was embarrassed to
+be from the same state as president bush</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030430_220712.37-E30-51" ROLE="Arg-1">
+      <extent>
+        <charseq START="326" END="339">president bush</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030430_220712.37-E29-50" ROLE="Arg-2">
+      <extent>
+        <charseq START="308" END="339">the same state as president bush</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030430_220712.37-R3" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030430_220712.37-E32" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030430_220712.37-E4" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030430_220712.37-R3-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="525" END="556">andrea ash from kezi in portland</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030430_220712.37-E32-56" ROLE="Arg-1">
+      <extent>
+        <charseq START="525" END="556">andrea ash from kezi in portland</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030430_220712.37-E4-5" ROLE="Arg-2">
+      <extent>
+        <charseq START="541" END="556">kezi in portland</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030430_220712.37-R4" TYPE="GEN-AFF" SUBTYPE="Org-Location" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030430_220712.37-E4" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030430_220712.37-E5" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030430_220712.37-R4-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="541" END="556">kezi in portland</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030430_220712.37-E4-5" ROLE="Arg-1">
+      <extent>
+        <charseq START="541" END="556">kezi in portland</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030430_220712.37-E5-6" ROLE="Arg-2">
+      <extent>
+        <charseq START="549" END="556">portland</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030430_220712.37-R5" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030430_220712.37-E18" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030430_220712.37-E25" ROLE="Arg-2"/>
+  <relation_argument REFID="CNNHL_ENG_20030430_220712.37-T9" ROLE="Time-Within"/>
+  <relation_mention ID="CNNHL_ENG_20030430_220712.37-R5-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="70" END="155">and the dixie chicks open their u.s. tour tomorrow night in
+greenville, south carolina</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030430_220712.37-E18-1" ROLE="Arg-1">
+      <extent>
+        <charseq START="74" END="89">the dixie chicks</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030430_220712.37-E25-43" ROLE="Arg-2">
+      <extent>
+        <charseq START="130" END="155">greenville, south carolina</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030430_220712.37-T9-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="112" END="125">tomorrow night</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030430_220712.37-R6" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030430_220712.37-E25" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030430_220712.37-E26" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030430_220712.37-R6-1" LEXICALCONDITION="Formulaic">
+    <extent>
+      <charseq START="130" END="155">greenville, south carolina</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030430_220712.37-E25-43" ROLE="Arg-1">
+      <extent>
+        <charseq START="130" END="155">greenville, south carolina</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030430_220712.37-E26-44" ROLE="Arg-2">
+      <extent>
+        <charseq START="142" END="155">south carolina</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+</document>
+</source_file>

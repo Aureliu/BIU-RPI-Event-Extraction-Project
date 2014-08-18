@@ -1,0 +1,968 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030327_163556.20.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030327_163556.20">
+<entity ID="CNN_ENG_20030327_163556.20-E1" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E1-2" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="641" END="646">people</charseq>
+    </extent>
+    <head>
+      <charseq START="641" END="646">people</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030327_163556.20-E2" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E2-3" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="665" END="667">cnn</charseq>
+    </extent>
+    <head>
+      <charseq START="665" END="667">cnn</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E2-54" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="272" END="274">our</charseq>
+    </extent>
+    <head>
+      <charseq START="272" END="274">our</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="cnn">
+      <charseq START="665" END="667">cnn</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030327_163556.20-E3" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E3-5" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="829" END="829">i</charseq>
+    </extent>
+    <head>
+      <charseq START="829" END="829">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E3-6" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="858" END="858">i</charseq>
+    </extent>
+    <head>
+      <charseq START="858" END="858">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E3-7" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="878" END="878">i</charseq>
+    </extent>
+    <head>
+      <charseq START="878" END="878">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E3-8" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="998" END="999">me</charseq>
+    </extent>
+    <head>
+      <charseq START="998" END="999">me</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030327_163556.20-E4" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E4-10" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1065" END="1073">americans</charseq>
+    </extent>
+    <head>
+      <charseq START="1065" END="1073">americans</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="americans">
+      <charseq START="1065" END="1073">americans</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030327_163556.20-E5" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E5-11" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1107" END="1137">the barber at hinsville georgia</charseq>
+    </extent>
+    <head>
+      <charseq START="1111" END="1116">barber</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030327_163556.20-E6" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E6-12" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="1121" END="1137">hinsville georgia</charseq>
+    </extent>
+    <head>
+      <charseq START="1121" END="1129">hinsville</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="hinsville">
+      <charseq START="1121" END="1129">hinsville</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030327_163556.20-E7" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E7-13" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="1131" END="1137">georgia</charseq>
+    </extent>
+    <head>
+      <charseq START="1131" END="1137">georgia</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="georgia">
+      <charseq START="1131" END="1137">georgia</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030327_163556.20-E8" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E8-14" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1155" END="1158">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1155" END="1158">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E8-15" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1181" END="1193">a lot of them</charseq>
+    </extent>
+    <head>
+      <charseq START="1190" END="1193">them</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E8-16" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1202" END="1205">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1202" END="1205">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E8-17" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1224" END="1228">their</charseq>
+    </extent>
+    <head>
+      <charseq START="1224" END="1228">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E8-48" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1640" END="1645">people</charseq>
+    </extent>
+    <head>
+      <charseq START="1640" END="1645">people</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E8-49" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="2382" END="2387">people</charseq>
+    </extent>
+    <head>
+      <charseq START="2382" END="2387">people</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E8-50" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1847" END="1856">the
+people</charseq>
+    </extent>
+    <head>
+      <charseq START="1851" END="1856">people</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030327_163556.20-E9" TYPE="PER" SUBTYPE="Indeterminate" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E9-18" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1236" END="1238">you</charseq>
+    </extent>
+    <head>
+      <charseq START="1236" END="1238">you</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030327_163556.20-E10" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E10-19" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1331" END="1360">farmer's market in
+los angeles</charseq>
+    </extent>
+    <head>
+      <charseq START="1340" END="1345">market</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030327_163556.20-E11" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E11-20" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1331" END="1336">farmer</charseq>
+    </extent>
+    <head>
+      <charseq START="1331" END="1336">farmer</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030327_163556.20-E12" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E12-21" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="1350" END="1360">los angeles</charseq>
+    </extent>
+    <head>
+      <charseq START="1350" END="1360">los angeles</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="los angeles">
+      <charseq START="1350" END="1360">los angeles</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030327_163556.20-E13" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E13-22" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1393" END="1393">i</charseq>
+    </extent>
+    <head>
+      <charseq START="1393" END="1393">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E13-24" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1446" END="1446">i</charseq>
+    </extent>
+    <head>
+      <charseq START="1446" END="1446">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E13-26" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1568" END="1568">i</charseq>
+    </extent>
+    <head>
+      <charseq START="1568" END="1568">i</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030327_163556.20-E14" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E14-23" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1422" END="1424">our</charseq>
+    </extent>
+    <head>
+      <charseq START="1422" END="1424">our</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030327_163556.20-E15" TYPE="ORG" SUBTYPE="Commercial" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E15-28" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1789" END="1805">some
+hotel chains</charseq>
+    </extent>
+    <head>
+      <charseq START="1800" END="1805">chains</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030327_163556.20-E16" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E16-29" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="1794" END="1798">hotel</charseq>
+    </extent>
+    <head>
+      <charseq START="1794" END="1798">hotel</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030327_163556.20-E17" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E17-1" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="72" END="167">some americans who find themselves spending hours on
+end watching television coverage of the war</charseq>
+    </extent>
+    <head>
+      <charseq START="77" END="85">americans</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E17-43" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="87" END="89">who</charseq>
+    </extent>
+    <head>
+      <charseq START="87" END="89">who</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E17-51" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="96" END="105">themselves</charseq>
+    </extent>
+    <head>
+      <charseq START="96" END="105">themselves</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030327_163556.20-E18" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E18-30" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1890" END="1901">my boyfriend</charseq>
+    </extent>
+    <head>
+      <charseq START="1893" END="1901">boyfriend</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E18-32" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1975" END="1976">he</charseq>
+    </extent>
+    <head>
+      <charseq START="1975" END="1976">he</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030327_163556.20-E19" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E19-31" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1890" END="1891">my</charseq>
+    </extent>
+    <head>
+      <charseq START="1890" END="1891">my</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030327_163556.20-E20" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E20-33" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2001" END="2012">fewer people</charseq>
+    </extent>
+    <head>
+      <charseq START="2007" END="2012">people</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E20-34" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2034" END="2037">they</charseq>
+    </extent>
+    <head>
+      <charseq START="2034" END="2037">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E20-35" TYPE="PRO" LDCTYPE="HLS">
+    <extent>
+      <charseq START="2061" END="2065">fewer</charseq>
+    </extent>
+    <head>
+      <charseq START="2061" END="2065">fewer</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E20-36" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2086" END="2089">they</charseq>
+    </extent>
+    <head>
+      <charseq START="2086" END="2089">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E20-37" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2116" END="2119">they</charseq>
+    </extent>
+    <head>
+      <charseq START="2116" END="2119">they</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030327_163556.20-E21" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E21-38" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="2355" END="2363">consumers</charseq>
+    </extent>
+    <head>
+      <charseq START="2355" END="2363">consumers</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030327_163556.20-E22" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E22-27" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="236" END="262">a loved
+one in the war zone</charseq>
+    </extent>
+    <head>
+      <charseq START="244" END="246">one</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030327_163556.20-E23" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E23-39" TYPE="PRO" LDCTYPE="PTV">
+    <extent>
+      <charseq START="1041" END="1073">more than 70 percent of americans</charseq>
+    </extent>
+    <head>
+      <charseq START="1054" END="1060">percent</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E23-42" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1079" END="1082">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1079" END="1082">they</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030327_163556.20-E24" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E24-40" TYPE="PRO" LDCTYPE="PRO" ROLE="LOC">
+    <extent>
+      <charseq START="1562" END="1565">here</charseq>
+    </extent>
+    <head>
+      <charseq START="1562" END="1565">here</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030327_163556.20-E25" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E25-41" TYPE="PRO" LDCTYPE="PTV">
+    <extent>
+      <charseq START="1833" END="1856">60 percent of the
+people</charseq>
+    </extent>
+    <head>
+      <charseq START="1836" END="1842">percent</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E25-47" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1862" END="1865">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1862" END="1865">they</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030327_163556.20-E26" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E26-45" TYPE="NOM" LDCTYPE="NOM" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="454" END="469">that other place</charseq>
+    </extent>
+    <head>
+      <charseq START="465" END="469">place</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E26-46" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="472" END="497">the one on tv all the time</charseq>
+    </extent>
+    <head>
+      <charseq START="476" END="478">one</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030327_163556.20-E27" TYPE="PER" SUBTYPE="Indeterminate" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E27-4" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="801" END="803">you</charseq>
+    </extent>
+    <head>
+      <charseq START="801" END="803">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E27-25" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1479" END="1481">you</charseq>
+    </extent>
+    <head>
+      <charseq START="1479" END="1481">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E27-52" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="227" END="229">you</charseq>
+    </extent>
+    <head>
+      <charseq START="227" END="229">you</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030327_163556.20-E28" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E28-53" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="272" END="288">our candy crowley</charseq>
+    </extent>
+    <head>
+      <charseq START="276" END="288">candy crowley</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="candy crowley">
+      <charseq START="276" END="288">candy crowley</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030327_163556.20-E30" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E30-55" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="298" END="299">us</charseq>
+    </extent>
+    <head>
+      <charseq START="298" END="299">us</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030327_163556.20-E31" TYPE="LOC" SUBTYPE="Celestial" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E31-56" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="520" END="533">another planet</charseq>
+    </extent>
+    <head>
+      <charseq START="528" END="533">planet</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030327_163556.20-E32" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E32-57" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="375" END="393">the washington
+mall</charseq>
+    </extent>
+    <head>
+      <charseq START="379" END="393">washington
+mall</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="washington mall">
+      <charseq START="379" END="393">washington
+mall</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030327_163556.20-E33" TYPE="LOC" SUBTYPE="Water-Body" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E33-58" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="435" END="451">the pacific
+ocean</charseq>
+    </extent>
+    <head>
+      <charseq START="439" END="451">pacific
+ocean</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="pacific ocean">
+      <charseq START="439" END="451">pacific
+ocean</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030327_163556.20-E34" TYPE="LOC" SUBTYPE="Region-General" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E34-9" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="584" END="707">a very nice spot by the beach where this
+is a chance for people to get away from cnn coverage,
+everything, and kind of relax</charseq>
+    </extent>
+    <head>
+      <charseq START="596" END="599">spot</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E34-44" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="614" END="618">where</charseq>
+    </extent>
+    <head>
+      <charseq START="614" END="618">where</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030327_163556.20-E36" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E36-60" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="565" END="566">we</charseq>
+    </extent>
+    <head>
+      <charseq START="565" END="566">we</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030327_163556.20-E37" TYPE="LOC" SUBTYPE="Land-Region-Natural" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030327_163556.20-E37-61" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="604" END="707">the beach where this
+is a chance for people to get away from cnn coverage,
+everything, and kind of relax</charseq>
+    </extent>
+    <head>
+      <charseq START="608" END="612">beach</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<value ID="CNN_ENG_20030327_163556.20-V1" TYPE="Numeric" SUBTYPE="Percent">
+  <value_mention ID="CNN_ENG_20030327_163556.20-V1-1">
+    <extent>
+      <charseq START="1701" END="1709">2 percent</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_ENG_20030327_163556.20-V2" TYPE="Numeric" SUBTYPE="Percent">
+  <value_mention ID="CNN_ENG_20030327_163556.20-V2-1">
+    <extent>
+      <charseq START="1051" END="1060">70 percent</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_ENG_20030327_163556.20-V3" TYPE="Numeric" SUBTYPE="Percent">
+  <value_mention ID="CNN_ENG_20030327_163556.20-V3-1">
+    <extent>
+      <charseq START="1833" END="1842">60 percent</charseq>
+    </extent>
+  </value_mention>
+</value>
+<timex2 ID="CNN_ENG_20030327_163556.20-T1" VAL="2003-03-27T16:58:58">
+  <timex2_mention ID="CNN_ENG_20030327_163556.20-T1-1">
+    <extent>
+      <charseq START="44" END="62">2003-03-27 16:58:58</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030327_163556.20-T2" VAL="PTXH" ANCHOR_VAL="XXXX-XX-XX" ANCHOR_DIR="WITHIN">
+  <timex2_mention ID="CNN_ENG_20030327_163556.20-T2-1">
+    <extent>
+      <charseq START="116" END="127">hours on
+end</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030327_163556.20-T3" VAL="2003-SP">
+  <timex2_mention ID="CNN_ENG_20030327_163556.20-T3-1">
+    <extent>
+      <charseq START="340" END="350">spring-time</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030327_163556.20-T4" VAL="XXXX-XX-XXTMO">
+  <timex2_mention ID="CNN_ENG_20030327_163556.20-T4-1">
+    <extent>
+      <charseq START="953" END="963">the morning</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030327_163556.20-T5" VAL="XXXX-WXX">
+  <timex2_mention ID="CNN_ENG_20030327_163556.20-T5-1">
+    <extent>
+      <charseq START="1663" END="1687">the first week of the
+war</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030327_163556.20-T6" VAL="XXXX-WXX">
+  <timex2_mention ID="CNN_ENG_20030327_163556.20-T6-1">
+    <extent>
+      <charseq START="1716" END="1732">the previous week</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030327_163556.20-T7" VAL="XXXX-XX-XX" SET="YES">
+  <timex2_mention ID="CNN_ENG_20030327_163556.20-T7-1">
+    <extent>
+      <charseq START="1933" END="1948">every single
+day</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030327_163556.20-T8" VAL="PRESENT_REF" ANCHOR_VAL="2003-03-27T16:58:58" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_ENG_20030327_163556.20-T8-1">
+    <extent>
+      <charseq START="775" END="777">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030327_163556.20-R1" TYPE="PER-SOC" SUBTYPE="Lasting-Personal" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="CNN_ENG_20030327_163556.20-E27" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030327_163556.20-E22" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030327_163556.20-R1-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="200" END="262">that is especially true if you have a loved
+one in the war zone</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030327_163556.20-E27-52" ROLE="Arg-1">
+      <extent>
+        <charseq START="227" END="229">you</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030327_163556.20-E22-27" ROLE="Arg-2">
+      <extent>
+        <charseq START="236" END="262">a loved
+one in the war zone</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030327_163556.20-R2" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030327_163556.20-E28" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030327_163556.20-E2" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030327_163556.20-R2-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="272" END="288">our candy crowley</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030327_163556.20-E28-53" ROLE="Arg-1">
+      <extent>
+        <charseq START="272" END="288">our candy crowley</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030327_163556.20-E2-54" ROLE="Arg-2">
+      <extent>
+        <charseq START="272" END="274">our</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030327_163556.20-R3" TYPE="PHYS" SUBTYPE="Located" TENSE="Present" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030327_163556.20-E36" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030327_163556.20-E34" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030327_163556.20-R3-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="565" END="707">we happen to be at a very nice spot by the beach where this
+is a chance for people to get away from cnn coverage,
+everything, and kind of relax</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030327_163556.20-E36-60" ROLE="Arg-1">
+      <extent>
+        <charseq START="565" END="566">we</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030327_163556.20-E34-9" ROLE="Arg-2">
+      <extent>
+        <charseq START="584" END="707">a very nice spot by the beach where this
+is a chance for people to get away from cnn coverage,
+everything, and kind of relax</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030327_163556.20-R4" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030327_163556.20-E5" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030327_163556.20-E6" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030327_163556.20-R4-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="1107" END="1137">the barber at hinsville georgia</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030327_163556.20-E5-11" ROLE="Arg-1">
+      <extent>
+        <charseq START="1107" END="1137">the barber at hinsville georgia</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030327_163556.20-E6-12" ROLE="Arg-2">
+      <extent>
+        <charseq START="1121" END="1137">hinsville georgia</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030327_163556.20-R5" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030327_163556.20-E6" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030327_163556.20-E7" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030327_163556.20-R5-1" LEXICALCONDITION="Formulaic">
+    <extent>
+      <charseq START="1121" END="1137">hinsville georgia</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030327_163556.20-E6-12" ROLE="Arg-1">
+      <extent>
+        <charseq START="1121" END="1137">hinsville georgia</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030327_163556.20-E7-13" ROLE="Arg-2">
+      <extent>
+        <charseq START="1131" END="1137">georgia</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030327_163556.20-R6" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030327_163556.20-E10" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030327_163556.20-E12" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030327_163556.20-R6-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="1331" END="1360">farmer's market in
+los angeles</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030327_163556.20-E10-19" ROLE="Arg-1">
+      <extent>
+        <charseq START="1331" END="1360">farmer's market in
+los angeles</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030327_163556.20-E12-21" ROLE="Arg-2">
+      <extent>
+        <charseq START="1350" END="1360">los angeles</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030327_163556.20-R7" TYPE="PER-SOC" SUBTYPE="Lasting-Personal" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030327_163556.20-E19" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030327_163556.20-E18" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030327_163556.20-R7-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="1890" END="1901">my boyfriend</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030327_163556.20-E19-31" ROLE="Arg-1">
+      <extent>
+        <charseq START="1890" END="1891">my</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030327_163556.20-E18-30" ROLE="Arg-2">
+      <extent>
+        <charseq START="1890" END="1901">my boyfriend</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030327_163556.20-R8" TYPE="PHYS" SUBTYPE="Near" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030327_163556.20-E34" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030327_163556.20-E37" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030327_163556.20-R8-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="584" END="707">a very nice spot by the beach where this
+is a chance for people to get away from cnn coverage,
+everything, and kind of relax</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030327_163556.20-E34-9" ROLE="Arg-1">
+      <extent>
+        <charseq START="584" END="707">a very nice spot by the beach where this
+is a chance for people to get away from cnn coverage,
+everything, and kind of relax</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030327_163556.20-E37-61" ROLE="Arg-2">
+      <extent>
+        <charseq START="604" END="707">the beach where this
+is a chance for people to get away from cnn coverage,
+everything, and kind of relax</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030327_163556.20-EV1" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Present">
+  <event_mention ID="CNN_ENG_20030327_163556.20-EV1-1">
+    <extent>
+      <charseq START="165" END="167">war</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="68" END="197">for some americans who find themselves spending hours on
+end watching television coverage of the war, it can be hard
+to break away</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="165" END="167">war</charseq>
+    </anchor>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030327_163556.20-EV1-2">
+    <extent>
+      <charseq START="255" END="257">war</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="200" END="262">that is especially true if you have a loved
+one in the war zone</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="255" END="257">war</charseq>
+    </anchor>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030327_163556.20-EV1-3">
+    <extent>
+      <charseq START="1102" END="1104">war</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1041" END="1104">more than 70 percent of americans say they are sad about
+the war</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1102" END="1104">war</charseq>
+    </anchor>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030327_163556.20-EV1-4">
+    <extent>
+      <charseq START="1775" END="1777">war</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1735" END="1830">air
+travel has fallen 10 mers since the war began and some
+hotel chains say cancellations are up</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1775" END="1777">war</charseq>
+    </anchor>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030327_163556.20-EV1-5">
+    <extent>
+      <charseq START="1883" END="1885">war</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1833" END="1885">60 percent of the
+people say they're watching the war</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1883" END="1885">war</charseq>
+    </anchor>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030327_163556.20-EV1-6">
+    <extent>
+      <charseq START="2142" END="2144">war</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2055" END="2192">maybe fewer are flying because they worry about terrorism
+or they worry about what the war will do to the economy or
+maybe it's everything</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2142" END="2144">war</charseq>
+    </anchor>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030327_163556.20-EV2" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Future">
+  <event_argument REFID="CNN_ENG_20030327_163556.20-E24" ROLE="Place"/>
+  <event_mention ID="CNN_ENG_20030327_163556.20-EV2-1">
+    <extent>
+      <charseq START="1539" END="1565">terrorism that happens here</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1516" END="1623">if there's any kind of terrorism that happens here,
+i think that would definitely put a damper on everything</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1539" END="1547">terrorism</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030327_163556.20-E24-40" ROLE="Place">
+      <extent>
+        <charseq START="1562" END="1565">here</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030327_163556.20-EV2-2">
+    <extent>
+      <charseq START="2103" END="2111">terrorism</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2055" END="2192">maybe fewer are flying because they worry about terrorism
+or they worry about what the war will do to the economy or
+maybe it's everything</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2103" END="2111">terrorism</charseq>
+    </anchor>
+  </event_mention>
+</event>
+</document>
+</source_file>

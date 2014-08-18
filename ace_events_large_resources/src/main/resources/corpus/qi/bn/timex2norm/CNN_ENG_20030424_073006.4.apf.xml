@@ -1,0 +1,280 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030424_073006.4.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030424_073006.4">
+<entity ID="CNN_ENG_20030424_073006.4-E1" TYPE="VEH" SUBTYPE="Water" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030424_073006.4-E1-1" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="67" END="79">a cruise ship</charseq>
+    </extent>
+    <head>
+      <charseq START="76" END="79">ship</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030424_073006.4-E1-7" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="214" END="230">legend of the sea</charseq>
+    </extent>
+    <head>
+      <charseq START="214" END="230">legend of the sea</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030424_073006.4-E1-8" TYPE="NOM" LDCTYPE="BAR" LDCATR="FALSE">
+    <extent>
+      <charseq START="186" END="212">royal caribbean
+cruise ship</charseq>
+    </extent>
+    <head>
+      <charseq START="209" END="212">ship</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030424_073006.4-E1-11" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="324" END="331">the ship</charseq>
+    </extent>
+    <head>
+      <charseq START="328" END="331">ship</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030424_073006.4-E1-14" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="383" END="390">the ship</charseq>
+    </extent>
+    <head>
+      <charseq START="387" END="390">ship</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="legend of the sea">
+      <charseq START="214" END="230">legend of the sea</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030424_073006.4-E2" TYPE="LOC" SUBTYPE="Region-General" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030424_073006.4-E2-2" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="103" END="118">the hawaii coast</charseq>
+    </extent>
+    <head>
+      <charseq START="114" END="118">coast</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030424_073006.4-E3" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030424_073006.4-E3-3" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="107" END="112">hawaii</charseq>
+    </extent>
+    <head>
+      <charseq START="107" END="112">hawaii</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="hawaii">
+      <charseq START="107" END="112">hawaii</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030424_073006.4-E4" TYPE="PER" SUBTYPE="Indeterminate" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030424_073006.4-E4-4" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="148" END="156">terrorist</charseq>
+    </extent>
+    <head>
+      <charseq START="148" END="156">terrorist</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030424_073006.4-E5" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030424_073006.4-E5-5" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="244" END="251">honolulu</charseq>
+    </extent>
+    <head>
+      <charseq START="244" END="251">honolulu</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="honolulu">
+      <charseq START="244" END="251">honolulu</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030424_073006.4-E7" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030424_073006.4-E7-9" TYPE="NAM" LDCTYPE="NAMPRE">
+    <extent>
+      <charseq START="186" END="200">royal caribbean</charseq>
+    </extent>
+    <head>
+      <charseq START="186" END="200">royal caribbean</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="royal caribbean">
+      <charseq START="186" END="200">royal caribbean</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030424_073006.4-E8" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030424_073006.4-E8-10" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="299" END="308">passengers</charseq>
+    </extent>
+    <head>
+      <charseq START="299" END="308">passengers</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030424_073006.4-E9" TYPE="FAC" SUBTYPE="Subarea-Facility" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030424_073006.4-E9-12" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="324" END="346">the ship's dining
+rooms</charseq>
+    </extent>
+    <head>
+      <charseq START="342" END="346">rooms</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030424_073006.4-E10" TYPE="WEA" SUBTYPE="Exploding" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030424_073006.4-E10-13" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="354" END="357">bomb</charseq>
+    </extent>
+    <head>
+      <charseq START="354" END="357">bomb</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<timex2 ID="CNN_ENG_20030424_073006.4-T1" VAL="2003-04-24T09:37:31">
+  <timex2_mention ID="CNN_ENG_20030424_073006.4-T1-1">
+    <extent>
+      <charseq START="43" END="61">2003-04-24 09:37:31</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030424_073006.4-T2" VAL="2003-04-23">
+  <timex2_mention ID="CNN_ENG_20030424_073006.4-T2-1">
+    <extent>
+      <charseq START="288" END="296">yesterday</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030424_073006.4-R1" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030424_073006.4-E2" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030424_073006.4-E3" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030424_073006.4-R1-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="103" END="118">the hawaii coast</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030424_073006.4-E2-2" ROLE="Arg-1">
+      <extent>
+        <charseq START="103" END="118">the hawaii coast</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030424_073006.4-E3-3" ROLE="Arg-2">
+      <extent>
+        <charseq START="107" END="112">hawaii</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030424_073006.4-R2" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030424_073006.4-E7" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030424_073006.4-E1" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030424_073006.4-R2-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="186" END="212">royal caribbean
+cruise ship</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030424_073006.4-E7-9" ROLE="Arg-1">
+      <extent>
+        <charseq START="186" END="200">royal caribbean</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030424_073006.4-E1-8" ROLE="Arg-2">
+      <extent>
+        <charseq START="186" END="212">royal caribbean
+cruise ship</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030424_073006.4-R3" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030424_073006.4-E9" ROLE="Arg-2"/>
+  <relation_argument REFID="CNN_ENG_20030424_073006.4-E8" ROLE="Arg-1"/>
+  <relation_mention ID="CNN_ENG_20030424_073006.4-R3-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="299" END="346">passengers were taken to the ship's dining
+rooms</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030424_073006.4-E9-12" ROLE="Arg-2">
+      <extent>
+        <charseq START="324" END="346">the ship's dining
+rooms</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030424_073006.4-E8-10" ROLE="Arg-1">
+      <extent>
+        <charseq START="299" END="308">passengers</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030424_073006.4-EV1" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030424_073006.4-E4" ROLE="Attacker"/>
+  <event_argument REFID="CNN_ENG_20030424_073006.4-E1" ROLE="Target"/>
+  <event_mention ID="CNN_ENG_20030424_073006.4-EV1-1">
+    <extent>
+      <charseq START="67" END="163">a cruise ship is being searched off the hawaii coast after two notes
+threatening terrorist attack</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="67" END="183">a cruise ship is being searched off the hawaii coast after two notes
+threatening terrorist attack were found on board</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="158" END="163">attack</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030424_073006.4-E4-4" ROLE="Attacker">
+      <extent>
+        <charseq START="148" END="156">terrorist</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030424_073006.4-E1-1" ROLE="Target">
+      <extent>
+        <charseq START="67" END="79">a cruise ship</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030424_073006.4-EV2" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030424_073006.4-E8" ROLE="Artifact"/>
+  <event_argument REFID="CNN_ENG_20030424_073006.4-E9" ROLE="Destination"/>
+  <event_mention ID="CNN_ENG_20030424_073006.4-EV2-1">
+    <extent>
+      <charseq START="299" END="346">passengers were taken to the ship's dining
+rooms</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="299" END="390">passengers were taken to the ship's dining
+rooms while bomb sniffing dogs went over the ship</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="315" END="319">taken</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030424_073006.4-E8-10" ROLE="Artifact">
+      <extent>
+        <charseq START="299" END="308">passengers</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030424_073006.4-E9-12" ROLE="Destination">
+      <extent>
+        <charseq START="324" END="346">the ship's dining
+rooms</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

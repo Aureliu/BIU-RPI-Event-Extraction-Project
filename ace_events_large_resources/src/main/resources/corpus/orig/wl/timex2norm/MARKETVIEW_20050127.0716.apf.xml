@@ -1,0 +1,562 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="MARKETVIEW_20050127.0716.sgm" SOURCE="weblog" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="MARKETVIEW_20050127.0716">
+<entity ID="MARKETVIEW_20050127.0716-E1" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="MARKETVIEW_20050127.0716-E1-1" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="593" END="621">rich private sector employees</charseq>
+    </extent>
+    <head>
+      <charseq START="613" END="621">employees</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050127.0716-E2" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="MARKETVIEW_20050127.0716-E2-2" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="627" END="641">the labor force</charseq>
+    </extent>
+    <head>
+      <charseq START="637" END="641">force</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050127.0716-E3" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="MARKETVIEW_20050127.0716-E3-9" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE">
+    <extent>
+      <charseq START="1081" END="1085">Japan</charseq>
+    </extent>
+    <head>
+      <charseq START="1081" END="1085">Japan</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Japan">
+      <charseq START="1081" END="1085">Japan</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKETVIEW_20050127.0716-E4" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="MARKETVIEW_20050127.0716-E4-10" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="1102" END="1107">the US</charseq>
+    </extent>
+    <head>
+      <charseq START="1106" END="1107">US</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="US">
+      <charseq START="1106" END="1107">US</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKETVIEW_20050127.0716-E5" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="MARKETVIEW_20050127.0716-E5-11" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1819" END="1840">the Shanghai Composite</charseq>
+    </extent>
+    <head>
+      <charseq START="1823" END="1840">Shanghai Composite</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Shanghai Composite">
+      <charseq START="1823" END="1840">Shanghai Composite</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKETVIEW_20050127.0716-E6" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="MARKETVIEW_20050127.0716-E6-13" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1259" END="1259">I</charseq>
+    </extent>
+    <head>
+      <charseq START="1259" END="1259">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050127.0716-E6-39" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1229" END="1234">Tanger</charseq>
+    </extent>
+    <head>
+      <charseq START="1229" END="1234">Tanger</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Tanger">
+      <charseq START="1229" END="1234">Tanger</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKETVIEW_20050127.0716-E7" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="MARKETVIEW_20050127.0716-E7-17" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="1432" END="1451">minority shareholder</charseq>
+    </extent>
+    <head>
+      <charseq START="1441" END="1451">shareholder</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050127.0716-E8" TYPE="ORG" SUBTYPE="Commercial" CLASS="USP">
+  <entity_mention ID="MARKETVIEW_20050127.0716-E8-18" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1571" END="1579">companies</charseq>
+    </extent>
+    <head>
+      <charseq START="1571" END="1579">companies</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050127.0716-E9" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="MARKETVIEW_20050127.0716-E9-3" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="675" END="678">they</charseq>
+    </extent>
+    <head>
+      <charseq START="675" END="678">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050127.0716-E9-4" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="780" END="783">they</charseq>
+    </extent>
+    <head>
+      <charseq START="780" END="783">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050127.0716-E9-5" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="936" END="940">China</charseq>
+    </extent>
+    <head>
+      <charseq START="936" END="940">China</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050127.0716-E9-6" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="993" END="996">they</charseq>
+    </extent>
+    <head>
+      <charseq START="993" END="996">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050127.0716-E9-7" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="1024" END="1028">their</charseq>
+    </extent>
+    <head>
+      <charseq START="1024" END="1028">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050127.0716-E9-8" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="1066" END="1069">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1066" END="1069">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050127.0716-E9-12" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="1161" END="1165">their</charseq>
+    </extent>
+    <head>
+      <charseq START="1161" END="1165">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050127.0716-E9-16" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="1299" END="1303">their</charseq>
+    </extent>
+    <head>
+      <charseq START="1299" END="1303">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050127.0716-E9-19" TYPE="NOM" LDCTYPE="NOMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="517" END="526">Government</charseq>
+    </extent>
+    <head>
+      <charseq START="517" END="526">Government</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050127.0716-E9-26" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="268" END="269">it</charseq>
+    </extent>
+    <head>
+      <charseq START="268" END="269">it</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050127.0716-E9-30" TYPE="NOM" LDCTYPE="NOM" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="942" END="986">a genuine, rather than
+theoretical, contender</charseq>
+    </extent>
+    <head>
+      <charseq START="978" END="986">contender</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050127.0716-E9-34" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="237" END="241">China</charseq>
+    </extent>
+    <head>
+      <charseq START="237" END="241">China</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050127.0716-E9-35" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="397" END="401">China</charseq>
+    </extent>
+    <head>
+      <charseq START="397" END="401">China</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050127.0716-E9-36" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="404" END="408">Their</charseq>
+    </extent>
+    <head>
+      <charseq START="404" END="408">Their</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="China">
+      <charseq START="936" END="940">China</charseq>
+    </name>
+    <name NAME="China">
+      <charseq START="237" END="241">China</charseq>
+    </name>
+    <name NAME="China">
+      <charseq START="397" END="401">China</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKETVIEW_20050127.0716-E10" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="MARKETVIEW_20050127.0716-E10-20" TYPE="NAM" LDCTYPE="NAMPRE">
+    <extent>
+      <charseq START="1685" END="1693">Economist</charseq>
+    </extent>
+    <head>
+      <charseq START="1685" END="1693">Economist</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Economist">
+      <charseq START="1685" END="1693">Economist</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKETVIEW_20050127.0716-E11" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="MARKETVIEW_20050127.0716-E11-22" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1390" END="1391">it</charseq>
+    </extent>
+    <head>
+      <charseq START="1390" END="1391">it</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050127.0716-E11-23" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE" METONYMY_MENTION="TRUE">
+    <extent>
+      <charseq START="1394" END="1414">a
+structural nuthouse</charseq>
+    </extent>
+    <head>
+      <charseq START="1407" END="1414">nuthouse</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050127.0716-E11-24" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1299" END="1316">their stock market</charseq>
+    </extent>
+    <head>
+      <charseq START="1311" END="1316">market</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050127.0716-E11-25" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1328" END="1330">its</charseq>
+    </extent>
+    <head>
+      <charseq START="1328" END="1330">its</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050127.0716-E13" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="MARKETVIEW_20050127.0716-E13-27" TYPE="NOM" LDCTYPE="BAR" LDCATR="FALSE">
+    <extent>
+      <charseq START="755" END="763">Consumers</charseq>
+    </extent>
+    <head>
+      <charseq START="755" END="763">Consumers</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050127.0716-E13-28" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="737" END="744">consumer</charseq>
+    </extent>
+    <head>
+      <charseq START="737" END="744">consumer</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050127.0716-E14" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="MARKETVIEW_20050127.0716-E14-29" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="1661" END="1671">shareholder</charseq>
+    </extent>
+    <head>
+      <charseq START="1661" END="1671">shareholder</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050127.0716-E16" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="MARKETVIEW_20050127.0716-E16-14" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1270" END="1272">you</charseq>
+    </extent>
+    <head>
+      <charseq START="1270" END="1272">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050127.0716-E16-15" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1120" END="1120">I</charseq>
+    </extent>
+    <head>
+      <charseq START="1120" END="1120">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050127.0716-E16-21" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2054" END="2056">You</charseq>
+    </extent>
+    <head>
+      <charseq START="2054" END="2056">You</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050127.0716-E16-31" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="181" END="182">my</charseq>
+    </extent>
+    <head>
+      <charseq START="181" END="182">my</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050127.0716-E16-32" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="110" END="114">Byrne</charseq>
+    </extent>
+    <head>
+      <charseq START="110" END="114">Byrne</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Byrne">
+      <charseq START="110" END="114">Byrne</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKETVIEW_20050127.0716-E19" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="MARKETVIEW_20050127.0716-E19-37" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="463" END="494">Nearly Starving
+Peasant Laborers</charseq>
+    </extent>
+    <head>
+      <charseq START="487" END="494">Laborers</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050127.0716-E20" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="MARKETVIEW_20050127.0716-E20-38" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="499" END="536">Absurdly Well-Off Government Employees</charseq>
+    </extent>
+    <head>
+      <charseq START="528" END="536">Employees</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050127.0716-E21" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="MARKETVIEW_20050127.0716-E21-33" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="797" END="815">a real middle class</charseq>
+    </extent>
+    <head>
+      <charseq START="811" END="815">class</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<value ID="MARKETVIEW_20050127.0716-V1" TYPE="Contact-Info" SUBTYPE="URL">
+  <value_mention ID="MARKETVIEW_20050127.0716-V1-1">
+    <extent>
+      <charseq START="1750" END="1807">http://www.economist.com/displaystory.cfm?story_id=1447832</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="MARKETVIEW_20050127.0716-V2" TYPE="Numeric" SUBTYPE="Percent">
+  <value_mention ID="MARKETVIEW_20050127.0716-V2-1">
+    <extent>
+      <charseq START="1968" END="1969">4%</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="MARKETVIEW_20050127.0716-V3" TYPE="Contact-Info" SUBTYPE="URL">
+  <value_mention ID="MARKETVIEW_20050127.0716-V3-1">
+    <extent>
+      <charseq START="2005" END="2050">http://finance.yahoo.com/q/bc?s=^SSEC&amp;t=5y</charseq>
+    </extent>
+  </value_mention>
+</value>
+<timex2 ID="MARKETVIEW_20050127.0716-T1" VAL="PRESENT_REF" ANCHOR_VAL="2005-01-27T07:16:00" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="MARKETVIEW_20050127.0716-T1-1">
+    <extent>
+      <charseq START="543" END="545">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKETVIEW_20050127.0716-T2" VAL="2005-01-27T07:16:00">
+  <timex2_mention ID="MARKETVIEW_20050127.0716-T2-1">
+    <extent>
+      <charseq START="40" END="58">2005-01-27T07:16:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKETVIEW_20050127.0716-T3" VAL="2005-01-27T07:16:00">
+  <timex2_mention ID="MARKETVIEW_20050127.0716-T3-1">
+    <extent>
+      <charseq START="118" END="136">2005-01-27T07:16:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKETVIEW_20050127.0716-T4" VAL="P150Y" ANCHOR_VAL="2005-01-27" ANCHOR_DIR="ENDING">
+  <timex2_mention ID="MARKETVIEW_20050127.0716-T4-1">
+    <extent>
+      <charseq START="306" END="320">about 150 years</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKETVIEW_20050127.0716-T5" VAL="PXY" ANCHOR_VAL="2005-01-27" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="MARKETVIEW_20050127.0716-T5-1">
+    <extent>
+      <charseq START="700" END="704">years</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKETVIEW_20050127.0716-T6" VAL="P20Y" ANCHOR_VAL="1985" ANCHOR_DIR="STARTING">
+  <timex2_mention ID="MARKETVIEW_20050127.0716-T6-1">
+    <extent>
+      <charseq START="836" END="856">the last twenty years</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKETVIEW_20050127.0716-T7" VAL="2002-H1">
+  <timex2_mention ID="MARKETVIEW_20050127.0716-T7-1">
+    <extent>
+      <charseq START="1144" END="1153">early 2002</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKETVIEW_20050127.0716-T8" VAL="2005-01-27T10:10:00">
+  <timex2_mention ID="MARKETVIEW_20050127.0716-T8-1">
+    <extent>
+      <charseq START="1248" END="1256">T10:10:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKETVIEW_20050127.0716-T9" VAL="2004">
+  <timex2_mention ID="MARKETVIEW_20050127.0716-T9-1">
+    <extent>
+      <charseq START="1343" END="1351">last year</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKETVIEW_20050127.0716-T10" VAL="1997-07">
+  <timex2_mention ID="MARKETVIEW_20050127.0716-T10-1">
+    <extent>
+      <charseq START="1845" END="1854">July, 1997</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKETVIEW_20050127.0716-T11" VAL="2005-01-27">
+  <timex2_mention ID="MARKETVIEW_20050127.0716-T11-1">
+    <extent>
+      <charseq START="1886" END="1901">January 27, 2005</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKETVIEW_20050127.0716-T12" VAL="P5Y" ANCHOR_VAL="1997" ANCHOR_DIR="STARTING">
+  <timex2_mention ID="MARKETVIEW_20050127.0716-T12-1">
+    <extent>
+      <charseq START="1976" END="1981">5 year</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="MARKETVIEW_20050127.0716-R1" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="MARKETVIEW_20050127.0716-E20" ROLE="Arg-1"/>
+  <relation_argument REFID="MARKETVIEW_20050127.0716-E9" ROLE="Arg-2"/>
+  <relation_mention ID="MARKETVIEW_20050127.0716-R1-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="499" END="536">Absurdly Well-Off Government Employees</charseq>
+    </extent>
+    <relation_mention_argument REFID="MARKETVIEW_20050127.0716-E20-38" ROLE="Arg-1">
+      <extent>
+        <charseq START="499" END="536">Absurdly Well-Off Government Employees</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="MARKETVIEW_20050127.0716-E9-19" ROLE="Arg-2">
+      <extent>
+        <charseq START="517" END="526">Government</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="MARKETVIEW_20050127.0716-R2" TYPE="GEN-AFF" SUBTYPE="Org-Location" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="MARKETVIEW_20050127.0716-E11" ROLE="Arg-1"/>
+  <relation_argument REFID="MARKETVIEW_20050127.0716-E9" ROLE="Arg-2"/>
+  <relation_mention ID="MARKETVIEW_20050127.0716-R2-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="1299" END="1316">their stock market</charseq>
+    </extent>
+    <relation_mention_argument REFID="MARKETVIEW_20050127.0716-E11-24" ROLE="Arg-1">
+      <extent>
+        <charseq START="1299" END="1316">their stock market</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="MARKETVIEW_20050127.0716-E9-16" ROLE="Arg-2">
+      <extent>
+        <charseq START="1299" END="1303">their</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="MARKETVIEW_20050127.0716-R3" TYPE="ORG-AFF" SUBTYPE="Investor-Shareholder" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="MARKETVIEW_20050127.0716-E14" ROLE="Arg-1"/>
+  <relation_argument REFID="MARKETVIEW_20050127.0716-E8" ROLE="Arg-2"/>
+  <relation_mention ID="MARKETVIEW_20050127.0716-R3-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="1417" END="1677">Unfortunately, minority shareholder rights are
+virtually non-existent, and excluding the dodgy financial statements
+listed on the exchange, lots of times companies are more interested in
+generating cash from an IPO then actually bothering with shareholder
+value</charseq>
+    </extent>
+    <relation_mention_argument REFID="MARKETVIEW_20050127.0716-E14-29" ROLE="Arg-1">
+      <extent>
+        <charseq START="1661" END="1671">shareholder</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="MARKETVIEW_20050127.0716-E8-18" ROLE="Arg-2">
+      <extent>
+        <charseq START="1571" END="1579">companies</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+</document>
+</source_file>

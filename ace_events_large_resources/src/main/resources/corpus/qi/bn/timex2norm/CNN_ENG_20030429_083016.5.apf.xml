@@ -1,0 +1,211 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030429_083016.5.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030429_083016.5">
+<entity ID="CNN_ENG_20030429_083016.5-E1" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030429_083016.5-E1-13" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="301" END="309">24-member</charseq>
+    </extent>
+    <head>
+      <charseq START="304" END="309">member</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030429_083016.5-E2" TYPE="GPE" SUBTYPE="Special" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030429_083016.5-E2-1" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="71" END="81">palestinian</charseq>
+    </extent>
+    <head>
+      <charseq START="71" END="81">palestinian</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030429_083016.5-E2-7" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="247" END="257">palestinian</charseq>
+    </extent>
+    <head>
+      <charseq START="247" END="257">palestinian</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="palestinian">
+      <charseq START="71" END="81">palestinian</charseq>
+    </name>
+    <name NAME="palestinian">
+      <charseq START="247" END="257">palestinian</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030429_083016.5-E3" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030429_083016.5-E3-2" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="146" END="158">yasser arafat</charseq>
+    </extent>
+    <head>
+      <charseq START="146" END="158">yasser arafat</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030429_083016.5-E3-4" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="209" END="210">he</charseq>
+    </extent>
+    <head>
+      <charseq START="209" END="210">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="yasser arafat">
+      <charseq START="146" END="158">yasser arafat</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030429_083016.5-E4" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030429_083016.5-E4-3" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="167" END="175">abu mazen</charseq>
+    </extent>
+    <head>
+      <charseq START="167" END="175">abu mazen</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030429_083016.5-E4-8" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="324" END="328">mazen</charseq>
+    </extent>
+    <head>
+      <charseq START="324" END="328">mazen</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030429_083016.5-E4-12" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="180" END="193">prime minister</charseq>
+    </extent>
+    <head>
+      <charseq START="186" END="193">minister</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="abu mazen">
+      <charseq START="167" END="175">abu mazen</charseq>
+    </name>
+    <name NAME="mazen">
+      <charseq START="324" END="328">mazen</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030429_083016.5-E5" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030429_083016.5-E5-5" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE">
+    <extent>
+      <charseq START="235" END="240">israel</charseq>
+    </extent>
+    <head>
+      <charseq START="235" END="240">israel</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="israel">
+      <charseq START="235" END="240">israel</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030429_083016.5-E6" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030429_083016.5-E6-6" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="247" END="265">palestinian leaders</charseq>
+    </extent>
+    <head>
+      <charseq START="259" END="265">leaders</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030429_083016.5-E8" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030429_083016.5-E8-9" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="301" END="317">24-member cabinet</charseq>
+    </extent>
+    <head>
+      <charseq START="311" END="317">cabinet</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030429_083016.5-E8-10" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="319" END="322">that</charseq>
+    </extent>
+    <head>
+      <charseq START="319" END="322">that</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030429_083016.5-E9" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030429_083016.5-E9-11" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="345" END="357">kelly wallace</charseq>
+    </extent>
+    <head>
+      <charseq START="345" END="357">kelly wallace</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="kelly wallace">
+      <charseq START="345" END="357">kelly wallace</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<timex2 ID="CNN_ENG_20030429_083016.5-T1" VAL="2003-04-29T10:38:42">
+  <timex2_mention ID="CNN_ENG_20030429_083016.5-T1-1">
+    <extent>
+      <charseq START="243" END="245">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030429_083016.5-T2" VAL="2003-04-29T10:38:42">
+  <timex2_mention ID="CNN_ENG_20030429_083016.5-T2-1">
+    <extent>
+      <charseq START="43" END="61">2003-04-29 10:38:42</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030429_083016.5-R1" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030429_083016.5-E6" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030429_083016.5-E2" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030429_083016.5-R1-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="247" END="265">palestinian leaders</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030429_083016.5-E6-6" ROLE="Arg-1">
+      <extent>
+        <charseq START="247" END="265">palestinian leaders</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030429_083016.5-E2-7" ROLE="Arg-2">
+      <extent>
+        <charseq START="247" END="257">palestinian</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030429_083016.5-EV1" TYPE="Personnel" SUBTYPE="End-Position" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Future">
+  <event_argument REFID="CNN_ENG_20030429_083016.5-E8" ROLE="Person"/>
+  <event_mention ID="CNN_ENG_20030429_083016.5-EV1-1">
+    <extent>
+      <charseq START="291" END="317">september 24-member cabinet</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="243" END="342">now palestinian leaders must
+vote on whether to september 24-member cabinet that mazen is
+presenting</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="291" END="299">september</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030429_083016.5-E8-9" ROLE="Person">
+      <extent>
+        <charseq START="301" END="317">24-member cabinet</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

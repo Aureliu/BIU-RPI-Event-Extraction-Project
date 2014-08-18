@@ -1,0 +1,1285 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="AFP_ENG_20030311.0491.sgm" SOURCE="newswire" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="AFP_ENG_20030311.0491">
+<entity ID="AFP_ENG_20030311.0491-E1" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="AFP_ENG_20030311.0491-E1-50" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="680" END="686">British</charseq>
+    </extent>
+    <head>
+      <charseq START="680" END="686">British</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="British">
+      <charseq START="680" END="686">British</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AFP_ENG_20030311.0491-E2" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="AFP_ENG_20030311.0491-E2-2" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="692" END="699">Canadian</charseq>
+    </extent>
+    <head>
+      <charseq START="692" END="699">Canadian</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Canadian">
+      <charseq START="692" END="699">Canadian</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AFP_ENG_20030311.0491-E3" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="AFP_ENG_20030311.0491-E3-4" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="752" END="757">Buyers</charseq>
+    </extent>
+    <head>
+      <charseq START="752" END="757">Buyers</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AFP_ENG_20030311.0491-E4" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="AFP_ENG_20030311.0491-E4-5" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="763" END="769">sellers</charseq>
+    </extent>
+    <head>
+      <charseq START="763" END="769">sellers</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AFP_ENG_20030311.0491-E5" TYPE="ORG" SUBTYPE="Government" CLASS="GEN">
+  <entity_mention ID="AFP_ENG_20030311.0491-E5-6" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="827" END="840">foreign courts</charseq>
+    </extent>
+    <head>
+      <charseq START="835" END="840">courts</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AFP_ENG_20030311.0491-E6" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="AFP_ENG_20030311.0491-E6-7" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="866" END="954">buyers in auctions outside the United States
+between January 1, 1993 and February 7, 2000</charseq>
+    </extent>
+    <head>
+      <charseq START="866" END="871">buyers</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AFP_ENG_20030311.0491-E7" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="AFP_ENG_20030311.0491-E7-9" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="961" END="1014">sellers between
+September 1, 1995 and February 7, 2000</charseq>
+    </extent>
+    <head>
+      <charseq START="961" END="967">sellers</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AFP_ENG_20030311.0491-E8" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="AFP_ENG_20030311.0491-E8-8" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="893" END="909">the United States</charseq>
+    </extent>
+    <head>
+      <charseq START="897" END="909">United States</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030311.0491-E8-10" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1038" END="1039">US</charseq>
+    </extent>
+    <head>
+      <charseq START="1038" END="1039">US</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030311.0491-E8-23" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="1547" END="1563">the United States</charseq>
+    </extent>
+    <head>
+      <charseq START="1551" END="1563">United States</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030311.0491-E8-42" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="452" END="468">the
+United States</charseq>
+    </extent>
+    <head>
+      <charseq START="456" END="468">United States</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="United States">
+      <charseq START="897" END="909">United States</charseq>
+    </name>
+    <name NAME="US">
+      <charseq START="1038" END="1039">US</charseq>
+    </name>
+    <name NAME="United States">
+      <charseq START="1551" END="1563">United States</charseq>
+    </name>
+    <name NAME="United States">
+      <charseq START="456" END="468">United States</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AFP_ENG_20030311.0491-E9" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="AFP_ENG_20030311.0491-E9-11" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1165" END="1180">a Manhattan jury</charseq>
+    </extent>
+    <head>
+      <charseq START="1177" END="1180">jury</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AFP_ENG_20030311.0491-E10" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="AFP_ENG_20030311.0491-E10-12" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="1167" END="1175">Manhattan</charseq>
+    </extent>
+    <head>
+      <charseq START="1167" END="1175">Manhattan</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Manhattan">
+      <charseq START="1167" END="1175">Manhattan</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AFP_ENG_20030311.0491-E11" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="AFP_ENG_20030311.0491-E11-13" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1192" END="1252">Sotheby's main
+shareholder and former chairman Alfred Taubman</charseq>
+    </extent>
+    <head>
+      <charseq START="1239" END="1252">Alfred Taubman</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030311.0491-E11-14" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="FALSE">
+    <extent>
+      <charseq START="1192" END="1237">Sotheby's main
+shareholder and former chairman</charseq>
+    </extent>
+    <head>
+      <charseq START="1207" END="1217">shareholder</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030311.0491-E11-15" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1192" END="1237">Sotheby's main
+shareholder and former chairman</charseq>
+    </extent>
+    <head>
+      <charseq START="1230" END="1237">chairman</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030311.0491-E11-17" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1333" END="1347">the billionaire</charseq>
+    </extent>
+    <head>
+      <charseq START="1337" END="1347">billionaire</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Alfred Taubman">
+      <charseq START="1239" END="1252">Alfred Taubman</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AFP_ENG_20030311.0491-E14" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="GEN">
+  <entity_mention ID="AFP_ENG_20030311.0491-E14-18" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1378" END="1383">prison</charseq>
+    </extent>
+    <head>
+      <charseq START="1378" END="1383">prison</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AFP_ENG_20030311.0491-E15" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="AFP_ENG_20030311.0491-E15-19" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1444" END="1454">prosecutors</charseq>
+    </extent>
+    <head>
+      <charseq START="1444" END="1454">prosecutors</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AFP_ENG_20030311.0491-E16" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="AFP_ENG_20030311.0491-E16-25" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1571" END="1584">its
+management</charseq>
+    </extent>
+    <head>
+      <charseq START="1575" END="1584">management</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AFP_ENG_20030311.0491-E17" TYPE="ORG" SUBTYPE="Government" CLASS="GEN">
+  <entity_mention ID="AFP_ENG_20030311.0491-E17-31" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1965" END="1969">court</charseq>
+    </extent>
+    <head>
+      <charseq START="1965" END="1969">court</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030311.0491-E17-40" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="351" END="360">the courts</charseq>
+    </extent>
+    <head>
+      <charseq START="355" END="360">courts</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AFP_ENG_20030311.0491-E18" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="AFP_ENG_20030311.0491-E18-32" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="119" END="126">NEW YORK</charseq>
+    </extent>
+    <head>
+      <charseq START="119" END="126">NEW YORK</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="NEW YORK">
+      <charseq START="119" END="126">NEW YORK</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AFP_ENG_20030311.0491-E19" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="AFP_ENG_20030311.0491-E19-33" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="139" END="141">AFP</charseq>
+    </extent>
+    <head>
+      <charseq START="139" END="141">AFP</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="AFP">
+      <charseq START="139" END="141">AFP</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AFP_ENG_20030311.0491-E20" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="AFP_ENG_20030311.0491-E20-3" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="716" END="734">both
+auction houses</charseq>
+    </extent>
+    <head>
+      <charseq START="729" END="734">houses</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030311.0491-E20-21" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1481" END="1490">both firms</charseq>
+    </extent>
+    <head>
+      <charseq START="1486" END="1490">firms</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030311.0491-E20-34" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="145" END="193">The world's most powerful fine art auction houses</charseq>
+    </extent>
+    <head>
+      <charseq START="188" END="193">houses</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030311.0491-E20-46" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="572" END="575">each</charseq>
+    </extent>
+    <head>
+      <charseq START="572" END="575">each</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AFP_ENG_20030311.0491-E21" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="AFP_ENG_20030311.0491-E21-26" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1612" END="1620">Sotheby's</charseq>
+    </extent>
+    <head>
+      <charseq START="1612" END="1620">Sotheby's</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030311.0491-E21-27" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1690" END="1698">Sotheby's</charseq>
+    </extent>
+    <head>
+      <charseq START="1690" END="1698">Sotheby's</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030311.0491-E21-29" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1782" END="1790">Sotheby's</charseq>
+    </extent>
+    <head>
+      <charseq START="1782" END="1790">Sotheby's</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030311.0491-E21-30" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1797" END="1798">it</charseq>
+    </extent>
+    <head>
+      <charseq START="1797" END="1798">it</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030311.0491-E21-35" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="196" END="204">Sotheby's</charseq>
+    </extent>
+    <head>
+      <charseq START="196" END="204">Sotheby's</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030311.0491-E21-36" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1192" END="1200">Sotheby's</charseq>
+    </extent>
+    <head>
+      <charseq START="1192" END="1200">Sotheby's</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030311.0491-E21-39" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="306" END="314">Sotheby's</charseq>
+    </extent>
+    <head>
+      <charseq START="306" END="314">Sotheby's</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030311.0491-E21-43" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="471" END="472">it</charseq>
+    </extent>
+    <head>
+      <charseq START="471" END="472">it</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030311.0491-E21-44" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="542" END="550">Sotheby's</charseq>
+    </extent>
+    <head>
+      <charseq START="542" END="550">Sotheby's</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030311.0491-E21-47" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="607" END="647">Sotheby's, which
+operates in 34 countries</charseq>
+    </extent>
+    <head>
+      <charseq START="607" END="615">Sotheby's</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030311.0491-E21-48" TYPE="PRO" LDCTYPE="WHQ" LDCATR="FALSE">
+    <extent>
+      <charseq START="618" END="622">which</charseq>
+    </extent>
+    <head>
+      <charseq START="618" END="622">which</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Sotheby's">
+      <charseq START="1612" END="1620">Sotheby's</charseq>
+    </name>
+    <name NAME="Sotheby's">
+      <charseq START="1690" END="1698">Sotheby's</charseq>
+    </name>
+    <name NAME="Sotheby's">
+      <charseq START="1782" END="1790">Sotheby's</charseq>
+    </name>
+    <name NAME="Sotheby's">
+      <charseq START="196" END="204">Sotheby's</charseq>
+    </name>
+    <name NAME="Sotheby's">
+      <charseq START="1192" END="1200">Sotheby's</charseq>
+    </name>
+    <name NAME="Sotheby's">
+      <charseq START="306" END="314">Sotheby's</charseq>
+    </name>
+    <name NAME="Sotheby's">
+      <charseq START="542" END="550">Sotheby's</charseq>
+    </name>
+    <name NAME="Sotheby's">
+      <charseq START="607" END="615">Sotheby's</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AFP_ENG_20030311.0491-E22" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="AFP_ENG_20030311.0491-E22-16" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1301" END="1310">Christie's</charseq>
+    </extent>
+    <head>
+      <charseq START="1301" END="1310">Christie's</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030311.0491-E22-22" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1514" END="1523">Christie's</charseq>
+    </extent>
+    <head>
+      <charseq START="1514" END="1523">Christie's</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030311.0491-E22-24" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1571" END="1573">its</charseq>
+    </extent>
+    <head>
+      <charseq START="1571" END="1573">its</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030311.0491-E22-28" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1704" END="1713">Christie's</charseq>
+    </extent>
+    <head>
+      <charseq START="1704" END="1713">Christie's</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030311.0491-E22-37" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="210" END="219">Christie's</charseq>
+    </extent>
+    <head>
+      <charseq START="210" END="219">Christie's</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030311.0491-E22-45" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="556" END="565">Christie's</charseq>
+    </extent>
+    <head>
+      <charseq START="556" END="565">Christie's</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Christie's">
+      <charseq START="1301" END="1310">Christie's</charseq>
+    </name>
+    <name NAME="Christie's">
+      <charseq START="1514" END="1523">Christie's</charseq>
+    </name>
+    <name NAME="Christie's">
+      <charseq START="1704" END="1713">Christie's</charseq>
+    </name>
+    <name NAME="Christie's">
+      <charseq START="210" END="219">Christie's</charseq>
+    </name>
+    <name NAME="Christie's">
+      <charseq START="556" END="565">Christie's</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AFP_ENG_20030311.0491-E23" TYPE="LOC" SUBTYPE="Celestial" CLASS="SPC">
+  <entity_mention ID="AFP_ENG_20030311.0491-E23-38" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="145" END="153">The world</charseq>
+    </extent>
+    <head>
+      <charseq START="149" END="153">world</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AFP_ENG_20030311.0491-E25" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="AFP_ENG_20030311.0491-E25-20" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1470" END="1490">clients of both firms</charseq>
+    </extent>
+    <head>
+      <charseq START="1470" END="1476">clients</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AFP_ENG_20030311.0491-E25-41" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="395" END="401">clients</charseq>
+    </extent>
+    <head>
+      <charseq START="395" END="401">clients</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AFP_ENG_20030311.0491-E28" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="AFP_ENG_20030311.0491-E28-49" TYPE="NOM" LDCTYPE="NOM" ROLE="LOC">
+    <extent>
+      <charseq START="636" END="647">34 countries</charseq>
+    </extent>
+    <head>
+      <charseq START="639" END="647">countries</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<value ID="AFP_ENG_20030311.0491-V1" TYPE="Sentence">
+  <value_mention ID="AFP_ENG_20030311.0491-V1-1">
+    <extent>
+      <charseq START="1389" END="1413">a 7.5-million-dollar fine</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="AFP_ENG_20030311.0491-V2" TYPE="Numeric" SUBTYPE="Money">
+  <value_mention ID="AFP_ENG_20030311.0491-V2-1">
+    <extent>
+      <charseq START="241" END="258">40 million dollars</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="AFP_ENG_20030311.0491-V3" TYPE="Numeric" SUBTYPE="Money">
+  <value_mention ID="AFP_ENG_20030311.0491-V3-1">
+    <extent>
+      <charseq START="581" END="598">20 million dollars</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="AFP_ENG_20030311.0491-V4" TYPE="Numeric" SUBTYPE="Money">
+  <value_mention ID="AFP_ENG_20030311.0491-V4-1">
+    <extent>
+      <charseq START="1125" END="1143">512 million dollars</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="AFP_ENG_20030311.0491-V5" TYPE="Crime">
+  <value_mention ID="AFP_ENG_20030311.0491-V5-1">
+    <extent>
+      <charseq START="1257" END="1310">entering into a
+price-fixing agreement with Christie's</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="AFP_ENG_20030311.0491-V6" TYPE="Sentence">
+  <value_mention ID="AFP_ENG_20030311.0491-V6-1">
+    <extent>
+      <charseq START="1366" END="1383">one year in
+prison</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="AFP_ENG_20030311.0491-V7" TYPE="Numeric" SUBTYPE="Money">
+  <value_mention ID="AFP_ENG_20030311.0491-V7-1">
+    <extent>
+      <charseq START="1391" END="1408">7.5-million-dollar</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="AFP_ENG_20030311.0491-V8" TYPE="Crime">
+  <value_mention ID="AFP_ENG_20030311.0491-V8-1">
+    <extent>
+      <charseq START="1420" END="1435">the price-fixing</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="AFP_ENG_20030311.0491-V9" TYPE="Numeric" SUBTYPE="Money">
+  <value_mention ID="AFP_ENG_20030311.0491-V9-1">
+    <extent>
+      <charseq START="1492" END="1510">400 million dollars</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="AFP_ENG_20030311.0491-V10" TYPE="Numeric" SUBTYPE="Percent">
+  <value_mention ID="AFP_ENG_20030311.0491-V10-1">
+    <extent>
+      <charseq START="1723" END="1742">more than 90 percent</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="AFP_ENG_20030311.0491-V11" TYPE="Numeric" SUBTYPE="Money">
+  <value_mention ID="AFP_ENG_20030311.0491-V11-1">
+    <extent>
+      <charseq START="1817" END="1833">20-million-dollar</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="AFP_ENG_20030311.0491-V12" TYPE="Numeric" SUBTYPE="Money">
+  <value_mention ID="AFP_ENG_20030311.0491-V12-1">
+    <extent>
+      <charseq START="1914" END="1931">10
+million dollars</charseq>
+    </extent>
+  </value_mention>
+</value>
+<timex2 ID="AFP_ENG_20030311.0491-T1" VAL="2003-03-11">
+  <timex2_mention ID="AFP_ENG_20030311.0491-T1-1">
+    <extent>
+      <charseq START="39" END="46">20030311</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AFP_ENG_20030311.0491-T2" VAL="2003-03-11">
+  <timex2_mention ID="AFP_ENG_20030311.0491-T2-1">
+    <extent>
+      <charseq START="129" END="136">March 11</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AFP_ENG_20030311.0491-T3" VAL="1993">
+  <timex2_mention ID="AFP_ENG_20030311.0491-T3-1">
+    <extent>
+      <charseq START="430" END="433">1993</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AFP_ENG_20030311.0491-T4" VAL="2000-09">
+  <timex2_mention ID="AFP_ENG_20030311.0491-T4-1">
+    <extent>
+      <charseq START="1095" END="1108">September 2000</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AFP_ENG_20030311.0491-T5" VAL="2001-12">
+  <timex2_mention ID="AFP_ENG_20030311.0491-T5-1">
+    <extent>
+      <charseq START="1150" END="1162">December 2001</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AFP_ENG_20030311.0491-T6" VAL="2002-04">
+  <timex2_mention ID="AFP_ENG_20030311.0491-T6-1">
+    <extent>
+      <charseq START="1314" END="1330">Four months later</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AFP_ENG_20030311.0491-T7" VAL="P1Y" ANCHOR_VAL="2002-04" ANCHOR_DIR="AFTER">
+  <timex2_mention ID="AFP_ENG_20030311.0491-T7-1">
+    <extent>
+      <charseq START="1366" END="1373">one year</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AFP_ENG_20030311.0491-T8" VAL="2002">
+  <timex2_mention ID="AFP_ENG_20030311.0491-T8-1">
+    <extent>
+      <charseq START="1870" END="1873">2002</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AFP_ENG_20030311.0491-T9" VAL="2000">
+  <timex2_mention ID="AFP_ENG_20030311.0491-T9-1">
+    <extent>
+      <charseq START="439" END="442">2000</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AFP_ENG_20030311.0491-T10" VAL="1993-01-01">
+  <timex2_mention ID="AFP_ENG_20030311.0491-T10-1">
+    <extent>
+      <charseq START="919" END="933">January 1, 1993</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AFP_ENG_20030311.0491-T11" VAL="2000-02-07">
+  <timex2_mention ID="AFP_ENG_20030311.0491-T11-1">
+    <extent>
+      <charseq START="939" END="954">February 7, 2000</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AFP_ENG_20030311.0491-T12" VAL="1995-09-01">
+  <timex2_mention ID="AFP_ENG_20030311.0491-T12-1">
+    <extent>
+      <charseq START="977" END="993">September 1, 1995</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AFP_ENG_20030311.0491-T13" VAL="2000-02-07">
+  <timex2_mention ID="AFP_ENG_20030311.0491-T13-1">
+    <extent>
+      <charseq START="999" END="1014">February 7, 2000</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AFP_ENG_20030311.0491-T14" VAL="PAST_REF" ANCHOR_VAL="2003-03-11" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="AFP_ENG_20030311.0491-T14-1">
+    <extent>
+      <charseq START="1223" END="1228">former</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="AFP_ENG_20030311.0491-R1" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="AFP_ENG_20030311.0491-E11" ROLE="Arg-1"/>
+  <relation_argument REFID="AFP_ENG_20030311.0491-E14" ROLE="Arg-2"/>
+  <relation_argument REFID="AFP_ENG_20030311.0491-T7" ROLE="Time-Within"/>
+  <relation_mention ID="AFP_ENG_20030311.0491-R1-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="1314" END="1510">Four months later, the billionaire was sentenced to one year in
+prison and a 7.5-million-dollar fine over the price-fixing, which
+prosecutors said had cost clients of both firms 400 million dollars</charseq>
+    </extent>
+    <relation_mention_argument REFID="AFP_ENG_20030311.0491-E11-17" ROLE="Arg-1">
+      <extent>
+        <charseq START="1333" END="1347">the billionaire</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="AFP_ENG_20030311.0491-E14-18" ROLE="Arg-2">
+      <extent>
+        <charseq START="1378" END="1383">prison</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="AFP_ENG_20030311.0491-T7-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="1366" END="1373">one year</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="AFP_ENG_20030311.0491-R2" TYPE="GEN-AFF" SUBTYPE="Org-Location" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="AFP_ENG_20030311.0491-E20" ROLE="Arg-1"/>
+  <relation_argument REFID="AFP_ENG_20030311.0491-E23" ROLE="Arg-2"/>
+  <relation_mention ID="AFP_ENG_20030311.0491-R2-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="145" END="193">The world's most powerful fine art auction houses</charseq>
+    </extent>
+    <relation_mention_argument REFID="AFP_ENG_20030311.0491-E20-34" ROLE="Arg-1">
+      <extent>
+        <charseq START="145" END="193">The world's most powerful fine art auction houses</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="AFP_ENG_20030311.0491-E23-38" ROLE="Arg-2">
+      <extent>
+        <charseq START="145" END="153">The world</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="AFP_ENG_20030311.0491-R3" TYPE="GEN-AFF" SUBTYPE="Org-Location" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="AFP_ENG_20030311.0491-E21" ROLE="Arg-1"/>
+  <relation_argument REFID="AFP_ENG_20030311.0491-E28" ROLE="Arg-2"/>
+  <relation_mention ID="AFP_ENG_20030311.0491-R3-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="497" END="647">Under the terms of the settlement agreement, Sotheby's and
+Christie's will each pay 20 million dollars," said Sotheby's, which
+operates in 34 countries</charseq>
+    </extent>
+    <relation_mention_argument REFID="AFP_ENG_20030311.0491-E21-48" ROLE="Arg-1">
+      <extent>
+        <charseq START="618" END="622">which</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="AFP_ENG_20030311.0491-E28-49" ROLE="Arg-2">
+      <extent>
+        <charseq START="636" END="647">34 countries</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="AFP_ENG_20030311.0491-R4" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="AFP_ENG_20030311.0491-E9" ROLE="Arg-1"/>
+  <relation_argument REFID="AFP_ENG_20030311.0491-E10" ROLE="Arg-2"/>
+  <relation_mention ID="AFP_ENG_20030311.0491-R4-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="1165" END="1180">a Manhattan jury</charseq>
+    </extent>
+    <relation_mention_argument REFID="AFP_ENG_20030311.0491-E9-11" ROLE="Arg-1">
+      <extent>
+        <charseq START="1165" END="1180">a Manhattan jury</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="AFP_ENG_20030311.0491-E10-12" ROLE="Arg-2">
+      <extent>
+        <charseq START="1167" END="1175">Manhattan</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="AFP_ENG_20030311.0491-R5" TYPE="ORG-AFF" SUBTYPE="Investor-Shareholder" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="AFP_ENG_20030311.0491-E21" ROLE="Arg-2"/>
+  <relation_argument REFID="AFP_ENG_20030311.0491-E11" ROLE="Arg-1"/>
+  <relation_mention ID="AFP_ENG_20030311.0491-R5-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="1192" END="1237">Sotheby's main
+shareholder and former chairman</charseq>
+    </extent>
+    <relation_mention_argument REFID="AFP_ENG_20030311.0491-E21-36" ROLE="Arg-2">
+      <extent>
+        <charseq START="1192" END="1200">Sotheby's</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="AFP_ENG_20030311.0491-E11-14" ROLE="Arg-1">
+      <extent>
+        <charseq START="1192" END="1237">Sotheby's main
+shareholder and former chairman</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="AFP_ENG_20030311.0491-R6" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="AFP_ENG_20030311.0491-E11" ROLE="Arg-1"/>
+  <relation_argument REFID="AFP_ENG_20030311.0491-E21" ROLE="Arg-2"/>
+  <relation_argument REFID="AFP_ENG_20030311.0491-T14" ROLE="Time-Within"/>
+  <relation_mention ID="AFP_ENG_20030311.0491-R6-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="1192" END="1237">Sotheby's main
+shareholder and former chairman</charseq>
+    </extent>
+    <relation_mention_argument REFID="AFP_ENG_20030311.0491-E11-15" ROLE="Arg-1">
+      <extent>
+        <charseq START="1192" END="1237">Sotheby's main
+shareholder and former chairman</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="AFP_ENG_20030311.0491-E21-36" ROLE="Arg-2">
+      <extent>
+        <charseq START="1192" END="1200">Sotheby's</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="AFP_ENG_20030311.0491-T14-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="1223" END="1228">former</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="AFP_ENG_20030311.0491-R7" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="AFP_ENG_20030311.0491-E16" ROLE="Arg-1"/>
+  <relation_argument REFID="AFP_ENG_20030311.0491-E22" ROLE="Arg-2"/>
+  <relation_mention ID="AFP_ENG_20030311.0491-R7-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="1571" END="1584">its
+management</charseq>
+    </extent>
+    <relation_mention_argument REFID="AFP_ENG_20030311.0491-E16-25" ROLE="Arg-1">
+      <extent>
+        <charseq START="1571" END="1584">its
+management</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="AFP_ENG_20030311.0491-E22-24" ROLE="Arg-2">
+      <extent>
+        <charseq START="1571" END="1573">its</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="AFP_ENG_20030311.0491-EV1" TYPE="Justice" SUBTYPE="Sue" MODALITY="Other" POLARITY="Negative" GENERICITY="Generic" TENSE="Future">
+  <event_argument REFID="AFP_ENG_20030311.0491-E5" ROLE="Adjudicator"/>
+  <event_argument REFID="AFP_ENG_20030311.0491-E3" ROLE="Plaintiff"/>
+  <event_argument REFID="AFP_ENG_20030311.0491-E4" ROLE="Plaintiff"/>
+  <event_mention ID="AFP_ENG_20030311.0491-EV1-1">
+    <extent>
+      <charseq START="752" END="840">Buyers and sellers also would have to agree not to pursue further
+cases in foreign courts</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="752" END="840">Buyers and sellers also would have to agree not to pursue further
+cases in foreign courts</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="803" END="808">pursue</charseq>
+    </anchor>
+    <event_mention_argument REFID="AFP_ENG_20030311.0491-E5-6" ROLE="Adjudicator">
+      <extent>
+        <charseq START="827" END="840">foreign courts</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AFP_ENG_20030311.0491-E3-4" ROLE="Plaintiff">
+      <extent>
+        <charseq START="752" END="757">Buyers</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AFP_ENG_20030311.0491-E4-5" ROLE="Plaintiff">
+      <extent>
+        <charseq START="763" END="769">sellers</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="AFP_ENG_20030311.0491-EV2" TYPE="Transaction" SUBTYPE="Transfer-Money" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="AFP_ENG_20030311.0491-V4" ROLE="Money"/>
+  <event_argument REFID="AFP_ENG_20030311.0491-T4" ROLE="Time-After"/>
+  <event_mention ID="AFP_ENG_20030311.0491-EV2-1">
+    <extent>
+      <charseq START="1061" END="1143">settled in an agreement
+struck in September 2000 for a total of 512 million dollars</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1018" END="1143">Similar claims over US-based auctions were settled in an agreement
+struck in September 2000 for a total of 512 million dollars</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1061" END="1067">settled</charseq>
+    </anchor>
+    <event_mention_argument REFID="AFP_ENG_20030311.0491-V4-1" ROLE="Money">
+      <extent>
+        <charseq START="1125" END="1143">512 million dollars</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AFP_ENG_20030311.0491-T4-1" ROLE="Time-After">
+      <extent>
+        <charseq START="1095" END="1108">September 2000</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="AFP_ENG_20030311.0491-EV3" TYPE="Justice" SUBTYPE="Charge-Indict" MODALITY="Other" POLARITY="Negative" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="AFP_ENG_20030311.0491-E22" ROLE="Defendant"/>
+  <event_argument REFID="AFP_ENG_20030311.0491-E8" ROLE="Place"/>
+  <event_mention ID="AFP_ENG_20030311.0491-EV3-1">
+    <extent>
+      <charseq START="1514" END="1563">Christie's was not prosecuted in the United States</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1514" END="1676">Christie's was not prosecuted in the United States after its
+management agreed to testify against Sotheby's and provide documents
+needed to prove fraudulent intent</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1533" END="1542">prosecuted</charseq>
+    </anchor>
+    <event_mention_argument REFID="AFP_ENG_20030311.0491-E22-22" ROLE="Defendant">
+      <extent>
+        <charseq START="1514" END="1523">Christie's</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AFP_ENG_20030311.0491-E8-23" ROLE="Place">
+      <extent>
+        <charseq START="1547" END="1563">the United States</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="AFP_ENG_20030311.0491-EV4" TYPE="Transaction" SUBTYPE="Transfer-Money" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Future">
+  <event_argument REFID="AFP_ENG_20030311.0491-E20" ROLE="Giver"/>
+  <event_argument REFID="AFP_ENG_20030311.0491-E21" ROLE="Giver"/>
+  <event_argument REFID="AFP_ENG_20030311.0491-E22" ROLE="Giver"/>
+  <event_argument REFID="AFP_ENG_20030311.0491-V2" ROLE="Money"/>
+  <event_argument REFID="AFP_ENG_20030311.0491-V11" ROLE="Money"/>
+  <event_argument REFID="AFP_ENG_20030311.0491-V3" ROLE="Money"/>
+  <event_argument REFID="AFP_ENG_20030311.0491-V12" ROLE="Money"/>
+  <event_mention ID="AFP_ENG_20030311.0491-EV4-1">
+    <extent>
+      <charseq START="145" END="258">The world's most powerful fine art auction houses, Sotheby's and
+Christie's, have agreed to pay 40 million dollars</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="145" END="319">The world's most powerful fine art auction houses, Sotheby's and
+Christie's, have agreed to pay 40 million dollars to settle an
+international price-fixing scam, Sotheby's said</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="237" END="239">pay</charseq>
+    </anchor>
+    <event_mention_argument REFID="AFP_ENG_20030311.0491-E20-34" ROLE="Giver">
+      <extent>
+        <charseq START="145" END="193">The world's most powerful fine art auction houses</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AFP_ENG_20030311.0491-E21-35" ROLE="Giver">
+      <extent>
+        <charseq START="196" END="204">Sotheby's</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AFP_ENG_20030311.0491-E22-37" ROLE="Giver">
+      <extent>
+        <charseq START="210" END="219">Christie's</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AFP_ENG_20030311.0491-V2-1" ROLE="Money">
+      <extent>
+        <charseq START="241" END="258">40 million dollars</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="AFP_ENG_20030311.0491-EV4-2">
+    <extent>
+      <charseq START="327" END="333">payment</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="323" END="492">The payment, if approved by the courts, would settle a slew of suits
+by clients over auctions held between 1993 and 2000 outside the
+United States, it said in a statement</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="327" END="333">payment</charseq>
+    </anchor>
+  </event_mention>
+  <event_mention ID="AFP_ENG_20030311.0491-EV4-3">
+    <extent>
+      <charseq START="1782" END="1844">Sotheby's said it would record the 20-million-dollar settlement</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1782" END="1873">Sotheby's said it would record the 20-million-dollar settlement as a
+special charge for 2002</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1835" END="1844">settlement</charseq>
+    </anchor>
+    <event_mention_argument REFID="AFP_ENG_20030311.0491-E21-29" ROLE="Giver">
+      <extent>
+        <charseq START="1782" END="1790">Sotheby's</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AFP_ENG_20030311.0491-V11-1" ROLE="Money">
+      <extent>
+        <charseq START="1817" END="1833">20-million-dollar</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="AFP_ENG_20030311.0491-EV4-4">
+    <extent>
+      <charseq START="542" END="598">Sotheby's and
+Christie's will each pay 20 million dollars</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="497" END="647">Under the terms of the settlement agreement, Sotheby's and
+Christie's will each pay 20 million dollars," said Sotheby's, which
+operates in 34 countries</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="577" END="579">pay</charseq>
+    </anchor>
+    <event_mention_argument REFID="AFP_ENG_20030311.0491-E21-44" ROLE="Giver">
+      <extent>
+        <charseq START="542" END="550">Sotheby's</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AFP_ENG_20030311.0491-E22-45" ROLE="Giver">
+      <extent>
+        <charseq START="556" END="565">Christie's</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AFP_ENG_20030311.0491-E20-46" ROLE="Giver">
+      <extent>
+        <charseq START="572" END="575">each</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AFP_ENG_20030311.0491-V3-1" ROLE="Money">
+      <extent>
+        <charseq START="581" END="598">20 million dollars</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="AFP_ENG_20030311.0491-EV4-5">
+    <extent>
+      <charseq START="1902" END="1931">payments of 10
+million dollars</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1876" END="1978">It would be funded in two payments of 10
+million dollars each upon preliminary and final court approval</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1902" END="1909">payments</charseq>
+    </anchor>
+    <event_mention_argument REFID="AFP_ENG_20030311.0491-V12-1" ROLE="Money">
+      <extent>
+        <charseq START="1914" END="1931">10
+million dollars</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="AFP_ENG_20030311.0491-EV5" TYPE="Justice" SUBTYPE="Sue" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="AFP_ENG_20030311.0491-E21" ROLE="Defendant"/>
+  <event_argument REFID="AFP_ENG_20030311.0491-E6" ROLE="Plaintiff"/>
+  <event_argument REFID="AFP_ENG_20030311.0491-E7" ROLE="Plaintiff"/>
+  <event_argument REFID="AFP_ENG_20030311.0491-E25" ROLE="Plaintiff"/>
+  <event_mention ID="AFP_ENG_20030311.0491-EV5-1">
+    <extent>
+      <charseq START="386" END="472">suits
+by clients over auctions held between 1993 and 2000 outside the
+United States, it</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="323" END="492">The payment, if approved by the courts, would settle a slew of suits
+by clients over auctions held between 1993 and 2000 outside the
+United States, it said in a statement</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="386" END="390">suits</charseq>
+    </anchor>
+    <event_mention_argument REFID="AFP_ENG_20030311.0491-E21-43" ROLE="Defendant">
+      <extent>
+        <charseq START="471" END="472">it</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AFP_ENG_20030311.0491-E25-41" ROLE="Plaintiff">
+      <extent>
+        <charseq START="395" END="401">clients</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="AFP_ENG_20030311.0491-EV5-2">
+    <extent>
+      <charseq START="848" END="1014">litigation covers buyers in auctions outside the United States
+between January 1, 1993 and February 7, 2000, and sellers between
+September 1, 1995 and February 7, 2000</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="844" END="1014">The litigation covers buyers in auctions outside the United States
+between January 1, 1993 and February 7, 2000, and sellers between
+September 1, 1995 and February 7, 2000</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="848" END="857">litigation</charseq>
+    </anchor>
+    <event_mention_argument REFID="AFP_ENG_20030311.0491-E6-7" ROLE="Plaintiff">
+      <extent>
+        <charseq START="866" END="954">buyers in auctions outside the United States
+between January 1, 1993 and February 7, 2000</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AFP_ENG_20030311.0491-E7-9" ROLE="Plaintiff">
+      <extent>
+        <charseq START="961" END="1014">sellers between
+September 1, 1995 and February 7, 2000</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="AFP_ENG_20030311.0491-EV6" TYPE="Justice" SUBTYPE="Convict" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="AFP_ENG_20030311.0491-E11" ROLE="Defendant"/>
+  <event_argument REFID="AFP_ENG_20030311.0491-V5" ROLE="Crime"/>
+  <event_argument REFID="AFP_ENG_20030311.0491-E10" ROLE="Place"/>
+  <event_argument REFID="AFP_ENG_20030311.0491-E9" ROLE="Adjudicator"/>
+  <event_argument REFID="AFP_ENG_20030311.0491-T5" ROLE="Time-Within"/>
+  <event_mention ID="AFP_ENG_20030311.0491-EV6-1">
+    <extent>
+      <charseq START="1150" END="1310">December 2001, a Manhattan jury convicted Sotheby's main
+shareholder and former chairman Alfred Taubman of entering into a
+price-fixing agreement with Christie's</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1147" END="1310">In December 2001, a Manhattan jury convicted Sotheby's main
+shareholder and former chairman Alfred Taubman of entering into a
+price-fixing agreement with Christie's</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1182" END="1190">convicted</charseq>
+    </anchor>
+    <event_mention_argument REFID="AFP_ENG_20030311.0491-E11-13" ROLE="Defendant">
+      <extent>
+        <charseq START="1192" END="1252">Sotheby's main
+shareholder and former chairman Alfred Taubman</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AFP_ENG_20030311.0491-V5-1" ROLE="Crime">
+      <extent>
+        <charseq START="1257" END="1310">entering into a
+price-fixing agreement with Christie's</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AFP_ENG_20030311.0491-E10-12" ROLE="Place">
+      <extent>
+        <charseq START="1167" END="1175">Manhattan</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AFP_ENG_20030311.0491-E9-11" ROLE="Adjudicator">
+      <extent>
+        <charseq START="1165" END="1180">a Manhattan jury</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AFP_ENG_20030311.0491-T5-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="1150" END="1162">December 2001</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="AFP_ENG_20030311.0491-EV7" TYPE="Justice" SUBTYPE="Sentence" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="AFP_ENG_20030311.0491-E11" ROLE="Defendant"/>
+  <event_argument REFID="AFP_ENG_20030311.0491-V6" ROLE="Sentence"/>
+  <event_argument REFID="AFP_ENG_20030311.0491-V1" ROLE="Sentence"/>
+  <event_argument REFID="AFP_ENG_20030311.0491-V8" ROLE="Crime"/>
+  <event_argument REFID="AFP_ENG_20030311.0491-T6" ROLE="Time-At-End"/>
+  <event_mention ID="AFP_ENG_20030311.0491-EV7-1">
+    <extent>
+      <charseq START="1314" END="1435">Four months later, the billionaire was sentenced to one year in
+prison and a 7.5-million-dollar fine over the price-fixing</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1314" END="1510">Four months later, the billionaire was sentenced to one year in
+prison and a 7.5-million-dollar fine over the price-fixing, which
+prosecutors said had cost clients of both firms 400 million dollars</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1353" END="1361">sentenced</charseq>
+    </anchor>
+    <event_mention_argument REFID="AFP_ENG_20030311.0491-E11-17" ROLE="Defendant">
+      <extent>
+        <charseq START="1333" END="1347">the billionaire</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AFP_ENG_20030311.0491-V6-1" ROLE="Sentence">
+      <extent>
+        <charseq START="1366" END="1383">one year in
+prison</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AFP_ENG_20030311.0491-V1-1" ROLE="Sentence">
+      <extent>
+        <charseq START="1389" END="1413">a 7.5-million-dollar fine</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AFP_ENG_20030311.0491-V8-1" ROLE="Crime">
+      <extent>
+        <charseq START="1420" END="1435">the price-fixing</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AFP_ENG_20030311.0491-T6-1" ROLE="Time-At-End">
+      <extent>
+        <charseq START="1314" END="1330">Four months later</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="AFP_ENG_20030311.0491-EV8" TYPE="Transaction" SUBTYPE="Transfer-Money" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="AFP_ENG_20030311.0491-E25" ROLE="Giver"/>
+  <event_argument REFID="AFP_ENG_20030311.0491-V9" ROLE="Money"/>
+  <event_argument REFID="AFP_ENG_20030311.0491-E20" ROLE="Recipient"/>
+  <event_mention ID="AFP_ENG_20030311.0491-EV8-1">
+    <extent>
+      <charseq START="1465" END="1510">cost clients of both firms 400 million dollars</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1314" END="1510">Four months later, the billionaire was sentenced to one year in
+prison and a 7.5-million-dollar fine over the price-fixing, which
+prosecutors said had cost clients of both firms 400 million dollars</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1465" END="1468">cost</charseq>
+    </anchor>
+    <event_mention_argument REFID="AFP_ENG_20030311.0491-E25-20" ROLE="Giver">
+      <extent>
+        <charseq START="1470" END="1490">clients of both firms</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AFP_ENG_20030311.0491-V9-1" ROLE="Money">
+      <extent>
+        <charseq START="1492" END="1510">400 million dollars</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AFP_ENG_20030311.0491-E20-21" ROLE="Recipient">
+      <extent>
+        <charseq START="1481" END="1490">both firms</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

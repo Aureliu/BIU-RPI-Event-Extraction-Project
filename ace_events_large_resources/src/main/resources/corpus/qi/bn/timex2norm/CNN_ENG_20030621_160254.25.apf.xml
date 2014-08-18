@@ -1,0 +1,1423 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030621_160254.25.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030621_160254.25">
+<entity ID="CNN_ENG_20030621_160254.25-E1" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E1-3" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="567" END="579">brother harry</charseq>
+    </extent>
+    <head>
+      <charseq START="575" END="579">harry</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E1-4" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="567" END="573">brother</charseq>
+    </extent>
+    <head>
+      <charseq START="567" END="573">brother</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="harry">
+      <charseq START="575" END="579">harry</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030621_160254.25-E3" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E3-5" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="585" END="589">their</charseq>
+    </extent>
+    <head>
+      <charseq START="585" END="589">their</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030621_160254.25-E4" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E4-6" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="585" END="596">their father</charseq>
+    </extent>
+    <head>
+      <charseq START="591" END="596">father</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E4-8" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="599" END="612">prince charles</charseq>
+    </extent>
+    <head>
+      <charseq START="606" END="612">charles</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E4-9" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="FALSE">
+    <extent>
+      <charseq START="599" END="604">prince</charseq>
+    </extent>
+    <head>
+      <charseq START="599" END="604">prince</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E4-43" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1206" END="1215">his father</charseq>
+    </extent>
+    <head>
+      <charseq START="1210" END="1215">father</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E4-44" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1218" END="1231">prince charles</charseq>
+    </extent>
+    <head>
+      <charseq START="1225" END="1231">charles</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E4-45" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="FALSE">
+    <extent>
+      <charseq START="1218" END="1223">prince</charseq>
+    </extent>
+    <head>
+      <charseq START="1218" END="1223">prince</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E4-46" TYPE="PRO" LDCTYPE="WHQ" LDCATR="FALSE">
+    <extent>
+      <charseq START="1234" END="1236">who</charseq>
+    </extent>
+    <head>
+      <charseq START="1234" END="1236">who</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E4-63" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1684" END="1697">prince charles</charseq>
+    </extent>
+    <head>
+      <charseq START="1691" END="1697">charles</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E4-64" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1684" END="1689">prince</charseq>
+    </extent>
+    <head>
+      <charseq START="1684" END="1689">prince</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E4-67" TYPE="NOM" LDCTYPE="BAR" LDCATR="FALSE">
+    <extent>
+      <charseq START="1758" END="1763">father</charseq>
+    </extent>
+    <head>
+      <charseq START="1758" END="1763">father</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E4-71" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1876" END="1894">britain's
+next king</charseq>
+    </extent>
+    <head>
+      <charseq START="1891" END="1894">king</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E4-79" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1974" END="1983">his father</charseq>
+    </extent>
+    <head>
+      <charseq START="1978" END="1983">father</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="charles">
+      <charseq START="606" END="612">charles</charseq>
+    </name>
+    <name NAME="charles">
+      <charseq START="1225" END="1231">charles</charseq>
+    </name>
+    <name NAME="charles">
+      <charseq START="1691" END="1697">charles</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030621_160254.25-E7" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E7-10" TYPE="PRO" LDCTYPE="HLS">
+    <extent>
+      <charseq START="766" END="769">many</charseq>
+    </extent>
+    <head>
+      <charseq START="766" END="769">many</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030621_160254.25-E8" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E8-16" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="829" END="830">it</charseq>
+    </extent>
+    <head>
+      <charseq START="829" END="830">it</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E8-17" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="834" END="849">the young people</charseq>
+    </extent>
+    <head>
+      <charseq START="844" END="849">people</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E8-21" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="939" END="988">the young
+people of today that need to be his fans</charseq>
+    </extent>
+    <head>
+      <charseq START="949" END="954">people</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E8-22" TYPE="PRO" LDCTYPE="WHQ" LDCATR="FALSE">
+    <extent>
+      <charseq START="965" END="968">that</charseq>
+    </extent>
+    <head>
+      <charseq START="965" END="968">that</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030621_160254.25-E9" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E9-11" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="710" END="717">britains</charseq>
+    </extent>
+    <head>
+      <charseq START="710" END="717">britains</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030621_160254.25-E10" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E10-2" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="558" END="564">william</charseq>
+    </extent>
+    <head>
+      <charseq START="558" END="564">william</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E10-12" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="775" END="788">prince william</charseq>
+    </extent>
+    <head>
+      <charseq START="782" END="788">william</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E10-13" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="775" END="780">prince</charseq>
+    </extent>
+    <head>
+      <charseq START="775" END="780">prince</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E10-14" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="793" END="824">the house of
+windsor's only hope</charseq>
+    </extent>
+    <head>
+      <charseq START="821" END="824">hope</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E10-18" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="1558" END="1571">prince william</charseq>
+    </extent>
+    <head>
+      <charseq START="1565" END="1571">william</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E10-19" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="851" END="852">he</charseq>
+    </extent>
+    <head>
+      <charseq START="851" END="852">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E10-20" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="886" END="887">he</charseq>
+    </extent>
+    <head>
+      <charseq START="886" END="887">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E10-23" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="981" END="983">his</charseq>
+    </extent>
+    <head>
+      <charseq START="981" END="983">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E10-24" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="1003" END="1009">william</charseq>
+    </extent>
+    <head>
+      <charseq START="1003" END="1009">william</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E10-30" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="1055" END="1057">his</charseq>
+    </extent>
+    <head>
+      <charseq START="1055" END="1057">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E10-35" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="1132" END="1145">her eldest son</charseq>
+    </extent>
+    <head>
+      <charseq START="1143" END="1145">son</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E10-36" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="1148" END="1149">he</charseq>
+    </extent>
+    <head>
+      <charseq START="1148" END="1149">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E10-37" TYPE="NOM" LDCTYPE="BAR" LDCATR="TRUE">
+    <extent>
+      <charseq START="1154" END="1167">part
+teen idol</charseq>
+    </extent>
+    <head>
+      <charseq START="1164" END="1167">idol</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E10-39" TYPE="NOM" LDCTYPE="BAR" LDCATR="TRUE">
+    <extent>
+      <charseq START="1170" END="1192">part king in the making</charseq>
+    </extent>
+    <head>
+      <charseq START="1175" END="1178">king</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E10-40" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="1206" END="1208">his</charseq>
+    </extent>
+    <head>
+      <charseq START="1206" END="1208">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E10-47" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="1259" END="1261">him</charseq>
+    </extent>
+    <head>
+      <charseq START="1259" END="1261">him</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E10-48" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="1278" END="1288">this prince</charseq>
+    </extent>
+    <head>
+      <charseq START="1283" END="1288">prince</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E10-49" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="1353" END="1355">his</charseq>
+    </extent>
+    <head>
+      <charseq START="1353" END="1355">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E10-53" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="1422" END="1428">william</charseq>
+    </extent>
+    <head>
+      <charseq START="1422" END="1428">william</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E10-55" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="1537" END="1539">his</charseq>
+    </extent>
+    <head>
+      <charseq START="1537" END="1539">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E10-56" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1558" END="1563">prince</charseq>
+    </extent>
+    <head>
+      <charseq START="1558" END="1563">prince</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E10-58" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="1611" END="1613">him</charseq>
+    </extent>
+    <head>
+      <charseq START="1611" END="1613">him</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E10-59" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="1622" END="1623">he</charseq>
+    </extent>
+    <head>
+      <charseq START="1622" END="1623">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E10-68" TYPE="NOM" LDCTYPE="BAR" LDCATR="TRUE">
+    <extent>
+      <charseq START="1769" END="1771">son</charseq>
+    </extent>
+    <head>
+      <charseq START="1769" END="1771">son</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E10-70" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="1839" END="1868">the younger king in the making</charseq>
+    </extent>
+    <head>
+      <charseq START="1851" END="1854">king</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E10-73" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="1900" END="1950">william, once his mother's confidante and
+protector</charseq>
+    </extent>
+    <head>
+      <charseq START="1900" END="1906">william</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E10-74" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="1914" END="1916">his</charseq>
+    </extent>
+    <head>
+      <charseq START="1914" END="1916">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E10-76" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="1914" END="1950">his mother's confidante and
+protector</charseq>
+    </extent>
+    <head>
+      <charseq START="1927" END="1936">confidante</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E10-77" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="1914" END="1950">his mother's confidante and
+protector</charseq>
+    </extent>
+    <head>
+      <charseq START="1942" END="1950">protector</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E10-78" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="1974" END="1976">his</charseq>
+    </extent>
+    <head>
+      <charseq START="1974" END="1976">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E10-81" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="2096" END="2102">william</charseq>
+    </extent>
+    <head>
+      <charseq START="2096" END="2102">william</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E10-85" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="2173" END="2187">the future king</charseq>
+    </extent>
+    <head>
+      <charseq START="2184" END="2187">king</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E10-86" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="91" END="92">he</charseq>
+    </extent>
+    <head>
+      <charseq START="91" END="92">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E10-92" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="152" END="153">he</charseq>
+    </extent>
+    <head>
+      <charseq START="152" END="153">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E10-93" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="186" END="199">prince william</charseq>
+    </extent>
+    <head>
+      <charseq START="193" END="199">william</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E10-101" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="398" END="400">his</charseq>
+    </extent>
+    <head>
+      <charseq START="398" END="400">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E10-102" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="417" END="430">prince william</charseq>
+    </extent>
+    <head>
+      <charseq START="424" END="430">william</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E10-103" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="417" END="422">prince</charseq>
+    </extent>
+    <head>
+      <charseq START="417" END="422">prince</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E10-104" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="186" END="191">prince</charseq>
+    </extent>
+    <head>
+      <charseq START="186" END="191">prince</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="william">
+      <charseq START="558" END="564">william</charseq>
+    </name>
+    <name NAME="william">
+      <charseq START="782" END="788">william</charseq>
+    </name>
+    <name NAME="william">
+      <charseq START="1565" END="1571">william</charseq>
+    </name>
+    <name NAME="william">
+      <charseq START="1003" END="1009">william</charseq>
+    </name>
+    <name NAME="william">
+      <charseq START="1422" END="1428">william</charseq>
+    </name>
+    <name NAME="william">
+      <charseq START="1900" END="1906">william</charseq>
+    </name>
+    <name NAME="william">
+      <charseq START="2096" END="2102">william</charseq>
+    </name>
+    <name NAME="william">
+      <charseq START="193" END="199">william</charseq>
+    </name>
+    <name NAME="william">
+      <charseq START="424" END="430">william</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030621_160254.25-E12" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E12-15" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="797" END="812">house of
+windsor</charseq>
+    </extent>
+    <head>
+      <charseq START="797" END="812">house of
+windsor</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="house of windsor">
+      <charseq START="797" END="812">house of
+windsor</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030621_160254.25-E14" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E14-26" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1035" END="1088">those who wept
+when his mother, princess di anna, died</charseq>
+    </extent>
+    <head>
+      <charseq START="1035" END="1039">those</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E14-27" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="1041" END="1043">who</charseq>
+    </extent>
+    <head>
+      <charseq START="1041" END="1043">who</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E14-33" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1113" END="1117">their</charseq>
+    </extent>
+    <head>
+      <charseq START="1113" END="1117">their</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030621_160254.25-E15" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E15-29" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1055" END="1064">his mother</charseq>
+    </extent>
+    <head>
+      <charseq START="1059" END="1064">mother</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E15-31" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1067" END="1082">princess di anna</charseq>
+    </extent>
+    <head>
+      <charseq START="1076" END="1082">di anna</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E15-32" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="FALSE">
+    <extent>
+      <charseq START="1067" END="1074">princess</charseq>
+    </extent>
+    <head>
+      <charseq START="1067" END="1074">princess</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E15-34" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1132" END="1134">her</charseq>
+    </extent>
+    <head>
+      <charseq START="1132" END="1134">her</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E15-65" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1718" END="1733">princess
+di anna</charseq>
+    </extent>
+    <head>
+      <charseq START="1727" END="1733">di anna</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E15-66" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1718" END="1725">princess</charseq>
+    </extent>
+    <head>
+      <charseq START="1718" END="1725">princess</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E15-75" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1914" END="1923">his mother</charseq>
+    </extent>
+    <head>
+      <charseq START="1918" END="1923">mother</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="di anna">
+      <charseq START="1076" END="1082">di anna</charseq>
+    </name>
+    <name NAME="di anna">
+      <charseq START="1727" END="1733">di anna</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030621_160254.25-E19" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E19-38" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="1159" END="1162">teen</charseq>
+    </extent>
+    <head>
+      <charseq START="1159" END="1162">teen</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030621_160254.25-E21" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E21-1" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="82" END="88">england</charseq>
+    </extent>
+    <head>
+      <charseq START="82" END="88">england</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E21-62" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="1649" END="1655">britain</charseq>
+    </extent>
+    <head>
+      <charseq START="1649" END="1655">britain</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E21-72" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="1876" END="1882">britain</charseq>
+    </extent>
+    <head>
+      <charseq START="1876" END="1882">britain</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E21-94" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="224" END="230">british</charseq>
+    </extent>
+    <head>
+      <charseq START="224" END="230">british</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E21-100" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="308" END="314">english</charseq>
+    </extent>
+    <head>
+      <charseq START="308" END="314">english</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E21-105" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="487" END="493">british</charseq>
+    </extent>
+    <head>
+      <charseq START="487" END="493">british</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="england">
+      <charseq START="82" END="88">england</charseq>
+    </name>
+    <name NAME="britain">
+      <charseq START="1649" END="1655">britain</charseq>
+    </name>
+    <name NAME="britain">
+      <charseq START="1876" END="1882">britain</charseq>
+    </name>
+    <name NAME="british">
+      <charseq START="224" END="230">british</charseq>
+    </name>
+    <name NAME="english">
+      <charseq START="308" END="314">english</charseq>
+    </name>
+    <name NAME="british">
+      <charseq START="487" END="493">british</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030621_160254.25-E25" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E25-50" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1380" END="1380">i</charseq>
+    </extent>
+    <head>
+      <charseq START="1380" END="1380">i</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030621_160254.25-E26" TYPE="PER" SUBTYPE="Indeterminate" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E26-51" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1402" END="1404">you</charseq>
+    </extent>
+    <head>
+      <charseq START="1402" END="1404">you</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030621_160254.25-E27" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E27-52" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1412" END="1417">anyone</charseq>
+    </extent>
+    <head>
+      <charseq START="1412" END="1417">anyone</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030621_160254.25-E28" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E28-54" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1522" END="1543">most young men his age</charseq>
+    </extent>
+    <head>
+      <charseq START="1533" END="1535">men</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030621_160254.25-E30" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E30-57" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1594" END="1613">those closest
+to him</charseq>
+    </extent>
+    <head>
+      <charseq START="1594" END="1598">those</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E30-60" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1616" END="1673">those he can trust not to run to britain's gossipy
+feed ya</charseq>
+    </extent>
+    <head>
+      <charseq START="1616" END="1620">those</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030621_160254.25-E31" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E31-25" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1029" END="1032">fans</charseq>
+    </extent>
+    <head>
+      <charseq START="1029" END="1032">fans</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030621_160254.25-E34" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E34-69" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1805" END="1807">you</charseq>
+    </extent>
+    <head>
+      <charseq START="1805" END="1807">you</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030621_160254.25-E37" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E37-80" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2006" END="2008">him</charseq>
+    </extent>
+    <head>
+      <charseq START="2006" END="2008">him</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030621_160254.25-E38" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E38-82" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2107" END="2120">windsor castle</charseq>
+    </extent>
+    <head>
+      <charseq START="2107" END="2120">windsor castle</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="windsor castle">
+      <charseq START="2107" END="2120">windsor castle</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030621_160254.25-E39" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E39-83" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2123" END="2142">more than 300 guests</charseq>
+    </extent>
+    <head>
+      <charseq START="2137" END="2142">guests</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E39-84" TYPE="NOM" LDCTYPE="BAR" LDCATR="FALSE">
+    <extent>
+      <charseq START="2162" END="2187">friends of the future king</charseq>
+    </extent>
+    <head>
+      <charseq START="2162" END="2168">friends</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E39-90" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="2157" END="2159">ffk</charseq>
+    </extent>
+    <head>
+      <charseq START="2157" END="2159">ffk</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="ffk">
+      <charseq START="2157" END="2159">ffk</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030621_160254.25-E41" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E41-61" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="981" END="988">his fans</charseq>
+    </extent>
+    <head>
+      <charseq START="985" END="988">fans</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030621_160254.25-E42" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E42-87" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1441" END="1459">every single person</charseq>
+    </extent>
+    <head>
+      <charseq START="1454" END="1459">person</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030621_160254.25-E46" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E46-91" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="116" END="139">millions of
+adoring fans</charseq>
+    </extent>
+    <head>
+      <charseq START="136" END="139">fans</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030621_160254.25-E48" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E48-95" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="240" END="259">cnn's
+walter rodgers</charseq>
+    </extent>
+    <head>
+      <charseq START="246" END="259">walter rodgers</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="walter rodgers">
+      <charseq START="246" END="259">walter rodgers</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030621_160254.25-E49" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E49-96" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="240" END="242">cnn</charseq>
+    </extent>
+    <head>
+      <charseq START="240" END="242">cnn</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="cnn">
+      <charseq START="240" END="242">cnn</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030621_160254.25-E50" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E50-97" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="305" END="321">an english prince</charseq>
+    </extent>
+    <head>
+      <charseq START="316" END="321">prince</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E50-99" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="324" END="340">a king in
+waiting</charseq>
+    </extent>
+    <head>
+      <charseq START="326" END="329">king</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030621_160254.25-E56" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E56-88" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="542" END="544">his</charseq>
+    </extent>
+    <head>
+      <charseq START="542" END="544">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030621_160254.25-E56-106" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="515" END="531">buckingham palace</charseq>
+    </extent>
+    <head>
+      <charseq START="515" END="531">buckingham palace</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="buckingham palace">
+      <charseq START="515" END="531">buckingham palace</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<timex2 ID="CNN_ENG_20030621_160254.25-T1" VAL="FUTURE_REF" ANCHOR_VAL="2003-06-21T16:31:14" ANCHOR_DIR="AFTER">
+  <timex2_mention ID="CNN_ENG_20030621_160254.25-T1-1">
+    <extent>
+      <charseq START="2177" END="2182">future</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030621_160254.25-T2" VAL="2003-06-21T16:31:14">
+  <timex2_mention ID="CNN_ENG_20030621_160254.25-T2-1">
+    <extent>
+      <charseq START="44" END="62">2003-06-21 16:31:14</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030621_160254.25-T3" VAL="2003-06-21">
+  <timex2_mention ID="CNN_ENG_20030621_160254.25-T3-1">
+    <extent>
+      <charseq START="146" END="150">today</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030621_160254.25-T4" VAL="P15Y" ANCHOR_VAL="1988" ANCHOR_DIR="STARTING">
+  <timex2_mention ID="CNN_ENG_20030621_160254.25-T4-1">
+    <extent>
+      <charseq START="726" END="763">15 years of scandals
+and embarrassment</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030621_160254.25-T5" VAL="2043">
+  <timex2_mention ID="CNN_ENG_20030621_160254.25-T5-1">
+    <extent>
+      <charseq START="929" END="936">40 years</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030621_160254.25-T6" VAL="2003-06-21">
+  <timex2_mention ID="CNN_ENG_20030621_160254.25-T6-1">
+    <extent>
+      <charseq START="959" END="963">today</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030621_160254.25-T7" VAL="PRESENT_REF" ANCHOR_VAL="2003-06-21" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_ENG_20030621_160254.25-T7-1">
+    <extent>
+      <charseq START="1776" END="1778">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030621_160254.25-T8" VAL="PRESENT_REF" ANCHOR_VAL="2003-06-21" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_ENG_20030621_160254.25-T8-1">
+    <extent>
+      <charseq START="1952" END="1954">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030621_160254.25-T9" VAL="PRESENT_REF" ANCHOR_VAL="2003-06-21-T16:31:14" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_ENG_20030621_160254.25-T9-1">
+    <extent>
+      <charseq START="2214" END="2216">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030621_160254.25-T10" VAL="PAST_REF" ANCHOR_VAL="2003-06-21" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="CNN_ENG_20030621_160254.25-T10-1">
+    <extent>
+      <charseq START="291" END="302">days of yore</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030621_160254.25-T11" VAL="2003-06-21">
+  <timex2_mention ID="CNN_ENG_20030621_160254.25-T11-1">
+    <extent>
+      <charseq START="166" END="175">a birthday</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030621_160254.25-T12" VAL="2003-06-21" MOD="BEFORE">
+  <timex2_mention ID="CNN_ENG_20030621_160254.25-T12-1">
+    <extent>
+      <charseq START="398" END="414">his 21st birthday</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030621_160254.25-R1" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030621_160254.25-E10" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030621_160254.25-E21" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030621_160254.25-R1-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="68" END="183">well, also in england, he's rich, handsome, got millions of
+adoring fans, and today he celebrates a birthday, big 21</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030621_160254.25-E10-86" ROLE="Arg-1">
+      <extent>
+        <charseq START="91" END="92">he</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030621_160254.25-E21-1" ROLE="Arg-2">
+      <extent>
+        <charseq START="82" END="88">england</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030621_160254.25-R2" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030621_160254.25-E48" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030621_160254.25-E49" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030621_160254.25-R2-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="240" END="259">cnn's
+walter rodgers</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030621_160254.25-E48-95" ROLE="Arg-1">
+      <extent>
+        <charseq START="240" END="259">cnn's
+walter rodgers</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030621_160254.25-E49-96" ROLE="Arg-2">
+      <extent>
+        <charseq START="240" END="242">cnn</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030621_160254.25-R3" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030621_160254.25-E50" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030621_160254.25-E21" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030621_160254.25-R3-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="305" END="321">an english prince</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030621_160254.25-E50-97" ROLE="Arg-1">
+      <extent>
+        <charseq START="305" END="321">an english prince</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030621_160254.25-E21-100" ROLE="Arg-2">
+      <extent>
+        <charseq START="308" END="314">english</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030621_160254.25-R4" TYPE="PER-SOC" SUBTYPE="Family" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030621_160254.25-E10" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030621_160254.25-E1" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030621_160254.25-R4-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="515" END="717">buckingham palace released his pictures of william,
+brother harry and their father, prince charles in what some
+see as a skilled marketing campaign to sell the monarchy to
+the next generation of britains</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030621_160254.25-E10-2" ROLE="Arg-1">
+      <extent>
+        <charseq START="558" END="564">william</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030621_160254.25-E1-3" ROLE="Arg-2">
+      <extent>
+        <charseq START="567" END="579">brother harry</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030621_160254.25-R5" TYPE="PER-SOC" SUBTYPE="Family" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030621_160254.25-E3" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030621_160254.25-E4" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030621_160254.25-R5-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="585" END="596">their father</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030621_160254.25-E3-5" ROLE="Arg-1">
+      <extent>
+        <charseq START="585" END="589">their</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030621_160254.25-E4-6" ROLE="Arg-2">
+      <extent>
+        <charseq START="585" END="596">their father</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030621_160254.25-R6" TYPE="PER-SOC" SUBTYPE="Family" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030621_160254.25-E10" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030621_160254.25-E15" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030621_160254.25-R6-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="1055" END="1064">his mother</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030621_160254.25-E10-30" ROLE="Arg-1">
+      <extent>
+        <charseq START="1055" END="1057">his</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030621_160254.25-E15-29" ROLE="Arg-2">
+      <extent>
+        <charseq START="1055" END="1064">his mother</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_ENG_20030621_160254.25-R6-2" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="1132" END="1145">her eldest son</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030621_160254.25-E15-34" ROLE="Arg-2">
+      <extent>
+        <charseq START="1132" END="1134">her</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030621_160254.25-E10-35" ROLE="Arg-1">
+      <extent>
+        <charseq START="1132" END="1145">her eldest son</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_ENG_20030621_160254.25-R6-3" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="1914" END="1923">his mother</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030621_160254.25-E10-74" ROLE="Arg-1">
+      <extent>
+        <charseq START="1914" END="1916">his</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030621_160254.25-E15-75" ROLE="Arg-2">
+      <extent>
+        <charseq START="1914" END="1923">his mother</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030621_160254.25-R8" TYPE="PER-SOC" SUBTYPE="Family" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030621_160254.25-E10" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030621_160254.25-E4" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030621_160254.25-R8-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="1206" END="1215">his father</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030621_160254.25-E10-40" ROLE="Arg-1">
+      <extent>
+        <charseq START="1206" END="1208">his</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030621_160254.25-E4-43" ROLE="Arg-2">
+      <extent>
+        <charseq START="1206" END="1215">his father</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_ENG_20030621_160254.25-R8-2" LEXICALCONDITION="Coordination">
+    <extent>
+      <charseq START="1758" END="1771">father and son</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030621_160254.25-E4-67" ROLE="Arg-2">
+      <extent>
+        <charseq START="1758" END="1763">father</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030621_160254.25-E10-68" ROLE="Arg-1">
+      <extent>
+        <charseq START="1769" END="1771">son</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_ENG_20030621_160254.25-R8-3" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="1974" END="1983">his father</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030621_160254.25-E10-78" ROLE="Arg-1">
+      <extent>
+        <charseq START="1974" END="1976">his</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030621_160254.25-E4-79" ROLE="Arg-2">
+      <extent>
+        <charseq START="1974" END="1983">his father</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030621_160254.25-R10" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Future" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030621_160254.25-E4" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030621_160254.25-E21" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030621_160254.25-R10-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="1876" END="1894">britain's
+next king</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030621_160254.25-E4-71" ROLE="Arg-1">
+      <extent>
+        <charseq START="1876" END="1894">britain's
+next king</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030621_160254.25-E21-72" ROLE="Arg-2">
+      <extent>
+        <charseq START="1876" END="1882">britain</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030621_160254.25-R13" TYPE="PER-SOC" SUBTYPE="Lasting-Personal" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030621_160254.25-E39" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030621_160254.25-E10" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030621_160254.25-R13-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="2162" END="2187">friends of the future king</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030621_160254.25-E39-84" ROLE="Arg-1">
+      <extent>
+        <charseq START="2162" END="2187">friends of the future king</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030621_160254.25-E10-85" ROLE="Arg-2">
+      <extent>
+        <charseq START="2173" END="2187">the future king</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030621_160254.25-EV1" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030621_160254.25-E50" ROLE="Attacker"/>
+  <event_argument REFID="CNN_ENG_20030621_160254.25-T10" ROLE="Time-Within"/>
+  <event_mention ID="CNN_ENG_20030621_160254.25-EV1-1">
+    <extent>
+      <charseq START="291" END="372">days of yore, an english prince, a king in
+waiting would be charging off to battle</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="288" END="512">in days of yore, an english prince, a king in
+waiting would be charging off to battle on a horse, just
+before his 21st birthday, prince william is chasing a polo
+ball, such of what has become of the british monarchy over
+time</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="367" END="372">battle</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030621_160254.25-E50-97" ROLE="Attacker">
+      <extent>
+        <charseq START="305" END="321">an english prince</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030621_160254.25-E50-99" ROLE="Attacker">
+      <extent>
+        <charseq START="324" END="340">a king in
+waiting</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030621_160254.25-T10-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="291" END="302">days of yore</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030621_160254.25-EV2" TYPE="Life" SUBTYPE="Die" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030621_160254.25-E15" ROLE="Victim"/>
+  <event_mention ID="CNN_ENG_20030621_160254.25-EV2-1">
+    <extent>
+      <charseq START="1055" END="1088">his mother, princess di anna, died</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1035" END="1145">those who wept
+when his mother, princess di anna, died, apparently
+transfered their affection to her eldest son</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1085" END="1088">died</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030621_160254.25-E15-29" ROLE="Victim">
+      <extent>
+        <charseq START="1055" END="1064">his mother</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030621_160254.25-EV3" TYPE="Personnel" SUBTYPE="Start-Position" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030621_160254.25-E4" ROLE="Person"/>
+  <event_mention ID="CNN_ENG_20030621_160254.25-EV3-1">
+    <extent>
+      <charseq START="1206" END="1257">his father,
+prince charles, who is likely to precede</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1148" END="1375">he is part
+teen idol, part king in the making, but unlike his father,
+prince charles, who is likely to precede him to the throne,
+this prince sustains -- disdains being called your royal
+highness, signing his name, william wales</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1251" END="1257">precede</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030621_160254.25-E4-43" ROLE="Person">
+      <extent>
+        <charseq START="1206" END="1215">his father</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030621_160254.25-E4-44" ROLE="Person">
+      <extent>
+        <charseq START="1218" END="1231">prince charles</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030621_160254.25-EV4" TYPE="Life" SUBTYPE="Divorce" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030621_160254.25-E4" ROLE="Person"/>
+  <event_argument REFID="CNN_ENG_20030621_160254.25-E15" ROLE="Person"/>
+  <event_mention ID="CNN_ENG_20030621_160254.25-EV4-1">
+    <extent>
+      <charseq START="1684" END="1733">prince charles' ugly divorce with princess
+di anna</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1676" END="1800">despite prince charles' ugly divorce with princess
+di anna, the affection between father and son is now
+palpable and enviable</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1705" END="1711">divorce</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030621_160254.25-E4-63" ROLE="Person">
+      <extent>
+        <charseq START="1684" END="1697">prince charles</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030621_160254.25-E15-65" ROLE="Person">
+      <extent>
+        <charseq START="1718" END="1733">princess
+di anna</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

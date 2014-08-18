@@ -1,0 +1,475 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNNHL_ENG_20030425_183518.12.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNNHL_ENG_20030425_183518.12">
+<entity ID="CNNHL_ENG_20030425_183518.12-E1" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030425_183518.12-E1-25" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="351" END="361">negotiators</charseq>
+    </extent>
+    <head>
+      <charseq START="351" END="361">negotiators</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030425_183518.12-E2" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030425_183518.12-E2-3" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="394" END="495">four prisoners,
+including ramzi binalshibh, a september 11th suspect apprehended last
+year in pakistan</charseq>
+    </extent>
+    <head>
+      <charseq START="399" END="407">prisoners</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030425_183518.12-E3" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030425_183518.12-E3-5" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="420" END="435">ramzi binalshibh</charseq>
+    </extent>
+    <head>
+      <charseq START="420" END="435">ramzi binalshibh</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030425_183518.12-E3-6" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="438" END="495">a september 11th suspect apprehended last
+year in pakistan</charseq>
+    </extent>
+    <head>
+      <charseq START="455" END="461">suspect</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="ramzi binalshibh">
+      <charseq START="420" END="435">ramzi binalshibh</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030425_183518.12-E5" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030425_183518.12-E5-7" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="488" END="495">pakistan</charseq>
+    </extent>
+    <head>
+      <charseq START="488" END="495">pakistan</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="pakistan">
+      <charseq START="488" END="495">pakistan</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030425_183518.12-E6" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030425_183518.12-E6-9" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="571" END="582">all hostages</charseq>
+    </extent>
+    <head>
+      <charseq START="575" END="582">hostages</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030425_183518.12-E7" TYPE="FAC" SUBTYPE="Path" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030425_183518.12-E7-10" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="337" END="348">the
+autobahn</charseq>
+    </extent>
+    <head>
+      <charseq START="341" END="348">autobahn</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="autobahn">
+      <charseq START="341" END="348">autobahn</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030425_183518.12-E8" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030425_183518.12-E8-1" TYPE="NOM" LDCTYPE="BAR" LDCATR="FALSE">
+    <extent>
+      <charseq START="70" END="82">german police</charseq>
+    </extent>
+    <head>
+      <charseq START="77" END="82">police</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030425_183518.12-E8-11" TYPE="NOM" LDCTYPE="BAR" LDCATR="FALSE">
+    <extent>
+      <charseq START="498" END="503">police</charseq>
+    </extent>
+    <head>
+      <charseq START="498" END="503">police</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030425_183518.12-E8-24" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="319" END="324">police</charseq>
+    </extent>
+    <head>
+      <charseq START="319" END="324">police</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030425_183518.12-E9" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030425_183518.12-E9-2" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="367" END="368">he</charseq>
+    </extent>
+    <head>
+      <charseq START="367" END="368">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030425_183518.12-E9-8" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="514" END="546">the 17-year-old hijacking suspect</charseq>
+    </extent>
+    <head>
+      <charseq START="540" END="546">suspect</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030425_183518.12-E9-12" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="88" END="112">a teenage lebanese gunman</charseq>
+    </extent>
+    <head>
+      <charseq START="107" END="112">gunman</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030425_183518.12-E9-15" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="115" END="117">who</charseq>
+    </extent>
+    <head>
+      <charseq START="115" END="117">who</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030425_183518.12-E9-18" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="190" END="199">the gunman</charseq>
+    </extent>
+    <head>
+      <charseq START="194" END="199">gunman</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030425_183518.12-E10" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030425_183518.12-E10-13" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="98" END="105">lebanese</charseq>
+    </extent>
+    <head>
+      <charseq START="98" END="105">lebanese</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="lebanese">
+      <charseq START="98" END="105">lebanese</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030425_183518.12-E11" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030425_183518.12-E11-14" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="70" END="75">german</charseq>
+    </extent>
+    <head>
+      <charseq START="70" END="75">german</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="german">
+      <charseq START="70" END="75">german</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030425_183518.12-E12" TYPE="VEH" SUBTYPE="Land" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030425_183518.12-E12-16" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="128" END="132">a bus</charseq>
+    </extent>
+    <head>
+      <charseq START="130" END="132">bus</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030425_183518.12-E12-19" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="229" END="235">the bus</charseq>
+    </extent>
+    <head>
+      <charseq START="233" END="235">bus</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030425_183518.12-E13" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030425_183518.12-E13-17" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="160" END="187">a key september 11th suspect</charseq>
+    </extent>
+    <head>
+      <charseq START="181" END="187">suspect</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030425_183518.12-E14" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030425_183518.12-E14-20" TYPE="NOM" LDCTYPE="NOM" ROLE="LOC">
+    <extent>
+      <charseq START="240" END="270">the north german city of bremen</charseq>
+    </extent>
+    <head>
+      <charseq START="257" END="260">city</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030425_183518.12-E14-22" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="265" END="270">bremen</charseq>
+    </extent>
+    <head>
+      <charseq START="265" END="270">bremen</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="bremen">
+      <charseq START="265" END="270">bremen</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030425_183518.12-E15" TYPE="LOC" SUBTYPE="Region-General" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030425_183518.12-E15-21" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="244" END="255">north german</charseq>
+    </extent>
+    <head>
+      <charseq START="250" END="255">german</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030425_183518.12-E16" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030425_183518.12-E16-23" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="284" END="292">16 people</charseq>
+    </extent>
+    <head>
+      <charseq START="287" END="292">people</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<timex2 ID="CNNHL_ENG_20030425_183518.12-T1" VAL="2003-04-25T19:39:19">
+  <timex2_mention ID="CNNHL_ENG_20030425_183518.12-T1-1">
+    <extent>
+      <charseq START="46" END="64">2003-04-25 19:39:19</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNNHL_ENG_20030425_183518.12-T2" VAL="2003-04-25">
+  <timex2_mention ID="CNNHL_ENG_20030425_183518.12-T2-1">
+    <extent>
+      <charseq START="134" END="138">today</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNNHL_ENG_20030425_183518.12-T3" VAL="2001-09-11">
+  <timex2_mention ID="CNNHL_ENG_20030425_183518.12-T3-1">
+    <extent>
+      <charseq START="166" END="179">september 11th</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNNHL_ENG_20030425_183518.12-T4" VAL="2001-09-11">
+  <timex2_mention ID="CNNHL_ENG_20030425_183518.12-T4-1">
+    <extent>
+      <charseq START="440" END="453">september 11th</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNNHL_ENG_20030425_183518.12-T5" VAL="2002">
+  <timex2_mention ID="CNNHL_ENG_20030425_183518.12-T5-1">
+    <extent>
+      <charseq START="475" END="483">last
+year</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNNHL_ENG_20030425_183518.12-T6" VAL="P17Y" ANCHOR_VAL="2003" ANCHOR_DIR="ENDING">
+  <timex2_mention ID="CNNHL_ENG_20030425_183518.12-T6-1">
+    <extent>
+      <charseq START="518" END="528">17-year-old</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNNHL_ENG_20030425_183518.12-R1" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030425_183518.12-E9" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030425_183518.12-E12" ROLE="Arg-2"/>
+  <relation_argument REFID="CNNHL_ENG_20030425_183518.12-T2" ROLE="Time-Within"/>
+  <relation_mention ID="CNNHL_ENG_20030425_183518.12-R1-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="70" END="187">german police say a teenage lebanese gunman, who hijacked a bus today,
+was hoping to free a key september 11th suspect</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030425_183518.12-E9-12" ROLE="Arg-1">
+      <extent>
+        <charseq START="88" END="112">a teenage lebanese gunman</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030425_183518.12-E12-16" ROLE="Arg-2">
+      <extent>
+        <charseq START="128" END="132">a bus</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030425_183518.12-T2-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="134" END="138">today</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030425_183518.12-R2" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030425_183518.12-E3" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030425_183518.12-E5" ROLE="Arg-2"/>
+  <relation_argument REFID="CNNHL_ENG_20030425_183518.12-T5" ROLE="Time-Within"/>
+  <relation_mention ID="CNNHL_ENG_20030425_183518.12-R2-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="351" END="495">negotiators say he demanded the release of four prisoners,
+including ramzi binalshibh, a september 11th suspect apprehended last
+year in pakistan</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030425_183518.12-E3-6" ROLE="Arg-1">
+      <extent>
+        <charseq START="438" END="495">a september 11th suspect apprehended last
+year in pakistan</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030425_183518.12-E5-7" ROLE="Arg-2">
+      <extent>
+        <charseq START="488" END="495">pakistan</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030425_183518.12-T5-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="475" END="483">last
+year</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030425_183518.12-R3" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030425_183518.12-E8" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030425_183518.12-E11" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030425_183518.12-R3-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="70" END="82">german police</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030425_183518.12-E8-1" ROLE="Arg-1">
+      <extent>
+        <charseq START="70" END="82">german police</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030425_183518.12-E11-14" ROLE="Arg-2">
+      <extent>
+        <charseq START="70" END="75">german</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030425_183518.12-R4" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030425_183518.12-E9" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030425_183518.12-E10" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030425_183518.12-R4-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="88" END="112">a teenage lebanese gunman</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030425_183518.12-E9-12" ROLE="Arg-1">
+      <extent>
+        <charseq START="88" END="112">a teenage lebanese gunman</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030425_183518.12-E10-13" ROLE="Arg-2">
+      <extent>
+        <charseq START="98" END="105">lebanese</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030425_183518.12-R5" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030425_183518.12-E9" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030425_183518.12-E14" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030425_183518.12-R5-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="190" END="348">the gunman is accused
+of commandeering the bus in the north german city of bremen and
+holding 16 people hostage during a 75-mile police chase down the
+autobahn</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030425_183518.12-E9-18" ROLE="Arg-1">
+      <extent>
+        <charseq START="190" END="199">the gunman</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030425_183518.12-E14-20" ROLE="Arg-2">
+      <extent>
+        <charseq START="240" END="270">the north german city of bremen</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNNHL_ENG_20030425_183518.12-EV1" TYPE="Justice" SUBTYPE="Release-Parole" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNNHL_ENG_20030425_183518.12-E3" ROLE="Person"/>
+  <event_argument REFID="CNNHL_ENG_20030425_183518.12-E1" ROLE="Entity"/>
+  <event_mention ID="CNNHL_ENG_20030425_183518.12-EV1-1">
+    <extent>
+      <charseq START="351" END="435">negotiators say he demanded the release of four prisoners,
+including ramzi binalshibh</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="351" END="495">negotiators say he demanded the release of four prisoners,
+including ramzi binalshibh, a september 11th suspect apprehended last
+year in pakistan</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="383" END="389">release</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030425_183518.12-E3-5" ROLE="Person">
+      <extent>
+        <charseq START="420" END="435">ramzi binalshibh</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030425_183518.12-E1-25" ROLE="Entity">
+      <extent>
+        <charseq START="351" END="361">negotiators</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNNHL_ENG_20030425_183518.12-EV2" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Negative" GENERICITY="Generic" TENSE="Past">
+  <event_argument REFID="CNNHL_ENG_20030425_183518.12-E9" ROLE="Target"/>
+  <event_argument REFID="CNNHL_ENG_20030425_183518.12-E8" ROLE="Attacker"/>
+  <event_mention ID="CNNHL_ENG_20030425_183518.12-EV2-1">
+    <extent>
+      <charseq START="498" END="568">police captured the 17-year-old hijacking suspect
+without firing a shot</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="498" END="568">police captured the 17-year-old hijacking suspect
+without firing a shot</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="565" END="568">shot</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030425_183518.12-E9-8" ROLE="Target">
+      <extent>
+        <charseq START="514" END="546">the 17-year-old hijacking suspect</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030425_183518.12-E8-11" ROLE="Attacker">
+      <extent>
+        <charseq START="498" END="503">police</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

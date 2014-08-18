@@ -1,0 +1,340 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030429_190711.14.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030429_190711.14">
+<entity ID="CNN_ENG_20030429_190711.14-E1" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030429_190711.14-E1-1" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="107" END="112">canada</charseq>
+    </extent>
+    <head>
+      <charseq START="107" END="112">canada</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030429_190711.14-E1-3" TYPE="PRO" LDCTYPE="PRO" ROLE="LOC">
+    <extent>
+      <charseq START="129" END="133">there</charseq>
+    </extent>
+    <head>
+      <charseq START="129" END="133">there</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="canada">
+      <charseq START="107" END="112">canada</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030429_190711.14-E2" TYPE="ORG" SUBTYPE="Non-Governmental" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030429_190711.14-E2-4" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="142" END="170">the world health organization</charseq>
+    </extent>
+    <head>
+      <charseq START="146" END="170">world health organization</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030429_190711.14-E2-6" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="182" END="183">it</charseq>
+    </extent>
+    <head>
+      <charseq START="182" END="183">it</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030429_190711.14-E2-7" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="196" END="198">its</charseq>
+    </extent>
+    <head>
+      <charseq START="196" END="198">its</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030429_190711.14-E2-11" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="415" END="421">the who</charseq>
+    </extent>
+    <head>
+      <charseq START="419" END="421">who</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="who">
+      <charseq START="419" END="421">who</charseq>
+    </name>
+    <name NAME="world health organization">
+      <charseq START="146" END="170">world health organization</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030429_190711.14-E3" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030429_190711.14-E3-8" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="227" END="233">toronto</charseq>
+    </extent>
+    <head>
+      <charseq START="227" END="233">toronto</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030429_190711.14-E3-9" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="330" END="336">toronto</charseq>
+    </extent>
+    <head>
+      <charseq START="330" END="336">toronto</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030429_190711.14-E3-10" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="406" END="412">toronto</charseq>
+    </extent>
+    <head>
+      <charseq START="406" END="412">toronto</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="toronto">
+      <charseq START="227" END="233">toronto</charseq>
+    </name>
+    <name NAME="toronto">
+      <charseq START="330" END="336">toronto</charseq>
+    </name>
+    <name NAME="toronto">
+      <charseq START="406" END="412">toronto</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030429_190711.14-E4" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030429_190711.14-E4-2" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE">
+    <extent>
+      <charseq START="644" END="652">hong kong</charseq>
+    </extent>
+    <head>
+      <charseq START="644" END="652">hong kong</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030429_190711.14-E4-5" TYPE="PRO" LDCTYPE="WHQ" ROLE="GPE">
+    <extent>
+      <charseq START="654" END="658">which</charseq>
+    </extent>
+    <head>
+      <charseq START="654" END="658">which</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030429_190711.14-E4-12" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="462" END="470">hong kong</charseq>
+    </extent>
+    <head>
+      <charseq START="462" END="470">hong kong</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="hong kong">
+      <charseq START="462" END="470">hong kong</charseq>
+    </name>
+    <name NAME="hong kong">
+      <charseq START="644" END="652">hong kong</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030429_190711.14-E5" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030429_190711.14-E5-13" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="473" END="479">beijing</charseq>
+    </extent>
+    <head>
+      <charseq START="473" END="479">beijing</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="beijing">
+      <charseq START="473" END="479">beijing</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030429_190711.14-E6" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030429_190711.14-E6-14" TYPE="NOM" LDCTYPE="NOM" ROLE="LOC">
+    <extent>
+      <charseq START="485" END="505">the chinese provences</charseq>
+    </extent>
+    <head>
+      <charseq START="497" END="505">provences</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030429_190711.14-E7" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030429_190711.14-E7-15" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="489" END="495">chinese</charseq>
+    </extent>
+    <head>
+      <charseq START="489" END="495">chinese</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030429_190711.14-E7-16" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="530" END="534">china</charseq>
+    </extent>
+    <head>
+      <charseq START="530" END="534">china</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="chinese">
+      <charseq START="489" END="495">chinese</charseq>
+    </name>
+    <name NAME="china">
+      <charseq START="530" END="534">china</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030429_190711.14-E9" TYPE="GPE" SUBTYPE="Nation" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030429_190711.14-E9-17" TYPE="NOM" LDCTYPE="NOM" ROLE="GPE">
+    <extent>
+      <charseq START="561" END="584">any country in the world</charseq>
+    </extent>
+    <head>
+      <charseq START="565" END="571">country</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030429_190711.14-E10" TYPE="LOC" SUBTYPE="Celestial" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030429_190711.14-E10-18" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="576" END="584">the world</charseq>
+    </extent>
+    <head>
+      <charseq START="580" END="584">world</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<timex2 ID="CNN_ENG_20030429_190711.14-T1" VAL="PT1H" ANCHOR_VAL="2003-04-29-T13:00" ANCHOR_DIR="STARTING">
+  <timex2_mention ID="CNN_ENG_20030429_190711.14-T1-1">
+    <extent>
+      <charseq START="89" END="102">1:00 p.m. hour</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030429_190711.14-T2" VAL="2003-04-29">
+  <timex2_mention ID="CNN_ENG_20030429_190711.14-T2-1">
+    <extent>
+      <charseq START="135" END="139">today</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030429_190711.14-T3" VAL="P20D" ANCHOR_VAL="2003-04-29" ANCHOR_DIR="ENDING">
+  <timex2_mention ID="CNN_ENG_20030429_190711.14-T3-1">
+    <extent>
+      <charseq START="270" END="276">20 days</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030429_190711.14-T4" VAL="2003-04-29">
+  <timex2_mention ID="CNN_ENG_20030429_190711.14-T4-1">
+    <extent>
+      <charseq START="595" END="599">today</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030429_190711.14-T5" VAL="2003-04-29T20:29:49">
+  <timex2_mention ID="CNN_ENG_20030429_190711.14-T5-1">
+    <extent>
+      <charseq START="44" END="62">2003-04-29 20:29:49</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030429_190711.14-R1" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030429_190711.14-E6" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030429_190711.14-E7" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030429_190711.14-R1-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="485" END="505">the chinese provences</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030429_190711.14-E6-14" ROLE="Arg-1">
+      <extent>
+        <charseq START="485" END="505">the chinese provences</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030429_190711.14-E7-15" ROLE="Arg-2">
+      <extent>
+        <charseq START="489" END="495">chinese</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030429_190711.14-R2" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030429_190711.14-E9" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030429_190711.14-E10" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030429_190711.14-R2-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="561" END="584">any country in the world</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030429_190711.14-E9-17" ROLE="Arg-1">
+      <extent>
+        <charseq START="561" END="584">any country in the world</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030429_190711.14-E10-18" ROLE="Arg-2">
+      <extent>
+        <charseq START="576" END="584">the world</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030429_190711.14-EV1" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030429_190711.14-E3" ROLE="Destination"/>
+  <event_mention ID="CNN_ENG_20030429_190711.14-EV1-1">
+    <extent>
+      <charseq START="217" END="233">travel to toronto</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="115" END="257">the top story there
+today, the world health organization announced it is lifting its
+advisory against travel to toronto because of fear of sars</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="217" END="222">travel</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030429_190711.14-E3-8" ROLE="Destination">
+      <extent>
+        <charseq START="227" END="233">toronto</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030429_190711.14-EV2" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Negative" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030429_190711.14-E4" ROLE="Destination"/>
+  <event_argument REFID="CNN_ENG_20030429_190711.14-E5" ROLE="Destination"/>
+  <event_argument REFID="CNN_ENG_20030429_190711.14-E6" ROLE="Destination"/>
+  <event_mention ID="CNN_ENG_20030429_190711.14-EV2-1">
+    <extent>
+      <charseq START="452" END="505">travel to hong kong,
+beijing and the chinese provences</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="415" END="527">the who says sars advisories against travel to hong kong,
+beijing and the chinese provences will remain in effect</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="452" END="457">travel</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030429_190711.14-E4-12" ROLE="Destination">
+      <extent>
+        <charseq START="462" END="470">hong kong</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030429_190711.14-E5-13" ROLE="Destination">
+      <extent>
+        <charseq START="473" END="479">beijing</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030429_190711.14-E6-14" ROLE="Destination">
+      <extent>
+        <charseq START="485" END="505">the chinese provences</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

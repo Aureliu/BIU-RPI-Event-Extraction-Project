@@ -1,0 +1,321 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030404_073033.4.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030404_073033.4">
+<entity ID="CNN_ENG_20030404_073033.4-E1" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030404_073033.4-E1-5" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="537" END="543">baghdad</charseq>
+    </extent>
+    <head>
+      <charseq START="537" END="543">baghdad</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030404_073033.4-E1-20" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="501" END="507">baghdad</charseq>
+    </extent>
+    <head>
+      <charseq START="501" END="507">baghdad</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="baghdad">
+      <charseq START="501" END="507">baghdad</charseq>
+    </name>
+    <name NAME="baghdad">
+      <charseq START="537" END="543">baghdad</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030404_073033.4-E2" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030404_073033.4-E2-3" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="510" END="517">military</charseq>
+    </extent>
+    <head>
+      <charseq START="510" END="517">military</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030404_073033.4-E2-10" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="217" END="224">military</charseq>
+    </extent>
+    <head>
+      <charseq START="217" END="224">military</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030404_073033.4-E3" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030404_073033.4-E3-4" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="533" END="569">the
+baghdad republican guard division</charseq>
+    </extent>
+    <head>
+      <charseq START="545" END="569">republican guard division</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030404_073033.4-E5" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030404_073033.4-E5-1" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="67" END="81">central command</charseq>
+    </extent>
+    <head>
+      <charseq START="67" END="81">central command</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="central command">
+      <charseq START="67" END="81">central command</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030404_073033.4-E6" TYPE="FAC" SUBTYPE="Airport" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030404_073033.4-E6-6" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="103" END="117">baghdad airport</charseq>
+    </extent>
+    <head>
+      <charseq START="103" END="117">baghdad airport</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030404_073033.4-E6-7" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="158" END="168">the airport</charseq>
+    </extent>
+    <head>
+      <charseq START="162" END="168">airport</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030404_073033.4-E6-12" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="307" END="311">there</charseq>
+    </extent>
+    <head>
+      <charseq START="307" END="311">there</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030404_073033.4-E6-14" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="358" END="362">there</charseq>
+    </extent>
+    <head>
+      <charseq START="358" END="362">there</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="baghdad airport">
+      <charseq START="103" END="117">baghdad airport</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030404_073033.4-E7" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030404_073033.4-E7-8" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="203" END="205">u.s</charseq>
+    </extent>
+    <head>
+      <charseq START="203" END="205">u.s</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030404_073033.4-E7-18" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="472" END="474">u.s</charseq>
+    </extent>
+    <head>
+      <charseq START="472" END="474">u.s</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="u.s">
+      <charseq START="203" END="205">u.s</charseq>
+    </name>
+    <name NAME="u.s">
+      <charseq START="472" END="474">u.s</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030404_073033.4-E8" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030404_073033.4-E8-2" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="510" END="527">military officials</charseq>
+    </extent>
+    <head>
+      <charseq START="519" END="527">officials</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030404_073033.4-E8-9" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="217" END="234">military officials</charseq>
+    </extent>
+    <head>
+      <charseq START="226" END="234">officials</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030404_073033.4-E8-13" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="318" END="321">they</charseq>
+    </extent>
+    <head>
+      <charseq START="318" END="321">they</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030404_073033.4-E10" TYPE="FAC" SUBTYPE="Path" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030404_073033.4-E10-11" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="267" END="277">the
+runways</charseq>
+    </extent>
+    <head>
+      <charseq START="271" END="277">runways</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030404_073033.4-E11" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030404_073033.4-E11-15" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="405" END="411">centcom</charseq>
+    </extent>
+    <head>
+      <charseq START="405" END="411">centcom</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="centcom">
+      <charseq START="405" END="411">centcom</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030404_073033.4-E12" TYPE="ORG" SUBTYPE="Government" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030404_073033.4-E12-16" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="423" END="450">2500 republican guard troops</charseq>
+    </extent>
+    <head>
+      <charseq START="428" END="450">republican guard troops</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="republican guard troops">
+      <charseq START="428" END="450">republican guard troops</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030404_073033.4-E13" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030404_073033.4-E13-17" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="472" END="483">u.s. marines</charseq>
+    </extent>
+    <head>
+      <charseq START="477" END="483">marines</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030404_073033.4-E15" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030404_073033.4-E15-19" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="493" END="495">kut</charseq>
+    </extent>
+    <head>
+      <charseq START="493" END="495">kut</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="kut">
+      <charseq START="493" END="495">kut</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<timex2 ID="CNN_ENG_20030404_073033.4-T1" VAL="2003-04-04T08:36:21">
+  <timex2_mention ID="CNN_ENG_20030404_073033.4-T1-1">
+    <extent>
+      <charseq START="43" END="61">2003-04-04 08:36:21</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030404_073033.4-T2" VAL="PRESENT_REF" ANCHOR_VAL="2003-04-04T08:36:21" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_ENG_20030404_073033.4-T2-1">
+    <extent>
+      <charseq START="193" END="195">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030404_073033.4-R2" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030404_073033.4-E8" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030404_073033.4-E2" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030404_073033.4-R2-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="217" END="234">military officials</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030404_073033.4-E8-9" ROLE="Arg-1">
+      <extent>
+        <charseq START="217" END="234">military officials</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030404_073033.4-E2-10" ROLE="Arg-2">
+      <extent>
+        <charseq START="217" END="224">military</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_ENG_20030404_073033.4-R2-2" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="510" END="527">military officials</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030404_073033.4-E8-2" ROLE="Arg-1">
+      <extent>
+        <charseq START="510" END="527">military officials</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030404_073033.4-E2-3" ROLE="Arg-2">
+      <extent>
+        <charseq START="510" END="517">military</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030404_073033.4-R3" TYPE="PART-WHOLE" SUBTYPE="Subsidiary" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030404_073033.4-E3" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030404_073033.4-E1" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030404_073033.4-R3-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="533" END="569">the
+baghdad republican guard division</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030404_073033.4-E3-4" ROLE="Arg-1">
+      <extent>
+        <charseq START="533" END="569">the
+baghdad republican guard division</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030404_073033.4-E1-5" ROLE="Arg-2">
+      <extent>
+        <charseq START="537" END="543">baghdad</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030404_073033.4-R4" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030404_073033.4-E7" ROLE="Arg-2"/>
+  <relation_argument REFID="CNN_ENG_20030404_073033.4-E13" ROLE="Arg-1"/>
+  <relation_mention ID="CNN_ENG_20030404_073033.4-R4-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="472" END="483">u.s. marines</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030404_073033.4-E7-18" ROLE="Arg-2">
+      <extent>
+        <charseq START="472" END="474">u.s</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030404_073033.4-E13-17" ROLE="Arg-1">
+      <extent>
+        <charseq START="472" END="483">u.s. marines</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+</document>
+</source_file>

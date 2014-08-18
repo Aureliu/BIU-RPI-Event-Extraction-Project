@@ -1,0 +1,705 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="OIADVANTAGE_20050109.1947.sgm" SOURCE="weblog" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="OIADVANTAGE_20050109.1947">
+<entity ID="OIADVANTAGE_20050109.1947-E1" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="OIADVANTAGE_20050109.1947-E1-2" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="395" END="400">United</charseq>
+    </extent>
+    <head>
+      <charseq START="395" END="400">United</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="United">
+      <charseq START="395" END="400">United</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="OIADVANTAGE_20050109.1947-E2" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="OIADVANTAGE_20050109.1947-E2-3" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="453" END="488">a highly paid, specialized workforce</charseq>
+    </extent>
+    <head>
+      <charseq START="480" END="488">workforce</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="OIADVANTAGE_20050109.1947-E3" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="OIADVANTAGE_20050109.1947-E3-4" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="513" END="514">we</charseq>
+    </extent>
+    <head>
+      <charseq START="513" END="514">we</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="OIADVANTAGE_20050109.1947-E4" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="OIADVANTAGE_20050109.1947-E4-5" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="520" END="578">a whole slew of competitors with much lower cost
+structures</charseq>
+    </extent>
+    <head>
+      <charseq START="536" END="546">competitors</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="OIADVANTAGE_20050109.1947-E5" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="OIADVANTAGE_20050109.1947-E5-8" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1517" END="1535">BusinessWeek Online</charseq>
+    </extent>
+    <head>
+      <charseq START="1517" END="1535">BusinessWeek Online</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="BusinessWeek Online">
+      <charseq START="1517" END="1535">BusinessWeek Online</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="OIADVANTAGE_20050109.1947-E6" TYPE="ORG" SUBTYPE="Commercial" CLASS="USP">
+  <entity_mention ID="OIADVANTAGE_20050109.1947-E6-10" TYPE="PRO" LDCTYPE="PTV">
+    <extent>
+      <charseq START="738" END="760">some of these companies</charseq>
+    </extent>
+    <head>
+      <charseq START="738" END="741">some</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="OIADVANTAGE_20050109.1947-E7" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="OIADVANTAGE_20050109.1947-E7-14" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="822" END="831">Pittsburgh</charseq>
+    </extent>
+    <head>
+      <charseq START="822" END="831">Pittsburgh</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050109.1947-E7-15" TYPE="PRO" LDCTYPE="PTV" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="834" END="856">one of US Airway's hubs</charseq>
+    </extent>
+    <head>
+      <charseq START="834" END="836">one</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050109.1947-E7-19" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="868" END="870">its</charseq>
+    </extent>
+    <head>
+      <charseq START="868" END="870">its</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050109.1947-E7-23" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="980" END="989">Pittsburgh</charseq>
+    </extent>
+    <head>
+      <charseq START="980" END="989">Pittsburgh</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Pittsburgh">
+      <charseq START="822" END="831">Pittsburgh</charseq>
+    </name>
+    <name NAME="Pittsburgh">
+      <charseq START="980" END="989">Pittsburgh</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="OIADVANTAGE_20050109.1947-E9" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="OIADVANTAGE_20050109.1947-E9-16" TYPE="NOM" LDCTYPE="BAR" ROLE="GPE">
+    <extent>
+      <charseq START="841" END="856">US Airway's hubs</charseq>
+    </extent>
+    <head>
+      <charseq START="853" END="856">hubs</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="OIADVANTAGE_20050109.1947-E10" TYPE="FAC" SUBTYPE="Airport" CLASS="SPC">
+  <entity_mention ID="OIADVANTAGE_20050109.1947-E10-18" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="868" END="878">its airport</charseq>
+    </extent>
+    <head>
+      <charseq START="872" END="878">airport</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="OIADVANTAGE_20050109.1947-E11" TYPE="FAC" SUBTYPE="Subarea-Facility" CLASS="SPC">
+  <entity_mention ID="OIADVANTAGE_20050109.1947-E11-20" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="894" END="935">a sprawling retail complex in the terminal</charseq>
+    </extent>
+    <head>
+      <charseq START="913" END="919">complex</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="OIADVANTAGE_20050109.1947-E12" TYPE="FAC" SUBTYPE="Subarea-Facility" CLASS="SPC">
+  <entity_mention ID="OIADVANTAGE_20050109.1947-E12-21" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="924" END="935">the terminal</charseq>
+    </extent>
+    <head>
+      <charseq START="928" END="935">terminal</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="OIADVANTAGE_20050109.1947-E13" TYPE="FAC" SUBTYPE="Airport" CLASS="SPC">
+  <entity_mention ID="OIADVANTAGE_20050109.1947-E13-24" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1065" END="1088">These shiny
+new airports</charseq>
+    </extent>
+    <head>
+      <charseq START="1081" END="1088">airports</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="OIADVANTAGE_20050109.1947-E14" TYPE="ORG" SUBTYPE="Commercial" CLASS="GEN">
+  <entity_mention ID="OIADVANTAGE_20050109.1947-E14-25" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1171" END="1182">the airlines</charseq>
+    </extent>
+    <head>
+      <charseq START="1175" END="1182">airlines</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="OIADVANTAGE_20050109.1947-E15" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="OIADVANTAGE_20050109.1947-E15-27" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1242" END="1250">Southwest</charseq>
+    </extent>
+    <head>
+      <charseq START="1242" END="1250">Southwest</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Southwest">
+      <charseq START="1242" END="1250">Southwest</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="OIADVANTAGE_20050109.1947-E16" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="OIADVANTAGE_20050109.1947-E16-28" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1256" END="1262">JetBlue</charseq>
+    </extent>
+    <head>
+      <charseq START="1256" END="1262">JetBlue</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="JetBlue">
+      <charseq START="1256" END="1262">JetBlue</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="OIADVANTAGE_20050109.1947-E17" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="OIADVANTAGE_20050109.1947-E17-29" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1269" END="1316">the only major airlines to earn a profit in 2004</charseq>
+    </extent>
+    <head>
+      <charseq START="1284" END="1291">airlines</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="OIADVANTAGE_20050109.1947-E18" TYPE="PER" SUBTYPE="Indeterminate" CLASS="USP">
+  <entity_mention ID="OIADVANTAGE_20050109.1947-E18-30" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1322" END="1324">who</charseq>
+    </extent>
+    <head>
+      <charseq START="1322" END="1324">who</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="OIADVANTAGE_20050109.1947-E19" TYPE="ORG" SUBTYPE="Commercial" CLASS="USP">
+  <entity_mention ID="OIADVANTAGE_20050109.1947-E19-26" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1186" END="1189">This</charseq>
+    </extent>
+    <head>
+      <charseq START="1186" END="1189">This</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050109.1947-E19-34" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="1194" END="1239">an industry looking for a sustainable strategy</charseq>
+    </extent>
+    <head>
+      <charseq START="1197" END="1204">industry</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050109.1947-E19-37" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="212" END="231">the
+airline industry</charseq>
+    </extent>
+    <head>
+      <charseq START="224" END="231">industry</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="OIADVANTAGE_20050109.1947-E20" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="OIADVANTAGE_20050109.1947-E20-1" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="147" END="147">I</charseq>
+    </extent>
+    <head>
+      <charseq START="147" END="147">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050109.1947-E20-6" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="582" END="582">I</charseq>
+    </extent>
+    <head>
+      <charseq START="582" END="582">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050109.1947-E20-7" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="590" END="590">I</charseq>
+    </extent>
+    <head>
+      <charseq START="590" END="590">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050109.1947-E20-31" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1381" END="1381">I</charseq>
+    </extent>
+    <head>
+      <charseq START="1381" END="1381">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050109.1947-E20-35" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="171" END="172">me</charseq>
+    </extent>
+    <head>
+      <charseq START="171" END="172">me</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050109.1947-E20-40" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="255" END="256">me</charseq>
+    </extent>
+    <head>
+      <charseq START="255" END="256">me</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050109.1947-E20-41" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="117" END="122">John A</charseq>
+    </extent>
+    <head>
+      <charseq START="117" END="122">John A</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="John A">
+      <charseq START="117" END="122">John A</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="OIADVANTAGE_20050109.1947-E21" TYPE="PER" SUBTYPE="Indeterminate" CLASS="USP">
+  <entity_mention ID="OIADVANTAGE_20050109.1947-E21-36" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="189" END="194">anyone</charseq>
+    </extent>
+    <head>
+      <charseq START="189" END="194">anyone</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="OIADVANTAGE_20050109.1947-E23" TYPE="ORG" SUBTYPE="Commercial" CLASS="GEN">
+  <entity_mention ID="OIADVANTAGE_20050109.1947-E23-38" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="216" END="222">airline</charseq>
+    </extent>
+    <head>
+      <charseq START="216" END="222">airline</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050109.1947-E23-44" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="321" END="327">airline</charseq>
+    </extent>
+    <head>
+      <charseq START="321" END="327">airline</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="OIADVANTAGE_20050109.1947-E24" TYPE="PER" SUBTYPE="Individual" CLASS="USP">
+  <entity_mention ID="OIADVANTAGE_20050109.1947-E24-39" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="242" END="248">someone</charseq>
+    </extent>
+    <head>
+      <charseq START="242" END="248">someone</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="OIADVANTAGE_20050109.1947-E25" TYPE="ORG" SUBTYPE="Commercial" CLASS="GEN">
+  <entity_mention ID="OIADVANTAGE_20050109.1947-E25-42" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="266" END="274">companies</charseq>
+    </extent>
+    <head>
+      <charseq START="266" END="274">companies</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="OIADVANTAGE_20050109.1947-E26" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="OIADVANTAGE_20050109.1947-E26-9" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="258" END="400">a group companies facing more
+serious problems than the legacy airline carriers (Delta, US Airways,
+Continental, American, Northwestern, United</charseq>
+    </extent>
+    <head>
+      <charseq START="260" END="264">group</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050109.1947-E26-11" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="746" END="760">these companies</charseq>
+    </extent>
+    <head>
+      <charseq START="752" END="760">companies</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050109.1947-E26-12" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="805" END="819">these companies</charseq>
+    </extent>
+    <head>
+      <charseq START="811" END="819">companies</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050109.1947-E26-32" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1467" END="1481">these companies</charseq>
+    </extent>
+    <head>
+      <charseq START="1473" END="1481">companies</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050109.1947-E26-43" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="310" END="400">the legacy airline carriers (Delta, US Airways,
+Continental, American, Northwestern, United</charseq>
+    </extent>
+    <head>
+      <charseq START="329" END="336">carriers</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="OIADVANTAGE_20050109.1947-E28" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="OIADVANTAGE_20050109.1947-E28-45" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="339" END="343">Delta</charseq>
+    </extent>
+    <head>
+      <charseq START="339" END="343">Delta</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Delta">
+      <charseq START="339" END="343">Delta</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="OIADVANTAGE_20050109.1947-E29" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="OIADVANTAGE_20050109.1947-E29-17" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="841" END="849">US Airway</charseq>
+    </extent>
+    <head>
+      <charseq START="841" END="849">US Airway</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050109.1947-E29-22" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="942" END="951">US Airways</charseq>
+    </extent>
+    <head>
+      <charseq START="942" END="951">US Airways</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050109.1947-E29-33" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1598" END="1606">US Airway</charseq>
+    </extent>
+    <head>
+      <charseq START="1598" END="1606">US Airway</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050109.1947-E29-46" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="346" END="355">US Airways</charseq>
+    </extent>
+    <head>
+      <charseq START="346" END="355">US Airways</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="US Airway">
+      <charseq START="841" END="849">US Airway</charseq>
+    </name>
+    <name NAME="US Airways">
+      <charseq START="942" END="951">US Airways</charseq>
+    </name>
+    <name NAME="US Airway">
+      <charseq START="1598" END="1606">US Airway</charseq>
+    </name>
+    <name NAME="US Airways">
+      <charseq START="346" END="355">US Airways</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="OIADVANTAGE_20050109.1947-E30" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="OIADVANTAGE_20050109.1947-E30-47" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="358" END="368">Continental</charseq>
+    </extent>
+    <head>
+      <charseq START="358" END="368">Continental</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Continental">
+      <charseq START="358" END="368">Continental</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="OIADVANTAGE_20050109.1947-E31" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="OIADVANTAGE_20050109.1947-E31-48" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="371" END="378">American</charseq>
+    </extent>
+    <head>
+      <charseq START="371" END="378">American</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="American">
+      <charseq START="371" END="378">American</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="OIADVANTAGE_20050109.1947-E32" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="OIADVANTAGE_20050109.1947-E32-49" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="381" END="392">Northwestern</charseq>
+    </extent>
+    <head>
+      <charseq START="381" END="392">Northwestern</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Northwestern">
+      <charseq START="381" END="392">Northwestern</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<value ID="OIADVANTAGE_20050109.1947-V1" TYPE="Numeric" SUBTYPE="Percent">
+  <value_mention ID="OIADVANTAGE_20050109.1947-V1-1">
+    <extent>
+      <charseq START="994" END="996">28%</charseq>
+    </extent>
+  </value_mention>
+</value>
+<timex2 ID="OIADVANTAGE_20050109.1947-T1" VAL="2005-01-09T19:47:00">
+  <timex2_mention ID="OIADVANTAGE_20050109.1947-T1-1">
+    <extent>
+      <charseq START="41" END="59">2005-01-09T19:47:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="OIADVANTAGE_20050109.1947-T2" VAL="2005-01-09T19:47:00">
+  <timex2_mention ID="OIADVANTAGE_20050109.1947-T2-1">
+    <extent>
+      <charseq START="126" END="144">2005-01-09T19:47:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="OIADVANTAGE_20050109.1947-T3" VAL="2004-W52">
+  <timex2_mention ID="OIADVANTAGE_20050109.1947-T3-1">
+    <extent>
+      <charseq START="648" END="656">last week</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="OIADVANTAGE_20050109.1947-T4" VAL="PXY" ANCHOR_VAL="2005" ANCHOR_DIR="STARTING">
+  <timex2_mention ID="OIADVANTAGE_20050109.1947-T4-1">
+    <extent>
+      <charseq START="686" END="705">these next few years</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="OIADVANTAGE_20050109.1947-T5" VAL="2004-01">
+  <timex2_mention ID="OIADVANTAGE_20050109.1947-T5-1">
+    <extent>
+      <charseq START="1004" END="1018">January of 2004</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="OIADVANTAGE_20050109.1947-T6" VAL="2004">
+  <timex2_mention ID="OIADVANTAGE_20050109.1947-T6-1">
+    <extent>
+      <charseq START="1313" END="1316">2004</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="OIADVANTAGE_20050109.1947-T7" VAL="2009">
+  <timex2_mention ID="OIADVANTAGE_20050109.1947-T7-1">
+    <extent>
+      <charseq START="1358" END="1375">another five years</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="OIADVANTAGE_20050109.1947-T8" VAL="PRESENT_REF" ANCHOR_VAL="2005-01-09T19:47:00" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="OIADVANTAGE_20050109.1947-T8-1">
+    <extent>
+      <charseq START="938" END="940">Now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="OIADVANTAGE_20050109.1947-R1" TYPE="ORG-AFF" SUBTYPE="Investor-Shareholder" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="OIADVANTAGE_20050109.1947-E21" ROLE="Arg-1"/>
+  <relation_argument REFID="OIADVANTAGE_20050109.1947-E19" ROLE="Arg-2"/>
+  <relation_mention ID="OIADVANTAGE_20050109.1947-R1-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="147" END="231">I can't for the life of me figure out why anyone would invest in the
+airline industry</charseq>
+    </extent>
+    <relation_mention_argument REFID="OIADVANTAGE_20050109.1947-E21-36" ROLE="Arg-1">
+      <extent>
+        <charseq START="189" END="194">anyone</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="OIADVANTAGE_20050109.1947-E19-37" ROLE="Arg-2">
+      <extent>
+        <charseq START="212" END="231">the
+airline industry</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="OIADVANTAGE_20050109.1947-R2" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="OIADVANTAGE_20050109.1947-E10" ROLE="Arg-1"/>
+  <relation_argument REFID="OIADVANTAGE_20050109.1947-E7" ROLE="Arg-2"/>
+  <relation_mention ID="OIADVANTAGE_20050109.1947-R2-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="868" END="878">its airport</charseq>
+    </extent>
+    <relation_mention_argument REFID="OIADVANTAGE_20050109.1947-E10-18" ROLE="Arg-1">
+      <extent>
+        <charseq START="868" END="878">its airport</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="OIADVANTAGE_20050109.1947-E7-19" ROLE="Arg-2">
+      <extent>
+        <charseq START="868" END="870">its</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="OIADVANTAGE_20050109.1947-R3" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="OIADVANTAGE_20050109.1947-E11" ROLE="Arg-1"/>
+  <relation_argument REFID="OIADVANTAGE_20050109.1947-E12" ROLE="Arg-2"/>
+  <relation_mention ID="OIADVANTAGE_20050109.1947-R3-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="894" END="935">a sprawling retail complex in the terminal</charseq>
+    </extent>
+    <relation_mention_argument REFID="OIADVANTAGE_20050109.1947-E11-20" ROLE="Arg-1">
+      <extent>
+        <charseq START="894" END="935">a sprawling retail complex in the terminal</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="OIADVANTAGE_20050109.1947-E12-21" ROLE="Arg-2">
+      <extent>
+        <charseq START="924" END="935">the terminal</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="OIADVANTAGE_20050109.1947-R4" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="OIADVANTAGE_20050109.1947-E11" ROLE="Arg-1"/>
+  <relation_argument REFID="OIADVANTAGE_20050109.1947-E10" ROLE="Arg-2"/>
+  <relation_mention ID="OIADVANTAGE_20050109.1947-R4-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="822" END="935">Pittsburgh, one of US Airway's hubs, built
+up its airport complete with a sprawling retail complex in the terminal</charseq>
+    </extent>
+    <relation_mention_argument REFID="OIADVANTAGE_20050109.1947-E11-20" ROLE="Arg-1">
+      <extent>
+        <charseq START="894" END="935">a sprawling retail complex in the terminal</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="OIADVANTAGE_20050109.1947-E10-18" ROLE="Arg-2">
+      <extent>
+        <charseq START="868" END="878">its airport</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="OIADVANTAGE_20050109.1947-EV1" TYPE="Business" SUBTYPE="End-Org" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Future">
+  <event_argument REFID="OIADVANTAGE_20050109.1947-E29" ROLE="Org"/>
+  <event_mention ID="OIADVANTAGE_20050109.1947-EV1-1">
+    <extent>
+      <charseq START="942" END="1051">US Airways has reduced flights out of Pittsburgh by 28% since
+January of 2004 and is in real danger of folding</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="938" END="1062">Now US Airways has reduced flights out of Pittsburgh by 28% since
+January of 2004 and is in real danger of folding completely</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1045" END="1051">folding</charseq>
+    </anchor>
+    <event_mention_argument REFID="OIADVANTAGE_20050109.1947-E29-22" ROLE="Org">
+      <extent>
+        <charseq START="942" END="951">US Airways</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="OIADVANTAGE_20050109.1947-EV2" TYPE="Business" SUBTYPE="Declare-Bankruptcy" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Future">
+  <event_argument REFID="OIADVANTAGE_20050109.1947-E26" ROLE="Org"/>
+  <event_mention ID="OIADVANTAGE_20050109.1947-EV2-1">
+    <extent>
+      <charseq START="1467" END="1513">these companies parade in and out of bankruptcy</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1378" END="1513">So I will thankfully
+accept the low fares, bemoan the loss of food on flights, and watch
+these companies parade in and out of bankruptcy</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1504" END="1513">bankruptcy</charseq>
+    </anchor>
+    <event_mention_argument REFID="OIADVANTAGE_20050109.1947-E26-32" ROLE="Org">
+      <extent>
+        <charseq START="1467" END="1481">these companies</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

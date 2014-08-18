@@ -96,7 +96,7 @@ public class TextFeatureGenerator
 	{
 		try
 		{
-			readDict("src/main/resources/data/dict");
+			readDict("../ace_events_large_resources/src/main/resources/data/dict");
 		} 
 		catch (IOException e)
 		{

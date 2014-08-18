@@ -1,0 +1,248 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="AGGRESSIVEVOICEDAILY_20041218.0146.sgm" SOURCE="weblog" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="AGGRESSIVEVOICEDAILY_20041218.0146">
+<entity ID="AGGRESSIVEVOICEDAILY_20041218.0146-E1" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041218.0146-E1-7" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="108" END="112">Scott</charseq>
+    </extent>
+    <head>
+      <charseq START="108" END="112">Scott</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041218.0146-E1-16" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="506" END="506">I</charseq>
+    </extent>
+    <head>
+      <charseq START="506" END="506">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Scott">
+      <charseq START="108" END="112">Scott</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041218.0146-E2" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041218.0146-E2-1" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="547" END="556">the voters</charseq>
+    </extent>
+    <head>
+      <charseq START="551" END="556">voters</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041218.0146-E3" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041218.0146-E3-2" TYPE="PRO" LDCTYPE="WHQ" LDCATR="TRUE">
+    <extent>
+      <charseq START="470" END="472">who</charseq>
+    </extent>
+    <head>
+      <charseq START="470" END="472">who</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041218.0146-E3-12" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="406" END="430">Columnist
+Michelle Malkin</charseq>
+    </extent>
+    <head>
+      <charseq START="416" END="430">Michelle Malkin</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041218.0146-E3-13" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="406" END="414">Columnist</charseq>
+    </extent>
+    <head>
+      <charseq START="406" END="414">Columnist</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041218.0146-E3-14" TYPE="PRO" LDCTYPE="PTV" LDCATR="TRUE">
+    <extent>
+      <charseq START="435" END="499">one of the few columnists/bloggers who has picked up
+on the story</charseq>
+    </extent>
+    <head>
+      <charseq START="435" END="437">one</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Michelle Malkin">
+      <charseq START="416" END="430">Michelle Malkin</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041218.0146-E4" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041218.0146-E4-3" TYPE="NOM" LDCTYPE="NOM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="187" END="212">the gay capital of
+America</charseq>
+    </extent>
+    <head>
+      <charseq START="195" END="201">capital</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041218.0146-E4-4" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="137" END="149">San Francisco</charseq>
+    </extent>
+    <head>
+      <charseq START="137" END="149">San Francisco</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041218.0146-E4-8" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="325" END="337">San Francisco</charseq>
+    </extent>
+    <head>
+      <charseq START="325" END="337">San Francisco</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="San Francisco">
+      <charseq START="137" END="149">San Francisco</charseq>
+    </name>
+    <name NAME="San Francisco">
+      <charseq START="325" END="337">San Francisco</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041218.0146-E6" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041218.0146-E6-5" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE">
+    <extent>
+      <charseq START="206" END="212">America</charseq>
+    </extent>
+    <head>
+      <charseq START="206" END="212">America</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="America">
+      <charseq START="206" END="212">America</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041218.0146-E7" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041218.0146-E7-6" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="242" END="254">Washington DC</charseq>
+    </extent>
+    <head>
+      <charseq START="242" END="254">Washington DC</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041218.0146-E7-10" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="394" END="395">DC</charseq>
+    </extent>
+    <head>
+      <charseq START="394" END="395">DC</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="DC">
+      <charseq START="394" END="395">DC</charseq>
+    </name>
+    <name NAME="Washington DC">
+      <charseq START="242" END="254">Washington DC</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041218.0146-E9" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041218.0146-E9-9" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="325" END="347">San Francisco officials</charseq>
+    </extent>
+    <head>
+      <charseq START="339" END="347">officials</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041218.0146-E11" TYPE="WEA" SUBTYPE="Shooting" CLASS="GEN">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041218.0146-E11-11" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="397" END="399">gun</charseq>
+    </extent>
+    <head>
+      <charseq START="397" END="399">gun</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041218.0146-E15" TYPE="PER" SUBTYPE="Individual" CLASS="USP">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041218.0146-E15-15" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="442" END="499">the few columnists/bloggers who has picked up
+on the story</charseq>
+    </extent>
+    <head>
+      <charseq START="450" END="468">columnists/bloggers</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<timex2 ID="AGGRESSIVEVOICEDAILY_20041218.0146-T1" VAL="2004-12-18T01:46:00">
+  <timex2_mention ID="AGGRESSIVEVOICEDAILY_20041218.0146-T1-1">
+    <extent>
+      <charseq START="50" END="68">2004-12-18T01:46:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AGGRESSIVEVOICEDAILY_20041218.0146-T2" VAL="2004-12-18T01:46:00">
+  <timex2_mention ID="AGGRESSIVEVOICEDAILY_20041218.0146-T2-1">
+    <extent>
+      <charseq START="116" END="134">2004-12-18T01:46:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AGGRESSIVEVOICEDAILY_20041218.0146-T3" VAL="PRESENT_REF" ANCHOR_VAL="2004-12-18T01:46:00" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="AGGRESSIVEVOICEDAILY_20041218.0146-T3-1">
+    <extent>
+      <charseq START="316" END="318">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="AGGRESSIVEVOICEDAILY_20041218.0146-R1" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20041218.0146-E4" ROLE="Arg-1"/>
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20041218.0146-E6" ROLE="Arg-2"/>
+  <relation_mention ID="AGGRESSIVEVOICEDAILY_20041218.0146-R1-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="187" END="212">the gay capital of
+America</charseq>
+    </extent>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20041218.0146-E4-3" ROLE="Arg-1">
+      <extent>
+        <charseq START="187" END="212">the gay capital of
+America</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20041218.0146-E6-5" ROLE="Arg-2">
+      <extent>
+        <charseq START="206" END="212">America</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="AGGRESSIVEVOICEDAILY_20041218.0146-R2" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20041218.0146-E9" ROLE="Arg-1"/>
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20041218.0146-E4" ROLE="Arg-2"/>
+  <relation_mention ID="AGGRESSIVEVOICEDAILY_20041218.0146-R2-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="325" END="347">San Francisco officials</charseq>
+    </extent>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20041218.0146-E9-9" ROLE="Arg-1">
+      <extent>
+        <charseq START="325" END="347">San Francisco officials</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20041218.0146-E4-8" ROLE="Arg-2">
+      <extent>
+        <charseq START="325" END="337">San Francisco</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+</document>
+</source_file>

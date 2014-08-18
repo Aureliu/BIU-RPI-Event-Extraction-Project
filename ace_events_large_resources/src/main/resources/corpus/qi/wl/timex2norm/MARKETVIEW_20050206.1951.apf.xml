@@ -1,0 +1,265 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="MARKETVIEW_20050206.1951.sgm" SOURCE="weblog" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="MARKETVIEW_20050206.1951">
+<entity ID="MARKETVIEW_20050206.1951-E1" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="MARKETVIEW_20050206.1951-E1-2" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1038" END="1039">us</charseq>
+    </extent>
+    <head>
+      <charseq START="1038" END="1039">us</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050206.1951-E2" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="MARKETVIEW_20050206.1951-E2-11" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="747" END="750">eBay</charseq>
+    </extent>
+    <head>
+      <charseq START="747" END="750">eBay</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="eBay">
+      <charseq START="747" END="750">eBay</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKETVIEW_20050206.1951-E3" TYPE="ORG" SUBTYPE="Commercial" CLASS="USP">
+  <entity_mention ID="MARKETVIEW_20050206.1951-E3-4" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="650" END="653">they</charseq>
+    </extent>
+    <head>
+      <charseq START="650" END="653">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050206.1951-E3-5" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="521" END="525">Their</charseq>
+    </extent>
+    <head>
+      <charseq START="521" END="525">Their</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050206.1951-E4" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="MARKETVIEW_20050206.1951-E4-1" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="135" END="135">I</charseq>
+    </extent>
+    <head>
+      <charseq START="135" END="135">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050206.1951-E4-7" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="274" END="275">my</charseq>
+    </extent>
+    <head>
+      <charseq START="274" END="275">my</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050206.1951-E4-8" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="96" END="100">Byrne</charseq>
+    </extent>
+    <head>
+      <charseq START="96" END="100">Byrne</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050206.1951-E4-18" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1079" END="1079">I</charseq>
+    </extent>
+    <head>
+      <charseq START="1079" END="1079">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Byrne">
+      <charseq START="96" END="100">Byrne</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKETVIEW_20050206.1951-E5" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="MARKETVIEW_20050206.1951-E5-3" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="595" END="600">Google</charseq>
+    </extent>
+    <head>
+      <charseq START="595" END="600">Google</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050206.1951-E5-6" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="225" END="240">a quirky company</charseq>
+    </extent>
+    <head>
+      <charseq START="234" END="240">company</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050206.1951-E5-12" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="380" END="385">Google</charseq>
+    </extent>
+    <head>
+      <charseq START="380" END="385">Google</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050206.1951-E5-17" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1022" END="1027">Google</charseq>
+    </extent>
+    <head>
+      <charseq START="1022" END="1027">Google</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Google">
+      <charseq START="595" END="600">Google</charseq>
+    </name>
+    <name NAME="Google">
+      <charseq START="380" END="385">Google</charseq>
+    </name>
+    <name NAME="Google">
+      <charseq START="1022" END="1027">Google</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKETVIEW_20050206.1951-E6" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="MARKETVIEW_20050206.1951-E6-13" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1100" END="1108">Anonymous</charseq>
+    </extent>
+    <head>
+      <charseq START="1100" END="1108">Anonymous</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Anonymous">
+      <charseq START="1100" END="1108">Anonymous</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKETVIEW_20050206.1951-E7" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="MARKETVIEW_20050206.1951-E7-9" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="392" END="401">many
+users</charseq>
+    </extent>
+    <head>
+      <charseq START="397" END="401">users</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050206.1951-E8" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="MARKETVIEW_20050206.1951-E8-10" TYPE="PRO" LDCTYPE="HLS">
+    <extent>
+      <charseq START="441" END="444">some</charseq>
+    </extent>
+    <head>
+      <charseq START="441" END="444">some</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050206.1951-E9" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="MARKETVIEW_20050206.1951-E9-14" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="825" END="858">Everyone who wants a Gmail account</charseq>
+    </extent>
+    <head>
+      <charseq START="825" END="832">Everyone</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050206.1951-E9-15" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="834" END="836">who</charseq>
+    </extent>
+    <head>
+      <charseq START="834" END="836">who</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050206.1951-E10" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="MARKETVIEW_20050206.1951-E10-16" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="877" END="895">people with
+invites</charseq>
+    </extent>
+    <head>
+      <charseq START="877" END="882">people</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050206.1951-E11" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="MARKETVIEW_20050206.1951-E11-19" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1163" END="1182">a blog administrator</charseq>
+    </extent>
+    <head>
+      <charseq START="1170" END="1182">administrator</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<value ID="MARKETVIEW_20050206.1951-V1" TYPE="Numeric" SUBTYPE="Money">
+  <value_mention ID="MARKETVIEW_20050206.1951-V1-1">
+    <extent>
+      <charseq START="740" END="742">$50</charseq>
+    </extent>
+  </value_mention>
+</value>
+<timex2 ID="MARKETVIEW_20050206.1951-T1" VAL="2005-02-07T09:27:00">
+  <timex2_mention ID="MARKETVIEW_20050206.1951-T1-1">
+    <extent>
+      <charseq START="1122" END="1130">T09:27:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKETVIEW_20050206.1951-T2" VAL="PRESENT_REF" ANCHOR_VAL="2005-02-06T19:51:00" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="MARKETVIEW_20050206.1951-T2-1">
+    <extent>
+      <charseq START="820" END="822">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKETVIEW_20050206.1951-T3" VAL="2005-02-06T19:51:00">
+  <timex2_mention ID="MARKETVIEW_20050206.1951-T3-1">
+    <extent>
+      <charseq START="40" END="58">2005-02-06T19:51:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKETVIEW_20050206.1951-T4" VAL="2005-02-06T19:51:00">
+  <timex2_mention ID="MARKETVIEW_20050206.1951-T4-1">
+    <extent>
+      <charseq START="104" END="122">2005-02-06T19:51:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKETVIEW_20050206.1951-T5" VAL="2004-04-XX">
+  <timex2_mention ID="MARKETVIEW_20050206.1951-T5-1">
+    <extent>
+      <charseq START="246" END="261">April Fool's
+Day</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKETVIEW_20050206.1951-T6" VAL="2005-W05-WE">
+  <timex2_mention ID="MARKETVIEW_20050206.1951-T6-1">
+    <extent>
+      <charseq START="361" END="377">Just this weekend</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKETVIEW_20050206.1951-T7" VAL="P1Y" ANCHOR_VAL="2004" ANCHOR_DIR="STARTING">
+  <timex2_mention ID="MARKETVIEW_20050206.1951-T7-1">
+    <extent>
+      <charseq START="961" END="973">nearly a year</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+</document>
+</source_file>

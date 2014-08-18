@@ -1,0 +1,370 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030526_180540.6.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030526_180540.6">
+<entity ID="CNN_ENG_20030526_180540.6-E1" TYPE="FAC" SUBTYPE="Subarea-Facility" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030526_180540.6-E1-2" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="568" END="603">passageways glowing in dim red light</charseq>
+    </extent>
+    <head>
+      <charseq START="568" END="578">passageways</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030526_180540.6-E2" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030526_180540.6-E2-4" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="197" END="204">the crew</charseq>
+    </extent>
+    <head>
+      <charseq START="201" END="204">crew</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_180540.6-E2-5" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="532" END="535">crew</charseq>
+    </extent>
+    <head>
+      <charseq START="532" END="535">crew</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030526_180540.6-E3" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030526_180540.6-E3-3" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="128" END="131">they</charseq>
+    </extent>
+    <head>
+      <charseq START="128" END="131">they</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030526_180540.6-E5" TYPE="VEH" SUBTYPE="Water" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030526_180540.6-E5-1" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="82" END="105">the "uss john c. stennis</charseq>
+    </extent>
+    <head>
+      <charseq START="87" END="105">uss john c. stennis</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_180540.6-E5-7" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="161" END="168">the ship</charseq>
+    </extent>
+    <head>
+      <charseq START="165" END="168">ship</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_180540.6-E5-8" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="284" END="295">the
+"stennis</charseq>
+    </extent>
+    <head>
+      <charseq START="289" END="295">stennis</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_180540.6-E5-10" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="381" END="391">the carrier</charseq>
+    </extent>
+    <head>
+      <charseq START="385" END="391">carrier</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="uss john c. stennis">
+      <charseq START="87" END="105">uss john c. stennis</charseq>
+    </name>
+    <name NAME="stennis">
+      <charseq START="289" END="295">stennis</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030526_180540.6-E6" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030526_180540.6-E6-12" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="503" END="507">their</charseq>
+    </extent>
+    <head>
+      <charseq START="503" END="507">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_180540.6-E6-13" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="532" END="543">crew members</charseq>
+    </extent>
+    <head>
+      <charseq START="537" END="543">members</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_180540.6-E6-14" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="550" END="554">their</charseq>
+    </extent>
+    <head>
+      <charseq START="550" END="554">their</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030526_180540.6-E7" TYPE="VEH" SUBTYPE="Air" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030526_180540.6-E7-9" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="369" END="391">planes from the carrier</charseq>
+    </extent>
+    <head>
+      <charseq START="369" END="374">planes</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030526_180540.6-E8" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030526_180540.6-E8-11" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="416" END="426">afghanistan</charseq>
+    </extent>
+    <head>
+      <charseq START="416" END="426">afghanistan</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="afghanistan">
+      <charseq START="416" END="426">afghanistan</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030526_180540.6-E9" TYPE="VEH" SUBTYPE="Air" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030526_180540.6-E9-15" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="737" END="740">jets</charseq>
+    </extent>
+    <head>
+      <charseq START="737" END="740">jets</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030526_180540.6-E10" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030526_180540.6-E10-16" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1032" END="1067">the choreographer of the flight deck</charseq>
+    </extent>
+    <head>
+      <charseq START="1036" END="1048">choreographer</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_180540.6-E10-20" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1072" END="1084">this man here</charseq>
+    </extent>
+    <head>
+      <charseq START="1077" END="1079">man</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_180540.6-E10-21" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1087" END="1088">he</charseq>
+    </extent>
+    <head>
+      <charseq START="1087" END="1088">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_180540.6-E10-22" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="1093" END="1103">the handler</charseq>
+    </extent>
+    <head>
+      <charseq START="1097" END="1103">handler</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030526_180540.6-E11" TYPE="VEH" SUBTYPE="Subarea-Vehicle" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030526_180540.6-E11-6" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="467" END="470">deck</charseq>
+    </extent>
+    <head>
+      <charseq START="467" END="470">deck</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_180540.6-E11-17" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="609" END="623">the flight deck</charseq>
+    </extent>
+    <head>
+      <charseq START="620" END="623">deck</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_180540.6-E11-18" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="696" END="710">the flight deck</charseq>
+    </extent>
+    <head>
+      <charseq START="707" END="710">deck</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030526_180540.6-E11-19" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1053" END="1067">the flight deck</charseq>
+    </extent>
+    <head>
+      <charseq START="1064" END="1067">deck</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<timex2 ID="CNN_ENG_20030526_180540.6-T1" VAL="2003-05-26T19:21:06">
+  <timex2_mention ID="CNN_ENG_20030526_180540.6-T1-1">
+    <extent>
+      <charseq START="43" END="61">2003-05-26 19:21:06</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030526_180540.6-T2" VAL="2003-05-26TNI">
+  <timex2_mention ID="CNN_ENG_20030526_180540.6-T2-1">
+    <extent>
+      <charseq START="67" END="71">night</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030526_180540.6-T3" VAL="2003TNI" SET="YES">
+  <timex2_mention ID="CNN_ENG_20030526_180540.6-T3-1">
+    <extent>
+      <charseq START="147" END="156">after dark</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030526_180540.6-T4" VAL="2003TDT" SET="YES">
+  <timex2_mention ID="CNN_ENG_20030526_180540.6-T4-1">
+    <extent>
+      <charseq START="216" END="218">day</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030526_180540.6-T5" VAL="2003TNI" SET="YES">
+  <timex2_mention ID="CNN_ENG_20030526_180540.6-T5-1">
+    <extent>
+      <charseq START="230" END="238">all night</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030526_180540.6-T6" VAL="2003-05-26">
+  <timex2_mention ID="CNN_ENG_20030526_180540.6-T6-1">
+    <extent>
+      <charseq START="249" END="255">day two</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030526_180540.6-T7" VAL="PT12H" ANCHOR_VAL="2003-05-26-T19:21:06" ANCHOR_DIR="STARTING">
+  <timex2_mention ID="CNN_ENG_20030526_180540.6-T7-1">
+    <extent>
+      <charseq START="333" END="366">the next 12
+hours into the morning</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030526_180540.6-T8" VAL="2003-05-27TMO" MOD="END">
+  <timex2_mention ID="CNN_ENG_20030526_180540.6-T8-1">
+    <extent>
+      <charseq START="356" END="366">the morning</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030526_180540.6-T9" VAL="2003TNI" SET="YES">
+  <timex2_mention ID="CNN_ENG_20030526_180540.6-T9-1">
+    <extent>
+      <charseq START="858" END="862">night</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030526_180540.6-T10" VAL="2003TNI" SET="YES">
+  <timex2_mention ID="CNN_ENG_20030526_180540.6-T10-1">
+    <extent>
+      <charseq START="518" END="522">night</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030526_180540.6-R1" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030526_180540.6-E10" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030526_180540.6-E11" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030526_180540.6-R1-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="1032" END="1067">the choreographer of the flight deck</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030526_180540.6-E10-16" ROLE="Arg-1">
+      <extent>
+        <charseq START="1032" END="1067">the choreographer of the flight deck</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030526_180540.6-E11-19" ROLE="Arg-2">
+      <extent>
+        <charseq START="1053" END="1067">the flight deck</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030526_180540.6-R2" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030526_180540.6-E3" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030526_180540.6-E5" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030526_180540.6-R2-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="109" END="238">on this
+deployment they primarily fly after dark so the ship's
+schedule is upside down, the crew sleeps by day and works
+all night</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030526_180540.6-E3-3" ROLE="Arg-1">
+      <extent>
+        <charseq START="128" END="131">they</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030526_180540.6-E5-7" ROLE="Arg-2">
+      <extent>
+        <charseq START="161" END="168">the ship</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030526_180540.6-EV1" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030526_180540.6-T7" ROLE="Time-Holds"/>
+  <event_argument REFID="CNN_ENG_20030526_180540.6-T8" ROLE="Time-Ending"/>
+  <event_argument REFID="CNN_ENG_20030526_180540.6-E7" ROLE="Vehicle"/>
+  <event_argument REFID="CNN_ENG_20030526_180540.6-E8" ROLE="Destination"/>
+  <event_mention ID="CNN_ENG_20030526_180540.6-EV1-1">
+    <extent>
+      <charseq START="333" END="426">the next 12
+hours into the morning, planes from the carrier will fly
+missions over afghanistan</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="329" END="426">for the next 12
+hours into the morning, planes from the carrier will fly
+missions over afghanistan</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="398" END="400">fly</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030526_180540.6-E7-9" ROLE="Vehicle">
+      <extent>
+        <charseq START="369" END="391">planes from the carrier</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030526_180540.6-E8-11" ROLE="Destination">
+      <extent>
+        <charseq START="416" END="426">afghanistan</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030526_180540.6-T7-1" ROLE="Time-Holds">
+      <extent>
+        <charseq START="333" END="366">the next 12
+hours into the morning</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030526_180540.6-T8-1" ROLE="Time-Ending">
+      <extent>
+        <charseq START="356" END="366">the morning</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

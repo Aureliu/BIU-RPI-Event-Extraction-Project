@@ -1,0 +1,683 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030611_102832.3.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030611_102832.3">
+<entity ID="CNN_ENG_20030611_102832.3-E1" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030611_102832.3-E1-1" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="692" END="718">former enron vice president</charseq>
+    </extent>
+    <head>
+      <charseq START="710" END="718">president</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030611_102832.3-E1-2" TYPE="PRO" LDCTYPE="WHQ" LDCATR="FALSE">
+    <extent>
+      <charseq START="736" END="738">who</charseq>
+    </extent>
+    <head>
+      <charseq START="736" END="738">who</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030611_102832.3-E1-4" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="855" END="857">her</charseq>
+    </extent>
+    <head>
+      <charseq START="855" END="857">her</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030611_102832.3-E1-5" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="877" END="879">her</charseq>
+    </extent>
+    <head>
+      <charseq START="877" END="879">her</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030611_102832.3-E1-34" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="692" END="801">former enron vice president sherron watkins who wrote that
+now-famous memo questioning the accounting practice</charseq>
+    </extent>
+    <head>
+      <charseq START="720" END="734">sherron watkins</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="sherron watkins">
+      <charseq START="720" END="734">sherron watkins</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030611_102832.3-E3" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030611_102832.3-E3-3" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="836" END="837">we</charseq>
+    </extent>
+    <head>
+      <charseq START="836" END="837">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030611_102832.3-E3-12" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="67" END="68">we</charseq>
+    </extent>
+    <head>
+      <charseq START="67" END="68">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030611_102832.3-E3-13" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1020" END="1021">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1020" END="1021">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030611_102832.3-E3-15" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="815" END="816">us</charseq>
+    </extent>
+    <head>
+      <charseq START="815" END="816">us</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030611_102832.3-E4" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030611_102832.3-E4-7" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="901" END="918">justice department</charseq>
+    </extent>
+    <head>
+      <charseq START="901" END="918">justice department</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030611_102832.3-E4-8" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="939" END="941">its</charseq>
+    </extent>
+    <head>
+      <charseq START="939" END="941">its</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="justice department">
+      <charseq START="901" END="918">justice department</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030611_102832.3-E5" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030611_102832.3-E5-6" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="877" END="896">her form are company</charseq>
+    </extent>
+    <head>
+      <charseq START="890" END="896">company</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030611_102832.3-E5-9" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="960" END="965">enroan</charseq>
+    </extent>
+    <head>
+      <charseq START="960" END="965">enroan</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030611_102832.3-E5-30" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="568" END="572">enron</charseq>
+    </extent>
+    <head>
+      <charseq START="568" END="572">enron</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030611_102832.3-E5-32" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="614" END="624">the company</charseq>
+    </extent>
+    <head>
+      <charseq START="618" END="624">company</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030611_102832.3-E5-33" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="699" END="703">enron</charseq>
+    </extent>
+    <head>
+      <charseq START="699" END="703">enron</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="enroan">
+      <charseq START="960" END="965">enroan</charseq>
+    </name>
+    <name NAME="enron">
+      <charseq START="568" END="572">enron</charseq>
+    </name>
+    <name NAME="enron">
+      <charseq START="699" END="703">enron</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030611_102832.3-E6" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030611_102832.3-E6-11" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="827" END="833">houston</charseq>
+    </extent>
+    <head>
+      <charseq START="827" END="833">houston</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="houston">
+      <charseq START="827" END="833">houston</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030611_102832.3-E7" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030611_102832.3-E7-14" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="118" END="142">embattled imclone founder</charseq>
+    </extent>
+    <head>
+      <charseq START="136" END="142">founder</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030611_102832.3-E7-17" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="118" END="153">embattled imclone founder sam waksal</charseq>
+    </extent>
+    <head>
+      <charseq START="144" END="153">sam waksal</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030611_102832.3-E7-22" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="304" END="309">waksal</charseq>
+    </extent>
+    <head>
+      <charseq START="304" END="309">waksal</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030611_102832.3-E7-23" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="329" END="331">his</charseq>
+    </extent>
+    <head>
+      <charseq START="329" END="331">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030611_102832.3-E7-28" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="454" END="459">waksal</charseq>
+    </extent>
+    <head>
+      <charseq START="454" END="459">waksal</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030611_102832.3-E7-29" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="464" END="593">the
+first chief executive to be sentenced in a wave of
+corporate scandals and that started with the big enron
+bankruptcy into 2001</charseq>
+    </extent>
+    <head>
+      <charseq START="480" END="488">executive</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="sam waksal">
+      <charseq START="144" END="153">sam waksal</charseq>
+    </name>
+    <name NAME="waksal">
+      <charseq START="304" END="309">waksal</charseq>
+    </name>
+    <name NAME="waksal">
+      <charseq START="454" END="459">waksal</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030611_102832.3-E8" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030611_102832.3-E8-16" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="204" END="210">insider</charseq>
+    </extent>
+    <head>
+      <charseq START="204" END="210">insider</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030611_102832.3-E10" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030611_102832.3-E10-18" TYPE="NAM" LDCTYPE="NAMPRE">
+    <extent>
+      <charseq START="128" END="134">imclone</charseq>
+    </extent>
+    <head>
+      <charseq START="128" END="134">imclone</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="imclone">
+      <charseq START="128" END="134">imclone</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030611_102832.3-E11" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030611_102832.3-E11-19" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="193" END="198">prison</charseq>
+    </extent>
+    <head>
+      <charseq START="193" END="198">prison</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030611_102832.3-E12" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030611_102832.3-E12-20" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="274" END="301">domestic diva martha
+stewart</charseq>
+    </extent>
+    <head>
+      <charseq START="288" END="301">martha
+stewart</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030611_102832.3-E12-21" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="274" END="286">domestic diva</charseq>
+    </extent>
+    <head>
+      <charseq START="283" END="286">diva</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030611_102832.3-E12-26" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="361" END="367">stewart</charseq>
+    </extent>
+    <head>
+      <charseq START="361" END="367">stewart</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030611_102832.3-E12-27" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="399" END="401">her</charseq>
+    </extent>
+    <head>
+      <charseq START="399" END="401">her</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="martha stewart">
+      <charseq START="288" END="301">martha
+stewart</charseq>
+    </name>
+    <name NAME="stewart">
+      <charseq START="361" END="367">stewart</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030611_102832.3-E14" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030611_102832.3-E14-24" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="329" END="340">his daughter</charseq>
+    </extent>
+    <head>
+      <charseq START="333" END="340">daughter</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030611_102832.3-E14-25" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="350" END="352">her</charseq>
+    </extent>
+    <head>
+      <charseq START="350" END="352">her</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030611_102832.3-E18" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030611_102832.3-E18-10" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="956" END="976">key enroan executives</charseq>
+    </extent>
+    <head>
+      <charseq START="967" END="976">executives</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030611_102832.3-E18-31" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="596" END="624">top executives at the company</charseq>
+    </extent>
+    <head>
+      <charseq START="600" END="609">executives</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<value ID="CNN_ENG_20030611_102832.3-V1" TYPE="Sentence">
+  <value_mention ID="CNN_ENG_20030611_102832.3-V1-1">
+    <extent>
+      <charseq START="168" END="198">more than
+seven years in prison</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_ENG_20030611_102832.3-V2" TYPE="Crime">
+  <value_mention ID="CNN_ENG_20030611_102832.3-V2-1">
+    <extent>
+      <charseq START="204" END="218">insider trading</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_ENG_20030611_102832.3-V3" TYPE="Numeric" SUBTYPE="Money">
+  <value_mention ID="CNN_ENG_20030611_102832.3-V3-1">
+    <extent>
+      <charseq START="663" END="681">billions of dollars</charseq>
+    </extent>
+  </value_mention>
+</value>
+<timex2 ID="CNN_ENG_20030611_102832.3-T1" VAL="2003-06-11T10:33">
+  <timex2_mention ID="CNN_ENG_20030611_102832.3-T1-1">
+    <extent>
+      <charseq START="86" END="102">33 after the hour</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030611_102832.3-T2" VAL="2003-06-11TMO">
+  <timex2_mention ID="CNN_ENG_20030611_102832.3-T2-1">
+    <extent>
+      <charseq START="104" END="115">this morning</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030611_102832.3-T3" VAL="2003-06-11T10:40:49">
+  <timex2_mention ID="CNN_ENG_20030611_102832.3-T3-1">
+    <extent>
+      <charseq START="43" END="61">2003-06-11 10:40:49</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030611_102832.3-T4" VAL="2001">
+  <timex2_mention ID="CNN_ENG_20030611_102832.3-T4-1">
+    <extent>
+      <charseq START="590" END="593">2001</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030611_102832.3-T5" VAL="2003-06-11T10:40:49">
+  <timex2_mention ID="CNN_ENG_20030611_102832.3-T5-1">
+    <extent>
+      <charseq START="818" END="820">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030611_102832.3-T6" VAL="PAST_REF" ANCHOR_VAL="2003-06-11-T10:40:49" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="CNN_ENG_20030611_102832.3-T6-1">
+    <extent>
+      <charseq START="692" END="697">former</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030611_102832.3-T7" VAL="2003-06-11TMO">
+  <timex2_mention ID="CNN_ENG_20030611_102832.3-T7-1">
+    <extent>
+      <charseq START="1034" END="1045">this morning</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030611_102832.3-T8" VAL="2003-06-11T10:40:49">
+  <timex2_mention ID="CNN_ENG_20030611_102832.3-T8-1">
+    <extent>
+      <charseq START="74" END="76">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030611_102832.3-T9" VAL="P7Y" MOD="MORE_THAN" ANCHOR_VAL="2003-06-11" ANCHOR_DIR="STARTING">
+  <timex2_mention ID="CNN_ENG_20030611_102832.3-T9-1">
+    <extent>
+      <charseq START="168" END="188">more than
+seven years</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030611_102832.3-T10" VAL="PRESENT_REF" ANCHOR_VAL="2003-06-11-T10:40:49" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_ENG_20030611_102832.3-T10-1">
+    <extent>
+      <charseq START="751" END="753">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030611_102832.3-R2" TYPE="ORG-AFF" SUBTYPE="Founder" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030611_102832.3-E7" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030611_102832.3-E10" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030611_102832.3-R2-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="118" END="142">embattled imclone founder</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030611_102832.3-E7-14" ROLE="Arg-1">
+      <extent>
+        <charseq START="118" END="142">embattled imclone founder</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030611_102832.3-E10-18" ROLE="Arg-2">
+      <extent>
+        <charseq START="128" END="134">imclone</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030611_102832.3-R3" TYPE="PER-SOC" SUBTYPE="Family" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030611_102832.3-E7" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030611_102832.3-E14" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030611_102832.3-R3-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="329" END="340">his daughter</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030611_102832.3-E7-23" ROLE="Arg-1">
+      <extent>
+        <charseq START="329" END="331">his</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030611_102832.3-E14-24" ROLE="Arg-2">
+      <extent>
+        <charseq START="329" END="340">his daughter</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030611_102832.3-R4" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030611_102832.3-E18" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030611_102832.3-E5" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030611_102832.3-R4-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="596" END="624">top executives at the company</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030611_102832.3-E18-31" ROLE="Arg-1">
+      <extent>
+        <charseq START="596" END="624">top executives at the company</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030611_102832.3-E5-32" ROLE="Arg-2">
+      <extent>
+        <charseq START="614" END="624">the company</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_ENG_20030611_102832.3-R4-2" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="956" END="976">key enroan executives</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030611_102832.3-E18-10" ROLE="Arg-1">
+      <extent>
+        <charseq START="956" END="976">key enroan executives</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030611_102832.3-E5-9" ROLE="Arg-2">
+      <extent>
+        <charseq START="960" END="965">enroan</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030611_102832.3-R5" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030611_102832.3-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030611_102832.3-E5" ROLE="Arg-2"/>
+  <relation_argument REFID="CNN_ENG_20030611_102832.3-T6" ROLE="Time-Within"/>
+  <relation_mention ID="CNN_ENG_20030611_102832.3-R5-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="692" END="718">former enron vice president</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030611_102832.3-E1-1" ROLE="Arg-1">
+      <extent>
+        <charseq START="692" END="718">former enron vice president</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030611_102832.3-E5-33" ROLE="Arg-2">
+      <extent>
+        <charseq START="699" END="703">enron</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030611_102832.3-T6-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="692" END="697">former</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_ENG_20030611_102832.3-R5-2" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="877" END="896">her form are company</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030611_102832.3-E1-5" ROLE="Arg-1">
+      <extent>
+        <charseq START="877" END="879">her</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030611_102832.3-E5-6" ROLE="Arg-2">
+      <extent>
+        <charseq START="877" END="896">her form are company</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030611_102832.3-R6" TYPE="PHYS" SUBTYPE="Located" TENSE="Present" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030611_102832.3-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030611_102832.3-E6" ROLE="Arg-2"/>
+  <relation_argument REFID="CNN_ENG_20030611_102832.3-T10" ROLE="Time-Within"/>
+  <relation_mention ID="CNN_ENG_20030611_102832.3-R6-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="692" END="1045">former enron vice president sherron watkins who wrote that
+now-famous memo questioning the accounting practice and
+joining us now from houston, we want to talk to her about
+the fate of her form are company as justice department
+continues to build its case against key enroan executives
+and insight on maybe some other headlines we are seeing
+this morning</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030611_102832.3-E1-1" ROLE="Arg-1">
+      <extent>
+        <charseq START="692" END="718">former enron vice president</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030611_102832.3-E6-11" ROLE="Arg-2">
+      <extent>
+        <charseq START="827" END="833">houston</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030611_102832.3-T10-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="751" END="753">now</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030611_102832.3-EV1" TYPE="Justice" SUBTYPE="Sentence" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030611_102832.3-E7" ROLE="Defendant"/>
+  <event_argument REFID="CNN_ENG_20030611_102832.3-V1" ROLE="Sentence"/>
+  <event_argument REFID="CNN_ENG_20030611_102832.3-V2" ROLE="Crime"/>
+  <event_mention ID="CNN_ENG_20030611_102832.3-EV1-1">
+    <extent>
+      <charseq START="118" END="218">embattled imclone founder sam waksal sentenced to more than
+seven years in prison for insider trading</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="118" END="218">embattled imclone founder sam waksal sentenced to more than
+seven years in prison for insider trading</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="155" END="163">sentenced</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030611_102832.3-E7-17" ROLE="Defendant">
+      <extent>
+        <charseq START="118" END="153">embattled imclone founder sam waksal</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030611_102832.3-V1-1" ROLE="Sentence">
+      <extent>
+        <charseq START="168" END="198">more than
+seven years in prison</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030611_102832.3-V2-1" ROLE="Crime">
+      <extent>
+        <charseq START="204" END="218">insider trading</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030611_102832.3-EV1-2">
+    <extent>
+      <charseq START="464" END="593">the
+first chief executive to be sentenced in a wave of
+corporate scandals and that started with the big enron
+bankruptcy into 2001</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="454" END="593">waksal is the
+first chief executive to be sentenced in a wave of
+corporate scandals and that started with the big enron
+bankruptcy into 2001</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="496" END="504">sentenced</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030611_102832.3-E7-29" ROLE="Defendant">
+      <extent>
+        <charseq START="464" END="593">the
+first chief executive to be sentenced in a wave of
+corporate scandals and that started with the big enron
+bankruptcy into 2001</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030611_102832.3-EV2" TYPE="Business" SUBTYPE="Declare-Bankruptcy" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030611_102832.3-E5" ROLE="Org"/>
+  <event_argument REFID="CNN_ENG_20030611_102832.3-T4" ROLE="Time-Within"/>
+  <event_mention ID="CNN_ENG_20030611_102832.3-EV2-1">
+    <extent>
+      <charseq START="568" END="593">enron
+bankruptcy into 2001</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="454" END="593">waksal is the
+first chief executive to be sentenced in a wave of
+corporate scandals and that started with the big enron
+bankruptcy into 2001</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="574" END="583">bankruptcy</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030611_102832.3-E5-30" ROLE="Org">
+      <extent>
+        <charseq START="568" END="572">enron</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030611_102832.3-T4-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="590" END="593">2001</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

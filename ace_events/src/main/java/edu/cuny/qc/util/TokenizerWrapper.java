@@ -23,7 +23,7 @@ public class TokenizerWrapper
 	{
 		if(tokenizerWrapper == null)
 		{
-			tokenizerWrapper = new TokenizerWrapper(new File("src/main/resources/data/en-token.bin"));
+			tokenizerWrapper = new TokenizerWrapper(new File("../ace_events_large_resources/src/main/resources/data/en-token.bin"));
 		}
 		return tokenizerWrapper;
 	}

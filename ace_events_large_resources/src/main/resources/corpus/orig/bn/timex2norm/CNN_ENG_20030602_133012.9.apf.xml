@@ -1,0 +1,915 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030602_133012.9.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030602_133012.9">
+<entity ID="CNN_ENG_20030602_133012.9-E1" TYPE="LOC" SUBTYPE="Land-Region-Natural" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030602_133012.9-E1-3" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="552" END="561">the island</charseq>
+    </extent>
+    <head>
+      <charseq START="556" END="561">island</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030602_133012.9-E2" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030602_133012.9-E2-47" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE">
+    <extent>
+      <charseq START="1357" END="1373">the zef yot union</charseq>
+    </extent>
+    <head>
+      <charseq START="1361" END="1373">zef yot union</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="zef yot union">
+      <charseq START="1361" END="1373">zef yot union</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030602_133012.9-E3" TYPE="VEH" SUBTYPE="Water" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030602_133012.9-E3-4" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="577" END="579">its</charseq>
+    </extent>
+    <head>
+      <charseq START="577" END="579">its</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030602_133012.9-E3-36" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="533" END="537">which</charseq>
+    </extent>
+    <head>
+      <charseq START="533" END="537">which</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030602_133012.9-E4" TYPE="LOC" SUBTYPE="Land-Region-Natural" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030602_133012.9-E4-6" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="620" END="638">the surface of mars</charseq>
+    </extent>
+    <head>
+      <charseq START="624" END="630">surface</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030602_133012.9-E4-15" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1076" END="1104">the surface of the red
+planet</charseq>
+    </extent>
+    <head>
+      <charseq START="1080" END="1086">surface</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030602_133012.9-E5" TYPE="PER" SUBTYPE="Indeterminate" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030602_133012.9-E5-9" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="760" END="762">you</charseq>
+    </extent>
+    <head>
+      <charseq START="760" END="762">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030602_133012.9-E5-10" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="776" END="778">you</charseq>
+    </extent>
+    <head>
+      <charseq START="776" END="778">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030602_133012.9-E5-11" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="824" END="826">you</charseq>
+    </extent>
+    <head>
+      <charseq START="824" END="826">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030602_133012.9-E5-32" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1446" END="1448">you</charseq>
+    </extent>
+    <head>
+      <charseq START="1446" END="1448">you</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030602_133012.9-E6" TYPE="ORG" SUBTYPE="Medical-Science" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030602_133012.9-E6-16" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1196" END="1231">the european
+space agency in germany</charseq>
+    </extent>
+    <head>
+      <charseq START="1200" END="1220">european
+space agency</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030602_133012.9-E6-18" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="FALSE">
+    <extent>
+      <charseq START="1252" END="1259">european</charseq>
+    </extent>
+    <head>
+      <charseq START="1252" END="1259">european</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030602_133012.9-E6-31" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="122" END="129">european</charseq>
+    </extent>
+    <head>
+      <charseq START="122" END="129">european</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="european space agency">
+      <charseq START="1200" END="1220">european
+space agency</charseq>
+    </name>
+    <name NAME="european">
+      <charseq START="1252" END="1259">european</charseq>
+    </name>
+    <name NAME="european">
+      <charseq START="122" END="129">european</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030602_133012.9-E7" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030602_133012.9-E7-17" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="1225" END="1231">germany</charseq>
+    </extent>
+    <head>
+      <charseq START="1225" END="1231">germany</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="germany">
+      <charseq START="1225" END="1231">germany</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030602_133012.9-E9" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030602_133012.9-E9-20" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="1314" END="1321">american</charseq>
+    </extent>
+    <head>
+      <charseq START="1314" END="1321">american</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="american">
+      <charseq START="1314" END="1321">american</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030602_133012.9-E10" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030602_133012.9-E10-21" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="1337" END="1344">japanese</charseq>
+    </extent>
+    <head>
+      <charseq START="1337" END="1344">japanese</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="japanese">
+      <charseq START="1337" END="1344">japanese</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030602_133012.9-E11" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030602_133012.9-E11-23" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1491" END="1491">i</charseq>
+    </extent>
+    <head>
+      <charseq START="1491" END="1491">i</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030602_133012.9-E12" TYPE="VEH" SUBTYPE="Air" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030602_133012.9-E12-24" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1505" END="1525">the mars polar lander</charseq>
+    </extent>
+    <head>
+      <charseq START="1509" END="1525">mars polar lander</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030602_133012.9-E12-25" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1565" END="1566">it</charseq>
+    </extent>
+    <head>
+      <charseq START="1565" END="1566">it</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="mars polar lander">
+      <charseq START="1509" END="1525">mars polar lander</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030602_133012.9-E13" TYPE="LOC" SUBTYPE="Celestial" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030602_133012.9-E13-7" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="635" END="638">mars</charseq>
+    </extent>
+    <head>
+      <charseq START="635" END="638">mars</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030602_133012.9-E13-14" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="1091" END="1104">the red
+planet</charseq>
+    </extent>
+    <head>
+      <charseq START="1095" END="1104">red
+planet</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030602_133012.9-E13-19" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="1272" END="1275">mars</charseq>
+    </extent>
+    <head>
+      <charseq START="1272" END="1275">mars</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030602_133012.9-E13-22" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="1412" END="1415">mars</charseq>
+    </extent>
+    <head>
+      <charseq START="1412" END="1415">mars</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030602_133012.9-E13-26" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="1579" END="1592">the red planet</charseq>
+    </extent>
+    <head>
+      <charseq START="1587" END="1592">planet</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030602_133012.9-E13-27" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1624" END="1627">mars</charseq>
+    </extent>
+    <head>
+      <charseq START="1624" END="1627">mars</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030602_133012.9-E13-30" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="131" END="134">mars</charseq>
+    </extent>
+    <head>
+      <charseq START="131" END="134">mars</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030602_133012.9-E13-40" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="1420" END="1443">a tough place to
+explore</charseq>
+    </extent>
+    <head>
+      <charseq START="1428" END="1432">place</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030602_133012.9-E13-42" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="318" END="331">the red planet</charseq>
+    </extent>
+    <head>
+      <charseq START="326" END="331">planet</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030602_133012.9-E13-49" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="425" END="438">the red planet</charseq>
+    </extent>
+    <head>
+      <charseq START="433" END="438">planet</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="mars">
+      <charseq START="635" END="638">mars</charseq>
+    </name>
+    <name NAME="red planet">
+      <charseq START="1095" END="1104">red
+planet</charseq>
+    </name>
+    <name NAME="mars">
+      <charseq START="1272" END="1275">mars</charseq>
+    </name>
+    <name NAME="mars">
+      <charseq START="1412" END="1415">mars</charseq>
+    </name>
+    <name NAME="planet">
+      <charseq START="1587" END="1592">planet</charseq>
+    </name>
+    <name NAME="mars">
+      <charseq START="1624" END="1627">mars</charseq>
+    </name>
+    <name NAME="mars">
+      <charseq START="131" END="134">mars</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030602_133012.9-E16" TYPE="VEH" SUBTYPE="Air" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030602_133012.9-E16-1" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="102" END="109">a rocket</charseq>
+    </extent>
+    <head>
+      <charseq START="104" END="109">rocket</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030602_133012.9-E16-13" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="938" END="958">the entire says craft</charseq>
+    </extent>
+    <head>
+      <charseq START="949" END="958">says craft</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030602_133012.9-E16-28" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="117" END="118">it</charseq>
+    </extent>
+    <head>
+      <charseq START="117" END="118">it</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030602_133012.9-E16-29" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="120" END="146">a
+european mars observetory</charseq>
+    </extent>
+    <head>
+      <charseq START="136" END="146">observetory</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030602_133012.9-E16-35" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="163" END="164">it</charseq>
+    </extent>
+    <head>
+      <charseq START="163" END="164">it</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030602_133012.9-E16-38" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="253" END="254">it</charseq>
+    </extent>
+    <head>
+      <charseq START="253" END="254">it</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030602_133012.9-E16-39" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="262" END="277">the mars express</charseq>
+    </extent>
+    <head>
+      <charseq START="266" END="277">mars express</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030602_133012.9-E16-41" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="282" END="283">it</charseq>
+    </extent>
+    <head>
+      <charseq START="282" END="283">it</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030602_133012.9-E16-43" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="350" END="363">two
+spacecraft</charseq>
+    </extent>
+    <head>
+      <charseq START="354" END="363">spacecraft</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030602_133012.9-E16-44" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="149" END="160">mars express</charseq>
+    </extent>
+    <head>
+      <charseq START="149" END="160">mars express</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030602_133012.9-E16-45" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="386" END="397">mars express</charseq>
+    </extent>
+    <head>
+      <charseq START="386" END="397">mars express</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030602_133012.9-E16-46" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="366" END="397">an orbit ter called mars express</charseq>
+    </extent>
+    <head>
+      <charseq START="369" END="377">orbit ter</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030602_133012.9-E16-48" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="400" END="401">it</charseq>
+    </extent>
+    <head>
+      <charseq START="400" END="401">it</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030602_133012.9-E16-50" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="463" END="464">it</charseq>
+    </extent>
+    <head>
+      <charseq START="463" END="464">it</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="mars express">
+      <charseq START="266" END="277">mars express</charseq>
+    </name>
+    <name NAME="mars express">
+      <charseq START="149" END="160">mars express</charseq>
+    </name>
+    <name NAME="mars express">
+      <charseq START="386" END="397">mars express</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030602_133012.9-E17" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030602_133012.9-E17-33" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="180" END="180">s</charseq>
+    </extent>
+    <head>
+      <charseq START="180" END="180">s</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030602_133012.9-E19" TYPE="LOC" SUBTYPE="Region-General" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030602_133012.9-E19-37" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="230" END="234">there</charseq>
+    </extent>
+    <head>
+      <charseq START="230" END="234">there</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030602_133012.9-E22" TYPE="VEH" SUBTYPE="Air" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030602_133012.9-E22-5" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="594" END="606">the eagle two</charseq>
+    </extent>
+    <head>
+      <charseq START="598" END="606">eagle two</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030602_133012.9-E22-8" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="680" END="681">it</charseq>
+    </extent>
+    <head>
+      <charseq START="680" END="681">it</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030602_133012.9-E22-12" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="901" END="958">this tiny little lander dropping
+off the entire says craft</charseq>
+    </extent>
+    <head>
+      <charseq START="918" END="923">lander</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030602_133012.9-E22-34" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1054" END="1055">it</charseq>
+    </extent>
+    <head>
+      <charseq START="1054" END="1055">it</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030602_133012.9-E22-51" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="475" END="591">a lander known as beagle two, named after charles
+car win which he sailed to the island and went into its bit
+of fame</charseq>
+    </extent>
+    <head>
+      <charseq START="477" END="482">lander</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030602_133012.9-E22-52" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="493" END="502">beagle two</charseq>
+    </extent>
+    <head>
+      <charseq START="493" END="502">beagle two</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="eagle two">
+      <charseq START="598" END="606">eagle two</charseq>
+    </name>
+    <name NAME="beagle two">
+      <charseq START="493" END="502">beagle two</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030602_133012.9-E24" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030602_133012.9-E24-2" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="539" END="540">he</charseq>
+    </extent>
+    <head>
+      <charseq START="539" END="540">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030602_133012.9-E24-53" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="517" END="531">charles
+car win</charseq>
+    </extent>
+    <head>
+      <charseq START="517" END="531">charles
+car win</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="charles car win">
+      <charseq START="517" END="531">charles
+car win</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<timex2 ID="CNN_ENG_20030602_133012.9-T1" VAL="2003-06-02T13:53:04">
+  <timex2_mention ID="CNN_ENG_20030602_133012.9-T1-1">
+    <extent>
+      <charseq START="81" END="83">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030602_133012.9-T2" VAL="2003-06-02T13:53:04">
+  <timex2_mention ID="CNN_ENG_20030602_133012.9-T2-1">
+    <extent>
+      <charseq START="236" END="244">right
+now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030602_133012.9-T3" VAL="2003-06-02T13:53:04">
+  <timex2_mention ID="CNN_ENG_20030602_133012.9-T3-1">
+    <extent>
+      <charseq START="43" END="61">2003-06-02 13:53:04</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030602_133012.9-T4" VAL="2003-06-02TNI">
+  <timex2_mention ID="CNN_ENG_20030602_133012.9-T4-1">
+    <extent>
+      <charseq START="205" END="228">a little before midnight</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030602_133012.9-T5" VAL="P7M" ANCHOR_VAL="2003-06-02-T13:53:04" ANCHOR_DIR="STARTING">
+  <timex2_mention ID="CNN_ENG_20030602_133012.9-T5-1">
+    <extent>
+      <charseq START="295" END="305">seven-month</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030602_133012.9-T6" VAL="PXY" ANCHOR_VAL="2003-06-02" ANCHOR_DIR="AFTER">
+  <timex2_mention ID="CNN_ENG_20030602_133012.9-T6-1">
+    <extent>
+      <charseq START="444" END="460">a couple of years</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030602_133012.9-T7" VAL="P6M" MOD="APPROX" ANCHOR_VAL="2003-06-02" ANCHOR_DIR="AFTER">
+  <timex2_mention ID="CNN_ENG_20030602_133012.9-T7-1">
+    <extent>
+      <charseq START="644" END="659">about six months</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030602_133012.9-T8" VAL="2004-01">
+  <timex2_mention ID="CNN_ENG_20030602_133012.9-T8-1">
+    <extent>
+      <charseq START="876" END="896">seven months from now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030602_133012.9-T9" VAL="1998-12">
+  <timex2_mention ID="CNN_ENG_20030602_133012.9-T9-1">
+    <extent>
+      <charseq START="1460" END="1488">december of 1988 1988 -- 1998</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030602_133012.9-R3" TYPE="PART-WHOLE" SUBTYPE="Artifact" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030602_133012.9-E22" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030602_133012.9-E16" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030602_133012.9-R3-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="463" END="591">it
+also has a lander known as beagle two, named after charles
+car win which he sailed to the island and went into its bit
+of fame</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030602_133012.9-E22-51" ROLE="Arg-1">
+      <extent>
+        <charseq START="475" END="591">a lander known as beagle two, named after charles
+car win which he sailed to the island and went into its bit
+of fame</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030602_133012.9-E16-50" ROLE="Arg-2">
+      <extent>
+        <charseq START="463" END="464">it</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_ENG_20030602_133012.9-R3-2" LEXICALCONDITION="Participial">
+    <extent>
+      <charseq START="901" END="958">this tiny little lander dropping
+off the entire says craft</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030602_133012.9-E22-12" ROLE="Arg-1">
+      <extent>
+        <charseq START="901" END="958">this tiny little lander dropping
+off the entire says craft</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030602_133012.9-E16-13" ROLE="Arg-2">
+      <extent>
+        <charseq START="938" END="958">the entire says craft</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030602_133012.9-R4" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030602_133012.9-E6" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030602_133012.9-E16" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030602_133012.9-R4-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="112" END="146">atop it a
+european mars observetory</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030602_133012.9-E6-31" ROLE="Arg-1">
+      <extent>
+        <charseq START="122" END="129">european</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030602_133012.9-E16-29" ROLE="Arg-2">
+      <extent>
+        <charseq START="120" END="146">a
+european mars observetory</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030602_133012.9-R5" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030602_133012.9-E24" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030602_133012.9-E3" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030602_133012.9-R5-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="463" END="591">it
+also has a lander known as beagle two, named after charles
+car win which he sailed to the island and went into its bit
+of fame</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030602_133012.9-E24-2" ROLE="Arg-1">
+      <extent>
+        <charseq START="539" END="540">he</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030602_133012.9-E3-36" ROLE="Arg-2">
+      <extent>
+        <charseq START="533" END="537">which</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030602_133012.9-R6" TYPE="GEN-AFF" SUBTYPE="Org-Location" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030602_133012.9-E6" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030602_133012.9-E7" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030602_133012.9-R6-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="1196" END="1231">the european
+space agency in germany</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030602_133012.9-E6-16" ROLE="Arg-1">
+      <extent>
+        <charseq START="1196" END="1231">the european
+space agency in germany</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030602_133012.9-E7-17" ROLE="Arg-2">
+      <extent>
+        <charseq START="1225" END="1231">germany</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030602_133012.9-R7" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030602_133012.9-E24" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030602_133012.9-E1" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030602_133012.9-R7-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="463" END="591">it
+also has a lander known as beagle two, named after charles
+car win which he sailed to the island and went into its bit
+of fame</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030602_133012.9-E24-2" ROLE="Arg-1">
+      <extent>
+        <charseq START="539" END="540">he</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030602_133012.9-E1-3" ROLE="Arg-2">
+      <extent>
+        <charseq START="552" END="561">the island</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030602_133012.9-R8" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030602_133012.9-E4" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030602_133012.9-E13" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030602_133012.9-R8-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="1076" END="1104">the surface of the red
+planet</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030602_133012.9-E4-15" ROLE="Arg-1">
+      <extent>
+        <charseq START="1076" END="1104">the surface of the red
+planet</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030602_133012.9-E13-14" ROLE="Arg-2">
+      <extent>
+        <charseq START="1091" END="1104">the red
+planet</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_ENG_20030602_133012.9-R8-2" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="620" END="638">the surface of mars</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030602_133012.9-E4-6" ROLE="Arg-1">
+      <extent>
+        <charseq START="620" END="638">the surface of mars</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030602_133012.9-E13-7" ROLE="Arg-2">
+      <extent>
+        <charseq START="635" END="638">mars</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030602_133012.9-EV1" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Present">
+  <event_argument REFID="CNN_ENG_20030602_133012.9-E16" ROLE="Vehicle"/>
+  <event_argument REFID="CNN_ENG_20030602_133012.9-E13" ROLE="Destination"/>
+  <event_argument REFID="CNN_ENG_20030602_133012.9-T5" ROLE="Time-Holds"/>
+  <event_mention ID="CNN_ENG_20030602_133012.9-EV1-1">
+    <extent>
+      <charseq START="262" END="331">the mars express on its way on a
+seven-month journey to the red planet</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="262" END="363">the mars express on its way on a
+seven-month journey to the red planet, contains really two
+spacecraft</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="307" END="313">journey</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030602_133012.9-E16-39" ROLE="Vehicle">
+      <extent>
+        <charseq START="262" END="277">the mars express</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030602_133012.9-E13-42" ROLE="Destination">
+      <extent>
+        <charseq START="318" END="331">the red planet</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030602_133012.9-T5-1" ROLE="Time-Holds">
+      <extent>
+        <charseq START="295" END="305">seven-month</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030602_133012.9-EV2" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030602_133012.9-E12" ROLE="Vehicle"/>
+  <event_argument REFID="CNN_ENG_20030602_133012.9-E13" ROLE="Destination"/>
+  <event_argument REFID="CNN_ENG_20030602_133012.9-T9" ROLE="Time-Within"/>
+  <event_mention ID="CNN_ENG_20030602_133012.9-EV2-1">
+    <extent>
+      <charseq START="1460" END="1592">december of 1988 1988 -- 1998, i
+should say, the mars polar lander had a very unsuccessful
+conclusion to its flight to the red planet</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1446" END="1592">you'll recall december of 1988 1988 -- 1998, i
+should say, the mars polar lander had a very unsuccessful
+conclusion to its flight to the red planet</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1569" END="1574">flight</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030602_133012.9-E12-24" ROLE="Vehicle">
+      <extent>
+        <charseq START="1505" END="1525">the mars polar lander</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030602_133012.9-E13-26" ROLE="Destination">
+      <extent>
+        <charseq START="1579" END="1592">the red planet</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030602_133012.9-T9-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="1460" END="1488">december of 1988 1988 -- 1998</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030602_133012.9-EV3" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030602_133012.9-E24" ROLE="Artifact"/>
+  <event_argument REFID="CNN_ENG_20030602_133012.9-E1" ROLE="Destination"/>
+  <event_argument REFID="CNN_ENG_20030602_133012.9-E3" ROLE="Vehicle"/>
+  <event_mention ID="CNN_ENG_20030602_133012.9-EV3-1">
+    <extent>
+      <charseq START="533" END="561">which he sailed to the island</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="463" END="591">it
+also has a lander known as beagle two, named after charles
+car win which he sailed to the island and went into its bit
+of fame</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="542" END="547">sailed</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030602_133012.9-E24-2" ROLE="Artifact">
+      <extent>
+        <charseq START="539" END="540">he</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030602_133012.9-E1-3" ROLE="Destination">
+      <extent>
+        <charseq START="552" END="561">the island</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030602_133012.9-E3-36" ROLE="Vehicle">
+      <extent>
+        <charseq START="533" END="537">which</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030602_133012.9-EV4" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030602_133012.9-E13" ROLE="Destination"/>
+  <event_mention ID="CNN_ENG_20030602_133012.9-EV4-1">
+    <extent>
+      <charseq START="1261" END="1275">mission
+to mars</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1234" END="1275">this is the first european mission
+to mars</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1261" END="1267">mission</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030602_133012.9-E13-19" ROLE="Destination">
+      <extent>
+        <charseq START="1272" END="1275">mars</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

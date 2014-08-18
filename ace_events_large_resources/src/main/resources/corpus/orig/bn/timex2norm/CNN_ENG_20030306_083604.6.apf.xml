@@ -1,0 +1,519 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030306_083604.6.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030306_083604.6">
+<entity ID="CNN_ENG_20030306_083604.6-E1" TYPE="LOC" SUBTYPE="Region-General" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030306_083604.6-E1-2" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="430" END="438">the north</charseq>
+    </extent>
+    <head>
+      <charseq START="434" END="438">north</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030306_083604.6-E1-10" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="550" END="554">there</charseq>
+    </extent>
+    <head>
+      <charseq START="550" END="554">there</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030306_083604.6-E2" TYPE="LOC" SUBTYPE="Water-Body" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030306_083604.6-E2-3" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="FALSE">
+    <extent>
+      <charseq START="478" END="490">lake superior</charseq>
+    </extent>
+    <head>
+      <charseq START="478" END="490">lake superior</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030306_083604.6-E2-6" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="578" END="590">lake superior</charseq>
+    </extent>
+    <head>
+      <charseq START="578" END="590">lake superior</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030306_083604.6-E2-7" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="593" END="627">the largest
+of the five great lakes</charseq>
+    </extent>
+    <head>
+      <charseq START="597" END="603">largest</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030306_083604.6-E2-9" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="657" END="661">there</charseq>
+    </extent>
+    <head>
+      <charseq START="657" END="661">there</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="lake superior">
+      <charseq START="478" END="490">lake superior</charseq>
+    </name>
+    <name NAME="lake superior">
+      <charseq START="578" END="590">lake superior</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030306_083604.6-E4" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030306_083604.6-E4-4" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="508" END="518">forecasters</charseq>
+    </extent>
+    <head>
+      <charseq START="508" END="518">forecasters</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030306_083604.6-E6" TYPE="LOC" SUBTYPE="Water-Body" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030306_083604.6-E6-8" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="608" END="627">the five great lakes</charseq>
+    </extent>
+    <head>
+      <charseq START="623" END="627">lakes</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030306_083604.6-E7" TYPE="LOC" SUBTYPE="Region-General" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030306_083604.6-E7-15" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="180" END="184">coast</charseq>
+    </extent>
+    <head>
+      <charseq START="180" END="184">coast</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030306_083604.6-E8" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030306_083604.6-E8-1" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="67" END="119">tens of thousands of college and high school students</charseq>
+    </extent>
+    <head>
+      <charseq START="112" END="119">students</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030306_083604.6-E9" TYPE="ORG" SUBTYPE="Educational" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030306_083604.6-E9-11" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="88" END="94">college</charseq>
+    </extent>
+    <head>
+      <charseq START="88" END="94">college</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030306_083604.6-E9-19" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="219" END="225">college</charseq>
+    </extent>
+    <head>
+      <charseq START="219" END="225">college</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030306_083604.6-E10" TYPE="ORG" SUBTYPE="Educational" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030306_083604.6-E10-12" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="100" END="110">high school</charseq>
+    </extent>
+    <head>
+      <charseq START="100" END="110">high school</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030306_083604.6-E10-18" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="203" END="213">high school</charseq>
+    </extent>
+    <head>
+      <charseq START="203" END="213">high school</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030306_083604.6-E11" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030306_083604.6-E11-13" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="147" END="154">campuses</charseq>
+    </extent>
+    <head>
+      <charseq START="147" END="154">campuses</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030306_083604.6-E12" TYPE="LOC" SUBTYPE="Region-General" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030306_083604.6-E12-14" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="171" END="175">coast</charseq>
+    </extent>
+    <head>
+      <charseq START="171" END="175">coast</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030306_083604.6-E13" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030306_083604.6-E13-16" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE">
+    <extent>
+      <charseq START="187" END="196">california</charseq>
+    </extent>
+    <head>
+      <charseq START="187" END="196">california</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030306_083604.6-E13-20" TYPE="PRO" LDCTYPE="PRO" ROLE="LOC">
+    <extent>
+      <charseq START="236" END="240">there</charseq>
+    </extent>
+    <head>
+      <charseq START="236" END="240">there</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="california">
+      <charseq START="187" END="196">california</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030306_083604.6-E14" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030306_083604.6-E14-17" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="203" END="240">high school and college students there</charseq>
+    </extent>
+    <head>
+      <charseq START="227" END="234">students</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030306_083604.6-E14-21" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="264" END="268">their</charseq>
+    </extent>
+    <head>
+      <charseq START="264" END="268">their</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030306_083604.6-E17" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030306_083604.6-E17-22" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE">
+    <extent>
+      <charseq START="286" END="288">u.s</charseq>
+    </extent>
+    <head>
+      <charseq START="286" END="288">u.s</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="u.s">
+      <charseq START="286" END="288">u.s</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030306_083604.6-E18" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030306_083604.6-E18-23" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE">
+    <extent>
+      <charseq START="304" END="307">iraq</charseq>
+    </extent>
+    <head>
+      <charseq START="304" END="307">iraq</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="iraq">
+      <charseq START="304" END="307">iraq</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030306_083604.6-E19" TYPE="WEA" SUBTYPE="Exploding" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030306_083604.6-E19-24" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="324" END="328">bombs</charseq>
+    </extent>
+    <head>
+      <charseq START="324" END="328">bombs</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030306_083604.6-E20" TYPE="ORG" SUBTYPE="Non-Governmental" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030306_083604.6-E20-25" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="359" END="404">the national youth and student peace
+coalition</charseq>
+    </extent>
+    <head>
+      <charseq START="363" END="404">national youth and student peace
+coalition</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="national youth and student peace coalition">
+      <charseq START="363" END="404">national youth and student peace
+coalition</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<timex2 ID="CNN_ENG_20030306_083604.6-T1" VAL="2003-03-06T08:36:54">
+  <timex2_mention ID="CNN_ENG_20030306_083604.6-T1-1">
+    <extent>
+      <charseq START="43" END="61">2003-03-06 08:36:54</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030306_083604.6-T2" VAL="2003-03-05">
+  <timex2_mention ID="CNN_ENG_20030306_083604.6-T2-1">
+    <extent>
+      <charseq START="156" END="164">yesterday</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030306_083604.6-T3" VAL="2003-03-06T08:36:54">
+  <timex2_mention ID="CNN_ENG_20030306_083604.6-T3-1">
+    <extent>
+      <charseq START="198" END="200">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030306_083604.6-T4" VAL="2003-03-06T08:36:54">
+  <timex2_mention ID="CNN_ENG_20030306_083604.6-T4-1">
+    <extent>
+      <charseq START="459" END="461">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030306_083604.6-T5" VAL="P20Y" MOD="APPROX" ANCHOR_VAL="2003" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_ENG_20030306_083604.6-T5-1">
+    <extent>
+      <charseq START="559" END="575">about two decades</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030306_083604.6-R1" TYPE="ORG-AFF" SUBTYPE="Student-Alum" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030306_083604.6-E8" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030306_083604.6-E9" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030306_083604.6-R1-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="67" END="119">tens of thousands of college and high school students</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030306_083604.6-E8-1" ROLE="Arg-1">
+      <extent>
+        <charseq START="67" END="119">tens of thousands of college and high school students</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030306_083604.6-E9-11" ROLE="Arg-2">
+      <extent>
+        <charseq START="88" END="94">college</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030306_083604.6-R2" TYPE="ORG-AFF" SUBTYPE="Student-Alum" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030306_083604.6-E8" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030306_083604.6-E10" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030306_083604.6-R2-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="67" END="119">tens of thousands of college and high school students</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030306_083604.6-E8-1" ROLE="Arg-1">
+      <extent>
+        <charseq START="67" END="119">tens of thousands of college and high school students</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030306_083604.6-E10-12" ROLE="Arg-2">
+      <extent>
+        <charseq START="100" END="110">high school</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030306_083604.6-R3" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030306_083604.6-E11" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030306_083604.6-E12" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030306_083604.6-R3-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="147" END="184">campuses yesterday from coast-to-coast</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030306_083604.6-E11-13" ROLE="Arg-1">
+      <extent>
+        <charseq START="147" END="154">campuses</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030306_083604.6-E12-14" ROLE="Arg-2">
+      <extent>
+        <charseq START="171" END="175">coast</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030306_083604.6-R4" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030306_083604.6-E11" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030306_083604.6-E7" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030306_083604.6-R4-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="147" END="184">campuses yesterday from coast-to-coast</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030306_083604.6-E11-13" ROLE="Arg-1">
+      <extent>
+        <charseq START="147" END="154">campuses</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030306_083604.6-E7-15" ROLE="Arg-2">
+      <extent>
+        <charseq START="180" END="184">coast</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030306_083604.6-R5" TYPE="ORG-AFF" SUBTYPE="Student-Alum" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030306_083604.6-E14" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030306_083604.6-E10" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030306_083604.6-R5-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="203" END="240">high school and college students there</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030306_083604.6-E14-17" ROLE="Arg-1">
+      <extent>
+        <charseq START="203" END="240">high school and college students there</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030306_083604.6-E10-18" ROLE="Arg-2">
+      <extent>
+        <charseq START="203" END="213">high school</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030306_083604.6-R6" TYPE="ORG-AFF" SUBTYPE="Student-Alum" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030306_083604.6-E14" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030306_083604.6-E9" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030306_083604.6-R6-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="203" END="240">high school and college students there</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030306_083604.6-E14-17" ROLE="Arg-1">
+      <extent>
+        <charseq START="203" END="240">high school and college students there</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030306_083604.6-E9-19" ROLE="Arg-2">
+      <extent>
+        <charseq START="219" END="225">college</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030306_083604.6-R7" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030306_083604.6-E14" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030306_083604.6-E13" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030306_083604.6-R7-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="203" END="240">high school and college students there</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030306_083604.6-E14-17" ROLE="Arg-1">
+      <extent>
+        <charseq START="203" END="240">high school and college students there</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030306_083604.6-E13-20" ROLE="Arg-2">
+      <extent>
+        <charseq START="236" END="240">there</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030306_083604.6-EV1" TYPE="Conflict" SUBTYPE="Demonstrate" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030306_083604.6-E12" ROLE="Place"/>
+  <event_argument REFID="CNN_ENG_20030306_083604.6-E7" ROLE="Place"/>
+  <event_argument REFID="CNN_ENG_20030306_083604.6-E8" ROLE="Entity"/>
+  <event_argument REFID="CNN_ENG_20030306_083604.6-T2" ROLE="Time-Within"/>
+  <event_mention ID="CNN_ENG_20030306_083604.6-EV1-1">
+    <extent>
+      <charseq START="67" END="184">tens of thousands of college and high school students stage antiwar
+protests on campuses yesterday from coast-to-coast</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="67" END="184">tens of thousands of college and high school students stage antiwar
+protests on campuses yesterday from coast-to-coast</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="135" END="142">protests</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030306_083604.6-E12-14" ROLE="Place">
+      <extent>
+        <charseq START="171" END="175">coast</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030306_083604.6-E7-15" ROLE="Place">
+      <extent>
+        <charseq START="180" END="184">coast</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030306_083604.6-E8-1" ROLE="Entity">
+      <extent>
+        <charseq START="67" END="119">tens of thousands of college and high school students</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030306_083604.6-T2-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="156" END="164">yesterday</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030306_083604.6-EV2" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030306_083604.6-E17" ROLE="Attacker"/>
+  <event_argument REFID="CNN_ENG_20030306_083604.6-E18" ROLE="Place"/>
+  <event_mention ID="CNN_ENG_20030306_083604.6-EV2-1">
+    <extent>
+      <charseq START="286" END="307">u.s.-led war with iraq</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="187" END="307">california now,
+high school and college students there skipped class to show their
+opposition to a u.s.-led war with iraq</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="295" END="297">war</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030306_083604.6-E17-22" ROLE="Attacker">
+      <extent>
+        <charseq START="286" END="288">u.s</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030306_083604.6-E18-23" ROLE="Place">
+      <extent>
+        <charseq START="304" END="307">iraq</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030306_083604.6-EV3" TYPE="Conflict" SUBTYPE="Demonstrate" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030306_083604.6-E20" ROLE="Entity"/>
+  <event_mention ID="CNN_ENG_20030306_083604.6-EV3-1">
+    <extent>
+      <charseq START="330" END="404">demonstration coored naed by the national youth and student peace
+coalition</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="310" END="404">the books not bombs
+demonstration coored naed by the national youth and student peace
+coalition</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="330" END="342">demonstration</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030306_083604.6-E20-25" ROLE="Entity">
+      <extent>
+        <charseq START="359" END="404">the national youth and student peace
+coalition</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

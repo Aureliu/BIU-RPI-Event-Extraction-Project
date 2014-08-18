@@ -1,0 +1,443 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030428_173654.13.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030428_173654.13">
+<entity ID="CNN_ENG_20030428_173654.13-E1" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030428_173654.13-E1-3" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="465" END="470">prison</charseq>
+    </extent>
+    <head>
+      <charseq START="465" END="470">prison</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030428_173654.13-E2" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030428_173654.13-E2-6" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="340" END="346">america</charseq>
+    </extent>
+    <head>
+      <charseq START="340" END="346">america</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030428_173654.13-E2-18" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="394" END="400">america</charseq>
+    </extent>
+    <head>
+      <charseq START="394" END="400">america</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="america">
+      <charseq START="340" END="346">america</charseq>
+    </name>
+    <name NAME="america">
+      <charseq START="394" END="400">america</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030428_173654.13-E3" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030428_173654.13-E3-7" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="421" END="421">i</charseq>
+    </extent>
+    <head>
+      <charseq START="421" END="421">i</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030428_173654.13-E4" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030428_173654.13-E4-1" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="68" END="100">another six executives from enron</charseq>
+    </extent>
+    <head>
+      <charseq START="80" END="89">executives</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030428_173654.13-E4-10" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="188" END="207">the former
+employees</charseq>
+    </extent>
+    <head>
+      <charseq START="199" END="207">employees</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030428_173654.13-E4-11" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="214" END="217">they</charseq>
+    </extent>
+    <head>
+      <charseq START="214" END="217">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030428_173654.13-E4-12" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="261" END="264">they</charseq>
+    </extent>
+    <head>
+      <charseq START="261" END="264">they</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030428_173654.13-E5" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030428_173654.13-E5-4" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="493" END="497">enron</charseq>
+    </extent>
+    <head>
+      <charseq START="493" END="497">enron</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030428_173654.13-E5-8" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="96" END="100">enron</charseq>
+    </extent>
+    <head>
+      <charseq START="96" END="100">enron</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030428_173654.13-E5-17" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="324" END="328">enron</charseq>
+    </extent>
+    <head>
+      <charseq START="324" END="328">enron</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030428_173654.13-E5-20" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="432" END="436">enron</charseq>
+    </extent>
+    <head>
+      <charseq START="432" END="436">enron</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="enron">
+      <charseq START="493" END="497">enron</charseq>
+    </name>
+    <name NAME="enron">
+      <charseq START="96" END="100">enron</charseq>
+    </name>
+    <name NAME="enron">
+      <charseq START="324" END="328">enron</charseq>
+    </name>
+    <name NAME="enron">
+      <charseq START="432" END="436">enron</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030428_173654.13-E6" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030428_173654.13-E6-9" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="159" END="177">federal prosecutors</charseq>
+    </extent>
+    <head>
+      <charseq START="167" END="177">prosecutors</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030428_173654.13-E7" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030428_173654.13-E7-13" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="277" END="298">seven other executives</charseq>
+    </extent>
+    <head>
+      <charseq START="289" END="298">executives</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030428_173654.13-E7-19" TYPE="PRO" LDCTYPE="HLS">
+    <extent>
+      <charseq START="403" END="415">seven of them</charseq>
+    </extent>
+    <head>
+      <charseq START="403" END="407">seven</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030428_173654.13-E8" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030428_173654.13-E8-5" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="412" END="415">them</charseq>
+    </extent>
+    <head>
+      <charseq START="412" END="415">them</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030428_173654.13-E8-14" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="365" END="377">50 executives</charseq>
+    </extent>
+    <head>
+      <charseq START="368" END="377">executives</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030428_173654.13-E9" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030428_173654.13-E9-15" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="316" END="318">abe</charseq>
+    </extent>
+    <head>
+      <charseq START="316" END="318">abe</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="abe">
+      <charseq START="316" END="318">abe</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030428_173654.13-E10" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030428_173654.13-E10-16" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="320" END="322">our</charseq>
+    </extent>
+    <head>
+      <charseq START="320" END="322">our</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030428_173654.13-E13" TYPE="PER" SUBTYPE="Individual" CLASS="NEG">
+  <entity_mention ID="CNN_ENG_20030428_173654.13-E13-2" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="447" END="452">no one</charseq>
+    </extent>
+    <head>
+      <charseq START="447" END="452">no one</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030428_173654.13-E13-21" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="439" END="444">no one</charseq>
+    </extent>
+    <head>
+      <charseq START="439" END="444">no one</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<value ID="CNN_ENG_20030428_173654.13-V1" TYPE="Crime">
+  <value_mention ID="CNN_ENG_20030428_173654.13-V1-1">
+    <extent>
+      <charseq START="124" END="139">securities
+fraud</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_ENG_20030428_173654.13-V2" TYPE="Crime">
+  <value_mention ID="CNN_ENG_20030428_173654.13-V2-1">
+    <extent>
+      <charseq START="145" END="156">other crimes</charseq>
+    </extent>
+  </value_mention>
+</value>
+<timex2 ID="CNN_ENG_20030428_173654.13-T1" VAL="2003-04-28T18:46:38">
+  <timex2_mention ID="CNN_ENG_20030428_173654.13-T1-1">
+    <extent>
+      <charseq START="44" END="62">2003-04-28 18:46:38</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030428_173654.13-T2" VAL="2003-W18" MOD="ON_OR_AFTER">
+  <timex2_mention ID="CNN_ENG_20030428_173654.13-T2-1">
+    <extent>
+      <charseq START="238" END="258">as early as this week</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030428_173654.13-T3" VAL="P511D" ANCHOR_VAL="2003-04-28" ANCHOR_DIR="ENDING">
+  <timex2_mention ID="CNN_ENG_20030428_173654.13-T3-1">
+    <extent>
+      <charseq START="478" END="485">511 days</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030428_173654.13-T4" VAL="PAST_REF" ANCHOR_VAL="2003-04-28T18:46:38" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="CNN_ENG_20030428_173654.13-T4-1">
+    <extent>
+      <charseq START="192" END="197">former</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030428_173654.13-T5" VAL="PRESENT_REF" ANCHOR_VAL="2003-04-28T18:46:38" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_ENG_20030428_173654.13-T5-1">
+    <extent>
+      <charseq START="379" END="381">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030428_173654.13-R1" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030428_173654.13-E4" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030428_173654.13-E5" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030428_173654.13-R1-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="68" END="100">another six executives from enron</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030428_173654.13-E4-1" ROLE="Arg-1">
+      <extent>
+        <charseq START="68" END="100">another six executives from enron</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030428_173654.13-E5-8" ROLE="Arg-2">
+      <extent>
+        <charseq START="96" END="100">enron</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030428_173654.13-R2" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030428_173654.13-E7" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030428_173654.13-E5" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030428_173654.13-R2-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="403" END="436">seven of them, as i said, at enron</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030428_173654.13-E7-19" ROLE="Arg-1">
+      <extent>
+        <charseq START="403" END="415">seven of them</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030428_173654.13-E5-20" ROLE="Arg-2">
+      <extent>
+        <charseq START="432" END="436">enron</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030428_173654.13-EV1" TYPE="Business" SUBTYPE="Declare-Bankruptcy" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030428_173654.13-E5" ROLE="Org"/>
+  <event_mention ID="CNN_ENG_20030428_173654.13-EV1-1">
+    <extent>
+      <charseq START="493" END="520">enron filed for bankruptcies</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="473" END="520">been 511 days since enron filed for bankruptcies</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="509" END="520">bankruptcies</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030428_173654.13-E5-4" ROLE="Org">
+      <extent>
+        <charseq START="493" END="497">enron</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030428_173654.13-EV2" TYPE="Justice" SUBTYPE="Charge-Indict" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Future">
+  <event_argument REFID="CNN_ENG_20030428_173654.13-E4" ROLE="Defendant"/>
+  <event_argument REFID="CNN_ENG_20030428_173654.13-V1" ROLE="Crime"/>
+  <event_argument REFID="CNN_ENG_20030428_173654.13-V2" ROLE="Crime"/>
+  <event_argument REFID="CNN_ENG_20030428_173654.13-E6" ROLE="Prosecutor"/>
+  <event_argument REFID="CNN_ENG_20030428_173654.13-T2" ROLE="Time-Within"/>
+  <event_mention ID="CNN_ENG_20030428_173654.13-EV2-1">
+    <extent>
+      <charseq START="68" END="156">another six executives from enron could be charged with securities
+fraud and other crimes</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="68" END="156">another six executives from enron could be charged with securities
+fraud and other crimes</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="111" END="117">charged</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030428_173654.13-E4-1" ROLE="Defendant">
+      <extent>
+        <charseq START="68" END="100">another six executives from enron</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030428_173654.13-V1-1" ROLE="Crime">
+      <extent>
+        <charseq START="124" END="139">securities
+fraud</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030428_173654.13-V2-1" ROLE="Crime">
+      <extent>
+        <charseq START="145" END="156">other crimes</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030428_173654.13-EV2-2">
+    <extent>
+      <charseq START="159" END="258">federal prosecutors notified the former
+employees that they could face charges as early as this week</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="159" END="258">federal prosecutors notified the former
+employees that they could face charges as early as this week</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="230" END="236">charges</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030428_173654.13-E4-11" ROLE="Defendant">
+      <extent>
+        <charseq START="214" END="217">they</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030428_173654.13-E6-9" ROLE="Prosecutor">
+      <extent>
+        <charseq START="159" END="177">federal prosecutors</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030428_173654.13-T2-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="238" END="258">as early as this week</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030428_173654.13-EV3" TYPE="Justice" SUBTYPE="Charge-Indict" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030428_173654.13-E7" ROLE="Defendant"/>
+  <event_mention ID="CNN_ENG_20030428_173654.13-EV3-1">
+    <extent>
+      <charseq START="277" END="314">seven other executives already charged</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="261" END="314">they
+would join seven other executives already charged</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="308" END="314">charged</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030428_173654.13-E7-13" ROLE="Defendant">
+      <extent>
+        <charseq START="277" END="298">seven other executives</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030428_173654.13-EV4" TYPE="Justice" SUBTYPE="Charge-Indict" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030428_173654.13-E8" ROLE="Defendant"/>
+  <event_argument REFID="CNN_ENG_20030428_173654.13-E2" ROLE="Place"/>
+  <event_mention ID="CNN_ENG_20030428_173654.13-EV4-1">
+    <extent>
+      <charseq START="365" END="400">50 executives now charged in
+america</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="320" END="400">our enron
+corporate america score board sets 50 executives now charged in
+america</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="383" END="389">charged</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030428_173654.13-E8-14" ROLE="Defendant">
+      <extent>
+        <charseq START="365" END="377">50 executives</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030428_173654.13-E2-18" ROLE="Place">
+      <extent>
+        <charseq START="394" END="400">america</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

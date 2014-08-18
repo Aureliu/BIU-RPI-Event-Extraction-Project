@@ -1,0 +1,1025 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="AGGRESSIVEVOICEDAILY_20050203.1356.sgm" SOURCE="weblog" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="AGGRESSIVEVOICEDAILY_20050203.1356">
+<entity ID="AGGRESSIVEVOICEDAILY_20050203.1356-E1" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E1-64" TYPE="PRO" LDCTYPE="HLS">
+    <extent>
+      <charseq START="525" END="534">66 percent</charseq>
+    </extent>
+    <head>
+      <charseq START="528" END="534">percent</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050203.1356-E2" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E2-3" TYPE="PRO" LDCTYPE="HLS">
+    <extent>
+      <charseq START="590" END="599">78 percent</charseq>
+    </extent>
+    <head>
+      <charseq START="593" END="599">percent</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050203.1356-E3" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E3-4" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="606" END="609">U.S.</charseq>
+    </extent>
+    <head>
+      <charseq START="606" END="609">U.S.</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E3-10" TYPE="NOM" LDCTYPE="NOM" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="771" END="781">the
+country</charseq>
+    </extent>
+    <head>
+      <charseq START="775" END="781">country</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E3-43" TYPE="PRO" LDCTYPE="PRO" ROLE="PER" LDCATR="FALSE">
+    <extent>
+      <charseq START="1701" END="1702">We</charseq>
+    </extent>
+    <head>
+      <charseq START="1701" END="1702">We</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E3-45" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="1492" END="1493">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1492" END="1493">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="U.S.">
+      <charseq START="606" END="609">U.S.</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050203.1356-E5" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E5-5" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="621" END="624">Iraq</charseq>
+    </extent>
+    <head>
+      <charseq START="621" END="624">Iraq</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E5-15" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="928" END="931">Iraq</charseq>
+    </extent>
+    <head>
+      <charseq START="928" END="931">Iraq</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E5-25" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1156" END="1160">Iraqi</charseq>
+    </extent>
+    <head>
+      <charseq START="1156" END="1160">Iraqi</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E5-29" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="1327" END="1330">Iraq</charseq>
+    </extent>
+    <head>
+      <charseq START="1327" END="1330">Iraq</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E5-38" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="1563" END="1566">Iraq</charseq>
+    </extent>
+    <head>
+      <charseq START="1563" END="1566">Iraq</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Iraq">
+      <charseq START="621" END="624">Iraq</charseq>
+    </name>
+    <name NAME="Iraq">
+      <charseq START="928" END="931">Iraq</charseq>
+    </name>
+    <name NAME="Iraqi">
+      <charseq START="1156" END="1160">Iraqi</charseq>
+    </name>
+    <name NAME="Iraq">
+      <charseq START="1327" END="1330">Iraq</charseq>
+    </name>
+    <name NAME="Iraq">
+      <charseq START="1563" END="1566">Iraq</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050203.1356-E6" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E6-7" TYPE="PRO" LDCTYPE="PTV">
+    <extent>
+      <charseq START="725" END="749">77 percent of respondents</charseq>
+    </extent>
+    <head>
+      <charseq START="728" END="734">percent</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050203.1356-E7" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E7-11" TYPE="PRO" LDCTYPE="HLS">
+    <extent>
+      <charseq START="835" END="844">67 percent</charseq>
+    </extent>
+    <head>
+      <charseq START="838" END="844">percent</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050203.1356-E8" TYPE="PER" SUBTYPE="Indeterminate" CLASS="USP">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E8-12" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="863" END="865">who</charseq>
+    </extent>
+    <head>
+      <charseq START="863" END="865">who</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050203.1356-E9" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E9-13" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="898" END="931">mother of a soldier killed in
+Iraq</charseq>
+    </extent>
+    <head>
+      <charseq START="898" END="903">mother</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E9-35" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1422" END="1434">Janet Norwood</charseq>
+    </extent>
+    <head>
+      <charseq START="1422" END="1434">Janet Norwood</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Janet Norwood">
+      <charseq START="1422" END="1434">Janet Norwood</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050203.1356-E10" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E10-6" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1271" END="1277">our son</charseq>
+    </extent>
+    <head>
+      <charseq START="1275" END="1277">son</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E10-14" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="908" END="931">a soldier killed in
+Iraq</charseq>
+    </extent>
+    <head>
+      <charseq START="910" END="916">soldier</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E10-20" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1115" END="1145">Marine Corps Sgt. Byron Norwood</charseq>
+    </extent>
+    <head>
+      <charseq START="1133" END="1145">Byron Norwood</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E10-21" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1115" END="1131">Marine Corps Sgt.</charseq>
+    </extent>
+    <head>
+      <charseq START="1128" END="1131">Sgt.</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E10-31" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1392" END="1398">our son</charseq>
+    </extent>
+    <head>
+      <charseq START="1396" END="1398">son</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Byron Norwood">
+      <charseq START="1133" END="1145">Byron Norwood</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050203.1356-E11" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E11-16" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="937" END="991">the daughter of a man killed by Saddam Hussein's regime</charseq>
+    </extent>
+    <head>
+      <charseq START="941" END="948">daughter</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E11-24" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1152" END="1166">the Iraqi
+woman</charseq>
+    </extent>
+    <head>
+      <charseq START="1162" END="1166">woman</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E11-26" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1218" END="1224">herself</charseq>
+    </extent>
+    <head>
+      <charseq START="1218" END="1224">herself</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E11-46" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="1169" END="1189">Safia Taleb al-Suhail</charseq>
+    </extent>
+    <head>
+      <charseq START="1169" END="1189">Safia Taleb al-Suhail</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E11-60" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1252" END="1254">She</charseq>
+    </extent>
+    <head>
+      <charseq START="1252" END="1254">She</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Safia Taleb al-Suhail">
+      <charseq START="1169" END="1189">Safia Taleb al-Suhail</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050203.1356-E12" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E12-17" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="953" END="991">a man killed by Saddam Hussein's regime</charseq>
+    </extent>
+    <head>
+      <charseq START="955" END="957">man</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050203.1356-E13" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E13-18" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="969" END="982">Saddam Hussein</charseq>
+    </extent>
+    <head>
+      <charseq START="969" END="982">Saddam Hussein</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Saddam Hussein">
+      <charseq START="969" END="982">Saddam Hussein</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050203.1356-E14" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E14-19" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1100" END="1145">the parents of Marine Corps Sgt. Byron Norwood</charseq>
+    </extent>
+    <head>
+      <charseq START="1104" END="1110">parents</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E14-22" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1271" END="1273">our</charseq>
+    </extent>
+    <head>
+      <charseq START="1271" END="1273">our</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E14-27" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1305" END="1306">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1305" END="1306">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E14-32" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1392" END="1394">our</charseq>
+    </extent>
+    <head>
+      <charseq START="1392" END="1394">our</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E14-61" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1264" END="1265">us</charseq>
+    </extent>
+    <head>
+      <charseq START="1264" END="1265">us</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050203.1356-E17" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E17-28" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1313" END="1330">the
+people in Iraq</charseq>
+    </extent>
+    <head>
+      <charseq START="1317" END="1322">people</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050203.1356-E18" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E18-33" TYPE="PRO" LDCTYPE="PTV">
+    <extent>
+      <charseq START="1408" END="1418">all of them</charseq>
+    </extent>
+    <head>
+      <charseq START="1408" END="1410">all</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050203.1356-E19" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E19-34" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1415" END="1418">them</charseq>
+    </extent>
+    <head>
+      <charseq START="1415" END="1418">them</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050203.1356-E20" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E20-36" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1521" END="1521">I</charseq>
+    </extent>
+    <head>
+      <charseq START="1521" END="1521">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E20-44" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="104" END="108">Scott</charseq>
+    </extent>
+    <head>
+      <charseq START="104" END="108">Scott</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Scott">
+      <charseq START="104" END="108">Scott</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050203.1356-E21" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E21-37" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1533" END="1566">a friend currently serving in Iraq</charseq>
+    </extent>
+    <head>
+      <charseq START="1535" END="1540">friend</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E21-39" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1583" END="1584">he</charseq>
+    </extent>
+    <head>
+      <charseq START="1583" END="1584">he</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050203.1356-E22" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E22-30" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="969" END="991">Saddam Hussein's regime</charseq>
+    </extent>
+    <head>
+      <charseq START="986" END="991">regime</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="regime">
+      <charseq START="986" END="991">regime</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050203.1356-E23" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E23-40" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1624" END="1629">troops</charseq>
+    </extent>
+    <head>
+      <charseq START="1624" END="1629">troops</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E23-41" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1652" END="1655">They</charseq>
+    </extent>
+    <head>
+      <charseq START="1652" END="1655">They</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050203.1356-E24" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E24-42" TYPE="NAM" LDCTYPE="NAMPRE">
+    <extent>
+      <charseq START="1115" END="1126">Marine Corps</charseq>
+    </extent>
+    <head>
+      <charseq START="1115" END="1126">Marine Corps</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Marine Corps">
+      <charseq START="1115" END="1126">Marine Corps</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050203.1356-E26" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E26-1" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="135" END="137">CNN</charseq>
+    </extent>
+    <head>
+      <charseq START="135" END="137">CNN</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E26-55" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="370" END="372">CNN</charseq>
+    </extent>
+    <head>
+      <charseq START="370" END="372">CNN</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="CNN">
+      <charseq START="135" END="137">CNN</charseq>
+    </name>
+    <name NAME="CNN">
+      <charseq START="370" END="372">CNN</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050203.1356-E27" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E27-47" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="149" END="155">readers</charseq>
+    </extent>
+    <head>
+      <charseq START="149" END="155">readers</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050203.1356-E28" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E28-2" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="548" END="560">the president</charseq>
+    </extent>
+    <head>
+      <charseq START="552" END="560">president</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E28-9" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="756" END="759">Bush</charseq>
+    </extent>
+    <head>
+      <charseq START="756" END="759">Bush</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E28-48" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="165" END="177">the president</charseq>
+    </extent>
+    <head>
+      <charseq START="169" END="177">president</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E28-49" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="238" END="245">Mr. Bush</charseq>
+    </extent>
+    <head>
+      <charseq START="242" END="245">Bush</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E28-50" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="238" END="240">Mr.</charseq>
+    </extent>
+    <head>
+      <charseq START="238" END="240">Mr.</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E28-52" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="316" END="318">him</charseq>
+    </extent>
+    <head>
+      <charseq START="316" END="318">him</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E28-54" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="354" END="356">him</charseq>
+    </extent>
+    <head>
+      <charseq START="354" END="356">him</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E28-58" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="427" END="439">the president</charseq>
+    </extent>
+    <head>
+      <charseq START="431" END="439">president</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E28-63" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="473" END="476">Bush</charseq>
+    </extent>
+    <head>
+      <charseq START="473" END="476">Bush</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Bush">
+      <charseq START="756" END="759">Bush</charseq>
+    </name>
+    <name NAME="Bush">
+      <charseq START="242" END="245">Bush</charseq>
+    </name>
+    <name NAME="Bush">
+      <charseq START="473" END="476">Bush</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050203.1356-E30" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E30-51" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="292" END="309">45,000 Republicans</charseq>
+    </extent>
+    <head>
+      <charseq START="299" END="309">Republicans</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050203.1356-E31" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E31-53" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="331" END="345">45,000
+liberals</charseq>
+    </extent>
+    <head>
+      <charseq START="338" END="345">liberals</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050203.1356-E33" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E33-56" TYPE="NAM" LDCTYPE="NAMPRE">
+    <extent>
+      <charseq START="374" END="382">USA Today</charseq>
+    </extent>
+    <head>
+      <charseq START="374" END="382">USA Today</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="USA Today">
+      <charseq START="374" END="382">USA Today</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050203.1356-E34" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E34-57" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="405" END="415">more people</charseq>
+    </extent>
+    <head>
+      <charseq START="410" END="415">people</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050203.1356-E35" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E35-59" TYPE="PRO" LDCTYPE="PTV">
+    <extent>
+      <charseq START="442" END="466">70 percent of respondents</charseq>
+    </extent>
+    <head>
+      <charseq START="445" END="451">percent</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050203.1356-E36" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E36-8" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="739" END="749">respondents</charseq>
+    </extent>
+    <head>
+      <charseq START="739" END="749">respondents</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-E36-62" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="456" END="466">respondents</charseq>
+    </extent>
+    <head>
+      <charseq START="456" END="466">respondents</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<value ID="AGGRESSIVEVOICEDAILY_20050203.1356-V1" TYPE="Numeric" SUBTYPE="Percent">
+  <value_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-V1-1">
+    <extent>
+      <charseq START="442" END="451">70 percent</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="AGGRESSIVEVOICEDAILY_20050203.1356-V2" TYPE="Numeric" SUBTYPE="Percent">
+  <value_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-V2-1">
+    <extent>
+      <charseq START="525" END="534">66 percent</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="AGGRESSIVEVOICEDAILY_20050203.1356-V3" TYPE="Numeric" SUBTYPE="Percent">
+  <value_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-V3-1">
+    <extent>
+      <charseq START="590" END="599">78 percent</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="AGGRESSIVEVOICEDAILY_20050203.1356-V4" TYPE="Numeric" SUBTYPE="Percent">
+  <value_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-V4-1">
+    <extent>
+      <charseq START="725" END="734">77 percent</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="AGGRESSIVEVOICEDAILY_20050203.1356-V5" TYPE="Numeric" SUBTYPE="Percent">
+  <value_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-V5-1">
+    <extent>
+      <charseq START="835" END="844">67 percent</charseq>
+    </extent>
+  </value_mention>
+</value>
+<timex2 ID="AGGRESSIVEVOICEDAILY_20050203.1356-T1" VAL="2005-02-03">
+  <timex2_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-T1-1">
+    <extent>
+      <charseq START="1094" END="1098">Today</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AGGRESSIVEVOICEDAILY_20050203.1356-T2" VAL="2005-02-03T13:56:00">
+  <timex2_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-T2-1">
+    <extent>
+      <charseq START="50" END="68">2005-02-03T13:56:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AGGRESSIVEVOICEDAILY_20050203.1356-T3" VAL="2005-02-03T13:56:00">
+  <timex2_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-T3-1">
+    <extent>
+      <charseq START="112" END="130">2005-02-03T13:56:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AGGRESSIVEVOICEDAILY_20050203.1356-T4" VAL="2005-02-02TNI">
+  <timex2_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-T4-1">
+    <extent>
+      <charseq START="207" END="216">last night</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AGGRESSIVEVOICEDAILY_20050203.1356-T5" VAL="PRESENT_REF" ANCHOR_VAL="2005-02-03T13:56:00" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-T5-1">
+    <extent>
+      <charseq START="366" END="368">new</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AGGRESSIVEVOICEDAILY_20050203.1356-T6" VAL="2005-02-02TNI">
+  <timex2_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-T6-1">
+    <extent>
+      <charseq START="1020" END="1029">last night</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AGGRESSIVEVOICEDAILY_20050203.1356-T7" VAL="2005-02-02TEV">
+  <timex2_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-T7-1">
+    <extent>
+      <charseq START="1080" END="1090">the evening</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AGGRESSIVEVOICEDAILY_20050203.1356-T8" VAL="2005-02-02TNI">
+  <timex2_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-T8-1">
+    <extent>
+      <charseq START="1568" END="1577">last night</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AGGRESSIVEVOICEDAILY_20050203.1356-T9" VAL="PRESENT_REF" ANCHOR_VAL="2005-02-03T13:56:00" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-T9-1">
+    <extent>
+      <charseq START="1542" END="1550">currently</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="AGGRESSIVEVOICEDAILY_20050203.1356-R1" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20050203.1356-E10" ROLE="Arg-1"/>
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20050203.1356-E24" ROLE="Arg-2"/>
+  <relation_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-R1-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="1115" END="1131">Marine Corps Sgt.</charseq>
+    </extent>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050203.1356-E10-21" ROLE="Arg-1">
+      <extent>
+        <charseq START="1115" END="1131">Marine Corps Sgt.</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050203.1356-E24-42" ROLE="Arg-2">
+      <extent>
+        <charseq START="1115" END="1126">Marine Corps</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="AGGRESSIVEVOICEDAILY_20050203.1356-R2" TYPE="PER-SOC" SUBTYPE="Family" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20050203.1356-E9" ROLE="Arg-1"/>
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20050203.1356-E10" ROLE="Arg-2"/>
+  <relation_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-R2-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="898" END="931">mother of a soldier killed in
+Iraq</charseq>
+    </extent>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050203.1356-E9-13" ROLE="Arg-1">
+      <extent>
+        <charseq START="898" END="931">mother of a soldier killed in
+Iraq</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050203.1356-E10-14" ROLE="Arg-2">
+      <extent>
+        <charseq START="908" END="931">a soldier killed in
+Iraq</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="AGGRESSIVEVOICEDAILY_20050203.1356-R3" TYPE="PER-SOC" SUBTYPE="Family" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20050203.1356-E11" ROLE="Arg-1"/>
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20050203.1356-E12" ROLE="Arg-2"/>
+  <relation_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-R3-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="937" END="991">the daughter of a man killed by Saddam Hussein's regime</charseq>
+    </extent>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050203.1356-E11-16" ROLE="Arg-1">
+      <extent>
+        <charseq START="937" END="991">the daughter of a man killed by Saddam Hussein's regime</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050203.1356-E12-17" ROLE="Arg-2">
+      <extent>
+        <charseq START="953" END="991">a man killed by Saddam Hussein's regime</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="AGGRESSIVEVOICEDAILY_20050203.1356-R4" TYPE="PER-SOC" SUBTYPE="Family" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20050203.1356-E14" ROLE="Arg-1"/>
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20050203.1356-E10" ROLE="Arg-2"/>
+  <relation_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-R4-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="1100" END="1145">the parents of Marine Corps Sgt. Byron Norwood</charseq>
+    </extent>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050203.1356-E14-19" ROLE="Arg-1">
+      <extent>
+        <charseq START="1100" END="1145">the parents of Marine Corps Sgt. Byron Norwood</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050203.1356-E10-20" ROLE="Arg-2">
+      <extent>
+        <charseq START="1115" END="1145">Marine Corps Sgt. Byron Norwood</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-R4-2" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="1271" END="1277">our son</charseq>
+    </extent>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050203.1356-E14-22" ROLE="Arg-1">
+      <extent>
+        <charseq START="1271" END="1273">our</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050203.1356-E10-6" ROLE="Arg-2">
+      <extent>
+        <charseq START="1271" END="1277">our son</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-R4-3" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="1392" END="1398">our son</charseq>
+    </extent>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050203.1356-E14-32" ROLE="Arg-1">
+      <extent>
+        <charseq START="1392" END="1394">our</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050203.1356-E10-31" ROLE="Arg-2">
+      <extent>
+        <charseq START="1392" END="1398">our son</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="AGGRESSIVEVOICEDAILY_20050203.1356-R5" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20050203.1356-E11" ROLE="Arg-1"/>
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20050203.1356-E5" ROLE="Arg-2"/>
+  <relation_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-R5-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="1152" END="1166">the Iraqi
+woman</charseq>
+    </extent>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050203.1356-E11-24" ROLE="Arg-1">
+      <extent>
+        <charseq START="1152" END="1166">the Iraqi
+woman</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050203.1356-E5-25" ROLE="Arg-2">
+      <extent>
+        <charseq START="1156" END="1160">Iraqi</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="AGGRESSIVEVOICEDAILY_20050203.1356-R7" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20050203.1356-E17" ROLE="Arg-1"/>
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20050203.1356-E5" ROLE="Arg-2"/>
+  <relation_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-R7-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="1313" END="1330">the
+people in Iraq</charseq>
+    </extent>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050203.1356-E17-28" ROLE="Arg-1">
+      <extent>
+        <charseq START="1313" END="1330">the
+people in Iraq</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050203.1356-E5-29" ROLE="Arg-2">
+      <extent>
+        <charseq START="1327" END="1330">Iraq</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="AGGRESSIVEVOICEDAILY_20050203.1356-R9" TYPE="PER-SOC" SUBTYPE="Lasting-Personal" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20050203.1356-E20" ROLE="Arg-1"/>
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20050203.1356-E21" ROLE="Arg-2"/>
+  <relation_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-R9-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="1521" END="1649">I talked to a friend currently serving in Iraq last night
+and he says morale is up and the presence of troops is a positive thing</charseq>
+    </extent>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050203.1356-E20-36" ROLE="Arg-1">
+      <extent>
+        <charseq START="1521" END="1521">I</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050203.1356-E21-37" ROLE="Arg-2">
+      <extent>
+        <charseq START="1533" END="1566">a friend currently serving in Iraq</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="AGGRESSIVEVOICEDAILY_20050203.1356-R10" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20050203.1356-E21" ROLE="Arg-1"/>
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20050203.1356-E5" ROLE="Arg-2"/>
+  <relation_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-R10-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="1521" END="1649">I talked to a friend currently serving in Iraq last night
+and he says morale is up and the presence of troops is a positive thing</charseq>
+    </extent>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050203.1356-E21-37" ROLE="Arg-1">
+      <extent>
+        <charseq START="1533" END="1566">a friend currently serving in Iraq</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050203.1356-E5-38" ROLE="Arg-2">
+      <extent>
+        <charseq START="1563" END="1566">Iraq</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="AGGRESSIVEVOICEDAILY_20050203.1356-EV1" TYPE="Life" SUBTYPE="Die" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="AGGRESSIVEVOICEDAILY_20050203.1356-E10" ROLE="Victim"/>
+  <event_argument REFID="AGGRESSIVEVOICEDAILY_20050203.1356-E5" ROLE="Place"/>
+  <event_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-EV1-1">
+    <extent>
+      <charseq START="908" END="931">a soldier killed in
+Iraq</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="859" END="991">And who wasn't moved by the embrace of mother of a soldier killed in
+Iraq and the daughter of a man killed by Saddam Hussein's regime</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="918" END="923">killed</charseq>
+    </anchor>
+    <event_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050203.1356-E10-14" ROLE="Victim">
+      <extent>
+        <charseq START="908" END="931">a soldier killed in
+Iraq</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050203.1356-E5-15" ROLE="Place">
+      <extent>
+        <charseq START="928" END="931">Iraq</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="AGGRESSIVEVOICEDAILY_20050203.1356-EV2" TYPE="Movement" SUBTYPE="Transport" MODALITY="Other" POLARITY="Negative" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="AGGRESSIVEVOICEDAILY_20050203.1356-E23" ROLE="Agent"/>
+  <event_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-EV2-1">
+    <extent>
+      <charseq START="1652" END="1684">They just can't pack up and leave</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1652" END="1684">They just can't pack up and leave</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1680" END="1684">leave</charseq>
+    </anchor>
+    <event_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050203.1356-E23-41" ROLE="Agent">
+      <extent>
+        <charseq START="1652" END="1655">They</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="AGGRESSIVEVOICEDAILY_20050203.1356-EV3" TYPE="Life" SUBTYPE="Die" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="AGGRESSIVEVOICEDAILY_20050203.1356-E12" ROLE="Victim"/>
+  <event_argument REFID="AGGRESSIVEVOICEDAILY_20050203.1356-E22" ROLE="Agent"/>
+  <event_argument REFID="AGGRESSIVEVOICEDAILY_20050203.1356-E5" ROLE="Place"/>
+  <event_mention ID="AGGRESSIVEVOICEDAILY_20050203.1356-EV3-1">
+    <extent>
+      <charseq START="928" END="991">Iraq and the daughter of a man killed by Saddam Hussein's regime</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="859" END="991">And who wasn't moved by the embrace of mother of a soldier killed in
+Iraq and the daughter of a man killed by Saddam Hussein's regime</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="959" END="964">killed</charseq>
+    </anchor>
+    <event_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050203.1356-E12-17" ROLE="Victim">
+      <extent>
+        <charseq START="953" END="991">a man killed by Saddam Hussein's regime</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050203.1356-E22-30" ROLE="Agent">
+      <extent>
+        <charseq START="969" END="991">Saddam Hussein's regime</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050203.1356-E5-15" ROLE="Place">
+      <extent>
+        <charseq START="928" END="931">Iraq</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

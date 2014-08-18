@@ -1,0 +1,1596 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030618_193127.17.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030618_193127.17">
+<entity ID="CNN_ENG_20030618_193127.17-E1" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E1-1" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="FALSE">
+    <extent>
+      <charseq START="683" END="687">tween</charseq>
+    </extent>
+    <head>
+      <charseq START="683" END="687">tween</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E1-3" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="712" END="714">her</charseq>
+    </extent>
+    <head>
+      <charseq START="712" END="714">her</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E1-4" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="719" END="733">lizzie mag wire</charseq>
+    </extent>
+    <head>
+      <charseq START="719" END="733">lizzie mag wire</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E1-68" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2537" END="2547">hilary duff</charseq>
+    </extent>
+    <head>
+      <charseq START="2537" END="2547">hilary duff</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E1-97" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="3184" END="3194">hilary duff</charseq>
+    </extent>
+    <head>
+      <charseq START="3184" END="3194">hilary duff</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E1-98" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="3199" END="3204">a star</charseq>
+    </extent>
+    <head>
+      <charseq START="3201" END="3204">star</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E1-140" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="679" END="699">the tween hilary duff</charseq>
+    </extent>
+    <head>
+      <charseq START="689" END="699">hilary duff</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="lizzie mag wire">
+      <charseq START="719" END="733">lizzie mag wire</charseq>
+    </name>
+    <name NAME="hilary duff">
+      <charseq START="2537" END="2547">hilary duff</charseq>
+    </name>
+    <name NAME="hilary duff">
+      <charseq START="3184" END="3194">hilary duff</charseq>
+    </name>
+    <name NAME="hilary duff">
+      <charseq START="689" END="699">hilary duff</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030618_193127.17-E3" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E3-2" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="702" END="705">fans</charseq>
+    </extent>
+    <head>
+      <charseq START="702" END="705">fans</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030618_193127.17-E5" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E5-5" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="759" END="780">three corporate giants</charseq>
+    </extent>
+    <head>
+      <charseq START="775" END="780">giants</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030618_193127.17-E6" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E6-6" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="805" END="815">nickelodeon</charseq>
+    </extent>
+    <head>
+      <charseq START="805" END="815">nickelodeon</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="nickelodeon">
+      <charseq START="805" END="815">nickelodeon</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030618_193127.17-E7" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E7-7" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="820" END="825">disney</charseq>
+    </extent>
+    <head>
+      <charseq START="820" END="825">disney</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="disney">
+      <charseq START="820" END="825">disney</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030618_193127.17-E8" TYPE="ORG" SUBTYPE="Entertainment" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E8-11" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="888" END="893">the wb</charseq>
+    </extent>
+    <head>
+      <charseq START="892" END="893">wb</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="wb">
+      <charseq START="892" END="893">wb</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030618_193127.17-E9" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E9-14" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="983" END="990">one star</charseq>
+    </extent>
+    <head>
+      <charseq START="987" END="990">star</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E9-17" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1009" END="1013">their</charseq>
+    </extent>
+    <head>
+      <charseq START="1009" END="1013">their</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030618_193127.17-E10" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E10-15" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="997" END="1007">vanity fair</charseq>
+    </extent>
+    <head>
+      <charseq START="997" END="1007">vanity fair</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E10-27" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1427" END="1437">vanity fair</charseq>
+    </extent>
+    <head>
+      <charseq START="1427" END="1437">vanity fair</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E10-33" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1513" END="1523">vanity fair</charseq>
+    </extent>
+    <head>
+      <charseq START="1513" END="1523">vanity fair</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E10-37" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1584" END="1587">them</charseq>
+    </extent>
+    <head>
+      <charseq START="1584" END="1587">them</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E10-40" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1663" END="1664">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1663" END="1664">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E10-41" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1694" END="1695">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1694" END="1695">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="vanity fair">
+      <charseq START="997" END="1007">vanity fair</charseq>
+    </name>
+    <name NAME="vanity fair">
+      <charseq START="1427" END="1437">vanity fair</charseq>
+    </name>
+    <name NAME="vanity fair">
+      <charseq START="1513" END="1523">vanity fair</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030618_193127.17-E11" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E11-16" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1009" END="1029">their favorite author</charseq>
+    </extent>
+    <head>
+      <charseq START="1024" END="1029">author</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E11-119" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="1034" END="1056">whoever wrote the
+bible</charseq>
+    </extent>
+    <head>
+      <charseq START="1034" END="1040">whoever</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030618_193127.17-E12" TYPE="PER" SUBTYPE="Indeterminate" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E12-19" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="1168" END="1171">peer</charseq>
+    </extent>
+    <head>
+      <charseq START="1168" END="1171">peer</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030618_193127.17-E13" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E13-21" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1280" END="1287">the fans</charseq>
+    </extent>
+    <head>
+      <charseq START="1284" END="1287">fans</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030618_193127.17-E14" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E14-23" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1356" END="1365">the coreys</charseq>
+    </extent>
+    <head>
+      <charseq START="1360" END="1365">coreys</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030618_193127.17-E15" TYPE="PER" SUBTYPE="Individual" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E15-24" TYPE="PRO" LDCTYPE="PTV">
+    <extent>
+      <charseq START="1349" END="1365">one of the coreys</charseq>
+    </extent>
+    <head>
+      <charseq START="1349" END="1351">one</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030618_193127.17-E16" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E16-29" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1497" END="1498">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1497" END="1498">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E16-30" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1510" END="1511">us</charseq>
+    </extent>
+    <head>
+      <charseq START="1510" END="1511">us</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030618_193127.17-E17" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E17-31" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1513" END="1556">vanity fair fashion director elizabeth olsen</charseq>
+    </extent>
+    <head>
+      <charseq START="1542" END="1556">elizabeth olsen</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E17-32" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1513" END="1540">vanity fair fashion director</charseq>
+    </extent>
+    <head>
+      <charseq START="1533" END="1540">director</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E17-65" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2492" END="2492">i</charseq>
+    </extent>
+    <head>
+      <charseq START="2492" END="2492">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E17-66" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2505" END="2505">i</charseq>
+    </extent>
+    <head>
+      <charseq START="2505" END="2505">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E17-99" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3211" END="3211">i</charseq>
+    </extent>
+    <head>
+      <charseq START="3211" END="3211">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="elizabeth olsen">
+      <charseq START="1542" END="1556">elizabeth olsen</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030618_193127.17-E20" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E20-43" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1863" END="1879">stars of the past</charseq>
+    </extent>
+    <head>
+      <charseq START="1863" END="1867">stars</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030618_193127.17-E21" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E21-45" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1916" END="1922">singers</charseq>
+    </extent>
+    <head>
+      <charseq START="1916" END="1922">singers</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030618_193127.17-E22" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E22-46" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1927" END="1933">dancers</charseq>
+    </extent>
+    <head>
+      <charseq START="1927" END="1933">dancers</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030618_193127.17-E23" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E23-8" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="834" END="837">them</charseq>
+    </extent>
+    <head>
+      <charseq START="834" END="837">them</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E23-9" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="854" END="857">they</charseq>
+    </extent>
+    <head>
+      <charseq START="854" END="857">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E23-10" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="877" END="880">they</charseq>
+    </extent>
+    <head>
+      <charseq START="877" END="880">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E23-12" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="916" END="932">these tween stars</charseq>
+    </extent>
+    <head>
+      <charseq START="928" END="932">stars</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E23-13" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="960" END="964">their</charseq>
+    </extent>
+    <head>
+      <charseq START="960" END="964">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E23-18" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="1059" END="1068">these kids</charseq>
+    </extent>
+    <head>
+      <charseq START="1065" END="1068">kids</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E23-20" TYPE="NOM" LDCTYPE="BAR" LDCATR="TRUE">
+    <extent>
+      <charseq START="1257" END="1261">stars</charseq>
+    </extent>
+    <head>
+      <charseq START="1257" END="1261">stars</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E23-22" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="1297" END="1301">their</charseq>
+    </extent>
+    <head>
+      <charseq START="1297" END="1301">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E23-25" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="1368" END="1379">these tweens</charseq>
+    </extent>
+    <head>
+      <charseq START="1374" END="1379">tweens</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E23-26" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="1397" END="1400">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1397" END="1400">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E23-28" TYPE="NOM" LDCTYPE="BAR" LDCATR="TRUE">
+    <extent>
+      <charseq START="1440" END="1445">tweens</charseq>
+    </extent>
+    <head>
+      <charseq START="1440" END="1445">tweens</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E23-36" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="1596" END="1605">the tweens</charseq>
+    </extent>
+    <head>
+      <charseq START="1600" END="1605">tweens</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E23-38" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="1616" END="1619">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1616" END="1619">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E23-39" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="1637" END="1640">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1637" END="1640">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E23-42" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="1788" END="1791">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1788" END="1791">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E23-44" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="1882" END="1885">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1882" END="1885">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E23-47" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="1936" END="1939">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1936" END="1939">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E23-48" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="1961" END="1979">mini martha
+stewart</charseq>
+    </extent>
+    <head>
+      <charseq START="1966" END="1979">martha
+stewart</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E23-49" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="1984" END="1987">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1984" END="1987">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E23-50" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="2026" END="2029">they</charseq>
+    </extent>
+    <head>
+      <charseq START="2026" END="2029">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E23-51" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="2062" END="2071">themselves</charseq>
+    </extent>
+    <head>
+      <charseq START="2062" END="2071">themselves</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E23-52" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="2117" END="2120">they</charseq>
+    </extent>
+    <head>
+      <charseq START="2117" END="2120">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E23-60" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="2382" END="2385">thee</charseq>
+    </extent>
+    <head>
+      <charseq START="2382" END="2385">thee</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E23-62" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="2420" END="2423">they</charseq>
+    </extent>
+    <head>
+      <charseq START="2420" END="2423">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E23-101" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="3266" END="3269">they</charseq>
+    </extent>
+    <head>
+      <charseq START="3266" END="3269">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E23-103" TYPE="PRO" LDCTYPE="HLS" LDCATR="TRUE">
+    <extent>
+      <charseq START="3320" END="3322">all</charseq>
+    </extent>
+    <head>
+      <charseq START="3320" END="3322">all</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E23-106" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="3404" END="3407">they</charseq>
+    </extent>
+    <head>
+      <charseq START="3404" END="3407">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E23-108" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="3420" END="3424">their</charseq>
+    </extent>
+    <head>
+      <charseq START="3420" END="3424">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E23-109" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="3439" END="3442">them</charseq>
+    </extent>
+    <head>
+      <charseq START="3439" END="3442">them</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E23-110" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="3517" END="3520">them</charseq>
+    </extent>
+    <head>
+      <charseq START="3517" END="3520">them</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E23-111" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="141" END="145">tween</charseq>
+    </extent>
+    <head>
+      <charseq START="141" END="145">tween</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E23-112" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="327" END="331">tween</charseq>
+    </extent>
+    <head>
+      <charseq START="327" END="331">tween</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E23-118" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="922" END="926">tween</charseq>
+    </extent>
+    <head>
+      <charseq START="922" END="926">tween</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E23-120" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="3228" END="3231">they</charseq>
+    </extent>
+    <head>
+      <charseq START="3228" END="3231">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E23-121" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="3244" END="3252">their own</charseq>
+    </extent>
+    <head>
+      <charseq START="3244" END="3248">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E23-122" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="3250" END="3252">own</charseq>
+    </extent>
+    <head>
+      <charseq START="3250" END="3252">own</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E23-126" TYPE="NOM" LDCTYPE="BAR" LDCATR="TRUE">
+    <extent>
+      <charseq START="141" END="151">tween stars</charseq>
+    </extent>
+    <head>
+      <charseq START="147" END="151">stars</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E23-127" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="154" END="157">they</charseq>
+    </extent>
+    <head>
+      <charseq START="154" END="157">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E23-128" TYPE="NOM" LDCTYPE="BAR" LDCATR="TRUE">
+    <extent>
+      <charseq START="162" END="177">kids eight to 14</charseq>
+    </extent>
+    <head>
+      <charseq START="162" END="165">kids</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E23-130" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="198" END="209">their heroes</charseq>
+    </extent>
+    <head>
+      <charseq START="204" END="209">heroes</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E23-133" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="321" END="337">these tween stars</charseq>
+    </extent>
+    <head>
+      <charseq START="333" END="337">stars</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E23-134" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="365" END="368">they</charseq>
+    </extent>
+    <head>
+      <charseq START="365" END="368">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E23-136" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="464" END="477">today's
+tweens</charseq>
+    </extent>
+    <head>
+      <charseq START="472" END="477">tweens</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="martha stewart">
+      <charseq START="1966" END="1979">martha
+stewart</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030618_193127.17-E24" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E24-53" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2147" END="2169">a much
+broader audience</charseq>
+    </extent>
+    <head>
+      <charseq START="2162" END="2169">audience</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030618_193127.17-E25" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E25-55" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2188" END="2190">one</charseq>
+    </extent>
+    <head>
+      <charseq START="2188" END="2190">one</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E25-56" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2209" END="2212">they</charseq>
+    </extent>
+    <head>
+      <charseq START="2209" END="2212">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E25-57" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2231" END="2231">i</charseq>
+    </extent>
+    <head>
+      <charseq START="2231" END="2231">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E25-58" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2266" END="2266">i</charseq>
+    </extent>
+    <head>
+      <charseq START="2266" END="2266">i</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030618_193127.17-E26" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E26-59" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="2326" END="2329">kids</charseq>
+    </extent>
+    <head>
+      <charseq START="2326" END="2329">kids</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030618_193127.17-E27" TYPE="PER" SUBTYPE="Individual" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E27-63" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2464" END="2466">who</charseq>
+    </extent>
+    <head>
+      <charseq START="2464" END="2466">who</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E27-64" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="2470" END="2487">the ultimate tween</charseq>
+    </extent>
+    <head>
+      <charseq START="2483" END="2487">tween</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030618_193127.17-E29" TYPE="PER" SUBTYPE="Indeterminate" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E29-67" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2514" END="2516">you</charseq>
+    </extent>
+    <head>
+      <charseq START="2514" END="2516">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E29-69" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2554" END="2556">you</charseq>
+    </extent>
+    <head>
+      <charseq START="2554" END="2556">you</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030618_193127.17-E30" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E30-70" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2577" END="2591">the olsen twins</charseq>
+    </extent>
+    <head>
+      <charseq START="2587" END="2591">twins</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E30-71" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="2581" END="2585">olsen</charseq>
+    </extent>
+    <head>
+      <charseq START="2581" END="2585">olsen</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E30-72" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2604" END="2618">the olsen twins</charseq>
+    </extent>
+    <head>
+      <charseq START="2614" END="2618">twins</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E30-73" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="2608" END="2612">olsen</charseq>
+    </extent>
+    <head>
+      <charseq START="2608" END="2612">olsen</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E30-74" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2638" END="2641">they</charseq>
+    </extent>
+    <head>
+      <charseq START="2638" END="2641">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E30-75" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2662" END="2665">they</charseq>
+    </extent>
+    <head>
+      <charseq START="2662" END="2665">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E30-76" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2695" END="2698">they</charseq>
+    </extent>
+    <head>
+      <charseq START="2695" END="2698">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E30-77" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2724" END="2727">they</charseq>
+    </extent>
+    <head>
+      <charseq START="2724" END="2727">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E30-82" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2822" END="2826">their</charseq>
+    </extent>
+    <head>
+      <charseq START="2822" END="2826">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E30-84" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2904" END="2907">they</charseq>
+    </extent>
+    <head>
+      <charseq START="2904" END="2907">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E30-85" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2920" END="2923">they</charseq>
+    </extent>
+    <head>
+      <charseq START="2920" END="2923">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E30-87" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2971" END="2975">their</charseq>
+    </extent>
+    <head>
+      <charseq START="2971" END="2975">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E30-88" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2987" END="2990">they</charseq>
+    </extent>
+    <head>
+      <charseq START="2987" END="2990">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E30-89" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2995" END="3003">their own</charseq>
+    </extent>
+    <head>
+      <charseq START="2995" END="2999">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E30-90" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3001" END="3003">own</charseq>
+    </extent>
+    <head>
+      <charseq START="3001" END="3003">own</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E30-91" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3019" END="3022">they</charseq>
+    </extent>
+    <head>
+      <charseq START="3019" END="3022">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E30-92" TYPE="NOM" LDCTYPE="BAR" LDCATR="TRUE">
+    <extent>
+      <charseq START="3027" END="3056">well-rounded and polite people</charseq>
+    </extent>
+    <head>
+      <charseq START="3051" END="3056">people</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E30-93" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3065" END="3068">they</charseq>
+    </extent>
+    <head>
+      <charseq START="3065" END="3068">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E30-94" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3078" END="3081">they</charseq>
+    </extent>
+    <head>
+      <charseq START="3078" END="3081">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E30-95" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3120" END="3123">they</charseq>
+    </extent>
+    <head>
+      <charseq START="3120" END="3123">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E30-139" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="584" END="587">they</charseq>
+    </extent>
+    <head>
+      <charseq START="584" END="587">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="olsen">
+      <charseq START="2581" END="2585">olsen</charseq>
+    </name>
+    <name NAME="olsen">
+      <charseq START="2608" END="2612">olsen</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030618_193127.17-E32" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E32-78" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2760" END="2773">shirley temple</charseq>
+    </extent>
+    <head>
+      <charseq START="2760" END="2773">shirley temple</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E32-79" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2798" END="2800">she</charseq>
+    </extent>
+    <head>
+      <charseq START="2798" END="2800">she</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="shirley temple">
+      <charseq START="2760" END="2773">shirley temple</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030618_193127.17-E33" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E33-81" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2822" END="2834">their company</charseq>
+    </extent>
+    <head>
+      <charseq START="2828" END="2834">company</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E33-83" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="2846" END="2854">dual
+star</charseq>
+    </extent>
+    <head>
+      <charseq START="2846" END="2854">dual
+star</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E33-113" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="594" END="659">a billion dollar empire built on videos, clothing
+perfume and more</charseq>
+    </extent>
+    <head>
+      <charseq START="611" END="616">empire</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E33-114" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2744" END="2752">an empire</charseq>
+    </extent>
+    <head>
+      <charseq START="2747" END="2752">empire</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="dual star">
+      <charseq START="2846" END="2854">dual
+star</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030618_193127.17-E35" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E35-86" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="2958" END="2963">people</charseq>
+    </extent>
+    <head>
+      <charseq START="2958" END="2963">people</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030618_193127.17-E38" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E38-102" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3297" END="3299">one</charseq>
+    </extent>
+    <head>
+      <charseq START="3297" END="3299">one</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030618_193127.17-E39" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E39-104" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3337" END="3340">some</charseq>
+    </extent>
+    <head>
+      <charseq START="3337" END="3340">some</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030618_193127.17-E40" TYPE="PER" SUBTYPE="Individual" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E40-105" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3365" END="3367">who</charseq>
+    </extent>
+    <head>
+      <charseq START="3365" END="3367">who</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030618_193127.17-E41" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E41-61" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="97" END="115">anyone who knows me</charseq>
+    </extent>
+    <head>
+      <charseq START="97" END="102">anyone</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E41-123" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="104" END="106">who</charseq>
+    </extent>
+    <head>
+      <charseq START="104" END="106">who</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030618_193127.17-E42" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E42-107" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="3420" END="3432">their parents</charseq>
+    </extent>
+    <head>
+      <charseq START="3426" END="3432">parents</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030618_193127.17-E45" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E45-115" TYPE="NAM" LDCTYPE="NAMPRE">
+    <extent>
+      <charseq START="2242" END="2246">cosby</charseq>
+    </extent>
+    <head>
+      <charseq START="2242" END="2246">cosby</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="cosby">
+      <charseq START="2242" END="2246">cosby</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030618_193127.17-E48" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E48-34" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1559" END="1559">i</charseq>
+    </extent>
+    <head>
+      <charseq START="1559" END="1559">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E48-35" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1578" END="1578">i</charseq>
+    </extent>
+    <head>
+      <charseq START="1578" END="1578">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E48-54" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2182" END="2182">i</charseq>
+    </extent>
+    <head>
+      <charseq START="2182" END="2182">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E48-80" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2814" END="2814">i</charseq>
+    </extent>
+    <head>
+      <charseq START="2814" END="2814">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E48-96" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3156" END="3156">i</charseq>
+    </extent>
+    <head>
+      <charseq START="3156" END="3156">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E48-100" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3223" END="3225">you</charseq>
+    </extent>
+    <head>
+      <charseq START="3223" END="3225">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E48-124" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="114" END="115">me</charseq>
+    </extent>
+    <head>
+      <charseq START="114" END="115">me</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E48-125" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="123" END="124">my</charseq>
+    </extent>
+    <head>
+      <charseq START="123" END="124">my</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E48-132" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="253" END="254">my</charseq>
+    </extent>
+    <head>
+      <charseq START="253" END="254">my</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030618_193127.17-E51" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E51-116" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="3484" END="3524">the audience that sort of
+adores them now</charseq>
+    </extent>
+    <head>
+      <charseq START="3488" END="3495">audience</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E51-117" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="3497" END="3500">that</charseq>
+    </extent>
+    <head>
+      <charseq START="3497" END="3500">that</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E51-129" TYPE="PRO" LDCTYPE="HLS">
+    <extent>
+      <charseq START="188" END="195">millions</charseq>
+    </extent>
+    <head>
+      <charseq START="188" END="195">millions</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E51-131" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="198" END="202">their</charseq>
+    </extent>
+    <head>
+      <charseq START="198" END="202">their</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030618_193127.17-E52" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E52-135" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="433" END="461">the corey feldman of the '80s</charseq>
+    </extent>
+    <head>
+      <charseq START="437" END="449">corey feldman</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="corey feldman">
+      <charseq START="437" END="449">corey feldman</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030618_193127.17-E53" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E53-137" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="533" END="562">mary indicate and ashley olsen</charseq>
+    </extent>
+    <head>
+      <charseq START="533" END="545">mary indicate</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="mary indicate">
+      <charseq START="533" END="545">mary indicate</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030618_193127.17-E54" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030618_193127.17-E54-138" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="533" END="562">mary indicate and ashley olsen</charseq>
+    </extent>
+    <head>
+      <charseq START="551" END="556">ashley</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="ashley">
+      <charseq START="551" END="556">ashley</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<value ID="CNN_ENG_20030618_193127.17-V1" TYPE="Numeric" SUBTYPE="Money">
+  <value_mention ID="CNN_ENG_20030618_193127.17-V1-1">
+    <extent>
+      <charseq START="83" END="94">$300 million</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_ENG_20030618_193127.17-V2" TYPE="Numeric" SUBTYPE="Money">
+  <value_mention ID="CNN_ENG_20030618_193127.17-V2-1">
+    <extent>
+      <charseq START="596" END="609">billion dollar</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_ENG_20030618_193127.17-V3" TYPE="Numeric" SUBTYPE="Money">
+  <value_mention ID="CNN_ENG_20030618_193127.17-V3-1">
+    <extent>
+      <charseq START="1103" END="1114">multibillion</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_ENG_20030618_193127.17-V4" TYPE="Numeric" SUBTYPE="Money">
+  <value_mention ID="CNN_ENG_20030618_193127.17-V4-1">
+    <extent>
+      <charseq START="2873" END="2889">a billion dollars</charseq>
+    </extent>
+  </value_mention>
+</value>
+<timex2 ID="CNN_ENG_20030618_193127.17-T1" VAL="2003-06-18T19:59:20">
+  <timex2_mention ID="CNN_ENG_20030618_193127.17-T1-1">
+    <extent>
+      <charseq START="44" END="62">2003-06-18 19:59:20</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030618_193127.17-T2" VAL="P8Y" ANCHOR_VAL="2003" ANCHOR_DIR="ENDING">
+  <timex2_mention ID="CNN_ENG_20030618_193127.17-T2-1">
+    <extent>
+      <charseq START="167" END="171">eight</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030618_193127.17-T3" VAL="P14Y" ANCHOR_VAL="2003" ANCHOR_DIR="ENDING">
+  <timex2_mention ID="CNN_ENG_20030618_193127.17-T3-1">
+    <extent>
+      <charseq START="176" END="177">14</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030618_193127.17-T4" VAL="198">
+  <timex2_mention ID="CNN_ENG_20030618_193127.17-T4-1">
+    <extent>
+      <charseq START="454" END="461">the '80s</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030618_193127.17-T5" VAL="PRESENT_REF" ANCHOR_VAL="2003-06-18T19:59:20" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_ENG_20030618_193127.17-T5-1">
+    <extent>
+      <charseq START="421" END="423">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030618_193127.17-T6" VAL="PRESENT_REF" ANCHOR_VAL="2003-06-18T19:59:20" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_ENG_20030618_193127.17-T6-1">
+    <extent>
+      <charseq START="464" END="468">today</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030618_193127.17-T7" VAL="PRESENT_REF" ANCHOR_VAL="2003-06-18T19:59:20" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_ENG_20030618_193127.17-T7-1">
+    <extent>
+      <charseq START="580" END="582">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030618_193127.17-T8" VAL="PRESENT_REF" ANCHOR_VAL="2003-06-18T19:59:20" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_ENG_20030618_193127.17-T8-1">
+    <extent>
+      <charseq START="1729" END="1731">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030618_193127.17-T9" VAL="PAST_REF" ANCHOR_VAL="2003-06-18T19:59:20" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="CNN_ENG_20030618_193127.17-T9-1">
+    <extent>
+      <charseq START="1872" END="1879">the past</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030618_193127.17-T10" VAL="P4Y" ANCHOR_VAL="2003" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="CNN_ENG_20030618_193127.17-T10-1">
+    <extent>
+      <charseq START="2256" END="2263">age four</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030618_193127.17-T11" VAL="P5Y" ANCHOR_VAL="2003" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="CNN_ENG_20030618_193127.17-T11-1">
+    <extent>
+      <charseq START="2284" END="2291">age five</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030618_193127.17-T12" VAL="2002">
+  <timex2_mention ID="CNN_ENG_20030618_193127.17-T12-1">
+    <extent>
+      <charseq START="2891" END="2899">last year</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030618_193127.17-T13" VAL="PRESENT_REF" ANCHOR_VAL="2003-06-18T19:59:20" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_ENG_20030618_193127.17-T13-1">
+    <extent>
+      <charseq START="3522" END="3524">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030618_193127.17-R1" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030618_193127.17-E17" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030618_193127.17-E10" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030618_193127.17-R1-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="1513" END="1540">vanity fair fashion director</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030618_193127.17-E17-32" ROLE="Arg-1">
+      <extent>
+        <charseq START="1513" END="1540">vanity fair fashion director</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030618_193127.17-E10-33" ROLE="Arg-2">
+      <extent>
+        <charseq START="1513" END="1523">vanity fair</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030618_193127.17-R2" TYPE="ORG-AFF" SUBTYPE="Ownership" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030618_193127.17-E30" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030618_193127.17-E33" ROLE="Arg-2"/>
+  <relation_argument REFID="CNN_ENG_20030618_193127.17-T7" ROLE="Time-Within"/>
+  <relation_mention ID="CNN_ENG_20030618_193127.17-R2-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="2822" END="2834">their company</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030618_193127.17-E30-82" ROLE="Arg-1">
+      <extent>
+        <charseq START="2822" END="2826">their</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030618_193127.17-E33-81" ROLE="Arg-2">
+      <extent>
+        <charseq START="2822" END="2834">their company</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_ENG_20030618_193127.17-R2-2" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="580" END="659">now
+they have a billion dollar empire built on videos, clothing
+perfume and more</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030618_193127.17-E30-139" ROLE="Arg-1">
+      <extent>
+        <charseq START="584" END="587">they</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030618_193127.17-E33-113" ROLE="Arg-2">
+      <extent>
+        <charseq START="594" END="659">a billion dollar empire built on videos, clothing
+perfume and more</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030618_193127.17-T7-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="580" END="582">now</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030618_193127.17-R3" TYPE="PER-SOC" SUBTYPE="Family" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030618_193127.17-E23" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030618_193127.17-E42" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030618_193127.17-R3-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="3420" END="3432">their parents</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030618_193127.17-E23-108" ROLE="Arg-1">
+      <extent>
+        <charseq START="3420" END="3424">their</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030618_193127.17-E42-107" ROLE="Arg-2">
+      <extent>
+        <charseq START="3420" END="3432">their parents</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030618_193127.17-R5" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="CNN_ENG_20030618_193127.17-E23" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030618_193127.17-E8" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030618_193127.17-R5-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="844" END="893">then when they're ready to breed
+they go to the wb</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030618_193127.17-E23-10" ROLE="Arg-1">
+      <extent>
+        <charseq START="877" END="880">they</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030618_193127.17-E8-11" ROLE="Arg-2">
+      <extent>
+        <charseq START="888" END="893">the wb</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030618_193127.17-EV1" TYPE="Personnel" SUBTYPE="Start-Position" MODALITY="Other" POLARITY="Negative" GENERICITY="Generic" TENSE="Present">
+  <event_argument REFID="CNN_ENG_20030618_193127.17-E35" ROLE="Person"/>
+  <event_mention ID="CNN_ENG_20030618_193127.17-EV1-1">
+    <extent>
+      <charseq START="2951" END="2963">hiring
+people</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2920" END="2984">they're not just sitting there hiring
+people to do their business</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2951" END="2956">hiring</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030618_193127.17-E35-86" ROLE="Person">
+      <extent>
+        <charseq START="2958" END="2963">people</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030618_193127.17-EV2" TYPE="Personnel" SUBTYPE="Start-Position" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030618_193127.17-E23" ROLE="Person"/>
+  <event_argument REFID="CNN_ENG_20030618_193127.17-E8" ROLE="Entity"/>
+  <event_mention ID="CNN_ENG_20030618_193127.17-EV2-1">
+    <extent>
+      <charseq START="877" END="893">they go to the wb</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="844" END="893">then when they're ready to breed
+they go to the wb</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="882" END="883">go</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030618_193127.17-E23-10" ROLE="Person">
+      <extent>
+        <charseq START="877" END="880">they</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030618_193127.17-E8-11" ROLE="Entity">
+      <extent>
+        <charseq START="888" END="893">the wb</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030618_193127.17-EV3" TYPE="Business" SUBTYPE="Start-Org" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030618_193127.17-E33" ROLE="Org"/>
+  <event_argument REFID="CNN_ENG_20030618_193127.17-E30" ROLE="Agent"/>
+  <event_mention ID="CNN_ENG_20030618_193127.17-EV3-1">
+    <extent>
+      <charseq START="2724" END="2752">they turned it into an empire</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2720" END="2789">but they turned it into an empire, what shirley temple
+could have done</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2729" END="2734">turned</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030618_193127.17-E33-114" ROLE="Org">
+      <extent>
+        <charseq START="2744" END="2752">an empire</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030618_193127.17-E30-77" ROLE="Agent">
+      <extent>
+        <charseq START="2724" END="2727">they</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

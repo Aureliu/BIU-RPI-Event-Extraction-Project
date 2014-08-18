@@ -33,7 +33,7 @@ public class ParserWrapper
 	{
 		if(parser == null)
 		{
-			parser = new ParserWrapper(new File("src/main/resources/data/englishPCFG.ser.gz"));
+			parser = new ParserWrapper(new File("../ace_events_large_resources/src/main/resources/data/englishPCFG.ser.gz"));
 		}
 		return parser;
 	}

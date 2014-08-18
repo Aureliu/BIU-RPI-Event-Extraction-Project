@@ -1,0 +1,838 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030610_130042.17.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030610_130042.17">
+<entity ID="CNN_ENG_20030610_130042.17-E1" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_130042.17-E1-37" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="416" END="425">two people</charseq>
+    </extent>
+    <head>
+      <charseq START="420" END="425">people</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030610_130042.17-E2" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_130042.17-E2-2" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="440" END="448">27 others</charseq>
+    </extent>
+    <head>
+      <charseq START="443" END="448">others</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030610_130042.17-E3" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_130042.17-E3-3" TYPE="NOM" LDCTYPE="NOM" ROLE="GPE">
+    <extent>
+      <charseq START="558" END="569">the israelis</charseq>
+    </extent>
+    <head>
+      <charseq START="562" END="569">israelis</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_130042.17-E3-15" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE">
+    <extent>
+      <charseq START="1078" END="1083">israel</charseq>
+    </extent>
+    <head>
+      <charseq START="1078" END="1083">israel</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_130042.17-E3-17" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="1141" END="1146">israel</charseq>
+    </extent>
+    <head>
+      <charseq START="1141" END="1146">israel</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="israel">
+      <charseq START="1078" END="1083">israel</charseq>
+    </name>
+    <name NAME="israel">
+      <charseq START="1141" END="1146">israel</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030610_130042.17-E4" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030610_130042.17-E4-4" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="599" END="600">we</charseq>
+    </extent>
+    <head>
+      <charseq START="599" END="600">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_130042.17-E4-5" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="614" END="616">our</charseq>
+    </extent>
+    <head>
+      <charseq START="614" END="616">our</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030610_130042.17-E5" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_130042.17-E5-6" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="661" END="675">the white house</charseq>
+    </extent>
+    <head>
+      <charseq START="665" END="675">white house</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="white house">
+      <charseq START="665" END="675">white house</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030610_130042.17-E6" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_130042.17-E6-7" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="689" END="701">the president</charseq>
+    </extent>
+    <head>
+      <charseq START="693" END="701">president</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_130042.17-E6-8" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="730" END="731">he</charseq>
+    </extent>
+    <head>
+      <charseq START="730" END="731">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_130042.17-E6-10" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="922" END="923">he</charseq>
+    </extent>
+    <head>
+      <charseq START="922" END="923">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_130042.17-E6-12" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="857" END="909">the
+president, quoted by ari fleischer, his spokesman</charseq>
+    </extent>
+    <head>
+      <charseq START="861" END="869">president</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_130042.17-E6-33" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="897" END="899">his</charseq>
+    </extent>
+    <head>
+      <charseq START="897" END="899">his</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030610_130042.17-E7" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_130042.17-E7-9" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="882" END="894">ari fleischer</charseq>
+    </extent>
+    <head>
+      <charseq START="882" END="894">ari fleischer</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_130042.17-E7-22" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="897" END="909">his spokesman</charseq>
+    </extent>
+    <head>
+      <charseq START="901" END="909">spokesman</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="ari fleischer">
+      <charseq START="882" END="894">ari fleischer</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030610_130042.17-E8" TYPE="WEA" SUBTYPE="Projectile" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030610_130042.17-E8-11" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="517" END="522">rocket</charseq>
+    </extent>
+    <head>
+      <charseq START="517" END="522">rocket</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030610_130042.17-E9" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030610_130042.17-E9-13" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="974" END="996">palestinian authorities</charseq>
+    </extent>
+    <head>
+      <charseq START="986" END="996">authorities</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030610_130042.17-E10" TYPE="GPE" SUBTYPE="Special" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_130042.17-E10-14" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="974" END="984">palestinian</charseq>
+    </extent>
+    <head>
+      <charseq START="974" END="984">palestinian</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="palestinian">
+      <charseq START="974" END="984">palestinian</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030610_130042.17-E11" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_130042.17-E11-16" TYPE="NAM" LDCTYPE="NAMPRE">
+    <extent>
+      <charseq START="1120" END="1125">sharon</charseq>
+    </extent>
+    <head>
+      <charseq START="1120" END="1125">sharon</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="sharon">
+      <charseq START="1120" END="1125">sharon</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030610_130042.17-E12" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_130042.17-E12-19" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1116" END="1146">the sharon government in
+israel</charseq>
+    </extent>
+    <head>
+      <charseq START="1127" END="1136">government</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030610_130042.17-E13" TYPE="PER" SUBTYPE="Indeterminate" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030610_130042.17-E13-1" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="77" END="79">you</charseq>
+    </extent>
+    <head>
+      <charseq START="77" END="79">you</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030610_130042.17-E14" TYPE="VEH" SUBTYPE="Air" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_130042.17-E14-20" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="155" END="170">israeli gun ship</charseq>
+    </extent>
+    <head>
+      <charseq START="167" END="170">ship</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030610_130042.17-E16" TYPE="GPE" SUBTYPE="GPE-Cluster" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_130042.17-E16-23" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE">
+    <extent>
+      <charseq START="119" END="133">the
+middle east</charseq>
+    </extent>
+    <head>
+      <charseq START="123" END="133">middle east</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="middle east">
+      <charseq START="123" END="133">middle east</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030610_130042.17-E17" TYPE="LOC" SUBTYPE="Region-General" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_130042.17-E17-18" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1180" END="1183">gaza</charseq>
+    </extent>
+    <head>
+      <charseq START="1180" END="1183">gaza</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_130042.17-E17-24" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="139" END="142">gaza</charseq>
+    </extent>
+    <head>
+      <charseq START="139" END="142">gaza</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="gaza">
+      <charseq START="1180" END="1183">gaza</charseq>
+    </name>
+    <name NAME="gaza">
+      <charseq START="139" END="142">gaza</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030610_130042.17-E18" TYPE="WEA" SUBTYPE="Shooting" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030610_130042.17-E18-26" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="163" END="165">gun</charseq>
+    </extent>
+    <head>
+      <charseq START="163" END="165">gun</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030610_130042.17-E19" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_130042.17-E19-27" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="155" END="161">israeli</charseq>
+    </extent>
+    <head>
+      <charseq START="155" END="161">israeli</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="israeli">
+      <charseq START="155" END="161">israeli</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030610_130042.17-E20" TYPE="VEH" SUBTYPE="Land" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_130042.17-E20-28" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="287" END="370">a car
+carrying rantissi, a senior member of the hamas group, a
+militant organization</charseq>
+    </extent>
+    <head>
+      <charseq START="289" END="291">car</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030610_130042.17-E21" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_130042.17-E21-29" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="302" END="309">rantissi</charseq>
+    </extent>
+    <head>
+      <charseq START="302" END="309">rantissi</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_130042.17-E21-34" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="312" END="370">a senior member of the hamas group, a
+militant organization</charseq>
+    </extent>
+    <head>
+      <charseq START="321" END="326">member</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_130042.17-E21-36" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="387" END="388">he</charseq>
+    </extent>
+    <head>
+      <charseq START="387" END="388">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="rantissi">
+      <charseq START="302" END="309">rantissi</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030610_130042.17-E22" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030610_130042.17-E22-25" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="1017" END="1025">terrorist</charseq>
+    </extent>
+    <head>
+      <charseq START="1017" END="1025">terrorist</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030610_130042.17-E23" TYPE="ORG" SUBTYPE="Non-Governmental" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_130042.17-E23-31" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="331" END="345">the hamas group</charseq>
+    </extent>
+    <head>
+      <charseq START="335" END="345">hamas group</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_130042.17-E23-35" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="348" END="370">a
+militant organization</charseq>
+    </extent>
+    <head>
+      <charseq START="359" END="370">organization</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="hamas group">
+      <charseq START="335" END="345">hamas group</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<timex2 ID="CNN_ENG_20030610_130042.17-T1" VAL="2003-06-10T13:32:35">
+  <timex2_mention ID="CNN_ENG_20030610_130042.17-T1-1">
+    <extent>
+      <charseq START="44" END="62">2003-06-10 13:32:35</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030610_130042.17-R1" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030610_130042.17-E19" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030610_130042.17-E14" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030610_130042.17-R1-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="155" END="170">israeli gun ship</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030610_130042.17-E19-27" ROLE="Arg-1">
+      <extent>
+        <charseq START="155" END="161">israeli</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030610_130042.17-E14-20" ROLE="Arg-2">
+      <extent>
+        <charseq START="155" END="170">israeli gun ship</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030610_130042.17-R2" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030610_130042.17-E21" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030610_130042.17-E20" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030610_130042.17-R2-1" LEXICALCONDITION="Participial">
+    <extent>
+      <charseq START="287" END="370">a car
+carrying rantissi, a senior member of the hamas group, a
+militant organization</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030610_130042.17-E21-29" ROLE="Arg-1">
+      <extent>
+        <charseq START="302" END="309">rantissi</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030610_130042.17-E20-28" ROLE="Arg-2">
+      <extent>
+        <charseq START="287" END="370">a car
+carrying rantissi, a senior member of the hamas group, a
+militant organization</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030610_130042.17-R3" TYPE="ORG-AFF" SUBTYPE="Membership" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030610_130042.17-E21" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030610_130042.17-E23" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030610_130042.17-R3-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="312" END="370">a senior member of the hamas group, a
+militant organization</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030610_130042.17-E21-34" ROLE="Arg-1">
+      <extent>
+        <charseq START="312" END="370">a senior member of the hamas group, a
+militant organization</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030610_130042.17-E23-31" ROLE="Arg-2">
+      <extent>
+        <charseq START="331" END="345">the hamas group</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030610_130042.17-R4" TYPE="PER-SOC" SUBTYPE="Business" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030610_130042.17-E6" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030610_130042.17-E7" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030610_130042.17-R4-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="897" END="909">his spokesman</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030610_130042.17-E6-33" ROLE="Arg-1">
+      <extent>
+        <charseq START="897" END="899">his</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030610_130042.17-E7-22" ROLE="Arg-2">
+      <extent>
+        <charseq START="897" END="909">his spokesman</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030610_130042.17-R5" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030610_130042.17-E9" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030610_130042.17-E10" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030610_130042.17-R5-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="974" END="996">palestinian authorities</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030610_130042.17-E9-13" ROLE="Arg-1">
+      <extent>
+        <charseq START="974" END="996">palestinian authorities</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030610_130042.17-E10-14" ROLE="Arg-2">
+      <extent>
+        <charseq START="974" END="984">palestinian</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030610_130042.17-R6" TYPE="GEN-AFF" SUBTYPE="Org-Location" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030610_130042.17-E12" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030610_130042.17-E3" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030610_130042.17-R6-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="1116" END="1146">the sharon government in
+israel</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030610_130042.17-E12-19" ROLE="Arg-1">
+      <extent>
+        <charseq START="1116" END="1146">the sharon government in
+israel</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030610_130042.17-E3-17" ROLE="Arg-2">
+      <extent>
+        <charseq START="1141" END="1146">israel</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030610_130042.17-EV1" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030610_130042.17-E22" ROLE="Attacker"/>
+  <event_mention ID="CNN_ENG_20030610_130042.17-EV1-1">
+    <extent>
+      <charseq START="1017" END="1033">terrorist
+attacks</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="857" END="1083">the
+president, quoted by ari fleischer, his spokesman, is
+saying he's concerned the strike will undermine efforts by
+palestinian authorities to bring an end to terrorist
+attacks and does not contribute to the security of israel</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1027" END="1033">attacks</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030610_130042.17-E22-25" ROLE="Attacker">
+      <extent>
+        <charseq START="1017" END="1025">terrorist</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030610_130042.17-EV2" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030610_130042.17-E17" ROLE="Place"/>
+  <event_mention ID="CNN_ENG_20030610_130042.17-EV2-1">
+    <extent>
+      <charseq START="1169" END="1183">attacks in gaza</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1086" END="1183">clearly some frustration with the sharon government in
+israel in the wake of these attacks in gaza</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1169" END="1175">attacks</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030610_130042.17-E17-18" ROLE="Place">
+      <extent>
+        <charseq START="1180" END="1183">gaza</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030610_130042.17-EV3" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030610_130042.17-E19" ROLE="Attacker"/>
+  <event_argument REFID="CNN_ENG_20030610_130042.17-E17" ROLE="Place"/>
+  <event_argument REFID="CNN_ENG_20030610_130042.17-E14" ROLE="Instrument"/>
+  <event_mention ID="CNN_ENG_20030610_130042.17-EV3-1">
+    <extent>
+      <charseq START="139" END="177">gaza, a pair of israeli gun ship attack</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="136" END="263">in gaza, a pair of israeli gun ship attack,
+aerial attacks that have threatened to derail the road map
+to peace, as it is called</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="172" END="177">attack</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030610_130042.17-E19-27" ROLE="Attacker">
+      <extent>
+        <charseq START="155" END="161">israeli</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030610_130042.17-E17-24" ROLE="Place">
+      <extent>
+        <charseq START="139" END="142">gaza</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030610_130042.17-E14-20" ROLE="Instrument">
+      <extent>
+        <charseq START="155" END="170">israeli gun ship</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030610_130042.17-EV4" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030610_130042.17-E20" ROLE="Target"/>
+  <event_mention ID="CNN_ENG_20030610_130042.17-EV4-1">
+    <extent>
+      <charseq START="287" END="384">a car
+carrying rantissi, a senior member of the hamas group, a
+militant organization, was targeted</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="266" END="384">in the first attack, a car
+carrying rantissi, a senior member of the hamas group, a
+militant organization, was targeted</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="377" END="384">targeted</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030610_130042.17-E20-28" ROLE="Target">
+      <extent>
+        <charseq START="287" END="370">a car
+carrying rantissi, a senior member of the hamas group, a
+militant organization</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030610_130042.17-EV5" TYPE="Life" SUBTYPE="Die" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030610_130042.17-E1" ROLE="Victim"/>
+  <event_mention ID="CNN_ENG_20030610_130042.17-EV5-1">
+    <extent>
+      <charseq START="416" END="437">two people were killed</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="387" END="437">he survived, with
+wound, but two people were killed</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="432" END="437">killed</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030610_130042.17-E1-37" ROLE="Victim">
+      <extent>
+        <charseq START="416" END="425">two people</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030610_130042.17-EV6" TYPE="Life" SUBTYPE="Injure" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030610_130042.17-E2" ROLE="Victim"/>
+  <event_mention ID="CNN_ENG_20030610_130042.17-EV6-1">
+    <extent>
+      <charseq START="440" END="461">27 others were injured</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="440" END="476">27 others were injured
+in that attack</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="455" END="461">injured</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030610_130042.17-E2-2" ROLE="Victim">
+      <extent>
+        <charseq START="440" END="448">27 others</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030610_130042.17-EV7" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030610_130042.17-E8" ROLE="Instrument"/>
+  <event_mention ID="CNN_ENG_20030610_130042.17-EV7-1">
+    <extent>
+      <charseq START="809" END="814">attack</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="777" END="814">still no reaction to the
+second attack</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="809" END="814">attack</charseq>
+    </anchor>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030610_130042.17-EV7-2">
+    <extent>
+      <charseq START="490" END="522">attack occurred after some
+rocket</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="479" END="596">the second attack occurred after some
+rocket firings aimed, apparently, toward the israelis,
+apparently in retaliation</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="490" END="495">attack</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030610_130042.17-E8-11" ROLE="Instrument">
+      <extent>
+        <charseq START="517" END="522">rocket</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030610_130042.17-EV8" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030610_130042.17-E8" ROLE="Instrument"/>
+  <event_mention ID="CNN_ENG_20030610_130042.17-EV8-1">
+    <extent>
+      <charseq START="517" END="530">rocket firings</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="479" END="596">the second attack occurred after some
+rocket firings aimed, apparently, toward the israelis,
+apparently in retaliation</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="524" END="530">firings</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030610_130042.17-E8-11" ROLE="Instrument">
+      <extent>
+        <charseq START="517" END="522">rocket</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030610_130042.17-EV9" TYPE="Life" SUBTYPE="Injure" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030610_130042.17-E21" ROLE="Victim"/>
+  <event_mention ID="CNN_ENG_20030610_130042.17-EV9-1">
+    <extent>
+      <charseq START="387" END="409">he survived, with
+wound</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="387" END="437">he survived, with
+wound, but two people were killed</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="405" END="409">wound</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030610_130042.17-E21-36" ROLE="Victim">
+      <extent>
+        <charseq START="387" END="388">he</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030610_130042.17-EV10" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030610_130042.17-E2" ROLE="Target"/>
+  <event_argument REFID="CNN_ENG_20030610_130042.17-E20" ROLE="Target"/>
+  <event_mention ID="CNN_ENG_20030610_130042.17-EV10-1">
+    <extent>
+      <charseq START="440" END="476">27 others were injured
+in that attack</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="440" END="476">27 others were injured
+in that attack</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="471" END="476">attack</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030610_130042.17-E2-2" ROLE="Target">
+      <extent>
+        <charseq START="440" END="448">27 others</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030610_130042.17-EV10-2">
+    <extent>
+      <charseq START="769" END="774">attack</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="661" END="774">the white house saying, and
+the president directly quoted as saying, he was deeply
+troubled by that initial attack</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="769" END="774">attack</charseq>
+    </anchor>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030610_130042.17-EV10-3">
+    <extent>
+      <charseq START="941" END="946">strike</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="857" END="1083">the
+president, quoted by ari fleischer, his spokesman, is
+saying he's concerned the strike will undermine efforts by
+palestinian authorities to bring an end to terrorist
+attacks and does not contribute to the security of israel</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="941" END="946">strike</charseq>
+    </anchor>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030610_130042.17-EV10-4">
+    <extent>
+      <charseq START="279" END="370">attack, a car
+carrying rantissi, a senior member of the hamas group, a
+militant organization</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="266" END="384">in the first attack, a car
+carrying rantissi, a senior member of the hamas group, a
+militant organization, was targeted</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="279" END="284">attack</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030610_130042.17-E20-28" ROLE="Target">
+      <extent>
+        <charseq START="287" END="370">a car
+carrying rantissi, a senior member of the hamas group, a
+militant organization</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030610_130042.17-EV11" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030610_130042.17-E19" ROLE="Attacker"/>
+  <event_argument REFID="CNN_ENG_20030610_130042.17-E17" ROLE="Place"/>
+  <event_argument REFID="CNN_ENG_20030610_130042.17-E14" ROLE="Instrument"/>
+  <event_mention ID="CNN_ENG_20030610_130042.17-EV11-1">
+    <extent>
+      <charseq START="139" END="193">gaza, a pair of israeli gun ship attack,
+aerial attacks</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="136" END="263">in gaza, a pair of israeli gun ship attack,
+aerial attacks that have threatened to derail the road map
+to peace, as it is called</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="187" END="193">attacks</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030610_130042.17-E19-27" ROLE="Attacker">
+      <extent>
+        <charseq START="155" END="161">israeli</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030610_130042.17-E17-24" ROLE="Place">
+      <extent>
+        <charseq START="139" END="142">gaza</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030610_130042.17-E14-20" ROLE="Instrument">
+      <extent>
+        <charseq START="155" END="170">israeli gun ship</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

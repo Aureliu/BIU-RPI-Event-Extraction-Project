@@ -1,0 +1,855 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030605_193002.8.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030605_193002.8">
+<entity ID="CNN_ENG_20030605_193002.8-E1" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E1-7" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="573" END="575">joe</charseq>
+    </extent>
+    <head>
+      <charseq START="573" END="575">joe</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E1-9" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="589" END="590">he</charseq>
+    </extent>
+    <head>
+      <charseq START="589" END="590">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E1-10" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="594" END="604">the partner</charseq>
+    </extent>
+    <head>
+      <charseq START="598" END="604">partner</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E1-47" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1974" END="1986">one other
+guy</charseq>
+    </extent>
+    <head>
+      <charseq START="1984" END="1986">guy</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="joe">
+      <charseq START="573" END="575">joe</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030605_193002.8-E3" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E3-13" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="810" END="824">the 18-24 crowd</charseq>
+    </extent>
+    <head>
+      <charseq START="820" END="824">crowd</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030605_193002.8-E4" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E4-17" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1020" END="1028">everybody</charseq>
+    </extent>
+    <head>
+      <charseq START="1020" END="1028">everybody</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030605_193002.8-E5" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E5-4" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="479" END="482">they</charseq>
+    </extent>
+    <head>
+      <charseq START="479" END="482">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E5-18" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1064" END="1072">taco bell</charseq>
+    </extent>
+    <head>
+      <charseq START="1064" END="1072">taco bell</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E5-28" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1294" END="1302">taco bell</charseq>
+    </extent>
+    <head>
+      <charseq START="1294" END="1302">taco bell</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E5-30" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1329" END="1332">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1329" END="1332">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E5-31" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1366" END="1370">their</charseq>
+    </extent>
+    <head>
+      <charseq START="1366" END="1370">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E5-33" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1450" END="1453">them</charseq>
+    </extent>
+    <head>
+      <charseq START="1450" END="1453">them</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E5-34" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1563" END="1566">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1563" END="1566">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E5-38" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1669" END="1672">them</charseq>
+    </extent>
+    <head>
+      <charseq START="1669" END="1672">them</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E5-39" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1675" END="1678">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1675" END="1678">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E5-48" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2012" END="2015">they</charseq>
+    </extent>
+    <head>
+      <charseq START="2012" END="2015">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E5-49" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="2020" END="2043">a huge, huge
+corporation</charseq>
+    </extent>
+    <head>
+      <charseq START="2033" END="2043">corporation</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E5-51" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1060" END="1078">the taco bell folks</charseq>
+    </extent>
+    <head>
+      <charseq START="1074" END="1078">folks</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E5-52" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1096" END="1099">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1096" END="1099">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E5-53" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1757" END="1760">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1757" END="1760">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E5-59" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="204" END="212">taco bell</charseq>
+    </extent>
+    <head>
+      <charseq START="204" END="212">taco bell</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E5-65" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="348" END="356">taco
+ball</charseq>
+    </extent>
+    <head>
+      <charseq START="348" END="356">taco
+ball</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="taco bell">
+      <charseq START="1064" END="1072">taco bell</charseq>
+    </name>
+    <name NAME="taco bell">
+      <charseq START="1294" END="1302">taco bell</charseq>
+    </name>
+    <name NAME="taco bell">
+      <charseq START="204" END="212">taco bell</charseq>
+    </name>
+    <name NAME="taco ball">
+      <charseq START="348" END="356">taco
+ball</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030605_193002.8-E6" TYPE="ORG" SUBTYPE="Commercial" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E6-22" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1167" END="1200">a bunch of different manufacturers</charseq>
+    </extent>
+    <head>
+      <charseq START="1188" END="1200">manufacturers</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030605_193002.8-E7" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E7-24" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="1236" END="1248">new york city</charseq>
+    </extent>
+    <head>
+      <charseq START="1236" END="1248">new york city</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E7-25" TYPE="PRO" LDCTYPE="WHQ" ROLE="LOC">
+    <extent>
+      <charseq START="1250" END="1254">where</charseq>
+    </extent>
+    <head>
+      <charseq START="1250" END="1254">where</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="new york city">
+      <charseq START="1236" END="1248">new york city</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030605_193002.8-E8" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E8-26" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1256" END="1265">nick loada</charseq>
+    </extent>
+    <head>
+      <charseq START="1256" END="1265">nick loada</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="nick loada">
+      <charseq START="1256" END="1265">nick loada</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030605_193002.8-E9" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E9-27" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1271" END="1287">universal studios</charseq>
+    </extent>
+    <head>
+      <charseq START="1271" END="1287">universal studios</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="universal studios">
+      <charseq START="1271" END="1287">universal studios</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030605_193002.8-E10" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E10-40" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1686" END="1700">a new ad agency</charseq>
+    </extent>
+    <head>
+      <charseq START="1695" END="1700">agency</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030605_193002.8-E11" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E11-1" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="67" END="80">martha stewart</charseq>
+    </extent>
+    <head>
+      <charseq START="67" END="80">martha stewart</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="martha stewart">
+      <charseq START="67" END="80">martha stewart</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030605_193002.8-E13" TYPE="PER" SUBTYPE="Individual" CLASS="NEG">
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E13-55" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="88" END="134">the only corporate figurehead in the
+news today</charseq>
+    </extent>
+    <head>
+      <charseq START="107" END="116">figurehead</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030605_193002.8-E14" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E14-56" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="137" END="144">the jury</charseq>
+    </extent>
+    <head>
+      <charseq START="141" END="144">jury</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E14-57" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="177" END="195">a grand
+rapids jury</charseq>
+    </extent>
+    <head>
+      <charseq START="192" END="195">jury</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030605_193002.8-E15" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E15-58" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="179" END="190">grand
+rapids</charseq>
+    </extent>
+    <head>
+      <charseq START="179" END="190">grand
+rapids</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="grand rapids">
+      <charseq START="179" END="190">grand
+rapids</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030605_193002.8-E17" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E17-11" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="607" END="608">we</charseq>
+    </extent>
+    <head>
+      <charseq START="607" END="608">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E17-12" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="761" END="762">we</charseq>
+    </extent>
+    <head>
+      <charseq START="761" END="762">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E17-14" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="830" END="831">we</charseq>
+    </extent>
+    <head>
+      <charseq START="830" END="831">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E17-15" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="985" END="986">we</charseq>
+    </extent>
+    <head>
+      <charseq START="985" END="986">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E17-16" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="996" END="997">he</charseq>
+    </extent>
+    <head>
+      <charseq START="996" END="997">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E17-19" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1089" END="1091">you</charseq>
+    </extent>
+    <head>
+      <charseq START="1089" END="1091">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E17-20" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1118" END="1119">us</charseq>
+    </extent>
+    <head>
+      <charseq START="1118" END="1119">us</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E17-21" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1142" END="1143">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1142" END="1143">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E17-23" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1215" END="1216">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1215" END="1216">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E17-29" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1317" END="1318">us</charseq>
+    </extent>
+    <head>
+      <charseq START="1317" END="1318">us</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E17-32" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1438" END="1439">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1438" END="1439">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E17-35" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1489" END="1491">you</charseq>
+    </extent>
+    <head>
+      <charseq START="1489" END="1491">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E17-36" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1528" END="1530">you</charseq>
+    </extent>
+    <head>
+      <charseq START="1528" END="1530">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E17-37" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1600" END="1601">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1600" END="1601">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E17-41" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1782" END="1783">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1782" END="1783">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E17-42" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1831" END="1832">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1831" END="1832">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E17-50" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2096" END="2097">we</charseq>
+    </extent>
+    <head>
+      <charseq START="2096" END="2097">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E17-54" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="1988" END="1990">who</charseq>
+    </extent>
+    <head>
+      <charseq START="1988" END="1990">who</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E17-60" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="225" END="267">the true creators
+of the chihuahua mass cot</charseq>
+    </extent>
+    <head>
+      <charseq START="234" END="241">creators</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E17-61" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="270" END="276">two men</charseq>
+    </extent>
+    <head>
+      <charseq START="274" END="276">men</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E17-62" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="286" END="290">their</charseq>
+    </extent>
+    <head>
+      <charseq START="286" END="290">their</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030605_193002.8-E18" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E18-3" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="472" END="472">i</charseq>
+    </extent>
+    <head>
+      <charseq START="472" END="472">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E18-5" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="522" END="523">my</charseq>
+    </extent>
+    <head>
+      <charseq START="522" END="523">my</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E18-45" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1935" END="1935">i</charseq>
+    </extent>
+    <head>
+      <charseq START="1935" END="1935">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E18-63" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="320" END="320">i</charseq>
+    </extent>
+    <head>
+      <charseq START="320" END="320">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E18-66" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="378" END="379">me</charseq>
+    </extent>
+    <head>
+      <charseq START="378" END="379">me</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030605_193002.8-E19" TYPE="ORG" SUBTYPE="Commercial" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E19-64" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="328" END="345">the wrong business</charseq>
+    </extent>
+    <head>
+      <charseq START="338" END="345">business</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030605_193002.8-E20" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E20-2" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="428" END="430">you</charseq>
+    </extent>
+    <head>
+      <charseq START="428" END="430">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E20-6" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="529" END="531">you</charseq>
+    </extent>
+    <head>
+      <charseq START="529" END="531">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E20-8" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="581" END="586">myself</charseq>
+    </extent>
+    <head>
+      <charseq START="581" END="586">myself</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E20-43" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1872" END="1874">you</charseq>
+    </extent>
+    <head>
+      <charseq START="1872" END="1874">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E20-44" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1912" END="1914">you</charseq>
+    </extent>
+    <head>
+      <charseq START="1912" END="1914">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E20-46" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1966" END="1968">you</charseq>
+    </extent>
+    <head>
+      <charseq START="1966" END="1968">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E20-67" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="384" END="392">tom rinks</charseq>
+    </extent>
+    <head>
+      <charseq START="384" END="392">tom rinks</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E20-68" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="399" END="401">his</charseq>
+    </extent>
+    <head>
+      <charseq START="399" END="401">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E20-72" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="423" END="425">tom</charseq>
+    </extent>
+    <head>
+      <charseq START="423" END="425">tom</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="tom rinks">
+      <charseq START="384" END="392">tom rinks</charseq>
+    </name>
+    <name NAME="tom">
+      <charseq START="423" END="425">tom</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030605_193002.8-E21" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E21-70" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="399" END="410">his attorney</charseq>
+    </extent>
+    <head>
+      <charseq START="403" END="410">attorney</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_193002.8-E21-71" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="412" END="420">john doza</charseq>
+    </extent>
+    <head>
+      <charseq START="412" END="420">john doza</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="john doza">
+      <charseq START="412" END="420">john doza</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<value ID="CNN_ENG_20030605_193002.8-V1" TYPE="Numeric" SUBTYPE="Money">
+  <value_mention ID="CNN_ENG_20030605_193002.8-V1-1">
+    <extent>
+      <charseq START="164" END="174">$30 million</charseq>
+    </extent>
+  </value_mention>
+</value>
+<timex2 ID="CNN_ENG_20030605_193002.8-T1" VAL="2003-06-05T20:01:46">
+  <timex2_mention ID="CNN_ENG_20030605_193002.8-T1-1">
+    <extent>
+      <charseq START="43" END="61">2003-06-05 20:01:46</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030605_193002.8-T2" VAL="1996">
+  <timex2_mention ID="CNN_ENG_20030605_193002.8-T2-1">
+    <extent>
+      <charseq START="1210" END="1213">1996</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030605_193002.8-T3" VAL="P1Y" ANCHOR_VAL="1996" ANCHOR_DIR="STARTING">
+  <timex2_mention ID="CNN_ENG_20030605_193002.8-T3-1">
+    <extent>
+      <charseq START="1420" END="1423">year</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030605_193002.8-T4" VAL="P1Y" ANCHOR_VAL="1996" ANCHOR_DIR="STARTING">
+  <timex2_mention ID="CNN_ENG_20030605_193002.8-T4-1">
+    <extent>
+      <charseq START="1477" END="1482">a year</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030605_193002.8-T5" VAL="P1Y" MOD="MORE_THAN" ANCHOR_VAL="1996" ANCHOR_DIR="STARTING">
+  <timex2_mention ID="CNN_ENG_20030605_193002.8-T5-1">
+    <extent>
+      <charseq START="1852" END="1862">over a year</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030605_193002.8-T6" VAL="2003-06-05">
+  <timex2_mention ID="CNN_ENG_20030605_193002.8-T6-1">
+    <extent>
+      <charseq START="130" END="134">today</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030605_193002.8-R1" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030605_193002.8-E14" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030605_193002.8-E15" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030605_193002.8-R1-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="177" END="195">a grand
+rapids jury</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030605_193002.8-E14-57" ROLE="Arg-1">
+      <extent>
+        <charseq START="177" END="195">a grand
+rapids jury</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030605_193002.8-E15-58" ROLE="Arg-2">
+      <extent>
+        <charseq START="179" END="190">grand
+rapids</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030605_193002.8-R2" TYPE="PER-SOC" SUBTYPE="Business" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030605_193002.8-E20" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030605_193002.8-E21" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030605_193002.8-R2-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="399" END="410">his attorney</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030605_193002.8-E20-68" ROLE="Arg-1">
+      <extent>
+        <charseq START="399" END="401">his</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030605_193002.8-E21-70" ROLE="Arg-2">
+      <extent>
+        <charseq START="399" END="410">his attorney</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030605_193002.8-R3" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030605_193002.8-E17" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030605_193002.8-E7" ROLE="Arg-2"/>
+  <relation_argument REFID="CNN_ENG_20030605_193002.8-T2" ROLE="Time-Within"/>
+  <relation_mention ID="CNN_ENG_20030605_193002.8-R3-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="1142" END="1402">we had been
+licensing to a bunch of different manufacturers, and in
+1996 we were at a show in new york city where nick loada
+and universal studios, and taco bell walked up to us and
+said they were looking for a mass cot for their brand and
+this would be perfect</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030605_193002.8-E17-23" ROLE="Arg-1">
+      <extent>
+        <charseq START="1215" END="1216">we</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030605_193002.8-E7-24" ROLE="Arg-2">
+      <extent>
+        <charseq START="1236" END="1248">new york city</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030605_193002.8-T2-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="1210" END="1213">1996</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030605_193002.8-EV1" TYPE="Justice" SUBTYPE="Fine" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030605_193002.8-E5" ROLE="Entity"/>
+  <event_argument REFID="CNN_ENG_20030605_193002.8-E14" ROLE="Adjudicator"/>
+  <event_argument REFID="CNN_ENG_20030605_193002.8-V1" ROLE="Money"/>
+  <event_mention ID="CNN_ENG_20030605_193002.8-EV1-1">
+    <extent>
+      <charseq START="164" END="223">$30 million, a grand
+rapids jury saying taco bell has to pay</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="137" END="267">the jury has handed down a $30 million, a grand
+rapids jury saying taco bell has to pay the true creators
+of the chihuahua mass cot</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="221" END="223">pay</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030605_193002.8-E5-59" ROLE="Entity">
+      <extent>
+        <charseq START="204" END="212">taco bell</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030605_193002.8-E14-57" ROLE="Adjudicator">
+      <extent>
+        <charseq START="177" END="195">a grand
+rapids jury</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030605_193002.8-V1-1" ROLE="Money">
+      <extent>
+        <charseq START="164" END="174">$30 million</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030605_193002.8-EV2" TYPE="Justice" SUBTYPE="Appeal" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030605_193002.8-E5" ROLE="Plaintiff"/>
+  <event_mention ID="CNN_ENG_20030605_193002.8-EV2-1">
+    <extent>
+      <charseq START="348" END="369">taco
+ball is appealing</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="348" END="369">taco
+ball is appealing</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="361" END="369">appealing</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030605_193002.8-E5-65" ROLE="Plaintiff">
+      <extent>
+        <charseq START="348" END="356">taco
+ball</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

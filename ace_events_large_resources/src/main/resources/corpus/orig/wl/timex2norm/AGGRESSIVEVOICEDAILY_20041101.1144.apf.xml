@@ -1,0 +1,817 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="AGGRESSIVEVOICEDAILY_20041101.1144.sgm" SOURCE="weblog" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="AGGRESSIVEVOICEDAILY_20041101.1144">
+<entity ID="AGGRESSIVEVOICEDAILY_20041101.1144-E1" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-E1-3" TYPE="NOM" LDCTYPE="BAR" ROLE="LOC">
+    <extent>
+      <charseq START="718" END="721">town</charseq>
+    </extent>
+    <head>
+      <charseq START="718" END="721">town</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041101.1144-E2" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-E2-4" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="737" END="738">we</charseq>
+    </extent>
+    <head>
+      <charseq START="737" END="738">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-E2-25" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1605" END="1607">our</charseq>
+    </extent>
+    <head>
+      <charseq START="1605" END="1607">our</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041101.1144-E3" TYPE="FAC" SUBTYPE="Subarea-Facility" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-E3-5" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="949" END="981">the kitchen and living room areas</charseq>
+    </extent>
+    <head>
+      <charseq START="977" END="981">areas</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041101.1144-E4" TYPE="FAC" SUBTYPE="Subarea-Facility" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-E4-6" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="953" END="959">kitchen</charseq>
+    </extent>
+    <head>
+      <charseq START="953" END="959">kitchen</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041101.1144-E5" TYPE="FAC" SUBTYPE="Subarea-Facility" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-E5-7" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="965" END="975">living room</charseq>
+    </extent>
+    <head>
+      <charseq START="965" END="975">living room</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041101.1144-E6" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-E6-9" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1011" END="1021">Hugh Hefner</charseq>
+    </extent>
+    <head>
+      <charseq START="1011" END="1021">Hugh Hefner</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Hugh Hefner">
+      <charseq START="1011" END="1021">Hugh Hefner</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041101.1144-E7" TYPE="PER" SUBTYPE="Indeterminate" CLASS="USP">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-E7-11" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1128" END="1144">any of the
+guests</charseq>
+    </extent>
+    <head>
+      <charseq START="1128" END="1130">any</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041101.1144-E8" TYPE="ORG" SUBTYPE="Sports" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-E8-12" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1170" END="1182">the Seminoles</charseq>
+    </extent>
+    <head>
+      <charseq START="1174" END="1182">Seminoles</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-E8-14" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1237" END="1239">our</charseq>
+    </extent>
+    <head>
+      <charseq START="1237" END="1239">our</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-E8-17" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1371" END="1372">us</charseq>
+    </extent>
+    <head>
+      <charseq START="1371" END="1372">us</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-E8-22" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1492" END="1494">our</charseq>
+    </extent>
+    <head>
+      <charseq START="1492" END="1494">our</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-E8-27" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1657" END="1664">Seminole</charseq>
+    </extent>
+    <head>
+      <charseq START="1657" END="1664">Seminole</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Seminole">
+      <charseq START="1657" END="1664">Seminole</charseq>
+    </name>
+    <name NAME="Seminoles">
+      <charseq START="1174" END="1182">Seminoles</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041101.1144-E9" TYPE="ORG" SUBTYPE="Sports" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-E9-13" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1199" END="1215">unranked Maryland</charseq>
+    </extent>
+    <head>
+      <charseq START="1208" END="1215">Maryland</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Maryland">
+      <charseq START="1208" END="1215">Maryland</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041101.1144-E10" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-E10-16" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1349" END="1357">Chris
+Rix</charseq>
+    </extent>
+    <head>
+      <charseq START="1349" END="1357">Chris
+Rix</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-E10-18" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1390" END="1392">his</charseq>
+    </extent>
+    <head>
+      <charseq START="1390" END="1392">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-E10-24" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1520" END="1522">Rix</charseq>
+    </extent>
+    <head>
+      <charseq START="1520" END="1522">Rix</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Chris Rix">
+      <charseq START="1349" END="1357">Chris
+Rix</charseq>
+    </name>
+    <name NAME="Rix">
+      <charseq START="1520" END="1522">Rix</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041101.1144-E11" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-E11-19" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1456" END="1544">the inept Wyatt Sexton who has been our
+starter since replacing Rix earlier in the season</charseq>
+    </extent>
+    <head>
+      <charseq START="1466" END="1477">Wyatt Sexton</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-E11-21" TYPE="PRO" LDCTYPE="WHQ" LDCATR="FALSE">
+    <extent>
+      <charseq START="1479" END="1481">who</charseq>
+    </extent>
+    <head>
+      <charseq START="1479" END="1481">who</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-E11-23" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="1492" END="1502">our
+starter</charseq>
+    </extent>
+    <head>
+      <charseq START="1496" END="1502">starter</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Wyatt Sexton">
+      <charseq START="1466" END="1477">Wyatt Sexton</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041101.1144-E12" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-E12-20" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="1297" END="1307">quarterback</charseq>
+    </extent>
+    <head>
+      <charseq START="1297" END="1307">quarterback</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041101.1144-E15" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-E15-28" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1707" END="1708">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1707" END="1708">we</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041101.1144-E16" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-E16-30" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1940" END="1941">us</charseq>
+    </extent>
+    <head>
+      <charseq START="1940" END="1941">us</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041101.1144-E17" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-E17-1" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="135" END="135">I</charseq>
+    </extent>
+    <head>
+      <charseq START="135" END="135">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-E17-8" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="995" END="995">I</charseq>
+    </extent>
+    <head>
+      <charseq START="995" END="995">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-E17-10" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1089" END="1089">I</charseq>
+    </extent>
+    <head>
+      <charseq START="1089" END="1089">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-E17-26" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1629" END="1629">I</charseq>
+    </extent>
+    <head>
+      <charseq START="1629" END="1629">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-E17-29" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1752" END="1752">I</charseq>
+    </extent>
+    <head>
+      <charseq START="1752" END="1752">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-E17-31" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1981" END="1981">I</charseq>
+    </extent>
+    <head>
+      <charseq START="1981" END="1981">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-E17-32" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2027" END="2027">I</charseq>
+    </extent>
+    <head>
+      <charseq START="2027" END="2027">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-E17-38" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="316" END="316">I</charseq>
+    </extent>
+    <head>
+      <charseq START="316" END="316">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-E17-39" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="100" END="104">Scott</charseq>
+    </extent>
+    <head>
+      <charseq START="100" END="104">Scott</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-E17-41" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="444" END="444">I</charseq>
+    </extent>
+    <head>
+      <charseq START="444" END="444">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-E17-42" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="471" END="472">my</charseq>
+    </extent>
+    <head>
+      <charseq START="471" END="472">my</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-E17-51" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="682" END="682">I</charseq>
+    </extent>
+    <head>
+      <charseq START="682" END="682">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Scott">
+      <charseq START="100" END="104">Scott</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041101.1144-E18" TYPE="ORG" SUBTYPE="Entertainment" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-E18-2" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="707" END="710">they</charseq>
+    </extent>
+    <head>
+      <charseq START="707" END="710">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-E18-15" TYPE="PRO" LDCTYPE="PTV" LDCATR="FALSE">
+    <extent>
+      <charseq START="464" END="492">one of my favorite live
+bands</charseq>
+    </extent>
+    <head>
+      <charseq START="464" END="466">one</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-E18-33" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="344" END="355">Sister Hazel</charseq>
+    </extent>
+    <head>
+      <charseq START="344" END="355">Sister Hazel</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-E18-48" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="626" END="635">these guys</charseq>
+    </extent>
+    <head>
+      <charseq START="632" END="635">guys</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-E18-49" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="495" END="506">Sister Hazel</charseq>
+    </extent>
+    <head>
+      <charseq START="495" END="506">Sister Hazel</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Sister Hazel">
+      <charseq START="344" END="355">Sister Hazel</charseq>
+    </name>
+    <name NAME="Sister Hazel">
+      <charseq START="495" END="506">Sister Hazel</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041101.1144-E19" TYPE="FAC" SUBTYPE="Subarea-Facility" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-E19-34" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="863" END="870">bathroom</charseq>
+    </extent>
+    <head>
+      <charseq START="863" END="870">bathroom</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041101.1144-E20" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-E20-36" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="287" END="310">a small group of friends</charseq>
+    </extent>
+    <head>
+      <charseq START="295" END="299">group</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041101.1144-E21" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-E21-37" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="304" END="310">friends</charseq>
+    </extent>
+    <head>
+      <charseq START="304" END="310">friends</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041101.1144-E22" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-E22-40" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="368" END="386">Floyd's Music Store</charseq>
+    </extent>
+    <head>
+      <charseq START="368" END="386">Floyd's Music Store</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Floyd's Music Store">
+      <charseq START="368" END="386">Floyd's Music Store</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041101.1144-E23" TYPE="ORG" SUBTYPE="Entertainment" CLASS="GEN">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-E23-43" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="471" END="492">my favorite live
+bands</charseq>
+    </extent>
+    <head>
+      <charseq START="488" END="492">bands</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041101.1144-E24" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-E24-45" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="544" END="551">the fans</charseq>
+    </extent>
+    <head>
+      <charseq START="548" END="551">fans</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-E24-46" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="564" END="567">them</charseq>
+    </extent>
+    <head>
+      <charseq START="564" END="567">them</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041101.1144-E25" TYPE="PER" SUBTYPE="Indeterminate" CLASS="GEN">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-E25-47" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="599" END="601">you</charseq>
+    </extent>
+    <head>
+      <charseq START="599" END="601">you</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041101.1144-E27" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-E27-50" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="645" END="668">so many other performers</charseq>
+    </extent>
+    <head>
+      <charseq START="659" END="668">performers</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041101.1144-E28" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-E28-35" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1056" END="1063">everyone</charseq>
+    </extent>
+    <head>
+      <charseq START="1056" END="1063">everyone</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-E28-44" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1135" END="1144">the
+guests</charseq>
+    </extent>
+    <head>
+      <charseq START="1139" END="1144">guests</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<value ID="AGGRESSIVEVOICEDAILY_20041101.1144-V1" TYPE="Job-Title">
+  <value_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-V1-1">
+    <extent>
+      <charseq START="1492" END="1502">our
+starter</charseq>
+    </extent>
+  </value_mention>
+</value>
+<timex2 ID="AGGRESSIVEVOICEDAILY_20041101.1144-T1" VAL="2004-11-01T11:44:00">
+  <timex2_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-T1-1">
+    <extent>
+      <charseq START="50" END="68">2004-11-01T11:44:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AGGRESSIVEVOICEDAILY_20041101.1144-T2" VAL="2004-11-01T11:44:00">
+  <timex2_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-T2-1">
+    <extent>
+      <charseq START="108" END="126">2004-11-01T11:44:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AGGRESSIVEVOICEDAILY_20041101.1144-T3" VAL="PAST_REF" ANCHOR_VAL="2004-11-01" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-T3-1">
+    <extent>
+      <charseq START="176" END="192">the past few days</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AGGRESSIVEVOICEDAILY_20041101.1144-T4" VAL="2004-W44-WE">
+  <timex2_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-T4-1">
+    <extent>
+      <charseq START="227" END="235">a weekend</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AGGRESSIVEVOICEDAILY_20041101.1144-T5" VAL="2004-10-29">
+  <timex2_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-T5-1">
+    <extent>
+      <charseq START="280" END="285">Friday</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AGGRESSIVEVOICEDAILY_20041101.1144-T6" VAL="P3Y" ANCHOR_VAL="2004" ANCHOR_DIR="ENDING">
+  <timex2_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-T6-1">
+    <extent>
+      <charseq START="392" END="409">the third straight</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AGGRESSIVEVOICEDAILY_20041101.1144-T7" VAL="P3Y" ANCHOR_VAL="2004" ANCHOR_DIR="ENDING">
+  <timex2_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-T7-1">
+    <extent>
+      <charseq START="420" END="442">the third straight year</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AGGRESSIVEVOICEDAILY_20041101.1144-T8" VAL="2004-10-30">
+  <timex2_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-T8-1">
+    <extent>
+      <charseq START="728" END="735">Saturday</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AGGRESSIVEVOICEDAILY_20041101.1144-T9">
+  <timex2_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-T9-1">
+    <extent>
+      <charseq START="795" END="803">Halloween</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AGGRESSIVEVOICEDAILY_20041101.1144-T10" VAL="2004-10-30">
+  <timex2_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-T10-1">
+    <extent>
+      <charseq START="1161" END="1168">Saturday</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AGGRESSIVEVOICEDAILY_20041101.1144-T11" VAL="2004">
+  <timex2_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-T11-1">
+    <extent>
+      <charseq START="1269" END="1277">this year</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AGGRESSIVEVOICEDAILY_20041101.1144-T12">
+  <timex2_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-T12-1">
+    <extent>
+      <charseq START="1609" END="1617">Halloween</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AGGRESSIVEVOICEDAILY_20041101.1144-T13" VAL="2004-11-06">
+  <timex2_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-T13-1">
+    <extent>
+      <charseq START="1681" END="1693">next Saturday</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AGGRESSIVEVOICEDAILY_20041101.1144-T14" VAL="2004-10-31">
+  <timex2_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-T14-1">
+    <extent>
+      <charseq START="1700" END="1705">Sunday</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AGGRESSIVEVOICEDAILY_20041101.1144-T15" VAL="2004-W43">
+  <timex2_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-T15-1">
+    <extent>
+      <charseq START="1816" END="1824">last week</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AGGRESSIVEVOICEDAILY_20041101.1144-T16" VAL="2004" MOD="END">
+  <timex2_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-T16-1">
+    <extent>
+      <charseq START="1882" END="1901">the end of this year</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AGGRESSIVEVOICEDAILY_20041101.1144-T17" VAL="2005" MOD="START">
+  <timex2_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-T17-1">
+    <extent>
+      <charseq START="1907" END="1927">the beginning of 2005</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AGGRESSIVEVOICEDAILY_20041101.1144-T18">
+  <timex2_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-T18-1">
+    <extent>
+      <charseq START="1524" END="1544">earlier in the season</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="AGGRESSIVEVOICEDAILY_20041101.1144-R1" TYPE="PER-SOC" SUBTYPE="Lasting-Personal" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20041101.1144-E20" ROLE="Arg-1"/>
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20041101.1144-E17" ROLE="Arg-2"/>
+  <relation_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-R1-1" LEXICALCONDITION="Coordination">
+    <extent>
+      <charseq START="287" END="316">a small group of friends and I</charseq>
+    </extent>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20041101.1144-E20-36" ROLE="Arg-1">
+      <extent>
+        <charseq START="287" END="310">a small group of friends</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20041101.1144-E17-38" ROLE="Arg-2">
+      <extent>
+        <charseq START="316" END="316">I</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="AGGRESSIVEVOICEDAILY_20041101.1144-R2" TYPE="ORG-AFF" SUBTYPE="Sports-Affiliation" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20041101.1144-E11" ROLE="Arg-1"/>
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20041101.1144-E8" ROLE="Arg-2"/>
+  <relation_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-R2-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="1492" END="1502">our
+starter</charseq>
+    </extent>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20041101.1144-E11-23" ROLE="Arg-1">
+      <extent>
+        <charseq START="1492" END="1502">our
+starter</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20041101.1144-E8-22" ROLE="Arg-2">
+      <extent>
+        <charseq START="1492" END="1494">our</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="AGGRESSIVEVOICEDAILY_20041101.1144-R3" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20041101.1144-E20" ROLE="Arg-1"/>
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20041101.1144-E22" ROLE="Arg-2"/>
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20041101.1144-T5" ROLE="Time-Within"/>
+  <relation_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-R3-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="277" END="492">On Friday a small group of friends and I attended a most-righteous
+Sister Hazel concert at Floyd's Music Store for the third straight, and
+for the third straight year I was blown away by one of my favorite live
+bands</charseq>
+    </extent>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20041101.1144-E20-36" ROLE="Arg-1">
+      <extent>
+        <charseq START="287" END="310">a small group of friends</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20041101.1144-E22-40" ROLE="Arg-2">
+      <extent>
+        <charseq START="368" END="386">Floyd's Music Store</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20041101.1144-T5-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="280" END="285">Friday</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="AGGRESSIVEVOICEDAILY_20041101.1144-R4" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20041101.1144-E17" ROLE="Arg-1"/>
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20041101.1144-E22" ROLE="Arg-2"/>
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20041101.1144-T5" ROLE="Time-Within"/>
+  <relation_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-R4-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="277" END="492">On Friday a small group of friends and I attended a most-righteous
+Sister Hazel concert at Floyd's Music Store for the third straight, and
+for the third straight year I was blown away by one of my favorite live
+bands</charseq>
+    </extent>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20041101.1144-E17-38" ROLE="Arg-1">
+      <extent>
+        <charseq START="316" END="316">I</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20041101.1144-E22-40" ROLE="Arg-2">
+      <extent>
+        <charseq START="368" END="386">Floyd's Music Store</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20041101.1144-T5-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="280" END="285">Friday</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="AGGRESSIVEVOICEDAILY_20041101.1144-EV1" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="AGGRESSIVEVOICEDAILY_20041101.1144-T8" ROLE="Time-Within"/>
+  <event_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-EV1-1">
+    <extent>
+      <charseq START="728" END="918">Saturday we hosted what was for the most part a largely successful
+Halloween party -- save for the fake blood stains on the carpet and
+bathroom walls, a couple beer spills, unnecessary fights</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="725" END="981">On Saturday we hosted what was for the most part a largely successful
+Halloween party -- save for the fake blood stains on the carpet and
+bathroom walls, a couple beer spills, unnecessary fights and the
+expected trashing of the kitchen and living room areas</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="913" END="918">fights</charseq>
+    </anchor>
+    <event_mention_argument REFID="AGGRESSIVEVOICEDAILY_20041101.1144-T8-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="728" END="735">Saturday</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="AGGRESSIVEVOICEDAILY_20041101.1144-EV2" TYPE="Personnel" SUBTYPE="Start-Position" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="AGGRESSIVEVOICEDAILY_20041101.1144-E11" ROLE="Person"/>
+  <event_argument REFID="AGGRESSIVEVOICEDAILY_20041101.1144-E8" ROLE="Entity"/>
+  <event_argument REFID="AGGRESSIVEVOICEDAILY_20041101.1144-V1" ROLE="Position"/>
+  <event_argument REFID="AGGRESSIVEVOICEDAILY_20041101.1144-T18" ROLE="Time-Within"/>
+  <event_mention ID="AGGRESSIVEVOICEDAILY_20041101.1144-EV2-1">
+    <extent>
+      <charseq START="1479" END="1544">who has been our
+starter since replacing Rix earlier in the season</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1407" END="1544">Alas, too little too
+late was the case thanks to the inept Wyatt Sexton who has been our
+starter since replacing Rix earlier in the season</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1510" END="1518">replacing</charseq>
+    </anchor>
+    <event_mention_argument REFID="AGGRESSIVEVOICEDAILY_20041101.1144-E11-21" ROLE="Person">
+      <extent>
+        <charseq START="1479" END="1481">who</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AGGRESSIVEVOICEDAILY_20041101.1144-E8-22" ROLE="Entity">
+      <extent>
+        <charseq START="1492" END="1494">our</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AGGRESSIVEVOICEDAILY_20041101.1144-V1-1" ROLE="Position">
+      <extent>
+        <charseq START="1492" END="1502">our
+starter</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AGGRESSIVEVOICEDAILY_20041101.1144-T18-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="1524" END="1544">earlier in the season</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

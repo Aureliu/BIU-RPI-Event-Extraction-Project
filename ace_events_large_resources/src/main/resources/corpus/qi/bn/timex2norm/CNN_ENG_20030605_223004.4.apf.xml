@@ -1,0 +1,1331 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030605_223004.4.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030605_223004.4">
+<entity ID="CNN_ENG_20030605_223004.4-E1" TYPE="GPE" SUBTYPE="Special" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E1-2" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="427" END="437">palestinian</charseq>
+    </extent>
+    <head>
+      <charseq START="427" END="437">palestinian</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="palestinian">
+      <charseq START="427" END="437">palestinian</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030605_223004.4-E2" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E2-7" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="500" END="504">court</charseq>
+    </extent>
+    <head>
+      <charseq START="500" END="504">court</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E2-8" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="523" END="527">court</charseq>
+    </extent>
+    <head>
+      <charseq START="523" END="527">court</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030605_223004.4-E3" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E3-9" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="560" END="602">lawyers for the three
+men arrested with him</charseq>
+    </extent>
+    <head>
+      <charseq START="560" END="566">lawyers</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E3-12" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="608" END="611">they</charseq>
+    </extent>
+    <head>
+      <charseq START="608" END="611">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E3-14" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="682" END="686">their</charseq>
+    </extent>
+    <head>
+      <charseq START="682" END="686">their</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030605_223004.4-E4" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E4-10" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="572" END="602">the three
+men arrested with him</charseq>
+    </extent>
+    <head>
+      <charseq START="582" END="584">men</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030605_223004.4-E5" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E5-13" TYPE="NOM" LDCTYPE="NOM" ROLE="ORG">
+    <extent>
+      <charseq START="644" END="657">the government</charseq>
+    </extent>
+    <head>
+      <charseq START="648" END="657">government</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030605_223004.4-E6" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E6-15" TYPE="PRO" LDCTYPE="PTV">
+    <extent>
+      <charseq START="694" END="716">two
+of the indicted men</charseq>
+    </extent>
+    <head>
+      <charseq START="694" END="696">two</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030605_223004.4-E7" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E7-16" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="701" END="716">the indicted men</charseq>
+    </extent>
+    <head>
+      <charseq START="714" END="716">men</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030605_223004.4-E8" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E8-18" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="756" END="770">other defendant</charseq>
+    </extent>
+    <head>
+      <charseq START="762" END="770">defendant</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030605_223004.4-E9" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E9-19" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="810" END="813">they</charseq>
+    </extent>
+    <head>
+      <charseq START="810" END="813">they</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030605_223004.4-E10" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E10-20" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="828" END="831">jail</charseq>
+    </extent>
+    <head>
+      <charseq START="828" END="831">jail</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030605_223004.4-E11" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E11-21" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="953" END="969">president lincoln</charseq>
+    </extent>
+    <head>
+      <charseq START="963" END="969">lincoln</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E11-22" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="953" END="961">president</charseq>
+    </extent>
+    <head>
+      <charseq START="953" END="961">president</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="lincoln">
+      <charseq START="963" END="969">lincoln</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030605_223004.4-E13" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E13-26" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1225" END="1230">others</charseq>
+    </extent>
+    <head>
+      <charseq START="1225" END="1230">others</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E13-29" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1278" END="1281">them</charseq>
+    </extent>
+    <head>
+      <charseq START="1278" END="1281">them</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030605_223004.4-E14" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E14-27" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1260" END="1267">mr. barr</charseq>
+    </extent>
+    <head>
+      <charseq START="1264" END="1267">barr</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E14-32" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1346" END="1421">about the last person on the planet that you
+would ever call ablying liberal</charseq>
+    </extent>
+    <head>
+      <charseq START="1361" END="1366">person</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E14-35" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1407" END="1421">ablying liberal</charseq>
+    </extent>
+    <head>
+      <charseq START="1415" END="1421">liberal</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E14-36" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1424" END="1425">he</charseq>
+    </extent>
+    <head>
+      <charseq START="1424" END="1425">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E14-39" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1471" END="1473">him</charseq>
+    </extent>
+    <head>
+      <charseq START="1471" END="1473">him</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E14-40" TYPE="NOM" LDCTYPE="BAR" LDCATR="FALSE">
+    <extent>
+      <charseq START="1476" END="1486">congressman</charseq>
+    </extent>
+    <head>
+      <charseq START="1476" END="1486">congressman</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E14-42" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="FALSE">
+    <extent>
+      <charseq START="1260" END="1261">mr</charseq>
+    </extent>
+    <head>
+      <charseq START="1260" END="1261">mr</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E14-43" TYPE="PRO" LDCTYPE="WHQ" LDCATR="FALSE">
+    <extent>
+      <charseq START="1382" END="1385">that</charseq>
+    </extent>
+    <head>
+      <charseq START="1382" END="1385">that</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E14-44" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1284" END="1321">a republican from the state of georgia</charseq>
+    </extent>
+    <head>
+      <charseq START="1286" END="1295">republican</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E14-46" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="1324" END="1340">former
+prosecutor</charseq>
+    </extent>
+    <head>
+      <charseq START="1331" END="1340">prosecutor</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="barr">
+      <charseq START="1264" END="1267">barr</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030605_223004.4-E15" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E15-30" TYPE="NOM" LDCTYPE="NOM" ROLE="LOC">
+    <extent>
+      <charseq START="1302" END="1321">the state of georgia</charseq>
+    </extent>
+    <head>
+      <charseq START="1306" END="1310">state</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E15-31" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="1315" END="1321">georgia</charseq>
+    </extent>
+    <head>
+      <charseq START="1315" END="1321">georgia</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="georgia">
+      <charseq START="1315" END="1321">georgia</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030605_223004.4-E17" TYPE="LOC" SUBTYPE="Celestial" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E17-33" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1371" END="1380">the planet</charseq>
+    </extent>
+    <head>
+      <charseq START="1375" END="1380">planet</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030605_223004.4-E18" TYPE="PER" SUBTYPE="Indeterminate" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E18-34" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1387" END="1389">you</charseq>
+    </extent>
+    <head>
+      <charseq START="1387" END="1389">you</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030605_223004.4-E20" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E20-1" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="67" END="68">we</charseq>
+    </extent>
+    <head>
+      <charseq START="67" END="68">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E20-25" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1210" END="1211">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1210" END="1211">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E20-37" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1433" END="1434">us</charseq>
+    </extent>
+    <head>
+      <charseq START="1433" END="1434">us</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E20-38" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1445" END="1446">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1445" END="1446">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E20-47" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="181" END="182">we</charseq>
+    </extent>
+    <head>
+      <charseq START="181" END="182">we</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030605_223004.4-E21" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E21-41" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1007" END="1011">f.d.r</charseq>
+    </extent>
+    <head>
+      <charseq START="1007" END="1011">f.d.r</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="f.d.r">
+      <charseq START="1007" END="1011">f.d.r</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030605_223004.4-E23" TYPE="ORG" SUBTYPE="Non-Governmental" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E23-24" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="425" END="443">a palestinian group</charseq>
+    </extent>
+    <head>
+      <charseq START="439" END="443">group</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E23-28" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="445" END="457">islamic jihad</charseq>
+    </extent>
+    <head>
+      <charseq START="445" END="457">islamic jihad</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="islamic jihad">
+      <charseq START="445" END="457">islamic jihad</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030605_223004.4-E27" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E27-45" TYPE="PRO" LDCTYPE="HLS">
+    <extent>
+      <charseq START="136" END="174">those accused or suspected of terrorism</charseq>
+    </extent>
+    <head>
+      <charseq START="136" END="140">those</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030605_223004.4-E28" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E28-48" TYPE="PRO" LDCTYPE="HLS">
+    <extent>
+      <charseq START="245" END="248">some</charseq>
+    </extent>
+    <head>
+      <charseq START="245" END="248">some</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030605_223004.4-E29" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E29-49" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="282" END="295">tampa, florida</charseq>
+    </extent>
+    <head>
+      <charseq START="282" END="286">tampa</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="tampa">
+      <charseq START="282" END="286">tampa</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030605_223004.4-E30" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E30-50" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="289" END="295">florida</charseq>
+    </extent>
+    <head>
+      <charseq START="289" END="295">florida</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E30-55" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="343" END="349">florida</charseq>
+    </extent>
+    <head>
+      <charseq START="343" END="349">florida</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="florida">
+      <charseq START="289" END="295">florida</charseq>
+    </name>
+    <name NAME="florida">
+      <charseq START="343" END="349">florida</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030605_223004.4-E31" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E31-3" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="460" END="461">he</charseq>
+    </extent>
+    <head>
+      <charseq START="460" END="461">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E31-4" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="478" END="479">he</charseq>
+    </extent>
+    <head>
+      <charseq START="478" END="479">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E31-5" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="491" END="493">his</charseq>
+    </extent>
+    <head>
+      <charseq START="491" END="493">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E31-6" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="512" END="514">his</charseq>
+    </extent>
+    <head>
+      <charseq START="512" END="514">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E31-11" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="600" END="602">him</charseq>
+    </extent>
+    <head>
+      <charseq START="600" END="602">him</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E31-17" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="739" END="750">samiel aryan</charseq>
+    </extent>
+    <head>
+      <charseq START="739" END="750">samiel aryan</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E31-52" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="298" END="311">samuel arianna</charseq>
+    </extent>
+    <head>
+      <charseq START="298" END="311">samuel arianna</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E31-53" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="313" END="349">a former college professor in florida</charseq>
+    </extent>
+    <head>
+      <charseq START="330" END="338">professor</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E31-56" TYPE="PRO" LDCTYPE="WHQ" LDCATR="FALSE">
+    <extent>
+      <charseq START="351" END="353">who</charseq>
+    </extent>
+    <head>
+      <charseq START="351" END="353">who</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E31-57" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="401" END="457">a north
+america head of a palestinian group islamic jihad</charseq>
+    </extent>
+    <head>
+      <charseq START="417" END="420">head</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="samiel aryan">
+      <charseq START="739" END="750">samiel aryan</charseq>
+    </name>
+    <name NAME="samuel arianna">
+      <charseq START="298" END="311">samuel arianna</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030605_223004.4-E33" TYPE="ORG" SUBTYPE="Educational" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E33-54" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="322" END="328">college</charseq>
+    </extent>
+    <head>
+      <charseq START="322" END="328">college</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030605_223004.4-E35" TYPE="GPE" SUBTYPE="Continent" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030605_223004.4-E35-58" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="403" END="415">north
+america</charseq>
+    </extent>
+    <head>
+      <charseq START="403" END="415">north
+america</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="north america">
+      <charseq START="403" END="415">north
+america</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<value ID="CNN_ENG_20030605_223004.4-V1" TYPE="Crime">
+  <value_mention ID="CNN_ENG_20030605_223004.4-V1-1">
+    <extent>
+      <charseq START="395" END="457">being a north
+america head of a palestinian group islamic jihad</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_ENG_20030605_223004.4-V2" TYPE="Job-Title">
+  <value_mention ID="CNN_ENG_20030605_223004.4-V2-1">
+    <extent>
+      <charseq START="1331" END="1340">prosecutor</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_ENG_20030605_223004.4-V3" TYPE="Job-Title">
+  <value_mention ID="CNN_ENG_20030605_223004.4-V3-1">
+    <extent>
+      <charseq START="322" END="338">college professor</charseq>
+    </extent>
+  </value_mention>
+</value>
+<timex2 ID="CNN_ENG_20030605_223004.4-T1" VAL="2003-06-05T22:50:13">
+  <timex2_mention ID="CNN_ENG_20030605_223004.4-T1-1">
+    <extent>
+      <charseq START="43" END="61">2003-06-05 22:50:13</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030605_223004.4-T2" VAL="2003-06-05TNI">
+  <timex2_mention ID="CNN_ENG_20030605_223004.4-T2-1">
+    <extent>
+      <charseq START="76" END="82">tonight</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030605_223004.4-T3" VAL="PAST_REF" ANCHOR_VAL="2003-06-05T22:50:13" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="CNN_ENG_20030605_223004.4-T3-1">
+    <extent>
+      <charseq START="315" END="320">former</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030605_223004.4-T4" VAL="2003-02">
+  <timex2_mention ID="CNN_ENG_20030605_223004.4-T4-1">
+    <extent>
+      <charseq START="371" END="378">february</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030605_223004.4-T5" VAL="2003-06-05">
+  <timex2_mention ID="CNN_ENG_20030605_223004.4-T5-1">
+    <extent>
+      <charseq START="472" END="476">today</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030605_223004.4-T6" VAL="2005-01-XX">
+  <timex2_mention ID="CNN_ENG_20030605_223004.4-T6-1">
+    <extent>
+      <charseq START="491" END="504">his dmai court</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030605_223004.4-T7" VAL="2005-01-XX">
+  <timex2_mention ID="CNN_ENG_20030605_223004.4-T7-1">
+    <extent>
+      <charseq START="512" END="527">his day in
+court</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030605_223004.4-T8" VAL="2005-01">
+  <timex2_mention ID="CNN_ENG_20030605_223004.4-T8-1">
+    <extent>
+      <charseq START="546" END="557">january 2005</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030605_223004.4-T9" VAL="P18M" ANCHOR_VAL="2003-06-05" ANCHOR_DIR="STARTING">
+  <timex2_mention ID="CNN_ENG_20030605_223004.4-T9-1">
+    <extent>
+      <charseq START="618" END="631">that much time</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030605_223004.4-T10" VAL="2005-01" MOD="APPROX">
+  <timex2_mention ID="CNN_ENG_20030605_223004.4-T10-1">
+    <extent>
+      <charseq START="859" END="875">roughly 18
+months</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030605_223004.4-T11">
+  <timex2_mention ID="CNN_ENG_20030605_223004.4-T11-1">
+    <extent>
+      <charseq START="992" END="1004">the civil war</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030605_223004.4-T12">
+  <timex2_mention ID="CNN_ENG_20030605_223004.4-T12-1">
+    <extent>
+      <charseq START="1021" END="1032">world war ii</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030605_223004.4-T13">
+  <timex2_mention ID="CNN_ENG_20030605_223004.4-T13-1">
+    <extent>
+      <charseq START="1143" END="1153">at the time</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030605_223004.4-T14" VAL="PRESENT_REF" ANCHOR_VAL="2003-06-05T22:50:13" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_ENG_20030605_223004.4-T14-1">
+    <extent>
+      <charseq START="1205" END="1207">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030605_223004.4-T15" VAL="PAST_REF" ANCHOR_VAL="2003-06-05-T22:50:13" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="CNN_ENG_20030605_223004.4-T15-1">
+    <extent>
+      <charseq START="1324" END="1329">former</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030605_223004.4-T16" VAL="2003-06-05TNI">
+  <timex2_mention ID="CNN_ENG_20030605_223004.4-T16-1">
+    <extent>
+      <charseq START="1436" END="1442">tonight</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030605_223004.4-T17" VAL="TEV">
+  <timex2_mention ID="CNN_ENG_20030605_223004.4-T17-1">
+    <extent>
+      <charseq START="1494" END="1500">evening</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030605_223004.4-R2" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030605_223004.4-E29" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030605_223004.4-E30" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030605_223004.4-R2-1" LEXICALCONDITION="Formulaic">
+    <extent>
+      <charseq START="282" END="295">tampa, florida</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030605_223004.4-E29-49" ROLE="Arg-1">
+      <extent>
+        <charseq START="282" END="295">tampa, florida</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030605_223004.4-E30-50" ROLE="Arg-2">
+      <extent>
+        <charseq START="289" END="295">florida</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030605_223004.4-R3" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030605_223004.4-E31" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030605_223004.4-E33" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030605_223004.4-R3-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="313" END="349">a former college professor in florida</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030605_223004.4-E31-53" ROLE="Arg-1">
+      <extent>
+        <charseq START="313" END="349">a former college professor in florida</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030605_223004.4-E33-54" ROLE="Arg-2">
+      <extent>
+        <charseq START="322" END="328">college</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030605_223004.4-R4" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030605_223004.4-E31" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030605_223004.4-E30" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030605_223004.4-R4-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="313" END="349">a former college professor in florida</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030605_223004.4-E31-53" ROLE="Arg-1">
+      <extent>
+        <charseq START="313" END="349">a former college professor in florida</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030605_223004.4-E30-55" ROLE="Arg-2">
+      <extent>
+        <charseq START="343" END="349">florida</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030605_223004.4-R5" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030605_223004.4-E31" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030605_223004.4-E35" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030605_223004.4-R5-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="401" END="457">a north
+america head of a palestinian group islamic jihad</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030605_223004.4-E31-57" ROLE="Arg-1">
+      <extent>
+        <charseq START="401" END="457">a north
+america head of a palestinian group islamic jihad</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030605_223004.4-E35-58" ROLE="Arg-2">
+      <extent>
+        <charseq START="403" END="415">north
+america</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030605_223004.4-R6" TYPE="ORG-AFF" SUBTYPE="Membership" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030605_223004.4-E31" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030605_223004.4-E23" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030605_223004.4-R6-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="401" END="457">a north
+america head of a palestinian group islamic jihad</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030605_223004.4-E31-57" ROLE="Arg-1">
+      <extent>
+        <charseq START="401" END="457">a north
+america head of a palestinian group islamic jihad</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030605_223004.4-E23-24" ROLE="Arg-2">
+      <extent>
+        <charseq START="425" END="443">a palestinian group</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030605_223004.4-R7" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030605_223004.4-E9" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030605_223004.4-E10" ROLE="Arg-2"/>
+  <relation_argument REFID="CNN_ENG_20030605_223004.4-T10" ROLE="Time-Ending"/>
+  <relation_mention ID="CNN_ENG_20030605_223004.4-R7-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="694" END="875">two
+of the indicted men are out on bond, but samiel aryan and
+other defendant are held without bond which is to say they
+will stay in jail until the trial starts in roughly 18
+months</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030605_223004.4-E9-19" ROLE="Arg-1">
+      <extent>
+        <charseq START="810" END="813">they</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030605_223004.4-E10-20" ROLE="Arg-2">
+      <extent>
+        <charseq START="828" END="831">jail</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030605_223004.4-T10-1" ROLE="Time-Ending">
+      <extent>
+        <charseq START="859" END="875">roughly 18
+months</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030605_223004.4-R8" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030605_223004.4-E15" ROLE="Arg-2"/>
+  <relation_argument REFID="CNN_ENG_20030605_223004.4-E14" ROLE="Arg-1"/>
+  <relation_mention ID="CNN_ENG_20030605_223004.4-R8-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="1284" END="1321">a republican from the state of georgia</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030605_223004.4-E15-30" ROLE="Arg-2">
+      <extent>
+        <charseq START="1302" END="1321">the state of georgia</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030605_223004.4-E14-44" ROLE="Arg-1">
+      <extent>
+        <charseq START="1284" END="1321">a republican from the state of georgia</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030605_223004.4-R9" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030605_223004.4-E14" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030605_223004.4-E17" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030605_223004.4-R9-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="1346" END="1421">about the last person on the planet that you
+would ever call ablying liberal</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030605_223004.4-E14-32" ROLE="Arg-1">
+      <extent>
+        <charseq START="1346" END="1421">about the last person on the planet that you
+would ever call ablying liberal</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030605_223004.4-E17-33" ROLE="Arg-2">
+      <extent>
+        <charseq START="1371" END="1380">the planet</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030605_223004.4-R10" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="CNN_ENG_20030605_223004.4-E31" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030605_223004.4-E2" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030605_223004.4-R10-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="460" END="504">he was
+told today he will have his dmai court</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030605_223004.4-E31-4" ROLE="Arg-1">
+      <extent>
+        <charseq START="478" END="479">he</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030605_223004.4-E2-7" ROLE="Arg-2">
+      <extent>
+        <charseq START="500" END="504">court</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_ENG_20030605_223004.4-R10-2" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="507" END="557">only his day in
+court won't come until january 2005</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030605_223004.4-E31-6" ROLE="Arg-1">
+      <extent>
+        <charseq START="512" END="514">his</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030605_223004.4-E2-8" ROLE="Arg-2">
+      <extent>
+        <charseq START="523" END="527">court</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030605_223004.4-R11" TYPE="GEN-AFF" SUBTYPE="Org-Location" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030605_223004.4-E23" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030605_223004.4-E1" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030605_223004.4-R11-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="425" END="443">a palestinian group</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030605_223004.4-E23-24" ROLE="Arg-1">
+      <extent>
+        <charseq START="425" END="443">a palestinian group</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030605_223004.4-E1-2" ROLE="Arg-2">
+      <extent>
+        <charseq START="427" END="437">palestinian</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030605_223004.4-EV1" TYPE="Justice" SUBTYPE="Arrest-Jail" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030605_223004.4-E31" ROLE="Person"/>
+  <event_argument REFID="CNN_ENG_20030605_223004.4-E8" ROLE="Person"/>
+  <event_argument REFID="CNN_ENG_20030605_223004.4-E9" ROLE="Person"/>
+  <event_argument REFID="CNN_ENG_20030605_223004.4-E10" ROLE="Place"/>
+  <event_argument REFID="CNN_ENG_20030605_223004.4-T10" ROLE="Time-Ending"/>
+  <event_mention ID="CNN_ENG_20030605_223004.4-EV1-1">
+    <extent>
+      <charseq START="739" END="779">samiel aryan and
+other defendant are held</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="694" END="875">two
+of the indicted men are out on bond, but samiel aryan and
+other defendant are held without bond which is to say they
+will stay in jail until the trial starts in roughly 18
+months</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="776" END="779">held</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030605_223004.4-E31-17" ROLE="Person">
+      <extent>
+        <charseq START="739" END="750">samiel aryan</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030605_223004.4-E8-18" ROLE="Person">
+      <extent>
+        <charseq START="756" END="770">other defendant</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030605_223004.4-EV1-2">
+    <extent>
+      <charseq START="810" END="875">they
+will stay in jail until the trial starts in roughly 18
+months</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="694" END="875">two
+of the indicted men are out on bond, but samiel aryan and
+other defendant are held without bond which is to say they
+will stay in jail until the trial starts in roughly 18
+months</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="820" END="823">stay</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030605_223004.4-E9-19" ROLE="Person">
+      <extent>
+        <charseq START="810" END="813">they</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030605_223004.4-E10-20" ROLE="Place">
+      <extent>
+        <charseq START="828" END="831">jail</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030605_223004.4-T10-1" ROLE="Time-Ending">
+      <extent>
+        <charseq START="859" END="875">roughly 18
+months</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030605_223004.4-EV2" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030605_223004.4-E27" ROLE="Attacker"/>
+  <event_mention ID="CNN_ENG_20030605_223004.4-EV2-1">
+    <extent>
+      <charseq START="136" END="174">those accused or suspected of terrorism</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="67" END="223">we begin tonight talking about the way the justice system
+deals with those accused or suspected of terrorism, and
+we'll talk more about that in just a moment</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="166" END="174">terrorism</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030605_223004.4-E27-45" ROLE="Attacker">
+      <extent>
+        <charseq START="136" END="174">those accused or suspected of terrorism</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030605_223004.4-EV3" TYPE="Personnel" SUBTYPE="End-Position" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030605_223004.4-E31" ROLE="Person"/>
+  <event_argument REFID="CNN_ENG_20030605_223004.4-E30" ROLE="Place"/>
+  <event_argument REFID="CNN_ENG_20030605_223004.4-E33" ROLE="Entity"/>
+  <event_argument REFID="CNN_ENG_20030605_223004.4-V3" ROLE="Position"/>
+  <event_mention ID="CNN_ENG_20030605_223004.4-EV3-1">
+    <extent>
+      <charseq START="313" END="349">a former college professor in florida</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="226" END="457">first, though
+with some believe is a case in point from tampa, florida,
+samuel arianna a former college professor in florida who
+was arrested in february and charged of being a north
+america head of a palestinian group islamic jihad</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="315" END="320">former</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030605_223004.4-E31-53" ROLE="Person">
+      <extent>
+        <charseq START="313" END="349">a former college professor in florida</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030605_223004.4-E30-55" ROLE="Place">
+      <extent>
+        <charseq START="343" END="349">florida</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030605_223004.4-E33-54" ROLE="Entity">
+      <extent>
+        <charseq START="322" END="328">college</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030605_223004.4-V3-1" ROLE="Position">
+      <extent>
+        <charseq START="322" END="338">college professor</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030605_223004.4-EV4" TYPE="Justice" SUBTYPE="Arrest-Jail" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030605_223004.4-E31" ROLE="Person"/>
+  <event_argument REFID="CNN_ENG_20030605_223004.4-E30" ROLE="Place"/>
+  <event_argument REFID="CNN_ENG_20030605_223004.4-V1" ROLE="Crime"/>
+  <event_argument REFID="CNN_ENG_20030605_223004.4-T4" ROLE="Time-Within"/>
+  <event_mention ID="CNN_ENG_20030605_223004.4-EV4-1">
+    <extent>
+      <charseq START="343" END="457">florida who
+was arrested in february and charged of being a north
+america head of a palestinian group islamic jihad</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="226" END="457">first, though
+with some believe is a case in point from tampa, florida,
+samuel arianna a former college professor in florida who
+was arrested in february and charged of being a north
+america head of a palestinian group islamic jihad</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="359" END="366">arrested</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030605_223004.4-E31-56" ROLE="Person">
+      <extent>
+        <charseq START="351" END="353">who</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030605_223004.4-E30-55" ROLE="Place">
+      <extent>
+        <charseq START="343" END="349">florida</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030605_223004.4-V1-1" ROLE="Crime">
+      <extent>
+        <charseq START="395" END="457">being a north
+america head of a palestinian group islamic jihad</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030605_223004.4-T4-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="371" END="378">february</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030605_223004.4-EV5" TYPE="Justice" SUBTYPE="Charge-Indict" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030605_223004.4-E31" ROLE="Defendant"/>
+  <event_argument REFID="CNN_ENG_20030605_223004.4-V1" ROLE="Crime"/>
+  <event_argument REFID="CNN_ENG_20030605_223004.4-T4" ROLE="Time-Within"/>
+  <event_mention ID="CNN_ENG_20030605_223004.4-EV5-1">
+    <extent>
+      <charseq START="351" END="457">who
+was arrested in february and charged of being a north
+america head of a palestinian group islamic jihad</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="226" END="457">first, though
+with some believe is a case in point from tampa, florida,
+samuel arianna a former college professor in florida who
+was arrested in february and charged of being a north
+america head of a palestinian group islamic jihad</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="384" END="390">charged</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030605_223004.4-E31-56" ROLE="Defendant">
+      <extent>
+        <charseq START="351" END="353">who</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030605_223004.4-V1-1" ROLE="Crime">
+      <extent>
+        <charseq START="395" END="457">being a north
+america head of a palestinian group islamic jihad</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030605_223004.4-T4-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="371" END="378">february</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030605_223004.4-EV6" TYPE="Justice" SUBTYPE="Trial-Hearing" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Future">
+  <event_argument REFID="CNN_ENG_20030605_223004.4-E31" ROLE="Defendant"/>
+  <event_argument REFID="CNN_ENG_20030605_223004.4-E2" ROLE="Place"/>
+  <event_argument REFID="CNN_ENG_20030605_223004.4-T8" ROLE="Time-Within"/>
+  <event_argument REFID="CNN_ENG_20030605_223004.4-E9" ROLE="Defendant"/>
+  <event_argument REFID="CNN_ENG_20030605_223004.4-T10" ROLE="Time-Starting"/>
+  <event_mention ID="CNN_ENG_20030605_223004.4-EV6-1">
+    <extent>
+      <charseq START="478" END="504">he will have his dmai court</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="460" END="504">he was
+told today he will have his dmai court</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="486" END="489">have</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030605_223004.4-E31-4" ROLE="Defendant">
+      <extent>
+        <charseq START="478" END="479">he</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030605_223004.4-E2-7" ROLE="Place">
+      <extent>
+        <charseq START="500" END="504">court</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030605_223004.4-EV6-2">
+    <extent>
+      <charseq START="512" END="557">his day in
+court won't come until january 2005</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="507" END="557">only his day in
+court won't come until january 2005</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="535" END="538">come</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030605_223004.4-E31-6" ROLE="Defendant">
+      <extent>
+        <charseq START="512" END="514">his</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030605_223004.4-E2-8" ROLE="Place">
+      <extent>
+        <charseq START="523" END="527">court</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030605_223004.4-T8-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="546" END="557">january 2005</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030605_223004.4-EV6-3">
+    <extent>
+      <charseq START="810" END="875">they
+will stay in jail until the trial starts in roughly 18
+months</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="694" END="875">two
+of the indicted men are out on bond, but samiel aryan and
+other defendant are held without bond which is to say they
+will stay in jail until the trial starts in roughly 18
+months</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="843" END="847">trial</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030605_223004.4-E9-19" ROLE="Defendant">
+      <extent>
+        <charseq START="810" END="813">they</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030605_223004.4-T10-1" ROLE="Time-Starting">
+      <extent>
+        <charseq START="859" END="875">roughly 18
+months</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030605_223004.4-EV7" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_mention ID="CNN_ENG_20030605_223004.4-EV7-1">
+    <extent>
+      <charseq START="1002" END="1004">war</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="953" END="1181">president lincoln dealt with it
+during the civil war, f.d.r. did in world war ii, and it is
+often true that decisions made in the heat of a moment, a
+war or after an attack look pretty good at the time, not so
+good as time passes</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1002" END="1004">war</charseq>
+    </anchor>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030605_223004.4-EV8" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_mention ID="CNN_ENG_20030605_223004.4-EV8-1">
+    <extent>
+      <charseq START="1027" END="1029">war</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="953" END="1181">president lincoln dealt with it
+during the civil war, f.d.r. did in world war ii, and it is
+often true that decisions made in the heat of a moment, a
+war or after an attack look pretty good at the time, not so
+good as time passes</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1027" END="1029">war</charseq>
+    </anchor>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030605_223004.4-EV9" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_mention ID="CNN_ENG_20030605_223004.4-EV9-1">
+    <extent>
+      <charseq START="1119" END="1124">attack</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="953" END="1181">president lincoln dealt with it
+during the civil war, f.d.r. did in world war ii, and it is
+often true that decisions made in the heat of a moment, a
+war or after an attack look pretty good at the time, not so
+good as time passes</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1119" END="1124">attack</charseq>
+    </anchor>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030605_223004.4-EV10" TYPE="Personnel" SUBTYPE="End-Position" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030605_223004.4-E14" ROLE="Person"/>
+  <event_argument REFID="CNN_ENG_20030605_223004.4-V2" ROLE="Position"/>
+  <event_mention ID="CNN_ENG_20030605_223004.4-EV10-1">
+    <extent>
+      <charseq START="1324" END="1340">former
+prosecutor</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1324" END="1421">former
+prosecutor and about the last person on the planet that you
+would ever call ablying liberal</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1324" END="1329">former</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030605_223004.4-E14-46" ROLE="Person">
+      <extent>
+        <charseq START="1324" END="1340">former
+prosecutor</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030605_223004.4-V2-1" ROLE="Position">
+      <extent>
+        <charseq START="1331" END="1340">prosecutor</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030605_223004.4-EV11" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_mention ID="CNN_ENG_20030605_223004.4-EV11-1">
+    <extent>
+      <charseq START="1103" END="1105">war</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="953" END="1181">president lincoln dealt with it
+during the civil war, f.d.r. did in world war ii, and it is
+often true that decisions made in the heat of a moment, a
+war or after an attack look pretty good at the time, not so
+good as time passes</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1103" END="1105">war</charseq>
+    </anchor>
+  </event_mention>
+</event>
+</document>
+</source_file>

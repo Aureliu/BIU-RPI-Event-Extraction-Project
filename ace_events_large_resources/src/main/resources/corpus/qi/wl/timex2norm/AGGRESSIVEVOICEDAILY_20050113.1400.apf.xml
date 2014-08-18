@@ -1,0 +1,219 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="AGGRESSIVEVOICEDAILY_20050113.1400.sgm" SOURCE="weblog" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="AGGRESSIVEVOICEDAILY_20050113.1400">
+<entity ID="AGGRESSIVEVOICEDAILY_20050113.1400-E1" TYPE="WEA" SUBTYPE="Shooting" CLASS="GEN">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050113.1400-E1-14" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="382" END="384">gun</charseq>
+    </extent>
+    <head>
+      <charseq START="382" END="384">gun</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050113.1400-E1-15" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="258" END="260">gun</charseq>
+    </extent>
+    <head>
+      <charseq START="258" END="260">gun</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050113.1400-E1-16" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="304" END="306">gun</charseq>
+    </extent>
+    <head>
+      <charseq START="304" END="306">gun</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050113.1400-E2" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050113.1400-E2-1" TYPE="NOM" LDCTYPE="NOM" ROLE="GPE">
+    <extent>
+      <charseq START="237" END="247">every state</charseq>
+    </extent>
+    <head>
+      <charseq START="243" END="247">state</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050113.1400-E2-2" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE">
+    <extent>
+      <charseq START="252" END="256">their</charseq>
+    </extent>
+    <head>
+      <charseq START="252" END="256">their</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050113.1400-E3" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050113.1400-E3-3" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="290" END="297">children</charseq>
+    </extent>
+    <head>
+      <charseq START="290" END="297">children</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050113.1400-E3-13" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="606" END="609">kids</charseq>
+    </extent>
+    <head>
+      <charseq START="606" END="609">kids</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050113.1400-E4" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050113.1400-E4-4" TYPE="NOM" LDCTYPE="NOM" ROLE="GPE">
+    <extent>
+      <charseq START="318" END="334">Thirty-one states</charseq>
+    </extent>
+    <head>
+      <charseq START="329" END="334">states</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050113.1400-E5" TYPE="ORG" SUBTYPE="Non-Governmental" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050113.1400-E5-5" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="186" END="203">the Brady Campaign</charseq>
+    </extent>
+    <head>
+      <charseq START="190" END="203">Brady Campaign</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050113.1400-E5-6" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="373" END="390">the anti-gun group</charseq>
+    </extent>
+    <head>
+      <charseq START="386" END="390">group</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Brady Campaign">
+      <charseq START="190" END="203">Brady Campaign</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050113.1400-E6" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050113.1400-E6-7" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="125" END="129">Scott</charseq>
+    </extent>
+    <head>
+      <charseq START="125" END="129">Scott</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050113.1400-E6-8" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="393" END="393">I</charseq>
+    </extent>
+    <head>
+      <charseq START="393" END="393">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050113.1400-E6-9" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="433" END="433">I</charseq>
+    </extent>
+    <head>
+      <charseq START="433" END="433">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050113.1400-E6-12" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="485" END="486">my</charseq>
+    </extent>
+    <head>
+      <charseq START="485" END="486">my</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Scott">
+      <charseq START="125" END="129">Scott</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20050113.1400-E7" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050113.1400-E7-10" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE">
+    <extent>
+      <charseq START="485" END="508">my home state of
+Florida</charseq>
+    </extent>
+    <head>
+      <charseq START="502" END="508">Florida</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20050113.1400-E7-11" TYPE="NOM" LDCTYPE="NOM" ROLE="GPE">
+    <extent>
+      <charseq START="485" END="497">my home state</charseq>
+    </extent>
+    <head>
+      <charseq START="493" END="497">state</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Florida">
+      <charseq START="502" END="508">Florida</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<value ID="AGGRESSIVEVOICEDAILY_20050113.1400-V1" TYPE="Contact-Info" SUBTYPE="URL">
+  <value_mention ID="AGGRESSIVEVOICEDAILY_20050113.1400-V1-1">
+    <extent>
+      <charseq START="445" END="464">GunControlPolicy.com</charseq>
+    </extent>
+  </value_mention>
+</value>
+<timex2 ID="AGGRESSIVEVOICEDAILY_20050113.1400-T1" VAL="2005-01-13T14:00:00">
+  <timex2_mention ID="AGGRESSIVEVOICEDAILY_20050113.1400-T1-1">
+    <extent>
+      <charseq START="50" END="68">2005-01-13T14:00:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AGGRESSIVEVOICEDAILY_20050113.1400-T2" VAL="2005-01-13T14:00:00">
+  <timex2_mention ID="AGGRESSIVEVOICEDAILY_20050113.1400-T2-1">
+    <extent>
+      <charseq START="133" END="151">2005-01-13T14:00:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<event ID="AGGRESSIVEVOICEDAILY_20050113.1400-EV1" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="AGGRESSIVEVOICEDAILY_20050113.1400-E2" ROLE="Place"/>
+  <event_argument REFID="AGGRESSIVEVOICEDAILY_20050113.1400-E3" ROLE="Target"/>
+  <event_argument REFID="AGGRESSIVEVOICEDAILY_20050113.1400-E1" ROLE="Instrument"/>
+  <event_mention ID="AGGRESSIVEVOICEDAILY_20050113.1400-EV1-1">
+    <extent>
+      <charseq START="252" END="315">their gun laws that supposedly shield
+children from gun violence</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="154" END="315">In a horribly deceitful manner, the Brady Campaign has released
+"report cards" for every state on their gun laws that supposedly shield
+children from gun violence</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="308" END="315">violence</charseq>
+    </anchor>
+    <event_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050113.1400-E2-2" ROLE="Place">
+      <extent>
+        <charseq START="252" END="256">their</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050113.1400-E3-3" ROLE="Target">
+      <extent>
+        <charseq START="290" END="297">children</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AGGRESSIVEVOICEDAILY_20050113.1400-E1-16" ROLE="Instrument">
+      <extent>
+        <charseq START="304" END="306">gun</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

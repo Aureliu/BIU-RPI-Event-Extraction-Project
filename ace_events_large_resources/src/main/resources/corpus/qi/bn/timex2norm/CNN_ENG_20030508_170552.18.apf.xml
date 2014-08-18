@@ -1,0 +1,1983 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030508_170552.18.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030508_170552.18">
+<entity ID="CNN_ENG_20030508_170552.18-E1" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E1-3" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="610" END="610">i</charseq>
+    </extent>
+    <head>
+      <charseq START="610" END="610">i</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030508_170552.18-E2" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E2-8" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="713" END="726">my dear friend</charseq>
+    </extent>
+    <head>
+      <charseq START="721" END="726">friend</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E2-9" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="740" END="741">he</charseq>
+    </extent>
+    <head>
+      <charseq START="740" END="741">he</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030508_170552.18-E3" TYPE="FAC" SUBTYPE="Airport" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E3-10" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="762" END="775">bagdad airport</charseq>
+    </extent>
+    <head>
+      <charseq START="762" END="775">bagdad airport</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="bagdad airport">
+      <charseq START="762" END="775">bagdad airport</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030508_170552.18-E4" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E4-102" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="314" END="315">us</charseq>
+    </extent>
+    <head>
+      <charseq START="314" END="315">us</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E4-103" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="484" END="485">us</charseq>
+    </extent>
+    <head>
+      <charseq START="484" END="485">us</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E4-123" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="272" END="273">us</charseq>
+    </extent>
+    <head>
+      <charseq START="272" END="273">us</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030508_170552.18-E5" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E5-13" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="813" END="816">iraq</charseq>
+    </extent>
+    <head>
+      <charseq START="813" END="816">iraq</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E5-78" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="3316" END="3319">iraq</charseq>
+    </extent>
+    <head>
+      <charseq START="3316" END="3319">iraq</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="iraq">
+      <charseq START="813" END="816">iraq</charseq>
+    </name>
+    <name NAME="iraq">
+      <charseq START="3316" END="3319">iraq</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030508_170552.18-E6" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E6-17" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE">
+    <extent>
+      <charseq START="1079" END="1084">kuwait</charseq>
+    </extent>
+    <head>
+      <charseq START="1079" END="1084">kuwait</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="kuwait">
+      <charseq START="1079" END="1084">kuwait</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030508_170552.18-E7" TYPE="WEA" SUBTYPE="Nuclear" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E7-18" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1107" END="1124">the nuclear weapon</charseq>
+    </extent>
+    <head>
+      <charseq START="1119" END="1124">weapon</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E7-19" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1140" END="1149">the weapon</charseq>
+    </extent>
+    <head>
+      <charseq START="1144" END="1149">weapon</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E7-22" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1197" END="1214">the nuclear weapon</charseq>
+    </extent>
+    <head>
+      <charseq START="1209" END="1214">weapon</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030508_170552.18-E8" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E8-26" TYPE="NAM" LDCTYPE="NAM" ROLE="ORG">
+    <extent>
+      <charseq START="1338" END="1354">the united states</charseq>
+    </extent>
+    <head>
+      <charseq START="1342" END="1354">united states</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E8-31" TYPE="PRO" LDCTYPE="PRO" ROLE="ORG">
+    <extent>
+      <charseq START="1715" END="1716">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1715" END="1716">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E8-32" TYPE="PRO" LDCTYPE="PRO" ROLE="ORG">
+    <extent>
+      <charseq START="1763" END="1764">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1763" END="1764">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E8-36" TYPE="NAM" LDCTYPE="NAM" ROLE="ORG">
+    <extent>
+      <charseq START="1980" END="1996">the united states</charseq>
+    </extent>
+    <head>
+      <charseq START="1984" END="1996">united states</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E8-48" TYPE="PRO" LDCTYPE="PRO" ROLE="ORG">
+    <extent>
+      <charseq START="2343" END="2346">your</charseq>
+    </extent>
+    <head>
+      <charseq START="2343" END="2346">your</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E8-51" TYPE="PRO" LDCTYPE="PRO" ROLE="ORG">
+    <extent>
+      <charseq START="2474" END="2477">they</charseq>
+    </extent>
+    <head>
+      <charseq START="2474" END="2477">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E8-86" TYPE="PRO" LDCTYPE="PRO" ROLE="ORG">
+    <extent>
+      <charseq START="3644" END="3645">we</charseq>
+    </extent>
+    <head>
+      <charseq START="3644" END="3645">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E8-88" TYPE="NAM" LDCTYPE="NAM" ROLE="ORG">
+    <extent>
+      <charseq START="3711" END="3727">the united states</charseq>
+    </extent>
+    <head>
+      <charseq START="3715" END="3727">united states</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E8-89" TYPE="NAM" LDCTYPE="NAM" ROLE="ORG">
+    <extent>
+      <charseq START="3817" END="3833">the united states</charseq>
+    </extent>
+    <head>
+      <charseq START="3821" END="3833">united states</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="united states">
+      <charseq START="1342" END="1354">united states</charseq>
+    </name>
+    <name NAME="united states">
+      <charseq START="1984" END="1996">united states</charseq>
+    </name>
+    <name NAME="united states">
+      <charseq START="3715" END="3727">united states</charseq>
+    </name>
+    <name NAME="united states">
+      <charseq START="3821" END="3833">united states</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030508_170552.18-E9" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E9-27" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1576" END="1585">the
+rebels</charseq>
+    </extent>
+    <head>
+      <charseq START="1580" END="1585">rebels</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030508_170552.18-E10" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E10-28" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1624" END="1629">shiite</charseq>
+    </extent>
+    <head>
+      <charseq START="1624" END="1629">shiite</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030508_170552.18-E11" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E11-29" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1667" END="1675">the kurds</charseq>
+    </extent>
+    <head>
+      <charseq START="1671" END="1675">kurds</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E11-56" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2635" END="2643">the kurds</charseq>
+    </extent>
+    <head>
+      <charseq START="2639" END="2643">kurds</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030508_170552.18-E12" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E12-38" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2024" END="2041">norman schwarzkopf</charseq>
+    </extent>
+    <head>
+      <charseq START="2024" END="2041">norman schwarzkopf</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E12-50" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2412" END="2413">he</charseq>
+    </extent>
+    <head>
+      <charseq START="2412" END="2413">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E12-72" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="3047" END="3057">swars cough</charseq>
+    </extent>
+    <head>
+      <charseq START="3047" END="3057">swars cough</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E12-96" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2465" END="2467">you</charseq>
+    </extent>
+    <head>
+      <charseq START="2465" END="2467">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E12-97" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2323" END="2325">you</charseq>
+    </extent>
+    <head>
+      <charseq START="2323" END="2325">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="norman schwarzkopf">
+      <charseq START="2024" END="2041">norman schwarzkopf</charseq>
+    </name>
+    <name NAME="swars cough">
+      <charseq START="3047" END="3057">swars cough</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030508_170552.18-E13" TYPE="VEH" SUBTYPE="Air" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E13-39" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="2070" END="2080">helicopters</charseq>
+    </extent>
+    <head>
+      <charseq START="2070" END="2080">helicopters</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E13-49" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2343" END="2358">your helicopters</charseq>
+    </extent>
+    <head>
+      <charseq START="2348" END="2358">helicopters</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030508_170552.18-E14" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E14-100" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="69" END="94">vanity fair's" come lumist</charseq>
+    </extent>
+    <head>
+      <charseq START="84" END="94">come lumist</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E14-101" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="69" END="106">vanity fair's" come lumist daniel fair</charseq>
+    </extent>
+    <head>
+      <charseq START="96" END="106">daniel fair</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E14-111" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="146" END="147">he</charseq>
+    </extent>
+    <head>
+      <charseq START="146" END="147">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E14-112" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="172" END="173">he</charseq>
+    </extent>
+    <head>
+      <charseq START="172" END="173">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E14-113" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="180" END="181">he</charseq>
+    </extent>
+    <head>
+      <charseq START="180" END="181">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="daniel fair">
+      <charseq START="96" END="106">daniel fair</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030508_170552.18-E15" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E15-42" TYPE="NOM" LDCTYPE="NOM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="2121" END="2163">the little town i was in this
+southern iraq</charseq>
+    </extent>
+    <head>
+      <charseq START="2132" END="2135">town</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E15-98" TYPE="PRO" LDCTYPE="WHQ" ROLE="LOC" LDCATR="TRUE">
+    <extent>
+      <charseq START="2212" END="2216">where</charseq>
+    </extent>
+    <head>
+      <charseq START="2212" END="2216">where</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030508_170552.18-E16" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E16-47" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2240" END="2241">we</charseq>
+    </extent>
+    <head>
+      <charseq START="2240" END="2241">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E16-53" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2550" END="2551">we</charseq>
+    </extent>
+    <head>
+      <charseq START="2550" END="2551">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E16-76" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3229" END="3230">we</charseq>
+    </extent>
+    <head>
+      <charseq START="3229" END="3230">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E16-104" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1427" END="1428">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1427" END="1428">we</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030508_170552.18-E17" TYPE="VEH" SUBTYPE="Air" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E17-52" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2528" END="2539">the gunships</charseq>
+    </extent>
+    <head>
+      <charseq START="2532" END="2539">gunships</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030508_170552.18-E18" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E18-54" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2560" END="2608">not less than 50,000 inhabitants of southern iraq</charseq>
+    </extent>
+    <head>
+      <charseq START="2581" END="2591">inhabitants</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030508_170552.18-E19" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E19-58" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2789" END="2819">the bush administration members</charseq>
+    </extent>
+    <head>
+      <charseq START="2813" END="2819">members</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030508_170552.18-E20" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E20-59" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="2793" END="2811">bush administration</charseq>
+    </extent>
+    <head>
+      <charseq START="2798" END="2811">administration</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E20-99" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3088" END="3091">they</charseq>
+    </extent>
+    <head>
+      <charseq START="3088" END="3091">they</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030508_170552.18-E22" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E22-60" TYPE="NAM" LDCTYPE="NAMPRE">
+    <extent>
+      <charseq START="2793" END="2796">bush</charseq>
+    </extent>
+    <head>
+      <charseq START="2793" END="2796">bush</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="bush">
+      <charseq START="2793" END="2796">bush</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030508_170552.18-E23" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E23-61" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2822" END="2831">mr. cheney</charseq>
+    </extent>
+    <head>
+      <charseq START="2826" END="2831">cheney</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E23-62" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="FALSE">
+    <extent>
+      <charseq START="2822" END="2823">mr</charseq>
+    </extent>
+    <head>
+      <charseq START="2822" END="2823">mr</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E23-63" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2835" END="2875">the
+only one i know that changed his mind</charseq>
+    </extent>
+    <head>
+      <charseq START="2844" END="2846">one</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E23-64" TYPE="PRO" LDCTYPE="WHQ" LDCATR="FALSE">
+    <extent>
+      <charseq START="2855" END="2858">that</charseq>
+    </extent>
+    <head>
+      <charseq START="2855" END="2858">that</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E23-65" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2868" END="2870">his</charseq>
+    </extent>
+    <head>
+      <charseq START="2868" END="2870">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E23-70" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="3003" END="3012">mr. cheney</charseq>
+    </extent>
+    <head>
+      <charseq START="3007" END="3012">cheney</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E23-71" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="3003" END="3004">mr</charseq>
+    </extent>
+    <head>
+      <charseq START="3003" END="3004">mr</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="cheney">
+      <charseq START="2826" END="2831">cheney</charseq>
+    </name>
+    <name NAME="cheney">
+      <charseq START="3007" END="3012">cheney</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030508_170552.18-E27" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E27-67" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="2892" END="2895">that</charseq>
+    </extent>
+    <head>
+      <charseq START="2892" END="2895">that</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E27-68" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2946" END="2949">they</charseq>
+    </extent>
+    <head>
+      <charseq START="2946" END="2949">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E27-90" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2886" END="2922">those that
+took the view at that time</charseq>
+    </extent>
+    <head>
+      <charseq START="2886" END="2890">those</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030508_170552.18-E29" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E29-73" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3068" END="3078">many others</charseq>
+    </extent>
+    <head>
+      <charseq START="3073" END="3078">others</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030508_170552.18-E30" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E30-74" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="3130" END="3135">bagdad</charseq>
+    </extent>
+    <head>
+      <charseq START="3130" END="3135">bagdad</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="bagdad">
+      <charseq START="3130" END="3135">bagdad</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030508_170552.18-E31" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E31-75" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="3167" END="3186">the republican guard</charseq>
+    </extent>
+    <head>
+      <charseq START="3171" END="3186">republican guard</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="republican guard">
+      <charseq START="3171" END="3186">republican guard</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030508_170552.18-E32" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E32-77" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="3287" END="3412">how many wonderful people in iraq at the
+academic community, lawyers, human rights activists,
+civilians, intellectuals, people</charseq>
+    </extent>
+    <head>
+      <charseq START="3306" END="3311">people</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E32-84" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="3407" END="3412">people</charseq>
+    </extent>
+    <head>
+      <charseq START="3407" END="3412">people</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E32-85" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="3437" END="3439">who</charseq>
+    </extent>
+    <head>
+      <charseq START="3437" END="3439">who</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030508_170552.18-E33" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E33-79" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="3324" END="3345">the
+academic community</charseq>
+    </extent>
+    <head>
+      <charseq START="3337" END="3345">community</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030508_170552.18-E34" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E34-80" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="3348" END="3354">lawyers</charseq>
+    </extent>
+    <head>
+      <charseq START="3348" END="3354">lawyers</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030508_170552.18-E35" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E35-81" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="3357" END="3378">human rights activists</charseq>
+    </extent>
+    <head>
+      <charseq START="3370" END="3378">activists</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030508_170552.18-E36" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E36-82" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="3381" END="3389">civilians</charseq>
+    </extent>
+    <head>
+      <charseq START="3381" END="3389">civilians</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030508_170552.18-E37" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E37-83" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="3392" END="3404">intellectuals</charseq>
+    </extent>
+    <head>
+      <charseq START="3392" END="3404">intellectuals</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030508_170552.18-E38" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E38-46" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="545" END="547">you</charseq>
+    </extent>
+    <head>
+      <charseq START="545" END="547">you</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030508_170552.18-E39" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E39-92" TYPE="PRO" LDCTYPE="PTV">
+    <extent>
+      <charseq START="2878" END="2922">most of those that
+took the view at that time</charseq>
+    </extent>
+    <head>
+      <charseq START="2878" END="2881">most</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030508_170552.18-E40" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E40-93" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="3618" END="3622">human</charseq>
+    </extent>
+    <head>
+      <charseq START="3618" END="3622">human</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E40-94" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="3357" END="3361">human</charseq>
+    </extent>
+    <head>
+      <charseq START="3357" END="3361">human</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030508_170552.18-E42" TYPE="GPE" SUBTYPE="Nation" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E42-95" TYPE="NOM" LDCTYPE="NOMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="1737" END="1742">nation</charseq>
+    </extent>
+    <head>
+      <charseq START="1737" END="1742">nation</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030508_170552.18-E45" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E45-91" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="69" END="79">vanity fair</charseq>
+    </extent>
+    <head>
+      <charseq START="69" END="79">vanity fair</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="vanity fair">
+      <charseq START="69" END="79">vanity fair</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030508_170552.18-E46" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E46-14" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1003" END="1016">saddam hussein</charseq>
+    </extent>
+    <head>
+      <charseq START="1003" END="1016">saddam hussein</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E46-15" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1048" END="1049">he</charseq>
+    </extent>
+    <head>
+      <charseq START="1048" END="1049">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E46-16" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1057" END="1057">i</charseq>
+    </extent>
+    <head>
+      <charseq START="1057" END="1057">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E46-20" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1166" END="1167">he</charseq>
+    </extent>
+    <head>
+      <charseq START="1166" END="1167">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E46-21" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1179" END="1179">i</charseq>
+    </extent>
+    <head>
+      <charseq START="1179" END="1179">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E46-23" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1223" END="1223">i</charseq>
+    </extent>
+    <head>
+      <charseq START="1223" END="1223">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E46-24" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1234" END="1235">he</charseq>
+    </extent>
+    <head>
+      <charseq START="1234" END="1235">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E46-25" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1279" END="1280">he</charseq>
+    </extent>
+    <head>
+      <charseq START="1279" END="1280">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E46-34" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1900" END="1913">saddam hussein</charseq>
+    </extent>
+    <head>
+      <charseq START="1900" END="1913">saddam hussein</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E46-35" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1929" END="1931">his</charseq>
+    </extent>
+    <head>
+      <charseq START="1929" END="1931">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E46-69" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2974" END="2987">saddam hussein</charseq>
+    </extent>
+    <head>
+      <charseq START="2974" END="2987">saddam hussein</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E46-114" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="203" END="209">hussein</charseq>
+    </extent>
+    <head>
+      <charseq START="203" END="209">hussein</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="saddam hussein">
+      <charseq START="1003" END="1016">saddam hussein</charseq>
+    </name>
+    <name NAME="saddam hussein">
+      <charseq START="1900" END="1913">saddam hussein</charseq>
+    </name>
+    <name NAME="saddam hussein">
+      <charseq START="2974" END="2987">saddam hussein</charseq>
+    </name>
+    <name NAME="hussein">
+      <charseq START="203" END="209">hussein</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030508_170552.18-E47" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E47-1" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="557" END="557">i</charseq>
+    </extent>
+    <head>
+      <charseq START="557" END="557">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E47-2" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="589" END="591">you</charseq>
+    </extent>
+    <head>
+      <charseq START="589" END="591">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E47-4" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="635" END="635">i</charseq>
+    </extent>
+    <head>
+      <charseq START="635" END="635">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E47-5" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="662" END="662">i</charseq>
+    </extent>
+    <head>
+      <charseq START="662" END="662">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E47-6" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="685" END="685">i</charseq>
+    </extent>
+    <head>
+      <charseq START="685" END="685">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E47-7" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="713" END="714">my</charseq>
+    </extent>
+    <head>
+      <charseq START="713" END="714">my</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E47-11" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="781" END="781">i</charseq>
+    </extent>
+    <head>
+      <charseq START="781" END="781">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E47-12" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="804" END="804">i</charseq>
+    </extent>
+    <head>
+      <charseq START="804" END="804">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E47-33" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1827" END="1829">you</charseq>
+    </extent>
+    <head>
+      <charseq START="1827" END="1829">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E47-37" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2009" END="2011">you</charseq>
+    </extent>
+    <head>
+      <charseq START="2009" END="2011">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E47-40" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2104" END="2105">me</charseq>
+    </extent>
+    <head>
+      <charseq START="2104" END="2105">me</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E47-41" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2137" END="2137">i</charseq>
+    </extent>
+    <head>
+      <charseq START="2137" END="2137">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E47-44" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2176" END="2176">i</charseq>
+    </extent>
+    <head>
+      <charseq START="2176" END="2176">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E47-45" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2183" END="2183">i</charseq>
+    </extent>
+    <head>
+      <charseq START="2183" END="2183">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E47-57" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2724" END="2724">i</charseq>
+    </extent>
+    <head>
+      <charseq START="2724" END="2724">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E47-66" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2848" END="2848">i</charseq>
+    </extent>
+    <head>
+      <charseq START="2848" END="2848">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E47-87" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3695" END="3698">your</charseq>
+    </extent>
+    <head>
+      <charseq START="3695" END="3698">your</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E47-115" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="245" END="264">christopher hitchens</charseq>
+    </extent>
+    <head>
+      <charseq START="245" END="264">christopher hitchens</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E47-117" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="305" END="307">you</charseq>
+    </extent>
+    <head>
+      <charseq START="305" END="307">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E47-118" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="338" END="339">me</charseq>
+    </extent>
+    <head>
+      <charseq START="338" END="339">me</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E47-119" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="344" END="347">your</charseq>
+    </extent>
+    <head>
+      <charseq START="344" END="347">your</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E47-121" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="431" END="433">you</charseq>
+    </extent>
+    <head>
+      <charseq START="431" END="433">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E47-124" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="487" END="490">your</charseq>
+    </extent>
+    <head>
+      <charseq START="487" END="490">your</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E47-125" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="512" END="514">you</charseq>
+    </extent>
+    <head>
+      <charseq START="512" END="514">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="christopher hitchens">
+      <charseq START="245" END="264">christopher hitchens</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030508_170552.18-E48" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E48-116" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="280" END="289">california</charseq>
+    </extent>
+    <head>
+      <charseq START="280" END="289">california</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="california">
+      <charseq START="280" END="289">california</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030508_170552.18-E49" TYPE="LOC" SUBTYPE="Region-General" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E49-43" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2146" END="2163">this
+southern iraq</charseq>
+    </extent>
+    <head>
+      <charseq START="2160" END="2163">iraq</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E49-55" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2596" END="2608">southern iraq</charseq>
+    </extent>
+    <head>
+      <charseq START="2605" END="2608">iraq</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E49-120" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="374" END="386">southern iraq</charseq>
+    </extent>
+    <head>
+      <charseq START="383" END="386">iraq</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030508_170552.18-E50" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E50-30" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1687" END="1696">the
+regime</charseq>
+    </extent>
+    <head>
+      <charseq START="1691" END="1696">regime</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E50-105" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2279" END="2282">they</charseq>
+    </extent>
+    <head>
+      <charseq START="2279" END="2282">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E50-106" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2295" END="2296">we</charseq>
+    </extent>
+    <head>
+      <charseq START="2295" END="2296">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E50-107" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2335" END="2336">we</charseq>
+    </extent>
+    <head>
+      <charseq START="2335" END="2336">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E50-108" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2445" END="2448">they</charseq>
+    </extent>
+    <head>
+      <charseq START="2445" END="2448">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E50-109" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2490" END="2493">they</charseq>
+    </extent>
+    <head>
+      <charseq START="2490" END="2493">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E50-110" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2519" END="2522">they</charseq>
+    </extent>
+    <head>
+      <charseq START="2519" END="2522">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030508_170552.18-E50-122" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="466" END="476">this regime</charseq>
+    </extent>
+    <head>
+      <charseq START="471" END="476">regime</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<timex2 ID="CNN_ENG_20030508_170552.18-T1" VAL="XXXX-XX-XX">
+  <timex2_mention ID="CNN_ENG_20030508_170552.18-T1-1">
+    <extent>
+      <charseq START="213" END="228">day of reckoning</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030508_170552.18-T2" VAL="FUTURE_REF" ANCHOR_VAL="2003-05-08T18:28:53" ANCHOR_DIR="AFTER">
+  <timex2_mention ID="CNN_ENG_20030508_170552.18-T2-1">
+    <extent>
+      <charseq START="522" END="531">the future</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030508_170552.18-T3" VAL="PAST_REF" ANCHOR_VAL="2003-05-08T18:28:53" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="CNN_ENG_20030508_170552.18-T3-1">
+    <extent>
+      <charseq START="570" END="577">the past</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030508_170552.18-T4" VAL="PRESENT_REF" ANCHOR_VAL="2003-05-08T18:28:53" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_ENG_20030508_170552.18-T4-1">
+    <extent>
+      <charseq START="3237" END="3239">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030508_170552.18-T5" VAL="PRESENT_REF" ANCHOR_VAL="2003-05-08T18:28:53" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_ENG_20030508_170552.18-T5-1">
+    <extent>
+      <charseq START="3640" END="3642">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030508_170552.18-T6" VAL="2003-05-08T18:28:53">
+  <timex2_mention ID="CNN_ENG_20030508_170552.18-T6-1">
+    <extent>
+      <charseq START="44" END="62">2003-05-08 18:28:53</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030508_170552.18-T7" VAL="2003-06">
+  <timex2_mention ID="CNN_ENG_20030508_170552.18-T7-1">
+    <extent>
+      <charseq START="132" END="135">june</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030508_170552.18-T8" VAL="1990">
+  <timex2_mention ID="CNN_ENG_20030508_170552.18-T8-1">
+    <extent>
+      <charseq START="997" END="1000">1990</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030508_170552.18-T9" VAL="P12Y" ANCHOR_VAL="1990" ANCHOR_DIR="STARTING">
+  <timex2_mention ID="CNN_ENG_20030508_170552.18-T9-1">
+    <extent>
+      <charseq START="1315" END="1324">dozen-year</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030508_170552.18-T10" VAL="PRESENT_REF" ANCHOR_VAL="2003-05-08-T18:28:53" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_ENG_20030508_170552.18-T10-1">
+    <extent>
+      <charseq START="1447" END="1452">lately</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030508_170552.18-T11" VAL="1991">
+  <timex2_mention ID="CNN_ENG_20030508_170552.18-T11-1">
+    <extent>
+      <charseq START="1509" END="1510">91</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030508_170552.18-T12" VAL="1991">
+  <timex2_mention ID="CNN_ENG_20030508_170552.18-T12-1">
+    <extent>
+      <charseq START="1587" END="1590">then</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030508_170552.18-T13" VAL="P11Y" ANCHOR_VAL="2003" ANCHOR_DIR="ENDING">
+  <timex2_mention ID="CNN_ENG_20030508_170552.18-T13-1">
+    <extent>
+      <charseq START="1723" END="1730">11 years</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030508_170552.18-T14" VAL="1991">
+  <timex2_mention ID="CNN_ENG_20030508_170552.18-T14-1">
+    <extent>
+      <charseq START="1644" END="1656">at that point</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030508_170552.18-T15" VAL="2003-05-08T18:28:53">
+  <timex2_mention ID="CNN_ENG_20030508_170552.18-T15-1">
+    <extent>
+      <charseq START="1756" END="1758">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030508_170552.18-T16" VAL="PAST_REF" ANCHOR_VAL="2003-05-08-T18:28:53" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="CNN_ENG_20030508_170552.18-T16-1">
+    <extent>
+      <charseq START="2937" END="2944">recently</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030508_170552.18-T17" VAL="2003-05-08T18:28:53">
+  <timex2_mention ID="CNN_ENG_20030508_170552.18-T17-1">
+    <extent>
+      <charseq START="3423" END="3425">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030508_170552.18-T18" VAL="1990">
+  <timex2_mention ID="CNN_ENG_20030508_170552.18-T18-1">
+    <extent>
+      <charseq START="1294" END="1306">at
+that point</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030508_170552.18-R1" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030508_170552.18-E14" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030508_170552.18-E45" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030508_170552.18-R1-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="69" END="94">vanity fair's" come lumist</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030508_170552.18-E14-100" ROLE="Arg-1">
+      <extent>
+        <charseq START="69" END="94">vanity fair's" come lumist</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030508_170552.18-E45-91" ROLE="Arg-2">
+      <extent>
+        <charseq START="69" END="79">vanity fair</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030508_170552.18-R2" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030508_170552.18-E47" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030508_170552.18-E48" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030508_170552.18-R2-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="245" END="289">christopher hitchens joins us from california</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030508_170552.18-E47-115" ROLE="Arg-1">
+      <extent>
+        <charseq START="245" END="264">christopher hitchens</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030508_170552.18-E48-116" ROLE="Arg-2">
+      <extent>
+        <charseq START="280" END="289">california</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030508_170552.18-R3" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030508_170552.18-E47" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030508_170552.18-E49" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030508_170552.18-R3-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="344" END="476">your journey, particularly to southern iraq, what is evoked
+there a sense of both that you evoke is a sense of history
+of this regime</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030508_170552.18-E47-119" ROLE="Arg-1">
+      <extent>
+        <charseq START="344" END="347">your</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030508_170552.18-E49-120" ROLE="Arg-2">
+      <extent>
+        <charseq START="374" END="386">southern iraq</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030508_170552.18-R4" TYPE="PER-SOC" SUBTYPE="Lasting-Personal" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030508_170552.18-E47" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030508_170552.18-E2" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030508_170552.18-R4-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="713" END="726">my dear friend</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030508_170552.18-E47-7" ROLE="Arg-1">
+      <extent>
+        <charseq START="713" END="714">my</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030508_170552.18-E2-8" ROLE="Arg-2">
+      <extent>
+        <charseq START="713" END="726">my dear friend</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030508_170552.18-R5" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030508_170552.18-E15" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030508_170552.18-E49" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030508_170552.18-R5-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="2121" END="2163">the little town i was in this
+southern iraq</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030508_170552.18-E15-42" ROLE="Arg-1">
+      <extent>
+        <charseq START="2121" END="2163">the little town i was in this
+southern iraq</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030508_170552.18-E49-43" ROLE="Arg-2">
+      <extent>
+        <charseq START="2146" END="2163">this
+southern iraq</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030508_170552.18-R6" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030508_170552.18-E8" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030508_170552.18-E13" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030508_170552.18-R6-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="2343" END="2358">your helicopters</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030508_170552.18-E8-48" ROLE="Arg-1">
+      <extent>
+        <charseq START="2343" END="2346">your</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030508_170552.18-E13-49" ROLE="Arg-2">
+      <extent>
+        <charseq START="2343" END="2358">your helicopters</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030508_170552.18-R7" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030508_170552.18-E17" ROLE="Arg-2"/>
+  <relation_argument REFID="CNN_ENG_20030508_170552.18-E50" ROLE="Arg-1"/>
+  <relation_mention ID="CNN_ENG_20030508_170552.18-R7-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="2519" END="2676">they use the gunships to kill, we
+think, not less than 50,000 inhabitants of southern iraq
+and trying to do that to the kurds, as well, so it was a
+knife edge</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030508_170552.18-E17-52" ROLE="Arg-2">
+      <extent>
+        <charseq START="2528" END="2539">the gunships</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030508_170552.18-E50-110" ROLE="Arg-1">
+      <extent>
+        <charseq START="2519" END="2522">they</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030508_170552.18-R8" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030508_170552.18-E18" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030508_170552.18-E49" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030508_170552.18-R8-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="2560" END="2608">not less than 50,000 inhabitants of southern iraq</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030508_170552.18-E18-54" ROLE="Arg-1">
+      <extent>
+        <charseq START="2560" END="2608">not less than 50,000 inhabitants of southern iraq</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030508_170552.18-E49-55" ROLE="Arg-2">
+      <extent>
+        <charseq START="2596" END="2608">southern iraq</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030508_170552.18-R9" TYPE="ORG-AFF" SUBTYPE="Membership" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030508_170552.18-E19" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030508_170552.18-E20" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030508_170552.18-R9-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="2789" END="2819">the bush administration members</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030508_170552.18-E19-58" ROLE="Arg-1">
+      <extent>
+        <charseq START="2789" END="2819">the bush administration members</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030508_170552.18-E20-59" ROLE="Arg-2">
+      <extent>
+        <charseq START="2793" END="2811">bush administration</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030508_170552.18-R10" TYPE="ORG-AFF" SUBTYPE="Membership" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030508_170552.18-E22" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030508_170552.18-E20" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030508_170552.18-R10-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="2793" END="2811">bush administration</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030508_170552.18-E22-60" ROLE="Arg-1">
+      <extent>
+        <charseq START="2793" END="2796">bush</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030508_170552.18-E20-59" ROLE="Arg-2">
+      <extent>
+        <charseq START="2793" END="2811">bush administration</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030508_170552.18-R11" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030508_170552.18-E32" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030508_170552.18-E5" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030508_170552.18-R11-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="3287" END="3412">how many wonderful people in iraq at the
+academic community, lawyers, human rights activists,
+civilians, intellectuals, people</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030508_170552.18-E32-77" ROLE="Arg-1">
+      <extent>
+        <charseq START="3287" END="3412">how many wonderful people in iraq at the
+academic community, lawyers, human rights activists,
+civilians, intellectuals, people</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030508_170552.18-E5-78" ROLE="Arg-2">
+      <extent>
+        <charseq START="3316" END="3319">iraq</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030508_170552.18-R12" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030508_170552.18-E47" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030508_170552.18-E5" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030508_170552.18-R12-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="685" END="1045">i wasn't in a position that my dear friend
+was in when he was killed outside bagdad airport but i had
+long thought and i was in iraq in the previous war that
+really all the talk that had been about the rush to war,
+the push for war, the drive for war, all that propaganda,
+was essentially nonsensical because in 1990, saddam hussein
+made the only self criticism</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030508_170552.18-E47-12" ROLE="Arg-1">
+      <extent>
+        <charseq START="804" END="804">i</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030508_170552.18-E5-13" ROLE="Arg-2">
+      <extent>
+        <charseq START="813" END="816">iraq</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030508_170552.18-R13" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030508_170552.18-E47" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030508_170552.18-E15" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030508_170552.18-R13-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="2121" END="2237">the little town i was in this
+southern iraq, as far as i got, i can't boast of further,
+is where the talks took place</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030508_170552.18-E47-41" ROLE="Arg-1">
+      <extent>
+        <charseq START="2137" END="2137">i</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030508_170552.18-E15-42" ROLE="Arg-2">
+      <extent>
+        <charseq START="2121" END="2163">the little town i was in this
+southern iraq</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030508_170552.18-R14" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030508_170552.18-E2" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030508_170552.18-E3" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030508_170552.18-R14-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="685" END="1045">i wasn't in a position that my dear friend
+was in when he was killed outside bagdad airport but i had
+long thought and i was in iraq in the previous war that
+really all the talk that had been about the rush to war,
+the push for war, the drive for war, all that propaganda,
+was essentially nonsensical because in 1990, saddam hussein
+made the only self criticism</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030508_170552.18-E2-9" ROLE="Arg-1">
+      <extent>
+        <charseq START="740" END="741">he</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030508_170552.18-E3-10" ROLE="Arg-2">
+      <extent>
+        <charseq START="762" END="775">bagdad airport</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030508_170552.18-EV1" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030508_170552.18-E47" ROLE="Artifact"/>
+  <event_argument REFID="CNN_ENG_20030508_170552.18-E49" ROLE="Destination"/>
+  <event_mention ID="CNN_ENG_20030508_170552.18-EV1-1">
+    <extent>
+      <charseq START="344" END="386">your journey, particularly to southern iraq</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="344" END="476">your journey, particularly to southern iraq, what is evoked
+there a sense of both that you evoke is a sense of history
+of this regime</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="349" END="355">journey</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030508_170552.18-E47-119" ROLE="Artifact">
+      <extent>
+        <charseq START="344" END="347">your</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030508_170552.18-E49-120" ROLE="Destination">
+      <extent>
+        <charseq START="374" END="386">southern iraq</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030508_170552.18-EV2" TYPE="Life" SUBTYPE="Die" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030508_170552.18-E2" ROLE="Victim"/>
+  <event_argument REFID="CNN_ENG_20030508_170552.18-E3" ROLE="Place"/>
+  <event_mention ID="CNN_ENG_20030508_170552.18-EV2-1">
+    <extent>
+      <charseq START="740" END="775">he was killed outside bagdad airport</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="685" END="1045">i wasn't in a position that my dear friend
+was in when he was killed outside bagdad airport but i had
+long thought and i was in iraq in the previous war that
+really all the talk that had been about the rush to war,
+the push for war, the drive for war, all that propaganda,
+was essentially nonsensical because in 1990, saddam hussein
+made the only self criticism</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="747" END="752">killed</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030508_170552.18-E2-9" ROLE="Victim">
+      <extent>
+        <charseq START="740" END="741">he</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030508_170552.18-E3-10" ROLE="Place">
+      <extent>
+        <charseq START="762" END="775">bagdad airport</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030508_170552.18-EV3" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030508_170552.18-E5" ROLE="Place"/>
+  <event_mention ID="CNN_ENG_20030508_170552.18-EV3-1">
+    <extent>
+      <charseq START="813" END="836">iraq in the previous war</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="685" END="1045">i wasn't in a position that my dear friend
+was in when he was killed outside bagdad airport but i had
+long thought and i was in iraq in the previous war that
+really all the talk that had been about the rush to war,
+the push for war, the drive for war, all that propaganda,
+was essentially nonsensical because in 1990, saddam hussein
+made the only self criticism</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="834" END="836">war</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030508_170552.18-E5-13" ROLE="Place">
+      <extent>
+        <charseq START="813" END="816">iraq</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030508_170552.18-EV4" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_mention ID="CNN_ENG_20030508_170552.18-EV4-1">
+    <extent>
+      <charseq START="895" END="897">war</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="685" END="1045">i wasn't in a position that my dear friend
+was in when he was killed outside bagdad airport but i had
+long thought and i was in iraq in the previous war that
+really all the talk that had been about the rush to war,
+the push for war, the drive for war, all that propaganda,
+was essentially nonsensical because in 1990, saddam hussein
+made the only self criticism</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="895" END="897">war</charseq>
+    </anchor>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030508_170552.18-EV4-2">
+    <extent>
+      <charseq START="913" END="915">war</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="685" END="1045">i wasn't in a position that my dear friend
+was in when he was killed outside bagdad airport but i had
+long thought and i was in iraq in the previous war that
+really all the talk that had been about the rush to war,
+the push for war, the drive for war, all that propaganda,
+was essentially nonsensical because in 1990, saddam hussein
+made the only self criticism</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="913" END="915">war</charseq>
+    </anchor>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030508_170552.18-EV4-3">
+    <extent>
+      <charseq START="932" END="934">war</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="685" END="1045">i wasn't in a position that my dear friend
+was in when he was killed outside bagdad airport but i had
+long thought and i was in iraq in the previous war that
+really all the talk that had been about the rush to war,
+the push for war, the drive for war, all that propaganda,
+was essentially nonsensical because in 1990, saddam hussein
+made the only self criticism</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="932" END="934">war</charseq>
+    </anchor>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030508_170552.18-EV5" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030508_170552.18-E46" ROLE="Attacker"/>
+  <event_mention ID="CNN_ENG_20030508_170552.18-EV5-1">
+    <extent>
+      <charseq START="1057" END="1077">i could either
+invade</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1048" END="1124">he said, i could either
+invade kuwait or finish developing the nuclear weapon</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1072" END="1077">invade</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030508_170552.18-E46-16" ROLE="Attacker">
+      <extent>
+        <charseq START="1057" END="1057">i</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030508_170552.18-EV6" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030508_170552.18-E46" ROLE="Attacker"/>
+  <event_mention ID="CNN_ENG_20030508_170552.18-EV6-1">
+    <extent>
+      <charseq START="1279" END="1330">he inaugurated at
+that point like a dozen-year's war</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1259" END="1543">but that means that he inaugurated at
+that point like a dozen-year's war where the united states
+could be criticized for doing too little and acting too
+slowly but all we're arguing about lately is to do with
+those that should have been finished in '91 when it could
+have been finished</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1328" END="1330">war</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030508_170552.18-E46-25" ROLE="Attacker">
+      <extent>
+        <charseq START="1279" END="1280">he</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030508_170552.18-EV7" TYPE="Conflict" SUBTYPE="Demonstrate" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030508_170552.18-E10" ROLE="Entity"/>
+  <event_mention ID="CNN_ENG_20030508_170552.18-EV7-1">
+    <extent>
+      <charseq START="1624" END="1642">shiite
+insurrection</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1593" END="1656">taken the risk of supporting a shiite
+insurrection at that point</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1631" END="1642">insurrection</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030508_170552.18-E10-28" ROLE="Entity">
+      <extent>
+        <charseq START="1624" END="1629">shiite</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030508_170552.18-EV8" TYPE="Life" SUBTYPE="Die" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030508_170552.18-E17" ROLE="Instrument"/>
+  <event_argument REFID="CNN_ENG_20030508_170552.18-E18" ROLE="Victim"/>
+  <event_argument REFID="CNN_ENG_20030508_170552.18-E50" ROLE="Agent"/>
+  <event_mention ID="CNN_ENG_20030508_170552.18-EV8-1">
+    <extent>
+      <charseq START="2519" END="2608">they use the gunships to kill, we
+think, not less than 50,000 inhabitants of southern iraq</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2519" END="2676">they use the gunships to kill, we
+think, not less than 50,000 inhabitants of southern iraq
+and trying to do that to the kurds, as well, so it was a
+knife edge</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2544" END="2547">kill</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030508_170552.18-E17-52" ROLE="Instrument">
+      <extent>
+        <charseq START="2528" END="2539">the gunships</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030508_170552.18-E18-54" ROLE="Victim">
+      <extent>
+        <charseq START="2560" END="2608">not less than 50,000 inhabitants of southern iraq</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030508_170552.18-E50-110" ROLE="Agent">
+      <extent>
+        <charseq START="2519" END="2522">they</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030508_170552.18-EV9" TYPE="Life" SUBTYPE="Die" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030508_170552.18-E32" ROLE="Victim"/>
+  <event_mention ID="CNN_ENG_20030508_170552.18-EV9-1">
+    <extent>
+      <charseq START="3437" END="3467">who
+have been horribly murdered</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="3437" END="3576">who
+have been horribly murdered and tortured and reduced to
+misery since by a half application of violence through
+sanctions and overflights</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="3460" END="3467">murdered</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030508_170552.18-E32-85" ROLE="Victim">
+      <extent>
+        <charseq START="3437" END="3439">who</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030508_170552.18-EV10" TYPE="Contact" SUBTYPE="Meet" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030508_170552.18-E15" ROLE="Place"/>
+  <event_mention ID="CNN_ENG_20030508_170552.18-EV10-1">
+    <extent>
+      <charseq START="2121" END="2226">the little town i was in this
+southern iraq, as far as i got, i can't boast of further,
+is where the talks</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2121" END="2237">the little town i was in this
+southern iraq, as far as i got, i can't boast of further,
+is where the talks took place</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2222" END="2226">talks</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030508_170552.18-E15-42" ROLE="Place">
+      <extent>
+        <charseq START="2121" END="2163">the little town i was in this
+southern iraq</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030508_170552.18-EV10-2">
+    <extent>
+      <charseq START="2270" END="2276">meeting</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2240" END="2276">we have the transcript of
+the meeting</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2270" END="2276">meeting</charseq>
+    </anchor>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030508_170552.18-EV11" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Negative" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030508_170552.18-E20" ROLE="Agent"/>
+  <event_argument REFID="CNN_ENG_20030508_170552.18-E30" ROLE="Destination"/>
+  <event_mention ID="CNN_ENG_20030508_170552.18-EV11-1">
+    <extent>
+      <charseq START="3088" END="3135">they made the decision not to move toward bagdad</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="3083" END="3156">when they made the decision not to move toward bagdad with
+bad information</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="3118" END="3121">move</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030508_170552.18-E20-99" ROLE="Agent">
+      <extent>
+        <charseq START="3088" END="3091">they</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030508_170552.18-E30-74" ROLE="Destination">
+      <extent>
+        <charseq START="3130" END="3135">bagdad</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030508_170552.18-EV12" TYPE="Life" SUBTYPE="Injure" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030508_170552.18-E32" ROLE="Victim"/>
+  <event_mention ID="CNN_ENG_20030508_170552.18-EV12-1">
+    <extent>
+      <charseq START="3437" END="3480">who
+have been horribly murdered and tortured</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="3437" END="3576">who
+have been horribly murdered and tortured and reduced to
+misery since by a half application of violence through
+sanctions and overflights</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="3473" END="3480">tortured</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030508_170552.18-E32-85" ROLE="Victim">
+      <extent>
+        <charseq START="3437" END="3439">who</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030508_170552.18-EV13" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030508_170552.18-E46" ROLE="Attacker"/>
+  <event_mention ID="CNN_ENG_20030508_170552.18-EV13-1">
+    <extent>
+      <charseq START="1223" END="1231">i invaded</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1127" END="1231">maybe before the weapon and then later he said, oh, i
+should have got the nuclear weapon before i invaded</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1225" END="1231">invaded</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030508_170552.18-E46-23" ROLE="Attacker">
+      <extent>
+        <charseq START="1223" END="1223">i</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

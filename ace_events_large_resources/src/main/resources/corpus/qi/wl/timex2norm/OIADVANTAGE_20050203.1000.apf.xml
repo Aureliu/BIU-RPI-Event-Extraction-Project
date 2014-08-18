@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="OIADVANTAGE_20050203.1000.sgm" SOURCE="weblog" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="OIADVANTAGE_20050203.1000">
+<entity ID="OIADVANTAGE_20050203.1000-E1" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="OIADVANTAGE_20050203.1000-E1-1" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="248" END="248">I</charseq>
+    </extent>
+    <head>
+      <charseq START="248" END="248">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050203.1000-E1-2" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="337" END="338">my</charseq>
+    </extent>
+    <head>
+      <charseq START="337" END="338">my</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050203.1000-E1-3" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="279" END="279">I</charseq>
+    </extent>
+    <head>
+      <charseq START="279" END="279">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050203.1000-E1-4" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="310" END="310">I</charseq>
+    </extent>
+    <head>
+      <charseq START="310" END="310">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050203.1000-E1-5" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="319" END="319">I</charseq>
+    </extent>
+    <head>
+      <charseq START="319" END="319">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050203.1000-E1-6" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="98" END="103">John A</charseq>
+    </extent>
+    <head>
+      <charseq START="98" END="103">John A</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050203.1000-E1-7" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="437" END="437">I</charseq>
+    </extent>
+    <head>
+      <charseq START="437" END="437">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="John A">
+      <charseq START="98" END="103">John A</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="OIADVANTAGE_20050203.1000-E2" TYPE="PER" SUBTYPE="Indeterminate" CLASS="USP">
+  <entity_mention ID="OIADVANTAGE_20050203.1000-E2-8" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="519" END="522">your</charseq>
+    </extent>
+    <head>
+      <charseq START="519" END="522">your</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<timex2 ID="OIADVANTAGE_20050203.1000-T1" VAL="2005-02-03T10:00:00">
+  <timex2_mention ID="OIADVANTAGE_20050203.1000-T1-1">
+    <extent>
+      <charseq START="41" END="59">2005-02-03T10:00:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="OIADVANTAGE_20050203.1000-T2" VAL="PRESENT_REF" ANCHOR_VAL="2005-02-03T10:00:00" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="OIADVANTAGE_20050203.1000-T2-1">
+    <extent>
+      <charseq START="166" END="168">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="OIADVANTAGE_20050203.1000-T3" VAL="2005">
+  <timex2_mention ID="OIADVANTAGE_20050203.1000-T3-1">
+    <extent>
+      <charseq START="132" END="135">2005</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="OIADVANTAGE_20050203.1000-T4">
+  <timex2_mention ID="OIADVANTAGE_20050203.1000-T4-1">
+    <extent>
+      <charseq START="107" END="125">2005-02-03T10:00:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+</document>
+</source_file>

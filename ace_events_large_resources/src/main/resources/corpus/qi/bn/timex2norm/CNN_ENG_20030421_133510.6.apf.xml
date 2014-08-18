@@ -1,0 +1,386 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030421_133510.6.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030421_133510.6">
+<entity ID="CNN_ENG_20030421_133510.6-E1" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030421_133510.6-E1-20" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="683" END="684">we</charseq>
+    </extent>
+    <head>
+      <charseq START="683" END="684">we</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030421_133510.6-E2" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030421_133510.6-E2-2" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="536" END="543">the nyse</charseq>
+    </extent>
+    <head>
+      <charseq START="540" END="543">nyse</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030421_133510.6-E2-3" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="914" END="940">the new york stock
+exchange</charseq>
+    </extent>
+    <head>
+      <charseq START="918" END="940">new york stock
+exchange</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030421_133510.6-E2-8" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="528" END="543">here at
+the nyse</charseq>
+    </extent>
+    <head>
+      <charseq START="528" END="531">here</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="nyse">
+      <charseq START="540" END="543">nyse</charseq>
+    </name>
+    <name NAME="new york stock exchange">
+      <charseq START="918" END="940">new york stock
+exchange</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030421_133510.6-E3" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030421_133510.6-E3-4" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="144" END="173">the airlines flight attendants</charseq>
+    </extent>
+    <head>
+      <charseq START="164" END="173">attendants</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030421_133510.6-E4" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030421_133510.6-E4-1" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="67" END="83">american airlines</charseq>
+    </extent>
+    <head>
+      <charseq START="67" END="83">american airlines</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030421_133510.6-E4-6" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="144" END="155">the airlines</charseq>
+    </extent>
+    <head>
+      <charseq START="148" END="155">airlines</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030421_133510.6-E4-10" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="309" END="335">the world's largest airline</charseq>
+    </extent>
+    <head>
+      <charseq START="329" END="335">airline</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030421_133510.6-E4-15" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="408" END="424">american
+airlines</charseq>
+    </extent>
+    <head>
+      <charseq START="408" END="424">american
+airlines</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="american airlines">
+      <charseq START="408" END="424">american
+airlines</charseq>
+    </name>
+    <name NAME="american airlines">
+      <charseq START="67" END="83">american airlines</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030421_133510.6-E5" TYPE="ORG" SUBTYPE="Government" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030421_133510.6-E5-5" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="126" END="141">bankruptcy court</charseq>
+    </extent>
+    <head>
+      <charseq START="137" END="141">court</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030421_133510.6-E6" TYPE="ORG" SUBTYPE="Non-Governmental" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030421_133510.6-E6-7" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="144" END="179">the airlines flight attendants union</charseq>
+    </extent>
+    <head>
+      <charseq START="175" END="179">union</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030421_133510.6-E7" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030421_133510.6-E7-9" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="280" END="288">executive</charseq>
+    </extent>
+    <head>
+      <charseq START="280" END="288">executive</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030421_133510.6-E8" TYPE="LOC" SUBTYPE="Celestial" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030421_133510.6-E8-11" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="309" END="317">the world</charseq>
+    </extent>
+    <head>
+      <charseq START="313" END="317">world</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030421_133510.6-E9" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030421_133510.6-E9-13" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="389" END="391">amr</charseq>
+    </extent>
+    <head>
+      <charseq START="389" END="391">amr</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030421_133510.6-E9-14" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="394" END="424">the parent of american
+airlines</charseq>
+    </extent>
+    <head>
+      <charseq START="398" END="403">parent</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="amr">
+      <charseq START="389" END="391">amr</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030421_133510.6-E11" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030421_133510.6-E11-16" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="459" END="474">ceo donald carty</charseq>
+    </extent>
+    <head>
+      <charseq START="463" END="474">donald carty</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030421_133510.6-E11-17" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="459" END="461">ceo</charseq>
+    </extent>
+    <head>
+      <charseq START="459" END="461">ceo</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="donald carty">
+      <charseq START="463" END="474">donald carty</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030421_133510.6-E13" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030421_133510.6-E13-18" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="494" END="502">employees</charseq>
+    </extent>
+    <head>
+      <charseq START="494" END="502">employees</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030421_133510.6-E14" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030421_133510.6-E14-19" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="607" END="618">some traders</charseq>
+    </extent>
+    <head>
+      <charseq START="612" END="618">traders</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<value ID="CNN_ENG_20030421_133510.6-V1" TYPE="Numeric" SUBTYPE="Percent">
+  <value_mention ID="CNN_ENG_20030421_133510.6-V1-1">
+    <extent>
+      <charseq START="524" END="526">40%</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_ENG_20030421_133510.6-V2" TYPE="Numeric" SUBTYPE="Money">
+  <value_mention ID="CNN_ENG_20030421_133510.6-V2-1">
+    <extent>
+      <charseq START="210" END="221">$340 million</charseq>
+    </extent>
+  </value_mention>
+</value>
+<timex2 ID="CNN_ENG_20030421_133510.6-T1" VAL="2003-04-21T14:57:38">
+  <timex2_mention ID="CNN_ENG_20030421_133510.6-T1-1">
+    <extent>
+      <charseq START="43" END="61">2003-04-21 14:57:38</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030421_133510.6-T2" VAL="2002">
+  <timex2_mention ID="CNN_ENG_20030421_133510.6-T2-1">
+    <extent>
+      <charseq START="264" END="272">last year</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030421_133510.6-T3" VAL="2003-W16-WE">
+  <timex2_mention ID="CNN_ENG_20030421_133510.6-T3-1">
+    <extent>
+      <charseq START="625" END="651">an extended holiday weekend</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030421_133510.6-T4" VAL="PXD" ANCHOR_VAL="2003-04-21" ANCHOR_DIR="STARTING">
+  <timex2_mention ID="CNN_ENG_20030421_133510.6-T4-1">
+    <extent>
+      <charseq START="659" END="681">the next couple of days</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030421_133510.6-T5" VAL="2003-04-21">
+  <timex2_mention ID="CNN_ENG_20030421_133510.6-T5-1">
+    <extent>
+      <charseq START="723" END="727">today</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030421_133510.6-R1" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030421_133510.6-E3" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030421_133510.6-E4" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030421_133510.6-R1-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="144" END="173">the airlines flight attendants</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030421_133510.6-E3-4" ROLE="Arg-1">
+      <extent>
+        <charseq START="144" END="173">the airlines flight attendants</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030421_133510.6-E4-6" ROLE="Arg-2">
+      <extent>
+        <charseq START="144" END="155">the airlines</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030421_133510.6-R2" TYPE="ORG-AFF" SUBTYPE="Membership" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030421_133510.6-E3" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030421_133510.6-E6" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030421_133510.6-R2-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="144" END="179">the airlines flight attendants union</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030421_133510.6-E3-4" ROLE="Arg-1">
+      <extent>
+        <charseq START="144" END="173">the airlines flight attendants</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030421_133510.6-E6-7" ROLE="Arg-2">
+      <extent>
+        <charseq START="144" END="179">the airlines flight attendants union</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030421_133510.6-R3" TYPE="GEN-AFF" SUBTYPE="Org-Location" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030421_133510.6-E4" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030421_133510.6-E8" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030421_133510.6-R3-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="309" END="335">the world's largest airline</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030421_133510.6-E4-10" ROLE="Arg-1">
+      <extent>
+        <charseq START="309" END="335">the world's largest airline</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030421_133510.6-E8-11" ROLE="Arg-2">
+      <extent>
+        <charseq START="309" END="317">the world</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030421_133510.6-R4" TYPE="PART-WHOLE" SUBTYPE="Subsidiary" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030421_133510.6-E4" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030421_133510.6-E9" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030421_133510.6-R4-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="394" END="424">the parent of american
+airlines</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030421_133510.6-E4-15" ROLE="Arg-1">
+      <extent>
+        <charseq START="408" END="424">american
+airlines</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030421_133510.6-E9-14" ROLE="Arg-2">
+      <extent>
+        <charseq START="394" END="424">the parent of american
+airlines</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030421_133510.6-EV1" TYPE="Business" SUBTYPE="Declare-Bankruptcy" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030421_133510.6-E4" ROLE="Org"/>
+  <event_mention ID="CNN_ENG_20030421_133510.6-EV1-1">
+    <extent>
+      <charseq START="67" END="135">american airlines may soon have a new destination as well,
+bankruptcy</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="67" END="141">american airlines may soon have a new destination as well,
+bankruptcy court</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="126" END="135">bankruptcy</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030421_133510.6-E4-1" ROLE="Org">
+      <extent>
+        <charseq START="67" END="83">american airlines</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030421_133510.6-EV2" TYPE="Business" SUBTYPE="Declare-Bankruptcy" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Future">
+  <event_argument REFID="CNN_ENG_20030421_133510.6-E4" ROLE="Org"/>
+  <event_mention ID="CNN_ENG_20030421_133510.6-EV2-1">
+    <extent>
+      <charseq START="309" END="379">the world's largest airline needs the concessions to
+avoid a bankruptcy</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="309" END="386">the world's largest airline needs the concessions to
+avoid a bankruptcy filing</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="370" END="379">bankruptcy</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030421_133510.6-E4-10" ROLE="Org">
+      <extent>
+        <charseq START="309" END="335">the world's largest airline</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

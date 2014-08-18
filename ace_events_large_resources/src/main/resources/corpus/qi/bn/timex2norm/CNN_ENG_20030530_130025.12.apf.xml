@@ -1,0 +1,535 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030530_130025.12.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030530_130025.12">
+<entity ID="CNN_ENG_20030530_130025.12-E1" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030530_130025.12-E1-1" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="68" END="82">aol time warner</charseq>
+    </extent>
+    <head>
+      <charseq START="68" END="82">aol time warner</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030530_130025.12-E1-5" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="591" END="593">aol</charseq>
+    </extent>
+    <head>
+      <charseq START="591" END="593">aol</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030530_130025.12-E1-8" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="672" END="674">aol</charseq>
+    </extent>
+    <head>
+      <charseq START="672" END="674">aol</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030530_130025.12-E1-9" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="720" END="722">aol</charseq>
+    </extent>
+    <head>
+      <charseq START="720" END="722">aol</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030530_130025.12-E1-13" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="900" END="903">they</charseq>
+    </extent>
+    <head>
+      <charseq START="900" END="903">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030530_130025.12-E1-19" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="209" END="223">aol time warner</charseq>
+    </extent>
+    <head>
+      <charseq START="209" END="223">aol time warner</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030530_130025.12-E1-21" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="237" END="254">our
+parent company</charseq>
+    </extent>
+    <head>
+      <charseq START="248" END="254">company</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030530_130025.12-E1-28" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="418" END="432">aol time warner</charseq>
+    </extent>
+    <head>
+      <charseq START="418" END="432">aol time warner</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030530_130025.12-E1-30" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="438" END="457">our corporate parent</charseq>
+    </extent>
+    <head>
+      <charseq START="452" END="457">parent</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="aol time warner">
+      <charseq START="68" END="82">aol time warner</charseq>
+    </name>
+    <name NAME="aol">
+      <charseq START="591" END="593">aol</charseq>
+    </name>
+    <name NAME="aol">
+      <charseq START="672" END="674">aol</charseq>
+    </name>
+    <name NAME="aol">
+      <charseq START="720" END="722">aol</charseq>
+    </name>
+    <name NAME="aol time warner">
+      <charseq START="209" END="223">aol time warner</charseq>
+    </name>
+    <name NAME="aol time warner">
+      <charseq START="418" END="432">aol time warner</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030530_130025.12-E2" TYPE="ORG" SUBTYPE="Commercial" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030530_130025.12-E2-12" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="866" END="872">company</charseq>
+    </extent>
+    <head>
+      <charseq START="866" END="872">company</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030530_130025.12-E3" TYPE="PER" SUBTYPE="Indeterminate" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030530_130025.12-E3-14" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="951" END="953">you</charseq>
+    </extent>
+    <head>
+      <charseq START="951" END="953">you</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030530_130025.12-E5" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030530_130025.12-E5-2" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="498" END="515">the software giant</charseq>
+    </extent>
+    <head>
+      <charseq START="511" END="515">giant</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030530_130025.12-E5-3" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="542" END="543">it</charseq>
+    </extent>
+    <head>
+      <charseq START="542" END="543">it</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030530_130025.12-E5-4" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="550" END="552">its</charseq>
+    </extent>
+    <head>
+      <charseq START="550" END="552">its</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030530_130025.12-E5-6" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="634" END="642">microsoft</charseq>
+    </extent>
+    <head>
+      <charseq START="634" END="642">microsoft</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030530_130025.12-E5-7" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="657" END="659">its</charseq>
+    </extent>
+    <head>
+      <charseq START="657" END="659">its</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030530_130025.12-E5-10" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="755" END="763">microsoft</charseq>
+    </extent>
+    <head>
+      <charseq START="755" END="763">microsoft</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030530_130025.12-E5-15" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="88" END="96">microsoft</charseq>
+    </extent>
+    <head>
+      <charseq START="88" END="96">microsoft</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030530_130025.12-E5-31" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="487" END="495">microsoft</charseq>
+    </extent>
+    <head>
+      <charseq START="487" END="495">microsoft</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="microsoft">
+      <charseq START="634" END="642">microsoft</charseq>
+    </name>
+    <name NAME="microsoft">
+      <charseq START="755" END="763">microsoft</charseq>
+    </name>
+    <name NAME="microsoft">
+      <charseq START="88" END="96">microsoft</charseq>
+    </name>
+    <name NAME="microsoft">
+      <charseq START="487" END="495">microsoft</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030530_130025.12-E6" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030530_130025.12-E6-16" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="123" END="136">allan chernoff</charseq>
+    </extent>
+    <head>
+      <charseq START="123" END="136">allan chernoff</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="allan chernoff">
+      <charseq START="123" END="136">allan chernoff</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030530_130025.12-E7" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030530_130025.12-E7-17" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="148" END="174">the new york stock exchange</charseq>
+    </extent>
+    <head>
+      <charseq START="152" END="174">new york stock exchange</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="new york stock exchange">
+      <charseq START="152" END="174">new york stock exchange</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030530_130025.12-E8" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030530_130025.12-E8-18" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="193" END="194">us</charseq>
+    </extent>
+    <head>
+      <charseq START="193" END="194">us</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030530_130025.12-E9" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030530_130025.12-E9-20" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="237" END="239">our</charseq>
+    </extent>
+    <head>
+      <charseq START="237" END="239">our</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030530_130025.12-E9-29" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="438" END="440">our</charseq>
+    </extent>
+    <head>
+      <charseq START="438" END="440">our</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030530_130025.12-E11" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030530_130025.12-E11-22" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="291" END="300">bill gates</charseq>
+    </extent>
+    <head>
+      <charseq START="291" END="300">bill gates</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="bill gates">
+      <charseq START="291" END="300">bill gates</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030530_130025.12-E12" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030530_130025.12-E12-23" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="306" END="316">dick parson</charseq>
+    </extent>
+    <head>
+      <charseq START="306" END="316">dick parson</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="dick parson">
+      <charseq START="306" END="316">dick parson</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030530_130025.12-E14" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030530_130025.12-E14-25" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="319" END="349">the ceos of these two companies</charseq>
+    </extent>
+    <head>
+      <charseq START="323" END="326">ceos</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030530_130025.12-E15" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030530_130025.12-E15-11" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="775" END="779">their</charseq>
+    </extent>
+    <head>
+      <charseq START="775" END="779">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030530_130025.12-E15-26" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="331" END="349">these two companies</charseq>
+    </extent>
+    <head>
+      <charseq START="341" END="349">companies</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030530_130025.12-E15-27" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="384" END="396">the companies</charseq>
+    </extent>
+    <head>
+      <charseq START="388" END="396">companies</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<value ID="CNN_ENG_20030530_130025.12-V1" TYPE="Numeric" SUBTYPE="Money">
+  <value_mention ID="CNN_ENG_20030530_130025.12-V1-1">
+    <extent>
+      <charseq START="469" END="480">$750 million</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_ENG_20030530_130025.12-V2" TYPE="Numeric" SUBTYPE="Money">
+  <value_mention ID="CNN_ENG_20030530_130025.12-V2-1">
+    <extent>
+      <charseq START="832" END="843">$750 million</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_ENG_20030530_130025.12-V3" TYPE="Crime">
+  <value_mention ID="CNN_ENG_20030530_130025.12-V3-1">
+    <extent>
+      <charseq START="542" END="610">it used its
+monopoly power in after to block the aol netscape browser</charseq>
+    </extent>
+  </value_mention>
+</value>
+<timex2 ID="CNN_ENG_20030530_130025.12-T1" VAL="2003-05-30T13:32:55">
+  <timex2_mention ID="CNN_ENG_20030530_130025.12-T1-1">
+    <extent>
+      <charseq START="44" END="62">2003-05-30 13:32:55</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030530_130025.12-T2" VAL="2003-05-30T13:32:55">
+  <timex2_mention ID="CNN_ENG_20030530_130025.12-T2-1">
+    <extent>
+      <charseq START="373" END="381">right
+now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030530_130025.12-T3" VAL="P7Y" ANCHOR_VAL="2003" ANCHOR_DIR="STARTING">
+  <timex2_mention ID="CNN_ENG_20030530_130025.12-T3-1">
+    <extent>
+      <charseq START="680" END="690">seven years</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030530_130025.12-R1" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030530_130025.12-E6" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030530_130025.12-E7" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030530_130025.12-R1-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="123" END="184">allan chernoff live from the new york stock exchange with
+more</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030530_130025.12-E6-16" ROLE="Arg-1">
+      <extent>
+        <charseq START="123" END="136">allan chernoff</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030530_130025.12-E7-17" ROLE="Arg-2">
+      <extent>
+        <charseq START="148" END="174">the new york stock exchange</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030530_130025.12-R2" TYPE="PART-WHOLE" SUBTYPE="Subsidiary" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030530_130025.12-E9" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030530_130025.12-E1" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030530_130025.12-R2-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="237" END="254">our
+parent company</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030530_130025.12-E9-20" ROLE="Arg-1">
+      <extent>
+        <charseq START="237" END="239">our</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030530_130025.12-E1-21" ROLE="Arg-2">
+      <extent>
+        <charseq START="237" END="254">our
+parent company</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_ENG_20030530_130025.12-R2-2" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="438" END="457">our corporate parent</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030530_130025.12-E9-29" ROLE="Arg-1">
+      <extent>
+        <charseq START="438" END="440">our</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030530_130025.12-E1-30" ROLE="Arg-2">
+      <extent>
+        <charseq START="438" END="457">our corporate parent</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030530_130025.12-R3" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030530_130025.12-E14" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030530_130025.12-E15" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030530_130025.12-R3-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="319" END="349">the ceos of these two companies</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030530_130025.12-E14-25" ROLE="Arg-1">
+      <extent>
+        <charseq START="319" END="349">the ceos of these two companies</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030530_130025.12-E15-26" ROLE="Arg-2">
+      <extent>
+        <charseq START="331" END="349">these two companies</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030530_130025.12-EV1" TYPE="Justice" SUBTYPE="Sue" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030530_130025.12-E15" ROLE="Defendant"/>
+  <event_argument REFID="CNN_ENG_20030530_130025.12-E15" ROLE="Plaintiff"/>
+  <event_mention ID="CNN_ENG_20030530_130025.12-EV1-1">
+    <extent>
+      <charseq START="384" END="415">the companies settling a lawsuit</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="384" END="415">the companies settling a lawsuit</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="409" END="415">lawsuit</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030530_130025.12-E15-27" ROLE="Defendant">
+      <extent>
+        <charseq START="384" END="396">the companies</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030530_130025.12-E15-27" ROLE="Plaintiff">
+      <extent>
+        <charseq START="384" END="396">the companies</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030530_130025.12-EV2" TYPE="Transaction" SUBTYPE="Transfer-Money" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Future">
+  <event_argument REFID="CNN_ENG_20030530_130025.12-E5" ROLE="Giver"/>
+  <event_argument REFID="CNN_ENG_20030530_130025.12-V1" ROLE="Money"/>
+  <event_argument REFID="CNN_ENG_20030530_130025.12-E1" ROLE="Recipient"/>
+  <event_mention ID="CNN_ENG_20030530_130025.12-EV2-1">
+    <extent>
+      <charseq START="418" END="495">aol time warnerings
+our corporate parent, will get $750 million from microsoft</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="418" END="495">aol time warnerings
+our corporate parent, will get $750 million from microsoft</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="465" END="467">get</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030530_130025.12-E5-31" ROLE="Giver">
+      <extent>
+        <charseq START="487" END="495">microsoft</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030530_130025.12-V1-1" ROLE="Money">
+      <extent>
+        <charseq START="469" END="480">$750 million</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030530_130025.12-E1-28" ROLE="Recipient">
+      <extent>
+        <charseq START="418" END="432">aol time warner</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030530_130025.12-EV3" TYPE="Justice" SUBTYPE="Charge-Indict" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030530_130025.12-E5" ROLE="Defendant"/>
+  <event_argument REFID="CNN_ENG_20030530_130025.12-V3" ROLE="Crime"/>
+  <event_mention ID="CNN_ENG_20030530_130025.12-EV3-1">
+    <extent>
+      <charseq START="498" END="610">the software giant paying to settle charges it used its
+monopoly power in after to block the aol netscape browser</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="498" END="610">the software giant paying to settle charges it used its
+monopoly power in after to block the aol netscape browser</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="534" END="540">charges</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030530_130025.12-E5-2" ROLE="Defendant">
+      <extent>
+        <charseq START="498" END="515">the software giant</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030530_130025.12-E5-3" ROLE="Defendant">
+      <extent>
+        <charseq START="542" END="543">it</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030530_130025.12-V3-1" ROLE="Crime">
+      <extent>
+        <charseq START="542" END="610">it used its
+monopoly power in after to block the aol netscape browser</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

@@ -1,0 +1,599 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030501_160459.0.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030501_160459.0">
+<entity ID="CNN_ENG_20030501_160459.0-E1" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030501_160459.0-E1-22" TYPE="PRO" LDCTYPE="PTV">
+    <extent>
+      <charseq START="480" END="529">many of the young men and women on the
+flight deck</charseq>
+    </extent>
+    <head>
+      <charseq START="480" END="483">many</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030501_160459.0-E2" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030501_160459.0-E2-2" TYPE="NAM" LDCTYPE="NAMPRE" METONYMY_MENTION="TRUE">
+    <extent>
+      <charseq START="768" END="778">white house</charseq>
+    </extent>
+    <head>
+      <charseq START="768" END="778">white house</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030501_160459.0-E3" TYPE="VEH" SUBTYPE="Subarea-Vehicle" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030501_160459.0-E3-4" TYPE="PRO" LDCTYPE="PTV">
+    <extent>
+      <charseq START="865" END="880">part
+of the ship</charseq>
+    </extent>
+    <head>
+      <charseq START="865" END="868">part</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030501_160459.0-E4" TYPE="VEH" SUBTYPE="Air" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030501_160459.0-E4-8" TYPE="PRO" LDCTYPE="PTV">
+    <extent>
+      <charseq START="968" END="1013">some of the f-18
+aircraft that are now leaving</charseq>
+    </extent>
+    <head>
+      <charseq START="968" END="971">some</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030501_160459.0-E5" TYPE="VEH" SUBTYPE="Air" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030501_160459.0-E5-9" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="976" END="1013">the f-18
+aircraft that are now leaving</charseq>
+    </extent>
+    <head>
+      <charseq START="985" END="992">aircraft</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030501_160459.0-E5-11" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="994" END="997">that</charseq>
+    </extent>
+    <head>
+      <charseq START="994" END="997">that</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030501_160459.0-E5-12" TYPE="NOM" LDCTYPE="NOM" METONYMY_MENTION="TRUE">
+    <extent>
+      <charseq START="1015" END="1028">these aircraft</charseq>
+    </extent>
+    <head>
+      <charseq START="1021" END="1028">aircraft</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030501_160459.0-E6" TYPE="VEH" SUBTYPE="Air" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030501_160459.0-E6-10" TYPE="NAM" LDCTYPE="NAMPRE">
+    <extent>
+      <charseq START="980" END="983">f-18</charseq>
+    </extent>
+    <head>
+      <charseq START="980" END="983">f-18</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="f-18">
+      <charseq START="980" END="983">f-18</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030501_160459.0-E7" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030501_160459.0-E7-13" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="1041" END="1046">lamore</charseq>
+    </extent>
+    <head>
+      <charseq START="1041" END="1046">lamore</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="lamore">
+      <charseq START="1041" END="1046">lamore</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030501_160459.0-E8" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030501_160459.0-E8-14" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1084" END="1087">wolf</charseq>
+    </extent>
+    <head>
+      <charseq START="1084" END="1087">wolf</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="wolf">
+      <charseq START="1084" END="1087">wolf</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030501_160459.0-E9" TYPE="VEH" SUBTYPE="Air" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030501_160459.0-E9-15" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="340" END="347">aircraft</charseq>
+    </extent>
+    <head>
+      <charseq START="340" END="347">aircraft</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030501_160459.0-E10" TYPE="VEH" SUBTYPE="Water" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030501_160459.0-E10-1" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="112" END="135">the "uss
+abraham lincoln</charseq>
+    </extent>
+    <head>
+      <charseq START="117" END="135">uss
+abraham lincoln</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030501_160459.0-E10-5" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="873" END="880">the ship</charseq>
+    </extent>
+    <head>
+      <charseq START="877" END="880">ship</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030501_160459.0-E10-16" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="247" END="270">the "uss abraham lincoln</charseq>
+    </extent>
+    <head>
+      <charseq START="252" END="270">uss abraham lincoln</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="uss abraham lincoln">
+      <charseq START="117" END="135">uss
+abraham lincoln</charseq>
+    </name>
+    <name NAME="uss abraham lincoln">
+      <charseq START="252" END="270">uss abraham lincoln</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030501_160459.0-E11" TYPE="VEH" SUBTYPE="Water" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030501_160459.0-E11-17" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="337" END="366">an aircraft
+carrier in the u.s</charseq>
+    </extent>
+    <head>
+      <charseq START="349" END="355">carrier</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030501_160459.0-E12" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030501_160459.0-E12-18" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="360" END="366">the u.s</charseq>
+    </extent>
+    <head>
+      <charseq START="364" END="366">u.s</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030501_160459.0-E12-30" TYPE="NOM" LDCTYPE="NOM" ROLE="PER" LDCATR="FALSE">
+    <extent>
+      <charseq START="702" END="720">the american people</charseq>
+    </extent>
+    <head>
+      <charseq START="715" END="720">people</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030501_160459.0-E12-31" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="706" END="713">american</charseq>
+    </extent>
+    <head>
+      <charseq START="706" END="713">american</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="u.s">
+      <charseq START="364" END="366">u.s</charseq>
+    </name>
+    <name NAME="american">
+      <charseq START="706" END="713">american</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030501_160459.0-E13" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030501_160459.0-E13-19" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="379" END="385">vietnam</charseq>
+    </extent>
+    <head>
+      <charseq START="379" END="385">vietnam</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="vietnam">
+      <charseq START="379" END="385">vietnam</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030501_160459.0-E14" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030501_160459.0-E14-3" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="818" END="819">he</charseq>
+    </extent>
+    <head>
+      <charseq START="818" END="819">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030501_160459.0-E14-6" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="883" END="884">he</charseq>
+    </extent>
+    <head>
+      <charseq START="883" END="884">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030501_160459.0-E14-20" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="398" END="410">the
+president</charseq>
+    </extent>
+    <head>
+      <charseq START="402" END="410">president</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030501_160459.0-E14-21" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="425" END="426">he</charseq>
+    </extent>
+    <head>
+      <charseq START="425" END="426">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030501_160459.0-E14-27" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="576" END="578">his</charseq>
+    </extent>
+    <head>
+      <charseq START="576" END="578">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030501_160459.0-E14-29" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="664" END="665">he</charseq>
+    </extent>
+    <head>
+      <charseq START="664" END="665">he</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030501_160459.0-E15" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030501_160459.0-E15-26" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="556" END="559">them</charseq>
+    </extent>
+    <head>
+      <charseq START="556" END="559">them</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030501_160459.0-E15-28" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="635" END="638">them</charseq>
+    </extent>
+    <head>
+      <charseq START="635" END="638">them</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030501_160459.0-E16" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030501_160459.0-E16-23" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="480" END="529">many of the young men and women on the
+flight deck</charseq>
+    </extent>
+    <head>
+      <charseq START="498" END="500">men</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030501_160459.0-E17" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030501_160459.0-E17-24" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="480" END="529">many of the young men and women on the
+flight deck</charseq>
+    </extent>
+    <head>
+      <charseq START="506" END="510">women</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030501_160459.0-E18" TYPE="VEH" SUBTYPE="Subarea-Vehicle" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030501_160459.0-E18-7" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="906" END="920">the flight deck</charseq>
+    </extent>
+    <head>
+      <charseq START="917" END="920">deck</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030501_160459.0-E18-25" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="515" END="529">the
+flight deck</charseq>
+    </extent>
+    <head>
+      <charseq START="526" END="529">deck</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030501_160459.0-E20" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030501_160459.0-E20-32" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="768" END="784">white house aides</charseq>
+    </extent>
+    <head>
+      <charseq START="780" END="784">aides</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<timex2 ID="CNN_ENG_20030501_160459.0-T1" VAL="2003-05-01T17:05:56">
+  <timex2_mention ID="CNN_ENG_20030501_160459.0-T1-1">
+    <extent>
+      <charseq START="43" END="61">2003-05-01 17:05:56</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030501_160459.0-T2" VAL="P10M" ANCHOR_VAL="2002-07" ANCHOR_DIR="STARTING">
+  <timex2_mention ID="CNN_ENG_20030501_160459.0-T2-1">
+    <extent>
+      <charseq START="285" END="297">10 month
+long</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030501_160459.0-T3" VAL="2003-05-01TEV">
+  <timex2_mention ID="CNN_ENG_20030501_160459.0-T3-1">
+    <extent>
+      <charseq START="650" END="661">this evening</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030501_160459.0-T4" VAL="2003-05-01T17:05:56">
+  <timex2_mention ID="CNN_ENG_20030501_160459.0-T4-1">
+    <extent>
+      <charseq START="1003" END="1005">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030501_160459.0-T5" VAL="P10M" ANCHOR_VAL="2002-07" ANCHOR_DIR="STARTING">
+  <timex2_mention ID="CNN_ENG_20030501_160459.0-T5-1">
+    <extent>
+      <charseq START="1059" END="1071">10-month long</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030501_160459.0-T6">
+  <timex2_mention ID="CNN_ENG_20030501_160459.0-T6-1">
+    <extent>
+      <charseq START="375" END="389">the vietnam era</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030501_160459.0-R1" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030501_160459.0-E20" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030501_160459.0-E2" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030501_160459.0-R1-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="768" END="784">white house aides</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030501_160459.0-E20-32" ROLE="Arg-1">
+      <extent>
+        <charseq START="768" END="784">white house aides</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030501_160459.0-E2-2" ROLE="Arg-2">
+      <extent>
+        <charseq START="768" END="778">white house</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030501_160459.0-R2" TYPE="PART-WHOLE" SUBTYPE="Artifact" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030501_160459.0-E3" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030501_160459.0-E10" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030501_160459.0-R2-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="865" END="880">part
+of the ship</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030501_160459.0-E3-4" ROLE="Arg-1">
+      <extent>
+        <charseq START="865" END="880">part
+of the ship</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030501_160459.0-E10-5" ROLE="Arg-2">
+      <extent>
+        <charseq START="873" END="880">the ship</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030501_160459.0-R3" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030501_160459.0-E12" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030501_160459.0-E11" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030501_160459.0-R3-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="337" END="366">an aircraft
+carrier in the u.s</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030501_160459.0-E12-18" ROLE="Arg-1">
+      <extent>
+        <charseq START="360" END="366">the u.s</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030501_160459.0-E11-17" ROLE="Arg-2">
+      <extent>
+        <charseq START="337" END="366">an aircraft
+carrier in the u.s</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030501_160459.0-R4" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030501_160459.0-E16" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030501_160459.0-E18" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030501_160459.0-R4-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="480" END="529">many of the young men and women on the
+flight deck</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030501_160459.0-E16-23" ROLE="Arg-1">
+      <extent>
+        <charseq START="480" END="529">many of the young men and women on the
+flight deck</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030501_160459.0-E18-25" ROLE="Arg-2">
+      <extent>
+        <charseq START="515" END="529">the
+flight deck</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030501_160459.0-R5" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030501_160459.0-E17" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030501_160459.0-E18" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030501_160459.0-R5-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="480" END="529">many of the young men and women on the
+flight deck</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030501_160459.0-E17-24" ROLE="Arg-1">
+      <extent>
+        <charseq START="480" END="529">many of the young men and women on the
+flight deck</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030501_160459.0-E18-25" ROLE="Arg-2">
+      <extent>
+        <charseq START="515" END="529">the
+flight deck</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030501_160459.0-R6" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030501_160459.0-E14" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030501_160459.0-E3" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030501_160459.0-R6-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="818" END="1081">he -- after landing and taking a brief tour of part
+of the ship, he also went out on to the flight deck and
+observed some of the flight operations of some of the f-18
+aircraft that are now leaving these aircraft, headed to
+lamore after this 10-month long deploy am</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030501_160459.0-E14-3" ROLE="Arg-1">
+      <extent>
+        <charseq START="818" END="819">he</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030501_160459.0-E3-4" ROLE="Arg-2">
+      <extent>
+        <charseq START="865" END="880">part
+of the ship</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030501_160459.0-R7" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030501_160459.0-E14" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030501_160459.0-E18" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030501_160459.0-R7-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="818" END="1081">he -- after landing and taking a brief tour of part
+of the ship, he also went out on to the flight deck and
+observed some of the flight operations of some of the f-18
+aircraft that are now leaving these aircraft, headed to
+lamore after this 10-month long deploy am</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030501_160459.0-E14-6" ROLE="Arg-1">
+      <extent>
+        <charseq START="883" END="884">he</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030501_160459.0-E18-7" ROLE="Arg-2">
+      <extent>
+        <charseq START="906" END="920">the flight deck</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030501_160459.0-EV1" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_mention ID="CNN_ENG_20030501_160459.0-EV1-1">
+    <extent>
+      <charseq START="750" END="755">combat</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="392" END="765">after the
+president came aboard, he then spent a considerable amount
+of time talking to many of the young men and women on the
+flight deck, taking photographs with them, still wearing
+his flight suit throughout much of that period, talking to
+them and again this evening, he will be issuing a major
+address to the american people reguarding the end of major
+combat operation</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="750" END="755">combat</charseq>
+    </anchor>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030501_160459.0-EV2" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Future">
+  <event_argument REFID="CNN_ENG_20030501_160459.0-E5" ROLE="Vehicle"/>
+  <event_argument REFID="CNN_ENG_20030501_160459.0-E7" ROLE="Destination"/>
+  <event_argument REFID="CNN_ENG_20030501_160459.0-T5" ROLE="Time-After"/>
+  <event_mention ID="CNN_ENG_20030501_160459.0-EV2-1">
+    <extent>
+      <charseq START="1015" END="1071">these aircraft, headed to
+lamore after this 10-month long</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="818" END="1081">he -- after landing and taking a brief tour of part
+of the ship, he also went out on to the flight deck and
+observed some of the flight operations of some of the f-18
+aircraft that are now leaving these aircraft, headed to
+lamore after this 10-month long deploy am</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1031" END="1036">headed</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030501_160459.0-E5-12" ROLE="Vehicle">
+      <extent>
+        <charseq START="1015" END="1028">these aircraft</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030501_160459.0-E7-13" ROLE="Destination">
+      <extent>
+        <charseq START="1041" END="1046">lamore</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030501_160459.0-T5-1" ROLE="Time-After">
+      <extent>
+        <charseq START="1059" END="1071">10-month long</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

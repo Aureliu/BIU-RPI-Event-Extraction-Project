@@ -1,0 +1,444 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030603_095830.17.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030603_095830.17">
+<entity ID="CNN_ENG_20030603_095830.17-E1" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030603_095830.17-E1-2" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="456" END="468">rob sabati,ed</charseq>
+    </extent>
+    <head>
+      <charseq START="456" END="468">rob sabati,ed</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030603_095830.17-E1-3" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="470" END="518">a a an
+adjunct professor at georgetown university</charseq>
+    </extent>
+    <head>
+      <charseq START="485" END="493">professor</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030603_095830.17-E1-5" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="533" END="535">you</charseq>
+    </extent>
+    <head>
+      <charseq START="533" END="535">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030603_095830.17-E1-6" TYPE="NOM" LDCTYPE="BAR" LDCATR="FALSE">
+    <extent>
+      <charseq START="551" END="559">professor</charseq>
+    </extent>
+    <head>
+      <charseq START="551" END="559">professor</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030603_095830.17-E1-7" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="566" END="568">you</charseq>
+    </extent>
+    <head>
+      <charseq START="566" END="568">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="rob sabati,ed">
+      <charseq START="456" END="468">rob sabati,ed</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030603_095830.17-E3" TYPE="ORG" SUBTYPE="Educational" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030603_095830.17-E3-4" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="498" END="518">georgetown university</charseq>
+    </extent>
+    <head>
+      <charseq START="498" END="518">georgetown university</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="georgetown university">
+      <charseq START="498" END="518">georgetown university</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030603_095830.17-E4" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030603_095830.17-E4-1" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="68" END="81">president bush</charseq>
+    </extent>
+    <head>
+      <charseq START="78" END="81">bush</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030603_095830.17-E4-8" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="586" END="599">president bush</charseq>
+    </extent>
+    <head>
+      <charseq START="596" END="599">bush</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030603_095830.17-E4-9" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="586" END="594">president</charseq>
+    </extent>
+    <head>
+      <charseq START="586" END="594">president</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030603_095830.17-E4-13" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="68" END="76">president</charseq>
+    </extent>
+    <head>
+      <charseq START="68" END="76">president</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030603_095830.17-E4-19" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="221" END="228">mr. bush</charseq>
+    </extent>
+    <head>
+      <charseq START="225" END="228">bush</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030603_095830.17-E4-20" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="221" END="222">mr</charseq>
+    </extent>
+    <head>
+      <charseq START="221" END="222">mr</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030603_095830.17-E4-21" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="261" END="263">his</charseq>
+    </extent>
+    <head>
+      <charseq START="261" END="263">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030603_095830.17-E4-23" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="329" END="330">he</charseq>
+    </extent>
+    <head>
+      <charseq START="329" END="330">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="bush">
+      <charseq START="78" END="81">bush</charseq>
+    </name>
+    <name NAME="bush">
+      <charseq START="596" END="599">bush</charseq>
+    </name>
+    <name NAME="bush">
+      <charseq START="225" END="228">bush</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030603_095830.17-E5" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030603_095830.17-E5-10" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="710" END="725">the arab leaders</charseq>
+    </extent>
+    <head>
+      <charseq START="719" END="725">leaders</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030603_095830.17-E6" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030603_095830.17-E6-15" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="119" END="122">arab</charseq>
+    </extent>
+    <head>
+      <charseq START="119" END="122">arab</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030603_095830.17-E6-18" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="714" END="717">arab</charseq>
+    </extent>
+    <head>
+      <charseq START="714" END="717">arab</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030603_095830.17-E9" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030603_095830.17-E9-14" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="111" END="130">several arab leaders</charseq>
+    </extent>
+    <head>
+      <charseq START="124" END="130">leaders</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030603_095830.17-E11" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030603_095830.17-E11-16" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="183" END="189">israeli</charseq>
+    </extent>
+    <head>
+      <charseq START="183" END="189">israeli</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="israeli">
+      <charseq START="183" END="189">israeli</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030603_095830.17-E12" TYPE="GPE" SUBTYPE="Special" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030603_095830.17-E12-17" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="191" END="201">palestinian</charseq>
+    </extent>
+    <head>
+      <charseq START="191" END="201">palestinian</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="palestinian">
+      <charseq START="191" END="201">palestinian</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030603_095830.17-E14" TYPE="GPE" SUBTYPE="GPE-Cluster" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030603_095830.17-E14-22" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="294" END="304">middle east</charseq>
+    </extent>
+    <head>
+      <charseq START="294" END="304">middle east</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="middle east">
+      <charseq START="294" END="304">middle east</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030603_095830.17-E15" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030603_095830.17-E15-11" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="388" END="400">a few killers</charseq>
+    </extent>
+    <head>
+      <charseq START="394" END="400">killers</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030603_095830.17-E15-12" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="403" END="418">a few
+terrorists</charseq>
+    </extent>
+    <head>
+      <charseq START="409" END="418">terrorists</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030603_095830.17-E15-24" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="375" END="386">a few people</charseq>
+    </extent>
+    <head>
+      <charseq START="381" END="386">people</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030603_095830.17-E16" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030603_095830.17-E16-25" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="430" END="431">us</charseq>
+    </extent>
+    <head>
+      <charseq START="430" END="431">us</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<timex2 ID="CNN_ENG_20030603_095830.17-T1" VAL="2003-06-03T10:21:22">
+  <timex2_mention ID="CNN_ENG_20030603_095830.17-T1-1">
+    <extent>
+      <charseq START="44" END="62">2003-06-03 10:21:22</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030603_095830.17-T2" VAL="2003-06-03T11">
+  <timex2_mention ID="CNN_ENG_20030603_095830.17-T2-1">
+    <extent>
+      <charseq START="146" END="154">next hour</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030603_095830.17-T3" VAL="2003-06-03" MOD="START">
+  <timex2_mention ID="CNN_ENG_20030603_095830.17-T3-1">
+    <extent>
+      <charseq START="314" END="326">earlier today</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030603_095830.17-T4" VAL="PRESENT_REF" ANCHOR_VAL="2003-06-03T10:21:22" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_ENG_20030603_095830.17-T4-1">
+    <extent>
+      <charseq START="433" END="435">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030603_095830.17-T5" VAL="2003-06-03TMO">
+  <timex2_mention ID="CNN_ENG_20030603_095830.17-T5-1">
+    <extent>
+      <charseq START="537" END="548">this
+morning</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030603_095830.17-T6" VAL="PRESENT_REF" ANCHOR_VAL="2003-06-03T10:21:22" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_ENG_20030603_095830.17-T6-1">
+    <extent>
+      <charseq START="626" END="634">this time</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030603_095830.17-T7" VAL="2003-06-03T10:21:54">
+  <timex2_mention ID="CNN_ENG_20030603_095830.17-T7-1">
+    <extent>
+      <charseq START="759" END="777">2003-06-03 10:21:54</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030603_095830.17-R1" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030603_095830.17-E9" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030603_095830.17-E6" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030603_095830.17-R1-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="111" END="130">several arab leaders</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030603_095830.17-E9-14" ROLE="Arg-1">
+      <extent>
+        <charseq START="111" END="130">several arab leaders</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030603_095830.17-E6-15" ROLE="Arg-2">
+      <extent>
+        <charseq START="119" END="122">arab</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030603_095830.17-R2" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030603_095830.17-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030603_095830.17-E3" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030603_095830.17-R2-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="470" END="518">a a an
+adjunct professor at georgetown university</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030603_095830.17-E1-3" ROLE="Arg-1">
+      <extent>
+        <charseq START="470" END="518">a a an
+adjunct professor at georgetown university</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030603_095830.17-E3-4" ROLE="Arg-2">
+      <extent>
+        <charseq START="498" END="518">georgetown university</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030603_095830.17-R3" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030603_095830.17-E5" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030603_095830.17-E6" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030603_095830.17-R3-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="710" END="725">the arab leaders</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030603_095830.17-E5-10" ROLE="Arg-1">
+      <extent>
+        <charseq START="710" END="725">the arab leaders</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030603_095830.17-E6-18" ROLE="Arg-2">
+      <extent>
+        <charseq START="714" END="717">arab</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030603_095830.17-EV1" TYPE="Contact" SUBTYPE="Meet" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Future">
+  <event_argument REFID="CNN_ENG_20030603_095830.17-E4" ROLE="Entity"/>
+  <event_argument REFID="CNN_ENG_20030603_095830.17-E9" ROLE="Entity"/>
+  <event_mention ID="CNN_ENG_20030603_095830.17-EV1-1">
+    <extent>
+      <charseq START="68" END="130">president bush is going to be meeting with several arab leaders</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="68" END="130">president bush is going to be meeting with several arab leaders</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="98" END="104">meeting</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030603_095830.17-E4-1" ROLE="Entity">
+      <extent>
+        <charseq START="68" END="81">president bush</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030603_095830.17-E9-14" ROLE="Entity">
+      <extent>
+        <charseq START="111" END="130">several arab leaders</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030603_095830.17-EV2" TYPE="Contact" SUBTYPE="Meet" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Future">
+  <event_argument REFID="CNN_ENG_20030603_095830.17-E4" ROLE="Entity"/>
+  <event_argument REFID="CNN_ENG_20030603_095830.17-E5" ROLE="Entity"/>
+  <event_mention ID="CNN_ENG_20030603_095830.17-EV2-1">
+    <extent>
+      <charseq START="161" END="166">summit</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="133" END="218">that
+happens next hour in a summit focusing on an israeli-palestinian peace
+initiative</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="161" END="166">summit</charseq>
+    </anchor>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030603_095830.17-EV2-2">
+    <extent>
+      <charseq START="586" END="752">president bush is actually
+going to, at this time, take the steps and say what has to be said to
+remove the skepticism that the arab leaders are bringing to the
+summit</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="562" END="752">are you optimistic that president bush is actually
+going to, at this time, take the steps and say what has to be said to
+remove the skepticism that the arab leaders are bringing to the
+summit</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="747" END="752">summit</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030603_095830.17-E4-8" ROLE="Entity">
+      <extent>
+        <charseq START="586" END="599">president bush</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030603_095830.17-E5-10" ROLE="Entity">
+      <extent>
+        <charseq START="710" END="725">the arab leaders</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

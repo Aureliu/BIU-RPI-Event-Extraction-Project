@@ -1,0 +1,1202 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="MARKBACKER_20041220.0919.sgm" SOURCE="weblog" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="MARKBACKER_20041220.0919">
+<entity ID="MARKBACKER_20041220.0919-E1" TYPE="ORG" SUBTYPE="Sports" CLASS="SPC">
+  <entity_mention ID="MARKBACKER_20041220.0919-E1-10" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1520" END="1525">Packer</charseq>
+    </extent>
+    <head>
+      <charseq START="1520" END="1525">Packer</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041220.0919-E1-11" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2758" END="2768">the Packers</charseq>
+    </extent>
+    <head>
+      <charseq START="2762" END="2768">Packers</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041220.0919-E1-61" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="405" END="415">the Packers</charseq>
+    </extent>
+    <head>
+      <charseq START="409" END="415">Packers</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041220.0919-E1-72" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="863" END="873">The Packers</charseq>
+    </extent>
+    <head>
+      <charseq START="867" END="873">Packers</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Packer">
+      <charseq START="1520" END="1525">Packer</charseq>
+    </name>
+    <name NAME="Packers">
+      <charseq START="2762" END="2768">Packers</charseq>
+    </name>
+    <name NAME="Packers">
+      <charseq START="409" END="415">Packers</charseq>
+    </name>
+    <name NAME="Packers">
+      <charseq START="867" END="873">Packers</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKBACKER_20041220.0919-E2" TYPE="ORG" SUBTYPE="Sports" CLASS="SPC">
+  <entity_mention ID="MARKBACKER_20041220.0919-E2-29" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2163" END="2172">The league</charseq>
+    </extent>
+    <head>
+      <charseq START="2167" END="2172">league</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041220.0919-E2-37" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2725" END="2731">the NFL</charseq>
+    </extent>
+    <head>
+      <charseq START="2729" END="2731">NFL</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041220.0919-E2-51" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1728" END="1734">the
+NFL</charseq>
+    </extent>
+    <head>
+      <charseq START="1732" END="1734">NFL</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="NFL">
+      <charseq START="2729" END="2731">NFL</charseq>
+    </name>
+    <name NAME="NFL">
+      <charseq START="1732" END="1734">NFL</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKBACKER_20041220.0919-E3" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="MARKBACKER_20041220.0919-E3-14" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1742" END="1752">Jim McMahon</charseq>
+    </extent>
+    <head>
+      <charseq START="1742" END="1752">Jim McMahon</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041220.0919-E3-15" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1826" END="1827">he</charseq>
+    </extent>
+    <head>
+      <charseq START="1826" END="1827">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Jim McMahon">
+      <charseq START="1742" END="1752">Jim McMahon</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKBACKER_20041220.0919-E4" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="MARKBACKER_20041220.0919-E4-16" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1854" END="1879">Jaguars coach Jack
+Del Rio</charseq>
+    </extent>
+    <head>
+      <charseq START="1868" END="1879">Jack
+Del Rio</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041220.0919-E4-57" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1854" END="1866">Jaguars coach</charseq>
+    </extent>
+    <head>
+      <charseq START="1862" END="1866">coach</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Jack Del Rio">
+      <charseq START="1868" END="1879">Jack
+Del Rio</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKBACKER_20041220.0919-E5" TYPE="ORG" SUBTYPE="Sports" CLASS="SPC">
+  <entity_mention ID="MARKBACKER_20041220.0919-E5-17" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1854" END="1860">Jaguars</charseq>
+    </extent>
+    <head>
+      <charseq START="1854" END="1860">Jaguars</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041220.0919-E5-33" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="2628" END="2638">the Jaguars</charseq>
+    </extent>
+    <head>
+      <charseq START="2632" END="2638">Jaguars</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041220.0919-E5-65" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="536" END="547">Jacksonville</charseq>
+    </extent>
+    <head>
+      <charseq START="536" END="547">Jacksonville</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Jaguars">
+      <charseq START="1854" END="1860">Jaguars</charseq>
+    </name>
+    <name NAME="Jaguars">
+      <charseq START="2632" END="2638">Jaguars</charseq>
+    </name>
+    <name NAME="Jacksonville">
+      <charseq START="536" END="547">Jacksonville</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKBACKER_20041220.0919-E6" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="MARKBACKER_20041220.0919-E6-18" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1933" END="1941">officials</charseq>
+    </extent>
+    <head>
+      <charseq START="1933" END="1941">officials</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKBACKER_20041220.0919-E7" TYPE="PER" SUBTYPE="Indeterminate" CLASS="USP">
+  <entity_mention ID="MARKBACKER_20041220.0919-E7-21" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2000" END="2005">anyone</charseq>
+    </extent>
+    <head>
+      <charseq START="2000" END="2005">anyone</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041220.0919-E7-22" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2019" END="2021">you</charseq>
+    </extent>
+    <head>
+      <charseq START="2019" END="2021">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041220.0919-E7-56" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="989" END="991">you</charseq>
+    </extent>
+    <head>
+      <charseq START="989" END="991">you</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKBACKER_20041220.0919-E8" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="MARKBACKER_20041220.0919-E8-31" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2506" END="2519">Paul
+Tagliabue</charseq>
+    </extent>
+    <head>
+      <charseq START="2506" END="2519">Paul
+Tagliabue</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041220.0919-E8-32" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2546" END="2548">his</charseq>
+    </extent>
+    <head>
+      <charseq START="2546" END="2548">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Paul Tagliabue">
+      <charseq START="2506" END="2519">Paul
+Tagliabue</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKBACKER_20041220.0919-E9" TYPE="ORG" SUBTYPE="Sports" CLASS="USP">
+  <entity_mention ID="MARKBACKER_20041220.0919-E9-35" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2774" END="2789">many other teams</charseq>
+    </extent>
+    <head>
+      <charseq START="2785" END="2789">teams</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKBACKER_20041220.0919-E10" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="MARKBACKER_20041220.0919-E10-1" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="184" END="184">I</charseq>
+    </extent>
+    <head>
+      <charseq START="184" END="184">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041220.0919-E10-13" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1713" END="1713">I</charseq>
+    </extent>
+    <head>
+      <charseq START="1713" END="1713">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041220.0919-E10-20" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1982" END="1982">I</charseq>
+    </extent>
+    <head>
+      <charseq START="1982" END="1982">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041220.0919-E10-25" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2116" END="2116">I</charseq>
+    </extent>
+    <head>
+      <charseq START="2116" END="2116">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041220.0919-E10-26" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2153" END="2154">me</charseq>
+    </extent>
+    <head>
+      <charseq START="2153" END="2154">me</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041220.0919-E10-27" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2223" END="2223">I</charseq>
+    </extent>
+    <head>
+      <charseq START="2223" END="2223">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041220.0919-E10-28" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2743" END="2743">I</charseq>
+    </extent>
+    <head>
+      <charseq START="2743" END="2743">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041220.0919-E10-55" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="206" END="206">I</charseq>
+    </extent>
+    <head>
+      <charseq START="206" END="206">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041220.0919-E10-59" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="257" END="257">I</charseq>
+    </extent>
+    <head>
+      <charseq START="257" END="257">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041220.0919-E10-60" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="294" END="294">I</charseq>
+    </extent>
+    <head>
+      <charseq START="294" END="294">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041220.0919-E10-70" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="107" END="117">Mark Backer</charseq>
+    </extent>
+    <head>
+      <charseq START="107" END="117">Mark Backer</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Mark Backer">
+      <charseq START="107" END="117">Mark Backer</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKBACKER_20041220.0919-E11" TYPE="PER" SUBTYPE="Indeterminate" CLASS="GEN">
+  <entity_mention ID="MARKBACKER_20041220.0919-E11-40" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="2879" END="2888">tight ends</charseq>
+    </extent>
+    <head>
+      <charseq START="2879" END="2888">tight ends</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKBACKER_20041220.0919-E12" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="MARKBACKER_20041220.0919-E12-41" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="2894" END="2910">offensive lineman</charseq>
+    </extent>
+    <head>
+      <charseq START="2904" END="2910">lineman</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKBACKER_20041220.0919-E13" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="MARKBACKER_20041220.0919-E13-43" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1559" END="1566">a
+person</charseq>
+    </extent>
+    <head>
+      <charseq START="1561" END="1566">person</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKBACKER_20041220.0919-E14" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="MARKBACKER_20041220.0919-E14-44" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="2329" END="2363">bigger, stronger and faster players</charseq>
+    </extent>
+    <head>
+      <charseq START="2357" END="2363">players</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKBACKER_20041220.0919-E15" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="MARKBACKER_20041220.0919-E15-45" TYPE="PRO" LDCTYPE="PTV">
+    <extent>
+      <charseq START="2539" END="2558">all of his employees</charseq>
+    </extent>
+    <head>
+      <charseq START="2539" END="2541">all</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041220.0919-E15-58" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2546" END="2558">his employees</charseq>
+    </extent>
+    <head>
+      <charseq START="2550" END="2558">employees</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKBACKER_20041220.0919-E16" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="MARKBACKER_20041220.0919-E16-46" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="2652" END="2667">players like him</charseq>
+    </extent>
+    <head>
+      <charseq START="2652" END="2658">players</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKBACKER_20041220.0919-E17" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="MARKBACKER_20041220.0919-E17-4" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1386" END="1405">the offending player</charseq>
+    </extent>
+    <head>
+      <charseq START="1400" END="1405">player</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041220.0919-E17-5" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1410" END="1411">he</charseq>
+    </extent>
+    <head>
+      <charseq START="1410" END="1411">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041220.0919-E17-7" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1462" END="1464">him</charseq>
+    </extent>
+    <head>
+      <charseq START="1462" END="1464">him</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041220.0919-E17-8" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1503" END="1504">he</charseq>
+    </extent>
+    <head>
+      <charseq START="1503" END="1504">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041220.0919-E17-19" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1949" END="1954">Darius</charseq>
+    </extent>
+    <head>
+      <charseq START="1949" END="1954">Darius</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041220.0919-E17-23" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2044" END="2049">Darius</charseq>
+    </extent>
+    <head>
+      <charseq START="2044" END="2049">Darius</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041220.0919-E17-34" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2641" END="2646">Darius</charseq>
+    </extent>
+    <head>
+      <charseq START="2641" END="2646">Darius</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041220.0919-E17-36" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2665" END="2667">him</charseq>
+    </extent>
+    <head>
+      <charseq START="2665" END="2667">him</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041220.0919-E17-39" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2833" END="2838">Darius</charseq>
+    </extent>
+    <head>
+      <charseq START="2833" END="2838">Darius</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041220.0919-E17-42" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1885" END="1890">Darius</charseq>
+    </extent>
+    <head>
+      <charseq START="1885" END="1890">Darius</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041220.0919-E17-49" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="536" END="550">Jacksonville DB</charseq>
+    </extent>
+    <head>
+      <charseq START="549" END="550">DB</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041220.0919-E17-50" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="2846" END="2910">the target of similar
+attacks by tight ends and offensive lineman</charseq>
+    </extent>
+    <head>
+      <charseq START="2850" END="2855">target</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041220.0919-E17-64" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="536" END="565">Jacksonville DB Donovin Darius</charseq>
+    </extent>
+    <head>
+      <charseq START="552" END="565">Donovin Darius</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041220.0919-E17-73" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1230" END="1235">Darius</charseq>
+    </extent>
+    <head>
+      <charseq START="1230" END="1235">Darius</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Darius">
+      <charseq START="1949" END="1954">Darius</charseq>
+    </name>
+    <name NAME="Darius">
+      <charseq START="2044" END="2049">Darius</charseq>
+    </name>
+    <name NAME="Darius">
+      <charseq START="2641" END="2646">Darius</charseq>
+    </name>
+    <name NAME="Darius">
+      <charseq START="2833" END="2838">Darius</charseq>
+    </name>
+    <name NAME="Darius">
+      <charseq START="1885" END="1890">Darius</charseq>
+    </name>
+    <name NAME="Donovin Darius">
+      <charseq START="552" END="565">Donovin Darius</charseq>
+    </name>
+    <name NAME="Darius">
+      <charseq START="1230" END="1235">Darius</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKBACKER_20041220.0919-E21" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="MARKBACKER_20041220.0919-E21-62" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="429" END="433">Favre</charseq>
+    </extent>
+    <head>
+      <charseq START="429" END="433">Favre</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Favre">
+      <charseq START="429" END="433">Favre</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKBACKER_20041220.0919-E22" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="MARKBACKER_20041220.0919-E22-24" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2097" END="2104">Ferguson</charseq>
+    </extent>
+    <head>
+      <charseq START="2097" END="2104">Ferguson</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041220.0919-E22-30" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2487" END="2494">Ferguson</charseq>
+    </extent>
+    <head>
+      <charseq START="2487" END="2494">Ferguson</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041220.0919-E22-52" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="697" END="699">his</charseq>
+    </extent>
+    <head>
+      <charseq START="697" END="699">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041220.0919-E22-53" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1122" END="1129">Ferguson</charseq>
+    </extent>
+    <head>
+      <charseq START="1122" END="1129">Ferguson</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041220.0919-E22-54" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1145" END="1147">his</charseq>
+    </extent>
+    <head>
+      <charseq START="1145" END="1147">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041220.0919-E22-63" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="439" END="453">Robert Ferguson</charseq>
+    </extent>
+    <head>
+      <charseq START="439" END="453">Robert Ferguson</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041220.0919-E22-66" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="589" END="596">Ferguson</charseq>
+    </extent>
+    <head>
+      <charseq START="589" END="596">Ferguson</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041220.0919-E22-67" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="638" END="645">Ferguson</charseq>
+    </extent>
+    <head>
+      <charseq START="638" END="645">Ferguson</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041220.0919-E22-69" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="770" END="777">Ferguson</charseq>
+    </extent>
+    <head>
+      <charseq START="770" END="777">Ferguson</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Ferguson">
+      <charseq START="2097" END="2104">Ferguson</charseq>
+    </name>
+    <name NAME="Ferguson">
+      <charseq START="2487" END="2494">Ferguson</charseq>
+    </name>
+    <name NAME="Ferguson">
+      <charseq START="1122" END="1129">Ferguson</charseq>
+    </name>
+    <name NAME="Robert Ferguson">
+      <charseq START="439" END="453">Robert Ferguson</charseq>
+    </name>
+    <name NAME="Ferguson">
+      <charseq START="589" END="596">Ferguson</charseq>
+    </name>
+    <name NAME="Ferguson">
+      <charseq START="638" END="645">Ferguson</charseq>
+    </name>
+    <name NAME="Ferguson">
+      <charseq START="770" END="777">Ferguson</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKBACKER_20041220.0919-E26" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="MARKBACKER_20041220.0919-E26-6" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1418" END="1426">the field</charseq>
+    </extent>
+    <head>
+      <charseq START="1422" END="1426">field</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041220.0919-E26-38" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2817" END="2825">the field</charseq>
+    </extent>
+    <head>
+      <charseq START="2821" END="2825">field</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041220.0919-E26-68" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="759" END="767">the field</charseq>
+    </extent>
+    <head>
+      <charseq START="763" END="767">field</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKBACKER_20041220.0919-E27" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="MARKBACKER_20041220.0919-E27-2" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1263" END="1271">the crowd</charseq>
+    </extent>
+    <head>
+      <charseq START="1267" END="1271">crowd</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041220.0919-E27-3" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1320" END="1324">their</charseq>
+    </extent>
+    <head>
+      <charseq START="1320" END="1324">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041220.0919-E27-9" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1516" END="1530">the Packer fans</charseq>
+    </extent>
+    <head>
+      <charseq START="1527" END="1530">fans</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041220.0919-E27-12" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1569" END="1572">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1569" END="1572">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041220.0919-E27-47" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1598" END="1602">their</charseq>
+    </extent>
+    <head>
+      <charseq START="1598" END="1602">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041220.0919-E27-48" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1642" END="1646">their</charseq>
+    </extent>
+    <head>
+      <charseq START="1642" END="1646">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041220.0919-E27-71" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="836" END="844">the crowd</charseq>
+    </extent>
+    <head>
+      <charseq START="840" END="844">crowd</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<timex2 ID="MARKBACKER_20041220.0919-T1" VAL="2004-12-20T09:19:00">
+  <timex2_mention ID="MARKBACKER_20041220.0919-T1-1">
+    <extent>
+      <charseq START="40" END="58">2004-12-20T09:19:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKBACKER_20041220.0919-T2" VAL="PXD" ANCHOR_VAL="2004-12-20" ANCHOR_DIR="AFTER">
+  <timex2_mention ID="MARKBACKER_20041220.0919-T2-1">
+    <extent>
+      <charseq START="335" END="342">the days</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKBACKER_20041220.0919-T3" VAL="PTXM" ANCHOR_VAL="2004-12-20-T09:19:00" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="MARKBACKER_20041220.0919-T3-1">
+    <extent>
+      <charseq START="726" END="737">many minutes</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKBACKER_20041220.0919-T4" VAL="198" MOD="MID">
+  <timex2_mention ID="MARKBACKER_20041220.0919-T4-1">
+    <extent>
+      <charseq START="1788" END="1799">the mid 80's</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKBACKER_20041220.0919-T5" VAL="2004-12-20T09:19:00">
+  <timex2_mention ID="MARKBACKER_20041220.0919-T5-1">
+    <extent>
+      <charseq START="121" END="139">2004-12-20T09:19:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKBACKER_20041220.0919-T6" VAL="PT4M41S" ANCHOR_VAL="2004-12-20-T09:19:00" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="MARKBACKER_20041220.0919-T6-1">
+    <extent>
+      <charseq START="369" END="372">4:41</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKBACKER_20041220.0919-T7" VAL="198TXX:XX:XX">
+  <timex2_mention ID="MARKBACKER_20041220.0919-T7-1">
+    <extent>
+      <charseq START="1801" END="1847">about five seconds after he had released a pass</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKBACKER_20041220.0919-T8" VAL="PRESENT_REF" ANCHOR_VAL="2004-12-20-T09:19:00" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="MARKBACKER_20041220.0919-T8-1">
+    <extent>
+      <charseq START="2306" END="2324">In this day and age</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKBACKER_20041220.0919-T9" VAL="PXW" ANCHOR_VAL="2004-W52" ANCHOR_DIR="AFTER">
+  <timex2_mention ID="MARKBACKER_20041220.0919-T9-1">
+    <extent>
+      <charseq START="348" END="360">weeks to come</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="MARKBACKER_20041220.0919-R1" TYPE="ORG-AFF" SUBTYPE="Sports-Affiliation" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="MARKBACKER_20041220.0919-E17" ROLE="Arg-1"/>
+  <relation_argument REFID="MARKBACKER_20041220.0919-E5" ROLE="Arg-2"/>
+  <relation_mention ID="MARKBACKER_20041220.0919-R1-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="536" END="550">Jacksonville DB</charseq>
+    </extent>
+    <relation_mention_argument REFID="MARKBACKER_20041220.0919-E17-49" ROLE="Arg-1">
+      <extent>
+        <charseq START="536" END="550">Jacksonville DB</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="MARKBACKER_20041220.0919-E5-65" ROLE="Arg-2">
+      <extent>
+        <charseq START="536" END="547">Jacksonville</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="MARKBACKER_20041220.0919-R2" TYPE="ORG-AFF" SUBTYPE="Sports-Affiliation" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="MARKBACKER_20041220.0919-E4" ROLE="Arg-1"/>
+  <relation_argument REFID="MARKBACKER_20041220.0919-E5" ROLE="Arg-2"/>
+  <relation_mention ID="MARKBACKER_20041220.0919-R2-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="1854" END="1866">Jaguars coach</charseq>
+    </extent>
+    <relation_mention_argument REFID="MARKBACKER_20041220.0919-E4-57" ROLE="Arg-1">
+      <extent>
+        <charseq START="1854" END="1866">Jaguars coach</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="MARKBACKER_20041220.0919-E5-17" ROLE="Arg-2">
+      <extent>
+        <charseq START="1854" END="1860">Jaguars</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="MARKBACKER_20041220.0919-R3" TYPE="PER-SOC" SUBTYPE="Business" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="MARKBACKER_20041220.0919-E8" ROLE="Arg-1"/>
+  <relation_argument REFID="MARKBACKER_20041220.0919-E15" ROLE="Arg-2"/>
+  <relation_mention ID="MARKBACKER_20041220.0919-R3-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="2546" END="2558">his employees</charseq>
+    </extent>
+    <relation_mention_argument REFID="MARKBACKER_20041220.0919-E8-32" ROLE="Arg-1">
+      <extent>
+        <charseq START="2546" END="2548">his</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="MARKBACKER_20041220.0919-E15-58" ROLE="Arg-2">
+      <extent>
+        <charseq START="2546" END="2558">his employees</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="MARKBACKER_20041220.0919-R4" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="MARKBACKER_20041220.0919-E22" ROLE="Arg-1"/>
+  <relation_argument REFID="MARKBACKER_20041220.0919-E26" ROLE="Arg-2"/>
+  <relation_argument REFID="MARKBACKER_20041220.0919-T3" ROLE="Time-Holds"/>
+  <relation_mention ID="MARKBACKER_20041220.0919-R4-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="720" END="859">After many minutes lying motionless on the field, Ferguson was
+finally removed via stretcher, giving a thumbs up to the crowd on the
+way out</charseq>
+    </extent>
+    <relation_mention_argument REFID="MARKBACKER_20041220.0919-E22-69" ROLE="Arg-1">
+      <extent>
+        <charseq START="770" END="777">Ferguson</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="MARKBACKER_20041220.0919-E26-68" ROLE="Arg-2">
+      <extent>
+        <charseq START="759" END="767">the field</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="MARKBACKER_20041220.0919-T3-1" ROLE="Time-Holds">
+      <extent>
+        <charseq START="726" END="737">many minutes</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="MARKBACKER_20041220.0919-EV1" TYPE="Life" SUBTYPE="Injure" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="MARKBACKER_20041220.0919-E22" ROLE="Victim"/>
+  <event_argument REFID="MARKBACKER_20041220.0919-E17" ROLE="Agent"/>
+  <event_mention ID="MARKBACKER_20041220.0919-EV1-1">
+    <extent>
+      <charseq START="2044" END="2104">Darius'
+intent was to dismember, injure or even kill Ferguson</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1982" END="2104">I don't care what anyone says about "you can't judge intent." Darius'
+intent was to dismember, injure or even kill Ferguson</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2077" END="2082">injure</charseq>
+    </anchor>
+    <event_mention_argument REFID="MARKBACKER_20041220.0919-E22-24" ROLE="Victim">
+      <extent>
+        <charseq START="2097" END="2104">Ferguson</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="MARKBACKER_20041220.0919-E17-23" ROLE="Agent">
+      <extent>
+        <charseq START="2044" END="2049">Darius</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="MARKBACKER_20041220.0919-EV2" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_mention ID="MARKBACKER_20041220.0919-EV2-1">
+    <extent>
+      <charseq START="791" END="797">removed</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="720" END="859">After many minutes lying motionless on the field, Ferguson was
+finally removed via stretcher, giving a thumbs up to the crowd on the
+way out</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="791" END="797">removed</charseq>
+    </anchor>
+  </event_mention>
+</event>
+<event ID="MARKBACKER_20041220.0919-EV3" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="MARKBACKER_20041220.0919-E17" ROLE="Attacker"/>
+  <event_argument REFID="MARKBACKER_20041220.0919-E22" ROLE="Target"/>
+  <event_mention ID="MARKBACKER_20041220.0919-EV3-1">
+    <extent>
+      <charseq START="536" END="596">Jacksonville DB Donovin Darius
+unloaded chin high on Ferguson</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="503" END="623">Coming from the other direction, Jacksonville DB Donovin Darius
+unloaded chin high on Ferguson with a vicious clothesline</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="567" END="574">unloaded</charseq>
+    </anchor>
+    <event_mention_argument REFID="MARKBACKER_20041220.0919-E17-64" ROLE="Attacker">
+      <extent>
+        <charseq START="536" END="565">Jacksonville DB Donovin Darius</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="MARKBACKER_20041220.0919-E22-66" ROLE="Target">
+      <extent>
+        <charseq START="589" END="596">Ferguson</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="MARKBACKER_20041220.0919-EV3-2">
+    <extent>
+      <charseq START="933" END="936">This</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="933" END="1032">This was not one of the staged stiff-armed clotheslines you see in
+professional wrestling broadcasts</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="933" END="936">This</charseq>
+    </anchor>
+  </event_mention>
+  <event_mention ID="MARKBACKER_20041220.0919-EV3-3">
+    <extent>
+      <charseq START="1035" END="1129">This was a vicious, arm cocked and
+swinging clothesline that literally could have torn Ferguson</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1035" END="1152">This was a vicious, arm cocked and
+swinging clothesline that literally could have torn Ferguson's head off
+of his body</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1035" END="1038">This</charseq>
+    </anchor>
+    <event_mention_argument REFID="MARKBACKER_20041220.0919-E22-53" ROLE="Target">
+      <extent>
+        <charseq START="1122" END="1129">Ferguson</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="MARKBACKER_20041220.0919-EV3-4">
+    <extent>
+      <charseq START="2578" END="2581">this</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2506" END="2603">Paul
+Tagliabue must give word to all of his employees that actions like this
+will not be tolerated</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2578" END="2581">this</charseq>
+    </anchor>
+  </event_mention>
+</event>
+<event ID="MARKBACKER_20041220.0919-EV4" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="MARKBACKER_20041220.0919-E17" ROLE="Artifact"/>
+  <event_argument REFID="MARKBACKER_20041220.0919-E26" ROLE="Origin"/>
+  <event_mention ID="MARKBACKER_20041220.0919-EV4-1">
+    <extent>
+      <charseq START="1410" END="1426">he left
+the field</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1285" END="1426">One sidenote here is that, despite their rabid fandom and the
+situation, not one thing was thrown at the offending player as he left
+the field</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1413" END="1416">left</charseq>
+    </anchor>
+    <event_mention_argument REFID="MARKBACKER_20041220.0919-E17-5" ROLE="Artifact">
+      <extent>
+        <charseq START="1410" END="1411">he</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="MARKBACKER_20041220.0919-E26-6" ROLE="Origin">
+      <extent>
+        <charseq START="1418" END="1426">the field</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="MARKBACKER_20041220.0919-EV5" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="MARKBACKER_20041220.0919-E3" ROLE="Target"/>
+  <event_argument REFID="MARKBACKER_20041220.0919-T4" ROLE="Time-Within"/>
+  <event_argument REFID="MARKBACKER_20041220.0919-T7" ROLE="Time-At-End"/>
+  <event_mention ID="MARKBACKER_20041220.0919-EV5-1">
+    <extent>
+      <charseq START="1742" END="1847">Jim McMahon was body slammed to the ground in the mid 80's
+about five seconds after he had released a pass</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1662" END="1847">This was the most vicious and blatantly dirty play I have seen in the
+NFL since Jim McMahon was body slammed to the ground in the mid 80's
+about five seconds after he had released a pass</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1763" END="1769">slammed</charseq>
+    </anchor>
+    <event_mention_argument REFID="MARKBACKER_20041220.0919-E3-14" ROLE="Target">
+      <extent>
+        <charseq START="1742" END="1752">Jim McMahon</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="MARKBACKER_20041220.0919-T4-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="1788" END="1799">the mid 80's</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="MARKBACKER_20041220.0919-T7-1" ROLE="Time-At-End">
+      <extent>
+        <charseq START="1801" END="1847">about five seconds after he had released a pass</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="MARKBACKER_20041220.0919-EV6" TYPE="Life" SUBTYPE="Injure" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="MARKBACKER_20041220.0919-E22" ROLE="Victim"/>
+  <event_argument REFID="MARKBACKER_20041220.0919-E17" ROLE="Agent"/>
+  <event_mention ID="MARKBACKER_20041220.0919-EV6-1">
+    <extent>
+      <charseq START="2044" END="2104">Darius'
+intent was to dismember, injure or even kill Ferguson</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1982" END="2104">I don't care what anyone says about "you can't judge intent." Darius'
+intent was to dismember, injure or even kill Ferguson</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2066" END="2074">dismember</charseq>
+    </anchor>
+    <event_mention_argument REFID="MARKBACKER_20041220.0919-E22-24" ROLE="Victim">
+      <extent>
+        <charseq START="2097" END="2104">Ferguson</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="MARKBACKER_20041220.0919-E17-23" ROLE="Agent">
+      <extent>
+        <charseq START="2044" END="2049">Darius</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="MARKBACKER_20041220.0919-EV7" TYPE="Life" SUBTYPE="Die" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="MARKBACKER_20041220.0919-E22" ROLE="Victim"/>
+  <event_argument REFID="MARKBACKER_20041220.0919-E17" ROLE="Agent"/>
+  <event_mention ID="MARKBACKER_20041220.0919-EV7-1">
+    <extent>
+      <charseq START="2044" END="2104">Darius'
+intent was to dismember, injure or even kill Ferguson</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1982" END="2104">I don't care what anyone says about "you can't judge intent." Darius'
+intent was to dismember, injure or even kill Ferguson</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2092" END="2095">kill</charseq>
+    </anchor>
+    <event_mention_argument REFID="MARKBACKER_20041220.0919-E22-24" ROLE="Victim">
+      <extent>
+        <charseq START="2097" END="2104">Ferguson</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="MARKBACKER_20041220.0919-E17-23" ROLE="Agent">
+      <extent>
+        <charseq START="2044" END="2049">Darius</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="MARKBACKER_20041220.0919-EV8" TYPE="Life" SUBTYPE="Injure" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="MARKBACKER_20041220.0919-T8" ROLE="Time-Within"/>
+  <event_mention ID="MARKBACKER_20041220.0919-EV8-1">
+    <extent>
+      <charseq START="2306" END="2373">In this day and age of bigger, stronger and faster players, injuries</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2306" END="2422">In this day and age of bigger, stronger and faster players, injuries
+are going to happen accidentally all of the time</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2366" END="2373">injuries</charseq>
+    </anchor>
+    <event_mention_argument REFID="MARKBACKER_20041220.0919-T8-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="2306" END="2324">In this day and age</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="MARKBACKER_20041220.0919-EV9" TYPE="Life" SUBTYPE="Injure" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="MARKBACKER_20041220.0919-E22" ROLE="Victim"/>
+  <event_mention ID="MARKBACKER_20041220.0919-EV9-1">
+    <extent>
+      <charseq START="2487" END="2503">Ferguson's injury</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2425" END="2503">There is simply no
+room for the kind of play that resulted in Ferguson's injury</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2498" END="2503">injury</charseq>
+    </anchor>
+    <event_mention_argument REFID="MARKBACKER_20041220.0919-E22-30" ROLE="Victim">
+      <extent>
+        <charseq START="2487" END="2494">Ferguson</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="MARKBACKER_20041220.0919-EV10" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Future">
+  <event_argument REFID="MARKBACKER_20041220.0919-E11" ROLE="Attacker"/>
+  <event_argument REFID="MARKBACKER_20041220.0919-E12" ROLE="Attacker"/>
+  <event_argument REFID="MARKBACKER_20041220.0919-E26" ROLE="Place"/>
+  <event_argument REFID="MARKBACKER_20041220.0919-E17" ROLE="Target"/>
+  <event_mention ID="MARKBACKER_20041220.0919-EV10-1">
+    <extent>
+      <charseq START="2817" END="2910">the field" with Darius being the target of similar
+attacks by tight ends and offensive lineman</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2735" END="2910">If not, I fully expect the Packers and many other teams to handle
+this matter "on the field" with Darius being the target of similar
+attacks by tight ends and offensive lineman</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2868" END="2874">attacks</charseq>
+    </anchor>
+    <event_mention_argument REFID="MARKBACKER_20041220.0919-E11-40" ROLE="Attacker">
+      <extent>
+        <charseq START="2879" END="2888">tight ends</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="MARKBACKER_20041220.0919-E12-41" ROLE="Attacker">
+      <extent>
+        <charseq START="2894" END="2910">offensive lineman</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="MARKBACKER_20041220.0919-E26-38" ROLE="Place">
+      <extent>
+        <charseq START="2817" END="2825">the field</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="MARKBACKER_20041220.0919-E17-50" ROLE="Target">
+      <extent>
+        <charseq START="2846" END="2910">the target of similar
+attacks by tight ends and offensive lineman</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

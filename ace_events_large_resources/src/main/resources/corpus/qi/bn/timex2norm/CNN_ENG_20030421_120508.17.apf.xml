@@ -1,0 +1,544 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030421_120508.17.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030421_120508.17">
+<entity ID="CNN_ENG_20030421_120508.17-E1" TYPE="ORG" SUBTYPE="Commercial" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030421_120508.17-E1-3" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="806" END="815">its rivals</charseq>
+    </extent>
+    <head>
+      <charseq START="810" END="815">rivals</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030421_120508.17-E2" TYPE="ORG" SUBTYPE="Commercial" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030421_120508.17-E2-5" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="892" END="901">businesses</charseq>
+    </extent>
+    <head>
+      <charseq START="892" END="901">businesses</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030421_120508.17-E2-6" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="926" END="930">their</charseq>
+    </extent>
+    <head>
+      <charseq START="926" END="930">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030421_120508.17-E2-8" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="983" END="986">they</charseq>
+    </extent>
+    <head>
+      <charseq START="983" END="986">they</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030421_120508.17-E3" TYPE="ORG" SUBTYPE="Commercial" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030421_120508.17-E3-4" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1182" END="1198">low fare airlines</charseq>
+    </extent>
+    <head>
+      <charseq START="1191" END="1198">airlines</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030421_120508.17-E4" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030421_120508.17-E4-7" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="971" END="977">experts</charseq>
+    </extent>
+    <head>
+      <charseq START="971" END="977">experts</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030421_120508.17-E5" TYPE="ORG" SUBTYPE="Non-Governmental" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030421_120508.17-E5-9" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1214" END="1238">business travel
+coalition</charseq>
+    </extent>
+    <head>
+      <charseq START="1214" END="1238">business travel
+coalition</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="business travel coalition">
+      <charseq START="1214" END="1238">business travel
+coalition</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030421_120508.17-E6" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030421_120508.17-E6-10" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1241" END="1268">younger techs heavy managers</charseq>
+    </extent>
+    <head>
+      <charseq START="1261" END="1268">managers</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030421_120508.17-E6-11" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1308" END="1311">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1308" END="1311">they</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030421_120508.17-E7" TYPE="VEH" SUBTYPE="Air" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030421_120508.17-E7-12" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1299" END="1305">a plane</charseq>
+    </extent>
+    <head>
+      <charseq START="1301" END="1305">plane</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030421_120508.17-E8" TYPE="ORG" SUBTYPE="Commercial" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030421_120508.17-E8-13" TYPE="PRO" LDCTYPE="HLS">
+    <extent>
+      <charseq START="1241" END="1253">younger techs</charseq>
+    </extent>
+    <head>
+      <charseq START="1249" END="1253">techs</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030421_120508.17-E9" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030421_120508.17-E9-1" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="68" END="84">american airlines</charseq>
+    </extent>
+    <head>
+      <charseq START="68" END="84">american airlines</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030421_120508.17-E9-2" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="806" END="808">its</charseq>
+    </extent>
+    <head>
+      <charseq START="806" END="808">its</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030421_120508.17-E9-14" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="130" END="140">the company</charseq>
+    </extent>
+    <head>
+      <charseq START="134" END="140">company</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030421_120508.17-E9-19" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="401" END="419">the largest airline</charseq>
+    </extent>
+    <head>
+      <charseq START="413" END="419">airline</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030421_120508.17-E9-22" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="526" END="536">the airline</charseq>
+    </extent>
+    <head>
+      <charseq START="530" END="536">airline</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030421_120508.17-E9-23" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="638" END="645">american</charseq>
+    </extent>
+    <head>
+      <charseq START="638" END="645">american</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030421_120508.17-E9-24" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="669" END="671">its</charseq>
+    </extent>
+    <head>
+      <charseq START="669" END="671">its</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030421_120508.17-E9-31" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="793" END="800">american</charseq>
+    </extent>
+    <head>
+      <charseq START="793" END="800">american</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="american airlines">
+      <charseq START="68" END="84">american airlines</charseq>
+    </name>
+    <name NAME="american">
+      <charseq START="638" END="645">american</charseq>
+    </name>
+    <name NAME="american">
+      <charseq START="793" END="800">american</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030421_120508.17-E10" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030421_120508.17-E10-15" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="174" END="189">rhonda
+schaffler</charseq>
+    </extent>
+    <head>
+      <charseq START="174" END="189">rhonda
+schaffler</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="rhonda schaffler">
+      <charseq START="174" END="189">rhonda
+schaffler</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030421_120508.17-E11" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030421_120508.17-E11-16" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="230" END="231">we</charseq>
+    </extent>
+    <head>
+      <charseq START="230" END="231">we</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030421_120508.17-E12" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030421_120508.17-E12-17" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="264" END="290">a couple district attorneys</charseq>
+    </extent>
+    <head>
+      <charseq START="282" END="290">attorneys</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030421_120508.17-E13" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030421_120508.17-E13-18" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="302" END="322">the flight
+attendants</charseq>
+    </extent>
+    <head>
+      <charseq START="313" END="322">attendants</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030421_120508.17-E14" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030421_120508.17-E14-20" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="475" END="487">union members</charseq>
+    </extent>
+    <head>
+      <charseq START="481" END="487">members</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030421_120508.17-E14-28" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="723" END="735">union members</charseq>
+    </extent>
+    <head>
+      <charseq START="729" END="735">members</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030421_120508.17-E14-30" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="760" END="763">they</charseq>
+    </extent>
+    <head>
+      <charseq START="760" END="763">they</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030421_120508.17-E15" TYPE="ORG" SUBTYPE="Non-Governmental" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030421_120508.17-E15-21" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="475" END="479">union</charseq>
+    </extent>
+    <head>
+      <charseq START="475" END="479">union</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030421_120508.17-E15-27" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="708" END="712">union</charseq>
+    </extent>
+    <head>
+      <charseq START="708" END="712">union</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030421_120508.17-E15-29" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="723" END="727">union</charseq>
+    </extent>
+    <head>
+      <charseq START="723" END="727">union</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030421_120508.17-E16" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030421_120508.17-E16-25" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="669" END="687">its chief executive</charseq>
+    </extent>
+    <head>
+      <charseq START="679" END="687">executive</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030421_120508.17-E17" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030421_120508.17-E17-26" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="708" END="720">union
+leaders</charseq>
+    </extent>
+    <head>
+      <charseq START="714" END="720">leaders</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<timex2 ID="CNN_ENG_20030421_120508.17-T1" VAL="2003-04-21T13:30:55">
+  <timex2_mention ID="CNN_ENG_20030421_120508.17-T1-1">
+    <extent>
+      <charseq START="44" END="62">2003-04-21 13:30:55</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030421_120508.17-T2" VAL="2003-04-21T13:30:55" MOD="BEFORE">
+  <timex2_mention ID="CNN_ENG_20030421_120508.17-T2-1">
+    <extent>
+      <charseq START="264" END="294">a couple district attorneys ago</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030421_120508.17-T3" ANCHOR_VAL="2003-04-21" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_ENG_20030421_120508.17-T3-1">
+    <extent>
+      <charseq START="297" END="299">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030421_120508.17-T4" VAL="2003-04-18">
+  <timex2_mention ID="CNN_ENG_20030421_120508.17-T4-1">
+    <extent>
+      <charseq START="630" END="635">friday</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030421_120508.17-T5" VAL="P3Y" ANCHOR_VAL="2000" ANCHOR_DIR="STARTING">
+  <timex2_mention ID="CNN_ENG_20030421_120508.17-T5-1">
+    <extent>
+      <charseq START="870" END="889">the past
+three years</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030421_120508.17-T6" ANCHOR_VAL="2003-04-21-T13:30:55" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_ENG_20030421_120508.17-T6-1">
+    <extent>
+      <charseq START="116" END="125">the latest</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030421_120508.17-T7" ANCHOR_VAL="2003-04-21" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_ENG_20030421_120508.17-T7-1">
+    <extent>
+      <charseq START="967" END="969">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030421_120508.17-R1" TYPE="ORG-AFF" SUBTYPE="Membership" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030421_120508.17-E14" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030421_120508.17-E15" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030421_120508.17-R1-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="475" END="487">union members</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030421_120508.17-E14-20" ROLE="Arg-1">
+      <extent>
+        <charseq START="475" END="487">union members</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030421_120508.17-E15-21" ROLE="Arg-2">
+      <extent>
+        <charseq START="475" END="479">union</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_ENG_20030421_120508.17-R1-2" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="723" END="735">union members</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030421_120508.17-E14-28" ROLE="Arg-1">
+      <extent>
+        <charseq START="723" END="735">union members</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030421_120508.17-E15-29" ROLE="Arg-2">
+      <extent>
+        <charseq START="723" END="727">union</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030421_120508.17-R2" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030421_120508.17-E16" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030421_120508.17-E9" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030421_120508.17-R2-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="669" END="687">its chief executive</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030421_120508.17-E16-25" ROLE="Arg-1">
+      <extent>
+        <charseq START="669" END="687">its chief executive</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030421_120508.17-E9-24" ROLE="Arg-2">
+      <extent>
+        <charseq START="669" END="671">its</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030421_120508.17-R3" TYPE="ORG-AFF" SUBTYPE="Membership" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030421_120508.17-E17" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030421_120508.17-E15" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030421_120508.17-R3-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="708" END="720">union
+leaders</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030421_120508.17-E17-26" ROLE="Arg-1">
+      <extent>
+        <charseq START="708" END="720">union
+leaders</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030421_120508.17-E15-27" ROLE="Arg-2">
+      <extent>
+        <charseq START="708" END="712">union</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030421_120508.17-R5" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="CNN_ENG_20030421_120508.17-E6" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030421_120508.17-E7" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030421_120508.17-R5-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="1201" END="1305">according to business travel
+coalition, younger techs heavy managers aren't so keen on
+jumping on a plane</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030421_120508.17-E6-10" ROLE="Arg-1">
+      <extent>
+        <charseq START="1241" END="1268">younger techs heavy managers</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030421_120508.17-E7-12" ROLE="Arg-2">
+      <extent>
+        <charseq START="1299" END="1305">a plane</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030421_120508.17-R6" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030421_120508.17-E6" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030421_120508.17-E8" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030421_120508.17-R6-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="1241" END="1268">younger techs heavy managers</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030421_120508.17-E6-10" ROLE="Arg-1">
+      <extent>
+        <charseq START="1241" END="1268">younger techs heavy managers</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030421_120508.17-E8-13" ROLE="Arg-2">
+      <extent>
+        <charseq START="1241" END="1253">younger techs</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030421_120508.17-EV1" TYPE="Business" SUBTYPE="Declare-Bankruptcy" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Future">
+  <event_argument REFID="CNN_ENG_20030421_120508.17-E9" ROLE="Org"/>
+  <event_mention ID="CNN_ENG_20030421_120508.17-EV1-1">
+    <extent>
+      <charseq START="130" END="160">the company to avoid bankruptcy</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="112" END="189">for the latest
+on the company to avoid bankruptcy, check with rhonda
+schaffler</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="151" END="160">bankruptcy</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030421_120508.17-E9-14" ROLE="Org">
+      <extent>
+        <charseq START="130" END="140">the company</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030421_120508.17-EV1-2">
+    <extent>
+      <charseq START="401" END="451">the largest airline may have
+to file for bankruptcy</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="380" END="451">and if it's rejected the largest airline may have
+to file for bankruptcy</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="442" END="451">bankruptcy</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030421_120508.17-E9-19" ROLE="Org">
+      <extent>
+        <charseq START="401" END="419">the largest airline</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030421_120508.17-EV2" TYPE="Business" SUBTYPE="Declare-Bankruptcy" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030421_120508.17-E9" ROLE="Org"/>
+  <event_mention ID="CNN_ENG_20030421_120508.17-EV2-1">
+    <extent>
+      <charseq START="526" END="624">the airline's
+executive compensation plan where woi would have paid huge
+bonuses even in bankruptcy</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="454" END="624">what's go on is that union members
+became outraged after learning about the airline's
+executive compensation plan where woi would have paid huge
+bonuses even in bankruptcy</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="615" END="624">bankruptcy</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030421_120508.17-E9-22" ROLE="Org">
+      <extent>
+        <charseq START="526" END="536">the airline</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

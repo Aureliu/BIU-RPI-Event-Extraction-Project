@@ -1,0 +1,595 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030617_173115.14.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030617_173115.14">
+<entity ID="CNN_ENG_20030617_173115.14-E1" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030617_173115.14-E1-29" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="517" END="527">lower
+court</charseq>
+    </extent>
+    <head>
+      <charseq START="523" END="527">court</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030617_173115.14-E2" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030617_173115.14-E2-2" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="537" END="558">the justice department</charseq>
+    </extent>
+    <head>
+      <charseq START="549" END="558">department</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030617_173115.14-E3" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030617_173115.14-E3-3" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="632" END="633">we</charseq>
+    </extent>
+    <head>
+      <charseq START="632" END="633">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030617_173115.14-E3-12" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="893" END="894">we</charseq>
+    </extent>
+    <head>
+      <charseq START="893" END="894">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030617_173115.14-E3-14" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1004" END="1005">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1004" END="1005">we</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030617_173115.14-E4" TYPE="LOC" SUBTYPE="Region-General" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030617_173115.14-E4-4" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="723" END="736">central israel</charseq>
+    </extent>
+    <head>
+      <charseq START="731" END="736">israel</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030617_173115.14-E5" TYPE="LOC" SUBTYPE="Region-General" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030617_173115.14-E5-6" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="752" END="764">the west bank</charseq>
+    </extent>
+    <head>
+      <charseq START="756" END="764">west bank</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="west bank">
+      <charseq START="756" END="764">west bank</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030617_173115.14-E6" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030617_173115.14-E6-7" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="767" END="791">a 7-year-old israeli girl</charseq>
+    </extent>
+    <head>
+      <charseq START="788" END="791">girl</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030617_173115.14-E6-10" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="815" END="817">her</charseq>
+    </extent>
+    <head>
+      <charseq START="815" END="817">her</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030617_173115.14-E7" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030617_173115.14-E7-8" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="780" END="786">israeli</charseq>
+    </extent>
+    <head>
+      <charseq START="780" END="786">israeli</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="israeli">
+      <charseq START="780" END="786">israeli</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030617_173115.14-E8" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030617_173115.14-E8-9" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="815" END="824">her father</charseq>
+    </extent>
+    <head>
+      <charseq START="819" END="824">father</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030617_173115.14-E9" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030617_173115.14-E9-11" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="841" END="854">another sister</charseq>
+    </extent>
+    <head>
+      <charseq START="849" END="854">sister</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030617_173115.14-E10" TYPE="PER" SUBTYPE="Indeterminate" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030617_173115.14-E10-13" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="981" END="983">you</charseq>
+    </extent>
+    <head>
+      <charseq START="981" END="983">you</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030617_173115.14-E11" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030617_173115.14-E11-15" TYPE="PRO" LDCTYPE="HLS">
+    <extent>
+      <charseq START="803" END="812">two
+others</charseq>
+    </extent>
+    <head>
+      <charseq START="807" END="812">others</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030617_173115.14-E12" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030617_173115.14-E12-1" TYPE="NAM" LDCTYPE="NAM" ROLE="ORG" LDCATR="FALSE">
+    <extent>
+      <charseq START="68" END="73">canada</charseq>
+    </extent>
+    <head>
+      <charseq START="68" END="73">canada</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030617_173115.14-E12-16" TYPE="NOM" LDCTYPE="NOM" ROLE="ORG" LDCATR="TRUE">
+    <extent>
+      <charseq START="102" END="140">the third country to
+allow gay marriage</charseq>
+    </extent>
+    <head>
+      <charseq START="112" END="118">country</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030617_173115.14-E12-19" TYPE="NOM" LDCTYPE="NOM" ROLE="ORG" LDCATR="FALSE">
+    <extent>
+      <charseq START="143" END="164">the federal government</charseq>
+    </extent>
+    <head>
+      <charseq START="155" END="164">government</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030617_173115.14-E12-23" TYPE="NOM" LDCTYPE="NOM" ROLE="ORG" LDCATR="FALSE">
+    <extent>
+      <charseq START="275" END="288">the government</charseq>
+    </extent>
+    <head>
+      <charseq START="279" END="288">government</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="canada">
+      <charseq START="68" END="73">canada</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030617_173115.14-E14" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030617_173115.14-E14-17" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="129" END="131">gay</charseq>
+    </extent>
+    <head>
+      <charseq START="129" END="131">gay</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030617_173115.14-E14-24" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="328" END="330">gay</charseq>
+    </extent>
+    <head>
+      <charseq START="328" END="330">gay</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030617_173115.14-E15" TYPE="ORG" SUBTYPE="Government" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030617_173115.14-E15-20" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="186" END="190">court</charseq>
+    </extent>
+    <head>
+      <charseq START="186" END="190">court</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030617_173115.14-E16" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030617_173115.14-E16-21" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="241" END="268">prime minister jean chretien</charseq>
+    </extent>
+    <head>
+      <charseq START="256" END="268">jean chretien</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030617_173115.14-E16-22" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="241" END="254">prime minister</charseq>
+    </extent>
+    <head>
+      <charseq START="247" END="254">minister</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="jean chretien">
+      <charseq START="256" END="268">jean chretien</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030617_173115.14-E19" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030617_173115.14-E19-18" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="351" END="353">u.s</charseq>
+    </extent>
+    <head>
+      <charseq START="351" END="353">u.s</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030617_173115.14-E19-25" TYPE="NOM" LDCTYPE="NOM" ROLE="ORG" LDCATR="FALSE">
+    <extent>
+      <charseq START="347" END="365">the u.s.
+government</charseq>
+    </extent>
+    <head>
+      <charseq START="356" END="365">government</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="u.s">
+      <charseq START="351" END="353">u.s</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030617_173115.14-E21" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030617_173115.14-E21-26" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="224" END="231">same-sex</charseq>
+    </extent>
+    <head>
+      <charseq START="224" END="231">same-sex</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030617_173115.14-E22" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030617_173115.14-E22-27" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="405" END="453">people
+detained as part of the 9/11 investigation</charseq>
+    </extent>
+    <head>
+      <charseq START="405" END="410">people</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030617_173115.14-E23" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030617_173115.14-E23-28" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="481" END="503">a federal appeals court</charseq>
+    </extent>
+    <head>
+      <charseq START="499" END="503">court</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<timex2 ID="CNN_ENG_20030617_173115.14-T1" VAL="PRESENT_REF" ANCHOR_VAL="2003-06-17-T17:42:42" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_ENG_20030617_173115.14-T1-1">
+    <extent>
+      <charseq START="295" END="297">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030617_173115.14-T2" VAL="XXXX-09-11">
+  <timex2_mention ID="CNN_ENG_20030617_173115.14-T2-1">
+    <extent>
+      <charseq START="436" END="439">9/11</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030617_173115.14-T3" VAL="P7Y" ANCHOR_VAL="1996" ANCHOR_DIR="STARTING">
+  <timex2_mention ID="CNN_ENG_20030617_173115.14-T3-1">
+    <extent>
+      <charseq START="769" END="778">7-year-old</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030617_173115.14-T4" VAL="PT1H" MOD="APPROX" ANCHOR_VAL="2003-06-17-T17" ANCHOR_DIR="ENDING">
+  <timex2_mention ID="CNN_ENG_20030617_173115.14-T4-1">
+    <extent>
+      <charseq START="659" END="684">within the past hour or so</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030617_173115.14-T5" VAL="2003-06-17T17:42:42">
+  <timex2_mention ID="CNN_ENG_20030617_173115.14-T5-1">
+    <extent>
+      <charseq START="44" END="62">2003-06-17 17:42:42</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030617_173115.14-R1" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030617_173115.14-E6" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030617_173115.14-E7" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030617_173115.14-R1-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="767" END="791">a 7-year-old israeli girl</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030617_173115.14-E6-7" ROLE="Arg-1">
+      <extent>
+        <charseq START="767" END="791">a 7-year-old israeli girl</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030617_173115.14-E7-8" ROLE="Arg-2">
+      <extent>
+        <charseq START="780" END="786">israeli</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030617_173115.14-R2" TYPE="PER-SOC" SUBTYPE="Family" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030617_173115.14-E6" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030617_173115.14-E8" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030617_173115.14-R2-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="815" END="824">her father</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030617_173115.14-E6-10" ROLE="Arg-1">
+      <extent>
+        <charseq START="815" END="817">her</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030617_173115.14-E8-9" ROLE="Arg-2">
+      <extent>
+        <charseq START="815" END="824">her father</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030617_173115.14-R3" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030617_173115.14-E16" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030617_173115.14-E12" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030617_173115.14-R3-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="241" END="340">prime minister jean chretien says the government will now
+draft legislation legalizing gay marriages</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030617_173115.14-E16-21" ROLE="Arg-1">
+      <extent>
+        <charseq START="241" END="268">prime minister jean chretien</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030617_173115.14-E12-23" ROLE="Arg-2">
+      <extent>
+        <charseq START="275" END="288">the government</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030617_173115.14-R4" TYPE="PHYS" SUBTYPE="Near" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030617_173115.14-E4" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030617_173115.14-E5" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030617_173115.14-R4-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="629" END="764">as we've
+been reporting, only within the past hour or so, there's
+been a shooting incident in central israel, not far from
+the west bank</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030617_173115.14-E4-4" ROLE="Arg-1">
+      <extent>
+        <charseq START="723" END="736">central israel</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030617_173115.14-E5-6" ROLE="Arg-2">
+      <extent>
+        <charseq START="752" END="764">the west bank</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030617_173115.14-EV1" TYPE="Life" SUBTYPE="Marry" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Generic" TENSE="Future">
+  <event_argument REFID="CNN_ENG_20030617_173115.14-E14" ROLE="Person"/>
+  <event_argument REFID="CNN_ENG_20030617_173115.14-E12" ROLE="Place"/>
+  <event_argument REFID="CNN_ENG_20030617_173115.14-E21" ROLE="Person"/>
+  <event_mention ID="CNN_ENG_20030617_173115.14-EV1-1">
+    <extent>
+      <charseq START="68" END="140">canada is on the path to becoming the third country to
+allow gay marriage</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="68" END="140">canada is on the path to becoming the third country to
+allow gay marriage</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="133" END="140">marriage</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030617_173115.14-E14-17" ROLE="Person">
+      <extent>
+        <charseq START="129" END="131">gay</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030617_173115.14-E12-1" ROLE="Place">
+      <extent>
+        <charseq START="68" END="73">canada</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030617_173115.14-EV1-2">
+    <extent>
+      <charseq START="224" END="238">same-sex unions</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="143" END="238">the federal government will not appeal
+the court ruling that cleared the way for same-sex unions</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="233" END="238">unions</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030617_173115.14-E21-26" ROLE="Person">
+      <extent>
+        <charseq START="224" END="231">same-sex</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030617_173115.14-EV1-3">
+    <extent>
+      <charseq START="275" END="340">the government will now
+draft legislation legalizing gay marriages</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="241" END="340">prime minister jean chretien says the government will now
+draft legislation legalizing gay marriages</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="332" END="340">marriages</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030617_173115.14-E14-24" ROLE="Person">
+      <extent>
+        <charseq START="328" END="330">gay</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030617_173115.14-E12-23" ROLE="Place">
+      <extent>
+        <charseq START="275" END="288">the government</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030617_173115.14-EV2" TYPE="Justice" SUBTYPE="Appeal" MODALITY="Other" POLARITY="Negative" GENERICITY="Specific" TENSE="Future">
+  <event_argument REFID="CNN_ENG_20030617_173115.14-E12" ROLE="Plaintiff"/>
+  <event_mention ID="CNN_ENG_20030617_173115.14-EV2-1">
+    <extent>
+      <charseq START="143" END="180">the federal government will not appeal</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="143" END="238">the federal government will not appeal
+the court ruling that cleared the way for same-sex unions</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="175" END="180">appeal</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030617_173115.14-E12-19" ROLE="Plaintiff">
+      <extent>
+        <charseq START="143" END="164">the federal government</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030617_173115.14-EV3" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030617_173115.14-E4" ROLE="Place"/>
+  <event_argument REFID="CNN_ENG_20030617_173115.14-T4" ROLE="Time-Within"/>
+  <event_argument REFID="CNN_ENG_20030617_173115.14-E11" ROLE="Attacker"/>
+  <event_mention ID="CNN_ENG_20030617_173115.14-EV3-1">
+    <extent>
+      <charseq START="659" END="736">within the past hour or so, there's
+been a shooting incident in central israel</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="629" END="764">as we've
+been reporting, only within the past hour or so, there's
+been a shooting incident in central israel, not far from
+the west bank</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="702" END="709">shooting</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030617_173115.14-E4-4" ROLE="Place">
+      <extent>
+        <charseq START="723" END="736">central israel</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030617_173115.14-T4-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="659" END="684">within the past hour or so</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030617_173115.14-EV3-2">
+    <extent>
+      <charseq START="803" END="890">two
+others, her father apparently and another sister, have been
+wounded in this incident</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="803" END="890">two
+others, her father apparently and another sister, have been
+wounded in this incident</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="883" END="890">incident</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030617_173115.14-E11-15" ROLE="Attacker">
+      <extent>
+        <charseq START="803" END="812">two
+others</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030617_173115.14-EV4" TYPE="Life" SUBTYPE="Die" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030617_173115.14-E6" ROLE="Victim"/>
+  <event_mention ID="CNN_ENG_20030617_173115.14-EV4-1">
+    <extent>
+      <charseq START="767" END="800">a 7-year-old israeli girl has died</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="767" END="800">a 7-year-old israeli girl has died</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="797" END="800">died</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030617_173115.14-E6-7" ROLE="Victim">
+      <extent>
+        <charseq START="767" END="791">a 7-year-old israeli girl</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030617_173115.14-EV5" TYPE="Life" SUBTYPE="Injure" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030617_173115.14-E11" ROLE="Victim"/>
+  <event_mention ID="CNN_ENG_20030617_173115.14-EV5-1">
+    <extent>
+      <charseq START="803" END="873">two
+others, her father apparently and another sister, have been
+wounded</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="803" END="890">two
+others, her father apparently and another sister, have been
+wounded in this incident</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="867" END="873">wounded</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030617_173115.14-E11-15" ROLE="Victim">
+      <extent>
+        <charseq START="803" END="812">two
+others</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

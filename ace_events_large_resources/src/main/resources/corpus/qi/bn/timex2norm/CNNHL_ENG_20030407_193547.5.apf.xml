@@ -1,0 +1,315 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNNHL_ENG_20030407_193547.5.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNNHL_ENG_20030407_193547.5">
+<entity ID="CNNHL_ENG_20030407_193547.5-E1" TYPE="WEA" SUBTYPE="Chemical" CLASS="NEG">
+  <entity_mention ID="CNNHL_ENG_20030407_193547.5-E1-6" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="559" END="563">nerve</charseq>
+    </extent>
+    <head>
+      <charseq START="559" END="563">nerve</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030407_193547.5-E2" TYPE="WEA" SUBTYPE="Chemical" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030407_193547.5-E2-1" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="559" END="603">nerve no carrier - - - - - and blister agents</charseq>
+    </extent>
+    <head>
+      <charseq START="598" END="603">agents</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030407_193547.5-E3" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNNHL_ENG_20030407_193547.5-E3-2" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="69" END="70">we</charseq>
+    </extent>
+    <head>
+      <charseq START="69" END="70">we</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030407_193547.5-E4" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030407_193547.5-E4-3" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="87" END="184">baghdad, - - - where u.s. troops have found - -f| -
+what may be chemical - - - - weapons materials</charseq>
+    </extent>
+    <head>
+      <charseq START="87" END="93">baghdad</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030407_193547.5-E4-4" TYPE="PRO" LDCTYPE="WHQ" ROLE="LOC">
+    <extent>
+      <charseq START="102" END="106">where</charseq>
+    </extent>
+    <head>
+      <charseq START="102" END="106">where</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="baghdad">
+      <charseq START="87" END="93">baghdad</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030407_193547.5-E5" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030407_193547.5-E5-5" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="108" END="110">u.s</charseq>
+    </extent>
+    <head>
+      <charseq START="108" END="110">u.s</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="u.s">
+      <charseq START="108" END="110">u.s</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030407_193547.5-E6" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030407_193547.5-E6-7" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="108" END="118">u.s. troops</charseq>
+    </extent>
+    <head>
+      <charseq START="113" END="118">troops</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030407_193547.5-E6-13" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="359" END="364">troops</charseq>
+    </extent>
+    <head>
+      <charseq START="359" END="364">troops</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030407_193547.5-E7" TYPE="WEA" SUBTYPE="Chemical" CLASS="GEN">
+  <entity_mention ID="CNNHL_ENG_20030407_193547.5-E7-8" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="151" END="174">chemical - - - - weapons</charseq>
+    </extent>
+    <head>
+      <charseq START="168" END="174">weapons</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030407_193547.5-E8" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030407_193547.5-E8-9" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="209" END="216">the army</charseq>
+    </extent>
+    <head>
+      <charseq START="213" END="216">army</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030407_193547.5-E9" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030407_193547.5-E9-10" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="209" END="246">the army's 101st - - airborne division</charseq>
+    </extent>
+    <head>
+      <charseq START="239" END="246">division</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030407_193547.5-E9-17" TYPE="PRO" LDCTYPE="HLS">
+    <extent>
+      <charseq START="688" END="696">the
+101st</charseq>
+    </extent>
+    <head>
+      <charseq START="692" END="696">101st</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030407_193547.5-E10" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030407_193547.5-E10-11" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="303" END="352">an agricultural complex - - - - - - - near
+karbala</charseq>
+    </extent>
+    <head>
+      <charseq START="319" END="325">complex</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030407_193547.5-E10-15" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="421" END="428">the site</charseq>
+    </extent>
+    <head>
+      <charseq START="425" END="428">site</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030407_193547.5-E11" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030407_193547.5-E11-12" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="346" END="352">karbala</charseq>
+    </extent>
+    <head>
+      <charseq START="346" END="352">karbala</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="karbala">
+      <charseq START="346" END="352">karbala</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030407_193547.5-E12" TYPE="WEA" SUBTYPE="Underspecified" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030407_193547.5-E12-14" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="377" END="414">a large amount of conventional weapons</charseq>
+    </extent>
+    <head>
+      <charseq START="408" END="414">weapons</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030407_193547.5-E13" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030407_193547.5-E13-16" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="671" END="696">the commander of the
+101st</charseq>
+    </extent>
+    <head>
+      <charseq START="675" END="683">commander</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<timex2 ID="CNNHL_ENG_20030407_193547.5-T1" VAL="2003-04-07T19:35:24">
+  <timex2_mention ID="CNNHL_ENG_20030407_193547.5-T1-1">
+    <extent>
+      <charseq START="45" END="63">2003-04-07 19:35:24</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNNHL_ENG_20030407_193547.5-R1" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030407_193547.5-E6" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030407_193547.5-E5" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030407_193547.5-R1-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="108" END="118">u.s. troops</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030407_193547.5-E6-7" ROLE="Arg-1">
+      <extent>
+        <charseq START="108" END="118">u.s. troops</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030407_193547.5-E5-5" ROLE="Arg-2">
+      <extent>
+        <charseq START="108" END="110">u.s</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030407_193547.5-R2" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030407_193547.5-E9" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030407_193547.5-E8" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030407_193547.5-R2-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="209" END="246">the army's 101st - - airborne division</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030407_193547.5-E9-10" ROLE="Arg-1">
+      <extent>
+        <charseq START="209" END="246">the army's 101st - - airborne division</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030407_193547.5-E8-9" ROLE="Arg-2">
+      <extent>
+        <charseq START="209" END="216">the army</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030407_193547.5-R3" TYPE="PHYS" SUBTYPE="Near" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030407_193547.5-E10" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030407_193547.5-E11" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030407_193547.5-R3-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="303" END="352">an agricultural complex - - - - - - - near
+karbala</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030407_193547.5-E10-11" ROLE="Arg-1">
+      <extent>
+        <charseq START="303" END="352">an agricultural complex - - - - - - - near
+karbala</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030407_193547.5-E11-12" ROLE="Arg-2">
+      <extent>
+        <charseq START="346" END="352">karbala</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030407_193547.5-R4" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030407_193547.5-E6" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030407_193547.5-E4" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030407_193547.5-R4-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="69" END="184">we begin south of baghdad, - - - where u.s. troops have found - -f| -
+what may be chemical - - - - weapons materials</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030407_193547.5-E6-7" ROLE="Arg-1">
+      <extent>
+        <charseq START="108" END="118">u.s. troops</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030407_193547.5-E4-4" ROLE="Arg-2">
+      <extent>
+        <charseq START="102" END="106">where</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030407_193547.5-R5" TYPE="ORG-AFF" SUBTYPE="Membership" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030407_193547.5-E13" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030407_193547.5-E9" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030407_193547.5-R5-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="671" END="696">the commander of the
+101st</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030407_193547.5-E13-16" ROLE="Arg-1">
+      <extent>
+        <charseq START="671" END="696">the commander of the
+101st</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030407_193547.5-E9-17" ROLE="Arg-2">
+      <extent>
+        <charseq START="688" END="696">the
+101st</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030407_193547.5-R6" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030407_193547.5-E6" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030407_193547.5-E10" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030407_193547.5-R6-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="359" END="428">troops also found a large amount of conventional weapons
+- at the site</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030407_193547.5-E6-13" ROLE="Arg-1">
+      <extent>
+        <charseq START="359" END="364">troops</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030407_193547.5-E10-15" ROLE="Arg-2">
+      <extent>
+        <charseq START="421" END="428">the site</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+</document>
+</source_file>

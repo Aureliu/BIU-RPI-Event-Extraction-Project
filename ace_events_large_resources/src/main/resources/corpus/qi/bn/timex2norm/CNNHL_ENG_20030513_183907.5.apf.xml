@@ -1,0 +1,786 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNNHL_ENG_20030513_183907.5.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNNHL_ENG_20030513_183907.5">
+<entity ID="CNNHL_ENG_20030513_183907.5-E1" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030513_183907.5-E1-24" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="482" END="501">the state department</charseq>
+    </extent>
+    <head>
+      <charseq START="486" END="501">state department</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="state department">
+      <charseq START="486" END="501">state department</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030513_183907.5-E2" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNNHL_ENG_20030513_183907.5-E2-2" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="515" END="556">all non-essential diplomats
+and dependents</charseq>
+    </extent>
+    <head>
+      <charseq START="533" END="541">diplomats</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030513_183907.5-E3" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNNHL_ENG_20030513_183907.5-E3-3" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="515" END="556">all non-essential diplomats
+and dependents</charseq>
+    </extent>
+    <head>
+      <charseq START="547" END="556">dependents</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030513_183907.5-E4" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030513_183907.5-E4-5" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="578" END="588">an fbi team</charseq>
+    </extent>
+    <head>
+      <charseq START="585" END="588">team</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030513_183907.5-E5" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030513_183907.5-E5-6" TYPE="NAM" LDCTYPE="NAMPRE">
+    <extent>
+      <charseq START="581" END="583">fbi</charseq>
+    </extent>
+    <head>
+      <charseq START="581" END="583">fbi</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="fbi">
+      <charseq START="581" END="583">fbi</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030513_183907.5-E6" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030513_183907.5-E6-8" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="664" END="725">three
+residential compounds for americans and other westerners</charseq>
+    </extent>
+    <head>
+      <charseq START="682" END="690">compounds</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030513_183907.5-E7" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNNHL_ENG_20030513_183907.5-E7-9" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="710" END="725">other westerners</charseq>
+    </extent>
+    <head>
+      <charseq START="716" END="725">westerners</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030513_183907.5-E8" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNNHL_ENG_20030513_183907.5-E8-10" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="696" END="704">americans</charseq>
+    </extent>
+    <head>
+      <charseq START="696" END="704">americans</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030513_183907.5-E9" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030513_183907.5-E9-1" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="128" END="139">saudi
+arabia</charseq>
+    </extent>
+    <head>
+      <charseq START="128" END="139">saudi
+arabia</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030513_183907.5-E9-4" TYPE="NOM" LDCTYPE="NOM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="565" END="575">the country</charseq>
+    </extent>
+    <head>
+      <charseq START="569" END="575">country</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030513_183907.5-E9-7" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="604" END="615">saudi
+arabia</charseq>
+    </extent>
+    <head>
+      <charseq START="604" END="615">saudi
+arabia</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030513_183907.5-E9-11" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="317" END="321">saudi</charseq>
+    </extent>
+    <head>
+      <charseq START="317" END="321">saudi</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="saudi arabia">
+      <charseq START="128" END="139">saudi
+arabia</charseq>
+    </name>
+    <name NAME="saudi arabia">
+      <charseq START="604" END="615">saudi
+arabia</charseq>
+    </name>
+    <name NAME="saudi">
+      <charseq START="317" END="321">saudi</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030513_183907.5-E11" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030513_183907.5-E11-12" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="174" END="191">an eighth american</charseq>
+    </extent>
+    <head>
+      <charseq START="184" END="191">american</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030513_183907.5-E12" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030513_183907.5-E12-13" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="211" END="219">21 people</charseq>
+    </extent>
+    <head>
+      <charseq START="214" END="219">people</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030513_183907.5-E13" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030513_183907.5-E13-14" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="248" END="273">the nine suspected
+bombers</charseq>
+    </extent>
+    <head>
+      <charseq START="267" END="273">bombers</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030513_183907.5-E14" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030513_183907.5-E14-15" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="276" END="292">nearly 200 people</charseq>
+    </extent>
+    <head>
+      <charseq START="287" END="292">people</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030513_183907.5-E15" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNNHL_ENG_20030513_183907.5-E15-16" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="308" END="331">u.s. and saudi officials</charseq>
+    </extent>
+    <head>
+      <charseq START="323" END="331">officials</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030513_183907.5-E16" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030513_183907.5-E16-17" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="308" END="310">u.s</charseq>
+    </extent>
+    <head>
+      <charseq START="308" END="310">u.s</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="u.s">
+      <charseq START="308" END="310">u.s</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030513_183907.5-E17" TYPE="ORG" SUBTYPE="Non-Governmental" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030513_183907.5-E17-18" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="372" END="379">al qaeda</charseq>
+    </extent>
+    <head>
+      <charseq START="372" END="379">al qaeda</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="al qaeda">
+      <charseq START="372" END="379">al qaeda</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030513_183907.5-E18" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030513_183907.5-E18-19" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="439" END="469">secretary of state colin powell</charseq>
+    </extent>
+    <head>
+      <charseq START="458" END="469">colin powell</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030513_183907.5-E18-21" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="439" END="456">secretary of state</charseq>
+    </extent>
+    <head>
+      <charseq START="439" END="447">secretary</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="colin powell">
+      <charseq START="458" END="469">colin powell</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030513_183907.5-E19" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNNHL_ENG_20030513_183907.5-E19-20" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="650" END="653">they</charseq>
+    </extent>
+    <head>
+      <charseq START="650" END="653">they</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030513_183907.5-E21" TYPE="ORG" SUBTYPE="Government" CLASS="USP">
+  <entity_mention ID="CNNHL_ENG_20030513_183907.5-E21-22" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="452" END="456">state</charseq>
+    </extent>
+    <head>
+      <charseq START="452" END="456">state</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030513_183907.5-E22" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030513_183907.5-E22-23" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="474" END="479">riyadh</charseq>
+    </extent>
+    <head>
+      <charseq START="474" END="479">riyadh</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="riyadh">
+      <charseq START="474" END="479">riyadh</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<timex2 ID="CNNHL_ENG_20030513_183907.5-T1" VAL="2003-05-13T19:37:22">
+  <timex2_mention ID="CNNHL_ENG_20030513_183907.5-T1-1">
+    <extent>
+      <charseq START="45" END="63">2003-05-13 19:37:22</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNNHL_ENG_20030513_183907.5-T2" VAL="P1D" MOD="START" ANCHOR_VAL="2003-05-13" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="CNNHL_ENG_20030513_183907.5-T2-1">
+    <extent>
+      <charseq START="69" END="76">24 hours</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNNHL_ENG_20030513_183907.5-R1" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030513_183907.5-E15" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030513_183907.5-E16" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030513_183907.5-R1-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="308" END="331">u.s. and saudi officials</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030513_183907.5-E15-16" ROLE="Arg-1">
+      <extent>
+        <charseq START="308" END="331">u.s. and saudi officials</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030513_183907.5-E16-17" ROLE="Arg-2">
+      <extent>
+        <charseq START="308" END="310">u.s</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030513_183907.5-R2" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030513_183907.5-E15" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030513_183907.5-E9" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030513_183907.5-R2-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="308" END="331">u.s. and saudi officials</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030513_183907.5-E15-16" ROLE="Arg-1">
+      <extent>
+        <charseq START="308" END="331">u.s. and saudi officials</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030513_183907.5-E9-11" ROLE="Arg-2">
+      <extent>
+        <charseq START="317" END="321">saudi</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030513_183907.5-R3" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030513_183907.5-E18" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030513_183907.5-E21" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030513_183907.5-R3-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="439" END="456">secretary of state</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030513_183907.5-E18-21" ROLE="Arg-1">
+      <extent>
+        <charseq START="439" END="456">secretary of state</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030513_183907.5-E21-22" ROLE="Arg-2">
+      <extent>
+        <charseq START="452" END="456">state</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030513_183907.5-R4" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030513_183907.5-E18" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030513_183907.5-E22" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030513_183907.5-R4-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="382" END="479">they may have been timed
+to coincide with the arrival of secretary of state colin powell in
+riyadh</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030513_183907.5-E18-19" ROLE="Arg-1">
+      <extent>
+        <charseq START="439" END="469">secretary of state colin powell</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030513_183907.5-E22-23" ROLE="Arg-2">
+      <extent>
+        <charseq START="474" END="479">riyadh</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030513_183907.5-R5" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="CNNHL_ENG_20030513_183907.5-E2" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030513_183907.5-E9" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030513_183907.5-R5-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="482" END="575">the state department is ordering all non-essential diplomats
+and dependents out of the country</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030513_183907.5-E2-2" ROLE="Arg-1">
+      <extent>
+        <charseq START="515" END="556">all non-essential diplomats
+and dependents</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030513_183907.5-E9-4" ROLE="Arg-2">
+      <extent>
+        <charseq START="565" END="575">the country</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030513_183907.5-R6" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="CNNHL_ENG_20030513_183907.5-E3" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030513_183907.5-E9" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030513_183907.5-R6-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="482" END="575">the state department is ordering all non-essential diplomats
+and dependents out of the country</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030513_183907.5-E3-3" ROLE="Arg-1">
+      <extent>
+        <charseq START="515" END="556">all non-essential diplomats
+and dependents</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030513_183907.5-E9-4" ROLE="Arg-2">
+      <extent>
+        <charseq START="565" END="575">the country</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030513_183907.5-R7" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030513_183907.5-E4" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030513_183907.5-E5" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030513_183907.5-R7-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="578" END="588">an fbi team</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030513_183907.5-E4-5" ROLE="Arg-1">
+      <extent>
+        <charseq START="578" END="588">an fbi team</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030513_183907.5-E5-6" ROLE="Arg-2">
+      <extent>
+        <charseq START="581" END="583">fbi</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030513_183907.5-R8" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="CNNHL_ENG_20030513_183907.5-E4" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030513_183907.5-E9" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030513_183907.5-R8-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="578" END="647">an fbi team is heading to saudi
+arabia to help investigate the attacks</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030513_183907.5-E4-5" ROLE="Arg-1">
+      <extent>
+        <charseq START="578" END="588">an fbi team</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030513_183907.5-E9-7" ROLE="Arg-2">
+      <extent>
+        <charseq START="604" END="615">saudi
+arabia</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030513_183907.5-R9" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="CNNHL_ENG_20030513_183907.5-E8" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030513_183907.5-E6" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030513_183907.5-R9-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="664" END="725">three
+residential compounds for americans and other westerners</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030513_183907.5-E8-10" ROLE="Arg-1">
+      <extent>
+        <charseq START="696" END="704">americans</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030513_183907.5-E6-8" ROLE="Arg-2">
+      <extent>
+        <charseq START="664" END="725">three
+residential compounds for americans and other westerners</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030513_183907.5-R10" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="CNNHL_ENG_20030513_183907.5-E7" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030513_183907.5-E6" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030513_183907.5-R10-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="664" END="725">three
+residential compounds for americans and other westerners</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030513_183907.5-E7-9" ROLE="Arg-1">
+      <extent>
+        <charseq START="710" END="725">other westerners</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030513_183907.5-E6-8" ROLE="Arg-2">
+      <extent>
+        <charseq START="664" END="725">three
+residential compounds for americans and other westerners</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNNHL_ENG_20030513_183907.5-EV1" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNNHL_ENG_20030513_183907.5-E9" ROLE="Place"/>
+  <event_mention ID="CNNHL_ENG_20030513_183907.5-EV1-1">
+    <extent>
+      <charseq START="116" END="139">bombings in saudi
+arabia</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="69" END="171">24 hours after a coordinated series of suicide bombings in saudi
+arabia, the death toll is still rising</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="116" END="123">bombings</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_183907.5-E9-1" ROLE="Place">
+      <extent>
+        <charseq START="128" END="139">saudi
+arabia</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNNHL_ENG_20030513_183907.5-EV1-2">
+    <extent>
+      <charseq START="604" END="647">saudi
+arabia to help investigate the attacks</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="578" END="647">an fbi team is heading to saudi
+arabia to help investigate the attacks</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="641" END="647">attacks</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_183907.5-E9-7" ROLE="Place">
+      <extent>
+        <charseq START="604" END="615">saudi
+arabia</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNNHL_ENG_20030513_183907.5-EV2" TYPE="Life" SUBTYPE="Die" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNNHL_ENG_20030513_183907.5-E11" ROLE="Victim"/>
+  <event_mention ID="CNNHL_ENG_20030513_183907.5-EV2-1">
+    <extent>
+      <charseq START="174" END="200">an eighth american has died</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="174" END="200">an eighth american has died</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="197" END="200">died</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_183907.5-E11-12" ROLE="Victim">
+      <extent>
+        <charseq START="174" END="191">an eighth american</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNNHL_ENG_20030513_183907.5-EV3" TYPE="Life" SUBTYPE="Die" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNNHL_ENG_20030513_183907.5-E12" ROLE="Victim"/>
+  <event_argument REFID="CNNHL_ENG_20030513_183907.5-E13" ROLE="Victim"/>
+  <event_argument REFID="CNNHL_ENG_20030513_183907.5-E13" ROLE="Agent"/>
+  <event_mention ID="CNNHL_ENG_20030513_183907.5-EV3-1">
+    <extent>
+      <charseq START="211" END="273">21 people were killed, not including the nine suspected
+bombers</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="203" END="273">in all, 21 people were killed, not including the nine suspected
+bombers</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="226" END="231">killed</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_183907.5-E12-13" ROLE="Victim">
+      <extent>
+        <charseq START="211" END="219">21 people</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_183907.5-E13-14" ROLE="Victim">
+      <extent>
+        <charseq START="248" END="273">the nine suspected
+bombers</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_183907.5-E13-14" ROLE="Agent">
+      <extent>
+        <charseq START="248" END="273">the nine suspected
+bombers</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNNHL_ENG_20030513_183907.5-EV4" TYPE="Life" SUBTYPE="Injure" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNNHL_ENG_20030513_183907.5-E14" ROLE="Victim"/>
+  <event_mention ID="CNNHL_ENG_20030513_183907.5-EV4-1">
+    <extent>
+      <charseq START="276" END="305">nearly 200 people were injured</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="276" END="305">nearly 200 people were injured</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="299" END="305">injured</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_183907.5-E14-15" ROLE="Victim">
+      <extent>
+        <charseq START="276" END="292">nearly 200 people</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNNHL_ENG_20030513_183907.5-EV5" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNNHL_ENG_20030513_183907.5-E17" ROLE="Attacker"/>
+  <event_mention ID="CNNHL_ENG_20030513_183907.5-EV5-1">
+    <extent>
+      <charseq START="341" END="379">bombings bear the trademark of al qaeda</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="308" END="379">u.s. and saudi officials say
+the bombings bear the trademark of al qaeda</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="341" END="348">bombings</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_183907.5-E17-18" ROLE="Attacker">
+      <extent>
+        <charseq START="372" END="379">al qaeda</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNNHL_ENG_20030513_183907.5-EV6" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNNHL_ENG_20030513_183907.5-E18" ROLE="Artifact"/>
+  <event_argument REFID="CNNHL_ENG_20030513_183907.5-E22" ROLE="Destination"/>
+  <event_mention ID="CNNHL_ENG_20030513_183907.5-EV6-1">
+    <extent>
+      <charseq START="428" END="479">arrival of secretary of state colin powell in
+riyadh</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="382" END="479">they may have been timed
+to coincide with the arrival of secretary of state colin powell in
+riyadh</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="428" END="434">arrival</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_183907.5-E18-19" ROLE="Artifact">
+      <extent>
+        <charseq START="439" END="469">secretary of state colin powell</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_183907.5-E22-23" ROLE="Destination">
+      <extent>
+        <charseq START="474" END="479">riyadh</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNNHL_ENG_20030513_183907.5-EV7" TYPE="Movement" SUBTYPE="Transport" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Future">
+  <event_argument REFID="CNNHL_ENG_20030513_183907.5-E2" ROLE="Artifact"/>
+  <event_argument REFID="CNNHL_ENG_20030513_183907.5-E3" ROLE="Artifact"/>
+  <event_argument REFID="CNNHL_ENG_20030513_183907.5-E1" ROLE="Agent"/>
+  <event_argument REFID="CNNHL_ENG_20030513_183907.5-E9" ROLE="Origin"/>
+  <event_mention ID="CNNHL_ENG_20030513_183907.5-EV7-1">
+    <extent>
+      <charseq START="482" END="575">the state department is ordering all non-essential diplomats
+and dependents out of the country</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="482" END="575">the state department is ordering all non-essential diplomats
+and dependents out of the country</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="558" END="560">out</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_183907.5-E2-2" ROLE="Artifact">
+      <extent>
+        <charseq START="515" END="556">all non-essential diplomats
+and dependents</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_183907.5-E3-3" ROLE="Artifact">
+      <extent>
+        <charseq START="515" END="556">all non-essential diplomats
+and dependents</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_183907.5-E1-24" ROLE="Agent">
+      <extent>
+        <charseq START="482" END="501">the state department</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_183907.5-E9-4" ROLE="Origin">
+      <extent>
+        <charseq START="565" END="575">the country</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNNHL_ENG_20030513_183907.5-EV8" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Future">
+  <event_argument REFID="CNNHL_ENG_20030513_183907.5-E4" ROLE="Artifact"/>
+  <event_argument REFID="CNNHL_ENG_20030513_183907.5-E9" ROLE="Destination"/>
+  <event_mention ID="CNNHL_ENG_20030513_183907.5-EV8-1">
+    <extent>
+      <charseq START="578" END="615">an fbi team is heading to saudi
+arabia</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="578" END="647">an fbi team is heading to saudi
+arabia to help investigate the attacks</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="593" END="599">heading</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_183907.5-E4-5" ROLE="Artifact">
+      <extent>
+        <charseq START="578" END="588">an fbi team</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_183907.5-E9-7" ROLE="Destination">
+      <extent>
+        <charseq START="604" END="615">saudi
+arabia</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNNHL_ENG_20030513_183907.5-EV9" TYPE="Life" SUBTYPE="Die" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Generic" TENSE="Past">
+  <event_argument REFID="CNNHL_ENG_20030513_183907.5-E9" ROLE="Place"/>
+  <event_mention ID="CNNHL_ENG_20030513_183907.5-EV9-1">
+    <extent>
+      <charseq START="128" END="150">saudi
+arabia, the death</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="69" END="171">24 hours after a coordinated series of suicide bombings in saudi
+arabia, the death toll is still rising</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="146" END="150">death</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_183907.5-E9-1" ROLE="Place">
+      <extent>
+        <charseq START="128" END="139">saudi
+arabia</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNNHL_ENG_20030513_183907.5-EV10" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNNHL_ENG_20030513_183907.5-E19" ROLE="Attacker"/>
+  <event_argument REFID="CNNHL_ENG_20030513_183907.5-E6" ROLE="Target"/>
+  <event_mention ID="CNNHL_ENG_20030513_183907.5-EV10-1">
+    <extent>
+      <charseq START="650" END="725">they targeted three
+residential compounds for americans and other westerners</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="650" END="725">they targeted three
+residential compounds for americans and other westerners</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="655" END="662">targeted</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_183907.5-E19-20" ROLE="Attacker">
+      <extent>
+        <charseq START="650" END="653">they</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_183907.5-E6-8" ROLE="Target">
+      <extent>
+        <charseq START="664" END="725">three
+residential compounds for americans and other westerners</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

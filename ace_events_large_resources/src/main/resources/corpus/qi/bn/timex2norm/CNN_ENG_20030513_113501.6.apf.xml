@@ -1,0 +1,1534 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030513_113501.6.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030513_113501.6">
+<entity ID="CNN_ENG_20030513_113501.6-E1" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E1-1" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="123" END="137">john f. kennedy</charseq>
+    </extent>
+    <head>
+      <charseq START="123" END="137">john f. kennedy</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E1-3" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="716" END="722">kennedy</charseq>
+    </extent>
+    <head>
+      <charseq START="716" END="722">kennedy</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E1-4" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="763" END="765">jfk</charseq>
+    </extent>
+    <head>
+      <charseq START="763" END="765">jfk</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E1-5" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="821" END="822">he</charseq>
+    </extent>
+    <head>
+      <charseq START="821" END="822">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E1-6" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="857" END="859">his</charseq>
+    </extent>
+    <head>
+      <charseq START="857" END="859">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E1-7" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="906" END="907">he</charseq>
+    </extent>
+    <head>
+      <charseq START="906" END="907">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E1-8" TYPE="NOM" LDCTYPE="BAR" LDCATR="TRUE">
+    <extent>
+      <charseq START="896" END="904">president</charseq>
+    </extent>
+    <head>
+      <charseq START="896" END="904">president</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E1-10" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="954" END="956">him</charseq>
+    </extent>
+    <head>
+      <charseq START="954" END="956">him</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E1-12" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="1004" END="1006">jfk</charseq>
+    </extent>
+    <head>
+      <charseq START="1004" END="1006">jfk</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E1-14" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="1089" END="1091">his</charseq>
+    </extent>
+    <head>
+      <charseq START="1089" END="1091">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E1-15" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="1126" END="1127">he</charseq>
+    </extent>
+    <head>
+      <charseq START="1126" END="1127">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E1-21" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="1287" END="1288">he</charseq>
+    </extent>
+    <head>
+      <charseq START="1287" END="1288">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E1-22" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="1296" END="1298">his</charseq>
+    </extent>
+    <head>
+      <charseq START="1296" END="1298">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E1-26" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="1399" END="1400">he</charseq>
+    </extent>
+    <head>
+      <charseq START="1399" END="1400">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E1-28" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="1438" END="1440">his</charseq>
+    </extent>
+    <head>
+      <charseq START="1438" END="1440">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E1-30" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="1518" END="1520">his</charseq>
+    </extent>
+    <head>
+      <charseq START="1518" END="1520">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E1-32" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="1544" END="1545">he</charseq>
+    </extent>
+    <head>
+      <charseq START="1544" END="1545">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E1-33" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="1587" END="1589">his</charseq>
+    </extent>
+    <head>
+      <charseq START="1587" END="1589">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E1-34" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="1669" END="1671">his</charseq>
+    </extent>
+    <head>
+      <charseq START="1669" END="1671">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E1-35" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="1688" END="1694">kennedy</charseq>
+    </extent>
+    <head>
+      <charseq START="1688" END="1694">kennedy</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E1-36" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="1744" END="1746">his</charseq>
+    </extent>
+    <head>
+      <charseq START="1744" END="1746">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E1-37" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="1764" END="1766">his</charseq>
+    </extent>
+    <head>
+      <charseq START="1764" END="1766">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E1-38" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="1818" END="1824">kennedy</charseq>
+    </extent>
+    <head>
+      <charseq START="1818" END="1824">kennedy</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E1-39" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="1862" END="1864">his</charseq>
+    </extent>
+    <head>
+      <charseq START="1862" END="1864">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E1-40" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="1878" END="1880">his</charseq>
+    </extent>
+    <head>
+      <charseq START="1878" END="1880">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E1-41" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="1929" END="1931">him</charseq>
+    </extent>
+    <head>
+      <charseq START="1929" END="1931">him</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E1-42" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="1943" END="1999">the youngest person elected president in american
+history</charseq>
+    </extent>
+    <head>
+      <charseq START="1956" END="1961">person</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E1-43" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="2002" END="2008">kennedy</charseq>
+    </extent>
+    <head>
+      <charseq START="2002" END="2008">kennedy</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E1-44" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="2031" END="2032">he</charseq>
+    </extent>
+    <head>
+      <charseq START="2031" END="2032">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E1-51" TYPE="NOM" LDCTYPE="BAR" LDCATR="TRUE">
+    <extent>
+      <charseq START="1971" END="1979">president</charseq>
+    </extent>
+    <head>
+      <charseq START="1971" END="1979">president</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E1-57" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="2127" END="2127">i</charseq>
+    </extent>
+    <head>
+      <charseq START="2127" END="2127">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E1-78" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="163" END="165">his</charseq>
+    </extent>
+    <head>
+      <charseq START="163" END="165">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E1-86" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="253" END="270">the 35th president</charseq>
+    </extent>
+    <head>
+      <charseq START="262" END="270">president</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E1-90" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="356" END="362">kennedy</charseq>
+    </extent>
+    <head>
+      <charseq START="356" END="362">kennedy</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E1-94" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="547" END="553">kennedy</charseq>
+    </extent>
+    <head>
+      <charseq START="547" END="553">kennedy</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E1-101" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="651" END="657">kennedy</charseq>
+    </extent>
+    <head>
+      <charseq START="651" END="657">kennedy</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="john f. kennedy">
+      <charseq START="123" END="137">john f. kennedy</charseq>
+    </name>
+    <name NAME="kennedy">
+      <charseq START="716" END="722">kennedy</charseq>
+    </name>
+    <name NAME="jfk">
+      <charseq START="763" END="765">jfk</charseq>
+    </name>
+    <name NAME="jfk">
+      <charseq START="1004" END="1006">jfk</charseq>
+    </name>
+    <name NAME="kennedy">
+      <charseq START="1688" END="1694">kennedy</charseq>
+    </name>
+    <name NAME="kennedy">
+      <charseq START="1818" END="1824">kennedy</charseq>
+    </name>
+    <name NAME="kennedy">
+      <charseq START="2002" END="2008">kennedy</charseq>
+    </name>
+    <name NAME="kennedy">
+      <charseq START="356" END="362">kennedy</charseq>
+    </name>
+    <name NAME="kennedy">
+      <charseq START="547" END="553">kennedy</charseq>
+    </name>
+    <name NAME="kennedy">
+      <charseq START="651" END="657">kennedy</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030513_113501.6-E2" TYPE="PER" SUBTYPE="Individual" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E2-9" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="922" END="929">a priest</charseq>
+    </extent>
+    <head>
+      <charseq START="924" END="929">priest</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030513_113501.6-E3" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E3-16" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1155" END="1164">the public</charseq>
+    </extent>
+    <head>
+      <charseq START="1159" END="1164">public</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030513_113501.6-E4" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E4-17" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1196" END="1267">politicians who used political influence
+to get out of military conflict</charseq>
+    </extent>
+    <head>
+      <charseq START="1196" END="1206">politicians</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E4-18" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="1208" END="1210">who</charseq>
+    </extent>
+    <head>
+      <charseq START="1208" END="1210">who</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030513_113501.6-E5" TYPE="ORG" SUBTYPE="Government" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E5-19" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1251" END="1258">military</charseq>
+    </extent>
+    <head>
+      <charseq START="1251" END="1258">military</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E5-27" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1414" END="1421">military</charseq>
+    </extent>
+    <head>
+      <charseq START="1414" END="1421">military</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030513_113501.6-E6" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E6-23" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1296" END="1305">his family</charseq>
+    </extent>
+    <head>
+      <charseq START="1300" END="1305">family</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030513_113501.6-E7" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E7-24" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1331" END="1338">the navy</charseq>
+    </extent>
+    <head>
+      <charseq START="1335" END="1338">navy</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E7-46" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1704" END="1711">the navy</charseq>
+    </extent>
+    <head>
+      <charseq START="1708" END="1711">navy</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030513_113501.6-E8" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E8-25" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="1348" END="1354">america</charseq>
+    </extent>
+    <head>
+      <charseq START="1348" END="1354">america</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E8-52" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1984" END="1991">american</charseq>
+    </extent>
+    <head>
+      <charseq START="1984" END="1991">american</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="america">
+      <charseq START="1348" END="1354">america</charseq>
+    </name>
+    <name NAME="american">
+      <charseq START="1984" END="1991">american</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030513_113501.6-E10" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E10-29" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1438" END="1456">his powerful father</charseq>
+    </extent>
+    <head>
+      <charseq START="1451" END="1456">father</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E10-45" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1669" END="1678">his father</charseq>
+    </extent>
+    <head>
+      <charseq START="1673" END="1678">father</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030513_113501.6-E11" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E11-31" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1528" END="1530">one</charseq>
+    </extent>
+    <head>
+      <charseq START="1528" END="1530">one</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030513_113501.6-E13" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E13-70" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2433" END="2456">the secretary of defense</charseq>
+    </extent>
+    <head>
+      <charseq START="2437" END="2445">secretary</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E13-73" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2543" END="2566">the secretary of defense</charseq>
+    </extent>
+    <head>
+      <charseq START="2547" END="2555">secretary</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E13-98" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="2459" END="2473">donald rumsfeld</charseq>
+    </extent>
+    <head>
+      <charseq START="2459" END="2473">donald rumsfeld</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="donald rumsfeld">
+      <charseq START="2459" END="2473">donald rumsfeld</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030513_113501.6-E15" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E15-47" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE">
+    <extent>
+      <charseq START="1792" END="1803">the japanese</charseq>
+    </extent>
+    <head>
+      <charseq START="1796" END="1803">japanese</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="japanese">
+      <charseq START="1796" END="1803">japanese</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030513_113501.6-E16" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E16-49" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1878" END="1899">his sister and brother</charseq>
+    </extent>
+    <head>
+      <charseq START="1882" END="1887">sister</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030513_113501.6-E17" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E17-50" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1878" END="1899">his sister and brother</charseq>
+    </extent>
+    <head>
+      <charseq START="1893" END="1899">brother</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030513_113501.6-E20" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E20-53" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2015" END="2022">a friend</charseq>
+    </extent>
+    <head>
+      <charseq START="2017" END="2022">friend</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030513_113501.6-E21" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E21-54" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2052" END="2054">you</charseq>
+    </extent>
+    <head>
+      <charseq START="2052" END="2054">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E21-55" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2091" END="2094">your</charseq>
+    </extent>
+    <head>
+      <charseq START="2091" END="2094">your</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030513_113501.6-E22" TYPE="LOC" SUBTYPE="Celestial" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E22-56" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2108" END="2112">earth</charseq>
+    </extent>
+    <head>
+      <charseq START="2108" END="2112">earth</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="earth">
+      <charseq START="2108" END="2112">earth</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030513_113501.6-E23" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E23-60" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="2158" END="2167">washington</charseq>
+    </extent>
+    <head>
+      <charseq START="2158" END="2167">washington</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E23-68" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="2399" END="2408">washington</charseq>
+    </extent>
+    <head>
+      <charseq START="2399" END="2408">washington</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="washington">
+      <charseq START="2158" END="2167">washington</charseq>
+    </name>
+    <name NAME="washington">
+      <charseq START="2399" END="2408">washington</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030513_113501.6-E24" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E24-63" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2289" END="2290">my</charseq>
+    </extent>
+    <head>
+      <charseq START="2289" END="2290">my</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030513_113501.6-E25" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E25-64" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2289" END="2297">my guests</charseq>
+    </extent>
+    <head>
+      <charseq START="2292" END="2297">guests</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030513_113501.6-E26" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E26-66" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2349" END="2366">the vice president</charseq>
+    </extent>
+    <head>
+      <charseq START="2358" END="2366">president</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E26-67" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="2368" END="2378">dick cheney</charseq>
+    </extent>
+    <head>
+      <charseq START="2368" END="2378">dick cheney</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E26-71" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2476" END="2493">the vice president</charseq>
+    </extent>
+    <head>
+      <charseq START="2485" END="2493">president</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="dick cheney">
+      <charseq START="2368" END="2378">dick cheney</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030513_113501.6-E29" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E29-72" TYPE="NAM" LDCTYPE="NAMPRE">
+    <extent>
+      <charseq START="2518" END="2532">jimmy doolittle</charseq>
+    </extent>
+    <head>
+      <charseq START="2518" END="2532">jimmy doolittle</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="jimmy doolittle">
+      <charseq START="2518" END="2532">jimmy doolittle</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030513_113501.6-E30" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E30-76" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2685" END="2698">andrew
+jackson</charseq>
+    </extent>
+    <head>
+      <charseq START="2685" END="2698">andrew
+jackson</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="andrew jackson">
+      <charseq START="2685" END="2698">andrew
+jackson</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030513_113501.6-E31" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E31-80" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1744" END="1757">his ship mates</charseq>
+    </extent>
+    <head>
+      <charseq START="1748" END="1757">ship mates</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030513_113501.6-E32" TYPE="VEH" SUBTYPE="Water" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E32-82" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1764" END="1771">his boat</charseq>
+    </extent>
+    <head>
+      <charseq START="1768" END="1771">boat</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E32-92" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="1773" END="1778">pt-109</charseq>
+    </extent>
+    <head>
+      <charseq START="1773" END="1778">pt-109</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="pt-109">
+      <charseq START="1773" END="1778">pt-109</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030513_113501.6-E33" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E33-83" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2610" END="2613">them</charseq>
+    </extent>
+    <head>
+      <charseq START="2610" END="2613">them</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030513_113501.6-E34" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E34-84" TYPE="PRO" LDCTYPE="PTV">
+    <extent>
+      <charseq START="2602" END="2613">both of them</charseq>
+    </extent>
+    <head>
+      <charseq START="2602" END="2605">both</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030513_113501.6-E35" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E35-85" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="175" END="189">the
+white house</charseq>
+    </extent>
+    <head>
+      <charseq START="179" END="189">white house</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="white house">
+      <charseq START="179" END="189">white house</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030513_113501.6-E36" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E36-59" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2153" END="2155">cnn</charseq>
+    </extent>
+    <head>
+      <charseq START="2153" END="2155">cnn</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E36-61" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2176" END="2177">we</charseq>
+    </extent>
+    <head>
+      <charseq START="2176" END="2177">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E36-74" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2569" END="2570">we</charseq>
+    </extent>
+    <head>
+      <charseq START="2569" END="2570">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E36-75" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2628" END="2629">we</charseq>
+    </extent>
+    <head>
+      <charseq START="2628" END="2629">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E36-77" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2776" END="2777">we</charseq>
+    </extent>
+    <head>
+      <charseq START="2776" END="2777">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E36-87" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="273" END="275">our</charseq>
+    </extent>
+    <head>
+      <charseq START="273" END="275">our</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="cnn">
+      <charseq START="2153" END="2155">cnn</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030513_113501.6-E37" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E37-58" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2138" END="2150">jonathan karl</charseq>
+    </extent>
+    <head>
+      <charseq START="2138" END="2150">jonathan karl</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E37-88" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="273" END="289">our jonathan karl</charseq>
+    </extent>
+    <head>
+      <charseq START="277" END="289">jonathan karl</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E37-89" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="324" END="331">reporter</charseq>
+    </extent>
+    <head>
+      <charseq START="324" END="331">reporter</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="jonathan karl">
+      <charseq START="2138" END="2150">jonathan karl</charseq>
+    </name>
+    <name NAME="jonathan karl">
+      <charseq START="277" END="289">jonathan karl</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030513_113501.6-E38" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E38-91" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="386" END="394">an intern</charseq>
+    </extent>
+    <head>
+      <charseq START="389" END="394">intern</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E38-99" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="594" END="603">the intern</charseq>
+    </extent>
+    <head>
+      <charseq START="598" END="603">intern</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030513_113501.6-E39" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E39-2" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="682" END="683">he</charseq>
+    </extent>
+    <head>
+      <charseq START="682" END="683">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E39-11" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="988" END="990">his</charseq>
+    </extent>
+    <head>
+      <charseq START="988" END="990">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E39-13" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1009" END="1014">dallic</charseq>
+    </extent>
+    <head>
+      <charseq START="1009" END="1014">dallic</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E39-20" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1274" END="1279">dallic</charseq>
+    </extent>
+    <head>
+      <charseq START="1274" END="1279">dallic</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E39-48" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1806" END="1811">dallek</charseq>
+    </extent>
+    <head>
+      <charseq START="1806" END="1811">dallek</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E39-62" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2260" END="2273">the biographer</charseq>
+    </extent>
+    <head>
+      <charseq START="2264" END="2273">biographer</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E39-79" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="427" END="447">historian
+robert dowd</charseq>
+    </extent>
+    <head>
+      <charseq START="437" END="447">robert dowd</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E39-93" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="427" END="435">historian</charseq>
+    </extent>
+    <head>
+      <charseq START="427" END="435">historian</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E39-100" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="627" END="628">he</charseq>
+    </extent>
+    <head>
+      <charseq START="627" END="628">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="dallic">
+      <charseq START="1009" END="1014">dallic</charseq>
+    </name>
+    <name NAME="dallic">
+      <charseq START="1274" END="1279">dallic</charseq>
+    </name>
+    <name NAME="dallek">
+      <charseq START="1806" END="1811">dallek</charseq>
+    </name>
+    <name NAME="robert dowd">
+      <charseq START="437" END="447">robert dowd</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030513_113501.6-E42" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E42-95" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="572" END="574">she</charseq>
+    </extent>
+    <head>
+      <charseq START="572" END="574">she</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E42-96" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="563" END="565">who</charseq>
+    </extent>
+    <head>
+      <charseq START="563" END="565">who</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030513_113501.6-E42-97" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="538" END="615">a former
+kennedy staffer who says she does not remember the intern's
+last game</charseq>
+    </extent>
+    <head>
+      <charseq START="555" END="561">staffer</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<value ID="CNN_ENG_20030513_113501.6-V1" TYPE="Job-Title">
+  <value_mention ID="CNN_ENG_20030513_113501.6-V1-1">
+    <extent>
+      <charseq START="896" END="904">president</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_ENG_20030513_113501.6-V2" TYPE="Job-Title">
+  <value_mention ID="CNN_ENG_20030513_113501.6-V2-1">
+    <extent>
+      <charseq START="1971" END="1979">president</charseq>
+    </extent>
+  </value_mention>
+</value>
+<timex2 ID="CNN_ENG_20030513_113501.6-T1" VAL="PAST_REF" ANCHOR_VAL="2003-05-13T12:58:38" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="CNN_ENG_20030513_113501.6-T1-1">
+    <extent>
+      <charseq START="540" END="545">former</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030513_113501.6-T2" VAL="PRESENT_REF" ANCHOR_VAL="2003-05-13-T12:58:38" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_ENG_20030513_113501.6-T2-1">
+    <extent>
+      <charseq START="694" END="696">new</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030513_113501.6-T3" VAL="XXXX-XX-XX">
+  <timex2_mention ID="CNN_ENG_20030513_113501.6-T3-1">
+    <extent>
+      <charseq START="2091" END="2112">your last day on
+earth</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030513_113501.6-T4" VAL="2003-05-13T12:58:38">
+  <timex2_mention ID="CNN_ENG_20030513_113501.6-T4-1">
+    <extent>
+      <charseq START="43" END="61">2003-05-13 12:58:38</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030513_113501.6-T5" VAL="PRESENT_REF" ANCHOR_VAL="2003-05-13-T12:58:38" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_ENG_20030513_113501.6-T5-1">
+    <extent>
+      <charseq START="89" END="91">new</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030513_113501.6-T6" VAL="2003-05-13T14:00-08">
+  <timex2_mention ID="CNN_ENG_20030513_113501.6-T6-1">
+    <extent>
+      <charseq START="2330" END="2346">2:00 p.m.
+pacific</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030513_113501.6-T7" VAL="PRESENT_REF" ANCHOR_VAL="2003-05-13-T12:58:38" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_ENG_20030513_113501.6-T7-1">
+    <extent>
+      <charseq START="992" END="994">new</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030513_113501.6-T8" VAL="1941">
+  <timex2_mention ID="CNN_ENG_20030513_113501.6-T8-1">
+    <extent>
+      <charseq START="1393" END="1396">1941</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030513_113501.6-T9" VAL="XXXX-XX-XX" SET="YES">
+  <timex2_mention ID="CNN_ENG_20030513_113501.6-T9-1">
+    <extent>
+      <charseq START="2071" END="2079">every day</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030513_113501.6-T10" VAL="2003-05-13">
+  <timex2_mention ID="CNN_ENG_20030513_113501.6-T10-1">
+    <extent>
+      <charseq START="2221" END="2231">later
+today</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030513_113501.6-T11" VAL="2003-05-13T17:00-05">
+  <timex2_mention ID="CNN_ENG_20030513_113501.6-T11-1">
+    <extent>
+      <charseq START="2299" END="2327">later today 5:00 p.m. eastern</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030513_113501.6-T12" VAL="2003-05-13T12:58:38">
+  <timex2_mention ID="CNN_ENG_20030513_113501.6-T12-1">
+    <extent>
+      <charseq START="2383" END="2385">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030513_113501.6-R1" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030513_113501.6-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030513_113501.6-E35" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030513_113501.6-R1-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="67" END="189">there's some shocking new information about the life of
+john f. kennedy, both before and during his days in the
+white house</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030513_113501.6-E1-78" ROLE="Arg-1">
+      <extent>
+        <charseq START="163" END="165">his</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030513_113501.6-E35-85" ROLE="Arg-2">
+      <extent>
+        <charseq START="175" END="189">the
+white house</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030513_113501.6-R2" TYPE="PER-SOC" SUBTYPE="Family" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030513_113501.6-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030513_113501.6-E16" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030513_113501.6-R2-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="1878" END="1899">his sister and brother</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030513_113501.6-E1-40" ROLE="Arg-1">
+      <extent>
+        <charseq START="1878" END="1880">his</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030513_113501.6-E16-49" ROLE="Arg-2">
+      <extent>
+        <charseq START="1878" END="1899">his sister and brother</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030513_113501.6-R3" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030513_113501.6-E37" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030513_113501.6-E36" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030513_113501.6-R3-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="273" END="289">our jonathan karl</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030513_113501.6-E37-88" ROLE="Arg-1">
+      <extent>
+        <charseq START="273" END="289">our jonathan karl</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030513_113501.6-E36-87" ROLE="Arg-2">
+      <extent>
+        <charseq START="273" END="275">our</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_ENG_20030513_113501.6-R3-2" LEXICALCONDITION="Formulaic">
+    <extent>
+      <charseq START="2138" END="2155">jonathan karl, cnn</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030513_113501.6-E37-58" ROLE="Arg-1">
+      <extent>
+        <charseq START="2138" END="2150">jonathan karl</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030513_113501.6-E36-59" ROLE="Arg-2">
+      <extent>
+        <charseq START="2153" END="2155">cnn</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030513_113501.6-R4" TYPE="PER-SOC" SUBTYPE="Family" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030513_113501.6-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030513_113501.6-E17" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030513_113501.6-R4-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="1878" END="1899">his sister and brother</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030513_113501.6-E1-40" ROLE="Arg-1">
+      <extent>
+        <charseq START="1878" END="1880">his</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030513_113501.6-E17-50" ROLE="Arg-2">
+      <extent>
+        <charseq START="1878" END="1899">his sister and brother</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030513_113501.6-R5" TYPE="PER-SOC" SUBTYPE="Lasting-Personal" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030513_113501.6-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030513_113501.6-E20" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030513_113501.6-R5-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="2002" END="2112">kennedy told a friend before he entered politics,
+you've got to live every day like it's your last day on
+earth</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030513_113501.6-E1-43" ROLE="Arg-1">
+      <extent>
+        <charseq START="2002" END="2008">kennedy</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030513_113501.6-E20-53" ROLE="Arg-2">
+      <extent>
+        <charseq START="2015" END="2022">a friend</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030513_113501.6-R8" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030513_113501.6-E37" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030513_113501.6-E23" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030513_113501.6-R8-1" LEXICALCONDITION="Formulaic">
+    <extent>
+      <charseq START="2138" END="2167">jonathan karl, cnn,
+washington</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030513_113501.6-E37-58" ROLE="Arg-1">
+      <extent>
+        <charseq START="2138" END="2150">jonathan karl</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030513_113501.6-E23-60" ROLE="Arg-2">
+      <extent>
+        <charseq START="2158" END="2167">washington</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030513_113501.6-R9" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030513_113501.6-E26" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030513_113501.6-E23" ROLE="Arg-2"/>
+  <relation_argument REFID="CNN_ENG_20030513_113501.6-T12" ROLE="Time-Within"/>
+  <relation_mention ID="CNN_ENG_20030513_113501.6-R9-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="2349" END="2566">the vice president dick cheney is now speaking in
+washington at a luncheon honoring the secretary of defense,
+donald rumsfeld, the vice president will be presenting the
+jimmy doolittle award to the secretary of defense</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030513_113501.6-E26-66" ROLE="Arg-1">
+      <extent>
+        <charseq START="2349" END="2366">the vice president</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030513_113501.6-E23-68" ROLE="Arg-2">
+      <extent>
+        <charseq START="2399" END="2408">washington</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030513_113501.6-T12-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="2383" END="2385">now</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030513_113501.6-R11" TYPE="PER-SOC" SUBTYPE="Family" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030513_113501.6-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030513_113501.6-E6" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030513_113501.6-R11-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="1296" END="1305">his family</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030513_113501.6-E1-22" ROLE="Arg-1">
+      <extent>
+        <charseq START="1296" END="1298">his</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030513_113501.6-E6-23" ROLE="Arg-2">
+      <extent>
+        <charseq START="1296" END="1305">his family</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030513_113501.6-R12" TYPE="PER-SOC" SUBTYPE="Business" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030513_113501.6-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030513_113501.6-E31" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030513_113501.6-R12-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="1744" END="1757">his ship mates</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030513_113501.6-E1-36" ROLE="Arg-1">
+      <extent>
+        <charseq START="1744" END="1746">his</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030513_113501.6-E31-80" ROLE="Arg-2">
+      <extent>
+        <charseq START="1744" END="1757">his ship mates</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030513_113501.6-R13" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030513_113501.6-E21" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030513_113501.6-E22" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030513_113501.6-R13-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="2002" END="2112">kennedy told a friend before he entered politics,
+you've got to live every day like it's your last day on
+earth</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030513_113501.6-E21-55" ROLE="Arg-1">
+      <extent>
+        <charseq START="2091" END="2094">your</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030513_113501.6-E22-56" ROLE="Arg-2">
+      <extent>
+        <charseq START="2108" END="2112">earth</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030513_113501.6-R14" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030513_113501.6-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030513_113501.6-E32" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030513_113501.6-R14-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="1764" END="1771">his boat</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030513_113501.6-E1-37" ROLE="Arg-1">
+      <extent>
+        <charseq START="1764" END="1766">his</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030513_113501.6-E32-82" ROLE="Arg-2">
+      <extent>
+        <charseq START="1764" END="1771">his boat</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030513_113501.6-R15" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030513_113501.6-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030513_113501.6-E7" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030513_113501.6-R15-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="1688" END="1803">kennedy entered
+the navy earning hero status for saving his ship mates when
+his boat pt-109 was sunk by the japanese</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030513_113501.6-E1-35" ROLE="Arg-1">
+      <extent>
+        <charseq START="1688" END="1694">kennedy</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030513_113501.6-E7-46" ROLE="Arg-2">
+      <extent>
+        <charseq START="1704" END="1711">the navy</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_ENG_20030513_113501.6-R15-2" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="1270" END="1387">but dallic shows he youed
+his family's influence to get into the navy just as america
+was on the verge of world war ii</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030513_113501.6-E1-21" ROLE="Arg-1">
+      <extent>
+        <charseq START="1287" END="1288">he</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030513_113501.6-E7-24" ROLE="Arg-2">
+      <extent>
+        <charseq START="1331" END="1338">the navy</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030513_113501.6-R16" TYPE="PER-SOC" SUBTYPE="Family" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030513_113501.6-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030513_113501.6-E10" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030513_113501.6-R16-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="1669" END="1678">his father</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030513_113501.6-E1-34" ROLE="Arg-1">
+      <extent>
+        <charseq START="1669" END="1671">his</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030513_113501.6-E10-45" ROLE="Arg-2">
+      <extent>
+        <charseq START="1669" END="1678">his father</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_ENG_20030513_113501.6-R16-2" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="1438" END="1456">his powerful father</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030513_113501.6-E1-28" ROLE="Arg-1">
+      <extent>
+        <charseq START="1438" END="1440">his</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030513_113501.6-E10-29" ROLE="Arg-2">
+      <extent>
+        <charseq START="1438" END="1456">his powerful father</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030513_113501.6-EV1" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030513_113501.6-E8" ROLE="Attacker"/>
+  <event_mention ID="CNN_ENG_20030513_113501.6-EV1-1">
+    <extent>
+      <charseq START="1348" END="1384">america
+was on the verge of world war</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1270" END="1387">but dallic shows he youed
+his family's influence to get into the navy just as america
+was on the verge of world war ii</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1382" END="1384">war</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030513_113501.6-E8-25" ROLE="Attacker">
+      <extent>
+        <charseq START="1348" END="1354">america</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030513_113501.6-EV2" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030513_113501.6-E15" ROLE="Attacker"/>
+  <event_argument REFID="CNN_ENG_20030513_113501.6-E32" ROLE="Target"/>
+  <event_mention ID="CNN_ENG_20030513_113501.6-EV2-1">
+    <extent>
+      <charseq START="1764" END="1803">his boat pt-109 was sunk by the japanese</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1688" END="1803">kennedy entered
+the navy earning hero status for saving his ship mates when
+his boat pt-109 was sunk by the japanese</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1784" END="1787">sunk</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030513_113501.6-E15-47" ROLE="Attacker">
+      <extent>
+        <charseq START="1792" END="1803">the japanese</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030513_113501.6-E32-82" ROLE="Target">
+      <extent>
+        <charseq START="1764" END="1771">his boat</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030513_113501.6-EV3" TYPE="Personnel" SUBTYPE="Elect" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030513_113501.6-E1" ROLE="Person"/>
+  <event_argument REFID="CNN_ENG_20030513_113501.6-E8" ROLE="Entity"/>
+  <event_argument REFID="CNN_ENG_20030513_113501.6-V2" ROLE="Position"/>
+  <event_argument REFID="CNN_ENG_20030513_113501.6-V1" ROLE="Position"/>
+  <event_mention ID="CNN_ENG_20030513_113501.6-EV3-1">
+    <extent>
+      <charseq START="887" END="907">becoming president he</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="874" END="967">twice before
+becoming president he was so sick, a priest was brought in
+to give him last rites</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="887" END="894">becoming</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030513_113501.6-E1-7" ROLE="Person">
+      <extent>
+        <charseq START="906" END="907">he</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030513_113501.6-V1-1" ROLE="Position">
+      <extent>
+        <charseq START="896" END="904">president</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030513_113501.6-EV3-2">
+    <extent>
+      <charseq START="1943" END="1999">the youngest person elected president in american
+history</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1806" END="1999">dallek says
+kennedy's brushes with death, combined with his t deaths of
+his sister and brother, fueled the ambition to led him to
+become the youngest person elected president in american
+history</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1963" END="1969">elected</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030513_113501.6-E1-42" ROLE="Person">
+      <extent>
+        <charseq START="1943" END="1999">the youngest person elected president in american
+history</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030513_113501.6-E8-52" ROLE="Entity">
+      <extent>
+        <charseq START="1984" END="1991">american</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030513_113501.6-V2-1" ROLE="Position">
+      <extent>
+        <charseq START="1971" END="1979">president</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030513_113501.6-EV4" TYPE="Life" SUBTYPE="Die" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030513_113501.6-E16" ROLE="Victim"/>
+  <event_argument REFID="CNN_ENG_20030513_113501.6-E17" ROLE="Victim"/>
+  <event_mention ID="CNN_ENG_20030513_113501.6-EV4-1">
+    <extent>
+      <charseq START="1868" END="1899">deaths of
+his sister and brother</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1806" END="1999">dallek says
+kennedy's brushes with death, combined with his t deaths of
+his sister and brother, fueled the ambition to led him to
+become the youngest person elected president in american
+history</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1868" END="1873">deaths</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030513_113501.6-E16-49" ROLE="Victim">
+      <extent>
+        <charseq START="1878" END="1899">his sister and brother</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030513_113501.6-E17-50" ROLE="Victim">
+      <extent>
+        <charseq START="1878" END="1899">his sister and brother</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

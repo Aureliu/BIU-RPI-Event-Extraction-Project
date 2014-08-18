@@ -1,0 +1,368 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030501_063017.15.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030501_063017.15">
+<entity ID="CNN_ENG_20030501_063017.15-E1" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030501_063017.15-E1-28" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="832" END="841">new jersey</charseq>
+    </extent>
+    <head>
+      <charseq START="832" END="841">new jersey</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="new jersey">
+      <charseq START="832" END="841">new jersey</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030501_063017.15-E2" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030501_063017.15-E2-10" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="798" END="798">i</charseq>
+    </extent>
+    <head>
+      <charseq START="798" END="798">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030501_063017.15-E2-11" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="863" END="863">i</charseq>
+    </extent>
+    <head>
+      <charseq START="863" END="863">i</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030501_063017.15-E3" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030501_063017.15-E3-2" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1086" END="1096">city people</charseq>
+    </extent>
+    <head>
+      <charseq START="1091" END="1096">people</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030501_063017.15-E4" TYPE="GPE" SUBTYPE="Population-Center" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030501_063017.15-E4-3" TYPE="NOM" LDCTYPE="NOMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="1086" END="1089">city</charseq>
+    </extent>
+    <head>
+      <charseq START="1086" END="1089">city</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030501_063017.15-E5" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030501_063017.15-E5-4" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1105" END="1115">our viewers</charseq>
+    </extent>
+    <head>
+      <charseq START="1109" END="1115">viewers</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030501_063017.15-E6" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030501_063017.15-E6-6" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1186" END="1197">any farm kid</charseq>
+    </extent>
+    <head>
+      <charseq START="1195" END="1197">kid</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030501_063017.15-E7" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030501_063017.15-E7-7" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1190" END="1193">farm</charseq>
+    </extent>
+    <head>
+      <charseq START="1190" END="1193">farm</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030501_063017.15-E7-24" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="633" END="640">the farm</charseq>
+    </extent>
+    <head>
+      <charseq START="637" END="640">farm</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030501_063017.15-E8" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030501_063017.15-E8-1" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="96" END="108">jack cafferty</charseq>
+    </extent>
+    <head>
+      <charseq START="96" END="108">jack cafferty</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030501_063017.15-E8-19" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="556" END="559">jack</charseq>
+    </extent>
+    <head>
+      <charseq START="556" END="559">jack</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="jack">
+      <charseq START="556" END="559">jack</charseq>
+    </name>
+    <name NAME="jack cafferty">
+      <charseq START="96" END="108">jack cafferty</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030501_063017.15-E9" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030501_063017.15-E9-13" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="843" END="860">a
+buyology teacher</charseq>
+    </extent>
+    <head>
+      <charseq START="854" END="860">teacher</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030501_063017.15-E10" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030501_063017.15-E10-5" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1105" END="1107">our</charseq>
+    </extent>
+    <head>
+      <charseq START="1105" END="1107">our</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030501_063017.15-E10-9" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1555" END="1556">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1555" END="1556">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030501_063017.15-E10-14" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="113" END="114">we</charseq>
+    </extent>
+    <head>
+      <charseq START="113" END="114">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030501_063017.15-E10-15" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="169" END="170">we</charseq>
+    </extent>
+    <head>
+      <charseq START="169" END="170">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030501_063017.15-E10-20" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="564" END="565">we</charseq>
+    </extent>
+    <head>
+      <charseq START="564" END="565">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030501_063017.15-E10-21" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="591" END="592">us</charseq>
+    </extent>
+    <head>
+      <charseq START="591" END="592">us</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030501_063017.15-E11" TYPE="GPE" SUBTYPE="GPE-Cluster" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030501_063017.15-E11-17" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="207" END="217">middle east</charseq>
+    </extent>
+    <head>
+      <charseq START="207" END="217">middle east</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="middle east">
+      <charseq START="207" END="217">middle east</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030501_063017.15-E12" TYPE="PER" SUBTYPE="Indeterminate" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030501_063017.15-E12-16" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="874" END="876">you</charseq>
+    </extent>
+    <head>
+      <charseq START="874" END="876">you</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030501_063017.15-E13" TYPE="LOC" SUBTYPE="Region-General" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030501_063017.15-E13-22" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="597" END="610">the east coast</charseq>
+    </extent>
+    <head>
+      <charseq START="601" END="610">east coast</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="east coast">
+      <charseq START="601" END="610">east coast</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030501_063017.15-E14" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030501_063017.15-E14-23" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="612" END="614">who</charseq>
+    </extent>
+    <head>
+      <charseq START="612" END="614">who</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030501_063017.15-E16" TYPE="PER" SUBTYPE="Indeterminate" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030501_063017.15-E16-12" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="724" END="726">you</charseq>
+    </extent>
+    <head>
+      <charseq START="724" END="726">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030501_063017.15-E16-25" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="669" END="671">you</charseq>
+    </extent>
+    <head>
+      <charseq START="669" END="671">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030501_063017.15-E16-26" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="682" END="684">you</charseq>
+    </extent>
+    <head>
+      <charseq START="682" END="684">you</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030501_063017.15-E17" TYPE="PER" SUBTYPE="Indeterminate" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030501_063017.15-E17-18" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1073" END="1075">you</charseq>
+    </extent>
+    <head>
+      <charseq START="1073" END="1075">you</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030501_063017.15-E18" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030501_063017.15-E18-8" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1522" END="1522">i</charseq>
+    </extent>
+    <head>
+      <charseq START="1522" END="1522">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030501_063017.15-E18-27" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="710" END="713">bill</charseq>
+    </extent>
+    <head>
+      <charseq START="710" END="713">bill</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="bill">
+      <charseq START="710" END="713">bill</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<timex2 ID="CNN_ENG_20030501_063017.15-T1" VAL="2003-05-01T09:01:16">
+  <timex2_mention ID="CNN_ENG_20030501_063017.15-T1-1">
+    <extent>
+      <charseq START="44" END="62">2003-05-01 09:01:16</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030501_063017.15-T2" VAL="XXXX-XX-XX" MOD="AFTER" SET="YES">
+  <timex2_mention ID="CNN_ENG_20030501_063017.15-T2-1">
+    <extent>
+      <charseq START="1241" END="1269">a few days after they're
+born</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030501_063017.15-R1" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030501_063017.15-E9" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030501_063017.15-E1" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030501_063017.15-R1-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="829" END="923">in new jersey a
+buyology teacher, i can tell you without hesitation, a
+chicken cannot be nursed</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030501_063017.15-E9-13" ROLE="Arg-1">
+      <extent>
+        <charseq START="843" END="860">a
+buyology teacher</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030501_063017.15-E1-28" ROLE="Arg-2">
+      <extent>
+        <charseq START="832" END="841">new jersey</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030501_063017.15-R2" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030501_063017.15-E3" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030501_063017.15-E4" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030501_063017.15-R2-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="1086" END="1096">city people</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030501_063017.15-E3-2" ROLE="Arg-1">
+      <extent>
+        <charseq START="1086" END="1096">city people</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030501_063017.15-E4-3" ROLE="Arg-2">
+      <extent>
+        <charseq START="1086" END="1089">city</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030501_063017.15-R3" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030501_063017.15-E6" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030501_063017.15-E7" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030501_063017.15-R3-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="1186" END="1197">any farm kid</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030501_063017.15-E6-6" ROLE="Arg-1">
+      <extent>
+        <charseq START="1186" END="1197">any farm kid</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030501_063017.15-E7-7" ROLE="Arg-2">
+      <extent>
+        <charseq START="1190" END="1193">farm</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+</document>
+</source_file>

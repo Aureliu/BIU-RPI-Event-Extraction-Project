@@ -1,0 +1,983 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="rec.music.phish_20041215.1554.sgm" SOURCE="usenet" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="rec.music.phish_20041215.1554">
+<entity ID="rec.music.phish_20041215.1554-E1" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="rec.music.phish_20041215.1554-E1-2" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="635" END="641">Clinton</charseq>
+    </extent>
+    <head>
+      <charseq START="635" END="641">Clinton</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Clinton">
+      <charseq START="635" END="641">Clinton</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="rec.music.phish_20041215.1554-E2" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="rec.music.phish_20041215.1554-E2-4" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="728" END="731">Iraq</charseq>
+    </extent>
+    <head>
+      <charseq START="728" END="731">Iraq</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="rec.music.phish_20041215.1554-E2-12" TYPE="PRO" LDCTYPE="PRO" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="834" END="843">over there</charseq>
+    </extent>
+    <head>
+      <charseq START="839" END="843">there</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="rec.music.phish_20041215.1554-E2-15" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="928" END="932">Iraqi</charseq>
+    </extent>
+    <head>
+      <charseq START="928" END="932">Iraqi</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Iraq">
+      <charseq START="728" END="731">Iraq</charseq>
+    </name>
+    <name NAME="Iraqi">
+      <charseq START="928" END="932">Iraqi</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="rec.music.phish_20041215.1554-E3" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="rec.music.phish_20041215.1554-E3-5" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="756" END="765">our troops</charseq>
+    </extent>
+    <head>
+      <charseq START="760" END="765">troops</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="rec.music.phish_20041215.1554-E3-10" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="823" END="832">our troops</charseq>
+    </extent>
+    <head>
+      <charseq START="827" END="832">troops</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="rec.music.phish_20041215.1554-E4" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="rec.music.phish_20041215.1554-E4-14" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="915" END="937">the existing
+Iraqi army</charseq>
+    </extent>
+    <head>
+      <charseq START="934" END="937">army</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="rec.music.phish_20041215.1554-E6" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="rec.music.phish_20041215.1554-E6-17" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="964" END="975">new recruits</charseq>
+    </extent>
+    <head>
+      <charseq START="968" END="975">recruits</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="rec.music.phish_20041215.1554-E7" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="rec.music.phish_20041215.1554-E7-20" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1328" END="1328">I</charseq>
+    </extent>
+    <head>
+      <charseq START="1328" END="1328">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="rec.music.phish_20041215.1554-E7-28" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1551" END="1551">I</charseq>
+    </extent>
+    <head>
+      <charseq START="1551" END="1551">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="rec.music.phish_20041215.1554-E7-36" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1740" END="1740">I</charseq>
+    </extent>
+    <head>
+      <charseq START="1740" END="1740">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="rec.music.phish_20041215.1554-E7-38" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1800" END="1800">I</charseq>
+    </extent>
+    <head>
+      <charseq START="1800" END="1800">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="rec.music.phish_20041215.1554-E7-39" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1812" END="1813">my</charseq>
+    </extent>
+    <head>
+      <charseq START="1812" END="1813">my</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="rec.music.phish_20041215.1554-E7-49" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1228" END="1245">rpmoria...@aol.com</charseq>
+    </extent>
+    <head>
+      <charseq START="1228" END="1245">rpmoria...@aol.com</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="rpmoria...@aol.com">
+      <charseq START="1228" END="1245">rpmoria...@aol.com</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="rec.music.phish_20041215.1554-E8" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="rec.music.phish_20041215.1554-E8-23" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1403" END="1422">the other two idiots</charseq>
+    </extent>
+    <head>
+      <charseq START="1417" END="1422">idiots</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="rec.music.phish_20041215.1554-E9" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="rec.music.phish_20041215.1554-E9-25" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1473" END="1478">Cheney</charseq>
+    </extent>
+    <head>
+      <charseq START="1473" END="1478">Cheney</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Cheney">
+      <charseq START="1473" END="1478">Cheney</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="rec.music.phish_20041215.1554-E10" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="rec.music.phish_20041215.1554-E10-26" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1484" END="1488">Rummy</charseq>
+    </extent>
+    <head>
+      <charseq START="1484" END="1488">Rummy</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Rummy">
+      <charseq START="1484" END="1488">Rummy</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="rec.music.phish_20041215.1554-E11" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="rec.music.phish_20041215.1554-E11-27" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="1494" END="1539">the ones to blame for the
+screwed up war plans</charseq>
+    </extent>
+    <head>
+      <charseq START="1498" END="1501">ones</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="rec.music.phish_20041215.1554-E11-29" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1561" END="1564">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1561" END="1564">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="rec.music.phish_20041215.1554-E11-30" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1575" END="1579">their</charseq>
+    </extent>
+    <head>
+      <charseq START="1575" END="1579">their</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="rec.music.phish_20041215.1554-E12" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="rec.music.phish_20041215.1554-E12-8" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="142" END="145">Bush</charseq>
+    </extent>
+    <head>
+      <charseq START="142" END="145">Bush</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="rec.music.phish_20041215.1554-E12-9" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1282" END="1285">Bush</charseq>
+    </extent>
+    <head>
+      <charseq START="1282" END="1285">Bush</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="rec.music.phish_20041215.1554-E12-16" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1875" END="1878">Bush</charseq>
+    </extent>
+    <head>
+      <charseq START="1875" END="1878">Bush</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="rec.music.phish_20041215.1554-E12-18" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1079" END="1082">Bush</charseq>
+    </extent>
+    <head>
+      <charseq START="1079" END="1082">Bush</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="rec.music.phish_20041215.1554-E12-31" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1593" END="1596">Bush</charseq>
+    </extent>
+    <head>
+      <charseq START="1593" END="1596">Bush</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="rec.music.phish_20041215.1554-E12-32" TYPE="PRO" LDCTYPE="PTV" LDCATR="TRUE">
+    <extent>
+      <charseq START="1601" END="1652">one of those guys that just sees how he wants to see</charseq>
+    </extent>
+    <head>
+      <charseq START="1601" END="1603">one</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="rec.music.phish_20041215.1554-E12-37" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1795" END="1798">Bush</charseq>
+    </extent>
+    <head>
+      <charseq START="1795" END="1798">Bush</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="rec.music.phish_20041215.1554-E12-52" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="220" END="223">Bush</charseq>
+    </extent>
+    <head>
+      <charseq START="220" END="223">Bush</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="rec.music.phish_20041215.1554-E12-63" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="507" END="510">Bush</charseq>
+    </extent>
+    <head>
+      <charseq START="507" END="510">Bush</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Bush">
+      <charseq START="142" END="145">Bush</charseq>
+    </name>
+    <name NAME="Bush">
+      <charseq START="1282" END="1285">Bush</charseq>
+    </name>
+    <name NAME="Bush">
+      <charseq START="1875" END="1878">Bush</charseq>
+    </name>
+    <name NAME="Bush">
+      <charseq START="1079" END="1082">Bush</charseq>
+    </name>
+    <name NAME="Bush">
+      <charseq START="1593" END="1596">Bush</charseq>
+    </name>
+    <name NAME="Bush">
+      <charseq START="1795" END="1798">Bush</charseq>
+    </name>
+    <name NAME="Bush">
+      <charseq START="220" END="223">Bush</charseq>
+    </name>
+    <name NAME="Bush">
+      <charseq START="507" END="510">Bush</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="rec.music.phish_20041215.1554-E13" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="rec.music.phish_20041215.1554-E13-33" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1608" END="1652">those guys that just sees how he wants to see</charseq>
+    </extent>
+    <head>
+      <charseq START="1614" END="1617">guys</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="rec.music.phish_20041215.1554-E13-34" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="1619" END="1622">that</charseq>
+    </extent>
+    <head>
+      <charseq START="1619" END="1622">that</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="rec.music.phish_20041215.1554-E13-45" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1638" END="1639">he</charseq>
+    </extent>
+    <head>
+      <charseq START="1638" END="1639">he</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="rec.music.phish_20041215.1554-E14" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="rec.music.phish_20041215.1554-E14-35" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1688" END="1695">a leader</charseq>
+    </extent>
+    <head>
+      <charseq START="1690" END="1695">leader</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="rec.music.phish_20041215.1554-E15" TYPE="PER" SUBTYPE="Indeterminate" CLASS="GEN">
+  <entity_mention ID="rec.music.phish_20041215.1554-E15-41" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1932" END="1934">you</charseq>
+    </extent>
+    <head>
+      <charseq START="1932" END="1934">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="rec.music.phish_20041215.1554-E15-42" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1955" END="1958">your</charseq>
+    </extent>
+    <head>
+      <charseq START="1955" END="1958">your</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="rec.music.phish_20041215.1554-E16" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="rec.music.phish_20041215.1554-E16-43" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1973" END="1979">someone</charseq>
+    </extent>
+    <head>
+      <charseq START="1973" END="1979">someone</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="rec.music.phish_20041215.1554-E16-44" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1988" END="1992">their</charseq>
+    </extent>
+    <head>
+      <charseq START="1988" END="1992">their</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="rec.music.phish_20041215.1554-E18" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="rec.music.phish_20041215.1554-E18-1" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="168" END="168">I</charseq>
+    </extent>
+    <head>
+      <charseq START="168" END="168">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="rec.music.phish_20041215.1554-E18-6" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="796" END="796">I</charseq>
+    </extent>
+    <head>
+      <charseq START="796" END="796">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="rec.music.phish_20041215.1554-E18-19" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1173" END="1173">I</charseq>
+    </extent>
+    <head>
+      <charseq START="1173" END="1173">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="rec.music.phish_20041215.1554-E18-48" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="96" END="109">BoMaGoSh Yndit</charseq>
+    </extent>
+    <head>
+      <charseq START="96" END="109">BoMaGoSh Yndit</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="rec.music.phish_20041215.1554-E18-51" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="199" END="199">I</charseq>
+    </extent>
+    <head>
+      <charseq START="199" END="199">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="BoMaGoSh Yndit">
+      <charseq START="96" END="109">BoMaGoSh Yndit</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="rec.music.phish_20041215.1554-E19" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="rec.music.phish_20041215.1554-E19-50" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1832" END="1833">JB</charseq>
+    </extent>
+    <head>
+      <charseq START="1832" END="1833">JB</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="JB">
+      <charseq START="1832" END="1833">JB</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="rec.music.phish_20041215.1554-E21" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="rec.music.phish_20041215.1554-E21-40" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1901" END="1903">His</charseq>
+    </extent>
+    <head>
+      <charseq START="1901" END="1903">His</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="rec.music.phish_20041215.1554-E21-53" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="239" END="244">Talent</charseq>
+    </extent>
+    <head>
+      <charseq START="239" END="244">Talent</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="rec.music.phish_20041215.1554-E21-56" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="266" END="271">Talent</charseq>
+    </extent>
+    <head>
+      <charseq START="266" END="271">Talent</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="rec.music.phish_20041215.1554-E21-65" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="574" END="579">Talent</charseq>
+    </extent>
+    <head>
+      <charseq START="574" END="579">Talent</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="rec.music.phish_20041215.1554-E21-67" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="604" END="605">he</charseq>
+    </extent>
+    <head>
+      <charseq START="604" END="605">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Talent">
+      <charseq START="239" END="244">Talent</charseq>
+    </name>
+    <name NAME="Talent">
+      <charseq START="266" END="271">Talent</charseq>
+    </name>
+    <name NAME="Talent">
+      <charseq START="574" END="579">Talent</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="rec.music.phish_20041215.1554-E22" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="rec.music.phish_20041215.1554-E22-3" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="644" END="649">Franks</charseq>
+    </extent>
+    <head>
+      <charseq START="644" END="649">Franks</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="rec.music.phish_20041215.1554-E22-21" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1361" END="1366">Franks</charseq>
+    </extent>
+    <head>
+      <charseq START="1361" END="1366">Franks</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="rec.music.phish_20041215.1554-E22-22" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1377" END="1378">he</charseq>
+    </extent>
+    <head>
+      <charseq START="1377" END="1378">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="rec.music.phish_20041215.1554-E22-24" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1432" END="1433">He</charseq>
+    </extent>
+    <head>
+      <charseq START="1432" END="1433">He</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="rec.music.phish_20041215.1554-E22-54" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="247" END="252">Franks</charseq>
+    </extent>
+    <head>
+      <charseq START="247" END="252">Franks</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Franks">
+      <charseq START="644" END="649">Franks</charseq>
+    </name>
+    <name NAME="Franks">
+      <charseq START="1361" END="1366">Franks</charseq>
+    </name>
+    <name NAME="Franks">
+      <charseq START="247" END="252">Franks</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="rec.music.phish_20041215.1554-E23" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="rec.music.phish_20041215.1554-E23-13" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="889" END="894">Bremer</charseq>
+    </extent>
+    <head>
+      <charseq START="889" END="894">Bremer</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="rec.music.phish_20041215.1554-E23-55" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="258" END="263">Bremer</charseq>
+    </extent>
+    <head>
+      <charseq START="258" END="263">Bremer</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Bremer">
+      <charseq START="889" END="894">Bremer</charseq>
+    </name>
+    <name NAME="Bremer">
+      <charseq START="258" END="263">Bremer</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="rec.music.phish_20041215.1554-E24" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="rec.music.phish_20041215.1554-E24-57" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="290" END="296">the CIA</charseq>
+    </extent>
+    <head>
+      <charseq START="294" END="296">CIA</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="CIA">
+      <charseq START="294" END="296">CIA</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="rec.music.phish_20041215.1554-E25" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="rec.music.phish_20041215.1554-E25-7" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="756" END="758">our</charseq>
+    </extent>
+    <head>
+      <charseq START="756" END="758">our</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="rec.music.phish_20041215.1554-E25-11" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="823" END="825">our</charseq>
+    </extent>
+    <head>
+      <charseq START="823" END="825">our</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="rec.music.phish_20041215.1554-E25-46" TYPE="PRO" LDCTYPE="PRO" ROLE="PER" LDCATR="FALSE">
+    <extent>
+      <charseq START="804" END="805">we</charseq>
+    </extent>
+    <head>
+      <charseq START="804" END="805">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="rec.music.phish_20041215.1554-E25-47" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="957" END="958">us</charseq>
+    </extent>
+    <head>
+      <charseq START="957" END="958">us</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="rec.music.phish_20041215.1554-E25-58" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="351" END="358">American</charseq>
+    </extent>
+    <head>
+      <charseq START="351" END="358">American</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="American">
+      <charseq START="351" END="358">American</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="rec.music.phish_20041215.1554-E27" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="rec.music.phish_20041215.1554-E27-59" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="441" END="446">Saddam</charseq>
+    </extent>
+    <head>
+      <charseq START="441" END="446">Saddam</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Saddam">
+      <charseq START="441" END="446">Saddam</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="rec.music.phish_20041215.1554-E28" TYPE="WEA" SUBTYPE="Underspecified" CLASS="USP">
+  <entity_mention ID="rec.music.phish_20041215.1554-E28-60" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="452" END="470">a stockpile of WMDs</charseq>
+    </extent>
+    <head>
+      <charseq START="467" END="470">WMDs</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="rec.music.phish_20041215.1554-E29" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="rec.music.phish_20041215.1554-E29-61" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="478" END="533">people who mindlessly defend Bush's
+policies, like wjb67</charseq>
+    </extent>
+    <head>
+      <charseq START="478" END="483">people</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="rec.music.phish_20041215.1554-E29-62" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="485" END="487">who</charseq>
+    </extent>
+    <head>
+      <charseq START="485" END="487">who</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="rec.music.phish_20041215.1554-E29-66" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="584" END="587">they</charseq>
+    </extent>
+    <head>
+      <charseq START="584" END="587">they</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="rec.music.phish_20041215.1554-E30" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="rec.music.phish_20041215.1554-E30-64" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="529" END="533">wjb67</charseq>
+    </extent>
+    <head>
+      <charseq START="529" END="533">wjb67</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="wjb67">
+      <charseq START="529" END="533">wjb67</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<timex2 ID="rec.music.phish_20041215.1554-T1">
+  <timex2_mention ID="rec.music.phish_20041215.1554-T1-1">
+    <extent>
+      <charseq START="113" END="138">15 Dec 2004 12:54:29 -0800</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="rec.music.phish_20041215.1554-T2" VAL="2004-12-15T15:54:00">
+  <timex2_mention ID="rec.music.phish_20041215.1554-T2-1">
+    <extent>
+      <charseq START="45" END="63">2004-12-15T15:54:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="rec.music.phish_20041215.1554-T3" VAL="P1DE" MOD="END" ANCHOR_VAL="2004-12-15T15:54:00" ANCHOR_DIR="AFTER">
+  <timex2_mention ID="rec.music.phish_20041215.1554-T3-1">
+    <extent>
+      <charseq START="862" END="882">the end of the decade</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="rec.music.phish_20041215.1554-T4">
+  <timex2_mention ID="rec.music.phish_20041215.1554-T4-1">
+    <extent>
+      <charseq START="1249" END="1274">15 Dec 2004 13:01:46 -0800</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="rec.music.phish_20041215.1554-T5">
+  <timex2_mention ID="rec.music.phish_20041215.1554-T5-1">
+    <extent>
+      <charseq START="1837" END="1867">Wed, 15 Dec 2004 16:16:16 -0500</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="rec.music.phish_20041215.1554-R1" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="rec.music.phish_20041215.1554-E21" ROLE="Arg-1"/>
+  <relation_argument REFID="rec.music.phish_20041215.1554-E24" ROLE="Arg-2"/>
+  <relation_mention ID="rec.music.phish_20041215.1554-R1-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="266" END="470">Talent was in charge of the CIA when two of
+the most costly intelligence failures in American history happened --
+not recognizing the Sept. 11 plot, and wrongly claiming that Saddam had
+a stockpile of WMDs</charseq>
+    </extent>
+    <relation_mention_argument REFID="rec.music.phish_20041215.1554-E21-56" ROLE="Arg-1">
+      <extent>
+        <charseq START="266" END="271">Talent</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="rec.music.phish_20041215.1554-E24-57" ROLE="Arg-2">
+      <extent>
+        <charseq START="290" END="296">the CIA</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="rec.music.phish_20041215.1554-R2" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="rec.music.phish_20041215.1554-E27" ROLE="Arg-1"/>
+  <relation_argument REFID="rec.music.phish_20041215.1554-E28" ROLE="Arg-2"/>
+  <relation_mention ID="rec.music.phish_20041215.1554-R2-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="266" END="470">Talent was in charge of the CIA when two of
+the most costly intelligence failures in American history happened --
+not recognizing the Sept. 11 plot, and wrongly claiming that Saddam had
+a stockpile of WMDs</charseq>
+    </extent>
+    <relation_mention_argument REFID="rec.music.phish_20041215.1554-E27-59" ROLE="Arg-1">
+      <extent>
+        <charseq START="441" END="446">Saddam</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="rec.music.phish_20041215.1554-E28-60" ROLE="Arg-2">
+      <extent>
+        <charseq START="452" END="470">a stockpile of WMDs</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="rec.music.phish_20041215.1554-R3" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="rec.music.phish_20041215.1554-E3" ROLE="Arg-1"/>
+  <relation_argument REFID="rec.music.phish_20041215.1554-E25" ROLE="Arg-2"/>
+  <relation_mention ID="rec.music.phish_20041215.1554-R3-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="756" END="765">our troops</charseq>
+    </extent>
+    <relation_mention_argument REFID="rec.music.phish_20041215.1554-E3-5" ROLE="Arg-1">
+      <extent>
+        <charseq START="756" END="765">our troops</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="rec.music.phish_20041215.1554-E25-7" ROLE="Arg-2">
+      <extent>
+        <charseq START="756" END="758">our</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="rec.music.phish_20041215.1554-R3-2" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="823" END="832">our troops</charseq>
+    </extent>
+    <relation_mention_argument REFID="rec.music.phish_20041215.1554-E3-10" ROLE="Arg-1">
+      <extent>
+        <charseq START="823" END="832">our troops</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="rec.music.phish_20041215.1554-E25-11" ROLE="Arg-2">
+      <extent>
+        <charseq START="823" END="825">our</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="rec.music.phish_20041215.1554-R4" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="rec.music.phish_20041215.1554-E3" ROLE="Arg-1"/>
+  <relation_argument REFID="rec.music.phish_20041215.1554-E2" ROLE="Arg-2"/>
+  <relation_argument REFID="rec.music.phish_20041215.1554-T3" ROLE="Time-Ending"/>
+  <relation_mention ID="rec.music.phish_20041215.1554-R4-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="644" END="882">Franks was
+in charge of the operation that was supposed to quickly go in, take
+over Iraq, and then start moving our troops out rapidly -- at this
+point I think we're going to see our troops over there at least through
+the end of the decade</charseq>
+    </extent>
+    <relation_mention_argument REFID="rec.music.phish_20041215.1554-E3-5" ROLE="Arg-1">
+      <extent>
+        <charseq START="756" END="765">our troops</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="rec.music.phish_20041215.1554-E2-4" ROLE="Arg-2">
+      <extent>
+        <charseq START="728" END="731">Iraq</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="rec.music.phish_20041215.1554-T3-1" ROLE="Time-Ending">
+      <extent>
+        <charseq START="862" END="882">the end of the decade</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="rec.music.phish_20041215.1554-R5" TYPE="PART-WHOLE" SUBTYPE="Subsidiary" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="rec.music.phish_20041215.1554-E4" ROLE="Arg-1"/>
+  <relation_argument REFID="rec.music.phish_20041215.1554-E2" ROLE="Arg-2"/>
+  <relation_mention ID="rec.music.phish_20041215.1554-R5-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="915" END="937">the existing
+Iraqi army</charseq>
+    </extent>
+    <relation_mention_argument REFID="rec.music.phish_20041215.1554-E4-14" ROLE="Arg-1">
+      <extent>
+        <charseq START="915" END="937">the existing
+Iraqi army</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="rec.music.phish_20041215.1554-E2-15" ROLE="Arg-2">
+      <extent>
+        <charseq START="928" END="932">Iraqi</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="rec.music.phish_20041215.1554-EV1" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_mention ID="rec.music.phish_20041215.1554-EV1-1">
+    <extent>
+      <charseq START="400" END="407">Sept. 11</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="266" END="470">Talent was in charge of the CIA when two of
+the most costly intelligence failures in American history happened --
+not recognizing the Sept. 11 plot, and wrongly claiming that Saddam had
+a stockpile of WMDs</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="400" END="407">Sept. 11</charseq>
+    </anchor>
+  </event_mention>
+</event>
+<event ID="rec.music.phish_20041215.1554-EV2" TYPE="Movement" SUBTYPE="Transport" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="rec.music.phish_20041215.1554-E3" ROLE="Artifact"/>
+  <event_argument REFID="rec.music.phish_20041215.1554-E2" ROLE="Origin"/>
+  <event_mention ID="rec.music.phish_20041215.1554-EV2-1">
+    <extent>
+      <charseq START="728" END="832">Iraq, and then start moving our troops out rapidly -- at this
+point I think we're going to see our troops</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="644" END="882">Franks was
+in charge of the operation that was supposed to quickly go in, take
+over Iraq, and then start moving our troops out rapidly -- at this
+point I think we're going to see our troops over there at least through
+the end of the decade</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="749" END="754">moving</charseq>
+    </anchor>
+    <event_mention_argument REFID="rec.music.phish_20041215.1554-E3-10" ROLE="Artifact">
+      <extent>
+        <charseq START="823" END="832">our troops</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="rec.music.phish_20041215.1554-E2-4" ROLE="Origin">
+      <extent>
+        <charseq START="728" END="731">Iraq</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="rec.music.phish_20041215.1554-EV3" TYPE="Movement" SUBTYPE="Transport" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="rec.music.phish_20041215.1554-E2" ROLE="Destination"/>
+  <event_mention ID="rec.music.phish_20041215.1554-EV3-1">
+    <extent>
+      <charseq START="711" END="731">go in, take
+over Iraq</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="644" END="882">Franks was
+in charge of the operation that was supposed to quickly go in, take
+over Iraq, and then start moving our troops out rapidly -- at this
+point I think we're going to see our troops over there at least through
+the end of the decade</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="711" END="712">go</charseq>
+    </anchor>
+    <event_mention_argument REFID="rec.music.phish_20041215.1554-E2-4" ROLE="Destination">
+      <extent>
+        <charseq START="728" END="731">Iraq</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="rec.music.phish_20041215.1554-EV4" TYPE="Business" SUBTYPE="End-Org" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="rec.music.phish_20041215.1554-E4" ROLE="Org"/>
+  <event_mention ID="rec.music.phish_20041215.1554-EV4-1">
+    <extent>
+      <charseq START="907" END="937">destroy the existing
+Iraqi army</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="885" END="998">And Bremer decided to destroy the existing
+Iraqi army, leaving it up to us and new recruits to try to impose
+order</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="907" END="913">destroy</charseq>
+    </anchor>
+    <event_mention_argument REFID="rec.music.phish_20041215.1554-E4-14" ROLE="Org">
+      <extent>
+        <charseq START="915" END="937">the existing
+Iraqi army</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="rec.music.phish_20041215.1554-EV5" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_mention ID="rec.music.phish_20041215.1554-EV5-1">
+    <extent>
+      <charseq START="1531" END="1533">war</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1432" END="1590">He was not given
+very much to work with--Cheney and Rummy are the ones to blame for the
+screwed up war plans-of course I am sure they will get their medals
+too</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1531" END="1533">war</charseq>
+    </anchor>
+  </event_mention>
+</event>
+</document>
+</source_file>

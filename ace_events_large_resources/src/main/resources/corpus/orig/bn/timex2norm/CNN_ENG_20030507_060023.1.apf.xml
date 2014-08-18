@@ -1,0 +1,482 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030507_060023.1.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030507_060023.1">
+<entity ID="CNN_ENG_20030507_060023.1-E1" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030507_060023.1-E1-22" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="440" END="441">we</charseq>
+    </extent>
+    <head>
+      <charseq START="440" END="441">we</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030507_060023.1-E2" TYPE="ORG" SUBTYPE="Non-Governmental" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030507_060023.1-E2-2" TYPE="PRO" LDCTYPE="WHQ" LDCATR="FALSE">
+    <extent>
+      <charseq START="486" END="489">what</charseq>
+    </extent>
+    <head>
+      <charseq START="486" END="489">what</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030507_060023.1-E2-3" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="508" END="543">the terror cell responsible for
+9/11</charseq>
+    </extent>
+    <head>
+      <charseq START="519" END="522">cell</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030507_060023.1-E2-5" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="597" END="639">a cell in
+germany known as the hamburg cell</charseq>
+    </extent>
+    <head>
+      <charseq START="599" END="602">cell</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030507_060023.1-E2-7" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="624" END="639">the hamburg cell</charseq>
+    </extent>
+    <head>
+      <charseq START="628" END="639">hamburg cell</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="hamburg cell">
+      <charseq START="628" END="639">hamburg cell</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030507_060023.1-E4" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030507_060023.1-E4-4" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="546" END="570">many members on that tape</charseq>
+    </extent>
+    <head>
+      <charseq START="551" END="557">members</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030507_060023.1-E6" TYPE="FAC" SUBTYPE="Subarea-Facility" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030507_060023.1-E6-8" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="649" END="661">the same room</charseq>
+    </extent>
+    <head>
+      <charseq START="658" END="661">room</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030507_060023.1-E7" TYPE="PER" SUBTYPE="Indeterminate" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030507_060023.1-E7-1" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="111" END="113">you</charseq>
+    </extent>
+    <head>
+      <charseq START="111" END="113">you</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030507_060023.1-E8" TYPE="ORG" SUBTYPE="Non-Governmental" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030507_060023.1-E8-9" TYPE="NAM" LDCTYPE="NAMPRE">
+    <extent>
+      <charseq START="122" END="129">al qaeda</charseq>
+    </extent>
+    <head>
+      <charseq START="122" END="129">al qaeda</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="al qaeda">
+      <charseq START="122" END="129">al qaeda</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030507_060023.1-E9" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030507_060023.1-E9-10" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="163" END="189">the families of the victims</charseq>
+    </extent>
+    <head>
+      <charseq START="167" END="174">families</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030507_060023.1-E10" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030507_060023.1-E10-11" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="179" END="189">the victims</charseq>
+    </extent>
+    <head>
+      <charseq START="183" END="189">victims</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030507_060023.1-E11" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030507_060023.1-E11-12" TYPE="PRO" LDCTYPE="PTV">
+    <extent>
+      <charseq START="192" END="252">two of
+the four pilots who took control of the planes on 9/11</charseq>
+    </extent>
+    <head>
+      <charseq START="192" END="194">two</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030507_060023.1-E12" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030507_060023.1-E12-13" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="199" END="252">the four pilots who took control of the planes on 9/11</charseq>
+    </extent>
+    <head>
+      <charseq START="208" END="213">pilots</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030507_060023.1-E12-14" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="215" END="217">who</charseq>
+    </extent>
+    <head>
+      <charseq START="215" END="217">who</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030507_060023.1-E12-20" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="344" END="353">the pilots</charseq>
+    </extent>
+    <head>
+      <charseq START="348" END="353">pilots</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030507_060023.1-E13" TYPE="VEH" SUBTYPE="Air" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030507_060023.1-E13-15" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="235" END="244">the planes</charseq>
+    </extent>
+    <head>
+      <charseq START="239" END="244">planes</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030507_060023.1-E14" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030507_060023.1-E14-16" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="282" END="297">hamburg, germany</charseq>
+    </extent>
+    <head>
+      <charseq START="282" END="288">hamburg</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="hamburg">
+      <charseq START="282" END="288">hamburg</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030507_060023.1-E15" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030507_060023.1-E15-6" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="607" END="613">germany</charseq>
+    </extent>
+    <head>
+      <charseq START="607" END="613">germany</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030507_060023.1-E15-17" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="291" END="297">germany</charseq>
+    </extent>
+    <head>
+      <charseq START="291" END="297">germany</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="germany">
+      <charseq START="291" END="297">germany</charseq>
+    </name>
+    <name NAME="germany">
+      <charseq START="607" END="613">germany</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030507_060023.1-E16" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030507_060023.1-E16-19" TYPE="PRO" LDCTYPE="PTV" LDCATR="FALSE">
+    <extent>
+      <charseq START="329" END="353">another one of the pilots</charseq>
+    </extent>
+    <head>
+      <charseq START="337" END="339">one</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030507_060023.1-E16-21" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="356" END="368">mohammed atta</charseq>
+    </extent>
+    <head>
+      <charseq START="356" END="368">mohammed atta</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="mohammed atta">
+      <charseq START="356" END="368">mohammed atta</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<timex2 ID="CNN_ENG_20030507_060023.1-T1" VAL="2003-05-07T08:07:45">
+  <timex2_mention ID="CNN_ENG_20030507_060023.1-T1-1">
+    <extent>
+      <charseq START="43" END="61">2003-05-07 08:07:45</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030507_060023.1-T2" VAL="PTXH" ANCHOR_VAL="2003-05-07-T07:07:45" ANCHOR_DIR="STARTING">
+  <timex2_mention ID="CNN_ENG_20030507_060023.1-T2-1">
+    <extent>
+      <charseq START="78" END="92">the second hour</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030507_060023.1-T3" VAL="2003-05-07TMO">
+  <timex2_mention ID="CNN_ENG_20030507_060023.1-T3-1">
+    <extent>
+      <charseq START="100" END="106">morning</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030507_060023.1-T4" VAL="2001-09-11">
+  <timex2_mention ID="CNN_ENG_20030507_060023.1-T4-1">
+    <extent>
+      <charseq START="249" END="252">9/11</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030507_060023.1-T5" VAL="1999">
+  <timex2_mention ID="CNN_ENG_20030507_060023.1-T5-1">
+    <extent>
+      <charseq START="300" END="318">four years ago 1999</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030507_060023.1-T6" VAL="2003-05-07TMO">
+  <timex2_mention ID="CNN_ENG_20030507_060023.1-T6-1">
+    <extent>
+      <charseq START="427" END="437">the morning</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030507_060023.1-T7" VAL="2003-05-07T08:07:45">
+  <timex2_mention ID="CNN_ENG_20030507_060023.1-T7-1">
+    <extent>
+      <charseq START="475" END="483">right now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030507_060023.1-T8" VAL="2001-09-11">
+  <timex2_mention ID="CNN_ENG_20030507_060023.1-T8-1">
+    <extent>
+      <charseq START="540" END="543">9/11</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030507_060023.1-T9" VAL="1999">
+  <timex2_mention ID="CNN_ENG_20030507_060023.1-T9-1">
+    <extent>
+      <charseq START="666" END="678">the same
+time</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030507_060023.1-R1" TYPE="PER-SOC" SUBTYPE="Family" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030507_060023.1-E9" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030507_060023.1-E10" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030507_060023.1-R1-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="163" END="189">the families of the victims</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030507_060023.1-E9-10" ROLE="Arg-1">
+      <extent>
+        <charseq START="163" END="189">the families of the victims</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030507_060023.1-E10-11" ROLE="Arg-2">
+      <extent>
+        <charseq START="179" END="189">the victims</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030507_060023.1-R2" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030507_060023.1-E12" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030507_060023.1-E13" ROLE="Arg-2"/>
+  <relation_argument REFID="CNN_ENG_20030507_060023.1-T4" ROLE="Time-Within"/>
+  <relation_mention ID="CNN_ENG_20030507_060023.1-R2-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="192" END="326">two of
+the four pilots who took control of the planes on 9/11 attended a
+wedding party in hamburg, germany, four years ago 1999 this is</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030507_060023.1-E12-14" ROLE="Arg-1">
+      <extent>
+        <charseq START="215" END="217">who</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030507_060023.1-E13-15" ROLE="Arg-2">
+      <extent>
+        <charseq START="235" END="244">the planes</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030507_060023.1-T4-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="249" END="252">9/11</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030507_060023.1-R3" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030507_060023.1-E11" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030507_060023.1-E14" ROLE="Arg-2"/>
+  <relation_argument REFID="CNN_ENG_20030507_060023.1-T5" ROLE="Time-Within"/>
+  <relation_mention ID="CNN_ENG_20030507_060023.1-R3-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="192" END="326">two of
+the four pilots who took control of the planes on 9/11 attended a
+wedding party in hamburg, germany, four years ago 1999 this is</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030507_060023.1-E11-12" ROLE="Arg-1">
+      <extent>
+        <charseq START="192" END="252">two of
+the four pilots who took control of the planes on 9/11</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030507_060023.1-E14-16" ROLE="Arg-2">
+      <extent>
+        <charseq START="282" END="297">hamburg, germany</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030507_060023.1-T5-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="300" END="318">four years ago 1999</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030507_060023.1-R4" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030507_060023.1-E4" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030507_060023.1-E6" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030507_060023.1-R4-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="546" END="678">many members on that tape working together through a cell in
+germany known as the hamburg cell seen in the same room at the same
+time</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030507_060023.1-E4-4" ROLE="Arg-1">
+      <extent>
+        <charseq START="546" END="570">many members on that tape</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030507_060023.1-E6-8" ROLE="Arg-2">
+      <extent>
+        <charseq START="649" END="661">the same room</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030507_060023.1-R5" TYPE="ORG-AFF" SUBTYPE="Membership" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030507_060023.1-E4" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030507_060023.1-E2" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030507_060023.1-R5-1" LEXICALCONDITION="Participial">
+    <extent>
+      <charseq START="546" END="678">many members on that tape working together through a cell in
+germany known as the hamburg cell seen in the same room at the same
+time</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030507_060023.1-E4-4" ROLE="Arg-1">
+      <extent>
+        <charseq START="546" END="570">many members on that tape</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030507_060023.1-E2-5" ROLE="Arg-2">
+      <extent>
+        <charseq START="597" END="639">a cell in
+germany known as the hamburg cell</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030507_060023.1-R6" TYPE="GEN-AFF" SUBTYPE="Org-Location" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030507_060023.1-E2" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030507_060023.1-E15" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030507_060023.1-R6-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="597" END="639">a cell in
+germany known as the hamburg cell</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030507_060023.1-E2-5" ROLE="Arg-1">
+      <extent>
+        <charseq START="597" END="639">a cell in
+germany known as the hamburg cell</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030507_060023.1-E15-6" ROLE="Arg-2">
+      <extent>
+        <charseq START="607" END="613">germany</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030507_060023.1-R7" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030507_060023.1-E14" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030507_060023.1-E15" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030507_060023.1-R7-1" LEXICALCONDITION="Formulaic">
+    <extent>
+      <charseq START="282" END="297">hamburg, germany</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030507_060023.1-E14-16" ROLE="Arg-1">
+      <extent>
+        <charseq START="282" END="297">hamburg, germany</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030507_060023.1-E15-17" ROLE="Arg-2">
+      <extent>
+        <charseq START="291" END="297">germany</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030507_060023.1-EV1" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030507_060023.1-E2" ROLE="Attacker"/>
+  <event_argument REFID="CNN_ENG_20030507_060023.1-T8" ROLE="Time-Within"/>
+  <event_mention ID="CNN_ENG_20030507_060023.1-EV1-1">
+    <extent>
+      <charseq START="508" END="543">the terror cell responsible for
+9/11</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="486" END="543">what's believed to be the terror cell responsible for
+9/11</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="512" END="517">terror</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030507_060023.1-E2-3" ROLE="Attacker">
+      <extent>
+        <charseq START="508" END="543">the terror cell responsible for
+9/11</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030507_060023.1-T8-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="540" END="543">9/11</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

@@ -1,0 +1,479 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNNHL_ENG_20030513_220910.32.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNNHL_ENG_20030513_220910.32">
+<entity ID="CNNHL_ENG_20030513_220910.32-E1" TYPE="FAC" SUBTYPE="Subarea-Facility" CLASS="USP">
+  <entity_mention ID="CNNHL_ENG_20030513_220910.32-E1-24" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="491" END="500">courtrooms</charseq>
+    </extent>
+    <head>
+      <charseq START="491" END="500">courtrooms</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030513_220910.32-E2" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030513_220910.32-E2-3" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="546" END="561">an
+auction house</charseq>
+    </extent>
+    <head>
+      <charseq START="557" END="561">house</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030513_220910.32-E3" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030513_220910.32-E3-4" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="587" END="604">a concert promoter</charseq>
+    </extent>
+    <head>
+      <charseq START="597" END="604">promoter</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030513_220910.32-E4" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030513_220910.32-E4-1" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="70" END="70">i</charseq>
+    </extent>
+    <head>
+      <charseq START="70" END="70">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030513_220910.32-E4-5" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="74" END="85">alisha davis</charseq>
+    </extent>
+    <head>
+      <charseq START="74" END="85">alisha davis</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="alisha davis">
+      <charseq START="74" END="85">alisha davis</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030513_220910.32-E6" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030513_220910.32-E6-2" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="528" END="529">he</charseq>
+    </extent>
+    <head>
+      <charseq START="528" END="529">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030513_220910.32-E6-6" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="99" END="113">the king of pop</charseq>
+    </extent>
+    <head>
+      <charseq START="103" END="106">king</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030513_220910.32-E6-8" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="135" END="137">him</charseq>
+    </extent>
+    <head>
+      <charseq START="135" END="137">him</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030513_220910.32-E6-9" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="139" END="158">the king of lawsuits</charseq>
+    </extent>
+    <head>
+      <charseq START="143" END="146">king</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030513_220910.32-E6-10" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="161" END="175">michael jackson</charseq>
+    </extent>
+    <head>
+      <charseq START="161" END="175">michael jackson</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030513_220910.32-E6-16" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="264" END="266">him</charseq>
+    </extent>
+    <head>
+      <charseq START="264" END="266">him</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030513_220910.32-E6-17" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="278" END="279">he</charseq>
+    </extent>
+    <head>
+      <charseq START="278" END="279">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030513_220910.32-E6-19" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="331" END="344">the gloved
+one</charseq>
+    </extent>
+    <head>
+      <charseq START="342" END="344">one</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030513_220910.32-E6-22" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="437" END="439">him</charseq>
+    </extent>
+    <head>
+      <charseq START="437" END="439">him</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030513_220910.32-E6-23" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="460" END="466">jackson</charseq>
+    </extent>
+    <head>
+      <charseq START="460" END="466">jackson</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="michael jackson">
+      <charseq START="161" END="175">michael jackson</charseq>
+    </name>
+    <name NAME="jackson">
+      <charseq START="460" END="466">jackson</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030513_220910.32-E8" TYPE="PER" SUBTYPE="Indeterminate" CLASS="GEN">
+  <entity_mention ID="CNNHL_ENG_20030513_220910.32-E8-7" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="120" END="122">you</charseq>
+    </extent>
+    <head>
+      <charseq START="120" END="122">you</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030513_220910.32-E10" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030513_220910.32-E10-12" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="196" END="210">universal
+music</charseq>
+    </extent>
+    <head>
+      <charseq START="196" END="210">universal
+music</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030513_220910.32-E10-13" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="213" END="248">the parent company of motown records</charseq>
+    </extent>
+    <head>
+      <charseq START="224" END="230">company</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030513_220910.32-E10-15" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="257" END="258">he</charseq>
+    </extent>
+    <head>
+      <charseq START="257" END="258">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030513_220910.32-E10-20" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="353" END="361">the label</charseq>
+    </extent>
+    <head>
+      <charseq START="357" END="361">label</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="universal music">
+      <charseq START="196" END="210">universal
+music</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030513_220910.32-E12" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030513_220910.32-E12-14" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="235" END="248">motown records</charseq>
+    </extent>
+    <head>
+      <charseq START="235" END="248">motown records</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="motown records">
+      <charseq START="235" END="248">motown records</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030513_220910.32-E13" TYPE="ORG" SUBTYPE="Entertainment" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030513_220910.32-E13-18" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="295" END="310">the jackson five</charseq>
+    </extent>
+    <head>
+      <charseq START="299" END="310">jackson five</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030513_220910.32-E13-21" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="397" END="408">jackson five</charseq>
+    </extent>
+    <head>
+      <charseq START="397" END="408">jackson five</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="jackson five">
+      <charseq START="299" END="310">jackson five</charseq>
+    </name>
+    <name NAME="jackson five">
+      <charseq START="397" END="408">jackson five</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<value ID="CNNHL_ENG_20030513_220910.32-V1" TYPE="Numeric" SUBTYPE="Money">
+  <value_mention ID="CNNHL_ENG_20030513_220910.32-V1-1">
+    <extent>
+      <charseq START="442" END="456">a single dollar</charseq>
+    </extent>
+  </value_mention>
+</value>
+<timex2 ID="CNNHL_ENG_20030513_220910.32-T1" VAL="2003-05-13T23:26:07">
+  <timex2_mention ID="CNNHL_ENG_20030513_220910.32-T1-1">
+    <extent>
+      <charseq START="46" END="64">2003-05-13 23:26:07</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNNHL_ENG_20030513_220910.32-T2" VAL="2003-05-13T23:26:07" MOD="APPROX">
+  <timex2_mention ID="CNNHL_ENG_20030513_220910.32-T2-1">
+    <extent>
+      <charseq START="116" END="118">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNNHL_ENG_20030513_220910.32-T3" VAL="197">
+  <timex2_mention ID="CNNHL_ENG_20030513_220910.32-T3-1">
+    <extent>
+      <charseq START="320" END="328">the 1970s</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNNHL_ENG_20030513_220910.32-T4" VAL="PRESENT_REF" ANCHOR_VAL="2003-05-13T23:26:07" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNNHL_ENG_20030513_220910.32-T4-1">
+    <extent>
+      <charseq START="502" END="507">lately</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNNHL_ENG_20030513_220910.32-T5" VAL="PXM" ANCHOR_VAL="2003-05" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="CNNHL_ENG_20030513_220910.32-T5-1">
+    <extent>
+      <charseq START="513" END="525">recent months</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNNHL_ENG_20030513_220910.32-T6" VAL="2">
+  <timex2_mention ID="CNNHL_ENG_20030513_220910.32-T6-1">
+    <extent>
+      <charseq START="639" END="648">millennium</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNNHL_ENG_20030513_220910.32-R1" TYPE="PART-WHOLE" SUBTYPE="Subsidiary" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030513_220910.32-E12" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030513_220910.32-E10" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030513_220910.32-R1-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="213" END="248">the parent company of motown records</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030513_220910.32-E12-14" ROLE="Arg-1">
+      <extent>
+        <charseq START="235" END="248">motown records</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030513_220910.32-E10-13" ROLE="Arg-2">
+      <extent>
+        <charseq START="213" END="248">the parent company of motown records</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030513_220910.32-R2" TYPE="ORG-AFF" SUBTYPE="Membership" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030513_220910.32-E6" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030513_220910.32-E13" ROLE="Arg-2"/>
+  <relation_argument REFID="CNNHL_ENG_20030513_220910.32-T3" ROLE="Time-Within"/>
+  <relation_mention ID="CNNHL_ENG_20030513_220910.32-R2-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="161" END="328">michael jackson filed suit against universal
+music, the parent company of motown records saying he owe him for
+music he recorded with the jackson five back in the 1970s</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030513_220910.32-E6-10" ROLE="Arg-1">
+      <extent>
+        <charseq START="161" END="175">michael jackson</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030513_220910.32-E13-18" ROLE="Arg-2">
+      <extent>
+        <charseq START="295" END="310">the jackson five</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030513_220910.32-T3-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="320" END="328">the 1970s</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030513_220910.32-R3" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030513_220910.32-E6" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030513_220910.32-E1" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030513_220910.32-R3-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="460" END="507">jackson has been in
+and out of courtrooms lately</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030513_220910.32-E6-23" ROLE="Arg-1">
+      <extent>
+        <charseq START="460" END="466">jackson</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030513_220910.32-E1-24" ROLE="Arg-2">
+      <extent>
+        <charseq START="491" END="500">courtrooms</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNNHL_ENG_20030513_220910.32-EV1" TYPE="Justice" SUBTYPE="Sue" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNNHL_ENG_20030513_220910.32-E10" ROLE="Defendant"/>
+  <event_argument REFID="CNNHL_ENG_20030513_220910.32-E6" ROLE="Plaintiff"/>
+  <event_mention ID="CNNHL_ENG_20030513_220910.32-EV1-1">
+    <extent>
+      <charseq START="161" END="210">michael jackson filed suit against universal
+music</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="161" END="328">michael jackson filed suit against universal
+music, the parent company of motown records saying he owe him for
+music he recorded with the jackson five back in the 1970s</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="183" END="186">suit</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_220910.32-E10-12" ROLE="Defendant">
+      <extent>
+        <charseq START="196" END="210">universal
+music</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_220910.32-E6-10" ROLE="Plaintiff">
+      <extent>
+        <charseq START="161" END="175">michael jackson</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNNHL_ENG_20030513_220910.32-EV2" TYPE="Transaction" SUBTYPE="Transfer-Money" MODALITY="Other" POLARITY="Negative" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNNHL_ENG_20030513_220910.32-E10" ROLE="Giver"/>
+  <event_argument REFID="CNNHL_ENG_20030513_220910.32-V1" ROLE="Money"/>
+  <event_argument REFID="CNNHL_ENG_20030513_220910.32-E6" ROLE="Recipient"/>
+  <event_mention ID="CNNHL_ENG_20030513_220910.32-EV2-1">
+    <extent>
+      <charseq START="331" END="456">the gloved
+one claims the label has been releasing new albums and jackson five
+merchandise without giving him "a single dollar</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="331" END="456">the gloved
+one claims the label has been releasing new albums and jackson five
+merchandise without giving him "a single dollar</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="430" END="435">giving</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_220910.32-E10-20" ROLE="Giver">
+      <extent>
+        <charseq START="353" END="361">the label</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_220910.32-V1-1" ROLE="Money">
+      <extent>
+        <charseq START="442" END="456">a single dollar</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_220910.32-E6-19" ROLE="Recipient">
+      <extent>
+        <charseq START="331" END="344">the gloved
+one</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNNHL_ENG_20030513_220910.32-EV3" TYPE="Justice" SUBTYPE="Sue" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNNHL_ENG_20030513_220910.32-E6" ROLE="Defendant"/>
+  <event_argument REFID="CNNHL_ENG_20030513_220910.32-E2" ROLE="Plaintiff"/>
+  <event_argument REFID="CNNHL_ENG_20030513_220910.32-E3" ROLE="Plaintiff"/>
+  <event_argument REFID="CNNHL_ENG_20030513_220910.32-T5" ROLE="Time-Within"/>
+  <event_mention ID="CNNHL_ENG_20030513_220910.32-EV3-1">
+    <extent>
+      <charseq START="513" END="604">recent months, he's been sued by an
+auction house for non-payment, and by a concert promoter</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="510" END="661">in recent months, he's been sued by an
+auction house for non-payment, and by a concert promoter for allegedly
+backing out of two millennium performances</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="538" END="541">sued</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_220910.32-E6-2" ROLE="Defendant">
+      <extent>
+        <charseq START="528" END="529">he</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_220910.32-E2-3" ROLE="Plaintiff">
+      <extent>
+        <charseq START="546" END="561">an
+auction house</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_220910.32-E3-4" ROLE="Plaintiff">
+      <extent>
+        <charseq START="587" END="604">a concert promoter</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_220910.32-T5-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="513" END="525">recent months</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNNHL_ENG_20030513_220910.32-EV4" TYPE="Justice" SUBTYPE="Sue" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_mention ID="CNNHL_ENG_20030513_220910.32-EV4-1">
+    <extent>
+      <charseq START="151" END="158">lawsuits</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="88" END="158">used to be the king of pop. now you could call him
+the king of lawsuits</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="151" END="158">lawsuits</charseq>
+    </anchor>
+  </event_mention>
+</event>
+</document>
+</source_file>

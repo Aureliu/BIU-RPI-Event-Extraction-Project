@@ -1,0 +1,485 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="OIADVANTAGE_20050203.2102.sgm" SOURCE="weblog" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="OIADVANTAGE_20050203.2102">
+<entity ID="OIADVANTAGE_20050203.2102-E1" TYPE="ORG" SUBTYPE="Commercial" CLASS="GEN">
+  <entity_mention ID="OIADVANTAGE_20050203.2102-E1-2" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1794" END="1813">their industry peers</charseq>
+    </extent>
+    <head>
+      <charseq START="1809" END="1813">peers</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="OIADVANTAGE_20050203.2102-E2" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="OIADVANTAGE_20050203.2102-E2-7" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2222" END="2242">the greedy capitalist</charseq>
+    </extent>
+    <head>
+      <charseq START="2233" END="2242">capitalist</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="OIADVANTAGE_20050203.2102-E3" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="OIADVANTAGE_20050203.2102-E3-8" TYPE="NOM" LDCTYPE="BAR" LDCATR="FALSE">
+    <extent>
+      <charseq START="2248" END="2265">hippie tree hugger</charseq>
+    </extent>
+    <head>
+      <charseq START="2260" END="2265">hugger</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050203.2102-E3-9" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="2248" END="2253">hippie</charseq>
+    </extent>
+    <head>
+      <charseq START="2248" END="2253">hippie</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="OIADVANTAGE_20050203.2102-E4" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="OIADVANTAGE_20050203.2102-E4-43" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="850" END="862">Business
+Week</charseq>
+    </extent>
+    <head>
+      <charseq START="850" END="862">Business
+Week</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Business Week">
+      <charseq START="850" END="862">Business
+Week</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="OIADVANTAGE_20050203.2102-E6" TYPE="ORG" SUBTYPE="Commercial" CLASS="NEG">
+  <entity_mention ID="OIADVANTAGE_20050203.2102-E6-10" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1195" END="1205">no
+business</charseq>
+    </extent>
+    <head>
+      <charseq START="1198" END="1205">business</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="OIADVANTAGE_20050203.2102-E7" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="OIADVANTAGE_20050203.2102-E7-11" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1702" END="1709">employee</charseq>
+    </extent>
+    <head>
+      <charseq START="1702" END="1709">employee</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050203.2102-E7-38" TYPE="NOM" LDCTYPE="BAR" LDCATR="FALSE">
+    <extent>
+      <charseq START="1296" END="1304">employees</charseq>
+    </extent>
+    <head>
+      <charseq START="1296" END="1304">employees</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050203.2102-E7-40" TYPE="NOM" LDCTYPE="BAR" LDCATR="FALSE">
+    <extent>
+      <charseq START="1438" END="1446">employees</charseq>
+    </extent>
+    <head>
+      <charseq START="1438" END="1446">employees</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="OIADVANTAGE_20050203.2102-E8" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="OIADVANTAGE_20050203.2102-E8-12" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="867" END="889">The Wall Street Journal</charseq>
+    </extent>
+    <head>
+      <charseq START="871" END="889">Wall Street Journal</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Wall Street Journal">
+      <charseq START="871" END="889">Wall Street Journal</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="OIADVANTAGE_20050203.2102-E9" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="OIADVANTAGE_20050203.2102-E9-14" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="297" END="297">I</charseq>
+    </extent>
+    <head>
+      <charseq START="297" END="297">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050203.2102-E9-15" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2176" END="2176">I</charseq>
+    </extent>
+    <head>
+      <charseq START="2176" END="2176">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050203.2102-E9-16" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="476" END="476">I</charseq>
+    </extent>
+    <head>
+      <charseq START="476" END="476">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050203.2102-E9-33" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="100" END="105">John A</charseq>
+    </extent>
+    <head>
+      <charseq START="100" END="105">John A</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="John A">
+      <charseq START="100" END="105">John A</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="OIADVANTAGE_20050203.2102-E10" TYPE="ORG" SUBTYPE="Commercial" CLASS="GEN">
+  <entity_mention ID="OIADVANTAGE_20050203.2102-E10-18" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="1759" END="1762">that</charseq>
+    </extent>
+    <head>
+      <charseq START="1759" END="1762">that</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050203.2102-E10-19" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1749" END="1813">companies that
+pollute at a higher rate than their industry peers</charseq>
+    </extent>
+    <head>
+      <charseq START="1749" END="1757">companies</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050203.2102-E10-23" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1794" END="1798">their</charseq>
+    </extent>
+    <head>
+      <charseq START="1794" END="1798">their</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="OIADVANTAGE_20050203.2102-E11" TYPE="ORG" SUBTYPE="Commercial" CLASS="GEN">
+  <entity_mention ID="OIADVANTAGE_20050203.2102-E11-3" TYPE="NOM" LDCTYPE="BAR" LDCATR="FALSE">
+    <extent>
+      <charseq START="1911" END="1986">companies that sell your typical "sin" products (tobacco, firearms,
+gambling</charseq>
+    </extent>
+    <head>
+      <charseq START="1911" END="1919">companies</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050203.2102-E11-17" TYPE="PRO" LDCTYPE="WHQ" LDCATR="FALSE">
+    <extent>
+      <charseq START="1921" END="1924">that</charseq>
+    </extent>
+    <head>
+      <charseq START="1921" END="1924">that</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050203.2102-E11-20" TYPE="NOM" LDCTYPE="BAR" LDCATR="TRUE">
+    <extent>
+      <charseq START="1996" END="2016">excellent investments</charseq>
+    </extent>
+    <head>
+      <charseq START="2006" END="2016">investments</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="OIADVANTAGE_20050203.2102-E12" TYPE="ORG" SUBTYPE="Commercial" CLASS="USP">
+  <entity_mention ID="OIADVANTAGE_20050203.2102-E12-21" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1895" END="1899">their</charseq>
+    </extent>
+    <head>
+      <charseq START="1895" END="1899">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050203.2102-E12-22" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1835" END="1873">companies with numerous NLRB violations</charseq>
+    </extent>
+    <head>
+      <charseq START="1835" END="1843">companies</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="OIADVANTAGE_20050203.2102-E13" TYPE="ORG" SUBTYPE="Commercial" CLASS="USP">
+  <entity_mention ID="OIADVANTAGE_20050203.2102-E13-24" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1677" END="1719">Companies that
+have poor employee relations</charseq>
+    </extent>
+    <head>
+      <charseq START="1677" END="1685">Companies</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="OIADVANTAGE_20050203.2102-E14" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="OIADVANTAGE_20050203.2102-E14-25" TYPE="NAM" LDCTYPE="NAMPRE">
+    <extent>
+      <charseq START="1859" END="1862">NLRB</charseq>
+    </extent>
+    <head>
+      <charseq START="1859" END="1862">NLRB</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="NLRB">
+      <charseq START="1859" END="1862">NLRB</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="OIADVANTAGE_20050203.2102-E15" TYPE="ORG" SUBTYPE="Commercial" CLASS="GEN">
+  <entity_mention ID="OIADVANTAGE_20050203.2102-E15-26" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="2157" END="2160">firm</charseq>
+    </extent>
+    <head>
+      <charseq START="2157" END="2160">firm</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="OIADVANTAGE_20050203.2102-E16" TYPE="ORG" SUBTYPE="Commercial" CLASS="USP">
+  <entity_mention ID="OIADVANTAGE_20050203.2102-E16-27" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1895" END="1905">their peers</charseq>
+    </extent>
+    <head>
+      <charseq START="1901" END="1905">peers</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="OIADVANTAGE_20050203.2102-E17" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="OIADVANTAGE_20050203.2102-E17-13" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="379" END="393">Poor naive soul</charseq>
+    </extent>
+    <head>
+      <charseq START="390" END="393">soul</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050203.2102-E17-29" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="404" END="406">you</charseq>
+    </extent>
+    <head>
+      <charseq START="404" END="406">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050203.2102-E17-30" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="430" END="432">you</charseq>
+    </extent>
+    <head>
+      <charseq START="430" END="432">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050203.2102-E17-31" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="464" END="467">your</charseq>
+    </extent>
+    <head>
+      <charseq START="464" END="467">your</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="OIADVANTAGE_20050203.2102-E18" TYPE="PER" SUBTYPE="Indeterminate" CLASS="GEN">
+  <entity_mention ID="OIADVANTAGE_20050203.2102-E18-4" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1931" END="1934">your</charseq>
+    </extent>
+    <head>
+      <charseq START="1931" END="1934">your</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050203.2102-E18-6" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2064" END="2066">you</charseq>
+    </extent>
+    <head>
+      <charseq START="2064" END="2066">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050203.2102-E18-28" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="350" END="352">You</charseq>
+    </extent>
+    <head>
+      <charseq START="350" END="352">You</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050203.2102-E18-35" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="802" END="804">you</charseq>
+    </extent>
+    <head>
+      <charseq START="802" END="804">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050203.2102-E18-36" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="893" END="895">you</charseq>
+    </extent>
+    <head>
+      <charseq START="893" END="895">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050203.2102-E18-37" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1005" END="1007">you</charseq>
+    </extent>
+    <head>
+      <charseq START="1005" END="1007">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050203.2102-E18-41" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1558" END="1560">you</charseq>
+    </extent>
+    <head>
+      <charseq START="1558" END="1560">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050203.2102-E18-42" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1634" END="1636">you</charseq>
+    </extent>
+    <head>
+      <charseq START="1634" END="1636">you</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="OIADVANTAGE_20050203.2102-E19" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="OIADVANTAGE_20050203.2102-E19-1" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="508" END="518">stakeholder</charseq>
+    </extent>
+    <head>
+      <charseq START="508" END="518">stakeholder</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="OIADVANTAGE_20050203.2102-E20" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="OIADVANTAGE_20050203.2102-E20-32" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="523" END="533">stockholder</charseq>
+    </extent>
+    <head>
+      <charseq START="523" END="533">stockholder</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="OIADVANTAGE_20050203.2102-E21" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="OIADVANTAGE_20050203.2102-E21-34" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="753" END="761">investors</charseq>
+    </extent>
+    <head>
+      <charseq START="753" END="761">investors</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="OIADVANTAGE_20050203.2102-E23" TYPE="WEA" SUBTYPE="Shooting" CLASS="GEN">
+  <entity_mention ID="OIADVANTAGE_20050203.2102-E23-5" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1969" END="1976">firearms</charseq>
+    </extent>
+    <head>
+      <charseq START="1969" END="1976">firearms</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="OIADVANTAGE_20050203.2102-E23-39" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1390" END="1393">guns</charseq>
+    </extent>
+    <head>
+      <charseq START="1390" END="1393">guns</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<timex2 ID="OIADVANTAGE_20050203.2102-T2" VAL="2005-02-03T21:02:00">
+  <timex2_mention ID="OIADVANTAGE_20050203.2102-T2-1">
+    <extent>
+      <charseq START="109" END="127">2005-02-03T21:02:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="OIADVANTAGE_20050203.2102-T3" VAL="PRESENT_REF" ANCHOR_VAL="2005-02-03T21:02:00" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="OIADVANTAGE_20050203.2102-T3-1">
+    <extent>
+      <charseq START="1133" END="1139">current</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="OIADVANTAGE_20050203.2102-T1" VAL="2005-02-03T21:02:00">
+  <timex2_mention ID="OIADVANTAGE_20050203.2102-T1-1">
+    <extent>
+      <charseq START="41" END="59">2005-02-03T21:02:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="OIADVANTAGE_20050203.2102-R1" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="OIADVANTAGE_20050203.2102-E7" ROLE="Arg-1"/>
+  <relation_argument REFID="OIADVANTAGE_20050203.2102-E13" ROLE="Arg-2"/>
+  <relation_mention ID="OIADVANTAGE_20050203.2102-R1-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="1677" END="1813">Companies that
+have poor employee relations tend to underperform, as do companies that
+pollute at a higher rate than their industry peers</charseq>
+    </extent>
+    <relation_mention_argument REFID="OIADVANTAGE_20050203.2102-E7-11" ROLE="Arg-1">
+      <extent>
+        <charseq START="1702" END="1709">employee</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="OIADVANTAGE_20050203.2102-E13-24" ROLE="Arg-2">
+      <extent>
+        <charseq START="1677" END="1719">Companies that
+have poor employee relations</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="OIADVANTAGE_20050203.2102-R2" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="OIADVANTAGE_20050203.2102-E11" ROLE="Arg-1"/>
+  <relation_argument REFID="OIADVANTAGE_20050203.2102-E23" ROLE="Arg-2"/>
+  <relation_mention ID="OIADVANTAGE_20050203.2102-R2-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="1816" END="2016">On the other hand,
+companies with numerous NLRB violations don't do worse than their peers
+and companies that sell your typical "sin" products (tobacco, firearms,
+gambling) can be excellent investments</charseq>
+    </extent>
+    <relation_mention_argument REFID="OIADVANTAGE_20050203.2102-E11-3" ROLE="Arg-1">
+      <extent>
+        <charseq START="1911" END="1986">companies that sell your typical "sin" products (tobacco, firearms,
+gambling</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="OIADVANTAGE_20050203.2102-E23-5" ROLE="Arg-2">
+      <extent>
+        <charseq START="1969" END="1976">firearms</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+</document>
+</source_file>

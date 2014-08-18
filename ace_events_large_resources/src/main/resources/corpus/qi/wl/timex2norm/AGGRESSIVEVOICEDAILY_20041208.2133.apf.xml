@@ -1,0 +1,909 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="AGGRESSIVEVOICEDAILY_20041208.2133.sgm" SOURCE="weblog" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="AGGRESSIVEVOICEDAILY_20041208.2133">
+<entity ID="AGGRESSIVEVOICEDAILY_20041208.2133-E1" TYPE="VEH" SUBTYPE="Land" CLASS="GEN">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E1-1" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="660" END="671">our vehicles</charseq>
+    </extent>
+    <head>
+      <charseq START="664" END="671">vehicles</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041208.2133-E2" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E2-43" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="863" END="877">Nashville, Tenn</charseq>
+    </extent>
+    <head>
+      <charseq START="863" END="871">Nashville</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Nashville">
+      <charseq START="863" END="871">Nashville</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041208.2133-E3" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E3-5" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="874" END="877">Tenn</charseq>
+    </extent>
+    <head>
+      <charseq START="874" END="877">Tenn</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Tenn">
+      <charseq START="874" END="877">Tenn</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041208.2133-E4" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E4-8" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1134" END="1145">the Pentagon</charseq>
+    </extent>
+    <head>
+      <charseq START="1138" END="1145">Pentagon</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Pentagon">
+      <charseq START="1138" END="1145">Pentagon</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041208.2133-E5" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E5-9" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="718" END="779">the estimated 2,300 soldiers who had
+assembled to see Rumsfeld</charseq>
+    </extent>
+    <head>
+      <charseq START="738" END="745">soldiers</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E5-10" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="747" END="749">who</charseq>
+    </extent>
+    <head>
+      <charseq START="747" END="749">who</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041208.2133-E6" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E6-6" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="848" END="853">Wilson</charseq>
+    </extent>
+    <head>
+      <charseq START="848" END="853">Wilson</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E6-7" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="1091" END="1093">his</charseq>
+    </extent>
+    <head>
+      <charseq START="1091" END="1093">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E6-13" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="912" END="917">Wilson</charseq>
+    </extent>
+    <head>
+      <charseq START="912" END="917">Wilson</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E6-15" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="920" END="1021">an airplane mechanic whose unit, the 278th Regimental Combat
+Team of the Tennessee Army National Guard</charseq>
+    </extent>
+    <head>
+      <charseq START="932" END="939">mechanic</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E6-16" TYPE="PRO" LDCTYPE="WHQ" LDCATR="TRUE">
+    <extent>
+      <charseq START="941" END="945">whose</charseq>
+    </extent>
+    <head>
+      <charseq START="941" END="945">whose</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E6-52" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="482" END="499">Spc. Thomas Wilson</charseq>
+    </extent>
+    <head>
+      <charseq START="487" END="499">Thomas Wilson</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E6-53" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="482" END="484">Spc</charseq>
+    </extent>
+    <head>
+      <charseq START="482" END="484">Spc</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Wilson">
+      <charseq START="848" END="853">Wilson</charseq>
+    </name>
+    <name NAME="Wilson">
+      <charseq START="912" END="917">Wilson</charseq>
+    </name>
+    <name NAME="Thomas Wilson">
+      <charseq START="487" END="499">Thomas Wilson</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041208.2133-E8" TYPE="VEH" SUBTYPE="Air" CLASS="GEN">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E8-17" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="923" END="930">airplane</charseq>
+    </extent>
+    <head>
+      <charseq START="923" END="930">airplane</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041208.2133-E9" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E9-19" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="941" END="950">whose unit</charseq>
+    </extent>
+    <head>
+      <charseq START="947" END="950">unit</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E9-20" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="953" END="1021">the 278th Regimental Combat
+Team of the Tennessee Army National Guard</charseq>
+    </extent>
+    <head>
+      <charseq START="957" END="984">278th Regimental Combat
+Team</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="278th Regimental Combat Team">
+      <charseq START="957" END="984">278th Regimental Combat
+Team</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041208.2133-E11" TYPE="VEH" SUBTYPE="Land" CLASS="GEN">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E11-25" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1466" END="1471">a tank</charseq>
+    </extent>
+    <head>
+      <charseq START="1468" END="1471">tank</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E11-26" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1477" END="1482">a tank</charseq>
+    </extent>
+    <head>
+      <charseq START="1479" END="1482">tank</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041208.2133-E12" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E12-28" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="1053" END="1056">Iraq</charseq>
+    </extent>
+    <head>
+      <charseq START="1053" END="1056">Iraq</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Iraq">
+      <charseq START="1053" END="1056">Iraq</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041208.2133-E13" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E13-29" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="229" END="248">Disgruntled soldiers</charseq>
+    </extent>
+    <head>
+      <charseq START="241" END="248">soldiers</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041208.2133-E14" TYPE="VEH" SUBTYPE="Land" CLASS="GEN">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E14-30" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="310" END="325">armored vehicles</charseq>
+    </extent>
+    <head>
+      <charseq START="318" END="325">vehicles</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E14-40" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="799" END="844">proper armored vehicles to carry with us north</charseq>
+    </extent>
+    <head>
+      <charseq START="814" END="821">vehicles</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041208.2133-E15" TYPE="ORG" SUBTYPE="Government" CLASS="GEN">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E15-32" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="396" END="412">the
+Army you have</charseq>
+    </extent>
+    <head>
+      <charseq START="400" END="403">Army</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041208.2133-E16" TYPE="ORG" SUBTYPE="Government" CLASS="GEN">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E16-33" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="439" END="477">the Army you might want or wish
+to have</charseq>
+    </extent>
+    <head>
+      <charseq START="443" END="446">Army</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041208.2133-E17" TYPE="VEH" SUBTYPE="Land" CLASS="GEN">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E17-34" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1293" END="1353">as
+many Humvees and other vehicles with extra armor as it can</charseq>
+    </extent>
+    <head>
+      <charseq START="1301" END="1307">Humvees</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041208.2133-E18" TYPE="VEH" SUBTYPE="Land" CLASS="GEN">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E18-35" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1293" END="1353">as
+many Humvees and other vehicles with extra armor as it can</charseq>
+    </extent>
+    <head>
+      <charseq START="1319" END="1326">vehicles</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041208.2133-E19" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E19-36" TYPE="PRO" LDCTYPE="HLS">
+    <extent>
+      <charseq START="1403" END="1406">some</charseq>
+    </extent>
+    <head>
+      <charseq START="1403" END="1406">some</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041208.2133-E20" TYPE="LOC" SUBTYPE="Celestial" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E20-37" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1453" END="1461">the world</charseq>
+    </extent>
+    <head>
+      <charseq START="1457" END="1461">world</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041208.2133-E21" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E21-38" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="515" END="521">defense</charseq>
+    </extent>
+    <head>
+      <charseq START="515" END="521">defense</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E21-39" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="122" END="128">Defense</charseq>
+    </extent>
+    <head>
+      <charseq START="122" END="128">Defense</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="defense">
+      <charseq START="515" END="521">defense</charseq>
+    </name>
+    <name NAME="Defense">
+      <charseq START="122" END="128">Defense</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041208.2133-E23" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E23-41" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="989" END="1021">the Tennessee Army National Guard</charseq>
+    </extent>
+    <head>
+      <charseq START="993" END="1021">Tennessee Army National Guard</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Tennessee Army National Guard">
+      <charseq START="993" END="1021">Tennessee Army National Guard</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041208.2133-E24" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E24-11" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="772" END="779">Rumsfeld</charseq>
+    </extent>
+    <head>
+      <charseq START="772" END="779">Rumsfeld</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E24-12" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1226" END="1233">Rumsfeld</charseq>
+    </extent>
+    <head>
+      <charseq START="1226" END="1233">Rumsfeld</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E24-23" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1370" END="1371">he</charseq>
+    </extent>
+    <head>
+      <charseq START="1370" END="1371">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E24-27" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1510" END="1511">he</charseq>
+    </extent>
+    <head>
+      <charseq START="1510" END="1511">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E24-31" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="122" END="154">Defense Secretary Donald Rumsfeld</charseq>
+    </extent>
+    <head>
+      <charseq START="140" END="154">Donald Rumsfeld</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E24-44" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="264" END="271">Rumsfeld</charseq>
+    </extent>
+    <head>
+      <charseq START="264" END="271">Rumsfeld</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E24-48" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="416" END="423">Rumsfeld</charseq>
+    </extent>
+    <head>
+      <charseq START="416" END="423">Rumsfeld</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E24-49" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="122" END="138">Defense Secretary</charseq>
+    </extent>
+    <head>
+      <charseq START="130" END="138">Secretary</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E24-54" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="511" END="531">the defense secretary</charseq>
+    </extent>
+    <head>
+      <charseq START="523" END="531">secretary</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Rumsfeld">
+      <charseq START="772" END="779">Rumsfeld</charseq>
+    </name>
+    <name NAME="Rumsfeld">
+      <charseq START="1226" END="1233">Rumsfeld</charseq>
+    </name>
+    <name NAME="Donald Rumsfeld">
+      <charseq START="140" END="154">Donald Rumsfeld</charseq>
+    </name>
+    <name NAME="Rumsfeld">
+      <charseq START="264" END="271">Rumsfeld</charseq>
+    </name>
+    <name NAME="Rumsfeld">
+      <charseq START="416" END="423">Rumsfeld</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041208.2133-E25" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E25-2" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="660" END="662">our</charseq>
+    </extent>
+    <head>
+      <charseq START="660" END="662">our</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E25-3" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="542" END="543">we</charseq>
+    </extent>
+    <head>
+      <charseq START="542" END="543">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E25-4" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="837" END="838">us</charseq>
+    </extent>
+    <head>
+      <charseq START="837" END="838">us</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E25-42" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="184" END="193">the
+troops</charseq>
+    </extent>
+    <head>
+      <charseq START="188" END="193">troops</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E25-55" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="542" END="552">we
+soldiers</charseq>
+    </extent>
+    <head>
+      <charseq START="545" END="552">soldiers</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E25-56" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="784" END="785">We</charseq>
+    </extent>
+    <head>
+      <charseq START="784" END="785">We</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041208.2133-E26" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E26-50" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="93" END="97">Scott</charseq>
+    </extent>
+    <head>
+      <charseq START="93" END="97">Scott</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Scott">
+      <charseq START="93" END="97">Scott</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041208.2133-E27" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E27-45" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="353" END="372">the Associated Press</charseq>
+    </extent>
+    <head>
+      <charseq START="357" END="372">Associated Press</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Associated Press">
+      <charseq START="357" END="372">Associated Press</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041208.2133-E28" TYPE="PER" SUBTYPE="Indeterminate" CLASS="USP">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E28-24" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1423" END="1425">You</charseq>
+    </extent>
+    <head>
+      <charseq START="1423" END="1425">You</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E28-46" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="377" END="379">You</charseq>
+    </extent>
+    <head>
+      <charseq START="377" END="379">You</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E28-47" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="405" END="407">you</charseq>
+    </extent>
+    <head>
+      <charseq START="405" END="407">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E28-51" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="448" END="450">you</charseq>
+    </extent>
+    <head>
+      <charseq START="448" END="450">you</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="AGGRESSIVEVOICEDAILY_20041208.2133-E29" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E29-21" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1240" END="1247">the Army</charseq>
+    </extent>
+    <head>
+      <charseq START="1244" END="1247">Army</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-E29-22" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1348" END="1349">it</charseq>
+    </extent>
+    <head>
+      <charseq START="1348" END="1349">it</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Army">
+      <charseq START="1244" END="1247">Army</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<timex2 ID="AGGRESSIVEVOICEDAILY_20041208.2133-T1" VAL="2004-12-08T21:33:00">
+  <timex2_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-T1-1">
+    <extent>
+      <charseq START="50" END="68">2004-12-08T21:33:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AGGRESSIVEVOICEDAILY_20041208.2133-T2">
+  <timex2_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-T2-1">
+    <extent>
+      <charseq START="101" END="119">2004-12-08T21:33:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AGGRESSIVEVOICEDAILY_20041208.2133-T3" VAL="2004-12-08">
+  <timex2_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-T3-1">
+    <extent>
+      <charseq START="195" END="199">today</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AGGRESSIVEVOICEDAILY_20041208.2133-T4" VAL="P31Y" ANCHOR_VAL="1973" ANCHOR_DIR="STARTING">
+  <timex2_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-T4-1">
+    <extent>
+      <charseq START="856" END="857">31</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AGGRESSIVEVOICEDAILY_20041208.2133-T5" VAL="P1Y" ANCHOR_VAL="2004" ANCHOR_DIR="STARTING">
+  <timex2_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-T5-1">
+    <extent>
+      <charseq START="1064" END="1071">one-year</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="AGGRESSIVEVOICEDAILY_20041208.2133-T6" VAL="P1Y" MOD="MORE_THAN" ANCHOR_VAL="2004" ANCHOR_DIR="ENDING">
+  <timex2_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-T6-1">
+    <extent>
+      <charseq START="1151" END="1166">more than a year</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="AGGRESSIVEVOICEDAILY_20041208.2133-R1" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20041208.2133-E2" ROLE="Arg-1"/>
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20041208.2133-E3" ROLE="Arg-2"/>
+  <relation_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-R1-1" LEXICALCONDITION="Formulaic">
+    <extent>
+      <charseq START="863" END="877">Nashville, Tenn</charseq>
+    </extent>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20041208.2133-E2-43" ROLE="Arg-1">
+      <extent>
+        <charseq START="863" END="877">Nashville, Tenn</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20041208.2133-E3-5" ROLE="Arg-2">
+      <extent>
+        <charseq START="874" END="877">Tenn</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="AGGRESSIVEVOICEDAILY_20041208.2133-R2" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20041208.2133-E25" ROLE="Arg-1"/>
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20041208.2133-E1" ROLE="Arg-2"/>
+  <relation_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-R2-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="660" END="671">our vehicles</charseq>
+    </extent>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20041208.2133-E25-2" ROLE="Arg-1">
+      <extent>
+        <charseq START="660" END="662">our</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20041208.2133-E1-1" ROLE="Arg-2">
+      <extent>
+        <charseq START="660" END="671">our vehicles</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="AGGRESSIVEVOICEDAILY_20041208.2133-R3" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20041208.2133-E25" ROLE="Arg-1"/>
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20041208.2133-E14" ROLE="Arg-2"/>
+  <relation_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-R3-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="784" END="908">We do not have proper armored vehicles to carry with us north,"
+Wilson, 31, of Nashville, Tenn., concluded after asking again</charseq>
+    </extent>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20041208.2133-E25-4" ROLE="Arg-1">
+      <extent>
+        <charseq START="837" END="838">us</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20041208.2133-E14-40" ROLE="Arg-2">
+      <extent>
+        <charseq START="799" END="844">proper armored vehicles to carry with us north</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="AGGRESSIVEVOICEDAILY_20041208.2133-R4" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20041208.2133-E6" ROLE="Arg-1"/>
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20041208.2133-E2" ROLE="Arg-2"/>
+  <relation_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-R4-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="848" END="877">Wilson, 31, of Nashville, Tenn</charseq>
+    </extent>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20041208.2133-E6-6" ROLE="Arg-1">
+      <extent>
+        <charseq START="848" END="853">Wilson</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20041208.2133-E2-43" ROLE="Arg-2">
+      <extent>
+        <charseq START="863" END="877">Nashville, Tenn</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="AGGRESSIVEVOICEDAILY_20041208.2133-R5" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20041208.2133-E29" ROLE="Arg-1"/>
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20041208.2133-E17" ROLE="Arg-2"/>
+  <relation_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-R5-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="1226" END="1353">Rumsfeld said the Army was sparing no expense or effort to acquire as
+many Humvees and other vehicles with extra armor as it can</charseq>
+    </extent>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20041208.2133-E29-21" ROLE="Arg-1">
+      <extent>
+        <charseq START="1240" END="1247">the Army</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20041208.2133-E17-34" ROLE="Arg-2">
+      <extent>
+        <charseq START="1293" END="1353">as
+many Humvees and other vehicles with extra armor as it can</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="AGGRESSIVEVOICEDAILY_20041208.2133-R6" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20041208.2133-E29" ROLE="Arg-1"/>
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20041208.2133-E18" ROLE="Arg-2"/>
+  <relation_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-R6-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="1226" END="1353">Rumsfeld said the Army was sparing no expense or effort to acquire as
+many Humvees and other vehicles with extra armor as it can</charseq>
+    </extent>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20041208.2133-E29-21" ROLE="Arg-1">
+      <extent>
+        <charseq START="1240" END="1247">the Army</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20041208.2133-E18-35" ROLE="Arg-2">
+      <extent>
+        <charseq START="1293" END="1353">as
+many Humvees and other vehicles with extra armor as it can</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="AGGRESSIVEVOICEDAILY_20041208.2133-R7" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20041208.2133-E6" ROLE="Arg-1"/>
+  <relation_argument REFID="AGGRESSIVEVOICEDAILY_20041208.2133-E9" ROLE="Arg-2"/>
+  <relation_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-R7-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="941" END="950">whose unit</charseq>
+    </extent>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20041208.2133-E6-16" ROLE="Arg-1">
+      <extent>
+        <charseq START="941" END="945">whose</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="AGGRESSIVEVOICEDAILY_20041208.2133-E9-19" ROLE="Arg-2">
+      <extent>
+        <charseq START="941" END="950">whose unit</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="AGGRESSIVEVOICEDAILY_20041208.2133-EV1" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="AGGRESSIVEVOICEDAILY_20041208.2133-E28" ROLE="Attacker"/>
+  <event_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-EV1-1">
+    <extent>
+      <charseq START="377" END="389">You go to war</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="348" END="477">From the Associated Press : "You go to war with the
+Army you have," Rumsfeld replied, "not the Army you might want or wish
+to have</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="387" END="389">war</charseq>
+    </anchor>
+    <event_mention_argument REFID="AGGRESSIVEVOICEDAILY_20041208.2133-E28-46" ROLE="Attacker">
+      <extent>
+        <charseq START="377" END="379">You</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="AGGRESSIVEVOICEDAILY_20041208.2133-EV2" TYPE="Transaction" SUBTYPE="Transfer-Ownership" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="AGGRESSIVEVOICEDAILY_20041208.2133-E17" ROLE="Artifact"/>
+  <event_argument REFID="AGGRESSIVEVOICEDAILY_20041208.2133-E18" ROLE="Artifact"/>
+  <event_argument REFID="AGGRESSIVEVOICEDAILY_20041208.2133-E29" ROLE="Buyer"/>
+  <event_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-EV2-1">
+    <extent>
+      <charseq START="1240" END="1353">the Army was sparing no expense or effort to acquire as
+many Humvees and other vehicles with extra armor as it can</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1226" END="1353">Rumsfeld said the Army was sparing no expense or effort to acquire as
+many Humvees and other vehicles with extra armor as it can</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1285" END="1291">acquire</charseq>
+    </anchor>
+    <event_mention_argument REFID="AGGRESSIVEVOICEDAILY_20041208.2133-E17-34" ROLE="Artifact">
+      <extent>
+        <charseq START="1293" END="1353">as
+many Humvees and other vehicles with extra armor as it can</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AGGRESSIVEVOICEDAILY_20041208.2133-E18-35" ROLE="Artifact">
+      <extent>
+        <charseq START="1293" END="1353">as
+many Humvees and other vehicles with extra armor as it can</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AGGRESSIVEVOICEDAILY_20041208.2133-E29-21" ROLE="Buyer">
+      <extent>
+        <charseq START="1240" END="1247">the Army</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="AGGRESSIVEVOICEDAILY_20041208.2133-EV3" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="AGGRESSIVEVOICEDAILY_20041208.2133-E11" ROLE="Target"/>
+  <event_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-EV3-1">
+    <extent>
+      <charseq START="1477" END="1506">a tank can
+(still) be blown up</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1423" END="1516">You can have all the armor in the world on a tank and a tank can
+(still) be blown up," he said</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1499" END="1506">blown up</charseq>
+    </anchor>
+    <event_mention_argument REFID="AGGRESSIVEVOICEDAILY_20041208.2133-E11-26" ROLE="Target">
+      <extent>
+        <charseq START="1477" END="1482">a tank</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="AGGRESSIVEVOICEDAILY_20041208.2133-EV4" TYPE="Contact" SUBTYPE="Meet" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="AGGRESSIVEVOICEDAILY_20041208.2133-E24" ROLE="Entity"/>
+  <event_argument REFID="AGGRESSIVEVOICEDAILY_20041208.2133-E25" ROLE="Entity"/>
+  <event_argument REFID="AGGRESSIVEVOICEDAILY_20041208.2133-T3" ROLE="Time-Within"/>
+  <event_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-EV4-1">
+    <extent>
+      <charseq START="122" END="199">Defense Secretary Donald Rumsfeld took part in a Q&amp;A with the
+troops today</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="122" END="226">Defense Secretary Donald Rumsfeld took part in a Q&amp;A with the
+troops today that was anything but cozy</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="171" END="177">Q&amp;A</charseq>
+    </anchor>
+    <event_mention_argument REFID="AGGRESSIVEVOICEDAILY_20041208.2133-E24-31" ROLE="Entity">
+      <extent>
+        <charseq START="122" END="154">Defense Secretary Donald Rumsfeld</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AGGRESSIVEVOICEDAILY_20041208.2133-E25-42" ROLE="Entity">
+      <extent>
+        <charseq START="184" END="193">the
+troops</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AGGRESSIVEVOICEDAILY_20041208.2133-T3-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="195" END="199">today</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="AGGRESSIVEVOICEDAILY_20041208.2133-EV5" TYPE="Movement" SUBTYPE="Transport" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Future">
+  <event_argument REFID="AGGRESSIVEVOICEDAILY_20041208.2133-E6" ROLE="Artifact"/>
+  <event_argument REFID="AGGRESSIVEVOICEDAILY_20041208.2133-E12" ROLE="Destination"/>
+  <event_argument REFID="AGGRESSIVEVOICEDAILY_20041208.2133-T5" ROLE="Time-At-Beginning"/>
+  <event_mention ID="AGGRESSIVEVOICEDAILY_20041208.2133-EV5-1">
+    <extent>
+      <charseq START="912" END="1071">Wilson, an airplane mechanic whose unit, the 278th Regimental Combat
+Team of the Tennessee Army National Guard, is about to drive north into
+Iraq for a one-year</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="912" END="1166">Wilson, an airplane mechanic whose unit, the 278th Regimental Combat
+Team of the Tennessee Army National Guard, is about to drive north into
+Iraq for a one-year tour of duty, put his finger on a problem that has
+bedeviled the Pentagon for more than a year</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1036" END="1040">drive</charseq>
+    </anchor>
+    <event_mention_argument REFID="AGGRESSIVEVOICEDAILY_20041208.2133-E6-13" ROLE="Artifact">
+      <extent>
+        <charseq START="912" END="917">Wilson</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AGGRESSIVEVOICEDAILY_20041208.2133-E12-28" ROLE="Destination">
+      <extent>
+        <charseq START="1053" END="1056">Iraq</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="AGGRESSIVEVOICEDAILY_20041208.2133-T5-1" ROLE="Time-At-Beginning">
+      <extent>
+        <charseq START="1064" END="1071">one-year</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

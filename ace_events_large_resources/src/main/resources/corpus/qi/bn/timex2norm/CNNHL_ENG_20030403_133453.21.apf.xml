@@ -1,0 +1,248 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNNHL_ENG_20030403_133453.21.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNNHL_ENG_20030403_133453.21">
+<entity ID="CNNHL_ENG_20030403_133453.21-E1" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030403_133453.21-E1-1" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="70" END="89">the associated press</charseq>
+    </extent>
+    <head>
+      <charseq START="74" END="89">associated press</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="associated press">
+      <charseq START="74" END="89">associated press</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030403_133453.21-E2" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNNHL_ENG_20030403_133453.21-E2-2" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="109" END="119">u.s. troops</charseq>
+    </extent>
+    <head>
+      <charseq START="114" END="119">troops</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030403_133453.21-E3" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030403_133453.21-E3-3" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="109" END="111">u.s</charseq>
+    </extent>
+    <head>
+      <charseq START="109" END="111">u.s</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="u.s">
+      <charseq START="109" END="111">u.s</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030403_133453.21-E4" TYPE="FAC" SUBTYPE="Airport" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030403_133453.21-E4-4" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="148" END="175">saddam international airport</charseq>
+    </extent>
+    <head>
+      <charseq START="148" END="175">saddam international airport</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030403_133453.21-E4-11" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="301" END="311">the airport</charseq>
+    </extent>
+    <head>
+      <charseq START="305" END="311">airport</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="saddam international airport">
+      <charseq START="148" END="175">saddam international airport</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030403_133453.21-E5" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030403_133453.21-E5-5" TYPE="NOM" LDCTYPE="NOM" ROLE="LOC">
+    <extent>
+      <charseq START="200" END="216">the
+iraqi capital</charseq>
+    </extent>
+    <head>
+      <charseq START="210" END="216">capital</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030403_133453.21-E6" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030403_133453.21-E6-6" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="204" END="208">iraqi</charseq>
+    </extent>
+    <head>
+      <charseq START="204" END="208">iraqi</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="iraqi">
+      <charseq START="204" END="208">iraqi</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030403_133453.21-E7" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030403_133453.21-E7-7" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="219" END="236">pentagon officials</charseq>
+    </extent>
+    <head>
+      <charseq START="228" END="236">officials</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030403_133453.21-E7-12" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="314" END="322">officials</charseq>
+    </extent>
+    <head>
+      <charseq START="314" END="322">officials</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030403_133453.21-E7-13" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="328" END="331">they</charseq>
+    </extent>
+    <head>
+      <charseq START="328" END="331">they</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030403_133453.21-E8" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030403_133453.21-E8-8" TYPE="NAM" LDCTYPE="NAMPRE">
+    <extent>
+      <charseq START="219" END="226">pentagon</charseq>
+    </extent>
+    <head>
+      <charseq START="219" END="226">pentagon</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="pentagon">
+      <charseq START="219" END="226">pentagon</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030403_133453.21-E9" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030403_133453.21-E9-9" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="246" END="311">reporters who refused to
+comment about any activity at the airport</charseq>
+    </extent>
+    <head>
+      <charseq START="246" END="254">reporters</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030403_133453.21-E9-10" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="256" END="258">who</charseq>
+    </extent>
+    <head>
+      <charseq START="256" END="258">who</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<timex2 ID="CNNHL_ENG_20030403_133453.21-T1" VAL="2003-04-03T13:51:01">
+  <timex2_mention ID="CNNHL_ENG_20030403_133453.21-T1-1">
+    <extent>
+      <charseq START="46" END="64">2003-04-03 13:51:01</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNNHL_ENG_20030403_133453.21-R1" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030403_133453.21-E2" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030403_133453.21-E3" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030403_133453.21-R1-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="109" END="119">u.s. troops</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030403_133453.21-E2-2" ROLE="Arg-1">
+      <extent>
+        <charseq START="109" END="119">u.s. troops</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030403_133453.21-E3-3" ROLE="Arg-2">
+      <extent>
+        <charseq START="109" END="111">u.s</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030403_133453.21-R2" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030403_133453.21-E5" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030403_133453.21-E6" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030403_133453.21-R2-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="200" END="216">the
+iraqi capital</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030403_133453.21-E5-5" ROLE="Arg-1">
+      <extent>
+        <charseq START="200" END="216">the
+iraqi capital</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030403_133453.21-E6-6" ROLE="Arg-2">
+      <extent>
+        <charseq START="204" END="208">iraqi</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030403_133453.21-R3" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030403_133453.21-E7" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030403_133453.21-E8" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030403_133453.21-R3-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="219" END="236">pentagon officials</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030403_133453.21-E7-7" ROLE="Arg-1">
+      <extent>
+        <charseq START="219" END="236">pentagon officials</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030403_133453.21-E8-8" ROLE="Arg-2">
+      <extent>
+        <charseq START="219" END="226">pentagon</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNNHL_ENG_20030403_133453.21-EV1" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNNHL_ENG_20030403_133453.21-E2" ROLE="Attacker"/>
+  <event_argument REFID="CNNHL_ENG_20030403_133453.21-E4" ROLE="Target"/>
+  <event_mention ID="CNNHL_ENG_20030403_133453.21-EV1-1">
+    <extent>
+      <charseq START="109" END="175">u.s. troops have launched an
+attack on saddam international airport</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="70" END="175">the associated press is reporting that u.s. troops have launched an
+attack on saddam international airport</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="138" END="143">attack</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030403_133453.21-E2-2" ROLE="Attacker">
+      <extent>
+        <charseq START="109" END="119">u.s. troops</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030403_133453.21-E4-4" ROLE="Target">
+      <extent>
+        <charseq START="148" END="175">saddam international airport</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

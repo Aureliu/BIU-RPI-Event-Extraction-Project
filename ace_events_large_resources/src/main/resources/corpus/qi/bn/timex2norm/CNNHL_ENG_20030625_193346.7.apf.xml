@@ -1,0 +1,611 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNNHL_ENG_20030625_193346.7.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNNHL_ENG_20030625_193346.7">
+<entity ID="CNNHL_ENG_20030625_193346.7-E1" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030625_193346.7-E1-19" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="226" END="234">pakistani</charseq>
+    </extent>
+    <head>
+      <charseq START="226" END="234">pakistani</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030625_193346.7-E1-27" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="384" END="391">pakistan</charseq>
+    </extent>
+    <head>
+      <charseq START="384" END="391">pakistan</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="pakistani">
+      <charseq START="226" END="234">pakistani</charseq>
+    </name>
+    <name NAME="pakistan">
+      <charseq START="384" END="391">pakistan</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030625_193346.7-E2" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030625_193346.7-E2-2" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="393" END="403">afghanistan</charseq>
+    </extent>
+    <head>
+      <charseq START="393" END="403">afghanistan</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="afghanistan">
+      <charseq START="393" END="403">afghanistan</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030625_193346.7-E3" TYPE="LOC" SUBTYPE="Boundary" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030625_193346.7-E3-3" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="380" END="410">the pakistan/afghanistan border</charseq>
+    </extent>
+    <head>
+      <charseq START="405" END="410">border</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030625_193346.7-E4" TYPE="ORG" SUBTYPE="Non-Governmental" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030625_193346.7-E4-6" TYPE="NAM" LDCTYPE="NAMPRE">
+    <extent>
+      <charseq START="481" END="488">al qaeda</charseq>
+    </extent>
+    <head>
+      <charseq START="481" END="488">al qaeda</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="al qaeda">
+      <charseq START="481" END="488">al qaeda</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030625_193346.7-E5" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNNHL_ENG_20030625_193346.7-E5-7" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="481" END="532">al qaeda
+members in africa, the middle east and asia</charseq>
+    </extent>
+    <head>
+      <charseq START="490" END="496">members</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030625_193346.7-E6" TYPE="GPE" SUBTYPE="Continent" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030625_193346.7-E6-8" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="501" END="506">africa</charseq>
+    </extent>
+    <head>
+      <charseq START="501" END="506">africa</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="africa">
+      <charseq START="501" END="506">africa</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030625_193346.7-E7" TYPE="GPE" SUBTYPE="Continent" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030625_193346.7-E7-9" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="529" END="532">asia</charseq>
+    </extent>
+    <head>
+      <charseq START="529" END="532">asia</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="asia">
+      <charseq START="529" END="532">asia</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030625_193346.7-E8" TYPE="GPE" SUBTYPE="GPE-Cluster" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030625_193346.7-E8-10" TYPE="NOM" LDCTYPE="NOM" ROLE="LOC">
+    <extent>
+      <charseq START="509" END="523">the middle east</charseq>
+    </extent>
+    <head>
+      <charseq START="513" END="523">middle east</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030625_193346.7-E9" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030625_193346.7-E9-1" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="69" END="71">cnn</charseq>
+    </extent>
+    <head>
+      <charseq START="69" END="71">cnn</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="cnn">
+      <charseq START="69" END="71">cnn</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030625_193346.7-E10" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030625_193346.7-E10-11" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="217" END="219">u.s</charseq>
+    </extent>
+    <head>
+      <charseq START="217" END="219">u.s</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030625_193346.7-E10-12" TYPE="NOM" LDCTYPE="NOM" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="177" END="183">the u.s</charseq>
+    </extent>
+    <head>
+      <charseq START="181" END="183">u.s</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030625_193346.7-E10-18" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="190" END="192">its</charseq>
+    </extent>
+    <head>
+      <charseq START="190" END="192">its</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="u.s">
+      <charseq START="217" END="219">u.s</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030625_193346.7-E11" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030625_193346.7-E11-5" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="419" END="427">bin laden</charseq>
+    </extent>
+    <head>
+      <charseq START="419" END="427">bin laden</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030625_193346.7-E11-13" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="85" END="99">osama bin laden</charseq>
+    </extent>
+    <head>
+      <charseq START="85" END="99">osama bin laden</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030625_193346.7-E11-15" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="126" END="128">his</charseq>
+    </extent>
+    <head>
+      <charseq START="126" END="128">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030625_193346.7-E11-21" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="256" END="264">bin laden</charseq>
+    </extent>
+    <head>
+      <charseq START="256" END="264">bin laden</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030625_193346.7-E11-22" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="282" END="283">he</charseq>
+    </extent>
+    <head>
+      <charseq START="282" END="283">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="bin laden">
+      <charseq START="419" END="427">bin laden</charseq>
+    </name>
+    <name NAME="osama bin laden">
+      <charseq START="85" END="99">osama bin laden</charseq>
+    </name>
+    <name NAME="bin laden">
+      <charseq START="256" END="264">bin laden</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030625_193346.7-E12" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030625_193346.7-E12-14" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="126" END="138">his followers</charseq>
+    </extent>
+    <head>
+      <charseq START="130" END="138">followers</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030625_193346.7-E12-16" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="162" END="165">them</charseq>
+    </extent>
+    <head>
+      <charseq START="162" END="165">them</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030625_193346.7-E14" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030625_193346.7-E14-17" TYPE="NOM" LDCTYPE="NOM" ROLE="GPE">
+    <extent>
+      <charseq START="190" END="199">its allies</charseq>
+    </extent>
+    <head>
+      <charseq START="194" END="199">allies</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030625_193346.7-E16" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNNHL_ENG_20030625_193346.7-E16-20" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="217" END="241">u.s. and pakistani troops</charseq>
+    </extent>
+    <head>
+      <charseq START="236" END="241">troops</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030625_193346.7-E17" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030625_193346.7-E17-23" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="294" END="321">intelligence sources in asia</charseq>
+    </extent>
+    <head>
+      <charseq START="307" END="313">sources</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030625_193346.7-E18" TYPE="GPE" SUBTYPE="Continent" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030625_193346.7-E18-24" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="318" END="321">asia</charseq>
+    </extent>
+    <head>
+      <charseq START="318" END="321">asia</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="asia">
+      <charseq START="318" END="321">asia</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030625_193346.7-E19" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030625_193346.7-E19-25" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="352" END="359">couriers</charseq>
+    </extent>
+    <head>
+      <charseq START="352" END="359">couriers</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030625_193346.7-E20" TYPE="LOC" SUBTYPE="Region-General" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030625_193346.7-E20-4" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="413" END="417">where</charseq>
+    </extent>
+    <head>
+      <charseq START="413" END="417">where</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030625_193346.7-E20-26" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="366" END="452">an area along the pakistan/afghanistan border, where
+bin laden is believed to be hiding</charseq>
+    </extent>
+    <head>
+      <charseq START="369" END="372">area</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<timex2 ID="CNNHL_ENG_20030625_193346.7-T1" VAL="2003-06-25T19:39:30">
+  <timex2_mention ID="CNNHL_ENG_20030625_193346.7-T1-1">
+    <extent>
+      <charseq START="45" END="63">2003-06-25 19:39:30</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNNHL_ENG_20030625_193346.7-T2" VAL="2003-02">
+  <timex2_mention ID="CNNHL_ENG_20030625_193346.7-T2-1">
+    <extent>
+      <charseq START="143" END="150">february</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNNHL_ENG_20030625_193346.7-T3" VAL="2003-03">
+  <timex2_mention ID="CNNHL_ENG_20030625_193346.7-T3-1">
+    <extent>
+      <charseq START="202" END="214">a month
+later</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNNHL_ENG_20030625_193346.7-R1" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030625_193346.7-E16" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030625_193346.7-E10" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030625_193346.7-R1-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="217" END="241">u.s. and pakistani troops</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030625_193346.7-E16-20" ROLE="Arg-1">
+      <extent>
+        <charseq START="217" END="241">u.s. and pakistani troops</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030625_193346.7-E10-11" ROLE="Arg-2">
+      <extent>
+        <charseq START="217" END="219">u.s</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030625_193346.7-R2" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030625_193346.7-E16" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030625_193346.7-E1" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030625_193346.7-R2-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="217" END="241">u.s. and pakistani troops</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030625_193346.7-E16-20" ROLE="Arg-1">
+      <extent>
+        <charseq START="217" END="241">u.s. and pakistani troops</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030625_193346.7-E1-19" ROLE="Arg-2">
+      <extent>
+        <charseq START="226" END="234">pakistani</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030625_193346.7-R3" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030625_193346.7-E17" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030625_193346.7-E18" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030625_193346.7-R3-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="294" END="321">intelligence sources in asia</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030625_193346.7-E17-23" ROLE="Arg-1">
+      <extent>
+        <charseq START="294" END="321">intelligence sources in asia</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030625_193346.7-E18-24" ROLE="Arg-2">
+      <extent>
+        <charseq START="318" END="321">asia</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030625_193346.7-R4" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030625_193346.7-E19" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030625_193346.7-E20" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030625_193346.7-R4-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="294" END="452">intelligence sources in asia say the message was taken
+by couriers from an area along the pakistan/afghanistan border, where
+bin laden is believed to be hiding</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030625_193346.7-E19-25" ROLE="Arg-1">
+      <extent>
+        <charseq START="352" END="359">couriers</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030625_193346.7-E20-26" ROLE="Arg-2">
+      <extent>
+        <charseq START="366" END="452">an area along the pakistan/afghanistan border, where
+bin laden is believed to be hiding</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030625_193346.7-R5" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="CNNHL_ENG_20030625_193346.7-E11" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030625_193346.7-E20" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030625_193346.7-R5-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="366" END="452">an area along the pakistan/afghanistan border, where
+bin laden is believed to be hiding</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030625_193346.7-E11-5" ROLE="Arg-1">
+      <extent>
+        <charseq START="419" END="427">bin laden</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030625_193346.7-E20-4" ROLE="Arg-2">
+      <extent>
+        <charseq START="413" END="417">where</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030625_193346.7-R6" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030625_193346.7-E3" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030625_193346.7-E1" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030625_193346.7-R6-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="380" END="410">the pakistan/afghanistan border</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030625_193346.7-E3-3" ROLE="Arg-1">
+      <extent>
+        <charseq START="380" END="410">the pakistan/afghanistan border</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030625_193346.7-E1-27" ROLE="Arg-2">
+      <extent>
+        <charseq START="384" END="391">pakistan</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030625_193346.7-R7" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030625_193346.7-E3" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030625_193346.7-E2" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030625_193346.7-R7-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="380" END="410">the pakistan/afghanistan border</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030625_193346.7-E3-3" ROLE="Arg-1">
+      <extent>
+        <charseq START="380" END="410">the pakistan/afghanistan border</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030625_193346.7-E2-2" ROLE="Arg-2">
+      <extent>
+        <charseq START="393" END="403">afghanistan</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030625_193346.7-R8" TYPE="ORG-AFF" SUBTYPE="Membership" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030625_193346.7-E5" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030625_193346.7-E4" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030625_193346.7-R8-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="481" END="532">al qaeda
+members in africa, the middle east and asia</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030625_193346.7-E5-7" ROLE="Arg-1">
+      <extent>
+        <charseq START="481" END="532">al qaeda
+members in africa, the middle east and asia</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030625_193346.7-E4-6" ROLE="Arg-2">
+      <extent>
+        <charseq START="481" END="488">al qaeda</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030625_193346.7-R9" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030625_193346.7-E5" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030625_193346.7-E6" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030625_193346.7-R9-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="481" END="532">al qaeda
+members in africa, the middle east and asia</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030625_193346.7-E5-7" ROLE="Arg-1">
+      <extent>
+        <charseq START="481" END="532">al qaeda
+members in africa, the middle east and asia</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030625_193346.7-E6-8" ROLE="Arg-2">
+      <extent>
+        <charseq START="501" END="506">africa</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030625_193346.7-R10" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030625_193346.7-E5" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030625_193346.7-E8" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030625_193346.7-R10-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="481" END="532">al qaeda
+members in africa, the middle east and asia</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030625_193346.7-E5-7" ROLE="Arg-1">
+      <extent>
+        <charseq START="481" END="532">al qaeda
+members in africa, the middle east and asia</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030625_193346.7-E8-10" ROLE="Arg-2">
+      <extent>
+        <charseq START="509" END="523">the middle east</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030625_193346.7-R11" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030625_193346.7-E5" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030625_193346.7-E7" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030625_193346.7-R11-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="481" END="532">al qaeda
+members in africa, the middle east and asia</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030625_193346.7-E5-7" ROLE="Arg-1">
+      <extent>
+        <charseq START="481" END="532">al qaeda
+members in africa, the middle east and asia</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030625_193346.7-E7-9" ROLE="Arg-2">
+      <extent>
+        <charseq START="529" END="532">asia</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNNHL_ENG_20030625_193346.7-EV1" TYPE="Contact" SUBTYPE="Phone-Write" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNNHL_ENG_20030625_193346.7-E11" ROLE="Entity"/>
+  <event_argument REFID="CNNHL_ENG_20030625_193346.7-E12" ROLE="Entity"/>
+  <event_argument REFID="CNNHL_ENG_20030625_193346.7-T2" ROLE="Time-Within"/>
+  <event_mention ID="CNNHL_ENG_20030625_193346.7-EV1-1">
+    <extent>
+      <charseq START="85" END="150">osama bin laden sent a private letter to his followers
+in february</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="69" END="199">cnn has learned osama bin laden sent a private letter to his followers
+in february, ordering them to attack the u.s. and its allies</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="101" END="104">sent</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030625_193346.7-E11-13" ROLE="Entity">
+      <extent>
+        <charseq START="85" END="99">osama bin laden</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030625_193346.7-E12-14" ROLE="Entity">
+      <extent>
+        <charseq START="126" END="138">his followers</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030625_193346.7-T2-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="143" END="150">february</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNNHL_ENG_20030625_193346.7-EV2" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNNHL_ENG_20030625_193346.7-E12" ROLE="Attacker"/>
+  <event_mention ID="CNNHL_ENG_20030625_193346.7-EV2-1">
+    <extent>
+      <charseq START="126" END="175">his followers
+in february, ordering them to attack</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="69" END="199">cnn has learned osama bin laden sent a private letter to his followers
+in february, ordering them to attack the u.s. and its allies</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="170" END="175">attack</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030625_193346.7-E12-14" ROLE="Attacker">
+      <extent>
+        <charseq START="126" END="138">his followers</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

@@ -1,0 +1,273 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030421_120508.13.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030421_120508.13">
+<entity ID="CNN_ENG_20030421_120508.13-E1" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030421_120508.13-E1-1" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="73" END="98">saddam hussein's rej geemg</charseq>
+    </extent>
+    <head>
+      <charseq START="90" END="98">rej geemg</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030421_120508.13-E2" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030421_120508.13-E2-2" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="73" END="86">saddam hussein</charseq>
+    </extent>
+    <head>
+      <charseq START="73" END="86">saddam hussein</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="saddam hussein">
+      <charseq START="73" END="86">saddam hussein</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030421_120508.13-E3" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030421_120508.13-E3-3" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="125" END="128">iraq</charseq>
+    </extent>
+    <head>
+      <charseq START="125" END="128">iraq</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030421_120508.13-E3-6" TYPE="NOM" LDCTYPE="NOM" ROLE="LOC">
+    <extent>
+      <charseq START="212" END="222">the country</charseq>
+    </extent>
+    <head>
+      <charseq START="216" END="222">country</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="iraq">
+      <charseq START="125" END="128">iraq</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030421_120508.13-E4" TYPE="ORG" SUBTYPE="Government" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030421_120508.13-E4-4" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="146" END="153">military</charseq>
+    </extent>
+    <head>
+      <charseq START="146" END="153">military</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030421_120508.13-E4-14" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="245" END="252">military</charseq>
+    </extent>
+    <head>
+      <charseq START="245" END="252">military</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030421_120508.13-E5" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030421_120508.13-E5-5" TYPE="NOM" LDCTYPE="NOM" ROLE="ORG">
+    <extent>
+      <charseq START="188" END="200">the coalition</charseq>
+    </extent>
+    <head>
+      <charseq START="192" END="200">coalition</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030421_120508.13-E6" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030421_120508.13-E6-7" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="245" END="301">military analyst and retired
+army general claudia kennedy</charseq>
+    </extent>
+    <head>
+      <charseq START="287" END="301">claudia kennedy</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030421_120508.13-E6-8" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="FALSE">
+    <extent>
+      <charseq START="266" END="285">retired
+army general</charseq>
+    </extent>
+    <head>
+      <charseq START="279" END="285">general</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030421_120508.13-E6-10" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="245" END="260">military analyst</charseq>
+    </extent>
+    <head>
+      <charseq START="254" END="260">analyst</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030421_120508.13-E6-12" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="354" END="356">you</charseq>
+    </extent>
+    <head>
+      <charseq START="354" END="356">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="claudia kennedy">
+      <charseq START="287" END="301">claudia kennedy</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030421_120508.13-E8" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030421_120508.13-E8-9" TYPE="NAM" LDCTYPE="NAMPRE">
+    <extent>
+      <charseq START="274" END="277">army</charseq>
+    </extent>
+    <head>
+      <charseq START="274" END="277">army</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="army">
+      <charseq START="274" END="277">army</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030421_120508.13-E10" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030421_120508.13-E10-11" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="309" END="310">me</charseq>
+    </extent>
+    <head>
+      <charseq START="309" END="310">me</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030421_120508.13-E11" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030421_120508.13-E11-13" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="363" END="364">us</charseq>
+    </extent>
+    <head>
+      <charseq START="363" END="364">us</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<value ID="CNN_ENG_20030421_120508.13-V1" TYPE="Job-Title">
+  <value_mention ID="CNN_ENG_20030421_120508.13-V1-1">
+    <extent>
+      <charseq START="274" END="285">army general</charseq>
+    </extent>
+  </value_mention>
+</value>
+<timex2 ID="CNN_ENG_20030421_120508.13-T1" VAL="2003-04-21T13:23:11">
+  <timex2_mention ID="CNN_ENG_20030421_120508.13-T1-1">
+    <extent>
+      <charseq START="44" END="62">2003-04-21 13:23:11</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030421_120508.13-R1" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030421_120508.13-E6" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030421_120508.13-E8" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030421_120508.13-R1-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="266" END="285">retired
+army general</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030421_120508.13-E6-8" ROLE="Arg-1">
+      <extent>
+        <charseq START="266" END="285">retired
+army general</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030421_120508.13-E8-9" ROLE="Arg-2">
+      <extent>
+        <charseq START="274" END="277">army</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030421_120508.13-R2" TYPE="ORG-AFF" SUBTYPE="Membership" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030421_120508.13-E1" ROLE="Arg-2"/>
+  <relation_argument REFID="CNN_ENG_20030421_120508.13-E2" ROLE="Arg-1"/>
+  <relation_mention ID="CNN_ENG_20030421_120508.13-R2-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="73" END="98">saddam hussein's rej geemg</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030421_120508.13-E2-2" ROLE="Arg-1">
+      <extent>
+        <charseq START="73" END="86">saddam hussein</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030421_120508.13-E1-1" ROLE="Arg-2">
+      <extent>
+        <charseq START="73" END="98">saddam hussein's rej geemg</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030421_120508.13-EV1" TYPE="Business" SUBTYPE="End-Org" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030421_120508.13-E3" ROLE="Place"/>
+  <event_argument REFID="CNN_ENG_20030421_120508.13-E1" ROLE="Org"/>
+  <event_mention ID="CNN_ENG_20030421_120508.13-EV1-1">
+    <extent>
+      <charseq START="73" END="128">saddam hussein's rej geemg is no more, the focus in iraq</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="68" END="242">knew saddam hussein's rej geemg is no more, the focus in iraq is
+turning from military action to rebuilding which means the coalition's
+role in the country will have to change</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="100" END="109">is no more</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030421_120508.13-E3-3" ROLE="Place">
+      <extent>
+        <charseq START="125" END="128">iraq</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030421_120508.13-E1-1" ROLE="Org">
+      <extent>
+        <charseq START="73" END="98">saddam hussein's rej geemg</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030421_120508.13-EV2" TYPE="Personnel" SUBTYPE="End-Position" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Generic" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030421_120508.13-E6" ROLE="Person"/>
+  <event_argument REFID="CNN_ENG_20030421_120508.13-E8" ROLE="Entity"/>
+  <event_argument REFID="CNN_ENG_20030421_120508.13-V1" ROLE="Position"/>
+  <event_mention ID="CNN_ENG_20030421_120508.13-EV2-1">
+    <extent>
+      <charseq START="245" END="301">military analyst and retired
+army general claudia kennedy</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="245" END="338">military analyst and retired
+army general claudia kennedy joins me with a look at possibilitys</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="266" END="272">retired</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030421_120508.13-E6-7" ROLE="Person">
+      <extent>
+        <charseq START="245" END="301">military analyst and retired
+army general claudia kennedy</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030421_120508.13-E8-9" ROLE="Entity">
+      <extent>
+        <charseq START="274" END="277">army</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030421_120508.13-V1-1" ROLE="Position">
+      <extent>
+        <charseq START="274" END="285">army general</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

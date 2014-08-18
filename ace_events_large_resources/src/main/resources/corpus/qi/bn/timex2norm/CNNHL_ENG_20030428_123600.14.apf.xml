@@ -1,0 +1,772 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNNHL_ENG_20030428_123600.14.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNNHL_ENG_20030428_123600.14">
+<entity ID="CNNHL_ENG_20030428_123600.14-E1" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030428_123600.14-E1-5" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="601" END="613">one cosmonaut</charseq>
+    </extent>
+    <head>
+      <charseq START="605" END="613">cosmonaut</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030428_123600.14-E2" TYPE="VEH" SUBTYPE="Air" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030428_123600.14-E2-7" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="632" END="640">the soyuz</charseq>
+    </extent>
+    <head>
+      <charseq START="636" END="640">soyuz</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030428_123600.14-E2-8" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="176" END="180">soyuz</charseq>
+    </extent>
+    <head>
+      <charseq START="176" END="180">soyuz</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030428_123600.14-E2-19" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="166" END="188">a russian soyuz capsule</charseq>
+    </extent>
+    <head>
+      <charseq START="182" END="188">capsule</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="soyuz">
+      <charseq START="636" END="640">soyuz</charseq>
+    </name>
+    <name NAME="soyuz">
+      <charseq START="176" END="180">soyuz</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030428_123600.14-E3" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030428_123600.14-E3-9" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="653" END="661">that crew</charseq>
+    </extent>
+    <head>
+      <charseq START="658" END="661">crew</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030428_123600.14-E4" TYPE="LOC" SUBTYPE="Celestial" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030428_123600.14-E4-10" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="671" END="675">earth</charseq>
+    </extent>
+    <head>
+      <charseq START="671" END="675">earth</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="earth">
+      <charseq START="671" END="675">earth</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030428_123600.14-E5" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030428_123600.14-E5-1" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="70" END="90">an american astronaut</charseq>
+    </extent>
+    <head>
+      <charseq START="82" END="90">astronaut</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030428_123600.14-E5-28" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="466" END="474">edward lu</charseq>
+    </extent>
+    <head>
+      <charseq START="466" END="474">edward lu</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="edward lu">
+      <charseq START="466" END="474">edward lu</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030428_123600.14-E6" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030428_123600.14-E6-11" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="578" END="595">the two astronauts</charseq>
+    </extent>
+    <head>
+      <charseq START="586" END="595">astronauts</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030428_123600.14-E7" TYPE="LOC" SUBTYPE="Celestial" CLASS="GEN">
+  <entity_mention ID="CNNHL_ENG_20030428_123600.14-E7-12" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="307" END="311">space</charseq>
+    </extent>
+    <head>
+      <charseq START="307" END="311">space</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030428_123600.14-E7-13" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="545" END="549">space</charseq>
+    </extent>
+    <head>
+      <charseq START="545" END="549">space</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030428_123600.14-E7-14" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="151" END="155">space</charseq>
+    </extent>
+    <head>
+      <charseq START="151" END="155">space</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030428_123600.14-E10" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030428_123600.14-E10-15" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="73" END="80">american</charseq>
+    </extent>
+    <head>
+      <charseq START="73" END="80">american</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="american">
+      <charseq START="73" END="80">american</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030428_123600.14-E11" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030428_123600.14-E11-16" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="96" END="112">russian cosmonaut</charseq>
+    </extent>
+    <head>
+      <charseq START="104" END="112">cosmonaut</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030428_123600.14-E11-29" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="480" END="505">yuri
+malenchenko of russia</charseq>
+    </extent>
+    <head>
+      <charseq START="480" END="495">yuri
+malenchenko</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="yuri malenchenko">
+      <charseq START="480" END="495">yuri
+malenchenko</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030428_123600.14-E12" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030428_123600.14-E12-2" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="500" END="505">russia</charseq>
+    </extent>
+    <head>
+      <charseq START="500" END="505">russia</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030428_123600.14-E12-17" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="96" END="102">russian</charseq>
+    </extent>
+    <head>
+      <charseq START="96" END="102">russian</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030428_123600.14-E12-20" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="168" END="174">russian</charseq>
+    </extent>
+    <head>
+      <charseq START="168" END="174">russian</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="russia">
+      <charseq START="500" END="505">russia</charseq>
+    </name>
+    <name NAME="russian">
+      <charseq START="96" END="102">russian</charseq>
+    </name>
+    <name NAME="russian">
+      <charseq START="168" END="174">russian</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030428_123600.14-E14" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030428_123600.14-E14-3" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="541" END="557">the space
+station</charseq>
+    </extent>
+    <head>
+      <charseq START="551" END="557">station</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030428_123600.14-E14-6" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="625" END="629">there</charseq>
+    </extent>
+    <head>
+      <charseq START="625" END="629">there</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030428_123600.14-E14-18" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="133" END="163">the
+international space station</charseq>
+    </extent>
+    <head>
+      <charseq START="157" END="163">station</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030428_123600.14-E14-22" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="247" END="266">the orbiting outpost</charseq>
+    </extent>
+    <head>
+      <charseq START="260" END="266">outpost</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030428_123600.14-E14-23" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="303" END="319">the space station</charseq>
+    </extent>
+    <head>
+      <charseq START="313" END="319">station</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030428_123600.14-E17" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030428_123600.14-E17-4" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="560" END="563">they</charseq>
+    </extent>
+    <head>
+      <charseq START="560" END="563">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030428_123600.14-E17-21" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="198" END="201">them</charseq>
+    </extent>
+    <head>
+      <charseq START="198" END="201">them</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030428_123600.14-E18" TYPE="VEH" SUBTYPE="Air" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030428_123600.14-E18-24" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="346" END="362">shuttle "columbia</charseq>
+    </extent>
+    <head>
+      <charseq START="355" END="362">columbia</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030428_123600.14-E18-25" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="346" END="352">shuttle</charseq>
+    </extent>
+    <head>
+      <charseq START="346" END="352">shuttle</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="columbia">
+      <charseq START="355" END="362">columbia</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030428_123600.14-E20" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030428_123600.14-E20-26" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="411" END="419">the
+crews</charseq>
+    </extent>
+    <head>
+      <charseq START="415" END="419">crews</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030428_123600.14-E21" TYPE="VEH" SUBTYPE="Air" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030428_123600.14-E21-27" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="446" END="463">the two spacecraft</charseq>
+    </extent>
+    <head>
+      <charseq START="454" END="463">spacecraft</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<timex2 ID="CNNHL_ENG_20030428_123600.14-T1" VAL="2003-04-28T13:46:16">
+  <timex2_mention ID="CNNHL_ENG_20030428_123600.14-T1-1">
+    <extent>
+      <charseq START="46" END="64">2003-04-28 13:46:16</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNNHL_ENG_20030428_123600.14-T2" VAL="2003-04-28TMO">
+  <timex2_mention ID="CNNHL_ENG_20030428_123600.14-T2-1">
+    <extent>
+      <charseq START="207" END="218">this morning</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNNHL_ENG_20030428_123600.14-T3" VAL="2003-02-01">
+  <timex2_mention ID="CNNHL_ENG_20030428_123600.14-T3-1">
+    <extent>
+      <charseq START="331" END="344">february first</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNNHL_ENG_20030428_123600.14-T4" VAL="PT90M" MOD="APPROX" ANCHOR_VAL="2003-04-28" ANCHOR_DIR="WITHIN">
+  <timex2_mention ID="CNNHL_ENG_20030428_123600.14-T4-1">
+    <extent>
+      <charseq START="381" END="390">90 minutes</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNNHL_ENG_20030428_123600.14-T5" VAL="P6M" ANCHOR_VAL="2003-04" ANCHOR_DIR="AFTER">
+  <timex2_mention ID="CNNHL_ENG_20030428_123600.14-T5-1">
+    <extent>
+      <charseq START="518" END="536">the next six months</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNNHL_ENG_20030428_123600.14-T6" VAL="2003-05-04">
+  <timex2_mention ID="CNNHL_ENG_20030428_123600.14-T6-1">
+    <extent>
+      <charseq START="677" END="683">may 4th</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNNHL_ENG_20030428_123600.14-T7" VAL="PRESENT_REF" ANCHOR_VAL="2003-04-28T13:46:16" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNNHL_ENG_20030428_123600.14-T7-1">
+    <extent>
+      <charseq START="615" END="623">currently</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNNHL_ENG_20030428_123600.14-R1" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030428_123600.14-E11" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030428_123600.14-E14" ROLE="Arg-2"/>
+  <relation_argument REFID="CNNHL_ENG_20030428_123600.14-T5" ROLE="Time-Holds"/>
+  <relation_mention ID="CNNHL_ENG_20030428_123600.14-R1-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="466" END="557">edward lu and yuri
+malenchenko of russia will spend the next six months in the space
+station</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030428_123600.14-E11-29" ROLE="Arg-1">
+      <extent>
+        <charseq START="480" END="505">yuri
+malenchenko of russia</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030428_123600.14-E14-3" ROLE="Arg-2">
+      <extent>
+        <charseq START="541" END="557">the space
+station</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030428_123600.14-T5-1" ROLE="Time-Holds">
+      <extent>
+        <charseq START="518" END="536">the next six months</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNNHL_ENG_20030428_123600.14-R1-2" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="70" END="163">an american astronaut and russian cosmonaut are settling in at the
+international space station</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030428_123600.14-E11-16" ROLE="Arg-1">
+      <extent>
+        <charseq START="96" END="112">russian cosmonaut</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030428_123600.14-E14-18" ROLE="Arg-2">
+      <extent>
+        <charseq START="133" END="163">the
+international space station</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030428_123600.14-R2" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030428_123600.14-E5" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030428_123600.14-E10" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030428_123600.14-R2-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="70" END="90">an american astronaut</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030428_123600.14-E5-1" ROLE="Arg-1">
+      <extent>
+        <charseq START="70" END="90">an american astronaut</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030428_123600.14-E10-15" ROLE="Arg-2">
+      <extent>
+        <charseq START="73" END="80">american</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030428_123600.14-R3" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030428_123600.14-E11" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030428_123600.14-E12" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030428_123600.14-R3-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="96" END="112">russian cosmonaut</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030428_123600.14-E11-16" ROLE="Arg-1">
+      <extent>
+        <charseq START="96" END="112">russian cosmonaut</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030428_123600.14-E12-17" ROLE="Arg-2">
+      <extent>
+        <charseq START="96" END="102">russian</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNNHL_ENG_20030428_123600.14-R3-2" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="480" END="505">yuri
+malenchenko of russia</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030428_123600.14-E11-29" ROLE="Arg-1">
+      <extent>
+        <charseq START="480" END="505">yuri
+malenchenko of russia</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030428_123600.14-E12-2" ROLE="Arg-2">
+      <extent>
+        <charseq START="500" END="505">russia</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030428_123600.14-R4" TYPE="PHYS" SUBTYPE="Located" TENSE="Present" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030428_123600.14-E5" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030428_123600.14-E14" ROLE="Arg-2"/>
+  <relation_argument REFID="CNNHL_ENG_20030428_123600.14-T5" ROLE="Time-Holds"/>
+  <relation_mention ID="CNNHL_ENG_20030428_123600.14-R4-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="70" END="163">an american astronaut and russian cosmonaut are settling in at the
+international space station</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030428_123600.14-E5-1" ROLE="Arg-1">
+      <extent>
+        <charseq START="70" END="90">an american astronaut</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030428_123600.14-E14-18" ROLE="Arg-2">
+      <extent>
+        <charseq START="133" END="163">the
+international space station</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNNHL_ENG_20030428_123600.14-R4-2" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="466" END="557">edward lu and yuri
+malenchenko of russia will spend the next six months in the space
+station</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030428_123600.14-E5-28" ROLE="Arg-1">
+      <extent>
+        <charseq START="466" END="474">edward lu</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030428_123600.14-E14-3" ROLE="Arg-2">
+      <extent>
+        <charseq START="541" END="557">the space
+station</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030428_123600.14-T5-1" ROLE="Time-Holds">
+      <extent>
+        <charseq START="518" END="536">the next six months</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030428_123600.14-R6" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030428_123600.14-E17" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030428_123600.14-E2" ROLE="Arg-2"/>
+  <relation_argument REFID="CNNHL_ENG_20030428_123600.14-T2" ROLE="Time-Within"/>
+  <relation_mention ID="CNNHL_ENG_20030428_123600.14-R6-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="166" END="266">a russian soyuz capsule dropped them off
+this morning after docking perfectly at the orbiting outpost</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030428_123600.14-E17-21" ROLE="Arg-1">
+      <extent>
+        <charseq START="198" END="201">them</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030428_123600.14-E2-19" ROLE="Arg-2">
+      <extent>
+        <charseq START="166" END="188">a russian soyuz capsule</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030428_123600.14-T2-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="207" END="218">this morning</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030428_123600.14-R7" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030428_123600.14-E20" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030428_123600.14-E21" ROLE="Arg-2"/>
+  <relation_argument REFID="CNNHL_ENG_20030428_123600.14-T4" ROLE="Time-At-End"/>
+  <relation_mention ID="CNNHL_ENG_20030428_123600.14-R7-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="375" END="463">about 90 minutes after the docking, the
+crews opened the hatch between the two spacecraft</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030428_123600.14-E20-26" ROLE="Arg-1">
+      <extent>
+        <charseq START="411" END="419">the
+crews</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030428_123600.14-E21-27" ROLE="Arg-2">
+      <extent>
+        <charseq START="446" END="463">the two spacecraft</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030428_123600.14-T4-1" ROLE="Time-At-End">
+      <extent>
+        <charseq START="381" END="390">90 minutes</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030428_123600.14-R9" TYPE="PHYS" SUBTYPE="Located" TENSE="Present" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030428_123600.14-E6" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030428_123600.14-E14" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030428_123600.14-R9-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="560" END="629">they're replacing the two astronauts and one cosmonaut
+currently there</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030428_123600.14-E6-11" ROLE="Arg-1">
+      <extent>
+        <charseq START="578" END="595">the two astronauts</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030428_123600.14-E14-6" ROLE="Arg-2">
+      <extent>
+        <charseq START="625" END="629">there</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030428_123600.14-R10" TYPE="PHYS" SUBTYPE="Located" TENSE="Present" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030428_123600.14-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030428_123600.14-E14" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030428_123600.14-R10-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="560" END="629">they're replacing the two astronauts and one cosmonaut
+currently there</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030428_123600.14-E1-5" ROLE="Arg-1">
+      <extent>
+        <charseq START="601" END="613">one cosmonaut</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030428_123600.14-E14-6" ROLE="Arg-2">
+      <extent>
+        <charseq START="625" END="629">there</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030428_123600.14-R11" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Future" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030428_123600.14-E3" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030428_123600.14-E2" ROLE="Arg-2"/>
+  <relation_argument REFID="CNNHL_ENG_20030428_123600.14-T6" ROLE="Time-Within"/>
+  <relation_mention ID="CNNHL_ENG_20030428_123600.14-R11-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="632" END="683">the soyuz will carry that crew back to earth may 4th</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030428_123600.14-E3-9" ROLE="Arg-1">
+      <extent>
+        <charseq START="653" END="661">that crew</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030428_123600.14-E2-7" ROLE="Arg-2">
+      <extent>
+        <charseq START="632" END="640">the soyuz</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030428_123600.14-T6-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="677" END="683">may 4th</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030428_123600.14-R12" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="CNNHL_ENG_20030428_123600.14-E3" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030428_123600.14-E4" ROLE="Arg-2"/>
+  <relation_argument REFID="CNNHL_ENG_20030428_123600.14-T6" ROLE="Time-After"/>
+  <relation_mention ID="CNNHL_ENG_20030428_123600.14-R12-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="632" END="683">the soyuz will carry that crew back to earth may 4th</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030428_123600.14-E3-9" ROLE="Arg-1">
+      <extent>
+        <charseq START="653" END="661">that crew</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030428_123600.14-E4-10" ROLE="Arg-2">
+      <extent>
+        <charseq START="671" END="675">earth</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030428_123600.14-T6-1" ROLE="Time-After">
+      <extent>
+        <charseq START="677" END="683">may 4th</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030428_123600.14-R13" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030428_123600.14-E12" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030428_123600.14-E2" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030428_123600.14-R13-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="166" END="188">a russian soyuz capsule</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030428_123600.14-E12-20" ROLE="Arg-1">
+      <extent>
+        <charseq START="168" END="174">russian</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030428_123600.14-E2-19" ROLE="Arg-2">
+      <extent>
+        <charseq START="166" END="188">a russian soyuz capsule</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNNHL_ENG_20030428_123600.14-EV1" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNNHL_ENG_20030428_123600.14-E2" ROLE="Vehicle"/>
+  <event_argument REFID="CNNHL_ENG_20030428_123600.14-E17" ROLE="Artifact"/>
+  <event_argument REFID="CNNHL_ENG_20030428_123600.14-E14" ROLE="Destination"/>
+  <event_argument REFID="CNNHL_ENG_20030428_123600.14-T2" ROLE="Time-Within"/>
+  <event_mention ID="CNNHL_ENG_20030428_123600.14-EV1-1">
+    <extent>
+      <charseq START="166" END="266">a russian soyuz capsule dropped them off
+this morning after docking perfectly at the orbiting outpost</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="166" END="266">a russian soyuz capsule dropped them off
+this morning after docking perfectly at the orbiting outpost</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="190" END="196">dropped</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030428_123600.14-E2-19" ROLE="Vehicle">
+      <extent>
+        <charseq START="166" END="188">a russian soyuz capsule</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030428_123600.14-E17-21" ROLE="Artifact">
+      <extent>
+        <charseq START="198" END="201">them</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030428_123600.14-E14-22" ROLE="Destination">
+      <extent>
+        <charseq START="247" END="266">the orbiting outpost</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030428_123600.14-T2-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="207" END="218">this morning</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNNHL_ENG_20030428_123600.14-EV2" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Future">
+  <event_argument REFID="CNNHL_ENG_20030428_123600.14-E2" ROLE="Vehicle"/>
+  <event_argument REFID="CNNHL_ENG_20030428_123600.14-E3" ROLE="Artifact"/>
+  <event_argument REFID="CNNHL_ENG_20030428_123600.14-E4" ROLE="Destination"/>
+  <event_argument REFID="CNNHL_ENG_20030428_123600.14-T6" ROLE="Time-Starting"/>
+  <event_mention ID="CNNHL_ENG_20030428_123600.14-EV2-1">
+    <extent>
+      <charseq START="632" END="683">the soyuz will carry that crew back to earth may 4th</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="632" END="683">the soyuz will carry that crew back to earth may 4th</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="647" END="651">carry</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030428_123600.14-E2-7" ROLE="Vehicle">
+      <extent>
+        <charseq START="632" END="640">the soyuz</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030428_123600.14-E3-9" ROLE="Artifact">
+      <extent>
+        <charseq START="653" END="661">that crew</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030428_123600.14-E4-10" ROLE="Destination">
+      <extent>
+        <charseq START="671" END="675">earth</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030428_123600.14-T6-1" ROLE="Time-Starting">
+      <extent>
+        <charseq START="677" END="683">may 4th</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNNHL_ENG_20030428_123600.14-EV3" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNNHL_ENG_20030428_123600.14-E14" ROLE="Destination"/>
+  <event_mention ID="CNNHL_ENG_20030428_123600.14-EV3-1">
+    <extent>
+      <charseq START="293" END="319">flight to the space station</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="269" END="372">it was
+the first manned flight to the space station since the february first
+shuttle "columbia" disaster</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="293" END="298">flight</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030428_123600.14-E14-23" ROLE="Destination">
+      <extent>
+        <charseq START="303" END="319">the space station</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

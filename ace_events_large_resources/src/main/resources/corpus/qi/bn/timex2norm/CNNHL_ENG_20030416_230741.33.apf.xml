@@ -1,0 +1,264 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNNHL_ENG_20030416_230741.33.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNNHL_ENG_20030416_230741.33">
+<entity ID="CNNHL_ENG_20030416_230741.33-E1" TYPE="WEA" SUBTYPE="Shooting" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030416_230741.33-E1-2" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="285" END="302">a gift from saddam</charseq>
+    </extent>
+    <head>
+      <charseq START="287" END="290">gift</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030416_230741.33-E1-13" TYPE="PRO" LDCTYPE="HLS" LDCATR="FALSE">
+    <extent>
+      <charseq START="272" END="302">one
+that was a gift from saddam</charseq>
+    </extent>
+    <head>
+      <charseq START="272" END="274">one</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030416_230741.33-E1-14" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="276" END="279">that</charseq>
+    </extent>
+    <head>
+      <charseq START="276" END="279">that</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030416_230741.33-E2" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030416_230741.33-E2-1" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="75" END="77">him</charseq>
+    </extent>
+    <head>
+      <charseq START="75" END="77">him</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030416_230741.33-E2-3" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="79" END="106">the man with the golden guns</charseq>
+    </extent>
+    <head>
+      <charseq START="83" END="85">man</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030416_230741.33-E2-6" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="109" END="128">saddam hussein's son</charseq>
+    </extent>
+    <head>
+      <charseq START="126" END="128">son</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030416_230741.33-E2-7" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="130" END="133">uday</charseq>
+    </extent>
+    <head>
+      <charseq START="130" END="133">uday</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030416_230741.33-E2-8" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="150" END="176">the owner of 74 golden guns</charseq>
+    </extent>
+    <head>
+      <charseq START="154" END="158">owner</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="uday">
+      <charseq START="130" END="133">uday</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030416_230741.33-E4" TYPE="WEA" SUBTYPE="Shooting" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030416_230741.33-E4-4" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="92" END="106">the golden guns</charseq>
+    </extent>
+    <head>
+      <charseq START="103" END="106">guns</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030416_230741.33-E4-9" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="163" END="176">74 golden guns</charseq>
+    </extent>
+    <head>
+      <charseq START="173" END="176">guns</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030416_230741.33-E4-11" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="194" END="202">the stash</charseq>
+    </extent>
+    <head>
+      <charseq START="198" END="202">stash</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030416_230741.33-E7" TYPE="WEA" SUBTYPE="Shooting" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030416_230741.33-E7-10" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="179" END="202">the ak-47's in the stash</charseq>
+    </extent>
+    <head>
+      <charseq START="183" END="189">ak-47's</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030416_230741.33-E8" TYPE="WEA" SUBTYPE="Shooting" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030416_230741.33-E8-12" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="238" END="269">silver and nickel-plated weapons</charseq>
+    </extent>
+    <head>
+      <charseq START="263" END="269">weapons</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030416_230741.33-E10" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030416_230741.33-E10-15" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="297" END="302">saddam</charseq>
+    </extent>
+    <head>
+      <charseq START="297" END="302">saddam</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030416_230741.33-E10-16" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="109" END="122">saddam hussein</charseq>
+    </extent>
+    <head>
+      <charseq START="109" END="122">saddam hussein</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030416_230741.33-E10-17" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="326" END="348">the former iraqi
+leader</charseq>
+    </extent>
+    <head>
+      <charseq START="343" END="348">leader</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="saddam hussein">
+      <charseq START="109" END="122">saddam hussein</charseq>
+    </name>
+    <name NAME="saddam">
+      <charseq START="297" END="302">saddam</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030416_230741.33-E11" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030416_230741.33-E11-18" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="337" END="341">iraqi</charseq>
+    </extent>
+    <head>
+      <charseq START="337" END="341">iraqi</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="iraqi">
+      <charseq START="337" END="341">iraqi</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<timex2 ID="CNNHL_ENG_20030416_230741.33-T1" VAL="2003-04-16T23:24:12">
+  <timex2_mention ID="CNNHL_ENG_20030416_230741.33-T1-1">
+    <extent>
+      <charseq START="46" END="64">2003-04-16 23:24:12</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNNHL_ENG_20030416_230741.33-T2" VAL="PAST_REF" ANCHOR_VAL="2003-04-16T23:24:12" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="CNNHL_ENG_20030416_230741.33-T2-1">
+    <extent>
+      <charseq START="330" END="335">former</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNNHL_ENG_20030416_230741.33-R1" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030416_230741.33-E10" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030416_230741.33-E11" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030416_230741.33-R1-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="326" END="348">the former iraqi
+leader</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030416_230741.33-E10-17" ROLE="Arg-1">
+      <extent>
+        <charseq START="326" END="348">the former iraqi
+leader</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030416_230741.33-E11-18" ROLE="Arg-2">
+      <extent>
+        <charseq START="337" END="341">iraqi</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030416_230741.33-R3" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030416_230741.33-E2" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030416_230741.33-E4" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030416_230741.33-R3-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="150" END="176">the owner of 74 golden guns</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030416_230741.33-E2-8" ROLE="Arg-1">
+      <extent>
+        <charseq START="150" END="176">the owner of 74 golden guns</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030416_230741.33-E4-9" ROLE="Arg-2">
+      <extent>
+        <charseq START="163" END="176">74 golden guns</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNNHL_ENG_20030416_230741.33-R3-2" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="79" END="106">the man with the golden guns</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030416_230741.33-E2-3" ROLE="Arg-1">
+      <extent>
+        <charseq START="79" END="106">the man with the golden guns</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030416_230741.33-E4-4" ROLE="Arg-2">
+      <extent>
+        <charseq START="92" END="106">the golden guns</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030416_230741.33-R4" TYPE="PER-SOC" SUBTYPE="Family" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030416_230741.33-E10" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030416_230741.33-E2" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030416_230741.33-R4-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="109" END="128">saddam hussein's son</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030416_230741.33-E10-16" ROLE="Arg-1">
+      <extent>
+        <charseq START="109" END="122">saddam hussein</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030416_230741.33-E2-6" ROLE="Arg-2">
+      <extent>
+        <charseq START="109" END="128">saddam hussein's son</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+</document>
+</source_file>

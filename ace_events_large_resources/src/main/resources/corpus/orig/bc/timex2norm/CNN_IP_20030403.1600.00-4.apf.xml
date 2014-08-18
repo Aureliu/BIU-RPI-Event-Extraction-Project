@@ -1,0 +1,2110 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_IP_20030403.1600.00-4.sgm" SOURCE="broadcast conversation" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_IP_20030403.1600.00-4">
+<entity ID="CNN_IP_20030403.1600.00-4-E1" TYPE="WEA" SUBTYPE="Shooting" CLASS="GEN">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E1-151" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="703" END="731">120-millimeter smoothbore gun</charseq>
+    </extent>
+    <head>
+      <charseq START="729" END="731">gun</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030403.1600.00-4-E2" TYPE="VEH" SUBTYPE="Land" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E2-3" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="742" END="753">The Bradleys</charseq>
+    </extent>
+    <head>
+      <charseq START="746" END="753">Bradleys</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Bradleys">
+      <charseq START="746" END="753">Bradleys</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_IP_20030403.1600.00-4-E3" TYPE="WEA" SUBTYPE="Shooting" CLASS="GEN">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E3-4" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="760" END="783">25-millimetre chain guns</charseq>
+    </extent>
+    <head>
+      <charseq START="780" END="783">guns</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030403.1600.00-4-E4" TYPE="WEA" SUBTYPE="Shooting" CLASS="GEN">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E4-5" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="789" END="808">coaxial machine guns</charseq>
+    </extent>
+    <head>
+      <charseq START="805" END="808">guns</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030403.1600.00-4-E5" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E5-8" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="884" END="892">Mogadishu</charseq>
+    </extent>
+    <head>
+      <charseq START="884" END="892">Mogadishu</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E5-143" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="412" END="420">Mogadishu</charseq>
+    </extent>
+    <head>
+      <charseq START="412" END="420">Mogadishu</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Mogadishu">
+      <charseq START="884" END="892">Mogadishu</charseq>
+    </name>
+    <name NAME="Mogadishu">
+      <charseq START="412" END="420">Mogadishu</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_IP_20030403.1600.00-4-E6" TYPE="FAC" SUBTYPE="Airport" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E6-134" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2851" END="2878">Saddam
+International Airport</charseq>
+    </extent>
+    <head>
+      <charseq START="2851" END="2878">Saddam
+International Airport</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Saddam International Airport">
+      <charseq START="2851" END="2878">Saddam
+International Airport</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_IP_20030403.1600.00-4-E7" TYPE="LOC" SUBTYPE="Region-General" CLASS="GEN">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E7-6" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2185" END="2197">an urban area</charseq>
+    </extent>
+    <head>
+      <charseq START="2194" END="2197">area</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030403.1600.00-4-E8" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E8-16" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1153" END="1163">our viewers</charseq>
+    </extent>
+    <head>
+      <charseq START="1157" END="1163">viewers</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030403.1600.00-4-E9" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="GEN">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E9-7" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="3186" END="3203">a target like this</charseq>
+    </extent>
+    <head>
+      <charseq START="3188" END="3193">target</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030403.1600.00-4-E10" TYPE="WEA" SUBTYPE="Shooting" CLASS="GEN">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E10-17" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="1800" END="1808">artillery</charseq>
+    </extent>
+    <head>
+      <charseq START="1800" END="1808">artillery</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030403.1600.00-4-E11" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E11-19" TYPE="PRO" LDCTYPE="HLS">
+    <extent>
+      <charseq START="3200" END="3203">this</charseq>
+    </extent>
+    <head>
+      <charseq START="3200" END="3203">this</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030403.1600.00-4-E12" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E12-23" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1442" END="1449">a
+mosque</charseq>
+    </extent>
+    <head>
+      <charseq START="1444" END="1449">mosque</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030403.1600.00-4-E13" TYPE="PER" SUBTYPE="Indeterminate" CLASS="USP">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E13-46" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2097" END="2099">you</charseq>
+    </extent>
+    <head>
+      <charseq START="2097" END="2099">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E13-52" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2335" END="2337">you</charseq>
+    </extent>
+    <head>
+      <charseq START="2335" END="2337">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E13-80" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3010" END="3012">you</charseq>
+    </extent>
+    <head>
+      <charseq START="3010" END="3012">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E13-82" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3113" END="3115">you</charseq>
+    </extent>
+    <head>
+      <charseq START="3113" END="3115">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E13-95" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3539" END="3541">you</charseq>
+    </extent>
+    <head>
+      <charseq START="3539" END="3541">you</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030403.1600.00-4-E14" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E14-28" TYPE="NAM" LDCTYPE="NAMPRE">
+    <extent>
+      <charseq START="1549" END="1561">Ryan Chilcote</charseq>
+    </extent>
+    <head>
+      <charseq START="1549" END="1561">Ryan Chilcote</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Ryan Chilcote">
+      <charseq START="1549" END="1561">Ryan Chilcote</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_IP_20030403.1600.00-4-E15" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E15-29" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="1574" END="1578">Najaf</charseq>
+    </extent>
+    <head>
+      <charseq START="1574" END="1578">Najaf</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Najaf">
+      <charseq START="1574" END="1578">Najaf</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_IP_20030403.1600.00-4-E16" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E16-30" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1675" END="1698">Republican Guard snipers</charseq>
+    </extent>
+    <head>
+      <charseq START="1692" END="1698">snipers</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030403.1600.00-4-E17" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E17-31" TYPE="NAM" LDCTYPE="NAMPRE">
+    <extent>
+      <charseq START="1675" END="1690">Republican Guard</charseq>
+    </extent>
+    <head>
+      <charseq START="1675" END="1690">Republican Guard</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Republican Guard">
+      <charseq START="1675" END="1690">Republican Guard</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_IP_20030403.1600.00-4-E18" TYPE="FAC" SUBTYPE="Subarea-Facility" CLASS="USP">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E18-32" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1706" END="1714">balconies</charseq>
+    </extent>
+    <head>
+      <charseq START="1706" END="1714">balconies</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E18-33" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1721" END="1724">this</charseq>
+    </extent>
+    <head>
+      <charseq START="1721" END="1724">this</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030403.1600.00-4-E19" TYPE="FAC" SUBTYPE="Subarea-Facility" CLASS="GEN">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E19-34" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1746" END="1767">the roofs of buildings</charseq>
+    </extent>
+    <head>
+      <charseq START="1750" END="1754">roofs</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030403.1600.00-4-E20" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="GEN">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E20-35" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1759" END="1767">buildings</charseq>
+    </extent>
+    <head>
+      <charseq START="1759" END="1767">buildings</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030403.1600.00-4-E21" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E21-1" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="190" END="193">Judy</charseq>
+    </extent>
+    <head>
+      <charseq START="190" END="193">Judy</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E21-109" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="3962" END="3965">Judy</charseq>
+    </extent>
+    <head>
+      <charseq START="3962" END="3965">Judy</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Judy">
+      <charseq START="190" END="193">Judy</charseq>
+    </name>
+    <name NAME="Judy">
+      <charseq START="3962" END="3965">Judy</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_IP_20030403.1600.00-4-E22" TYPE="WEA" SUBTYPE="Shooting" CLASS="GEN">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E22-36" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1773" END="1795">anti-aircraft artillery</charseq>
+    </extent>
+    <head>
+      <charseq START="1787" END="1795">artillery</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030403.1600.00-4-E23" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="GEN">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E23-37" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1800" END="1820">artillery encampments</charseq>
+    </extent>
+    <head>
+      <charseq START="1810" END="1820">encampments</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030403.1600.00-4-E24" TYPE="VEH" SUBTYPE="Land" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E24-38" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1863" END="1879">an armored
+column</charseq>
+    </extent>
+    <head>
+      <charseq START="1874" END="1879">column</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E24-40" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1930" END="1947">a column like
+this</charseq>
+    </extent>
+    <head>
+      <charseq START="1932" END="1937">column</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E24-41" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1944" END="1947">this</charseq>
+    </extent>
+    <head>
+      <charseq START="1944" END="1947">this</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E24-42" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1955" END="1956">it</charseq>
+    </extent>
+    <head>
+      <charseq START="1955" END="1956">it</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030403.1600.00-4-E25" TYPE="VEH" SUBTYPE="Air" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E25-39" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1886" END="1896">air support</charseq>
+    </extent>
+    <head>
+      <charseq START="1890" END="1896">support</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030403.1600.00-4-E26" TYPE="LOC" SUBTYPE="Region-General" CLASS="GEN">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E26-43" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1971" END="1992">these concrete canyons</charseq>
+    </extent>
+    <head>
+      <charseq START="1986" END="1992">canyons</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030403.1600.00-4-E27" TYPE="GPE" SUBTYPE="Population-Center" CLASS="GEN">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E27-44" TYPE="NOM" LDCTYPE="NOM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="1997" END="2002">a city</charseq>
+    </extent>
+    <head>
+      <charseq START="1999" END="2002">city</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E27-47" TYPE="NOM" LDCTYPE="NOMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="2134" END="2137">city</charseq>
+    </extent>
+    <head>
+      <charseq START="2134" END="2137">city</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030403.1600.00-4-E29" TYPE="VEH" SUBTYPE="Land" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E29-50" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2300" END="2328">the armored
+fighting vehicles</charseq>
+    </extent>
+    <head>
+      <charseq START="2321" END="2328">vehicles</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E29-51" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="2330" END="2333">that</charseq>
+    </extent>
+    <head>
+      <charseq START="2330" END="2333">that</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E29-53" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2349" END="2352">they</charseq>
+    </extent>
+    <head>
+      <charseq START="2349" END="2352">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E29-55" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2371" END="2374">they</charseq>
+    </extent>
+    <head>
+      <charseq START="2371" END="2374">they</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030403.1600.00-4-E30" TYPE="PER" SUBTYPE="Indeterminate" CLASS="GEN">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E30-59" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2496" END="2504">the enemy</charseq>
+    </extent>
+    <head>
+      <charseq START="2500" END="2504">enemy</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E30-65" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2550" END="2551">he</charseq>
+    </extent>
+    <head>
+      <charseq START="2550" END="2551">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E30-68" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2641" END="2643">his</charseq>
+    </extent>
+    <head>
+      <charseq START="2641" END="2643">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E30-69" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2673" END="2675">him</charseq>
+    </extent>
+    <head>
+      <charseq START="2673" END="2675">him</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E30-72" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2758" END="2761">them</charseq>
+    </extent>
+    <head>
+      <charseq START="2758" END="2761">them</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E30-73" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2773" END="2776">them</charseq>
+    </extent>
+    <head>
+      <charseq START="2773" END="2776">them</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030403.1600.00-4-E31" TYPE="FAC" SUBTYPE="Path" CLASS="GEN">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E31-60" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2516" END="2525">the blocks</charseq>
+    </extent>
+    <head>
+      <charseq START="2520" END="2525">blocks</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030403.1600.00-4-E32" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="GEN">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E32-62" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2531" END="2557">the buildings that he is in</charseq>
+    </extent>
+    <head>
+      <charseq START="2535" END="2543">buildings</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E32-64" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="2545" END="2548">that</charseq>
+    </extent>
+    <head>
+      <charseq START="2545" END="2548">that</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030403.1600.00-4-E33" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E33-74" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="518" END="559">LT. COL. ROBERT LEONHARD, U.S. ARMY (RET.)</charseq>
+    </extent>
+    <head>
+      <charseq START="518" END="559">LT. COL. ROBERT LEONHARD, U.S. ARMY (RET.)</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="LT. COL. ROBERT LEONHARD, U.S. ARMY (RET.)">
+      <charseq START="518" END="559">LT. COL. ROBERT LEONHARD, U.S. ARMY (RET.)</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_IP_20030403.1600.00-4-E34" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E34-67" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="218" END="219">we</charseq>
+    </extent>
+    <head>
+      <charseq START="218" END="219">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E34-83" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1528" END="1529">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1528" END="1529">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E34-84" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1584" END="1585">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1584" END="1585">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E34-103" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1838" END="1839">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1838" END="1839">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E34-122" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2982" END="2983">we</charseq>
+    </extent>
+    <head>
+      <charseq START="2982" END="2983">we</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030403.1600.00-4-E35" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E35-81" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="3032" END="3041">the troops</charseq>
+    </extent>
+    <head>
+      <charseq START="3036" END="3041">troops</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E35-85" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3171" END="3174">they</charseq>
+    </extent>
+    <head>
+      <charseq START="3171" END="3174">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E35-86" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3206" END="3209">they</charseq>
+    </extent>
+    <head>
+      <charseq START="3206" END="3209">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E35-87" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3255" END="3258">they</charseq>
+    </extent>
+    <head>
+      <charseq START="3255" END="3258">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E35-150" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3121" END="3124">them</charseq>
+    </extent>
+    <head>
+      <charseq START="3121" END="3124">them</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030403.1600.00-4-E36" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E36-88" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="3971" END="3978">WOODRUFF</charseq>
+    </extent>
+    <head>
+      <charseq START="3971" END="3978">WOODRUFF</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="WOODRUFF">
+      <charseq START="3971" END="3978">WOODRUFF</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_IP_20030403.1600.00-4-E37" TYPE="FAC" SUBTYPE="Subarea-Facility" CLASS="GEN">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E37-89" TYPE="PRO" LDCTYPE="PTV">
+    <extent>
+      <charseq START="3374" END="3396">the top
+of the building</charseq>
+    </extent>
+    <head>
+      <charseq START="3378" END="3380">top</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030403.1600.00-4-E38" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="GEN">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E38-90" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="3385" END="3396">the building</charseq>
+    </extent>
+    <head>
+      <charseq START="3389" END="3396">building</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030403.1600.00-4-E39" TYPE="WEA" SUBTYPE="Exploding" CLASS="GEN">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E39-10" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="3441" END="3448">grenades</charseq>
+    </extent>
+    <head>
+      <charseq START="3441" END="3448">grenades</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E39-26" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3555" END="3558">them</charseq>
+    </extent>
+    <head>
+      <charseq START="3555" END="3558">them</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E39-93" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="3483" END="3490">grenades</charseq>
+    </extent>
+    <head>
+      <charseq START="3483" END="3490">grenades</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E39-98" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3617" END="3620">them</charseq>
+    </extent>
+    <head>
+      <charseq START="3617" END="3620">them</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030403.1600.00-4-E40" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="GEN">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E40-92" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="3468" END="3476">buildings</charseq>
+    </extent>
+    <head>
+      <charseq START="3468" END="3476">buildings</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030403.1600.00-4-E41" TYPE="FAC" SUBTYPE="Path" CLASS="GEN">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E41-96" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="3571" END="3580">staircases</charseq>
+    </extent>
+    <head>
+      <charseq START="3571" END="3580">staircases</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E41-97" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="3625" END="3637">the staircase</charseq>
+    </extent>
+    <head>
+      <charseq START="3629" END="3637">staircase</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030403.1600.00-4-E42" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E42-13" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="1250" END="1252">you</charseq>
+    </extent>
+    <head>
+      <charseq START="1250" END="1252">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E42-15" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="1120" END="1122">you</charseq>
+    </extent>
+    <head>
+      <charseq START="1120" END="1122">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E42-18" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="1172" END="1174">you</charseq>
+    </extent>
+    <head>
+      <charseq START="1172" END="1174">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E42-45" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="2041" END="2041">I</charseq>
+    </extent>
+    <head>
+      <charseq START="2041" END="2041">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E42-54" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="2362" END="2363">me</charseq>
+    </extent>
+    <head>
+      <charseq START="2362" END="2363">me</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E42-76" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="200" END="215">Colonel Leonhard</charseq>
+    </extent>
+    <head>
+      <charseq START="208" END="215">Leonhard</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E42-99" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="3713" END="3745">Lieutenant
+Colonel Robert Leonard</charseq>
+    </extent>
+    <head>
+      <charseq START="3732" END="3745">Robert Leonard</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E42-100" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="3713" END="3730">Lieutenant
+Colonel</charseq>
+    </extent>
+    <head>
+      <charseq START="3724" END="3730">Colonel</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E42-101" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="3762" END="3765">your</charseq>
+    </extent>
+    <head>
+      <charseq START="3762" END="3765">your</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E42-106" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="3913" END="3915">you</charseq>
+    </extent>
+    <head>
+      <charseq START="3913" END="3915">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E42-107" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="3931" END="3934">your</charseq>
+    </extent>
+    <head>
+      <charseq START="3931" END="3934">your</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E42-112" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="4008" END="4010">you</charseq>
+    </extent>
+    <head>
+      <charseq START="4008" END="4010">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E42-113" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="4012" END="4027">Colonel Leonhard</charseq>
+    </extent>
+    <head>
+      <charseq START="4020" END="4027">Leonhard</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E42-114" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="4012" END="4018">Colonel</charseq>
+    </extent>
+    <head>
+      <charseq START="4012" END="4018">Colonel</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E42-129" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="2008" END="2015">LEONHARD</charseq>
+    </extent>
+    <head>
+      <charseq START="2008" END="2015">LEONHARD</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E42-132" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="3225" END="3232">LEONHARD</charseq>
+    </extent>
+    <head>
+      <charseq START="3225" END="3232">LEONHARD</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E42-133" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="200" END="206">Colonel</charseq>
+    </extent>
+    <head>
+      <charseq START="200" END="206">Colonel</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Leonhard">
+      <charseq START="208" END="215">Leonhard</charseq>
+    </name>
+    <name NAME="Robert Leonard">
+      <charseq START="3732" END="3745">Robert Leonard</charseq>
+    </name>
+    <name NAME="Leonhard">
+      <charseq START="4020" END="4027">Leonhard</charseq>
+    </name>
+    <name NAME="LEONHARD">
+      <charseq START="2008" END="2015">LEONHARD</charseq>
+    </name>
+    <name NAME="LEONHARD">
+      <charseq START="3225" END="3232">LEONHARD</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_IP_20030403.1600.00-4-E43" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E43-9" TYPE="PRO" LDCTYPE="PRO" ROLE="ORG" LDCATR="FALSE">
+    <extent>
+      <charseq START="1218" END="1219">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1218" END="1219">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E43-105" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="3834" END="3836">U.S</charseq>
+    </extent>
+    <head>
+      <charseq START="3834" END="3836">U.S</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="U.S">
+      <charseq START="3834" END="3836">U.S</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_IP_20030403.1600.00-4-E46" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E46-115" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="4058" END="4059">us</charseq>
+    </extent>
+    <head>
+      <charseq START="4058" END="4059">us</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030403.1600.00-4-E47" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E47-116" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="4090" END="4103">President Bush</charseq>
+    </extent>
+    <head>
+      <charseq START="4100" END="4103">Bush</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E47-117" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="4090" END="4098">President</charseq>
+    </extent>
+    <head>
+      <charseq START="4090" END="4098">President</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E47-118" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="4138" END="4139">he</charseq>
+    </extent>
+    <head>
+      <charseq START="4138" END="4139">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E47-120" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="4197" END="4209">the president</charseq>
+    </extent>
+    <head>
+      <charseq START="4201" END="4209">president</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Bush">
+      <charseq START="4100" END="4103">Bush</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_IP_20030403.1600.00-4-E50" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E50-119" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="4160" END="4173">fallen Marines</charseq>
+    </extent>
+    <head>
+      <charseq START="4167" END="4173">Marines</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030403.1600.00-4-E51" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E51-124" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="4221" END="4232">Camp Lejeune</charseq>
+    </extent>
+    <head>
+      <charseq START="4221" END="4232">Camp Lejeune</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E51-125" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="4257" END="4268">Camp Lejeune</charseq>
+    </extent>
+    <head>
+      <charseq START="4257" END="4268">Camp Lejeune</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Camp Lejeune">
+      <charseq START="4221" END="4232">Camp Lejeune</charseq>
+    </name>
+    <name NAME="Camp Lejeune">
+      <charseq START="4257" END="4268">Camp Lejeune</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_IP_20030403.1600.00-4-E53" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E53-126" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="4253" END="4278">the Camp Lejeune
+community</charseq>
+    </extent>
+    <head>
+      <charseq START="4270" END="4278">community</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030403.1600.00-4-E54" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E54-21" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2233" END="2250">side
+that's moving</charseq>
+    </extent>
+    <head>
+      <charseq START="2233" END="2236">side</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E54-128" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2224" END="2225">It</charseq>
+    </extent>
+    <head>
+      <charseq START="2224" END="2225">It</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E54-130" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="2238" END="2241">that</charseq>
+    </extent>
+    <head>
+      <charseq START="2238" END="2241">that</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E54-131" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="2252" END="2255">that</charseq>
+    </extent>
+    <head>
+      <charseq START="2252" END="2255">that</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030403.1600.00-4-E56" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E56-61" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1104" END="1105">We</charseq>
+    </extent>
+    <head>
+      <charseq START="1104" END="1105">We</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E56-63" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1153" END="1155">our</charseq>
+    </extent>
+    <head>
+      <charseq START="1153" END="1155">our</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E56-75" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1334" END="1335">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1334" END="1335">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E56-77" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1452" END="1453">We</charseq>
+    </extent>
+    <head>
+      <charseq START="1452" END="1453">We</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E56-102" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3748" END="3749">we</charseq>
+    </extent>
+    <head>
+      <charseq START="3748" END="3749">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E56-104" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2791" END="2792">We</charseq>
+    </extent>
+    <head>
+      <charseq START="2791" END="2792">We</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E56-108" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3942" END="3943">We</charseq>
+    </extent>
+    <head>
+      <charseq START="3942" END="3943">We</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E56-110" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2834" END="2835">we</charseq>
+    </extent>
+    <head>
+      <charseq START="2834" END="2835">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E56-111" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2909" END="2910">we</charseq>
+    </extent>
+    <head>
+      <charseq START="2909" END="2910">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E56-121" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2992" END="2993">we</charseq>
+    </extent>
+    <head>
+      <charseq START="2992" END="2993">we</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030403.1600.00-4-E57" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E57-27" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="3992" END="3996">Miles</charseq>
+    </extent>
+    <head>
+      <charseq START="3992" END="3996">Miles</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E57-79" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="138" END="169">MILES O'BRIEN, CNN CORRESPONDENT</charseq>
+    </extent>
+    <head>
+      <charseq START="138" END="169">MILES O'BRIEN, CNN CORRESPONDENT</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E57-91" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1084" END="1090">O'BRIEN</charseq>
+    </extent>
+    <head>
+      <charseq START="1084" END="1090">O'BRIEN</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E57-123" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2782" END="2788">O'BRIEN</charseq>
+    </extent>
+    <head>
+      <charseq START="2782" END="2788">O'BRIEN</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E57-127" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="3643" END="3649">O'BRIEN</charseq>
+    </extent>
+    <head>
+      <charseq START="3643" END="3649">O'BRIEN</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E57-135" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="275" END="275">I</charseq>
+    </extent>
+    <head>
+      <charseq START="275" END="275">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E57-141" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2943" END="2943">I</charseq>
+    </extent>
+    <head>
+      <charseq START="2943" END="2943">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E57-142" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3987" END="3989">you</charseq>
+    </extent>
+    <head>
+      <charseq START="3987" END="3989">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Miles">
+      <charseq START="3992" END="3996">Miles</charseq>
+    </name>
+    <name NAME="MILES O'BRIEN, CNN CORRESPONDENT">
+      <charseq START="138" END="169">MILES O'BRIEN, CNN CORRESPONDENT</charseq>
+    </name>
+    <name NAME="O'BRIEN">
+      <charseq START="1084" END="1090">O'BRIEN</charseq>
+    </name>
+    <name NAME="O'BRIEN">
+      <charseq START="2782" END="2788">O'BRIEN</charseq>
+    </name>
+    <name NAME="O'BRIEN">
+      <charseq START="3643" END="3649">O'BRIEN</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_IP_20030403.1600.00-4-E58" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E58-136" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="317" END="331">a lot of people</charseq>
+    </extent>
+    <head>
+      <charseq START="326" END="331">people</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E58-139" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="338" END="341">they</charseq>
+    </extent>
+    <head>
+      <charseq START="338" END="341">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E58-140" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="368" END="371">they</charseq>
+    </extent>
+    <head>
+      <charseq START="368" END="371">they</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030403.1600.00-4-E60" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E60-11" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="948" END="949">we</charseq>
+    </extent>
+    <head>
+      <charseq START="948" END="949">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E60-12" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1000" END="1001">We</charseq>
+    </extent>
+    <head>
+      <charseq START="1000" END="1001">We</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E60-22" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3434" END="3435">we</charseq>
+    </extent>
+    <head>
+      <charseq START="3434" END="3435">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E60-24" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3350" END="3351">we</charseq>
+    </extent>
+    <head>
+      <charseq START="3350" END="3351">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E60-25" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3323" END="3324">we</charseq>
+    </extent>
+    <head>
+      <charseq START="3323" END="3324">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E60-48" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="913" END="914">we</charseq>
+    </extent>
+    <head>
+      <charseq START="913" END="914">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E60-49" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="3830" END="3846">the U.S. military</charseq>
+    </extent>
+    <head>
+      <charseq START="3839" END="3846">military</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E60-56" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2414" END="2415">we</charseq>
+    </extent>
+    <head>
+      <charseq START="2414" END="2415">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E60-57" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2432" END="2433">We</charseq>
+    </extent>
+    <head>
+      <charseq START="2432" END="2433">We</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E60-58" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2464" END="2465">We</charseq>
+    </extent>
+    <head>
+      <charseq START="2464" END="2465">We</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E60-66" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2569" END="2570">we</charseq>
+    </extent>
+    <head>
+      <charseq START="2569" END="2570">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E60-70" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2694" END="2695">us</charseq>
+    </extent>
+    <head>
+      <charseq START="2694" END="2695">us</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E60-71" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2744" END="2745">we</charseq>
+    </extent>
+    <head>
+      <charseq START="2744" END="2745">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E60-78" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1492" END="1494">you</charseq>
+    </extent>
+    <head>
+      <charseq START="1492" END="1494">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E60-94" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1650" END="1652">you</charseq>
+    </extent>
+    <head>
+      <charseq START="1650" END="1652">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E60-144" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="612" END="613">we</charseq>
+    </extent>
+    <head>
+      <charseq START="612" END="613">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E60-147" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="668" END="669">we</charseq>
+    </extent>
+    <head>
+      <charseq START="668" END="669">we</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030403.1600.00-4-E61" TYPE="VEH" SUBTYPE="Land" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E61-2" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="736" END="739">them</charseq>
+    </extent>
+    <head>
+      <charseq START="736" END="739">them</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E61-14" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="929" END="941">such vehicles</charseq>
+    </extent>
+    <head>
+      <charseq START="934" END="941">vehicles</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E61-145" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="620" END="644">armored
+fighting vehicles</charseq>
+    </extent>
+    <head>
+      <charseq START="637" END="644">vehicles</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E61-148" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="680" END="683">them</charseq>
+    </extent>
+    <head>
+      <charseq START="680" END="683">them</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E61-149" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="686" END="696">Those tanks</charseq>
+    </extent>
+    <head>
+      <charseq START="692" END="696">tanks</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_IP_20030403.1600.00-4-E62" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E62-20" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="1232" END="1238">Baghdad</charseq>
+    </extent>
+    <head>
+      <charseq START="1232" END="1238">Baghdad</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E62-137" TYPE="PRO" LDCTYPE="PRO" ROLE="LOC">
+    <extent>
+      <charseq START="646" END="661">there in Baghdad</charseq>
+    </extent>
+    <head>
+      <charseq START="646" END="650">there</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E62-138" TYPE="PRO" LDCTYPE="PRO" ROLE="LOC">
+    <extent>
+      <charseq START="993" END="997">there</charseq>
+    </extent>
+    <head>
+      <charseq START="993" END="997">there</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_IP_20030403.1600.00-4-E62-146" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="655" END="661">Baghdad</charseq>
+    </extent>
+    <head>
+      <charseq START="655" END="661">Baghdad</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Baghdad">
+      <charseq START="1232" END="1238">Baghdad</charseq>
+    </name>
+    <name NAME="Baghdad">
+      <charseq START="655" END="661">Baghdad</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<timex2 ID="CNN_IP_20030403.1600.00-4-T1" VAL="2003-04-03T16:00:00-05">
+  <timex2_mention ID="CNN_IP_20030403.1600.00-4-T1-1">
+    <extent>
+      <charseq START="38" END="62">2003-04-03T16:00:00-05:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_IP_20030403.1600.00-4-R1" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="CNN_IP_20030403.1600.00-4-E60" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_IP_20030403.1600.00-4-E61" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_IP_20030403.1600.00-4-R1-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="854" END="941">Completely different from the Mogadishu situation in
+which we did not have such vehicles</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_IP_20030403.1600.00-4-E60-48" ROLE="Arg-1">
+      <extent>
+        <charseq START="913" END="914">we</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_IP_20030403.1600.00-4-E61-14" ROLE="Arg-2">
+      <extent>
+        <charseq START="929" END="941">such vehicles</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_IP_20030403.1600.00-4-R1-2" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="578" END="683">And one of the reasons is because we have armored
+fighting vehicles there in Baghdad, and we will use them</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_IP_20030403.1600.00-4-E60-147" ROLE="Arg-1">
+      <extent>
+        <charseq START="668" END="669">we</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_IP_20030403.1600.00-4-E61-145" ROLE="Arg-2">
+      <extent>
+        <charseq START="620" END="644">armored
+fighting vehicles</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_IP_20030403.1600.00-4-R2" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="CNN_IP_20030403.1600.00-4-E16" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_IP_20030403.1600.00-4-E18" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_IP_20030403.1600.00-4-R2-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="1675" END="1714">Republican Guard snipers up on balconies</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_IP_20030403.1600.00-4-E16-30" ROLE="Arg-1">
+      <extent>
+        <charseq START="1675" END="1698">Republican Guard snipers</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_IP_20030403.1600.00-4-E18-32" ROLE="Arg-2">
+      <extent>
+        <charseq START="1706" END="1714">balconies</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_IP_20030403.1600.00-4-R3" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="CNN_IP_20030403.1600.00-4-E16" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_IP_20030403.1600.00-4-E19" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_IP_20030403.1600.00-4-R3-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="1675" END="1767">Republican Guard snipers up on balconies like this, and
+possibly up on the roofs of buildings</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_IP_20030403.1600.00-4-E16-30" ROLE="Arg-1">
+      <extent>
+        <charseq START="1675" END="1698">Republican Guard snipers</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_IP_20030403.1600.00-4-E19-34" ROLE="Arg-2">
+      <extent>
+        <charseq START="1746" END="1767">the roofs of buildings</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_IP_20030403.1600.00-4-R5" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_IP_20030403.1600.00-4-E16" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_IP_20030403.1600.00-4-E17" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_IP_20030403.1600.00-4-R5-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="1675" END="1698">Republican Guard snipers</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_IP_20030403.1600.00-4-E16-30" ROLE="Arg-1">
+      <extent>
+        <charseq START="1675" END="1698">Republican Guard snipers</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_IP_20030403.1600.00-4-E17-31" ROLE="Arg-2">
+      <extent>
+        <charseq START="1675" END="1690">Republican Guard</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_IP_20030403.1600.00-4-R6" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_IP_20030403.1600.00-4-E19" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_IP_20030403.1600.00-4-E20" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_IP_20030403.1600.00-4-R6-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="1746" END="1767">the roofs of buildings</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_IP_20030403.1600.00-4-E19-34" ROLE="Arg-1">
+      <extent>
+        <charseq START="1746" END="1767">the roofs of buildings</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_IP_20030403.1600.00-4-E20-35" ROLE="Arg-2">
+      <extent>
+        <charseq START="1759" END="1767">buildings</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_IP_20030403.1600.00-4-R7" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_IP_20030403.1600.00-4-E26" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_IP_20030403.1600.00-4-E27" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_IP_20030403.1600.00-4-R7-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="1971" END="2002">these concrete canyons in a city</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_IP_20030403.1600.00-4-E26-43" ROLE="Arg-1">
+      <extent>
+        <charseq START="1971" END="1992">these concrete canyons</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_IP_20030403.1600.00-4-E27-44" ROLE="Arg-2">
+      <extent>
+        <charseq START="1997" END="2002">a city</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_IP_20030403.1600.00-4-R8" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="CNN_IP_20030403.1600.00-4-E30" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_IP_20030403.1600.00-4-E32" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_IP_20030403.1600.00-4-R8-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="2464" END="2557">We will take the time to locate the enemy, surround the blocks
+and the buildings that he is in</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_IP_20030403.1600.00-4-E30-59" ROLE="Arg-1">
+      <extent>
+        <charseq START="2496" END="2504">the enemy</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_IP_20030403.1600.00-4-E32-62" ROLE="Arg-2">
+      <extent>
+        <charseq START="2531" END="2557">the buildings that he is in</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_IP_20030403.1600.00-4-R9" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_IP_20030403.1600.00-4-E37" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_IP_20030403.1600.00-4-E38" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_IP_20030403.1600.00-4-R9-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="3374" END="3396">the top
+of the building</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_IP_20030403.1600.00-4-E37-89" ROLE="Arg-1">
+      <extent>
+        <charseq START="3374" END="3396">the top
+of the building</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_IP_20030403.1600.00-4-E38-90" ROLE="Arg-2">
+      <extent>
+        <charseq START="3385" END="3396">the building</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_IP_20030403.1600.00-4-R10" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_IP_20030403.1600.00-4-E60" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_IP_20030403.1600.00-4-E39" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_IP_20030403.1600.00-4-R10-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="3404" END="3532">One of the reasons is because we use grenades a lot
+in clearing buildings, and grenades ten to offend downhill rather than
+uphill</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_IP_20030403.1600.00-4-E60-22" ROLE="Arg-1">
+      <extent>
+        <charseq START="3434" END="3435">we</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_IP_20030403.1600.00-4-E39-10" ROLE="Arg-2">
+      <extent>
+        <charseq START="3441" END="3448">grenades</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_IP_20030403.1600.00-4-R11" TYPE="PART-WHOLE" SUBTYPE="Subsidiary" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_IP_20030403.1600.00-4-E60" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_IP_20030403.1600.00-4-E43" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_IP_20030403.1600.00-4-R11-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="3830" END="3846">the U.S. military</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_IP_20030403.1600.00-4-E60-49" ROLE="Arg-1">
+      <extent>
+        <charseq START="3830" END="3846">the U.S. military</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_IP_20030403.1600.00-4-E43-105" ROLE="Arg-2">
+      <extent>
+        <charseq START="3834" END="3836">U.S</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_IP_20030403.1600.00-4-R12" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Other">
+  <relation_argument REFID="CNN_IP_20030403.1600.00-4-E47" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_IP_20030403.1600.00-4-E51" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_IP_20030403.1600.00-4-R12-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="4176" END="4315">Up next, a report on
+the president's trip to Camp Lejeune, and a look at how the Camp Lejeune
+community is coping with the challenges of war</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_IP_20030403.1600.00-4-E47-120" ROLE="Arg-1">
+      <extent>
+        <charseq START="4197" END="4209">the president</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_IP_20030403.1600.00-4-E51-124" ROLE="Arg-2">
+      <extent>
+        <charseq START="4221" END="4232">Camp Lejeune</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_IP_20030403.1600.00-4-R13" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_IP_20030403.1600.00-4-E53" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_IP_20030403.1600.00-4-E51" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_IP_20030403.1600.00-4-R13-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="4253" END="4278">the Camp Lejeune
+community</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_IP_20030403.1600.00-4-E53-126" ROLE="Arg-1">
+      <extent>
+        <charseq START="4253" END="4278">the Camp Lejeune
+community</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_IP_20030403.1600.00-4-E51-125" ROLE="Arg-2">
+      <extent>
+        <charseq START="4257" END="4268">Camp Lejeune</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_IP_20030403.1600.00-4-EV1" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_mention ID="CNN_IP_20030403.1600.00-4-EV1-1">
+    <extent>
+      <charseq START="263" END="268">combat</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="196" END="268">And Colonel Leonhard, we're going to talk a
+little bit about urban combat</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="263" END="268">combat</charseq>
+    </anchor>
+  </event_mention>
+  <event_mention ID="CNN_IP_20030403.1600.00-4-EV1-2">
+    <extent>
+      <charseq START="3705" END="3710">combat</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="3676" END="3710">Gravity rules, even in urban combat</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="3705" END="3710">combat</charseq>
+    </anchor>
+  </event_mention>
+  <event_mention ID="CNN_IP_20030403.1600.00-4-EV1-3">
+    <extent>
+      <charseq START="3793" END="3801">something</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="3713" END="3904">Lieutenant
+Colonel Robert Leonard, we appreciate your insights in urban combat,
+something that is not something that the U.S. military would prefer to
+engage in, but it might become inevitable</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="3793" END="3801">something</charseq>
+    </anchor>
+  </event_mention>
+  <event_mention ID="CNN_IP_20030403.1600.00-4-EV1-4">
+    <extent>
+      <charseq START="360" END="365">combat</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="271" END="460">And I wanted to just start this off by
+saying a lot of people when they hear about urban combat, they think of
+that Blackhawk down scenario, Mogadishu and the problems that can go
+wrong here</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="360" END="365">combat</charseq>
+    </anchor>
+  </event_mention>
+  <event_mention ID="CNN_IP_20030403.1600.00-4-EV1-5">
+    <extent>
+      <charseq START="1321" END="1326">combat</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1215" END="1326">If we move in on
+Baghdad, and give you a sense of the kinds of targets that might be
+encountered in urban combat</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1321" END="1326">combat</charseq>
+    </anchor>
+  </event_mention>
+  <event_mention ID="CNN_IP_20030403.1600.00-4-EV1-6">
+    <extent>
+      <charseq START="3785" END="3790">combat</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="3713" END="3904">Lieutenant
+Colonel Robert Leonard, we appreciate your insights in urban combat,
+something that is not something that the U.S. military would prefer to
+engage in, but it might become inevitable</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="3785" END="3790">combat</charseq>
+    </anchor>
+  </event_mention>
+</event>
+<event ID="CNN_IP_20030403.1600.00-4-EV2" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_mention ID="CNN_IP_20030403.1600.00-4-EV2-1">
+    <extent>
+      <charseq START="2716" END="2722">assault</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2560" END="2727">And then we'll probably surge fires into
+their both lethal and nonlethal to make his position untenable, to make
+him move rather than us moving through the assault zone</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2716" END="2722">assault</charseq>
+    </anchor>
+  </event_mention>
+</event>
+<event ID="CNN_IP_20030403.1600.00-4-EV3" TYPE="Life" SUBTYPE="Die" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_IP_20030403.1600.00-4-E50" ROLE="Victim"/>
+  <event_mention ID="CNN_IP_20030403.1600.00-4-EV3-1">
+    <extent>
+      <charseq START="4160" END="4173">fallen Marines</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="4090" END="4173">President Bush vows a final push to
+victory and he mourns the loss of fallen Marines</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="4160" END="4165">fallen</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_IP_20030403.1600.00-4-E50-119" ROLE="Victim">
+      <extent>
+        <charseq START="4160" END="4173">fallen Marines</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_IP_20030403.1600.00-4-EV4" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="CNN_IP_20030403.1600.00-4-E60" ROLE="Attacker"/>
+  <event_mention ID="CNN_IP_20030403.1600.00-4-EV4-1">
+    <extent>
+      <charseq START="1000" END="1070">We are much more likely to use patience and
+finesse rather than assault</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1000" END="1078">We are much more likely to use patience and
+finesse rather than assault tactics</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1064" END="1070">assault</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_IP_20030403.1600.00-4-E60-12" ROLE="Attacker">
+      <extent>
+        <charseq START="1000" END="1001">We</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_IP_20030403.1600.00-4-EV5" TYPE="Life" SUBTYPE="Die" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_mention ID="CNN_IP_20030403.1600.00-4-EV5-1">
+    <extent>
+      <charseq START="2277" END="2286">casualties</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2224" END="2286">It's the side
+that's moving that's going to take the casualties</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2277" END="2286">casualties</charseq>
+    </anchor>
+  </event_mention>
+</event>
+<event ID="CNN_IP_20030403.1600.00-4-EV6" TYPE="Movement" SUBTYPE="Transport" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="CNN_IP_20030403.1600.00-4-E54" ROLE="Artifact"/>
+  <event_mention ID="CNN_IP_20030403.1600.00-4-EV6-1">
+    <extent>
+      <charseq START="2233" END="2250">side
+that's moving</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2224" END="2286">It's the side
+that's moving that's going to take the casualties</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2245" END="2250">moving</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_IP_20030403.1600.00-4-E54-21" ROLE="Artifact">
+      <extent>
+        <charseq START="2233" END="2250">side
+that's moving</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_IP_20030403.1600.00-4-EV7" TYPE="Movement" SUBTYPE="Transport" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_IP_20030403.1600.00-4-E29" ROLE="Vehicle"/>
+  <event_mention ID="CNN_IP_20030403.1600.00-4-EV7-1">
+    <extent>
+      <charseq START="2300" END="2384">the armored
+fighting vehicles that you see there they look to me as if they're moving</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2289" END="2429">That said, the armored
+fighting vehicles that you see there they look to me as if they're moving
+a little bit faster as than we probably will</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2379" END="2384">moving</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_IP_20030403.1600.00-4-E29-50" ROLE="Vehicle">
+      <extent>
+        <charseq START="2300" END="2328">the armored
+fighting vehicles</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_IP_20030403.1600.00-4-EV8" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="CNN_IP_20030403.1600.00-4-E60" ROLE="Attacker"/>
+  <event_mention ID="CNN_IP_20030403.1600.00-4-EV8-1">
+    <extent>
+      <charseq START="2569" END="2588">we'll probably surge</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2560" END="2727">And then we'll probably surge fires into
+their both lethal and nonlethal to make his position untenable, to make
+him move rather than us moving through the assault zone</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2584" END="2588">surge</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_IP_20030403.1600.00-4-E60-66" ROLE="Attacker">
+      <extent>
+        <charseq START="2569" END="2570">we</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_IP_20030403.1600.00-4-EV9" TYPE="Movement" SUBTYPE="Transport" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="CNN_IP_20030403.1600.00-4-E30" ROLE="Artifact"/>
+  <event_mention ID="CNN_IP_20030403.1600.00-4-EV9-1">
+    <extent>
+      <charseq START="2673" END="2680">him move</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2560" END="2727">And then we'll probably surge fires into
+their both lethal and nonlethal to make his position untenable, to make
+him move rather than us moving through the assault zone</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2677" END="2680">move</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_IP_20030403.1600.00-4-E30-69" ROLE="Artifact">
+      <extent>
+        <charseq START="2673" END="2675">him</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_IP_20030403.1600.00-4-EV10" TYPE="Movement" SUBTYPE="Transport" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="CNN_IP_20030403.1600.00-4-E60" ROLE="Agent"/>
+  <event_mention ID="CNN_IP_20030403.1600.00-4-EV10-1">
+    <extent>
+      <charseq START="2694" END="2702">us moving</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2560" END="2727">And then we'll probably surge fires into
+their both lethal and nonlethal to make his position untenable, to make
+him move rather than us moving through the assault zone</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2697" END="2702">moving</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_IP_20030403.1600.00-4-E60-70" ROLE="Agent">
+      <extent>
+        <charseq START="2694" END="2695">us</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_IP_20030403.1600.00-4-EV11" TYPE="Justice" SUBTYPE="Arrest-Jail" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="CNN_IP_20030403.1600.00-4-E30" ROLE="Person"/>
+  <event_argument REFID="CNN_IP_20030403.1600.00-4-E60" ROLE="Agent"/>
+  <event_mention ID="CNN_IP_20030403.1600.00-4-EV11-1">
+    <extent>
+      <charseq START="2744" END="2771">we
+can engage them or arrest</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2730" END="2776">At which time we
+can engage them or arrest them</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2766" END="2771">arrest</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_IP_20030403.1600.00-4-E30-72" ROLE="Person">
+      <extent>
+        <charseq START="2758" END="2761">them</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_IP_20030403.1600.00-4-E60-71" ROLE="Agent">
+      <extent>
+        <charseq START="2744" END="2745">we</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_IP_20030403.1600.00-4-EV12" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="CNN_IP_20030403.1600.00-4-E60" ROLE="Attacker"/>
+  <event_argument REFID="CNN_IP_20030403.1600.00-4-E30" ROLE="Target"/>
+  <event_mention ID="CNN_IP_20030403.1600.00-4-EV12-1">
+    <extent>
+      <charseq START="2744" END="2761">we
+can engage them</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2730" END="2776">At which time we
+can engage them or arrest them</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2751" END="2756">engage</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_IP_20030403.1600.00-4-E60-71" ROLE="Attacker">
+      <extent>
+        <charseq START="2744" END="2745">we</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_IP_20030403.1600.00-4-E30-72" ROLE="Target">
+      <extent>
+        <charseq START="2758" END="2761">them</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_IP_20030403.1600.00-4-EV13" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="CNN_IP_20030403.1600.00-4-E35" ROLE="Attacker"/>
+  <event_argument REFID="CNN_IP_20030403.1600.00-4-E9" ROLE="Target"/>
+  <event_mention ID="CNN_IP_20030403.1600.00-4-EV13-1">
+    <extent>
+      <charseq START="3171" END="3203">they'd assault a target like this</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="3155" END="3219">Typically, when they'd assault a target like this, they'd do
+what</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="3178" END="3184">assault</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_IP_20030403.1600.00-4-E35-85" ROLE="Attacker">
+      <extent>
+        <charseq START="3171" END="3174">they</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_IP_20030403.1600.00-4-E9-7" ROLE="Target">
+      <extent>
+        <charseq START="3186" END="3203">a target like this</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_IP_20030403.1600.00-4-EV14" TYPE="Life" SUBTYPE="Die" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Generic" TENSE="Past">
+  <event_argument REFID="CNN_IP_20030403.1600.00-4-E50" ROLE="Victim"/>
+  <event_mention ID="CNN_IP_20030403.1600.00-4-EV14-1">
+    <extent>
+      <charseq START="4152" END="4173">loss of fallen Marines</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="4030" END="4173">All of that certainly
+helps us visualize what might happen. President Bush vows a final push to
+victory and he mourns the loss of fallen Marines</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="4152" END="4155">loss</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_IP_20030403.1600.00-4-E50-119" ROLE="Victim">
+      <extent>
+        <charseq START="4160" END="4173">fallen Marines</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_IP_20030403.1600.00-4-EV15" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_IP_20030403.1600.00-4-E47" ROLE="Artifact"/>
+  <event_argument REFID="CNN_IP_20030403.1600.00-4-E51" ROLE="Destination"/>
+  <event_mention ID="CNN_IP_20030403.1600.00-4-EV15-1">
+    <extent>
+      <charseq START="4197" END="4232">the president's trip to Camp Lejeune</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="4176" END="4315">Up next, a report on
+the president's trip to Camp Lejeune, and a look at how the Camp Lejeune
+community is coping with the challenges of war</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="4213" END="4216">trip</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_IP_20030403.1600.00-4-E47-120" ROLE="Artifact">
+      <extent>
+        <charseq START="4197" END="4209">the president</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_IP_20030403.1600.00-4-E51-124" ROLE="Destination">
+      <extent>
+        <charseq START="4221" END="4232">Camp Lejeune</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_IP_20030403.1600.00-4-EV16" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_mention ID="CNN_IP_20030403.1600.00-4-EV16-1">
+    <extent>
+      <charseq START="4313" END="4315">war</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="4176" END="4315">Up next, a report on
+the president's trip to Camp Lejeune, and a look at how the Camp Lejeune
+community is coping with the challenges of war</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="4313" END="4315">war</charseq>
+    </anchor>
+  </event_mention>
+</event>
+</document>
+</source_file>

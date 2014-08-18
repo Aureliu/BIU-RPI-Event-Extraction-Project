@@ -1,0 +1,1254 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030610_123040.9.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030610_123040.9">
+<entity ID="CNN_ENG_20030610_123040.9-E1" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_123040.9-E1-48" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="324" END="330">a child</charseq>
+    </extent>
+    <head>
+      <charseq START="326" END="330">child</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030610_123040.9-E2" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_123040.9-E2-2" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="344" END="357">a hamas leader</charseq>
+    </extent>
+    <head>
+      <charseq START="352" END="357">leader</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_123040.9-E2-4" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="387" END="388">he</charseq>
+    </extent>
+    <head>
+      <charseq START="387" END="388">he</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030610_123040.9-E3" TYPE="ORG" SUBTYPE="Non-Governmental" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_123040.9-E3-3" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="346" END="350">hamas</charseq>
+    </extent>
+    <head>
+      <charseq START="346" END="350">hamas</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_123040.9-E3-41" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="198" END="202">hamas</charseq>
+    </extent>
+    <head>
+      <charseq START="198" END="202">hamas</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="hamas">
+      <charseq START="346" END="350">hamas</charseq>
+    </name>
+    <name NAME="hamas">
+      <charseq START="198" END="202">hamas</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030610_123040.9-E4" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_123040.9-E4-5" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="399" END="420">a
+palestinian hospital</charseq>
+    </extent>
+    <head>
+      <charseq START="413" END="420">hospital</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030610_123040.9-E5" TYPE="GPE" SUBTYPE="Special" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_123040.9-E5-6" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="401" END="411">palestinian</charseq>
+    </extent>
+    <head>
+      <charseq START="401" END="411">palestinian</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_123040.9-E5-40" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="177" END="187">palestinian</charseq>
+    </extent>
+    <head>
+      <charseq START="177" END="187">palestinian</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_123040.9-E5-46" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="653" END="663">palestinian</charseq>
+    </extent>
+    <head>
+      <charseq START="653" END="663">palestinian</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="palestinian">
+      <charseq START="401" END="411">palestinian</charseq>
+    </name>
+    <name NAME="palestinian">
+      <charseq START="177" END="187">palestinian</charseq>
+    </name>
+    <name NAME="palestinian">
+      <charseq START="653" END="663">palestinian</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030610_123040.9-E6" TYPE="VEH" SUBTYPE="Air" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_123040.9-E6-7" TYPE="NAM" LDCTYPE="NAMPRE">
+    <extent>
+      <charseq START="437" END="453">apache helicopter</charseq>
+    </extent>
+    <head>
+      <charseq START="444" END="453">helicopter</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="helicopter">
+      <charseq START="444" END="453">helicopter</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030610_123040.9-E7" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_123040.9-E7-9" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="525" END="536">palestinians</charseq>
+    </extent>
+    <head>
+      <charseq START="525" END="536">palestinians</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030610_123040.9-E8" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_123040.9-E8-10" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="539" END="550">three people</charseq>
+    </extent>
+    <head>
+      <charseq START="545" END="550">people</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030610_123040.9-E9" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_123040.9-E9-11" TYPE="PRO" LDCTYPE="HLS">
+    <extent>
+      <charseq START="558" END="566">33 others</charseq>
+    </extent>
+    <head>
+      <charseq START="561" END="566">others</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030610_123040.9-E10" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_123040.9-E10-12" TYPE="PRO" LDCTYPE="HLS">
+    <extent>
+      <charseq START="582" END="584">six</charseq>
+    </extent>
+    <head>
+      <charseq START="582" END="584">six</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030610_123040.9-E11" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_123040.9-E11-13" TYPE="PRO" LDCTYPE="HLS" LDCATR="FALSE">
+    <extent>
+      <charseq START="613" END="622">three dead</charseq>
+    </extent>
+    <head>
+      <charseq START="613" END="617">three</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_123040.9-E11-14" TYPE="NOM" LDCTYPE="BAR" LDCATR="TRUE">
+    <extent>
+      <charseq START="629" END="637">civilians</charseq>
+    </extent>
+    <head>
+      <charseq START="629" END="637">civilians</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030610_123040.9-E13" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_123040.9-E13-15" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="653" END="671">palestinian
+sources</charseq>
+    </extent>
+    <head>
+      <charseq START="665" END="671">sources</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030610_123040.9-E14" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_123040.9-E14-19" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="839" END="858">the associated press</charseq>
+    </extent>
+    <head>
+      <charseq START="843" END="858">associated press</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030610_123040.9-E15" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_123040.9-E15-20" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="871" END="871">i</charseq>
+    </extent>
+    <head>
+      <charseq START="871" END="871">i</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030610_123040.9-E16" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_123040.9-E16-22" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="913" END="922">sam waksal</charseq>
+    </extent>
+    <head>
+      <charseq START="913" END="922">sam waksal</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_123040.9-E16-25" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1090" END="1091">he</charseq>
+    </extent>
+    <head>
+      <charseq START="1090" END="1091">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_123040.9-E16-26" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1126" END="1127">he</charseq>
+    </extent>
+    <head>
+      <charseq START="1126" END="1127">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_123040.9-E16-27" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1152" END="1154">his</charseq>
+    </extent>
+    <head>
+      <charseq START="1152" END="1154">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="sam waksal">
+      <charseq START="913" END="922">sam waksal</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030610_123040.9-E17" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030610_123040.9-E17-23" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="1052" END="1058">insider</charseq>
+    </extent>
+    <head>
+      <charseq START="1052" END="1058">insider</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030610_123040.9-E18" TYPE="PER" SUBTYPE="Indeterminate" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030610_123040.9-E18-24" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1080" END="1082">you</charseq>
+    </extent>
+    <head>
+      <charseq START="1080" END="1082">you</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030610_123040.9-E19" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_123040.9-E19-28" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1170" END="1186">the federal judge</charseq>
+    </extent>
+    <head>
+      <charseq START="1182" END="1186">judge</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030610_123040.9-E20" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_123040.9-E20-1" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="67" END="68">we</charseq>
+    </extent>
+    <head>
+      <charseq START="67" END="68">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_123040.9-E20-8" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="507" END="508">we</charseq>
+    </extent>
+    <head>
+      <charseq START="507" END="508">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_123040.9-E20-16" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="674" END="675">we</charseq>
+    </extent>
+    <head>
+      <charseq START="674" END="675">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_123040.9-E20-17" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="724" END="726">our</charseq>
+    </extent>
+    <head>
+      <charseq START="724" END="726">our</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_123040.9-E20-18" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="737" END="738">we</charseq>
+    </extent>
+    <head>
+      <charseq START="737" END="738">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_123040.9-E20-21" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="898" END="900">our</charseq>
+    </extent>
+    <head>
+      <charseq START="898" END="900">our</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_123040.9-E20-29" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1298" END="1299">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1298" END="1299">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_123040.9-E20-30" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1355" END="1356">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1355" END="1356">we</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030610_123040.9-E21" TYPE="VEH" SUBTYPE="Air" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_123040.9-E21-31" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="146" END="155">helicopter</charseq>
+    </extent>
+    <head>
+      <charseq START="146" END="155">helicopter</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030610_123040.9-E22" TYPE="VEH" SUBTYPE="Air" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030610_123040.9-E22-32" TYPE="NAM" LDCTYPE="NAMPRE">
+    <extent>
+      <charseq START="437" END="442">apache</charseq>
+    </extent>
+    <head>
+      <charseq START="437" END="442">apache</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="apache">
+      <charseq START="437" END="442">apache</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030610_123040.9-E23" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030610_123040.9-E23-33" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="971" END="976">prison</charseq>
+    </extent>
+    <head>
+      <charseq START="971" END="976">prison</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_123040.9-E23-34" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1204" END="1209">prison</charseq>
+    </extent>
+    <head>
+      <charseq START="1204" END="1209">prison</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_123040.9-E23-35" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1246" END="1251">prison</charseq>
+    </extent>
+    <head>
+      <charseq START="1246" END="1251">prison</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030610_123040.9-E24" TYPE="LOC" SUBTYPE="Region-General" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_123040.9-E24-36" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="128" END="131">gaza</charseq>
+    </extent>
+    <head>
+      <charseq START="128" END="131">gaza</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_123040.9-E24-42" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="215" END="218">gaza</charseq>
+    </extent>
+    <head>
+      <charseq START="215" END="218">gaza</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="gaza">
+      <charseq START="128" END="131">gaza</charseq>
+    </name>
+    <name NAME="gaza">
+      <charseq START="215" END="218">gaza</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030610_123040.9-E25" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_123040.9-E25-37" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="138" END="144">israeli</charseq>
+    </extent>
+    <head>
+      <charseq START="138" END="144">israeli</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="israeli">
+      <charseq START="138" END="144">israeli</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030610_123040.9-E26" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_123040.9-E26-38" TYPE="NOM" LDCTYPE="BAR" LDCATR="FALSE">
+    <extent>
+      <charseq START="177" END="195">palestinian targets</charseq>
+    </extent>
+    <head>
+      <charseq START="189" END="195">targets</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030610_123040.9-E26-39" TYPE="NOM" LDCTYPE="BAR" LDCATR="TRUE">
+    <extent>
+      <charseq START="198" END="218">hamas
+targets in gaza</charseq>
+    </extent>
+    <head>
+      <charseq START="204" END="210">targets</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030610_123040.9-E30" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030610_123040.9-E30-43" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="221" END="238">a number of people</charseq>
+    </extent>
+    <head>
+      <charseq START="233" END="238">people</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030610_123040.9-E31" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_123040.9-E31-44" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="724" END="734">our
+viewers</charseq>
+    </extent>
+    <head>
+      <charseq START="728" END="734">viewers</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030610_123040.9-E32" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_123040.9-E32-45" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="281" END="296">two palestinians</charseq>
+    </extent>
+    <head>
+      <charseq START="285" END="296">palestinians</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030610_123040.9-E34" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030610_123040.9-E34-47" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="311" END="318">a mother</charseq>
+    </extent>
+    <head>
+      <charseq START="313" END="318">mother</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<value ID="CNN_ENG_20030610_123040.9-V1" TYPE="Numeric" SUBTYPE="Money">
+  <value_mention ID="CNN_ENG_20030610_123040.9-V1-1">
+    <extent>
+      <charseq START="994" END="1003">$4
+million</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_ENG_20030610_123040.9-V2" TYPE="Sentence">
+  <value_mention ID="CNN_ENG_20030610_123040.9-V2-1">
+    <extent>
+      <charseq START="946" END="976">more that seven years in prison</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_ENG_20030610_123040.9-V3" TYPE="Sentence">
+  <value_mention ID="CNN_ENG_20030610_123040.9-V3-1">
+    <extent>
+      <charseq START="1189" END="1209">seven years in
+prison</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_ENG_20030610_123040.9-V4" TYPE="Sentence">
+  <value_mention ID="CNN_ENG_20030610_123040.9-V4-1">
+    <extent>
+      <charseq START="1221" END="1251">more than seven years in prison</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_ENG_20030610_123040.9-V5" TYPE="Numeric" SUBTYPE="Money">
+  <value_mention ID="CNN_ENG_20030610_123040.9-V5-1">
+    <extent>
+      <charseq START="1254" END="1263">$4 million</charseq>
+    </extent>
+  </value_mention>
+</value>
+<timex2 ID="CNN_ENG_20030610_123040.9-T1" VAL="P7Y" ANCHOR_VAL="2003-06-10-T13:02:17" ANCHOR_DIR="AFTER">
+  <timex2_mention ID="CNN_ENG_20030610_123040.9-T1-1">
+    <extent>
+      <charseq START="1189" END="1199">seven years</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030610_123040.9-T2" VAL="P7Y" MOD="MORE_THAN" ANCHOR_VAL="2003-06-10-T13:02:17" ANCHOR_DIR="AFTER">
+  <timex2_mention ID="CNN_ENG_20030610_123040.9-T2-1">
+    <extent>
+      <charseq START="1221" END="1241">more than seven years</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030610_123040.9-T3" VAL="2003-06-10T13:02:17">
+  <timex2_mention ID="CNN_ENG_20030610_123040.9-T3-1">
+    <extent>
+      <charseq START="43" END="61">2003-06-10 13:02:17</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030610_123040.9-T4" VAL="2003-06-10">
+  <timex2_mention ID="CNN_ENG_20030610_123040.9-T4-1">
+    <extent>
+      <charseq START="119" END="123">today</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030610_123040.9-T5" VAL="PT1H" MOD="APPROX" ANCHOR_VAL="2003-06-10-T13:02:17" ANCHOR_DIR="ENDING">
+  <timex2_mention ID="CNN_ENG_20030610_123040.9-T5-1">
+    <extent>
+      <charseq START="486" END="498">the past hour</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030610_123040.9-T6" VAL="2003-06-10T13:02:17">
+  <timex2_mention ID="CNN_ENG_20030610_123040.9-T6-1">
+    <extent>
+      <charseq START="392" END="394">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030610_123040.9-T7" VAL="2003-06-10T13:02:17">
+  <timex2_mention ID="CNN_ENG_20030610_123040.9-T7-1">
+    <extent>
+      <charseq START="513" END="515">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030610_123040.9-T8" VAL="2003-06-10T13:02:17">
+  <timex2_mention ID="CNN_ENG_20030610_123040.9-T8-1">
+    <extent>
+      <charseq START="780" END="788">right now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030610_123040.9-T9" VAL="2003-06-10T13:02:17">
+  <timex2_mention ID="CNN_ENG_20030610_123040.9-T9-1">
+    <extent>
+      <charseq START="860" END="868">right now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030610_123040.9-T10" VAL="P7Y" MOD="MORE_THAN" ANCHOR_VAL="2003-06-10-T13:02:17" ANCHOR_DIR="AFTER">
+  <timex2_mention ID="CNN_ENG_20030610_123040.9-T10-1">
+    <extent>
+      <charseq START="946" END="966">more that seven years</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030610_123040.9-T11" VAL="2003-06-10TMO">
+  <timex2_mention ID="CNN_ENG_20030610_123040.9-T11-1">
+    <extent>
+      <charseq START="1342" END="1352">the morning</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030610_123040.9-T12" VAL="PT1H" ANCHOR_VAL="2003-06-10-T13:02:17" ANCHOR_DIR="STARTING">
+  <timex2_mention ID="CNN_ENG_20030610_123040.9-T12-1">
+    <extent>
+      <charseq START="1389" END="1401">the next hour</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030610_123040.9-T13" VAL="2003-06-10T13:02:17" ANCHOR_VAL="2003-06-10T13:02:17" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_ENG_20030610_123040.9-T13-1">
+    <extent>
+      <charseq START="1132" END="1134">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030610_123040.9-R1" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030610_123040.9-E13" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030610_123040.9-E5" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030610_123040.9-R1-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="653" END="671">palestinian
+sources</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030610_123040.9-E13-15" ROLE="Arg-1">
+      <extent>
+        <charseq START="653" END="671">palestinian
+sources</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030610_123040.9-E5-46" ROLE="Arg-2">
+      <extent>
+        <charseq START="653" END="663">palestinian</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030610_123040.9-R2" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030610_123040.9-E25" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030610_123040.9-E21" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030610_123040.9-R2-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="138" END="155">israeli helicopter</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030610_123040.9-E25-37" ROLE="Arg-1">
+      <extent>
+        <charseq START="138" END="144">israeli</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030610_123040.9-E21-31" ROLE="Arg-2">
+      <extent>
+        <charseq START="146" END="155">helicopter</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030610_123040.9-R3" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030610_123040.9-E26" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030610_123040.9-E5" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030610_123040.9-R3-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="177" END="195">palestinian targets</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030610_123040.9-E26-38" ROLE="Arg-1">
+      <extent>
+        <charseq START="177" END="195">palestinian targets</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030610_123040.9-E5-40" ROLE="Arg-2">
+      <extent>
+        <charseq START="177" END="187">palestinian</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030610_123040.9-R4" TYPE="ORG-AFF" SUBTYPE="Membership" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030610_123040.9-E26" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030610_123040.9-E3" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030610_123040.9-R4-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="198" END="218">hamas
+targets in gaza</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030610_123040.9-E26-39" ROLE="Arg-1">
+      <extent>
+        <charseq START="198" END="218">hamas
+targets in gaza</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030610_123040.9-E3-41" ROLE="Arg-2">
+      <extent>
+        <charseq START="198" END="202">hamas</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030610_123040.9-R5" TYPE="ORG-AFF" SUBTYPE="Membership" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030610_123040.9-E2" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030610_123040.9-E3" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030610_123040.9-R5-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="344" END="357">a hamas leader</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030610_123040.9-E2-2" ROLE="Arg-1">
+      <extent>
+        <charseq START="344" END="357">a hamas leader</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030610_123040.9-E3-3" ROLE="Arg-2">
+      <extent>
+        <charseq START="346" END="350">hamas</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030610_123040.9-R6" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030610_123040.9-E2" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030610_123040.9-E4" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030610_123040.9-R6-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="387" END="420">he's now in a
+palestinian hospital</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030610_123040.9-E2-4" ROLE="Arg-1">
+      <extent>
+        <charseq START="387" END="388">he</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030610_123040.9-E4-5" ROLE="Arg-2">
+      <extent>
+        <charseq START="399" END="420">a
+palestinian hospital</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030610_123040.9-R7" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030610_123040.9-E5" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030610_123040.9-E4" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030610_123040.9-R7-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="399" END="420">a
+palestinian hospital</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030610_123040.9-E5-6" ROLE="Arg-1">
+      <extent>
+        <charseq START="401" END="411">palestinian</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030610_123040.9-E4-5" ROLE="Arg-2">
+      <extent>
+        <charseq START="399" END="420">a
+palestinian hospital</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030610_123040.9-R8" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030610_123040.9-E26" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030610_123040.9-E24" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030610_123040.9-R8-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="198" END="218">hamas
+targets in gaza</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030610_123040.9-E26-39" ROLE="Arg-1">
+      <extent>
+        <charseq START="198" END="218">hamas
+targets in gaza</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030610_123040.9-E24-42" ROLE="Arg-2">
+      <extent>
+        <charseq START="215" END="218">gaza</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030610_123040.9-R9" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030610_123040.9-E16" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030610_123040.9-E23" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030610_123040.9-R9-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="913" END="1074">sam waksal has
+been sentenced to more that seven years in prison, ordered to pay $4
+million in fines and back taxes in connection with the insider trading
+scandal</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030610_123040.9-E16-22" ROLE="Arg-1">
+      <extent>
+        <charseq START="913" END="922">sam waksal</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030610_123040.9-E23-33" ROLE="Arg-2">
+      <extent>
+        <charseq START="971" END="976">prison</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030610_123040.9-R10" TYPE="PER-SOC" SUBTYPE="Family" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030610_123040.9-E34" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030610_123040.9-E1" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030610_123040.9-R10-1" LEXICALCONDITION="Coordination">
+    <extent>
+      <charseq START="311" END="330">a mother and a child</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030610_123040.9-E34-47" ROLE="Arg-1">
+      <extent>
+        <charseq START="311" END="318">a mother</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030610_123040.9-E1-48" ROLE="Arg-2">
+      <extent>
+        <charseq START="324" END="330">a child</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030610_123040.9-EV1" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030610_123040.9-E25" ROLE="Attacker"/>
+  <event_argument REFID="CNN_ENG_20030610_123040.9-E24" ROLE="Place"/>
+  <event_argument REFID="CNN_ENG_20030610_123040.9-E26" ROLE="Target"/>
+  <event_argument REFID="CNN_ENG_20030610_123040.9-E21" ROLE="Instrument"/>
+  <event_mention ID="CNN_ENG_20030610_123040.9-EV1-1">
+    <extent>
+      <charseq START="138" END="218">israeli helicopter air strikes against palestinian targets, hamas
+targets in gaza</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="134" END="218">two
+israeli helicopter air strikes against palestinian targets, hamas
+targets in gaza</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="161" END="167">strikes</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030610_123040.9-E25-37" ROLE="Attacker">
+      <extent>
+        <charseq START="138" END="144">israeli</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030610_123040.9-E24-42" ROLE="Place">
+      <extent>
+        <charseq START="215" END="218">gaza</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030610_123040.9-E26-38" ROLE="Target">
+      <extent>
+        <charseq START="177" END="195">palestinian targets</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030610_123040.9-E26-39" ROLE="Target">
+      <extent>
+        <charseq START="198" END="218">hamas
+targets in gaza</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030610_123040.9-E21-31" ROLE="Instrument">
+      <extent>
+        <charseq START="146" END="155">helicopter</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030610_123040.9-EV2" TYPE="Life" SUBTYPE="Die" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030610_123040.9-E30" ROLE="Victim"/>
+  <event_mention ID="CNN_ENG_20030610_123040.9-EV2-1">
+    <extent>
+      <charseq START="221" END="255">a number of people have been killed</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="221" END="341">a number of people have been killed in the first
+airstrike, two palestinians were killed, a mother and a child
+apparently</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="250" END="255">killed</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030610_123040.9-E30-43" ROLE="Victim">
+      <extent>
+        <charseq START="221" END="238">a number of people</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030610_123040.9-EV3" TYPE="Life" SUBTYPE="Die" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030610_123040.9-E32" ROLE="Victim"/>
+  <event_mention ID="CNN_ENG_20030610_123040.9-EV3-1">
+    <extent>
+      <charseq START="281" END="308">two palestinians were killed</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="221" END="341">a number of people have been killed in the first
+airstrike, two palestinians were killed, a mother and a child
+apparently</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="303" END="308">killed</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030610_123040.9-E32-45" ROLE="Victim">
+      <extent>
+        <charseq START="281" END="296">two palestinians</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030610_123040.9-EV4" TYPE="Life" SUBTYPE="Injure" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030610_123040.9-E2" ROLE="Victim"/>
+  <event_mention ID="CNN_ENG_20030610_123040.9-EV4-1">
+    <extent>
+      <charseq START="344" END="369">a hamas leader was injured</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="344" END="384">a hamas leader was injured in that strike</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="363" END="369">injured</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030610_123040.9-E2-2" ROLE="Victim">
+      <extent>
+        <charseq START="344" END="357">a hamas leader</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030610_123040.9-EV5" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030610_123040.9-E2" ROLE="Target"/>
+  <event_mention ID="CNN_ENG_20030610_123040.9-EV5-1">
+    <extent>
+      <charseq START="344" END="384">a hamas leader was injured in that strike</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="344" END="384">a hamas leader was injured in that strike</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="379" END="384">strike</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030610_123040.9-E2-2" ROLE="Target">
+      <extent>
+        <charseq START="344" END="357">a hamas leader</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030610_123040.9-EV6" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030610_123040.9-E8" ROLE="Target"/>
+  <event_argument REFID="CNN_ENG_20030610_123040.9-E9" ROLE="Target"/>
+  <event_argument REFID="CNN_ENG_20030610_123040.9-E10" ROLE="Target"/>
+  <event_argument REFID="CNN_ENG_20030610_123040.9-E6" ROLE="Instrument"/>
+  <event_argument REFID="CNN_ENG_20030610_123040.9-T5" ROLE="Time-Within"/>
+  <event_mention ID="CNN_ENG_20030610_123040.9-EV6-1">
+    <extent>
+      <charseq START="437" END="584">apache helicopter airstrike that
+occurred within the past hour or so, we're now told by palestinians,
+three people died, 33 others were wounded, six</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="423" END="671">in the second apache helicopter airstrike that
+occurred within the past hour or so, we're now told by palestinians,
+three people died, 33 others were wounded, six are in critical
+condition, three dead were civilians, according to palestinian
+sources</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="455" END="463">airstrike</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030610_123040.9-E8-10" ROLE="Target">
+      <extent>
+        <charseq START="539" END="550">three people</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030610_123040.9-E9-11" ROLE="Target">
+      <extent>
+        <charseq START="558" END="566">33 others</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030610_123040.9-E10-12" ROLE="Target">
+      <extent>
+        <charseq START="582" END="584">six</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030610_123040.9-E6-7" ROLE="Instrument">
+      <extent>
+        <charseq START="437" END="453">apache helicopter</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030610_123040.9-T5-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="486" END="498">the past hour</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030610_123040.9-EV7" TYPE="Life" SUBTYPE="Die" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030610_123040.9-E6" ROLE="Instrument"/>
+  <event_argument REFID="CNN_ENG_20030610_123040.9-E8" ROLE="Victim"/>
+  <event_mention ID="CNN_ENG_20030610_123040.9-EV7-1">
+    <extent>
+      <charseq START="437" END="555">apache helicopter airstrike that
+occurred within the past hour or so, we're now told by palestinians,
+three people died</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="423" END="671">in the second apache helicopter airstrike that
+occurred within the past hour or so, we're now told by palestinians,
+three people died, 33 others were wounded, six are in critical
+condition, three dead were civilians, according to palestinian
+sources</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="552" END="555">died</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030610_123040.9-E6-7" ROLE="Instrument">
+      <extent>
+        <charseq START="437" END="453">apache helicopter</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030610_123040.9-E8-10" ROLE="Victim">
+      <extent>
+        <charseq START="539" END="550">three people</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030610_123040.9-EV7-2">
+    <extent>
+      <charseq START="437" END="622">apache helicopter airstrike that
+occurred within the past hour or so, we're now told by palestinians,
+three people died, 33 others were wounded, six are in critical
+condition, three dead</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="423" END="671">in the second apache helicopter airstrike that
+occurred within the past hour or so, we're now told by palestinians,
+three people died, 33 others were wounded, six are in critical
+condition, three dead were civilians, according to palestinian
+sources</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="619" END="622">dead</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030610_123040.9-E6-7" ROLE="Instrument">
+      <extent>
+        <charseq START="437" END="453">apache helicopter</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030610_123040.9-E8-10" ROLE="Victim">
+      <extent>
+        <charseq START="539" END="550">three people</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030610_123040.9-EV8" TYPE="Life" SUBTYPE="Injure" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030610_123040.9-E6" ROLE="Instrument"/>
+  <event_argument REFID="CNN_ENG_20030610_123040.9-E9" ROLE="Victim"/>
+  <event_mention ID="CNN_ENG_20030610_123040.9-EV8-1">
+    <extent>
+      <charseq START="437" END="579">apache helicopter airstrike that
+occurred within the past hour or so, we're now told by palestinians,
+three people died, 33 others were wounded</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="423" END="671">in the second apache helicopter airstrike that
+occurred within the past hour or so, we're now told by palestinians,
+three people died, 33 others were wounded, six are in critical
+condition, three dead were civilians, according to palestinian
+sources</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="573" END="579">wounded</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030610_123040.9-E6-7" ROLE="Instrument">
+      <extent>
+        <charseq START="437" END="453">apache helicopter</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030610_123040.9-E9-11" ROLE="Victim">
+      <extent>
+        <charseq START="558" END="566">33 others</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030610_123040.9-EV9" TYPE="Justice" SUBTYPE="Sentence" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030610_123040.9-E19" ROLE="Adjudicator"/>
+  <event_argument REFID="CNN_ENG_20030610_123040.9-E16" ROLE="Defendant"/>
+  <event_argument REFID="CNN_ENG_20030610_123040.9-V2" ROLE="Sentence"/>
+  <event_mention ID="CNN_ENG_20030610_123040.9-EV9-1">
+    <extent>
+      <charseq START="913" END="976">sam waksal has
+been sentenced to more that seven years in prison</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="913" END="1074">sam waksal has
+been sentenced to more that seven years in prison, ordered to pay $4
+million in fines and back taxes in connection with the insider trading
+scandal</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="933" END="941">sentenced</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030610_123040.9-E16-22" ROLE="Defendant">
+      <extent>
+        <charseq START="913" END="922">sam waksal</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030610_123040.9-V2-1" ROLE="Sentence">
+      <extent>
+        <charseq START="946" END="976">more that seven years in prison</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030610_123040.9-EV9-2">
+    <extent>
+      <charseq START="1126" END="1186">he is now
+getting word of his sentence from the federal judge</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1126" END="1186">he is now
+getting word of his sentence from the federal judge</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1156" END="1163">sentence</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030610_123040.9-E19-28" ROLE="Adjudicator">
+      <extent>
+        <charseq START="1170" END="1186">the federal judge</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030610_123040.9-E16-26" ROLE="Defendant">
+      <extent>
+        <charseq START="1126" END="1127">he</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030610_123040.9-EV10" TYPE="Justice" SUBTYPE="Fine" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030610_123040.9-V5" ROLE="Money"/>
+  <event_argument REFID="CNN_ENG_20030610_123040.9-E16" ROLE="Entity"/>
+  <event_argument REFID="CNN_ENG_20030610_123040.9-V1" ROLE="Money"/>
+  <event_mention ID="CNN_ENG_20030610_123040.9-EV10-1">
+    <extent>
+      <charseq START="913" END="1012">sam waksal has
+been sentenced to more that seven years in prison, ordered to pay $4
+million in fines</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="913" END="1074">sam waksal has
+been sentenced to more that seven years in prison, ordered to pay $4
+million in fines and back taxes in connection with the insider trading
+scandal</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1008" END="1012">fines</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030610_123040.9-E16-22" ROLE="Entity">
+      <extent>
+        <charseq START="913" END="922">sam waksal</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030610_123040.9-V1-1" ROLE="Money">
+      <extent>
+        <charseq START="994" END="1003">$4
+million</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030610_123040.9-EV10-2">
+    <extent>
+      <charseq START="1254" END="1272">$4 million in fines</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1189" END="1352">seven years in
+prison, actually more than seven years in prison, $4 million in fines
+and back taxes, a story we've been following here on cnn throughout
+the morning</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1268" END="1272">fines</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030610_123040.9-V5-1" ROLE="Money">
+      <extent>
+        <charseq START="1254" END="1263">$4 million</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030610_123040.9-EV11" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030610_123040.9-E30" ROLE="Target"/>
+  <event_mention ID="CNN_ENG_20030610_123040.9-EV11-1">
+    <extent>
+      <charseq START="221" END="278">a number of people have been killed in the first
+airstrike</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="221" END="341">a number of people have been killed in the first
+airstrike, two palestinians were killed, a mother and a child
+apparently</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="270" END="278">airstrike</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030610_123040.9-E30-43" ROLE="Target">
+      <extent>
+        <charseq START="221" END="238">a number of people</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030610_123040.9-EV12" TYPE="Life" SUBTYPE="Injure" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030610_123040.9-E6" ROLE="Instrument"/>
+  <event_argument REFID="CNN_ENG_20030610_123040.9-E10" ROLE="Victim"/>
+  <event_mention ID="CNN_ENG_20030610_123040.9-EV12-1">
+    <extent>
+      <charseq START="437" END="610">apache helicopter airstrike that
+occurred within the past hour or so, we're now told by palestinians,
+three people died, 33 others were wounded, six are in critical
+condition</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="423" END="671">in the second apache helicopter airstrike that
+occurred within the past hour or so, we're now told by palestinians,
+three people died, 33 others were wounded, six are in critical
+condition, three dead were civilians, according to palestinian
+sources</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="593" END="610">critical
+condition</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030610_123040.9-E6-7" ROLE="Instrument">
+      <extent>
+        <charseq START="437" END="453">apache helicopter</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030610_123040.9-E10-12" ROLE="Victim">
+      <extent>
+        <charseq START="582" END="584">six</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

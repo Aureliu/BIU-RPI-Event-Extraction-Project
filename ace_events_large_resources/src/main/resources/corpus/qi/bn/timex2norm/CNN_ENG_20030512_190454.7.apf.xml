@@ -1,0 +1,436 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030512_190454.7.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030512_190454.7">
+<entity ID="CNN_ENG_20030512_190454.7-E1" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030512_190454.7-E1-1" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="493" END="496">wfaa</charseq>
+    </extent>
+    <head>
+      <charseq START="493" END="496">wfaa</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="wfaa">
+      <charseq START="493" END="496">wfaa</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030512_190454.7-E2" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030512_190454.7-E2-3" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="512" END="554">the smith county courthouse in
+tyler, texas</charseq>
+    </extent>
+    <head>
+      <charseq START="516" END="538">smith county courthouse</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="smith county courthouse">
+      <charseq START="516" END="538">smith county courthouse</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030512_190454.7-E3" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030512_190454.7-E3-4" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="543" END="554">tyler, texas</charseq>
+    </extent>
+    <head>
+      <charseq START="543" END="547">tyler</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="tyler">
+      <charseq START="543" END="547">tyler</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030512_190454.7-E4" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030512_190454.7-E4-6" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="473" END="496">katherine garcia of wfaa</charseq>
+    </extent>
+    <head>
+      <charseq START="473" END="488">katherine garcia</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="katherine garcia">
+      <charseq START="473" END="488">katherine garcia</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030512_190454.7-E5" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030512_190454.7-E5-7" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="80" END="113">a woman in an east texas jail cell</charseq>
+    </extent>
+    <head>
+      <charseq START="82" END="86">woman</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_190454.7-E5-11" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="145" END="147">she</charseq>
+    </extent>
+    <head>
+      <charseq START="145" END="147">she</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_190454.7-E5-12" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="224" END="226">she</charseq>
+    </extent>
+    <head>
+      <charseq START="224" END="226">she</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_190454.7-E5-13" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="267" END="269">her</charseq>
+    </extent>
+    <head>
+      <charseq START="267" END="269">her</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_190454.7-E5-14" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="301" END="303">she</charseq>
+    </extent>
+    <head>
+      <charseq START="301" END="303">she</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_190454.7-E5-15" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="333" END="335">her</charseq>
+    </extent>
+    <head>
+      <charseq START="333" END="335">her</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_190454.7-E5-18" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="370" END="372">she</charseq>
+    </extent>
+    <head>
+      <charseq START="370" END="372">she</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_190454.7-E5-19" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="389" END="391">her</charseq>
+    </extent>
+    <head>
+      <charseq START="389" END="391">her</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_190454.7-E5-21" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="279" END="298">deanna lejeune laney</charseq>
+    </extent>
+    <head>
+      <charseq START="279" END="298">deanna lejeune laney</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="deanna lejeune laney">
+      <charseq START="279" END="298">deanna lejeune laney</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030512_190454.7-E6" TYPE="FAC" SUBTYPE="Subarea-Facility" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030512_190454.7-E6-8" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="91" END="113">an east texas jail cell</charseq>
+    </extent>
+    <head>
+      <charseq START="110" END="113">cell</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030512_190454.7-E7" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030512_190454.7-E7-5" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE">
+    <extent>
+      <charseq START="550" END="554">texas</charseq>
+    </extent>
+    <head>
+      <charseq START="550" END="554">texas</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="texas">
+      <charseq START="550" END="554">texas</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030512_190454.7-E8" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030512_190454.7-E8-2" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="509" END="510">us</charseq>
+    </extent>
+    <head>
+      <charseq START="509" END="510">us</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_190454.7-E8-10" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="124" END="125">we</charseq>
+    </extent>
+    <head>
+      <charseq START="124" END="125">we</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030512_190454.7-E9" TYPE="LOC" SUBTYPE="Region-General" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030512_190454.7-E9-9" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="94" END="103">east texas</charseq>
+    </extent>
+    <head>
+      <charseq START="94" END="103">east texas</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="east texas">
+      <charseq START="94" END="103">east texas</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030512_190454.7-E10" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030512_190454.7-E10-16" TYPE="PRO" LDCTYPE="PTV">
+    <extent>
+      <charseq START="326" END="350">two of her
+three children</charseq>
+    </extent>
+    <head>
+      <charseq START="326" END="328">two</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030512_190454.7-E11" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030512_190454.7-E11-17" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="333" END="350">her
+three children</charseq>
+    </extent>
+    <head>
+      <charseq START="343" END="350">children</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030512_190454.7-E12" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030512_190454.7-E12-20" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="380" END="382">god</charseq>
+    </extent>
+    <head>
+      <charseq START="380" END="382">god</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="god">
+      <charseq START="380" END="382">god</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<timex2 ID="CNN_ENG_20030512_190454.7-T1" VAL="2003-05-12T20:11:04">
+  <timex2_mention ID="CNN_ENG_20030512_190454.7-T1-1">
+    <extent>
+      <charseq START="43" END="61">2003-05-12 20:11:04</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030512_190454.7-T2" VAL="2003-05-12TNI">
+  <timex2_mention ID="CNN_ENG_20030512_190454.7-T2-1">
+    <extent>
+      <charseq START="115" END="121">tonight</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030512_190454.7-T3" VAL="2003-05-10">
+  <timex2_mention ID="CNN_ENG_20030512_190454.7-T3-1">
+    <extent>
+      <charseq START="415" END="427">this saturday</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030512_190454.7-T4" VAL="2003-05-12">
+  <timex2_mention ID="CNN_ENG_20030512_190454.7-T4-1">
+    <extent>
+      <charseq START="430" END="434">today</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030512_190454.7-R1" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030512_190454.7-E5" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030512_190454.7-E6" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030512_190454.7-R1-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="80" END="113">a woman in an east texas jail cell</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030512_190454.7-E5-7" ROLE="Arg-1">
+      <extent>
+        <charseq START="80" END="113">a woman in an east texas jail cell</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030512_190454.7-E6-8" ROLE="Arg-2">
+      <extent>
+        <charseq START="91" END="113">an east texas jail cell</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030512_190454.7-R2" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030512_190454.7-E6" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030512_190454.7-E9" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030512_190454.7-R2-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="91" END="113">an east texas jail cell</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030512_190454.7-E6-8" ROLE="Arg-1">
+      <extent>
+        <charseq START="91" END="113">an east texas jail cell</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030512_190454.7-E9-9" ROLE="Arg-2">
+      <extent>
+        <charseq START="94" END="103">east texas</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030512_190454.7-R3" TYPE="PER-SOC" SUBTYPE="Family" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030512_190454.7-E5" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030512_190454.7-E11" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030512_190454.7-R3-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="333" END="350">her
+three children</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030512_190454.7-E5-15" ROLE="Arg-1">
+      <extent>
+        <charseq START="333" END="335">her</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030512_190454.7-E11-17" ROLE="Arg-2">
+      <extent>
+        <charseq START="333" END="350">her
+three children</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030512_190454.7-R4" TYPE="PHYS" SUBTYPE="Located" TENSE="Present" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030512_190454.7-E4" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030512_190454.7-E2" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030512_190454.7-R4-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="473" END="554">katherine garcia of wfaa joins from us the smith county courthouse in
+tyler, texas</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030512_190454.7-E4-6" ROLE="Arg-1">
+      <extent>
+        <charseq START="473" END="496">katherine garcia of wfaa</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030512_190454.7-E2-3" ROLE="Arg-2">
+      <extent>
+        <charseq START="512" END="554">the smith county courthouse in
+tyler, texas</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030512_190454.7-R5" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030512_190454.7-E2" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030512_190454.7-E3" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030512_190454.7-R5-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="512" END="554">the smith county courthouse in
+tyler, texas</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030512_190454.7-E2-3" ROLE="Arg-1">
+      <extent>
+        <charseq START="512" END="554">the smith county courthouse in
+tyler, texas</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030512_190454.7-E3-4" ROLE="Arg-2">
+      <extent>
+        <charseq START="543" END="554">tyler, texas</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030512_190454.7-R6" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030512_190454.7-E3" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030512_190454.7-E7" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030512_190454.7-R6-1" LEXICALCONDITION="Formulaic">
+    <extent>
+      <charseq START="543" END="554">tyler, texas</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030512_190454.7-E3-4" ROLE="Arg-1">
+      <extent>
+        <charseq START="543" END="554">tyler, texas</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030512_190454.7-E7-5" ROLE="Arg-2">
+      <extent>
+        <charseq START="550" END="554">texas</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030512_190454.7-R7" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030512_190454.7-E4" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030512_190454.7-E1" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030512_190454.7-R7-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="473" END="496">katherine garcia of wfaa</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030512_190454.7-E4-6" ROLE="Arg-1">
+      <extent>
+        <charseq START="473" END="496">katherine garcia of wfaa</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030512_190454.7-E1-1" ROLE="Arg-2">
+      <extent>
+        <charseq START="493" END="496">wfaa</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030512_190454.7-EV1" TYPE="Life" SUBTYPE="Die" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030512_190454.7-E10" ROLE="Victim"/>
+  <event_argument REFID="CNN_ENG_20030512_190454.7-E5" ROLE="Agent"/>
+  <event_mention ID="CNN_ENG_20030512_190454.7-EV1-1">
+    <extent>
+      <charseq START="301" END="359">she's accused of beating two of her
+three children to death</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="301" END="394">she's accused of beating two of her
+three children to death because, she says, god told her to</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="355" END="359">death</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030512_190454.7-E10-16" ROLE="Victim">
+      <extent>
+        <charseq START="326" END="350">two of her
+three children</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030512_190454.7-E5-14" ROLE="Agent">
+      <extent>
+        <charseq START="301" END="303">she</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

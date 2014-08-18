@@ -1,0 +1,1796 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030328_150609.10.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030328_150609.10">
+<entity ID="CNN_ENG_20030328_150609.10-E1" TYPE="ORG" SUBTYPE="Government" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E1-2" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="377" END="384">military</charseq>
+    </extent>
+    <head>
+      <charseq START="377" END="384">military</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030328_150609.10-E2" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E2-3" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="392" END="395">judy</charseq>
+    </extent>
+    <head>
+      <charseq START="392" END="395">judy</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E2-36" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1458" END="1461">judy</charseq>
+    </extent>
+    <head>
+      <charseq START="1458" END="1461">judy</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E2-85" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2426" END="2429">judy</charseq>
+    </extent>
+    <head>
+      <charseq START="2426" END="2429">judy</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E2-86" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2442" END="2442">i</charseq>
+    </extent>
+    <head>
+      <charseq START="2442" END="2442">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="judy">
+      <charseq START="392" END="395">judy</charseq>
+    </name>
+    <name NAME="judy">
+      <charseq START="1458" END="1461">judy</charseq>
+    </name>
+    <name NAME="judy">
+      <charseq START="2426" END="2429">judy</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030328_150609.10-E3" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E3-4" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="418" END="419">we</charseq>
+    </extent>
+    <head>
+      <charseq START="418" END="419">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E3-18" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2456" END="2457">we</charseq>
+    </extent>
+    <head>
+      <charseq START="2456" END="2457">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E3-87" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2110" END="2111">we</charseq>
+    </extent>
+    <head>
+      <charseq START="2110" END="2111">we</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030328_150609.10-E4" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E4-5" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="432" END="445">these soldiers</charseq>
+    </extent>
+    <head>
+      <charseq START="438" END="445">soldiers</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E4-6" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="543" END="556">these soldiers</charseq>
+    </extent>
+    <head>
+      <charseq START="549" END="556">soldiers</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E4-7" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="595" END="598">they</charseq>
+    </extent>
+    <head>
+      <charseq START="595" END="598">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E4-11" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="803" END="814">the soldiers</charseq>
+    </extent>
+    <head>
+      <charseq START="807" END="814">soldiers</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E4-13" TYPE="PRO" LDCTYPE="WHQ" LDCATR="FALSE">
+    <extent>
+      <charseq START="824" END="828">which</charseq>
+    </extent>
+    <head>
+      <charseq START="824" END="828">which</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E4-27" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1272" END="1276">these</charseq>
+    </extent>
+    <head>
+      <charseq START="1272" END="1276">these</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E4-28" TYPE="NOM" LDCTYPE="BAR" LDCATR="TRUE">
+    <extent>
+      <charseq START="1282" END="1304">highly trained soldiers</charseq>
+    </extent>
+    <head>
+      <charseq START="1297" END="1304">soldiers</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E4-29" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1307" END="1310">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1307" END="1310">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E4-30" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1329" END="1332">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1329" END="1332">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E4-35" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1429" END="1433">their</charseq>
+    </extent>
+    <head>
+      <charseq START="1429" END="1433">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E4-39" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1528" END="1531">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1528" END="1531">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E4-40" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1548" END="1551">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1548" END="1551">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E4-41" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1566" END="1569">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1566" END="1569">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E4-42" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1592" END="1595">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1592" END="1595">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E4-43" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1607" END="1611">their</charseq>
+    </extent>
+    <head>
+      <charseq START="1607" END="1611">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E4-44" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1652" END="1655">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1652" END="1655">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E4-45" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1690" END="1693">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1690" END="1693">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E4-46" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1730" END="1733">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1730" END="1733">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E4-47" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1768" END="1771">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1768" END="1771">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E4-57" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1926" END="1929">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1926" END="1929">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E4-58" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1942" END="1945">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1942" END="1945">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E4-59" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1954" END="1957">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1954" END="1957">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E4-60" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1970" END="1973">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1970" END="1973">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E4-61" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1994" END="1997">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1994" END="1997">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E4-64" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2045" END="2048">they</charseq>
+    </extent>
+    <head>
+      <charseq START="2045" END="2048">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E4-66" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2087" END="2090">they</charseq>
+    </extent>
+    <head>
+      <charseq START="2087" END="2090">they</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030328_150609.10-E5" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E5-8" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE">
+    <extent>
+      <charseq START="683" END="688">turkey</charseq>
+    </extent>
+    <head>
+      <charseq START="683" END="688">turkey</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="turkey">
+      <charseq START="683" END="688">turkey</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030328_150609.10-E6" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E6-9" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="710" END="734">the 4th infantry division</charseq>
+    </extent>
+    <head>
+      <charseq START="714" END="734">4th infantry division</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E6-10" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="739" END="761">one seeped in
+tradition</charseq>
+    </extent>
+    <head>
+      <charseq START="739" END="741">one</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="4th infantry division">
+      <charseq START="714" END="734">4th infantry division</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030328_150609.10-E8" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E8-12" TYPE="PRO" LDCTYPE="HLS">
+    <extent>
+      <charseq START="817" END="828">250 of
+which</charseq>
+    </extent>
+    <head>
+      <charseq START="817" END="819">250</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E8-67" TYPE="PRO" LDCTYPE="HLS">
+    <extent>
+      <charseq START="2119" END="2121">250</charseq>
+    </extent>
+    <head>
+      <charseq START="2119" END="2121">250</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E8-68" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2139" END="2142">they</charseq>
+    </extent>
+    <head>
+      <charseq START="2139" END="2142">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E8-69" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2163" END="2167">their</charseq>
+    </extent>
+    <head>
+      <charseq START="2163" END="2167">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E8-71" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2176" END="2179">they</charseq>
+    </extent>
+    <head>
+      <charseq START="2176" END="2179">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E8-72" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2196" END="2200">their</charseq>
+    </extent>
+    <head>
+      <charseq START="2196" END="2200">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E8-73" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2228" END="2231">them</charseq>
+    </extent>
+    <head>
+      <charseq START="2228" END="2231">them</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E8-74" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2242" END="2245">they</charseq>
+    </extent>
+    <head>
+      <charseq START="2242" END="2245">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E8-75" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2318" END="2321">them</charseq>
+    </extent>
+    <head>
+      <charseq START="2318" END="2321">them</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E8-76" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2362" END="2366">their</charseq>
+    </extent>
+    <head>
+      <charseq START="2362" END="2366">their</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030328_150609.10-E9" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E9-14" TYPE="PRO" LDCTYPE="HLS">
+    <extent>
+      <charseq START="874" END="879">12,000</charseq>
+    </extent>
+    <head>
+      <charseq START="874" END="879">12,000</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030328_150609.10-E10" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E10-15" TYPE="PRO" LDCTYPE="PRO" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="902" END="905">here</charseq>
+    </extent>
+    <head>
+      <charseq START="902" END="905">here</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E10-16" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="367" END="370">this</charseq>
+    </extent>
+    <head>
+      <charseq START="367" END="370">this</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E10-17" TYPE="NOM" LDCTYPE="NOM" ROLE="LOC" LDCATR="TRUE">
+    <extent>
+      <charseq START="375" END="389">a military town</charseq>
+    </extent>
+    <head>
+      <charseq START="386" END="389">town</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E10-34" TYPE="PRO" LDCTYPE="PRO" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="1423" END="1426">here</charseq>
+    </extent>
+    <head>
+      <charseq START="1423" END="1426">here</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E10-55" TYPE="PRO" LDCTYPE="PRO" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="1907" END="1910">here</charseq>
+    </extent>
+    <head>
+      <charseq START="1907" END="1910">here</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E10-56" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="1915" END="1923">fort hood</charseq>
+    </extent>
+    <head>
+      <charseq START="1915" END="1923">fort hood</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E10-78" TYPE="PRO" LDCTYPE="PRO" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="2216" END="2219">here</charseq>
+    </extent>
+    <head>
+      <charseq START="2216" END="2219">here</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E10-81" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="227" END="241">fort hood texas</charseq>
+    </extent>
+    <head>
+      <charseq START="227" END="235">fort hood</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E10-99" TYPE="PRO" LDCTYPE="PRO" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="265" END="269">there</charseq>
+    </extent>
+    <head>
+      <charseq START="265" END="269">there</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="fort hood">
+      <charseq START="1915" END="1923">fort hood</charseq>
+    </name>
+    <name NAME="fort hood">
+      <charseq START="227" END="235">fort hood</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030328_150609.10-E11" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E11-89" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="985" END="989">their</charseq>
+    </extent>
+    <head>
+      <charseq START="985" END="989">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E11-90" TYPE="PRO" LDCTYPE="HLS">
+    <extent>
+      <charseq START="908" END="920">another 4,000</charseq>
+    </extent>
+    <head>
+      <charseq START="916" END="920">4,000</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030328_150609.10-E12" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E12-19" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="927" END="949">fort carson in colorado</charseq>
+    </extent>
+    <head>
+      <charseq START="927" END="937">fort carson</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="fort carson">
+      <charseq START="927" END="937">fort carson</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030328_150609.10-E13" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E13-20" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="942" END="949">colorado</charseq>
+    </extent>
+    <head>
+      <charseq START="942" END="949">colorado</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="colorado">
+      <charseq START="942" END="949">colorado</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030328_150609.10-E14" TYPE="VEH" SUBTYPE="Water" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E14-21" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1032" END="1077">a ship on its way south through the suez canal</charseq>
+    </extent>
+    <head>
+      <charseq START="1034" END="1037">ship</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E14-22" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1042" END="1044">its</charseq>
+    </extent>
+    <head>
+      <charseq START="1042" END="1044">its</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030328_150609.10-E15" TYPE="FAC" SUBTYPE="Path" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E15-23" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1064" END="1077">the suez canal</charseq>
+    </extent>
+    <head>
+      <charseq START="1068" END="1077">suez canal</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="suez canal">
+      <charseq START="1068" END="1077">suez canal</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030328_150609.10-E16" TYPE="VEH" SUBTYPE="Air" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E16-24" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1191" END="1208">some 5 helicopters</charseq>
+    </extent>
+    <head>
+      <charseq START="1198" END="1208">helicopters</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030328_150609.10-E17" TYPE="VEH" SUBTYPE="Land" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E17-25" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1211" END="1219">200 tanks</charseq>
+    </extent>
+    <head>
+      <charseq START="1215" END="1219">tanks</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030328_150609.10-E18" TYPE="VEH" SUBTYPE="Land" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E18-26" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1232" END="1269">150
+bradley infantry fighting vehicles</charseq>
+    </extent>
+    <head>
+      <charseq START="1262" END="1269">vehicles</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030328_150609.10-E20" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E20-31" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1383" END="1406">the first wave of troops</charseq>
+    </extent>
+    <head>
+      <charseq START="1393" END="1396">wave</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E20-33" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="1408" END="1411">that</charseq>
+    </extent>
+    <head>
+      <charseq START="1408" END="1411">that</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030328_150609.10-E21" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E21-32" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1401" END="1406">troops</charseq>
+    </extent>
+    <head>
+      <charseq START="1401" END="1406">troops</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030328_150609.10-E22" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E22-1" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="68" END="111">tense of thousands of additional u.s. troops</charseq>
+    </extent>
+    <head>
+      <charseq START="106" END="111">troops</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030328_150609.10-E23" TYPE="LOC" SUBTYPE="Region-General" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E23-37" TYPE="PRO" LDCTYPE="PTV">
+    <extent>
+      <charseq START="1473" END="1493">anywhere in the world</charseq>
+    </extent>
+    <head>
+      <charseq START="1473" END="1480">anywhere</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030328_150609.10-E24" TYPE="LOC" SUBTYPE="Celestial" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E24-38" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1485" END="1493">the world</charseq>
+    </extent>
+    <head>
+      <charseq START="1489" END="1493">world</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030328_150609.10-E25" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E25-48" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1824" END="1831">they all</charseq>
+    </extent>
+    <head>
+      <charseq START="1824" END="1827">they</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030328_150609.10-E26" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E26-49" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1842" END="1865">the
+soldiers you talk to</charseq>
+    </extent>
+    <head>
+      <charseq START="1846" END="1853">soldiers</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030328_150609.10-E27" TYPE="PER" SUBTYPE="Indeterminate" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E27-50" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1855" END="1857">you</charseq>
+    </extent>
+    <head>
+      <charseq START="1855" END="1857">you</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030328_150609.10-E28" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E28-52" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1711" END="1727">the first cavalry</charseq>
+    </extent>
+    <head>
+      <charseq START="1715" END="1727">first cavalry</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="first cavalry">
+      <charseq START="1715" END="1727">first cavalry</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030328_150609.10-E29" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E29-53" TYPE="PRO" LDCTYPE="PTV">
+    <extent>
+      <charseq START="1876" END="1923">some of the information people here at
+fort hood</charseq>
+    </extent>
+    <head>
+      <charseq START="1876" END="1879">some</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030328_150609.10-E30" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E30-54" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1884" END="1923">the information people here at
+fort hood</charseq>
+    </extent>
+    <head>
+      <charseq START="1900" END="1905">people</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030328_150609.10-E31" TYPE="WEA" SUBTYPE="Shooting" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E31-70" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2163" END="2173">their m-16s</charseq>
+    </extent>
+    <head>
+      <charseq START="2169" END="2173">m-16s</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030328_150609.10-E32" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E32-77" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2196" END="2209">their families</charseq>
+    </extent>
+    <head>
+      <charseq START="2202" END="2209">families</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030328_150609.10-E33" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E33-79" TYPE="PRO" LDCTYPE="PTV">
+    <extent>
+      <charseq START="2310" END="2321">many of
+them</charseq>
+    </extent>
+    <head>
+      <charseq START="2310" END="2313">many</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030328_150609.10-E34" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E34-80" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="2337" END="2350">young children</charseq>
+    </extent>
+    <head>
+      <charseq START="2343" END="2350">children</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030328_150609.10-E35" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E35-82" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2362" END="2371">their kids</charseq>
+    </extent>
+    <head>
+      <charseq START="2368" END="2371">kids</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030328_150609.10-E36" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E36-83" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2378" END="2380">mom</charseq>
+    </extent>
+    <head>
+      <charseq START="2378" END="2380">mom</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="mom">
+      <charseq START="2378" END="2380">mom</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030328_150609.10-E37" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E37-84" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="2385" END="2387">dad</charseq>
+    </extent>
+    <head>
+      <charseq START="2385" END="2387">dad</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030328_150609.10-E38" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E38-62" TYPE="NOM" LDCTYPE="NOM" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="2032" END="2042">our country</charseq>
+    </extent>
+    <head>
+      <charseq START="2036" END="2042">country</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E38-63" TYPE="PRO" LDCTYPE="PRO" ROLE="PER" LDCATR="FALSE">
+    <extent>
+      <charseq START="2032" END="2034">our</charseq>
+    </extent>
+    <head>
+      <charseq START="2032" END="2034">our</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E38-92" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="101" END="103">u.s</charseq>
+    </extent>
+    <head>
+      <charseq START="101" END="103">u.s</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="u.s">
+      <charseq START="101" END="103">u.s</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030328_150609.10-E39" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E39-91" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="139" END="179">coalition forces fighting the war in iraq</charseq>
+    </extent>
+    <head>
+      <charseq START="149" END="154">forces</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030328_150609.10-E41" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E41-93" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="139" END="147">coalition</charseq>
+    </extent>
+    <head>
+      <charseq START="139" END="147">coalition</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="coalition">
+      <charseq START="139" END="147">coalition</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030328_150609.10-E42" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E42-51" TYPE="PRO" LDCTYPE="PRO" ROLE="LOC">
+    <extent>
+      <charseq START="1601" END="1605">there</charseq>
+    </extent>
+    <head>
+      <charseq START="1601" END="1605">there</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E42-65" TYPE="PRO" LDCTYPE="PRO" ROLE="LOC">
+    <extent>
+      <charseq START="2065" END="2069">there</charseq>
+    </extent>
+    <head>
+      <charseq START="2065" END="2069">there</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E42-94" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="176" END="179">iraq</charseq>
+    </extent>
+    <head>
+      <charseq START="176" END="179">iraq</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="iraq">
+      <charseq START="176" END="179">iraq</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030328_150609.10-E44" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E44-96" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="237" END="241">texas</charseq>
+    </extent>
+    <head>
+      <charseq START="237" END="241">texas</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="texas">
+      <charseq START="237" END="241">texas</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030328_150609.10-E45" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E45-88" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2484" END="2488">jamie</charseq>
+    </extent>
+    <head>
+      <charseq START="2484" END="2488">jamie</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E45-95" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1838" END="1839">me</charseq>
+    </extent>
+    <head>
+      <charseq START="1838" END="1839">me</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E45-97" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="244" END="260">cnn's jamie kolbe</charseq>
+    </extent>
+    <head>
+      <charseq START="250" END="260">jamie kolbe</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E45-100" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="282" END="286">jamie</charseq>
+    </extent>
+    <head>
+      <charseq START="282" END="286">jamie</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E45-105" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="353" END="360">reporter</charseq>
+    </extent>
+    <head>
+      <charseq START="353" END="360">reporter</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="jamie">
+      <charseq START="2484" END="2488">jamie</charseq>
+    </name>
+    <name NAME="jamie kolbe">
+      <charseq START="250" END="260">jamie kolbe</charseq>
+    </name>
+    <name NAME="jamie">
+      <charseq START="282" END="286">jamie</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030328_150609.10-E46" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E46-98" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="244" END="246">cnn</charseq>
+    </extent>
+    <head>
+      <charseq START="244" END="246">cnn</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="cnn">
+      <charseq START="244" END="246">cnn</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030328_150609.10-E47" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E47-101" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="291" END="304">these families</charseq>
+    </extent>
+    <head>
+      <charseq START="297" END="304">families</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E47-102" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="306" END="308">who</charseq>
+    </extent>
+    <head>
+      <charseq START="306" END="308">who</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E47-103" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="333" END="337">their</charseq>
+    </extent>
+    <head>
+      <charseq START="333" END="337">their</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030328_150609.10-E48" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030328_150609.10-E48-104" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="333" END="348">their
+loved ones</charseq>
+    </extent>
+    <head>
+      <charseq START="345" END="348">ones</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<timex2 ID="CNN_ENG_20030328_150609.10-T1" VAL="FUTURE_REF" ANCHOR_VAL="2003-03-28T15:28:47" ANCHOR_DIR="AFTER">
+  <timex2_mention ID="CNN_ENG_20030328_150609.10-T1-1">
+    <extent>
+      <charseq START="1587" END="1590">once</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030328_150609.10-T2" VAL="2003-03-28T15:28:47">
+  <timex2_mention ID="CNN_ENG_20030328_150609.10-T2-1">
+    <extent>
+      <charseq START="44" END="62">2003-03-28 15:28:47</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030328_150609.10-T3" VAL="2003-01">
+  <timex2_mention ID="CNN_ENG_20030328_150609.10-T3-1">
+    <extent>
+      <charseq START="579" END="585">january</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030328_150609.10-T4" VAL="2003-03-28T15:28:47">
+  <timex2_mention ID="CNN_ENG_20030328_150609.10-T4-1">
+    <extent>
+      <charseq START="591" END="593">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030328_150609.10-T5" VAL="2003-03-27">
+  <timex2_mention ID="CNN_ENG_20030328_150609.10-T5-1">
+    <extent>
+      <charseq START="835" END="843">yesterday</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030328_150609.10-T6" VAL="P1W" ANCHOR_VAL="2003-W13" ANCHOR_DIR="WITHIN">
+  <timex2_mention ID="CNN_ENG_20030328_150609.10-T6-1">
+    <extent>
+      <charseq START="851" END="872">the course of the week</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030328_150609.10-T7" VAL="2003-01">
+  <timex2_mention ID="CNN_ENG_20030328_150609.10-T7-1">
+    <extent>
+      <charseq START="1014" END="1020">january</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030328_150609.10-T8" VAL="2003-03-28T15:28:47">
+  <timex2_mention ID="CNN_ENG_20030328_150609.10-T8-1">
+    <extent>
+      <charseq START="1025" END="1027">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030328_150609.10-T9" VAL="PXM" ANCHOR_VAL="2003-03-28" ANCHOR_DIR="ENDING">
+  <timex2_mention ID="CNN_ENG_20030328_150609.10-T9-1">
+    <extent>
+      <charseq START="1154" END="1178">the last couple
+of months</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030328_150609.10-T10" VAL="2003-03-27">
+  <timex2_mention ID="CNN_ENG_20030328_150609.10-T10-1">
+    <extent>
+      <charseq START="2128" END="2136">yesterday</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030328_150609.10-T11" VAL="P1Y" ANCHOR_VAL="2003" ANCHOR_DIR="STARTING">
+  <timex2_mention ID="CNN_ENG_20030328_150609.10-T11-1">
+    <extent>
+      <charseq START="2418" END="2423">a year</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030328_150609.10-R1" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030328_150609.10-E22" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030328_150609.10-E38" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030328_150609.10-R1-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="68" END="111">tense of thousands of additional u.s. troops</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030328_150609.10-E22-1" ROLE="Arg-1">
+      <extent>
+        <charseq START="68" END="111">tense of thousands of additional u.s. troops</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030328_150609.10-E38-92" ROLE="Arg-2">
+      <extent>
+        <charseq START="101" END="103">u.s</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030328_150609.10-R2" TYPE="PHYS" SUBTYPE="Located" TENSE="Present" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030328_150609.10-E39" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030328_150609.10-E42" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030328_150609.10-R2-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="68" END="179">tense of thousands of additional u.s. troops are getting ready to join
+coalition forces fighting the war in iraq</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030328_150609.10-E39-91" ROLE="Arg-1">
+      <extent>
+        <charseq START="139" END="179">coalition forces fighting the war in iraq</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030328_150609.10-E42-94" ROLE="Arg-2">
+      <extent>
+        <charseq START="176" END="179">iraq</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030328_150609.10-R3" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030328_150609.10-E10" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030328_150609.10-E44" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030328_150609.10-R3-1" LEXICALCONDITION="Formulaic">
+    <extent>
+      <charseq START="227" END="241">fort hood texas</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030328_150609.10-E10-81" ROLE="Arg-1">
+      <extent>
+        <charseq START="227" END="241">fort hood texas</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030328_150609.10-E44-96" ROLE="Arg-2">
+      <extent>
+        <charseq START="237" END="241">texas</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030328_150609.10-R4" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030328_150609.10-E45" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030328_150609.10-E46" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030328_150609.10-R4-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="244" END="260">cnn's jamie kolbe</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030328_150609.10-E45-97" ROLE="Arg-1">
+      <extent>
+        <charseq START="244" END="260">cnn's jamie kolbe</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030328_150609.10-E46-98" ROLE="Arg-2">
+      <extent>
+        <charseq START="244" END="246">cnn</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030328_150609.10-R5" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030328_150609.10-E45" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030328_150609.10-E10" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030328_150609.10-R5-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="244" END="348">cnn's jamie kolbe is there
+reporting, jamie on these families who are saying good-bye to their
+loved ones</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030328_150609.10-E45-97" ROLE="Arg-1">
+      <extent>
+        <charseq START="244" END="260">cnn's jamie kolbe</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030328_150609.10-E10-99" ROLE="Arg-2">
+      <extent>
+        <charseq START="265" END="269">there</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030328_150609.10-R6" TYPE="PER-SOC" SUBTYPE="Family" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030328_150609.10-E47" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030328_150609.10-E48" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030328_150609.10-R6-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="333" END="348">their
+loved ones</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030328_150609.10-E47-103" ROLE="Arg-1">
+      <extent>
+        <charseq START="333" END="337">their</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030328_150609.10-E48-104" ROLE="Arg-2">
+      <extent>
+        <charseq START="333" END="348">their
+loved ones</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030328_150609.10-R7" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030328_150609.10-E9" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030328_150609.10-E10" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030328_150609.10-R7-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="457" END="905">in a strange way and this may
+sound unusual, there's a little sense of relief because these soldiers
+were set to leave in january and now they got second deployment
+orders, the delay, of course, the inability to get access to turkey,
+but along the way, the 4th infantry division is one seeped in
+tradition and there's a real sense of pride among the soldiers, 250 of
+which left yesterday, over the course of the week 12,000 will be
+leaving from here</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030328_150609.10-E9-14" ROLE="Arg-1">
+      <extent>
+        <charseq START="874" END="879">12,000</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030328_150609.10-E10-15" ROLE="Arg-2">
+      <extent>
+        <charseq START="902" END="905">here</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030328_150609.10-R8" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030328_150609.10-E11" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030328_150609.10-E12" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030328_150609.10-R8-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="908" END="949">another 4,000 from fort carson in colorado</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030328_150609.10-E11-90" ROLE="Arg-1">
+      <extent>
+        <charseq START="908" END="920">another 4,000</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030328_150609.10-E12-19" ROLE="Arg-2">
+      <extent>
+        <charseq START="927" END="949">fort carson in colorado</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030328_150609.10-R9" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030328_150609.10-E12" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030328_150609.10-E13" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030328_150609.10-R9-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="927" END="949">fort carson in colorado</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030328_150609.10-E12-19" ROLE="Arg-1">
+      <extent>
+        <charseq START="927" END="949">fort carson in colorado</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030328_150609.10-E13-20" ROLE="Arg-2">
+      <extent>
+        <charseq START="942" END="949">colorado</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030328_150609.10-R10" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030328_150609.10-E20" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030328_150609.10-E10" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030328_150609.10-R10-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="1329" END="1426">they are happy to be finally able to come and
+back up the first wave of troops that left from here</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030328_150609.10-E20-31" ROLE="Arg-1">
+      <extent>
+        <charseq START="1383" END="1406">the first wave of troops</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030328_150609.10-E10-34" ROLE="Arg-2">
+      <extent>
+        <charseq START="1423" END="1426">here</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030328_150609.10-R11" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030328_150609.10-E23" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030328_150609.10-E24" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030328_150609.10-R11-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="1473" END="1493">anywhere in the world</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030328_150609.10-E23-37" ROLE="Arg-1">
+      <extent>
+        <charseq START="1473" END="1493">anywhere in the world</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030328_150609.10-E24-38" ROLE="Arg-2">
+      <extent>
+        <charseq START="1485" END="1493">the world</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030328_150609.10-R12" TYPE="PHYS" SUBTYPE="Located" TENSE="Future" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030328_150609.10-E4" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030328_150609.10-E42" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030328_150609.10-R12-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="1566" END="1687">they will
+learn that once they get there their first stop will be to central
+command, they'll receive more specific orders</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030328_150609.10-E4-42" ROLE="Arg-1">
+      <extent>
+        <charseq START="1592" END="1595">they</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030328_150609.10-E42-51" ROLE="Arg-2">
+      <extent>
+        <charseq START="1601" END="1605">there</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_ENG_20030328_150609.10-R12-2" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="2045" END="2136">they
+are going over there to do a mission they believe in and as we said,
+250 left yesterday</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030328_150609.10-E4-64" ROLE="Arg-1">
+      <extent>
+        <charseq START="2045" END="2048">they</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030328_150609.10-E42-65" ROLE="Arg-2">
+      <extent>
+        <charseq START="2065" END="2069">there</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030328_150609.10-R13" TYPE="PHYS" SUBTYPE="Located" TENSE="Present" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030328_150609.10-E30" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030328_150609.10-E10" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030328_150609.10-R13-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="1824" END="1951">they all tell me, the
+soldiers you talk to and also some of the information people here at
+fort hood, they train like they fight</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030328_150609.10-E30-54" ROLE="Arg-1">
+      <extent>
+        <charseq START="1884" END="1923">the information people here at
+fort hood</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030328_150609.10-E10-55" ROLE="Arg-2">
+      <extent>
+        <charseq START="1907" END="1910">here</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030328_150609.10-R15" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030328_150609.10-E8" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030328_150609.10-E31" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030328_150609.10-R15-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="2163" END="2173">their m-16s</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030328_150609.10-E8-69" ROLE="Arg-1">
+      <extent>
+        <charseq START="2163" END="2167">their</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030328_150609.10-E31-70" ROLE="Arg-2">
+      <extent>
+        <charseq START="2163" END="2173">their m-16s</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030328_150609.10-R16" TYPE="PER-SOC" SUBTYPE="Family" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030328_150609.10-E8" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030328_150609.10-E32" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030328_150609.10-R16-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="2196" END="2209">their families</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030328_150609.10-E8-72" ROLE="Arg-1">
+      <extent>
+        <charseq START="2196" END="2200">their</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030328_150609.10-E32-77" ROLE="Arg-2">
+      <extent>
+        <charseq START="2196" END="2209">their families</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030328_150609.10-R17" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030328_150609.10-E32" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030328_150609.10-E10" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030328_150609.10-R17-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="2196" END="2423">their families were here to see them off, but they are
+determined to return though it is interesting to note that many of
+them, so many with young children have told their kids that mom or dad
+could be away for as long as a year</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030328_150609.10-E32-77" ROLE="Arg-1">
+      <extent>
+        <charseq START="2196" END="2209">their families</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030328_150609.10-E10-78" ROLE="Arg-2">
+      <extent>
+        <charseq START="2216" END="2219">here</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030328_150609.10-R18" TYPE="PER-SOC" SUBTYPE="Family" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030328_150609.10-E8" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030328_150609.10-E35" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030328_150609.10-R18-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="2362" END="2371">their kids</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030328_150609.10-E8-76" ROLE="Arg-1">
+      <extent>
+        <charseq START="2362" END="2366">their</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030328_150609.10-E35-82" ROLE="Arg-2">
+      <extent>
+        <charseq START="2362" END="2371">their kids</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030328_150609.10-EV1" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Future">
+  <event_argument REFID="CNN_ENG_20030328_150609.10-E22" ROLE="Artifact"/>
+  <event_argument REFID="CNN_ENG_20030328_150609.10-E42" ROLE="Destination"/>
+  <event_mention ID="CNN_ENG_20030328_150609.10-EV1-1">
+    <extent>
+      <charseq START="68" END="179">tense of thousands of additional u.s. troops are getting ready to join
+coalition forces fighting the war in iraq</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="68" END="179">tense of thousands of additional u.s. troops are getting ready to join
+coalition forces fighting the war in iraq</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="134" END="137">join</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030328_150609.10-E22-1" ROLE="Artifact">
+      <extent>
+        <charseq START="68" END="111">tense of thousands of additional u.s. troops</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030328_150609.10-E42-94" ROLE="Destination">
+      <extent>
+        <charseq START="176" END="179">iraq</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030328_150609.10-EV2" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030328_150609.10-E44" ROLE="Origin"/>
+  <event_mention ID="CNN_ENG_20030328_150609.10-EV2-1">
+    <extent>
+      <charseq START="192" END="241">departures are
+already underway at fort hood texas</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="182" END="241">the first departures are
+already underway at fort hood texas</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="192" END="201">departures</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030328_150609.10-E44-96" ROLE="Origin">
+      <extent>
+        <charseq START="237" END="241">texas</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030328_150609.10-EV3" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030328_150609.10-E4" ROLE="Artifact"/>
+  <event_argument REFID="CNN_ENG_20030328_150609.10-E10" ROLE="Origin"/>
+  <event_mention ID="CNN_ENG_20030328_150609.10-EV3-1">
+    <extent>
+      <charseq START="375" END="454">a military town, judy and little by little we
+are seeing these soldiers head out</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="353" END="454">reporter: and this is a military town, judy and little by little we
+are seeing these soldiers head out</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="447" END="454">head out</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030328_150609.10-E4-5" ROLE="Artifact">
+      <extent>
+        <charseq START="432" END="445">these soldiers</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030328_150609.10-E10-17" ROLE="Origin">
+      <extent>
+        <charseq START="375" END="389">a military town</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030328_150609.10-EV4" TYPE="Movement" SUBTYPE="Transport" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030328_150609.10-E4" ROLE="Artifact"/>
+  <event_argument REFID="CNN_ENG_20030328_150609.10-T3" ROLE="Time-Within"/>
+  <event_mention ID="CNN_ENG_20030328_150609.10-EV4-1">
+    <extent>
+      <charseq START="543" END="585">these soldiers
+were set to leave in january</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="457" END="905">in a strange way and this may
+sound unusual, there's a little sense of relief because these soldiers
+were set to leave in january and now they got second deployment
+orders, the delay, of course, the inability to get access to turkey,
+but along the way, the 4th infantry division is one seeped in
+tradition and there's a real sense of pride among the soldiers, 250 of
+which left yesterday, over the course of the week 12,000 will be
+leaving from here</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="570" END="574">leave</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030328_150609.10-E4-6" ROLE="Artifact">
+      <extent>
+        <charseq START="543" END="556">these soldiers</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030328_150609.10-T3-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="579" END="585">january</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030328_150609.10-EV5" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030328_150609.10-E39" ROLE="Attacker"/>
+  <event_argument REFID="CNN_ENG_20030328_150609.10-E42" ROLE="Place"/>
+  <event_argument REFID="CNN_ENG_20030328_150609.10-E39" ROLE="Target"/>
+  <event_mention ID="CNN_ENG_20030328_150609.10-EV5-1">
+    <extent>
+      <charseq START="139" END="179">coalition forces fighting the war in iraq</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="68" END="179">tense of thousands of additional u.s. troops are getting ready to join
+coalition forces fighting the war in iraq</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="169" END="171">war</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030328_150609.10-E39-91" ROLE="Attacker">
+      <extent>
+        <charseq START="139" END="179">coalition forces fighting the war in iraq</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030328_150609.10-E42-94" ROLE="Place">
+      <extent>
+        <charseq START="176" END="179">iraq</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030328_150609.10-E39-91" ROLE="Target">
+      <extent>
+        <charseq START="139" END="179">coalition forces fighting the war in iraq</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030328_150609.10-EV6" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Future">
+  <event_argument REFID="CNN_ENG_20030328_150609.10-E9" ROLE="Artifact"/>
+  <event_argument REFID="CNN_ENG_20030328_150609.10-E10" ROLE="Origin"/>
+  <event_argument REFID="CNN_ENG_20030328_150609.10-T6" ROLE="Time-Within"/>
+  <event_mention ID="CNN_ENG_20030328_150609.10-EV6-1">
+    <extent>
+      <charseq START="851" END="905">the course of the week 12,000 will be
+leaving from here</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="457" END="905">in a strange way and this may
+sound unusual, there's a little sense of relief because these soldiers
+were set to leave in january and now they got second deployment
+orders, the delay, of course, the inability to get access to turkey,
+but along the way, the 4th infantry division is one seeped in
+tradition and there's a real sense of pride among the soldiers, 250 of
+which left yesterday, over the course of the week 12,000 will be
+leaving from here</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="889" END="895">leaving</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030328_150609.10-E9-14" ROLE="Artifact">
+      <extent>
+        <charseq START="874" END="879">12,000</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030328_150609.10-E10-15" ROLE="Origin">
+      <extent>
+        <charseq START="902" END="905">here</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030328_150609.10-T6-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="851" END="872">the course of the week</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030328_150609.10-EV7" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030328_150609.10-E20" ROLE="Artifact"/>
+  <event_argument REFID="CNN_ENG_20030328_150609.10-E10" ROLE="Origin"/>
+  <event_mention ID="CNN_ENG_20030328_150609.10-EV7-1">
+    <extent>
+      <charseq START="1408" END="1426">that left from here</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1329" END="1426">they are happy to be finally able to come and
+back up the first wave of troops that left from here</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1413" END="1416">left</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030328_150609.10-E20-33" ROLE="Artifact">
+      <extent>
+        <charseq START="1408" END="1411">that</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030328_150609.10-E10-34" ROLE="Origin">
+      <extent>
+        <charseq START="1423" END="1426">here</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030328_150609.10-EV8" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030328_150609.10-E8" ROLE="Artifact"/>
+  <event_argument REFID="CNN_ENG_20030328_150609.10-E42" ROLE="Destination"/>
+  <event_argument REFID="CNN_ENG_20030328_150609.10-T10" ROLE="Time-Within"/>
+  <event_mention ID="CNN_ENG_20030328_150609.10-EV8-1">
+    <extent>
+      <charseq START="2065" END="2136">there to do a mission they believe in and as we said,
+250 left yesterday</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2045" END="2136">they
+are going over there to do a mission they believe in and as we said,
+250 left yesterday</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2123" END="2126">left</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030328_150609.10-E8-67" ROLE="Artifact">
+      <extent>
+        <charseq START="2119" END="2121">250</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030328_150609.10-E42-65" ROLE="Destination">
+      <extent>
+        <charseq START="2065" END="2069">there</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030328_150609.10-T10-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="2128" END="2136">yesterday</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030328_150609.10-EV9" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030328_150609.10-E4" ROLE="Attacker"/>
+  <event_mention ID="CNN_ENG_20030328_150609.10-EV9-1">
+    <extent>
+      <charseq START="1942" END="1951">they fight</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1824" END="1951">they all tell me, the
+soldiers you talk to and also some of the information people here at
+fort hood, they train like they fight</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1947" END="1951">fight</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030328_150609.10-E4-58" ROLE="Attacker">
+      <extent>
+        <charseq START="1942" END="1945">they</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030328_150609.10-EV10" TYPE="Movement" SUBTYPE="Transport" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Future">
+  <event_argument REFID="CNN_ENG_20030328_150609.10-E8" ROLE="Artifact"/>
+  <event_mention ID="CNN_ENG_20030328_150609.10-EV10-1">
+    <extent>
+      <charseq START="2242" END="2270">they are
+determined to return</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2139" END="2423">they were armedded with their m-16s, they are
+concerned. their families were here to see them off, but they are
+determined to return though it is interesting to note that many of
+them, so many with young children have told their kids that mom or dad
+could be away for as long as a year</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2265" END="2270">return</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030328_150609.10-E8-74" ROLE="Artifact">
+      <extent>
+        <charseq START="2242" END="2245">they</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030328_150609.10-EV11" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030328_150609.10-E8" ROLE="Artifact"/>
+  <event_argument REFID="CNN_ENG_20030328_150609.10-E10" ROLE="Origin"/>
+  <event_argument REFID="CNN_ENG_20030328_150609.10-T5" ROLE="Time-Within"/>
+  <event_mention ID="CNN_ENG_20030328_150609.10-EV11-1">
+    <extent>
+      <charseq START="817" END="905">250 of
+which left yesterday, over the course of the week 12,000 will be
+leaving from here</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="457" END="905">in a strange way and this may
+sound unusual, there's a little sense of relief because these soldiers
+were set to leave in january and now they got second deployment
+orders, the delay, of course, the inability to get access to turkey,
+but along the way, the 4th infantry division is one seeped in
+tradition and there's a real sense of pride among the soldiers, 250 of
+which left yesterday, over the course of the week 12,000 will be
+leaving from here</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="830" END="833">left</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030328_150609.10-E8-12" ROLE="Artifact">
+      <extent>
+        <charseq START="817" END="828">250 of
+which</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030328_150609.10-E10-15" ROLE="Origin">
+      <extent>
+        <charseq START="902" END="905">here</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030328_150609.10-T5-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="835" END="843">yesterday</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

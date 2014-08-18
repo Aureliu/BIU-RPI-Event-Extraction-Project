@@ -1,0 +1,567 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030404_163526.10.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030404_163526.10">
+<entity ID="CNN_ENG_20030404_163526.10-E1" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030404_163526.10-E1-4" TYPE="NOM" LDCTYPE="NOM" ROLE="ORG" LDCATR="FALSE">
+    <extent>
+      <charseq START="889" END="901">the coalition</charseq>
+    </extent>
+    <head>
+      <charseq START="893" END="901">coalition</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030404_163526.10-E1-6" TYPE="NOM" LDCTYPE="NOM" ROLE="ORG" LDCATR="FALSE">
+    <extent>
+      <charseq START="938" END="950">the coalition</charseq>
+    </extent>
+    <head>
+      <charseq START="942" END="950">coalition</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030404_163526.10-E1-7" TYPE="PRO" LDCTYPE="PRO" ROLE="ORG" LDCATR="FALSE">
+    <extent>
+      <charseq START="979" END="982">they</charseq>
+    </extent>
+    <head>
+      <charseq START="979" END="982">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030404_163526.10-E1-35" TYPE="NOM" LDCTYPE="NOMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="772" END="780">coalition</charseq>
+    </extent>
+    <head>
+      <charseq START="772" END="780">coalition</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030404_163526.10-E3" TYPE="FAC" SUBTYPE="Airport" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030404_163526.10-E3-2" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="818" END="821">what</charseq>
+    </extent>
+    <head>
+      <charseq START="818" END="821">what</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030404_163526.10-E3-3" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="827" END="871">formerly saddam hussein international
+airport</charseq>
+    </extent>
+    <head>
+      <charseq START="836" END="871">saddam hussein international
+airport</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030404_163526.10-E3-5" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="903" END="931">baghdad international
+airport</charseq>
+    </extent>
+    <head>
+      <charseq START="903" END="931">baghdad international
+airport</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030404_163526.10-E3-9" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1040" END="1050">the
+airport</charseq>
+    </extent>
+    <head>
+      <charseq START="1044" END="1050">airport</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="saddam hussein international airport">
+      <charseq START="836" END="871">saddam hussein international
+airport</charseq>
+    </name>
+    <name NAME="baghdad international airport">
+      <charseq START="903" END="931">baghdad international
+airport</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030404_163526.10-E6" TYPE="LOC" SUBTYPE="Region-General" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030404_163526.10-E6-8" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1007" END="1050">the area immediately surrounding the
+airport</charseq>
+    </extent>
+    <head>
+      <charseq START="1011" END="1014">area</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030404_163526.10-E7" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030404_163526.10-E7-21" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="86" END="90">iraqi</charseq>
+    </extent>
+    <head>
+      <charseq START="86" END="90">iraqi</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="iraqi">
+      <charseq START="86" END="90">iraqi</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030404_163526.10-E8" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030404_163526.10-E8-1" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="68" END="69">we</charseq>
+    </extent>
+    <head>
+      <charseq START="68" END="69">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030404_163526.10-E8-12" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1140" END="1141">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1140" END="1141">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030404_163526.10-E8-15" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1241" END="1242">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1241" END="1242">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030404_163526.10-E8-17" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="116" END="117">we</charseq>
+    </extent>
+    <head>
+      <charseq START="116" END="117">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030404_163526.10-E8-19" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="146" END="147">we</charseq>
+    </extent>
+    <head>
+      <charseq START="146" END="147">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030404_163526.10-E8-22" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="277" END="278">we</charseq>
+    </extent>
+    <head>
+      <charseq START="277" END="278">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030404_163526.10-E8-26" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="457" END="458">we</charseq>
+    </extent>
+    <head>
+      <charseq START="457" END="458">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030404_163526.10-E8-28" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="576" END="577">we</charseq>
+    </extent>
+    <head>
+      <charseq START="576" END="577">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030404_163526.10-E8-31" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="656" END="657">we</charseq>
+    </extent>
+    <head>
+      <charseq START="656" END="657">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030404_163526.10-E8-32" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="722" END="723">we</charseq>
+    </extent>
+    <head>
+      <charseq START="722" END="723">we</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030404_163526.10-E9" TYPE="PER" SUBTYPE="Indeterminate" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030404_163526.10-E9-14" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1213" END="1215">you</charseq>
+    </extent>
+    <head>
+      <charseq START="1213" END="1215">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030404_163526.10-E9-18" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="124" END="126">you</charseq>
+    </extent>
+    <head>
+      <charseq START="124" END="126">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030404_163526.10-E9-27" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="545" END="547">you</charseq>
+    </extent>
+    <head>
+      <charseq START="545" END="547">you</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030404_163526.10-E10" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030404_163526.10-E10-10" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="1098" END="1104">baghdad</charseq>
+    </extent>
+    <head>
+      <charseq START="1098" END="1104">baghdad</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030404_163526.10-E10-11" TYPE="PRO" LDCTYPE="WHQ" ROLE="LOC">
+    <extent>
+      <charseq START="1107" END="1111">where</charseq>
+    </extent>
+    <head>
+      <charseq START="1107" END="1111">where</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030404_163526.10-E10-13" TYPE="PRO" LDCTYPE="PRO" ROLE="LOC">
+    <extent>
+      <charseq START="1197" END="1201">there</charseq>
+    </extent>
+    <head>
+      <charseq START="1197" END="1201">there</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030404_163526.10-E10-20" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="193" END="199">baghdad</charseq>
+    </extent>
+    <head>
+      <charseq START="193" END="199">baghdad</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030404_163526.10-E10-25" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="386" END="392">baghdad</charseq>
+    </extent>
+    <head>
+      <charseq START="386" END="392">baghdad</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030404_163526.10-E10-29" TYPE="NOM" LDCTYPE="NOM" ROLE="GPE">
+    <extent>
+      <charseq START="598" END="605">the city</charseq>
+    </extent>
+    <head>
+      <charseq START="602" END="605">city</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030404_163526.10-E10-30" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE">
+    <extent>
+      <charseq START="624" END="626">its</charseq>
+    </extent>
+    <head>
+      <charseq START="624" END="626">its</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030404_163526.10-E10-33" TYPE="NOM" LDCTYPE="NOM" ROLE="LOC">
+    <extent>
+      <charseq START="762" END="769">the city</charseq>
+    </extent>
+    <head>
+      <charseq START="766" END="769">city</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="baghdad">
+      <charseq START="1098" END="1104">baghdad</charseq>
+    </name>
+    <name NAME="baghdad">
+      <charseq START="193" END="199">baghdad</charseq>
+    </name>
+    <name NAME="baghdad">
+      <charseq START="386" END="392">baghdad</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030404_163526.10-E11" TYPE="WEA" SUBTYPE="Projectile" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030404_163526.10-E11-16" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="265" END="270">tracer</charseq>
+    </extent>
+    <head>
+      <charseq START="265" END="270">tracer</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030404_163526.10-E12" TYPE="WEA" SUBTYPE="Shooting" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030404_163526.10-E12-23" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="295" END="312">anti-aircraft guns</charseq>
+    </extent>
+    <head>
+      <charseq START="309" END="312">guns</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030404_163526.10-E12-24" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="329" END="332">they</charseq>
+    </extent>
+    <head>
+      <charseq START="329" END="332">they</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030404_163526.10-E13" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030404_163526.10-E13-34" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="772" END="787">coalition forces</charseq>
+    </extent>
+    <head>
+      <charseq START="782" END="787">forces</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<timex2 ID="CNN_ENG_20030404_163526.10-T1" VAL="2003-04-04T16:41:56">
+  <timex2_mention ID="CNN_ENG_20030404_163526.10-T1-1">
+    <extent>
+      <charseq START="44" END="62">2003-04-04 16:41:56</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030404_163526.10-T2" VAL="2003-04-04T16:41:56">
+  <timex2_mention ID="CNN_ENG_20030404_163526.10-T2-1">
+    <extent>
+      <charseq START="76" END="78">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030404_163526.10-T3" VAL="2003-04-04T16:41:56">
+  <timex2_mention ID="CNN_ENG_20030404_163526.10-T3-1">
+    <extent>
+      <charseq START="566" END="573">just now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030404_163526.10-T4" VAL="2003-04-04T16:41:56" MOD="APPROX">
+  <timex2_mention ID="CNN_ENG_20030404_163526.10-T4-1">
+    <extent>
+      <charseq START="232" END="251">the last few
+moments</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030404_163526.10-T5" VAL="2003-04-04TNI">
+  <timex2_mention ID="CNN_ENG_20030404_163526.10-T5-1">
+    <extent>
+      <charseq START="428" END="434">tonight</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030404_163526.10-T6" VAL="2003-04-04T16:41:56" MOD="APPROX">
+  <timex2_mention ID="CNN_ENG_20030404_163526.10-T6-1">
+    <extent>
+      <charseq START="498" END="517">the last few moments</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030404_163526.10-T7" ANCHOR_VAL="2003-04-04-T16:41:56" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_ENG_20030404_163526.10-T7-1">
+    <extent>
+      <charseq START="874" END="876">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030404_163526.10-T8" VAL="2003-04-04TNI">
+  <timex2_mention ID="CNN_ENG_20030404_163526.10-T8-1">
+    <extent>
+      <charseq START="1119" END="1137">well into the night</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030404_163526.10-R1" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Present" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030404_163526.10-E13" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030404_163526.10-E3" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030404_163526.10-R1-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="722" END="931">we also know that 12 miles
+southwest of the city, coalition forces remain largely in
+control of what was formerly saddam hussein international
+airport, now renamed by the coalition baghdad international
+airport</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030404_163526.10-E13-34" ROLE="Arg-1">
+      <extent>
+        <charseq START="772" END="787">coalition forces</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030404_163526.10-E3-2" ROLE="Arg-2">
+      <extent>
+        <charseq START="818" END="821">what</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030404_163526.10-R2" TYPE="PHYS" SUBTYPE="Near" TENSE="Present" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030404_163526.10-E13" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030404_163526.10-E10" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030404_163526.10-R2-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="722" END="931">we also know that 12 miles
+southwest of the city, coalition forces remain largely in
+control of what was formerly saddam hussein international
+airport, now renamed by the coalition baghdad international
+airport</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030404_163526.10-E13-34" ROLE="Arg-1">
+      <extent>
+        <charseq START="772" END="787">coalition forces</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030404_163526.10-E10-33" ROLE="Arg-2">
+      <extent>
+        <charseq START="762" END="769">the city</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030404_163526.10-R3" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030404_163526.10-E13" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030404_163526.10-E1" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030404_163526.10-R3-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="772" END="787">coalition forces</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030404_163526.10-E13-34" ROLE="Arg-1">
+      <extent>
+        <charseq START="772" END="787">coalition forces</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030404_163526.10-E1-35" ROLE="Arg-2">
+      <extent>
+        <charseq START="772" END="780">coalition</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030404_163526.10-R4" TYPE="PHYS" SUBTYPE="Near" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030404_163526.10-E6" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030404_163526.10-E3" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030404_163526.10-R4-1" LEXICALCONDITION="Participial">
+    <extent>
+      <charseq START="1007" END="1050">the area immediately surrounding the
+airport</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030404_163526.10-E6-8" ROLE="Arg-1">
+      <extent>
+        <charseq START="1007" END="1050">the area immediately surrounding the
+airport</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030404_163526.10-E3-9" ROLE="Arg-2">
+      <extent>
+        <charseq START="1040" END="1050">the
+airport</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030404_163526.10-EV1" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030404_163526.10-E12" ROLE="Instrument"/>
+  <event_argument REFID="CNN_ENG_20030404_163526.10-E10" ROLE="Place"/>
+  <event_mention ID="CNN_ENG_20030404_163526.10-EV1-1">
+    <extent>
+      <charseq START="295" END="319">anti-aircraft guns firing</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="254" END="383">looks like tracer fire we're looking at,
+anti-aircraft guns firing at what they sense is some sort
+of threat coming from the skies</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="314" END="319">firing</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030404_163526.10-E12-23" ROLE="Instrument">
+      <extent>
+        <charseq START="295" END="312">anti-aircraft guns</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030404_163526.10-EV1-2">
+    <extent>
+      <charseq START="386" END="426">baghdad has had sporadic
+episodes of this</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="386" END="434">baghdad has had sporadic
+episodes of this tonight</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="423" END="426">this</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030404_163526.10-E10-25" ROLE="Place">
+      <extent>
+        <charseq START="386" END="392">baghdad</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030404_163526.10-EV2" TYPE="Transaction" SUBTYPE="Transfer-Ownership" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Present">
+  <event_argument REFID="CNN_ENG_20030404_163526.10-E3" ROLE="Artifact"/>
+  <event_argument REFID="CNN_ENG_20030404_163526.10-E13" ROLE="Buyer"/>
+  <event_mention ID="CNN_ENG_20030404_163526.10-EV2-1">
+    <extent>
+      <charseq START="772" END="821">coalition forces remain largely in
+control of what</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="722" END="931">we also know that 12 miles
+southwest of the city, coalition forces remain largely in
+control of what was formerly saddam hussein international
+airport, now renamed by the coalition baghdad international
+airport</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="807" END="813">control</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030404_163526.10-E3-2" ROLE="Artifact">
+      <extent>
+        <charseq START="818" END="821">what</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030404_163526.10-E13-34" ROLE="Buyer">
+      <extent>
+        <charseq START="772" END="787">coalition forces</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030404_163526.10-EV3" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Negative" GENERICITY="Specific" TENSE="Unspecified">
+  <event_mention ID="CNN_ENG_20030404_163526.10-EV3-1">
+    <extent>
+      <charseq START="446" END="455">explosions</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="437" END="542">no major explosions we're aware
+of, but just, apparently, in the last few moments, there
+has been activity</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="446" END="455">explosions</charseq>
+    </anchor>
+  </event_mention>
+</event>
+</document>
+</source_file>

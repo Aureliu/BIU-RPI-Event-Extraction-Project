@@ -1,0 +1,545 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030611_175950.5.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030611_175950.5">
+<entity ID="CNN_ENG_20030611_175950.5-E1" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030611_175950.5-E1-22" TYPE="PRO" LDCTYPE="PTV" LDCATR="FALSE">
+    <extent>
+      <charseq START="392" END="419">two of them
+members of hamas</charseq>
+    </extent>
+    <head>
+      <charseq START="392" END="394">two</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030611_175950.5-E1-24" TYPE="NOM" LDCTYPE="BAR" LDCATR="TRUE">
+    <extent>
+      <charseq START="404" END="419">members of hamas</charseq>
+    </extent>
+    <head>
+      <charseq START="404" END="410">members</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030611_175950.5-E2" TYPE="ORG" SUBTYPE="Non-Governmental" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030611_175950.5-E2-2" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="415" END="419">hamas</charseq>
+    </extent>
+    <head>
+      <charseq START="415" END="419">hamas</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="hamas">
+      <charseq START="415" END="419">hamas</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030611_175950.5-E3" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030611_175950.5-E3-3" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="422" END="431">mike hanna</charseq>
+    </extent>
+    <head>
+      <charseq START="422" END="431">mike hanna</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="mike hanna">
+      <charseq START="422" END="431">mike hanna</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030611_175950.5-E4" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030611_175950.5-E4-5" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="467" END="479">kelly
+wallace</charseq>
+    </extent>
+    <head>
+      <charseq START="467" END="479">kelly
+wallace</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030611_175950.5-E4-9" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="539" END="543">kelly</charseq>
+    </extent>
+    <head>
+      <charseq START="539" END="543">kelly</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="kelly wallace">
+      <charseq START="467" END="479">kelly
+wallace</charseq>
+    </name>
+    <name NAME="kelly">
+      <charseq START="539" END="543">kelly</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030611_175950.5-E5" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030611_175950.5-E5-6" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="484" END="536">kba sda where there's more helicopter attacks tonight</charseq>
+    </extent>
+    <head>
+      <charseq START="484" END="490">kba sda</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030611_175950.5-E5-7" TYPE="PRO" LDCTYPE="WHQ" ROLE="LOC">
+    <extent>
+      <charseq START="492" END="496">where</charseq>
+    </extent>
+    <head>
+      <charseq START="492" END="496">where</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="kba sda">
+      <charseq START="484" END="490">kba sda</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030611_175950.5-E6" TYPE="VEH" SUBTYPE="Air" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030611_175950.5-E6-8" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="511" END="520">helicopter</charseq>
+    </extent>
+    <head>
+      <charseq START="511" END="520">helicopter</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030611_175950.5-E7" TYPE="WEA" SUBTYPE="Exploding" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030611_175950.5-E7-10" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="239" END="250">suicide bomb</charseq>
+    </extent>
+    <head>
+      <charseq START="247" END="250">bomb</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030611_175950.5-E8" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030611_175950.5-E8-1" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="81" END="88">everyone</charseq>
+    </extent>
+    <head>
+      <charseq START="81" END="88">everyone</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030611_175950.5-E9" TYPE="GPE" SUBTYPE="GPE-Cluster" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030611_175950.5-E9-11" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="104" END="114">middle east</charseq>
+    </extent>
+    <head>
+      <charseq START="104" END="114">middle east</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="middle east">
+      <charseq START="104" END="114">middle east</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030611_175950.5-E10" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030611_175950.5-E10-12" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="176" END="189">president bush</charseq>
+    </extent>
+    <head>
+      <charseq START="186" END="189">bush</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030611_175950.5-E10-13" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="176" END="184">president</charseq>
+    </extent>
+    <head>
+      <charseq START="176" END="184">president</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="bush">
+      <charseq START="186" END="189">bush</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030611_175950.5-E12" TYPE="LOC" SUBTYPE="Celestial" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030611_175950.5-E12-14" TYPE="NOM" LDCTYPE="NOM" METONYMY_MENTION="TRUE">
+    <extent>
+      <charseq START="203" END="211">the
+world</charseq>
+    </extent>
+    <head>
+      <charseq START="207" END="211">world</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030611_175950.5-E13" TYPE="VEH" SUBTYPE="Land" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030611_175950.5-E13-15" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="262" END="266">a bus</charseq>
+    </extent>
+    <head>
+      <charseq START="264" END="266">bus</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030611_175950.5-E14" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030611_175950.5-E14-4" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="436" END="444">jerusalem</charseq>
+    </extent>
+    <head>
+      <charseq START="436" END="444">jerusalem</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030611_175950.5-E14-16" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="271" END="279">jerusalem</charseq>
+    </extent>
+    <head>
+      <charseq START="271" END="279">jerusalem</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="jerusalem">
+      <charseq START="436" END="444">jerusalem</charseq>
+    </name>
+    <name NAME="jerusalem">
+      <charseq START="271" END="279">jerusalem</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030611_175950.5-E15" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030611_175950.5-E15-17" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="288" END="296">16 people</charseq>
+    </extent>
+    <head>
+      <charseq START="291" END="296">people</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030611_175950.5-E16" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030611_175950.5-E16-18" TYPE="PRO" LDCTYPE="HLS">
+    <extent>
+      <charseq START="311" END="321">at least 70</charseq>
+    </extent>
+    <head>
+      <charseq START="320" END="321">70</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030611_175950.5-E17" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030611_175950.5-E17-19" TYPE="NAM" LDCTYPE="NAM" ROLE="ORG">
+    <extent>
+      <charseq START="356" END="361">israel</charseq>
+    </extent>
+    <head>
+      <charseq START="356" END="361">israel</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="israel">
+      <charseq START="356" END="361">israel</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030611_175950.5-E18" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030611_175950.5-E18-20" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="370" END="389">seven people in gaza</charseq>
+    </extent>
+    <head>
+      <charseq START="376" END="381">people</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030611_175950.5-E18-23" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="399" END="402">them</charseq>
+    </extent>
+    <head>
+      <charseq START="399" END="402">them</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030611_175950.5-E19" TYPE="LOC" SUBTYPE="Region-General" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030611_175950.5-E19-21" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="386" END="389">gaza</charseq>
+    </extent>
+    <head>
+      <charseq START="386" END="389">gaza</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="gaza">
+      <charseq START="386" END="389">gaza</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<timex2 ID="CNN_ENG_20030611_175950.5-T1" VAL="2003-06-11T18:08:56">
+  <timex2_mention ID="CNN_ENG_20030611_175950.5-T1-1">
+    <extent>
+      <charseq START="43" END="61">2003-06-11 18:08:56</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030611_175950.5-T2" VAL="2003-06-11TEV">
+  <timex2_mention ID="CNN_ENG_20030611_175950.5-T2-1">
+    <extent>
+      <charseq START="72" END="78">evening</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030611_175950.5-T3" VAL="2003-06-11TNI">
+  <timex2_mention ID="CNN_ENG_20030611_175950.5-T3-1">
+    <extent>
+      <charseq START="91" END="97">tonight</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030611_175950.5-T4" VAL="2003-06-11">
+  <timex2_mention ID="CNN_ENG_20030611_175950.5-T4-1">
+    <extent>
+      <charseq START="281" END="285">today</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030611_175950.5-T5" VAL="2003-06-11TNI">
+  <timex2_mention ID="CNN_ENG_20030611_175950.5-T5-1">
+    <extent>
+      <charseq START="530" END="536">tonight</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030611_175950.5-R1" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030611_175950.5-E18" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030611_175950.5-E19" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030611_175950.5-R1-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="370" END="389">seven people in gaza</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030611_175950.5-E18-20" ROLE="Arg-1">
+      <extent>
+        <charseq START="370" END="389">seven people in gaza</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030611_175950.5-E19-21" ROLE="Arg-2">
+      <extent>
+        <charseq START="386" END="389">gaza</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030611_175950.5-R2" TYPE="ORG-AFF" SUBTYPE="Membership" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030611_175950.5-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030611_175950.5-E2" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030611_175950.5-R2-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="404" END="419">members of hamas</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030611_175950.5-E1-24" ROLE="Arg-1">
+      <extent>
+        <charseq START="404" END="419">members of hamas</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030611_175950.5-E2-2" ROLE="Arg-2">
+      <extent>
+        <charseq START="415" END="419">hamas</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030611_175950.5-R3" TYPE="PHYS" SUBTYPE="Located" TENSE="Present" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030611_175950.5-E3" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030611_175950.5-E14" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030611_175950.5-R3-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="422" END="444">mike hanna in jerusalem</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030611_175950.5-E3-3" ROLE="Arg-1">
+      <extent>
+        <charseq START="422" END="431">mike hanna</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030611_175950.5-E14-4" ROLE="Arg-2">
+      <extent>
+        <charseq START="436" END="444">jerusalem</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030611_175950.5-R4" TYPE="PHYS" SUBTYPE="Located" TENSE="Present" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030611_175950.5-E4" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030611_175950.5-E5" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030611_175950.5-R4-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="467" END="536">kelly
+wallace in kba sda where there's more helicopter attacks tonight</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030611_175950.5-E4-5" ROLE="Arg-1">
+      <extent>
+        <charseq START="467" END="479">kelly
+wallace</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030611_175950.5-E5-6" ROLE="Arg-2">
+      <extent>
+        <charseq START="484" END="536">kba sda where there's more helicopter attacks tonight</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030611_175950.5-EV1" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030611_175950.5-E14" ROLE="Place"/>
+  <event_argument REFID="CNN_ENG_20030611_175950.5-E13" ROLE="Target"/>
+  <event_argument REFID="CNN_ENG_20030611_175950.5-E7" ROLE="Instrument"/>
+  <event_argument REFID="CNN_ENG_20030611_175950.5-T4" ROLE="Time-Within"/>
+  <event_mention ID="CNN_ENG_20030611_175950.5-EV1-1">
+    <extent>
+      <charseq START="239" END="285">suicide bomb attack on a bus in
+jerusalem today</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="176" END="285">president bush called upon the
+world to stop terrorism after a suicide bomb attack on a bus in
+jerusalem today</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="252" END="257">attack</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030611_175950.5-E14-16" ROLE="Place">
+      <extent>
+        <charseq START="271" END="279">jerusalem</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030611_175950.5-E13-15" ROLE="Target">
+      <extent>
+        <charseq START="262" END="266">a bus</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030611_175950.5-E7-10" ROLE="Instrument">
+      <extent>
+        <charseq START="239" END="250">suicide bomb</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030611_175950.5-T4-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="281" END="285">today</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030611_175950.5-EV2" TYPE="Life" SUBTYPE="Die" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030611_175950.5-E15" ROLE="Victim"/>
+  <event_mention ID="CNN_ENG_20030611_175950.5-EV2-1">
+    <extent>
+      <charseq START="288" END="308">16 people were killed</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="288" END="308">16 people were killed</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="303" END="308">killed</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030611_175950.5-E15-17" ROLE="Victim">
+      <extent>
+        <charseq START="288" END="296">16 people</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030611_175950.5-EV3" TYPE="Life" SUBTYPE="Die" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030611_175950.5-E16" ROLE="Victim"/>
+  <event_mention ID="CNN_ENG_20030611_175950.5-EV3-1">
+    <extent>
+      <charseq START="311" END="334">at least 70 were injured</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="311" END="334">at least 70 were injured</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="328" END="334">injured</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030611_175950.5-E16-18" ROLE="Victim">
+      <extent>
+        <charseq START="311" END="321">at least 70</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030611_175950.5-EV4" TYPE="Life" SUBTYPE="Die" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030611_175950.5-E18" ROLE="Victim"/>
+  <event_argument REFID="CNN_ENG_20030611_175950.5-E17" ROLE="Agent"/>
+  <event_argument REFID="CNN_ENG_20030611_175950.5-E19" ROLE="Place"/>
+  <event_mention ID="CNN_ENG_20030611_175950.5-EV4-1">
+    <extent>
+      <charseq START="356" END="389">israel killed seven people in gaza</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="337" END="419">shortly afterward, israel killed seven people in gaza, two of them
+members of hamas</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="363" END="368">killed</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030611_175950.5-E18-20" ROLE="Victim">
+      <extent>
+        <charseq START="370" END="389">seven people in gaza</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030611_175950.5-E17-19" ROLE="Agent">
+      <extent>
+        <charseq START="356" END="361">israel</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030611_175950.5-E19-21" ROLE="Place">
+      <extent>
+        <charseq START="386" END="389">gaza</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030611_175950.5-EV5" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Present">
+  <event_argument REFID="CNN_ENG_20030611_175950.5-E5" ROLE="Place"/>
+  <event_argument REFID="CNN_ENG_20030611_175950.5-E6" ROLE="Instrument"/>
+  <event_argument REFID="CNN_ENG_20030611_175950.5-T5" ROLE="Time-Within"/>
+  <event_mention ID="CNN_ENG_20030611_175950.5-EV5-1">
+    <extent>
+      <charseq START="484" END="536">kba sda where there's more helicopter attacks tonight</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="422" END="536">mike hanna in jerusalem, but first, going to kelly
+wallace in kba sda where there's more helicopter attacks tonight</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="522" END="528">attacks</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030611_175950.5-E5-6" ROLE="Place">
+      <extent>
+        <charseq START="484" END="536">kba sda where there's more helicopter attacks tonight</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030611_175950.5-E6-8" ROLE="Instrument">
+      <extent>
+        <charseq START="511" END="520">helicopter</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030611_175950.5-T5-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="530" END="536">tonight</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

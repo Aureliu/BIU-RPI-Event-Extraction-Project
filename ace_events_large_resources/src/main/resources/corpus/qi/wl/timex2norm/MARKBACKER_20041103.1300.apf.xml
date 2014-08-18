@@ -1,0 +1,1411 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="MARKBACKER_20041103.1300.sgm" SOURCE="weblog" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="MARKBACKER_20041103.1300">
+<entity ID="MARKBACKER_20041103.1300-E1" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="MARKBACKER_20041103.1300-E1-2" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1172" END="1212">the first
+person to come up with the idea</charseq>
+    </extent>
+    <head>
+      <charseq START="1182" END="1187">person</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E1-3" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="1218" END="1320">Benjamin Franklin who did it on
+behalf of some friends that owned oil companies (oil was used in lamps)</charseq>
+    </extent>
+    <head>
+      <charseq START="1218" END="1234">Benjamin Franklin</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E1-4" TYPE="PRO" LDCTYPE="WHQ" LDCATR="FALSE">
+    <extent>
+      <charseq START="1236" END="1238">who</charseq>
+    </extent>
+    <head>
+      <charseq START="1236" END="1238">who</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Benjamin Franklin">
+      <charseq START="1218" END="1234">Benjamin Franklin</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKBACKER_20041103.1300-E3" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="MARKBACKER_20041103.1300-E3-5" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1260" END="1320">some friends that owned oil companies (oil was used in lamps)</charseq>
+    </extent>
+    <head>
+      <charseq START="1265" END="1271">friends</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E3-6" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="1273" END="1276">that</charseq>
+    </extent>
+    <head>
+      <charseq START="1273" END="1276">that</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKBACKER_20041103.1300-E4" TYPE="ORG" SUBTYPE="Commercial" CLASS="GEN">
+  <entity_mention ID="MARKBACKER_20041103.1300-E4-7" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1284" END="1296">oil companies</charseq>
+    </extent>
+    <head>
+      <charseq START="1288" END="1296">companies</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKBACKER_20041103.1300-E5" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="MARKBACKER_20041103.1300-E5-9" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1383" END="1396">lots of
+people</charseq>
+    </extent>
+    <head>
+      <charseq START="1391" END="1396">people</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKBACKER_20041103.1300-E6" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="MARKBACKER_20041103.1300-E6-10" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1420" END="1445">some 100 million Americans</charseq>
+    </extent>
+    <head>
+      <charseq START="1437" END="1445">Americans</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E6-11" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1475" END="1479">their</charseq>
+    </extent>
+    <head>
+      <charseq START="1475" END="1479">their</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKBACKER_20041103.1300-E7" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="MARKBACKER_20041103.1300-E7-12" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1509" END="1516">Congress</charseq>
+    </extent>
+    <head>
+      <charseq START="1509" END="1516">Congress</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Congress">
+      <charseq START="1509" END="1516">Congress</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKBACKER_20041103.1300-E8" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="MARKBACKER_20041103.1300-E8-13" TYPE="NOM" LDCTYPE="NOM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="1591" END="1601">the country</charseq>
+    </extent>
+    <head>
+      <charseq START="1595" END="1601">country</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E8-14" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1637" END="1640">U.S.</charseq>
+    </extent>
+    <head>
+      <charseq START="1637" END="1640">U.S.</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E8-53" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="2867" END="2873">America</charseq>
+    </extent>
+    <head>
+      <charseq START="2867" END="2873">America</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E8-54" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="2887" END="2889">its</charseq>
+    </extent>
+    <head>
+      <charseq START="2887" END="2889">its</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="U.S.">
+      <charseq START="1637" END="1640">U.S.</charseq>
+    </name>
+    <name NAME="America">
+      <charseq START="2867" END="2873">America</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKBACKER_20041103.1300-E10" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="MARKBACKER_20041103.1300-E10-15" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1722" END="1745">President Lyndon
+Johnson</charseq>
+    </extent>
+    <head>
+      <charseq START="1732" END="1745">Lyndon
+Johnson</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E10-16" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1722" END="1730">President</charseq>
+    </extent>
+    <head>
+      <charseq START="1722" END="1730">President</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Lyndon Johnson">
+      <charseq START="1732" END="1745">Lyndon
+Johnson</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKBACKER_20041103.1300-E12" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="USP">
+  <entity_mention ID="MARKBACKER_20041103.1300-E12-17" TYPE="NOM" LDCTYPE="NOM" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="1855" END="1897">Any State that wanted to
+be exempt from DST</charseq>
+    </extent>
+    <head>
+      <charseq START="1859" END="1863">State</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E12-18" TYPE="PRO" LDCTYPE="WHQ" ROLE="ORG" LDCATR="FALSE">
+    <extent>
+      <charseq START="1865" END="1868">that</charseq>
+    </extent>
+    <head>
+      <charseq START="1865" END="1868">that</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E12-19" TYPE="NOM" LDCTYPE="NOMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1924" END="1928">state</charseq>
+    </extent>
+    <head>
+      <charseq START="1924" END="1928">state</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKBACKER_20041103.1300-E14" TYPE="LOC" SUBTYPE="Region-General" CLASS="SPC">
+  <entity_mention ID="MARKBACKER_20041103.1300-E14-23" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2048" END="2069">Indiana's eastern half</charseq>
+    </extent>
+    <head>
+      <charseq START="2066" END="2069">half</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKBACKER_20041103.1300-E15" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="MARKBACKER_20041103.1300-E15-24" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE">
+    <extent>
+      <charseq START="2048" END="2054">Indiana</charseq>
+    </extent>
+    <head>
+      <charseq START="2048" END="2054">Indiana</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Indiana">
+      <charseq START="2048" END="2054">Indiana</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKBACKER_20041103.1300-E16" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="MARKBACKER_20041103.1300-E16-25" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE">
+    <extent>
+      <charseq START="2111" END="2117">Arizona</charseq>
+    </extent>
+    <head>
+      <charseq START="2111" END="2117">Arizona</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Arizona">
+      <charseq START="2111" END="2117">Arizona</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKBACKER_20041103.1300-E17" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="MARKBACKER_20041103.1300-E17-26" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2142" END="2161">one tribe of Indians</charseq>
+    </extent>
+    <head>
+      <charseq START="2146" END="2150">tribe</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKBACKER_20041103.1300-E18" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="MARKBACKER_20041103.1300-E18-27" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2155" END="2161">Indians</charseq>
+    </extent>
+    <head>
+      <charseq START="2155" END="2161">Indians</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Indians">
+      <charseq START="2155" END="2161">Indians</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKBACKER_20041103.1300-E19" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="MARKBACKER_20041103.1300-E19-28" TYPE="NOM" LDCTYPE="NOM" ROLE="LOC">
+    <extent>
+      <charseq START="2178" END="2189">three states</charseq>
+    </extent>
+    <head>
+      <charseq START="2184" END="2189">states</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKBACKER_20041103.1300-E20" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="USP">
+  <entity_mention ID="MARKBACKER_20041103.1300-E20-29" TYPE="NOM" LDCTYPE="NOM" ROLE="GPE">
+    <extent>
+      <charseq START="2196" END="2213">those other states</charseq>
+    </extent>
+    <head>
+      <charseq START="2208" END="2213">states</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKBACKER_20041103.1300-E21" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="MARKBACKER_20041103.1300-E21-30" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE">
+    <extent>
+      <charseq START="2227" END="2232">Hawaii</charseq>
+    </extent>
+    <head>
+      <charseq START="2227" END="2232">Hawaii</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E21-31" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE">
+    <extent>
+      <charseq START="2268" END="2271">they</charseq>
+    </extent>
+    <head>
+      <charseq START="2268" END="2271">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E21-35" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE">
+    <extent>
+      <charseq START="2336" END="2341">Hawaii</charseq>
+    </extent>
+    <head>
+      <charseq START="2336" END="2341">Hawaii</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E21-37" TYPE="NAM" LDCTYPE="NAM" ROLE="PER">
+    <extent>
+      <charseq START="2375" END="2388">the Hawaiian's</charseq>
+    </extent>
+    <head>
+      <charseq START="2379" END="2388">Hawaiian's</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E21-38" TYPE="PRO" LDCTYPE="PRO" ROLE="PER">
+    <extent>
+      <charseq START="2429" END="2432">they</charseq>
+    </extent>
+    <head>
+      <charseq START="2429" END="2432">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Hawaii">
+      <charseq START="2227" END="2232">Hawaii</charseq>
+    </name>
+    <name NAME="Hawaii">
+      <charseq START="2336" END="2341">Hawaii</charseq>
+    </name>
+    <name NAME="Hawaiian's">
+      <charseq START="2379" END="2388">Hawaiian's</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKBACKER_20041103.1300-E22" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="MARKBACKER_20041103.1300-E22-32" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="2286" END="2290">Japan</charseq>
+    </extent>
+    <head>
+      <charseq START="2286" END="2290">Japan</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E22-34" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE">
+    <extent>
+      <charseq START="2314" END="2318">Japan</charseq>
+    </extent>
+    <head>
+      <charseq START="2314" END="2318">Japan</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E22-39" TYPE="NOM" LDCTYPE="NOM" ROLE="PER">
+    <extent>
+      <charseq START="2452" END="2459">the Japs</charseq>
+    </extent>
+    <head>
+      <charseq START="2456" END="2459">Japs</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Japan">
+      <charseq START="2286" END="2290">Japan</charseq>
+    </name>
+    <name NAME="Japan">
+      <charseq START="2314" END="2318">Japan</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKBACKER_20041103.1300-E23" TYPE="LOC" SUBTYPE="Region-General" CLASS="USP">
+  <entity_mention ID="MARKBACKER_20041103.1300-E23-33" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2300" END="2301">us</charseq>
+    </extent>
+    <head>
+      <charseq START="2300" END="2301">us</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKBACKER_20041103.1300-E24" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="MARKBACKER_20041103.1300-E24-1" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="136" END="136">I</charseq>
+    </extent>
+    <head>
+      <charseq START="136" END="136">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E24-8" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1324" END="1324">I</charseq>
+    </extent>
+    <head>
+      <charseq START="1324" END="1324">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E24-22" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2039" END="2039">I</charseq>
+    </extent>
+    <head>
+      <charseq START="2039" END="2039">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E24-40" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2483" END="2483">I</charseq>
+    </extent>
+    <head>
+      <charseq START="2483" END="2483">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E24-41" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2518" END="2518">I</charseq>
+    </extent>
+    <head>
+      <charseq START="2518" END="2518">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E24-42" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2539" END="2539">I</charseq>
+    </extent>
+    <head>
+      <charseq START="2539" END="2539">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E24-43" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2580" END="2580">I</charseq>
+    </extent>
+    <head>
+      <charseq START="2580" END="2580">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E24-44" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2616" END="2616">I</charseq>
+    </extent>
+    <head>
+      <charseq START="2616" END="2616">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E24-45" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2641" END="2641">I</charseq>
+    </extent>
+    <head>
+      <charseq START="2641" END="2641">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E24-46" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2659" END="2659">I</charseq>
+    </extent>
+    <head>
+      <charseq START="2659" END="2659">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E24-47" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2674" END="2674">I</charseq>
+    </extent>
+    <head>
+      <charseq START="2674" END="2674">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E24-48" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2686" END="2687">my</charseq>
+    </extent>
+    <head>
+      <charseq START="2686" END="2687">my</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E24-49" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2732" END="2732">I</charseq>
+    </extent>
+    <head>
+      <charseq START="2732" END="2732">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E24-50" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2799" END="2799">I</charseq>
+    </extent>
+    <head>
+      <charseq START="2799" END="2799">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E24-51" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2846" END="2847">me</charseq>
+    </extent>
+    <head>
+      <charseq START="2846" END="2847">me</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E24-52" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2851" END="2851">I</charseq>
+    </extent>
+    <head>
+      <charseq START="2851" END="2851">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E24-55" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2936" END="2936">I</charseq>
+    </extent>
+    <head>
+      <charseq START="2936" END="2936">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E24-56" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2960" END="2960">I</charseq>
+    </extent>
+    <head>
+      <charseq START="2960" END="2960">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E24-58" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3052" END="3052">I</charseq>
+    </extent>
+    <head>
+      <charseq START="3052" END="3052">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E24-60" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3173" END="3174">me</charseq>
+    </extent>
+    <head>
+      <charseq START="3173" END="3174">me</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E24-61" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3177" END="3177">I</charseq>
+    </extent>
+    <head>
+      <charseq START="3177" END="3177">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E24-65" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3238" END="3239">me</charseq>
+    </extent>
+    <head>
+      <charseq START="3238" END="3239">me</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E24-66" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3241" END="3242">my</charseq>
+    </extent>
+    <head>
+      <charseq START="3241" END="3242">my</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E24-67" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3278" END="3283">myself</charseq>
+    </extent>
+    <head>
+      <charseq START="3278" END="3283">myself</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E24-68" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3308" END="3309">my</charseq>
+    </extent>
+    <head>
+      <charseq START="3308" END="3309">my</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E24-70" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3358" END="3360">you</charseq>
+    </extent>
+    <head>
+      <charseq START="3358" END="3360">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E24-75" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3467" END="3469">You</charseq>
+    </extent>
+    <head>
+      <charseq START="3467" END="3469">You</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E24-76" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="155" END="155">I</charseq>
+    </extent>
+    <head>
+      <charseq START="155" END="155">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E24-77" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="101" END="111">Mark Backer</charseq>
+    </extent>
+    <head>
+      <charseq START="101" END="111">Mark Backer</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E24-80" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="181" END="181">I</charseq>
+    </extent>
+    <head>
+      <charseq START="181" END="181">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E24-81" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="209" END="209">I</charseq>
+    </extent>
+    <head>
+      <charseq START="209" END="209">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E24-82" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="234" END="235">my</charseq>
+    </extent>
+    <head>
+      <charseq START="234" END="235">my</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E24-83" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="243" END="243">I</charseq>
+    </extent>
+    <head>
+      <charseq START="243" END="243">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E24-84" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="332" END="333">my</charseq>
+    </extent>
+    <head>
+      <charseq START="332" END="333">my</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E24-85" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="364" END="364">I</charseq>
+    </extent>
+    <head>
+      <charseq START="364" END="364">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E24-86" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="389" END="390">my</charseq>
+    </extent>
+    <head>
+      <charseq START="389" END="390">my</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E24-88" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="446" END="446">I</charseq>
+    </extent>
+    <head>
+      <charseq START="446" END="446">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E24-89" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="484" END="484">I</charseq>
+    </extent>
+    <head>
+      <charseq START="484" END="484">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E24-90" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="551" END="551">I</charseq>
+    </extent>
+    <head>
+      <charseq START="551" END="551">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E24-93" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="792" END="793">My</charseq>
+    </extent>
+    <head>
+      <charseq START="792" END="793">My</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E24-98" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="914" END="914">I</charseq>
+    </extent>
+    <head>
+      <charseq START="914" END="914">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E24-100" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1116" END="1116">I</charseq>
+    </extent>
+    <head>
+      <charseq START="1116" END="1116">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Mark Backer">
+      <charseq START="101" END="111">Mark Backer</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKBACKER_20041103.1300-E25" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="MARKBACKER_20041103.1300-E25-57" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="2985" END="2988">home</charseq>
+    </extent>
+    <head>
+      <charseq START="2985" END="2988">home</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKBACKER_20041103.1300-E26" TYPE="FAC" SUBTYPE="Subarea-Facility" CLASS="SPC">
+  <entity_mention ID="MARKBACKER_20041103.1300-E26-62" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="3196" END="3204">the lobby</charseq>
+    </extent>
+    <head>
+      <charseq START="3200" END="3204">lobby</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKBACKER_20041103.1300-E27" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="MARKBACKER_20041103.1300-E27-63" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="3210" END="3251">the girls
+that are bringing me my Krystals</charseq>
+    </extent>
+    <head>
+      <charseq START="3214" END="3218">girls</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E27-64" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="3220" END="3223">that</charseq>
+    </extent>
+    <head>
+      <charseq START="3220" END="3223">that</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKBACKER_20041103.1300-E28" TYPE="FAC" SUBTYPE="Subarea-Facility" CLASS="SPC">
+  <entity_mention ID="MARKBACKER_20041103.1300-E28-69" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="3308" END="3314">my cube</charseq>
+    </extent>
+    <head>
+      <charseq START="3311" END="3314">cube</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKBACKER_20041103.1300-E29" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="MARKBACKER_20041103.1300-E29-71" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="3408" END="3422">Satan's
+minions</charseq>
+    </extent>
+    <head>
+      <charseq START="3416" END="3422">minions</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKBACKER_20041103.1300-E30" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="MARKBACKER_20041103.1300-E30-72" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="3408" END="3412">Satan</charseq>
+    </extent>
+    <head>
+      <charseq START="3408" END="3412">Satan</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Satan">
+      <charseq START="3408" END="3412">Satan</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKBACKER_20041103.1300-E31" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="MARKBACKER_20041103.1300-E31-73" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="3497" END="3501">China</charseq>
+    </extent>
+    <head>
+      <charseq START="3497" END="3501">China</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="China">
+      <charseq START="3497" END="3501">China</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKBACKER_20041103.1300-E32" TYPE="LOC" SUBTYPE="Region-General" CLASS="USP">
+  <entity_mention ID="MARKBACKER_20041103.1300-E32-74" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3529" END="3538">everywhere</charseq>
+    </extent>
+    <head>
+      <charseq START="3529" END="3538">everywhere</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKBACKER_20041103.1300-E33" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="MARKBACKER_20041103.1300-E33-78" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="3320" END="3322">Amy</charseq>
+    </extent>
+    <head>
+      <charseq START="3320" END="3322">Amy</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Amy">
+      <charseq START="3320" END="3322">Amy</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKBACKER_20041103.1300-E34" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="MARKBACKER_20041103.1300-E34-79" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="3428" END="3442">Jassalasca Jape</charseq>
+    </extent>
+    <head>
+      <charseq START="3428" END="3442">Jassalasca Jape</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Jassalasca Jape">
+      <charseq START="3428" END="3442">Jassalasca Jape</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKBACKER_20041103.1300-E35" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="MARKBACKER_20041103.1300-E35-87" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="414" END="415">we</charseq>
+    </extent>
+    <head>
+      <charseq START="414" END="415">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E35-91" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="600" END="601">We</charseq>
+    </extent>
+    <head>
+      <charseq START="600" END="601">We</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E35-92" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="674" END="676">our</charseq>
+    </extent>
+    <head>
+      <charseq START="674" END="676">our</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKBACKER_20041103.1300-E36" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="MARKBACKER_20041103.1300-E36-94" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="808" END="846">the assclowns that invented this idiocy</charseq>
+    </extent>
+    <head>
+      <charseq START="812" END="820">assclowns</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E36-95" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="822" END="825">that</charseq>
+    </extent>
+    <head>
+      <charseq START="822" END="825">that</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKBACKER_20041103.1300-E37" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="MARKBACKER_20041103.1300-E37-96" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="852" END="910">the
+goobers that perpetuate it in such a ridiculous fashion</charseq>
+    </extent>
+    <head>
+      <charseq START="856" END="862">goobers</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E37-97" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="864" END="867">that</charseq>
+    </extent>
+    <head>
+      <charseq START="864" END="867">that</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKBACKER_20041103.1300-E38" TYPE="PER" SUBTYPE="Indeterminate" CLASS="USP">
+  <entity_mention ID="MARKBACKER_20041103.1300-E38-20" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1979" END="1981">you</charseq>
+    </extent>
+    <head>
+      <charseq START="1979" END="1981">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E38-21" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2009" END="2011">you</charseq>
+    </extent>
+    <head>
+      <charseq START="2009" END="2011">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E38-36" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2365" END="2367">you</charseq>
+    </extent>
+    <head>
+      <charseq START="2365" END="2367">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E38-59" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3159" END="3161">you</charseq>
+    </extent>
+    <head>
+      <charseq START="3159" END="3161">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKBACKER_20041103.1300-E38-99" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1026" END="1029">your</charseq>
+    </extent>
+    <head>
+      <charseq START="1026" END="1029">your</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<value ID="MARKBACKER_20041103.1300-V1" TYPE="Contact-Info" SUBTYPE="URL">
+  <value_mention ID="MARKBACKER_20041103.1300-V1-1">
+    <extent>
+      <charseq START="511" END="548">http://webexhibits.org/daylightsaving/</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="MARKBACKER_20041103.1300-V2" TYPE="Numeric" SUBTYPE="Percent">
+  <value_mention ID="MARKBACKER_20041103.1300-V2-1">
+    <extent>
+      <charseq START="2881" END="2882">1%</charseq>
+    </extent>
+  </value_mention>
+</value>
+<timex2 ID="MARKBACKER_20041103.1300-T1" VAL="P36Y" ANCHOR_VAL="2004" ANCHOR_DIR="ENDING">
+  <timex2_mention ID="MARKBACKER_20041103.1300-T1-1">
+    <extent>
+      <charseq START="141" END="152">36 years old</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKBACKER_20041103.1300-T2" VAL="T12:00">
+  <timex2_mention ID="MARKBACKER_20041103.1300-T2-1">
+    <extent>
+      <charseq START="2770" END="2773">noon</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKBACKER_20041103.1300-T3" VAL="PAST_REF" ANCHOR_VAL="2004" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="MARKBACKER_20041103.1300-T3-1">
+    <extent>
+      <charseq START="303" END="316">over the years</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKBACKER_20041103.1300-T4" VAL="TEV" SET="YES">
+  <timex2_mention ID="MARKBACKER_20041103.1300-T4-1">
+    <extent>
+      <charseq START="645" END="659">summer evenings</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKBACKER_20041103.1300-T5" VAL="TXX">
+  <timex2_mention ID="MARKBACKER_20041103.1300-T5-1">
+    <extent>
+      <charseq START="685" END="691">an hour</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKBACKER_20041103.1300-T6" VAL="XXXX-SU" SET="YES">
+  <timex2_mention ID="MARKBACKER_20041103.1300-T6-1">
+    <extent>
+      <charseq START="704" END="713">the
+summer</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKBACKER_20041103.1300-T7" SET="YES">
+  <timex2_mention ID="MARKBACKER_20041103.1300-T7-1">
+    <extent>
+      <charseq START="1057" END="1065">New Years</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKBACKER_20041103.1300-T8" VAL="XXXX-07-04" SET="YES">
+  <timex2_mention ID="MARKBACKER_20041103.1300-T8-1">
+    <extent>
+      <charseq START="1071" END="1088">the Fourth of July</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKBACKER_20041103.1300-T9" VAL="1966">
+  <timex2_mention ID="MARKBACKER_20041103.1300-T9-1">
+    <extent>
+      <charseq START="1414" END="1417">1966</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKBACKER_20041103.1300-T10" VAL="1966-04-12">
+  <timex2_mention ID="MARKBACKER_20041103.1300-T10-1">
+    <extent>
+      <charseq START="1704" END="1716">12 April 1966</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKBACKER_20041103.1300-T11" VAL="1966-04-24">
+  <timex2_mention ID="MARKBACKER_20041103.1300-T11-1">
+    <extent>
+      <charseq START="1788" END="1811">the last Sunday of
+April</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKBACKER_20041103.1300-T12" VAL="1966-10-30">
+  <timex2_mention ID="MARKBACKER_20041103.1300-T12-1">
+    <extent>
+      <charseq START="1827" END="1852">the last Sunday of October</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKBACKER_20041103.1300-T13" VAL="T23">
+  <timex2_mention ID="MARKBACKER_20041103.1300-T13-1">
+    <extent>
+      <charseq START="2496" END="2499">11pm</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKBACKER_20041103.1300-T14" VAL="T22">
+  <timex2_mention ID="MARKBACKER_20041103.1300-T14-1">
+    <extent>
+      <charseq START="2504" END="2507">10pm</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKBACKER_20041103.1300-T15" VAL="T21">
+  <timex2_mention ID="MARKBACKER_20041103.1300-T15-1">
+    <extent>
+      <charseq START="2512" END="2514">9pm</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKBACKER_20041103.1300-T16" VAL="T05:30">
+  <timex2_mention ID="MARKBACKER_20041103.1300-T16-1">
+    <extent>
+      <charseq START="2530" END="2533">5:30</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKBACKER_20041103.1300-T17" VAL="XXXX-WXX">
+  <timex2_mention ID="MARKBACKER_20041103.1300-T17-1">
+    <extent>
+      <charseq START="2622" END="2634">two weeks ago</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKBACKER_20041103.1300-T18" VAL="XXXX-XX-XXT10:30" SET="YES">
+  <timex2_mention ID="MARKBACKER_20041103.1300-T18-1">
+    <extent>
+      <charseq START="2713" END="2729">10:30am
+every day</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKBACKER_20041103.1300-T19" VAL="XXXX-SU" SET="YES">
+  <timex2_mention ID="MARKBACKER_20041103.1300-T19-1">
+    <extent>
+      <charseq START="645" END="650">summer</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKBACKER_20041103.1300-T20" VAL="T11:30">
+  <timex2_mention ID="MARKBACKER_20041103.1300-T20-1">
+    <extent>
+      <charseq START="2760" END="2764">11:30</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKBACKER_20041103.1300-T21" VAL="T10:00" MOD="AFTER">
+  <timex2_mention ID="MARKBACKER_20041103.1300-T21-1">
+    <extent>
+      <charseq START="2813" END="2822">after 10am</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKBACKER_20041103.1300-T22" VAL="1966">
+  <timex2_mention ID="MARKBACKER_20041103.1300-T22-1">
+    <extent>
+      <charseq START="1628" END="1631">1966</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKBACKER_20041103.1300-T23" VAL="TXX-04">
+  <timex2_mention ID="MARKBACKER_20041103.1300-T23-1">
+    <extent>
+      <charseq START="2923" END="2933">those times</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKBACKER_20041103.1300-T24" VAL="T15:39:00">
+  <timex2_mention ID="MARKBACKER_20041103.1300-T24-1">
+    <extent>
+      <charseq START="3326" END="3344">????-??-??T15:39:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKBACKER_20041103.1300-T25" VAL="T20:18:00">
+  <timex2_mention ID="MARKBACKER_20041103.1300-T25-1">
+    <extent>
+      <charseq START="3446" END="3464">????-??-??T20:18:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKBACKER_20041103.1300-T26" VAL="PRESENT_REF" ANCHOR_VAL="2004-11-03T13:00:00" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="MARKBACKER_20041103.1300-T26-1">
+    <extent>
+      <charseq START="2780" END="2782">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKBACKER_20041103.1300-T27" VAL="2004-11-03T13:00:00">
+  <timex2_mention ID="MARKBACKER_20041103.1300-T27-1">
+    <extent>
+      <charseq START="40" END="58">2004-11-03T13:00:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKBACKER_20041103.1300-T28" VAL="2004-11-03T13:00:00">
+  <timex2_mention ID="MARKBACKER_20041103.1300-T28-1">
+    <extent>
+      <charseq START="115" END="133">2004-11-03T13:00:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="MARKBACKER_20041103.1300-R1" TYPE="ORG-AFF" SUBTYPE="Ownership" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="MARKBACKER_20041103.1300-E3" ROLE="Arg-1"/>
+  <relation_argument REFID="MARKBACKER_20041103.1300-E4" ROLE="Arg-2"/>
+  <relation_mention ID="MARKBACKER_20041103.1300-R1-1" LEXICALCONDITION="Participial">
+    <extent>
+      <charseq START="1260" END="1320">some friends that owned oil companies (oil was used in lamps)</charseq>
+    </extent>
+    <relation_mention_argument REFID="MARKBACKER_20041103.1300-E3-6" ROLE="Arg-1">
+      <extent>
+        <charseq START="1273" END="1276">that</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="MARKBACKER_20041103.1300-E4-7" ROLE="Arg-2">
+      <extent>
+        <charseq START="1284" END="1296">oil companies</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="MARKBACKER_20041103.1300-R2" TYPE="PER-SOC" SUBTYPE="Lasting-Personal" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="MARKBACKER_20041103.1300-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="MARKBACKER_20041103.1300-E3" ROLE="Arg-2"/>
+  <relation_mention ID="MARKBACKER_20041103.1300-R2-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="1116" END="1320">I kept reading the website of propoganda and found that the first
+person to come up with the idea was Benjamin Franklin who did it on
+behalf of some friends that owned oil companies (oil was used in lamps)</charseq>
+    </extent>
+    <relation_mention_argument REFID="MARKBACKER_20041103.1300-E1-4" ROLE="Arg-1">
+      <extent>
+        <charseq START="1236" END="1238">who</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="MARKBACKER_20041103.1300-E3-5" ROLE="Arg-2">
+      <extent>
+        <charseq START="1260" END="1320">some friends that owned oil companies (oil was used in lamps)</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="MARKBACKER_20041103.1300-R3" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="MARKBACKER_20041103.1300-E14" ROLE="Arg-1"/>
+  <relation_argument REFID="MARKBACKER_20041103.1300-E15" ROLE="Arg-2"/>
+  <relation_mention ID="MARKBACKER_20041103.1300-R3-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="2048" END="2069">Indiana's eastern half</charseq>
+    </extent>
+    <relation_mention_argument REFID="MARKBACKER_20041103.1300-E14-23" ROLE="Arg-1">
+      <extent>
+        <charseq START="2048" END="2069">Indiana's eastern half</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="MARKBACKER_20041103.1300-E15-24" ROLE="Arg-2">
+      <extent>
+        <charseq START="2048" END="2054">Indiana</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="MARKBACKER_20041103.1300-R4" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="MARKBACKER_20041103.1300-E17" ROLE="Arg-1"/>
+  <relation_argument REFID="MARKBACKER_20041103.1300-E19" ROLE="Arg-2"/>
+  <relation_mention ID="MARKBACKER_20041103.1300-R4-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="2111" END="2189">Arizona doesn't use it because one tribe of Indians stretches into
+three states</charseq>
+    </extent>
+    <relation_mention_argument REFID="MARKBACKER_20041103.1300-E17-26" ROLE="Arg-1">
+      <extent>
+        <charseq START="2142" END="2161">one tribe of Indians</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="MARKBACKER_20041103.1300-E19-28" ROLE="Arg-2">
+      <extent>
+        <charseq START="2178" END="2189">three states</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="MARKBACKER_20041103.1300-R5" TYPE="PHYS" SUBTYPE="Near" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="MARKBACKER_20041103.1300-E21" ROLE="Arg-1"/>
+  <relation_argument REFID="MARKBACKER_20041103.1300-E22" ROLE="Arg-2"/>
+  <relation_mention ID="MARKBACKER_20041103.1300-R5-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="2257" END="2358">Of course, they're closer to Japan than
+to us, and since Japan doesn't use it, Hawaii just plays along</charseq>
+    </extent>
+    <relation_mention_argument REFID="MARKBACKER_20041103.1300-E21-31" ROLE="Arg-1">
+      <extent>
+        <charseq START="2268" END="2271">they</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="MARKBACKER_20041103.1300-E22-32" ROLE="Arg-2">
+      <extent>
+        <charseq START="2286" END="2290">Japan</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="MARKBACKER_20041103.1300-R6" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="MARKBACKER_20041103.1300-E24" ROLE="Arg-1"/>
+  <relation_argument REFID="MARKBACKER_20041103.1300-E25" ROLE="Arg-2"/>
+  <relation_mention ID="MARKBACKER_20041103.1300-R6-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="2936" END="3010">I am tired, hungry, and I leave for work and get
+home from work in the dark</charseq>
+    </extent>
+    <relation_mention_argument REFID="MARKBACKER_20041103.1300-E24-56" ROLE="Arg-1">
+      <extent>
+        <charseq START="2960" END="2960">I</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="MARKBACKER_20041103.1300-E25-57" ROLE="Arg-2">
+      <extent>
+        <charseq START="2985" END="2988">home</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="MARKBACKER_20041103.1300-R7" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="MARKBACKER_20041103.1300-E24" ROLE="Arg-1"/>
+  <relation_argument REFID="MARKBACKER_20041103.1300-E28" ROLE="Arg-2"/>
+  <relation_mention ID="MARKBACKER_20041103.1300-R7-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="3308" END="3314">my cube</charseq>
+    </extent>
+    <relation_mention_argument REFID="MARKBACKER_20041103.1300-E24-68" ROLE="Arg-1">
+      <extent>
+        <charseq START="3308" END="3309">my</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="MARKBACKER_20041103.1300-E28-69" ROLE="Arg-2">
+      <extent>
+        <charseq START="3308" END="3314">my cube</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="MARKBACKER_20041103.1300-R8" TYPE="PHYS" SUBTYPE="Located" TENSE="Future" MODALITY="Asserted">
+  <relation_argument REFID="MARKBACKER_20041103.1300-E24" ROLE="Arg-1"/>
+  <relation_argument REFID="MARKBACKER_20041103.1300-E26" ROLE="Arg-2"/>
+  <relation_mention ID="MARKBACKER_20041103.1300-R8-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="3151" END="3251">Now, if you'll excuse me, I have to go stalk the lobby for the girls
+that are bringing me my Krystals</charseq>
+    </extent>
+    <relation_mention_argument REFID="MARKBACKER_20041103.1300-E24-61" ROLE="Arg-1">
+      <extent>
+        <charseq START="3177" END="3177">I</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="MARKBACKER_20041103.1300-E26-62" ROLE="Arg-2">
+      <extent>
+        <charseq START="3196" END="3204">the lobby</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="MARKBACKER_20041103.1300-R9" TYPE="PER-SOC" SUBTYPE="Business" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="MARKBACKER_20041103.1300-E30" ROLE="Arg-1"/>
+  <relation_argument REFID="MARKBACKER_20041103.1300-E29" ROLE="Arg-2"/>
+  <relation_mention ID="MARKBACKER_20041103.1300-R9-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="3408" END="3422">Satan's
+minions</charseq>
+    </extent>
+    <relation_mention_argument REFID="MARKBACKER_20041103.1300-E30-72" ROLE="Arg-1">
+      <extent>
+        <charseq START="3408" END="3412">Satan</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="MARKBACKER_20041103.1300-E29-71" ROLE="Arg-2">
+      <extent>
+        <charseq START="3408" END="3422">Satan's
+minions</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="MARKBACKER_20041103.1300-EV1" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Generic" TENSE="Present">
+  <event_argument REFID="MARKBACKER_20041103.1300-E24" ROLE="Artifact"/>
+  <event_argument REFID="MARKBACKER_20041103.1300-E25" ROLE="Destination"/>
+  <event_mention ID="MARKBACKER_20041103.1300-EV1-1">
+    <extent>
+      <charseq START="2960" END="2988">I leave for work and get
+home</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2936" END="3010">I am tired, hungry, and I leave for work and get
+home from work in the dark</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2981" END="2983">get</charseq>
+    </anchor>
+    <event_mention_argument REFID="MARKBACKER_20041103.1300-E24-56" ROLE="Artifact">
+      <extent>
+        <charseq START="2960" END="2960">I</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="MARKBACKER_20041103.1300-E25-57" ROLE="Destination">
+      <extent>
+        <charseq START="2985" END="2988">home</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="MARKBACKER_20041103.1300-EV2" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Future">
+  <event_argument REFID="MARKBACKER_20041103.1300-E24" ROLE="Artifact"/>
+  <event_argument REFID="MARKBACKER_20041103.1300-E26" ROLE="Destination"/>
+  <event_mention ID="MARKBACKER_20041103.1300-EV2-1">
+    <extent>
+      <charseq START="3177" END="3204">I have to go stalk the lobby</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="3151" END="3251">Now, if you'll excuse me, I have to go stalk the lobby for the girls
+that are bringing me my Krystals</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="3187" END="3188">go</charseq>
+    </anchor>
+    <event_mention_argument REFID="MARKBACKER_20041103.1300-E24-61" ROLE="Artifact">
+      <extent>
+        <charseq START="3177" END="3177">I</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="MARKBACKER_20041103.1300-E26-62" ROLE="Destination">
+      <extent>
+        <charseq START="3196" END="3204">the lobby</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

@@ -1,0 +1,642 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNNHL_ENG_20030513_220910.11.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNNHL_ENG_20030513_220910.11">
+<entity ID="CNNHL_ENG_20030513_220910.11-E1" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030513_220910.11-E1-3" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="80" END="112">oklahoma city bombing conspirator</charseq>
+    </extent>
+    <head>
+      <charseq START="102" END="112">conspirator</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030513_220910.11-E1-6" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="70" END="126">convicted oklahoma city bombing conspirator terry nichols</charseq>
+    </extent>
+    <head>
+      <charseq START="114" END="126">terry nichols</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030513_220910.11-E1-7" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="176" END="182">nichols</charseq>
+    </extent>
+    <head>
+      <charseq START="176" END="182">nichols</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030513_220910.11-E1-8" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="211" END="213">his</charseq>
+    </extent>
+    <head>
+      <charseq START="211" END="213">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030513_220910.11-E1-13" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="437" END="443">nichols</charseq>
+    </extent>
+    <head>
+      <charseq START="437" END="443">nichols</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="terry nichols">
+      <charseq START="114" END="126">terry nichols</charseq>
+    </name>
+    <name NAME="nichols">
+      <charseq START="176" END="182">nichols</charseq>
+    </name>
+    <name NAME="nichols">
+      <charseq START="437" END="443">nichols</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030513_220910.11-E2" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030513_220910.11-E2-2" TYPE="NOM" LDCTYPE="NOM" ROLE="GPE">
+    <extent>
+      <charseq START="154" END="158">state</charseq>
+    </extent>
+    <head>
+      <charseq START="154" END="158">state</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030513_220910.11-E3" TYPE="WEA" SUBTYPE="Exploding" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030513_220910.11-E3-1" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="589" END="592">that</charseq>
+    </extent>
+    <head>
+      <charseq START="589" END="592">that</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030513_220910.11-E3-4" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="580" END="587">the bomb</charseq>
+    </extent>
+    <head>
+      <charseq START="584" END="587">bomb</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030513_220910.11-E4" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030513_220910.11-E4-5" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="80" END="92">oklahoma city</charseq>
+    </extent>
+    <head>
+      <charseq START="80" END="92">oklahoma city</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030513_220910.11-E4-10" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="337" END="349">oklahoma
+city</charseq>
+    </extent>
+    <head>
+      <charseq START="337" END="349">oklahoma
+city</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="oklahoma city">
+      <charseq START="80" END="92">oklahoma city</charseq>
+    </name>
+    <name NAME="oklahoma city">
+      <charseq START="337" END="349">oklahoma
+city</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030513_220910.11-E6" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030513_220910.11-E6-9" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="291" END="313">eight federal employees</charseq>
+    </extent>
+    <head>
+      <charseq START="305" END="313">employees</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030513_220910.11-E8" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030513_220910.11-E8-11" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="334" END="355">an oklahoma
+city judge</charseq>
+    </extent>
+    <head>
+      <charseq START="351" END="355">judge</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030513_220910.11-E9" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030513_220910.11-E9-12" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="367" END="377">prosecutors</charseq>
+    </extent>
+    <head>
+      <charseq START="367" END="377">prosecutors</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030513_220910.11-E9-15" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="504" END="507">they</charseq>
+    </extent>
+    <head>
+      <charseq START="504" END="507">they</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030513_220910.11-E10" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030513_220910.11-E10-14" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="467" END="501">the other 160
+victims of the attack</charseq>
+    </extent>
+    <head>
+      <charseq START="481" END="487">victims</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030513_220910.11-E11" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030513_220910.11-E11-16" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="538" END="552">timothy
+mcveigh</charseq>
+    </extent>
+    <head>
+      <charseq START="538" END="552">timothy
+mcveigh</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="timothy mcveigh">
+      <charseq START="538" END="552">timothy
+mcveigh</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030513_220910.11-E12" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030513_220910.11-E12-17" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="604" END="640">the alfred
+p. murrah federal building</charseq>
+    </extent>
+    <head>
+      <charseq START="608" END="640">alfred
+p. murrah federal building</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="alfred p. murrah federal building">
+      <charseq START="608" END="640">alfred
+p. murrah federal building</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<value ID="CNNHL_ENG_20030513_220910.11-V1" TYPE="Sentence">
+  <value_mention ID="CNNHL_ENG_20030513_220910.11-V1-1">
+    <extent>
+      <charseq START="195" END="205">a life term</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNNHL_ENG_20030513_220910.11-V2" TYPE="Sentence">
+  <value_mention ID="CNNHL_ENG_20030513_220910.11-V2-1">
+    <extent>
+      <charseq START="519" END="535">the death penalty</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNNHL_ENG_20030513_220910.11-V3" TYPE="Crime">
+  <value_mention ID="CNNHL_ENG_20030513_220910.11-V3-1">
+    <extent>
+      <charseq START="160" END="165">murder</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNNHL_ENG_20030513_220910.11-V4" TYPE="Crime">
+  <value_mention ID="CNNHL_ENG_20030513_220910.11-V4-1">
+    <extent>
+      <charseq START="215" END="234">federal manslaughter</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNNHL_ENG_20030513_220910.11-V5" TYPE="Crime">
+  <value_mention ID="CNNHL_ENG_20030513_220910.11-V5-1">
+    <extent>
+      <charseq START="240" END="249">conspiracy</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNNHL_ENG_20030513_220910.11-V6" TYPE="Crime">
+  <value_mention ID="CNNHL_ENG_20030513_220910.11-V6-1">
+    <extent>
+      <charseq START="448" END="453">murder</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNNHL_ENG_20030513_220910.11-V7" TYPE="Crime">
+  <value_mention ID="CNNHL_ENG_20030513_220910.11-V7-1">
+    <extent>
+      <charseq START="568" END="640">setting off the bomb that destroyed the alfred
+p. murrah federal building</charseq>
+    </extent>
+  </value_mention>
+</value>
+<timex2 ID="CNNHL_ENG_20030513_220910.11-T1" VAL="1995">
+  <timex2_mention ID="CNNHL_ENG_20030513_220910.11-T1-1">
+    <extent>
+      <charseq START="322" END="325">1995</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNNHL_ENG_20030513_220910.11-T2" VAL="2001" MOD="AFTER" ANCHOR_VAL="2003" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="CNNHL_ENG_20030513_220910.11-T2-1">
+    <extent>
+      <charseq START="656" END="675">nearly two years ago</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNNHL_ENG_20030513_220910.11-T3" VAL="2003-05-13T23:10:24">
+  <timex2_mention ID="CNNHL_ENG_20030513_220910.11-T3-1">
+    <extent>
+      <charseq START="46" END="64">2003-05-13 23:10:24</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNNHL_ENG_20030513_220910.11-R1" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030513_220910.11-E8" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030513_220910.11-E4" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030513_220910.11-R1-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="334" END="355">an oklahoma
+city judge</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030513_220910.11-E8-11" ROLE="Arg-1">
+      <extent>
+        <charseq START="334" END="355">an oklahoma
+city judge</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030513_220910.11-E4-10" ROLE="Arg-2">
+      <extent>
+        <charseq START="337" END="349">oklahoma
+city</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNNHL_ENG_20030513_220910.11-EV1" TYPE="Justice" SUBTYPE="Convict" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNNHL_ENG_20030513_220910.11-E1" ROLE="Defendant"/>
+  <event_mention ID="CNNHL_ENG_20030513_220910.11-EV1-1">
+    <extent>
+      <charseq START="70" END="126">convicted oklahoma city bombing conspirator terry nichols</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="70" END="173">convicted oklahoma city bombing conspirator terry nichols will stand
+trial again on state murder charges</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="70" END="78">convicted</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_220910.11-E1-6" ROLE="Defendant">
+      <extent>
+        <charseq START="70" END="126">convicted oklahoma city bombing conspirator terry nichols</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNNHL_ENG_20030513_220910.11-EV2" TYPE="Justice" SUBTYPE="Trial-Hearing" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Future">
+  <event_argument REFID="CNNHL_ENG_20030513_220910.11-E1" ROLE="Defendant"/>
+  <event_argument REFID="CNNHL_ENG_20030513_220910.11-V3" ROLE="Crime"/>
+  <event_mention ID="CNNHL_ENG_20030513_220910.11-EV2-1">
+    <extent>
+      <charseq START="70" END="165">convicted oklahoma city bombing conspirator terry nichols will stand
+trial again on state murder</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="70" END="173">convicted oklahoma city bombing conspirator terry nichols will stand
+trial again on state murder charges</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="139" END="143">trial</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_220910.11-E1-6" ROLE="Defendant">
+      <extent>
+        <charseq START="70" END="126">convicted oklahoma city bombing conspirator terry nichols</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_220910.11-V3-1" ROLE="Crime">
+      <extent>
+        <charseq START="160" END="165">murder</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNNHL_ENG_20030513_220910.11-EV3" TYPE="Justice" SUBTYPE="Charge-Indict" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNNHL_ENG_20030513_220910.11-V3" ROLE="Crime"/>
+  <event_argument REFID="CNNHL_ENG_20030513_220910.11-E1" ROLE="Defendant"/>
+  <event_mention ID="CNNHL_ENG_20030513_220910.11-EV3-1">
+    <extent>
+      <charseq START="70" END="173">convicted oklahoma city bombing conspirator terry nichols will stand
+trial again on state murder charges</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="70" END="173">convicted oklahoma city bombing conspirator terry nichols will stand
+trial again on state murder charges</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="167" END="173">charges</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_220910.11-V3-1" ROLE="Crime">
+      <extent>
+        <charseq START="160" END="165">murder</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_220910.11-E1-6" ROLE="Defendant">
+      <extent>
+        <charseq START="70" END="126">convicted oklahoma city bombing conspirator terry nichols</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNNHL_ENG_20030513_220910.11-EV4" TYPE="Justice" SUBTYPE="Convict" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNNHL_ENG_20030513_220910.11-E1" ROLE="Defendant"/>
+  <event_argument REFID="CNNHL_ENG_20030513_220910.11-V4" ROLE="Crime"/>
+  <event_argument REFID="CNNHL_ENG_20030513_220910.11-V5" ROLE="Crime"/>
+  <event_mention ID="CNNHL_ENG_20030513_220910.11-EV4-1">
+    <extent>
+      <charseq START="176" END="261">nichols is serving a life term
+for his federal manslaughter and conspiracy convictions</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="176" END="331">nichols is serving a life term
+for his federal manslaughter and conspiracy convictions stemming from
+the deaths of eight federal employees in the 1995 blast</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="251" END="261">convictions</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_220910.11-E1-7" ROLE="Defendant">
+      <extent>
+        <charseq START="176" END="182">nichols</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_220910.11-V4-1" ROLE="Crime">
+      <extent>
+        <charseq START="215" END="234">federal manslaughter</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_220910.11-V5-1" ROLE="Crime">
+      <extent>
+        <charseq START="240" END="249">conspiracy</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNNHL_ENG_20030513_220910.11-EV5" TYPE="Life" SUBTYPE="Die" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNNHL_ENG_20030513_220910.11-E6" ROLE="Victim"/>
+  <event_argument REFID="CNNHL_ENG_20030513_220910.11-E1" ROLE="Agent"/>
+  <event_argument REFID="CNNHL_ENG_20030513_220910.11-T1" ROLE="Time-Within"/>
+  <event_mention ID="CNNHL_ENG_20030513_220910.11-EV5-1">
+    <extent>
+      <charseq START="176" END="325">nichols is serving a life term
+for his federal manslaughter and conspiracy convictions stemming from
+the deaths of eight federal employees in the 1995</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="176" END="331">nichols is serving a life term
+for his federal manslaughter and conspiracy convictions stemming from
+the deaths of eight federal employees in the 1995 blast</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="281" END="286">deaths</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_220910.11-E6-9" ROLE="Victim">
+      <extent>
+        <charseq START="291" END="313">eight federal employees</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_220910.11-E1-7" ROLE="Agent">
+      <extent>
+        <charseq START="176" END="182">nichols</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_220910.11-T1-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="322" END="325">1995</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNNHL_ENG_20030513_220910.11-EV6" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNNHL_ENG_20030513_220910.11-T1" ROLE="Time-Within"/>
+  <event_mention ID="CNNHL_ENG_20030513_220910.11-EV6-1">
+    <extent>
+      <charseq START="322" END="331">1995 blast</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="176" END="331">nichols is serving a life term
+for his federal manslaughter and conspiracy convictions stemming from
+the deaths of eight federal employees in the 1995 blast</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="327" END="331">blast</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_220910.11-T1-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="322" END="325">1995</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNNHL_ENG_20030513_220910.11-EV7" TYPE="Justice" SUBTYPE="Trial-Hearing" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNNHL_ENG_20030513_220910.11-E8" ROLE="Adjudicator"/>
+  <event_argument REFID="CNNHL_ENG_20030513_220910.11-E1" ROLE="Defendant"/>
+  <event_argument REFID="CNNHL_ENG_20030513_220910.11-E9" ROLE="Prosecutor"/>
+  <event_argument REFID="CNNHL_ENG_20030513_220910.11-E4" ROLE="Place"/>
+  <event_argument REFID="CNNHL_ENG_20030513_220910.11-V6" ROLE="Crime"/>
+  <event_mention ID="CNNHL_ENG_20030513_220910.11-EV7-1">
+    <extent>
+      <charseq START="334" END="453">an oklahoma
+city judge has ruled prosecutors presented enough evidence at a
+preliminary hearing to try nichols on murder</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="334" END="501">an oklahoma
+city judge has ruled prosecutors presented enough evidence at a
+preliminary hearing to try nichols on murder charges for the other 160
+victims of the attack</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="422" END="428">hearing</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_220910.11-E8-11" ROLE="Adjudicator">
+      <extent>
+        <charseq START="334" END="355">an oklahoma
+city judge</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_220910.11-E1-13" ROLE="Defendant">
+      <extent>
+        <charseq START="437" END="443">nichols</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_220910.11-E9-12" ROLE="Prosecutor">
+      <extent>
+        <charseq START="367" END="377">prosecutors</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_220910.11-E4-10" ROLE="Place">
+      <extent>
+        <charseq START="337" END="349">oklahoma
+city</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_220910.11-V6-1" ROLE="Crime">
+      <extent>
+        <charseq START="448" END="453">murder</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNNHL_ENG_20030513_220910.11-EV8" TYPE="Justice" SUBTYPE="Trial-Hearing" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Future">
+  <event_argument REFID="CNNHL_ENG_20030513_220910.11-E1" ROLE="Defendant"/>
+  <event_argument REFID="CNNHL_ENG_20030513_220910.11-E9" ROLE="Prosecutor"/>
+  <event_argument REFID="CNNHL_ENG_20030513_220910.11-V6" ROLE="Crime"/>
+  <event_mention ID="CNNHL_ENG_20030513_220910.11-EV8-1">
+    <extent>
+      <charseq START="367" END="453">prosecutors presented enough evidence at a
+preliminary hearing to try nichols on murder</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="334" END="501">an oklahoma
+city judge has ruled prosecutors presented enough evidence at a
+preliminary hearing to try nichols on murder charges for the other 160
+victims of the attack</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="433" END="435">try</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_220910.11-E1-13" ROLE="Defendant">
+      <extent>
+        <charseq START="437" END="443">nichols</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_220910.11-E9-12" ROLE="Prosecutor">
+      <extent>
+        <charseq START="367" END="377">prosecutors</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_220910.11-V6-1" ROLE="Crime">
+      <extent>
+        <charseq START="448" END="453">murder</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNNHL_ENG_20030513_220910.11-EV9" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNNHL_ENG_20030513_220910.11-E10" ROLE="Attacker"/>
+  <event_argument REFID="CNNHL_ENG_20030513_220910.11-E1" ROLE="Target"/>
+  <event_mention ID="CNNHL_ENG_20030513_220910.11-EV9-1">
+    <extent>
+      <charseq START="437" END="501">nichols on murder charges for the other 160
+victims of the attack</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="334" END="501">an oklahoma
+city judge has ruled prosecutors presented enough evidence at a
+preliminary hearing to try nichols on murder charges for the other 160
+victims of the attack</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="496" END="501">attack</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_220910.11-E10-14" ROLE="Attacker">
+      <extent>
+        <charseq START="467" END="501">the other 160
+victims of the attack</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_220910.11-E1-13" ROLE="Target">
+      <extent>
+        <charseq START="437" END="443">nichols</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNNHL_ENG_20030513_220910.11-EV10" TYPE="Justice" SUBTYPE="Convict" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNNHL_ENG_20030513_220910.11-E11" ROLE="Defendant"/>
+  <event_argument REFID="CNNHL_ENG_20030513_220910.11-V7" ROLE="Crime"/>
+  <event_mention ID="CNNHL_ENG_20030513_220910.11-EV10-1">
+    <extent>
+      <charseq START="538" END="640">timothy
+mcveigh, convicted of setting off the bomb that destroyed the alfred
+p. murrah federal building</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="538" END="675">timothy
+mcveigh, convicted of setting off the bomb that destroyed the alfred
+p. murrah federal building, was executed nearly two years ago</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="555" END="563">convicted</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_220910.11-E11-16" ROLE="Defendant">
+      <extent>
+        <charseq START="538" END="552">timothy
+mcveigh</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_220910.11-V7-1" ROLE="Crime">
+      <extent>
+        <charseq START="568" END="640">setting off the bomb that destroyed the alfred
+p. murrah federal building</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNNHL_ENG_20030513_220910.11-EV11" TYPE="Justice" SUBTYPE="Execute" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNNHL_ENG_20030513_220910.11-E11" ROLE="Person"/>
+  <event_argument REFID="CNNHL_ENG_20030513_220910.11-V7" ROLE="Crime"/>
+  <event_argument REFID="CNNHL_ENG_20030513_220910.11-T2" ROLE="Time-At-Beginning"/>
+  <event_mention ID="CNNHL_ENG_20030513_220910.11-EV11-1">
+    <extent>
+      <charseq START="538" END="675">timothy
+mcveigh, convicted of setting off the bomb that destroyed the alfred
+p. murrah federal building, was executed nearly two years ago</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="538" END="675">timothy
+mcveigh, convicted of setting off the bomb that destroyed the alfred
+p. murrah federal building, was executed nearly two years ago</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="647" END="654">executed</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_220910.11-E11-16" ROLE="Person">
+      <extent>
+        <charseq START="538" END="552">timothy
+mcveigh</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_220910.11-V7-1" ROLE="Crime">
+      <extent>
+        <charseq START="568" END="640">setting off the bomb that destroyed the alfred
+p. murrah federal building</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030513_220910.11-T2-1" ROLE="Time-At-Beginning">
+      <extent>
+        <charseq START="656" END="675">nearly two years ago</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

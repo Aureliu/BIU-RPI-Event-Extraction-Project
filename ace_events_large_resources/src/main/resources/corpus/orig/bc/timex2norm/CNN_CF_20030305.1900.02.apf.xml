@@ -1,0 +1,2988 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_CF_20030305.1900.02.sgm" SOURCE="broadcast conversation" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_CF_20030305.1900.02">
+<entity ID="CNN_CF_20030305.1900.02-E1" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E1-2" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="497" END="507">Congressman</charseq>
+    </extent>
+    <head>
+      <charseq START="497" END="507">Congressman</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E1-3" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="525" END="543">a New York Democrat</charseq>
+    </extent>
+    <head>
+      <charseq START="536" END="543">Democrat</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E1-6" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="549" END="551">his</charseq>
+    </extent>
+    <head>
+      <charseq START="549" END="551">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E1-17" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="734" END="743">Mr. Rangel</charseq>
+    </extent>
+    <head>
+      <charseq START="738" END="743">Rangel</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E1-18" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="734" END="735">Mr</charseq>
+    </extent>
+    <head>
+      <charseq START="734" END="735">Mr</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E1-25" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1015" END="1028">Charlie Rangel</charseq>
+    </extent>
+    <head>
+      <charseq START="1015" END="1028">Charlie Rangel</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E1-26" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2972" END="2974">you</charseq>
+    </extent>
+    <head>
+      <charseq START="2972" END="2974">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E1-34" TYPE="PRO" LDCTYPE="WHQ" LDCATR="FALSE">
+    <extent>
+      <charseq START="1031" END="1033">who</charseq>
+    </extent>
+    <head>
+      <charseq START="1031" END="1033">who</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E1-44" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1434" END="1440">Charlie</charseq>
+    </extent>
+    <head>
+      <charseq START="1434" END="1440">Charlie</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E1-49" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1651" END="1668">Congressman Rangel</charseq>
+    </extent>
+    <head>
+      <charseq START="1663" END="1668">Rangel</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E1-50" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1651" END="1661">Congressman</charseq>
+    </extent>
+    <head>
+      <charseq START="1651" END="1661">Congressman</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E1-74" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2209" END="2211">You</charseq>
+    </extent>
+    <head>
+      <charseq START="2209" END="2211">You</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E1-75" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2245" END="2247">you</charseq>
+    </extent>
+    <head>
+      <charseq START="2245" END="2247">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E1-79" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="2360" END="2386">a former federal prosecutor</charseq>
+    </extent>
+    <head>
+      <charseq START="2377" END="2386">prosecutor</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E1-81" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2407" END="2407">I</charseq>
+    </extent>
+    <head>
+      <charseq START="2407" END="2407">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E1-96" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2748" END="2749">me</charseq>
+    </extent>
+    <head>
+      <charseq START="2748" END="2749">me</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E1-102" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2822" END="2822">I</charseq>
+    </extent>
+    <head>
+      <charseq START="2822" END="2822">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E1-116" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3040" END="3040">I</charseq>
+    </extent>
+    <head>
+      <charseq START="3040" END="3040">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E1-130" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3609" END="3610">me</charseq>
+    </extent>
+    <head>
+      <charseq START="3609" END="3610">me</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E1-143" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3811" END="3811">I</charseq>
+    </extent>
+    <head>
+      <charseq START="3811" END="3811">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E1-150" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="3963" END="3963">I</charseq>
+    </extent>
+    <head>
+      <charseq START="3963" END="3963">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E1-158" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="4249" END="4249">I</charseq>
+    </extent>
+    <head>
+      <charseq START="4249" END="4249">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E1-166" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="4421" END="4446">Congressman Charlie
+Rangel</charseq>
+    </extent>
+    <head>
+      <charseq START="4433" END="4446">Charlie
+Rangel</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E1-167" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="4421" END="4431">Congressman</charseq>
+    </extent>
+    <head>
+      <charseq START="4421" END="4431">Congressman</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E1-191" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2253" END="2258">RANGEL</charseq>
+    </extent>
+    <head>
+      <charseq START="2253" END="2258">RANGEL</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E1-192" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2736" END="2741">RANGEL</charseq>
+    </extent>
+    <head>
+      <charseq START="2736" END="2741">RANGEL</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E1-193" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2980" END="2985">RANGEL</charseq>
+    </extent>
+    <head>
+      <charseq START="2980" END="2985">RANGEL</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E1-194" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="3478" END="3483">RANGEL</charseq>
+    </extent>
+    <head>
+      <charseq START="3478" END="3483">RANGEL</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E1-195" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="3597" END="3602">RANGEL</charseq>
+    </extent>
+    <head>
+      <charseq START="3597" END="3602">RANGEL</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E1-196" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="3922" END="3927">RANGEL</charseq>
+    </extent>
+    <head>
+      <charseq START="3922" END="3927">RANGEL</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E1-220" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="497" END="522">Congressman Charlie Rangel</charseq>
+    </extent>
+    <head>
+      <charseq START="509" END="522">Charlie Rangel</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Rangel">
+      <charseq START="738" END="743">Rangel</charseq>
+    </name>
+    <name NAME="Charlie Rangel">
+      <charseq START="1015" END="1028">Charlie Rangel</charseq>
+    </name>
+    <name NAME="Charlie">
+      <charseq START="1434" END="1440">Charlie</charseq>
+    </name>
+    <name NAME="Rangel">
+      <charseq START="1663" END="1668">Rangel</charseq>
+    </name>
+    <name NAME="Charlie Rangel">
+      <charseq START="4433" END="4446">Charlie
+Rangel</charseq>
+    </name>
+    <name NAME="RANGEL">
+      <charseq START="2253" END="2258">RANGEL</charseq>
+    </name>
+    <name NAME="RANGEL">
+      <charseq START="2736" END="2741">RANGEL</charseq>
+    </name>
+    <name NAME="RANGEL">
+      <charseq START="2980" END="2985">RANGEL</charseq>
+    </name>
+    <name NAME="RANGEL">
+      <charseq START="3478" END="3483">RANGEL</charseq>
+    </name>
+    <name NAME="RANGEL">
+      <charseq START="3597" END="3602">RANGEL</charseq>
+    </name>
+    <name NAME="RANGEL">
+      <charseq START="3922" END="3927">RANGEL</charseq>
+    </name>
+    <name NAME="Charlie Rangel">
+      <charseq START="509" END="522">Charlie Rangel</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E3" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E3-4" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="527" END="534">New York</charseq>
+    </extent>
+    <head>
+      <charseq START="527" END="534">New York</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E3-165" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="4399" END="4406">New York</charseq>
+    </extent>
+    <head>
+      <charseq START="4399" END="4406">New York</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="New York">
+      <charseq START="527" END="534">New York</charseq>
+    </name>
+    <name NAME="New York">
+      <charseq START="4399" END="4406">New York</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E5" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E5-8" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="571" END="603">Republican Congressman Peter King</charseq>
+    </extent>
+    <head>
+      <charseq START="594" END="603">Peter King</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E5-9" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="549" END="569">his fellow
+New Yorker</charseq>
+    </extent>
+    <head>
+      <charseq START="560" END="569">New Yorker</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E5-10" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="FALSE">
+    <extent>
+      <charseq START="571" END="592">Republican Congressman</charseq>
+    </extent>
+    <head>
+      <charseq START="582" END="592">Congressman</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E5-12" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="617" END="624">Mr. King</charseq>
+    </extent>
+    <head>
+      <charseq START="621" END="624">King</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E5-13" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="FALSE">
+    <extent>
+      <charseq START="617" END="618">Mr</charseq>
+    </extent>
+    <head>
+      <charseq START="617" END="618">Mr</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E5-16" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="711" END="713">you</charseq>
+    </extent>
+    <head>
+      <charseq START="711" END="713">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E5-21" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="817" END="819">You</charseq>
+    </extent>
+    <head>
+      <charseq START="817" END="819">You</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E5-22" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="889" END="891">you</charseq>
+    </extent>
+    <head>
+      <charseq START="889" END="891">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E5-23" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="896" END="985">a congressman
+who has put his constituents and his country ahead of his partisan
+interests</charseq>
+    </extent>
+    <head>
+      <charseq START="898" END="908">congressman</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E5-24" TYPE="PRO" LDCTYPE="WHQ" LDCATR="FALSE">
+    <extent>
+      <charseq START="910" END="912">who</charseq>
+    </extent>
+    <head>
+      <charseq START="910" END="912">who</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E5-27" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="922" END="924">his</charseq>
+    </extent>
+    <head>
+      <charseq START="922" END="924">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E5-29" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="943" END="945">his</charseq>
+    </extent>
+    <head>
+      <charseq START="943" END="945">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E5-30" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="964" END="966">his</charseq>
+    </extent>
+    <head>
+      <charseq START="964" END="966">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E5-32" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1003" END="1005">you</charseq>
+    </extent>
+    <head>
+      <charseq START="1003" END="1005">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E5-40" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1348" END="1348">I</charseq>
+    </extent>
+    <head>
+      <charseq START="1348" END="1348">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E5-41" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1358" END="1359">me</charseq>
+    </extent>
+    <head>
+      <charseq START="1358" END="1359">me</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E5-43" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1403" END="1403">I</charseq>
+    </extent>
+    <head>
+      <charseq START="1403" END="1403">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E5-45" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1540" END="1541">me</charseq>
+    </extent>
+    <head>
+      <charseq START="1540" END="1541">me</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E5-163" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="4371" END="4406">Congressman Peter King from New York</charseq>
+    </extent>
+    <head>
+      <charseq START="4383" END="4392">Peter King</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E5-164" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="4371" END="4381">Congressman</charseq>
+    </extent>
+    <head>
+      <charseq START="4371" END="4381">Congressman</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E5-197" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1239" END="1242">KING</charseq>
+    </extent>
+    <head>
+      <charseq START="1239" END="1242">KING</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Peter King">
+      <charseq START="594" END="603">Peter King</charseq>
+    </name>
+    <name NAME="King">
+      <charseq START="621" END="624">King</charseq>
+    </name>
+    <name NAME="Peter King">
+      <charseq START="4383" END="4392">Peter King</charseq>
+    </name>
+    <name NAME="KING">
+      <charseq START="1239" END="1242">KING</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E8" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E8-11" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="781" END="782">we</charseq>
+    </extent>
+    <head>
+      <charseq START="781" END="782">we</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E11" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E11-19" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="755" END="757">you</charseq>
+    </extent>
+    <head>
+      <charseq START="755" END="757">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E11-84" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2465" END="2467">You</charseq>
+    </extent>
+    <head>
+      <charseq START="2465" END="2467">You</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E11-86" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2502" END="2504">you</charseq>
+    </extent>
+    <head>
+      <charseq START="2502" END="2504">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E11-98" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2766" END="2768">you</charseq>
+    </extent>
+    <head>
+      <charseq START="2766" END="2768">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E11-99" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2787" END="2789">you</charseq>
+    </extent>
+    <head>
+      <charseq START="2787" END="2789">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E11-100" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2804" END="2806">you</charseq>
+    </extent>
+    <head>
+      <charseq START="2804" END="2806">you</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E14" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E14-28" TYPE="NOM" LDCTYPE="NOM" ROLE="GPE">
+    <extent>
+      <charseq START="943" END="953">his country</charseq>
+    </extent>
+    <head>
+      <charseq START="947" END="953">country</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E14-37" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE">
+    <extent>
+      <charseq START="1123" END="1125">our</charseq>
+    </extent>
+    <head>
+      <charseq START="1123" END="1125">our</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E14-46" TYPE="PRO" LDCTYPE="PRO" ROLE="ORG">
+    <extent>
+      <charseq START="1566" END="1567">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1566" END="1567">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E14-47" TYPE="PRO" LDCTYPE="PRO" ROLE="ORG">
+    <extent>
+      <charseq START="1625" END="1626">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1625" END="1626">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E14-52" TYPE="PRO" LDCTYPE="PRO" ROLE="ORG">
+    <extent>
+      <charseq START="3125" END="3126">we</charseq>
+    </extent>
+    <head>
+      <charseq START="3125" END="3126">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E14-54" TYPE="PRO" LDCTYPE="PRO" ROLE="ORG">
+    <extent>
+      <charseq START="1746" END="1747">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1746" END="1747">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E14-55" TYPE="PRO" LDCTYPE="PRO" ROLE="ORG">
+    <extent>
+      <charseq START="1762" END="1763">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1762" END="1763">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E14-110" TYPE="PRO" LDCTYPE="PRO" ROLE="ORG">
+    <extent>
+      <charseq START="3178" END="3179">We</charseq>
+    </extent>
+    <head>
+      <charseq START="3178" END="3179">We</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E14-114" TYPE="PRO" LDCTYPE="PRO" ROLE="ORG">
+    <extent>
+      <charseq START="2996" END="2997">we</charseq>
+    </extent>
+    <head>
+      <charseq START="2996" END="2997">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E14-117" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE">
+    <extent>
+      <charseq START="3068" END="3069">we</charseq>
+    </extent>
+    <head>
+      <charseq START="3068" END="3069">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E14-118" TYPE="PRO" LDCTYPE="PRO" ROLE="ORG">
+    <extent>
+      <charseq START="3083" END="3084">we</charseq>
+    </extent>
+    <head>
+      <charseq START="3083" END="3084">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E14-119" TYPE="PRO" LDCTYPE="PRO" ROLE="ORG">
+    <extent>
+      <charseq START="3244" END="3245">we</charseq>
+    </extent>
+    <head>
+      <charseq START="3244" END="3245">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E14-127" TYPE="PRO" LDCTYPE="PRO" ROLE="ORG">
+    <extent>
+      <charseq START="3527" END="3529">our</charseq>
+    </extent>
+    <head>
+      <charseq START="3527" END="3529">our</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E14-134" TYPE="PRO" LDCTYPE="PRO" ROLE="ORG">
+    <extent>
+      <charseq START="3639" END="3640">we</charseq>
+    </extent>
+    <head>
+      <charseq START="3639" END="3640">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E14-139" TYPE="PRO" LDCTYPE="PRO" ROLE="ORG">
+    <extent>
+      <charseq START="3748" END="3749">we</charseq>
+    </extent>
+    <head>
+      <charseq START="3748" END="3749">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E14-144" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE">
+    <extent>
+      <charseq START="3831" END="3832">we</charseq>
+    </extent>
+    <head>
+      <charseq START="3831" END="3832">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E14-145" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE">
+    <extent>
+      <charseq START="3843" END="3845">our</charseq>
+    </extent>
+    <head>
+      <charseq START="3843" END="3845">our</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E14-155" TYPE="NOM" LDCTYPE="NOM" ROLE="GPE">
+    <extent>
+      <charseq START="4113" END="4123">Our country</charseq>
+    </extent>
+    <head>
+      <charseq START="4117" END="4123">country</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E14-156" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE">
+    <extent>
+      <charseq START="4113" END="4115">Our</charseq>
+    </extent>
+    <head>
+      <charseq START="4113" END="4115">Our</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E14-157" TYPE="PRO" LDCTYPE="PRO" ROLE="ORG">
+    <extent>
+      <charseq START="4236" END="4237">we</charseq>
+    </extent>
+    <head>
+      <charseq START="4236" END="4237">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E14-159" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE">
+    <extent>
+      <charseq START="4263" END="4264">we</charseq>
+    </extent>
+    <head>
+      <charseq START="4263" END="4264">we</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E15" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E15-31" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="991" END="991">I</charseq>
+    </extent>
+    <head>
+      <charseq START="991" END="991">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E15-160" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="4305" END="4305">I</charseq>
+    </extent>
+    <head>
+      <charseq START="4305" END="4305">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E15-162" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="4359" END="4359">I</charseq>
+    </extent>
+    <head>
+      <charseq START="4359" END="4359">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E15-182" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="609" END="614">BEGALA</charseq>
+    </extent>
+    <head>
+      <charseq START="609" END="614">BEGALA</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E15-183" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="3442" END="3447">BEGALA</charseq>
+    </extent>
+    <head>
+      <charseq START="3442" END="3447">BEGALA</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E15-184" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="4297" END="4302">BEGALA</charseq>
+    </extent>
+    <head>
+      <charseq START="4297" END="4302">BEGALA</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="BEGALA">
+      <charseq START="609" END="614">BEGALA</charseq>
+    </name>
+    <name NAME="BEGALA">
+      <charseq START="3442" END="3447">BEGALA</charseq>
+    </name>
+    <name NAME="BEGALA">
+      <charseq START="4297" END="4302">BEGALA</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E16" TYPE="ORG" SUBTYPE="Non-Governmental" CLASS="GEN">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E16-35" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1079" END="1088">Republican</charseq>
+    </extent>
+    <head>
+      <charseq START="1079" END="1088">Republican</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E16-106" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="571" END="580">Republican</charseq>
+    </extent>
+    <head>
+      <charseq START="571" END="580">Republican</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Republican">
+      <charseq START="1079" END="1088">Republican</charseq>
+    </name>
+    <name NAME="Republican">
+      <charseq START="571" END="580">Republican</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E17" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E17-36" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1123" END="1136">our servicemen</charseq>
+    </extent>
+    <head>
+      <charseq START="1127" END="1136">servicemen</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E18" TYPE="ORG" SUBTYPE="Commercial" CLASS="GEN">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E18-38" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1187" END="1198">corporations</charseq>
+    </extent>
+    <head>
+      <charseq START="1187" END="1198">corporations</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E19" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E19-39" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1291" END="1302">the military</charseq>
+    </extent>
+    <head>
+      <charseq START="1295" END="1302">military</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E19-42" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1389" END="1400">the military</charseq>
+    </extent>
+    <head>
+      <charseq START="1393" END="1400">military</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E19-48" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1596" END="1607">the
+military</charseq>
+    </extent>
+    <head>
+      <charseq START="1600" END="1607">military</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E20" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E20-1" TYPE="NAM" LDCTYPE="NAM" ROLE="ORG">
+    <extent>
+      <charseq START="230" END="235">France</charseq>
+    </extent>
+    <head>
+      <charseq START="230" END="235">France</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="France">
+      <charseq START="230" END="235">France</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E21" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E21-5" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="3108" END="3122">Osama bin Laden</charseq>
+    </extent>
+    <head>
+      <charseq START="3108" END="3122">Osama bin Laden</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Osama bin Laden">
+      <charseq START="3108" END="3122">Osama bin Laden</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E23" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E23-33" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="4662" END="4673">a peacemaker</charseq>
+    </extent>
+    <head>
+      <charseq START="4664" END="4673">peacemaker</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E23-68" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="4619" END="4630">His Holiness</charseq>
+    </extent>
+    <head>
+      <charseq START="4619" END="4630">His Holiness</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E23-169" TYPE="PRO" LDCTYPE="PTV" LDCATR="TRUE">
+    <extent>
+      <charseq START="4495" END="4534">One of the most
+admired men in the world</charseq>
+    </extent>
+    <head>
+      <charseq START="4495" END="4497">One</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E23-171" TYPE="PRO" LDCTYPE="PRO" LDCATR="TRUE">
+    <extent>
+      <charseq START="4556" END="4557">he</charseq>
+    </extent>
+    <head>
+      <charseq START="4556" END="4557">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E23-174" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="4633" END="4644">John Paul II</charseq>
+    </extent>
+    <head>
+      <charseq START="4633" END="4644">John Paul II</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="His Holiness">
+      <charseq START="4619" END="4630">His Holiness</charseq>
+    </name>
+    <name NAME="John Paul II">
+      <charseq START="4633" END="4644">John Paul II</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E24" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E24-51" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="FALSE">
+    <extent>
+      <charseq START="1694" END="1700">Senator</charseq>
+    </extent>
+    <head>
+      <charseq START="1694" END="1700">Senator</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E24-66" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2036" END="2046">Mr. Daschle</charseq>
+    </extent>
+    <head>
+      <charseq START="2040" END="2046">Daschle</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E24-67" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="2036" END="2037">Mr</charseq>
+    </extent>
+    <head>
+      <charseq START="2036" END="2037">Mr</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E24-69" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1694" END="1708">Senator Daschle</charseq>
+    </extent>
+    <head>
+      <charseq START="1702" END="1708">Daschle</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Daschle">
+      <charseq START="2040" END="2046">Daschle</charseq>
+    </name>
+    <name NAME="Daschle">
+      <charseq START="1702" END="1708">Daschle</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E26" TYPE="ORG" SUBTYPE="Non-Governmental" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E26-56" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1815" END="1822">al Qaeda</charseq>
+    </extent>
+    <head>
+      <charseq START="1815" END="1822">al Qaeda</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E26-61" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1923" END="1930">al Qaeda</charseq>
+    </extent>
+    <head>
+      <charseq START="1923" END="1930">al Qaeda</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E26-63" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="1956" END="1963">al Qaeda</charseq>
+    </extent>
+    <head>
+      <charseq START="1956" END="1963">al Qaeda</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E26-95" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2703" END="2718">the
+organization</charseq>
+    </extent>
+    <head>
+      <charseq START="2707" END="2718">organization</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E26-111" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2957" END="2964">al Qaeda</charseq>
+    </extent>
+    <head>
+      <charseq START="2957" END="2964">al Qaeda</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="al Qaeda">
+      <charseq START="1815" END="1822">al Qaeda</charseq>
+    </name>
+    <name NAME="al Qaeda">
+      <charseq START="1923" END="1930">al Qaeda</charseq>
+    </name>
+    <name NAME="al Qaeda">
+      <charseq START="1956" END="1963">al Qaeda</charseq>
+    </name>
+    <name NAME="al Qaeda">
+      <charseq START="2957" END="2964">al Qaeda</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E27" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E27-57" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1826" END="1843">A lot of Democrats</charseq>
+    </extent>
+    <head>
+      <charseq START="1835" END="1843">Democrats</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E28" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E28-59" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1879" END="1900">Khalid Shaikh Mohammed</charseq>
+    </extent>
+    <head>
+      <charseq START="1879" END="1900">Khalid Shaikh Mohammed</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E28-60" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1903" END="1930">the No. 2 member of al Qaeda</charseq>
+    </extent>
+    <head>
+      <charseq START="1913" END="1918">member</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E28-87" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2522" END="2523">he</charseq>
+    </extent>
+    <head>
+      <charseq START="2522" END="2523">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E28-88" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2543" END="2544">he</charseq>
+    </extent>
+    <head>
+      <charseq START="2543" END="2544">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E28-91" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2593" END="2594">he</charseq>
+    </extent>
+    <head>
+      <charseq START="2593" END="2594">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E28-103" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2855" END="2862">this guy</charseq>
+    </extent>
+    <head>
+      <charseq START="2860" END="2862">guy</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E28-107" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2918" END="2919">he</charseq>
+    </extent>
+    <head>
+      <charseq START="2918" END="2919">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E28-108" TYPE="PRO" LDCTYPE="PTV" LDCATR="TRUE">
+    <extent>
+      <charseq START="2927" END="2964">one of the central figures
+in al Qaeda</charseq>
+    </extent>
+    <head>
+      <charseq START="2927" END="2929">one</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Khalid Shaikh Mohammed">
+      <charseq START="1879" END="1900">Khalid Shaikh Mohammed</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E30" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E30-62" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1936" END="1970">another
+significant al Qaeda member</charseq>
+    </extent>
+    <head>
+      <charseq START="1965" END="1970">member</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E32" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E32-64" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="1989" END="2008">Rawalpindi, Pakistan</charseq>
+    </extent>
+    <head>
+      <charseq START="1989" END="1998">Rawalpindi</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Rawalpindi">
+      <charseq START="1989" END="1998">Rawalpindi</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E33" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E33-65" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="2001" END="2008">Pakistan</charseq>
+    </extent>
+    <head>
+      <charseq START="2001" END="2008">Pakistan</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Pakistan">
+      <charseq START="2001" END="2008">Pakistan</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E35" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E35-70" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2076" END="2079">they</charseq>
+    </extent>
+    <head>
+      <charseq START="2076" END="2079">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E35-71" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2110" END="2113">they</charseq>
+    </extent>
+    <head>
+      <charseq START="2110" END="2113">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E35-72" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2163" END="2166">they</charseq>
+    </extent>
+    <head>
+      <charseq START="2163" END="2166">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E35-73" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2184" END="2187">they</charseq>
+    </extent>
+    <head>
+      <charseq START="2184" END="2187">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E35-76" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2264" END="2267">they</charseq>
+    </extent>
+    <head>
+      <charseq START="2264" END="2267">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E35-77" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2313" END="2316">they</charseq>
+    </extent>
+    <head>
+      <charseq START="2313" END="2316">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E35-78" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2332" END="2336">their</charseq>
+    </extent>
+    <head>
+      <charseq START="2332" END="2336">their</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E37" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E37-80" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2389" END="2414">every drug
+dealer I busted</charseq>
+    </extent>
+    <head>
+      <charseq START="2400" END="2405">dealer</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E37-82" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="2420" END="2462">the most important drug dealer in the world</charseq>
+    </extent>
+    <head>
+      <charseq START="2444" END="2449">dealer</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E39" TYPE="LOC" SUBTYPE="Celestial" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E39-83" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2454" END="2462">the world</charseq>
+    </extent>
+    <head>
+      <charseq START="2458" END="2462">world</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E39-204" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="4526" END="4534">the world</charseq>
+    </extent>
+    <head>
+      <charseq START="4530" END="4534">world</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E39-205" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="3870" END="3878">the world</charseq>
+    </extent>
+    <head>
+      <charseq START="3874" END="3878">world</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E40" TYPE="PER" SUBTYPE="Indeterminate" CLASS="USP">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E40-85" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2897" END="2903">anybody</charseq>
+    </extent>
+    <head>
+      <charseq START="2897" END="2903">anybody</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E41" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E41-89" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2571" END="2571">I</charseq>
+    </extent>
+    <head>
+      <charseq START="2571" END="2571">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E41-94" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2663" END="2663">I</charseq>
+    </extent>
+    <head>
+      <charseq START="2663" END="2663">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E41-97" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2756" END="2758">you</charseq>
+    </extent>
+    <head>
+      <charseq START="2756" END="2758">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E41-105" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2881" END="2881">I</charseq>
+    </extent>
+    <head>
+      <charseq START="2881" END="2881">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E41-131" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3617" END="3619">you</charseq>
+    </extent>
+    <head>
+      <charseq START="3617" END="3619">you</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E41-185" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="194" END="200">CARLSON</charseq>
+    </extent>
+    <head>
+      <charseq START="194" END="200">CARLSON</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E41-186" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1642" END="1648">CARLSON</charseq>
+    </extent>
+    <head>
+      <charseq START="1642" END="1648">CARLSON</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E41-187" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2556" END="2562">CARLSON</charseq>
+    </extent>
+    <head>
+      <charseq START="2556" END="2562">CARLSON</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E41-188" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2872" END="2878">CARLSON</charseq>
+    </extent>
+    <head>
+      <charseq START="2872" END="2878">CARLSON</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E41-189" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="3352" END="3358">CARLSON</charseq>
+    </extent>
+    <head>
+      <charseq START="3352" END="3358">CARLSON</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E41-190" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="3511" END="3517">CARLSON</charseq>
+    </extent>
+    <head>
+      <charseq START="3511" END="3517">CARLSON</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="CARLSON">
+      <charseq START="194" END="200">CARLSON</charseq>
+    </name>
+    <name NAME="CARLSON">
+      <charseq START="1642" END="1648">CARLSON</charseq>
+    </name>
+    <name NAME="CARLSON">
+      <charseq START="2556" END="2562">CARLSON</charseq>
+    </name>
+    <name NAME="CARLSON">
+      <charseq START="2872" END="2878">CARLSON</charseq>
+    </name>
+    <name NAME="CARLSON">
+      <charseq START="3352" END="3358">CARLSON</charseq>
+    </name>
+    <name NAME="CARLSON">
+      <charseq START="3511" END="3517">CARLSON</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E42" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E42-92" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2622" END="2643">the World Trade
+Center</charseq>
+    </extent>
+    <head>
+      <charseq START="2626" END="2643">World Trade
+Center</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="World Trade Center">
+      <charseq START="2626" END="2643">World Trade
+Center</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E43" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E43-93" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2649" END="2660">the Pentagon</charseq>
+    </extent>
+    <head>
+      <charseq START="2653" END="2660">Pentagon</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Pentagon">
+      <charseq START="2653" END="2660">Pentagon</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E44" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E44-101" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2777" END="2784">somebody</charseq>
+    </extent>
+    <head>
+      <charseq START="2777" END="2784">somebody</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E45" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E45-104" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2851" END="2853">who</charseq>
+    </extent>
+    <head>
+      <charseq START="2851" END="2853">who</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E47" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E47-109" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2934" END="2964">the central figures
+in al Qaeda</charseq>
+    </extent>
+    <head>
+      <charseq START="2946" END="2952">figures</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E49" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E49-115" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="3019" END="3033">a lot of people</charseq>
+    </extent>
+    <head>
+      <charseq START="3028" END="3033">people</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E50" TYPE="WEA" SUBTYPE="Biological" CLASS="USP">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E50-123" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="3393" END="3410">biological weapons</charseq>
+    </extent>
+    <head>
+      <charseq START="3404" END="3410">weapons</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E50-126" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3469" END="3472">them</charseq>
+    </extent>
+    <head>
+      <charseq START="3469" END="3472">them</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E51" TYPE="WEA" SUBTYPE="Underspecified" CLASS="GEN">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E51-129" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="3552" END="3582">biological and chemical weapons</charseq>
+    </extent>
+    <head>
+      <charseq START="3576" END="3582">weapons</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E51-133" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3632" END="3633">it</charseq>
+    </extent>
+    <head>
+      <charseq START="3632" END="3633">it</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E51-136" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3664" END="3665">it</charseq>
+    </extent>
+    <head>
+      <charseq START="3664" END="3665">it</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E52" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E52-90" TYPE="NAM" LDCTYPE="NAM" ROLE="ORG">
+    <extent>
+      <charseq START="238" END="243">Russia</charseq>
+    </extent>
+    <head>
+      <charseq START="238" END="243">Russia</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Russia">
+      <charseq START="238" END="243">Russia</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E53" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E53-138" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE">
+    <extent>
+      <charseq START="3691" END="3694">Iran</charseq>
+    </extent>
+    <head>
+      <charseq START="3691" END="3694">Iran</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Iran">
+      <charseq START="3691" END="3694">Iran</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E54" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E54-113" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2800" END="2802">who</charseq>
+    </extent>
+    <head>
+      <charseq START="2800" END="2802">who</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E55" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E55-147" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="3889" END="3903">a
+lot of people</charseq>
+    </extent>
+    <head>
+      <charseq START="3898" END="3903">people</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E55-148" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="3934" END="3937">that</charseq>
+    </extent>
+    <head>
+      <charseq START="3934" END="3937">that</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E56" TYPE="WEA" SUBTYPE="Underspecified" CLASS="USP">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E56-149" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="3944" END="3960">dangerous weapons</charseq>
+    </extent>
+    <head>
+      <charseq START="3954" END="3960">weapons</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E57" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E57-151" TYPE="NAM" LDCTYPE="NAM" ROLE="ORG">
+    <extent>
+      <charseq START="3987" END="3991">India</charseq>
+    </extent>
+    <head>
+      <charseq START="3987" END="3991">India</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E57-152" TYPE="PRO" LDCTYPE="PRO" ROLE="ORG">
+    <extent>
+      <charseq START="4006" END="4009">they</charseq>
+    </extent>
+    <head>
+      <charseq START="4006" END="4009">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="India">
+      <charseq START="3987" END="3991">India</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E58" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E58-153" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE">
+    <extent>
+      <charseq START="4050" END="4057">Pakistan</charseq>
+    </extent>
+    <head>
+      <charseq START="4050" END="4057">Pakistan</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Pakistan">
+      <charseq START="4050" END="4057">Pakistan</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E59" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E59-154" TYPE="NAM" LDCTYPE="NAM" ROLE="ORG">
+    <extent>
+      <charseq START="4076" END="4092">the North Koreans</charseq>
+    </extent>
+    <head>
+      <charseq START="4080" END="4092">North Koreans</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="North Koreans">
+      <charseq START="4080" END="4092">North Koreans</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E62" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E62-168" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="4455" END="4462">you both</charseq>
+    </extent>
+    <head>
+      <charseq START="4455" END="4457">you</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E64" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E64-170" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="4502" END="4534">the most
+admired men in the world</charseq>
+    </extent>
+    <head>
+      <charseq START="4519" END="4521">men</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E65" TYPE="PER" SUBTYPE="Indeterminate" CLASS="USP">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E65-146" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="4765" END="4767">You</charseq>
+    </extent>
+    <head>
+      <charseq START="4765" END="4767">You</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E66" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E66-173" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="3881" END="3882">We</charseq>
+    </extent>
+    <head>
+      <charseq START="3881" END="3882">We</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E68" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E68-175" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2681" END="2683">you</charseq>
+    </extent>
+    <head>
+      <charseq START="2681" END="2683">you</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E69" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E69-176" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="4683" END="4762">the author of "Vanity Fair's" scary new look
+at the King of Pop, Michael Jackson</charseq>
+    </extent>
+    <head>
+      <charseq START="4687" END="4692">author</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E70" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E70-177" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="4698" END="4708">Vanity Fair</charseq>
+    </extent>
+    <head>
+      <charseq START="4698" END="4708">Vanity Fair</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Vanity Fair">
+      <charseq START="4698" END="4708">Vanity Fair</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E71" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E71-112" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="4731" END="4745">the King of Pop</charseq>
+    </extent>
+    <head>
+      <charseq START="4735" END="4745">King of Pop</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E71-180" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="4748" END="4762">Michael Jackson</charseq>
+    </extent>
+    <head>
+      <charseq START="4748" END="4762">Michael Jackson</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="King of Pop">
+      <charseq START="4735" END="4745">King of Pop</charseq>
+    </name>
+    <name NAME="Michael Jackson">
+      <charseq START="4748" END="4762">Michael Jackson</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E73" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E73-179" TYPE="NAM" LDCTYPE="NAM" ROLE="ORG">
+    <extent>
+      <charseq START="249" END="255">Germany</charseq>
+    </extent>
+    <head>
+      <charseq START="249" END="255">Germany</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Germany">
+      <charseq START="249" END="255">Germany</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E74" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E74-198" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="922" END="937">his constituents</charseq>
+    </extent>
+    <head>
+      <charseq START="926" END="937">constituents</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E75" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E75-199" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2052" END="2057">others</charseq>
+    </extent>
+    <head>
+      <charseq START="2052" END="2057">others</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E76" TYPE="PER" SUBTYPE="Individual" CLASS="USP">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E76-200" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2494" END="2511">whoever you arrest</charseq>
+    </extent>
+    <head>
+      <charseq START="2494" END="2500">whoever</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E77" TYPE="GPE" SUBTYPE="Nation" CLASS="GEN">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E77-201" TYPE="NOM" LDCTYPE="NOM" ROLE="ORG">
+    <extent>
+      <charseq START="4203" END="4229">the
+international community</charseq>
+    </extent>
+    <head>
+      <charseq START="4221" END="4229">community</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E78" TYPE="WEA" SUBTYPE="Chemical" CLASS="GEN">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E78-203" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="3567" END="3574">chemical</charseq>
+    </extent>
+    <head>
+      <charseq START="3567" END="3574">chemical</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E79" TYPE="WEA" SUBTYPE="Biological" CLASS="GEN">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E79-206" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="3552" END="3561">biological</charseq>
+    </extent>
+    <head>
+      <charseq START="3552" END="3561">biological</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E79-207" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="3393" END="3402">biological</charseq>
+    </extent>
+    <head>
+      <charseq START="3393" END="3402">biological</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E81" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E81-202" TYPE="PRO" LDCTYPE="PRO" ROLE="ORG">
+    <extent>
+      <charseq START="272" END="276">their</charseq>
+    </extent>
+    <head>
+      <charseq START="272" END="276">their</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E82" TYPE="ORG" SUBTYPE="Non-Governmental" CLASS="USP">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E82-208" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="292" END="371">any new U.N. Security Council that could threaten
+Saddam Hussein's grip on power</charseq>
+    </extent>
+    <head>
+      <charseq START="305" END="320">Security Council</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E82-210" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="322" END="325">that</charseq>
+    </extent>
+    <head>
+      <charseq START="322" END="325">that</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Security Council">
+      <charseq START="305" END="320">Security Council</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E83" TYPE="ORG" SUBTYPE="Non-Governmental" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E83-209" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="300" END="302">U.N</charseq>
+    </extent>
+    <head>
+      <charseq START="300" END="302">U.N</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E83-215" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="414" END="420">the U.N</charseq>
+    </extent>
+    <head>
+      <charseq START="418" END="420">U.N</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="U.N">
+      <charseq START="300" END="302">U.N</charseq>
+    </name>
+    <name NAME="U.N">
+      <charseq START="418" END="420">U.N</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E85" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E85-53" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="3162" END="3175">Saddam Hussein</charseq>
+    </extent>
+    <head>
+      <charseq START="3162" END="3175">Saddam Hussein</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E85-211" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="342" END="355">Saddam Hussein</charseq>
+    </extent>
+    <head>
+      <charseq START="342" END="355">Saddam Hussein</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Saddam Hussein">
+      <charseq START="3162" END="3175">Saddam Hussein</charseq>
+    </name>
+    <name NAME="Saddam Hussein">
+      <charseq START="342" END="355">Saddam Hussein</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E86" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E86-212" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="374" END="404">Secretary of State Colin Powell</charseq>
+    </extent>
+    <head>
+      <charseq START="393" END="404">Colin Powell</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E86-213" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="374" END="391">Secretary of State</charseq>
+    </extent>
+    <head>
+      <charseq START="374" END="382">Secretary</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E86-216" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="443" END="444">he</charseq>
+    </extent>
+    <head>
+      <charseq START="443" END="444">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Colin Powell">
+      <charseq START="393" END="404">Colin Powell</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E88" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E88-214" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="387" END="391">State</charseq>
+    </extent>
+    <head>
+      <charseq START="387" END="391">State</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="State">
+      <charseq START="387" END="391">State</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E89" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E89-14" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="650" END="651">us</charseq>
+    </extent>
+    <head>
+      <charseq START="650" END="651">us</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E89-15" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="696" END="697">we</charseq>
+    </extent>
+    <head>
+      <charseq START="696" END="697">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E89-20" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="4603" END="4604">we</charseq>
+    </extent>
+    <head>
+      <charseq START="4603" END="4604">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E89-161" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="4339" END="4340">we</charseq>
+    </extent>
+    <head>
+      <charseq START="4339" END="4340">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E89-181" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="4807" END="4808">us</charseq>
+    </extent>
+    <head>
+      <charseq START="4807" END="4808">us</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E89-217" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="451" END="452">We</charseq>
+    </extent>
+    <head>
+      <charseq START="451" END="452">We</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_CF_20030305.1900.02-E90" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_CF_20030305.1900.02-E90-120" TYPE="NOM" LDCTYPE="NOM" ROLE="GPE">
+    <extent>
+      <charseq START="3313" END="3332">a defenseless nation</charseq>
+    </extent>
+    <head>
+      <charseq START="3327" END="3332">nation</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E90-121" TYPE="NOM" LDCTYPE="NOM" ROLE="GPE">
+    <extent>
+      <charseq START="3361" END="3380">A defenseless nation</charseq>
+    </extent>
+    <head>
+      <charseq START="3375" END="3380">nation</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E90-122" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE">
+    <extent>
+      <charseq START="3383" END="3386">They</charseq>
+    </extent>
+    <head>
+      <charseq START="3383" END="3386">They</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E90-124" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE">
+    <extent>
+      <charseq START="3421" END="3424">they</charseq>
+    </extent>
+    <head>
+      <charseq START="3421" END="3424">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E90-125" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE">
+    <extent>
+      <charseq START="3460" END="3463">they</charseq>
+    </extent>
+    <head>
+      <charseq START="3460" END="3463">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E90-128" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE">
+    <extent>
+      <charseq START="3542" END="3545">they</charseq>
+    </extent>
+    <head>
+      <charseq START="3542" END="3545">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E90-132" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE">
+    <extent>
+      <charseq START="3622" END="3625">They</charseq>
+    </extent>
+    <head>
+      <charseq START="3622" END="3625">They</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E90-135" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE">
+    <extent>
+      <charseq START="3652" END="3655">them</charseq>
+    </extent>
+    <head>
+      <charseq START="3652" END="3655">them</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E90-137" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE">
+    <extent>
+      <charseq START="3672" END="3675">they</charseq>
+    </extent>
+    <head>
+      <charseq START="3672" END="3675">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E90-140" TYPE="PRO" LDCTYPE="PRO" ROLE="GPE">
+    <extent>
+      <charseq START="3762" END="3765">them</charseq>
+    </extent>
+    <head>
+      <charseq START="3762" END="3765">them</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E90-141" TYPE="PRO" LDCTYPE="PRO" ROLE="LOC">
+    <extent>
+      <charseq START="3790" END="3794">there</charseq>
+    </extent>
+    <head>
+      <charseq START="3790" END="3794">there</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E90-142" TYPE="PRO" LDCTYPE="PRO" ROLE="PER">
+    <extent>
+      <charseq START="3805" END="3808">them</charseq>
+    </extent>
+    <head>
+      <charseq START="3805" END="3808">them</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_CF_20030305.1900.02-E90-218" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="487" END="490">Iraq</charseq>
+    </extent>
+    <head>
+      <charseq START="487" END="490">Iraq</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Iraq">
+      <charseq START="487" END="490">Iraq</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<value ID="CNN_CF_20030305.1900.02-V1" TYPE="Job-Title">
+  <value_mention ID="CNN_CF_20030305.1900.02-V1-1">
+    <extent>
+      <charseq START="2369" END="2386">federal prosecutor</charseq>
+    </extent>
+  </value_mention>
+</value>
+<timex2 ID="CNN_CF_20030305.1900.02-T1" VAL="PAST_REF" ANCHOR_VAL="2003-03-05-T19:00:00" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="CNN_CF_20030305.1900.02-T1-1">
+    <extent>
+      <charseq START="2362" END="2367">former</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_CF_20030305.1900.02-T2" VAL="PRESENT_REF" ANCHOR_VAL="2003-03-05-T19:00:00" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_CF_20030305.1900.02-T2-1">
+    <extent>
+      <charseq START="4719" END="4721">new</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_CF_20030305.1900.02-T3" VAL="2003-03-05T19:00:00-05">
+  <timex2_mention ID="CNN_CF_20030305.1900.02-T3-1">
+    <extent>
+      <charseq START="36" END="60">2003-03-05T19:00:00-05:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_CF_20030305.1900.02-T4" VAL="2003-03-05">
+  <timex2_mention ID="CNN_CF_20030305.1900.02-T4-1">
+    <extent>
+      <charseq START="257" END="261">today</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_CF_20030305.1900.02-T5" VAL="2003-03-06">
+  <timex2_mention ID="CNN_CF_20030305.1900.02-T5-1">
+    <extent>
+      <charseq START="423" END="430">tomorrow</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_CF_20030305.1900.02-T6" VAL="2003-03-05">
+  <timex2_mention ID="CNN_CF_20030305.1900.02-T6-1">
+    <extent>
+      <charseq START="1059" END="1063">today</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_CF_20030305.1900.02-T7" VAL="PAST_REF" ANCHOR_VAL="2003-03-05-T19:00:00" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="CNN_CF_20030305.1900.02-T7-1">
+    <extent>
+      <charseq START="1671" END="1692">a couple of months ago</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_CF_20030305.1900.02-T8" VAL="2003-W09-WE">
+  <timex2_mention ID="CNN_CF_20030305.1900.02-T8-1">
+    <extent>
+      <charseq START="1866" END="1877">This
+weekend</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_CF_20030305.1900.02-T9" VAL="2003-03-05T19:01-05">
+  <timex2_mention ID="CNN_CF_20030305.1900.02-T9-1">
+    <extent>
+      <charseq START="4591" END="4601">In a minute</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_CF_20030305.1900.02-T10" VAL="PRESENT_REF" ANCHOR_VAL="2003-03-05T19:00:00" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_CF_20030305.1900.02-T10-1">
+    <extent>
+      <charseq START="3076" END="3078">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_CF_20030305.1900.02-R1" TYPE="ORG-AFF" SUBTYPE="Membership" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030305.1900.02-E5" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030305.1900.02-E16" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030305.1900.02-R1-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="571" END="603">Republican Congressman Peter King</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030305.1900.02-E5-10" ROLE="Arg-1">
+      <extent>
+        <charseq START="571" END="592">Republican Congressman</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030305.1900.02-E16-106" ROLE="Arg-2">
+      <extent>
+        <charseq START="571" END="580">Republican</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030305.1900.02-R2" TYPE="PART-WHOLE" SUBTYPE="Subsidiary" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030305.1900.02-E82" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030305.1900.02-E83" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030305.1900.02-R2-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="292" END="371">any new U.N. Security Council that could threaten
+Saddam Hussein's grip on power</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030305.1900.02-E82-208" ROLE="Arg-1">
+      <extent>
+        <charseq START="292" END="371">any new U.N. Security Council that could threaten
+Saddam Hussein's grip on power</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030305.1900.02-E83-209" ROLE="Arg-2">
+      <extent>
+        <charseq START="300" END="302">U.N</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030305.1900.02-R3" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030305.1900.02-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030305.1900.02-E3" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030305.1900.02-R3-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="525" END="543">a New York Democrat</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030305.1900.02-E1-3" ROLE="Arg-1">
+      <extent>
+        <charseq START="525" END="543">a New York Democrat</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030305.1900.02-E3-4" ROLE="Arg-2">
+      <extent>
+        <charseq START="527" END="534">New York</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030305.1900.02-R4" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030305.1900.02-E5" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030305.1900.02-E14" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030305.1900.02-R4-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="943" END="953">his country</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030305.1900.02-E5-29" ROLE="Arg-1">
+      <extent>
+        <charseq START="943" END="945">his</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030305.1900.02-E14-28" ROLE="Arg-2">
+      <extent>
+        <charseq START="943" END="953">his country</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030305.1900.02-R5" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030305.1900.02-E17" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030305.1900.02-E14" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030305.1900.02-R5-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="1123" END="1136">our servicemen</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030305.1900.02-E17-36" ROLE="Arg-1">
+      <extent>
+        <charseq START="1123" END="1136">our servicemen</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030305.1900.02-E14-37" ROLE="Arg-2">
+      <extent>
+        <charseq START="1123" END="1125">our</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030305.1900.02-R6" TYPE="ORG-AFF" SUBTYPE="Membership" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030305.1900.02-E28" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030305.1900.02-E26" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030305.1900.02-R6-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="1903" END="1930">the No. 2 member of al Qaeda</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030305.1900.02-E28-60" ROLE="Arg-1">
+      <extent>
+        <charseq START="1903" END="1930">the No. 2 member of al Qaeda</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030305.1900.02-E26-61" ROLE="Arg-2">
+      <extent>
+        <charseq START="1923" END="1930">al Qaeda</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030305.1900.02-R7" TYPE="ORG-AFF" SUBTYPE="Membership" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030305.1900.02-E30" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030305.1900.02-E26" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030305.1900.02-R7-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="1936" END="1970">another
+significant al Qaeda member</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030305.1900.02-E30-62" ROLE="Arg-1">
+      <extent>
+        <charseq START="1936" END="1970">another
+significant al Qaeda member</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030305.1900.02-E26-63" ROLE="Arg-2">
+      <extent>
+        <charseq START="1956" END="1963">al Qaeda</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030305.1900.02-R8" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030305.1900.02-E28" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030305.1900.02-E32" ROLE="Arg-2"/>
+  <relation_argument REFID="CNN_CF_20030305.1900.02-T8" ROLE="Time-Within"/>
+  <relation_mention ID="CNN_CF_20030305.1900.02-R8-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="1866" END="2008">This
+weekend Khalid Shaikh Mohammed, the No. 2 member of al Qaeda and another
+significant al Qaeda member were captured in Rawalpindi, Pakistan</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030305.1900.02-E28-59" ROLE="Arg-1">
+      <extent>
+        <charseq START="1879" END="1900">Khalid Shaikh Mohammed</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030305.1900.02-E32-64" ROLE="Arg-2">
+      <extent>
+        <charseq START="1989" END="2008">Rawalpindi, Pakistan</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030305.1900.02-T8-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="1866" END="1877">This
+weekend</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030305.1900.02-R9" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030305.1900.02-E30" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030305.1900.02-E32" ROLE="Arg-2"/>
+  <relation_argument REFID="CNN_CF_20030305.1900.02-T8" ROLE="Time-Within"/>
+  <relation_mention ID="CNN_CF_20030305.1900.02-R9-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="1866" END="2008">This
+weekend Khalid Shaikh Mohammed, the No. 2 member of al Qaeda and another
+significant al Qaeda member were captured in Rawalpindi, Pakistan</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030305.1900.02-E30-62" ROLE="Arg-1">
+      <extent>
+        <charseq START="1936" END="1970">another
+significant al Qaeda member</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030305.1900.02-E32-64" ROLE="Arg-2">
+      <extent>
+        <charseq START="1989" END="2008">Rawalpindi, Pakistan</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030305.1900.02-T8-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="1866" END="1877">This
+weekend</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030305.1900.02-R10" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030305.1900.02-E32" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030305.1900.02-E33" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030305.1900.02-R10-1" LEXICALCONDITION="Formulaic">
+    <extent>
+      <charseq START="1989" END="2008">Rawalpindi, Pakistan</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030305.1900.02-E32-64" ROLE="Arg-1">
+      <extent>
+        <charseq START="1989" END="2008">Rawalpindi, Pakistan</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030305.1900.02-E33-65" ROLE="Arg-2">
+      <extent>
+        <charseq START="2001" END="2008">Pakistan</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030305.1900.02-R11" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030305.1900.02-E37" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030305.1900.02-E39" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030305.1900.02-R11-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="2420" END="2462">the most important drug dealer in the world</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030305.1900.02-E37-82" ROLE="Arg-1">
+      <extent>
+        <charseq START="2420" END="2462">the most important drug dealer in the world</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030305.1900.02-E39-83" ROLE="Arg-2">
+      <extent>
+        <charseq START="2454" END="2462">the world</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030305.1900.02-R12" TYPE="ORG-AFF" SUBTYPE="Membership" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030305.1900.02-E68" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030305.1900.02-E26" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030305.1900.02-R12-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="2663" END="2718">I think that puts you pretty high up in the
+organization</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030305.1900.02-E68-175" ROLE="Arg-1">
+      <extent>
+        <charseq START="2681" END="2683">you</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030305.1900.02-E26-95" ROLE="Arg-2">
+      <extent>
+        <charseq START="2703" END="2718">the
+organization</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030305.1900.02-R13" TYPE="ORG-AFF" SUBTYPE="Membership" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030305.1900.02-E47" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030305.1900.02-E26" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030305.1900.02-R13-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="2934" END="2964">the central figures
+in al Qaeda</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030305.1900.02-E47-109" ROLE="Arg-1">
+      <extent>
+        <charseq START="2934" END="2964">the central figures
+in al Qaeda</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030305.1900.02-E26-111" ROLE="Arg-2">
+      <extent>
+        <charseq START="2957" END="2964">al Qaeda</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030305.1900.02-R14" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030305.1900.02-E90" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030305.1900.02-E50" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030305.1900.02-R14-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="3383" END="3410">They have biological weapons</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030305.1900.02-E90-122" ROLE="Arg-1">
+      <extent>
+        <charseq START="3383" END="3386">They</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030305.1900.02-E50-123" ROLE="Arg-2">
+      <extent>
+        <charseq START="3393" END="3410">biological weapons</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_CF_20030305.1900.02-R14-2" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="3450" END="3472">And how'd they get them</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030305.1900.02-E90-125" ROLE="Arg-1">
+      <extent>
+        <charseq START="3460" END="3463">they</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030305.1900.02-E50-126" ROLE="Arg-2">
+      <extent>
+        <charseq START="3469" END="3472">them</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030305.1900.02-R16" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030305.1900.02-E90" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030305.1900.02-E51" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030305.1900.02-R16-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="3520" END="3582">It was our fault that they have biological and chemical weapons</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030305.1900.02-E90-128" ROLE="Arg-1">
+      <extent>
+        <charseq START="3542" END="3545">they</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030305.1900.02-E51-129" ROLE="Arg-2">
+      <extent>
+        <charseq START="3552" END="3582">biological and chemical weapons</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+  <relation_mention ID="CNN_CF_20030305.1900.02-R16-2" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="3622" END="3720">They have it and we supported them having it when they
+were fighting Iran so it's no big deal there</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030305.1900.02-E90-132" ROLE="Arg-1">
+      <extent>
+        <charseq START="3622" END="3625">They</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030305.1900.02-E51-133" ROLE="Arg-2">
+      <extent>
+        <charseq START="3632" END="3633">it</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_CF_20030305.1900.02-R17" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_CF_20030305.1900.02-E5" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_CF_20030305.1900.02-E3" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_CF_20030305.1900.02-R17-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="4371" END="4406">Congressman Peter King from New York</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_CF_20030305.1900.02-E5-163" ROLE="Arg-1">
+      <extent>
+        <charseq START="4371" END="4406">Congressman Peter King from New York</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_CF_20030305.1900.02-E3-165" ROLE="Arg-2">
+      <extent>
+        <charseq START="4399" END="4406">New York</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_CF_20030305.1900.02-EV1" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_CF_20030305.1900.02-E14" ROLE="Attacker"/>
+  <event_argument REFID="CNN_CF_20030305.1900.02-E26" ROLE="Target"/>
+  <event_mention ID="CNN_CF_20030305.1900.02-EV1-1">
+    <extent>
+      <charseq START="1762" END="1822">we haven't made any real progress in
+the war against al Qaeda</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1651" END="1822">Congressman Rangel, a couple of months ago Senator Daschle on CBS said --
+made the charge that we are, quote, "we haven't made any real progress in
+the war against al Qaeda</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1803" END="1805">war</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_CF_20030305.1900.02-E14-55" ROLE="Attacker">
+      <extent>
+        <charseq START="1762" END="1763">we</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_CF_20030305.1900.02-E26-56" ROLE="Target">
+      <extent>
+        <charseq START="1815" END="1822">al Qaeda</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_CF_20030305.1900.02-EV2" TYPE="Transaction" SUBTYPE="Transfer-Ownership" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_CF_20030305.1900.02-E50" ROLE="Artifact"/>
+  <event_argument REFID="CNN_CF_20030305.1900.02-E90" ROLE="Buyer"/>
+  <event_mention ID="CNN_CF_20030305.1900.02-EV2-1">
+    <extent>
+      <charseq START="3460" END="3472">they get them</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="3450" END="3472">And how'd they get them</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="3465" END="3467">get</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_CF_20030305.1900.02-E50-126" ROLE="Artifact">
+      <extent>
+        <charseq START="3469" END="3472">them</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_CF_20030305.1900.02-E90-125" ROLE="Buyer">
+      <extent>
+        <charseq START="3460" END="3463">they</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_CF_20030305.1900.02-EV3" TYPE="Contact" SUBTYPE="Meet" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Future">
+  <event_argument REFID="CNN_CF_20030305.1900.02-E86" ROLE="Entity"/>
+  <event_argument REFID="CNN_CF_20030305.1900.02-E83" ROLE="Entity"/>
+  <event_argument REFID="CNN_CF_20030305.1900.02-T5" ROLE="Time-Within"/>
+  <event_mention ID="CNN_CF_20030305.1900.02-EV3-1">
+    <extent>
+      <charseq START="374" END="430">Secretary of State Colin Powell goes to
+the U.N. tomorrow</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="374" END="448">Secretary of State Colin Powell goes to
+the U.N. tomorrow to do what he can</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="406" END="409">goes</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_CF_20030305.1900.02-E86-212" ROLE="Entity">
+      <extent>
+        <charseq START="374" END="404">Secretary of State Colin Powell</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_CF_20030305.1900.02-E83-215" ROLE="Entity">
+      <extent>
+        <charseq START="414" END="420">the U.N</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_CF_20030305.1900.02-T5-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="423" END="430">tomorrow</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_CF_20030305.1900.02-EV4" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Future">
+  <event_argument REFID="CNN_CF_20030305.1900.02-E90" ROLE="Place"/>
+  <event_mention ID="CNN_CF_20030305.1900.02-EV4-1">
+    <extent>
+      <charseq START="480" END="490">war in
+Iraq</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="451" END="603">We're talking with potential war in
+Iraq with Congressman Charlie Rangel, a New York Democrat and his fellow
+New Yorker Republican Congressman Peter King</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="480" END="482">war</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_CF_20030305.1900.02-E90-218" ROLE="Place">
+      <extent>
+        <charseq START="487" END="490">Iraq</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_CF_20030305.1900.02-EV5" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_mention ID="CNN_CF_20030305.1900.02-EV5-1">
+    <extent>
+      <charseq START="773" END="775">war</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="672" END="814">One of the reasons
+that we like having you on, and as well as Mr. Rangel, is that, you know,
+this is war, as we were saying in the last segment</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="773" END="775">war</charseq>
+    </anchor>
+  </event_mention>
+  <event_mention ID="CNN_CF_20030305.1900.02-EV5-2">
+    <extent>
+      <charseq START="827" END="828">it</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="817" END="882">You treat it with the
+gravity and the seriousness that it deserves</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="827" END="828">it</charseq>
+    </anchor>
+  </event_mention>
+  <event_mention ID="CNN_CF_20030305.1900.02-EV5-3">
+    <extent>
+      <charseq START="1231" END="1233">war</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1201" END="1233">Isn't that wrong in a time of war</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1231" END="1233">war</charseq>
+    </anchor>
+  </event_mention>
+  <event_mention ID="CNN_CF_20030305.1900.02-EV5-4">
+    <extent>
+      <charseq START="872" END="873">it</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="817" END="882">You treat it with the
+gravity and the seriousness that it deserves</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="872" END="873">it</charseq>
+    </anchor>
+  </event_mention>
+  <event_mention ID="CNN_CF_20030305.1900.02-EV5-5">
+    <extent>
+      <charseq START="4586" END="4588">war</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="4495" END="4588">One of the most
+admired men in the world is doing everything he can to avert the horror
+of war</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="4586" END="4588">war</charseq>
+    </anchor>
+  </event_mention>
+</event>
+<event ID="CNN_CF_20030305.1900.02-EV6" TYPE="Personnel" SUBTYPE="End-Position" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_CF_20030305.1900.02-E1" ROLE="Person"/>
+  <event_argument REFID="CNN_CF_20030305.1900.02-V1" ROLE="Position"/>
+  <event_argument REFID="CNN_CF_20030305.1900.02-T1" ROLE="Time-Within"/>
+  <event_mention ID="CNN_CF_20030305.1900.02-EV6-1">
+    <extent>
+      <charseq START="2360" END="2386">a former federal prosecutor</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2261" END="2462">If they don't have the pencil that's keeping score, they ought to keep
+their mouth shut because as a former federal prosecutor, every drug
+dealer I busted was the most important drug dealer in the world</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2362" END="2367">former</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_CF_20030305.1900.02-E1-79" ROLE="Person">
+      <extent>
+        <charseq START="2360" END="2386">a former federal prosecutor</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_CF_20030305.1900.02-V1-1" ROLE="Position">
+      <extent>
+        <charseq START="2369" END="2386">federal prosecutor</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_CF_20030305.1900.02-T1-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="2362" END="2367">former</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_CF_20030305.1900.02-EV7" TYPE="Justice" SUBTYPE="Arrest-Jail" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="CNN_CF_20030305.1900.02-E11" ROLE="Agent"/>
+  <event_argument REFID="CNN_CF_20030305.1900.02-E76" ROLE="Person"/>
+  <event_mention ID="CNN_CF_20030305.1900.02-EV7-1">
+    <extent>
+      <charseq START="2494" END="2511">whoever you arrest</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2465" END="2511">You just
+pass out numbers on whoever you arrest</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2506" END="2511">arrest</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_CF_20030305.1900.02-E11-86" ROLE="Agent">
+      <extent>
+        <charseq START="2502" END="2504">you</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_CF_20030305.1900.02-E76-200" ROLE="Person">
+      <extent>
+        <charseq START="2494" END="2511">whoever you arrest</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_CF_20030305.1900.02-EV8" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_CF_20030305.1900.02-E42" ROLE="Target"/>
+  <event_argument REFID="CNN_CF_20030305.1900.02-E43" ROLE="Target"/>
+  <event_mention ID="CNN_CF_20030305.1900.02-EV8-1">
+    <extent>
+      <charseq START="2612" END="2660">attack on the World Trade
+Center and the Pentagon</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2585" END="2660">Because he helped plan the attack on the World Trade
+Center and the Pentagon</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2612" END="2617">attack</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_CF_20030305.1900.02-E42-92" ROLE="Target">
+      <extent>
+        <charseq START="2622" END="2643">the World Trade
+Center</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_CF_20030305.1900.02-E43-93" ROLE="Target">
+      <extent>
+        <charseq START="2649" END="2660">the Pentagon</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_CF_20030305.1900.02-EV9" TYPE="Justice" SUBTYPE="Arrest-Jail" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="CNN_CF_20030305.1900.02-E44" ROLE="Person"/>
+  <event_argument REFID="CNN_CF_20030305.1900.02-E41" ROLE="Agent"/>
+  <event_mention ID="CNN_CF_20030305.1900.02-EV9-1">
+    <extent>
+      <charseq START="2756" END="2784">you, when you arrest somebody</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2744" END="2819">Let me tell you, when you arrest somebody, you describe who you're
+arresting</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2770" END="2775">arrest</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_CF_20030305.1900.02-E44-101" ROLE="Person">
+      <extent>
+        <charseq START="2777" END="2784">somebody</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_CF_20030305.1900.02-E41-97" ROLE="Agent">
+      <extent>
+        <charseq START="2756" END="2758">you</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_CF_20030305.1900.02-EV10" TYPE="Justice" SUBTYPE="Arrest-Jail" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="CNN_CF_20030305.1900.02-E49" ROLE="Person"/>
+  <event_argument REFID="CNN_CF_20030305.1900.02-E14" ROLE="Agent"/>
+  <event_mention ID="CNN_CF_20030305.1900.02-EV10-1">
+    <extent>
+      <charseq START="2996" END="3033">we should be arresting a lot of people</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2988" END="3033">Listen, we should be arresting a lot of people</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="3009" END="3017">arresting</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_CF_20030305.1900.02-E49-115" ROLE="Person">
+      <extent>
+        <charseq START="3019" END="3033">a lot of people</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_CF_20030305.1900.02-E14-114" ROLE="Agent">
+      <extent>
+        <charseq START="2996" END="2997">we</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_CF_20030305.1900.02-EV11" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_CF_20030305.1900.02-E14" ROLE="Attacker"/>
+  <event_mention ID="CNN_CF_20030305.1900.02-EV11-1">
+    <extent>
+      <charseq START="3244" END="3303">we should not have the
+arrogance to have a preemptive strike</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="3178" END="3344">We should do all of
+those things, but the most important thing is we should not have the
+arrogance to have a preemptive strike against a defenseless nation
+without the</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="3298" END="3303">strike</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_CF_20030305.1900.02-E14-119" ROLE="Attacker">
+      <extent>
+        <charseq START="3244" END="3245">we</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_CF_20030305.1900.02-EV12" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_CF_20030305.1900.02-E90" ROLE="Attacker"/>
+  <event_argument REFID="CNN_CF_20030305.1900.02-E53" ROLE="Attacker"/>
+  <event_mention ID="CNN_CF_20030305.1900.02-EV12-1">
+    <extent>
+      <charseq START="3672" END="3694">they
+were fighting Iran</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="3622" END="3720">They have it and we supported them having it when they
+were fighting Iran so it's no big deal there</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="3682" END="3689">fighting</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_CF_20030305.1900.02-E90-137" ROLE="Attacker">
+      <extent>
+        <charseq START="3672" END="3675">they</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_CF_20030305.1900.02-E53-138" ROLE="Attacker">
+      <extent>
+        <charseq START="3691" END="3694">Iran</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_CF_20030305.1900.02-EV13" TYPE="Life" SUBTYPE="Die" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="CNN_CF_20030305.1900.02-E14" ROLE="Agent"/>
+  <event_argument REFID="CNN_CF_20030305.1900.02-E90" ROLE="Place"/>
+  <event_mention ID="CNN_CF_20030305.1900.02-EV13-1">
+    <extent>
+      <charseq START="3748" END="3803">we
+can disarm them without actually going there, killing</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="3723" END="3878">And the thing is that if we
+can disarm them without actually going there, killing them, I really
+think that we maintain our moral authority around the world</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="3797" END="3803">killing</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_CF_20030305.1900.02-E14-139" ROLE="Agent">
+      <extent>
+        <charseq START="3748" END="3749">we</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_CF_20030305.1900.02-E90-141" ROLE="Place">
+      <extent>
+        <charseq START="3790" END="3794">there</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_CF_20030305.1900.02-EV14" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Other" POLARITY="Positive" GENERICITY="Specific" TENSE="Future">
+  <event_argument REFID="CNN_CF_20030305.1900.02-E57" ROLE="Attacker"/>
+  <event_mention ID="CNN_CF_20030305.1900.02-EV14-1">
+    <extent>
+      <charseq START="3987" END="4040">India decides
+that they could have a preemptive strike</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="3963" END="4057">I mean, what happens if India decides
+that they could have a preemptive strike against Pakistan</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="4035" END="4040">strike</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_CF_20030305.1900.02-E57-151" ROLE="Attacker">
+      <extent>
+        <charseq START="3987" END="3991">India</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_CF_20030305.1900.02-EV15" TYPE="Life" SUBTYPE="Die" MODALITY="Other" POLARITY="Negative" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="CNN_CF_20030305.1900.02-E14" ROLE="Agent"/>
+  <event_mention ID="CNN_CF_20030305.1900.02-EV15-1">
+    <extent>
+      <charseq START="4263" END="4277">we have to kill</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="4249" END="4291">I don't think we have to kill
+to prove that</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="4274" END="4277">kill</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_CF_20030305.1900.02-E14-159" ROLE="Agent">
+      <extent>
+        <charseq START="4263" END="4264">we</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

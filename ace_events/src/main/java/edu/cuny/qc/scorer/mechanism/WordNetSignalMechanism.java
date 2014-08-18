@@ -760,7 +760,7 @@ public class WordNetSignalMechanism extends SignalMechanism {
 	private static boolean DO_SENTENCE_LOGGING = false;
 	
 	//public static String WORDNET_DIR_PATH = ;
-	public static File WORDNET_DIR = new File("src/main/resources/data/Wordnet3.0");
+	public static File WORDNET_DIR = new File("../ace_events_large_resources/src/main/resources/data/Wordnet3.0");
 	private static final int MAXIMUM_WORDNET_LENGTH = 100;
 	
 	public static final Set<WordNetRelation> ALL_RELATIONS_SMALL = new LinkedHashSet<WordNetRelation>(Arrays.asList(new WordNetRelation[] {

@@ -1,0 +1,325 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNNHL_ENG_20030611_133445.24.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNNHL_ENG_20030611_133445.24">
+<entity ID="CNNHL_ENG_20030611_133445.24-E1" TYPE="FAC" SUBTYPE="Subarea-Facility" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030611_133445.24-E1-1" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="88" END="92">court</charseq>
+    </extent>
+    <head>
+      <charseq START="88" END="92">court</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030611_133445.24-E2" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030611_133445.24-E2-2" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="193" END="196">they</charseq>
+    </extent>
+    <head>
+      <charseq START="193" END="196">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030611_133445.24-E2-3" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="104" END="190">the suburban chicago high school
+girls involved in a violent hazing incident last month</charseq>
+    </extent>
+    <head>
+      <charseq START="137" END="141">girls</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030611_133445.24-E3" TYPE="ORG" SUBTYPE="Educational" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030611_133445.24-E3-4" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="108" END="135">suburban chicago high school</charseq>
+    </extent>
+    <head>
+      <charseq START="130" END="135">school</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030611_133445.24-E3-10" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="263" END="289">glenbrook north
+high school</charseq>
+    </extent>
+    <head>
+      <charseq START="263" END="289">glenbrook north
+high school</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="glenbrook north high school">
+      <charseq START="263" END="289">glenbrook north
+high school</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030611_133445.24-E5" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030611_133445.24-E5-5" TYPE="PRO" LDCTYPE="PTV">
+    <extent>
+      <charseq START="98" END="190">16 of the suburban chicago high school
+girls involved in a violent hazing incident last month</charseq>
+    </extent>
+    <head>
+      <charseq START="98" END="99">16</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030611_133445.24-E6" TYPE="LOC" SUBTYPE="Region-General" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030611_133445.24-E6-6" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="108" END="123">suburban chicago</charseq>
+    </extent>
+    <head>
+      <charseq START="117" END="123">chicago</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030611_133445.24-E7" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030611_133445.24-E7-7" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="229" END="289">mothers of two of the students at glenbrook north
+high school</charseq>
+    </extent>
+    <head>
+      <charseq START="229" END="235">mothers</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030611_133445.24-E8" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030611_133445.24-E8-8" TYPE="PRO" LDCTYPE="PTV">
+    <extent>
+      <charseq START="240" END="289">two of the students at glenbrook north
+high school</charseq>
+    </extent>
+    <head>
+      <charseq START="240" END="242">two</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030611_133445.24-E9" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNNHL_ENG_20030611_133445.24-E9-9" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="247" END="289">the students at glenbrook north
+high school</charseq>
+    </extent>
+    <head>
+      <charseq START="251" END="258">students</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030611_133445.24-E9-11" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="356" END="368">the teenagers</charseq>
+    </extent>
+    <head>
+      <charseq START="360" END="368">teenagers</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<value ID="CNNHL_ENG_20030611_133445.24-V1" TYPE="Crime">
+  <value_mention ID="CNNHL_ENG_20030611_133445.24-V1-1">
+    <extent>
+      <charseq START="315" END="325">misdemeanor</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNNHL_ENG_20030611_133445.24-V2" TYPE="Crime">
+  <value_mention ID="CNNHL_ENG_20030611_133445.24-V2-1">
+    <extent>
+      <charseq START="208" END="218">misdemeanor</charseq>
+    </extent>
+  </value_mention>
+</value>
+<timex2 ID="CNNHL_ENG_20030611_133445.24-T1" VAL="2003-06-11T13:56:03">
+  <timex2_mention ID="CNNHL_ENG_20030611_133445.24-T1-1">
+    <extent>
+      <charseq START="46" END="64">2003-06-11 13:56:03</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNNHL_ENG_20030611_133445.24-T2" VAL="2003-06-11">
+  <timex2_mention ID="CNNHL_ENG_20030611_133445.24-T2-1">
+    <extent>
+      <charseq START="79" END="83">a day</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNNHL_ENG_20030611_133445.24-T3" VAL="2003-05">
+  <timex2_mention ID="CNNHL_ENG_20030611_133445.24-T3-1">
+    <extent>
+      <charseq START="181" END="190">last month</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNNHL_ENG_20030611_133445.24-R1" TYPE="PER-SOC" SUBTYPE="Family" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030611_133445.24-E7" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030611_133445.24-E8" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030611_133445.24-R1-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="229" END="289">mothers of two of the students at glenbrook north
+high school</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030611_133445.24-E7-7" ROLE="Arg-1">
+      <extent>
+        <charseq START="229" END="289">mothers of two of the students at glenbrook north
+high school</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030611_133445.24-E8-8" ROLE="Arg-2">
+      <extent>
+        <charseq START="240" END="289">two of the students at glenbrook north
+high school</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030611_133445.24-R2" TYPE="PART-WHOLE" SUBTYPE="Subsidiary" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030611_133445.24-E3" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030611_133445.24-E6" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030611_133445.24-R2-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="108" END="135">suburban chicago high school</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030611_133445.24-E3-4" ROLE="Arg-1">
+      <extent>
+        <charseq START="108" END="135">suburban chicago high school</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030611_133445.24-E6-6" ROLE="Arg-2">
+      <extent>
+        <charseq START="108" END="123">suburban chicago</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030611_133445.24-R3" TYPE="PHYS" SUBTYPE="Located" TENSE="Present" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030611_133445.24-E5" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030611_133445.24-E1" ROLE="Arg-2"/>
+  <relation_argument REFID="CNNHL_ENG_20030611_133445.24-T2" ROLE="Time-Within"/>
+  <relation_mention ID="CNNHL_ENG_20030611_133445.24-R3-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="70" END="190">and it's a day in court for 16 of the suburban chicago high school
+girls involved in a violent hazing incident last month</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030611_133445.24-E5-5" ROLE="Arg-1">
+      <extent>
+        <charseq START="98" END="190">16 of the suburban chicago high school
+girls involved in a violent hazing incident last month</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030611_133445.24-E1-1" ROLE="Arg-2">
+      <extent>
+        <charseq START="88" END="92">court</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030611_133445.24-T2-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="79" END="83">a day</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030611_133445.24-R4" TYPE="ORG-AFF" SUBTYPE="Student-Alum" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030611_133445.24-E9" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030611_133445.24-E3" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030611_133445.24-R4-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="247" END="289">the students at glenbrook north
+high school</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030611_133445.24-E9-9" ROLE="Arg-1">
+      <extent>
+        <charseq START="247" END="289">the students at glenbrook north
+high school</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030611_133445.24-E3-10" ROLE="Arg-2">
+      <extent>
+        <charseq START="263" END="289">glenbrook north
+high school</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030611_133445.24-R5" TYPE="ORG-AFF" SUBTYPE="Student-Alum" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030611_133445.24-E3" ROLE="Arg-2"/>
+  <relation_argument REFID="CNNHL_ENG_20030611_133445.24-E2" ROLE="Arg-1"/>
+  <relation_mention ID="CNNHL_ENG_20030611_133445.24-R5-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="104" END="190">the suburban chicago high school
+girls involved in a violent hazing incident last month</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030611_133445.24-E2-3" ROLE="Arg-1">
+      <extent>
+        <charseq START="104" END="190">the suburban chicago high school
+girls involved in a violent hazing incident last month</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030611_133445.24-E3-4" ROLE="Arg-2">
+      <extent>
+        <charseq START="108" END="135">suburban chicago high school</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNNHL_ENG_20030611_133445.24-EV1" TYPE="Justice" SUBTYPE="Charge-Indict" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="CNNHL_ENG_20030611_133445.24-E2" ROLE="Defendant"/>
+  <event_argument REFID="CNNHL_ENG_20030611_133445.24-V2" ROLE="Crime"/>
+  <event_mention ID="CNNHL_ENG_20030611_133445.24-EV1-1">
+    <extent>
+      <charseq START="193" END="226">they're facing
+misdemeanor charges</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="193" END="226">they're facing
+misdemeanor charges</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="220" END="226">charges</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030611_133445.24-E2-2" ROLE="Defendant">
+      <extent>
+        <charseq START="193" END="196">they</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030611_133445.24-V2-1" ROLE="Crime">
+      <extent>
+        <charseq START="208" END="218">misdemeanor</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNNHL_ENG_20030611_133445.24-EV2" TYPE="Justice" SUBTYPE="Charge-Indict" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNNHL_ENG_20030611_133445.24-E7" ROLE="Defendant"/>
+  <event_argument REFID="CNNHL_ENG_20030611_133445.24-V1" ROLE="Crime"/>
+  <event_mention ID="CNNHL_ENG_20030611_133445.24-EV2-1">
+    <extent>
+      <charseq START="229" END="333">mothers of two of the students at glenbrook north
+high school have also been named on misdemeanor charges</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="229" END="368">mothers of two of the students at glenbrook north
+high school have also been named on misdemeanor charges of supplying
+beer to the teenagers</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="327" END="333">charges</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030611_133445.24-E7-7" ROLE="Defendant">
+      <extent>
+        <charseq START="229" END="289">mothers of two of the students at glenbrook north
+high school</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030611_133445.24-V1-1" ROLE="Crime">
+      <extent>
+        <charseq START="315" END="325">misdemeanor</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

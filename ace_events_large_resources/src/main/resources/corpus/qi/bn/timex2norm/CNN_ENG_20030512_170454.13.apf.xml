@@ -1,0 +1,1546 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030512_170454.13.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030512_170454.13">
+<entity ID="CNN_ENG_20030512_170454.13-E1" TYPE="GPE" SUBTYPE="State-or-Province" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E1-5" TYPE="NOM" LDCTYPE="NOMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="679" END="683">state</charseq>
+    </extent>
+    <head>
+      <charseq START="679" END="683">state</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E1-6" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="693" END="700">maryland</charseq>
+    </extent>
+    <head>
+      <charseq START="693" END="700">maryland</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E1-98" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="556" END="563">maryland</charseq>
+    </extent>
+    <head>
+      <charseq START="556" END="563">maryland</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="maryland">
+      <charseq START="693" END="700">maryland</charseq>
+    </name>
+    <name NAME="maryland">
+      <charseq START="556" END="563">maryland</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030512_170454.13-E3" TYPE="LOC" SUBTYPE="Water-Body" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E3-1" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="554" END="616">a maryland pond relating to
+evidence for those unsolved attacks</charseq>
+    </extent>
+    <head>
+      <charseq START="565" END="568">pond</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E3-10" TYPE="PRO" LDCTYPE="PTV">
+    <extent>
+      <charseq START="805" END="827">one of the
+park's ponds</charseq>
+    </extent>
+    <head>
+      <charseq START="805" END="807">one</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E3-12" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="883" END="890">the pond</charseq>
+    </extent>
+    <head>
+      <charseq START="887" END="890">pond</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E3-21" TYPE="PRO" LDCTYPE="PTV">
+    <extent>
+      <charseq START="1080" END="1095">one of the ponds</charseq>
+    </extent>
+    <head>
+      <charseq START="1080" END="1082">one</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E3-86" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="988" END="995">the area</charseq>
+    </extent>
+    <head>
+      <charseq START="992" END="995">area</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030512_170454.13-E4" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E4-2" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="619" END="629">kelli arena</charseq>
+    </extent>
+    <head>
+      <charseq START="619" END="629">kelli arena</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E4-56" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2328" END="2332">kelly</charseq>
+    </extent>
+    <head>
+      <charseq START="2328" END="2332">kelly</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="kelli arena">
+      <charseq START="619" END="629">kelli arena</charseq>
+    </name>
+    <name NAME="kelly">
+      <charseq START="2328" END="2332">kelly</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030512_170454.13-E5" TYPE="LOC" SUBTYPE="Land-Region-Natural" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E5-4" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="674" END="700">this state park in maryland</charseq>
+    </extent>
+    <head>
+      <charseq START="685" END="688">park</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E5-9" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="812" END="819">the
+park</charseq>
+    </extent>
+    <head>
+      <charseq START="816" END="819">park</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E5-29" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1582" END="1589">the park</charseq>
+    </extent>
+    <head>
+      <charseq START="1586" END="1589">park</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030512_170454.13-E7" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E7-7" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="731" END="739">officials</charseq>
+    </extent>
+    <head>
+      <charseq START="731" END="739">officials</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E7-11" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="830" END="838">officials</charseq>
+    </extent>
+    <head>
+      <charseq START="830" END="838">officials</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E7-28" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1518" END="1526">officials</charseq>
+    </extent>
+    <head>
+      <charseq START="1518" END="1526">officials</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E7-81" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="844" END="847">they</charseq>
+    </extent>
+    <head>
+      <charseq START="844" END="847">they</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030512_170454.13-E8" TYPE="PER" SUBTYPE="Individual" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E8-8" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="766" END="772">someone</charseq>
+    </extent>
+    <head>
+      <charseq START="766" END="772">someone</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030512_170454.13-E9" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E9-13" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="916" END="969">fort dietrick
+where the army experimented with anthrax</charseq>
+    </extent>
+    <head>
+      <charseq START="916" END="928">fort dietrick</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E9-14" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="930" END="934">where</charseq>
+    </extent>
+    <head>
+      <charseq START="930" END="934">where</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="fort dietrick">
+      <charseq START="916" END="928">fort dietrick</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030512_170454.13-E10" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E10-15" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="936" END="943">the army</charseq>
+    </extent>
+    <head>
+      <charseq START="940" END="943">army</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030512_170454.13-E11" TYPE="WEA" SUBTYPE="Biological" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E11-16" TYPE="NOM" LDCTYPE="BAR" LDCATR="FALSE">
+    <extent>
+      <charseq START="963" END="969">anthrax</charseq>
+    </extent>
+    <head>
+      <charseq START="963" END="969">anthrax</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E11-17" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="FALSE">
+    <extent>
+      <charseq START="423" END="429">anthrax</charseq>
+    </extent>
+    <head>
+      <charseq START="423" END="429">anthrax</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E11-30" TYPE="NOM" LDCTYPE="BAR" LDCATR="FALSE">
+    <extent>
+      <charseq START="1594" END="1600">anthrax</charseq>
+    </extent>
+    <head>
+      <charseq START="1594" END="1600">anthrax</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E11-31" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="FALSE">
+    <extent>
+      <charseq START="1609" END="1615">anthrax</charseq>
+    </extent>
+    <head>
+      <charseq START="1609" END="1615">anthrax</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E11-33" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="FALSE">
+    <extent>
+      <charseq START="1689" END="1695">anthrax</charseq>
+    </extent>
+    <head>
+      <charseq START="1689" END="1695">anthrax</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E11-51" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="2121" END="2127">anthrax</charseq>
+    </extent>
+    <head>
+      <charseq START="2121" END="2127">anthrax</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030512_170454.13-E13" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E13-18" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="972" END="977">agents</charseq>
+    </extent>
+    <head>
+      <charseq START="972" END="977">agents</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E13-85" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1425" END="1430">agents</charseq>
+    </extent>
+    <head>
+      <charseq START="1425" END="1430">agents</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030512_170454.13-E14" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E14-19" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1029" END="1037">the mayor</charseq>
+    </extent>
+    <head>
+      <charseq START="1033" END="1037">mayor</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030512_170454.13-E15" TYPE="LOC" SUBTYPE="Water-Body" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E15-22" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1087" END="1095">the ponds</charseq>
+    </extent>
+    <head>
+      <charseq START="1091" END="1095">ponds</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E15-23" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="812" END="827">the
+park's ponds</charseq>
+    </extent>
+    <head>
+      <charseq START="823" END="827">ponds</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030512_170454.13-E16" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E16-82" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1115" END="1118">dine</charseq>
+    </extent>
+    <head>
+      <charseq START="1115" END="1118">dine</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E16-83" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1314" END="1314">i</charseq>
+    </extent>
+    <head>
+      <charseq START="1314" END="1314">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E16-84" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="1098" END="1113">the
+police chief</charseq>
+    </extent>
+    <head>
+      <charseq START="1109" END="1113">chief</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="dine">
+      <charseq START="1115" END="1118">dine</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030512_170454.13-E17" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E17-24" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="1102" END="1107">police</charseq>
+    </extent>
+    <head>
+      <charseq START="1102" END="1107">police</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030512_170454.13-E18" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E18-26" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1405" END="1422">government sources</charseq>
+    </extent>
+    <head>
+      <charseq START="1416" END="1422">sources</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030512_170454.13-E19" TYPE="ORG" SUBTYPE="Government" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E19-27" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="1405" END="1414">government</charseq>
+    </extent>
+    <head>
+      <charseq START="1405" END="1414">government</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030512_170454.13-E21" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E21-32" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1660" END="1673">any individual</charseq>
+    </extent>
+    <head>
+      <charseq START="1664" END="1673">individual</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030512_170454.13-E23" TYPE="PER" SUBTYPE="Individual" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E23-35" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1746" END="1775">anyone it may be investigating</charseq>
+    </extent>
+    <head>
+      <charseq START="1746" END="1751">anyone</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030512_170454.13-E24" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E24-37" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1782" END="1811">attorney general john ashcroft</charseq>
+    </extent>
+    <head>
+      <charseq START="1799" END="1811">john ashcroft</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E24-38" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="FALSE">
+    <extent>
+      <charseq START="1782" END="1797">attorney general</charseq>
+    </extent>
+    <head>
+      <charseq START="1782" END="1789">attorney</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E24-70" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2677" END="2696">the attorney general</charseq>
+    </extent>
+    <head>
+      <charseq START="2681" END="2688">attorney</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E24-74" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2783" END="2784">he</charseq>
+    </extent>
+    <head>
+      <charseq START="2783" END="2784">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E24-76" TYPE="PRO" LDCTYPE="WHQ" LDCATR="FALSE">
+    <extent>
+      <charseq START="2723" END="2726">that</charseq>
+    </extent>
+    <head>
+      <charseq START="2723" END="2726">that</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E24-77" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="2707" END="2777">the only
+person that has even mentioned steven hatfield's name
+publicly</charseq>
+    </extent>
+    <head>
+      <charseq START="2716" END="2721">person</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="john ashcroft">
+      <charseq START="1799" END="1811">john ashcroft</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030512_170454.13-E26" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E26-39" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1835" END="1849">steven hatfield</charseq>
+    </extent>
+    <head>
+      <charseq START="1835" END="1849">steven hatfield</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E26-40" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="1852" END="1870">a former researcher</charseq>
+    </extent>
+    <head>
+      <charseq START="1861" END="1870">researcher</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E26-42" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1897" END="1898">he</charseq>
+    </extent>
+    <head>
+      <charseq START="1897" END="1898">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E26-43" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1924" END="1926">his</charseq>
+    </extent>
+    <head>
+      <charseq START="1924" END="1926">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E26-49" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2050" END="2051">he</charseq>
+    </extent>
+    <head>
+      <charseq START="2050" END="2051">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E26-50" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2091" END="2092">he</charseq>
+    </extent>
+    <head>
+      <charseq START="2091" END="2092">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E26-57" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2368" END="2375">hatfield</charseq>
+    </extent>
+    <head>
+      <charseq START="2368" END="2375">hatfield</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E26-63" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2525" END="2526">he</charseq>
+    </extent>
+    <head>
+      <charseq START="2525" END="2526">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E26-64" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2531" END="2570">the suspect that they think
+he's the guy</charseq>
+    </extent>
+    <head>
+      <charseq START="2535" END="2541">suspect</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E26-65" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2559" END="2560">he</charseq>
+    </extent>
+    <head>
+      <charseq START="2559" END="2560">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E26-66" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2564" END="2570">the guy</charseq>
+    </extent>
+    <head>
+      <charseq START="2568" END="2570">guy</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E26-71" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2747" END="2761">steven hatfield</charseq>
+    </extent>
+    <head>
+      <charseq START="2747" END="2761">steven hatfield</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E26-72" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="2793" END="2795">him</charseq>
+    </extent>
+    <head>
+      <charseq START="2793" END="2795">him</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E26-78" TYPE="PRO" LDCTYPE="WHQ" LDCATR="FALSE">
+    <extent>
+      <charseq START="2543" END="2546">that</charseq>
+    </extent>
+    <head>
+      <charseq START="2543" END="2546">that</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E26-79" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="2797" END="2816">a person of interest</charseq>
+    </extent>
+    <head>
+      <charseq START="2799" END="2804">person</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E26-80" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="1875" END="1894">a person of
+interest</charseq>
+    </extent>
+    <head>
+      <charseq START="1877" END="1882">person</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="steven hatfield">
+      <charseq START="1835" END="1849">steven hatfield</charseq>
+    </name>
+    <name NAME="hatfield">
+      <charseq START="2368" END="2375">hatfield</charseq>
+    </name>
+    <name NAME="steven hatfield">
+      <charseq START="2747" END="2761">steven hatfield</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030512_170454.13-E28" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E28-44" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1942" END="1954">the
+spokesman</charseq>
+    </extent>
+    <head>
+      <charseq START="1946" END="1954">spokesman</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030512_170454.13-E29" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E29-45" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1961" END="1963">cnn</charseq>
+    </extent>
+    <head>
+      <charseq START="1961" END="1963">cnn</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="cnn">
+      <charseq START="1961" END="1963">cnn</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030512_170454.13-E30" TYPE="LOC" SUBTYPE="Water-Body" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E30-47" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1994" END="2010">the pacific ocean</charseq>
+    </extent>
+    <head>
+      <charseq START="1998" END="2010">pacific ocean</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="pacific ocean">
+      <charseq START="1998" END="2010">pacific ocean</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030512_170454.13-E32" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E32-52" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="2157" END="2188">investigators involved this case</charseq>
+    </extent>
+    <head>
+      <charseq START="2157" END="2169">investigators</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030512_170454.13-E33" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E33-54" TYPE="PRO" LDCTYPE="HLS">
+    <extent>
+      <charseq START="2310" END="2318">13
+others</charseq>
+    </extent>
+    <head>
+      <charseq START="2313" END="2318">others</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030512_170454.13-E34" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E34-55" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="2321" END="2323">lou</charseq>
+    </extent>
+    <head>
+      <charseq START="2321" END="2323">lou</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E34-58" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2384" END="2384">i</charseq>
+    </extent>
+    <head>
+      <charseq START="2384" END="2384">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E34-60" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2410" END="2410">i</charseq>
+    </extent>
+    <head>
+      <charseq START="2410" END="2410">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="lou">
+      <charseq START="2321" END="2323">lou</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030512_170454.13-E35" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E35-59" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2392" END="2393">we</charseq>
+    </extent>
+    <head>
+      <charseq START="2392" END="2393">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E35-61" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2449" END="2450">we</charseq>
+    </extent>
+    <head>
+      <charseq START="2449" END="2450">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E35-68" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2578" END="2579">we</charseq>
+    </extent>
+    <head>
+      <charseq START="2578" END="2579">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E35-69" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2602" END="2603">we</charseq>
+    </extent>
+    <head>
+      <charseq START="2602" END="2603">we</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030512_170454.13-E36" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E36-62" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="2487" END="2511">law enforcement
+officials</charseq>
+    </extent>
+    <head>
+      <charseq START="2503" END="2511">officials</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030512_170454.13-E39" TYPE="PER" SUBTYPE="Individual" CLASS="NEG">
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E39-73" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2823" END="2831">a
+suspect</charseq>
+    </extent>
+    <head>
+      <charseq START="2825" END="2831">suspect</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030512_170454.13-E44" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E44-87" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="110" END="116">seattle</charseq>
+    </extent>
+    <head>
+      <charseq START="110" END="116">seattle</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E44-89" TYPE="NOM" LDCTYPE="NOM" ROLE="LOC">
+    <extent>
+      <charseq START="143" END="150">the city</charseq>
+    </extent>
+    <head>
+      <charseq START="147" END="150">city</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="seattle">
+      <charseq START="110" END="116">seattle</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030512_170454.13-E45" TYPE="LOC" SUBTYPE="Region-General" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E45-88" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="122" END="150">an
+industrial lot in the city</charseq>
+    </extent>
+    <head>
+      <charseq START="136" END="138">lot</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030512_170454.13-E46" TYPE="VEH" SUBTYPE="Land" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E46-90" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="165" END="176">smashed cars</charseq>
+    </extent>
+    <head>
+      <charseq START="173" END="176">cars</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030512_170454.13-E47" TYPE="VEH" SUBTYPE="Land" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E47-91" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="179" END="183">buses</charseq>
+    </extent>
+    <head>
+      <charseq START="179" END="183">buses</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030512_170454.13-E48" TYPE="WEA" SUBTYPE="Exploding" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E48-92" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="244" END="282">a fan that sized radioactive dirty bomb</charseq>
+    </extent>
+    <head>
+      <charseq START="279" END="282">bomb</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030512_170454.13-E49" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E49-93" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="336" END="352">emergency workers</charseq>
+    </extent>
+    <head>
+      <charseq START="346" END="352">workers</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030512_170454.13-E50" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E50-94" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="359" END="367">terrorist</charseq>
+    </extent>
+    <head>
+      <charseq START="359" END="367">terrorist</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030512_170454.13-E51" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E51-53" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="2285" END="2295">five people</charseq>
+    </extent>
+    <head>
+      <charseq START="2290" END="2295">people</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E51-95" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="446" END="456">five people</charseq>
+    </extent>
+    <head>
+      <charseq START="451" END="456">people</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030512_170454.13-E52" TYPE="PER" SUBTYPE="Individual" CLASS="NEG">
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E52-96" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="459" END="464">no one</charseq>
+    </extent>
+    <head>
+      <charseq START="462" END="464">one</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030512_170454.13-E53" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E53-3" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="652" END="658">the fbi</charseq>
+    </extent>
+    <head>
+      <charseq START="656" END="658">fbi</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E53-20" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1044" END="1050">the
+fbi</charseq>
+    </extent>
+    <head>
+      <charseq START="1048" END="1050">fbi</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E53-25" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1147" END="1153">the fbi</charseq>
+    </extent>
+    <head>
+      <charseq START="1151" END="1153">fbi</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E53-34" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1706" END="1712">the fbi</charseq>
+    </extent>
+    <head>
+      <charseq START="1710" END="1712">fbi</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E53-36" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1753" END="1754">it</charseq>
+    </extent>
+    <head>
+      <charseq START="1753" END="1754">it</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E53-46" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1976" END="1982">the fbi</charseq>
+    </extent>
+    <head>
+      <charseq START="1980" END="1982">fbi</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E53-48" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2016" END="2019">they</charseq>
+    </extent>
+    <head>
+      <charseq START="2016" END="2019">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E53-67" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="2548" END="2551">they</charseq>
+    </extent>
+    <head>
+      <charseq START="2548" END="2551">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E53-75" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1358" END="1361">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1358" END="1361">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030512_170454.13-E53-97" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="522" END="528">the fbi</charseq>
+    </extent>
+    <head>
+      <charseq START="526" END="528">fbi</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="fbi">
+      <charseq START="656" END="658">fbi</charseq>
+    </name>
+    <name NAME="fbi">
+      <charseq START="1048" END="1050">fbi</charseq>
+    </name>
+    <name NAME="fbi">
+      <charseq START="1151" END="1153">fbi</charseq>
+    </name>
+    <name NAME="fbi">
+      <charseq START="1710" END="1712">fbi</charseq>
+    </name>
+    <name NAME="fbi">
+      <charseq START="1980" END="1982">fbi</charseq>
+    </name>
+    <name NAME="fbi">
+      <charseq START="526" END="528">fbi</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<value ID="CNN_ENG_20030512_170454.13-V1" TYPE="Crime">
+  <value_mention ID="CNN_ENG_20030512_170454.13-V1-1">
+    <extent>
+      <charseq START="2259" END="2318">those attacks that killed five people and sickened 13
+others</charseq>
+    </extent>
+  </value_mention>
+</value>
+<timex2 ID="CNN_ENG_20030512_170454.13-T1" VAL="2003-05-12T18:30:08">
+  <timex2_mention ID="CNN_ENG_20030512_170454.13-T1-1">
+    <extent>
+      <charseq START="44" END="62">2003-05-12 18:30:08</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030512_170454.13-T2" VAL="P1W" ANCHOR_VAL="2003-WXX" ANCHOR_DIR="STARTING">
+  <timex2_mention ID="CNN_ENG_20030512_170454.13-T2-1">
+    <extent>
+      <charseq START="79" END="86">weeklong</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030512_170454.13-T3" VAL="P1Y6M" ANCHOR_VAL="2003-05-12" ANCHOR_DIR="ENDING">
+  <timex2_mention ID="CNN_ENG_20030512_170454.13-T3-1">
+    <extent>
+      <charseq START="387" END="403">a year and a half</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030512_170454.13-T4" VAL="2002-12">
+  <timex2_mention ID="CNN_ENG_20030512_170454.13-T4-1">
+    <extent>
+      <charseq START="716" END="728">last december</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030512_170454.13-T5" VAL="2002-12">
+  <timex2_mention ID="CNN_ENG_20030512_170454.13-T5-1">
+    <extent>
+      <charseq START="751" END="759">back then</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030512_170454.13-T6" VAL="2002-12">
+  <timex2_mention ID="CNN_ENG_20030512_170454.13-T6-1">
+    <extent>
+      <charseq START="1435" END="1442">december</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030512_170454.13-T7" VAL="2003-05-12">
+  <timex2_mention ID="CNN_ENG_20030512_170454.13-T7-1">
+    <extent>
+      <charseq START="2210" END="2224">18 months later</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030512_170454.13-T8" VAL="PRESENT_REF" ANCHOR_VAL="2003-05-12T18:30:08" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNN_ENG_20030512_170454.13-T8-1">
+    <extent>
+      <charseq START="1055" END="1057">now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030512_170454.13-T9" VAL="PAST_REF" ANCHOR_VAL="2003-05-12T18:30:08" ANCHOR_DIR="BEFORE">
+  <timex2_mention ID="CNN_ENG_20030512_170454.13-T9-1">
+    <extent>
+      <charseq START="1854" END="1859">former</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030512_170454.13-R1" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030512_170454.13-E45" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030512_170454.13-E44" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030512_170454.13-R1-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="122" END="150">an
+industrial lot in the city</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030512_170454.13-E45-88" ROLE="Arg-1">
+      <extent>
+        <charseq START="122" END="150">an
+industrial lot in the city</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030512_170454.13-E44-89" ROLE="Arg-2">
+      <extent>
+        <charseq START="143" END="150">the city</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030512_170454.13-R2" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030512_170454.13-E3" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030512_170454.13-E1" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030512_170454.13-R2-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="554" END="616">a maryland pond relating to
+evidence for those unsolved attacks</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030512_170454.13-E3-1" ROLE="Arg-1">
+      <extent>
+        <charseq START="554" END="616">a maryland pond relating to
+evidence for those unsolved attacks</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030512_170454.13-E1-98" ROLE="Arg-2">
+      <extent>
+        <charseq START="556" END="563">maryland</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030512_170454.13-R3" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030512_170454.13-E5" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030512_170454.13-E1" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030512_170454.13-R3-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="674" END="700">this state park in maryland</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030512_170454.13-E5-4" ROLE="Arg-1">
+      <extent>
+        <charseq START="674" END="700">this state park in maryland</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030512_170454.13-E1-6" ROLE="Arg-2">
+      <extent>
+        <charseq START="693" END="700">maryland</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030512_170454.13-R4" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030512_170454.13-E15" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030512_170454.13-E5" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030512_170454.13-R4-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="812" END="827">the
+park's ponds</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030512_170454.13-E15-23" ROLE="Arg-1">
+      <extent>
+        <charseq START="812" END="827">the
+park's ponds</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030512_170454.13-E5-9" ROLE="Arg-2">
+      <extent>
+        <charseq START="812" END="819">the
+park</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030512_170454.13-R5" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030512_170454.13-E10" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030512_170454.13-E11" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030512_170454.13-R5-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="916" END="969">fort dietrick
+where the army experimented with anthrax</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030512_170454.13-E10-15" ROLE="Arg-1">
+      <extent>
+        <charseq START="936" END="943">the army</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030512_170454.13-E11-16" ROLE="Arg-2">
+      <extent>
+        <charseq START="963" END="969">anthrax</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030512_170454.13-R6" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030512_170454.13-E17" ROLE="Arg-2"/>
+  <relation_argument REFID="CNN_ENG_20030512_170454.13-E16" ROLE="Arg-1"/>
+  <relation_mention ID="CNN_ENG_20030512_170454.13-R6-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="1098" END="1113">the
+police chief</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030512_170454.13-E17-24" ROLE="Arg-2">
+      <extent>
+        <charseq START="1102" END="1107">police</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030512_170454.13-E16-84" ROLE="Arg-1">
+      <extent>
+        <charseq START="1098" END="1113">the
+police chief</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030512_170454.13-R7" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030512_170454.13-E18" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030512_170454.13-E19" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030512_170454.13-R7-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="1405" END="1422">government sources</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030512_170454.13-E18-26" ROLE="Arg-1">
+      <extent>
+        <charseq START="1405" END="1422">government sources</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030512_170454.13-E19-27" ROLE="Arg-2">
+      <extent>
+        <charseq START="1405" END="1414">government</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030512_170454.13-R8" TYPE="PHYS" SUBTYPE="Near" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030512_170454.13-E3" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030512_170454.13-E9" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030512_170454.13-R8-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="830" END="969">officials say they found the tip significant
+because the pond is about ten miles from fort dietrick
+where the army experimented with anthrax</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030512_170454.13-E3-12" ROLE="Arg-1">
+      <extent>
+        <charseq START="883" END="890">the pond</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030512_170454.13-E9-13" ROLE="Arg-2">
+      <extent>
+        <charseq START="916" END="969">fort dietrick
+where the army experimented with anthrax</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030512_170454.13-EV1" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_mention ID="CNN_ENG_20030512_170454.13-EV1-1">
+    <extent>
+      <charseq START="88" END="93">terror</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="68" END="150">a national weeklong terror drill began in seattle and an
+industrial lot in the city</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="88" END="93">terror</charseq>
+    </anchor>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030512_170454.13-EV2" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Other" POLARITY="Positive" GENERICITY="Generic" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030512_170454.13-E50" ROLE="Attacker"/>
+  <event_mention ID="CNN_ENG_20030512_170454.13-EV2-1">
+    <extent>
+      <charseq START="359" END="374">terrorist attack</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="285" END="374">the test designed
+to measure the responsiveness of emergency workers to a
+terrorist attack</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="369" END="374">attack</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030512_170454.13-E50-94" ROLE="Attacker">
+      <extent>
+        <charseq START="359" END="367">terrorist</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030512_170454.13-EV3" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030512_170454.13-E51" ROLE="Target"/>
+  <event_argument REFID="CNN_ENG_20030512_170454.13-E11" ROLE="Instrument"/>
+  <event_argument REFID="CNN_ENG_20030512_170454.13-T3" ROLE="Time-Before"/>
+  <event_argument REFID="CNN_ENG_20030512_170454.13-E33" ROLE="Target"/>
+  <event_argument REFID="CNN_ENG_20030512_170454.13-E1" ROLE="Place"/>
+  <event_argument REFID="CNN_ENG_20030512_170454.13-E26" ROLE="Attacker"/>
+  <event_mention ID="CNN_ENG_20030512_170454.13-EV3-1">
+    <extent>
+      <charseq START="387" END="456">a year and a half since a
+series of anthrax attacks killed five people</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="377" END="456">it's been a year and a half since a
+series of anthrax attacks killed five people</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="431" END="437">attacks</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030512_170454.13-E51-95" ROLE="Target">
+      <extent>
+        <charseq START="446" END="456">five people</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030512_170454.13-E11-17" ROLE="Instrument">
+      <extent>
+        <charseq START="423" END="429">anthrax</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030512_170454.13-T3-1" ROLE="Time-Before">
+      <extent>
+        <charseq START="387" END="403">a year and a half</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030512_170454.13-EV3-2">
+    <extent>
+      <charseq START="2050" END="2127">he was involved with the attacks
+because he had nothing to do with the anthrax</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1970" END="2142">well, the fbi can drain the pacific ocean but they won't
+find any evidence that he was involved with the attacks
+because he had nothing to do with the anthrax attacks at
+all</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2075" END="2081">attacks</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030512_170454.13-E26-49" ROLE="Attacker">
+      <extent>
+        <charseq START="2050" END="2051">he</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030512_170454.13-E11-51" ROLE="Instrument">
+      <extent>
+        <charseq START="2121" END="2127">anthrax</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030512_170454.13-EV3-3">
+    <extent>
+      <charseq START="2121" END="2135">anthrax attacks</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1970" END="2142">well, the fbi can drain the pacific ocean but they won't
+find any evidence that he was involved with the attacks
+because he had nothing to do with the anthrax attacks at
+all</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2129" END="2135">attacks</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030512_170454.13-E11-51" ROLE="Instrument">
+      <extent>
+        <charseq START="2121" END="2127">anthrax</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030512_170454.13-EV3-4">
+    <extent>
+      <charseq START="2265" END="2318">attacks that killed five people and sickened 13
+others</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2210" END="2318">18 months later, still not one single arrest
+for those attacks that killed five people and sickened 13
+others</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2265" END="2271">attacks</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030512_170454.13-E51-53" ROLE="Target">
+      <extent>
+        <charseq START="2285" END="2295">five people</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030512_170454.13-E33-54" ROLE="Target">
+      <extent>
+        <charseq START="2310" END="2318">13
+others</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030512_170454.13-EV3-5">
+    <extent>
+      <charseq START="556" END="616">maryland pond relating to
+evidence for those unsolved attacks</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="459" END="616">no one has
+ever been arrested in connection with that case and the fbi
+is considering draining a maryland pond relating to
+evidence for those unsolved attacks</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="610" END="616">attacks</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030512_170454.13-E1-98" ROLE="Place">
+      <extent>
+        <charseq START="556" END="563">maryland</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030512_170454.13-EV3-6">
+    <extent>
+      <charseq START="1609" END="1623">anthrax attacks</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1518" END="1623">officials say there is no
+evidence connecting anything found in the park to anthrax
+or the anthrax attacks</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1617" END="1623">attacks</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030512_170454.13-E11-31" ROLE="Instrument">
+      <extent>
+        <charseq START="1609" END="1615">anthrax</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030512_170454.13-EV4" TYPE="Life" SUBTYPE="Die" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030512_170454.13-E11" ROLE="Instrument"/>
+  <event_argument REFID="CNN_ENG_20030512_170454.13-E51" ROLE="Victim"/>
+  <event_argument REFID="CNN_ENG_20030512_170454.13-T3" ROLE="Time-Before"/>
+  <event_mention ID="CNN_ENG_20030512_170454.13-EV4-1">
+    <extent>
+      <charseq START="387" END="456">a year and a half since a
+series of anthrax attacks killed five people</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="377" END="456">it's been a year and a half since a
+series of anthrax attacks killed five people</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="439" END="444">killed</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030512_170454.13-E11-17" ROLE="Instrument">
+      <extent>
+        <charseq START="423" END="429">anthrax</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030512_170454.13-E51-95" ROLE="Victim">
+      <extent>
+        <charseq START="446" END="456">five people</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030512_170454.13-T3-1" ROLE="Time-Before">
+      <extent>
+        <charseq START="387" END="403">a year and a half</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030512_170454.13-EV4-2">
+    <extent>
+      <charseq START="2278" END="2295">killed five people</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2210" END="2318">18 months later, still not one single arrest
+for those attacks that killed five people and sickened 13
+others</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2278" END="2283">killed</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030512_170454.13-E51-53" ROLE="Victim">
+      <extent>
+        <charseq START="2285" END="2295">five people</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030512_170454.13-EV4-3">
+    <extent>
+      <charseq START="1682" END="1695">deadly anthrax</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1626" END="1703">nor is there any evidence linking
+any individual to the deadly anthrax ledders</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1682" END="1687">deadly</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030512_170454.13-E11-33" ROLE="Instrument">
+      <extent>
+        <charseq START="1689" END="1695">anthrax</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030512_170454.13-EV5" TYPE="Justice" SUBTYPE="Arrest-Jail" MODALITY="Other" POLARITY="Negative" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNN_ENG_20030512_170454.13-V1" ROLE="Crime"/>
+  <event_argument REFID="CNN_ENG_20030512_170454.13-T7" ROLE="Time-Within"/>
+  <event_argument REFID="CNN_ENG_20030512_170454.13-E53" ROLE="Agent"/>
+  <event_argument REFID="CNN_ENG_20030512_170454.13-E52" ROLE="Person"/>
+  <event_mention ID="CNN_ENG_20030512_170454.13-EV5-1">
+    <extent>
+      <charseq START="459" END="528">no one has
+ever been arrested in connection with that case and the fbi</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="459" END="616">no one has
+ever been arrested in connection with that case and the fbi
+is considering draining a maryland pond relating to
+evidence for those unsolved attacks</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="480" END="487">arrested</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030512_170454.13-E53-97" ROLE="Agent">
+      <extent>
+        <charseq START="522" END="528">the fbi</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030512_170454.13-E52-96" ROLE="Person">
+      <extent>
+        <charseq START="459" END="464">no one</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030512_170454.13-EV5-2">
+    <extent>
+      <charseq START="2210" END="2318">18 months later, still not one single arrest
+for those attacks that killed five people and sickened 13
+others</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2210" END="2318">18 months later, still not one single arrest
+for those attacks that killed five people and sickened 13
+others</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2248" END="2253">arrest</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030512_170454.13-V1-1" ROLE="Crime">
+      <extent>
+        <charseq START="2259" END="2318">those attacks that killed five people and sickened 13
+others</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030512_170454.13-T7-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="2210" END="2224">18 months later</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030512_170454.13-EV6" TYPE="Life" SUBTYPE="Die" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_mention ID="CNN_ENG_20030512_170454.13-EV6-1">
+    <extent>
+      <charseq START="1258" END="1263">murder</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1239" END="1277">after all, it is a murder
+investigation</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1258" END="1263">murder</charseq>
+    </anchor>
+  </event_mention>
+  <event_mention ID="CNN_ENG_20030512_170454.13-EV6-2">
+    <extent>
+      <charseq START="1289" END="1294">murder</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="1280" END="1377">multiple murder investigation, so i'm sure
+there are a number of avenues that they're looking into</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="1289" END="1294">murder</charseq>
+    </anchor>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030512_170454.13-EV7" TYPE="Life" SUBTYPE="Injure" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNN_ENG_20030512_170454.13-E33" ROLE="Victim"/>
+  <event_mention ID="CNN_ENG_20030512_170454.13-EV7-1">
+    <extent>
+      <charseq START="2301" END="2318">sickened 13
+others</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="2210" END="2318">18 months later, still not one single arrest
+for those attacks that killed five people and sickened 13
+others</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="2301" END="2308">sickened</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030512_170454.13-E33-54" ROLE="Victim">
+      <extent>
+        <charseq START="2310" END="2318">13
+others</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

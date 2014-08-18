@@ -1,0 +1,285 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030528_165958.16.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030528_165958.16">
+<entity ID="CNN_ENG_20030528_165958.16-E1" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030528_165958.16-E1-1" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="68" END="81">president bush</charseq>
+    </extent>
+    <head>
+      <charseq START="78" END="81">bush</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030528_165958.16-E1-2" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="68" END="76">president</charseq>
+    </extent>
+    <head>
+      <charseq START="68" END="76">president</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030528_165958.16-E1-6" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="166" END="168">his</charseq>
+    </extent>
+    <head>
+      <charseq START="166" END="168">his</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030528_165958.16-E1-10" TYPE="NOM" LDCTYPE="NOM" LDCATR="FALSE">
+    <extent>
+      <charseq START="278" END="290">the president</charseq>
+    </extent>
+    <head>
+      <charseq START="282" END="290">president</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="bush">
+      <charseq START="78" END="81">bush</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030528_165958.16-E3" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030528_165958.16-E3-3" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="91" END="97">the g-8</charseq>
+    </extent>
+    <head>
+      <charseq START="95" END="97">g-8</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="g-8">
+      <charseq START="95" END="97">g-8</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030528_165958.16-E4" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030528_165958.16-E4-4" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="109" END="114">france</charseq>
+    </extent>
+    <head>
+      <charseq START="109" END="114">france</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="france">
+      <charseq START="109" END="114">france</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030528_165958.16-E5" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030528_165958.16-E5-5" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="144" END="157">saddam hussein</charseq>
+    </extent>
+    <head>
+      <charseq START="144" END="157">saddam hussein</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="saddam hussein">
+      <charseq START="144" END="157">saddam hussein</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030528_165958.16-E6" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030528_165958.16-E6-7" TYPE="NOM" LDCTYPE="NOM" ROLE="PER" LDCATR="FALSE">
+    <extent>
+      <charseq START="210" END="228">the american public</charseq>
+    </extent>
+    <head>
+      <charseq START="223" END="228">public</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030528_165958.16-E6-8" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="214" END="221">american</charseq>
+    </extent>
+    <head>
+      <charseq START="214" END="221">american</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="american">
+      <charseq START="214" END="221">american</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030528_165958.16-E8" TYPE="GPE" SUBTYPE="Continent" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030528_165958.16-E8-9" TYPE="NOM" LDCTYPE="BAR" ROLE="PER">
+    <extent>
+      <charseq START="238" END="246">europeans</charseq>
+    </extent>
+    <head>
+      <charseq START="238" END="246">europeans</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030528_165958.16-E9" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030528_165958.16-E9-11" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="293" END="335">our senior political analyst bill schneider</charseq>
+    </extent>
+    <head>
+      <charseq START="322" END="335">bill schneider</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030528_165958.16-E9-12" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="293" END="320">our senior political analyst</charseq>
+    </extent>
+    <head>
+      <charseq START="314" END="320">analyst</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="bill schneider">
+      <charseq START="322" END="335">bill schneider</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030528_165958.16-E11" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030528_165958.16-E11-13" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="293" END="295">our</charseq>
+    </extent>
+    <head>
+      <charseq START="293" END="295">our</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<timex2 ID="CNN_ENG_20030528_165958.16-T1" VAL="2003-05-28T17:28:10">
+  <timex2_mention ID="CNN_ENG_20030528_165958.16-T1-1">
+    <extent>
+      <charseq START="44" END="62">2003-05-28 17:28:10</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030528_165958.16-T2" VAL="2003-05-23">
+  <timex2_mention ID="CNN_ENG_20030528_165958.16-T2-1">
+    <extent>
+      <charseq START="119" END="124">friday</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030528_165958.16-R1" TYPE="PHYS" SUBTYPE="Located" TENSE="Future" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030528_165958.16-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030528_165958.16-E4" ROLE="Arg-2"/>
+  <relation_argument REFID="CNN_ENG_20030528_165958.16-T2" ROLE="Time-Within"/>
+  <relation_mention ID="CNN_ENG_20030528_165958.16-R1-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="68" END="290">president bush head to the g-8 summit in france on friday with victory
+over saddam hussein and in his pocket and a soaring approval rating by
+the american public, but do europeans share the same enthusiasm for
+the president</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030528_165958.16-E1-1" ROLE="Arg-1">
+      <extent>
+        <charseq START="68" END="81">president bush</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030528_165958.16-E4-4" ROLE="Arg-2">
+      <extent>
+        <charseq START="109" END="114">france</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030528_165958.16-T2-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="119" END="124">friday</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNN_ENG_20030528_165958.16-R2" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030528_165958.16-E9" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030528_165958.16-E11" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030528_165958.16-R2-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="293" END="320">our senior political analyst</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030528_165958.16-E9-12" ROLE="Arg-1">
+      <extent>
+        <charseq START="293" END="320">our senior political analyst</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030528_165958.16-E11-13" ROLE="Arg-2">
+      <extent>
+        <charseq START="293" END="295">our</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNN_ENG_20030528_165958.16-EV1" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Future">
+  <event_argument REFID="CNN_ENG_20030528_165958.16-E1" ROLE="Artifact"/>
+  <event_argument REFID="CNN_ENG_20030528_165958.16-E4" ROLE="Destination"/>
+  <event_argument REFID="CNN_ENG_20030528_165958.16-T2" ROLE="Time-Within"/>
+  <event_mention ID="CNN_ENG_20030528_165958.16-EV1-1">
+    <extent>
+      <charseq START="68" END="124">president bush head to the g-8 summit in france on friday</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="68" END="290">president bush head to the g-8 summit in france on friday with victory
+over saddam hussein and in his pocket and a soaring approval rating by
+the american public, but do europeans share the same enthusiasm for
+the president</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="83" END="86">head</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030528_165958.16-E1-1" ROLE="Artifact">
+      <extent>
+        <charseq START="68" END="81">president bush</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030528_165958.16-E4-4" ROLE="Destination">
+      <extent>
+        <charseq START="109" END="114">france</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030528_165958.16-T2-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="119" END="124">friday</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNN_ENG_20030528_165958.16-EV2" TYPE="Contact" SUBTYPE="Meet" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Future">
+  <event_argument REFID="CNN_ENG_20030528_165958.16-E4" ROLE="Place"/>
+  <event_argument REFID="CNN_ENG_20030528_165958.16-E3" ROLE="Entity"/>
+  <event_argument REFID="CNN_ENG_20030528_165958.16-T2" ROLE="Time-Within"/>
+  <event_mention ID="CNN_ENG_20030528_165958.16-EV2-1">
+    <extent>
+      <charseq START="91" END="124">the g-8 summit in france on friday</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="68" END="290">president bush head to the g-8 summit in france on friday with victory
+over saddam hussein and in his pocket and a soaring approval rating by
+the american public, but do europeans share the same enthusiasm for
+the president</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="99" END="104">summit</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNN_ENG_20030528_165958.16-E4-4" ROLE="Place">
+      <extent>
+        <charseq START="109" END="114">france</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030528_165958.16-E3-3" ROLE="Entity">
+      <extent>
+        <charseq START="91" END="97">the g-8</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNN_ENG_20030528_165958.16-T2-1" ROLE="Time-Within">
+      <extent>
+        <charseq START="119" END="124">friday</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

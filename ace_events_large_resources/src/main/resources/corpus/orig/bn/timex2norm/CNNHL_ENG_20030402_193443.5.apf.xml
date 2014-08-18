@@ -1,0 +1,348 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNNHL_ENG_20030402_193443.5.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNNHL_ENG_20030402_193443.5">
+<entity ID="CNNHL_ENG_20030402_193443.5-E1" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030402_193443.5-E1-2" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="133" END="135">u.s</charseq>
+    </extent>
+    <head>
+      <charseq START="133" END="135">u.s</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="u.s">
+      <charseq START="133" END="135">u.s</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030402_193443.5-E2" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030402_193443.5-E2-1" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="69" END="83">central command</charseq>
+    </extent>
+    <head>
+      <charseq START="69" END="83">central command</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030402_193443.5-E2-3" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="90" END="91">it</charseq>
+    </extent>
+    <head>
+      <charseq START="90" END="91">it</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="central command">
+      <charseq START="69" END="83">central command</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030402_193443.5-E3" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030402_193443.5-E3-4" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="110" END="114">iraqi</charseq>
+    </extent>
+    <head>
+      <charseq START="110" END="114">iraqi</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="iraqi">
+      <charseq START="110" END="114">iraqi</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030402_193443.5-E4" TYPE="ORG" SUBTYPE="Non-Governmental" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030402_193443.5-E4-5" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="259" END="298">the international
+committee of red cross</charseq>
+    </extent>
+    <head>
+      <charseq START="263" END="298">international
+committee of red cross</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="international committee of red cross">
+      <charseq START="263" END="298">international
+committee of red cross</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030402_193443.5-E5" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030402_193443.5-E5-7" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="163" END="204">hundreds of civilians casualties in hillah</charseq>
+    </extent>
+    <head>
+      <charseq START="185" END="194">casualties</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030402_193443.5-E6" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030402_193443.5-E6-8" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="199" END="204">hillah</charseq>
+    </extent>
+    <head>
+      <charseq START="199" END="204">hillah</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030402_193443.5-E6-10" TYPE="PRO" LDCTYPE="WHQ" ROLE="LOC">
+    <extent>
+      <charseq START="207" END="210">that</charseq>
+    </extent>
+    <head>
+      <charseq START="207" END="210">that</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030402_193443.5-E6-11" TYPE="PRO" LDCTYPE="PRO" ROLE="LOC">
+    <extent>
+      <charseq START="327" END="331">there</charseq>
+    </extent>
+    <head>
+      <charseq START="327" END="331">there</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="hillah">
+      <charseq START="199" END="204">hillah</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030402_193443.5-E7" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030402_193443.5-E7-9" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="238" END="244">baghdad</charseq>
+    </extent>
+    <head>
+      <charseq START="238" END="244">baghdad</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="baghdad">
+      <charseq START="238" END="244">baghdad</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030402_193443.5-E8" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030402_193443.5-E8-12" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="247" END="298">a member of the international
+committee of red cross</charseq>
+    </extent>
+    <head>
+      <charseq START="249" END="254">member</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030402_193443.5-E8-14" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="338" END="339">he</charseq>
+    </extent>
+    <head>
+      <charseq START="338" END="339">he</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030402_193443.5-E9" TYPE="PER" SUBTYPE="Individual" CLASS="GEN">
+  <entity_mention ID="CNNHL_ENG_20030402_193443.5-E9-6" TYPE="NOM" LDCTYPE="NOMPRE">
+    <extent>
+      <charseq START="175" END="182">civilian</charseq>
+    </extent>
+    <head>
+      <charseq START="175" END="182">civilian</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030402_193443.5-E10" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030402_193443.5-E10-13" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="308" END="331">the local hospital there</charseq>
+    </extent>
+    <head>
+      <charseq START="318" END="325">hospital</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<timex2 ID="CNNHL_ENG_20030402_193443.5-T1" VAL="2003-04-02T19:36:03">
+  <timex2_mention ID="CNNHL_ENG_20030402_193443.5-T1-1">
+    <extent>
+      <charseq START="45" END="63">2003-04-02 19:36:03</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNNHL_ENG_20030402_193443.5-R1" TYPE="PHYS" SUBTYPE="Near" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030402_193443.5-E6" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030402_193443.5-E7" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030402_193443.5-R1-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="207" END="244">that's about 60 miles south of baghdad</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030402_193443.5-E6-10" ROLE="Arg-1">
+      <extent>
+        <charseq START="207" END="210">that</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030402_193443.5-E7-9" ROLE="Arg-2">
+      <extent>
+        <charseq START="238" END="244">baghdad</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030402_193443.5-R2" TYPE="ORG-AFF" SUBTYPE="Membership" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030402_193443.5-E8" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030402_193443.5-E4" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030402_193443.5-R2-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="247" END="298">a member of the international
+committee of red cross</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030402_193443.5-E8-12" ROLE="Arg-1">
+      <extent>
+        <charseq START="247" END="298">a member of the international
+committee of red cross</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030402_193443.5-E4-5" ROLE="Arg-2">
+      <extent>
+        <charseq START="259" END="298">the international
+committee of red cross</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030402_193443.5-R3" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030402_193443.5-E8" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030402_193443.5-E10" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030402_193443.5-R3-1" LEXICALCONDITION="Verbal">
+    <extent>
+      <charseq START="247" END="366">a member of the international
+committee of red cross visited the local hospital there, and he says
+it's a horrible scene</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030402_193443.5-E8-12" ROLE="Arg-1">
+      <extent>
+        <charseq START="247" END="298">a member of the international
+committee of red cross</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030402_193443.5-E10-13" ROLE="Arg-2">
+      <extent>
+        <charseq START="308" END="331">the local hospital there</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030402_193443.5-R4" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030402_193443.5-E10" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030402_193443.5-E6" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030402_193443.5-R4-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="308" END="331">the local hospital there</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030402_193443.5-E10-13" ROLE="Arg-1">
+      <extent>
+        <charseq START="308" END="331">the local hospital there</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030402_193443.5-E6-11" ROLE="Arg-2">
+      <extent>
+        <charseq START="327" END="331">there</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030402_193443.5-R5" TYPE="PHYS" SUBTYPE="Located" TENSE="Past" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030402_193443.5-E5" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030402_193443.5-E6" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030402_193443.5-R5-1" LEXICALCONDITION="Preposition">
+    <extent>
+      <charseq START="163" END="204">hundreds of civilians casualties in hillah</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030402_193443.5-E5-7" ROLE="Arg-1">
+      <extent>
+        <charseq START="163" END="204">hundreds of civilians casualties in hillah</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030402_193443.5-E6-8" ROLE="Arg-2">
+      <extent>
+        <charseq START="199" END="204">hillah</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNNHL_ENG_20030402_193443.5-EV1" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNNHL_ENG_20030402_193443.5-E1" ROLE="Attacker"/>
+  <event_argument REFID="CNNHL_ENG_20030402_193443.5-E3" ROLE="Place"/>
+  <event_argument REFID="CNNHL_ENG_20030402_193443.5-E6" ROLE="Place"/>
+  <event_argument REFID="CNNHL_ENG_20030402_193443.5-E9" ROLE="Target"/>
+  <event_mention ID="CNNHL_ENG_20030402_193443.5-EV1-1">
+    <extent>
+      <charseq START="110" END="204">iraqi allegations that u.s.
+attacks are to blame for hundreds of civilians casualties in hillah</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="69" END="204">central command says it is investigating iraqi allegations that u.s.
+attacks are to blame for hundreds of civilians casualties in hillah</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="138" END="144">attacks</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030402_193443.5-E1-2" ROLE="Attacker">
+      <extent>
+        <charseq START="133" END="135">u.s</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030402_193443.5-E3-4" ROLE="Place">
+      <extent>
+        <charseq START="110" END="114">iraqi</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030402_193443.5-E6-8" ROLE="Place">
+      <extent>
+        <charseq START="199" END="204">hillah</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030402_193443.5-E9-6" ROLE="Target">
+      <extent>
+        <charseq START="175" END="182">civilian</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNNHL_ENG_20030402_193443.5-EV2" TYPE="Movement" SUBTYPE="Transport" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNNHL_ENG_20030402_193443.5-E8" ROLE="Artifact"/>
+  <event_argument REFID="CNNHL_ENG_20030402_193443.5-E10" ROLE="Destination"/>
+  <event_mention ID="CNNHL_ENG_20030402_193443.5-EV2-1">
+    <extent>
+      <charseq START="247" END="331">a member of the international
+committee of red cross visited the local hospital there</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="247" END="366">a member of the international
+committee of red cross visited the local hospital there, and he says
+it's a horrible scene</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="300" END="306">visited</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030402_193443.5-E8-12" ROLE="Artifact">
+      <extent>
+        <charseq START="247" END="298">a member of the international
+committee of red cross</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030402_193443.5-E10-13" ROLE="Destination">
+      <extent>
+        <charseq START="308" END="331">the local hospital there</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

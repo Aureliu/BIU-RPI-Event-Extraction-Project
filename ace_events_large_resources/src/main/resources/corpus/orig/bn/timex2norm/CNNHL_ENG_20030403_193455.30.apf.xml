@@ -1,0 +1,445 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNNHL_ENG_20030403_193455.30.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNNHL_ENG_20030403_193455.30">
+<entity ID="CNNHL_ENG_20030403_193455.30-E1" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030403_193455.30-E1-17" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="367" END="369">u.s</charseq>
+    </extent>
+    <head>
+      <charseq START="367" END="369">u.s</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="u.s">
+      <charseq START="367" END="369">u.s</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030403_193455.30-E2" TYPE="WEA" SUBTYPE="Shooting" CLASS="GEN">
+  <entity_mention ID="CNNHL_ENG_20030403_193455.30-E2-2" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="367" END="380">u.s. artillery</charseq>
+    </extent>
+    <head>
+      <charseq START="372" END="380">artillery</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030403_193455.30-E3" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030403_193455.30-E3-3" TYPE="NAM" LDCTYPE="NAMPRE">
+    <extent>
+      <charseq START="251" END="257">reuters</charseq>
+    </extent>
+    <head>
+      <charseq START="251" END="257">reuters</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="reuters">
+      <charseq START="251" END="257">reuters</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030403_193455.30-E4" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030403_193455.30-E4-4" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="249" END="271">a reuters correspondent</charseq>
+    </extent>
+    <head>
+      <charseq START="259" END="271">correspondent</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030403_193455.30-E5" TYPE="FAC" SUBTYPE="Airport" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030403_193455.30-E5-1" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="70" END="97">saddam international airport</charseq>
+    </extent>
+    <head>
+      <charseq START="70" END="97">saddam international airport</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030403_193455.30-E5-12" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="221" END="246">the capital's main airport</charseq>
+    </extent>
+    <head>
+      <charseq START="240" END="246">airport</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="saddam international airport">
+      <charseq START="70" END="97">saddam international airport</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030403_193455.30-E6" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNNHL_ENG_20030403_193455.30-E6-5" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="125" END="133">witnesses</charseq>
+    </extent>
+    <head>
+      <charseq START="125" END="133">witnesses</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030403_193455.30-E6-16" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="337" END="345">witnesses</charseq>
+    </extent>
+    <head>
+      <charseq START="337" END="345">witnesses</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030403_193455.30-E7" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030403_193455.30-E7-6" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="139" END="143">iraqi</charseq>
+    </extent>
+    <head>
+      <charseq START="139" END="143">iraqi</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030403_193455.30-E7-15" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="288" END="292">iraqi</charseq>
+    </extent>
+    <head>
+      <charseq START="288" END="292">iraqi</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="iraqi">
+      <charseq START="139" END="143">iraqi</charseq>
+    </name>
+    <name NAME="iraqi">
+      <charseq START="288" END="292">iraqi</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030403_193455.30-E8" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030403_193455.30-E8-7" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="139" END="150">iraqi troops</charseq>
+    </extent>
+    <head>
+      <charseq START="145" END="150">troops</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030403_193455.30-E9" TYPE="PER" SUBTYPE="Group" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030403_193455.30-E9-8" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="182" END="197">coalition troops</charseq>
+    </extent>
+    <head>
+      <charseq START="192" END="197">troops</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030403_193455.30-E9-10" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="206" END="210">their</charseq>
+    </extent>
+    <head>
+      <charseq START="206" END="210">their</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030403_193455.30-E10" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030403_193455.30-E10-9" TYPE="NOM" LDCTYPE="NOMPRE" ROLE="GPE">
+    <extent>
+      <charseq START="182" END="190">coalition</charseq>
+    </extent>
+    <head>
+      <charseq START="182" END="190">coalition</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030403_193455.30-E11" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030403_193455.30-E11-11" TYPE="NOM" LDCTYPE="NOM" ROLE="LOC">
+    <extent>
+      <charseq START="221" END="231">the capital</charseq>
+    </extent>
+    <head>
+      <charseq START="225" END="231">capital</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030403_193455.30-E12" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNNHL_ENG_20030403_193455.30-E12-13" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="278" END="315">dozens of iraqi civilians and soldiers</charseq>
+    </extent>
+    <head>
+      <charseq START="294" END="302">civilians</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030403_193455.30-E13" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNNHL_ENG_20030403_193455.30-E13-14" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="278" END="315">dozens of iraqi civilians and soldiers</charseq>
+    </extent>
+    <head>
+      <charseq START="308" END="315">soldiers</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<timex2 ID="CNNHL_ENG_20030403_193455.30-T1" VAL="2003-04-03T19:53:35">
+  <timex2_mention ID="CNNHL_ENG_20030403_193455.30-T1-1">
+    <extent>
+      <charseq START="46" END="64">2003-04-03 19:53:35</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNNHL_ENG_20030403_193455.30-R1" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030403_193455.30-E8" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030403_193455.30-E7" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030403_193455.30-R1-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="139" END="150">iraqi troops</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030403_193455.30-E8-7" ROLE="Arg-1">
+      <extent>
+        <charseq START="139" END="150">iraqi troops</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030403_193455.30-E7-6" ROLE="Arg-2">
+      <extent>
+        <charseq START="139" END="143">iraqi</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030403_193455.30-R2" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030403_193455.30-E9" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030403_193455.30-E10" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030403_193455.30-R2-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="182" END="197">coalition troops</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030403_193455.30-E9-8" ROLE="Arg-1">
+      <extent>
+        <charseq START="182" END="197">coalition troops</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030403_193455.30-E10-9" ROLE="Arg-2">
+      <extent>
+        <charseq START="182" END="190">coalition</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030403_193455.30-R3" TYPE="PART-WHOLE" SUBTYPE="Geographical" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030403_193455.30-E5" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030403_193455.30-E11" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030403_193455.30-R3-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="221" END="246">the capital's main airport</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030403_193455.30-E5-12" ROLE="Arg-1">
+      <extent>
+        <charseq START="221" END="246">the capital's main airport</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030403_193455.30-E11-11" ROLE="Arg-2">
+      <extent>
+        <charseq START="221" END="231">the capital</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030403_193455.30-R4" TYPE="GEN-AFF" SUBTYPE="Citizen-Resident-Religion-Ethnicity" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030403_193455.30-E12" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030403_193455.30-E7" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030403_193455.30-R4-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="278" END="315">dozens of iraqi civilians and soldiers</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030403_193455.30-E12-13" ROLE="Arg-1">
+      <extent>
+        <charseq START="278" END="315">dozens of iraqi civilians and soldiers</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030403_193455.30-E7-15" ROLE="Arg-2">
+      <extent>
+        <charseq START="288" END="292">iraqi</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030403_193455.30-R5" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030403_193455.30-E13" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030403_193455.30-E7" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030403_193455.30-R5-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="278" END="315">dozens of iraqi civilians and soldiers</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030403_193455.30-E13-14" ROLE="Arg-1">
+      <extent>
+        <charseq START="278" END="315">dozens of iraqi civilians and soldiers</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030403_193455.30-E7-15" ROLE="Arg-2">
+      <extent>
+        <charseq START="288" END="292">iraqi</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030403_193455.30-R6" TYPE="ART" SUBTYPE="User-Owner-Inventor-Manufacturer" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030403_193455.30-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030403_193455.30-E2" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030403_193455.30-R6-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="367" END="380">u.s. artillery</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030403_193455.30-E1-17" ROLE="Arg-1">
+      <extent>
+        <charseq START="367" END="369">u.s</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030403_193455.30-E2-2" ROLE="Arg-2">
+      <extent>
+        <charseq START="367" END="380">u.s. artillery</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030403_193455.30-R7" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030403_193455.30-E4" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030403_193455.30-E3" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030403_193455.30-R7-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="249" END="271">a reuters correspondent</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030403_193455.30-E4-4" ROLE="Arg-1">
+      <extent>
+        <charseq START="249" END="271">a reuters correspondent</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030403_193455.30-E3-3" ROLE="Arg-2">
+      <extent>
+        <charseq START="251" END="257">reuters</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNNHL_ENG_20030403_193455.30-EV1" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Present">
+  <event_argument REFID="CNNHL_ENG_20030403_193455.30-E8" ROLE="Attacker"/>
+  <event_argument REFID="CNNHL_ENG_20030403_193455.30-E11" ROLE="Place"/>
+  <event_argument REFID="CNNHL_ENG_20030403_193455.30-E9" ROLE="Target"/>
+  <event_mention ID="CNNHL_ENG_20030403_193455.30-EV1-1">
+    <extent>
+      <charseq START="139" END="231">iraqi troops are dug in trying to fend off coalition troops making
+their way into the capital</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="125" END="246">witnesses say
+iraqi troops are dug in trying to fend off coalition troops making
+their way into the capital's main airport</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="173" END="180">fend off</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030403_193455.30-E8-7" ROLE="Attacker">
+      <extent>
+        <charseq START="139" END="150">iraqi troops</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030403_193455.30-E11-11" ROLE="Place">
+      <extent>
+        <charseq START="221" END="231">the capital</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030403_193455.30-E9-8" ROLE="Target">
+      <extent>
+        <charseq START="182" END="197">coalition troops</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNNHL_ENG_20030403_193455.30-EV2" TYPE="Life" SUBTYPE="Die" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNNHL_ENG_20030403_193455.30-E13" ROLE="Victim"/>
+  <event_argument REFID="CNNHL_ENG_20030403_193455.30-E1" ROLE="Agent"/>
+  <event_argument REFID="CNNHL_ENG_20030403_193455.30-E7" ROLE="Place"/>
+  <event_argument REFID="CNNHL_ENG_20030403_193455.30-E2" ROLE="Instrument"/>
+  <event_argument REFID="CNNHL_ENG_20030403_193455.30-E12" ROLE="Victim"/>
+  <event_mention ID="CNNHL_ENG_20030403_193455.30-EV2-1">
+    <extent>
+      <charseq START="278" END="380">dozens of iraqi civilians and soldiers were killed in what
+witnesses called a barrage of u.s. artillery</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="249" END="380">a reuters correspondent
+said dozens of iraqi civilians and soldiers were killed in what
+witnesses called a barrage of u.s. artillery</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="322" END="327">killed</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030403_193455.30-E13-14" ROLE="Victim">
+      <extent>
+        <charseq START="278" END="315">dozens of iraqi civilians and soldiers</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030403_193455.30-E1-17" ROLE="Agent">
+      <extent>
+        <charseq START="367" END="369">u.s</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030403_193455.30-E7-15" ROLE="Place">
+      <extent>
+        <charseq START="288" END="292">iraqi</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030403_193455.30-E2-2" ROLE="Instrument">
+      <extent>
+        <charseq START="367" END="380">u.s. artillery</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030403_193455.30-E12-13" ROLE="Victim">
+      <extent>
+        <charseq START="278" END="315">dozens of iraqi civilians and soldiers</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+<event ID="CNNHL_ENG_20030403_193455.30-EV3" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Past">
+  <event_argument REFID="CNNHL_ENG_20030403_193455.30-E1" ROLE="Attacker"/>
+  <event_argument REFID="CNNHL_ENG_20030403_193455.30-E13" ROLE="Target"/>
+  <event_argument REFID="CNNHL_ENG_20030403_193455.30-E2" ROLE="Instrument"/>
+  <event_mention ID="CNNHL_ENG_20030403_193455.30-EV3-1">
+    <extent>
+      <charseq START="278" END="380">dozens of iraqi civilians and soldiers were killed in what
+witnesses called a barrage of u.s. artillery</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="249" END="380">a reuters correspondent
+said dozens of iraqi civilians and soldiers were killed in what
+witnesses called a barrage of u.s. artillery</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="356" END="362">barrage</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030403_193455.30-E1-17" ROLE="Attacker">
+      <extent>
+        <charseq START="367" END="369">u.s</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030403_193455.30-E13-14" ROLE="Target">
+      <extent>
+        <charseq START="278" END="315">dozens of iraqi civilians and soldiers</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030403_193455.30-E2-2" ROLE="Instrument">
+      <extent>
+        <charseq START="367" END="380">u.s. artillery</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

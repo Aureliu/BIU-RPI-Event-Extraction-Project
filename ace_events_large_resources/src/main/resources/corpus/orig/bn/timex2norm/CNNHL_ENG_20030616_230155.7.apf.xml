@@ -1,0 +1,382 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNNHL_ENG_20030616_230155.7.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNNHL_ENG_20030616_230155.7">
+<entity ID="CNNHL_ENG_20030616_230155.7-E1" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030616_230155.7-E1-3" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="533" END="535">u.s</charseq>
+    </extent>
+    <head>
+      <charseq START="533" END="535">u.s</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030616_230155.7-E1-20" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="492" END="498">the u.s</charseq>
+    </extent>
+    <head>
+      <charseq START="496" END="498">u.s</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="u.s">
+      <charseq START="533" END="535">u.s</charseq>
+    </name>
+    <name NAME="u.s">
+      <charseq START="496" END="498">u.s</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030616_230155.7-E3" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNNHL_ENG_20030616_230155.7-E3-4" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="221" END="250">backers of the clerical regime</charseq>
+    </extent>
+    <head>
+      <charseq START="221" END="227">backers</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030616_230155.7-E4" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030616_230155.7-E4-5" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="232" END="250">the clerical regime</charseq>
+    </extent>
+    <head>
+      <charseq START="245" END="250">regime</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030616_230155.7-E5" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030616_230155.7-E5-1" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="69" END="91">the bush administration</charseq>
+    </extent>
+    <head>
+      <charseq START="78" END="91">administration</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030616_230155.7-E5-13" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="307" END="329">the bush administration</charseq>
+    </extent>
+    <head>
+      <charseq START="316" END="329">administration</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030616_230155.7-E6" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030616_230155.7-E6-6" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="73" END="76">bush</charseq>
+    </extent>
+    <head>
+      <charseq START="73" END="76">bush</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030616_230155.7-E6-14" TYPE="NAM" LDCTYPE="NAMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="311" END="314">bush</charseq>
+    </extent>
+    <head>
+      <charseq START="311" END="314">bush</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="bush">
+      <charseq START="73" END="76">bush</charseq>
+    </name>
+    <name NAME="bush">
+      <charseq START="311" END="314">bush</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030616_230155.7-E7" TYPE="GPE" SUBTYPE="Nation" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030616_230155.7-E7-7" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC" LDCATR="FALSE">
+    <extent>
+      <charseq START="153" END="156">iran</charseq>
+    </extent>
+    <head>
+      <charseq START="153" END="156">iran</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030616_230155.7-E7-11" TYPE="NOM" LDCTYPE="NOM" ROLE="ORG" LDCATR="FALSE">
+    <extent>
+      <charseq START="272" END="293">the
+iranian government</charseq>
+    </extent>
+    <head>
+      <charseq START="284" END="293">government</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030616_230155.7-E7-12" TYPE="NAM" LDCTYPE="NAMPRE" ROLE="GPE" LDCATR="TRUE">
+    <extent>
+      <charseq START="276" END="282">iranian</charseq>
+    </extent>
+    <head>
+      <charseq START="276" END="282">iranian</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030616_230155.7-E7-18" TYPE="NAM" LDCTYPE="NAM" ROLE="GPE" LDCATR="FALSE">
+    <extent>
+      <charseq START="445" END="448">iran</charseq>
+    </extent>
+    <head>
+      <charseq START="445" END="448">iran</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030616_230155.7-E7-19" TYPE="NOM" LDCTYPE="BAR" ROLE="PER" LDCATR="FALSE">
+    <extent>
+      <charseq START="454" END="461">iranians</charseq>
+    </extent>
+    <head>
+      <charseq START="454" END="461">iranians</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="iran">
+      <charseq START="153" END="156">iran</charseq>
+    </name>
+    <name NAME="iranian">
+      <charseq START="276" END="282">iranian</charseq>
+    </name>
+    <name NAME="iran">
+      <charseq START="445" END="448">iran</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030616_230155.7-E8" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNNHL_ENG_20030616_230155.7-E8-8" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="175" END="184">protesters</charseq>
+    </extent>
+    <head>
+      <charseq START="175" END="184">protesters</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030616_230155.7-E8-15" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="364" END="377">the protesters</charseq>
+    </extent>
+    <head>
+      <charseq START="368" END="377">protesters</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030616_230155.7-E9" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="CNNHL_ENG_20030616_230155.7-E9-9" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="210" END="215">police</charseq>
+    </extent>
+    <head>
+      <charseq START="210" END="215">police</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030616_230155.7-E10" TYPE="GPE" SUBTYPE="Population-Center" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030616_230155.7-E10-10" TYPE="NAM" LDCTYPE="NAM" ROLE="LOC">
+    <extent>
+      <charseq START="255" END="260">tehran</charseq>
+    </extent>
+    <head>
+      <charseq START="255" END="260">tehran</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="tehran">
+      <charseq START="255" END="260">tehran</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNNHL_ENG_20030616_230155.7-E13" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030616_230155.7-E13-2" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="506" END="507">he</charseq>
+    </extent>
+    <head>
+      <charseq START="506" END="507">he</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNNHL_ENG_20030616_230155.7-E13-16" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="380" END="409">the state department spokesman</charseq>
+    </extent>
+    <head>
+      <charseq START="401" END="409">spokesman</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNNHL_ENG_20030616_230155.7-E14" TYPE="ORG" SUBTYPE="Government" CLASS="SPC">
+  <entity_mention ID="CNNHL_ENG_20030616_230155.7-E14-17" TYPE="NAM" LDCTYPE="NAMPRE">
+    <extent>
+      <charseq START="384" END="399">state department</charseq>
+    </extent>
+    <head>
+      <charseq START="384" END="399">state department</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="state department">
+      <charseq START="384" END="399">state department</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<timex2 ID="CNNHL_ENG_20030616_230155.7-T1" VAL="P1W" ANCHOR_VAL="2003-06-16" ANCHOR_DIR="AS_OF">
+  <timex2_mention ID="CNNHL_ENG_20030616_230155.7-T1-1">
+    <extent>
+      <charseq START="163" END="172">a week now</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNNHL_ENG_20030616_230155.7-T2" VAL="2003-06-16T23:10:08">
+  <timex2_mention ID="CNNHL_ENG_20030616_230155.7-T2-1">
+    <extent>
+      <charseq START="45" END="63">2003-06-16 23:10:08</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNNHL_ENG_20030616_230155.7-R1" TYPE="PHYS" SUBTYPE="Located" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030616_230155.7-E3" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030616_230155.7-E10" ROLE="Arg-2"/>
+  <relation_argument REFID="CNNHL_ENG_20030616_230155.7-T1" ROLE="Time-Holds"/>
+  <relation_mention ID="CNNHL_ENG_20030616_230155.7-R1-1" LEXICALCONDITION="Other">
+    <extent>
+      <charseq START="159" END="260">for a week now, protesters have been clashing
+with police and backers of the clerical regime in tehran</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030616_230155.7-E3-4" ROLE="Arg-1">
+      <extent>
+        <charseq START="221" END="250">backers of the clerical regime</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030616_230155.7-E10-10" ROLE="Arg-2">
+      <extent>
+        <charseq START="255" END="260">tehran</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030616_230155.7-T1-1" ROLE="Time-Holds">
+      <extent>
+        <charseq START="163" END="172">a week now</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<relation ID="CNNHL_ENG_20030616_230155.7-R2" TYPE="ORG-AFF" SUBTYPE="Employment" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="CNNHL_ENG_20030616_230155.7-E13" ROLE="Arg-1"/>
+  <relation_argument REFID="CNNHL_ENG_20030616_230155.7-E14" ROLE="Arg-2"/>
+  <relation_mention ID="CNNHL_ENG_20030616_230155.7-R2-1" LEXICALCONDITION="PreMod">
+    <extent>
+      <charseq START="380" END="409">the state department spokesman</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNNHL_ENG_20030616_230155.7-E13-16" ROLE="Arg-1">
+      <extent>
+        <charseq START="380" END="409">the state department spokesman</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNNHL_ENG_20030616_230155.7-E14-17" ROLE="Arg-2">
+      <extent>
+        <charseq START="384" END="399">state department</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+<event ID="CNNHL_ENG_20030616_230155.7-EV1" TYPE="Conflict" SUBTYPE="Demonstrate" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNNHL_ENG_20030616_230155.7-E7" ROLE="Place"/>
+  <event_mention ID="CNNHL_ENG_20030616_230155.7-EV1-1">
+    <extent>
+      <charseq START="135" END="156">demonstrations in iran</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="69" END="156">the bush administration is officially endorsing the pro-democracy
+demonstrations in iran</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="135" END="148">demonstrations</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030616_230155.7-E7-7" ROLE="Place">
+      <extent>
+        <charseq START="153" END="156">iran</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+  <event_mention ID="CNNHL_ENG_20030616_230155.7-EV1-2">
+    <extent>
+      <charseq START="420" END="433">demonstrations</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="380" END="551">the state department spokesman
+says the demonstrations are about iran and iranians, and have nothing
+to do with the u.s., but he did make it clear where u.s. sympathies
+lie</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="420" END="433">demonstrations</charseq>
+    </anchor>
+  </event_mention>
+</event>
+<event ID="CNNHL_ENG_20030616_230155.7-EV2" TYPE="Conflict" SUBTYPE="Attack" MODALITY="Asserted" POLARITY="Positive" GENERICITY="Specific" TENSE="Unspecified">
+  <event_argument REFID="CNNHL_ENG_20030616_230155.7-E10" ROLE="Place"/>
+  <event_argument REFID="CNNHL_ENG_20030616_230155.7-E8" ROLE="Target"/>
+  <event_argument REFID="CNNHL_ENG_20030616_230155.7-E9" ROLE="Target"/>
+  <event_argument REFID="CNNHL_ENG_20030616_230155.7-E3" ROLE="Target"/>
+  <event_argument REFID="CNNHL_ENG_20030616_230155.7-T1" ROLE="Time-Holds"/>
+  <event_argument REFID="CNNHL_ENG_20030616_230155.7-E8" ROLE="Attacker"/>
+  <event_argument REFID="CNNHL_ENG_20030616_230155.7-E9" ROLE="Attacker"/>
+  <event_argument REFID="CNNHL_ENG_20030616_230155.7-E3" ROLE="Attacker"/>
+  <event_mention ID="CNNHL_ENG_20030616_230155.7-EV2-1">
+    <extent>
+      <charseq START="163" END="260">a week now, protesters have been clashing
+with police and backers of the clerical regime in tehran</charseq>
+    </extent>
+    <ldc_scope>
+      <charseq START="159" END="260">for a week now, protesters have been clashing
+with police and backers of the clerical regime in tehran</charseq>
+    </ldc_scope>
+    <anchor>
+      <charseq START="196" END="203">clashing</charseq>
+    </anchor>
+    <event_mention_argument REFID="CNNHL_ENG_20030616_230155.7-E10-10" ROLE="Place">
+      <extent>
+        <charseq START="255" END="260">tehran</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030616_230155.7-E8-8" ROLE="Target">
+      <extent>
+        <charseq START="175" END="184">protesters</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030616_230155.7-E9-9" ROLE="Target">
+      <extent>
+        <charseq START="210" END="215">police</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030616_230155.7-E3-4" ROLE="Target">
+      <extent>
+        <charseq START="221" END="250">backers of the clerical regime</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030616_230155.7-T1-1" ROLE="Time-Holds">
+      <extent>
+        <charseq START="163" END="172">a week now</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030616_230155.7-E8-8" ROLE="Attacker">
+      <extent>
+        <charseq START="175" END="184">protesters</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030616_230155.7-E9-9" ROLE="Attacker">
+      <extent>
+        <charseq START="210" END="215">police</charseq>
+      </extent>
+    </event_mention_argument>
+    <event_mention_argument REFID="CNNHL_ENG_20030616_230155.7-E3-4" ROLE="Attacker">
+      <extent>
+        <charseq START="221" END="250">backers of the clerical regime</charseq>
+      </extent>
+    </event_mention_argument>
+  </event_mention>
+</event>
+</document>
+</source_file>

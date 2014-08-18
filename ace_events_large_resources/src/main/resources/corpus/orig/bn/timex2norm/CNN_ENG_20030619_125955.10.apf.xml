@@ -1,0 +1,192 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="CNN_ENG_20030619_125955.10.sgm" SOURCE="broadcast news" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="CNN_ENG_20030619_125955.10">
+<entity ID="CNN_ENG_20030619_125955.10-E1" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030619_125955.10-E1-1" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="68" END="68">i</charseq>
+    </extent>
+    <head>
+      <charseq START="68" END="68">i</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030619_125955.10-E1-2" TYPE="NAM" LDCTYPE="NAM" LDCATR="TRUE">
+    <extent>
+      <charseq START="72" END="87">rhonda schaffler</charseq>
+    </extent>
+    <head>
+      <charseq START="72" END="87">rhonda schaffler</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="rhonda schaffler">
+      <charseq START="72" END="87">rhonda schaffler</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030619_125955.10-E3" TYPE="FAC" SUBTYPE="Building-Grounds" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030619_125955.10-E3-3" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="100" END="126">the new york stock
+exchange</charseq>
+    </extent>
+    <head>
+      <charseq START="104" END="126">new york stock
+exchange</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030619_125955.10-E3-10" TYPE="PRO" LDCTYPE="WHQ">
+    <extent>
+      <charseq START="129" END="133">where</charseq>
+    </extent>
+    <head>
+      <charseq START="129" END="133">where</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="new york stock exchange">
+      <charseq START="104" END="126">new york stock
+exchange</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030619_125955.10-E4" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="CNN_ENG_20030619_125955.10-E4-4" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="243" END="251">investors</charseq>
+    </extent>
+    <head>
+      <charseq START="243" END="251">investors</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030619_125955.10-E5" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030619_125955.10-E5-5" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="460" END="477">general electronic</charseq>
+    </extent>
+    <head>
+      <charseq START="460" END="477">general electronic</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030619_125955.10-E5-8" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="558" END="568">the company</charseq>
+    </extent>
+    <head>
+      <charseq START="562" END="568">company</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="general electronic">
+      <charseq START="460" END="477">general electronic</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="CNN_ENG_20030619_125955.10-E6" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030619_125955.10-E6-6" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="500" END="524">three brokerage
+companies</charseq>
+    </extent>
+    <head>
+      <charseq START="516" END="524">companies</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="CNN_ENG_20030619_125955.10-E6-7" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="530" END="534">their</charseq>
+    </extent>
+    <head>
+      <charseq START="530" END="534">their</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="CNN_ENG_20030619_125955.10-E7" TYPE="ORG" SUBTYPE="Media" CLASS="SPC">
+  <entity_mention ID="CNN_ENG_20030619_125955.10-E7-9" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="589" END="591">cnn</charseq>
+    </extent>
+    <head>
+      <charseq START="589" END="591">cnn</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="cnn">
+      <charseq START="589" END="591">cnn</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<value ID="CNN_ENG_20030619_125955.10-V1" TYPE="Numeric" SUBTYPE="Money">
+  <value_mention ID="CNN_ENG_20030619_125955.10-V1-1">
+    <extent>
+      <charseq START="485" END="492">a dollar</charseq>
+    </extent>
+  </value_mention>
+</value>
+<value ID="CNN_ENG_20030619_125955.10-V2" TYPE="Numeric" SUBTYPE="Percent">
+  <value_mention ID="CNN_ENG_20030619_125955.10-V2-1">
+    <extent>
+      <charseq START="582" END="586">0.75%</charseq>
+    </extent>
+  </value_mention>
+</value>
+<timex2 ID="CNN_ENG_20030619_125955.10-T3" VAL="2003-06-19">
+  <timex2_mention ID="CNN_ENG_20030619_125955.10-T3-1">
+    <extent>
+      <charseq START="293" END="297">today</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030619_125955.10-T4" VAL="FUTURE_REF" ANCHOR_VAL="2003-06-19" ANCHOR_DIR="AFTER">
+  <timex2_mention ID="CNN_ENG_20030619_125955.10-T4-1">
+    <extent>
+      <charseq START="315" END="320">future</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030619_125955.10-T5" VAL="P17M" ANCHOR_VAL="2002-01" ANCHOR_DIR="STARTING">
+  <timex2_mention ID="CNN_ENG_20030619_125955.10-T5-1">
+    <extent>
+      <charseq START="367" END="375">17 months</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030619_125955.10-T1" VAL="2003-06-19T13:30:01">
+  <timex2_mention ID="CNN_ENG_20030619_125955.10-T1-1">
+    <extent>
+      <charseq START="44" END="62">2003-06-19 13:30:01</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="CNN_ENG_20030619_125955.10-T2" VAL="P3M" ANCHOR_VAL="2003-03" ANCHOR_DIR="STARTING">
+  <timex2_mention ID="CNN_ENG_20030619_125955.10-T2-1">
+    <extent>
+      <charseq START="188" END="199">three months</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="CNN_ENG_20030619_125955.10-R1" TYPE="PHYS" SUBTYPE="Located" TENSE="Present" MODALITY="Asserted">
+  <relation_argument REFID="CNN_ENG_20030619_125955.10-E1" ROLE="Arg-1"/>
+  <relation_argument REFID="CNN_ENG_20030619_125955.10-E3" ROLE="Arg-2"/>
+  <relation_mention ID="CNN_ENG_20030619_125955.10-R1-1" LEXICALCONDITION="Formulaic">
+    <extent>
+      <charseq START="68" END="126">i'm rhonda schaffler, live from the new york stock
+exchange</charseq>
+    </extent>
+    <relation_mention_argument REFID="CNN_ENG_20030619_125955.10-E1-2" ROLE="Arg-1">
+      <extent>
+        <charseq START="72" END="87">rhonda schaffler</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="CNN_ENG_20030619_125955.10-E3-3" ROLE="Arg-2">
+      <extent>
+        <charseq START="100" END="126">the new york stock
+exchange</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+</document>
+</source_file>

@@ -1,0 +1,406 @@
+<?xml version="1.0"?>
+<!DOCTYPE source_file SYSTEM "apf.v5.1.1.dtd">
+<source_file URI="MARKETVIEW_20050105.1901.sgm" SOURCE="weblog" TYPE="text" AUTHOR="LDC" ENCODING="UTF-8">
+<document DOCID="MARKETVIEW_20050105.1901">
+<entity ID="MARKETVIEW_20050105.1901-E1" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="MARKETVIEW_20050105.1901-E1-1" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="808" END="809">He</charseq>
+    </extent>
+    <head>
+      <charseq START="808" END="809">He</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050105.1901-E1-37" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="786" END="797">your analyst</charseq>
+    </extent>
+    <head>
+      <charseq START="791" END="797">analyst</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050105.1901-E2" TYPE="PER" SUBTYPE="Indeterminate" CLASS="NEG">
+  <entity_mention ID="MARKETVIEW_20050105.1901-E2-2" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="877" END="882">Nobody</charseq>
+    </extent>
+    <head>
+      <charseq START="877" END="882">Nobody</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050105.1901-E3" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="MARKETVIEW_20050105.1901-E3-3" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="936" END="1006">portfolio managers with a Net
+Asset Value report card every trading day</charseq>
+    </extent>
+    <head>
+      <charseq START="946" END="953">managers</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050105.1901-E4" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="MARKETVIEW_20050105.1901-E4-5" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1069" END="1085">The best analysts</charseq>
+    </extent>
+    <head>
+      <charseq START="1078" END="1085">analysts</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050105.1901-E5" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="MARKETVIEW_20050105.1901-E5-6" TYPE="PRO" LDCTYPE="HLS">
+    <extent>
+      <charseq START="1130" END="1138">The worst</charseq>
+    </extent>
+    <head>
+      <charseq START="1134" END="1138">worst</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050105.1901-E5-7" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1147" END="1150">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1147" END="1150">they</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050105.1901-E6" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="MARKETVIEW_20050105.1901-E6-8" TYPE="PRO" LDCTYPE="HLS">
+    <extent>
+      <charseq START="1178" END="1185">the rest</charseq>
+    </extent>
+    <head>
+      <charseq START="1182" END="1185">rest</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050105.1901-E7" TYPE="PER" SUBTYPE="Group" CLASS="GEN">
+  <entity_mention ID="MARKETVIEW_20050105.1901-E7-4" TYPE="NOM" LDCTYPE="BAR" LDCATR="FALSE">
+    <extent>
+      <charseq START="1009" END="1016">analysts</charseq>
+    </extent>
+    <head>
+      <charseq START="1009" END="1016">analysts</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050105.1901-E7-10" TYPE="NOM" LDCTYPE="BAR" LDCATR="FALSE">
+    <extent>
+      <charseq START="1218" END="1225">analysts</charseq>
+    </extent>
+    <head>
+      <charseq START="1218" END="1225">analysts</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050105.1901-E7-11" TYPE="NOM" LDCTYPE="BAR" LDCATR="TRUE">
+    <extent>
+      <charseq START="1240" END="1286">aggregators of
+publically-available information</charseq>
+    </extent>
+    <head>
+      <charseq START="1240" END="1250">aggregators</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050105.1901-E7-12" TYPE="NOM" LDCTYPE="BAR" LDCATR="TRUE">
+    <extent>
+      <charseq START="1292" END="1339">echo-chambers for
+previously-determined opinions</charseq>
+    </extent>
+    <head>
+      <charseq START="1297" END="1304">chambers</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050105.1901-E7-13" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1342" END="1345">They</charseq>
+    </extent>
+    <head>
+      <charseq START="1342" END="1345">They</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050105.1901-E7-14" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1433" END="1436">they</charseq>
+    </extent>
+    <head>
+      <charseq START="1433" END="1436">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050105.1901-E7-17" TYPE="NOM" LDCTYPE="NOMPRE" LDCATR="TRUE">
+    <extent>
+      <charseq START="452" END="458">analyst</charseq>
+    </extent>
+    <head>
+      <charseq START="452" END="458">analyst</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050105.1901-E7-21" TYPE="NOM" LDCTYPE="BAR" LDCATR="FALSE">
+    <extent>
+      <charseq START="1724" END="1731">analysts</charseq>
+    </extent>
+    <head>
+      <charseq START="1724" END="1731">analysts</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050105.1901-E9" TYPE="LOC" SUBTYPE="Celestial" CLASS="USP">
+  <entity_mention ID="MARKETVIEW_20050105.1901-E9-15" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="1510" END="1523">an ideal
+world</charseq>
+    </extent>
+    <head>
+      <charseq START="1519" END="1523">world</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050105.1901-E11" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="MARKETVIEW_20050105.1901-E11-20" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="1681" END="1686">others</charseq>
+    </extent>
+    <head>
+      <charseq START="1681" END="1686">others</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050105.1901-E12" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="MARKETVIEW_20050105.1901-E12-9" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1201" END="1201">I</charseq>
+    </extent>
+    <head>
+      <charseq START="1201" END="1201">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050105.1901-E12-23" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="1763" END="1763">I</charseq>
+    </extent>
+    <head>
+      <charseq START="1763" END="1763">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050105.1901-E12-24" TYPE="NOM" LDCTYPE="NOM" LDCATR="TRUE">
+    <extent>
+      <charseq START="1771" END="1776">a bull</charseq>
+    </extent>
+    <head>
+      <charseq START="1773" END="1776">bull</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050105.1901-E12-30" TYPE="NAM" LDCTYPE="NAM" LDCATR="FALSE">
+    <extent>
+      <charseq START="110" END="114">Byrne</charseq>
+    </extent>
+    <head>
+      <charseq START="110" END="114">Byrne</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050105.1901-E12-34" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="692" END="692">I</charseq>
+    </extent>
+    <head>
+      <charseq START="692" END="692">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050105.1901-E12-35" TYPE="PRO" LDCTYPE="PRO" LDCATR="FALSE">
+    <extent>
+      <charseq START="711" END="711">I</charseq>
+    </extent>
+    <head>
+      <charseq START="711" END="711">I</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Byrne">
+      <charseq START="110" END="114">Byrne</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKETVIEW_20050105.1901-E13" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="MARKETVIEW_20050105.1901-E13-18" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1552" END="1555">ours</charseq>
+    </extent>
+    <head>
+      <charseq START="1552" END="1555">ours</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050105.1901-E13-19" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="1619" END="1620">we</charseq>
+    </extent>
+    <head>
+      <charseq START="1619" END="1620">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050105.1901-E13-25" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="145" END="146">we</charseq>
+    </extent>
+    <head>
+      <charseq START="145" END="146">we</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050105.1901-E13-26" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="159" END="160">we</charseq>
+    </extent>
+    <head>
+      <charseq START="159" END="160">we</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050105.1901-E14" TYPE="ORG" SUBTYPE="Commercial" CLASS="SPC">
+  <entity_mention ID="MARKETVIEW_20050105.1901-E14-16" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="480" END="483">they</charseq>
+    </extent>
+    <head>
+      <charseq START="480" END="483">they</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050105.1901-E14-22" TYPE="NAM" LDCTYPE="NAM">
+    <extent>
+      <charseq START="1748" END="1759">Krispy Kreme</charseq>
+    </extent>
+    <head>
+      <charseq START="1748" END="1759">Krispy Kreme</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050105.1901-E14-27" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="194" END="305">A company
+hitting and then rehitting lows that would have been unthinkable even
+after their pull-back a year ago</charseq>
+    </extent>
+    <head>
+      <charseq START="196" END="202">company</charseq>
+    </head>
+  </entity_mention>
+  <entity_mention ID="MARKETVIEW_20050105.1901-E14-28" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="280" END="284">their</charseq>
+    </extent>
+    <head>
+      <charseq START="280" END="284">their</charseq>
+    </head>
+  </entity_mention>
+  <entity_attributes>
+    <name NAME="Krispy Kreme">
+      <charseq START="1748" END="1759">Krispy Kreme</charseq>
+    </name>
+  </entity_attributes>
+</entity>
+<entity ID="MARKETVIEW_20050105.1901-E15" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="MARKETVIEW_20050105.1901-E15-29" TYPE="NOM" LDCTYPE="BAR">
+    <extent>
+      <charseq START="426" END="433">insiders</charseq>
+    </extent>
+    <head>
+      <charseq START="426" END="433">insiders</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050105.1901-E17" TYPE="PER" SUBTYPE="Individual" CLASS="SPC">
+  <entity_mention ID="MARKETVIEW_20050105.1901-E17-31" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="490" END="500">a lone bull</charseq>
+    </extent>
+    <head>
+      <charseq START="497" END="500">bull</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050105.1901-E18" TYPE="PER" SUBTYPE="Group" CLASS="USP">
+  <entity_mention ID="MARKETVIEW_20050105.1901-E18-32" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="530" END="544">plenty of bears</charseq>
+    </extent>
+    <head>
+      <charseq START="540" END="544">bears</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050105.1901-E19" TYPE="ORG" SUBTYPE="Commercial" CLASS="GEN">
+  <entity_mention ID="MARKETVIEW_20050105.1901-E19-33" TYPE="NOM" LDCTYPE="NOM">
+    <extent>
+      <charseq START="916" END="922">a loser</charseq>
+    </extent>
+    <head>
+      <charseq START="918" END="922">loser</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<entity ID="MARKETVIEW_20050105.1901-E21" TYPE="PER" SUBTYPE="Indeterminate" CLASS="USP">
+  <entity_mention ID="MARKETVIEW_20050105.1901-E21-36" TYPE="PRO" LDCTYPE="PRO">
+    <extent>
+      <charseq START="786" END="789">your</charseq>
+    </extent>
+    <head>
+      <charseq START="786" END="789">your</charseq>
+    </head>
+  </entity_mention>
+</entity>
+<timex2 ID="MARKETVIEW_20050105.1901-T1" VAL="2005-01-05T19:01:00">
+  <timex2_mention ID="MARKETVIEW_20050105.1901-T1-1">
+    <extent>
+      <charseq START="40" END="58">2005-01-05T19:01:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKETVIEW_20050105.1901-T2" VAL="2005-01-05T19:01:00">
+  <timex2_mention ID="MARKETVIEW_20050105.1901-T2-1">
+    <extent>
+      <charseq START="118" END="136">2005-01-05T19:01:00</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKETVIEW_20050105.1901-T3" VAL="2004">
+  <timex2_mention ID="MARKETVIEW_20050105.1901-T3-1">
+    <extent>
+      <charseq START="296" END="305">a year ago</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKETVIEW_20050105.1901-T4" VAL="2005">
+  <timex2_mention ID="MARKETVIEW_20050105.1901-T4-1">
+    <extent>
+      <charseq START="851" END="859">this year</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<timex2 ID="MARKETVIEW_20050105.1901-T5" VAL="XXXX-XX-XX">
+  <timex2_mention ID="MARKETVIEW_20050105.1901-T5-1">
+    <extent>
+      <charseq START="990" END="1006">every trading day</charseq>
+    </extent>
+  </timex2_mention>
+</timex2>
+<relation ID="MARKETVIEW_20050105.1901-R1" TYPE="PER-SOC" SUBTYPE="Business" TENSE="Unspecified" MODALITY="Asserted">
+  <relation_argument REFID="MARKETVIEW_20050105.1901-E21" ROLE="Arg-1"/>
+  <relation_argument REFID="MARKETVIEW_20050105.1901-E1" ROLE="Arg-2"/>
+  <relation_mention ID="MARKETVIEW_20050105.1901-R1-1" LEXICALCONDITION="Possessive">
+    <extent>
+      <charseq START="786" END="797">your analyst</charseq>
+    </extent>
+    <relation_mention_argument REFID="MARKETVIEW_20050105.1901-E21-36" ROLE="Arg-1">
+      <extent>
+        <charseq START="786" END="789">your</charseq>
+      </extent>
+    </relation_mention_argument>
+    <relation_mention_argument REFID="MARKETVIEW_20050105.1901-E1-37" ROLE="Arg-2">
+      <extent>
+        <charseq START="786" END="797">your analyst</charseq>
+      </extent>
+    </relation_mention_argument>
+  </relation_mention>
+</relation>
+</document>
+</source_file>

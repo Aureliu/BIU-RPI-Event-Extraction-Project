@@ -80,7 +80,6 @@ import edu.cuny.qc.ace.acetypes.AceEntityMention;
 import edu.cuny.qc.scorer.mechanism.WordNetSignalMechanism;
 import edu.cuny.qc.util.PosMap;
 import edu.cuny.qc.util.Utils;
-import edu.cuny.qc.util.fragment.CasTreeConverter;
 import edu.cuny.qc.util.fragment.Facet;
 import edu.cuny.qc.util.fragment.FragmentAndReference;
 import edu.cuny.qc.util.fragment.FragmentLayer;
@@ -121,6 +120,7 @@ import eu.excitementproject.eop.lap.biu.en.pasta.nomlex.NomlexMapBuilder;
 import eu.excitementproject.eop.lap.biu.en.pasta.stanforddependencies.easyfirst.PastaMode;
 import eu.excitementproject.eop.lap.biu.pasta.identification.PredicateArgumentIdentificationException;
 import eu.excitementproject.eop.lap.biu.pasta.identification.PredicateArgumentStructureBuilder;
+import eu.excitementproject.eop.lap.biu.uima.CasTreeConverter;
 
 /**
  * Performs various statistics (using the stats mechanism) on the ACE XMIs, and outputs

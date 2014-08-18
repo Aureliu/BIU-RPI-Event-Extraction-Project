@@ -59,8 +59,8 @@ import edu.cuny.qc.scorer.SignalMechanismsContainer;
 import edu.cuny.qc.util.SentDetectorWrapper;
 import edu.cuny.qc.util.Span;
 import edu.cuny.qc.util.TokenizerWrapper;
-import edu.cuny.qc.util.fragment.CasTreeConverter;
 import eu.excitementproject.eop.common.utilities.uima.UimaUtilsException;
+import eu.excitementproject.eop.lap.biu.uima.CasTreeConverter;
 
 /**
  * read the source data of i2b2

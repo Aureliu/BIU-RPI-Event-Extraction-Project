@@ -26,8 +26,6 @@ import de.tudarmstadt.ukp.dkpro.core.api.metadata.type.DocumentMetaData;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
 import edu.cuny.qc.util.Utils;
-import edu.cuny.qc.util.fragment.CasTreeConverter;
-import edu.cuny.qc.util.fragment.CasTreeConverterException;
 import edu.cuny.qc.util.fragment.FragmentLayer;
 import edu.cuny.qc.util.fragment.FragmentLayerException;
 import edu.cuny.qc.util.fragment.TreeFragmentBuilder.TreeFragmentBuilderException;
@@ -35,6 +33,8 @@ import eu.excitementproject.eop.common.representation.parse.tree.TreeAndParentMa
 import eu.excitementproject.eop.common.representation.partofspeech.UnsupportedPosTagStringException;
 import eu.excitementproject.eop.lap.LAPException;
 import eu.excitementproject.eop.lap.biu.pasta.identification.PredicateArgumentIdentificationException;
+import eu.excitementproject.eop.lap.biu.uima.CasTreeConverter;
+import eu.excitementproject.eop.lap.biu.uima.CasTreeConverterException;
 
 /**
  * Finds sentences that comply to some hard-coded criteria. Started from a copy of {@link AceAnalyzer}.

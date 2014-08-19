@@ -52,7 +52,7 @@ public class Nomlex
 	
 	public void readDict()
 	{
-		File filePath = new File("src/main/resources/data/NOMLEX");
+		File filePath = new File("../ace_events_large_resources/src/main/resources/data/NOMLEX");
 		try
 		{
 			BufferedReader reader = new BufferedReader(new FileReader(filePath));

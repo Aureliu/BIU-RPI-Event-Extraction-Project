@@ -90,7 +90,7 @@ public class FragmentLayer {
 //		}
 	}
 	
-	public List<BasicNode> getTreeFragments(Annotation covering) throws CASException, AceException, TreeAndParentMapException, TreeFragmentBuilderException {
+	public List<BasicNode> getTreeFragments(Annotation covering) throws CASException, AceException, TreeAndParentMapException, TreeFragmentBuilderException, FragmentLayerException {
 		List<BasicNode> result = new ArrayList<BasicNode>();
 		if (covering != null) {
 			MultiMap<Sentence, Token> sentence2tokens = Utils.getCoveringSentences(covering, tokenIndex);
@@ -111,16 +111,19 @@ public class FragmentLayer {
 		return root;
 	}
 
-	public FragmentAndReference getFragmentBySentenceAndTokens(Sentence sentence, Collection<Token> tokens, Facet facet) throws TreeAndParentMapException, TreeFragmentBuilderException {
+	public FragmentAndReference getFragmentBySentenceAndTokens(Sentence sentence, Collection<Token> tokens, Facet facet) throws TreeAndParentMapException, TreeFragmentBuilderException, FragmentLayerException {
 		BasicNode root = sentence2root.get(sentence);
 		Set<BasicNode> targetNodes = new LinkedHashSet<BasicNode>(tokens.size());
 		for (Token token : tokens) {
 			Collection<BasicNode> nodes = token2nodes.get(token);
 			/// DEBUG
 			if (nodes == null) {
-				System.out.printf("");
+				System.out.printf("\n\n\nnull nodes for token %s[%s:%s]!!!!!!! Sentence: %s||||\n\n\n", token.getCoveredText(), token.getBegin(), token.getEnd(), sentence.getCoveredText());
 			}
 			///
+			if (nodes == null) {
+				throw new FragmentLayerException("Token " + UimaUtils.annotationToString(token) + " doesn't have a corresponding tree node. Maybe for some reason CasTreeConvereter skipped or had some mistake with it?");
+			}
 			targetNodes.addAll(nodes); //Also get duplicated nodes!
 		}
 		//logger.trace("-------- fragmenter.build(" + AnotherBasicNodeUtils.getNodeString(root) + ", " + AnotherBasicNodeUtils.getNodesString(targetNodes) + ")");
@@ -140,8 +143,9 @@ public class FragmentLayer {
 	 * @throws TreeAndParentMapException
 	 * @throws TreeFragmentBuilderException
 	 * @throws AceAbnormalMessage 
+	 * @throws FragmentLayerException 
 	 */
-	public FragmentAndReference getRootLinkingTreeFragment(Annotation /*EventMentionAnchor*/ eventAnchor, Annotation /*BasicArgumentMentionHead*/ argHead, Object /*EventMentionArgument*/ argMention) throws CASException, AceException, TreeAndParentMapException, TreeFragmentBuilderException, AceAbnormalMessage {
+	public FragmentAndReference getRootLinkingTreeFragment(Annotation /*EventMentionAnchor*/ eventAnchor, Annotation /*BasicArgumentMentionHead*/ argHead, Object /*EventMentionArgument*/ argMention) throws CASException, AceException, TreeAndParentMapException, TreeFragmentBuilderException, AceAbnormalMessage, FragmentLayerException {
 		if (eventAnchor == null || argHead == null) {
 			throw new AceAbnormalMessage("NullParam");
 		}
@@ -201,69 +205,6 @@ public class FragmentLayer {
 
 		linkToFacet.put(connectingFrag.getFragmentRoot(), facet);
 		return connectingFrag;
-	}
-	
-	public static String getTreeout(BasicNode tree, SimpleNodeString nodeStr) {
-		return TreePrinter.getString(tree, "( ", " )", nodeStr);
-	}
-	
-	public static String getTreeoutDependenciesTokens(BasicNode tree) {
-		return getTreeout(tree, new SimpleNodeString() {
-			@Override public String toString(BasicNode node) {
-				return InfoGetFields.getRelation(node.getInfo(), "<ROOT>")+"->"+InfoGetFields.getWord(node.getInfo());
-			}
-		});
-	}
-	
-	public static String getTreeoutDependenciesTokensGeneralPos(BasicNode tree) {
-		return getTreeout(tree, new SimpleNodeString() {
-			@Override public String toString(BasicNode node) {
-				return InfoGetFields.getRelation(node.getInfo(), "<ROOT>")+"->"+InfoGetFields.getWord(node.getInfo()) +"/"+node.getInfo().getNodeInfo().getSyntacticInfo().getPartOfSpeech().getCanonicalPosTag();
-			}
-		});
-	}
-	
-	public static String getTreeout(List<BasicNode> trees, boolean withContext, SimpleNodeString nodeStr) {
-		if (trees.isEmpty()) {
-			return "(empty-tree)";
-		}
-		String subrootDep = null;
-		if (!withContext) {
-			subrootDep = "<SUBROOT>";
-		}
-		return TreePrinter.getString(trees, "( ", " )", "#", subrootDep, nodeStr);
-	}
-	
-	public static String getTreeoutOnlyDependencies(List<BasicNode> trees, boolean withContext) {
-		return getTreeout(trees, withContext, new SimpleNodeString() {
-			@Override public String toString(BasicNode node) {
-				return " "+InfoGetFields.getRelation(node.getInfo(), "<ROOT>")+" ";
-			}
-		});
-	}
-
-	public static String getTreeoutDependenciesToken(List<BasicNode> trees, boolean withContext) {
-		return getTreeout(trees, withContext, new SimpleNodeString() {
-			@Override public String toString(BasicNode node) {
-				return " "+InfoGetFields.getRelation(node.getInfo(), "<ROOT>")+"->"+InfoGetFields.getWord(node.getInfo())+" ";
-			}
-		});
-	}
-
-	public static String getTreeoutDependenciesSpecificPOS(List<BasicNode> trees, boolean withContext) {
-		return getTreeout(trees, withContext, new SimpleNodeString() {
-			@Override public String toString(BasicNode node) {
-				return " "+InfoGetFields.getRelation(node.getInfo(), "<ROOT>")+"->"+InfoGetFields.getPartOfSpeech(node.getInfo())+" ";
-			}
-		});
-	}
-
-	public static String getTreeoutDependenciesGeneralPOS(List<BasicNode> trees, boolean withContext) {
-		return getTreeout(trees, withContext, new SimpleNodeString() {
-			@Override public String toString(BasicNode node) {
-				return " "+InfoGetFields.getRelation(node.getInfo(), "<ROOT>")+"->"+node.getInfo().getNodeInfo().getSyntacticInfo().getPartOfSpeech().getCanonicalPosTag()+" ";
-			}
-		});
 	}
 
 }

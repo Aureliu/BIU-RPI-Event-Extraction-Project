@@ -34,14 +34,14 @@ public class PlainSignalMechanism extends SignalMechanism {
 		switch(controller.featureProfile) {
 		case TOKEN_BASELINE:
 			addTrigger(new ScorerData("PL_SAME_TOKEN",				SameTriggerToken.inst,				Aggregator.Any.inst		));
-			addArgument(new ScorerData("PL_SAME_FULLHEAD",			SameArgumentText.inst,				Aggregator.Any.inst		));
+			addArgumentFree(new ScorerData("PL_SAME_FULLHEAD",			SameArgumentText.inst,				Aggregator.Any.inst		));
 			break;
 		case ANALYSIS: //fall-through, analyze exactly all normal scorers 
 		case NORMAL:
 			addTrigger(new ScorerData("PL_SAME_LEMMA",				SameTriggerLemma.inst,				Aggregator.Any.inst		));
 			
-			addArgument(new ScorerData("PL_SAME_FULLHEAD",			SameArgumentText.inst,				Aggregator.Any.inst		));
-			addArgument(new ScorerData("PL_SAME_LEMMA_HEADTOKEN",	SameArgumentHeadTokenLemma.inst,	Aggregator.Any.inst		));
+			addArgumentFree(new ScorerData("PL_SAME_FULLHEAD",			SameArgumentText.inst,				Aggregator.Any.inst		));
+			addArgumentFree(new ScorerData("PL_SAME_LEMMA_HEADTOKEN",	SameArgumentHeadTokenLemma.inst,	Aggregator.Any.inst		));
 			
 			break;
 		default:

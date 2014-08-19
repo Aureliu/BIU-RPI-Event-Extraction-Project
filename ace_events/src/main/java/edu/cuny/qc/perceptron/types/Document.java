@@ -40,6 +40,7 @@ import ac.biu.nlp.nlp.ie.onthefly.input.SpecAnnotator;
 import ac.biu.nlp.nlp.ie.onthefly.input.TypesContainer;
 
 import com.google.common.collect.ImmutableList;
+import com.google.common.collect.Iterators;
 import com.google.common.collect.LinkedHashMultimap;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Multimap;
@@ -59,6 +60,7 @@ import edu.cuny.qc.scorer.SignalMechanismsContainer;
 import edu.cuny.qc.util.SentDetectorWrapper;
 import edu.cuny.qc.util.Span;
 import edu.cuny.qc.util.TokenizerWrapper;
+import edu.cuny.qc.util.Utils;
 import eu.excitementproject.eop.common.utilities.uima.UimaUtilsException;
 import eu.excitementproject.eop.lap.biu.uima.CasTreeConverter;
 
@@ -151,7 +153,8 @@ public class Document implements java.io.Serializable
 		System.err.println("??? Document: Not dumping processed document (and jcas), because annotations are referenced not only in cas but also in cuny.Sentence and cuny.SentenceInstance. To solve, I should load annotations to these classes separately, like by finding in Document.jcas rlevant single annotations in [begin, end] spans.");
 		//System.err.println("??? Document: Args args args!!! (when checking the Bundledsignals thingie)");
 		System.err.println("??? Document: Document 'un/timex2norm/alt.vacation.las-vegas_20050109.0133' is still problematic, all offsets are off. Can probably fix, or just remove from lists.");
-		System.err.println("??? Document: ***********************************************************\n************************************\n******************************************\n***********************************\n                loadSignalsIntoDocument(): filter also Args scorers!!!!!\n******************************************\n**************************************************\n");
+		System.err.println("??? Document: changing some stuff in fixTokenBoundaries, mainly that when a hyphen splits the token, we diregard the hyphen itself (it helps later since the parser disregards the hyphen, so we are left with a token outside of the tree).");
+		//System.err.println("??? Document: ***********************************************************\n************************************\n******************************************\n***********************************\n                loadSignalsIntoDocument(): filter also Args scorers!!!!!\n******************************************\n**************************************************\n");
 		
 		// initialize priorityQueueEntities
 		try
@@ -943,10 +946,13 @@ public class Document implements java.io.Serializable
 								start = token_1.end() + 1;
 								ret.add(token_1);
 							}
-							if(k < subTokens.length - 1)
-							{
-								ret.add(new Span(start, start));
-							}
+							
+							//Ofer: don't put a token on the hyphen itself
+//							if(k < subTokens.length - 1)
+//							{
+//								ret.add(new Span(start, start));
+//							}
+							
 							start++;
 						}
 						flag = true;
@@ -1004,6 +1010,15 @@ public class Document implements java.io.Serializable
 			
 		}
 	
+		/// Ofer's new addition - also remove PUNCTUATION tokens!
+		for (Iterator<Span> iter = ret.iterator(); iter.hasNext();) {
+			Span token = iter.next();
+			String tokenText = token.getCoveredText(text);
+			if (Utils.PUNCTUATION.contains(tokenText)) {
+				iter.remove();
+			}
+		}
+		
 		return ret.toArray(new Span[ret.size()]);
 	}
 	
@@ -1155,12 +1170,12 @@ public class Document implements java.io.Serializable
 		if (signals != null) {
 
 			// Filter out scorers that are not currently relevant
-			for (List<Map<String, Map<ScorerData, SignalInstance>>> iter1 : signals.triggerSignals.values()) {
-				for (Map<String, Map<ScorerData, SignalInstance>> iter2 : iter1) {
-					for (Map<ScorerData, SignalInstance> iter3 : iter2.values()) {
-						for (Iterator<Entry<ScorerData, SignalInstance>> iterator = iter3.entrySet().iterator(); iterator.hasNext();) {
+			for (List<Map<String, Map<ScorerData, SignalInstance>>> iter3 : signals.triggerSignals.values()) {
+				for (Map<String, Map<ScorerData, SignalInstance>> iter4 : iter3) {
+					for (Map<ScorerData, SignalInstance> iter5 : iter4.values()) {
+						for (Iterator<Entry<ScorerData, SignalInstance>> iterator = iter5.entrySet().iterator(); iterator.hasNext();) {
 							Entry<ScorerData, SignalInstance> entry = iterator.next();
-							if (!signalMechanismsContainer.triggerScorers.contains(entry.getKey())) {
+							if (!signalMechanismsContainer.argumentScorers.contains(entry.getKey())) {
 								iterator.remove();
 							}
 						}
@@ -1168,7 +1183,38 @@ public class Document implements java.io.Serializable
 				}
 			}
 			
-			/// TODO!!!! Do the same for args!!!
+			for (Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>> iter2 : signals.argFreeSignals.values()) {
+				for (List<Map<String, Map<ScorerData, SignalInstance>>> iter3 : iter2.values()) {
+					for (Map<String, Map<ScorerData, SignalInstance>> iter4 : iter3) {
+						for (Map<ScorerData, SignalInstance> iter5 : iter4.values()) {
+							for (Iterator<Entry<ScorerData, SignalInstance>> iterator = iter5.entrySet().iterator(); iterator.hasNext();) {
+								Entry<ScorerData, SignalInstance> entry = iterator.next();
+								if (!signalMechanismsContainer.argumentScorers.contains(entry.getKey())) {
+									iterator.remove();
+								}
+							}
+						}
+					}
+				}
+			}
+			
+			for (List<Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>>> iter1 : signals.argDependentSignals.values()) {
+				for (Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>> iter2 : iter1) {
+					for (List<Map<String, Map<ScorerData, SignalInstance>>> iter3 : iter2.values()) {
+						for (Map<String, Map<ScorerData, SignalInstance>> iter4 : iter3) {
+							for (Map<ScorerData, SignalInstance> iter5 : iter4.values()) {
+								for (Iterator<Entry<ScorerData, SignalInstance>> iterator = iter5.entrySet().iterator(); iterator.hasNext();) {
+									Entry<ScorerData, SignalInstance> entry = iterator.next();
+									if (!signalMechanismsContainer.argumentScorers.contains(entry.getKey())) {
+										iterator.remove();
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
 		}
 	}
 	
@@ -1276,7 +1322,7 @@ public class Document implements java.io.Serializable
 	public static LinkedHashMultimap<JCas, SentenceInstance> getInstancesForSentence(Controller controller, SignalMechanismsContainer signalMechanismsContainer, Sentence sent, TypesContainer types, Alphabet featureAlphabet, 
 			boolean learnable, boolean debug) throws CASRuntimeException, AnalysisEngineProcessException, ResourceInitializationException, CASException, UimaUtilsException, IOException, AeException {
 		/// DEBUG
-		System.out.printf("  Document.getInstancesForSentence: sent=%s, types=%s (%s types), controller.argOMethod=%s\n", sent, types, types.specs.size(), controller.argOMethod);
+		//System.out.printf("  Document.getInstancesForSentence: sent=%s, types=%s (%s types), controller.argOMethod=%s\n", sent, types, types.specs.size(), controller.argOMethod);
 		///
 		LinkedHashMultimap<JCas, SentenceInstance> result = LinkedHashMultimap.create();
 		if (controller.oMethod.startsWith("G")) {
@@ -1284,7 +1330,7 @@ public class Document implements java.io.Serializable
 				JCas spec = types.specs.get(specNum);
 				
 				/// DEBUG
-				System.out.printf("  Document.getInstancesForSentence:   making sentence for spec=%s, specNum=%s\n", SpecAnnotator.getSpecLabel(spec), specNum);
+				//System.out.printf("  Document.getInstancesForSentence:   making sentence for spec=%s, specNum=%s\n", SpecAnnotator.getSpecLabel(spec), specNum);
 				///
 				if (controller.argOMethod==ArgOMethod.DUPLICATE_BY_ROLE) { //duplicate by role!
 					Map<String, JCas> singleRoleSpecs = SpecAnnotator.getSingleRoleSpecs(spec);
@@ -1297,7 +1343,7 @@ public class Document implements java.io.Serializable
 								learnable, spec, specNum, role, roleNum, debug);
 						result.put(spec, inst);
 						/// DEBUG
-						System.out.printf("  Document.getInstancesForSentence:      adding for role=%s, roleNum=%s\n", role, roleNum);
+						//System.out.printf("  Document.getInstancesForSentence:      adding for role=%s, roleNum=%s\n", role, roleNum);
 						///
 					}
 				}

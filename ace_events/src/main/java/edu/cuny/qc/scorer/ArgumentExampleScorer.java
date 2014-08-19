@@ -38,7 +38,7 @@ import eu.excitementproject.eop.common.representation.partofspeech.PartOfSpeech;
 import eu.excitementproject.eop.common.representation.partofspeech.UnsupportedPosTagStringException;
 import eu.excitementproject.eop.common.utilities.uima.UimaUtils;
 
-public abstract class ArgumentExampleScorer extends ArgumentScorer<ArgumentExample> {
+public abstract class ArgumentExampleScorer extends ArgumentFreeScorer<ArgumentExample> {
 	private static final long serialVersionUID = 3212246701761719333L;
 	
 	static {
@@ -48,13 +48,9 @@ public abstract class ArgumentExampleScorer extends ArgumentScorer<ArgumentExamp
 
 	@Override
 	protected void prepareSpecIteration(JCas spec) throws SignalMechanismException {
-		try {
-			Collection<ArgumentExample> examples = JCasUtil.select(argument.getExamples(), ArgumentExample.class);
-			specIterator = examples.iterator();
-			docJcas = textTriggerToken.getCAS().getJCas();
-		} catch (CASException e) {
-			throw new SignalMechanismException(e);
-		}
+		Collection<ArgumentExample> examples = JCasUtil.select(argument.getExamples(), ArgumentExample.class);
+		specIterator = examples.iterator();
+		docJCasStatic = docJCas; //I know this looks weird, but we need to take the JCas from the super class, and put it in a static field, for the cache (which is static)
 	}
 
 	@Override
@@ -183,7 +179,7 @@ public abstract class ArgumentExampleScorer extends ArgumentScorer<ArgumentExamp
 			"Inc", "Incorporated", "Corp", "Corporation", "Ltd", "Limited", "Co"
 	}));
 
-	private static JCas docJcas = null;
+	private static JCas docJCasStatic = null;
 	private static LoadingCache<AceEntity, Set<EntityMentionInfo>> cacheTextEntityInfoStatic = CacheBuilder.newBuilder()
 			.maximumSize(10000)
 			.build(new CacheLoader<AceEntity, Set<EntityMentionInfo>>() {
@@ -205,7 +201,7 @@ public abstract class ArgumentExampleScorer extends ArgumentScorer<ArgumentExamp
 						
 						// Basically I am not allowed to use textTriggerToken as it changes with each call to prepareSpecIteration()
 						// But here I only use it for the JCas, which stays the same for the entire document, so it's fine
-						info.headAnno = AnnotationUtils.spanToAnnotation(docJcas, corefMention.head);
+						info.headAnno = AnnotationUtils.spanToAnnotation(docJCasStatic, corefMention.head);
 						/// DEBUG
 //						String headSpan = concreteMention.head.getCoveredText(docAllText);
 //						if (headSpan.contains("addam")) {

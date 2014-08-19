@@ -8,6 +8,7 @@ import org.apache.uima.resource.ResourceInitializationException;
 import org.uimafit.factory.AggregateBuilder;
 
 import de.tudarmstadt.ukp.dkpro.core.stanfordnlp.StanfordParser;
+import edu.cuny.qc.perceptron.core.Perceptron;
 import eu.excitementproject.eop.lap.biu.uima.ae.postagger.MaxentPosTaggerAE;
 import eu.excitementproject.eop.lap.biu.uima.ae.tokenizer.MaxentTokenizerAE;
 
@@ -15,6 +16,7 @@ public class AnalysisEngines {
 	static {
 		//System.err.println("AnalysisEngines: TODO - add POS tagging back to Document and Sentence");
 		System.err.println("I started off with my implementeation of StanfordParserAE that builds upon Qi's use of Stanford Parser. I even discovered that while it considers punctuation, it doesn't output dependencies for it, so I wrote a new component that removes Token annotations from punctuation, so that they don't ruin the conversion later. I also removed some samples from spec due to some convertor issues. But now, it fails on many corpus sentences, which I am not sure what to do about. It's all coming from having a (non-deep) node with two parents, and from a brief check, it seems that at least one of them has the dependency 'dep', which doesn't sound real to me, but technically apear in the Stanford pdf, so maybe.\n");
+		System.err.println("Now using some configuration that I found as working (for SentenceView and Document). Note that it's a different parser than Qi's original, so maybe this should be mentions, and I should try and see how it affect the run results (Qi's).\n");
 	}
 	
 	public static AnalysisEngine forSpecTokenView(String viewName) throws AeException {
@@ -45,19 +47,19 @@ public class AnalysisEngines {
 					// do stuff like split-by-hyphen
 					//createPrimitiveDescription(TokenFixerAE.class),
 					
-					createPrimitiveDescription(StanfordLemmatizerAE.class),
 					createPrimitiveDescription(StanfordPosTaggerAE.class,
 							StanfordPosTaggerAE.PARAM_MODEL_FILE , MAXENT_POS_TAGGER_MODEL_FILE),
 							
-//					createPrimitiveDescription(EasyFirstParserAE.class,
-//							EasyFirstParserAE.PARAM_HOST , "127.0.0.1",
-//							EasyFirstParserAE.PARAM_PORT , 8080
-//							),
+					createPrimitiveDescription(EasyFirstParserAE.class,
+							EasyFirstParserAE.PARAM_HOST , Perceptron.controllerStatic.easyFirstHost,
+							EasyFirstParserAE.PARAM_PORT , Perceptron.controllerStatic.easyFirstPort
+							),
 							
-					createPrimitiveDescription(StanfordParserAE.class),
+//					createPrimitiveDescription(StanfordLemmatizerAE.class),
+//					createPrimitiveDescription(StanfordParserAE.class),
 					
 					// This must be invoked AFTER THE PARSER - to give the parser everything, even punctuation (and even if he doesn't give punctuations any dependencies)
-					createPrimitiveDescription(PunctuationTokenRemoverAE.class),
+					//createPrimitiveDescription(PunctuationTokenRemoverAE.class),
 			});
 		}
 		catch (ResourceInitializationException e) {
@@ -70,19 +72,19 @@ public class AnalysisEngines {
 		try {
 			return build(viewName, new AnalysisEngineDescription[] {
 					// No need to do sentence splitting and tokenization - these are done directly when reading the document, in Document.readDoc()
-					createPrimitiveDescription(StanfordLemmatizerAE.class),
 					createPrimitiveDescription(StanfordPosTaggerAE.class,
 							StanfordPosTaggerAE.PARAM_MODEL_FILE , MAXENT_POS_TAGGER_MODEL_FILE),
 							
-//					createPrimitiveDescription(EasyFirstParserAE.class,
-//							EasyFirstParserAE.PARAM_HOST , "127.0.0.1",
-//							EasyFirstParserAE.PARAM_PORT , 8080
-//							),
+					createPrimitiveDescription(EasyFirstParserAE.class,
+							EasyFirstParserAE.PARAM_HOST , Perceptron.controllerStatic.easyFirstHost,
+							EasyFirstParserAE.PARAM_PORT , Perceptron.controllerStatic.easyFirstPort
+							),
 
-							createPrimitiveDescription(StanfordParserAE.class),
+//							createPrimitiveDescription(StanfordLemmatizerAE.class),
+//							createPrimitiveDescription(StanfordParserAE.class),
 							
 							// This must be invoked AFTER THE PARSER - to give the parser everything, even punctuation (and even if he doesn't give punctuations any dependencies)
-							createPrimitiveDescription(PunctuationTokenRemoverAE.class),
+							//createPrimitiveDescription(PunctuationTokenRemoverAE.class),
 			});
 		}
 		catch (ResourceInitializationException e) {

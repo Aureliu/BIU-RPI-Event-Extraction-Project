@@ -14,7 +14,7 @@ import edu.cuny.qc.ace.acetypes.AceMention;
 import edu.cuny.qc.util.Span;
 import edu.cuny.qc.util.Utils;
 
-public abstract class ArgumentInUsageSampleScorer extends ArgumentScorer<ArgumentInUsageSample> {
+public abstract class ArgumentInUsageSampleScorer extends ArgumentDependentScorer<ArgumentInUsageSample> {
 	private static final long serialVersionUID = 3212246701761719333L;
 
 	@Override
@@ -54,7 +54,7 @@ public abstract class ArgumentInUsageSampleScorer extends ArgumentScorer<Argumen
 //	}
 	
 //	public abstract Boolean calcBoolPredicateSeedScore(BasicNode textFragment, BasicNode specfragment, ScorerData scorerData) throws SignalMechanismException;
-	public abstract Boolean calcBoolPredicateSeedScore(Token textTriggerToken, AceMention textMention, Annotation textHeadAnno, ArgumentInUsageSample specAius, ScorerData scorerData) throws SignalMechanismException;
+	public abstract Boolean calcBoolPredicateSeedScore(Token textTriggerToken, AceMention textArgMention, Annotation textArgHeadAnno, ArgumentInUsageSample specAius, ScorerData scorerData) throws SignalMechanismException;
 	
 	private static JCas docJcas = null;
 }

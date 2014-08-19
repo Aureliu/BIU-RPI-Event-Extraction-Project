@@ -39,8 +39,11 @@ public class BundledSignals implements Serializable {
 	// Sentence\TriggerToken\Spec\Signals
 	public Map<Integer, List<Map<String, Map<ScorerData, SignalInstance>>>> triggerSignals;
 	
-	// Sentence\TriggerToken\Spec\ArgToken\Role\Signals
-	public Map<Integer, List<Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>>>> argSignals;
+	// Sentence\Spec\ArgCand\Role\Signals
+	public Map<Integer, Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>>> argFreeSignals;
+	
+	// Sentence\TriggerToken\Spec\ArgCand\Role\Signals
+	public Map<Integer, List<Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>>>> argDependentSignals;
 
 	public BundledSignals(
 			//TypesContainer types,
@@ -55,7 +58,8 @@ public class BundledSignals implements Serializable {
 //		this.argumentScorers = perceptron.argumentScorers;
 		
 		this.triggerSignals = new FinalKeysMap<Integer, List<Map<String, Map<ScorerData, SignalInstance>>>>();
-		this.argSignals = new FinalKeysMap<Integer, List<Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>>>>();
+		this.argFreeSignals = new FinalKeysMap<Integer, Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>>>();
+		this.argDependentSignals = new FinalKeysMap<Integer, List<Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>>>>();
 	}
 
 	public void absorb(BundledSignals other) {
@@ -92,13 +96,61 @@ public class BundledSignals implements Serializable {
 			}
 		}
 
-		for (Iterator<Entry<Integer, List<Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>>>>> iter1b = other.argSignals.entrySet().iterator(); iter1b.hasNext();) {
-			Entry<Integer, List<Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>>>> entry1b = iter1b.next();
-			if (!this.argSignals.containsKey(entry1b.getKey())) {
-				this.argSignals.put(entry1b.getKey(), entry1b.getValue());
+		for (Iterator<Entry<Integer, Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>>>> iter1b = other.argFreeSignals.entrySet().iterator(); iter1b.hasNext();) {
+			Entry<Integer, Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>>> entry1b = iter1b.next();
+			if (!this.argFreeSignals.containsKey(entry1b.getKey())) {
+				this.argFreeSignals.put(entry1b.getKey(), entry1b.getValue());
 			}
 			else {
-				List<Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>>> this1b = this.argSignals.get(entry1b.getKey());
+				Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>> this1b = this.argFreeSignals.get(entry1b.getKey());
+//				int nb=0;
+//				for (Iterator<Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>>> iter2b = entry1b.getValue().iterator(); iter2b.hasNext();) {
+//					Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>> elem2b = iter2b.next();
+//					Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>> this2b = this1b.get(nb);
+//					nb++;
+					
+					for (Iterator<Entry<String, List<Map<String, Map<ScorerData, SignalInstance>>>>> iter3b = entry1b.getValue().entrySet().iterator(); iter3b.hasNext();) {
+						Entry<String, List<Map<String, Map<ScorerData, SignalInstance>>>> entry3b = iter3b.next();
+						if (!this1b.containsKey(entry3b.getKey())) {
+							this1b.put(entry3b.getKey(), entry3b.getValue());
+						}
+						else {
+							List<Map<String, Map<ScorerData, SignalInstance>>> this3b = this1b.get(entry3b.getKey());
+							int mb=0;
+							for (Iterator<Map<String, Map<ScorerData, SignalInstance>>> iter4b = entry3b.getValue().iterator(); iter4b.hasNext();) {
+								Map<String, Map<ScorerData, SignalInstance>> elem4b = iter4b.next();
+								Map<String, Map<ScorerData, SignalInstance>> this4b = this3b.get(mb);
+								mb++;
+								
+								for (Iterator<Entry<String, Map<ScorerData, SignalInstance>>> iter5b = elem4b.entrySet().iterator(); iter5b.hasNext();) {
+									Entry<String, Map<ScorerData, SignalInstance>> entry5b = iter5b.next();
+									if (!this4b.containsKey(entry5b.getKey())) {
+										this4b.put(entry5b.getKey(), entry5b.getValue());
+									}
+									else {
+										Map<ScorerData, SignalInstance> this5b = this4b.get(entry5b.getKey());
+										
+										for (Iterator<Entry<ScorerData, SignalInstance>> iter6b = entry5b.getValue().entrySet().iterator(); iter6b.hasNext();) {
+											Entry<ScorerData, SignalInstance> entry6b = iter6b.next();
+											if (!this5b.containsKey(entry6b.getKey())) {
+												this5b.put(entry6b.getKey(), entry6b.getValue());
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				//}
+			}
+		}
+		for (Iterator<Entry<Integer, List<Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>>>>> iter1b = other.argDependentSignals.entrySet().iterator(); iter1b.hasNext();) {
+			Entry<Integer, List<Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>>>> entry1b = iter1b.next();
+			if (!this.argDependentSignals.containsKey(entry1b.getKey())) {
+				this.argDependentSignals.put(entry1b.getKey(), entry1b.getValue());
+			}
+			else {
+				List<Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>>> this1b = this.argDependentSignals.get(entry1b.getKey());
 				int nb=0;
 				for (Iterator<Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>>> iter2b = entry1b.getValue().iterator(); iter2b.hasNext();) {
 					Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>> elem2b = iter2b.next();
@@ -147,7 +199,7 @@ public class BundledSignals implements Serializable {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result
-				+ ((argSignals == null) ? 0 : argSignals.hashCode());
+				+ ((argDependentSignals == null) ? 0 : argDependentSignals.hashCode());
 //		result = prime * result
 //				+ ((argumentRoles == null) ? 0 : argumentRoles.hashCode());
 //		result = prime
@@ -165,6 +217,8 @@ public class BundledSignals implements Serializable {
 //						.hashCode());
 		result = prime * result
 				+ ((triggerSignals == null) ? 0 : triggerSignals.hashCode());
+		result = prime * result
+				+ ((argFreeSignals == null) ? 0 : argFreeSignals.hashCode());
 		return result;
 	}
 
@@ -177,10 +231,10 @@ public class BundledSignals implements Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		BundledSignals other = (BundledSignals) obj;
-		if (argSignals == null) {
-			if (other.argSignals != null)
+		if (argDependentSignals == null) {
+			if (other.argDependentSignals != null)
 				return false;
-		} else if (!argSignals.equals(other.argSignals))
+		} else if (!argDependentSignals.equals(other.argDependentSignals))
 			return false;
 //		if (argumentRoles == null) {
 //			if (other.argumentRoles != null)
@@ -211,6 +265,11 @@ public class BundledSignals implements Serializable {
 			if (other.triggerSignals != null)
 				return false;
 		} else if (!triggerSignals.equals(other.triggerSignals))
+			return false;
+		if (argFreeSignals == null) {
+			if (other.argFreeSignals != null)
+				return false;
+		} else if (!argFreeSignals.equals(other.argFreeSignals))
 			return false;
 		return true;
 	}

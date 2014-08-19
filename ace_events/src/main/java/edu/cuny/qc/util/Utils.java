@@ -137,13 +137,11 @@ public class Utils {
 		if (covered==null) {
 			return result;
 		}
-		
 		/// DEBUG
-		if (covered.getCoveredText().equals("Egyptian")) {
-			System.out.printf("");
+		if (covered.getCoveredText().equals(",")) {
+			System.err.printf("");
 		}
 		///
-		
 		MultiMap<Token,Sentence> map = selectCoveredByIndex(covered.getCAS().getJCas(), Token.class, covered.getBegin(), covered.getEnd(), tokenIndex);
 
 		// A token can only have one sentence
@@ -196,18 +194,6 @@ public class Utils {
 		else {
 			throw new IllegalArgumentException("Received mention of unknown type (class=" + mention.getClass().getName() + "): " + mention);
 		}
-	}
-	
-	public static String dependeciesToStr(List<Dependency> deps) {
-		List<String> strs = Lists.newArrayListWithCapacity(deps.size());
-		for (Dependency dep : deps) {
-			Token dependent = dep.getDependent();
-			Token governor = dep.getGovernor();
-			strs.add(String.format("%s(%s[%s:%s]->%s[%s:%s])", dep.getDependencyType(),
-					dependent.getCoveredText(), dependent.getBegin(), dependent.getEnd(),
-					governor.getCoveredText(), governor.getBegin(), governor.getEnd()));
-		}
-		return String.format("%s deps: [%s]", deps.size(), StringUtils.join(strs, ", "));
 	}
 	
 	public static String edgesToStr(List<GraphEdge> edges, List<Token> tokens) {

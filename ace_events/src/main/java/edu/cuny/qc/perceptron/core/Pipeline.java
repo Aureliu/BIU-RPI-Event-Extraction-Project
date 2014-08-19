@@ -214,7 +214,7 @@ public class Pipeline
 					}
 					
 					/// DEBUG
-					System.out.printf("         ^^^ Document.readInstanceList: got %s instances, but added only %s of them to result. Now result is of size %s.\n", insts.size(), count, result.size());
+					System.out.printf("%s         ^^^ Pipeline.readInstanceList: got %s instances, but added only %s of them to result. Now result is of size %s.\n", Utils.detailedLog(), insts.size(), count, result.size());
 					////
 				}
 				System.out.printf("%s Finished reading sentence instances - now we have a total of %d instances from all documents.\n", Utils.detailedLog(), result.size());

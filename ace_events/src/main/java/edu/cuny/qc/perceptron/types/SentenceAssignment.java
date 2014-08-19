@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -16,6 +17,7 @@ import org.apache.commons.lang.StringUtils;
 import org.apache.uima.cas.CASException;
 
 import com.google.common.collect.ImmutableList;
+import com.google.common.collect.Iterators;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 
@@ -91,6 +93,8 @@ public class SentenceAssignment
 		System.err.println("??? SentenceAssignment: GLOBAL FEATURES ARE NOT IMPORTED YET!!!");
 		//System.err.println("??? SentenceAssignment: in makeEdgeLocal..(), I am pretty sure that I am doing wrong use of all the superfluous arguments of makeFeatures() (The ones that documents signals and such). I just use it sorta like in triggers, but at least some of it has GOT to be wrong.");
 		System.err.println("??? SentenceAssignment: makeFeature() still doesn't support log stuff normaly. I probably have to add a 'String roleLabel' parameter, where the current 'label' param wil become 'triggerLabel', and add another level to the Map-Map-Map that will also save the role (or PRD for the predicate). But the question is - what is the signal name? Maybe I need to pass several, since an O is affected by all roles... I dunno, think about it :)");
+		System.err.println("??? SentenceAssignment: we are re-calculating free arg features during a dependent-arg loop. Shouldn't be TOO time costly, and keeps the code simpler.");
+		System.err.println("??? SentenceAssignment: Remove the check that two role sets for dependent and free are the same.");
 	}
 	
 	public static String getGenericTriggerLabel(String label) {
@@ -595,16 +599,42 @@ public class SentenceAssignment
 			}
 			
 			String nodeLabel = getLabelAtToken(index);
-			List<Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>>> edgeSignals   = (List<Map<String,  List<Map<String, Map<ScorerData, SignalInstance>>>>>) problem.get(InstanceAnnotations.EdgeTextSignals);
+			List<Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>>> edgeDependentSignals   = (List<Map<String,  List<Map<String, Map<ScorerData, SignalInstance>>>>>) problem.get(InstanceAnnotations.EdgeDependentTextSignals);
+			Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>> edgeFreeSignals   = (Map<String,  List<Map<String, Map<ScorerData, SignalInstance>>>>) problem.get(InstanceAnnotations.EdgeFreeTextSignals);
 	
 			//Integer nodeNum = problem.types.triggerTypes.get(nodeLabel);
 			//Integer edgeNum = problem.types.argumentRoles.get(nodeLabel).get(edgeLabel);
 			//Map<ScorerData, SignalInstance> signals = edgeSignals.get(index).get(nodeLabel).get(entityIndex).get(edgeLabel);
-			Map<String, Map<ScorerData, SignalInstance>> signalsForEntity = edgeSignals.get(index).get(nodeLabel).get(entityIndex);
+			Map<String, Map<ScorerData, SignalInstance>> signalsForEntityDependent = edgeDependentSignals.get(index).get(nodeLabel).get(entityIndex);
+			
+			Map<String, Map<ScorerData, SignalInstance>> signalsForEntityFree = edgeFreeSignals.get(nodeLabel).get(entityIndex);
+			
+			// Just add the free signals to the dependent ones. Yes, it means these will be calculated multiple times, but it shouldn't be too time costly
+			/// DEBUG
+			if (!signalsForEntityDependent.keySet().equals(signalsForEntityFree.keySet())) {
+				throw new IllegalStateException(String.format("got different role sets for arg signals!: dependent=%s, free=%s", signalsForEntityDependent.keySet(), signalsForEntityFree.keySet()));
+			}
+			////
+//			Set<String> roles = signalsForEntityDependent.keySet();
+//			roles.addAll(signalsForEntityFree.keySet());
+			Map<String, Map<ScorerData, SignalInstance>> allSignalsForEntity = new HashMap<String, Map<ScorerData, SignalInstance>>(signalsForEntityDependent.keySet().size());
+			for (String role : signalsForEntityDependent.keySet()) {
+				Map<ScorerData, SignalInstance> perRole = new HashMap<ScorerData, SignalInstance>();
+				allSignalsForEntity.put(role, perRole);
+				perRole.putAll(signalsForEntityDependent.get(role));
+				perRole.putAll(signalsForEntityFree.get(role));
+			}
+//			Iterator<Entry<String, Map<ScorerData, SignalInstance>>> allSignalsForEntityIterator =
+//					Iterators.concat(signalsForEntityDependent.entrySet().iterator(), signalsForEntityFree.entrySet().iterator());
+			
+			/// DEBUG
+			System.out.printf("  ---SentenceAssignment.EdgeLocal: index=%s, nodeLabel=%s, entityIndex=%s\n       dependentSignals(%s): %s\n       freeSignals(%s): %s\n       allSignals(%s): %s\n",
+					index, nodeLabel, entityIndex, signalsForEntityDependent.size(), signalsForEntityDependent, signalsForEntityFree.size(), signalsForEntityFree, allSignalsForEntity.size(), allSignalsForEntity);
+			////
 						
 			if (this.controller.oMethod.startsWith("G")) {
 				if (genericEdgeLabel == Generic_Existing_Argument_Label) {
-					Map<ScorerData, SignalInstance> signalsForRole = signalsForEntity.get(edgeLabel);
+					Map<ScorerData, SignalInstance> signalsForRole = allSignalsForEntity.get(edgeLabel);
 					
 					for (SignalInstance signal : signalsForRole.values()) {
 						List<SignalInstance> signals = Arrays.asList(new SignalInstance[] {signal});
@@ -613,7 +643,7 @@ public class SentenceAssignment
 				}
 				else { //genericEdgeLabel == Default_Argument_Label
 					if (this.controller.argOMethod==ArgOMethod.DUPLICATE_BY_ROLE) { //duplicate by role!
-						Map<ScorerData, SignalInstance> signalsForRole = signalsForEntity.get(problem.associatedRole);
+						Map<ScorerData, SignalInstance> signalsForRole = allSignalsForEntity.get(problem.associatedRole);
 						
 						for (SignalInstance signal : signalsForRole.values()) {
 							List<SignalInstance> signals = Arrays.asList(new SignalInstance[] {signal});
@@ -622,10 +652,15 @@ public class SentenceAssignment
 					}
 					else if (this.controller.argOMethod==ArgOMethod.OR_ALL) { //don't duplicate by role!
 						for (ScorerData data : signalMechanismsContainer.argumentScorers) {
-							List<SignalInstance> allSignalsAllRolesSameScorer = Lists.newArrayListWithCapacity(signalsForEntity.keySet().size());
-							for (String role : signalsForEntity.keySet()) {
-								Map<ScorerData, SignalInstance> signalsOfRole = signalsForEntity.get(role);
+							List<SignalInstance> allSignalsAllRolesSameScorer = Lists.newArrayListWithCapacity(allSignalsForEntity.keySet().size());
+							for (String role : allSignalsForEntity.keySet()) {
+								Map<ScorerData, SignalInstance> signalsOfRole = allSignalsForEntity.get(role);
 								SignalInstance signalOfRoleAndScorer = signalsOfRole.get(data);
+								/// DEBUG
+								if (signalOfRoleAndScorer == null) {
+									System.out.printf("\n\n\n*** Got null signal! signal=%s, data=%s, role=%s\n\n\n\n", signalOfRoleAndScorer, data, role);
+								}
+								///
 								allSignalsAllRolesSameScorer.add(signalOfRoleAndScorer);
 							}
 							// "or" method - the value is true if ANY of the signals' value is true

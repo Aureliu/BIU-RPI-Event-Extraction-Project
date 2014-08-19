@@ -98,6 +98,9 @@ public class Controller implements java.io.Serializable
 	// This param is special since we don't get it from command line - it's a calculated param!
 	public boolean lazyTargetFeatures = false;
 	
+	public String easyFirstHost = "127.0.0.1";
+	public Integer easyFirstPort = 8080;
+	
 	public Controller()
 	{
 //		System.out.printf("\n[%s] ******** Controller() **********\n", new Date());
@@ -259,6 +262,14 @@ public class Controller implements java.io.Serializable
 			{
 				argOMethod = ArgOMethod.valueOf(fields[1]);
 			}
+			else if(fields[0].equalsIgnoreCase("easyFirstHost"))
+			{
+				easyFirstHost = fields[1];
+			}
+			else if(fields[0].equalsIgnoreCase("easyFirstPort"))
+			{
+				easyFirstPort = Integer.valueOf(fields[1]);
+			}
 		}
 		
 		
@@ -284,7 +295,8 @@ public class Controller implements java.io.Serializable
 		" testType: " + testType + "\n\ttrainOnlyTypes: " + trainOnlyTypes + " devOnlyTypes: " + devOnlyTypes + 
 		" testOnlyTypes: " + testOnlyTypes + " sentenceSortingMethod: " + sentenceSortingMethod +
 		"\n\tfilterSentenceInstance: " + filterSentenceInstance + " enhanceSpecs: " + enhanceSpecs +
-		" takeExtendedTags: " + takeExtendedTags + " argOMethod: " + argOMethod + " lazyTargetFeatures: " + lazyTargetFeatures;
+		" takeExtendedTags: " + takeExtendedTags + " argOMethod: " + argOMethod + " lazyTargetFeatures: " + lazyTargetFeatures +
+		" easyFirstHost: " + easyFirstHost + " easyFirstPort: " + easyFirstPort;
 		
 		return ret + "\n";
 	}

@@ -16,7 +16,7 @@ public static ChunkWrapper chunkwrapper;
 	{
 		if(chunkwrapper == null)
 		{
-			chunkwrapper = new ChunkWrapper(new File("src/main/resources/data/en-chunker.bin"));
+			chunkwrapper = new ChunkWrapper(new File("../ace_events_large_resources/src/main/resources/data/en-chunker.bin"));
 		}
 		return chunkwrapper;
 	}

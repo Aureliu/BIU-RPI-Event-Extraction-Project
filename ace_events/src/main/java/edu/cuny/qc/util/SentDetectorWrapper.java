@@ -23,7 +23,7 @@ public class SentDetectorWrapper
 	{
 		if(sentDetectorWrapper == null)
 		{
-			sentDetectorWrapper = new SentDetectorWrapper(new File("src/main/resources/data/en-sent.bin"));
+			sentDetectorWrapper = new SentDetectorWrapper(new File("../ace_events_large_resources/src/main/resources/data/en-sent.bin"));
 		}
 		return sentDetectorWrapper;
 	}

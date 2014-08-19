@@ -18,13 +18,8 @@ import edu.stanford.nlp.tagger.maxent.MaxentTagger;
  */
 public class POSTaggerWrapperStanford 
 {
-	static protected String taggerModelPath; 
+	static protected String taggerModelPath = "../ace_events_large_resources/src/main/resources/data/left3words-wsj-0-18.tagger"; 
 	
-	static
-	{
-		taggerModelPath = "data" + "/" + "left3words-wsj-0-18.tagger";
-	}
-		
 	private MaxentTagger tagger;
 	
 	private PTBEscapingProcessor<HasWord, ?, ?> escaper;

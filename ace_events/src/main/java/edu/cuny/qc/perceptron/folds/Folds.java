@@ -53,7 +53,7 @@ import eu.excitementproject.eop.common.utilities.uima.UimaUtilsException;
 public class Folds {
 	protected static Logger logger;
 	public static final int BUILD_RUN_FAIL_RATIO = 10000;
-	private static final String CORPUS_DIR = "src/main/resources/corpus/qi";
+	private static final String CORPUS_DIR = "../ace_events_large_resources/src/main/resources/corpus/qi";
 //	private static final File TRAIN_DOCS = new File("src/main/resources/doclists/new_filelist_ACE_training.txt");
 //	private static final File DEV_DOCS = new File("src/main/resources/doclists/new_filelist_ACE_dev.txt");
 //	private static final File TEST_DOCS = new File("src/main/resources/doclists/new_filelist_ACE_test.txt");

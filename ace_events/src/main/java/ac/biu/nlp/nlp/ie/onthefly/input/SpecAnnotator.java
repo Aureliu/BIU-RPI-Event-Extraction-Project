@@ -64,6 +64,7 @@ import edu.cuny.qc.perceptron.types.Document;
 import edu.cuny.qc.util.fragment.FragmentAndReference;
 import edu.cuny.qc.util.fragment.FragmentLayer;
 import eu.excitementproject.eop.common.representation.parse.tree.dependency.basic.BasicNode;
+import eu.excitementproject.eop.common.representation.parse.tree.dependency.view.TreeToLineString;
 import eu.excitementproject.eop.common.utilities.DockedToken;
 import eu.excitementproject.eop.common.utilities.DockedTokenFinder;
 import eu.excitementproject.eop.common.utilities.DockedTokenFinderException;
@@ -530,40 +531,9 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 			FragmentLayer fragmentLayer = new FragmentLayer(sentenceView, Document.converter);
 			
 			for (UsageSample sample : usageSamples) {
-//				for (Lemma lemma : JCasUtil.selectCovered(Lemma.class, sample)) {
-//					String text = lemma.getValue();
-//					Collection<Annotation> elements = lemmasToAnnotations.get(text);
-//					if (elements.size() > 1) {
-//						// We don't allow in the usage samples lemmas that appear more than once in spec elements
-//						throw new SpecXmlException(String.format("Usage example contains a token ('%s') with a lemma ('%s') that appears more than once in the spec - This is prohibited.",
-//								lemma.getCoveredText(), text));
-//					}
-//					else if (elements.size() == 1) {
-//						Annotation element = elements.iterator().next();
-//						if (element instanceof PredicateSeed) {
-//							PredicateInUsageSample pius = new PredicateInUsageSample(sentenceView, lemma.getBegin(), lemma.getEnd());
-//							PredicateSeed seed = (PredicateSeed) element;
-//							toUsage.put(seed, pius);
-//							//seed.setPius(pius);
-//							pius.setPredicateSeed(seed);
-//							pius.addToIndexes();
-//						}
-//						else { //element instanceof ArgumentExample
-//							ArgumentInUsageSample aius = new ArgumentInUsageSample(sentenceView, lemma.getBegin(), lemma.getEnd());
-//							ArgumentExample example = (ArgumentExample) element;
-//							toUsage.put(example, aius);
-//							//example.setAius(aius);
-//							aius.setArgumentExample(example);
-//							aius.addToIndexes();
-//						}
-//					}
-//					
-//					// if elements.size() == 0, this lemma doesn't appear in the spec elements, so we ignore it
-//				}
-				
 				sample.setText(sample.getCoveredText());
 				BasicNode sampleRoot = fragmentLayer.getRoot(sample);
-				sample.setTreeout(FragmentLayer.getTreeoutDependenciesTokensGeneralPos(sampleRoot));
+				sample.setTreeout(TreeToLineString.getStringWordRelCanonicalPos(sampleRoot));
 				
 				// Now set a pius for each aius!
 				// Assuming exactly one pius per sample
@@ -591,12 +561,12 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 						FragmentAndReference linkFrag = fragmentLayer.getRootLinkingTreeFragment(pius, aius, null);
 						List<BasicNode> subroots = ImmutableList.of(linkFrag.getFragmentRoot());
 
-						addTreeout(TreeoutDepNoContext.class, aius, FragmentLayer.getTreeoutOnlyDependencies(subroots, false));
-						addTreeout(TreeoutDepGenPosNoContext.class, aius, FragmentLayer.getTreeoutDependenciesGeneralPOS(subroots, false));
-						addTreeout(TreeoutDepSpecPosNoContext.class, aius, FragmentLayer.getTreeoutDependenciesSpecificPOS(subroots, false));
-						addTreeout(TreeoutDepWithContext.class, aius, FragmentLayer.getTreeoutOnlyDependencies(subroots, true));
-						addTreeout(TreeoutDepGenPosWithContext.class, aius, FragmentLayer.getTreeoutDependenciesGeneralPOS(subroots, true));
-						addTreeout(TreeoutDepSpecPosWithContext.class, aius, FragmentLayer.getTreeoutDependenciesSpecificPOS(subroots, true));
+						addTreeout(TreeoutDepNoContext.class, aius, TreeToLineString.getStringRel(subroots, false));
+						addTreeout(TreeoutDepGenPosNoContext.class, aius, TreeToLineString.getStringRelCanonicalPos(subroots, false));
+						addTreeout(TreeoutDepSpecPosNoContext.class, aius, TreeToLineString.getStringRelPos(subroots, false));
+						addTreeout(TreeoutDepWithContext.class, aius, TreeToLineString.getStringRel(subroots, true));
+						addTreeout(TreeoutDepGenPosWithContext.class, aius, TreeToLineString.getStringRelCanonicalPos(subroots, true));
+						addTreeout(TreeoutDepSpecPosWithContext.class, aius, TreeToLineString.getStringRelPos(subroots, true));
 					}
 				}
 				

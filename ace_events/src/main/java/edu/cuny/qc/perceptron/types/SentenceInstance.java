@@ -17,6 +17,7 @@ import org.apache.uima.cas.FeatureStructure;
 import org.apache.uima.jcas.JCas;
 
 import com.google.common.collect.Lists;
+import com.google.common.collect.Maps;
 
 import ac.biu.nlp.nlp.ie.onthefly.input.SpecAnnotator;
 import ac.biu.nlp.nlp.ie.onthefly.input.TypesContainer;
@@ -39,6 +40,7 @@ import edu.cuny.qc.scorer.SignalMechanismException;
 import edu.cuny.qc.scorer.SignalMechanismsContainer;
 import edu.cuny.qc.util.FinalKeysMap;
 import edu.cuny.qc.util.Span;
+import edu.cuny.qc.util.Utils;
 
 /**
  * This is a basic object of the learning algrithm it represents a sentence,
@@ -135,7 +137,8 @@ public class SentenceInstance {
 		TOKEN_SPANS, // List<Span>: the spans of each token in this sent
 		POSTAGS, // POS tags
 		NodeTextSignalsBySpec, // node feature Vectors
-		EdgeTextSignals, // node feature Vectors
+		EdgeFreeTextSignals, // edge feature Vectors
+		EdgeDependentTextSignals, // edge feature Vectors
 		ParseTree, // parse tree
 		SentenceAnnotation, // UIMA Sentence Annotation
 		TokenAnnotations, // UIMA Token Annotations
@@ -547,24 +550,30 @@ public class SentenceInstance {
 			// }
 
 			List<Map<String, Map<ScorerData, SignalInstance>>> sentenceTriggerSignals;
-			List<Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>>> sentenceArgSignals;
+			Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>> sentenceArgFreeSignals;
+			List<Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>>> sentenceArgDependentSignals;
 			if (!doc.signals.triggerSignals.containsKey(sentID)) {
 				sentenceTriggerSignals = Lists.newArrayListWithCapacity(size());
-				sentenceArgSignals = new ArrayList<Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>>>(
+				sentenceArgFreeSignals = Maps.newHashMap();
+				sentenceArgDependentSignals = new ArrayList<Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>>>(
 						size());
 				doc.signals.triggerSignals.put(sentID, sentenceTriggerSignals);
-				doc.signals.argSignals.put(sentID, sentenceArgSignals);
+				doc.signals.argFreeSignals.put(sentID, sentenceArgFreeSignals);
+				doc.signals.argDependentSignals.put(sentID, sentenceArgDependentSignals);
 			} else {
 				sentenceTriggerSignals = doc.signals.triggerSignals.get(sentID);
-				sentenceArgSignals = doc.signals.argSignals.get(sentID);
+				sentenceArgFreeSignals = doc.signals.argFreeSignals.get(sentID);
+				sentenceArgDependentSignals = doc.signals.argDependentSignals.get(sentID);
 			}
 
 			this.textFeaturesMap.put(InstanceAnnotations.NodeTextSignalsBySpec,
 					sentenceTriggerSignals);
-			this.textFeaturesMap.put(InstanceAnnotations.EdgeTextSignals,
-					sentenceArgSignals);
+			this.textFeaturesMap.put(InstanceAnnotations.EdgeFreeTextSignals,
+					sentenceArgFreeSignals);
+			this.textFeaturesMap.put(InstanceAnnotations.EdgeDependentTextSignals,
+					sentenceArgDependentSignals);
 			calculatePersistentSignals(signalMechanismsContainer,
-					sentenceTriggerSignals, sentenceArgSignals, debug);
+					sentenceTriggerSignals, sentenceArgFreeSignals, sentenceArgDependentSignals, debug);
 		} catch (SignalMechanismException e) {
 			throw new RuntimeException(e);
 		} catch (CASException e) {
@@ -575,7 +584,8 @@ public class SentenceInstance {
 	private void calculatePersistentSignals(
 			SignalMechanismsContainer signalMechanismsContainer,
 			List<Map<String, Map<ScorerData, SignalInstance>>> triggerSignals,
-			List<Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>>> argSignals,
+			Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>> argFreeSignals,
+			List<Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>>> argDependentSignals,
 			boolean debug) throws SignalMechanismException, CASException {
 		// List<Map<String, Map<String, SignalInstance>>> triggerSignals = new
 		// ArrayList<Map<String, Map<String, SignalInstance>>>(size());
@@ -615,27 +625,27 @@ public class SentenceInstance {
 			} else {
 				tokenTriggerSignals = triggerSignals.get(i);
 			}
-			Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>> tokenArgSignals = null;
-			if (argSignals.size() <= i) {
-				tokenArgSignals = new HashMap<String, List<Map<String, Map<ScorerData, SignalInstance>>>>();
-				argSignals.add(tokenArgSignals);
+			Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>> tokenArgDependentSignals = null;
+			if (argDependentSignals.size() <= i) {
+				tokenArgDependentSignals = new HashMap<String, List<Map<String, Map<ScorerData, SignalInstance>>>>();
+				argDependentSignals.add(tokenArgDependentSignals);
 			} else {
-				tokenArgSignals = argSignals.get(i);
+				tokenArgDependentSignals = argDependentSignals.get(i);
 			}
 
 			for (JCas spec : types.specs) {
 				String specLabel = SpecAnnotator.getSpecLabel(spec);
 
 				Map<ScorerData, SignalInstance> specSignals = null;
-				List<Map<String, Map<ScorerData, SignalInstance>>> tokenArgSpecSignals = null;
+				List<Map<String, Map<ScorerData, SignalInstance>>> tokenArgDependentSpecSignals = null;
 				if (!tokenTriggerSignals.containsKey(specLabel)) {
 					specSignals = new HashMap<ScorerData, SignalInstance>();
 					tokenTriggerSignals.put(specLabel, specSignals);
-					tokenArgSpecSignals = new ArrayList<Map<String, Map<ScorerData, SignalInstance>>>();
-					tokenArgSignals.put(specLabel, tokenArgSpecSignals);
+					tokenArgDependentSpecSignals = new ArrayList<Map<String, Map<ScorerData, SignalInstance>>>();
+					tokenArgDependentSignals.put(specLabel, tokenArgDependentSpecSignals);
 				} else {
 					specSignals = tokenTriggerSignals.get(specLabel);
-					tokenArgSpecSignals = tokenArgSignals.get(specLabel);
+					tokenArgDependentSpecSignals = tokenArgDependentSignals.get(specLabel);
 				}
 
 				addTriggerSignals(spec, i, signalMechanismsContainer,
@@ -647,12 +657,12 @@ public class SentenceInstance {
 						// if(types.isEntityTypeEventCompatible(triggerLabel,
 						// mention.getType())) {
 
-						Map<String, Map<ScorerData, SignalInstance>> tokenArgSpecEntitySignals = null;
-						if (tokenArgSpecSignals.size() <= k) {
-							tokenArgSpecEntitySignals = new HashMap<String, Map<ScorerData, SignalInstance>>();
-							tokenArgSpecSignals.add(tokenArgSpecEntitySignals);
+						Map<String, Map<ScorerData, SignalInstance>> tokenArgDependentSpecEntitySignals = null;
+						if (tokenArgDependentSpecSignals.size() <= k) {
+							tokenArgDependentSpecEntitySignals = new HashMap<String, Map<ScorerData, SignalInstance>>();
+							tokenArgDependentSpecSignals.add(tokenArgDependentSpecEntitySignals);
 						} else {
-							tokenArgSpecEntitySignals = tokenArgSpecSignals
+							tokenArgDependentSpecEntitySignals = tokenArgDependentSpecSignals
 									.get(k);
 						}
 
@@ -663,16 +673,16 @@ public class SentenceInstance {
 							// triggerLabel, role)) {
 
 							Map<ScorerData, SignalInstance> roleSignals = null;
-							if (!tokenArgSpecEntitySignals.containsKey(role)) {
+							if (!tokenArgDependentSpecEntitySignals.containsKey(role)) {
 								roleSignals = new HashMap<ScorerData, SignalInstance>();
-								tokenArgSpecEntitySignals
+								tokenArgDependentSpecEntitySignals
 										.put(role, roleSignals);
 							} else {
-								roleSignals = tokenArgSpecEntitySignals
+								roleSignals = tokenArgDependentSpecEntitySignals
 										.get(role);
 							}
 
-							addArgumentSignals(spec, i, argument, mention,
+							addDependentArgumentSignals(spec, i, argument, mention,
 									signalMechanismsContainer, roleSignals,
 									debug);
 						}
@@ -680,14 +690,69 @@ public class SentenceInstance {
 				}
 			}
 		}
-		// System.out.printf("%s Finished signals SentenceInstance %s.\n",
-		// Pipeline.detailedLog(), this.sentInstID);
+		
+		if (controller.useArguments) {
+			for (JCas spec : types.specs) {
+				String specLabel = SpecAnnotator.getSpecLabel(spec);
+
+				List<Map<String, Map<ScorerData, SignalInstance>>> argFreeSpecSignals = null;
+				if (!argFreeSignals.containsKey(specLabel)) {
+					argFreeSpecSignals = new ArrayList<Map<String, Map<ScorerData, SignalInstance>>>();
+					argFreeSignals.put(specLabel, argFreeSpecSignals);
+				} else {
+					argFreeSpecSignals = argFreeSignals.get(specLabel);
+				}
+
+				for (int k = 0; k < eventArgCandidates.size(); k++) {
+					AceMention mention = eventArgCandidates.get(k);
+					// if(types.isEntityTypeEventCompatible(triggerLabel,
+					// mention.getType())) {
+
+					Map<String, Map<ScorerData, SignalInstance>> argFreeSpecEntitySignals = null;
+					if (argFreeSpecSignals.size() <= k) {
+						argFreeSpecEntitySignals = new HashMap<String, Map<ScorerData, SignalInstance>>();
+						argFreeSpecSignals.add(argFreeSpecEntitySignals);
+					} else {
+						argFreeSpecEntitySignals = argFreeSpecSignals.get(k);
+					}
+
+					for (Argument argument : SpecAnnotator
+							.getSpecArguments(spec)) {
+						String role = argument.getRole().getCoveredText();
+						// if(types.isRoleCompatible(mention.getType(),
+						// triggerLabel, role)) {
+
+						Map<ScorerData, SignalInstance> roleSignals = null;
+						if (!argFreeSpecEntitySignals.containsKey(role)) {
+							roleSignals = new HashMap<ScorerData, SignalInstance>();
+							argFreeSpecEntitySignals.put(role, roleSignals);
+						} else {
+							roleSignals = argFreeSpecEntitySignals.get(role);
+						}
+
+						addFreeArgumentSignals(spec, argument, mention,
+								signalMechanismsContainer, roleSignals,
+								debug);
+					}
+				}
+			}
+		}
 	}
 
 	public void addTriggerSignals(JCas spec, int i,
 			SignalMechanismsContainer signalMechanismsContainer,
 			Map<ScorerData, SignalInstance> specSignals, boolean debug)
 			throws SignalMechanismException {
+		
+		/// DEBUG
+		try {
+			System.out.printf("%s Starting trigger signals, inst=%s, i=%s, spec=%s\n", Utils.detailedLog(), this, i, SpecAnnotator.getSpecLabel(spec));
+		}
+		catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+		////
+		
 		for (SignalMechanism mechanism : signalMechanismsContainer.signalMechanisms) {
 
 			// /DEBUG
@@ -704,6 +769,7 @@ public class SentenceInstance {
 			// System.out.printf("\n\n\n\n\ngot it\n\n\n");
 			// }
 			// /
+			/////
 			mechanism.scoreTrigger(specSignals, /* perceptron.triggerScorers, */
 					spec, this, i, debug);
 
@@ -714,19 +780,72 @@ public class SentenceInstance {
 			// Pipeline.detailedLog(),
 			// mechanism.getClass().getSimpleName(), scorers.size(),
 			// scorers.toString().substring(0, 100) + "...");
+			
 		}
+		
+		/// DEBUG
+		try {
+			System.out.printf("%s Finishing trigger signals, inst=%s, i=%s, spec=%s\n", Utils.detailedLog(), this, i, SpecAnnotator.getSpecLabel(spec));
+		}
+		catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+		////
 		// return result;
 	}
 
-	public void addArgumentSignals(JCas spec, int i, Argument argument,
+	public void addDependentArgumentSignals(JCas spec, int i, Argument argument,
 			AceMention mention,
 			SignalMechanismsContainer signalMechanismsContainer,
 			Map<ScorerData, SignalInstance> roleSignals, boolean debug)
 			throws SignalMechanismException {
-		for (SignalMechanism mechanism : signalMechanismsContainer.signalMechanisms) {
-			mechanism.scoreArgument(roleSignals, spec, this, i, argument,
-					mention, debug);
+		
+		// DEBUG
+		try {
+			System.out.printf("%s Starting dependent arg signals, inst=%s, i=%s, spec=%s, mention=%s, role=%s\n", Utils.detailedLog(), this, i, SpecAnnotator.getSpecLabel(spec), mention, argument.getRole().getCoveredText());
 		}
+		catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+		///
+		for (SignalMechanism mechanism : signalMechanismsContainer.signalMechanisms) {
+			mechanism.scoreDependentArgument(roleSignals, spec, this, i, argument, mention, debug);
+		}
+		// DEBUG
+		try {
+			System.out.printf("%s ~~~~~~~~~~~~~~~~~~~Finishing dependent arg signals, inst=%s, i=%s, spec=%s, mention=%s, role=%s\n", Utils.detailedLog(), this, i, SpecAnnotator.getSpecLabel(spec), mention, argument.getRole().getCoveredText());
+		}
+		catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+		///
+	}
+
+	public void addFreeArgumentSignals(JCas spec, Argument argument,
+			AceMention mention,
+			SignalMechanismsContainer signalMechanismsContainer,
+			Map<ScorerData, SignalInstance> roleSignals, boolean debug)
+			throws SignalMechanismException {
+		
+		// DEBUG
+		try {
+			System.out.printf("%s       Starting free arg signals, inst=%s, spec=%s, mention=%s, role=%s\n", Utils.detailedLog(), this, SpecAnnotator.getSpecLabel(spec), mention, argument.getRole().getCoveredText());
+		}
+		catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+		///
+		for (SignalMechanism mechanism : signalMechanismsContainer.signalMechanisms) {
+			mechanism.scoreFreeArgument(roleSignals, spec, this, argument, mention, debug);
+		}
+		// DEBUG
+		try {
+			System.out.printf("%s ~~~~~Finishing free arg signals, inst=%s, spec=%s, mention=%s, role=%s\n", Utils.detailedLog(), this, SpecAnnotator.getSpecLabel(spec), mention, argument.getRole().getCoveredText());
+		}
+		catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+		///
 	}
 
 	public void markSignalUpdate() {

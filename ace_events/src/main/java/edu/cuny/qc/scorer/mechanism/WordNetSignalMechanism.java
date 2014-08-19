@@ -192,11 +192,11 @@ public class WordNetSignalMechanism extends SignalMechanism {
 			
 			// Top InfoGain - contained in other categories
 			
-			addArgument(new ScorerData(null, new WordnetArgumentScorer(SYNONYM_RELATION, Juxtaposition.ANCESTOR, 1), NoDerv.inst, Derivation.NONE, -1, 1, null, Any.inst));
-			addArgument(new ScorerData(null, new WordnetArgumentScorer(HYPERNYM_RELATIONS, Juxtaposition.ANCESTOR, 2), WordnetDervRltdDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, 1, null, Any.inst));
-			addArgument(new ScorerData(null, new WordnetArgumentScorer(ALL_RELATIONS_SMALL, Juxtaposition.ANCESTOR, 2), NoDerv.inst, Derivation.NONE, -1, 1, null, Any.inst));
-			addArgument(new ScorerData(null, new WordnetArgumentScorer(ALL_RELATIONS_SMALL, Juxtaposition.ANCESTOR, 2), WordnetDervRltdDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, 1, null, Any.inst));
-			addArgument(new ScorerData(null, new WordnetArgumentScorer(ALL_RELATIONS_BIG, Juxtaposition.ANCESTOR, 2), NomlexSignalMechanism.NomlexDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, 1, null, Any.inst));
+			addArgumentFree(new ScorerData(null, new WordnetArgumentScorer(SYNONYM_RELATION, Juxtaposition.ANCESTOR, 1), NoDerv.inst, Derivation.NONE, -1, 1, null, Any.inst));
+			addArgumentFree(new ScorerData(null, new WordnetArgumentScorer(HYPERNYM_RELATIONS, Juxtaposition.ANCESTOR, 2), WordnetDervRltdDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, 1, null, Any.inst));
+			addArgumentFree(new ScorerData(null, new WordnetArgumentScorer(ALL_RELATIONS_SMALL, Juxtaposition.ANCESTOR, 2), NoDerv.inst, Derivation.NONE, -1, 1, null, Any.inst));
+			addArgumentFree(new ScorerData(null, new WordnetArgumentScorer(ALL_RELATIONS_SMALL, Juxtaposition.ANCESTOR, 2), WordnetDervRltdDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, 1, null, Any.inst));
+			addArgumentFree(new ScorerData(null, new WordnetArgumentScorer(ALL_RELATIONS_BIG, Juxtaposition.ANCESTOR, 2), NomlexSignalMechanism.NomlexDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, 1, null, Any.inst));
 			
 			break;
 		default:
@@ -610,17 +610,9 @@ public class WordNetSignalMechanism extends SignalMechanism {
 			.build(new CacheLoader<BasicRulesQuery, Boolean>() {
 				public Boolean load(BasicRulesQuery key) throws WordNetException {
 					WordNetPartOfSpeech lWnPos = WordNetPartOfSpeech.toWordNetPartOfspeech(key.lPos);
-
-					
-					///DEBUG
-					System.err.printf("\n\n\n\nWordnetSignalMechanism: removed some code!!!!\n\n\n");
-					return false;
-					/////
-					
-					
-/*					int synsets = dictionary.getNumberOfSynsets(key.lLemma, lWnPos);
+					int synsets = dictionary.getNumberOfSynsets(key.lLemma, lWnPos);
 					return synsets > 0;
-*/				}
+				}
 			});
 
 	private static LoadingCache<FullRulesQuery, Set<String>> cacheCousinsLoose = CacheBuilder.newBuilder()

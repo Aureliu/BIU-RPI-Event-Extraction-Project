@@ -5,9 +5,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.Set;
 
-import edu.cuny.qc.perceptron.core.Perceptron;
 import edu.cuny.qc.scorer.ScorerData;
 import edu.cuny.qc.util.FinalKeysMap;
 
@@ -86,7 +84,8 @@ public class BundledSignals implements Serializable {
 							
 							for (Iterator<Entry<ScorerData, SignalInstance>> iter4 = entry3.getValue().entrySet().iterator(); iter4.hasNext();) {
 								Entry<ScorerData, SignalInstance> entry4 = iter4.next();
-								if (!this3.containsKey(entry4.getKey())) {
+								if (!this3.containsKey(entry4.getKey()) ||
+										(this3.get(entry4.getKey()).history == null && entry4.getValue().history != null) ) {
 									this3.put(entry4.getKey(), entry4.getValue());
 								}
 							}
@@ -132,7 +131,8 @@ public class BundledSignals implements Serializable {
 										
 										for (Iterator<Entry<ScorerData, SignalInstance>> iter6b = entry5b.getValue().entrySet().iterator(); iter6b.hasNext();) {
 											Entry<ScorerData, SignalInstance> entry6b = iter6b.next();
-											if (!this5b.containsKey(entry6b.getKey())) {
+											if (!this5b.containsKey(entry6b.getKey()) ||
+													(this5b.get(entry6b.getKey()).history == null && entry6b.getValue().history != null) ) {
 												this5b.put(entry6b.getKey(), entry6b.getValue());
 											}
 										}
@@ -180,7 +180,8 @@ public class BundledSignals implements Serializable {
 										
 										for (Iterator<Entry<ScorerData, SignalInstance>> iter6b = entry5b.getValue().entrySet().iterator(); iter6b.hasNext();) {
 											Entry<ScorerData, SignalInstance> entry6b = iter6b.next();
-											if (!this5b.containsKey(entry6b.getKey())) {
+											if (!this5b.containsKey(entry6b.getKey()) ||
+													(this5b.get(entry6b.getKey()).history == null && entry6b.getValue().history != null) ) {
 												this5b.put(entry6b.getKey(), entry6b.getValue());
 											}
 										}

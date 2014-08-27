@@ -50,16 +50,21 @@ public class AceAnalyzerDocumentCollection extends StatsDocumentCollection {
 		roleDoc.update(without(key, new String[] {"EventSubType", "ArgType", "Role"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
 		roleDoc.endUpdate();
 		
-		typePerDoc.startUpdate();
-		typePerDoc.update(key, fieldNameLvl1, fieldNameLvl2, element, isDynamic);
-		typePerDoc.update(without(key, new String[] {"category", "docId"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
-		typePerDoc.endUpdate();
+//		typePerDoc.startUpdate();
+//		typePerDoc.update(key, fieldNameLvl1, fieldNameLvl2, element, isDynamic);
+//		typePerDoc.update(without(key, new String[] {"category", "docId"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
+//		typePerDoc.endUpdate();
+		
+		treeoutDoc.startUpdate();
+		treeoutDoc.update(key, fieldNameLvl1, fieldNameLvl2, element, isDynamic);
+		treeoutDoc.endUpdate();
 	}
 	
-	public void dumpAsCsvFiles(File entityFile, File roleFile, File typePerDocFile) throws IOException { //add a specific parameter for each specific file
+	public void dumpAsCsvFiles(File entityFile, File roleFile, File treeoutFile) throws IOException { //add a specific parameter for each specific file
 		entityDoc.dumpAsCsv(entityFile);
 		roleDoc.dumpAsCsv(roleFile);
-		typePerDoc.dumpAsCsv(typePerDocFile);
+		//typePerDoc.dumpAsCsv(typePerDocFile);
+		treeoutDoc.dumpAsCsv(treeoutFile);
 	}
 	
 	
@@ -277,6 +282,52 @@ public class AceAnalyzerDocumentCollection extends StatsDocumentCollection {
 			}),
 			new LinkedHashMap<FieldName,StatsFieldType>() {{
 				put(new FieldName("EventSubType", ""), StatsFieldType.ENUM_SUM);
+			}});
+
+	@SuppressWarnings("serial")
+	private StatsDocument treeoutDoc = new StatsDocument(
+			Arrays.asList(new String[] {
+					"TO-Type", "TO-Value"
+			}),
+			new LinkedHashMap<FieldName,StatsFieldType>() {{
+				put(new FieldName("Edges", ""), StatsFieldType.CONST);
+				
+				put(new FieldName("Attack", "Attacker"), StatsFieldType.SUM_INT);
+				put(new FieldName("Attack", "Target"), StatsFieldType.SUM_INT);
+				put(new FieldName("Attack", "Instrument"), StatsFieldType.SUM_INT);
+				put(new FieldName("Attack", "Time"), StatsFieldType.SUM_INT);
+				put(new FieldName("Attack", "Place"), StatsFieldType.SUM_INT);
+				put(new FieldName("Attack", "-filter-"), StatsFieldType.CONST);
+				
+				put(new FieldName("Die", "Agent"), StatsFieldType.SUM_INT);
+				put(new FieldName("Die", "Victim"), StatsFieldType.SUM_INT);
+				put(new FieldName("Die", "Instrument"), StatsFieldType.SUM_INT);
+				put(new FieldName("Die", "Time"), StatsFieldType.SUM_INT);
+				put(new FieldName("Die", "Place"), StatsFieldType.SUM_INT);
+				put(new FieldName("Die", "-filter-"), StatsFieldType.CONST);
+				
+				put(new FieldName("Injure", "Agent"), StatsFieldType.SUM_INT);
+				put(new FieldName("Injure", "Victim"), StatsFieldType.SUM_INT);
+				put(new FieldName("Injure", "Instrument"), StatsFieldType.SUM_INT);
+				put(new FieldName("Injure", "Time"), StatsFieldType.SUM_INT);
+				put(new FieldName("Injure", "Place"), StatsFieldType.SUM_INT);
+				put(new FieldName("Injure", "-filter-"), StatsFieldType.CONST);
+				
+				put(new FieldName("Be-Born", "Person"), StatsFieldType.SUM_INT);
+				put(new FieldName("Be-Born", "Time"), StatsFieldType.SUM_INT);
+				put(new FieldName("Be-Born", "Place"), StatsFieldType.SUM_INT);
+				put(new FieldName("Be-Born", "-filter-"), StatsFieldType.CONST);
+
+				put(new FieldName("Marry", "Person"), StatsFieldType.SUM_INT);
+				put(new FieldName("Marry", "Time"), StatsFieldType.SUM_INT);
+				put(new FieldName("Marry", "Place"), StatsFieldType.SUM_INT);
+				put(new FieldName("Marry", "-filter-"), StatsFieldType.CONST);
+
+				put(new FieldName("Divorce", "Person"), StatsFieldType.SUM_INT);
+				put(new FieldName("Divorce", "Time"), StatsFieldType.SUM_INT);
+				put(new FieldName("Divorce", "Place"), StatsFieldType.SUM_INT);
+				put(new FieldName("Divorce", "-filter-"), StatsFieldType.CONST);
+
 			}});
 
 }

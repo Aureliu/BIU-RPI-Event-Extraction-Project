@@ -35,6 +35,7 @@ import edu.cuny.qc.util.Span;
  */
 public class Sentence implements java.io.Serializable
 {
+
 	/**
 	 * defines the sentence attributes types
 	 * @author check
@@ -323,5 +324,8 @@ public class Sentence implements java.io.Serializable
 				(Token) null));
 	}
 
+//	public String getText() {
+//		return text;
+//	}
 
 }

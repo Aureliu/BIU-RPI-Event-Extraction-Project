@@ -1,6 +1,7 @@
 package edu.cuny.qc.util.fragment;
 
 import eu.excitementproject.eop.common.representation.parse.tree.dependency.basic.BasicNode;
+import eu.excitementproject.eop.common.representation.parse.tree.dependency.view.TreeToLineString;
 
 /**
  * Holds two nodes - a root to some tree fragment (as built by
@@ -27,6 +28,10 @@ public class FragmentAndReference {
 	}
 	public BasicNode getOrigReference() {
 		return origReference;
+	}
+	
+	public String toString() {
+		return TreeToLineString.getStringWordRelCanonicalPos(fragmentRoot);
 	}
 	
 	private BasicNode fragmentRoot;

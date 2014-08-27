@@ -22,7 +22,7 @@ public class BrownClusters
 		{
 			try
 			{
-				File dict_path = new File("src/main/resources/data/aceAllAndKDD.brownCluster"); 			
+				File dict_path = new File("../ace_events_large_resources/src/main/resources/data/aceAllAndKDD.brownCluster"); 			
 				dict = new BrownClusters(dict_path);
 			} 
 			catch (FileNotFoundException e)

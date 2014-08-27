@@ -152,8 +152,8 @@ public class SentenceInstance {
 			String label = (associatedSpec == null) ? "*" : SpecAnnotator
 					.getSpecLabel(associatedSpec);
 			String role = (associatedRole == null) ? "*" : associatedRole;
-			return String.format("%s(%s, %s, %d events, %d argcands: %s)",
-					sentInstID, label, role, eventMentions.size(),
+			return String.format("%s(%s, %s, %s tokens, %d events, %d argcands: %s)",
+					sentInstID, label, role, size(), eventMentions.size(),
 					eventArgCandidates.size(),
 					textStart);
 		} catch (CASException e) {
@@ -745,12 +745,12 @@ public class SentenceInstance {
 			throws SignalMechanismException {
 		
 		/// DEBUG
-		try {
-			System.out.printf("%s Starting trigger signals, inst=%s, i=%s, spec=%s\n", Utils.detailedLog(), this, i, SpecAnnotator.getSpecLabel(spec));
-		}
-		catch (Exception e) {
-			throw new RuntimeException(e);
-		}
+//		try {
+//			System.out.printf("%s Starting trigger signals, inst=%s, i=%s, spec=%s\n", Utils.detailedLog(), this, i, SpecAnnotator.getSpecLabel(spec));
+//		}
+//		catch (Exception e) {
+//			throw new RuntimeException(e);
+//		}
 		////
 		
 		for (SignalMechanism mechanism : signalMechanismsContainer.signalMechanisms) {
@@ -784,12 +784,12 @@ public class SentenceInstance {
 		}
 		
 		/// DEBUG
-		try {
-			System.out.printf("%s Finishing trigger signals, inst=%s, i=%s, spec=%s\n", Utils.detailedLog(), this, i, SpecAnnotator.getSpecLabel(spec));
-		}
-		catch (Exception e) {
-			throw new RuntimeException(e);
-		}
+//		try {
+//			System.out.printf("%s Finishing trigger signals, inst=%s, i=%s, spec=%s\n", Utils.detailedLog(), this, i, SpecAnnotator.getSpecLabel(spec));
+//		}
+//		catch (Exception e) {
+//			throw new RuntimeException(e);
+//		}
 		////
 		// return result;
 	}
@@ -801,23 +801,23 @@ public class SentenceInstance {
 			throws SignalMechanismException {
 		
 		// DEBUG
-		try {
-			System.out.printf("%s Starting dependent arg signals, inst=%s, i=%s, spec=%s, mention=%s, role=%s\n", Utils.detailedLog(), this, i, SpecAnnotator.getSpecLabel(spec), mention, argument.getRole().getCoveredText());
-		}
-		catch (Exception e) {
-			throw new RuntimeException(e);
-		}
+//		try {
+//			System.out.printf("%s Starting dependent arg signals, inst=%s, i=%s, spec=%s, mention=%s, role=%s\n", Utils.detailedLog(), this, i, SpecAnnotator.getSpecLabel(spec), mention, argument.getRole().getCoveredText());
+//		}
+//		catch (Exception e) {
+//			throw new RuntimeException(e);
+//		}
 		///
 		for (SignalMechanism mechanism : signalMechanismsContainer.signalMechanisms) {
 			mechanism.scoreDependentArgument(roleSignals, spec, this, i, argument, mention, debug);
 		}
 		// DEBUG
-		try {
-			System.out.printf("%s ~~~~~~~~~~~~~~~~~~~Finishing dependent arg signals, inst=%s, i=%s, spec=%s, mention=%s, role=%s\n", Utils.detailedLog(), this, i, SpecAnnotator.getSpecLabel(spec), mention, argument.getRole().getCoveredText());
-		}
-		catch (Exception e) {
-			throw new RuntimeException(e);
-		}
+//		try {
+//			System.out.printf("%s ~~~~~~~~~~~~~~~~~~~Finishing dependent arg signals, inst=%s, i=%s, spec=%s, mention=%s, role=%s\n", Utils.detailedLog(), this, i, SpecAnnotator.getSpecLabel(spec), mention, argument.getRole().getCoveredText());
+//		}
+//		catch (Exception e) {
+//			throw new RuntimeException(e);
+//		}
 		///
 	}
 
@@ -828,23 +828,23 @@ public class SentenceInstance {
 			throws SignalMechanismException {
 		
 		// DEBUG
-		try {
-			System.out.printf("%s       Starting free arg signals, inst=%s, spec=%s, mention=%s, role=%s\n", Utils.detailedLog(), this, SpecAnnotator.getSpecLabel(spec), mention, argument.getRole().getCoveredText());
-		}
-		catch (Exception e) {
-			throw new RuntimeException(e);
-		}
+//		try {
+//			System.out.printf("%s       Starting free arg signals, inst=%s, spec=%s, mention=%s, role=%s\n", Utils.detailedLog(), this, SpecAnnotator.getSpecLabel(spec), mention, argument.getRole().getCoveredText());
+//		}
+//		catch (Exception e) {
+//			throw new RuntimeException(e);
+//		}
 		///
 		for (SignalMechanism mechanism : signalMechanismsContainer.signalMechanisms) {
 			mechanism.scoreFreeArgument(roleSignals, spec, this, argument, mention, debug);
 		}
 		// DEBUG
-		try {
-			System.out.printf("%s ~~~~~Finishing free arg signals, inst=%s, spec=%s, mention=%s, role=%s\n", Utils.detailedLog(), this, SpecAnnotator.getSpecLabel(spec), mention, argument.getRole().getCoveredText());
-		}
-		catch (Exception e) {
-			throw new RuntimeException(e);
-		}
+//		try {
+//			System.out.printf("%s ~~~~~Finishing free arg signals, inst=%s, spec=%s, mention=%s, role=%s\n", Utils.detailedLog(), this, SpecAnnotator.getSpecLabel(spec), mention, argument.getRole().getCoveredText());
+//		}
+//		catch (Exception e) {
+//			throw new RuntimeException(e);
+//		}
 		///
 	}
 

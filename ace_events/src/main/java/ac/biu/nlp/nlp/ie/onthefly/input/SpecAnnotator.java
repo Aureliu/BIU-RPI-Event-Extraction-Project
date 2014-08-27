@@ -11,6 +11,7 @@ import java.util.SortedMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_engine.AnalysisEngine;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
@@ -37,23 +38,33 @@ import ac.biu.nlp.nlp.ie.onthefly.input.uima.Predicate;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateInUsageSample;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateName;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateSeed;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.TAll;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepGenPosNoContext;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepGenPosWithContext;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepNoContext;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepGenPosNoContext;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepGenPosWithContext;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepNoContext;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepSpecPosNoContext;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepSpecPosWithContext;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepWithContext;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepSpecPosNoContext;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepSpecPosWithContext;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepWithContext;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.UsageSample;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.VAll;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.VerbLemma;
 
 import com.google.common.collect.HashMultimap;
+import com.google.common.collect.HashMultiset;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Iterators;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Multimap;
+import com.google.common.collect.Multiset;
 import com.google.common.collect.Sets;
 
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence;
@@ -449,13 +460,44 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 //		- sentenceView.setDocumentText(newSection.toString())
 	}
 	
-	private static void addTreeout(Class<? extends Treeout> cls, Annotation covering, String value) throws CASException {
+	private static void addTreeout(Map<Class<? extends Treeout>, Map<String, Multiset<String>>> treeoutByRole, Map<Class<? extends Treeout>, Map<String, Multiset<String>>> treeoutByVal, Class<? extends Treeout> cls, Annotation covering, String role, String value) throws CASException {
 		JCas jcas = covering.getCAS().getJCas();
 		Type type = jcas.getTypeSystem().getType(cls.getName());
 		AnnotationFS newAnno = jcas.getCas().createAnnotation(type, covering.getBegin(), covering.getEnd());
 		Treeout treeout = (Treeout) newAnno;
+
+		// Pad role with '_', so that all roles are aligned, and are displayed well in Chrome (which omits consecutive spaces!!!)
+		final int ROLE_PADDED_LEN=12;
+		treeout.setRole(StringUtils.rightPad(role, ROLE_PADDED_LEN, "_")/*String.format("%s%s", role, role.length()<ROLE_PADDED_LEN?StringUtils.repeat('_', ROLE_PADDED_LEN-role.length()):"")*/);
+
 		treeout.setValue(value);
 		treeout.addToIndexes();
+		
+		// Handle treeoutByRole
+		Map<String, Multiset<String>> ofCls = treeoutByRole.get(cls);
+		if (ofCls == null) {
+			ofCls = Maps.newHashMap();
+			treeoutByRole.put(cls, ofCls);
+		}
+		Multiset<String> ofRole = ofCls.get(role);
+		if (ofRole == null) {
+			ofRole = HashMultiset.create();
+			ofCls.put(role, ofRole);
+		}
+		ofRole.add(value);
+		
+		// Handle treeoutByVal
+		ofCls = treeoutByVal.get(cls);
+		if (ofCls == null) {
+			ofCls = Maps.newHashMap();
+			treeoutByVal.put(cls, ofCls);
+		}
+		Multiset<String> ofVal = ofCls.get(value);
+		if (ofVal == null) {
+			ofVal = HashMultiset.create();
+			ofCls.put(value, ofVal);
+		}
+		ofVal.add(role);
 	}
 	
 	@Override
@@ -484,6 +526,10 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 			
 			// Build once, use many times
 			Collection<UsageSample> usageSamples = JCasUtil.select(sentenceView, UsageSample.class);
+			
+			// For tracing treeouts
+			Map<Class<? extends Treeout>, Map<String, Multiset<String>>> treeoutByRole = Maps.newHashMap();
+			Map<Class<? extends Treeout>, Map<String, Multiset<String>>> treeoutByVal = Maps.newHashMap();
 			
 			// Make sure usage samples don't have exact duplicates
 			List<String> sampleTextsList = JCasUtil.toText(usageSamples);
@@ -557,16 +603,25 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 						aius.setPius(pius);
 						aius.setSample(sample);
 						
-						// Build fragment layer stuff
-						FragmentAndReference linkFrag = fragmentLayer.getRootLinkingTreeFragment(pius, aius, null);
+						// Build fragment layer stuff (twice, also without conj)
+						FragmentAndReference linkFrag = fragmentLayer.getRootLinkingTreeFragment(pius, aius, false, null);
 						List<BasicNode> subroots = ImmutableList.of(linkFrag.getFragmentRoot());
+						FragmentAndReference linkFragNoConj = fragmentLayer.getRootLinkingTreeFragment(pius, aius, true, null);
+						List<BasicNode> subrootsNoConj = ImmutableList.of(linkFragNoConj.getFragmentRoot());
 
-						addTreeout(TreeoutDepNoContext.class, aius, TreeToLineString.getStringRel(subroots, false));
-						addTreeout(TreeoutDepGenPosNoContext.class, aius, TreeToLineString.getStringRelCanonicalPos(subroots, false));
-						addTreeout(TreeoutDepSpecPosNoContext.class, aius, TreeToLineString.getStringRelPos(subroots, false));
-						addTreeout(TreeoutDepWithContext.class, aius, TreeToLineString.getStringRel(subroots, true));
-						addTreeout(TreeoutDepGenPosWithContext.class, aius, TreeToLineString.getStringRelCanonicalPos(subroots, true));
-						addTreeout(TreeoutDepSpecPosWithContext.class, aius, TreeToLineString.getStringRelPos(subroots, true));
+						String role = aius.getArgumentExample().getArgument().getRole().getCoveredText();
+						addTreeout(treeoutByRole, treeoutByVal, TreeoutDepNoContext.class, aius, role, TreeToLineString.getStringRel(subroots, false, true));
+						addTreeout(treeoutByRole, treeoutByVal, TreeoutDepGenPosNoContext.class, aius, role, TreeToLineString.getStringRelCanonicalPos(subroots, false, true));
+						addTreeout(treeoutByRole, treeoutByVal, TreeoutDepSpecPosNoContext.class, aius, role, TreeToLineString.getStringRelPos(subroots, false, true));
+						addTreeout(treeoutByRole, treeoutByVal, TreeoutDepWithContext.class, aius, role, TreeToLineString.getStringRel(subroots, true, true));
+						addTreeout(treeoutByRole, treeoutByVal, TreeoutDepGenPosWithContext.class, aius, role, TreeToLineString.getStringRelCanonicalPos(subroots, true, true));
+						addTreeout(treeoutByRole, treeoutByVal, TreeoutDepSpecPosWithContext.class, aius, role, TreeToLineString.getStringRelPos(subroots, true, true));
+						addTreeout(treeoutByRole, treeoutByVal, TreeoutDepPrepNoContext.class, aius, role, TreeToLineString.getStringRelPrep(subrootsNoConj, false, true));
+						addTreeout(treeoutByRole, treeoutByVal, TreeoutDepPrepGenPosNoContext.class, aius, role, TreeToLineString.getStringRelPrepCanonicalPos(subrootsNoConj, false, true));
+						addTreeout(treeoutByRole, treeoutByVal, TreeoutDepPrepSpecPosNoContext.class, aius, role, TreeToLineString.getStringRelPrepPos(subrootsNoConj, false, true));
+						addTreeout(treeoutByRole, treeoutByVal, TreeoutDepPrepWithContext.class, aius, role, TreeToLineString.getStringRelPrep(subrootsNoConj, true, true));
+						addTreeout(treeoutByRole, treeoutByVal, TreeoutDepPrepGenPosWithContext.class, aius, role, TreeToLineString.getStringRelPrepCanonicalPos(subrootsNoConj, true, true));
+						addTreeout(treeoutByRole, treeoutByVal, TreeoutDepPrepSpecPosWithContext.class, aius, role, TreeToLineString.getStringRelPrepPos(subrootsNoConj, true, true));
 					}
 				}
 				
@@ -584,6 +639,45 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 					arg.setAiuses((FSArray) FSCollectionFactory.createFSArray(tokenView, aiusesOfArg));
 				}
 				
+			}
+			
+			for (Class<?> cls : treeoutByRole.keySet()) {
+				Map<String, Multiset<String>> byCls = treeoutByRole.get(cls);
+				for (String role : byCls.keySet()) {
+					Multiset<String> byRole = byCls.get(role);
+					List<String> strs = Lists.newArrayList();
+					for (String val : byRole.elementSet()) {
+						int count = byRole.count(val);
+						String s = String.format("%s*%s", count, val);
+						strs.add(s);
+					}
+					String oneStr = StringUtils.join(strs, " | ");
+					
+					TAll tAll = new TAll(sentenceView);
+					tAll.setCls(cls.getSimpleName());
+					tAll.setRole(role);
+					tAll.setVal(oneStr);
+					tAll.addToIndexes();
+				}
+			}
+			for (Class<?> cls : treeoutByVal.keySet()) {
+				Map<String, Multiset<String>> byCls = treeoutByVal.get(cls);
+				for (String treeout : byCls.keySet()) {
+					Multiset<String> byTreeout = byCls.get(treeout);
+					List<String> strs = Lists.newArrayList();
+					for (String role : byTreeout.elementSet()) {
+						int count = byTreeout.count(role);
+						String s = String.format("%s*%s", count, role);
+						strs.add(s);
+					}
+					String oneStr = StringUtils.join(strs, " | ");
+					
+					VAll vAll = new VAll(sentenceView);
+					vAll.setCls(cls.getSimpleName());
+					vAll.setTreeout(treeout);
+					vAll.setVal(oneStr);
+					vAll.addToIndexes();
+				}
 			}
 						
 			System.err.printf("- In spec '%s': %d tokens in token view, %s tokens in sentence view\n", 

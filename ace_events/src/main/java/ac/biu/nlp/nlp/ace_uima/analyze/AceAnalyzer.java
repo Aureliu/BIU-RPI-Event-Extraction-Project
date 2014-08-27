@@ -69,7 +69,6 @@ import ac.biu.nlp.nlp.ace_uima.uima.ValueMention;
 import ac.biu.nlp.nlp.ace_uima.utils.AnotherBasicNodeUtils;
 import ac.biu.nlp.nlp.ace_uima.utils.FinalHashMap;
 import ac.biu.nlp.nlp.ace_uima.utils.IgnoreNullFinalHashMap;
-import ac.biu.nlp.nlp.ace_uima.utils.UimaUtils;
 import ac.biu.nlp.nlp.ie.onthefly.input.AnnotationUtils;
 import de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS;
 import de.tudarmstadt.ukp.dkpro.core.api.metadata.type.DocumentMetaData;
@@ -109,6 +108,7 @@ import eu.excitementproject.eop.common.utilities.StringUtil;
 import eu.excitementproject.eop.common.utilities.file.FileFilters;
 import eu.excitementproject.eop.common.utilities.file.FileUtils;
 import eu.excitementproject.eop.common.utilities.log4j.LoggerUtilities;
+import eu.excitementproject.eop.common.utilities.uima.UimaUtils;
 import eu.excitementproject.eop.core.component.lexicalknowledge.wordnet.WordnetLexicalResource;
 import eu.excitementproject.eop.core.component.lexicalknowledge.wordnet.WordnetRuleInfo;
 import eu.excitementproject.eop.lap.LAPException;
@@ -285,10 +285,10 @@ public class AceAnalyzer {
 					docs.updateDocs(key, "Anchor", "TokenGenPOS", getTokenAndGeneralPosString(eventAnchor));				
 					
 					List<BasicNode> eventAnchorFrag = fragmentLayer.getTreeFragments(eventAnchor);
-					docs.updateDocs(key, "Anchor", "Dep", TreeToLineString.getStringRel(eventAnchorFrag, true));						
-					docs.updateDocs(key, "Anchor", "DepToken", TreeToLineString.getStringWordRel(eventAnchorFrag, true));						
-					docs.updateDocs(key, "Anchor", "DepGenPOS", TreeToLineString.getStringRelCanonicalPos(eventAnchorFrag, true));						
-					docs.updateDocs(key, "Anchor", "DepSpecPOS", TreeToLineString.getStringRelPos(eventAnchorFrag, true));						
+					docs.updateDocs(key, "Anchor", "Dep", TreeToLineString.getStringRel(eventAnchorFrag, true, true));						
+					docs.updateDocs(key, "Anchor", "DepToken", TreeToLineString.getStringWordRel(eventAnchorFrag, true, true));						
+					docs.updateDocs(key, "Anchor", "DepGenPOS", TreeToLineString.getStringRelCanonicalPos(eventAnchorFrag, true, true));						
+					docs.updateDocs(key, "Anchor", "DepSpecPOS", TreeToLineString.getStringRelPos(eventAnchorFrag, true, true));						
 	
 					EventMentionExtent eventExtent = mention.getExtent();
 					docs.updateDocs(key, "Extent", "", getText(eventExtent));
@@ -352,12 +352,12 @@ public class AceAnalyzer {
 						docs.updateDocs(key, "ArgHead", "SpecType", getSpecTypeTextEntry(argHead));					
 	
 						List<BasicNode> argHeadFrag = fragmentLayer.getTreeFragments(argHead);
-						docs.updateDocs(key, "ArgHead", "Dep", TreeToLineString.getStringRel(argHeadFrag, true));						
-						docs.updateDocs(key, "ArgHead", "DepToken", TreeToLineString.getStringWordRel(argHeadFrag, true));						
-						docs.updateDocs(key, "ArgHead", "DepGenPOS", TreeToLineString.getStringRelCanonicalPos(argHeadFrag, true));						
-						docs.updateDocs(key, "ArgHead", "DepSpecPOS", TreeToLineString.getStringRelPos(argHeadFrag, true));
-						updateLinkingTreeFrags(key, eventAnchor, argHead, argMention, "Link", "Dep", "DepGenPOS", "DepSpecPOS",    true);
-						updateLinkingTreeFrags(key, eventAnchor, argHead, argMention, "Link", "*Dep", "*DepGenPOS", "*DepSpecPOS", false);
+						docs.updateDocs(key, "ArgHead", "Dep", TreeToLineString.getStringRel(argHeadFrag, true, true));						
+						docs.updateDocs(key, "ArgHead", "DepToken", TreeToLineString.getStringWordRel(argHeadFrag, true, true));						
+						docs.updateDocs(key, "ArgHead", "DepGenPOS", TreeToLineString.getStringRelCanonicalPos(argHeadFrag, true, true));						
+						docs.updateDocs(key, "ArgHead", "DepSpecPOS", TreeToLineString.getStringRelPos(argHeadFrag, true, true));
+						updateLinkingTreeFrags(key, eventAnchor, argHead, argMention, "Link", "Dep", "DepPrep", "DepGenPOS", "DepPrepGenPOS", "DepSpecPOS", "DepPrepSpecPOS",    true, true);
+						updateLinkingTreeFrags(key, eventAnchor, argHead, argMention, "Link", "*Dep", "*DepPrep", "*DepGenPOS", "*DepPrepGenPOS", "*DepSpecPOS", "*DepPrepSpecPOS", false, true);
 
 						if (argHead!=null) {
 							String specTypeStr = getSpecType(argHead.getMention());
@@ -579,8 +579,8 @@ public class AceAnalyzer {
 				if (predicatePas == null) {
 					countMissingPredicate++;
 					docs.updateDocs(key, "FindLinks", "", "PredMissed");
-					docs.updateDocs(key, "PredMissed", "*Dep", TreeToLineString.getStringRel(link, false));						
-					docs.updateDocs(key, "PredMissed", "*DepGenPOS", TreeToLineString.getStringRelCanonicalPos(link, false));
+					docs.updateDocs(key, "PredMissed", "*Dep", TreeToLineString.getStringRel(link, false, true));						
+					docs.updateDocs(key, "PredMissed", "*DepGenPOS", TreeToLineString.getStringRelCanonicalPos(link, false, true));
 					addDetails("__PredMissed", printIndented(link, facet.sentence, eventType, argRole));
 					//TODO if pasta didn't find this link, check also if this link is a coreference to something that pasta did find
 					continue;
@@ -591,23 +591,23 @@ public class AceAnalyzer {
 				if (argPases.isEmpty()) {
 					countMissingArg++;
 					docs.updateDocs(key, "FindLinks", "", "ArgMissed");
-					docs.updateDocs(key, "ArgMissed", "*Dep", TreeToLineString.getStringRel(link, false));						
-					docs.updateDocs(key, "ArgMissed", "*DepGenPOS", TreeToLineString.getStringRelCanonicalPos(link, false));						
+					docs.updateDocs(key, "ArgMissed", "*Dep", TreeToLineString.getStringRel(link, false, true));						
+					docs.updateDocs(key, "ArgMissed", "*DepGenPOS", TreeToLineString.getStringRelCanonicalPos(link, false, true));						
 					addDetails("__ArgMissed", printIndented(link, facet.sentence, eventType, argRole));
 					continue;
 				}
 				if (!argPases.contains(predicatePas)) {
 					countMissingLink++;
 					docs.updateDocs(key, "FindLinks", "", "LinkMissed");
-					docs.updateDocs(key, "LinkMissed", "*Dep", TreeToLineString.getStringRel(link, false));						
-					docs.updateDocs(key, "LinkMissed", "*DepGenPOS", TreeToLineString.getStringRelCanonicalPos(link, false));						
+					docs.updateDocs(key, "LinkMissed", "*Dep", TreeToLineString.getStringRel(link, false, true));						
+					docs.updateDocs(key, "LinkMissed", "*DepGenPOS", TreeToLineString.getStringRelCanonicalPos(link, false, true));						
 					addDetails("__LinkMissed", printIndented(link, facet.sentence, eventType, argRole));
 					continue;
 				}
 				countLinkFound++;
 				docs.updateDocs(key, "FindLinks", "", "LinkFound");
-				docs.updateDocs(key, "LinkFound", "*Dep", TreeToLineString.getStringRel(link, false));						
-				docs.updateDocs(key, "LinkFound", "*DepGenPOS", TreeToLineString.getStringRelCanonicalPos(link, false));						
+				docs.updateDocs(key, "LinkFound", "*Dep", TreeToLineString.getStringRel(link, false, true));						
+				docs.updateDocs(key, "LinkFound", "*DepGenPOS", TreeToLineString.getStringRelCanonicalPos(link, false, true));						
 				addDetails("__LinkFound", printIndented(link, facet.sentence, eventType, argRole));
 				foundPases.add(predicatePas);
 			}
@@ -1066,23 +1066,59 @@ public class AceAnalyzer {
 //	}
 //	
 	protected void updateLinkingTreeFrags(Map<String, String> key, EventMentionAnchor eventAnchor,
-			BasicArgumentMentionHead argHead, EventMentionArgument argMention, String field, String fieldDep, String fieldDepGenPos,
-			String fieldDepSpecPos, boolean withContext) throws Exception {
+			BasicArgumentMentionHead argHead, EventMentionArgument argMention, String field,
+			String fieldDep, String fieldDepPrep, 
+			String fieldDepGenPos, String fieldDepPrepGenPos,
+			String fieldDepSpecPos, String fieldDepPrepSpecPos, 
+			boolean withContext, boolean withMagicNodes) throws Exception {
 		List<BasicNode> roots = null;
+		List<BasicNode> rootsNoConj = null;
 		String abnormal = null;
+		int fragmentEdges = -99;
 		try {
-			FragmentAndReference frag = fragmentLayer.getRootLinkingTreeFragment(eventAnchor, argHead, argMention);
+			FragmentAndReference frag = fragmentLayer.getRootLinkingTreeFragment(eventAnchor, argHead, false, argMention);
 			roots = ImmutableList.of(frag.getFragmentRoot());
+			FragmentAndReference fragNoConj = fragmentLayer.getRootLinkingTreeFragment(eventAnchor, argHead, true, argMention);
+			rootsNoConj = ImmutableList.of(fragNoConj.getFragmentRoot());
+			fragmentEdges = AbstractNodeUtils.treeSize(frag.getFragmentRoot()) - 1;
 		} catch (AceAbnormalMessage e) {
 			abnormal = e.getMessage();
 		}
 		
-		docs.updateDocs(key, field, fieldDep,        abnormal!=null ? abnormal : TreeToLineString.getStringRel(roots, withContext));
-		docs.updateDocs(key, field, fieldDepGenPos,  abnormal!=null ? abnormal : TreeToLineString.getStringRelCanonicalPos(roots, withContext));
-		docs.updateDocs(key, field, fieldDepSpecPos, abnormal!=null ? abnormal : TreeToLineString.getStringRelPos(roots, withContext));
+		String treeoutDep =			abnormal!=null ? abnormal : TreeToLineString.getStringRel(roots, withContext, withMagicNodes);
+		String treeoutDepGenPos =	abnormal!=null ? abnormal : TreeToLineString.getStringRelCanonicalPos(roots, withContext, withMagicNodes);
+		String treeoutDepSpecPos =	abnormal!=null ? abnormal : TreeToLineString.getStringRelPos(roots, withContext, withMagicNodes);
+		String treeoutDepPrep =			abnormal!=null ? abnormal : TreeToLineString.getStringRelPrep(rootsNoConj, withContext, withMagicNodes);
+		String treeoutDepPrepGenPos =	abnormal!=null ? abnormal : TreeToLineString.getStringRelPrepCanonicalPos(rootsNoConj, withContext, withMagicNodes);
+		String treeoutDepPrepSpecPos =	abnormal!=null ? abnormal : TreeToLineString.getStringRelPrepPos(rootsNoConj, withContext, withMagicNodes);
+		
+		/// DEBUG
+		if (!withContext &&
+				(treeoutDepPrep.contains("conj") || treeoutDepPrepGenPos.contains("conj") || treeoutDepPrepSpecPos.contains("conj"))) {
+			System.err.printf("AceAnalyzer: Unexpected conj: eventAnchor=%s, argHead=%s, treeoutDepPrepGenPos=%s\n",
+					UimaUtils.annotationToString(eventAnchor), UimaUtils.annotationToString(argHead), treeoutDepPrepGenPos);
+		}
+		///
+		
+		updateLinkingTreeFragsSingle(key, fragmentEdges, field, fieldDep,        treeoutDep);
+		updateLinkingTreeFragsSingle(key, fragmentEdges, field, fieldDepGenPos,  treeoutDepGenPos);
+		updateLinkingTreeFragsSingle(key, fragmentEdges, field, fieldDepSpecPos, treeoutDepSpecPos);
+		updateLinkingTreeFragsSingle(key, fragmentEdges, field, fieldDepPrep,        treeoutDepPrep);
+		updateLinkingTreeFragsSingle(key, fragmentEdges, field, fieldDepPrepGenPos,  treeoutDepPrepGenPos);
+		updateLinkingTreeFragsSingle(key, fragmentEdges, field, fieldDepPrepSpecPos, treeoutDepPrepSpecPos);
 	}
 
-
+	protected void updateLinkingTreeFragsSingle(Map<String, String> key, Integer fragmentEdges, String field, String subfield, String value) throws Exception {
+		docs.updateDocs(key, field, subfield, value);
+		
+		key.put("TO-Type", subfield);
+		key.put("TO-Value", value);
+		String eventSubtype = key.get("EventSubType");
+		String role = key.get("Role");
+		docs.updateDocs(key, eventSubtype, role, 1);
+		docs.updateDocs(key, eventSubtype, "-filter-", "=SUM(C6:G6)>=$H$4");
+		docs.updateDocs(key, "Edges", "", fragmentEdges);
+	}
 
 //	protected BasicNode getMinimalTreeFragment(BasicNode root, Set<BasicNode> nodes) {
 //		
@@ -1185,7 +1221,7 @@ public class AceAnalyzer {
 		testFileIds = FileUtils.loadFileToString(AceAnalyzer.class.getResource("/doclists/new_filelist_ACE_test.txt").getPath());
 	}
 	
-	public void analyzeFolder(String xmiFolderPath, String entityStatsOutputPath, String roleStatsOutputFile, String typePerDocOutputFile, String detailedOutputFolderPath) throws Exception {
+	public void analyzeFolder(String xmiFolderPath, String entityStatsOutputPath, String roleStatsOutputFile, String treeoutOutputFile, String detailedOutputFolderPath) throws Exception {
 		
 		File detailedFolder = new File(detailedOutputFolderPath);
 		if (!detailedFolder.isDirectory()) {
@@ -1205,11 +1241,11 @@ public class AceAnalyzer {
 			analyzeOneJcas(jcas);
 		}
 		
-		writeOutput(entityStatsOutputPath, roleStatsOutputFile, typePerDocOutputFile, detailedOutputFolderPath);
+		writeOutput(entityStatsOutputPath, roleStatsOutputFile, treeoutOutputFile, detailedOutputFolderPath);
 	}
 	
-	protected void writeOutput(String entityStatsOutputPath, String roleStatsOutputFile, String typePerDocOutputFile, String detailedOutputFolderPath) throws IOException {
-		docs.dumpAsCsvFiles(new File(entityStatsOutputPath), new File(roleStatsOutputFile), new File(typePerDocOutputFile));
+	protected void writeOutput(String entityStatsOutputPath, String roleStatsOutputFile, String treeoutOutputFile, String detailedOutputFolderPath) throws IOException {
+		docs.dumpAsCsvFiles(new File(entityStatsOutputPath), new File(roleStatsOutputFile), new File(treeoutOutputFile));
 		dumpDetailedFiles(detailedOutputFolderPath);
 	}
 	
@@ -1251,7 +1287,7 @@ public class AceAnalyzer {
 	}
 	public static void main(String args[]) throws Exception {
 		if (args.length != 5) {
-			System.err.println("USAGE: AceAnalyzer <xmi input folder> <entity stats output file> <role stats output file> <type-per-doc output file> <detailed output folder>");
+			System.err.println("USAGE: AceAnalyzer <xmi input folder> <entity stats output file> <role stats output file> <treeout output file> <detailed output folder>");
 			return;
 		}
 		//initLog();
@@ -1286,7 +1322,7 @@ public class AceAnalyzer {
 //	public static Set<String> PUNCTUATION = Sets.newHashSet(Arrays.asList(new String[] {
 //			".", ",", "!", "?", ":", "@", "#", "$", "%"
 //	}));
-	public static File WORDNET_DIR = new File("C:/Java/git/breep/ace_events/src/main/resources/data/Wordnet3.0");
+	public static File WORDNET_DIR = new File("C:/Java/git/breep/ace_events_large_resources/src/main/resources/data/Wordnet3.0");
 	private static WordnetLexicalResource wordnet;
 	
 

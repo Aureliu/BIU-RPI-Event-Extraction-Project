@@ -94,20 +94,20 @@ public class Evaluator
 		}
 	}
 	
-	public Score evaluate(List<SentenceAssignment> results, Collection<SentenceInstance> instancesGold, Integer specificNode, int iteration) {
+	public Score evaluate(List<SentenceAssignment> results, Collection<SentenceInstance> instancesGold, int iteration) {
 		List<SentenceAssignment> goldTargets = new ArrayList<SentenceAssignment>(instancesGold.size());
 		for (SentenceInstance inst : instancesGold) {
 			goldTargets.add(inst.target);
 		}
 		
-		return evaluate(results, goldTargets, specificNode, iteration, false);
+		return evaluate(results, goldTargets, iteration, false);
 	}
 	
-	public Score evaluate(List<SentenceAssignment> results, List<SentenceAssignment> goldTargets, Integer specificNode, int iteration, boolean fake)
+	public Score evaluate(List<SentenceAssignment> results, List<SentenceAssignment> goldTargets, int iteration, boolean fake)
 	{
 		Score score = new Score(iteration);
 		evaluteTrigger(results, goldTargets, score);
-		evaluteArgument(results, goldTargets, specificNode, score);
+		evaluteArgument(results, goldTargets, score);
 		
 		score.calculateHarmonic_mean();
 		
@@ -269,7 +269,7 @@ public class Evaluator
 	 * @param instances
 	 * @return
 	 */
-	public void evaluteArgument(List<SentenceAssignment> results, List<SentenceAssignment> goldTargets, Integer specificNode, Score score)
+	public void evaluteArgument(List<SentenceAssignment> results, List<SentenceAssignment> goldTargets, Score score)
 	{
 		double count_arg_total = 0;
 		double count_arg_ans = 0;
@@ -282,6 +282,9 @@ public class Evaluator
 			SentenceAssignment ans = results.get(i);
 			//SentenceInstance goldInstance = instancesGold.get(i);
 			SentenceAssignment gold = goldTargets.get(i);//goldInstance.target;
+			
+			count_arg_total += gold.getNodeAssignment().size() * gold.eventArgCandidates.size();
+			
 			// count num of gold args
 			for(int j=0; j<gold.getNodeAssignment().size(); j++)
 			{
@@ -291,7 +294,7 @@ public class Evaluator
 					Map<Integer, Integer> gold_edges = gold.getEdgeAssignment().get(j);
 					for(int key : gold_edges.keySet())
 					{
-						count_arg_total++;
+						//count_arg_total++;
 						int value_gold = gold_edges.get(key);
 						if(!gold.edgeTargetAlphabet.lookupObject(value_gold).equals(SentenceAssignment.Default_Argument_Label))
 						{
@@ -315,11 +318,21 @@ public class Evaluator
 							if(!ans.edgeTargetAlphabet.lookupObject(value_ans).equals(SentenceAssignment.Default_Argument_Label))
 							{
 								count_arg_ans++;
+								
+								/// DEBUG
+								if (value_ans==1) {
+									System.out.printf("(%s, %s,%s) ", ans.ord, j, key);
+								}
+								///
 							}
 						}
 					}
 				}
 			}
+			/// DEBUG
+			//System.out.println();
+			///
+
 			// count correct args
 			for(int j=0; j<gold.getNodeAssignment().size(); j++)
 			{
@@ -333,12 +346,15 @@ public class Evaluator
 						// traverse argument
 						Map<Integer, Integer> ans_edges = ans.getEdgeAssignment().get(j);
 						Map<Integer, Integer> gold_edges = gold.getEdgeAssignment().get(j);
-						if(ans_edges != null && gold_edges != null)
+						if(ans_edges != null && gold_edges != null && !gold_edges.isEmpty())
 						{
 							for(int key : ans_edges.keySet())
 							{
 								int value_ans = ans_edges.get(key);
-								int value_gold = gold_edges.get(key);
+								Integer value_gold = gold_edges.get(key);
+								if (value_gold == null) {
+									value_gold = gold.edgeTargetAlphabet.lookupIndex(SentenceAssignment.Default_Argument_Label, false);
+								}
 								
 								if( !gold.edgeTargetAlphabet.lookupObject(value_ans).equals(SentenceAssignment.Default_Argument_Label) &&
 									!gold.edgeTargetAlphabet.lookupObject(value_gold).equals(SentenceAssignment.Default_Argument_Label)) {

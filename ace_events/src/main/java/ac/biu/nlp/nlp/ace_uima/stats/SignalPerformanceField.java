@@ -85,7 +85,7 @@ public abstract class SignalPerformanceField extends StatsField {
 			//return Arrays.asList(new Double[] {s.count_arg_gold, s.count_arg_ans, s.count_arg_correct, s.arg_precision, s.arg_recall, s.arg_F1, s.count_arg_correct_idt, s.arg_precision_idt, s.arg_recall_idt, s.arg_F1_idt});
 			// see CONCLUSION
 			Score s = new Score(-1);
-			evaluator.evaluteArgument(results, goldTargets, null, s);			
+			evaluator.evaluteArgument(results, goldTargets, s);
 			s.calculateHarmonic_mean();
 
 			return Arrays.asList(new Double[] {s.count_arg_total, s.count_arg_gold, s.count_arg_ans, s.count_arg_correct, s.arg_precision, s.arg_recall, s.arg_F1,
@@ -102,7 +102,7 @@ public abstract class SignalPerformanceField extends StatsField {
 			//return Arrays.asList(new Double[] {s.count_arg_gold, s.count_arg_ans, s.count_arg_correct, s.arg_precision, s.arg_recall, s.arg_F1, s.count_arg_correct_idt, s.arg_precision_idt, s.arg_recall_idt, s.arg_F1_idt});
 			// see CONCLUSION
 			Score s = new Score(-1);
-			evaluator.evaluteArgument(results, goldTargets, 0, s);			
+			evaluator.evaluteArgument(results, goldTargets, s);			
 			s.calculateHarmonic_mean();
 			
 			return Arrays.asList(new Double[] {s.count_arg_total, s.count_arg_gold, s.count_arg_ans, s.count_arg_correct, s.arg_precision, s.arg_recall, s.arg_F1,

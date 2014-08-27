@@ -11,7 +11,7 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Mon Aug 18 12:56:04 IDT 2014
+ * Updated by JCasGen Mon Aug 25 18:56:30 IDT 2014
  * XML source: C:/Java/Git/breep/ace_events/src/main/resources/desc/OdieInputTypes.xml
  * @generated */
 public class Treeout extends Annotation {
@@ -78,6 +78,24 @@ public class Treeout extends Annotation {
     if (Treeout_Type.featOkTst && ((Treeout_Type)jcasType).casFeat_value == null)
       jcasType.jcas.throwFeatMissing("value", "ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout");
     jcasType.ll_cas.ll_setStringValue(addr, ((Treeout_Type)jcasType).casFeatCode_value, v);}    
-  }
+            //*--------------*
+  //* Feature: role
+
+  /** getter for role - gets 
+   * @generated */
+  public String getRole() {
+    if (Treeout_Type.featOkTst && ((Treeout_Type)jcasType).casFeat_role == null)
+      jcasType.jcas.throwFeatMissing("role", "ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout");
+    return jcasType.ll_cas.ll_getStringValue(addr, ((Treeout_Type)jcasType).casFeatCode_role);}
+    
+  /** setter for role - sets  
+   * @generated */
+  public void setRole(String v) {
+    if (Treeout_Type.featOkTst && ((Treeout_Type)jcasType).casFeat_role == null)
+      jcasType.jcas.throwFeatMissing("role", "ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout");
+    jcasType.ll_cas.ll_setStringValue(addr, ((Treeout_Type)jcasType).casFeatCode_role, v);}    
+   
+    
+}
 
     

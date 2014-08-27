@@ -13,9 +13,7 @@ import org.apache.uima.resource.metadata.TypeSystemDescription;
 import org.apache.uima.util.InvalidXMLException;
 import org.uimafit.factory.AggregateBuilder;
 
-import ac.biu.nlp.nlp.ace_uima.utils.UimaUtils;
-import ac.biu.nlp.nlp.ace_uima.utils.UimaUtilsException;
-
+import eu.excitementproject.eop.common.utilities.uima.UimaUtilsException;
 import eu.excitementproject.eop.lap.biu.uima.ae.ner.StanfordNamedEntityRecognizerAE;
 import eu.excitementproject.eop.lap.biu.uima.ae.parser.EasyFirstParserAE;
 import eu.excitementproject.eop.lap.biu.uima.ae.postagger.MaxentPosTaggerAE;

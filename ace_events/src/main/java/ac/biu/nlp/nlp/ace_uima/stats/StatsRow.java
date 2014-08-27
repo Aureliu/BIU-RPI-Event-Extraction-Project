@@ -7,7 +7,8 @@ import java.util.Map.Entry;
 import edu.cuny.qc.perceptron.core.Evaluator.Score;
 
 import ac.biu.nlp.nlp.ace_uima.stats.SignalPerformanceField.TriggerSignalPerformanceField;
-import ac.biu.nlp.nlp.ace_uima.stats.SignalPerformanceField.ArgumentSignalPerformanceField;
+import ac.biu.nlp.nlp.ace_uima.stats.SignalPerformanceField.ArgumentDependentSignalPerformanceField;
+import ac.biu.nlp.nlp.ace_uima.stats.SignalPerformanceField.ArgumentFreeSignalPerformanceField;
 
 public class StatsRow {
 
@@ -48,11 +49,13 @@ public class StatsRow {
 		case ENUM_SUM:						field = new EnumSumField(name); break;
 		case COUNT_INT:						field = new CountIntField(name); break;
 		case SUM_INT:						field = new SumIntField(name); break;
+		case CONST:							field = new ConstField(name); break;
 		case COUNT_DOUBLE:					field = new CountDoubleField(name); break;
 		case LIST_COUNTS:					field = new ListCountsField(name); break;
 		case LIST_VALUES:					field = new ListValuesField(name); break;
 		case SIGNAL_PERFORMANCE_TRIGGER:	field = new TriggerSignalPerformanceField(name); break;
-		case SIGNAL_PERFORMANCE_ARG:		field = new ArgumentSignalPerformanceField(name); break;
+		case SIGNAL_PERFORMANCE_ARG_DEP:	field = new ArgumentDependentSignalPerformanceField(name); break;
+		case SIGNAL_PERFORMANCE_ARG_FREE:	field = new ArgumentFreeSignalPerformanceField(name); break;
 		default: throw new StatsException("Invalid field type: " + fieldType);
 		}
 		

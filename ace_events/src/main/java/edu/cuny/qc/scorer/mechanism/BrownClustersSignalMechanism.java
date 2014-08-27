@@ -4,10 +4,14 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.uima.jcas.tcas.Annotation;
+
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
+import edu.cuny.qc.ace.acetypes.AceEntityMention;
 import edu.cuny.qc.perceptron.core.Controller;
 import edu.cuny.qc.perceptron.core.Perceptron;
 import edu.cuny.qc.scorer.Aggregator;
+import edu.cuny.qc.scorer.ArgumentExampleScorer;
 import edu.cuny.qc.scorer.Derivation;
 import edu.cuny.qc.scorer.ScorerData;
 import edu.cuny.qc.scorer.SignalMechanism;
@@ -25,6 +29,7 @@ public class BrownClustersSignalMechanism extends SignalMechanism {
 	static {
 		System.err.println("BrownClustersSignalMechanism: should still add the REAL (probably) method, probably something like making sure that one side's bit string is just a substring of the other.");
 		System.err.println("BrownClustersSignalMechanism: Sometimes 'null' is returned by BrownClusters.getSingleton().getBrownCluster(str). WTF?");
+		System.err.println("BrownClustersSignalMechanism: I added SameLongestClusterArgumentHeadToken for args, but currently disabled it, since it wasn't calced in the big signal run of the past few days. MAYBE re-instate it, although it really really really has no chance of helping. :( Brown Clusters suck.");
 	}
 	
 	@Override
@@ -36,16 +41,18 @@ public class BrownClustersSignalMechanism extends SignalMechanism {
 //			addTrigger(new ScorerData("BR_ALL_CLUSTERS_LEM",		SameAllClustersLemma.inst,				Aggregator.Any.inst		));
 			addTrigger(new ScorerData("BR_LONGEST_CLUSTER_TOK",		SameLongestClusterToken.inst,			Aggregator.Any.inst		));
 			addTrigger(new ScorerData("BR_LONGEST_CLUSTER_LEM",		SameLongestClusterLemma.inst,			Aggregator.Any.inst		));
+			//addArgumentFree(new ScorerData("BR_LONGEST_CLUSTER_HEADTOKEN",		SameLongestClusterArgumentHeadToken.inst,			Aggregator.Any.inst		));
+			
 //			addTrigger(new ScorerData("BR_ALL_CLUSTERS_TOK",		SameAllClustersToken.inst,				Aggregator.Min2.inst		));
 //			addTrigger(new ScorerData("BR_ALL_CLUSTERS_LEM",		SameAllClustersLemma.inst,				Aggregator.Min2.inst		));
 //			addTrigger(new ScorerData("BR_LONGEST_CLUSTER_TOK",		SameLongestClusterToken.inst,			Aggregator.Min2.inst		));
 //			addTrigger(new ScorerData("BR_LONGEST_CLUSTER_LEM",		SameLongestClusterLemma.inst,			Aggregator.Min2.inst		));
 			
-			addTrigger(new ScorerData("BR_LONGEST_CLUSTER_LEM",	SameLongestClusterLemma.inst, WordnetDervRltdDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, Aggregator.Any.inst));
-			addTrigger(new ScorerData("BR_LONGEST_CLUSTER_LEM",	SameLongestClusterLemma.inst, WordnetDervRltdDeriver.inst, Derivation.SPEC_ORIG_AND_DERV, Aggregator.Any.inst));
-			addTrigger(new ScorerData("BR_LONGEST_CLUSTER_LEM",	SameLongestClusterLemma.inst, NomlexDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, Aggregator.Any.inst));
-			addTrigger(new ScorerData("BR_LONGEST_CLUSTER_LEM",	SameLongestClusterLemma.inst, NomlexDeriver.inst, Derivation.SPEC_ORIG_AND_DERV, Aggregator.Any.inst));
-			
+//			addTrigger(new ScorerData("BR_LONGEST_CLUSTER_LEM",	SameLongestClusterLemma.inst, WordnetDervRltdDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, Aggregator.Any.inst));
+//			addTrigger(new ScorerData("BR_LONGEST_CLUSTER_LEM",	SameLongestClusterLemma.inst, WordnetDervRltdDeriver.inst, Derivation.SPEC_ORIG_AND_DERV, Aggregator.Any.inst));
+//			addTrigger(new ScorerData("BR_LONGEST_CLUSTER_LEM",	SameLongestClusterLemma.inst, NomlexDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, Aggregator.Any.inst));
+//			addTrigger(new ScorerData("BR_LONGEST_CLUSTER_LEM",	SameLongestClusterLemma.inst, NomlexDeriver.inst, Derivation.SPEC_ORIG_AND_DERV, Aggregator.Any.inst));
+//			
 			break;
 		case NORMAL:
 			// Currently not using any scorer from this signal mechanism
@@ -111,6 +118,23 @@ public class BrownClustersSignalMechanism extends SignalMechanism {
 		public Boolean calcBoolPredicateSeedScore(Token textToken, Map<Class<?>, Object> textTriggerTokenMap, String textStr, PartOfSpeech textPos, String specStr, PartOfSpeech specPos, ScorerData scorerData) throws SignalMechanismException
 		{
 			List<String> textClusters = getBrownCluster(textStr);
+			List<String> specClusters = getBrownCluster(specStr);
+			if (textClusters == null || specClusters == null) {
+				return false;
+			}
+			String textLongestCluster = textClusters.get(textClusters.size()-1);
+			String specLongestCluster = specClusters.get(specClusters.size()-1);
+			return textLongestCluster.equals(specLongestCluster);
+		}
+	}
+
+	private static class SameLongestClusterArgumentHeadToken extends ArgumentExampleScorer {
+		private static final long serialVersionUID = -1571337226929664721L;
+		public static final SameLongestClusterArgumentHeadToken inst = new SameLongestClusterArgumentHeadToken();
+		@Override
+		public Boolean calcBoolArgumentExampleScore(AceEntityMention corefMention, Annotation headAnno, String textHeadTokenStr, PartOfSpeech textHeadTokenPos, String specStr, PartOfSpeech specPos, ScorerData scorerData) throws SignalMechanismException
+		{
+			List<String> textClusters = getBrownCluster(textHeadTokenStr);
 			List<String> specClusters = getBrownCluster(specStr);
 			if (textClusters == null || specClusters == null) {
 				return false;

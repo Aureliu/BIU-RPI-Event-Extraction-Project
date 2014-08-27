@@ -10,12 +10,14 @@ import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.util.InvalidXMLException;
 import org.xml.sax.SAXException;
 
+import eu.excitementproject.eop.common.utilities.uima.UimaUtils;
+import eu.excitementproject.eop.common.utilities.uima.UimaUtilsException;
+
 import ac.biu.nlp.nlp.ace_uima.odie.uima.InputMetadata;
-import ac.biu.nlp.nlp.ace_uima.utils.UimaUtils;
 
 public class OdieInputXmiBuilder {
 
-	private static void build(String inputFilePath, String xmiFilePath) throws InvalidXMLException, ResourceInitializationException, IOException, SAXException, AnalysisEngineProcessException {
+	private static void build(String inputFilePath, String xmiFilePath) throws InvalidXMLException, ResourceInitializationException, IOException, SAXException, AnalysisEngineProcessException, UimaUtilsException {
 		AnalysisEngine ae = UimaUtils.loadAE(OdieInputAnnotator.ANNOTATOR_FILE_PATH);
 		JCas jcas = ae.newJCas();
 		jcas.setDocumentLanguage("EN");
@@ -30,7 +32,7 @@ public class OdieInputXmiBuilder {
 
 	}
 
-	public static void main(String[] args) throws InvalidXMLException, ResourceInitializationException, IOException, SAXException, AnalysisEngineProcessException {
+	public static void main(String[] args) throws InvalidXMLException, ResourceInitializationException, IOException, SAXException, AnalysisEngineProcessException, UimaUtilsException {
 		if (args.length != 2) {
 			System.err.println(USAGE);
 			return;

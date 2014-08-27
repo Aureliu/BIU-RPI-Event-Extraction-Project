@@ -31,7 +31,7 @@ public class SumIntField extends StatsField {
 	@Override
 	public List<String> getValues() {
 		if (elements.isEmpty()) {
-			return Arrays.asList(new String[] {"-"});
+			return Arrays.asList(new String[] {""});
 		}
 		else {
 			Integer sum = MathUtils.sum(elements);

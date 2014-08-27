@@ -11,7 +11,7 @@ import org.apache.uima.cas.impl.TypeImpl;
 import org.apache.uima.cas.Type;
 
 /** 
- * Updated by JCasGen Mon Aug 18 12:56:04 IDT 2014
+ * Updated by JCasGen Mon Aug 25 18:56:30 IDT 2014
  * @generated */
 public class NounLemma_Type extends LemmaByPos_Type {
   /** @generated */

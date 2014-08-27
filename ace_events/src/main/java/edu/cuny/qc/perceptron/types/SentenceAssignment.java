@@ -4,7 +4,6 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -13,22 +12,19 @@ import java.util.Vector;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.apache.commons.lang.StringUtils;
 import org.apache.uima.cas.CASException;
 
+import ac.biu.nlp.nlp.ie.onthefly.input.SpecAnnotator;
+
 import com.google.common.collect.ImmutableList;
-import com.google.common.collect.Iterators;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 
-import ac.biu.nlp.nlp.ie.onthefly.input.SpecAnnotator;
 import edu.cuny.qc.ace.acetypes.AceEventMention;
 import edu.cuny.qc.ace.acetypes.AceEventMentionArgument;
 import edu.cuny.qc.ace.acetypes.AceMention;
 import edu.cuny.qc.perceptron.core.ArgOMethod;
 import edu.cuny.qc.perceptron.core.Controller;
-import edu.cuny.qc.perceptron.core.Perceptron;
-import edu.cuny.qc.perceptron.core.Pipeline;
 import edu.cuny.qc.perceptron.featureGenerator.GlobalFeatureGenerator;
 import edu.cuny.qc.perceptron.types.SentenceInstance.InstanceAnnotations;
 import edu.cuny.qc.scorer.ScorerData;
@@ -83,8 +79,9 @@ public class SentenceAssignment
 	/**
 	 * the index of last processed (assigned/searched) token
 	 */
-	int state = -1;
+	public int state = -1;
 	
+	public String sentInstId = "?";
 	static {
 		//System.err.println("??? SentenceAssignment: Assumes binary labels O,ATTACK (around oMethod)");
 		System.err.println("??? SentenceAssignment: Edge features are currently excluded, until I stabalize a policy with triggers. Then some policy should be decided for edges (that should handle, for example, the fact that if only the guess has some trigger that the gold doesn't have, then it would physically have more features than target (not same features just with different scores, like in the triggers' case), and this violated my assumption that guess and gold have the same features. Relevant methods: equals() (3 methods), makeEdgeLocalFeature(), BeamSearch.printBeam (check compatible)");
@@ -141,6 +138,11 @@ public class SentenceAssignment
 	{
 		return state;
 	}
+	
+	/// DEBUG
+	public static int ordGlobal = 0;
+	public int ord;
+	///
 	
 	/*
 	 * indicates if it violates gold-standard, useful for learning
@@ -213,10 +215,22 @@ public class SentenceAssignment
 		this.partial_scores.add(BigDecimal.ZERO);
 	}
 	
+	public void increaseStateTo(int newState) {
+		if (newState < state) {
+			throw new IllegalStateException("Tried to increase state to " + newState + ", but it's already in " + state);
+		}
+		else {
+			for (int n=state; n<newState; n++) {
+				incrementState();
+			}
+		}
+		//NOTE that if newState==state, nothing happen and we return silently
+	}
+	
 	/**
 	 * assignment to each node, node-->assignment
 	 */
-	protected Vector<Integer> nodeAssignment;
+	public Vector<Integer> nodeAssignment;
 	
 	public Vector<Integer> getNodeAssignment()
 	{
@@ -440,6 +454,11 @@ public class SentenceAssignment
 		signalsToValues = new HashMap<Integer, Map<String, String>>();
 		this.signalMechanismsContainer = signalMechanismsContainer;
 
+		/// DEBUG
+		ord = ordGlobal;
+		ordGlobal++;
+		///
+		
 		if (this.controller.oMethod.startsWith("G")) {
 			
 			FEATURE_POSITIVE_VAL = BigDecimal.ONE;
@@ -465,6 +484,8 @@ public class SentenceAssignment
 	public SentenceAssignment(SentenceInstance inst, SignalMechanismsContainer signalMechanismsContainer)
 	{
 		this(/*inst.types,*/signalMechanismsContainer, inst.eventArgCandidates, inst.target, inst.nodeTargetAlphabet, inst.edgeTargetAlphabet, inst.featureAlphabet, inst.controller);
+		
+		this.sentInstId = inst.sentInstID;
 		
 		for(int i=0; i < inst.size(); i++)
 		{
@@ -514,6 +535,12 @@ public class SentenceAssignment
 				int arg_index = inst.eventArgCandidates.indexOf(arg_mention);
 				feat_index = this.edgeTargetAlphabet.lookupIndex(arg.role);
 				arguments.put(arg_index, feat_index);
+				
+				/// DEBUG
+				if (arg.role.equals("Attacker")) {
+					System.out.printf("SentenceAssignment: %s:%s Attacker(%s): %s\n", sentInstId, arg_index, feat_index, arg_mention);
+				}
+				////
 			}
 		}
 		
@@ -628,8 +655,8 @@ public class SentenceAssignment
 //					Iterators.concat(signalsForEntityDependent.entrySet().iterator(), signalsForEntityFree.entrySet().iterator());
 			
 			/// DEBUG
-			System.out.printf("  ---SentenceAssignment.EdgeLocal: index=%s, nodeLabel=%s, entityIndex=%s\n       dependentSignals(%s): %s\n       freeSignals(%s): %s\n       allSignals(%s): %s\n",
-					index, nodeLabel, entityIndex, signalsForEntityDependent.size(), signalsForEntityDependent, signalsForEntityFree.size(), signalsForEntityFree, allSignalsForEntity.size(), allSignalsForEntity);
+//			System.out.printf("  ---SentenceAssignment.EdgeLocal: index=%s, nodeLabel=%s, entityIndex=%s\n       dependentSignals(%s): %s\n       freeSignals(%s): %s\n       allSignals(%s): %s\n",
+//					index, nodeLabel, entityIndex, signalsForEntityDependent.size(), signalsForEntityDependent, signalsForEntityFree.size(), signalsForEntityFree, allSignalsForEntity.size(), allSignalsForEntity);
 			////
 						
 			if (this.controller.oMethod.startsWith("G")) {
@@ -1248,7 +1275,7 @@ public class SentenceAssignment
 	
 	public String toString(Integer maxNodes)
 	{
-		StringBuffer ret = new StringBuffer();;
+		StringBuffer ret = new StringBuffer(String.format("%s/%s/%s: ", ord, sentInstId, state));
 		int i=0;
 		for(Integer assn : this.nodeAssignment)
 		{

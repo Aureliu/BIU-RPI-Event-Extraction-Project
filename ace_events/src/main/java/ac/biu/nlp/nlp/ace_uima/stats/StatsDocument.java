@@ -83,7 +83,7 @@ public class StatsDocument {
 		boolean first = true;
 		for (Entry<List<String>, StatsRow> row : rows.entrySet()) {
 			/// DEBUG
-			//System.out.printf("Statsdocument.dumpAsCsv(): key=%s\n", row.getKey());
+			System.out.printf("\nStatsdocument.dumpAsCsv() key=%s: ", row.getKey());
 			///
 			content.append(StringUtil.join(row.getKey(), SEPARATOR));
 			

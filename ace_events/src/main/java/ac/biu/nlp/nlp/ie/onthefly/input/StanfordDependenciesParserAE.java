@@ -41,6 +41,10 @@ import eu.excitementproject.eop.lap.biu.uima.ae.SingletonSynchronizedAnnotator;
  */
 public abstract class StanfordDependenciesParserAE<T extends BasicPipelinedParser> extends SingletonSynchronizedAnnotator<T> {
 
+	static {
+		System.err.printf("??? StanfordDependenciesParserAE: swallowing every error (just printing it and silently continuing), on a sentence level.\n");
+	}
+	
 	private static final String DEPPACKAGE = Dependency.class.getPackage().getName()+".";
 
 	private static final Set<String> DEEP_DEPENDENCY_RELATIONS = new LinkedHashSet<String>(Arrays.asList(new String[] {
@@ -50,126 +54,135 @@ public abstract class StanfordDependenciesParserAE<T extends BasicPipelinedParse
 	
 	@Override
 	public void process(JCas jcas) throws AnalysisEngineProcessException {
-		try {
+//		try {
 			
 			for (Sentence sentenceAnno : JCasUtil.select(jcas, Sentence.class)) {
-				List<PosTaggedToken> taggedTokens = new ArrayList<PosTaggedToken>();
-
-				// Make sure this list is an ArrayList, so that we can access elements by index freely (random access)
-				ArrayList<Token> tokenAnnotations = new ArrayList<Token>(JCasUtil.selectCovered(jcas, Token.class, sentenceAnno));
-			
-				// Build PosTaggedToken list of the sentence
-				for (Token tokenAnno : tokenAnnotations) {
-					String tokenText = tokenAnno.getCoveredText();
-					PennPartOfSpeech partOfSpeech = new PennPartOfSpeech(tokenAnno.getPos().getPosValue());
-					PosTaggedToken taggedToken = new PosTaggedToken(tokenText, partOfSpeech);
-					taggedTokens.add(taggedToken);
-				}
 				
-				BasicConstructionNode root;
-				ArrayList<BasicConstructionNode> orderedNodes;
+				//TODO: for now - swallow exceptions per sentence
+				try {
+					List<PosTaggedToken> taggedTokens = new ArrayList<PosTaggedToken>();
+	
+					// Make sure this list is an ArrayList, so that we can access elements by index freely (random access)
+					ArrayList<Token> tokenAnnotations = new ArrayList<Token>(JCasUtil.selectCovered(jcas, Token.class, sentenceAnno));
 				
-				synchronized (innerTool) {
-					innerTool.setSentence(taggedTokens);
-					innerTool.parse();
-					root = innerTool.getMutableParseTree();
-					orderedNodes = innerTool.getNodesOrderedByWords();
-				}
-				
-				if (tokenAnnotations.size() != orderedNodes.size()) {
-					throw new ParserRunException("Got parse for " + orderedNodes.size() +
-							" tokens, should have gotten according to the total number of tokens in the sentence: " + tokenAnnotations.size());
-				}
-				
-				// Get extra nodes
-				Set<BasicConstructionNode> extraNodes = AbstractNodeUtils.treeToLinkedHashSet(root);
-				extraNodes.removeAll(orderedNodes);
-				
-				// Get parent map
-				Map<BasicConstructionNode, BasicConstructionNode> parentMap = AbstractNodeUtils.parentMap(root);
-				
-				// Handle all concrete (non-extra) nodes
-				for (BasicConstructionNode node : orderedNodes) {
-					NodeInfo nodeInfo = node.getInfo().getNodeInfo();
-					
-					Token tokenAnno = null;
-					try {
-						tokenAnno = AbstractNodeCASUtils.nodeToToken(tokenAnnotations, node);
+					// Build PosTaggedToken list of the sentence
+					for (Token tokenAnno : tokenAnnotations) {
+						String tokenText = tokenAnno.getCoveredText();
+						PennPartOfSpeech partOfSpeech = new PennPartOfSpeech(tokenAnno.getPos().getPosValue());
+						PosTaggedToken taggedToken = new PosTaggedToken(tokenText, partOfSpeech);
+						taggedTokens.add(taggedToken);
 					}
-					// And another hack - ignore different texts (usually encoding problems)
-					catch (AbstractNodeCasException e) {
-						System.err.printf("\n\tGot this problem, ignoring it for now: %s.\n\tThe problem is in sentence: '%s'\n", e, sentenceAnno.getCoveredText());
-						continue;
+					
+					BasicConstructionNode root;
+					ArrayList<BasicConstructionNode> orderedNodes;
+					
+					synchronized (innerTool) {
+						innerTool.setSentence(taggedTokens);
+						innerTool.parse();
+						root = innerTool.getMutableParseTree();
+						orderedNodes = innerTool.getNodesOrderedByWords();
 					}
-
 					
-					// handle Lemma
-					Lemma lemma = new Lemma(jcas, tokenAnno.getBegin(), tokenAnno.getEnd());
-					lemma.setValue(nodeInfo.getWordLemma());
-					lemma.addToIndexes();
-					tokenAnno.setLemma(lemma);
+					if (tokenAnnotations.size() != orderedNodes.size()) {
+						throw new ParserRunException("Got parse for " + orderedNodes.size() +
+								" tokens, should have gotten according to the total number of tokens in the sentence: " + tokenAnnotations.size());
+					}
 					
-					// process dependency of concrete node
-					if (node != root) {
-						BasicConstructionNode parentNode = parentMap.get(node);
-						String relationName = node.getInfo().getEdgeInfo().getDependencyRelation().getStringRepresentation();
+					// Get extra nodes
+					Set<BasicConstructionNode> extraNodes = AbstractNodeUtils.treeToLinkedHashSet(root);
+					extraNodes.removeAll(orderedNodes);
+					
+					// Get parent map
+					Map<BasicConstructionNode, BasicConstructionNode> parentMap = AbstractNodeUtils.parentMap(root);
+					
+					// Handle all concrete (non-extra) nodes
+					for (BasicConstructionNode node : orderedNodes) {
+						NodeInfo nodeInfo = node.getInfo().getNodeInfo();
 						
-						//TODO this is a hack due to issue: https://github.com/hltfbk/Excitement-Open-Platform/issues/220
-						// When the problem is solved, remove the try-catch, and just leave the plain call to processDependency()
+						Token tokenAnno = null;
 						try {
-							processDependency(jcas, tokenAnno, parentNode, relationName, tokenAnnotations, sentenceAnno);
-						}
-						catch (ParserRunException e) {
-							if (e.getMessage().contains("is not defined in type system")) {
-								System.err.println("\n\tDouble-root problem in sentence: " + taggedTokens);
-								continue;
-							}
-							else {
-								throw e;
-							}
+							tokenAnno = AbstractNodeCASUtils.nodeToToken(tokenAnnotations, node);
 						}
 						// And another hack - ignore different texts (usually encoding problems)
 						catch (AbstractNodeCasException e) {
 							System.err.printf("\n\tGot this problem, ignoring it for now: %s.\n\tThe problem is in sentence: '%s'\n", e, sentenceAnno.getCoveredText());
 							continue;
 						}
-					}
-				}
-				
-				// Handle all extra nodes
-				for (BasicConstructionNode node : extraNodes) {
-					if (node.getAntecedent() == null) {
-						throw new ParserRunException("Got node that should have an antecedent, but doesn't have one: " + node);
+	
+						
+						// handle Lemma
+						Lemma lemma = new Lemma(jcas, tokenAnno.getBegin(), tokenAnno.getEnd());
+						lemma.setValue(nodeInfo.getWordLemma());
+						lemma.addToIndexes();
+						tokenAnno.setLemma(lemma);
+						
+						// process dependency of concrete node
+						if (node != root) {
+							BasicConstructionNode parentNode = parentMap.get(node);
+							String relationName = node.getInfo().getEdgeInfo().getDependencyRelation().getStringRepresentation();
+							
+							//TODO this is a hack due to issue: https://github.com/hltfbk/Excitement-Open-Platform/issues/220
+							// When the problem is solved, remove the try-catch, and just leave the plain call to processDependency()
+							try {
+								processDependency(jcas, tokenAnno, parentNode, relationName, tokenAnnotations, sentenceAnno);
+							}
+							catch (ParserRunException e) {
+								if (e.getMessage().contains("is not defined in type system")) {
+									System.err.println("\n\tDouble-root problem in sentence: " + taggedTokens);
+									continue;
+								}
+								else {
+									throw e;
+								}
+							}
+							// And another hack - ignore different texts (usually encoding problems)
+							catch (AbstractNodeCasException e) {
+								System.err.printf("\n\tGot this problem, ignoring it for now: %s.\n\tThe problem is in sentence: '%s'\n", e, sentenceAnno.getCoveredText());
+								continue;
+							}
+						}
 					}
 					
-					// the child in the dependency is the topmost antecedent
-					BasicConstructionNode dependencyChildNode = AbstractNodeUtils.getDeepAntecedentOf(node);
-					Token dependencyChildToken = null;
-					try {
-						dependencyChildToken = AbstractNodeCASUtils.nodeToToken(tokenAnnotations, dependencyChildNode);
+					// Handle all extra nodes
+					for (BasicConstructionNode node : extraNodes) {
+						if (node.getAntecedent() == null) {
+							throw new ParserRunException("Got node that should have an antecedent, but doesn't have one: " + node);
+						}
+						
+						// the child in the dependency is the topmost antecedent
+						BasicConstructionNode dependencyChildNode = AbstractNodeUtils.getDeepAntecedentOf(node);
+						Token dependencyChildToken = null;
+						try {
+							dependencyChildToken = AbstractNodeCASUtils.nodeToToken(tokenAnnotations, dependencyChildNode);
+						}
+						// And another hack - ignore different texts (usually encoding problems)
+						catch (AbstractNodeCasException e) {
+							System.err.printf("\n\tGot this problem, ignoring it for now: %s.\n\tThe problem is in sentence: '%s'\n", e, sentenceAnno.getCoveredText());
+							continue;
+						}
+	
+						
+						// the parent in the dependency is the node's parent
+						BasicConstructionNode dependencyParentNode = parentMap.get(node);
+						
+						String relationName = node.getInfo().getEdgeInfo().getDependencyRelation().getStringRepresentation();
+						processDependency(jcas, dependencyChildToken, dependencyParentNode, relationName, tokenAnnotations, sentenceAnno);
+						
 					}
-					// And another hack - ignore different texts (usually encoding problems)
-					catch (AbstractNodeCasException e) {
-						System.err.printf("\n\tGot this problem, ignoring it for now: %s.\n\tThe problem is in sentence: '%s'\n", e, sentenceAnno.getCoveredText());
-						continue;
-					}
-
-					
-					// the parent in the dependency is the node's parent
-					BasicConstructionNode dependencyParentNode = parentMap.get(node);
-					
-					String relationName = node.getInfo().getEdgeInfo().getDependencyRelation().getStringRepresentation();
-					processDependency(jcas, dependencyChildToken, dependencyParentNode, relationName, tokenAnnotations, sentenceAnno);
-					
+				} catch (Exception e) {
+					System.err.printf("StanfordDependenciesParserAE: got some error while parsing. sentence='%s' error: %s\n",
+							sentenceAnno.getCoveredText().replace("\n", " ").replace("\r", ""), e);
+					e.printStackTrace(System.err);
+					System.err.printf("#############################################\n");
 				}
 			}
-		} catch (ParserRunException e) {
-			throw new AnalysisEngineProcessException(AnalysisEngineProcessException.ANNOTATOR_EXCEPTION, null, e);
-		} catch (AbstractNodeCasException e) {
-			throw new AnalysisEngineProcessException(AnalysisEngineProcessException.ANNOTATOR_EXCEPTION, null, e);
-		} catch (UnsupportedPosTagStringException e) {
-			throw new AnalysisEngineProcessException(AnalysisEngineProcessException.ANNOTATOR_EXCEPTION, null, e);
-		}
+//		} catch (ParserRunException e) {
+//			throw new AnalysisEngineProcessException(AnalysisEngineProcessException.ANNOTATOR_EXCEPTION, null, e);
+//		} catch (AbstractNodeCasException e) {
+//			throw new AnalysisEngineProcessException(AnalysisEngineProcessException.ANNOTATOR_EXCEPTION, null, e);
+//		} catch (UnsupportedPosTagStringException e) {
+//			throw new AnalysisEngineProcessException(AnalysisEngineProcessException.ANNOTATOR_EXCEPTION, null, e);
+//		}
 	}
 	
 	public static Set<String> getDeepDependencyRelations() {

@@ -21,11 +21,14 @@ import edu.cuny.qc.perceptron.types.SentenceInstance;
 import edu.cuny.qc.perceptron.types.SentenceInstance.InstanceAnnotations;
 import edu.cuny.qc.perceptron.types.SignalInstance;
 import edu.cuny.qc.perceptron.types.SignalType;
+import edu.cuny.qc.util.Utils;
+import eu.excitementproject.eop.common.utilities.uima.UimaUtils;
 
 public abstract class SignalMechanism {
 	
 	static {
 		System.err.println("??? SignalMechanism: for argument, now considering only HEAD (not extent), and only FIRST WORD of head (could be more than one word). Need to think of handling MWEs.");
+		System.err.println("??? SignalMechanism: HACK: just put zero in the signal if we get an exception. What SHOULD happen is probably something like not adding the signal (but then I should make sure that down the pipeline they ignore this as well).");
 	}
 	
 	public SignalMechanism(Controller controller) throws SignalMechanismException {
@@ -91,17 +94,26 @@ public abstract class SignalMechanism {
 //					existingHash = existing.hashCode();
 //				}
 				////
-				//System.out.printf("%s NEW\n", Pipeline.detailedLog());
-				
+				//System.out.printf("%s calcing trigger signal, data=%s, doc=%s, inst=%s, i=%s\n", Utils.detailedLog(), data, textSentence.doc.docLine, textSentence, i);
 				//// DEBUG
 //				if (	/*(textSentence.sentInstID.equals("1b") && i==0 && textSentence.docID.equals("APW_ENG_20030424.0532")) ||*/
 //						(textSentence.sentInstID.equals("1a") && i==17)) {
 //					System.out.printf("\n\n\n\n\nvoo\n\n\n\n\n\n");
 //				}
 				////
-				PredicateScorer<?> scorer = (PredicateScorer<?>) data.scorer;
-				scorer.prepareCalc(spec, textTriggerToken, textTriggerTokenMap, docAllText, data);
-				BigDecimal score = data.elementAggregator.aggregate(scorer);
+//				PredicateScorer<?> scorer = (PredicateScorer<?>) data.scorer;
+				
+				BigDecimal score = calcTriggerScore(data.elementAggregator, spec, textTriggerToken, textTriggerTokenMap, docAllText, data, textSentence);
+//				try {
+//					scorer.prepareCalc(spec, textTriggerToken, textTriggerTokenMap, docAllText, data);
+//					score = data.elementAggregator.aggregate(scorer);
+//				} catch (Throwable e) {
+//					// HACK: just put zero in the signal if we get an exception. What SHOULD happen is probably something like not adding the signal (but then I should make sure that down the pipeline they ignore this as well).
+//					score = BigDecimal.ZERO;
+//					System.err.printf("SignalMechanism: Got some error while calcing score for trigger token=%s, doc=%s, scorer=%s: %s\n", UimaUtils.annotationToString(textTriggerToken), textSentence.doc.docLine, data, e);
+//					e.printStackTrace(System.err);
+//					System.err.printf("#############################################\n");
+//				}
 				
 				///// DEBUG
 //				if (textTriggerToken.getCoveredText().equals("attack") && !SignalInstance.isPositive.apply(score)) {
@@ -122,10 +134,16 @@ public abstract class SignalMechanism {
 //					signal.initHistory();
 					data.scorer.debug = true;
 					data.scorer.history = ArrayListMultimap.create();
+					
+					////
+					//System.out.printf("%s calcing trigger history signal, data=%s, doc=%s, inst=%s, i=%s\n", Utils.detailedLog(), data, textSentence.doc.docLine, textSentence, i);
+					//// DEBUG
 					// need to init again because the inner iterator is already exhausted, need to get a new one
-					PredicateScorer<?> scorer = (PredicateScorer<?>) data.scorer;
-					scorer.prepareCalc(spec, textTriggerToken, textTriggerTokenMap, docAllText, data);
-					debugAggregator.aggregate(scorer);
+//					PredicateScorer<?> scorer = (PredicateScorer<?>) data.scorer;
+//					scorer.prepareCalc(spec, textTriggerToken, textTriggerTokenMap, docAllText, data);
+//					debugAggregator.aggregate(scorer);
+					calcTriggerScore(debugAggregator, spec, textTriggerToken, textTriggerTokenMap, docAllText, data, textSentence);
+					
 					data.scorer.debug = false;
 					signal.history = data.scorer.history;
 					textSentence.markSignalUpdate();
@@ -134,6 +152,21 @@ public abstract class SignalMechanism {
 		}
 	}
 
+	private BigDecimal calcTriggerScore(Aggregator aggregator, JCas spec, Token textTriggerToken, Map<Class<?>, Object> textTriggerTokenMap, String docAllText, ScorerData data, SentenceInstance textSentence) {
+		BigDecimal score;
+		try {
+			PredicateScorer<?> scorer = (PredicateScorer<?>) data.scorer;
+			scorer.prepareCalc(spec, textTriggerToken, textTriggerTokenMap, docAllText, data);
+			score = aggregator.aggregate(scorer);
+		} catch (Throwable e) {
+			// HACK: just put zero in the signal if we get an exception. What SHOULD happen is probably something like not adding the signal (but then I should make sure that down the pipeline they ignore this as well).
+			score = BigDecimal.ZERO;
+			System.err.printf("SignalMechanism: Got some error while calcing score for trigger token=%s, doc=%s, scorer=%s: %s\n", UimaUtils.annotationToString(textTriggerToken), textSentence.doc.docLine, data, e);
+			e.printStackTrace(System.err);
+			System.err.printf("#############################################\n");
+		}
+		return score;
+	}
 //	public LinkedHashMap<ScorerData, Multimap<String, String>> getTriggerDetails(JCas spec, SentenceInstance textSentence, int i) throws SignalMechanismException {
 //		Token textTriggerToken = textSentence.getTokenAnnotation(i);
 //		Map<Class<?>, Object> textTriggerTokenMap = ((List<Map<Class<?>, Object>>) textSentence.get(InstanceAnnotations.Token_FEATURE_MAPs)).get(i);
@@ -141,7 +174,7 @@ public abstract class SignalMechanism {
 //		return getTriggerTokenDetails(spec, textSentence, textTriggerToken, textTriggerTokenMap);
 //	}
 
-	public void scoreDependentArgument(Map<ScorerData, SignalInstance> existingSignals, JCas spec, SentenceInstance textSentence, int i,	Argument argument, AceMention mention, boolean debug) throws SignalMechanismException {
+	public void scoreDependentArgument(Map<ScorerData, SignalInstance> existingSignals, JCas spec, SentenceInstance textSentence, int i, Argument argument, AceMention mention, boolean debug) throws SignalMechanismException {
 		Token textTriggerToken = textSentence.sent.getTokenAnnotation(i);
 		Map<Class<?>, Object> textTriggerTokenMap = ((List<Map<Class<?>, Object>>) textSentence.get(InstanceAnnotations.Token_FEATURE_MAPs)).get(i);
 		String docAllText = textSentence.doc.allText;
@@ -149,12 +182,25 @@ public abstract class SignalMechanism {
 		for (ScorerData data : scorers.get(SignalType.ARGUMENT_DEPENDENT)) {
 			SignalInstance signal = null;
 			if (!existingSignals.containsKey(data)) {
-				///DEBUG
-				ArgumentDependentScorer<?> scorer = (ArgumentDependentScorer<?>) data.scorer;
-				scorer.prepareCalc(spec, textTriggerToken, textTriggerTokenMap, argument, mention, docAllText, data);
-				BigDecimal score = data.elementAggregator.aggregate(scorer);
+//				ArgumentDependentScorer<?> scorer = (ArgumentDependentScorer<?>) data.scorer;
 				
-				signal = new SignalInstance(data, SignalType.TRIGGER, score);
+				////
+				//System.out.printf("%s calcing dep arg signal, data=%s, doc=%s, inst=%s, i=%s, mention=%s\n", Utils.detailedLog(), data, textSentence.doc.docLine, textSentence, i, mention);
+				//// DEBUG
+				BigDecimal score = calcArgDependentScore(data.elementAggregator, spec, textTriggerToken, textTriggerTokenMap, argument, mention, docAllText, data, textSentence);
+//				try {
+//					scorer.prepareCalc(spec, textTriggerToken, textTriggerTokenMap, argument, mention, docAllText, data);
+//					score = data.elementAggregator.aggregate(scorer);
+//				} catch (Throwable e) {
+//					// HACK: just put zero in the signal if we get an exception. What SHOULD happen is probably something like not adding the signal (but then I should make sure that down the pipeline they ignore this as well).
+//					score = BigDecimal.ZERO;
+//					System.err.printf("SignalMechanism: Got some error while calcing score for arg (dependent), trigger-token=%s, role=%s, mention=%s, doc=%s, scorer=%s: %s\n",
+//							UimaUtils.annotationToString(textTriggerToken), argument.getRole().getCoveredText(), mention, textSentence.doc.docLine, data, e);
+//					e.printStackTrace(System.err);
+//					System.err.printf("#############################################\n");
+//				}
+				
+				signal = new SignalInstance(data, SignalType.ARGUMENT_DEPENDENT, score);
 				existingSignals.put(data, signal);
 				//allTriggerScorers.add(data);
 				textSentence.markSignalUpdate();
@@ -166,16 +212,38 @@ public abstract class SignalMechanism {
 				if (signal.history == null) {
 					data.scorer.debug = true;
 					data.scorer.history = ArrayListMultimap.create();
+					////
+					//System.out.printf("%s calcing dep arg history signal, data=%s, doc=%s, inst=%s, i=%s, mention=%s\n", Utils.detailedLog(), data, textSentence.doc.docLine, textSentence, i, mention);
+					//// DEBUG
 					// need to init again because the inner iterator is already exhausted, need to get a new one
-					ArgumentDependentScorer<?> scorer = (ArgumentDependentScorer<?>) data.scorer;
-					scorer.prepareCalc(spec, textTriggerToken, textTriggerTokenMap, argument, mention, docAllText, data);
-					debugAggregator.aggregate(scorer);
+					calcArgDependentScore(debugAggregator, spec, textTriggerToken, textTriggerTokenMap, argument, mention, docAllText, data, textSentence);
+
+//					ArgumentDependentScorer<?> scorer = (ArgumentDependentScorer<?>) data.scorer;
+//					scorer.prepareCalc(spec, textTriggerToken, textTriggerTokenMap, argument, mention, docAllText, data);
+//					debugAggregator.aggregate(scorer);
 					data.scorer.debug = false;
 					signal.history = data.scorer.history;
 					textSentence.markSignalUpdate();
 				}
 			}
 		}
+	}
+
+	private BigDecimal calcArgDependentScore(Aggregator aggregator, JCas spec, Token textTriggerToken, Map<Class<?>, Object> textTriggerTokenMap, Argument argument, AceMention mention, String docAllText, ScorerData data, SentenceInstance textSentence) {
+		BigDecimal score;
+		try {
+			ArgumentDependentScorer<?> scorer = (ArgumentDependentScorer<?>) data.scorer;
+			scorer.prepareCalc(spec, textTriggerToken, textTriggerTokenMap, argument, mention, docAllText, data);
+			score = aggregator.aggregate(scorer);
+		} catch (Throwable e) {
+			// HACK: just put zero in the signal if we get an exception. What SHOULD happen is probably something like not adding the signal (but then I should make sure that down the pipeline they ignore this as well).
+			score = BigDecimal.ZERO;
+			System.err.printf("SignalMechanism: Got some error while calcing score for arg (dependent), trigger-token=%s, role=%s, mention=%s, doc=%s, scorer=%s: %s\n",
+					UimaUtils.annotationToString(textTriggerToken), argument.getRole().getCoveredText(), mention, textSentence.doc.docLine, data, e);
+			e.printStackTrace(System.err);
+			System.err.printf("#############################################\n");
+		}
+		return score;
 	}
 
 	public void scoreFreeArgument(Map<ScorerData, SignalInstance> existingSignals, JCas spec, SentenceInstance textSentence, Argument argument, AceMention mention, boolean debug) throws SignalMechanismException {
@@ -185,12 +253,25 @@ public abstract class SignalMechanism {
 		for (ScorerData data : scorers.get(SignalType.ARGUMENT_FREE)) {
 			SignalInstance signal = null;
 			if (!existingSignals.containsKey(data)) {
-				///DEBUG
-				ArgumentFreeScorer<?> scorer = (ArgumentFreeScorer<?>) data.scorer;
-				scorer.prepareCalc(spec, argument, mention, docAllText, docJCas, data);
-				BigDecimal score = data.elementAggregator.aggregate(scorer);
+//				ArgumentFreeScorer<?> scorer = (ArgumentFreeScorer<?>) data.scorer;
 				
-				signal = new SignalInstance(data, SignalType.TRIGGER, score);
+				////
+				//System.out.printf("%s calcing free arg signal, data=%s, doc=%s, inst=%s, mention=%s\n", Utils.detailedLog(), data, textSentence.doc.docLine, textSentence, mention);
+				//// DEBUG
+				BigDecimal score = calcArgFreeScore(data.elementAggregator, spec, argument, mention, docJCas, docAllText, data, textSentence);
+//				try {
+//					scorer.prepareCalc(spec, argument, mention, docAllText, docJCas, data);
+//					score = data.elementAggregator.aggregate(scorer);
+//				} catch (Throwable e) {
+//					// HACK: just put zero in the signal if we get an exception. What SHOULD happen is probably something like not adding the signal (but then I should make sure that down the pipeline they ignore this as well).
+//					score = BigDecimal.ZERO;
+//					System.err.printf("SignalMechanism: Got some error while calcing score for arg (free), role=%s, mention=%s, doc=%s, scorer=%s: %s\n",
+//							argument.getRole().getCoveredText(), mention, textSentence.doc.docLine, data, e);
+//					e.printStackTrace(System.err);
+//					System.err.printf("#############################################\n");
+//				}
+				
+				signal = new SignalInstance(data, SignalType.ARGUMENT_FREE, score);
 				existingSignals.put(data, signal);
 				//allTriggerScorers.add(data);
 				textSentence.markSignalUpdate();
@@ -203,15 +284,36 @@ public abstract class SignalMechanism {
 					data.scorer.debug = true;
 					data.scorer.history = ArrayListMultimap.create();
 					// need to init again because the inner iterator is already exhausted, need to get a new one
-					ArgumentFreeScorer<?> scorer = (ArgumentFreeScorer<?>) data.scorer;
-					scorer.prepareCalc(spec, argument, mention, docAllText, docJCas, data);
-					debugAggregator.aggregate(scorer);
+					////
+					//System.out.printf("%s calcing free arg history signal, data=%s, doc=%s, inst=%s, mention=%s\n", Utils.detailedLog(), data, textSentence.doc.docLine, textSentence, mention);
+					//// DEBUG
+					calcArgFreeScore(debugAggregator, spec, argument, mention, docJCas, docAllText, data, textSentence);
+//					ArgumentFreeScorer<?> scorer = (ArgumentFreeScorer<?>) data.scorer;
+//					scorer.prepareCalc(spec, argument, mention, docAllText, docJCas, data);
+//					debugAggregator.aggregate(scorer);
 					data.scorer.debug = false;
 					signal.history = data.scorer.history;
 					textSentence.markSignalUpdate();
 				}
 			}
 		}
+	}
+
+	private BigDecimal calcArgFreeScore(Aggregator aggregator, JCas spec, Argument argument, AceMention mention, JCas docJCas, String docAllText, ScorerData data, SentenceInstance textSentence) {
+		BigDecimal score;
+		try {
+			ArgumentFreeScorer<?> scorer = (ArgumentFreeScorer<?>) data.scorer;
+			scorer.prepareCalc(spec, argument, mention, docAllText, docJCas, data);
+			score = aggregator.aggregate(scorer);
+		} catch (Throwable e) {
+			// HACK: just put zero in the signal if we get an exception. What SHOULD happen is probably something like not adding the signal (but then I should make sure that down the pipeline they ignore this as well).
+			score = BigDecimal.ZERO;
+			System.err.printf("SignalMechanism: Got some error while calcing score for arg (free), role=%s, mention=%s, doc=%s, scorer=%s: %s\n",
+					argument.getRole().getCoveredText(), mention, textSentence.doc.docLine, data, e);
+			e.printStackTrace(System.err);
+			System.err.printf("#############################################\n");
+		}
+		return score;
 	}
 
 

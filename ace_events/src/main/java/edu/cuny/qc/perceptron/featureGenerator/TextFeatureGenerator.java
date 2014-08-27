@@ -60,6 +60,21 @@ public class TextFeatureGenerator
 	// dictionary for title/time words
 	private static Map<String, List<String>> dicts = new HashMap<String, List<String>>();
 	
+	//public TextFeatureGenerator()
+	static
+	{
+		System.err.printf("");
+		
+		try
+		{
+			readDict("../ace_events_large_resources/src/main/resources/data/dict");
+		} 
+		catch (IOException e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
 	public static void readDict(String dirName) throws IOException
 	{
 		File dir = new File(dirName);
@@ -88,19 +103,6 @@ public class TextFeatureGenerator
 				}
 			}
 			reader.close();
-		}
-	}
-	
-	//public TextFeatureGenerator()
-	static
-	{
-		try
-		{
-			readDict("../ace_events_large_resources/src/main/resources/data/dict");
-		} 
-		catch (IOException e)
-		{
-			e.printStackTrace();
 		}
 	}
 	
@@ -232,13 +234,13 @@ public class TextFeatureGenerator
 					tokenFeatureMaps.add(map);
 				}
 				
-			} 
-			catch (IOException e)
-			{
-				e.printStackTrace();
-				return;
+			} catch (Exception e) {
+				System.err.printf("TextFeatureGenerator: got some error while doPreprocess(). error: %s, sentence(tokens)='%s'\n",
+						e, tokens);
+				e.printStackTrace(System.err);
+				System.err.printf("#############################################\n");
 			}
-		}
+		} 
 	}
 	
 	/**

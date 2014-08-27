@@ -214,7 +214,14 @@ public class Pipeline
 					}
 					
 					/// DEBUG
-					System.out.printf("%s         ^^^ Pipeline.readInstanceList: got %s instances, but added only %s of them to result. Now result is of size %s.\n", Utils.detailedLog(), insts.size(), count, result.size());
+					///System.out.printf("%s\t\t^^^ Pipeline.readInstanceList: got %s instances, but added only %s of them to result. Now result is of size %s.\n", Utils.detailedLog(), insts.size(), count, result.size());
+					////
+					/// DEBUG
+					for (SentenceInstance inst : insts.values()) {
+						if (inst.sentInstID.equals("47d")) {
+							System.out.printf("^^^Pipeline.readInstanceList: More Hard-coded print of 47d: %s\n", inst.target);
+						}
+					}
 					////
 				}
 				System.out.printf("%s Finished reading sentence instances - now we have a total of %d instances from all documents.\n", Utils.detailedLog(), result.size());

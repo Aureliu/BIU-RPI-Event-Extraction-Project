@@ -24,8 +24,8 @@ import ac.biu.nlp.nlp.ace_uima.odie.uima.Argument;
 import ac.biu.nlp.nlp.ace_uima.odie.uima.ArgumentSeed;
 import ac.biu.nlp.nlp.ace_uima.odie.uima.InputMetadata;
 import ac.biu.nlp.nlp.ace_uima.odie.uima.Predicate;
-import ac.biu.nlp.nlp.ace_uima.utils.UimaUtils;
 import eu.excitementproject.eop.common.utilities.file.FileUtils;
+import eu.excitementproject.eop.common.utilities.uima.UimaUtils;
 
 public class OdieInputAnnotator extends JCasAnnotator_ImplBase {
 	public static final String LIST_SEPARATOR = ",";

@@ -30,7 +30,7 @@ public class SignalAnalyzerDocumentCollection extends StatsDocumentCollection {
 		//triggerDoc.update(without(key, new String[] {"folder", "docId", "label", "signal", "agg"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
 		triggerDoc.update(without(key, new String[] {"folder", "category", "docId"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
 		//triggerDoc.update(without(key, new String[] {"folder", "category", "docId", "signal", "agg"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
-		triggerDoc.update(without(key, new String[] {"folder", "category", "docId", "label"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
+		triggerDoc.update(without(key, new String[] {"folder", "category", "docId", "spec"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
 		//triggerDoc.update(without(key, new String[] {"folder", "category", "docId", "label", "signal", "agg"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
 		triggerDoc.endUpdate();
 		
@@ -47,10 +47,10 @@ public class SignalAnalyzerDocumentCollection extends StatsDocumentCollection {
 //		globalDoc.endUpdate();
 	}
 	
-	public void dumpAsCsvFiles(File triggerFile, File argFile, File globalFile) throws IOException { //add a specific parameter for each specific file
+	public void dumpAsCsvFiles(File triggerFile/*, File argFile, File globalFile*/) throws IOException { //add a specific parameter for each specific file
 		triggerDoc.dumpAsCsv(triggerFile);
-		argDoc.dumpAsCsv(argFile);
-		globalDoc.dumpAsCsv(globalFile);
+//		argDoc.dumpAsCsv(argFile);
+//		globalDoc.dumpAsCsv(globalFile);
 	}
 	
 	
@@ -59,32 +59,34 @@ public class SignalAnalyzerDocumentCollection extends StatsDocumentCollection {
 	@SuppressWarnings("serial")
 	private StatsDocument triggerDoc = new StatsDocument(
 			Arrays.asList(new String[] {
-					"folder", "category", "docId", "label", "signal", /*"spec-ind", */"deriver", "derivation", "left-sense", "right-sense", "agg"
+					"folder", "category", "docId", "spec", "role", "signal", /*"spec-ind", */"deriver", "derivation", "left-sense", "right-sense", "agg"
 			}),
 			new LinkedHashMap<FieldName,StatsFieldType>() {{
-				put(new FieldName("Performance", ""), StatsFieldType.SIGNAL_PERFORMANCE_TRIGGER);
-				put(new FieldName("SpecTokens", "TruePositive"), StatsFieldType.LIST_COUNTS);
-				put(new FieldName("SpecTokens", "FalsePositive"), StatsFieldType.LIST_COUNTS);
-				put(new FieldName("SpecTextTokens", "TruePositive"), StatsFieldType.LIST_VALUES);
-				put(new FieldName("SpecTextTokens", "FalsePositive"), StatsFieldType.LIST_VALUES);
+				put(new FieldName("SpecItems", "TruePositive"), StatsFieldType.LIST_COUNTS);
+				put(new FieldName("SpecItems", "FalsePositive"), StatsFieldType.LIST_COUNTS);
+				put(new FieldName("SpecTextItems", "TruePositive"), StatsFieldType.LIST_VALUES);
+				put(new FieldName("SpecTextItems", "FalsePositive"), StatsFieldType.LIST_VALUES);
+				put(new FieldName("TriggerPerformance", ""), StatsFieldType.SIGNAL_PERFORMANCE_TRIGGER);
+				put(new FieldName("ArgDepPerformance", ""), StatsFieldType.SIGNAL_PERFORMANCE_ARG_DEP);
+				put(new FieldName("ArgFreePerformance", ""), StatsFieldType.SIGNAL_PERFORMANCE_ARG_FREE);
 			}});
 	
-	@SuppressWarnings("serial")
-	private StatsDocument argDoc = new StatsDocument(
-			Arrays.asList(new String[] {
-					"EventSubType", "ArgType", "Role"
-			}),
-			new LinkedHashMap<FieldName,StatsFieldType>() {{
-				//put(new FieldName("Perfrmace", ""), StatsFieldType.PERFORMANCE);
-			}});
-	
-	@SuppressWarnings("serial")
-	private StatsDocument globalDoc = new StatsDocument(
-			Arrays.asList(new String[] {
-					"?"
-			}),
-			new LinkedHashMap<FieldName,StatsFieldType>() {{
-				//put(new FieldName("Perfrmace", ""), StatsFieldType.PERFORMANCE);
-			}});
-
+//	@SuppressWarnings("serial")
+//	private StatsDocument argDoc = new StatsDocument(
+//			Arrays.asList(new String[] {
+//					"EventSubType", "ArgType", "Role"
+//			}),
+//			new LinkedHashMap<FieldName,StatsFieldType>() {{
+//				//put(new FieldName("Perfrmace", ""), StatsFieldType.PERFORMANCE);
+//			}});
+//	
+//	@SuppressWarnings("serial")
+//	private StatsDocument globalDoc = new StatsDocument(
+//			Arrays.asList(new String[] {
+//					"?"
+//			}),
+//			new LinkedHashMap<FieldName,StatsFieldType>() {{
+//				//put(new FieldName("Perfrmace", ""), StatsFieldType.PERFORMANCE);
+//			}});
+//
 }

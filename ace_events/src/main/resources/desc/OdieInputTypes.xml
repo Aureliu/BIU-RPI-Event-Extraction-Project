@@ -152,6 +152,36 @@
           <description/>
           <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.UsageSample</rangeTypeName>
         </featureDescription>
+        <featureDescription>
+          <name>treeoutDepNoContext</name>
+          <description/>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>treeoutDepGenPosNoContext</name>
+          <description/>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>treeoutDepSpecPosNoContext</name>
+          <description/>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>treeoutDepWithContext</name>
+          <description/>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>treeoutDepGenPosWithContext</name>
+          <description/>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>treeoutDepSpecPosWithContext</name>
+          <description/>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
       </features>
     </typeDescription>
     <typeDescription>
@@ -192,6 +222,11 @@
       <supertypeName>uima.tcas.Annotation</supertypeName>
       <features>
         <featureDescription>
+          <name>role</name>
+          <description/>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
           <name>value</name>
           <description/>
           <rangeTypeName>uima.cas.String</rangeTypeName>
@@ -229,6 +264,36 @@
       <supertypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout</supertypeName>
     </typeDescription>
     <typeDescription>
+      <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepNoContext</name>
+      <description/>
+      <supertypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout</supertypeName>
+    </typeDescription>
+    <typeDescription>
+      <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepGenPosNoContext</name>
+      <description/>
+      <supertypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout</supertypeName>
+    </typeDescription>
+    <typeDescription>
+      <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepSpecPosNoContext</name>
+      <description/>
+      <supertypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout</supertypeName>
+    </typeDescription>
+    <typeDescription>
+      <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepWithContext</name>
+      <description/>
+      <supertypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout</supertypeName>
+    </typeDescription>
+    <typeDescription>
+      <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepGenPosWithContext</name>
+      <description/>
+      <supertypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout</supertypeName>
+    </typeDescription>
+    <typeDescription>
+      <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepSpecPosWithContext</name>
+      <description/>
+      <supertypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout</supertypeName>
+    </typeDescription>
+    <typeDescription>
       <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutSampleText</name>
       <description/>
       <supertypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout</supertypeName>
@@ -237,6 +302,50 @@
       <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutTokenDepGenPosWithContext</name>
       <description/>
       <supertypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout</supertypeName>
+    </typeDescription>
+    <typeDescription>
+      <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.TAll</name>
+      <description/>
+      <supertypeName>uima.cas.TOP</supertypeName>
+      <features>
+        <featureDescription>
+          <name>cls</name>
+          <description/>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>role</name>
+          <description/>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>val</name>
+          <description/>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+      </features>
+    </typeDescription>
+    <typeDescription>
+      <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.VAll</name>
+      <description/>
+      <supertypeName>uima.cas.TOP</supertypeName>
+      <features>
+        <featureDescription>
+          <name>cls</name>
+          <description/>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>treeout</name>
+          <description/>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>val</name>
+          <description/>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+      </features>
     </typeDescription>
   </types>
 </typeSystemDescription>

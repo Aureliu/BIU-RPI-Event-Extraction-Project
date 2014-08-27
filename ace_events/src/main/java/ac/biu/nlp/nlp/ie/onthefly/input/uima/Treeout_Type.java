@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** 
- * Updated by JCasGen Mon Aug 18 12:56:04 IDT 2014
+ * Updated by JCasGen Mon Aug 25 18:56:30 IDT 2014
  * @generated */
 public class Treeout_Type extends Annotation_Type {
   /** @generated */
@@ -64,11 +64,33 @@ public class Treeout_Type extends Annotation_Type {
 
 
 
+  /** @generated */
+  final Feature casFeat_role;
+  /** @generated */
+  final int     casFeatCode_role;
+  /** @generated */ 
+  public String getRole(int addr) {
+        if (featOkTst && casFeat_role == null)
+      jcas.throwFeatMissing("role", "ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout");
+    return ll_cas.ll_getStringValue(addr, casFeatCode_role);
+  }
+  /** @generated */    
+  public void setRole(int addr, String v) {
+        if (featOkTst && casFeat_role == null)
+      jcas.throwFeatMissing("role", "ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout");
+    ll_cas.ll_setStringValue(addr, casFeatCode_role, v);}
+    
+  
+ 
   /** initialize variables to correspond with Cas Type and Features
 	* @generated */
   public Treeout_Type(JCas jcas, Type casType) {
     super(jcas, casType);
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());
+
+ 
+    casFeat_role = jcas.getRequiredFeatureDE(casType, "role", "uima.cas.String", featOkTst);
+    casFeatCode_role  = (null == casFeat_role) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_role).getCode();
 
  
     casFeat_value = jcas.getRequiredFeatureDE(casType, "value", "uima.cas.String", featOkTst);

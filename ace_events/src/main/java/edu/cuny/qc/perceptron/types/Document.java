@@ -1139,7 +1139,13 @@ public class Document implements java.io.Serializable
 		}
 		
 		if (controller.useSignalFiles && signalsUpdated) {
+			// DEBUG
+			//System.out.printf("%s starting re-loading signal file for dumping, %s\n", Utils.detailedLog(), docLine);
+			////
 			BundledSignals stored = loadSignals(controller);
+			// DEBUG
+			//System.out.printf("%s finished re-loading signal file for dumping, %s\n", Utils.detailedLog(), docLine);
+			////
 			if (stored == null) {
 				stored = new BundledSignals();
 			}
@@ -1175,7 +1181,7 @@ public class Document implements java.io.Serializable
 					for (Map<ScorerData, SignalInstance> iter5 : iter4.values()) {
 						for (Iterator<Entry<ScorerData, SignalInstance>> iterator = iter5.entrySet().iterator(); iterator.hasNext();) {
 							Entry<ScorerData, SignalInstance> entry = iterator.next();
-							if (!signalMechanismsContainer.argumentScorers.contains(entry.getKey())) {
+							if (!signalMechanismsContainer.triggerScorers.contains(entry.getKey())) {
 								iterator.remove();
 							}
 						}

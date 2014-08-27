@@ -20,11 +20,10 @@ import org.apache.uima.util.InvalidXMLException;
 import org.apache.uima.util.XMLSerializer;
 import org.xml.sax.SAXException;
 
-import ac.biu.nlp.nlp.ace_uima.utils.UimaUtils;
-import ac.biu.nlp.nlp.ace_uima.utils.UimaUtilsException;
-
 import eu.excitementproject.eop.common.utilities.file.FileUtils;
 import eu.excitementproject.eop.common.utilities.file.RecursiveFileListIterator;
+import eu.excitementproject.eop.common.utilities.uima.UimaUtils;
+import eu.excitementproject.eop.common.utilities.uima.UimaUtilsException;
 import eu.excitementproject.eop.lap.LAPException;
 
 public class AceReader {

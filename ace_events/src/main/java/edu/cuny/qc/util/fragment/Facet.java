@@ -6,6 +6,7 @@ import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence;
 import ac.biu.nlp.nlp.ace_uima.uima.EventMentionAnchor;
 import ac.biu.nlp.nlp.ace_uima.uima.EventMentionArgument;
 import eu.excitementproject.eop.common.representation.parse.tree.dependency.basic.BasicNode;
+import eu.excitementproject.eop.common.representation.parse.tree.dependency.view.NodeShortString;
 
 public class Facet {
 	public Facet(BasicNode predicateHead, BasicNode argumentHead, Annotation /*EventMentionAnchor*/ predicateHeadAnno, EventMentionArgument argAnno, Sentence sentence) {
@@ -62,6 +63,12 @@ public class Facet {
 			return false;
 		}
 		return true;
+	}
+	
+	public String toString() {
+		return String.format("Facet(pred=%s, arg=%s)",
+				new NodeShortString.WordRelPos().toString(predicateHead),
+				new NodeShortString.WordRelPos().toString(argumentHead));
 	}
 	
 	private BasicNode predicateHead;

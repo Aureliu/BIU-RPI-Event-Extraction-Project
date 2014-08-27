@@ -99,7 +99,11 @@ public class Controller implements java.io.Serializable
 	public boolean lazyTargetFeatures = false;
 	
 	public String easyFirstHost = "127.0.0.1";
-	public Integer easyFirstPort = 8080;
+	public Integer easyFirstPort = 8081;
+	
+	public boolean calcDebugSignalsAnyway = false;
+	
+	
 	
 	public Controller()
 	{
@@ -270,6 +274,10 @@ public class Controller implements java.io.Serializable
 			{
 				easyFirstPort = Integer.valueOf(fields[1]);
 			}
+			else if(fields[0].equalsIgnoreCase("calcDebugSignalsAnyway"))
+			{
+				calcDebugSignalsAnyway = Boolean.parseBoolean(fields[1]);
+			}
 		}
 		
 		
@@ -296,7 +304,8 @@ public class Controller implements java.io.Serializable
 		" testOnlyTypes: " + testOnlyTypes + " sentenceSortingMethod: " + sentenceSortingMethod +
 		"\n\tfilterSentenceInstance: " + filterSentenceInstance + " enhanceSpecs: " + enhanceSpecs +
 		" takeExtendedTags: " + takeExtendedTags + " argOMethod: " + argOMethod + " lazyTargetFeatures: " + lazyTargetFeatures +
-		" easyFirstHost: " + easyFirstHost + " easyFirstPort: " + easyFirstPort;
+		" easyFirstHost: " + easyFirstHost + " easyFirstPort: " + easyFirstPort +
+		"\n\t calcDebugSignalsAnyway: " + calcDebugSignalsAnyway;
 		
 		return ret + "\n";
 	}

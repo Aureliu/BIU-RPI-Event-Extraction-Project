@@ -127,26 +127,27 @@ public class WordNetSignalMechanism extends SignalMechanism {
 
 		switch (controller.featureProfile) {
 		case TOKEN_BASELINE: break;
-		case ANALYSIS:
-			// tiny amount for debug
-			//addTriggers(SYNONYM_RELATION,   Juxtaposition.ANCESTOR, new Integer[] {1}, ALL_DERIVERS, DERVS_NONE, new Integer[] {1}, new Integer[] {1}, new PartOfSpeech[] {null, /*NOUN, VERB, ADJ, ADV*/}, AGG_ANY_MIN2);
-			
-			//END of analysis2!
-			/// Group A
-			addTriggers(SYNONYM_RELATION,   Juxtaposition.ANCESTOR, new Integer[] {1}, ALL_DERIVERS, DERVS_NONE, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN, /*VERB, ADJ, ADV*/}, AGG_ANY);
-			addTriggers(HYPERNYM_RELATIONS, Juxtaposition.ANCESTOR, LENGTHS_1_2_3, ALL_DERIVERS, DERVS_NONE_AND, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN/*, VERB*/}, AGG_ANY);
-			addTriggers(HYPERNYM1_RELATION, Juxtaposition.ANCESTOR, LENGTHS_1_2_3, ALL_DERIVERS, DERVS_NONE_AND, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN/*, VERB*/}, AGG_ANY);
-			addTriggers(HYPERNYM2_RELATION, Juxtaposition.ANCESTOR, LENGTHS_1_2_3, ALL_DERIVERS, DERVS_NONE_AND, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN/*, VERB*/}, AGG_ANY);
-	
-			/// Group B
-			addTriggers(HYPERNYM_RELATIONS, Juxtaposition.COUSIN_STRICT, new Integer[] {1}, ALL_DERIVERS, DERVS_NONE_AND, new Integer[] {1}, SENSE_NUMS, new PartOfSpeech[] {null/*, NOUN, VERB*/}, AGG_MIN2);
-			addTriggers(HYPERNYM_RELATIONS, Juxtaposition.COUSIN_STRICT, new Integer[] {2}, ALL_DERIVERS, DERVS_NONE_AND, new Integer[] {1}, SENSE_NUMS, new PartOfSpeech[] {null/*, NOUN, VERB*/}, AGG_MIN3);
-			addTriggers(HYPERNYM_RELATIONS, Juxtaposition.COUSIN_STRICT, new Integer[] {3}, ALL_DERIVERS, DERVS_TEXT_ORIG_AND_DERV, new Integer[] {-1}, SENSE_NUMS, new PartOfSpeech[] {null/*, NOUN, VERB*/}, AGG_MIN2_MIN3);
-	
-			addTriggers(ALL_RELATIONS_SMALL,   Juxtaposition.ANCESTOR, LENGTHS_1_2_3_TOP, ALL_DERIVERS, DERVS_ALL, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN, VERB/*, ADJ, ADV*/}, ALL_AGGS);
-			addTriggers(ALL_RELATIONS_BIG,   Juxtaposition.ANCESTOR, LENGTHS_1_2_3_TOP, ALL_DERIVERS, DERVS_ALL, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN, VERB/*, ADJ, ADV*/}, ALL_AGGS);
-		
-			break;
+//		case ANALYSIS:
+//			// tiny amount for debug
+//			//addTriggers(SYNONYM_RELATION,   Juxtaposition.ANCESTOR, new Integer[] {1}, ALL_DERIVERS, DERVS_NONE, new Integer[] {1}, new Integer[] {1}, new PartOfSpeech[] {null, /*NOUN, VERB, ADJ, ADV*/}, AGG_ANY_MIN2);
+//			
+//			//END of analysis2!
+//			/// Group A
+//			addTriggers(SYNONYM_RELATION,   Juxtaposition.ANCESTOR, new Integer[] {1}, ALL_DERIVERS, DERVS_NONE, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN, /*VERB, ADJ, ADV*/}, AGG_ANY);
+//			addTriggers(HYPERNYM_RELATIONS, Juxtaposition.ANCESTOR, LENGTHS_1_2_3, ALL_DERIVERS, DERVS_NONE_AND, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN/*, VERB*/}, AGG_ANY);
+//			addTriggers(HYPERNYM1_RELATION, Juxtaposition.ANCESTOR, LENGTHS_1_2_3, ALL_DERIVERS, DERVS_NONE_AND, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN/*, VERB*/}, AGG_ANY);
+//			addTriggers(HYPERNYM2_RELATION, Juxtaposition.ANCESTOR, LENGTHS_1_2_3, ALL_DERIVERS, DERVS_NONE_AND, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN/*, VERB*/}, AGG_ANY);
+//	
+//			/// Group B
+//			addTriggers(HYPERNYM_RELATIONS, Juxtaposition.COUSIN_STRICT, new Integer[] {1}, ALL_DERIVERS, DERVS_NONE_AND, new Integer[] {1}, SENSE_NUMS, new PartOfSpeech[] {null/*, NOUN, VERB*/}, AGG_MIN2);
+//			addTriggers(HYPERNYM_RELATIONS, Juxtaposition.COUSIN_STRICT, new Integer[] {2}, ALL_DERIVERS, DERVS_NONE_AND, new Integer[] {1}, SENSE_NUMS, new PartOfSpeech[] {null/*, NOUN, VERB*/}, AGG_MIN3);
+//			addTriggers(HYPERNYM_RELATIONS, Juxtaposition.COUSIN_STRICT, new Integer[] {3}, ALL_DERIVERS, DERVS_TEXT_ORIG_AND_DERV, new Integer[] {-1}, SENSE_NUMS, new PartOfSpeech[] {null/*, NOUN, VERB*/}, AGG_MIN2_MIN3);
+//	
+//			addTriggers(ALL_RELATIONS_SMALL,   Juxtaposition.ANCESTOR, LENGTHS_1_2_3_TOP, ALL_DERIVERS, DERVS_ALL, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN, VERB/*, ADJ, ADV*/}, ALL_AGGS);
+//			addTriggers(ALL_RELATIONS_BIG,   Juxtaposition.ANCESTOR, LENGTHS_1_2_3_TOP, ALL_DERIVERS, DERVS_ALL, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN, VERB/*, ADJ, ADV*/}, ALL_AGGS);
+//		
+//			break;
+		case ANALYSIS: //for now, analyze just the normal ones
 		case NORMAL:
 			//17.7.14 Some conclusions:
 			// - all three AllRelations (one big, two smalls) do exactly the same on batch1)
@@ -349,8 +350,8 @@ public class WordNetSignalMechanism extends SignalMechanism {
 	}
 	@Override
 	public void entrypointPreDocument(Document doc) {
-		System.out.printf("%s @@@@ PreDocument cache stats:\n", Utils.detailedLog());
-		logCacheStats();
+//		System.out.printf("%s @@@@ PreDocument cache stats:\n", Utils.detailedLog());
+//		logCacheStats();
 	}
 //	@Override
 //	public void entrypointPreDocumentBunch() {

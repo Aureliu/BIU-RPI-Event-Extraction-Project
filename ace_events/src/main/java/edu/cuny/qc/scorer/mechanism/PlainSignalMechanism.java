@@ -27,7 +27,7 @@ import eu.excitementproject.eop.common.representation.partofspeech.PartOfSpeech;
 public class PlainSignalMechanism extends SignalMechanism {
 
 	static {
-		System.err.printf("??? PlainSignalMechanism: remove one of PL_DERIVATION scorers - they are bot hthere only as an experiment!!!\n");
+		System.err.printf("??? PlainSignalMechanism: remove one of PL_DERIVATION scorers - they are both there only as an experiment!!!\n");
 	}
 	@Override
 	public void addScorers() {

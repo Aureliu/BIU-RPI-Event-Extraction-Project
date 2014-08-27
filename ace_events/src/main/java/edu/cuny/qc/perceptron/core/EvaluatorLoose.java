@@ -55,6 +55,9 @@ public class EvaluatorLoose extends Evaluator
 		}
 	}
 	
+	/**
+	 * Redundant!!!
+	 */
 	public static class GetArgumentsResult {
 		public List<Argument> arguments = null;
 		public double totalArgCandidates = 0;
@@ -67,7 +70,7 @@ public class EvaluatorLoose extends Evaluator
 	 * @return
 	 */
 	@Override
-	public void evaluteArgument(List<SentenceAssignment> results, List<SentenceAssignment> goldTargets, boolean argFree, Score score)
+	public void evaluteArgument(List<SentenceAssignment> results, List<SentenceAssignment> goldTargets, Score score)
 	{
 		double count_arg_total = 0;
 		double count_arg_ans = 0;
@@ -81,20 +84,11 @@ public class EvaluatorLoose extends Evaluator
 			SentenceAssignment gold = goldTargets.get(i);//goldInstance.target;
 			
 			// count num of args
-			if (argFree) {
-				GetArgumentsResult args_ans = getArguments(gold, ans, 0);
-				GetArgumentsResult args_gold = getArguments(gold, gold, ???);
-				count_arg_ans += args_ans.arguments.size();
-				count_arg_gold += args_gold.arguments.size();
-				count_arg_total += gold.nodeAssignment.size()*gold.eventArgCandidates.size();
-			}
-			else {
-				GetArgumentsResult args_ans = getArguments(gold, ans, specificNode);
-				GetArgumentsResult args_gold = getArguments(gold, gold, specificNode);
-				count_arg_ans += args_ans.arguments.size();
-				count_arg_gold += args_gold.arguments.size();
-				count_arg_total += args_ans.totalArgCandidates;
-			}
+			GetArgumentsResult args_ans = getArguments(gold, ans);
+			GetArgumentsResult args_gold = getArguments(gold, gold);
+			count_arg_ans += args_ans.arguments.size();
+			count_arg_gold += args_gold.arguments.size();
+			count_arg_total += gold.eventArgCandidates.size();
 			
 			// count num of correct args
 			for(Argument arg_ans : args_ans.arguments)
@@ -148,20 +142,19 @@ public class EvaluatorLoose extends Evaluator
 
 	}
 
-	protected static GetArgumentsResult getArguments(SentenceAssignment gold, SentenceAssignment ans, Integer specificNode)
+	protected static GetArgumentsResult getArguments(SentenceAssignment gold, SentenceAssignment ans)
 	{
 		GetArgumentsResult result = new GetArgumentsResult();
 		result.arguments = new ArrayList<Argument>();
 		
+		/// DEBUG
+//		if (ans!=gold) {
+//			System.out.printf(" | ");
+//		}
+		///
 		Map<Integer, Map<Integer, Integer>> edgeAssns = ans.getEdgeAssignment();
 		if(edgeAssns != null)
 		{
-			if (specificNode != null && edgeAssns.get(specificNode)!=null) {
-				Map<Integer, Integer> forSpecificNode = edgeAssns.get(specificNode);
-				edgeAssns = new HashMap<Integer, Map<Integer, Integer>>(1);
-				edgeAssns.put(specificNode, forSpecificNode);
-			}
-			
 			for(Integer nodeIndex : edgeAssns.keySet())
 			{
 				String nodeLabel = ans.getLabelAtToken(nodeIndex);
@@ -190,6 +183,12 @@ public class EvaluatorLoose extends Evaluator
 						{
 							result.arguments.add(argument);
 						}
+						
+						/// DEBUG
+						if (ans!=gold && role.equals("Attacker")) {
+							System.out.printf("(%s,%s,%s) ", ans.ord, nodeIndex, mentionIndex);
+						}
+						///
 					}
 				}
 			}

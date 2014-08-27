@@ -3,6 +3,7 @@ package edu.cuny.qc.util.fragment;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
@@ -29,6 +30,7 @@ import eu.excitementproject.eop.common.datastructures.OneToManyBidiMultiHashMap;
 import eu.excitementproject.eop.common.representation.parse.representation.basic.InfoGetFields;
 import eu.excitementproject.eop.common.representation.parse.tree.TreeAndParentMap.TreeAndParentMapException;
 import eu.excitementproject.eop.common.representation.parse.tree.dependency.basic.BasicNode;
+import eu.excitementproject.eop.common.representation.parse.tree.dependency.view.TreeToLineString;
 import eu.excitementproject.eop.common.utilities.uima.UimaUtils;
 import eu.excitementproject.eop.lap.biu.uima.CasTreeConverter;
 
@@ -41,7 +43,7 @@ public class FragmentLayer {
 	public Map<BasicNode, Facet> linkToFacet;
 	
 	static {
-		System.err.printf("??? FragmentLayer: I am letting quite a few erorrs from the converter get away, which costs me in lost sentence.s Maybe I should inspect them and reduce them (like by removing some more weird tokens).\n");
+		System.err.println("??? FragmentLayer: I am letting quite a few erorrs from the converter get away, which costs me in lost sentence. Maybe I should inspect them and reduce them (like by removing some more weird tokens). Some examples - stuff with hyphens (sometimes the AceAbnormalError wouldn't show the hyphen, like with President[579:588] which is really President-Elect in CNN_CF_20030304.1900.02), numbers (years and such), stuff with the percent sign, maybe punctuation stuff, etc.\n");
 	}
 	
 	public FragmentLayer(JCas jcas, CasTreeConverter converter) throws FragmentLayerException {
@@ -95,7 +97,7 @@ public class FragmentLayer {
 		if (covering != null) {
 			MultiMap<Sentence, Token> sentence2tokens = Utils.getCoveringSentences(covering, tokenIndex);
 			for (Entry<Sentence,Collection<Token>> entry : sentence2tokens.entrySet()) {
-				FragmentAndReference frag = getFragmentBySentenceAndTokens(entry.getKey(), entry.getValue(), null);
+				FragmentAndReference frag = getFragmentBySentenceAndTokens(entry.getKey(), entry.getValue(), null, false, null);
 				result.add(frag.getFragmentRoot());
 			}
 		}
@@ -111,9 +113,10 @@ public class FragmentLayer {
 		return root;
 	}
 
-	public FragmentAndReference getFragmentBySentenceAndTokens(Sentence sentence, Collection<Token> tokens, Facet facet) throws TreeAndParentMapException, TreeFragmentBuilderException, FragmentLayerException {
+	public FragmentAndReference getFragmentBySentenceAndTokens(Sentence sentence, Collection<Token> tokens, Map<Token, String> magicTokens, boolean removeConj, Facet facet) throws TreeAndParentMapException, TreeFragmentBuilderException, FragmentLayerException {
 		BasicNode root = sentence2root.get(sentence);
 		Set<BasicNode> targetNodes = new LinkedHashSet<BasicNode>(tokens.size());
+		Map<BasicNode, String> magicNodes = new HashMap<BasicNode, String>();
 		for (Token token : tokens) {
 			Collection<BasicNode> nodes = token2nodes.get(token);
 			/// DEBUG
@@ -125,9 +128,20 @@ public class FragmentLayer {
 				throw new FragmentLayerException("Token " + UimaUtils.annotationToString(token) + " doesn't have a corresponding tree node. Maybe for some reason CasTreeConvereter skipped or had some mistake with it?");
 			}
 			targetNodes.addAll(nodes); //Also get duplicated nodes!
+			
+			if (magicTokens != null && magicTokens.keySet().contains(token)) {
+				for (BasicNode node : nodes) {
+					magicNodes.put(node, magicTokens.get(token));
+				}
+			}
 		}
+		/// DEBUG
+//		if (sentence.getCoveredText().startsWith("Are you willing to pay")) {
+//			System.err.printf("\n\n\n\n\n\nGot cha!!!!!\n\n\n\n");
+//		}
+		///
 		//logger.trace("-------- fragmenter.build(" + AnotherBasicNodeUtils.getNodeString(root) + ", " + AnotherBasicNodeUtils.getNodesString(targetNodes) + ")");
-		FragmentAndReference fragRef = fragmenter.build(root, targetNodes, facet);
+		FragmentAndReference fragRef = fragmenter.build(root, targetNodes, magicNodes, removeConj, facet);
 		return fragRef;
 	}
 	
@@ -145,7 +159,7 @@ public class FragmentLayer {
 	 * @throws AceAbnormalMessage 
 	 * @throws FragmentLayerException 
 	 */
-	public FragmentAndReference getRootLinkingTreeFragment(Annotation /*EventMentionAnchor*/ eventAnchor, Annotation /*BasicArgumentMentionHead*/ argHead, Object /*EventMentionArgument*/ argMention) throws CASException, AceException, TreeAndParentMapException, TreeFragmentBuilderException, AceAbnormalMessage, FragmentLayerException {
+	public FragmentAndReference getRootLinkingTreeFragment(Annotation /*EventMentionAnchor*/ eventAnchor, Annotation /*BasicArgumentMentionHead*/ argHead, boolean removeConj, Object /*EventMentionArgument*/ argMention) throws CASException, AceException, TreeAndParentMapException, TreeFragmentBuilderException, AceAbnormalMessage, FragmentLayerException {
 		if (eventAnchor == null || argHead == null) {
 			throw new AceAbnormalMessage("NullParam");
 		}
@@ -155,7 +169,17 @@ public class FragmentLayer {
 		MultiMap<Sentence, Token> sentence2tokens_1 = Utils.getCoveringSentences(eventAnchor, tokenIndex);
 		MultiMap<Sentence, Token> sentence2tokens_2 = Utils.getCoveringSentences(argHead, tokenIndex);
 		if (sentence2tokens_1.size() == 0 || sentence2tokens_2.size() == 0) {
-			throw new AceAbnormalMessage(String.format("ERR:No Covering Sentence for trigger '%s' or arg '%s' (or both)", eventAnchor.getCoveredText(), argHead.getCoveredText()));
+			String err;
+			if (sentence2tokens_1.size() == 0 && sentence2tokens_2.size() != 0) {
+				err = String.format("trigger=%s", UimaUtils.annotationToString(eventAnchor));
+			}
+			else if (sentence2tokens_2.size() == 0 && sentence2tokens_1.size() != 0) {
+				err = String.format("arg=%s", UimaUtils.annotationToString(argHead));
+			}
+			else {
+				err = String.format("trigger=%s and arg=%s", UimaUtils.annotationToString(eventAnchor), UimaUtils.annotationToString(argHead));
+			}
+			throw new AceAbnormalMessage(String.format("ERR:No Covering Sentence for %s", err));
 //			throw new AceAbnormalMessage("ERR:No Covering Sentence"
 //					//, String.format("Got at least one of the two annotations, that is not covered by any sentence: " +
 //					//"(%s sentences, %s sentences)", sentence2tokens_1.size(), sentence2tokens_2.size()), logger
@@ -172,12 +196,15 @@ public class FragmentLayer {
 					s2t1.getKey(), s2t2.getKey()), null);
 		}
 		Sentence sentence = s2t1.getKey();
+		/// DEBUG
+		//System.err.printf("FragmentLayer: sentence=%s\n", UimaUtils.annotationToString(sentence));
+		////
 
 		//logger.trace("%%% 2");
 
 		// get the fragment of each covering annotation
-		FragmentAndReference frag1 = getFragmentBySentenceAndTokens(sentence, s2t1.getValue(), null);
-		FragmentAndReference frag2 = getFragmentBySentenceAndTokens(sentence, s2t2.getValue(), null);
+		FragmentAndReference frag1 = getFragmentBySentenceAndTokens(sentence, s2t1.getValue(), null, false, null);
+		FragmentAndReference frag2 = getFragmentBySentenceAndTokens(sentence, s2t2.getValue(), null, false, null);
 		//logger.trace("%%% 3");
 
 		// and now... get the fragment containing the roots of both fragments!
@@ -199,8 +226,12 @@ public class FragmentLayer {
 		
 		Facet facet = new Facet(frag1.getOrigReference(), frag2.getOrigReference(), eventAnchor, (EventMentionArgument) argMention, sentence);
 
+		Map<Token, String> magicTokens = new HashMap<Token, String>();
+		magicTokens.put(root1, TreeToLineString.MAGIC_NODE_PREDICATE);
+		magicTokens.put(root2, TreeToLineString.MAGIC_NODE_ARGUMENT);
+		
 		List<Token> bothRoots = Arrays.asList(new Token[] {root1, root2});
-		FragmentAndReference connectingFrag = getFragmentBySentenceAndTokens(sentence, bothRoots, facet);
+		FragmentAndReference connectingFrag = getFragmentBySentenceAndTokens(sentence, bothRoots, magicTokens, removeConj, facet);
 		//logger.trace("%%% 5");
 
 		linkToFacet.put(connectingFrag.getFragmentRoot(), facet);

@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** 
- * Updated by JCasGen Mon Aug 18 12:56:04 IDT 2014
+ * Updated by JCasGen Mon Aug 25 18:56:30 IDT 2014
  * @generated */
 public class PredicateInUsageSample_Type extends Annotation_Type {
   /** @generated */

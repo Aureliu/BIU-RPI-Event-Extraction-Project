@@ -1,9 +1,7 @@
 package edu.cuny.qc.scorer.mechanism;
 
-import java.util.AbstractMap.SimpleEntry;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.concurrent.ExecutionException;
 
 import org.apache.uima.cas.CASException;
@@ -11,12 +9,14 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 import ac.biu.nlp.nlp.ace_uima.AceAbnormalMessage;
 import ac.biu.nlp.nlp.ace_uima.AceException;
-import ac.biu.nlp.nlp.ie.onthefly.input.SpecAnnotator;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepGenPosNoContext;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepGenPosWithContext;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepNoContext;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepGenPosNoContext;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepNoContext;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepSpecPosNoContext;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepSpecPosNoContext;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepSpecPosWithContext;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepWithContext;
@@ -39,7 +39,6 @@ import edu.cuny.qc.scorer.ScorerData;
 import edu.cuny.qc.scorer.SignalMechanism;
 import edu.cuny.qc.scorer.SignalMechanismException;
 import edu.cuny.qc.util.TokenAnnotations;
-import edu.cuny.qc.util.Utils;
 import edu.cuny.qc.util.fragment.FragmentAndReference;
 import edu.cuny.qc.util.fragment.FragmentLayer;
 import edu.cuny.qc.util.fragment.FragmentLayerException;
@@ -66,11 +65,22 @@ public class DependencySignalMechanism extends SignalMechanism {
 		switch(controller.featureProfile) {
 		case TOKEN_BASELINE: break;
 		case ANALYSIS: //fall-through, analyze exactly all normal scorers 
+			addArgumentDependent(new ScorerData("DP_DEP_NOCON",			SameLinkDepNoContext.inst,			Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_GENPOS_NOCON",	SameLinkDepGenPosNoContext.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_SPECPOS_NOCON",	SameLinkDepSpecPosNoContext.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_PREP_NOCON",			SameLinkDepPrepNoContext.inst,			Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_PREP_GENPOS_NOCON",		SameLinkDepPrepGenPosNoContext.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_PREP_SPECPOS_NOCON",	SameLinkDepPrepSpecPosNoContext.inst,	Aggregator.Any.inst		));
+//			addArgumentDependent(new ScorerData("DP_DEP_CON",			SameLinkDepWithContext.inst,		Aggregator.Any.inst		));
+//			addArgumentDependent(new ScorerData("DP_DEP_GENPOS_CON",	SameLinkDepGenPosWithContext.inst,	Aggregator.Any.inst		));
+//			addArgumentDependent(new ScorerData("DP_DEP_SPECPOS_CON",	SameLinkDepSpecPosWithContext.inst,	Aggregator.Any.inst		));
+			break;
 		case NORMAL:
 			//addTrigger(new ScorerData(null, new Or(new OneDepUp("pobj"), new OneDepUp("dobj"), new OneDepUp("nsubj")), true));
 
-			addArgumentDependent(new ScorerData("DP_DEP_NOCON",			SameLinkDepNoContext.inst,			Aggregator.Any.inst		));
-			addArgumentDependent(new ScorerData("DP_DEP_GENPOS_NOCON",	SameLinkDepGenPosNoContext.inst,	Aggregator.Any.inst		));
+//			addArgumentDependent(new ScorerData("DP_DEP_NOCON",			SameLinkDepNoContext.inst,			Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_GENPOS_NOCON",		SameLinkDepGenPosNoContext.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_PREP_GENPOS_NOCON",	SameLinkDepPrepGenPosNoContext.inst,	Aggregator.Any.inst		));
 //			addArgumentDependent(new ScorerData("DP_DEP_SPECPOS_NOCON",	SameLinkDepSpecPosNoContext.inst,	Aggregator.Any.inst		));
 //			addArgumentDependent(new ScorerData("DP_DEP_CON",			SameLinkDepWithContext.inst,		Aggregator.Any.inst		));
 //			addArgumentDependent(new ScorerData("DP_DEP_GENPOS_CON",	SameLinkDepGenPosWithContext.inst,	Aggregator.Any.inst		));
@@ -124,6 +134,51 @@ public class DependencySignalMechanism extends SignalMechanism {
 		}
 	}
 	
+	public static class SpecTreeoutQuery {
+		public Class<? extends Treeout> specClass;
+		public ArgumentInUsageSample specAius;
+		public SpecTreeoutQuery(Class<? extends Treeout> specClass, ArgumentInUsageSample specAius) {
+			this.specClass = specClass; this.specAius = specAius;
+		}
+		@Override public int hashCode() {
+			final int prime = 269;
+			int result = 1;
+			result = prime*result + specClass.hashCode();
+			result = prime*result + UimaUtils.hashCodeAnnotationByTypeAndSpan(specAius);
+			return result;
+		}
+		@Override public boolean equals(Object obj) {
+			if (obj == null) { return false; }
+			if (obj == this) { return true; }
+			if (obj.getClass() != getClass()) { return false; }
+			SpecTreeoutQuery rhs = (SpecTreeoutQuery) obj;
+			return UimaUtils.equalsAnnotationByTypeAndSpan(specAius, rhs.specAius) && specClass==rhs.specClass;
+		}
+	}
+	
+	public static class TriggerArgQuery {
+		public Token textTriggerToken;
+		public Annotation textArgHeadAnno;
+		public TriggerArgQuery(Token textTriggerToken, Annotation textArgHeadAnno) {
+			this.textTriggerToken = textTriggerToken; this.textArgHeadAnno = textArgHeadAnno;
+		}
+		@Override public int hashCode() {
+			final int prime = 139;
+			int result = 1;
+			result = prime*result + UimaUtils.hashCodeAnnotationByTypeAndSpan(textTriggerToken);
+			result = prime*result + UimaUtils.hashCodeAnnotationByTypeAndSpan(textArgHeadAnno);
+			return result;
+		}
+		@Override public boolean equals(Object obj) {
+			if (obj == null) { return false; }
+			if (obj == this) { return true; }
+			if (obj.getClass() != getClass()) { return false; }
+			TriggerArgQuery rhs = (TriggerArgQuery) obj;
+			return UimaUtils.equalsAnnotationByTypeAndSpan(textTriggerToken, rhs.textTriggerToken) && UimaUtils.equalsAnnotationByTypeAndSpan(textArgHeadAnno, rhs.textArgHeadAnno);
+//			return new EqualsBuilder().append(textTriggerToken, rhs.textTriggerToken).append(textArgHeadAnno, rhs.textArgHeadAnno).isEquals();
+		}
+	}
+	
 	public static abstract class SameLinkOverTreeout extends ArgumentInUsageSampleScorer {
 		private static final long serialVersionUID = -6165360939857557992L;
 		public Class<? extends Treeout> specClass;
@@ -136,13 +191,12 @@ public class DependencySignalMechanism extends SignalMechanism {
 		@Override
 		public Boolean calcBoolPredicateSeedScore(Token textTriggerToken, AceMention textArgMention, Annotation textArgHeadAnno, ArgumentInUsageSample specAius, ScorerData scorerData) throws SignalMechanismException {
 			try {
-				Treeout specTreeoutAnno = UimaUtils.selectCoveredSingle(specClass, specAius);
-				specTreeout = specTreeoutAnno.getValue();
+				specTreeout = cacheSpecTreeouts.get(new SpecTreeoutQuery(specClass, specAius));
 
 				// DEBUG
 				//System.out.printf("%s       SameLinkOverTreeout(%s).calc: Starting textTriggerToken=%s, textArgHeadAnno=%s, specAius=%s, specTreeout=%s\n", Utils.detailedLog(), this.getClass().getSimpleName(), UimaUtils.annotationToString(textTriggerToken), UimaUtils.annotationToString(textArgHeadAnno), specAius.getCoveredText(), specTreeout);
 				///
-				Map<String, String> outsMap = cacheTextTreeouts.get(new SimpleEntry<Annotation, Annotation>(textTriggerToken, textArgHeadAnno));
+				Map<String, String> outsMap = cacheTextTreeouts.get(new TriggerArgQuery(textTriggerToken, textArgHeadAnno));
 				textTreeout = outsMap.get(textOutsMapKey);
 				
 				boolean result = textTreeout.equals(specTreeout);
@@ -151,8 +205,6 @@ public class DependencySignalMechanism extends SignalMechanism {
 				///
 				return result;
 			} catch (ExecutionException e) {
-				throw new SignalMechanismException(e);
-			} catch (CASException e) {
 				throw new SignalMechanismException(e);
 			}
 		}
@@ -181,27 +233,42 @@ public class DependencySignalMechanism extends SignalMechanism {
 		public SameLinkDepSpecPosNoContext() {super(TreeoutDepSpecPosNoContext.class, "DepSpecPosNoContext");}
 	}
 	
-	public static class SameLinkDepWithContext extends SameLinkOverTreeout {
-		private static final long serialVersionUID = 1694575499404281966L;
-		public static final SameLinkDepWithContext inst = new SameLinkDepWithContext();
-		public SameLinkDepWithContext() {super(TreeoutDepWithContext.class, "DepWithContext");}
+	public static class SameLinkDepPrepNoContext extends SameLinkOverTreeout {
+		private static final long serialVersionUID = -3889859804888325372L;
+		public static final SameLinkDepPrepNoContext inst = new SameLinkDepPrepNoContext();
+		public SameLinkDepPrepNoContext() {super(TreeoutDepPrepNoContext.class, "DepPrepNoContext");}
 	}
 	
-	public static class SameLinkDepGenPosWithContext extends SameLinkOverTreeout {
-		private static final long serialVersionUID = 1235776745686238698L;
-		public static final SameLinkDepGenPosWithContext inst = new SameLinkDepGenPosWithContext();
-		public SameLinkDepGenPosWithContext() {super(TreeoutDepGenPosWithContext.class, "DepGenPosWithContext");}
+	public static class SameLinkDepPrepGenPosNoContext extends SameLinkOverTreeout {
+		private static final long serialVersionUID = 4968227265598879023L;
+		public static final SameLinkDepPrepGenPosNoContext inst = new SameLinkDepPrepGenPosNoContext();
+		public SameLinkDepPrepGenPosNoContext() {super(TreeoutDepPrepGenPosNoContext.class, "DepPrepGenPosNoContext");}
 	}
 	
-	public static class SameLinkDepSpecPosWithContext extends SameLinkOverTreeout {
-		private static final long serialVersionUID = 5285506462168848680L;
-		public static final SameLinkDepSpecPosWithContext inst = new SameLinkDepSpecPosWithContext();
-		public SameLinkDepSpecPosWithContext() {super(TreeoutDepSpecPosWithContext.class, "DepSpecPosWithContext");}
+	public static class SameLinkDepPrepSpecPosNoContext extends SameLinkOverTreeout {
+		private static final long serialVersionUID = 817021276873360255L;
+		public static final SameLinkDepPrepSpecPosNoContext inst = new SameLinkDepPrepSpecPosNoContext();
+		public SameLinkDepPrepSpecPosNoContext() {super(TreeoutDepPrepSpecPosNoContext.class, "DepPrepSpecPosNoContext");}
 	}
 	
-//	public static class TreeoutsContainer {
-//		public String depNoContext, depGenPosNoContext, depSpecPosNoContext, depWithContext, depGenPosWithContext, depSpecPosWithContext;
+//	public static class SameLinkDepWithContext extends SameLinkOverTreeout {
+//		private static final long serialVersionUID = 1694575499404281966L;
+//		public static final SameLinkDepWithContext inst = new SameLinkDepWithContext();
+//		public SameLinkDepWithContext() {super(TreeoutDepWithContext.class, "DepWithContext");}
 //	}
+//	
+//	public static class SameLinkDepGenPosWithContext extends SameLinkOverTreeout {
+//		private static final long serialVersionUID = 1235776745686238698L;
+//		public static final SameLinkDepGenPosWithContext inst = new SameLinkDepGenPosWithContext();
+//		public SameLinkDepGenPosWithContext() {super(TreeoutDepGenPosWithContext.class, "DepGenPosWithContext");}
+//	}
+//	
+//	public static class SameLinkDepSpecPosWithContext extends SameLinkOverTreeout {
+//		private static final long serialVersionUID = 5285506462168848680L;
+//		public static final SameLinkDepSpecPosWithContext inst = new SameLinkDepSpecPosWithContext();
+//		public SameLinkDepSpecPosWithContext() {super(TreeoutDepSpecPosWithContext.class, "DepSpecPosWithContext");}
+//	}
+	
 
 	public static /*transient*/ FragmentLayer textFragmentLayer;
 //	public FragmentLayer specFragmentLayer;
@@ -214,29 +281,60 @@ public class DependencySignalMechanism extends SignalMechanism {
 //			return result;
 //		}
 //	});
-	private static /*transient*/ LoadingCache<Entry<? extends Annotation, ? extends Annotation>, Map<String, String>> cacheTextTreeouts = CacheBuilder.newBuilder()
+	
+	private static LoadingCache<SpecTreeoutQuery, String> cacheSpecTreeouts = CacheBuilder.newBuilder()
 	.maximumSize(100000)
-	.build(new CacheLoader<Entry<? extends Annotation, ? extends Annotation>, Map<String, String>>() {
-		public Map<String, String> load(Entry<? extends Annotation, ? extends Annotation> textAnnos) throws FragmentLayerException, CASException, AceException, TreeAndParentMapException, TreeFragmentBuilderException {
+	.build(new CacheLoader<SpecTreeoutQuery, String>() {
+		public String load(SpecTreeoutQuery query) throws CASException {
+			Treeout specTreeoutAnno = UimaUtils.selectCoveredSingle(query.specClass, query.specAius);
+			String result = specTreeoutAnno.getValue();
+			return result;
+		}
+	});
+	
+	private static /*transient*/ LoadingCache<TriggerArgQuery, Map<String, String>> cacheTextTreeouts = CacheBuilder.newBuilder()
+	.maximumSize(100000)
+	.build(new CacheLoader<TriggerArgQuery, Map<String, String>>() {
+		public Map<String, String> load(TriggerArgQuery query) throws FragmentLayerException, CASException, AceException, TreeAndParentMapException, TreeFragmentBuilderException {
+//			Annotation textTrigger = textAnnos.getKey();
+//			Annotation textArg = textAnnos.getValue();
+			
+			List<BasicNode> subroots = null;
+			List<BasicNode> subrootsNoConj = null;
+			String err = null;
 			try {
-				Annotation textTrigger = textAnnos.getKey();
-				Annotation textArg = textAnnos.getValue();
-				
-				FragmentAndReference linkFrag = textFragmentLayer.getRootLinkingTreeFragment(textTrigger, textArg, null);
-				List<BasicNode> subroots = ImmutableList.of(linkFrag.getFragmentRoot());
-				
-				Map<String, String> result = Maps.newHashMap();
-				result.put("DepNoContext",			TreeToLineString.getStringRel(subroots, false));
-				result.put("DepGenPosNoContext",	TreeToLineString.getStringRelCanonicalPos(subroots, false));
-				result.put("DepSpecPosNoContext",	TreeToLineString.getStringRelPos(subroots, false));
-				result.put("DepWithContext",		TreeToLineString.getStringRel(subroots, true));
-				result.put("DepGenPosWithContext",	TreeToLineString.getStringRelCanonicalPos(subroots, true));
-				result.put("DepSpecPosWithContext",	TreeToLineString.getStringRelPos(subroots, true));
-
-				return result;
+				FragmentAndReference linkFrag = textFragmentLayer.getRootLinkingTreeFragment(query.textTriggerToken, query.textArgHeadAnno, false, null);
+				subroots = ImmutableList.of(linkFrag.getFragmentRoot());
+				FragmentAndReference linkFragNoConj = textFragmentLayer.getRootLinkingTreeFragment(query.textTriggerToken, query.textArgHeadAnno, true, null);
+				subrootsNoConj = ImmutableList.of(linkFragNoConj.getFragmentRoot());
 			} catch (AceAbnormalMessage e) {
-				throw new FragmentLayerException(e);
+				System.err.printf("DependencySignalMechanism: Got AceAbnormalError while calcing link: %s\n", e.getMessage());
+				e.printStackTrace(System.err);
+				System.err.printf("#############################################\n");
+				err = e.getMessage();
+			} catch (Exception e) {
+				System.err.printf("DependencySignalMechanism: Got Exception while calcing link: %s\n", e);
+				e.printStackTrace(System.err);
+				System.err.printf("#############################################\n");
+				err = e.getMessage();
 			}
+				
+			Map<String, String> result = Maps.newHashMap();
+			result.put("DepNoContext",			err!=null?err: TreeToLineString.getStringRel(subroots, false, true));
+			result.put("DepGenPosNoContext",	err!=null?err: TreeToLineString.getStringRelCanonicalPos(subroots, false, true));
+			result.put("DepSpecPosNoContext",	err!=null?err: TreeToLineString.getStringRelPos(subroots, false, true));
+//			result.put("DepWithContext",		err!=null?err: TreeToLineString.getStringRel(subroots, true, true));
+//			result.put("DepGenPosWithContext",	err!=null?err: TreeToLineString.getStringRelCanonicalPos(subroots, true, true));
+//			result.put("DepSpecPosWithContext",	err!=null?err: TreeToLineString.getStringRelPos(subroots, true, true));
+
+			result.put("DepPrepNoContext",			err!=null?err: TreeToLineString.getStringRelPrep(subrootsNoConj, false, true));
+			result.put("DepPrepGenPosNoContext",	err!=null?err: TreeToLineString.getStringRelPrepCanonicalPos(subrootsNoConj, false, true));
+			result.put("DepPrepSpecPosNoContext",	err!=null?err: TreeToLineString.getStringRelPrepPos(subrootsNoConj, false, true));
+//			result.put("DepPrepWithContext",		err!=null?err: TreeToLineString.getStringRelPrep(subrootsNoConj, true, true));
+//			result.put("DepPrepGenPosWithContext",	err!=null?err: TreeToLineString.getStringRelPrepCanonicalPos(subrootsNoConj, true, true));
+//			result.put("DepPrepSpecPosWithContext",	err!=null?err: TreeToLineString.getStringRelPrepPos(subrootsNoConj, true, true));
+
+			return result;
 		}
 	});
 }

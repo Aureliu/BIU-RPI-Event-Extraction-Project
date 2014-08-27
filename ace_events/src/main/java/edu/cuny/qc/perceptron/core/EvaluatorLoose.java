@@ -1,6 +1,7 @@
 package edu.cuny.qc.perceptron.core;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -54,6 +55,11 @@ public class EvaluatorLoose extends Evaluator
 		}
 	}
 	
+	public static class GetArgumentsResult {
+		public List<Argument> arguments = null;
+		public double totalArgCandidates = 0;
+	}
+	
 	/**
 	 * evaluate the performance of argument
 	 * @param results
@@ -61,7 +67,7 @@ public class EvaluatorLoose extends Evaluator
 	 * @return
 	 */
 	@Override
-	public void evaluteArgument(List<SentenceAssignment> results, List<SentenceAssignment> goldTargets, Score score)
+	public void evaluteArgument(List<SentenceAssignment> results, List<SentenceAssignment> goldTargets, boolean argFree, Score score)
 	{
 		double count_arg_total = 0;
 		double count_arg_ans = 0;
@@ -75,15 +81,25 @@ public class EvaluatorLoose extends Evaluator
 			SentenceAssignment gold = goldTargets.get(i);//goldInstance.target;
 			
 			// count num of args
-			List<Argument> args_ans = getArguments(gold, ans, count_arg_total);
-			List<Argument> args_gold = getArguments(gold, gold, null); 
-			count_arg_ans += args_ans.size();
-			count_arg_gold += args_gold.size();
+			if (argFree) {
+				GetArgumentsResult args_ans = getArguments(gold, ans, 0);
+				GetArgumentsResult args_gold = getArguments(gold, gold, ???);
+				count_arg_ans += args_ans.arguments.size();
+				count_arg_gold += args_gold.arguments.size();
+				count_arg_total += gold.nodeAssignment.size()*gold.eventArgCandidates.size();
+			}
+			else {
+				GetArgumentsResult args_ans = getArguments(gold, ans, specificNode);
+				GetArgumentsResult args_gold = getArguments(gold, gold, specificNode);
+				count_arg_ans += args_ans.arguments.size();
+				count_arg_gold += args_gold.arguments.size();
+				count_arg_total += args_ans.totalArgCandidates;
+			}
 			
 			// count num of correct args
-			for(Argument arg_ans : args_ans)
+			for(Argument arg_ans : args_ans.arguments)
 			{
-				for(Argument arg_gold : args_gold)
+				for(Argument arg_gold : args_gold.arguments)
 				{
 					if(arg_ans.equals(arg_gold))
 					{
@@ -132,22 +148,27 @@ public class EvaluatorLoose extends Evaluator
 
 	}
 
-	protected static List<Argument> getArguments(SentenceAssignment gold, SentenceAssignment ans, Double totalArgCandidates)
+	protected static GetArgumentsResult getArguments(SentenceAssignment gold, SentenceAssignment ans, Integer specificNode)
 	{
-		List<Argument> ret = new ArrayList<Argument>();
+		GetArgumentsResult result = new GetArgumentsResult();
+		result.arguments = new ArrayList<Argument>();
 		
 		Map<Integer, Map<Integer, Integer>> edgeAssns = ans.getEdgeAssignment();
 		if(edgeAssns != null)
 		{
+			if (specificNode != null && edgeAssns.get(specificNode)!=null) {
+				Map<Integer, Integer> forSpecificNode = edgeAssns.get(specificNode);
+				edgeAssns = new HashMap<Integer, Map<Integer, Integer>>(1);
+				edgeAssns.put(specificNode, forSpecificNode);
+			}
+			
 			for(Integer nodeIndex : edgeAssns.keySet())
 			{
 				String nodeLabel = ans.getLabelAtToken(nodeIndex);
 				Map<Integer, Integer> edgeAssn = edgeAssns.get(nodeIndex);
 				for(Integer mentionIndex : edgeAssn.keySet())
 				{
-					if (totalArgCandidates != null) {
-						totalArgCandidates++;
-					}
+					//result.totalArgCandidates++;
 					String role = (String) gold.edgeTargetAlphabet.lookupObject(edgeAssn.get(mentionIndex));
 					if(!role.equals(SentenceAssignment.Default_Argument_Label))
 					{
@@ -165,16 +186,16 @@ public class EvaluatorLoose extends Evaluator
 							argument.headSpan = mention.extent;
 						}
 						
-						if(!ret.contains(argument))
+						if(!result.arguments.contains(argument))
 						{
-							ret.add(argument);
+							result.arguments.add(argument);
 						}
 					}
 				}
 			}
 		}
 		
-		return ret;
+		return result;
 	}
 
 }

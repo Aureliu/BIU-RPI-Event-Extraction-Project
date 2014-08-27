@@ -94,20 +94,20 @@ public class Evaluator
 		}
 	}
 	
-	public Score evaluate(List<SentenceAssignment> results, Collection<SentenceInstance> instancesGold, int iteration) {
+	public Score evaluate(List<SentenceAssignment> results, Collection<SentenceInstance> instancesGold, Integer specificNode, int iteration) {
 		List<SentenceAssignment> goldTargets = new ArrayList<SentenceAssignment>(instancesGold.size());
 		for (SentenceInstance inst : instancesGold) {
 			goldTargets.add(inst.target);
 		}
 		
-		return evaluate(results, goldTargets, iteration, false);
+		return evaluate(results, goldTargets, specificNode, iteration, false);
 	}
 	
-	public Score evaluate(List<SentenceAssignment> results, List<SentenceAssignment> goldTargets, int iteration, boolean fake)
+	public Score evaluate(List<SentenceAssignment> results, List<SentenceAssignment> goldTargets, Integer specificNode, int iteration, boolean fake)
 	{
 		Score score = new Score(iteration);
 		evaluteTrigger(results, goldTargets, score);
-		evaluteArgument(results, goldTargets, score);
+		evaluteArgument(results, goldTargets, specificNode, score);
 		
 		score.calculateHarmonic_mean();
 		
@@ -269,7 +269,7 @@ public class Evaluator
 	 * @param instances
 	 * @return
 	 */
-	public void evaluteArgument(List<SentenceAssignment> results, List<SentenceAssignment> goldTargets, Score score)
+	public void evaluteArgument(List<SentenceAssignment> results, List<SentenceAssignment> goldTargets, Integer specificNode, Score score)
 	{
 		double count_arg_total = 0;
 		double count_arg_ans = 0;

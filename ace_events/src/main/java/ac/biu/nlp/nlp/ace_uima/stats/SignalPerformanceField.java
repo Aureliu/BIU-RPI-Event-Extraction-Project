@@ -43,9 +43,9 @@ public abstract class SignalPerformanceField extends StatsField {
 		for (SentenceAssignment assn : elements) {
 			goldTargets.add(assn.target);
 		}
-		Score s = evaluator.evaluate(elements, goldTargets, -1, false);
+		//Score s = evaluator.evaluate(elements, goldTargets, -1, false);
 		
-		List<Double> doubles = getDoubles(s);
+		List<Double> doubles = getDoubles(elements, goldTargets);
 		List<String> result = new ArrayList<String>(doubles.size());
 		for (Double d : doubles) {
 			result.add("" + d);
@@ -54,19 +54,23 @@ public abstract class SignalPerformanceField extends StatsField {
 		return result;
 	}
 	
-	public abstract List<Double> getDoubles(Score s);
+	public abstract List<Double> getDoubles(List<SentenceAssignment> results, List<SentenceAssignment> goldTargets);
 	public abstract Boolean getLastBool(Score s);
 
 	private List<SentenceAssignment> elements = new ArrayList<SentenceAssignment>();
 	
-	private static final Evaluator evaluator = new EvaluatorLoose();
 	//public static List<SentenceInstance> goldInstances;
 	
 	public static class TriggerSignalPerformanceField extends SignalPerformanceField {
 		public TriggerSignalPerformanceField(FieldName name) { super(name);	}
-		@Override public List<Double> getDoubles(Score s) {
+		private static final Evaluator evaluator = new Evaluator();
+		@Override public List<Double> getDoubles(List<SentenceAssignment> results, List<SentenceAssignment> goldTargets) {
 			//return Arrays.asList(new Double[] {s.count_trigger_gold, s.count_trigger_ans, s.count_trigger_correct, s.trigger_precision, s.trigger_recall, s.trigger_F1, s.count_trigger_correct_idt, s.trigger_precision_idt, s.trigger_recall_idt, s.trigger_F1_idt});
 			// see CONCLUSION
+			Score s = new Score(-1);
+			evaluator.evaluteTrigger(results, goldTargets, s);			
+			s.calculateHarmonic_mean();
+
 			return Arrays.asList(new Double[] {s.count_trigger_total, s.count_trigger_gold, s.count_trigger_ans, s.count_trigger_correct, s.trigger_precision, s.trigger_recall, s.trigger_F1,
 					s.trigger_info_gain.goldEntropy, s.trigger_info_gain.ansTrueEntropy, s.trigger_info_gain.ansFalseEntropy, s.trigger_info_gain.weightedAverageAnsEntropy, s.trigger_info_gain.informationGain});
 		}
@@ -74,16 +78,38 @@ public abstract class SignalPerformanceField extends StatsField {
 			return s.trigger_F1==s.trigger_F1_idt;
 		}
 	}
-	public static class ArgumentSignalPerformanceField extends SignalPerformanceField {
-		public ArgumentSignalPerformanceField(FieldName name) { super(name);	}
-		@Override public List<Double> getDoubles(Score s) {
+	public static class ArgumentDependentSignalPerformanceField extends SignalPerformanceField {
+		public ArgumentDependentSignalPerformanceField(FieldName name) { super(name);	}
+		private static final Evaluator evaluator = new Evaluator();
+		@Override public List<Double> getDoubles(List<SentenceAssignment> results, List<SentenceAssignment> goldTargets) {
 			//return Arrays.asList(new Double[] {s.count_arg_gold, s.count_arg_ans, s.count_arg_correct, s.arg_precision, s.arg_recall, s.arg_F1, s.count_arg_correct_idt, s.arg_precision_idt, s.arg_recall_idt, s.arg_F1_idt});
 			// see CONCLUSION
+			Score s = new Score(-1);
+			evaluator.evaluteArgument(results, goldTargets, null, s);			
+			s.calculateHarmonic_mean();
+
 			return Arrays.asList(new Double[] {s.count_arg_total, s.count_arg_gold, s.count_arg_ans, s.count_arg_correct, s.arg_precision, s.arg_recall, s.arg_F1,
 					s.arg_info_gain.goldEntropy, s.arg_info_gain.ansTrueEntropy, s.arg_info_gain.ansFalseEntropy, s.arg_info_gain.weightedAverageAnsEntropy, s.arg_info_gain.informationGain});
 		}
 		@Override public Boolean getLastBool(Score s) {
-			return s.trigger_F1==s.trigger_F1_idt;
+			return s.arg_F1==s.arg_F1_idt;
+		}
+	}
+	public static class ArgumentFreeSignalPerformanceField extends SignalPerformanceField {
+		private static final Evaluator evaluator = new EvaluatorLoose();
+		public ArgumentFreeSignalPerformanceField(FieldName name) { super(name);	}
+		@Override public List<Double> getDoubles(List<SentenceAssignment> results, List<SentenceAssignment> goldTargets) {
+			//return Arrays.asList(new Double[] {s.count_arg_gold, s.count_arg_ans, s.count_arg_correct, s.arg_precision, s.arg_recall, s.arg_F1, s.count_arg_correct_idt, s.arg_precision_idt, s.arg_recall_idt, s.arg_F1_idt});
+			// see CONCLUSION
+			Score s = new Score(-1);
+			evaluator.evaluteArgument(results, goldTargets, 0, s);			
+			s.calculateHarmonic_mean();
+			
+			return Arrays.asList(new Double[] {s.count_arg_total, s.count_arg_gold, s.count_arg_ans, s.count_arg_correct, s.arg_precision, s.arg_recall, s.arg_F1,
+					s.arg_info_gain.goldEntropy, s.arg_info_gain.ansTrueEntropy, s.arg_info_gain.ansFalseEntropy, s.arg_info_gain.weightedAverageAnsEntropy, s.arg_info_gain.informationGain});
+		}
+		@Override public Boolean getLastBool(Score s) {
+			return s.arg_F1==s.arg_F1_idt;
 		}
 	}
 }

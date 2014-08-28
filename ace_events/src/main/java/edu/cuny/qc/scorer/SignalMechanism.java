@@ -158,6 +158,8 @@ public abstract class SignalMechanism {
 			PredicateScorer<?> scorer = (PredicateScorer<?>) data.scorer;
 			scorer.prepareCalc(spec, textTriggerToken, textTriggerTokenMap, docAllText, data);
 			score = aggregator.aggregate(scorer);
+		} catch (OutOfMemoryError e) {
+			throw e;
 		} catch (Throwable e) {
 			// HACK: just put zero in the signal if we get an exception. What SHOULD happen is probably something like not adding the signal (but then I should make sure that down the pipeline they ignore this as well).
 			score = BigDecimal.ZERO;
@@ -235,6 +237,8 @@ public abstract class SignalMechanism {
 			ArgumentDependentScorer<?> scorer = (ArgumentDependentScorer<?>) data.scorer;
 			scorer.prepareCalc(spec, textTriggerToken, textTriggerTokenMap, argument, mention, docAllText, data);
 			score = aggregator.aggregate(scorer);
+		} catch (OutOfMemoryError e) {
+			throw e;
 		} catch (Throwable e) {
 			// HACK: just put zero in the signal if we get an exception. What SHOULD happen is probably something like not adding the signal (but then I should make sure that down the pipeline they ignore this as well).
 			score = BigDecimal.ZERO;
@@ -305,6 +309,8 @@ public abstract class SignalMechanism {
 			ArgumentFreeScorer<?> scorer = (ArgumentFreeScorer<?>) data.scorer;
 			scorer.prepareCalc(spec, argument, mention, docAllText, docJCas, data);
 			score = aggregator.aggregate(scorer);
+		} catch (OutOfMemoryError e) {
+			throw e;
 		} catch (Throwable e) {
 			// HACK: just put zero in the signal if we get an exception. What SHOULD happen is probably something like not adding the signal (but then I should make sure that down the pipeline they ignore this as well).
 			score = BigDecimal.ZERO;

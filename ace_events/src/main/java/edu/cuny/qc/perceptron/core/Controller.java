@@ -103,6 +103,7 @@ public class Controller implements java.io.Serializable
 	
 	public boolean calcDebugSignalsAnyway = false;
 	
+	public Integer docsChunk = null; 
 	
 	
 	public Controller()
@@ -278,6 +279,10 @@ public class Controller implements java.io.Serializable
 			{
 				calcDebugSignalsAnyway = Boolean.parseBoolean(fields[1]);
 			}
+			else if(fields[0].equalsIgnoreCase("docsChunk"))
+			{
+				docsChunk = Integer.valueOf(fields[1]);
+			}
 		}
 		
 		
@@ -305,7 +310,7 @@ public class Controller implements java.io.Serializable
 		"\n\tfilterSentenceInstance: " + filterSentenceInstance + " enhanceSpecs: " + enhanceSpecs +
 		" takeExtendedTags: " + takeExtendedTags + " argOMethod: " + argOMethod + " lazyTargetFeatures: " + lazyTargetFeatures +
 		" easyFirstHost: " + easyFirstHost + " easyFirstPort: " + easyFirstPort +
-		"\n\t calcDebugSignalsAnyway: " + calcDebugSignalsAnyway;
+		"\n\tcalcDebugSignalsAnyway: " + calcDebugSignalsAnyway + " docsChunk: " + docsChunk;
 		
 		return ret + "\n";
 	}

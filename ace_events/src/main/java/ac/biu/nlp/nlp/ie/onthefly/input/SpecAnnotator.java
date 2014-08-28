@@ -326,13 +326,16 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 				////
 				
 				Annotation element = getElement(markerMap, absents, marker, elementText);
-				elements.put(i, element);
-				
-				tokens.add(preElement);		newSampleBuilder.append(preElement);
-				tokens.add(elementText);	newSampleBuilder.append(elementText);
-				tokens.add(postElement);	newSampleBuilder.append(postElement);
+				if (element != null) {
+					elements.put(i, element);
+					
+					tokens.add(preElement);		newSampleBuilder.append(preElement);
+					tokens.add(elementText);	newSampleBuilder.append(elementText);
+					tokens.add(postElement);	newSampleBuilder.append(postElement);
+				}
 			}
-			
+
+
 			String newSample = newSampleBuilder.toString();
 					
 			hasMoreSamples = iterSamples.hasNext();
@@ -344,50 +347,52 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 			else {
 				nextOffsetInOldText = oldDocText.length();
 			}
-			
-			SortedMap<Integer, DockedToken> dockedTokens;
-			try {
-				dockedTokens = DockedTokenFinder.find(newSample, tokens);
-			} catch (DockedTokenFinderException e) {
-				throw new SpecXmlException(e);
-			}
-			
-			for (Entry<Integer, Annotation> entry : elements.entrySet()) {
-				Annotation element = entry.getValue();
-				int numInDocked = 1 + 3*entry.getKey(); //This formula comes from the unique structure of the regex pattern - each match has 3 textual parts, the 2nd of which is our element
-				DockedToken docked = dockedTokens.get(numInDocked);
-				int begin = docked.getCharOffsetStart()+offsetInNewText;
-				int end = docked.getCharOffsetEnd()+offsetInNewText;
 				
-				if (element instanceof PredicateSeed) {
-					PredicateInUsageSample pius = new PredicateInUsageSample(sentenceView, begin, end);
-					PredicateSeed seed = (PredicateSeed) element;
-					toUsage.put(seed, pius);
-					//seed.setPius(pius);
-					pius.setPredicateSeed(seed);
-					pius.addToIndexes();
-				}
-				else { //element instanceof ArgumentExample
-					ArgumentInUsageSample aius = new ArgumentInUsageSample(sentenceView, begin, end);
-					ArgumentExample example = (ArgumentExample) element;
-					toUsage.put(example, aius);
-					toUsage.put(example.getArgument(), aius); //a little abuse of the format - put aius also directly for the Argument (the one that has many examples)
-					//example.setAius(aius);
-					aius.setArgumentExample(example);
-					aius.addToIndexes();
-				}
-			}
-			
-			int oldTextSampleEnd = offsetInOldText + sampleText.length();
-			String betweenSamples = oldDocText.substring(oldTextSampleEnd, nextOffsetInOldText);
-			newSectionBuilder.append(newSample);
-			newSectionBuilder.append(betweenSamples);
-			
-			UsageSample newUsageSample = new UsageSample(sentenceView, offsetInNewText, offsetInNewText+newSample.length());
-			newUsageSample.addToIndexes();
-			
-			offsetInNewText += newSample.length() + betweenSamples.length();
+			if (!Perceptron.controllerStatic.enhanceSpecs) {
 
+				SortedMap<Integer, DockedToken> dockedTokens;
+				try {
+					dockedTokens = DockedTokenFinder.find(newSample, tokens);
+				} catch (DockedTokenFinderException e) {
+					throw new SpecXmlException(e);
+				}
+				
+				for (Entry<Integer, Annotation> entry : elements.entrySet()) {
+					Annotation element = entry.getValue();
+					int numInDocked = 1 + 3*entry.getKey(); //This formula comes from the unique structure of the regex pattern - each match has 3 textual parts, the 2nd of which is our element
+					DockedToken docked = dockedTokens.get(numInDocked);
+					int begin = docked.getCharOffsetStart()+offsetInNewText;
+					int end = docked.getCharOffsetEnd()+offsetInNewText;
+					
+					if (element instanceof PredicateSeed) {
+						PredicateInUsageSample pius = new PredicateInUsageSample(sentenceView, begin, end);
+						PredicateSeed seed = (PredicateSeed) element;
+						toUsage.put(seed, pius);
+						//seed.setPius(pius);
+						pius.setPredicateSeed(seed);
+						pius.addToIndexes();
+					}
+					else { //element instanceof ArgumentExample
+						ArgumentInUsageSample aius = new ArgumentInUsageSample(sentenceView, begin, end);
+						ArgumentExample example = (ArgumentExample) element;
+						toUsage.put(example, aius);
+						toUsage.put(example.getArgument(), aius); //a little abuse of the format - put aius also directly for the Argument (the one that has many examples)
+						//example.setAius(aius);
+						aius.setArgumentExample(example);
+						aius.addToIndexes();
+					}
+				}
+				
+				int oldTextSampleEnd = offsetInOldText + sampleText.length();
+				String betweenSamples = oldDocText.substring(oldTextSampleEnd, nextOffsetInOldText);
+				newSectionBuilder.append(newSample);
+				newSectionBuilder.append(betweenSamples);
+				
+				UsageSample newUsageSample = new UsageSample(sentenceView, offsetInNewText, offsetInNewText+newSample.length());
+				newUsageSample.addToIndexes();
+				
+				offsetInNewText += newSample.length() + betweenSamples.length();
+			}
 		}
 		
 		String newSection = newSectionBuilder.toString();

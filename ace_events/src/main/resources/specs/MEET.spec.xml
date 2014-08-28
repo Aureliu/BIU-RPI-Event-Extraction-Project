@@ -2,6 +2,16 @@
   <predicate>
     <name>Meet</name>
     <seeds>
+      <seed>meet</seed>
+      <seed>met</seed>
+      <seed>summit</seed>
+      <seed>visited</seed>
+
+      <seed>talks</seed>
+      <seed>conferences</seed>
+      <seed>meetings</seed>
+      <seed>visits</seed>
+      <seed>meeting</seed>
     </seeds>
   </predicate>
   <arguments>
@@ -14,6 +24,44 @@
       	<type>GPE</type>
       </types>
       <examples>
+        <example>Albright</example>
+        <example>Bush</example>
+        <example>China</example>
+        <example>Ehud Barak</example>
+        <example>Erekat</example>
+        <example>Fred</example>
+        <example>Gen. John Coburn</example>
+        <example>governor</example>
+        <example>Harry</example>
+        <example>He</example>
+        <example>he</example>
+        <example>him</example>
+        <example>Israelis</example>
+        <example>Japan</example>
+        <example>Koreas</example>
+        <example>lawmakers</example>
+        <example>leaders</example>
+        <example>Madeleine Albright</example>
+        <example>minister</example>
+        <example>Mr. Sudnikovich</example>
+        <example>officials</example>
+        <example>Palestinians</example>
+        <example>prosecutors</example>
+        <example>Putin</example>
+        <example>representatives</example>
+        <example>Talal Arslan</example>
+        <example>their</example>
+        <example>Tommy</example>
+        <example>United States</example>
+        <example>Yasser Arafat</example>
+
+      	<example>Prime Minister</example>
+      	<example>Israeli Prime Minister</example>
+      	<example>Barak</example>
+      	<example>Palestinian leader Yasser Arafat</example>
+      	<example>Arafat</example>
+      	<example>Secretary</example>
+      	<example>Secretary of State</example>
       </examples>
     </argument>
     <argument>
@@ -23,6 +71,13 @@
       	<type>TIME</type>
       </types>
       <examples>
+        <example>earlier this week</example>
+        <example>Friday</example>
+        <example>May 17</example>
+        <example>Monday</example>
+        <example>this month</example>
+        <example>tomorrow Monday</example>
+        <example>Wednesday</example>
       </examples>
     </argument>
     <argument>
@@ -34,20 +89,39 @@
       	<type>FAC</type>
       </types>
       <examples>
+        <example>Boston</example>
+        <example>Egypt</example>
+        <example>London</example>
+        <example>New York</example>
+        <example>Washington</example>
       </examples>
     </argument>
   </arguments>
   <usage_samples>
-    <sample src="synth">Officials would meet ministers on Friday in Egypt.</sample>
-    <sample src="synth">Korea, Japan and China held a summit on Monday in Washington.</sample>
-    <sample src="synth">The governor is in talks with the representatives this Month.</sample>
-    <sample src="orig" >Protestors interrupted their meeting.</sample>
-    <sample src="orig" >The talks ended without agreement on Monday.</sample>
-    <sample src="orig" >The leaders held their meeting in Boston.</sample>
-    <sample src="orig" >There are reports that he could meet separately with Israeli Prime Minister Ehud Barak and Palestinian leader Yasser Arafat.</sample>
-    <sample src="orig" >Russian and U.S. trade officials will meet in London on May 17.</sample>
-    <sample src="orig" >He plans to meet with lawmakers from both parties.</sample>
-    <sample src="orig" >It is obvious that it was simply impossible not to meet with Mr. Sudnikovich.</sample>
-    <sample src="orig" >He decided it would probably be a good idea to meet with him.</sample>
+    <sample_out src="synth">Officials would meet ministers on Friday in Egypt.</sample>
+    <sample_out src="synth">Korea, Japan and China held a summit on Monday in Washington.</sample>
+    <sample_out src="synth">The governor is in talks with the representatives this Month.</sample>
+
+    <sample src="orig" >Protestors interrupted [ENT their] [PRD meeting].</sample>
+    <sample src="orig" >The [PRD talks] ended without agreement on [TIM Monday].</sample>
+    <sample src="orig" >The [ENT leaders] held their [PRD meeting] in [PLC Boston].</sample>
+    <sample src="orig" >There are reports that [ENT he] could [PRD meet] separately with Israeli Prime Minister [ENT Ehud Barak] and Palestinian leader [ENT Yasser Arafat].</sample>
+    <sample src="orig" >Russian and U.S. trade [ENT officials] will [PRD meet] in [PLC London] on [TIM May 17].</sample>
+    <sample src="orig" >[ENT He] plans to [PRD meet] with [ENT lawmakers] from both parties.</sample>
+    <sample src="orig" >It is obvious that it was simply impossible not to [PRD meet] with [ENT Mr. Sudnikovich].</sample>
+    <sample src="orig" >[ENT He] decided it would probably be a good idea to [PRD meet] with [ENT him].</sample>
+
+    <sample src="orig" >[ENT Fred] [PRD visited] [ENT Harry] in [PLC New York] on [TIM Friday].</sample>
+
+    <sample src="orig" >[ENT Bush] and [ENT Putin] [PRD met] [TIM earlier this week] to discuss Chechnya.</sample>
+    <sample src="orig" >[ENT China], [ENT Japan], the [ENT United States], and both [ENT Koreas] will hold a [PRD meeting] [TIM this month].</sample>
+    <sample src="orig" >Seven Lebanese Druze [ENT representatives] out of eight who [PRD met] under the leadership of representative Walid Jumblatt called on "youths in our Islamic Arab faction to actively jointhe heroic Palestinian Intifada against Israeli occupation and its agents, and to expose its means and methods."</sample>
+    <sample src="orig" >Only representative [ENT Talal Arslan] did not attend the [PRD meeting].</sample>
+    <sample src="orig" >[ENT Tommy] would again be summoned to [PRD meet] [ENT prosecutors] on [TIM Wednesday].</sample>
+    <sample src="orig" >Owens complained to Defense Secretary William Cohen, prompting a [PRD meeting] [TIM Friday] between the [ENT governor] and [ENT Gen. John Coburn], commander of the Army Material Command.</sample>
+    <sample src="orig" >Mr. [ENT Erekat] is due to travel to [PLC Washington] to [PRD meet] with US Secretary of State [ENT Madeleine Albright] and other US [ENT officials] attempting to win a ceasefire.</sample>
+    <sample src="orig" >Mrs. [ENT Albright] has already [PRD met] with Israel's acting foreign [ENT minister].</sample>
+    <sample src="orig" >Egypt condemned Israel's attacks today and said it has the approval of other Arab states to host a [PRD summit] with the [ENT Palestinians] and [ENT Israelis] only if the violence stops.</sample>
+    <sample src="orig" >Eyewitnesses reported that Palestinians demonstrated today Sunday in the West Bank against the Sharm el-Sheikh [PRD summit] to be held in [PLC Egypt] [TIM tomorrow Monday]. </sample>
   </usage_samples>
 </spec>

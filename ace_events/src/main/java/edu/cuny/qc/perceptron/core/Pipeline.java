@@ -87,9 +87,9 @@ public class Pipeline
 			model = new Perceptron(featureAlphabet, controller, outFolder, signalMechanismsContainer);
 			TypesContainer trainTypes = new TypesContainer(trainSpecXmlPaths, false);
 			TypesContainer devTypes = new TypesContainer(devSpecXmlPaths, false);
-			trainInstanceList = readInstanceList(controller, signalMechanismsContainer, trainTypes, srcDir, trainingFileList, featureAlphabet, null, true, false).values();
+			trainInstanceList = readInstanceList(controller, signalMechanismsContainer, trainTypes, srcDir, trainingFileList, featureAlphabet, null, true, false, null).values();
 			System.out.printf("=== Finished Training Documents (%s Sentence Instances) =====================================\n", trainInstanceList.size());
-			devInstanceList = readInstanceList(controller, signalMechanismsContainer, devTypes, srcDir, devFileList, featureAlphabet, null, false, false).values();
+			devInstanceList = readInstanceList(controller, signalMechanismsContainer, devTypes, srcDir, devFileList, featureAlphabet, null, false, false, null).values();
 			System.out.printf("=== Finished Dev Documents (%s Sentence Instances) =====================================\n", devInstanceList.size());
 		}
 		else
@@ -113,6 +113,14 @@ public class Pipeline
 		return model;
 	}
 	
+	public static class ChunkRecord {
+		public boolean isFinished = false;
+		public int firstLineNextChunk = 1; //1-based! like num!
+		//public int linesAlreadyRead = 0;
+		//public String toString() {return String.format("ChunkRecord(isFinished=%s firstLineNextChunk=%s linesAlreadyRead=%s)", isFinished, firstLineNextChunk, linesAlreadyRead);}
+		public String toString() {return String.format("ChunkRecord(isFinished=%s firstLineNextChunk=%s)", isFinished, firstLineNextChunk);}
+	}
+	
 	/**
 	 * give a file list and home dir, get an instance list
 	 * @param srcDir
@@ -130,11 +138,15 @@ public class Pipeline
 	public static Multimap<JCas, SentenceInstance> readInstanceList(/*Perceptron perceptron,*/
 			Controller controller, SignalMechanismsContainer signalMechanismsContainer,
 			TypesContainer types, File srcDir, File file_list, Alphabet featureAlphabet, 
-			Map<String, Integer> numMentions, boolean learnable, boolean debug) throws Exception
+			Map<String, Integer> numMentions, boolean learnable, boolean debug, ChunkRecord chunkRecord) throws Exception
 	{
 		System.out.printf("\n%s Reading instance list. srcDir=%s, file_list=%s, numMentions=%s, learnable=%s, debug=%s, featureAlphabet=%s, types=%s, signals=%s\n",
 				Utils.detailedLog(), srcDir, file_list, numMentions, learnable, debug, featureAlphabet, types, signalMechanismsContainer);
 		new PosMap();
+		
+		if (chunkRecord != null && chunkRecord.isFinished == true) {
+			throw new IllegalStateException("chunkRecord.isFinished == true");
+		}
 		
 		Multimap<JCas, SentenceInstance> result = LinkedHashMultimap.create(types.specs.size(), 20);
 		BufferedReader reader = new BufferedReader(new FileReader(file_list));
@@ -151,6 +163,18 @@ public class Pipeline
 //					System.gc();
 //					System.out.printf("%s done.\n", detailedLog());					
 //				}
+				
+				if (chunkRecord != null && controller.docsChunk != null) {
+					if (num+1 < chunkRecord.firstLineNextChunk) {
+						num++;
+						continue;
+					}
+					if (num+1 >= chunkRecord.firstLineNextChunk + controller.docsChunk) {
+						chunkRecord.firstLineNextChunk = num+1;
+						break;
+					}
+					//chunkRecord.linesAlreadyRead++;
+				}
 				num++;
 				
 				boolean monoCase = line.contains("bn/") ? true : false;
@@ -242,7 +266,6 @@ public class Pipeline
 //		System.out.printf("%s done.\n", detailedLog());
 //		System.out.println("done");
 			
-		// DEBUG
 		System.out.printf("Finished loading %s documents, in them %s sentence instances (total for all types)\n", num, result.size());
 		System.out.printf("Total of %s event mentions, in %s types:\n", allEventMentions.size(), allEventMentions.keySet().size());
 		for (String eventType : allEventMentions.keySet()) {
@@ -252,8 +275,22 @@ public class Pipeline
 				numMentions.put(eventType, mentions);
 			}
 		}
-		/////
-			
+
+		final String BIG_FINISH = "... and this is the real big finish of all documents!!!\n";
+		if (chunkRecord != null && controller.docsChunk != null) {
+			if (line == null) {
+				chunkRecord.isFinished = true;
+				chunkRecord.firstLineNextChunk = -1;
+				System.out.println(BIG_FINISH);
+			}
+			else {
+				System.out.printf("... But actually we have more chunks of documents to go....\n\n");
+			}
+		}
+		else {
+			System.out.println(BIG_FINISH);
+		}
+
 		return result;
 	}
 	

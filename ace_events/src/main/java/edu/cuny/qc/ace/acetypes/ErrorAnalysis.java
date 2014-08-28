@@ -8,12 +8,15 @@ import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.lang3.StringUtils;
 import org.dom4j.DocumentException;
 import org.dom4j.Node;
 
 import edu.cuny.qc.ace.analysis.forEvent.Analysis.Arg;
 import edu.cuny.qc.ace.analysis.forEvent.Analysis.EventMention;
 import edu.cuny.qc.ace.analysis.forEvent.ApfReader;
+import edu.cuny.qc.perceptron.core.Controller;
+import edu.cuny.qc.perceptron.core.Perceptron;
 import edu.cuny.qc.perceptron.types.Document;
 import edu.cuny.qc.perceptron.types.Sentence;
 import edu.cuny.qc.util.Span;
@@ -30,6 +33,11 @@ public class ErrorAnalysis
 	static String htmlTail = "</div></body></html>"; 
 	static String htmlBar = "<br><hr><br>";
 	
+	private static final String CONTROLLER_PARAMS =
+			"beamSize=4 maxIterNum=20 skipNonEventSent=true avgArguments=true useGlobalFeature=false " +
+			"addNeverSeenFeatures=true crossSent=false crossSentReranking=false order=0 evaluatorType=1 learnBigrams=true logLevel=3 " +
+			"oMethod=G0P- serialization=BZ2 featureProfile=ANALYSIS calcDebugSignalsAnyway=true";
+
 	static public List<EventMention> getEventMentions(File apf_file, List<Span> sentences, String doc_text) throws DocumentException
 	{
 		ApfReader apfReader_apf = new ApfReader(apf_file.getAbsolutePath());
@@ -351,6 +359,10 @@ public class ErrorAnalysis
 		PrintStream out4 = new PrintStream(new File(args[3]) + "4.html");
 		PrintStream out5 = new PrintStream(new File(args[3]) + "5.html");
 		
+		Controller controller = new Controller();
+		controller.setValueFromArguments(StringUtils.split(CONTROLLER_PARAMS));
+		Perceptron.controllerStatic = controller;
+
 		doAnalysis(goldDir, ansDir, filelist, out, out2, out3, out4, out5);
 		
 		out.close();

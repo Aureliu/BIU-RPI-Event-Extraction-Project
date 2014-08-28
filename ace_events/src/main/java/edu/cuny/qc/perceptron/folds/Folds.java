@@ -367,12 +367,12 @@ public class Folds {
 		System.out.printf("%s Starting to read docs...\n", Utils.detailedLog());
 
 		Map<String, Integer> trainMentions = Maps.newHashMapWithExpectedSize(types.specs.size());
-		Multimap<JCas, SentenceInstance> trainInstances = Pipeline.readInstanceList(controller, signalMechanismsContainer, types, corpusDir, trainDocs, new Alphabet(), trainMentions, true, false);
+		Multimap<JCas, SentenceInstance> trainInstances = Pipeline.readInstanceList(controller, signalMechanismsContainer, types, corpusDir, trainDocs, new Alphabet(), trainMentions, true, false, null);
 		System.out.printf("%s Finished reading training documents: %s sentence instances (total for all %s types)\n", Utils.detailedLog(), trainInstances.size(), trainInstances.keySet().size());
 		Map<String, Integer> devMentions = Maps.newHashMapWithExpectedSize(types.specs.size());
-		Multimap<JCas, SentenceInstance> devInstances = Pipeline.readInstanceList(controller, signalMechanismsContainer, types, corpusDir, devDocs, new Alphabet(), devMentions, false, false);
+		Multimap<JCas, SentenceInstance> devInstances = Pipeline.readInstanceList(controller, signalMechanismsContainer, types, corpusDir, devDocs, new Alphabet(), devMentions, false, false, null);
 		System.out.printf("%s Finished reading dev documents: %s sentence instances (total for all %s types)\n", Utils.detailedLog(), devInstances.size(), devInstances.keySet().size());
-		Multimap<JCas, SentenceInstance> testInstances = Pipeline.readInstanceList(controller, signalMechanismsContainer, types, corpusDir, testDocs, new Alphabet(), null, true, false);
+		Multimap<JCas, SentenceInstance> testInstances = Pipeline.readInstanceList(controller, signalMechanismsContainer, types, corpusDir, testDocs, new Alphabet(), null, true, false, null);
 		System.out.printf("%s Finished reading test documents: %s sentence instances (total for all %s types)\n", Utils.detailedLog(), testInstances.size(), testInstances.keySet().size());
 
 		List<Run> runs = buildRuns(controller, types, trainMentions, devMentions, numRuns, minTrainEvents, maxTrainEvents, minDevEvents, maxDevEvents, minTrainMentions, minDevMentions);

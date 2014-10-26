@@ -52,7 +52,7 @@ public class ListValuesField extends ListField {
 			Multiset<String> valueTerms = HashMultiset.create(en.getValue());
 			List<String> uniqueTermsWithCounts = new ArrayList<String>(valueTerms.elementSet().size());
 			for (String uniqueTerm : valueTerms.elementSet()) {
-				uniqueTermsWithCounts.add(String.format("%d*%s", valueTerms.count(uniqueTerm), uniqueTerm));
+				uniqueTermsWithCounts.add(String.format("%d*%s", valueTerms.count(uniqueTerm), uniqueTerm.replace("\n", " ").replace("\r", "").replace("^", "*")));
 			}
 			out.add(new AbstractMap.SimpleEntry<O,C>((O) en.getKey(), (C) uniqueTermsWithCounts));
 		}

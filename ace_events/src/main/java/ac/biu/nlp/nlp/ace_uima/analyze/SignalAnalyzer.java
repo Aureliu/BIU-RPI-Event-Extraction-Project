@@ -300,11 +300,11 @@ public class SignalAnalyzer {
 								
 								// No need to check if signal is positive - this is already done in SignalMechanismSpecIterator.addToHistory()
 								if (goldLabel.equals(triggerLabel)) { 
-									docs.updateDocs(key, "SpecItems", "TruePositive", entry.getKey());
+									docs.updateDocs(key, "SpecItems", "TruePositive", entry.getKey().replace("\n", " ").replace("^", "*"));
 									docs.updateDocs(key, "SpecTextItems", "TruePositive", entry);
 								}
 								else {
-									docs.updateDocs(key, "SpecItems", "FalsePositive", entry.getKey());
+									docs.updateDocs(key, "SpecItems", "FalsePositive", entry.getKey().replace("\n", " ").replace("^", "*"));
 									docs.updateDocs(key, "SpecTextItems", "FalsePositive", entry);
 								}
 							}
@@ -665,28 +665,28 @@ public class SignalAnalyzer {
 					///
 					
 					/// DEBUG
-					if (role.equals("Attacker")) {
-						int countAttacker = 0;
-						for (int x=0; x<assn.target.getEdgeAssignment().size(); x++) {
-							Map<Integer, Integer> forX = assn.target.getEdgeAssignment().get(x);
-							if (forX==null) {
-								continue;
-							}
-							for (int y=0; y<forX.size(); y++) {
-								Integer z = forX.get(y);
-								if (z==null) {
-									continue;
-								}
-								if (z!=0) {
-									countAttacker++;
-								}
-							}
-						}
-						//System.out.printf("\n\n\n\n\n\n\nAttacker==%s\n\n\n\n\n\n\n", countAttacker);
-						if (countAttacker>0) {
-							System.out.printf("\n\n\n\n\n\n\nAttacker is more than 0!!!\n\n\n\n\n\n\n", countAttacker);
-						}
-					}
+//					if (role.equals("Attacker")) {
+//						int countAttacker = 0;
+//						for (int x=0; x<assn.target.getEdgeAssignment().size(); x++) {
+//							Map<Integer, Integer> forX = assn.target.getEdgeAssignment().get(x);
+//							if (forX==null) {
+//								continue;
+//							}
+//							for (int y=0; y<forX.size(); y++) {
+//								Integer z = forX.get(y);
+//								if (z==null) {
+//									continue;
+//								}
+//								if (z!=0) {
+//									countAttacker++;
+//								}
+//							}
+//						}
+//						//System.out.printf("\n\n\n\n\n\n\nAttacker==%s\n\n\n\n\n\n\n", countAttacker);
+//						if (countAttacker>0) {
+//							System.out.printf("\n\n\n\n\n\n\nAttacker is more than 0!!!\n\n\n\n\n\n\n", countAttacker);
+//						}
+//					}
 					///
 					
 					/// DEBUG

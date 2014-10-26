@@ -71,6 +71,7 @@ public class DependencySignalMechanism extends SignalMechanism {
 			addArgumentDependent(new ScorerData("DP_DEP_PREP_NOCON",			SameLinkDepPrepNoContext.inst,			Aggregator.Any.inst		));
 			addArgumentDependent(new ScorerData("DP_DEP_PREP_GENPOS_NOCON",		SameLinkDepPrepGenPosNoContext.inst,	Aggregator.Any.inst		));
 			addArgumentDependent(new ScorerData("DP_DEP_PREP_SPECPOS_NOCON",	SameLinkDepPrepSpecPosNoContext.inst,	Aggregator.Any.inst		));
+			
 //			addArgumentDependent(new ScorerData("DP_DEP_CON",			SameLinkDepWithContext.inst,		Aggregator.Any.inst		));
 //			addArgumentDependent(new ScorerData("DP_DEP_GENPOS_CON",	SameLinkDepGenPosWithContext.inst,	Aggregator.Any.inst		));
 //			addArgumentDependent(new ScorerData("DP_DEP_SPECPOS_CON",	SameLinkDepSpecPosWithContext.inst,	Aggregator.Any.inst		));

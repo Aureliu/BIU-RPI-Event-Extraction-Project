@@ -9,6 +9,8 @@ import java.util.List;
 import java.util.Map.Entry;
 import java.util.Scanner;
 
+import org.apache.commons.lang3.StringUtils;
+
 import eu.excitementproject.eop.common.utilities.StringUtil;
 
 public abstract class ListField extends StatsField {
@@ -38,9 +40,7 @@ public abstract class ListField extends StatsField {
 			String strings = StringUtil.join(vals, " | ");
 			
 			int charsAllowed = charsLeft/keysLeft;
-			if (strings.length() > charsAllowed) {
-				strings = strings.substring(0, charsAllowed) + "...";
-			}
+			strings = StringUtils.abbreviate(strings, Math.max(charsAllowed, 4)); //maxWidth must be at least 4
 			
 			String keyAndVal = String.format("___%s = { %s }", entry.getKey(), strings);
 			toResult.add(keyAndVal);

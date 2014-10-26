@@ -31,6 +31,7 @@ public class SignalAnalyzerDocumentCollection extends StatsDocumentCollection {
 		triggerDoc.update(without(key, new String[] {"folder", "category", "docId"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
 		//triggerDoc.update(without(key, new String[] {"folder", "category", "docId", "signal", "agg"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
 		triggerDoc.update(without(key, new String[] {"folder", "category", "docId", "spec"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
+		triggerDoc.update(without(key, new String[] {"folder", "category", "docId", "spec", "role"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
 		//triggerDoc.update(without(key, new String[] {"folder", "category", "docId", "label", "signal", "agg"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
 		triggerDoc.endUpdate();
 		

@@ -12,6 +12,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 
 import org.apache.commons.lang3.StringUtils;
@@ -245,7 +246,7 @@ public class Logs {
 	
 	public static String assn(SentenceAssignment assn) {
 		// the minimum output out of these two methods is eventually taken
-		final int MAX_CHARS = 120;
+		final int MAX_CHARS = 200;
 		final int MAX_NODES = 20;
 		String ret = assn.toString(MAX_NODES);
 		if (ret.length() > MAX_CHARS) {
@@ -438,7 +439,8 @@ public class Logs {
 					"Lemma",
 					"k",
 					"Head",
-					"HeToLem",
+					"Type",
+					//"HeToLem",
 					"target-label",
 					"assn-label",
 					"both-labels",
@@ -746,15 +748,18 @@ public class Logs {
 				String surface = tokenAnno.getCoveredText();
 				String lemma = (String) tokens.get(j).get(TokenAnnotations.LemmaAnnotation.class);
 				Set<Object> allFeaturesSet = new HashSet<Object>();
-				Map<Object, BigDecimal> mapTarget = instance.target.getFeatureVectorSequence().get(j).getMap();
+				FeatureVector fvTarget = instance.target.getFeatureVectorSequence().get(j);
+				Map<Object, BigDecimal> mapTarget = fvTarget.getMap();
 				String assnPartialScore = "";
 
 				String targetTriggerLabel = triggerLabel(instance.target.getLabelAtToken(j));
 				
 				String assnTriggerLabel = "X";
+				FeatureVector fvAssn = null;
 				Map<Object, BigDecimal> mapAssn = new HashMap<Object, BigDecimal>();
 				if (j<assn.getFeatureVectorSequence().size()) {
-					mapAssn = assn.getFeatureVectorSequence().get(j).getMap();
+					fvAssn = assn.getFeatureVectorSequence().get(j);
+					mapAssn = fvAssn.getMap();
 					assnTriggerLabel = triggerLabel(assn.getLabelAtToken(j));
 					assnPartialScore = assn.getPartialScores().get(j).toString();
 				}
@@ -774,6 +779,9 @@ public class Logs {
 						topK = instance.eventArgCandidates.size()-1;
 					}
 					
+					Map<Object, BigDecimal> currMapTarget;
+					Map<Object, BigDecimal> currMapAssn;
+					
 					String targetLabel;
 					String assnLabelG;
 					List<String> allTargetArgLabels = Lists.newArrayList();
@@ -786,9 +794,12 @@ public class Logs {
 						String kStr = "";
 
 						String headText = "";
-						String headTokenLemma = "";
+						String mentionType = "";
+						//String headTokenLemma = "";
 						
 						if (k == -1) { //Trigger!
+							currMapTarget = mapTarget;
+							currMapAssn = mapAssn;
 							targetLabel = targetTriggerLabel;
 							assnLabelG = assnTriggerLabel;
 						}
@@ -819,10 +830,27 @@ public class Logs {
 								allAssnArgLabels.add(assnArgLabel);
 							}
 
+							currMapTarget = null;
+							if (fvTarget != null && fvTarget.argsFV != null && fvTarget.argsFV.containsKey(k)) {
+								currMapTarget = fvTarget.argsFV.get(k).getMap();
+								
+								Entry<Object, BigDecimal> e = currMapTarget.entrySet().iterator().next();
+								System.out.printf("    j=%s k=%s currMapTarget.size()=%s (e.g. %s: %s)\n", j, k, currMapTarget.size(), e.getKey(), e.getValue());
+							}
+							currMapAssn = null;
+							if (fvAssn != null && fvAssn.argsFV != null && fvAssn.argsFV.containsKey(k)) {
+								currMapAssn = fvAssn.argsFV.get(k).getMap();
+								
+								Entry<Object, BigDecimal> e = currMapAssn.entrySet().iterator().next();
+								System.out.printf("    j=%s k=%s currMapAssn.size()=%s (e.g. %s: %s)\n", j, k, currMapAssn.size(), e.getKey(), e.getValue());
+							}
+
+							
 							kStr = Integer.toString(k);
 							AceMention mention = instance.eventArgCandidates.get(k);
 							headText = mention.getHeadText();
-							headTokenLemma = mention.headTokenLemma;
+							mentionType = mention.getType();
+							//headTokenLemma = mention.headTokenLemma;
 						}
 						
 						for (String s : allFeaturesList) {
@@ -834,8 +862,13 @@ public class Logs {
 								continue;
 							}
 							
-							String inTarget = str(mapTarget, s);
-							String inAssn = str(mapAssn, s);
+							String inTarget = str(currMapTarget, s);
+							String inAssn = str(currMapAssn, s);
+							
+							if (inTarget.equals("X") && inAssn.equals("X")) {
+								continue;
+							}
+							
 							String inWeights = str(weights, s);
 							String inAvg = str(avg_weights, s);
 							
@@ -853,6 +886,13 @@ public class Logs {
 							else {
 								bothTargetAndAssn ="F";
 							}
+							
+							/// DEBUG
+//							if (k!=-1 && !assnLabelG.contains("X") && !assnLabelG.contains("-") && inAssn.equals("X")) {
+//								int d = 89 + 5;
+//								int a = d + 6;
+//							}
+							/////
 							
 							if (controller.logLevel >= LEVEL_F_2) {
 								Utils.print(f, "", "\n", "|", instance.sentInstID,
@@ -873,7 +913,8 @@ public class Logs {
 										lemma(lemma),
 										kStr,
 										lemma(headText, 25),
-										lemma(headTokenLemma, headText, false),
+										mentionType,
+										//lemma(headTokenLemma, headText, false),
 										targetLabel,
 										assnLabelG,
 										twoLabels(targetLabel, assnLabelG),//twoLabels(instance.target, assnLabel, j),
@@ -920,7 +961,8 @@ public class Logs {
 								lemma(lemma),
 								"", //k
 								"", //Head
-								"", //HeadTokenLemma
+								"", //mentionType
+								//"", //HeadTokenLemma
 								targetLabel,
 								assnLabelG,
 								twoLabels(targetLabel, assnLabelG),

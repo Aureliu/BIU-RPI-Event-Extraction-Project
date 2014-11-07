@@ -665,7 +665,7 @@ public class SentenceAssignment
 					
 					for (SignalInstance signal : signalsForRole.values()) {
 						List<SignalInstance> signals = Arrays.asList(new SignalInstance[] {signal});
-						makeEdgeLocalFeatureInner(signals, signal.positive, signal.getName(), genericEdgeLabel, index, edgeLabel, addIfNotPresent, useIfNotPresent);
+						makeEdgeLocalFeatureInner(signals, signal.positive, signal.getName(), genericEdgeLabel, index, entityIndex, edgeLabel, addIfNotPresent, useIfNotPresent);
 					}
 				}
 				else { //genericEdgeLabel == Default_Argument_Label
@@ -674,7 +674,7 @@ public class SentenceAssignment
 						
 						for (SignalInstance signal : signalsForRole.values()) {
 							List<SignalInstance> signals = Arrays.asList(new SignalInstance[] {signal});
-							makeEdgeLocalFeatureInner(signals, signal.positive, signal.getName(), genericEdgeLabel, index, edgeLabel, addIfNotPresent, useIfNotPresent);
+							makeEdgeLocalFeatureInner(signals, signal.positive, signal.getName(), genericEdgeLabel, index, entityIndex, edgeLabel, addIfNotPresent, useIfNotPresent);
 						}
 					}
 					else if (this.controller.argOMethod==ArgOMethod.OR_ALL) { //don't duplicate by role!
@@ -699,7 +699,7 @@ public class SentenceAssignment
 								}
 							}
 							String signalName = allSignalsAllRolesSameScorer.iterator().next().getName();
-							makeEdgeLocalFeatureInner(allSignalsAllRolesSameScorer, boolValue, signalName, genericEdgeLabel, index, edgeLabel, addIfNotPresent, useIfNotPresent);
+							makeEdgeLocalFeatureInner(allSignalsAllRolesSameScorer, boolValue, signalName, genericEdgeLabel, index, entityIndex, edgeLabel, addIfNotPresent, useIfNotPresent);
 						}
 					}
 					else {
@@ -717,13 +717,13 @@ public class SentenceAssignment
 		}
 	}
 	
-	private void makeEdgeLocalFeatureInner(List<SignalInstance> signals, boolean signalValue, String signalName, String genericEdgeLabel, int index, String edgeLabel, boolean addIfNotPresent, boolean useIfNotPresent) {
+	private void makeEdgeLocalFeatureInner(List<SignalInstance> signals, boolean signalValue, String signalName, String genericEdgeLabel, int index, int entityIndex, String edgeLabel, boolean addIfNotPresent, boolean useIfNotPresent) {
 		BigDecimal featureValuePositive = signalValue ? FEATURE_POSITIVE_VAL : FEATURE_NEGATIVE_VAL;
 		
 		String signalFullStr = "EdgeLocalFeature:\t" + signalName;
 		String featureStrPositive = signalFullStr + "\t" + "P+\t" + CURRENT_LABEL_MARKER + genericEdgeLabel;
 		
-		makeFeature(featureStrPositive, this.getFV(index), featureValuePositive, index, signals, signalFullStr, edgeLabel, "P+", addIfNotPresent, useIfNotPresent);
+		makeFeature(featureStrPositive, this.getFV(index), featureValuePositive, index, entityIndex, signals, signalFullStr, edgeLabel, "P+", addIfNotPresent, useIfNotPresent);
 		
 		if (this.controller.oMethod.contains("P+")) {
 			// do nothing, we did P+ before and nothing to do further
@@ -731,7 +731,7 @@ public class SentenceAssignment
 		else if (this.controller.oMethod.contains("P-")) {
 			BigDecimal featureValueNegative = signalValue ? FEATURE_NEGATIVE_VAL : FEATURE_POSITIVE_VAL;
 			String featureStrNegative = signalFullStr + "\t" + "P-\t" + CURRENT_LABEL_MARKER + genericEdgeLabel;
-			makeFeature(featureStrNegative, this.getFV(index), featureValueNegative, index, signals, signalFullStr, edgeLabel, "P-", addIfNotPresent, useIfNotPresent);
+			makeFeature(featureStrNegative, this.getFV(index), featureValueNegative, index, entityIndex, signals, signalFullStr, edgeLabel, "P-", addIfNotPresent, useIfNotPresent);
 		}
 		else {
 			throw new IllegalStateException("Method G must explicitly state P+ or P-, got: " + this.controller.oMethod);
@@ -754,7 +754,7 @@ public class SentenceAssignment
 		for(String feature : featureStrs)
 		{
 			String featureStr = "TriggerLevelGlobalFeature:\t" + feature;
-			makeFeature(featureStr, fv, null, null, featureStr, GLOBAL_LABEL, null, addIfNotPresent, useIfNotPresent);
+			makeFeature(featureStr, fv, null, null, null, featureStr, GLOBAL_LABEL, null, addIfNotPresent, useIfNotPresent);
 		}
 	} 
 	
@@ -772,7 +772,7 @@ public class SentenceAssignment
 		for(String feature : featureStrs)
 		{
 			String featureStr = "NodeLevelGlobalFeature:\t" + feature;
-			makeFeature(featureStr, fv, null, null, featureStr, GLOBAL_LABEL, null, addIfNotPresent, useIfNotPresent);
+			makeFeature(featureStr, fv, null, null, null, featureStr, GLOBAL_LABEL, null, addIfNotPresent, useIfNotPresent);
 		}
 	}
 	
@@ -791,13 +791,13 @@ public class SentenceAssignment
 		for(String feature : featureStrs)
 		{
 			String featureStr = "NodeLevelGlobalFeature:\t" + feature;
-			makeFeature(featureStr, fv, null, null, featureStr, GLOBAL_LABEL, null, addIfNotPresent, useIfNotPresent);
+			makeFeature(featureStr, fv, null, null, null, featureStr, GLOBAL_LABEL, null, addIfNotPresent, useIfNotPresent);
 		}
 		featureStrs = GlobalFeatureGenerator.get_global_features_sent_level(problem, index, this, entityIndex);
 		for(String feature : featureStrs)
 		{
 			String featureStr = "SentLevelGlobalFeature:\t" + feature;
-			makeFeature(featureStr, fv, null, null, featureStr, GLOBAL_LABEL, null, addIfNotPresent, useIfNotPresent);
+			makeFeature(featureStr, fv, null, null, null, featureStr, GLOBAL_LABEL, null, addIfNotPresent, useIfNotPresent);
 		}
 		
 	}
@@ -883,7 +883,7 @@ public class SentenceAssignment
 							String signalFullStr = "BigramFeature:\t" + signal.getName();
 							String featureStrPositive = signalFullStr + "\t" + "P+\t" + CURRENT_LABEL_MARKER + genericLabel;
 							
-							makeFeature(featureStrPositive, this.getFV(i), featureValuePositive, i, signals, signalFullStr, label, "P+", addIfNotPresent, useIfNotPresent);
+							makeFeature(featureStrPositive, this.getFV(i), featureValuePositive, i, null, signals, signalFullStr, label, "P+", addIfNotPresent, useIfNotPresent);
 							
 							if (this.controller.oMethod.contains("P+")) {
 								// do nothing, we did P+ before and nothing to do further
@@ -891,7 +891,7 @@ public class SentenceAssignment
 							else if (this.controller.oMethod.contains("P-")) {
 								BigDecimal featureValueNegative = signal.positive ? FEATURE_NEGATIVE_VAL : FEATURE_POSITIVE_VAL;
 								String featureStrNegative = signalFullStr + "\t" + "P-\t" + CURRENT_LABEL_MARKER + genericLabel;
-								makeFeature(featureStrNegative, this.getFV(i), featureValueNegative, i, signals, signalFullStr, label, "P-", addIfNotPresent, useIfNotPresent);
+								makeFeature(featureStrNegative, this.getFV(i), featureValueNegative, i, null, signals, signalFullStr, label, "P-", addIfNotPresent, useIfNotPresent);
 							}
 							else {
 								throw new IllegalStateException("Method G must explicitly state P+ or P-, got: " + this.controller.oMethod);
@@ -990,11 +990,11 @@ public class SentenceAssignment
 		}
 	}
 	
-	protected void makeFeature(String featureStr, FeatureVector fv, Integer i, List<SignalInstance> signals,
+	protected void makeFeature(String featureStr, FeatureVector fv, Integer i, Integer entityIndex, List<SignalInstance> signals,
 			String signalName, String label, String moreParams,
 			boolean add_if_not_present,	boolean use_if_not_present)
 	{
-		makeFeature(featureStr, fv, BigDecimal.ONE, i, signals, signalName, label, moreParams, add_if_not_present, use_if_not_present);
+		makeFeature(featureStr, fv, BigDecimal.ONE, i, entityIndex, signals, signalName, label, moreParams, add_if_not_present, use_if_not_present);
 	}
 	
 	/**
@@ -1005,7 +1005,7 @@ public class SentenceAssignment
 	 * @param use_if_not_present true if the feature is not in featureAlphaebt, still use it in FV
 	 */
 	protected void makeFeature(String featureStr, FeatureVector fv,
-			BigDecimal value, Integer i, List<SignalInstance> signals,
+			BigDecimal value, Integer i, Integer k, List<SignalInstance> signals,
 			String signalName, String label, String moreParams,
 			boolean add_if_not_present,	boolean use_if_not_present)
 	{
@@ -1026,6 +1026,10 @@ public class SentenceAssignment
 		{
 			fv.add(featureStr, value);
 			wasAdded = true;
+		}
+		
+		if (k != null && wasAdded) {
+			fv.add(featureStr, value, k);
 		}
 		
 		if (controller.saveSignalsToValues && wasAdded) {

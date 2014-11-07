@@ -394,9 +394,11 @@ public class Folds {
 			Perceptron.wTrain = logs.getW("Train");
 			Perceptron.fTrain = logs.getF("Train");
 			Perceptron.pTrain = logs.getP("Train");
+			Perceptron.bTrain = logs.getB("Train");
 			Perceptron.uDev = logs.getU("Dev");
 			Perceptron.fDev = logs.getF("Dev");
 			Perceptron.pDev   = logs.getP("Dev");
+			Perceptron.bDev   = logs.getB("Dev");
 			//logs.logTitles(w,  null,  null,  u,  null,  null);
 			String scoreFileName = outputFolder.getAbsolutePath() + "/TestScore." + run.suffix + ".txt";
 			PrintStream scoreFile = new PrintStream(scoreFileName);

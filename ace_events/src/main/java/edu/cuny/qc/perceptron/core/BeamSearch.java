@@ -6,8 +6,12 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
+
+import javax.management.RuntimeErrorException;
 
 import edu.cuny.qc.ace.acetypes.AceMention;
 import edu.cuny.qc.perceptron.types.FeatureVector;
@@ -40,6 +44,7 @@ public class BeamSearch
 		System.err.println("??? BeamSearch: In ScoreComparator, can try to use the compareTo() of both BigDecimals (I temporarily converted back to working on doubles, due to consistency problems with master).");
 		System.err.println("??? BeamSearch: Completely removing the part handling args - working only on triggers. Mostly to avoid arg-related violations, but also reduce run-time (since it's possible...).");
 		System.err.println("??? BeamSearch: Now that I am returning args, I'm still not doing that for logging. I'll only do it on a need-to basis.");
+		System.err.println("??? BeamSearch: Specifically - should return args in printBeam() in the beginning when calcing 'compatibe'");
 	}
 	
 	protected FeatureVector getWeights()
@@ -65,7 +70,9 @@ public class BeamSearch
 	}
 	
 	public void printBeam(PrintStream b, SentenceInstance instance, List<SentenceAssignment> beam, String violation, boolean doLogging) {
+		//System.out.printf("BEAMprint    printBeam: beam.size()=%s, b=%s, this.isTraining=%s, doLogging=%s\n", beam.size(), b, this.isTraining, doLogging);
 		if (this.isTraining && doLogging && b != null) {
+			//System.out.printf("BEAMprint    printBeam: We are in the method!!!\n");
 			for (int pos=0; pos<beam.size(); pos++) {
 				SentenceAssignment assn = beam.get(pos);
 				
@@ -88,19 +95,30 @@ public class BeamSearch
 				}
 	
 				if (model.controller.logLevel >= Logs.LEVEL_B_2) {
+					//System.out.printf("BEAMprint    printBeam: We are in LEVEL_B_2 (%s)!!!\n", Logs.LEVEL_B_2);
 					List<Map<Class<?>, Object>> tokens = (List<Map<Class<?>, Object>>) instance.get(InstanceAnnotations.Token_FEATURE_MAPs);
 					for (int j=0; j<=assn.getState(); j++) {
 						String lemma = (String) tokens.get(j).get(TokenAnnotations.LemmaAnnotation.class);
 						
-						Map<Object, BigDecimal> mapTarget = instance.target.getFeatureVectorSequence().get(j).getMap();
-						Map<Object, BigDecimal> mapAssn = assn.getFeatureVectorSequence().get(j).getMap();
-						List<String> allFeaturesList = new ArrayList<String>(mapAssn.size());
-						for (Object o : mapAssn.keySet()) {
-							allFeaturesList.add((String) o);
+						FeatureVector fvTarget = instance.target.getFeatureVectorSequence().get(j);
+						FeatureVector fvAssn = assn.getFeatureVectorSequence().get(j);
+						Map<Object, BigDecimal> mapTarget = fvTarget.getMap();
+						Map<Object, BigDecimal> mapAssn = fvAssn.getMap();
+
+						Set<Object> allFeaturesSet = new HashSet<Object>();
+						allFeaturesSet.addAll(mapTarget.keySet());
+						allFeaturesSet.addAll(mapAssn.keySet());
+
+						List<String> allFeaturesListNoEdge = new ArrayList<String>();
+						for (Object o : allFeaturesSet) {
+							String s = (String) o;
+							if (!s.startsWith("EdgeLocalFeature:")) {
+								allFeaturesListNoEdge.add(s);
+							}
 						}
-						Collections.sort(allFeaturesList);
+						Collections.sort(allFeaturesListNoEdge);
 		
-						for (String s : allFeaturesList) {						
+						for (String s : allFeaturesListNoEdge) {						
 							Utils.print(b, "", "\n", "|", instance.sentInstID,
 									//general
 									Perceptron.iter,//"Iter",
@@ -113,7 +131,7 @@ public class BeamSearch
 									posStr, //"pos",
 									"",//"assignment", //toString()
 									"",//"target"
-									"",//"copmatible"
+									"",//"compatible"
 									assn.getScore(),//"score",
 									assn.getState(),//"state",
 									
@@ -134,6 +152,86 @@ public class BeamSearch
 									Logs.str(model.getAvg_weights(), s)//"AvgWeight"
 							);
 						}
+						
+						//4.11.2014 09:34 - just discovered the equivalent code for AllFeatures.log!!!
+						/*
+						if (fvTarget.argsFV != null || fvAssn.argsFV != null) {
+							// TODO - remove?
+							if (allFeaturesListNoEdge.size() == allFeaturesSet.size()) {
+								throw new RuntimeException(String.format("Got an argsFV, bot no edge features! fvTarget.argsFV=%s, fvAssn.argsFV=%s",
+										fvTarget.argsFV, fvAssn.argsFV));
+							}
+							
+							for (int entityIndex=0; entityIndex<instance.eventArgCandidates.size(); entityIndex++) {
+								Set<Object> allEdgeFeaturesSet = new HashSet<Object>();
+								AceMention argCand = instance.eventArgCandidates.get(entityIndex);
+
+								Map<Object, BigDecimal> mapTargetEdge = null;
+								if (fvTarget.argsFV != null && fvTarget.argsFV.containsKey(entityIndex)) {
+									mapTargetEdge = fvTarget.argsFV.get(entityIndex).getMap();
+									allEdgeFeaturesSet.addAll(mapTargetEdge.keySet());
+								}
+								Map<Object, BigDecimal> mapAssnEdge = null;
+								if (fvAssn.argsFV != null && fvAssn.argsFV.containsKey(entityIndex)) {
+									mapAssnEdge = fvAssn.argsFV.get(entityIndex).getMap();
+									allEdgeFeaturesSet.addAll(mapAssnEdge.keySet());
+								}
+								
+								List<String> allEdgeFeaturesList = new ArrayList<String>();
+								for (Object o : allEdgeFeaturesSet) {
+									allEdgeFeaturesList.add((String) o);
+								}
+								Collections.sort(allEdgeFeaturesList);
+								
+								for (String s : allEdgeFeaturesList) {						
+									Utils.print(b, "", "\n", "|", instance.sentInstID,
+											//general
+											Perceptron.iter,//"Iter",
+											instance.docID,//"DocID"
+											instance.sentInstID,//"SentenceNo",
+											violation,//"violation",
+											beam.size(),//"beam-size",
+											
+											//assignment
+											posStr, //"pos",
+											"",//"assignment", //toString()
+											"",//"target"
+											"",//"compatible"
+											assn.getScore(),//"score",
+											assn.getState(),//"state",
+											
+											//token
+											j,//"i",
+											Logs.lemma(lemma),//"Lemma",
+											entityIndex,//"entityIndex"
+											argCand.getType(),//"entityType"
+											argCand.text???,//"entity"
+											instance.target.getLabelAtToken(j),//"target-label",
+											assn.getLabelAtToken(j),//"assn-label",
+											Logs.twoLabels(instance.target, assn, j),//"both-labels"
+											assn.getPartialScores().get(j),//"partial-score",
+											
+											//feature
+											Logs.feature(s),//"Feature",
+											Logs.str(mapTarget, s),//"target"
+											Logs.str(mapAssn, s),//"assn"
+											Logs.twoLabelsAndScore(instance.target, assn, j, mapAssn, s),//"labels+assn"
+											Logs.str(model.getWeights(), s),//"Weight",
+											Logs.str(model.getAvg_weights(), s)//"AvgWeight"
+									);
+								}
+								
+							}
+							
+						}
+						else {
+							// TODO - remove?
+							if (allFeaturesListNoEdge.size() != allFeaturesSet.size()) {
+								throw new RuntimeException(String.format("Both argsFV's are null, but still got %s edge features!",
+										allFeaturesSet.size()-allFeaturesListNoEdge.size()));
+							}
+						}
+						*/
 						
 						
 	//					Utils.print(b, "", "\n", "|",		
@@ -169,6 +267,7 @@ public class BeamSearch
 				}
 				
 				if (model.controller.logLevel >= Logs.LEVEL_B_1) {
+					//System.out.printf("BEAMprint    printBeam: We are in LEVEL_B_1 (%s)!!!\n", Logs.LEVEL_B_1);
 					Utils.print(b, "", "\n", "|", instance.sentInstID,
 							//general
 							Perceptron.iter,//"Iter",
@@ -181,7 +280,7 @@ public class BeamSearch
 							posStr, //"pos",
 							Logs.assn(assn),//"assignment", //toString()
 							Logs.assn(instance.target),//"target"
-							targetAssnCompatible,//"copmatible"
+							targetAssnCompatible,//"compatible"
 							assn.getScore(),//"score",
 							assn.getState(),//"state",
 							
@@ -209,6 +308,7 @@ public class BeamSearch
 	
 	public SentenceAssignment beamSearch(SentenceInstance problem, int beamSize, boolean isLearning, PrintStream b)
 	{
+		//System.out.printf("BEAMprint Start: beamSize=%s, isLearning=%s, b=%s, problem=%s\n", beamSize, isLearning, b, problem);
 		List<SentenceAssignment> beam = new ArrayList<SentenceAssignment>();
 		SentenceAssignment initial = new SentenceAssignment(/*problem.types,*/model.signalMechanismsContainer, problem.eventArgCandidates, null, problem.nodeTargetAlphabet, problem.edgeTargetAlphabet, problem.featureAlphabet, problem.controller);
 		beam.add(initial);
@@ -288,6 +388,7 @@ public class BeamSearch
 				if(violation)
 				{
 					beam.get(0).setViolate(true);
+					//System.out.printf("BEAMprint Violate 'trg': beam.size()=%s, b=%s, problem=%s\n", beam.size(), b, problem);
 					printBeam(b, problem, beam, "trg", true);
 					return beam.get(0);
 				}
@@ -381,6 +482,7 @@ public class BeamSearch
 						if(violation)
 						{
 							beam.get(0).setViolate(true);
+							//System.out.printf("BEAMprint Violate 'arg': beam.size()=%s, b=%s, problem=%s\n", beam.size(), b, problem);
 							printBeam(b, problem, beam, "arg", true);
 							return beam.get(0);
 						}
@@ -394,9 +496,11 @@ public class BeamSearch
 		if(isLearning && problem.violateGoldStandard(beam.get(0)))
 		{
 			beam.get(0).setViolate(true);
+			//System.out.printf("BEAMprint Violate 'end': beam.size()=%s, b=%s, problem=%s\n", beam.size(), b, problem);
 			printBeam(b, problem, beam, "end", true);
 		}
 		else {
+			//System.out.printf("BEAMprint Violate 'no': beam.size()=%s, b=%s, problem=%s\n", beam.size(), b, problem);
 			printBeam(b, problem, beam, "no", true);
 		}
 		

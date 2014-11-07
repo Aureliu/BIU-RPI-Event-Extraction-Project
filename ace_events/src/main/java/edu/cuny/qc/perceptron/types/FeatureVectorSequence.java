@@ -47,16 +47,16 @@ public class FeatureVectorSequence implements Serializable
 	}
 	
 	// deep copy FeatureVectorSequence
-	public FeatureVectorSequence clone()
-	{
-		FeatureVectorSequence fvs = new FeatureVectorSequence();
-		for(FeatureVector fv : sequence)
-		{
-			FeatureVector clone_fv = fv.clone();
-			fvs.add(clone_fv);
-		}
-		return fvs;
-	}
+//	public FeatureVectorSequence clone()
+//	{
+//		FeatureVectorSequence fvs = new FeatureVectorSequence();
+//		for(FeatureVector fv : sequence)
+//		{
+//			FeatureVector clone_fv = fv.clone();
+//			fvs.add(clone_fv);
+//		}
+//		return fvs;
+//	}
 	
 	public FeatureVectorSequence (Collection<FeatureVector> featureVectors)
 	{

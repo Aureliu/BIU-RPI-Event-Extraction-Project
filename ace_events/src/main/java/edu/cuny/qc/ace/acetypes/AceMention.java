@@ -98,7 +98,7 @@ public abstract class AceMention implements Comparable, java.io.Serializable {
 	
 	//////
 	public String headTokenText = null; 
-	public String headTokenLemma = null; 
+	//public String headTokenLemma = null; 
 	
 	
 	//////

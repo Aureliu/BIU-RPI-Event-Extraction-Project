@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Random;
 
 import org.apache.commons.lang3.StringUtils;
@@ -23,6 +24,11 @@ public class FeatureVector implements Serializable
 
 	// different from Mallet, just use a JDK HashMap to restore the sparse vector
 	public HashMap<Object, BigDecimal> map;
+	
+	// For each entityIndex\k (index in eventArgCandidates), give a full FeatureVector.
+	// Non-null only when relevant
+	// For logging purposes only
+	public HashMap<Integer, FeatureVector> argsFV;
 	
 	public Map<Integer, Map<Object, BigDecimal>> updates = Maps.newHashMap();
 
@@ -52,9 +58,10 @@ public class FeatureVector implements Serializable
 		this(20);
 	}
 	
-	public FeatureVector (int capacity) 
+	private FeatureVector (int capacity) 
 	{
 		map = new LinkedHashMap<Object, BigDecimal>(capacity);
+//		argsFV = new LinkedHashMap<Integer, FeatureVector>();
 	}
 
 	public BigDecimal get(Object key)
@@ -83,6 +90,19 @@ public class FeatureVector implements Serializable
 		}
 	}
 	
+	// Ofer: just for the k and argsFV
+	public void add(Object feat, BigDecimal value, int k) {
+		if (argsFV == null) {
+			argsFV = new HashMap<Integer, FeatureVector>();
+		}
+		FeatureVector fv = argsFV.get(k);
+		if (fv== null) {
+			fv = new FeatureVector();
+			argsFV.put(k, fv);
+		}
+		fv.add(feat, value);
+	}
+
 	public void addAndLogChanges(Object feat, BigDecimal value, int i) {
 		add(feat, value);
 		
@@ -105,6 +125,16 @@ public class FeatureVector implements Serializable
 	{
 		FeatureVector fv = new FeatureVector();
 		fv.map = (HashMap<Object, BigDecimal>) map.clone();
+		
+		// Deep copy!!!
+		if (argsFV != null) {
+			fv.argsFV = new HashMap<Integer, FeatureVector>(argsFV.size());
+			for (Entry<Integer, FeatureVector> entry : argsFV.entrySet()) {
+				FeatureVector innerFV = entry.getValue().clone();
+				fv.argsFV.put(entry.getKey(), innerFV);
+			}
+		}
+		
 		return fv;
 	}
 

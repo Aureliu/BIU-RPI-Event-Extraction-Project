@@ -114,7 +114,7 @@ public class TreeFragmentBuilder {
 //				System.err.println(getClass().getSimpleName() + ": Generated tree nodes do not exactly match required nodes. origToNew.keySet()=" +
 //						origToNew.keySet() + "  requiredNodes=%s" + requiredNodes);
 				System.err.println(getClass().getSimpleName() + ": Generated tree nodes do not exactly match required nodes. origToNew.keySet()=" +
-						origToNew.keySet().size() + "  requiredNodes=%s" + requiredNodes.size());
+						origToNew.keySet().size() + "  requiredNodes=" + requiredNodes.size());
 			}
 			return new FragmentAndReference(newRoot, origToNew.getKey(newRoot), facet);
 		}

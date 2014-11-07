@@ -146,7 +146,7 @@ public abstract class ArgumentExampleScorer extends ArgumentFreeScorer<ArgumentE
 		}
 
 		mention.headTokenText = prev.getCoveredText().intern();
-		mention.headTokenLemma = prev.getLemma().getValue().intern();
+		//mention.headTokenLemma = prev.getLemma().getValue().intern();
 		return prev;
 	}
 

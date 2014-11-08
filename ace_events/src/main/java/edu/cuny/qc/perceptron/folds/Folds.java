@@ -32,6 +32,7 @@ import com.google.common.collect.Sets;
 
 import edu.cuny.qc.ace.acetypes.AceDocument;
 import edu.cuny.qc.ace.acetypes.AceEventMention;
+import edu.cuny.qc.ace.acetypes.ErrorAnalysis;
 import edu.cuny.qc.ace.acetypes.Scorer;
 import edu.cuny.qc.ace.acetypes.Scorer.Stats;
 import edu.cuny.qc.perceptron.core.AllTrainingScores;
@@ -387,7 +388,8 @@ public class Folds {
 			Multimap<Document, SentenceInstance> runTrain = getInstancesForTypes(controller, trainInstances, run.trainEvents, true);
 			Multimap<Document, SentenceInstance> runDev = getInstancesForTypes(controller, devInstances, run.devEvents, false);
 			
-			String dirPrefix = "DIR_" + run.suffix + "__";
+			String dirPrefix = "DIR_" + run.suffix;// + "__";
+			String runDir = outputFolder + "/" + dirPrefix;
 			String modelFileName = outputFolder.getAbsolutePath() + "/Model_" + run.suffix;
 			logs.logSuffix = "." + run.suffix;
 			Perceptron.uTrain = logs.getU("Train");
@@ -418,6 +420,12 @@ public class Folds {
 
 			logs.logRun(r, run, scores, testStats, run.trainEvents, run.devEvents, run.testEvent,
 					runTrain.values(), runDev.values(), runTest.values());
+
+			if (!runTest.isEmpty()) {
+				String[] errorAnalysisArgs = new String[]{CORPUS_DIR, runDir, testDocs.getAbsolutePath(), runDir+"/NtpOut", SpecAnnotator.getSpecLabel(run.testEvent)};
+				ErrorAnalysis.main(errorAnalysisArgs);
+			}
+			
 			System.out.printf("%s ############################################# Finished run %s (%s in test spec)\n", Utils.detailedLog(), run.id, run.idPerTest);
 		}
 		System.out.printf("%s Finished all folds!\n", Utils.detailedLog());

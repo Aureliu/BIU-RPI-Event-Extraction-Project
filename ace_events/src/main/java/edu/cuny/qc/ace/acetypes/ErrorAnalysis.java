@@ -14,6 +14,8 @@ import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.dom4j.DocumentException;
 import org.dom4j.Node;
 
+import com.google.common.collect.ImmutableList;
+
 import edu.cuny.qc.ace.analysis.forEvent.Analysis.Arg;
 import edu.cuny.qc.ace.analysis.forEvent.Analysis.EventMention;
 import edu.cuny.qc.ace.analysis.forEvent.ApfReader;
@@ -39,7 +41,7 @@ public class ErrorAnalysis {
 			+ "oMethod=G0P- serialization=BZ2 featureProfile=ANALYSIS calcDebugSignalsAnyway=true";
 
 	static public List<EventMention> getEventMentions(File apf_file,
-			List<Span> sentences, String doc_text) throws DocumentException {
+			List<Span> sentences, String doc_text, List<String> allowedTypes) throws DocumentException {
 		ApfReader apfReader_apf = new ApfReader(apf_file.getAbsolutePath());
 		List<Node> nodes_event_mentions = apfReader_apf.getEventMentions();
 
@@ -47,14 +49,16 @@ public class ErrorAnalysis {
 		for (Node node_event_mention : nodes_event_mentions) {
 			EventMention event_mention = new EventMention(node_event_mention,
 					sentences, doc_text);
-			event_mentions.add(event_mention);
+			if (allowedTypes == null || allowedTypes.contains(event_mention.type)) {
+				event_mentions.add(event_mention);
+			}
 		}
 
 		return event_mentions;
 	}
 
 	static void doAnalysisForFile(File textFile, File apf_ans, File apf_gold,
-			Stats stats, String line, PrintStream out, PrintStream out2,
+			Stats stats, String line, List<String> allowedTypes, PrintStream out, PrintStream out2,
 			PrintStream out3, PrintStream out4, PrintStream out5)
 			throws DocumentException, IOException {
 		Document doc = new Document(textFile.getAbsolutePath().replace(".sgm",
@@ -66,9 +70,9 @@ public class ErrorAnalysis {
 		String doc_text = doc.allText;
 
 		List<EventMention> mentions_gold = getEventMentions(apf_gold,
-				sentences, doc_text);
+				sentences, doc_text, allowedTypes);
 		List<EventMention> mentions_ans = getEventMentions(apf_ans, sentences,
-				doc_text);
+				doc_text, null);
 
 		stats.num_empty_event_ans += getNumberOfEmptyEvents(mentions_ans);
 		stats.num_empty_event_gold += getNumberOfEmptyEvents(mentions_gold);
@@ -253,7 +257,7 @@ public class ErrorAnalysis {
 		return ret;
 	}
 
-	public static void doAnalysis(File goldDir, File ansDir, File file_list,
+	public static void doAnalysis(File goldDir, File ansDir, File file_list, List<String> allowedTypes,
 			PrintStream out, PrintStream out2, PrintStream out3,
 			PrintStream out4, PrintStream out5) throws IOException,
 			DocumentException {
@@ -301,7 +305,7 @@ public class ErrorAnalysis {
 			}
 
 			try {
-				doAnalysisForFile(text_file, apf_ans, apf_gold, stats, line,
+				doAnalysisForFile(text_file, apf_ans, apf_gold, stats, line, allowedTypes,
 						out, out2, out3, out4, out5);
 			} catch (DocumentException e) {
 				Throwable root = ExceptionUtils.getRootCause(e);
@@ -381,14 +385,14 @@ public class ErrorAnalysis {
 		}
 	}
 
-	static public void main(String[] args) throws DocumentException,
-			IOException {
-		if (args.length < 4) {
+	public static void main(String[] args) throws DocumentException, IOException {
+		if (args.length < 5) {
 			System.out.println("Automatic error analysis Usage:");
 			System.out.println("args[0]: gold Dir");
 			System.out.println("args[1]: ans Dir");
 			System.out.println("args[2]: file list");
 			System.out.println("args[3]: output filename");
+			System.out.println("args[4]: single name of test event - or \"null\"");
 			System.exit(-1);
 		}
 
@@ -400,12 +404,17 @@ public class ErrorAnalysis {
 		PrintStream out3 = new PrintStream(new File(args[3]) + "3.html");
 		PrintStream out4 = new PrintStream(new File(args[3]) + "4.html");
 		PrintStream out5 = new PrintStream(new File(args[3]) + "5.html");
+		String testEvent = args[4];
+		List<String> allowedTypes = null;
+		if (testEvent != "null") {
+			allowedTypes = ImmutableList.of(testEvent);
+		}
 
 		Controller controller = new Controller();
 		controller.setValueFromArguments(StringUtils.split(CONTROLLER_PARAMS));
 		Perceptron.controllerStatic = controller;
 
-		doAnalysis(goldDir, ansDir, filelist, out, out2, out3, out4, out5);
+		doAnalysis(goldDir, ansDir, filelist, allowedTypes, out, out2, out3, out4, out5);
 
 		out.close();
 		out2.close();

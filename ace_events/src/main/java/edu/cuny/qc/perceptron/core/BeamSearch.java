@@ -4,14 +4,27 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Map.Entry;
 
 import javax.management.RuntimeErrorException;
+
+import org.apache.commons.lang3.StringUtils;
+
+import com.google.common.collect.ContiguousSet;
+import com.google.common.collect.DiscreteDomain;
+import com.google.common.collect.ImmutableSortedSet;
+import com.google.common.collect.Lists;
+import com.google.common.collect.Range;
+
+import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
 
 import edu.cuny.qc.ace.acetypes.AceMention;
 import edu.cuny.qc.perceptron.types.FeatureVector;
@@ -69,242 +82,7 @@ public class BeamSearch
 		}
 	}
 	
-	public void printBeam(PrintStream b, SentenceInstance instance, List<SentenceAssignment> beam, String violation, boolean doLogging) {
-		//System.out.printf("BEAMprint    printBeam: beam.size()=%s, b=%s, this.isTraining=%s, doLogging=%s\n", beam.size(), b, this.isTraining, doLogging);
-		if (this.isTraining && doLogging && b != null) {
-			//System.out.printf("BEAMprint    printBeam: We are in the method!!!\n");
-			for (int pos=0; pos<beam.size(); pos++) {
-				SentenceAssignment assn = beam.get(pos);
-				
-				String targetAssnCompatible = "F";
-				// the trick here with ignoring args - should be removed when re-introducing args!
-				String targetNoArgs = instance.target.toString().replaceAll("\\([^()]*\\)", "");
-				if (targetNoArgs.startsWith(assn.toString())) {
-					targetAssnCompatible = "T";
-				}
 
-				String posStr = Integer.toString(pos);
-				if (beam.size()==1) {
-					posStr = "0-!";
-				}
-				//else if (pos == 0) {
-				//	posStr = "0+";
-				//}
-				else if (pos == beam.size()-1) {
-					posStr = "" + pos + "-";
-				}
-	
-				if (model.controller.logLevel >= Logs.LEVEL_B_2) {
-					//System.out.printf("BEAMprint    printBeam: We are in LEVEL_B_2 (%s)!!!\n", Logs.LEVEL_B_2);
-					List<Map<Class<?>, Object>> tokens = (List<Map<Class<?>, Object>>) instance.get(InstanceAnnotations.Token_FEATURE_MAPs);
-					for (int j=0; j<=assn.getState(); j++) {
-						String lemma = (String) tokens.get(j).get(TokenAnnotations.LemmaAnnotation.class);
-						
-						FeatureVector fvTarget = instance.target.getFeatureVectorSequence().get(j);
-						FeatureVector fvAssn = assn.getFeatureVectorSequence().get(j);
-						Map<Object, BigDecimal> mapTarget = fvTarget.getMap();
-						Map<Object, BigDecimal> mapAssn = fvAssn.getMap();
-
-						Set<Object> allFeaturesSet = new HashSet<Object>();
-						allFeaturesSet.addAll(mapTarget.keySet());
-						allFeaturesSet.addAll(mapAssn.keySet());
-
-						List<String> allFeaturesListNoEdge = new ArrayList<String>();
-						for (Object o : allFeaturesSet) {
-							String s = (String) o;
-							if (!s.startsWith("EdgeLocalFeature:")) {
-								allFeaturesListNoEdge.add(s);
-							}
-						}
-						Collections.sort(allFeaturesListNoEdge);
-		
-						for (String s : allFeaturesListNoEdge) {						
-							Utils.print(b, "", "\n", "|", instance.sentInstID,
-									//general
-									Perceptron.iter,//"Iter",
-									instance.docID,//"DocID"
-									instance.sentInstID,//"SentenceNo",
-									violation,//"violation",
-									beam.size(),//"beam-size",
-									
-									//assignment
-									posStr, //"pos",
-									"",//"assignment", //toString()
-									"",//"target"
-									"",//"compatible"
-									assn.getScore(),//"score",
-									assn.getState(),//"state",
-									
-									//token
-									j,//"i",
-									Logs.lemma(lemma),//"Lemma",
-									instance.target.getLabelAtToken(j),//"target-label",
-									assn.getLabelAtToken(j),//"assn-label",
-									Logs.twoLabels(instance.target, assn, j),//"both-labels"
-									assn.getPartialScores().get(j),//"partial-score",
-									
-									//feature
-									Logs.feature(s),//"Feature",
-									Logs.str(mapTarget, s),//"target"
-									Logs.str(mapAssn, s),//"assn"
-									Logs.twoLabelsAndScore(instance.target, assn, j, mapAssn, s),//"labels+assn"
-									Logs.str(model.getWeights(), s),//"Weight",
-									Logs.str(model.getAvg_weights(), s)//"AvgWeight"
-							);
-						}
-						
-						//4.11.2014 09:34 - just discovered the equivalent code for AllFeatures.log!!!
-						/*
-						if (fvTarget.argsFV != null || fvAssn.argsFV != null) {
-							// TODO - remove?
-							if (allFeaturesListNoEdge.size() == allFeaturesSet.size()) {
-								throw new RuntimeException(String.format("Got an argsFV, bot no edge features! fvTarget.argsFV=%s, fvAssn.argsFV=%s",
-										fvTarget.argsFV, fvAssn.argsFV));
-							}
-							
-							for (int entityIndex=0; entityIndex<instance.eventArgCandidates.size(); entityIndex++) {
-								Set<Object> allEdgeFeaturesSet = new HashSet<Object>();
-								AceMention argCand = instance.eventArgCandidates.get(entityIndex);
-
-								Map<Object, BigDecimal> mapTargetEdge = null;
-								if (fvTarget.argsFV != null && fvTarget.argsFV.containsKey(entityIndex)) {
-									mapTargetEdge = fvTarget.argsFV.get(entityIndex).getMap();
-									allEdgeFeaturesSet.addAll(mapTargetEdge.keySet());
-								}
-								Map<Object, BigDecimal> mapAssnEdge = null;
-								if (fvAssn.argsFV != null && fvAssn.argsFV.containsKey(entityIndex)) {
-									mapAssnEdge = fvAssn.argsFV.get(entityIndex).getMap();
-									allEdgeFeaturesSet.addAll(mapAssnEdge.keySet());
-								}
-								
-								List<String> allEdgeFeaturesList = new ArrayList<String>();
-								for (Object o : allEdgeFeaturesSet) {
-									allEdgeFeaturesList.add((String) o);
-								}
-								Collections.sort(allEdgeFeaturesList);
-								
-								for (String s : allEdgeFeaturesList) {						
-									Utils.print(b, "", "\n", "|", instance.sentInstID,
-											//general
-											Perceptron.iter,//"Iter",
-											instance.docID,//"DocID"
-											instance.sentInstID,//"SentenceNo",
-											violation,//"violation",
-											beam.size(),//"beam-size",
-											
-											//assignment
-											posStr, //"pos",
-											"",//"assignment", //toString()
-											"",//"target"
-											"",//"compatible"
-											assn.getScore(),//"score",
-											assn.getState(),//"state",
-											
-											//token
-											j,//"i",
-											Logs.lemma(lemma),//"Lemma",
-											entityIndex,//"entityIndex"
-											argCand.getType(),//"entityType"
-											argCand.text???,//"entity"
-											instance.target.getLabelAtToken(j),//"target-label",
-											assn.getLabelAtToken(j),//"assn-label",
-											Logs.twoLabels(instance.target, assn, j),//"both-labels"
-											assn.getPartialScores().get(j),//"partial-score",
-											
-											//feature
-											Logs.feature(s),//"Feature",
-											Logs.str(mapTarget, s),//"target"
-											Logs.str(mapAssn, s),//"assn"
-											Logs.twoLabelsAndScore(instance.target, assn, j, mapAssn, s),//"labels+assn"
-											Logs.str(model.getWeights(), s),//"Weight",
-											Logs.str(model.getAvg_weights(), s)//"AvgWeight"
-									);
-								}
-								
-							}
-							
-						}
-						else {
-							// TODO - remove?
-							if (allFeaturesListNoEdge.size() != allFeaturesSet.size()) {
-								throw new RuntimeException(String.format("Both argsFV's are null, but still got %s edge features!",
-										allFeaturesSet.size()-allFeaturesListNoEdge.size()));
-							}
-						}
-						*/
-						
-						
-	//					Utils.print(b, "", "\n", "|",		
-	//							//general
-	//							Perceptron.iter,//"Iter",
-	//							instance.sentID,//"SentenceNo",
-	//							violation,//"violation",
-	//							beam.size(),//"beam-size",
-	//							
-	//							//assignment
-	//							posStr, //"pos",
-	//							"",//"assignment", //toString()
-	//							"",//"target"
-	//							"",//"copmatible"
-	//							assn.getScore(),//"score",
-	//							assn.getState(),//"state",
-	//							
-	//							//token
-	//							j,//"i",
-	//							Perceptron.lemma(lemma),//"Lemma",
-	//							instance.target.getLabelAtToken(j),//"target-label",
-	//							assn.getLabelAtToken(j),//"assn-label",
-	//							assn.getPartialScores().get(j),//"partial-score",
-	//							
-	//							//feature
-	//							"",//"Feature",
-	//							"",//"target"
-	//							"",//"assn"
-	//							"",//"Weight",
-	//							""//"AvgWeight"
-	//					);
-					}
-				}
-				
-				if (model.controller.logLevel >= Logs.LEVEL_B_1) {
-					//System.out.printf("BEAMprint    printBeam: We are in LEVEL_B_1 (%s)!!!\n", Logs.LEVEL_B_1);
-					Utils.print(b, "", "\n", "|", instance.sentInstID,
-							//general
-							Perceptron.iter,//"Iter",
-							instance.docID,//"DocID"
-							instance.sentInstID,//"SentenceNo",
-							violation,//"violation",
-							beam.size(),//"beam-size",
-							
-							//assignment
-							posStr, //"pos",
-							Logs.assn(assn),//"assignment", //toString()
-							Logs.assn(instance.target),//"target"
-							targetAssnCompatible,//"compatible"
-							assn.getScore(),//"score",
-							assn.getState(),//"state",
-							
-							//token
-							"",//"i",
-							"",//"Lemma",
-							"",//"target-label",
-							"",//"assn-label",
-							"",//both-labels
-							"",//"partial-score",
-							
-							//feature
-							"",//"Feature",
-							"",//target
-							"",//assn
-							"",//labels+assn
-							"",//"Weight",
-							""//"AvgWeight"
-					);
-				}
-				
-			}
-		}
-	}
 	
 	public SentenceAssignment beamSearch(SentenceInstance problem, int beamSize, boolean isLearning, PrintStream b)
 	{
@@ -389,7 +167,7 @@ public class BeamSearch
 				{
 					beam.get(0).setViolate(true);
 					//System.out.printf("BEAMprint Violate 'trg': beam.size()=%s, b=%s, problem=%s\n", beam.size(), b, problem);
-					printBeam(b, problem, beam, "trg", true);
+					Logs.printBeam(b, problem, beam, "trg", this.isTraining, model, true);
 					return beam.get(0);
 				}
 			}
@@ -483,7 +261,7 @@ public class BeamSearch
 						{
 							beam.get(0).setViolate(true);
 							//System.out.printf("BEAMprint Violate 'arg': beam.size()=%s, b=%s, problem=%s\n", beam.size(), b, problem);
-							printBeam(b, problem, beam, "arg", true);
+							Logs.printBeam(b, problem, beam, "arg", this.isTraining, model, true);
 							return beam.get(0);
 						}
 					}
@@ -497,11 +275,11 @@ public class BeamSearch
 		{
 			beam.get(0).setViolate(true);
 			//System.out.printf("BEAMprint Violate 'end': beam.size()=%s, b=%s, problem=%s\n", beam.size(), b, problem);
-			printBeam(b, problem, beam, "end", true);
+			Logs.printBeam(b, problem, beam, "end", this.isTraining, model, true);
 		}
 		else {
 			//System.out.printf("BEAMprint Violate 'no': beam.size()=%s, b=%s, problem=%s\n", beam.size(), b, problem);
-			printBeam(b, problem, beam, "no", true);
+			Logs.printBeam(b, problem, beam, "no", this.isTraining, model, true);
 		}
 		
 		if (PRINT_BEAM) {

@@ -98,7 +98,7 @@ public class Decoder
 				perceptron.weights, perceptron.avg_weights, perceptron.avg_weights_base, null, null, null);
 		
 		// print to docs
-		File outputFile = new File(outDir + "/" + folderNamePrefix + doc.docLine + ".apf.xml");
+		File outputFile = new File(outDir + "/" + folderNamePrefix + "/" + doc.docLine + ".apf.xml");
 		if(!outputFile.getParentFile().exists())
 		{
 			outputFile.getParentFile().mkdirs();

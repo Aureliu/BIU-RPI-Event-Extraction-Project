@@ -67,7 +67,7 @@ public class Utils {
 				inMB(total - runtime.freeMemory()));
 	}
 	
-	public static void print(PrintStream out, String prefix, String postfix, String delimiter, Object sentID, Object...args) {
+	private static boolean shouldPrint(PrintStream out, Object sentID) {
 		if (out != null) {
 			String sentIDStr = null;
 			if (sentID!=null) {
@@ -75,8 +75,34 @@ public class Utils {
 			}
 			if (logOnlyTheseSentences == null || logOnlyTheseSentences.size()==0 || sentIDStr==null || sentIDStr.isEmpty() ||
 					sentIDStr.equals(Logs.POST_ITERATION_MARK) || logOnlyTheseSentences.contains(sentIDStr)) {
-				out.print(prefix + StringUtils.join(args, delimiter) + postfix);
+				return true;
 			}
+		}
+		return false;
+	}
+
+			
+	public static void print(PrintStream out, String prefix, String postfix, String delimiter, Object sentID, Object...args) {
+		if (shouldPrint(out, sentID)) {
+			out.print(prefix + StringUtils.join(args, delimiter) + postfix);
+		}
+	}
+	
+	public static void printByTitles(PrintStream out, String prefix, String postfix, String delimiter, Object sentID,
+			List<String> titles, Map<String, Object> entries) {
+		if (shouldPrint(out, sentID)) {
+			List<Object> values = Lists.newArrayList();
+			for (String title : titles) {
+				Object val = entries.get(title);
+				values.add(val);
+			}
+			out.print(prefix + StringUtils.join(values, delimiter) + postfix);
+		}
+	}
+	
+	public static void printTitles(PrintStream out, String prefix, String postfix, String delimiter, List<String> titles) {
+		if (shouldPrint(out, null)) {
+			out.print(prefix + StringUtils.join(titles, delimiter) + postfix);
 		}
 	}
 	

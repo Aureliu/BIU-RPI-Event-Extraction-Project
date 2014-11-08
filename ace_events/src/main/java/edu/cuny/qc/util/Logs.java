@@ -6,6 +6,7 @@ import java.io.PrintStream;
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
@@ -34,6 +35,7 @@ import edu.cuny.qc.ace.acetypes.AceMention;
 import edu.cuny.qc.ace.acetypes.Scorer.Stats;
 import edu.cuny.qc.perceptron.core.AllTrainingScores;
 import edu.cuny.qc.perceptron.core.Controller;
+import edu.cuny.qc.perceptron.core.Perceptron;
 import edu.cuny.qc.perceptron.core.Evaluator.Score;
 import edu.cuny.qc.perceptron.folds.Run;
 import edu.cuny.qc.perceptron.types.FeatureVector;
@@ -59,6 +61,21 @@ public class Logs {
 	public static final int LEVEL_R = 1;
 	public static final int LEVEL_WEIGHTS = 1;
 	public static final int LEVEL_MIN_F_U_W = Math.min(Math.min(LEVEL_U, LEVEL_F_1), LEVEL_W_1);
+
+	public static final	List<String> TITLES_F = Arrays.asList(new String[]{
+			"iter","docId","sentInstID","assocLabel","c","numTokens","argCands","assnScore",
+			"sentText","j","token","lemma","k","head","argType","targetLabel","assnLabel",
+			"twoLabels","feature","targetSize","targetSignal","targetVal","assnSize","assnSignal",
+			"assnVal","twoLabelsAndScore","both","same","partialScore","weightsSize",
+			"weight","avgWeight"
+		});
+	public static final	List<String> TITLES_B = Arrays.asList(new String[]{
+			"iter","docId","sentInstID","violation","beamSize","pos","assn","target",
+			"compatible","assnScore","state","j","token","lemma","k","head","argType","targetLabel","assnLabel",
+			"twoLabels","feature","targetSize","targetSignal","targetVal","assnSize","assnSignal",
+			"assnVal","twoLabelsAndScore","both","same","partialScore","weightsSize",
+			"weight","avgWeight"
+		});
 	
 	public Controller controller;
 	public String logSuffix; 
@@ -209,7 +226,7 @@ public class Logs {
 			for (String s : split) {
 				parts.add(s.substring(0, Math.min(s.length(), MAX_CHARS_MULTI_WORDS)));
 			}
-			return StringUtils.join(parts);
+			return StringUtils.join(parts, SEPARATOR);
 		}
 	}
 	
@@ -424,42 +441,7 @@ public class Logs {
 			String featuresOutputFilePath = outFolder.getAbsolutePath() + "/" + mode + "-AllFeatures-" + LOG_NAME_ID + "." + controller.logLevel + logSuffix + ".tsv";
 			PrintStream f = new PrintStream(featuresOutputFilePath);
 			
-			Utils.print(f, "", "\n", "|", null,			
-					"Iter",
-					"DocID",
-					"SentenceNo",
-					"AssocSpec",
-					"c",
-					"Tokens",
-					"ArgCands",
-					"AssnScore",
-					"Sentence",
-					"i",
-					"Token",
-					"Lemma",
-					"k",
-					"Head",
-					"Type",
-					//"HeToLem",
-					"target-label",
-					"assn-label",
-					"both-labels",
-					"Feature",
-					"target-size",
-					"target-signal",
-					"target",
-					"assn-size",
-					"assn-signal",
-					"assn",
-					"labels+assn",
-					"in-both",
-					"same-score",
-					"partial-score",
-					"weights-size",
-					"weights",
-					"avg_weights"
-			);
-			
+			Utils.printTitles(f, "", "\n", "|", TITLES_F);
 			return f;
 		}
 		return null;
@@ -541,39 +523,7 @@ public class Logs {
 			String beamsOutputFilePath = outFolder.getAbsolutePath() + "/" + mode + "-AllBeams-" + LOG_NAME_ID + "." + controller.logLevel + logSuffix + ".tsv";
 			PrintStream b = new PrintStream(beamsOutputFilePath);
 			
-			Utils.print(b, "", "\n", "|", null,	
-					//general
-					"Iter",
-					"DocID",
-					"SentenceNo",
-					"violation",
-					"beam-size",
-					
-					//assignment
-					"pos",
-					"assignment", //toString()
-					"target",
-					"compatible",
-					"score",
-					"state",
-					
-					//token
-					"i",
-					"Lemma",
-					"target-label",
-					"assn-label",
-					"both-labels",
-					"partial-score",
-					
-					//feature
-					"Feature",
-					"target",
-					"assn",
-					"labels+assn",
-					"Weight",
-					"AvgWeight"
-			);
-			
+			Utils.printTitles(b, "", "\n", "|", TITLES_B);
 			return b;
 		}
 		return null;
@@ -717,6 +667,294 @@ public class Logs {
 		return null;
 	}
 	
+	public static void printFeatures(List<String> titles, Controller controller, int logLevelSpecific, int logLevelGeneric,
+			SentenceInstance instance, SentenceAssignment assn, BigDecimal c, Integer iter,
+			FeatureVector weights, FeatureVector avg_weights, FeatureVector avg_weights_base,
+			String violation, int beamSize, String posStr, PrintStream out) {
+		String sentText = sentence(instance.textStart);
+		String assnScore = assn.getScore().toString();
+		int argCands = instance.eventArgCandidates.size();
+		
+		String assocLabel;
+		try {
+			assocLabel = SpecAnnotator.getSpecLabel(instance.associatedSpec);
+		} catch (CASException e) {
+			throw new RuntimeException(e);
+		}
+		
+		// {SignalName : {Label : {Category : AmountInSentence}}}
+		//Map<String, Map<String, Map<String, BigDecimal>>> amounts = Maps.newTreeMap();
+
+		// {SignalName: {Category : AmountInSentence}} - oof and oot ignore labels
+		//Map<String, Map<String, BigDecimal>> amountsOO = Maps.newTreeMap();
+
+		String targetAssnCompatible = "F";
+		// the trick here with ignoring args - should be removed when re-introducing args!
+		String targetNoArgs = instance.target.toString().replaceAll("\\([^()]*\\)", "");
+		if (targetNoArgs.startsWith(assn.toString())) {
+			targetAssnCompatible = "T";
+		}
+
+		List<Map<Class<?>, Object>> tokens = (List<Map<Class<?>, Object>>) instance.get(InstanceAnnotations.Token_FEATURE_MAPs);
+		for (int j=0; j<instance.size(); j++) {
+			Token tokenAnno = instance.sent.getTokenAnnotation(j);
+			String surface = tokenAnno.getCoveredText();
+			String lemma = (String) tokens.get(j).get(TokenAnnotations.LemmaAnnotation.class);
+			Set<Object> allFeaturesSet = new HashSet<Object>();
+			FeatureVector fvTarget = instance.target.getFeatureVectorSequence().get(j);
+			Map<Object, BigDecimal> mapTarget = fvTarget.getMap();
+			String assnPartialScore = "";
+
+			String targetTriggerLabel = triggerLabel(instance.target.getLabelAtToken(j));
+			
+			String assnTriggerLabel = "X";
+			FeatureVector fvAssn = null;
+			Map<Object, BigDecimal> mapAssn = new HashMap<Object, BigDecimal>();
+			if (j<assn.getFeatureVectorSequence().size()) {
+				fvAssn = assn.getFeatureVectorSequence().get(j);
+				mapAssn = fvAssn.getMap();
+				assnTriggerLabel = triggerLabel(assn.getLabelAtToken(j));
+				assnPartialScore = assn.getPartialScores().get(j).toString();
+			}
+			
+			if (controller.logLevel >= logLevelGeneric) {
+			
+				allFeaturesSet.addAll(mapTarget.keySet());
+				allFeaturesSet.addAll(mapAssn.keySet());
+				List<String> allFeaturesList = new ArrayList<String>(allFeaturesSet.size());
+				for (Object o : allFeaturesSet) {
+					allFeaturesList.add((String) o);
+				}
+				Collections.sort(allFeaturesList);
+				
+				int topK = -1;
+				if (controller.useArguments) {
+					topK = instance.eventArgCandidates.size()-1;
+				}
+				
+				Map<Object, BigDecimal> currMapTarget;
+				Map<Object, BigDecimal> currMapAssn;
+				
+				String targetLabel;
+				String assnLabelG;
+				List<String> allTargetArgLabels = Lists.newArrayList();
+				List<String> allAssnArgLabels = Lists.newArrayList();
+				
+				ImmutableSortedSet<Integer> kValsImm = ContiguousSet.create(Range.closed(-1, topK), DiscreteDomain.integers());
+				List<Integer> kVals = Lists.newArrayList(kValsImm);
+				
+				for (int k : kVals) {
+					String kStr = "";
+
+					String headText = "";
+					String argType = "";
+					//String headTokenLemma = "";
+					
+					if (k == -1) { //Trigger!
+						currMapTarget = mapTarget;
+						currMapAssn = mapAssn;
+						targetLabel = targetTriggerLabel;
+						assnLabelG = assnTriggerLabel;
+					}
+					else { //Argument!
+						targetLabel = argLabel(targetTriggerLabel, "-");
+						assnLabelG = argLabel(assnTriggerLabel, "-");
+						Integer targetRoleNum = null;
+						Integer assnRoleNum = null;
+						
+						if(instance.target.getEdgeAssignment().get(j) != null) {
+							targetRoleNum = instance.target.getEdgeAssignment().get(j).get(k);
+						}
+						if(assn.getEdgeAssignment().get(j) != null) {
+							assnRoleNum = assn.getEdgeAssignment().get(j).get(k);
+						}
+						
+						if (targetRoleNum==null && assnRoleNum==null) {
+							continue;
+						}
+						if (targetRoleNum!=null) {
+							String targetArgLabel = (String) instance.target.edgeTargetAlphabet.lookupObject(targetRoleNum);
+							targetLabel = argLabel(targetTriggerLabel, targetArgLabel);
+							allTargetArgLabels.add(targetArgLabel);
+						}
+						if (assnRoleNum!=null) {
+							String assnArgLabel = (String) instance.target.edgeTargetAlphabet.lookupObject(assnRoleNum);
+							assnLabelG = argLabel(assnTriggerLabel, assnArgLabel);
+							allAssnArgLabels.add(assnArgLabel);
+						}
+
+						currMapTarget = null;
+						if (fvTarget != null && fvTarget.argsFV != null && fvTarget.argsFV.containsKey(k)) {
+							currMapTarget = fvTarget.argsFV.get(k).getMap();
+							
+//							Entry<Object, BigDecimal> e = currMapTarget.entrySet().iterator().next();
+//							System.out.printf("    j=%s k=%s currMapTarget.size()=%s (e.g. %s: %s)\n", j, k, currMapTarget.size(), e.getKey(), e.getValue());
+						}
+						currMapAssn = null;
+						if (fvAssn != null && fvAssn.argsFV != null && fvAssn.argsFV.containsKey(k)) {
+							currMapAssn = fvAssn.argsFV.get(k).getMap();
+							
+							//Entry<Object, BigDecimal> e = currMapAssn.entrySet().iterator().next();
+							//System.out.printf("    j=%s k=%s currMapAssn.size()=%s (e.g. %s: %s)\n", j, k, currMapAssn.size(), e.getKey(), e.getValue());
+						}
+
+						
+						kStr = Integer.toString(k);
+						AceMention mention = instance.eventArgCandidates.get(k);
+						headText = mention.getHeadText();
+						argType = mention.getType();
+						//headTokenLemma = mention.headTokenLemma;
+					}
+					
+					for (String s : allFeaturesList) {
+						
+						// Filter feature by trigger\arg
+						if ((k == -1 && !s.startsWith("B")) ||
+							(k != -1 && !s.startsWith("E"))) {
+							
+							continue;
+						}
+						
+						String inTarget = str(currMapTarget, s);
+						String inAssn = str(currMapAssn, s);
+						
+						if (inTarget.equals("X") && inAssn.equals("X")) {
+							continue;
+						}
+						
+						String inWeights = str(weights, s);
+						String inAvg = str(avg_weights, s);
+						
+						String targetSignal = "-"; //getSignalScore(instance.target, j, s);
+						String assnSignal = "-"; //getSignalScore(assn, j, s);
+						
+						String bothTargetAndAssn = null;
+						String sameTargetAndAssn = "F";
+						if (!inTarget.equals("X") && !inAssn.equals("X")) {
+							bothTargetAndAssn = "T";
+							if (inTarget.equals(inAssn)) {
+								sameTargetAndAssn = "T";
+							}
+						}
+						else {
+							bothTargetAndAssn ="F";
+						}
+						
+						/// DEBUG
+//						if (k!=-1 && !assnLabelG.contains("X") && !assnLabelG.contains("-") && inAssn.equals("X")) {
+//							int d = 89 + 5;
+//							int a = d + 6;
+//						}
+//						if (targetLabel.contains("Be")) {
+//							int d = 89 + 5;
+//							int a = d + 6;
+//						}
+						/////
+						
+						if (controller.logLevel >= logLevelSpecific) {
+	
+							Map<String, Object> entries = new HashMap<String, Object>();
+							entries.put("iter", iter);
+							entries.put("docId", instance.docID);
+							entries.put("sentInstID", instance.sentInstID);
+							entries.put("violation", violation);
+							entries.put("beamSize", beamSize);
+							entries.put("pos", posStr);
+							entries.put("assn", "");
+							entries.put("target", "");
+							entries.put("compatible", "");
+							entries.put("state", assn.getState());
+							entries.put("assocLabel", assocLabel);
+							entries.put("c", c);
+							entries.put("numTokens", instance.size());
+							entries.put("argCands", argCands);
+							entries.put("assnScore", assnScore);
+							entries.put("sentText", "");
+							entries.put("j", j);
+							entries.put("token", lemma(surface));
+							entries.put("lemma", lemma(lemma));
+							entries.put("k", kStr);
+							entries.put("head", lemma(headText, 25));
+							entries.put("argType", argType);
+							entries.put("targetLabel", targetLabel);
+							entries.put("assnLabel", assnLabelG);
+							entries.put("twoLabels", twoLabels(targetLabel, assnLabelG));
+							entries.put("feature", feature(s));
+							entries.put("targetSize", "");
+							entries.put("targetSignal", targetSignal);
+							entries.put("targetVal", inTarget);
+							entries.put("assnSize", "");
+							entries.put("assnSignal", assnSignal);
+							entries.put("assnVal", inAssn);
+							entries.put("twoLabelsAndScore", twoLabelsAndScore(targetLabel, assnLabelG, inAssn));
+							entries.put("both", bothTargetAndAssn);
+							entries.put("same", sameTargetAndAssn);
+							entries.put("partialScore", assnPartialScore);
+							entries.put("weightsSize", "");
+							entries.put("weight", inWeights);
+							entries.put("avgWeight", inAvg);	
+							
+							Utils.printByTitles(out, "", "\n", "|", instance.sentInstID,
+									titles, entries);
+						}
+					}
+				}
+				
+				if (controller.logLevel >= logLevelGeneric) {
+	
+					String targetArgsStr = StringUtils.join(allTargetArgLabels, "_");
+					targetLabel = argLabel(targetTriggerLabel, targetArgsStr);
+					String assnArgsStr = StringUtils.join(allAssnArgLabels, "_");
+					assnLabelG = argLabel(assnTriggerLabel, assnArgsStr);
+					
+					Map<String, Object> entries = new HashMap<String, Object>();
+					entries.put("iter", iter);
+					entries.put("docId", instance.docID);
+					entries.put("sentInstID", instance.sentInstID);
+					entries.put("violation", violation);
+					entries.put("beamSize", beamSize);
+					entries.put("pos", posStr);
+					entries.put("assn", assn(assn));
+					entries.put("target", assn(instance.target));
+					entries.put("compatible", targetAssnCompatible);
+					entries.put("state", assn.getState());
+					entries.put("assocLabel", assocLabel);
+					entries.put("c", c);
+					entries.put("numTokens", instance.size());
+					entries.put("argCands", argCands);
+					entries.put("assnScore", assnScore);
+					entries.put("sentText", sentText);
+					entries.put("j", j);
+					entries.put("token", lemma(surface));
+					entries.put("lemma", lemma(lemma));
+					entries.put("k", "");
+					entries.put("head", "");
+					entries.put("argType", "");
+					entries.put("targetLabel", targetLabel);
+					entries.put("assnLabel", assnLabelG);
+					entries.put("twoLabels", twoLabels(targetLabel, assnLabelG));
+					entries.put("feature", "");
+					entries.put("targetSize", size(mapTarget));
+					entries.put("targetSignal", "");
+					entries.put("targetVal", "");
+					entries.put("assnSize", size(mapAssn));
+					entries.put("assnSignal", "");
+					entries.put("assnVal", "");
+					entries.put("twoLabelsAndScore", "");
+					entries.put("both", "");
+					entries.put("same", "");
+					entries.put("partialScore", assnPartialScore);
+					entries.put("weightsSize", size(weights));
+					entries.put("weight", "");
+					entries.put("avgWeight", "");	
+					
+					Utils.printByTitles(out, "", "\n", "|", instance.sentInstID,
+							titles, entries);
+				}
+			}
+		}	
+	}
+	
 	public void logPostBeamSearch(SentenceInstance instance, SentenceAssignment assn, BigDecimal c, Integer iter, int i,
 			FeatureVector weights, FeatureVector avg_weights, FeatureVector avg_weights_base, PrintStream w, PrintStream f, PrintStream u, boolean doLogging) {
 		if (controller.logLevel >= LEVEL_MIN_F_U_W && doLogging) {
@@ -734,463 +972,36 @@ public class Logs {
 			
 			//printf(w, "|%s%d|%s\n", wt.getFeaturesStringSkip(), i, wt.getFeaturesString());
 			printWeights(w, iter, instance.docID, instance.sentInstID, c, instance.size(), sentText, weights, avg_weights, avg_weights_base, doLogging);
-	
-	
-			// {SignalName : {Label : {Category : AmountInSentence}}}
-			Map<String, Map<String, Map<String, BigDecimal>>> amounts = Maps.newTreeMap();
-	
-			// {SignalName: {Category : AmountInSentence}} - oof and oot ignore labels
-			Map<String, Map<String, BigDecimal>> amountsOO = Maps.newTreeMap();
-	
-			List<Map<Class<?>, Object>> tokens = (List<Map<Class<?>, Object>>) instance.get(InstanceAnnotations.Token_FEATURE_MAPs);
-			for (int j=0; j<instance.size(); j++) {
-				Token tokenAnno = instance.sent.getTokenAnnotation(j);
-				String surface = tokenAnno.getCoveredText();
-				String lemma = (String) tokens.get(j).get(TokenAnnotations.LemmaAnnotation.class);
-				Set<Object> allFeaturesSet = new HashSet<Object>();
-				FeatureVector fvTarget = instance.target.getFeatureVectorSequence().get(j);
-				Map<Object, BigDecimal> mapTarget = fvTarget.getMap();
-				String assnPartialScore = "";
-
-				String targetTriggerLabel = triggerLabel(instance.target.getLabelAtToken(j));
-				
-				String assnTriggerLabel = "X";
-				FeatureVector fvAssn = null;
-				Map<Object, BigDecimal> mapAssn = new HashMap<Object, BigDecimal>();
-				if (j<assn.getFeatureVectorSequence().size()) {
-					fvAssn = assn.getFeatureVectorSequence().get(j);
-					mapAssn = fvAssn.getMap();
-					assnTriggerLabel = triggerLabel(assn.getLabelAtToken(j));
-					assnPartialScore = assn.getPartialScores().get(j).toString();
-				}
-				
-				if (controller.logLevel >= LEVEL_F_1) {
-				
-					allFeaturesSet.addAll(mapTarget.keySet());
-					allFeaturesSet.addAll(mapAssn.keySet());
-					List<String> allFeaturesList = new ArrayList<String>(allFeaturesSet.size());
-					for (Object o : allFeaturesSet) {
-						allFeaturesList.add((String) o);
-					}
-					Collections.sort(allFeaturesList);
-					
-					int topK = -1;
-					if (controller.useArguments) {
-						topK = instance.eventArgCandidates.size()-1;
-					}
-					
-					Map<Object, BigDecimal> currMapTarget;
-					Map<Object, BigDecimal> currMapAssn;
-					
-					String targetLabel;
-					String assnLabelG;
-					List<String> allTargetArgLabels = Lists.newArrayList();
-					List<String> allAssnArgLabels = Lists.newArrayList();
-					
-					ImmutableSortedSet<Integer> kValsImm = ContiguousSet.create(Range.closed(-1, topK), DiscreteDomain.integers());
-					List<Integer> kVals = Lists.newArrayList(kValsImm);
-					
-					for (int k : kVals) {
-						String kStr = "";
-
-						String headText = "";
-						String mentionType = "";
-						//String headTokenLemma = "";
-						
-						if (k == -1) { //Trigger!
-							currMapTarget = mapTarget;
-							currMapAssn = mapAssn;
-							targetLabel = targetTriggerLabel;
-							assnLabelG = assnTriggerLabel;
-						}
-						else { //Argument!
-							targetLabel = argLabel(targetTriggerLabel, "-");
-							assnLabelG = argLabel(assnTriggerLabel, "-");
-							Integer targetRoleNum = null;
-							Integer assnRoleNum = null;
-							
-							if(instance.target.getEdgeAssignment().get(j) != null) {
-								targetRoleNum = instance.target.getEdgeAssignment().get(j).get(k);
-							}
-							if(assn.getEdgeAssignment().get(j) != null) {
-								assnRoleNum = assn.getEdgeAssignment().get(j).get(k);
-							}
-							
-							if (targetRoleNum==null && assnRoleNum==null) {
-								continue;
-							}
-							if (targetRoleNum!=null) {
-								String targetArgLabel = (String) instance.target.edgeTargetAlphabet.lookupObject(targetRoleNum);
-								targetLabel = argLabel(targetTriggerLabel, targetArgLabel);
-								allTargetArgLabels.add(targetArgLabel);
-							}
-							if (assnRoleNum!=null) {
-								String assnArgLabel = (String) instance.target.edgeTargetAlphabet.lookupObject(assnRoleNum);
-								assnLabelG = argLabel(assnTriggerLabel, assnArgLabel);
-								allAssnArgLabels.add(assnArgLabel);
-							}
-
-							currMapTarget = null;
-							if (fvTarget != null && fvTarget.argsFV != null && fvTarget.argsFV.containsKey(k)) {
-								currMapTarget = fvTarget.argsFV.get(k).getMap();
-								
-								Entry<Object, BigDecimal> e = currMapTarget.entrySet().iterator().next();
-								System.out.printf("    j=%s k=%s currMapTarget.size()=%s (e.g. %s: %s)\n", j, k, currMapTarget.size(), e.getKey(), e.getValue());
-							}
-							currMapAssn = null;
-							if (fvAssn != null && fvAssn.argsFV != null && fvAssn.argsFV.containsKey(k)) {
-								currMapAssn = fvAssn.argsFV.get(k).getMap();
-								
-								Entry<Object, BigDecimal> e = currMapAssn.entrySet().iterator().next();
-								System.out.printf("    j=%s k=%s currMapAssn.size()=%s (e.g. %s: %s)\n", j, k, currMapAssn.size(), e.getKey(), e.getValue());
-							}
-
-							
-							kStr = Integer.toString(k);
-							AceMention mention = instance.eventArgCandidates.get(k);
-							headText = mention.getHeadText();
-							mentionType = mention.getType();
-							//headTokenLemma = mention.headTokenLemma;
-						}
-						
-						for (String s : allFeaturesList) {
-							
-							// Filter feature by trigger\arg
-							if ((k == -1 && !s.startsWith("B")) ||
-								(k != -1 && !s.startsWith("E"))) {
-								
-								continue;
-							}
-							
-							String inTarget = str(currMapTarget, s);
-							String inAssn = str(currMapAssn, s);
-							
-							if (inTarget.equals("X") && inAssn.equals("X")) {
-								continue;
-							}
-							
-							String inWeights = str(weights, s);
-							String inAvg = str(avg_weights, s);
-							
-							String targetSignal = "-"; //getSignalScore(instance.target, j, s);
-							String assnSignal = "-"; //getSignalScore(assn, j, s);
-							
-							String bothTargetAndAssn = null;
-							String sameTargetAndAssn = "F";
-							if (!inTarget.equals("X") && !inAssn.equals("X")) {
-								bothTargetAndAssn = "T";
-								if (inTarget.equals(inAssn)) {
-									sameTargetAndAssn = "T";
-								}
-							}
-							else {
-								bothTargetAndAssn ="F";
-							}
-							
-							/// DEBUG
-//							if (k!=-1 && !assnLabelG.contains("X") && !assnLabelG.contains("-") && inAssn.equals("X")) {
-//								int d = 89 + 5;
-//								int a = d + 6;
-//							}
-							/////
-							
-							if (controller.logLevel >= LEVEL_F_2) {
-								Utils.print(f, "", "\n", "|", instance.sentInstID,
-										iter,
-										instance.docID,
-										instance.sentInstID,
-										assocLabel,
-										c,
-										instance.size(),
-										
-										argCands,										
-										assnScore,
-										
-										
-										"",//sentText,
-										j,
-										lemma(surface),
-										lemma(lemma),
-										kStr,
-										lemma(headText, 25),
-										mentionType,
-										//lemma(headTokenLemma, headText, false),
-										targetLabel,
-										assnLabelG,
-										twoLabels(targetLabel, assnLabelG),//twoLabels(instance.target, assnLabel, j),
-										feature(s),
-										"",//mapTarget.size(),
-										targetSignal,
-										inTarget,
-										"",//mapAssn.size(),
-										assnSignal,
-										inAssn,
-										twoLabelsAndScore(targetLabel, assnLabelG, inAssn),//twoLabelsAndScore(instance.target, assnLabel, j, inAssn),
-										bothTargetAndAssn,
-										sameTargetAndAssn,
-										
-										assnPartialScore,
-										
-										"",//weights.size(),
-										inWeights,
-										inAvg
-								);
-							}
-						}
-					}
-					
-					if (controller.logLevel >= LEVEL_F_1) {
-		
-						String targetArgsStr = StringUtils.join(allTargetArgLabels, "_");
-						targetLabel = argLabel(targetTriggerLabel, targetArgsStr);
-						String assnArgsStr = StringUtils.join(allAssnArgLabels, "_");
-						assnLabelG = argLabel(assnTriggerLabel, assnArgsStr);
-								
-						Utils.print(f, "", "\n", "|", instance.sentInstID,
-								iter,
-								instance.docID,
-								instance.sentInstID,
-								assocLabel,
-								c,
-								instance.size(),
-								argCands,
-								assnScore,
-								sentText,
-								j,
-								lemma(surface),
-								lemma(lemma),
-								"", //k
-								"", //Head
-								"", //mentionType
-								//"", //HeadTokenLemma
-								targetLabel,
-								assnLabelG,
-								twoLabels(targetLabel, assnLabelG),
-								"",
-								size(mapTarget),
-								"",
-								"",
-								size(mapAssn),
-								"",
-								"",
-								"",
-								"",
-								"",
-								assnPartialScore,
-								size(weights),
-								"",
-								""
-						);
-					}
-				}
-				
-				if (controller.logLevel >= LEVEL_U && j<assn.getFeatureVectorSequence().size() && false) {
-//					String targetLabel = instance.target.getLabelAtToken(j);
-//					
-//					for (String signalName : SentenceAssignment.signalToFeature.keySet()) {
-//						try {
-//							String featureName = null;
-//							if (SentenceAssignment.signalToFeature.get(signalName).containsKey(assnLabel)) {
-//								// Due to deisgn limitations of the table, all data under categories (eg LBL,O,T)
-//								// would refer only to P+. P- won't be mentioned there (but is basically the opposite of the third portion).
-//								featureName = SentenceAssignment.signalToFeature.get(signalName).get(assnLabel).get("P+");
-//							}
-//							// {label : {category : amount}}
-//							Map<String, Map<String, BigDecimal>> forSignalName = amounts.get(signalName);
-//							if (forSignalName == null) {
-//								forSignalName = Maps.newLinkedHashMap();
-//								amounts.put(signalName, forSignalName);
-//							}
-//							Map<String, BigDecimal> forSignalNameOO = amountsOO.get(signalName);
-//							if (forSignalNameOO == null) {
-//								forSignalNameOO = Maps.newLinkedHashMap();
-//								amountsOO.put(signalName, forSignalNameOO);
-//							}
-//							
-//							boolean targetIsO = targetLabel.equals(SentenceAssignment.PAD_Trigger_Label);
-//							boolean assnIsO = assnLabel.equals(SentenceAssignment.PAD_Trigger_Label);
-//							
-//							if (targetIsO && assnIsO) {
-//								addAccordingly(mapAssn, forSignalNameOO, "O,O,T", "O,O,F", featureName);
-//							}
-//							else if (targetIsO && !assnIsO) {
-//								addAccordingly(mapAssn, forSignalName, assnLabel, "O,LBL,T", "O,LBL,F", featureName);
-//							}
-//							else if (!targetIsO && assnIsO) {
-//								addAccordingly(mapAssn, forSignalName, targetLabel, "LBL,O,T", "LBL,O,F", featureName);
-//							}
-//							else if (!targetIsO && !assnIsO) {
-//								if (targetLabel.equals(assnLabel)) {
-//									addAccordingly(mapAssn, forSignalName, targetLabel, "LBL,LBL,T", "LBL,LBL,F", featureName);
-//								}
-//								else {
-//									addAccordingly(mapAssn, forSignalName, assnLabel, "weird,weird,T", "weird,weird,F", featureName);
-//									addAccordingly(mapAssn, forSignalName, targetLabel, "weird,weird,T", "weird,weird,F", featureName);
-//								}
-//							}
-//						}
-//						catch (RuntimeException e) {
-//							throw new RuntimeException(
-//									String.format("Exception in inst=%s, j=%s, targetLabel=%s, assnLabel=%s sig=%s.", instance, j, targetLabel, assnLabel, signalName), e);
-//						}
-//					}
-				}
-			}
 			
-			if (controller.logLevel >= LEVEL_U) {
-//				for (String signalName : SentenceAssignment.signalToFeature.keySet()) {
-//					Map<String, Map<String, BigDecimal>> forSignalName = amounts.get(signalName);
-//					Map<String, BigDecimal> forSignalNameOO = amountsOO.get(signalName);
-//					for (String label : forSignalName.keySet()) {
-//						try {
-//							Map<String, BigDecimal> forLabel = forSignalName.get(label);
-//							
-//							// Explaining this horrible convention: pp=P+ (p plus), pm=P- (p minus)
-//							// and if you get a similar weird null regarding O (and not some LBL), then maybe do an if for it as well :)
-//							String featureNameLBLpp="";
-//							String featureNameLBLpm="";
-//							String featureNameOpp="";
-//							String featureNameOpm="";
-//							BigDecimal weightLBLpp=BigDecimal.ZERO;
-//							BigDecimal weightLBLpm=BigDecimal.ZERO;
-//							BigDecimal weightOpp=BigDecimal.ZERO;
-//							BigDecimal weightOpm=BigDecimal.ZERO;
-//							String weightLBLStrpp="X";
-//							String weightLBLStrpm="X";
-//							String weightOStrpp="X";
-//							String weightOStrpm="X";
-//							BigDecimal changeLBLpp=BigDecimal.ZERO;
-//							BigDecimal changeLBLpm=BigDecimal.ZERO;
-//							BigDecimal changeOpp=BigDecimal.ZERO;
-//							BigDecimal changeOpm=BigDecimal.ZERO;
-//							String changeLBLStrpp="X";
-//							String changeLBLStrpm="X";
-//							String changeOStrpp="X";
-//							String changeOStrpm="X";
-//							
-//							// this is a rather subtle point - we have this feature only if makeFeature() was called on it,
-//							// but it must also be in weight (makeFeature() could have been called on an assn that
-//							// was eventually not the one chosen in the beam)
-//							boolean featureLBLppExists = false;
-//							if (SentenceAssignment.signalToFeature.get(signalName).get(label) != null &&
-//								SentenceAssignment.signalToFeature.get(signalName).get(label).get("P+") != null) {
-//								featureNameLBLpp = SentenceAssignment.signalToFeature.get(signalName).get(label).get("P+");
-//								weightLBLpp = weights.get(featureNameLBLpp);
-//								if (weightLBLpp!=null) {
-//									featureLBLppExists = true;
-//									weightLBLStrpp = FMT.format(weightLBLpp);
-//								}
-//							}
-//							boolean featureLBLpmExists = false;
-//							if (SentenceAssignment.signalToFeature.get(signalName).get(label) != null &&
-//								SentenceAssignment.signalToFeature.get(signalName).get(label).get("P-") != null) {
-//								featureNameLBLpm = SentenceAssignment.signalToFeature.get(signalName).get(label).get("P-");
-//								weightLBLpm = weights.get(featureNameLBLpm);
-//								if (weightLBLpm!=null) {
-//									featureLBLpmExists = true;
-//									weightLBLStrpm = FMT.format(weightLBLpm);
-//								}
-//							}
-//							boolean featureOppExists = false;
-//							if (SentenceAssignment.signalToFeature.get(signalName).get(SentenceAssignment.PAD_Trigger_Label) != null &&
-//								SentenceAssignment.signalToFeature.get(signalName).get(SentenceAssignment.PAD_Trigger_Label).get("P+") != null) {
-//								featureNameOpp = SentenceAssignment.signalToFeature.get(signalName).get(SentenceAssignment.PAD_Trigger_Label).get("P+");
-//								weightOpp = weights.get(featureNameOpp);
-//								if (weightOpp!=null) {
-//									featureOppExists = true;
-//									weightOStrpp = FMT.format(weightOpp);
-//								}
-//							}
-//							boolean featureOpmExists = false;
-//							if (SentenceAssignment.signalToFeature.get(signalName).get(SentenceAssignment.PAD_Trigger_Label) != null &&
-//								SentenceAssignment.signalToFeature.get(signalName).get(SentenceAssignment.PAD_Trigger_Label).get("P-") != null) {
-//								featureNameOpm = SentenceAssignment.signalToFeature.get(signalName).get(SentenceAssignment.PAD_Trigger_Label).get("P-");
-//								weightOpm = weights.get(featureNameOpm);
-//								if (weightOpm!=null) {
-//									featureOpmExists = true;
-//									weightOStrpm = FMT.format(weightOpm);
-//								}
-//							}
-//	
-//							// we are only marking "change", if it happened to both features in the same token
-//							// otherwise, most-likely O was changed with a different LBL, so we don't want to show it in this row
-//							// (if we would, it would make weird distortions, like showing there was change even though
-//							// only none-change categories are on)
-//							if ((featureLBLppExists && featureOppExists) || (featureLBLpmExists && featureOpmExists)) {
-//								for (Map<Object, BigDecimal> featureChangesOnSameToken : weights.updates.values()) {
-//									if (featureChangesOnSameToken.containsKey(featureNameLBLpp) && featureChangesOnSameToken.containsKey(featureNameOpp)) {
-//										changeLBLpp = featureChangesOnSameToken.get(featureNameLBLpp);
-//										changeOpp = featureChangesOnSameToken.get(featureNameOpp);
-//										changeLBLStrpp = FMT.format(changeLBLpp);
-//										changeOStrpp = FMT.format(changeOpp);
-//									}
-//									if (featureChangesOnSameToken.containsKey(featureNameLBLpm) && featureChangesOnSameToken.containsKey(featureNameOpm)) {
-//										changeLBLpm = featureChangesOnSameToken.get(featureNameLBLpm);
-//										changeOpm = featureChangesOnSameToken.get(featureNameOpm);
-//										changeLBLStrpm = FMT.format(changeLBLpm);
-//										changeOStrpm = FMT.format(changeOpm);
-//									}
-//								}
-//							}
-//							
-//							boolean changePp = (changeLBLpp!=BigDecimal.ZERO || changeOpp!=BigDecimal.ZERO);
-//							boolean changePm = (changeLBLpm!=BigDecimal.ZERO || changeOpm!=BigDecimal.ZERO);
-//							boolean anyChange = (changePp || changePm);
-//							String changePpStr = changePp?"T":"F";
-//							String changePmStr = changePm?"T":"F";
-//							String anyChangeStr = anyChange?"T":"F";
-//							
-//							List<String> summary = Lists.newArrayList();
-//							addSummary(summary, forSignalNameOO, "O,O,F");
-//							addSummary(summary, forSignalNameOO, "O,O,T");
-//							addSummary(summary, forLabel, "LBL,O,T");
-//							addSummary(summary, forLabel, "O,LBL,F");
-//							addSummary(summary, forLabel, "LBL,LBL,T");
-//							addSummary(summary, forLabel, "O,LBL,T");
-//							addSummary(summary, forLabel, "LBL,O,F");
-//							addSummary(summary, forLabel, "LBL,LBL,F");
-//							addSummary(summary, forLabel, "weird,weird,F");
-//							addSummary(summary, forLabel, "weird,weird,T");
-//						
-//							Utils.print(u, "", "\n", "|", null,
-//									iter, //Iter
-//									String.format("%s:%s", instance.docID, instance.sentInstID), //"DocID:SentenceNo"
-//									instance.target.getState(),//"Tokens"
-//									assn.getState(),//"TokensProcessed"
-//									signalName, //"SignalName"
-//									label, //"Label"
-//									
-//									weightLBLStrpp, //"Weight:LBL:P+"
-//									weightLBLStrpm, //"Weight:LBL:P-"
-//									weightOStrpp, //"Weight:O:P+"
-//									weightOStrpm, //"Weight:O:P-"
-//									anyChangeStr, //"AnyChange"
-//									changePpStr, //
-//									changePmStr,
-//									changeLBLStrpp, // "Change:LBL:P+"
-//									changeLBLStrpm, // "Change:LBL:P-"
-//									changeOStrpp, // "Change:O:P+"
-//									changeOStrpm, // "Change:O:P-"
-//									String.format("Change=%s:%s*%s", changePpStr, changePmStr, summary), //"Summary"
-//	
-//									forSignalNameOO.get("O,O,F"),
-//									forLabel.get("LBL,O,T"),
-//									forLabel.get("O,LBL,F"),
-//									forLabel.get("LBL,LBL,T"),
-//									forLabel.get("O,LBL,T"),
-//									forLabel.get("LBL,O,F"),
-//									forSignalNameOO.get("O,O,T"),
-//									forLabel.get("LBL,LBL,F"),
-//									forLabel.get("weird,weird,F"),
-//									forLabel.get("weird,weird,T")
-//									
-//							);
-//						}
-//						catch (RuntimeException e) {
-//							throw new RuntimeException(String.format("Exception for instance=%s, sig=%s, label=%s", instance, signalName, label), e);
-//						}
-//					}
-//				}
+			List<String> titles = TITLES_F;
+			printFeatures(titles, controller, LEVEL_F_1, LEVEL_F_2, instance, assn, c, iter, weights, avg_weights, avg_weights_base,
+					"", -1, "", f);
+		}
+	}
+	
+	public static void printBeam(PrintStream b, SentenceInstance instance, List<SentenceAssignment> beam, String violation, 
+			boolean isTraining, Perceptron model, boolean doLogging) {
+		//System.out.printf("BEAMprint    printBeam: beam.size()=%s, b=%s, this.isTraining=%s, doLogging=%s\n", beam.size(), b, this.isTraining, doLogging);
+		if (isTraining && doLogging && b != null && model.controller.logLevel >= Logs.LEVEL_B_1) {
+			//System.out.printf("BEAMprint    printBeam: We are in the method!!!\n");
+			for (int pos=0; pos<beam.size(); pos++) {
+				SentenceAssignment assn = beam.get(pos);
+				
+				String posStr = Integer.toString(pos);
+				if (beam.size()==1) {
+					posStr = "0-!";
+				}
+				//else if (pos == 0) {
+				//	posStr = "0+";
+				//}
+				else if (pos == beam.size()-1) {
+					posStr = "" + pos + "-";
+				}
+	
+				List<String> titles = TITLES_B;
+				Logs.printFeatures(titles, model.controller, Logs.LEVEL_B_1, Logs.LEVEL_B_2, instance, assn, null, Perceptron.iter, model.getWeights(), model.getAvg_weights(), null,
+						violation, beam.size(), posStr, b);
+
 			}
 		}
 	}

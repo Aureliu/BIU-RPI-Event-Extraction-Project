@@ -57,6 +57,7 @@ import ac.biu.nlp.nlp.ace_uima.uima.Timex2MentionExtent;
 import ac.biu.nlp.nlp.ace_uima.uima.Value;
 import ac.biu.nlp.nlp.ace_uima.uima.ValueMention;
 import ac.biu.nlp.nlp.ace_uima.uima.ValueMentionExtent;
+import ac.biu.nlp.nlp.ie.onthefly.input.TypesContainer;
 import de.tudarmstadt.ukp.dkpro.core.api.metadata.type.DocumentMetaData;
 
 public class AceAnnotator extends JCasAnnotator_ImplBase {
@@ -206,13 +207,14 @@ public class AceAnnotator extends JCasAnnotator_ImplBase {
 					EventArgument eventArgAnno = new EventArgument(jCas);
 					eventArgAnno.addToIndexes();
 					eventArgAnno.setEvent(eventAnno);
-					eventArgAnno.setRole(eventArg.getROLE());
+					String role = TypesContainer.getCanonicalRoleName(eventArg.getROLE());
+					eventArgAnno.setRole(role);
 					
 					BasicArgument arg = idToArg.get(eventArg.getREFID());
 					assertTrue(arg != null, String.format("DocId: %s, Event: %s - Can't find arg %s", docId, event.getID(), eventArg.getREFID()));
 					eventArgAnno.setArg(arg);
 					
-					ArgIdAndRole key = new ArgIdAndRole(arg.getID(), eventArg.getROLE());
+					ArgIdAndRole key = new ArgIdAndRole(arg.getID(), role);
 					assertTrue(!argIdAndRoleToEventArgument.containsKey(key),
 							String.format("DocId: %s, Event: %s - Arg+Role (%s) appears more than once as an argument for this event", docId, event.getID(), key));
 					argIdAndRoleToEventArgument.put(key, eventArgAnno);
@@ -263,7 +265,8 @@ public class AceAnnotator extends JCasAnnotator_ImplBase {
 						EventMentionArgument eventMentionArgAnno = new EventMentionArgument(jCas);
 						eventMentionArgAnno.addToIndexes();
 						eventMentionArgAnno.setEventMention(eventMentionAnno);
-						eventMentionArgAnno.setRole(eventMentionArg.getROLE());
+						String role = TypesContainer.getCanonicalRoleName(eventMentionArg.getROLE());
+						eventMentionArgAnno.setRole(role); //Ofer 11.15.2014 - "Time" issue!
 						
 						BasicArgumentMention argMention = idToArgMention.get(eventMentionArg.getREFID());
 						eventMentionArgAnno.setArgMention(argMention);
@@ -271,7 +274,7 @@ public class AceAnnotator extends JCasAnnotator_ImplBase {
 						String msg = String.format("DocId: %s Event: %s ArgMention: %s - ", docId, event.getID(), argMention.getID());
 						
 						String argId = getArgIdByArgMentionId(eventMentionArg.getREFID());
-						ArgIdAndRole key = new ArgIdAndRole(argId, eventMentionArg.getROLE());
+						ArgIdAndRole key = new ArgIdAndRole(argId, role);
 						EventArgument eventArg = argIdAndRoleToEventArgument.get(key);
 						
 						// this is only to "prefer not null"
@@ -287,7 +290,7 @@ public class AceAnnotator extends JCasAnnotator_ImplBase {
 						argMentionToEventMentionArgs.get(argMention).add(eventMentionArgAnno);
 
 						// Verify same role as event argument
-						assertEquals(eventMentionArg.getROLE(), eventArg.getRole(),
+						assertEquals(role, eventArg.getRole(),
 								msg + "Event mention argument ROLE (%s) is different than that of event argument (%s)");
 						
 						// Verify extent is the same is that of linked arg mention

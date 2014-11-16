@@ -23,6 +23,8 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+import ac.biu.nlp.nlp.ie.onthefly.input.TypesContainer;
+
 /**
  *  A mapping between integers and objects where the mapping in each
  * direction is efficient.  Integers are assigned consecutively, starting
@@ -94,7 +96,14 @@ public class Alphabet implements Serializable
 
 	public Object lookupObject (int index)
 	{
-		return entries.get(index);
+		//return entries.get(index);
+		
+		//Ofer 15.11.2014: easier for "Time" related stuff :)
+		Object ret = entries.get(index);
+		if (ret == null) {
+			return ret;
+		}
+		return TypesContainer.getCanonicalRoleName((String) ret);
 	}
 
 	public Object[] toArray () {

@@ -533,13 +533,18 @@ public class SentenceAssignment
 			{
 				AceMention arg_mention = arg.value;
 				int arg_index = inst.eventArgCandidates.indexOf(arg_mention);
+				/// DEBUG
+				if (arg.role.startsWith("Time")) {
+					System.out.printf("SentenceAssignment: %s:%s %s(%s): %s\n", sentInstId, arg_index, arg.role, feat_index, arg_mention);
+				}
+				////
 				feat_index = this.edgeTargetAlphabet.lookupIndex(arg.role);
 				arguments.put(arg_index, feat_index);
 				
 				/// DEBUG
-				if (arg.role.equals("Attacker")) {
-					System.out.printf("SentenceAssignment: %s:%s Attacker(%s): %s\n", sentInstId, arg_index, feat_index, arg_mention);
-				}
+//				if (arg.role.equals("Attacker")) {
+//					System.out.printf("SentenceAssignment: %s:%s Attacker(%s): %s\n", sentInstId, arg_index, feat_index, arg_mention);
+//				}
 				////
 			}
 		}
@@ -662,6 +667,12 @@ public class SentenceAssignment
 			if (this.controller.oMethod.startsWith("G")) {
 				if (genericEdgeLabel == Generic_Existing_Argument_Label) {
 					Map<ScorerData, SignalInstance> signalsForRole = allSignalsForEntity.get(edgeLabel);
+					
+					/// DEBUG
+					if (signalsForRole == null || signalsForRole.values() == null) {
+						System.err.printf("\n\n signalsForRole == null!!!\n\n");
+					}
+					////
 					
 					for (SignalInstance signal : signalsForRole.values()) {
 						List<SignalInstance> signals = Arrays.asList(new SignalInstance[] {signal});

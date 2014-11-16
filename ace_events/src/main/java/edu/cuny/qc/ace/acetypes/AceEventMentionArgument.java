@@ -11,6 +11,8 @@ import java.io.PrintWriter;
 
 import org.w3c.dom.Element;
 
+import ac.biu.nlp.nlp.ie.onthefly.input.TypesContainer;
+
 import edu.cuny.qc.util.Span;
 
 public class AceEventMentionArgument implements java.io.Serializable {
@@ -49,6 +51,7 @@ public class AceEventMentionArgument implements java.io.Serializable {
 
 	public AceEventMentionArgument (Element argumentElement, AceDocument acedoc) {
 			role = argumentElement.getAttribute("ROLE");
+			role = TypesContainer.getCanonicalRoleName(role); // Ofer 15.11.2014 - a single "Time" Role! Non of "Time-Within" and friends!
 			String mentionid = argumentElement.getAttribute("REFID");
 			value = acedoc.findMention(mentionid);
 			confidence = 0.0; // Qi: to avoid empty string exception

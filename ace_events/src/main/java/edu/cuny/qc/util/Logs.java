@@ -65,14 +65,14 @@ public class Logs {
 	public static final	List<String> TITLES_F = Arrays.asList(new String[]{
 			"iter","docId","sentInstID","assocLabel","c","numTokens","argCands","assnScore",
 			"sentText","j","token","lemma","k","head","argType","targetLabel","assnLabel",
-			"twoLabels","feature","targetSize","targetSignal","targetVal","assnSize","assnSignal",
+			"twoLabels","feature",/*"targetSize",*//*"targetSignal",*/"targetVal",/*"assnSize",*//*"assnSignal",*/
 			"assnVal","twoLabelsAndScore","both","same","partialScore","weightsSize",
 			"weight","avgWeight"
 		});
 	public static final	List<String> TITLES_B = Arrays.asList(new String[]{
 			"iter","docId","sentInstID","violation","beamSize","pos","assn","target",
 			"compatible","assnScore","state","j","token","lemma","k","head","argType","targetLabel","assnLabel",
-			"twoLabels","feature","targetSize","targetSignal","targetVal","assnSize","assnSignal",
+			"twoLabels","feature",/*"targetSize",*//*"targetSignal",*/"targetVal",/*"assnSize",*//*"assnSignal",*/
 			"assnVal","twoLabelsAndScore","both","same","partialScore","weightsSize",
 			"weight","avgWeight"
 		});

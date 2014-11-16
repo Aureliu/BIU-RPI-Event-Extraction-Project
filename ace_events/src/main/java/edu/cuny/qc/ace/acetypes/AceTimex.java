@@ -94,6 +94,7 @@ public class AceTimex extends AceEventArgumentValue {
 
 	public String getType () 
 	{
-			return "Time";
+			// 14.11.2014 Ofer's change - I think it must be all caps to work ith other stuff...
+			return "TIME"; //"Time";
 	}
 }

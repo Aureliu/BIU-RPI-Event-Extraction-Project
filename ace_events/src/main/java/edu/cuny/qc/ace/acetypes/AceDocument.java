@@ -588,7 +588,7 @@ public class AceDocument implements java.io.Serializable {
 				Set<String> possibleRoles = types.argumentRoles.get(em.event.subtype).keySet();
 				for (Iterator<AceEventMentionArgument> argMentionIter = em.arguments.iterator(); argMentionIter.hasNext();) {
 					AceEventMentionArgument am = argMentionIter.next();
-					String role = types.getCanonicalRoleName(am.role);
+					String role = types.getCanonicalRoleName(am.role); //Ofer 15.11.2014 - I don't think this is necessary anymore, but doesn't seem to hurt
 					Set<String> possibleTypes = types.roleEntityTypes.get(role);
 					String argType = am.value.getType();
 					if (!possibleRoles.contains(role) || !possibleTypes.contains(argType)) {

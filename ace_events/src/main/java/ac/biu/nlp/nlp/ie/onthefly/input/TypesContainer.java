@@ -114,7 +114,7 @@ public class TypesContainer {
 		return false;
 	}
 
-	public String getCanonicalRoleName(String role)
+	public static String getCanonicalRoleName(String role)
 	{
 		if(role.startsWith("Time"))
 		{

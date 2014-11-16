@@ -807,6 +807,9 @@ public class SentenceInstance {
 //		catch (Exception e) {
 //			throw new RuntimeException(e);
 //		}
+//		if (mention.getType().toLowerCase().contains("time")) {
+//			System.err.printf(" ## i=%s, argument.role=%s, mention=%s\n", i, argument.getRole().getCoveredText(), mention);
+//		}
 		///
 		for (SignalMechanism mechanism : signalMechanismsContainer.signalMechanisms) {
 			mechanism.scoreDependentArgument(roleSignals, spec, this, i, argument, mention, debug);

@@ -6,6 +6,8 @@ import java.util.HashMap;
 
 import org.w3c.dom.Element;
 
+import ac.biu.nlp.nlp.ie.onthefly.input.TypesContainer;
+
 /**
  *  an Ace Event Argument, with information from the ACE key.
  */
@@ -39,6 +41,7 @@ public class AceEventArgument implements java.io.Serializable {
 
 	public AceEventArgument (Element argumentElement, AceDocument acedoc) {
 			role = argumentElement.getAttribute("ROLE");
+			role = TypesContainer.getCanonicalRoleName(role); // Ofer 15.11.2014 - a single "Time" Role! Non of "Time-Within" and friends!
 			String entityid = argumentElement.getAttribute("REFID");
 			value = acedoc.findEntityValueTimex(entityid);
 			String confidenceString = argumentElement.getAttribute("p"); // Qi modified

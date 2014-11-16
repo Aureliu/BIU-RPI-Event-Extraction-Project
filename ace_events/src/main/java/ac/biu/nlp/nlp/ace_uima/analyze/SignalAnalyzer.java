@@ -66,6 +66,26 @@ public class SignalAnalyzer {
 	private static final int SENTENCE_GC_FREQ = 20000;
 	//private static final int debugMinSentence = 1310;
 	private static final boolean DO_VERBOSE_PRINTS = true; //warning! only use this for really fine-grained debugging - this prints a lot!!!
+	
+	// NEW YORK!!!
+	// This was a decision I made 14/11/2014, that reverses a previous decision
+	// Previously, I handled Free Args Features differently from Dependent Args Features -
+	//    since semantically a FreeArgFeature only affects a single argcand (per single role) once per sentence, whereas a DepArgFeature affects
+	//    the sentence multiple time - once for every i (or every connection) in which it appears in the sentence.
+	// Now, this approach is fine, except that its current implementation HAS A BUG -
+	//    the current implementation decides that since FreeArgFeatures are i-independent, the arg-label (the role) in assn will always be conveniently
+	//    put in i==0 (or state==0). This way it doesn't matter if this argcand appears in multiple connections - it will only be counted
+	//    once per this sentence. BUT, the problem is, that in the target (gold), which is in assn.target (and to which assn is later evaluated
+	//    when building the fields), the arg-label (the role) appear sin its *correct position*, which is mostly in some i higher than 0.
+	//    So later, when assn is evaluated against assn.target, the match cannot be found!
+	// So, I could have fixed that bug. But INSTEAD, I decided to CHANGE THE APPROACH -
+	//    I decided I want also FreeArgFeatures to be counted multiple times. Why? Because if a feature can contribute to multiple connections -
+	//    I want it to have a higher weight when I am looking at performance! My system is eventually evaluated per connection, so if someone
+	//    contributes to more connections (even though this is "circumstantial", as the feature only relates to the word and not to the connection),
+	//    I would want to favor it.
+	// So this variable is representing the second approach. You can decide later to revert to the first approach, but
+	//    don't forget that then THE CURRENT IMPLEMENTATION HAS A BUG!!!!
+	private static final boolean HANDLE_FREEARGS_LIKE_DEPENDENTARGS = true; 
 
 	public static void analyze(File inputFileList, File specList, File outputFolder, boolean useDumps, String triggerDocName/*, String argDocName, String globalDocName*/, Integer debugMinSentence, Integer docsChunk) throws Exception {
 		(new PrintStream(new File(outputFolder, "start"))).close();
@@ -145,9 +165,9 @@ public class SignalAnalyzer {
 	//								targetOfRole.getEdgeAssignment().put(i, null);
 	//							}
 								//// DEBUG
-								if (l==1 && triggerLabel.equals("Attack") && !forICopy.isEmpty()) {
-									System.out.printf("SignalAnalyzer: got an Attacker: %s\n\t\t\tNew: %s\n", problem.target, targetOfRole);
-								}
+//								if (l==1 && triggerLabel.equals("Attack") && !forICopy.isEmpty()) {
+//									System.out.printf("SignalAnalyzer: got an Attacker: %s\n\t\t\tNew: %s\n", problem.target, targetOfRole);
+//								}
 								////
 							}
 							return targetOfRole;
@@ -155,9 +175,9 @@ public class SignalAnalyzer {
 					});
 	
 				//// DEBUG
-				if (problem.sentInstID.equals("47d") || problem.sentInstID.equals("61d")) {
-					System.out.printf("SignalAnalyzer: Hard-coded print of %s: %s\n", problem.sentInstID, problem.target);
-				}
+//				if (problem.sentInstID.equals("47d") || problem.sentInstID.equals("61d")) {
+//					System.out.printf("SignalAnalyzer: Hard-coded print of %s: %s\n", problem.sentInstID, problem.target);
+//				}
 				////
 	
 				
@@ -275,9 +295,9 @@ public class SignalAnalyzer {
 	//						System.out.printf("%s   Adding label to assn (i=%s, scorer=%s)\n", Pipeline.detailedLog(), i, data);
 	//					}
 						/// DEBUG
-	//					if (data.fullName.contains("HYPERNYM")) {
-	//						System.err.printf("sent=%s, i=%s, label=%s, scorer=%s, signal=%s: %s\n", sentNum, i, triggerLabel, data, signal, signal.history);
-	//					}
+//						if (data.basicName.contains("PL_SAME_LEMMA")) {
+//							System.err.printf("*** sent=%s, i=%s, label=%s, scorer=%s, signal=%s: %s\n", sentNum, i, triggerLabel, data, signal, signal.history);
+//						}
 						///
 	
 						
@@ -334,6 +354,12 @@ public class SignalAnalyzer {
 						List<Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>>> tokensArgs = (List<Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>>>) problem.get(InstanceAnnotations.EdgeDependentTextSignals);
 						Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>> tokenArg = tokensArgs.get(i);
 						List<Map<String, Map<ScorerData, SignalInstance>>> tokenArgSpec = tokenArg.get(triggerLabel);
+						
+						if (HANDLE_FREEARGS_LIKE_DEPENDENTARGS) {
+							Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>> tokensFreeArgs = (Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>>) problem.get(InstanceAnnotations.EdgeFreeTextSignals);
+							List<Map<String, Map<ScorerData, SignalInstance>>> tokenFreeArgSpec = tokensFreeArgs.get(triggerLabel);
+							miniAbsorb(tokenArgSpec, tokenFreeArgSpec);
+						}
 						
 						for (int k=0; k<problem.eventArgCandidates.size(); k++) {
 							Integer targetRoleNum = problem.target.getEdgeAssignment().get(i).get(k);
@@ -482,46 +508,69 @@ public class SignalAnalyzer {
 				/////////// FREE ARGS ////////////
 				// NOTE: this shares the same StatsField, assignmentsRole list, and other stuff, with dependent args. no problem with that.
 				
-				Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>> tokensArgs = (Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>>) problem.get(InstanceAnnotations.EdgeFreeTextSignals);
-				//Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>> tokenArg = tokensArgs.get(i);
-				List<Map<String, Map<ScorerData, SignalInstance>>> tokenArgSpec = tokensArgs.get(triggerLabel);
-				
-				/// DEBUG
-				if (problem.sentInstID.equals("7d")) {
-					System.out.printf("");
-				}
-				if (problem.sentInstID.equals("8d")) {
-					System.out.printf("");
-				}
-				if (problem.sentInstID.equals("9d")) {
-					System.out.printf("");
-				}
-				///
-				for (int k=0; k<problem.eventArgCandidates.size(); k++) {
-					for(int l=0; l<problem.edgeTargetAlphabet.size(); l++)
-					{	
-						String role = (String) problem.edgeTargetAlphabet.lookupObject(l);
-						
-						if (!SentenceAssignment.Default_Argument_Label.equals(role)) {
-							///check if in gold, the current cand is in "role" for any trigger in the sentence
-							// hard-coded "or" with short-circuit
-							boolean goldIsPositive = false;
-							for (int i : goldTriggerPositions) {
-								Integer targetRoleNum = problem.target.getEdgeAssignment().get(i).get(k);
-								// I'll allow that.
-								if (targetRoleNum == null) {
-									continue;
-								}
-								String goldArgLabel = (String) problem.target.edgeTargetAlphabet.lookupObject(targetRoleNum);
-								if (goldArgLabel.equals(role)) {
-									goldIsPositive = true;
-									break;
+				if (!HANDLE_FREEARGS_LIKE_DEPENDENTARGS) {
+					Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>> tokensArgs = (Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>>) problem.get(InstanceAnnotations.EdgeFreeTextSignals);
+					//Map<String, List<Map<String, Map<ScorerData, SignalInstance>>>> tokenArg = tokensArgs.get(i);
+					List<Map<String, Map<ScorerData, SignalInstance>>> tokenArgSpec = tokensArgs.get(triggerLabel);
+					
+					/// DEBUG
+					if (problem.sentInstID.equals("7d")) {
+						System.out.printf("");
+					}
+					if (problem.sentInstID.equals("8d")) {
+						System.out.printf("");
+					}
+					if (problem.sentInstID.equals("2b")) {
+						System.out.printf("");
+					}
+					
+					for (int xk=0; xk < tokenArgSpec.size(); xk++) {
+						Map<String, Map<ScorerData, SignalInstance>> xm1 = tokenArgSpec.get(xk);
+						for (String xr : xm1.keySet()) {
+							Map<ScorerData, SignalInstance> xm2 = xm1.get(xr);
+							for (ScorerData xd : xm2.keySet()) {
+								SignalInstance xs = xm2.get(xd);
+								
+								if (xd.basicName.contains("PL_SAME_LEMMA")) {
+									System.err.printf("*** sent=%s, spec=%s, xk=%s, xr=%s, xd=%s, xs=%s: %s\n", sentNum, triggerLabel, xk, xr, xd, xs, xs.history);
+									if (xs.positive) {
+										System.err.printf("        @@@ Found a positive one! %s: %s argcands=%s\n", xs, xs.history, problem.eventArgCandidates);
+										System.err.printf("            getEdgeAssignment()=%s, edgeTargetAlphabet=%s\n", problem.target.getEdgeAssignment(), problem.edgeTargetAlphabet);
+									}
 								}
 							}
+						}
+					}
+					
+	
+					///				
+					
+					for (int k=0; k<problem.eventArgCandidates.size(); k++) {
+						for(int l=0; l<problem.edgeTargetAlphabet.size(); l++)
+						{	
+							String role = (String) problem.edgeTargetAlphabet.lookupObject(l);
 							
-							// do for free args
-							// free args are always on state==0, by definition
-							doArgs(goldIsPositive, problem, 0, k, l, role, key, tokenArgSpec, assignmentsArgsFree, signalMechanismsContainer, cacheTargetForRole, debug);
+							if (!SentenceAssignment.Default_Argument_Label.equals(role)) {
+								///check if in gold, the current cand is in "role" for any trigger in the sentence
+								// hard-coded "or" with short-circuit
+								boolean goldIsPositive = false;
+								for (int i : goldTriggerPositions) {
+									Integer targetRoleNum = problem.target.getEdgeAssignment().get(i).get(k);
+									// I'll allow that.
+									if (targetRoleNum == null) {
+										continue;
+									}
+									String goldArgLabel = (String) problem.target.edgeTargetAlphabet.lookupObject(targetRoleNum);
+									if (goldArgLabel.equals(role)) {
+										goldIsPositive = true;
+										break;
+									}
+								}
+								
+								// do for free args
+								// free args are always on state==0, by definition
+								doArgs(goldIsPositive, problem, 0, k, l, role, key, tokenArgSpec, assignmentsArgsFree, signalMechanismsContainer, cacheTargetForRole, debug);
+							}
 						}
 					}
 				}
@@ -572,6 +621,11 @@ public class SignalAnalyzer {
 					Map<ScorerData, SentenceAssignment> assignmentsOfRole = assignmentsArgsFree.get(role);
 					for (ScorerData data : assignmentsOfRole.keySet()) {
 						SentenceAssignment assn = assignmentsOfRole.get(data);
+						/// DEBUG
+//						if (data.basicName.contains("PL_SAME_LEMMA_HEADTOKEN")) {
+//							System.out.printf("### [%s] (%s):\n\t\tassn=%s\n\t\ttarget=%s\n\n", data, role, assn, assn.target);
+//						}
+						/////
 						key.put("role", role);
 						key.put("signal", data.basicName);
 						key.put("el-agg", data.getElementAggregatorTypeName());
@@ -608,6 +662,34 @@ public class SignalAnalyzer {
 
 		docs.dumpAsCsvFiles(triggerFile/*, argFile, globalFile*/);
 		System.out.printf("\n\n[%s] Fully done!\n", new Date());
+	}
+	
+	// Inspired by/copied from: BundledSignals.absorb()
+	public static void miniAbsorb(List<Map<String, Map<ScorerData, SignalInstance>>> into, List<Map<String, Map<ScorerData, SignalInstance>>> from) {				
+		int mb=0;
+		for (Iterator<Map<String, Map<ScorerData, SignalInstance>>> iter4b = from.iterator(); iter4b.hasNext();) {
+			Map<String, Map<ScorerData, SignalInstance>> elem4b = iter4b.next();
+			Map<String, Map<ScorerData, SignalInstance>> this4b = into.get(mb);
+			mb++;
+			
+			for (Iterator<Entry<String, Map<ScorerData, SignalInstance>>> iter5b = elem4b.entrySet().iterator(); iter5b.hasNext();) {
+				Entry<String, Map<ScorerData, SignalInstance>> entry5b = iter5b.next();
+				if (!this4b.containsKey(entry5b.getKey())) {
+					this4b.put(entry5b.getKey(), entry5b.getValue());
+				}
+				else {
+					Map<ScorerData, SignalInstance> this5b = this4b.get(entry5b.getKey());
+					
+					for (Iterator<Entry<ScorerData, SignalInstance>> iter6b = entry5b.getValue().entrySet().iterator(); iter6b.hasNext();) {
+						Entry<ScorerData, SignalInstance> entry6b = iter6b.next();
+						if (!this5b.containsKey(entry6b.getKey()) ||
+								(this5b.get(entry6b.getKey()).history == null && entry6b.getValue().history != null) ) {
+							this5b.put(entry6b.getKey(), entry6b.getValue());
+						}
+					}
+				}
+			}
+		}
 	}
 	
 	public static void doArgs(boolean goldIsPositive, SentenceInstance problem, int i, int k, int l, String role, Map<String,String> key, List<Map<String, Map<ScorerData, SignalInstance>>> tokenArgSpec, Map<String, Map<ScorerData, SentenceAssignment>> assignmentsArgs, SignalMechanismsContainer signalMechanismsContainer, LoadingCache<Integer, SentenceAssignment> cacheTargetForRole, boolean debug) throws StatsException, ExecutionException

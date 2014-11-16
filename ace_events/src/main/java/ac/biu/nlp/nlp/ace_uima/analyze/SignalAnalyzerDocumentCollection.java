@@ -20,19 +20,10 @@ public class SignalAnalyzerDocumentCollection extends StatsDocumentCollection {
 		// Removing all lines containing docId, folder and category! We don't use it and it takes lots of memory!!!
 		
 		triggerDoc.startUpdate();
-		//triggerDoc.update(key, fieldNameLvl1, fieldNameLvl2, element, isDynamic);
-		//triggerDoc.update(without(key, new String[] {"label"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
-		//triggerDoc.update(without(key, new String[] {"signal", "agg"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
-		//triggerDoc.update(without(key, new String[] {"label", "signal", "agg"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
-		//triggerDoc.update(without(key, new String[] {"folder", "docId"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
-		//triggerDoc.update(without(key, new String[] {"folder", "docId", "signal", "agg"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
-		//triggerDoc.update(without(key, new String[] {"folder", "docId", "label"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
-		//triggerDoc.update(without(key, new String[] {"folder", "docId", "label", "signal", "agg"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
-		triggerDoc.update(without(key, new String[] {"folder", "category", "docId"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
-		//triggerDoc.update(without(key, new String[] {"folder", "category", "docId", "signal", "agg"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
-		triggerDoc.update(without(key, new String[] {"folder", "category", "docId", "spec"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
-		triggerDoc.update(without(key, new String[] {"folder", "category", "docId", "spec", "role"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
-		//triggerDoc.update(without(key, new String[] {"folder", "category", "docId", "label", "signal", "agg"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
+		triggerDoc.update(key, fieldNameLvl1, fieldNameLvl2, element, isDynamic);
+		triggerDoc.update(without(key, new String[] {"spec"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
+		triggerDoc.update(without(key, new String[] {"role"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
+		triggerDoc.update(without(key, new String[] {"spec", "role"}), fieldNameLvl1, fieldNameLvl2, element, isDynamic);
 		triggerDoc.endUpdate();
 		
 //		argDoc.startUpdate();
@@ -60,7 +51,7 @@ public class SignalAnalyzerDocumentCollection extends StatsDocumentCollection {
 	@SuppressWarnings("serial")
 	private StatsDocument triggerDoc = new StatsDocument(
 			Arrays.asList(new String[] {
-					"folder", "category", "docId", "spec", "role", "signal", /*"spec-ind", */"deriver", "derivation", "left-sense", "right-sense", "agg"
+					/*"folder", "category", "docId", */"spec", "role", "signal", /*"spec-ind", */"deriver", "derivation", "left-sense", "right-sense", "agg"
 			}),
 			new LinkedHashMap<FieldName,StatsFieldType>() {{
 				put(new FieldName("SpecItems", "TruePositive"), StatsFieldType.LIST_COUNTS);

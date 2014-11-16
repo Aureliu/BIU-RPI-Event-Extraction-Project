@@ -1,5 +1,9 @@
 package edu.cuny.qc.scorer.mechanism;
 
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ExecutionException;
@@ -25,6 +29,7 @@ import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 import com.google.common.collect.ImmutableList;
+import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
@@ -71,7 +76,35 @@ public class DependencySignalMechanism extends SignalMechanism {
 			addArgumentDependent(new ScorerData("DP_DEP_PREP_NOCON",			SameLinkDepPrepNoContext.inst,			Aggregator.Any.inst		));
 			addArgumentDependent(new ScorerData("DP_DEP_PREP_GENPOS_NOCON",		SameLinkDepPrepGenPosNoContext.inst,	Aggregator.Any.inst		));
 			addArgumentDependent(new ScorerData("DP_DEP_PREP_SPECPOS_NOCON",	SameLinkDepPrepSpecPosNoContext.inst,	Aggregator.Any.inst		));
-			
+
+			addArgumentDependent(new ScorerData("DP_DEP_NOCON_1/3",			SameLinkDepNoContextMinThird.inst,			Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_GENPOS_NOCON_1/3",	SameLinkDepGenPosNoContextMinThird.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_SPECPOS_NOCON_1/3",	SameLinkDepSpecPosNoContextMinThird.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_PREP_NOCON_1/3",			SameLinkDepPrepNoContextMinThird.inst,			Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_PREP_GENPOS_NOCON_1/3",		SameLinkDepPrepGenPosNoContextMinThird.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_PREP_SPECPOS_NOCON_1/3",	SameLinkDepPrepSpecPosNoContextMinThird.inst,	Aggregator.Any.inst		));
+
+			addArgumentDependent(new ScorerData("DP_DEP_NOCON_1/2",			SameLinkDepNoContextMinHalf.inst,			Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_GENPOS_NOCON_1/2",	SameLinkDepGenPosNoContextMinHalf.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_SPECPOS_NOCON_1/2",	SameLinkDepSpecPosNoContextMinHalf.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_PREP_NOCON_1/2",			SameLinkDepPrepNoContextMinHalf.inst,			Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_PREP_GENPOS_NOCON_1/2",		SameLinkDepPrepGenPosNoContextMinHalf.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_PREP_SPECPOS_NOCON_1/2",	SameLinkDepPrepSpecPosNoContextMinHalf.inst,	Aggregator.Any.inst		));
+
+			addArgumentDependent(new ScorerData("DP_DEP_NOCON_1/4",			SameLinkDepNoContextMinQuarter.inst,			Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_GENPOS_NOCON_1/4",	SameLinkDepGenPosNoContextMinQuarter.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_SPECPOS_NOCON_1/4",	SameLinkDepSpecPosNoContextMinQuarter.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_PREP_NOCON_1/4",			SameLinkDepPrepNoContextMinQuarter.inst,			Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_PREP_GENPOS_NOCON_1/4",		SameLinkDepPrepGenPosNoContextMinQuarter.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_PREP_SPECPOS_NOCON_1/4",	SameLinkDepPrepSpecPosNoContextMinQuarter.inst,	Aggregator.Any.inst		));
+
+			addArgumentDependent(new ScorerData("DP_DEP_NOCON_1/5",			SameLinkDepNoContextMinFifth.inst,			Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_GENPOS_NOCON_1/5",	SameLinkDepGenPosNoContextMinFifth.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_SPECPOS_NOCON_1/5",	SameLinkDepSpecPosNoContextMinFifth.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_PREP_NOCON_1/5",			SameLinkDepPrepNoContextMinFifth.inst,			Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_PREP_GENPOS_NOCON_1/5",		SameLinkDepPrepGenPosNoContextMinFifth.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_PREP_SPECPOS_NOCON_1/5",	SameLinkDepPrepSpecPosNoContextMinFifth.inst,	Aggregator.Any.inst		));
+
 //			addArgumentDependent(new ScorerData("DP_DEP_CON",			SameLinkDepWithContext.inst,		Aggregator.Any.inst		));
 //			addArgumentDependent(new ScorerData("DP_DEP_GENPOS_CON",	SameLinkDepGenPosWithContext.inst,	Aggregator.Any.inst		));
 //			addArgumentDependent(new ScorerData("DP_DEP_SPECPOS_CON",	SameLinkDepSpecPosWithContext.inst,	Aggregator.Any.inst		));
@@ -154,6 +187,57 @@ public class DependencySignalMechanism extends SignalMechanism {
 			if (obj.getClass() != getClass()) { return false; }
 			SpecTreeoutQuery rhs = (SpecTreeoutQuery) obj;
 			return UimaUtils.equalsAnnotationByTypeAndSpan(specAius, rhs.specAius) && specClass==rhs.specClass;
+		}
+	}
+	
+	public static class SpecListTreeoutsQuery {
+		public Class<? extends Treeout> specClass;
+		public List<ArgumentInUsageSample> specAiuses;
+		public List<ArgumentInUsageSample> specAiusesSorted;
+		public SpecListTreeoutsQuery(Class<? extends Treeout> specClass, List<ArgumentInUsageSample> specAiuses) {
+			this.specClass = specClass;
+			this.specAiuses = specAiuses;
+			this.specAiusesSorted = Lists.newArrayList(this.specAiuses);
+			Collections.sort(this.specAiusesSorted, new Comparator<ArgumentInUsageSample>() {
+				@Override public int compare(ArgumentInUsageSample aius1, ArgumentInUsageSample aius2) {
+					return UimaUtils.hashCodeAnnotationByTypeAndSpan(aius1) - UimaUtils.hashCodeAnnotationByTypeAndSpan(aius2);
+				}
+			});
+		}
+		@Override public int hashCode() {
+			final int prime = 271;
+			int result = 1;
+			
+			// this assumes that specAiuses can have repetitions, and its order doesn't matter
+			int listHash = 0;
+			for (ArgumentInUsageSample aius : specAiuses) {
+				listHash += UimaUtils.hashCodeAnnotationByTypeAndSpan(aius);
+			}
+			
+			result = prime*result + specClass.hashCode();
+			result = prime*result + listHash;
+			return result;
+		}
+		@Override public boolean equals(Object obj) {
+			if (obj == null) { return false; }
+			if (obj == this) { return true; }
+			if (obj.getClass() != getClass()) { return false; }
+			SpecListTreeoutsQuery rhs = (SpecListTreeoutsQuery) obj;
+			if (specClass!=rhs.specClass) { return false; }
+			
+			// this assumes that specAiuses can have repetitions, and its order doesn't matter
+			if (this.specAiusesSorted.size() != rhs.specAiusesSorted.size()) { return false;}
+			Iterator<ArgumentInUsageSample> iter1=this.specAiusesSorted.iterator();
+			Iterator<ArgumentInUsageSample> iter2=rhs.specAiusesSorted.iterator();
+			while (iter1.hasNext()) {
+				ArgumentInUsageSample next1 = iter1.next();
+				ArgumentInUsageSample next2 = iter2.next();
+				if (!UimaUtils.equalsAnnotationByTypeAndSpan(next1, next2)) {
+					return false;
+				}
+			}
+			
+			return true;
 		}
 	}
 	
@@ -270,7 +354,210 @@ public class DependencySignalMechanism extends SignalMechanism {
 //		public SameLinkDepSpecPosWithContext() {super(TreeoutDepSpecPosWithContext.class, "DepSpecPosWithContext");}
 //	}
 	
+	public static abstract class SameLinkOverTreeoutOnlyFrequesntAiuses extends SameLinkOverTreeout {
+		private static final long serialVersionUID = 8672008272926471560L;
+		public double minPercent;
+		public SameLinkOverTreeoutOnlyFrequesntAiuses(Class<? extends Treeout> specClass, String textOutsMapKey, double minPercent) {
+			super(specClass, textOutsMapKey);
+			this.minPercent = minPercent;
+		}
 
+		@Override
+		protected boolean includeAius(ArgumentInUsageSample aius, List<ArgumentInUsageSample> aiuses) throws ExecutionException {
+			Map<String, Integer> frequencies = cacheAiusFrequencies.get(new SpecListTreeoutsQuery(specClass, aiuses));
+			String aiusSpecTreeout = cacheSpecTreeouts.get(new SpecTreeoutQuery(specClass, aius));
+			Integer aiusFreq = frequencies.get(aiusSpecTreeout);
+			double aiusRelativeFreq = ((double) aiusFreq) / aiuses.size();
+			/// DEBUG
+			//System.out.printf("DependencySignalMechanism.SameLinkOverTreeoutOnlyFrequesntAiuses: \"%s\" appears %s times out of %s, which is %s. minPercent=%s, so including? %s\n",
+			//		aiusSpecTreeout, aiusFreq, aiuses.size(), aiusRelativeFreq, minPercent, aiusRelativeFreq >= minPercent);
+			///
+			return aiusRelativeFreq >= minPercent;
+		}
+
+	}
+	
+	///////// Min 1/3 ///////////////////////
+	public static abstract class SameLinkOverTreeoutMinimumThird extends SameLinkOverTreeoutOnlyFrequesntAiuses {
+		private static final long serialVersionUID = 6496448605251765612L;
+		private static final double MIN_PERCENT = 1.0/3;
+		public SameLinkOverTreeoutMinimumThird(Class<? extends Treeout> specClass, String textOutsMapKey) {
+			super(specClass, textOutsMapKey, MIN_PERCENT);
+		}
+	}
+
+	public static class SameLinkDepNoContextMinThird extends SameLinkOverTreeoutMinimumThird {
+		private static final long serialVersionUID = -6357105616985441064L;
+		public static final SameLinkDepNoContextMinThird inst = new SameLinkDepNoContextMinThird();
+		public SameLinkDepNoContextMinThird() {super(TreeoutDepNoContext.class, "DepNoContext");}
+	}
+	
+	public static class SameLinkDepGenPosNoContextMinThird extends SameLinkOverTreeoutMinimumThird {
+		private static final long serialVersionUID = -4337124019519476439L;
+		public static final SameLinkDepGenPosNoContextMinThird inst = new SameLinkDepGenPosNoContextMinThird();
+		public SameLinkDepGenPosNoContextMinThird() {super(TreeoutDepGenPosNoContext.class, "DepGenPosNoContext");}
+	}
+	
+	public static class SameLinkDepSpecPosNoContextMinThird extends SameLinkOverTreeoutMinimumThird {
+		private static final long serialVersionUID = -4419488905887644263L;
+		public static final SameLinkDepSpecPosNoContextMinThird inst = new SameLinkDepSpecPosNoContextMinThird();
+		public SameLinkDepSpecPosNoContextMinThird() {super(TreeoutDepSpecPosNoContext.class, "DepSpecPosNoContext");}
+	}
+	
+	public static class SameLinkDepPrepNoContextMinThird extends SameLinkOverTreeoutMinimumThird {
+		private static final long serialVersionUID = -7835777695118531109L;
+		public static final SameLinkDepPrepNoContextMinThird inst = new SameLinkDepPrepNoContextMinThird();
+		public SameLinkDepPrepNoContextMinThird() {super(TreeoutDepPrepNoContext.class, "DepPrepNoContext");}
+	}
+	
+	public static class SameLinkDepPrepGenPosNoContextMinThird extends SameLinkOverTreeoutMinimumThird {
+		private static final long serialVersionUID = 8362852044381125271L;
+		public static final SameLinkDepPrepGenPosNoContextMinThird inst = new SameLinkDepPrepGenPosNoContextMinThird();
+		public SameLinkDepPrepGenPosNoContextMinThird() {super(TreeoutDepPrepGenPosNoContext.class, "DepPrepGenPosNoContext");}
+	}
+	
+	public static class SameLinkDepPrepSpecPosNoContextMinThird extends SameLinkOverTreeoutMinimumThird {
+		private static final long serialVersionUID = -462636602605463316L;
+		public static final SameLinkDepPrepSpecPosNoContextMinThird inst = new SameLinkDepPrepSpecPosNoContextMinThird();
+		public SameLinkDepPrepSpecPosNoContextMinThird() {super(TreeoutDepPrepSpecPosNoContext.class, "DepPrepSpecPosNoContext");}
+	}
+
+	///////// Min 1/2 ///////////////////////
+	public static abstract class SameLinkOverTreeoutMinimumHalf extends SameLinkOverTreeoutOnlyFrequesntAiuses {
+		private static final long serialVersionUID = -1700397165964757235L;
+		private static final double MIN_PERCENT = 1.0/2;
+		public SameLinkOverTreeoutMinimumHalf(Class<? extends Treeout> specClass, String textOutsMapKey) {
+			super(specClass, textOutsMapKey, MIN_PERCENT);
+		}
+	}
+
+	public static class SameLinkDepNoContextMinHalf extends SameLinkOverTreeoutMinimumHalf {
+		private static final long serialVersionUID = 8978953472771506397L;
+		public static final SameLinkDepNoContextMinHalf inst = new SameLinkDepNoContextMinHalf();
+		public SameLinkDepNoContextMinHalf() {super(TreeoutDepNoContext.class, "DepNoContext");}
+	}
+	
+	public static class SameLinkDepGenPosNoContextMinHalf extends SameLinkOverTreeoutMinimumHalf {
+		private static final long serialVersionUID = -9035839148508994501L;
+		public static final SameLinkDepGenPosNoContextMinHalf inst = new SameLinkDepGenPosNoContextMinHalf();
+		public SameLinkDepGenPosNoContextMinHalf() {super(TreeoutDepGenPosNoContext.class, "DepGenPosNoContext");}
+	}
+	
+	public static class SameLinkDepSpecPosNoContextMinHalf extends SameLinkOverTreeoutMinimumHalf {
+		private static final long serialVersionUID = 8748138959597170056L;
+		public static final SameLinkDepSpecPosNoContextMinHalf inst = new SameLinkDepSpecPosNoContextMinHalf();
+		public SameLinkDepSpecPosNoContextMinHalf() {super(TreeoutDepSpecPosNoContext.class, "DepSpecPosNoContext");}
+	}
+	
+	public static class SameLinkDepPrepNoContextMinHalf extends SameLinkOverTreeoutMinimumHalf {
+		private static final long serialVersionUID = -1241229038066426568L;
+		public static final SameLinkDepPrepNoContextMinHalf inst = new SameLinkDepPrepNoContextMinHalf();
+		public SameLinkDepPrepNoContextMinHalf() {super(TreeoutDepPrepNoContext.class, "DepPrepNoContext");}
+	}
+	
+	public static class SameLinkDepPrepGenPosNoContextMinHalf extends SameLinkOverTreeoutMinimumHalf {
+		private static final long serialVersionUID = 3635011747498225134L;
+		public static final SameLinkDepPrepGenPosNoContextMinHalf inst = new SameLinkDepPrepGenPosNoContextMinHalf();
+		public SameLinkDepPrepGenPosNoContextMinHalf() {super(TreeoutDepPrepGenPosNoContext.class, "DepPrepGenPosNoContext");}
+	}
+	
+	public static class SameLinkDepPrepSpecPosNoContextMinHalf extends SameLinkOverTreeoutMinimumHalf {
+		private static final long serialVersionUID = -4624906863136656669L;
+		public static final SameLinkDepPrepSpecPosNoContextMinHalf inst = new SameLinkDepPrepSpecPosNoContextMinHalf();
+		public SameLinkDepPrepSpecPosNoContextMinHalf() {super(TreeoutDepPrepSpecPosNoContext.class, "DepPrepSpecPosNoContext");}
+	}
+
+	///////// Min 1/4 ///////////////////////
+	public static abstract class SameLinkOverTreeoutMinimumQuarter extends SameLinkOverTreeoutOnlyFrequesntAiuses {
+		private static final long serialVersionUID = -569981252266551136L;
+		private static final double MIN_PERCENT = 1.0/4;
+		public SameLinkOverTreeoutMinimumQuarter(Class<? extends Treeout> specClass, String textOutsMapKey) {
+			super(specClass, textOutsMapKey, MIN_PERCENT);
+		}
+	}
+
+	public static class SameLinkDepNoContextMinQuarter extends SameLinkOverTreeoutMinimumQuarter {
+		private static final long serialVersionUID = -7173718057746872577L;
+		public static final SameLinkDepNoContextMinQuarter inst = new SameLinkDepNoContextMinQuarter();
+		public SameLinkDepNoContextMinQuarter() {super(TreeoutDepNoContext.class, "DepNoContext");}
+	}
+	
+	public static class SameLinkDepGenPosNoContextMinQuarter extends SameLinkOverTreeoutMinimumQuarter {
+		private static final long serialVersionUID = -178651800815307952L;
+		public static final SameLinkDepGenPosNoContextMinQuarter inst = new SameLinkDepGenPosNoContextMinQuarter();
+		public SameLinkDepGenPosNoContextMinQuarter() {super(TreeoutDepGenPosNoContext.class, "DepGenPosNoContext");}
+	}
+	
+	public static class SameLinkDepSpecPosNoContextMinQuarter extends SameLinkOverTreeoutMinimumQuarter {
+		private static final long serialVersionUID = 1359447618199848839L;
+		public static final SameLinkDepSpecPosNoContextMinQuarter inst = new SameLinkDepSpecPosNoContextMinQuarter();
+		public SameLinkDepSpecPosNoContextMinQuarter() {super(TreeoutDepSpecPosNoContext.class, "DepSpecPosNoContext");}
+	}
+	
+	public static class SameLinkDepPrepNoContextMinQuarter extends SameLinkOverTreeoutMinimumQuarter {
+		private static final long serialVersionUID = -491806036694648836L;
+		public static final SameLinkDepPrepNoContextMinQuarter inst = new SameLinkDepPrepNoContextMinQuarter();
+		public SameLinkDepPrepNoContextMinQuarter() {super(TreeoutDepPrepNoContext.class, "DepPrepNoContext");}
+	}
+	
+	public static class SameLinkDepPrepGenPosNoContextMinQuarter extends SameLinkOverTreeoutMinimumQuarter {
+		private static final long serialVersionUID = -8640741798336940119L;
+		public static final SameLinkDepPrepGenPosNoContextMinQuarter inst = new SameLinkDepPrepGenPosNoContextMinQuarter();
+		public SameLinkDepPrepGenPosNoContextMinQuarter() {super(TreeoutDepPrepGenPosNoContext.class, "DepPrepGenPosNoContext");}
+	}
+	
+	public static class SameLinkDepPrepSpecPosNoContextMinQuarter extends SameLinkOverTreeoutMinimumQuarter {
+		private static final long serialVersionUID = -903918531183705036L;
+		public static final SameLinkDepPrepSpecPosNoContextMinQuarter inst = new SameLinkDepPrepSpecPosNoContextMinQuarter();
+		public SameLinkDepPrepSpecPosNoContextMinQuarter() {super(TreeoutDepPrepSpecPosNoContext.class, "DepPrepSpecPosNoContext");}
+	}
+
+	///////// Min 1/5 ///////////////////////
+	public static abstract class SameLinkOverTreeoutMinimumFifth extends SameLinkOverTreeoutOnlyFrequesntAiuses {
+		private static final long serialVersionUID = -3114591036337649553L;
+		private static final double MIN_PERCENT = 1.0/5;
+		public SameLinkOverTreeoutMinimumFifth(Class<? extends Treeout> specClass, String textOutsMapKey) {
+			super(specClass, textOutsMapKey, MIN_PERCENT);
+		}
+	}
+
+	public static class SameLinkDepNoContextMinFifth extends SameLinkOverTreeoutMinimumFifth {
+		private static final long serialVersionUID = -4304671459420513779L;
+		public static final SameLinkDepNoContextMinFifth inst = new SameLinkDepNoContextMinFifth();
+		public SameLinkDepNoContextMinFifth() {super(TreeoutDepNoContext.class, "DepNoContext");}
+	}
+	
+	public static class SameLinkDepGenPosNoContextMinFifth extends SameLinkOverTreeoutMinimumFifth {
+		private static final long serialVersionUID = -8650107758809734374L;
+		public static final SameLinkDepGenPosNoContextMinFifth inst = new SameLinkDepGenPosNoContextMinFifth();
+		public SameLinkDepGenPosNoContextMinFifth() {super(TreeoutDepGenPosNoContext.class, "DepGenPosNoContext");}
+	}
+	
+	public static class SameLinkDepSpecPosNoContextMinFifth extends SameLinkOverTreeoutMinimumFifth {
+		private static final long serialVersionUID = 6427556916345255280L;
+		public static final SameLinkDepSpecPosNoContextMinFifth inst = new SameLinkDepSpecPosNoContextMinFifth();
+		public SameLinkDepSpecPosNoContextMinFifth() {super(TreeoutDepSpecPosNoContext.class, "DepSpecPosNoContext");}
+	}
+	
+	public static class SameLinkDepPrepNoContextMinFifth extends SameLinkOverTreeoutMinimumFifth {
+		private static final long serialVersionUID = -2476013574526252453L;
+		public static final SameLinkDepPrepNoContextMinFifth inst = new SameLinkDepPrepNoContextMinFifth();
+		public SameLinkDepPrepNoContextMinFifth() {super(TreeoutDepPrepNoContext.class, "DepPrepNoContext");}
+	}
+	
+	public static class SameLinkDepPrepGenPosNoContextMinFifth extends SameLinkOverTreeoutMinimumFifth {
+		private static final long serialVersionUID = 7904358228008215820L;
+		public static final SameLinkDepPrepGenPosNoContextMinFifth inst = new SameLinkDepPrepGenPosNoContextMinFifth();
+		public SameLinkDepPrepGenPosNoContextMinFifth() {super(TreeoutDepPrepGenPosNoContext.class, "DepPrepGenPosNoContext");}
+	}
+	
+	public static class SameLinkDepPrepSpecPosNoContextMinFifth extends SameLinkOverTreeoutMinimumFifth {
+		private static final long serialVersionUID = 3244700973912308506L;
+		public static final SameLinkDepPrepSpecPosNoContextMinFifth inst = new SameLinkDepPrepSpecPosNoContextMinFifth();
+		public SameLinkDepPrepSpecPosNoContextMinFifth() {super(TreeoutDepPrepSpecPosNoContext.class, "DepPrepSpecPosNoContext");}
+	}
+
+	
 	public static /*transient*/ FragmentLayer textFragmentLayer;
 //	public FragmentLayer specFragmentLayer;
 //	
@@ -289,6 +576,23 @@ public class DependencySignalMechanism extends SignalMechanism {
 		public String load(SpecTreeoutQuery query) throws CASException {
 			Treeout specTreeoutAnno = UimaUtils.selectCoveredSingle(query.specClass, query.specAius);
 			String result = specTreeoutAnno.getValue();
+			return result;
+		}
+	});
+	
+	private static LoadingCache<SpecListTreeoutsQuery, Map<String, Integer>> cacheAiusFrequencies = CacheBuilder.newBuilder()
+	.maximumSize(100000)
+	.build(new CacheLoader<SpecListTreeoutsQuery, Map<String, Integer>>() {
+		public Map<String, Integer> load(SpecListTreeoutsQuery query) throws ExecutionException {
+			Map<String, Integer> result = Maps.newHashMap();
+			for (ArgumentInUsageSample aius : query.specAiuses) {
+				String specTreeout = cacheSpecTreeouts.get(new SpecTreeoutQuery(query.specClass, aius));
+				Integer count = result.get(specTreeout);
+				if (count == null) {
+					count = 0;
+				}
+				result.put(specTreeout, count+1);
+			}
 			return result;
 		}
 	});

@@ -36,6 +36,11 @@ public class PlainSignalMechanism extends SignalMechanism {
 			addTrigger(new ScorerData("PL_SAME_TOKEN",				SameTriggerToken.inst,				Aggregator.Any.inst		));
 			addArgumentFree(new ScorerData("PL_SAME_FULLHEAD",			SameArgumentText.inst,				Aggregator.Any.inst		));
 			break;
+		case ANALYSIS1: //nothing on ANALYSIS 1 and 2 
+		case ANALYSIS2: //nothing on ANALYSIS 1 and 2 
+			break;
+			
+		case ANALYSIS3: //fall-through, analyze exactly all normal scorers 
 		case ANALYSIS: //fall-through, analyze exactly all normal scorers 
 		case NORMAL:
 			addTrigger(new ScorerData("PL_SAME_LEMMA",				SameTriggerLemma.inst,				Aggregator.Any.inst		));
@@ -45,7 +50,8 @@ public class PlainSignalMechanism extends SignalMechanism {
 			
 			break;
 		default:
-			throw new IllegalStateException("Bad FeatureProfile enum value: " + controller.featureProfile);
+			//throw new IllegalStateException("Bad FeatureProfile enum value: " + controller.featureProfile);
+			break;
 		}
 
 		// they are both here only as an experiment - they should behave the same due to TEXT_ORIG_AND_DERV!!!!

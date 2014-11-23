@@ -51,7 +51,7 @@ public class SignalAnalyzerDocumentCollection extends StatsDocumentCollection {
 	@SuppressWarnings("serial")
 	private StatsDocument triggerDoc = new StatsDocument(
 			Arrays.asList(new String[] {
-					/*"folder", "category", "docId", */"spec", "role", "signal", /*"spec-ind", */"deriver", "derivation", "left-sense", "right-sense", "agg"
+					/*"folder", "category", "docId", */"spec", "role", "signal", /*"spec-ind", */"deriver", "derivation", "left-sense", "right-sense", "el-agg", "us-agg"
 			}),
 			new LinkedHashMap<FieldName,StatsFieldType>() {{
 				put(new FieldName("SpecItems", "TruePositive"), StatsFieldType.LIST_COUNTS);

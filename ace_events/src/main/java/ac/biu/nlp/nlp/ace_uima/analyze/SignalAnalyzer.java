@@ -48,6 +48,7 @@ import edu.cuny.qc.perceptron.types.SentenceAssignment;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
 import edu.cuny.qc.perceptron.types.SignalInstance;
 import edu.cuny.qc.perceptron.types.SentenceInstance.InstanceAnnotations;
+import edu.cuny.qc.scorer.FeatureProfile;
 import edu.cuny.qc.scorer.ScorerData;
 import edu.cuny.qc.scorer.SignalMechanism;
 import edu.cuny.qc.scorer.SignalMechanismsContainer;
@@ -87,7 +88,7 @@ public class SignalAnalyzer {
 	//    don't forget that then THE CURRENT IMPLEMENTATION HAS A BUG!!!!
 	private static final boolean HANDLE_FREEARGS_LIKE_DEPENDENTARGS = true; 
 
-	public static void analyze(File inputFileList, File specList, File outputFolder, boolean useDumps, String triggerDocName/*, String argDocName, String globalDocName*/, Integer debugMinSentence, Integer docsChunk) throws Exception {
+	public static void analyze(File inputFileList, File specList, File outputFolder, boolean useDumps, String triggerDocName/*, String argDocName, String globalDocName*/, Integer debugMinSentence, Integer docsChunk, String featureProfile) throws Exception {
 		(new PrintStream(new File(outputFolder, "start"))).close();
 		if (debugMinSentence < 0) {
 			debugMinSentence = Integer.MAX_VALUE;
@@ -108,6 +109,7 @@ public class SignalAnalyzer {
 		controller.usePreprocessFiles = useDumps;
 		controller.useSignalFiles = useDumps;
 		controller.docsChunk = docsChunk;
+		controller.featureProfile = FeatureProfile.valueOf(featureProfile);
 		Perceptron.controllerStatic = controller;
 		SignalMechanismsContainer signalMechanismsContainer = new SignalMechanismsContainer(controller);
 		List<String> specXmlPaths = SpecHandler.readSpecListFile(specList);
@@ -831,13 +833,14 @@ public class SignalAnalyzer {
 	 * @throws IOException 
 	 */
 	public static void main(String args[]) throws Exception {
-		if (args.length != 7/*8*/) {
+		if (args.length != 8/*7*//*8*/) {
 			//System.err.println("USAGE: SignalAnalyzer <input file list> <spec list> <output folder> <use dump files> <trigger doc> <arg doc> <global doc> <debug min sentence>");
-			System.err.println("USAGE: SignalAnalyzer <input file list> <spec list> <output folder> <use dump files> <trigger doc> <debug min sentence> <docs chunk>");
+			//System.err.println("USAGE: SignalAnalyzer <input file list> <spec list> <output folder> <use dump files> <trigger doc> <debug min sentence> <docs chunk>");
+			System.err.println("USAGE: SignalAnalyzer <input file list> <spec list> <output folder> <use dump files> <trigger doc> <debug min sentence> <docs chunk> <feature profile>");
 			return;
 		}
 		logger = Utils.handleLog();
-		SignalAnalyzer.analyze(new File(args[0]), new File(args[1]), new File(args[2]), Boolean.parseBoolean(args[3]), args[4], /*args[5], args[6], */Integer.parseInt(args[5/*7*/]), Integer.parseInt(args[6]));
+		SignalAnalyzer.analyze(new File(args[0]), new File(args[1]), new File(args[2]), Boolean.parseBoolean(args[3]), args[4], /*args[5], args[6], */Integer.parseInt(args[5/*7*/]), Integer.parseInt(args[6]), args[7]);
 	}
 
 	protected static Logger logger;

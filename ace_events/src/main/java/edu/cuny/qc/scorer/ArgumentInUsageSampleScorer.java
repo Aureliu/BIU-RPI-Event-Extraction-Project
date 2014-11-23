@@ -30,13 +30,27 @@ public abstract class ArgumentInUsageSampleScorer extends ArgumentDependentScore
 			Collection<ArgumentInUsageSample> aiuses = JCasUtil.select(argument.getAiuses(), ArgumentInUsageSample.class);
 			List<ArgumentInUsageSample> aiusesList = Lists.newArrayList(aiuses);
 			
-			Set<ArgumentInUsageSample> filteredAiuses = Sets.newLinkedHashSet();
-			for (ArgumentInUsageSample aius : aiuses) {
-				if (includeAius(aius, aiusesList)) {
-					filteredAiuses.add(aius);
+			Set<ArgumentInUsageSample> filteredAiuses = null;
+			try {
+				filteredAiuses = Sets.newLinkedHashSet();
+				for (ArgumentInUsageSample aius : aiuses) {
+					if (includeAius(aius, aiusesList)) {
+						filteredAiuses.add(aius);
+					}
 				}
 			}
+			catch (Exception e2) {
+				System.err.printf("         NO3\n\n\n\n\n\n\n");
+			}
 
+			/// DEBUG
+			if (filteredAiuses == null) {
+				System.err.printf("         NO\n\n\n\n\n\n\n");
+			}
+			if (textTriggerToken == null) {
+				System.err.printf("         NO2\n\n\n\n\n\n\n");
+			}
+			///
 			specIterator = filteredAiuses.iterator();
 			docJcas = textTriggerToken.getCAS().getJCas();
 		} catch (Exception e) {

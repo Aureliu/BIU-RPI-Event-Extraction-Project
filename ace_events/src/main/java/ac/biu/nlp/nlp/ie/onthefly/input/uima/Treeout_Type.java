@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** 
- * Updated by JCasGen Mon Aug 25 18:56:30 IDT 2014
+ * Updated by JCasGen Mon Nov 17 02:12:27 EST 2014
  * @generated */
 public class Treeout_Type extends Annotation_Type {
   /** @generated */
@@ -61,6 +61,24 @@ public class Treeout_Type extends Annotation_Type {
     ll_cas.ll_setStringValue(addr, casFeatCode_value, v);}
     
   
+ 
+  /** @generated */
+  final Feature casFeat_vAll;
+  /** @generated */
+  final int     casFeatCode_vAll;
+  /** @generated */ 
+  public int getVAll(int addr) {
+        if (featOkTst && casFeat_vAll == null)
+      jcas.throwFeatMissing("vAll", "ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout");
+    return ll_cas.ll_getRefValue(addr, casFeatCode_vAll);
+  }
+  /** @generated */    
+  public void setVAll(int addr, int v) {
+        if (featOkTst && casFeat_vAll == null)
+      jcas.throwFeatMissing("vAll", "ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout");
+    ll_cas.ll_setRefValue(addr, casFeatCode_vAll, v);}
+    
+  
 
 
 
@@ -95,6 +113,10 @@ public class Treeout_Type extends Annotation_Type {
  
     casFeat_value = jcas.getRequiredFeatureDE(casType, "value", "uima.cas.String", featOkTst);
     casFeatCode_value  = (null == casFeat_value) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_value).getCode();
+
+ 
+    casFeat_vAll = jcas.getRequiredFeatureDE(casType, "vAll", "ac.biu.nlp.nlp.ie.onthefly.input.uima.VAll", featOkTst);
+    casFeatCode_vAll  = (null == casFeat_vAll) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_vAll).getCode();
 
   }
 }

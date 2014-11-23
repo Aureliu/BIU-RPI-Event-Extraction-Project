@@ -9,10 +9,12 @@ import java.util.Map;
 import java.util.concurrent.ExecutionException;
 
 import org.apache.uima.cas.CASException;
+import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation;
 
 import ac.biu.nlp.nlp.ace_uima.AceAbnormalMessage;
 import ac.biu.nlp.nlp.ace_uima.AceException;
+import ac.biu.nlp.nlp.ie.onthefly.input.SpecAnnotator;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepGenPosNoContext;
@@ -24,6 +26,7 @@ import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepSpecPosNoContext;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepSpecPosNoContext;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepSpecPosWithContext;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepWithContext;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.VAll;
 
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
@@ -69,7 +72,9 @@ public class DependencySignalMechanism extends SignalMechanism {
 	public void addScorers() throws UnsupportedPosTagStringException {
 		switch(controller.featureProfile) {
 		case TOKEN_BASELINE: break;
-		case ANALYSIS: //fall-through, analyze exactly all normal scorers 
+		//case ANALYSIS1: //fall-through 
+		//case ANALYSIS:
+		case ANALYSIS11:
 			addArgumentDependent(new ScorerData("DP_DEP_NOCON",			SameLinkDepNoContext.inst,			Aggregator.Any.inst		));
 			addArgumentDependent(new ScorerData("DP_DEP_GENPOS_NOCON",	SameLinkDepGenPosNoContext.inst,	Aggregator.Any.inst		));
 			addArgumentDependent(new ScorerData("DP_DEP_SPECPOS_NOCON",	SameLinkDepSpecPosNoContext.inst,	Aggregator.Any.inst		));
@@ -77,13 +82,7 @@ public class DependencySignalMechanism extends SignalMechanism {
 			addArgumentDependent(new ScorerData("DP_DEP_PREP_GENPOS_NOCON",		SameLinkDepPrepGenPosNoContext.inst,	Aggregator.Any.inst		));
 			addArgumentDependent(new ScorerData("DP_DEP_PREP_SPECPOS_NOCON",	SameLinkDepPrepSpecPosNoContext.inst,	Aggregator.Any.inst		));
 
-			addArgumentDependent(new ScorerData("DP_DEP_NOCON_1/3",			SameLinkDepNoContextMinThird.inst,			Aggregator.Any.inst		));
-			addArgumentDependent(new ScorerData("DP_DEP_GENPOS_NOCON_1/3",	SameLinkDepGenPosNoContextMinThird.inst,	Aggregator.Any.inst		));
-			addArgumentDependent(new ScorerData("DP_DEP_SPECPOS_NOCON_1/3",	SameLinkDepSpecPosNoContextMinThird.inst,	Aggregator.Any.inst		));
-			addArgumentDependent(new ScorerData("DP_DEP_PREP_NOCON_1/3",			SameLinkDepPrepNoContextMinThird.inst,			Aggregator.Any.inst		));
-			addArgumentDependent(new ScorerData("DP_DEP_PREP_GENPOS_NOCON_1/3",		SameLinkDepPrepGenPosNoContextMinThird.inst,	Aggregator.Any.inst		));
-			addArgumentDependent(new ScorerData("DP_DEP_PREP_SPECPOS_NOCON_1/3",	SameLinkDepPrepSpecPosNoContextMinThird.inst,	Aggregator.Any.inst		));
-
+		case ANALYSIS12:
 			addArgumentDependent(new ScorerData("DP_DEP_NOCON_1/2",			SameLinkDepNoContextMinHalf.inst,			Aggregator.Any.inst		));
 			addArgumentDependent(new ScorerData("DP_DEP_GENPOS_NOCON_1/2",	SameLinkDepGenPosNoContextMinHalf.inst,	Aggregator.Any.inst		));
 			addArgumentDependent(new ScorerData("DP_DEP_SPECPOS_NOCON_1/2",	SameLinkDepSpecPosNoContextMinHalf.inst,	Aggregator.Any.inst		));
@@ -91,6 +90,15 @@ public class DependencySignalMechanism extends SignalMechanism {
 			addArgumentDependent(new ScorerData("DP_DEP_PREP_GENPOS_NOCON_1/2",		SameLinkDepPrepGenPosNoContextMinHalf.inst,	Aggregator.Any.inst		));
 			addArgumentDependent(new ScorerData("DP_DEP_PREP_SPECPOS_NOCON_1/2",	SameLinkDepPrepSpecPosNoContextMinHalf.inst,	Aggregator.Any.inst		));
 
+		case ANALYSIS13:
+			addArgumentDependent(new ScorerData("DP_DEP_NOCON_1/3",			SameLinkDepNoContextMinThird.inst,			Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_GENPOS_NOCON_1/3",	SameLinkDepGenPosNoContextMinThird.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_SPECPOS_NOCON_1/3",	SameLinkDepSpecPosNoContextMinThird.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_PREP_NOCON_1/3",			SameLinkDepPrepNoContextMinThird.inst,			Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_PREP_GENPOS_NOCON_1/3",		SameLinkDepPrepGenPosNoContextMinThird.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_PREP_SPECPOS_NOCON_1/3",	SameLinkDepPrepSpecPosNoContextMinThird.inst,	Aggregator.Any.inst		));
+
+		case ANALYSIS14:
 			addArgumentDependent(new ScorerData("DP_DEP_NOCON_1/4",			SameLinkDepNoContextMinQuarter.inst,			Aggregator.Any.inst		));
 			addArgumentDependent(new ScorerData("DP_DEP_GENPOS_NOCON_1/4",	SameLinkDepGenPosNoContextMinQuarter.inst,	Aggregator.Any.inst		));
 			addArgumentDependent(new ScorerData("DP_DEP_SPECPOS_NOCON_1/4",	SameLinkDepSpecPosNoContextMinQuarter.inst,	Aggregator.Any.inst		));
@@ -98,6 +106,7 @@ public class DependencySignalMechanism extends SignalMechanism {
 			addArgumentDependent(new ScorerData("DP_DEP_PREP_GENPOS_NOCON_1/4",		SameLinkDepPrepGenPosNoContextMinQuarter.inst,	Aggregator.Any.inst		));
 			addArgumentDependent(new ScorerData("DP_DEP_PREP_SPECPOS_NOCON_1/4",	SameLinkDepPrepSpecPosNoContextMinQuarter.inst,	Aggregator.Any.inst		));
 
+		case ANALYSIS15:
 			addArgumentDependent(new ScorerData("DP_DEP_NOCON_1/5",			SameLinkDepNoContextMinFifth.inst,			Aggregator.Any.inst		));
 			addArgumentDependent(new ScorerData("DP_DEP_GENPOS_NOCON_1/5",	SameLinkDepGenPosNoContextMinFifth.inst,	Aggregator.Any.inst		));
 			addArgumentDependent(new ScorerData("DP_DEP_SPECPOS_NOCON_1/5",	SameLinkDepSpecPosNoContextMinFifth.inst,	Aggregator.Any.inst		));
@@ -108,6 +117,9 @@ public class DependencySignalMechanism extends SignalMechanism {
 //			addArgumentDependent(new ScorerData("DP_DEP_CON",			SameLinkDepWithContext.inst,		Aggregator.Any.inst		));
 //			addArgumentDependent(new ScorerData("DP_DEP_GENPOS_CON",	SameLinkDepGenPosWithContext.inst,	Aggregator.Any.inst		));
 //			addArgumentDependent(new ScorerData("DP_DEP_SPECPOS_CON",	SameLinkDepSpecPosWithContext.inst,	Aggregator.Any.inst		));
+			break;
+		case ANALYSIS2:
+		case ANALYSIS3:
 			break;
 		case NORMAL:
 			//addTrigger(new ScorerData(null, new Or(new OneDepUp("pobj"), new OneDepUp("dobj"), new OneDepUp("nsubj")), true));
@@ -122,7 +134,8 @@ public class DependencySignalMechanism extends SignalMechanism {
 			
 			break;
 		default:
-			throw new IllegalStateException("Bad FeatureProfile enum value: " + controller.featureProfile);
+			//throw new IllegalStateException("Bad FeatureProfile enum value: " + controller.featureProfile);
+			break;
 		}
 
 	}
@@ -362,17 +375,60 @@ public class DependencySignalMechanism extends SignalMechanism {
 			this.minPercent = minPercent;
 		}
 
+		private int sum(Collection<Integer> nums) {
+			int result = 0;
+			for (Integer num : nums) {
+				result += num;
+			}
+			return result;
+		}
+		// the second parameter is there historically (because of the implementation mistake I did on 16.11.2014 - we ignore it
 		@Override
-		protected boolean includeAius(ArgumentInUsageSample aius, List<ArgumentInUsageSample> aiuses) throws ExecutionException {
-			Map<String, Integer> frequencies = cacheAiusFrequencies.get(new SpecListTreeoutsQuery(specClass, aiuses));
-			String aiusSpecTreeout = cacheSpecTreeouts.get(new SpecTreeoutQuery(specClass, aius));
-			Integer aiusFreq = frequencies.get(aiusSpecTreeout);
-			double aiusRelativeFreq = ((double) aiusFreq) / aiuses.size();
-			/// DEBUG
-			//System.out.printf("DependencySignalMechanism.SameLinkOverTreeoutOnlyFrequesntAiuses: \"%s\" appears %s times out of %s, which is %s. minPercent=%s, so including? %s\n",
-			//		aiusSpecTreeout, aiusFreq, aiuses.size(), aiusRelativeFreq, minPercent, aiusRelativeFreq >= minPercent);
-			///
-			return aiusRelativeFreq >= minPercent;
+		protected boolean includeAius(ArgumentInUsageSample aius, List<ArgumentInUsageSample> aiusesSameRole) throws Exception {
+			try {
+				/// DEBUG
+//				if (aius.getCoveredText().contains("stones")) {
+//					System.out.printf("\n\n\n\n\nMAYBE\n\n\n\n\n");
+//				}
+				////
+				Feature treeoutFeature = SpecAnnotator.getAiusTreeoutFeature(specClass, aius);
+				Treeout treeout = (Treeout) aius.getFeatureValue(treeoutFeature);
+				VAll vAll = treeout.getVAll();
+				Map<String, Integer> frequencies = cacheAiusFrequencies.get(vAll);
+				/// DEBUG
+//				if (frequencies == null) {
+//					System.out.printf("\n\n\n\n\nfrequencies == null\n\n\n\n\n");
+//				}
+				////
+				Integer sum = sum(frequencies.values());
+				/// DEBUG
+//				if (aius == null || aius.getArgumentExample()==null || aius.getArgumentExample().getArgument() == null ||
+//						aius.getArgumentExample().getArgument().getRole() == null) {
+//					System.out.printf("\n\n\n\n\naius (or something derved) == null\n\n\n\n\n");
+//				}
+				////
+				String role = aius.getArgumentExample().getArgument().getRole().getCoveredText();
+				/// DEBUG
+//				if (role == null) {
+//					System.out.printf("\n\n\n\n\role == null\n\n\n\n\n");
+//				}
+				////
+				Integer aiusFreq = frequencies.get(role);
+				/// DEBUG
+//				if (aiusFreq == null) {
+//					System.out.printf("\n\n\n\naiusFreq == null\n\n\n\n\n");
+//				}
+				////
+				double aiusRelativeFreq = ((double) aiusFreq) / sum;
+				/// DEBUG
+	//			System.out.printf("DependencySignalMechanism.SameLinkOverTreeoutOnlyFrequesntAiuses: \"%s\" appears %s times out of %s, which is %s. minPercent=%s, so including? %s\n",
+	//					role, aiusFreq, sum, aiusRelativeFreq, minPercent, aiusRelativeFreq >= minPercent);
+				///
+				return aiusRelativeFreq >= minPercent;
+			}
+			catch (Exception e) {
+				throw new Exception(e);
+			}
 		}
 
 	}
@@ -571,7 +627,7 @@ public class DependencySignalMechanism extends SignalMechanism {
 //	});
 	
 	private static LoadingCache<SpecTreeoutQuery, String> cacheSpecTreeouts = CacheBuilder.newBuilder()
-	.maximumSize(100000)
+	.maximumSize(1000)
 	.build(new CacheLoader<SpecTreeoutQuery, String>() {
 		public String load(SpecTreeoutQuery query) throws CASException {
 			Treeout specTreeoutAnno = UimaUtils.selectCoveredSingle(query.specClass, query.specAius);
@@ -580,25 +636,33 @@ public class DependencySignalMechanism extends SignalMechanism {
 		}
 	});
 	
-	private static LoadingCache<SpecListTreeoutsQuery, Map<String, Integer>> cacheAiusFrequencies = CacheBuilder.newBuilder()
-	.maximumSize(100000)
-	.build(new CacheLoader<SpecListTreeoutsQuery, Map<String, Integer>>() {
-		public Map<String, Integer> load(SpecListTreeoutsQuery query) throws ExecutionException {
-			Map<String, Integer> result = Maps.newHashMap();
-			for (ArgumentInUsageSample aius : query.specAiuses) {
-				String specTreeout = cacheSpecTreeouts.get(new SpecTreeoutQuery(query.specClass, aius));
-				Integer count = result.get(specTreeout);
-				if (count == null) {
-					count = 0;
-				}
-				result.put(specTreeout, count+1);
-			}
-			return result;
+//	private static LoadingCache<SpecListTreeoutsQuery, Map<String, Integer>> cacheAiusFrequencies = CacheBuilder.newBuilder()
+//	.maximumSize(100000)
+//	.build(new CacheLoader<SpecListTreeoutsQuery, Map<String, Integer>>() {
+//		public Map<String, Integer> load(SpecListTreeoutsQuery query) throws ExecutionException {
+//			Map<String, Integer> result = Maps.newHashMap();
+//			for (ArgumentInUsageSample aius : query.specAiuses) {
+//				String specTreeout = cacheSpecTreeouts.get(new SpecTreeoutQuery(query.specClass, aius));
+//				Integer count = result.get(specTreeout);
+//				if (count == null) {
+//					count = 0;
+//				}
+//				result.put(specTreeout, count+1);
+//			}
+//			return result;
+//		}
+//	});
+	
+	private static LoadingCache<VAll, Map<String, Integer>> cacheAiusFrequencies = CacheBuilder.newBuilder()
+	.maximumSize(1000)
+	.build(new CacheLoader<VAll, Map<String, Integer>>() {
+		public Map<String, Integer> load(VAll vAll) throws ExecutionException {
+			return SpecAnnotator.getFrequenciesFromVAll(vAll);
 		}
 	});
 	
 	private static /*transient*/ LoadingCache<TriggerArgQuery, Map<String, String>> cacheTextTreeouts = CacheBuilder.newBuilder()
-	.maximumSize(100000)
+	.maximumSize(1000)
 	.build(new CacheLoader<TriggerArgQuery, Map<String, String>>() {
 		public Map<String, String> load(TriggerArgQuery query) throws FragmentLayerException, CASException, AceException, TreeAndParentMapException, TreeFragmentBuilderException {
 //			Annotation textTrigger = textAnnos.getKey();

@@ -16,6 +16,7 @@ import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_engine.AnalysisEngine;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.cas.CASException;
+import org.apache.uima.cas.Feature;
 import org.apache.uima.cas.Type;
 import org.apache.uima.cas.text.AnnotationFS;
 import org.apache.uima.jcas.JCas;
@@ -23,6 +24,7 @@ import org.apache.uima.jcas.cas.FSArray;
 import org.apache.uima.jcas.tcas.Annotation;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.util.CasCopier;
+import org.hibernate.property.Getter;
 import org.uimafit.component.JCasAnnotator_ImplBase;
 import org.uimafit.util.FSCollectionFactory;
 import org.uimafit.util.JCasUtil;
@@ -31,6 +33,7 @@ import ac.biu.nlp.nlp.ace_uima.AceAbnormalMessage;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentExample;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample_Type;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentType;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.LemmaByPos;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.NounLemma;
@@ -74,6 +77,7 @@ import edu.cuny.qc.perceptron.core.Perceptron;
 import edu.cuny.qc.perceptron.types.Document;
 import edu.cuny.qc.util.fragment.FragmentAndReference;
 import edu.cuny.qc.util.fragment.FragmentLayer;
+import edu.ucla.sspace.util.HashMultiMap;
 import eu.excitementproject.eop.common.representation.parse.tree.dependency.basic.BasicNode;
 import eu.excitementproject.eop.common.representation.parse.tree.dependency.view.TreeToLineString;
 import eu.excitementproject.eop.common.utilities.DockedToken;
@@ -271,6 +275,29 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 		}
 	}
 
+	public static Feature getAiusTreeoutFeature(Class<? extends Treeout> cls, ArgumentInUsageSample aius) throws CASException {
+		String clsName = cls.getSimpleName();
+		String featureName = clsName.substring(0, 1).toLowerCase() + clsName.substring(1, clsName.length());
+		JCas jcas = aius.getCAS().getJCas();
+		Type type = jcas.getTypeSystem().getType(aius.getClass().getName());
+		Feature feature = type.getFeatureByBaseName(featureName);
+		return feature;
+	}
+	
+	public static Map<String, Integer> getFrequenciesFromVAll(VAll vAll) {
+		Map<String, Integer> result = Maps.newHashMap();
+		String[] perRole = vAll.getVal().split(" \\| ");
+		for (String roleInfo : perRole) {
+			String[] parts = roleInfo.split("\\*");
+			if (parts.length != 2) {
+				throw new IllegalArgumentException(String.format("Badly formatted vAll: %s", vAll.getVal()));
+			}
+			Integer count = Integer.parseInt(parts[0]);
+			String roleName = parts[1];
+			result.put(roleName, count);
+		}
+		return result;
+	}
 	
 	public Multimap<Annotation, Annotation> organizeUsageSamples(JCas tokenView, JCas sentenceViewTemp, JCas sentenceView, Map<String, Map<String, Annotation>> markerMap) throws SpecXmlException {
 		final Pattern USAGE_SAMPLE_ELEMENT = Pattern.compile("([^\\[]*)\\[(\\w{3}) ([^\\]]+)\\]([^\\[]*)");
@@ -465,10 +492,11 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 //		- sentenceView.setDocumentText(newSection.toString())
 	}
 	
-	private static void addTreeout(Map<Class<? extends Treeout>, Map<String, Multiset<String>>> treeoutByRole, Map<Class<? extends Treeout>, Map<String, Multiset<String>>> treeoutByVal, Class<? extends Treeout> cls, Annotation covering, String role, String value) throws CASException {
-		JCas jcas = covering.getCAS().getJCas();
+	private static void addTreeout(Map<Class<? extends Treeout>, Map<String, Multiset<String>>> treeoutByRole, Map<Class<? extends Treeout>, Map<String, Multiset<String>>> treeoutByVal,
+			Map<Class<? extends Treeout>, Multimap<String, ArgumentInUsageSample>> aiusesByTreeout, Class<? extends Treeout> cls, ArgumentInUsageSample aius, String role, String value) throws CASException {
+		JCas jcas = aius.getCAS().getJCas();
 		Type type = jcas.getTypeSystem().getType(cls.getName());
-		AnnotationFS newAnno = jcas.getCas().createAnnotation(type, covering.getBegin(), covering.getEnd());
+		AnnotationFS newAnno = jcas.getCas().createAnnotation(type, aius.getBegin(), aius.getEnd());
 		Treeout treeout = (Treeout) newAnno;
 
 		// Pad role with '_', so that all roles are aligned, and are displayed well in Chrome (which omits consecutive spaces!!!)
@@ -503,6 +531,20 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 			ofCls.put(value, ofVal);
 		}
 		ofVal.add(role);
+		
+		Multimap<String, ArgumentInUsageSample> ofCls2 = aiusesByTreeout.get(cls);
+		if (ofCls2 == null) {
+			ofCls2 = HashMultimap.create();
+			aiusesByTreeout.put(cls, ofCls2);
+		}
+		ofCls2.put(value, aius);
+		Feature treeoutFeature = getAiusTreeoutFeature(cls, aius);
+		///// DEBUG
+		if (treeoutFeature == null) {
+			System.out.printf("\n\n\n\n\n\n\n\n\ntreeoutFeature == null\n\n\n\n\n\n\n");
+		}
+		///
+		aius.setFeatureValue(treeoutFeature, treeout);
 	}
 	
 	@Override
@@ -535,6 +577,7 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 			// For tracing treeouts
 			Map<Class<? extends Treeout>, Map<String, Multiset<String>>> treeoutByRole = Maps.newHashMap();
 			Map<Class<? extends Treeout>, Map<String, Multiset<String>>> treeoutByVal = Maps.newHashMap();
+			Map<Class<? extends Treeout>, Multimap<String, ArgumentInUsageSample>> aiusesByTreeout = Maps.newHashMap();
 			
 			// Make sure usage samples don't have exact duplicates
 			List<String> sampleTextsList = JCasUtil.toText(usageSamples);
@@ -615,18 +658,18 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 						List<BasicNode> subrootsNoConj = ImmutableList.of(linkFragNoConj.getFragmentRoot());
 
 						String role = aius.getArgumentExample().getArgument().getRole().getCoveredText();
-						addTreeout(treeoutByRole, treeoutByVal, TreeoutDepNoContext.class, aius, role, TreeToLineString.getStringRel(subroots, false, true));
-						addTreeout(treeoutByRole, treeoutByVal, TreeoutDepGenPosNoContext.class, aius, role, TreeToLineString.getStringRelCanonicalPos(subroots, false, true));
-						addTreeout(treeoutByRole, treeoutByVal, TreeoutDepSpecPosNoContext.class, aius, role, TreeToLineString.getStringRelPos(subroots, false, true));
-						addTreeout(treeoutByRole, treeoutByVal, TreeoutDepWithContext.class, aius, role, TreeToLineString.getStringRel(subroots, true, true));
-						addTreeout(treeoutByRole, treeoutByVal, TreeoutDepGenPosWithContext.class, aius, role, TreeToLineString.getStringRelCanonicalPos(subroots, true, true));
-						addTreeout(treeoutByRole, treeoutByVal, TreeoutDepSpecPosWithContext.class, aius, role, TreeToLineString.getStringRelPos(subroots, true, true));
-						addTreeout(treeoutByRole, treeoutByVal, TreeoutDepPrepNoContext.class, aius, role, TreeToLineString.getStringRelPrep(subrootsNoConj, false, true));
-						addTreeout(treeoutByRole, treeoutByVal, TreeoutDepPrepGenPosNoContext.class, aius, role, TreeToLineString.getStringRelPrepCanonicalPos(subrootsNoConj, false, true));
-						addTreeout(treeoutByRole, treeoutByVal, TreeoutDepPrepSpecPosNoContext.class, aius, role, TreeToLineString.getStringRelPrepPos(subrootsNoConj, false, true));
-						addTreeout(treeoutByRole, treeoutByVal, TreeoutDepPrepWithContext.class, aius, role, TreeToLineString.getStringRelPrep(subrootsNoConj, true, true));
-						addTreeout(treeoutByRole, treeoutByVal, TreeoutDepPrepGenPosWithContext.class, aius, role, TreeToLineString.getStringRelPrepCanonicalPos(subrootsNoConj, true, true));
-						addTreeout(treeoutByRole, treeoutByVal, TreeoutDepPrepSpecPosWithContext.class, aius, role, TreeToLineString.getStringRelPrepPos(subrootsNoConj, true, true));
+						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepNoContext.class, aius, role, TreeToLineString.getStringRel(subroots, false, true));
+						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepGenPosNoContext.class, aius, role, TreeToLineString.getStringRelCanonicalPos(subroots, false, true));
+						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepSpecPosNoContext.class, aius, role, TreeToLineString.getStringRelPos(subroots, false, true));
+						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepWithContext.class, aius, role, TreeToLineString.getStringRel(subroots, true, true));
+						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepGenPosWithContext.class, aius, role, TreeToLineString.getStringRelCanonicalPos(subroots, true, true));
+						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepSpecPosWithContext.class, aius, role, TreeToLineString.getStringRelPos(subroots, true, true));
+						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepPrepNoContext.class, aius, role, TreeToLineString.getStringRelPrep(subrootsNoConj, false, true));
+						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepPrepGenPosNoContext.class, aius, role, TreeToLineString.getStringRelPrepCanonicalPos(subrootsNoConj, false, true));
+						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepPrepSpecPosNoContext.class, aius, role, TreeToLineString.getStringRelPrepPos(subrootsNoConj, false, true));
+						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepPrepWithContext.class, aius, role, TreeToLineString.getStringRelPrep(subrootsNoConj, true, true));
+						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepPrepGenPosWithContext.class, aius, role, TreeToLineString.getStringRelPrepCanonicalPos(subrootsNoConj, true, true));
+						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepPrepSpecPosWithContext.class, aius, role, TreeToLineString.getStringRelPrepPos(subrootsNoConj, true, true));
 					}
 				}
 				
@@ -665,7 +708,7 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 					tAll.addToIndexes();
 				}
 			}
-			for (Class<?> cls : treeoutByVal.keySet()) {
+			for (Class<? extends Treeout> cls : treeoutByVal.keySet()) {
 				Map<String, Multiset<String>> byCls = treeoutByVal.get(cls);
 				for (String treeout : byCls.keySet()) {
 					Multiset<String> byTreeout = byCls.get(treeout);
@@ -676,12 +719,34 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 						strs.add(s);
 					}
 					String oneStr = StringUtils.join(strs, " | ");
-					
+
 					VAll vAll = new VAll(sentenceView);
 					vAll.setCls(cls.getSimpleName());
 					vAll.setTreeout(treeout);
 					vAll.setVal(oneStr);
 					vAll.addToIndexes();
+					
+					Collection<ArgumentInUsageSample> aiuses = aiusesByTreeout.get(cls).get(treeout);
+					for (ArgumentInUsageSample aius : aiuses) {
+						Feature treeoutFeature = getAiusTreeoutFeature(cls, aius);
+						Treeout treeoutAnno = (Treeout) aius.getFeatureValue(treeoutFeature);
+						/// DEBUG
+//						if (treeoutAnno.getValue().contains("<SUBROOT>[PRD](dobj->NN[ARG])") &&
+//								cls == TreeoutDepSpecPosNoContext.class) {
+//							System.out.printf("\n\n\n\n\n\n\n\ngot treeout1\n\n\n\n\n\n\n");
+//						}
+//						if (treeoutAnno.getValue().contains("<SUBROOT>[PRD](dobj->NNS[ARG])") &&
+//								cls == TreeoutDepSpecPosNoContext.class) {
+//							System.out.printf("\n\n\n\n\n\n\n\ngot treeout2\n\n\n\n\n\n\n");
+//						}
+						///
+						VAll existingVAll = treeoutAnno.getVAll();
+						if (existingVAll != null && existingVAll != vAll) {
+							throw new IllegalStateException(String.format("Trying to set vAll of <%s> to treeout %s<%s>, but this treeout already has a vAll of <%s>!",
+									vAll.getVal(), cls.getSimpleName(), treeoutAnno.getValue(), existingVAll.getVal()));
+						}
+						treeoutAnno.setVAll(vAll);
+					}
 				}
 			}
 						

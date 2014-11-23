@@ -21,6 +21,9 @@ public class POSSignalMechanism extends SignalMechanism {
 
 	@Override
 	public void addScorers() throws UnsupportedPosTagStringException {
+		
+		// Ignore this entirely for now
+		/*
 		switch(controller.featureProfile) {
 		case TOKEN_BASELINE: break;
 		case ANALYSIS: //fall-through, analyze exactly all normal scorers 
@@ -33,6 +36,7 @@ public class POSSignalMechanism extends SignalMechanism {
 		default:
 			throw new IllegalStateException("Bad FeatureProfile enum value: " + controller.featureProfile);
 		}
+		*/
 	}
 
 	public POSSignalMechanism(Controller controller) throws SignalMechanismException {

@@ -109,7 +109,22 @@ public abstract class Aggregator implements Serializable {
 		}
 	}
 	
+	public static class MinThird extends Aggregator {
+		private static final long serialVersionUID = 8368396088793262028L;
+		public static final Aggregator inst = new MinHalf();
+		private MinThird() {} //private c-tor
+		@Override public String getSuffix() { return "-MinThird"; }
+
+		@Override
+		public BigDecimal aggregate(Iterator<BigDecimal> scoreIterator) {
+			List<BigDecimal> allElements = Lists.newArrayList(scoreIterator);
+			Iterator<BigDecimal> filtered = Iterators.filter(allElements.iterator(), SignalInstance.isPositive);
+			return SignalInstance.toDouble(Iterators.size(filtered) >= allElements.size()/3);
+		}
+	}
+	
 	public static final Aggregator[] ALL_AGGS = {Aggregator.Any.inst, Aggregator.Min2.inst, Aggregator.Min3.inst, /*Aggregator.Min4.inst, Aggregator.MinHalf.inst*/};
+	public static final Aggregator[] ALL_AGGS_REALLY = {Aggregator.Any.inst, Aggregator.Min2.inst, Aggregator.Min3.inst, Aggregator.Min4.inst, Aggregator.MinHalf.inst, Aggregator.MinThird.inst};
 	public static final Aggregator[] AGG_ANY = {Aggregator.Any.inst};
 	public static final Aggregator[] AGG_MIN2 = {Aggregator.Min2.inst};
 	public static final Aggregator[] AGG_MIN3 = {Aggregator.Min3.inst};

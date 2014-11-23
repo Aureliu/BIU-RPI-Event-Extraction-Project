@@ -37,6 +37,7 @@ public class BrownClustersSignalMechanism extends SignalMechanism {
 		switch(controller.featureProfile) {
 		case TOKEN_BASELINE: break;
 		case ANALYSIS: 
+		case ANALYSIS3: 
 //			addTrigger(new ScorerData("BR_ALL_CLUSTERS_TOK",		SameAllClustersToken.inst,				Aggregator.Any.inst		));
 //			addTrigger(new ScorerData("BR_ALL_CLUSTERS_LEM",		SameAllClustersLemma.inst,				Aggregator.Any.inst		));
 			addTrigger(new ScorerData("BR_LONGEST_CLUSTER_TOK",		SameLongestClusterToken.inst,			Aggregator.Any.inst		));
@@ -54,12 +55,15 @@ public class BrownClustersSignalMechanism extends SignalMechanism {
 //			addTrigger(new ScorerData("BR_LONGEST_CLUSTER_LEM",	SameLongestClusterLemma.inst, NomlexDeriver.inst, Derivation.SPEC_ORIG_AND_DERV, Aggregator.Any.inst));
 //			
 			break;
+		case ANALYSIS1:
+		case ANALYSIS2:
 		case NORMAL:
 			// Currently not using any scorer from this signal mechanism
 			
 			break;
 		default:
-			throw new IllegalStateException("Bad FeatureProfile enum value: " + controller.featureProfile);
+			//throw new IllegalStateException("Bad FeatureProfile enum value: " + controller.featureProfile);
+			break;
 		}
 
 	}

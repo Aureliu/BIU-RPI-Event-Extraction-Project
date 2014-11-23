@@ -147,7 +147,89 @@ public class WordNetSignalMechanism extends SignalMechanism {
 //			addTriggers(ALL_RELATIONS_BIG,   Juxtaposition.ANCESTOR, LENGTHS_1_2_3_TOP, ALL_DERIVERS, DERVS_ALL, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN, VERB/*, ADJ, ADV*/}, ALL_AGGS);
 //		
 //			break;
-		case ANALYSIS: //for now, analyze just the normal ones
+		case ANALYSIS2:
+			// Top F1
+			addTrigger(new ScorerData(null, new WordnetTriggerScorer(SYNONYM_RELATION, Juxtaposition.ANCESTOR, 1), NoDerv.inst, Derivation.NONE, -1, 1, null, Any.inst));
+			addTrigger(new ScorerData(null, new WordnetTriggerScorer(SYNONYM_RELATION, Juxtaposition.ANCESTOR, 1), new Join(WordnetDervRltdDeriver.inst, NomlexDeriver.inst), Derivation.TEXT_ORIG_AND_DERV, -1, 1, null, Any.inst));
+			addTrigger(new ScorerData(null, new WordnetTriggerScorer(SYNONYM_RELATION, Juxtaposition.ANCESTOR, 1), NoDerv.inst, Derivation.NONE, 1, 1, null, Any.inst));
+
+			addTrigger(new ScorerData(null, new WordnetTriggerScorer(HYPERNYM_RELATIONS, Juxtaposition.ANCESTOR, 1), WordnetDervRltdDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, 1, null, Any.inst));
+			addTrigger(new ScorerData(null, new WordnetTriggerScorer(HYPERNYM_RELATIONS, Juxtaposition.ANCESTOR, 2), WordnetDervRltdDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, 1, null, Any.inst));
+			addTrigger(new ScorerData(null, new WordnetTriggerScorer(HYPERNYM_RELATIONS, Juxtaposition.ANCESTOR, 3), WordnetDervRltdDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, 1, null, Any.inst));
+
+			addTrigger(new ScorerData(null, new WordnetTriggerScorer(ALL_RELATIONS_SMALL, Juxtaposition.ANCESTOR, 2), NoDerv.inst, Derivation.NONE, -1, 1, null, Any.inst));
+			addTrigger(new ScorerData(null, new WordnetTriggerScorer(ALL_RELATIONS_SMALL, Juxtaposition.ANCESTOR, 2), WordnetDervRltdDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, 1, null, Any.inst));
+			addTrigger(new ScorerData(null, new WordnetTriggerScorer(ALL_RELATIONS_BIG,   Juxtaposition.ANCESTOR, 2), NoDerv.inst, Derivation.NONE, -1, 1, null, Any.inst));
+
+			addTrigger(new ScorerData(null, new WordnetTriggerScorer(HYPERNYM_RELATIONS, Juxtaposition.ANCESTOR, 2), NoDerv.inst, Derivation.NONE, -1, 1, null, Any.inst));
+
+			addTrigger(new ScorerData(null, new WordnetTriggerScorer(ALL_RELATIONS_BIG, Juxtaposition.ANCESTOR, 2), NomlexSignalMechanism.NomlexDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, 1, null, Any.inst));
+			addTrigger(new ScorerData(null, new WordnetTriggerScorer(ALL_RELATIONS_BIG, Juxtaposition.ANCESTOR, 2), NomlexSignalMechanism.NomlexDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, 1, 1, null, Any.inst));
+			addTrigger(new ScorerData(null, new WordnetTriggerScorer(ALL_RELATIONS_BIG, Juxtaposition.ANCESTOR, 1), WordnetDervRltdDeriver.inst, Derivation.SPEC_ORIG_AND_DERV, -1, -1, null, Min3.inst));
+			
+			// Top Recall
+			addTrigger(new ScorerData(null, new WordnetTriggerScorer(HYPERNYM_RELATIONS, Juxtaposition.COUSIN_STRICT, 2), WordnetDervRltdDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, -1, null, Min2.inst));
+			addTrigger(new ScorerData(null, new WordnetTriggerScorer(HYPERNYM_RELATIONS, Juxtaposition.COUSIN_STRICT, 2), WordnetDervRltdDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, -1, null, Any.inst));
+			addTrigger(new ScorerData(null, new WordnetTriggerScorer(HYPERNYM_RELATIONS, Juxtaposition.COUSIN_STRICT, 3), WordnetDervRltdDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, -1, null, Min3.inst));
+			
+			addTrigger(new ScorerData(null, new WordnetTriggerScorer(SYNONYM_RELATION, Juxtaposition.ANCESTOR, 1), NoDerv.inst, Derivation.NONE, -1, -1, null, Any.inst));
+			addTrigger(new ScorerData(null, new WordnetTriggerScorer(SYNONYM_RELATION, Juxtaposition.ANCESTOR, 1), NoDerv.inst, Derivation.NONE, 1, -1, null, Any.inst));
+
+			
+			// Top F1
+			addArgumentFree(new ScorerData(null, new WordnetArgumentScorer(SYNONYM_RELATION, Juxtaposition.ANCESTOR, 1), NoDerv.inst, Derivation.NONE, -1, 1, null, Any.inst));
+			addArgumentFree(new ScorerData(null, new WordnetArgumentScorer(SYNONYM_RELATION, Juxtaposition.ANCESTOR, 1), new Join(WordnetDervRltdDeriver.inst, NomlexDeriver.inst), Derivation.TEXT_ORIG_AND_DERV, -1, 1, null, Any.inst));
+			addArgumentFree(new ScorerData(null, new WordnetArgumentScorer(SYNONYM_RELATION, Juxtaposition.ANCESTOR, 1), NoDerv.inst, Derivation.NONE, 1, 1, null, Any.inst));
+
+			addArgumentFree(new ScorerData(null, new WordnetArgumentScorer(HYPERNYM_RELATIONS, Juxtaposition.ANCESTOR, 1), WordnetDervRltdDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, 1, null, Any.inst));
+			addArgumentFree(new ScorerData(null, new WordnetArgumentScorer(HYPERNYM_RELATIONS, Juxtaposition.ANCESTOR, 2), WordnetDervRltdDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, 1, null, Any.inst));
+			addArgumentFree(new ScorerData(null, new WordnetArgumentScorer(HYPERNYM_RELATIONS, Juxtaposition.ANCESTOR, 3), WordnetDervRltdDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, 1, null, Any.inst));
+
+			addArgumentFree(new ScorerData(null, new WordnetArgumentScorer(ALL_RELATIONS_SMALL, Juxtaposition.ANCESTOR, 2), NoDerv.inst, Derivation.NONE, -1, 1, null, Any.inst));
+			addArgumentFree(new ScorerData(null, new WordnetArgumentScorer(ALL_RELATIONS_SMALL, Juxtaposition.ANCESTOR, 2), WordnetDervRltdDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, 1, null, Any.inst));
+			//addArgumentFree(new ScorerData(null, new WordnetArgumentScorer(ALL_RELATIONS_BIG,   Juxtaposition.ANCESTOR, 2), NoDerv.inst, Derivation.NONE, -1, 1, null, Any.inst));
+
+			addArgumentFree(new ScorerData(null, new WordnetArgumentScorer(HYPERNYM_RELATIONS, Juxtaposition.ANCESTOR, 2), NoDerv.inst, Derivation.NONE, -1, 1, null, Any.inst));
+
+			addArgumentFree(new ScorerData(null, new WordnetArgumentScorer(ALL_RELATIONS_BIG, Juxtaposition.ANCESTOR, 2), NomlexSignalMechanism.NomlexDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, 1, null, Any.inst));
+			addArgumentFree(new ScorerData(null, new WordnetArgumentScorer(ALL_RELATIONS_BIG, Juxtaposition.ANCESTOR, 2), NomlexSignalMechanism.NomlexDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, 1, 1, null, Any.inst));
+			//addArgumentFree(new ScorerData(null, new WordnetArgumentScorer(ALL_RELATIONS_BIG, Juxtaposition.ANCESTOR, 1), WordnetDervRltdDeriver.inst, Derivation.SPEC_ORIG_AND_DERV, -1, -1, null, Min3.inst));
+			
+			// Top Recall
+			addArgumentFree(new ScorerData(null, new WordnetArgumentScorer(HYPERNYM_RELATIONS, Juxtaposition.COUSIN_STRICT, 2), WordnetDervRltdDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, -1, null, Min2.inst));
+			addArgumentFree(new ScorerData(null, new WordnetArgumentScorer(HYPERNYM_RELATIONS, Juxtaposition.COUSIN_STRICT, 2), WordnetDervRltdDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, -1, null, Any.inst));
+			addArgumentFree(new ScorerData(null, new WordnetArgumentScorer(HYPERNYM_RELATIONS, Juxtaposition.COUSIN_STRICT, 3), WordnetDervRltdDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, -1, null, Min3.inst));
+			
+			addArgumentFree(new ScorerData(null, new WordnetArgumentScorer(SYNONYM_RELATION, Juxtaposition.ANCESTOR, 1), NoDerv.inst, Derivation.NONE, -1, -1, null, Any.inst));
+			addArgumentFree(new ScorerData(null, new WordnetArgumentScorer(SYNONYM_RELATION, Juxtaposition.ANCESTOR, 1), NoDerv.inst, Derivation.NONE, 1, -1, null, Any.inst));
+
+			break;
+
+		case ANALYSIS21:
+			//Inspired by part of: END of analysis2!
+			/// Group A
+			addManyArgumentFree(SYNONYM_RELATION,   Juxtaposition.ANCESTOR, new Integer[] {1}, ALL_DERIVERS, DERVS_NONE, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN, /*VERB, ADJ, ADV*/}, AGG_ANY);
+			addManyArgumentFree(HYPERNYM_RELATIONS, Juxtaposition.ANCESTOR, LENGTHS_1_2_3_4, ALL_DERIVERS, DERVS_NONE_AND, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN/*, VERB*/}, AGG_ANY);
+			addManyArgumentFree(HYPERNYM1_RELATION, Juxtaposition.ANCESTOR, LENGTHS_1_2_3_4, ALL_DERIVERS, DERVS_NONE_AND, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN/*, VERB*/}, AGG_ANY);
+			addManyArgumentFree(HYPERNYM2_RELATION, Juxtaposition.ANCESTOR, LENGTHS_1_2_3_4, ALL_DERIVERS, DERVS_NONE_AND, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN/*, VERB*/}, AGG_ANY);
+	
+			/// Group B
+			addManyArgumentFree(ALL_RELATIONS_SMALL,   Juxtaposition.ANCESTOR, LENGTHS_1_2_3_4_TOP, ALL_DERIVERS, DERVS_ALL, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN, VERB/*, ADJ, ADV*/}, ALL_AGGS);
+			addManyArgumentFree(ALL_RELATIONS_BIG,   Juxtaposition.ANCESTOR, LENGTHS_1_2_3_4_TOP, ALL_DERIVERS, DERVS_ALL, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN, VERB/*, ADJ, ADV*/}, ALL_AGGS);
+
+			break;
+		
+		case ANALYSIS22:
+			//Inspired by part of: END of analysis2!
+			/// Group B
+//			addManyArgumentFree(HYPERNYM_RELATIONS, Juxtaposition.COUSIN_STRICT, new Integer[] {1}, ALL_DERIVERS, DERVS_NONE_AND, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null/*, NOUN, VERB*/}, AGG_MIN2);
+//			addManyArgumentFree(HYPERNYM_RELATIONS, Juxtaposition.COUSIN_STRICT, new Integer[] {2}, ALL_DERIVERS, DERVS_NONE_AND, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null/*, NOUN, VERB*/}, AGG_MIN3);
+//			addManyArgumentFree(HYPERNYM_RELATIONS, Juxtaposition.COUSIN_STRICT, new Integer[] {3}, ALL_DERIVERS, DERVS_NONE_AND, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null/*, NOUN, VERB*/}, AGG_MIN2_MIN3);
+
+			addManyArgumentFree(HYPERNYM_RELATIONS, Juxtaposition.COUSIN_STRICT, LENGTHS_1_2_3_4_TOP, ALL_DERIVERS, DERVS_NONE_AND, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null/*, NOUN, VERB*/}, ALL_AGGS_REALLY);
+
+			break;
+		
 		case NORMAL:
 			//17.7.14 Some conclusions:
 			// - all three AllRelations (one big, two smalls) do exactly the same on batch1)
@@ -200,8 +282,13 @@ public class WordNetSignalMechanism extends SignalMechanism {
 			addArgumentFree(new ScorerData(null, new WordnetArgumentScorer(ALL_RELATIONS_BIG, Juxtaposition.ANCESTOR, 2), NomlexSignalMechanism.NomlexDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, 1, null, Any.inst));
 			
 			break;
+		case ANALYSIS1: //do nothing
+		case ANALYSIS3:
+			break;
+			
 		default:
-			throw new IllegalStateException("Bad FeatureProfile enum value: " + controller.featureProfile);
+			//throw new IllegalStateException("Bad FeatureProfile enum value: " + controller.featureProfile);
+			break;
 		}
 		
 		//END of analysis1!
@@ -314,6 +401,35 @@ public class WordNetSignalMechanism extends SignalMechanism {
 									
 									WordnetTriggerScorer scorer = new WordnetTriggerScorer(relations, juxt, length);
 									addTrigger(new ScorerData(null, scorer, deriver, derv, leftSense, rightSense, specificPos, agg));
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	public void addManyArgumentFree(Set<WordNetRelation> relations, Juxtaposition juxt, Integer[] lengths, Deriver[] derivers, Derivation[] dervs, Integer[] leftSenses, Integer[] rightSenses, PartOfSpeech[] specificPoses, Aggregator[] aggs) {
+		System.out.printf("%s ^^^ addManyArgumentFree(): Building %s (%sx%sx%sx%sx%sx%s) combinations: lengths=%s, dervs=%s, leftSenses=%s, rightSenses=%s, specificPoses=%s, aggs=%s. Fixed options: relations=%s, juxt=%s\n",
+				Utils.detailedLog(),
+				lengths.length*dervs.length*leftSenses.length*rightSenses.length*specificPoses.length*aggs.length,
+				lengths.length, dervs.length, leftSenses.length, rightSenses.length, specificPoses.length, aggs.length,
+				Arrays.toString(lengths), Arrays.toString(dervs), Arrays.toString(leftSenses), Arrays.toString(rightSenses), Arrays.toString(specificPoses), Arrays.toString(aggs),
+				relations, juxt);
+		for (Integer length : lengths) {
+			for (Deriver deriver : derivers) {
+				for (Derivation derv : dervs) {
+					for (Integer leftSense : leftSenses) {
+						for (Integer rightSense : rightSenses) {
+							for (PartOfSpeech specificPos : specificPoses) {
+								for (Aggregator agg : aggs) {
+	//								System.out.printf("%s ^^^^^ addTriggers(): Starting single combination: relations=%s, just=%s, length=%s, derv=%s, leftSense=%s, rightSense=%s, specificPos=%s, agg=%s\n",
+	//										Pipeline.detailedLog(),
+	//										relations, juxt, length, derv, leftSense, rightSense, specificPos, agg);
+									
+									WordnetTriggerScorer scorer = new WordnetTriggerScorer(relations, juxt, length);
+									addArgumentFree(new ScorerData(null, scorer, deriver, derv, leftSense, rightSense, specificPos, agg));
 								}
 							}
 						}
@@ -643,7 +759,7 @@ public class WordNetSignalMechanism extends SignalMechanism {
 			});
 	private static LoadingCache<FullRulesQuery, Set<String>> cacheCousinsStrict = CacheBuilder.newBuilder()
 			.recordStats()
-			.maximumWeight(2000000000)
+			.maximumWeight(20000000)
 			.weigher(new Weigher<FullRulesQuery, Set<String>>() {
 				public int weigh(FullRulesQuery k, Set<String> v) { return v.size(); }
 			})
@@ -799,7 +915,9 @@ public class WordNetSignalMechanism extends SignalMechanism {
 			WordNetRelation.SYNONYM
 	}));
 	private static final Integer[] LENGTHS_1_2_3 = {1, 2, 3};
+	private static final Integer[] LENGTHS_1_2_3_4 = {1, 2, 3, 5};
 	private static final Integer[] LENGTHS_1_2_3_TOP = {-1, 1, 2, 3};
+	private static final Integer[] LENGTHS_1_2_3_4_TOP = {-1, 1, 2, 3, 4};
 	private static final Integer[] ALL_LIMITED_LENGTHS = {1, 2, 3, 4, 5, 6, 7};
 	private static final Integer[] ALL_LENGTHS_WITH_TOP = {-1, 1, 2, 3, 4, 5, 6, 7};
 	private static final Integer[] SENSE_NUMS = {1, -1};

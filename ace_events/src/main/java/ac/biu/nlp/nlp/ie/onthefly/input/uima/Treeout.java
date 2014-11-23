@@ -11,7 +11,7 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Mon Aug 25 18:56:30 IDT 2014
+ * Updated by JCasGen Mon Nov 17 02:12:27 EST 2014
  * XML source: C:/Java/Git/breep/ace_events/src/main/resources/desc/OdieInputTypes.xml
  * @generated */
 public class Treeout extends Annotation {
@@ -78,7 +78,25 @@ public class Treeout extends Annotation {
     if (Treeout_Type.featOkTst && ((Treeout_Type)jcasType).casFeat_value == null)
       jcasType.jcas.throwFeatMissing("value", "ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout");
     jcasType.ll_cas.ll_setStringValue(addr, ((Treeout_Type)jcasType).casFeatCode_value, v);}    
-            //*--------------*
+   
+    
+  //*--------------*
+  //* Feature: vAll
+
+  /** getter for vAll - gets 
+   * @generated */
+  public VAll getVAll() {
+    if (Treeout_Type.featOkTst && ((Treeout_Type)jcasType).casFeat_vAll == null)
+      jcasType.jcas.throwFeatMissing("vAll", "ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout");
+    return (VAll)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((Treeout_Type)jcasType).casFeatCode_vAll)));}
+    
+  /** setter for vAll - sets  
+   * @generated */
+  public void setVAll(VAll v) {
+    if (Treeout_Type.featOkTst && ((Treeout_Type)jcasType).casFeat_vAll == null)
+      jcasType.jcas.throwFeatMissing("vAll", "ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout");
+    jcasType.ll_cas.ll_setRefValue(addr, ((Treeout_Type)jcasType).casFeatCode_vAll, jcasType.ll_cas.ll_getFSRef(v));}    
+                  //*--------------*
   //* Feature: role
 
   /** getter for role - gets 

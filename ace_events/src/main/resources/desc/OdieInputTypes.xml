@@ -155,32 +155,62 @@
         <featureDescription>
           <name>treeoutDepNoContext</name>
           <description/>
-          <rangeTypeName>uima.cas.String</rangeTypeName>
+          <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepNoContext</rangeTypeName>
         </featureDescription>
         <featureDescription>
           <name>treeoutDepGenPosNoContext</name>
           <description/>
-          <rangeTypeName>uima.cas.String</rangeTypeName>
+          <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepGenPosNoContext</rangeTypeName>
         </featureDescription>
         <featureDescription>
           <name>treeoutDepSpecPosNoContext</name>
           <description/>
-          <rangeTypeName>uima.cas.String</rangeTypeName>
+          <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepSpecPosNoContext</rangeTypeName>
         </featureDescription>
         <featureDescription>
           <name>treeoutDepWithContext</name>
           <description/>
-          <rangeTypeName>uima.cas.String</rangeTypeName>
+          <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepWithContext</rangeTypeName>
         </featureDescription>
         <featureDescription>
           <name>treeoutDepGenPosWithContext</name>
           <description/>
-          <rangeTypeName>uima.cas.String</rangeTypeName>
+          <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepGenPosWithContext</rangeTypeName>
         </featureDescription>
         <featureDescription>
           <name>treeoutDepSpecPosWithContext</name>
           <description/>
-          <rangeTypeName>uima.cas.String</rangeTypeName>
+          <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepSpecPosWithContext</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>treeoutDepPrepNoContext</name>
+          <description/>
+          <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepNoContext</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>treeoutDepPrepGenPosNoContext</name>
+          <description/>
+          <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepGenPosNoContext</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>treeoutDepPrepSpecPosNoContext</name>
+          <description/>
+          <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepSpecPosNoContext</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>treeoutDepPrepWithContext</name>
+          <description/>
+          <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepWithContext</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>treeoutDepPrepGenPosWithContext</name>
+          <description/>
+          <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepGenPosWithContext</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>treeoutDepPrepSpecPosWithContext</name>
+          <description/>
+          <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepSpecPosWithContext</rangeTypeName>
         </featureDescription>
       </features>
     </typeDescription>
@@ -230,6 +260,11 @@
           <name>value</name>
           <description/>
           <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>vAll</name>
+          <description/>
+          <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.VAll</rangeTypeName>
         </featureDescription>
       </features>
     </typeDescription>

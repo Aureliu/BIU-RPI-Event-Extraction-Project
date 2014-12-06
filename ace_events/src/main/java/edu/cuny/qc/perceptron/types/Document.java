@@ -24,6 +24,7 @@ import java.util.regex.Pattern;
 
 import opennlp.tools.util.InvalidFormatException;
 
+import org.apache.commons.lang3.SerializationException;
 import org.apache.commons.lang3.SerializationUtils;
 import org.apache.uima.analysis_engine.AnalysisEngine;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
@@ -61,6 +62,7 @@ import edu.cuny.qc.util.SentDetectorWrapper;
 import edu.cuny.qc.util.Span;
 import edu.cuny.qc.util.TokenizerWrapper;
 import edu.cuny.qc.util.Utils;
+import eu.excitementproject.eop.common.utilities.uima.UimaUtils;
 import eu.excitementproject.eop.common.utilities.uima.UimaUtilsException;
 import eu.excitementproject.eop.lap.biu.uima.CasTreeConverter;
 
@@ -78,7 +80,7 @@ public class Document implements java.io.Serializable
 	static public final String apfFileExt = ".apf.xml";
 	static public final String preprocessedFileExt = ".preprocessed";
 	static public final String signalsFileExt = ".signals";
-	//static public final String xmiFileExt = ".xmi";
+	static public final String xmiFileExt = ".xmi";
 	//public static final int SENT_ID_ADDITION = 100000;
 
 	
@@ -558,6 +560,13 @@ public class Document implements java.io.Serializable
 		
 		CASCompleteSerializer ser = Serialization.serializeCASComplete(this.jcas.getCasImpl());
 		out.writeObject(ser);
+		
+		File xmiFile = new File(docPath + xmiFileExt);
+		try {
+			UimaUtils.dumpXmi(xmiFile, this.jcas);
+		} catch (UimaUtilsException e) {
+			throw new IOException(e);
+		}
 	}
 
 	private void readObject(java.io.ObjectInputStream in) throws IOException, ClassNotFoundException {
@@ -1257,6 +1266,10 @@ public class Document implements java.io.Serializable
 				// Ignore IOException, and treat it as if the file didn't exist.
 				// it might be corrupted due to a previous bad run - we'll just overwrite it.
 				System.err.printf("Got an IOException (%s) when trying to decompress and deserialize file: '%s'. Continuing as if this file doesn't exist.", e.toString(), signalsFile.getAbsolutePath());
+			} catch (SerializationException e) {
+				// Ignore IOException, and treat it as if the file didn't exist.
+				// it might be corrupted due to a previous bad run - we'll just overwrite it.
+				System.err.printf("Got a SerializationException (%s) when trying to decompress and deserialize file: '%s'. Continuing as if this file doesn't exist.", e.toString(), signalsFile.getAbsolutePath());
 			}
 			finally {
 				if (in != null) {

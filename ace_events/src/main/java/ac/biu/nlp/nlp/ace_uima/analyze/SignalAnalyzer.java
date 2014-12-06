@@ -90,6 +90,8 @@ public class SignalAnalyzer {
 
 	public static void analyze(File inputFileList, File specList, File outputFolder, boolean useDumps, String triggerDocName/*, String argDocName, String globalDocName*/, Integer debugMinSentence, Integer docsChunk, String featureProfile) throws Exception {
 		(new PrintStream(new File(outputFolder, "start"))).close();
+		Utils.OUTPUT_FOLDER = outputFolder;
+		
 		if (debugMinSentence < 0) {
 			debugMinSentence = Integer.MAX_VALUE;
 		}
@@ -105,11 +107,12 @@ public class SignalAnalyzer {
 //		Utils.fileInit(globalFile);
 
 		Controller controller = new Controller();
-		controller.setValueFromArguments(StringUtils.split(CONTROLLER_PARAMS));
+		controller.setValueFromArguments(StringUtils.split(CONTROLLER_PARAMS), false);
 		controller.usePreprocessFiles = useDumps;
 		controller.useSignalFiles = useDumps;
 		controller.docsChunk = docsChunk;
 		controller.featureProfile = FeatureProfile.valueOf(featureProfile);
+		controller.printController();
 		Perceptron.controllerStatic = controller;
 		SignalMechanismsContainer signalMechanismsContainer = new SignalMechanismsContainer(controller);
 		List<String> specXmlPaths = SpecHandler.readSpecListFile(specList);

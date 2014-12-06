@@ -353,6 +353,7 @@ public class Folds {
 		File testDocs = new File(args[11]);
 		System.out.printf("Args:\n\toutputFolder=%s\n\tspecsFile=%s (with %s specs)\n\tnumRuns=%s\n\tminTrainEvents=%s\n\tmaxTrainEvents=%s\n\tminDevEvents=%s\n\tmaxDevEvents=%s\n\tminTrainMentions=%s\n\tminDevMentions=%s\n\ttrainDocs=%s\n\tdevDocs=%s\n\ttestDocs=%s\n\n",
 				outputFolder, args[1], allSpecs.size(), numRuns, minTrainEvents, maxTrainEvents, minDevEvents, maxDevEvents, minTrainMentions, minDevMentions, trainDocs, devDocs, testDocs);
+		Utils.OUTPUT_FOLDER = outputFolder;
 		
 		File corpusDir = new File(CORPUS_DIR);
 		Controller controller = new Controller();

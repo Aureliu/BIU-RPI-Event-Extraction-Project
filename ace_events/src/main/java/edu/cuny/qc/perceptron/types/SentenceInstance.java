@@ -129,6 +129,10 @@ public class SentenceInstance {
 	 */
 	Map<InstanceAnnotations, Object> textFeaturesMap = new HashMap<InstanceAnnotations, Object>();
 
+	// Hackity hack!
+	public static String currRole = null;
+	public static boolean currArgCandIsArg = false;
+	
 	static public enum InstanceAnnotations {
 		Token_FEATURE_MAPs, // list->map<key,value> token feature maps, each map
 							// contains basic text features for a token
@@ -318,13 +322,15 @@ public class SentenceInstance {
 					null, null, null, null, null, null, null);
 		}
 
-		getPersistentSignals(signalMechanismsContainer, debug);
+		//getPersistentSignals(signalMechanismsContainer, debug);
 
 		// System.out.printf("%s Starting target of SentenceInstance %s...\n",
 		// Pipeline.detailedLog(), this.sentInstID);
 
 		// add target as gold-standard assignment
 		this.target = new SentenceAssignment(this, signalMechanismsContainer);
+		getPersistentSignals(signalMechanismsContainer, debug);
+		this.target.blahBlah(this);
 
 		// System.out.printf("%s Finishing c-tor SentenceInstance %s...\n",
 		// Pipeline.detailedLog(), this.sentInstID);
@@ -672,6 +678,11 @@ public class SentenceInstance {
 							// if(types.isRoleCompatible(mention.getType(),
 							// triggerLabel, role)) {
 
+							currRole = role;
+							currArgCandIsArg = target.edgeAssignment.get(i) != null &&
+									           target.edgeAssignment.get(i).get(k) != null &&
+									           target.edgeTargetAlphabet.lookupObject(target.edgeAssignment.get(i).get(k)).equals(role);
+							
 							Map<ScorerData, SignalInstance> roleSignals = null;
 							if (!tokenArgDependentSpecEntitySignals.containsKey(role)) {
 								roleSignals = new HashMap<ScorerData, SignalInstance>();
@@ -721,7 +732,7 @@ public class SentenceInstance {
 						String role = argument.getRole().getCoveredText();
 						// if(types.isRoleCompatible(mention.getType(),
 						// triggerLabel, role)) {
-
+						
 						Map<ScorerData, SignalInstance> roleSignals = null;
 						if (!argFreeSpecEntitySignals.containsKey(role)) {
 							roleSignals = new HashMap<ScorerData, SignalInstance>();

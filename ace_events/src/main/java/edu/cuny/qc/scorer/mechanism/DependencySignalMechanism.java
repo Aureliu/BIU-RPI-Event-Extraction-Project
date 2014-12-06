@@ -1,5 +1,8 @@
 package edu.cuny.qc.scorer.mechanism;
 
+import java.io.File;
+import java.io.IOException;
+import java.io.PrintStream;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
@@ -8,6 +11,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ExecutionException;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.uima.cas.CASException;
 import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation;
@@ -40,6 +44,7 @@ import edu.cuny.qc.ace.acetypes.AceMention;
 import edu.cuny.qc.perceptron.core.Controller;
 import edu.cuny.qc.perceptron.graph.GraphEdge;
 import edu.cuny.qc.perceptron.types.Document;
+import edu.cuny.qc.perceptron.types.SentenceInstance;
 import edu.cuny.qc.scorer.Aggregator;
 import edu.cuny.qc.scorer.ArgumentInUsageSampleScorer;
 import edu.cuny.qc.scorer.PredicateSeedScorer;
@@ -47,12 +52,15 @@ import edu.cuny.qc.scorer.ScorerData;
 import edu.cuny.qc.scorer.SignalMechanism;
 import edu.cuny.qc.scorer.SignalMechanismException;
 import edu.cuny.qc.util.TokenAnnotations;
+import edu.cuny.qc.util.Utils;
 import edu.cuny.qc.util.fragment.FragmentAndReference;
 import edu.cuny.qc.util.fragment.FragmentLayer;
 import edu.cuny.qc.util.fragment.FragmentLayerException;
 import edu.cuny.qc.util.fragment.TreeFragmentBuilder.TreeFragmentBuilderException;
 import eu.excitementproject.eop.common.representation.parse.tree.TreeAndParentMap.TreeAndParentMapException;
 import eu.excitementproject.eop.common.representation.parse.tree.dependency.basic.BasicNode;
+import eu.excitementproject.eop.common.representation.parse.tree.dependency.view.TreeStringGenerator;
+import eu.excitementproject.eop.common.representation.parse.tree.dependency.view.TreeStringGenerator.TreeStringGeneratorException;
 import eu.excitementproject.eop.common.representation.parse.tree.dependency.view.TreeToLineString;
 import eu.excitementproject.eop.common.representation.partofspeech.PartOfSpeech;
 import eu.excitementproject.eop.common.representation.partofspeech.UnsupportedPosTagStringException;
@@ -66,6 +74,15 @@ public class DependencySignalMechanism extends SignalMechanism {
 	
 	public DependencySignalMechanism(Controller controller) throws SignalMechanismException {
 		super(controller);
+		
+		try {
+			outFile1= new PrintStream(new File(Utils.OUTPUT_FOLDER, "TextTreeouts1.txt"));
+			outFile1.printf("Id^Doc^Sentence^Fragment^Facet^Trigger^ArgHead^DepNoContext^Role^DepGenPosNoContext^DepSpecPosNoContext^DepPrepNoContext^DepPrepGenPosNoContext^DepPrepSpecPosNoContext\n");			
+			outFile2 = new PrintStream(new File(Utils.OUTPUT_FOLDER, "TextTreeouts2.txt"));
+			outFile2.printf("Id^Doc^Trigger^ArgHead^Sentence^Role\n");			
+		} catch (IOException e) {
+			throw new SignalMechanismException(e);
+		}
 	}
 
 	@Override
@@ -81,6 +98,7 @@ public class DependencySignalMechanism extends SignalMechanism {
 			addArgumentDependent(new ScorerData("DP_DEP_PREP_NOCON",			SameLinkDepPrepNoContext.inst,			Aggregator.Any.inst		));
 			addArgumentDependent(new ScorerData("DP_DEP_PREP_GENPOS_NOCON",		SameLinkDepPrepGenPosNoContext.inst,	Aggregator.Any.inst		));
 			addArgumentDependent(new ScorerData("DP_DEP_PREP_SPECPOS_NOCON",	SameLinkDepPrepSpecPosNoContext.inst,	Aggregator.Any.inst		));
+			break;
 
 		case ANALYSIS12:
 			addArgumentDependent(new ScorerData("DP_DEP_NOCON_1/2",			SameLinkDepNoContextMinHalf.inst,			Aggregator.Any.inst		));
@@ -89,6 +107,7 @@ public class DependencySignalMechanism extends SignalMechanism {
 			addArgumentDependent(new ScorerData("DP_DEP_PREP_NOCON_1/2",			SameLinkDepPrepNoContextMinHalf.inst,			Aggregator.Any.inst		));
 			addArgumentDependent(new ScorerData("DP_DEP_PREP_GENPOS_NOCON_1/2",		SameLinkDepPrepGenPosNoContextMinHalf.inst,	Aggregator.Any.inst		));
 			addArgumentDependent(new ScorerData("DP_DEP_PREP_SPECPOS_NOCON_1/2",	SameLinkDepPrepSpecPosNoContextMinHalf.inst,	Aggregator.Any.inst		));
+			break;
 
 		case ANALYSIS13:
 			addArgumentDependent(new ScorerData("DP_DEP_NOCON_1/3",			SameLinkDepNoContextMinThird.inst,			Aggregator.Any.inst		));
@@ -97,6 +116,7 @@ public class DependencySignalMechanism extends SignalMechanism {
 			addArgumentDependent(new ScorerData("DP_DEP_PREP_NOCON_1/3",			SameLinkDepPrepNoContextMinThird.inst,			Aggregator.Any.inst		));
 			addArgumentDependent(new ScorerData("DP_DEP_PREP_GENPOS_NOCON_1/3",		SameLinkDepPrepGenPosNoContextMinThird.inst,	Aggregator.Any.inst		));
 			addArgumentDependent(new ScorerData("DP_DEP_PREP_SPECPOS_NOCON_1/3",	SameLinkDepPrepSpecPosNoContextMinThird.inst,	Aggregator.Any.inst		));
+			break;
 
 		case ANALYSIS14:
 			addArgumentDependent(new ScorerData("DP_DEP_NOCON_1/4",			SameLinkDepNoContextMinQuarter.inst,			Aggregator.Any.inst		));
@@ -105,6 +125,7 @@ public class DependencySignalMechanism extends SignalMechanism {
 			addArgumentDependent(new ScorerData("DP_DEP_PREP_NOCON_1/4",			SameLinkDepPrepNoContextMinQuarter.inst,			Aggregator.Any.inst		));
 			addArgumentDependent(new ScorerData("DP_DEP_PREP_GENPOS_NOCON_1/4",		SameLinkDepPrepGenPosNoContextMinQuarter.inst,	Aggregator.Any.inst		));
 			addArgumentDependent(new ScorerData("DP_DEP_PREP_SPECPOS_NOCON_1/4",	SameLinkDepPrepSpecPosNoContextMinQuarter.inst,	Aggregator.Any.inst		));
+			break;
 
 		case ANALYSIS15:
 			addArgumentDependent(new ScorerData("DP_DEP_NOCON_1/5",			SameLinkDepNoContextMinFifth.inst,			Aggregator.Any.inst		));
@@ -664,15 +685,16 @@ public class DependencySignalMechanism extends SignalMechanism {
 	private static /*transient*/ LoadingCache<TriggerArgQuery, Map<String, String>> cacheTextTreeouts = CacheBuilder.newBuilder()
 	.maximumSize(1000)
 	.build(new CacheLoader<TriggerArgQuery, Map<String, String>>() {
-		public Map<String, String> load(TriggerArgQuery query) throws FragmentLayerException, CASException, AceException, TreeAndParentMapException, TreeFragmentBuilderException {
+		public Map<String, String> load(TriggerArgQuery query) throws FragmentLayerException, CASException, AceException, TreeAndParentMapException, TreeFragmentBuilderException, TreeStringGeneratorException {
 //			Annotation textTrigger = textAnnos.getKey();
 //			Annotation textArg = textAnnos.getValue();
 			
 			List<BasicNode> subroots = null;
 			List<BasicNode> subrootsNoConj = null;
 			String err = null;
+			FragmentAndReference linkFrag = null;
 			try {
-				FragmentAndReference linkFrag = textFragmentLayer.getRootLinkingTreeFragment(query.textTriggerToken, query.textArgHeadAnno, false, null);
+				linkFrag = textFragmentLayer.getRootLinkingTreeFragment(query.textTriggerToken, query.textArgHeadAnno, false, null);
 				subroots = ImmutableList.of(linkFrag.getFragmentRoot());
 				FragmentAndReference linkFragNoConj = textFragmentLayer.getRootLinkingTreeFragment(query.textTriggerToken, query.textArgHeadAnno, true, null);
 				subrootsNoConj = ImmutableList.of(linkFragNoConj.getFragmentRoot());
@@ -703,7 +725,42 @@ public class DependencySignalMechanism extends SignalMechanism {
 //			result.put("DepPrepGenPosWithContext",	err!=null?err: TreeToLineString.getStringRelPrepCanonicalPos(subrootsNoConj, true, true));
 //			result.put("DepPrepSpecPosWithContext",	err!=null?err: TreeToLineString.getStringRelPrepPos(subrootsNoConj, true, true));
 
+			if (SentenceInstance.currArgCandIsArg) {
+				outFileId++;
+				outFile1.printf("%s^%s^%s^%s^%s^%s^%s^%s^%s^%s^%s^%s^%s^%s\n",
+						outFileId,
+						StringUtils.abbreviate(query.textTriggerToken.getCAS().getJCas().getDocumentText().replace('\n',' '), 40),
+						Utils.treeToSurfaceText(linkFrag.getOrigReference()),
+						Utils.treeToSurfaceText(linkFrag.getFragmentRoot()),
+						linkFrag.facet.toString().replace('\n',' '),
+						UimaUtils.annotationToString(query.textTriggerToken, false, false),
+						UimaUtils.annotationToString(query.textArgHeadAnno).replace('\n',' '),
+						SentenceInstance.currRole,
+						result.get("DepNoContext"),
+						result.get("DepGenPosNoContext"),
+						result.get("DepSpecPosNoContext"),
+						result.get("DepPrepNoContext"),
+						result.get("DepPrepGenPosNoContext"),
+						result.get("DepPrepSpecPosNoContext")
+						);
+				outFile2.printf("%s^%s^%s^%s^%s^%s\nDepNoContext:       %s\nDepPrepNoContext:   %s\n%s\n\n",
+						outFileId,
+						StringUtils.abbreviate(query.textTriggerToken.getCAS().getJCas().getDocumentText().replace('\n',' '), 40),
+						SentenceInstance.currRole,
+						UimaUtils.annotationToString(query.textTriggerToken, false, false),
+						UimaUtils.annotationToString(query.textArgHeadAnno).replace('\n',' '),
+						Utils.treeToSurfaceText(linkFrag.getOrigReference()),
+						result.get("DepNoContext"),
+						result.get("DepPrepNoContext"),
+						TreeStringGenerator.treeToStringFull(linkFrag.getFragmentRoot())
+						);
+			}
+			
 			return result;
 		}
 	});
+	
+	private static PrintStream outFile1;
+	private static PrintStream outFile2;
+	private static int outFileId = 0;
 }

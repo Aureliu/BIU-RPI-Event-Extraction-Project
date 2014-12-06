@@ -112,11 +112,16 @@ public class Controller implements java.io.Serializable
 //		System.out.printf("******** %s **********\n", this);
 	}
 	
+	public void setValueFromArguments(String[] arguments) {
+		setValueFromArguments(arguments, true);
+	}
+
+	
 	/**
 	 * set the values according to command line arguments
 	 * @param line
 	 */
-	public void setValueFromArguments(String[] arguments)
+	public void setValueFromArguments(String[] arguments, boolean noMoreArgsAfterThis)
 	{
 		for(String arg : arguments)
 		{
@@ -288,6 +293,12 @@ public class Controller implements java.io.Serializable
 		
 		lazyTargetFeatures = false;//(argOMethod==ArgOMethod.ITERATE);
 		
+		if (noMoreArgsAfterThis) {
+			printController();
+		}
+	}
+	
+	public void printController() {
 		System.out.printf("\n[%s] ******** Controller() **********\n", new Date());
 		System.out.printf("******** %s **********\n", this);
 	}

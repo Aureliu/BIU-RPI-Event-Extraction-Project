@@ -428,7 +428,7 @@ public class WordNetSignalMechanism extends SignalMechanism {
 	//										Pipeline.detailedLog(),
 	//										relations, juxt, length, derv, leftSense, rightSense, specificPos, agg);
 									
-									WordnetTriggerScorer scorer = new WordnetTriggerScorer(relations, juxt, length);
+									WordnetArgumentScorer scorer = new WordnetArgumentScorer(relations, juxt, length);
 									addArgumentFree(new ScorerData(null, scorer, deriver, derv, leftSense, rightSense, specificPos, agg));
 								}
 							}
@@ -624,6 +624,7 @@ public class WordNetSignalMechanism extends SignalMechanism {
 	}
 	
 	public static class WordnetArgumentScorer extends ArgumentExampleScorer {
+		private static final long serialVersionUID = 1254719784746568048L;
 		public Set<WordNetRelation> relations;
 		public Juxtaposition juxt;
 		public int length;

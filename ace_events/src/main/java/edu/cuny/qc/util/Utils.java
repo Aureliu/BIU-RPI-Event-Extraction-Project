@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
@@ -26,6 +28,8 @@ import org.uimafit.util.JCasUtil;
 import ac.biu.nlp.nlp.ace_uima.AceException;
 import ac.biu.nlp.nlp.ace_uima.analyze.SignalAnalyzer;
 
+import com.google.common.base.Predicate;
+import com.google.common.collect.Collections2;
 import com.google.common.collect.ContiguousSet;
 import com.google.common.collect.DiscreteDomain;
 import com.google.common.collect.ImmutableSortedSet;
@@ -43,12 +47,17 @@ import edu.cuny.qc.ace.acetypes.AceMention;
 import edu.cuny.qc.ace.acetypes.AceTimexMention;
 import edu.cuny.qc.ace.acetypes.AceValueMention;
 import edu.cuny.qc.perceptron.graph.GraphEdge;
+import eu.excitementproject.eop.common.representation.parse.tree.AbstractNodeUtils;
+import eu.excitementproject.eop.common.representation.parse.tree.dependency.basic.BasicNode;
 
 public class Utils {
 	public static List<String> logOnlyTheseSentences = null;
 	private static final Runtime runtime = Runtime.getRuntime();
 	public static final double MB = 1024.0*1024;
 	private static final Random random = new Random();
+	
+	// This hack allows us to write files, from anywhere in the system!!!!
+	public static File OUTPUT_FOLDER = new File(".");
 
 	public static Set<String> PUNCTUATION = Sets.newHashSet(Arrays.asList(new String[] {
 			".", ",", "!", "?", ":", "@", "#", "%", "|", "'", "_"
@@ -164,9 +173,9 @@ public class Utils {
 			return result;
 		}
 		/// DEBUG
-		if (covered.getCoveredText().equals(",")) {
-			System.err.printf("");
-		}
+//		if (covered.getCoveredText().equals(",")) {
+//			System.err.printf("");
+//		}
 		///
 		MultiMap<Token,Sentence> map = selectCoveredByIndex(covered.getCAS().getJCas(), Token.class, covered.getBegin(), covered.getEnd(), tokenIndex);
 
@@ -232,5 +241,26 @@ public class Utils {
 					governor.getCoveredText(), governor.getBegin(), governor.getEnd()));
 		}
 		return String.format("%s edges: [%s]", edges.size(), StringUtils.join(strs, ", "));
+	}
+	
+	public static String treeToSurfaceText(BasicNode root) {
+		 List<BasicNode> nodes = AbstractNodeUtils.treeToList(root);
+		 Collections2.filter(nodes, new Predicate<BasicNode>() {
+			 @Override public boolean apply(BasicNode node) {
+				 return node.getAntecedent() == null;
+			 }
+		 });
+		 Collections.sort(nodes, new Comparator<BasicNode>() {
+			@Override public int compare(BasicNode o1, BasicNode o2) {
+				Integer id1 = Integer.parseInt(o1.getInfo().getId());
+				Integer id2 = Integer.parseInt(o2.getInfo().getId());
+				return id1.compareTo(id2);
+			}});
+		 List<String> strs = Lists.newArrayListWithExpectedSize(nodes.size());
+		 for (BasicNode node : nodes) {
+			 strs.add(node.getInfo().getNodeInfo().getWord());
+		 }
+		 String result = StringUtils.join(strs, " ");
+		 return result;
 	}
 }

@@ -548,6 +548,15 @@ public class SentenceAssignment
 				////
 			}
 		}
+	}
+	
+	/**
+	 * Not sure what this stuff does or why it's here -
+	 * All I know is that this had to happen in the end of building target, but I needed to
+	 *   split it from the c-tor, so it's here. That's all.
+	 * @param inst
+	 */
+	public void blahBlah(SentenceInstance inst) {
 		
 		// create featureVectorSequence
 		if (!controller.lazyTargetFeatures) {

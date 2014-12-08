@@ -130,6 +130,9 @@ public class SentenceInstance {
 	Map<InstanceAnnotations, Object> textFeaturesMap = new HashMap<InstanceAnnotations, Object>();
 
 	// Hackity hack!
+	public static String currDocId = null;
+	public static String currSentInstId = null;
+	public static String currEventType = null;
 	public static String currRole = null;
 	public static boolean currArgCandIsArg = false;
 	
@@ -601,6 +604,8 @@ public class SentenceInstance {
 		// System.out.printf("%s Starting signals SentenceInstance %s...\n",
 		// Pipeline.detailedLog(), this.sentInstID);
 		signalMechanismsContainer.entrypointSignalMechanismsPreSentence(this);
+		currDocId = docID;
+		currSentInstId = sentInstID;
 		for (int i = 0; i < size(); i++) {
 
 			/****
@@ -641,6 +646,7 @@ public class SentenceInstance {
 
 			for (JCas spec : types.specs) {
 				String specLabel = SpecAnnotator.getSpecLabel(spec);
+				currEventType = specLabel;
 
 				Map<ScorerData, SignalInstance> specSignals = null;
 				List<Map<String, Map<ScorerData, SignalInstance>>> tokenArgDependentSpecSignals = null;
@@ -679,9 +685,17 @@ public class SentenceInstance {
 							// triggerLabel, role)) {
 
 							currRole = role;
-							currArgCandIsArg = target.edgeAssignment.get(i) != null &&
+							currArgCandIsArg = !target.edgeAssignment.isEmpty() &&
+									           target.edgeAssignment.get(i) != null &&
 									           target.edgeAssignment.get(i).get(k) != null &&
 									           target.edgeTargetAlphabet.lookupObject(target.edgeAssignment.get(i).get(k)).equals(role);
+//							if (currArgCandIsArg) {
+//								System.out.printf("");
+//							}
+//							
+//							if (docID.equals("APW_ENG_20030318.0689")&&sentInstID.equals("17a")&&i==21&&k==6&&role.equals("Target")&&specLabel.equals("Attack")) {
+//								System.out.printf("");
+//							}
 							
 							Map<ScorerData, SignalInstance> roleSignals = null;
 							if (!tokenArgDependentSpecEntitySignals.containsKey(role)) {

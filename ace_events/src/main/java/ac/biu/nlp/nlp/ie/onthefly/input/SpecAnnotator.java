@@ -43,6 +43,12 @@ import ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateName;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateSeed;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.TAll;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatGenPosNoContext;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatNoContext;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatPrepGenPosNoContext;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatPrepNoContext;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatPrepSpecPosNoContext;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatSpecPosNoContext;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepGenPosNoContext;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepGenPosWithContext;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepNoContext;
@@ -75,11 +81,11 @@ import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
 import edu.cuny.qc.ace.acetypes.AceArgumentType;
 import edu.cuny.qc.perceptron.core.Perceptron;
 import edu.cuny.qc.perceptron.types.Document;
+import edu.cuny.qc.util.TreeToLineString;
 import edu.cuny.qc.util.fragment.FragmentAndReference;
 import edu.cuny.qc.util.fragment.FragmentLayer;
 import edu.ucla.sspace.util.HashMultiMap;
 import eu.excitementproject.eop.common.representation.parse.tree.dependency.basic.BasicNode;
-import eu.excitementproject.eop.common.representation.parse.tree.dependency.view.TreeToLineString;
 import eu.excitementproject.eop.common.utilities.DockedToken;
 import eu.excitementproject.eop.common.utilities.DockedTokenFinder;
 import eu.excitementproject.eop.common.utilities.DockedTokenFinderException;
@@ -661,15 +667,26 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepNoContext.class, aius, role, TreeToLineString.getStringRel(subroots, false, true));
 						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepGenPosNoContext.class, aius, role, TreeToLineString.getStringRelCanonicalPos(subroots, false, true));
 						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepSpecPosNoContext.class, aius, role, TreeToLineString.getStringRelPos(subroots, false, true));
-						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepWithContext.class, aius, role, TreeToLineString.getStringRel(subroots, true, true));
-						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepGenPosWithContext.class, aius, role, TreeToLineString.getStringRelCanonicalPos(subroots, true, true));
-						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepSpecPosWithContext.class, aius, role, TreeToLineString.getStringRelPos(subroots, true, true));
+
+						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepFlatNoContext.class, aius, role, TreeToLineString.getStringRelFlat(subroots, false, true));
+						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepFlatGenPosNoContext.class, aius, role, TreeToLineString.getStringRelFlatCanonicalPos(subroots, false, true));
+						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepFlatSpecPosNoContext.class, aius, role, TreeToLineString.getStringRelFlatPos(subroots, false, true));
+
+//						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepWithContext.class, aius, role, TreeToLineString.getStringRel(subroots, true, true));
+//						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepGenPosWithContext.class, aius, role, TreeToLineString.getStringRelCanonicalPos(subroots, true, true));
+//						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepSpecPosWithContext.class, aius, role, TreeToLineString.getStringRelPos(subroots, true, true));
+						
 						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepPrepNoContext.class, aius, role, TreeToLineString.getStringRelPrep(subrootsNoConj, false, true));
 						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepPrepGenPosNoContext.class, aius, role, TreeToLineString.getStringRelPrepCanonicalPos(subrootsNoConj, false, true));
 						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepPrepSpecPosNoContext.class, aius, role, TreeToLineString.getStringRelPrepPos(subrootsNoConj, false, true));
-						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepPrepWithContext.class, aius, role, TreeToLineString.getStringRelPrep(subrootsNoConj, true, true));
-						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepPrepGenPosWithContext.class, aius, role, TreeToLineString.getStringRelPrepCanonicalPos(subrootsNoConj, true, true));
-						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepPrepSpecPosWithContext.class, aius, role, TreeToLineString.getStringRelPrepPos(subrootsNoConj, true, true));
+						
+						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepFlatPrepNoContext.class, aius, role, TreeToLineString.getStringRelFlatPrep(subrootsNoConj, false, true));
+						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepFlatPrepGenPosNoContext.class, aius, role, TreeToLineString.getStringRelFlatPrepCanonicalPos(subrootsNoConj, false, true));
+						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepFlatPrepSpecPosNoContext.class, aius, role, TreeToLineString.getStringRelFlatPrepPos(subrootsNoConj, false, true));
+						
+//						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepPrepWithContext.class, aius, role, TreeToLineString.getStringRelPrep(subrootsNoConj, true, true));
+//						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepPrepGenPosWithContext.class, aius, role, TreeToLineString.getStringRelPrepCanonicalPos(subrootsNoConj, true, true));
+//						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepPrepSpecPosWithContext.class, aius, role, TreeToLineString.getStringRelPrepPos(subrootsNoConj, true, true));
 					}
 				}
 				

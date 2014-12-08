@@ -11,7 +11,7 @@ import org.apache.uima.cas.impl.TypeImpl;
 import org.apache.uima.cas.Type;
 
 /** 
- * Updated by JCasGen Mon Nov 17 02:12:27 EST 2014
+ * Updated by JCasGen Mon Dec 08 02:19:30 EST 2014
  * @generated */
 public class TreeoutDepGenPosNoContext_Type extends Treeout_Type {
   /** @generated */

@@ -1,0 +1,1219 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<styleMap>
+<rule>
+<pattern>ac.biu.nlp.nlp.ie.onthefly.input.uima.UsageSample</pattern>
+<label>UsageSample</label>
+<style>color:black; background:lightblue;</style>
+</rule>
+<rule>
+<pattern>ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateSeed</pattern>
+<label>PredicateSeed</label>
+<style>color:black; background:lightgreen;</style>
+</rule>
+<rule>
+<pattern>ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentExample</pattern>
+<label>ArgumentExample</label>
+<style>color:black; background:orange;</style>
+</rule>
+<rule>
+<pattern>ac.biu.nlp.nlp.ie.onthefly.input.uima.Predicate</pattern>
+<label>Predicate</label>
+<style>color:black; background:yellow;</style>
+</rule>
+<rule>
+<pattern>ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument</pattern>
+<label>Argument</label>
+<style>color:black; background:pink;</style>
+</rule>
+<rule>
+<pattern>ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentRole</pattern>
+<label>ArgumentRole</label>
+<style>color:black; background:salmon;</style>
+</rule>
+<rule>
+<pattern>ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentType</pattern>
+<label>ArgumentType</label>
+<style>color:black; background:cyan;</style>
+</rule>
+<rule>
+<pattern>ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateName</pattern>
+<label>PredicateName</label>
+<style>color:black; background:violet;</style>
+</rule>
+<rule>
+<pattern>ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateInUsageSample</pattern>
+<label>PredicateInUsageSample</label>
+<style>color:black; background:tan;</style>
+</rule>
+<rule>
+<pattern>ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample</pattern>
+<label>ArgumentInUsageSample</label>
+<style>color:white; background:brown;</style>
+</rule>
+<rule>
+<pattern>ac.biu.nlp.nlp.ie.onthefly.input.uima.LemmaByPos</pattern>
+<label>LemmaByPos</label>
+<style>color:white; background:blue;</style>
+</rule>
+<rule>
+<pattern>ac.biu.nlp.nlp.ie.onthefly.input.uima.NounLemma</pattern>
+<label>NounLemma</label>
+<style>color:white; background:green;</style>
+</rule>
+<rule>
+<pattern>ac.biu.nlp.nlp.ie.onthefly.input.uima.VerbLemma</pattern>
+<label>VerbLemma</label>
+<style>color:white; background:red;</style>
+</rule>
+<rule>
+<pattern>ac.biu.nlp.nlp.ie.onthefly.input.uima.Marker</pattern>
+<label>Marker</label>
+<style>color:white; background:mediumpurple;</style>
+</rule>
+<rule>
+<pattern>ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout</pattern>
+<label>Treeout</label>
+<style>color:black; background:lightblue;</style>
+</rule>
+<rule>
+<pattern>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepNoContext</pattern>
+<label>TreeoutDepNoContext</label>
+<style>color:black; background:lightgreen;</style>
+</rule>
+<rule>
+<pattern>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepGenPosNoContext</pattern>
+<label>TreeoutDepGenPosNoContext</label>
+<style>color:black; background:orange;</style>
+</rule>
+<rule>
+<pattern>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepSpecPosNoContext</pattern>
+<label>TreeoutDepSpecPosNoContext</label>
+<style>color:black; background:yellow;</style>
+</rule>
+<rule>
+<pattern>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepWithContext</pattern>
+<label>TreeoutDepWithContext</label>
+<style>color:black; background:pink;</style>
+</rule>
+<rule>
+<pattern>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepGenPosWithContext</pattern>
+<label>TreeoutDepGenPosWithContext</label>
+<style>color:black; background:salmon;</style>
+</rule>
+<rule>
+<pattern>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepSpecPosWithContext</pattern>
+<label>TreeoutDepSpecPosWithContext</label>
+<style>color:black; background:cyan;</style>
+</rule>
+<rule>
+<pattern>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepNoContext</pattern>
+<label>TreeoutDepPrepNoContext</label>
+<style>color:black; background:violet;</style>
+</rule>
+<rule>
+<pattern>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepGenPosNoContext</pattern>
+<label>TreeoutDepPrepGenPosNoContext</label>
+<style>color:black; background:tan;</style>
+</rule>
+<rule>
+<pattern>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepSpecPosNoContext</pattern>
+<label>TreeoutDepPrepSpecPosNoContext</label>
+<style>color:white; background:brown;</style>
+</rule>
+<rule>
+<pattern>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepWithContext</pattern>
+<label>TreeoutDepPrepWithContext</label>
+<style>color:white; background:blue;</style>
+</rule>
+<rule>
+<pattern>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepGenPosWithContext</pattern>
+<label>TreeoutDepPrepGenPosWithContext</label>
+<style>color:white; background:green;</style>
+</rule>
+<rule>
+<pattern>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepSpecPosWithContext</pattern>
+<label>TreeoutDepPrepSpecPosWithContext</label>
+<style>color:white; background:red;</style>
+</rule>
+<rule>
+<pattern>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutSampleText</pattern>
+<label>TreeoutSampleText</label>
+<style>color:white; background:mediumpurple;</style>
+</rule>
+<rule>
+<pattern>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutTokenDepGenPosWithContext</pattern>
+<label>TreeoutTokenDepGenPosWithContext</label>
+<style>color:black; background:lightblue;</style>
+</rule>
+<rule>
+<pattern>ac.biu.nlp.nlp.ie.onthefly.input.uima.TAll</pattern>
+<label>TAll</label>
+<style>color:black; background:lightgreen;</style>
+</rule>
+<rule>
+<pattern>ac.biu.nlp.nlp.ie.onthefly.input.uima.VAll</pattern>
+<label>VAll</label>
+<style>color:black; background:orange;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</pattern>
+<label>Constituent</label>
+<style>color:black; background:yellow;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.S</pattern>
+<label>S</label>
+<style>color:black; background:pink;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.ROOT</pattern>
+<label>ROOT</label>
+<style>color:black; background:salmon;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.NP</pattern>
+<label>NP</label>
+<style>color:black; background:cyan;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.VP</pattern>
+<label>VP</label>
+<style>color:black; background:violet;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.PP</pattern>
+<label>PP</label>
+<style>color:black; background:tan;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.ADJP</pattern>
+<label>ADJP</label>
+<style>color:white; background:brown;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.SBAR</pattern>
+<label>SBAR</label>
+<style>color:white; background:blue;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.SINV</pattern>
+<label>SINV</label>
+<style>color:white; background:green;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.UCP</pattern>
+<label>UCP</label>
+<style>color:white; background:red;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.NAC</pattern>
+<label>NAC</label>
+<style>color:white; background:mediumpurple;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.PRN0</pattern>
+<label>PRN0</label>
+<style>color:black; background:lightblue;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.ADVP</pattern>
+<label>ADVP</label>
+<style>color:black; background:lightgreen;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.FRAG</pattern>
+<label>FRAG</label>
+<style>color:black; background:orange;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.QP</pattern>
+<label>QP</label>
+<style>color:black; background:yellow;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.XS</pattern>
+<label>XS</label>
+<style>color:black; background:pink;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.X</pattern>
+<label>X</label>
+<style>color:black; background:salmon;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.NX</pattern>
+<label>NX</label>
+<style>color:black; background:cyan;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.WHPP</pattern>
+<label>WHPP</label>
+<style>color:black; background:violet;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.SBARQ</pattern>
+<label>SBARQ</label>
+<style>color:black; background:tan;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.WHNP</pattern>
+<label>WHNP</label>
+<style>color:white; background:brown;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.SQ</pattern>
+<label>SQ</label>
+<style>color:white; background:blue;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.RRC</pattern>
+<label>RRC</label>
+<style>color:white; background:green;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.CONJP</pattern>
+<label>CONJP</label>
+<style>color:white; background:red;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.INTJ</pattern>
+<label>INTJ</label>
+<style>color:white; background:mediumpurple;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.WHADVP</pattern>
+<label>WHADVP</label>
+<style>color:black; background:lightblue;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.WHADJP</pattern>
+<label>WHADJP</label>
+<style>color:black; background:lightgreen;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.PRT</pattern>
+<label>PRT</label>
+<style>color:black; background:orange;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.LST</pattern>
+<label>LST</label>
+<style>color:black; background:yellow;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.IN</pattern>
+<label>IN</label>
+<style>color:black; background:pink;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.DT</pattern>
+<label>DT</label>
+<style>color:black; background:salmon;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.JJ</pattern>
+<label>JJ</label>
+<style>color:black; background:cyan;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.JJR</pattern>
+<label>JJR</label>
+<style>color:black; background:violet;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.JJS</pattern>
+<label>JJS</label>
+<style>color:black; background:tan;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.RB</pattern>
+<label>RB</label>
+<style>color:white; background:brown;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.RBR</pattern>
+<label>RBR</label>
+<style>color:white; background:blue;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.RBS</pattern>
+<label>RBS</label>
+<style>color:white; background:green;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.NN</pattern>
+<label>NN</label>
+<style>color:white; background:red;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.NNS</pattern>
+<label>NNS</label>
+<style>color:white; background:mediumpurple;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.NNP</pattern>
+<label>NNP</label>
+<style>color:black; background:lightblue;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.NNPS</pattern>
+<label>NNPS</label>
+<style>color:black; background:lightgreen;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.CC</pattern>
+<label>CC</label>
+<style>color:black; background:orange;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.EX</pattern>
+<label>EX</label>
+<style>color:black; background:yellow;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.FW</pattern>
+<label>FW</label>
+<style>color:black; background:pink;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.UH</pattern>
+<label>UH</label>
+<style>color:black; background:salmon;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.LS</pattern>
+<label>LS</label>
+<style>color:black; background:cyan;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.RP</pattern>
+<label>RP</label>
+<style>color:black; background:violet;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.PRP</pattern>
+<label>PRP</label>
+<style>color:black; background:tan;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.VBZ</pattern>
+<label>VBZ</label>
+<style>color:white; background:brown;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.VB</pattern>
+<label>VB</label>
+<style>color:white; background:blue;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.VBG</pattern>
+<label>VBG</label>
+<style>color:white; background:green;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.VBD</pattern>
+<label>VBD</label>
+<style>color:white; background:red;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.VBP</pattern>
+<label>VBP</label>
+<style>color:white; background:mediumpurple;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.VBN</pattern>
+<label>VBN</label>
+<style>color:black; background:lightblue;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.PUNC</pattern>
+<label>PUNC</label>
+<style>color:black; background:lightgreen;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.CD</pattern>
+<label>CD</label>
+<style>color:black; background:orange;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.TO</pattern>
+<label>TO</label>
+<style>color:black; background:yellow;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.MD</pattern>
+<label>MD</label>
+<style>color:black; background:pink;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.PRP</pattern>
+<label>PRP</label>
+<style>color:black; background:salmon;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.PRPP</pattern>
+<label>PRPP</label>
+<style>color:black; background:cyan;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.WP</pattern>
+<label>WP</label>
+<style>color:black; background:violet;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.WRB</pattern>
+<label>WRB</label>
+<style>color:black; background:tan;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.POS</pattern>
+<label>POS</label>
+<style>color:white; background:brown;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.WDT</pattern>
+<label>WDT</label>
+<style>color:white; background:blue;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.PDT</pattern>
+<label>PDT</label>
+<style>color:white; background:green;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.WPP</pattern>
+<label>WPP</label>
+<style>color:white; background:red;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.SYM</pattern>
+<label>SYM</label>
+<style>color:white; background:mediumpurple;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</pattern>
+<label>Dependency</label>
+<style>color:black; background:lightblue;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.NSUBJ</pattern>
+<label>NSUBJ</label>
+<style>color:black; background:lightgreen;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.AMOD</pattern>
+<label>AMOD</label>
+<style>color:black; background:orange;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.DEP</pattern>
+<label>DEP</label>
+<style>color:black; background:yellow;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.DET</pattern>
+<label>DET</label>
+<style>color:black; background:pink;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.POBJ</pattern>
+<label>POBJ</label>
+<style>color:black; background:salmon;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.PREP</pattern>
+<label>PREP</label>
+<style>color:black; background:cyan;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.CC</pattern>
+<label>CC</label>
+<style>color:black; background:violet;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.CONJ</pattern>
+<label>CONJ</label>
+<style>color:black; background:tan;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.NN</pattern>
+<label>NN</label>
+<style>color:white; background:brown;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.NUM</pattern>
+<label>NUM</label>
+<style>color:white; background:blue;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.CCOMP</pattern>
+<label>CCOMP</label>
+<style>color:white; background:green;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.NUMBER</pattern>
+<label>NUMBER</label>
+<style>color:white; background:red;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.CONJ_YET</pattern>
+<label>CONJ_YET</label>
+<style>color:white; background:mediumpurple;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.COP</pattern>
+<label>COP</label>
+<style>color:black; background:lightblue;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.ADVMOD</pattern>
+<label>ADVMOD</label>
+<style>color:black; background:lightgreen;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.COMPLM</pattern>
+<label>COMPLM</label>
+<style>color:black; background:orange;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.AUX0</pattern>
+<label>AUX0</label>
+<style>color:black; background:yellow;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.XCOMP</pattern>
+<label>XCOMP</label>
+<style>color:black; background:pink;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.POSS</pattern>
+<label>POSS</label>
+<style>color:black; background:salmon;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.DOBJ</pattern>
+<label>DOBJ</label>
+<style>color:black; background:cyan;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.AUXPASS</pattern>
+<label>AUXPASS</label>
+<style>color:black; background:violet;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.RCMOD</pattern>
+<label>RCMOD</label>
+<style>color:black; background:tan;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.AGENT</pattern>
+<label>AGENT</label>
+<style>color:white; background:brown;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.APPOS</pattern>
+<label>APPOS</label>
+<style>color:white; background:blue;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.TMOD</pattern>
+<label>TMOD</label>
+<style>color:white; background:green;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.PARTMOD</pattern>
+<label>PARTMOD</label>
+<style>color:white; background:red;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.MEASURE</pattern>
+<label>MEASURE</label>
+<style>color:white; background:mediumpurple;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.ACOMP</pattern>
+<label>ACOMP</label>
+<style>color:black; background:lightblue;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.PREDET</pattern>
+<label>PREDET</label>
+<style>color:black; background:lightgreen;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.MARK</pattern>
+<label>MARK</label>
+<style>color:black; background:orange;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.ADVCL</pattern>
+<label>ADVCL</label>
+<style>color:black; background:yellow;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.NEG</pattern>
+<label>NEG</label>
+<style>color:black; background:pink;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.NSUBJPASS</pattern>
+<label>NSUBJPASS</label>
+<style>color:black; background:salmon;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.PREPC</pattern>
+<label>PREPC</label>
+<style>color:black; background:cyan;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.QUANTMOD</pattern>
+<label>QUANTMOD</label>
+<style>color:black; background:violet;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.CSUBJPASS</pattern>
+<label>CSUBJPASS</label>
+<style>color:black; background:tan;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.CSUBJ</pattern>
+<label>CSUBJ</label>
+<style>color:white; background:brown;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.REL</pattern>
+<label>REL</label>
+<style>color:white; background:blue;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.PRT</pattern>
+<label>PRT</label>
+<style>color:white; background:green;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.PUNCT</pattern>
+<label>PUNCT</label>
+<style>color:white; background:red;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.PCOMP</pattern>
+<label>PCOMP</label>
+<style>color:white; background:mediumpurple;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.XCOMP</pattern>
+<label>XCOMP</label>
+<style>color:black; background:lightblue;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.EXPL</pattern>
+<label>EXPL</label>
+<style>color:black; background:lightgreen;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.INFMOD</pattern>
+<label>INFMOD</label>
+<style>color:black; background:orange;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.CSUBJPASS</pattern>
+<label>CSUBJPASS</label>
+<style>color:black; background:yellow;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.ATTR</pattern>
+<label>ATTR</label>
+<style>color:black; background:pink;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.IOBJ</pattern>
+<label>IOBJ</label>
+<style>color:black; background:salmon;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.CONJP</pattern>
+<label>CONJP</label>
+<style>color:black; background:cyan;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.PRECONJ</pattern>
+<label>PRECONJ</label>
+<style>color:black; background:violet;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.PURPCL</pattern>
+<label>PURPCL</label>
+<style>color:black; background:tan;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.PRED</pattern>
+<label>PRED</label>
+<style>color:white; background:brown;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.PARATAXIS</pattern>
+<label>PARATAXIS</label>
+<style>color:white; background:blue;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.ABBREV</pattern>
+<label>ABBREV</label>
+<style>color:white; background:green;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.POSSESSIVE</pattern>
+<label>POSSESSIVE</label>
+<style>color:white; background:red;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Governor</pattern>
+<label>Governor</label>
+<style>color:white; background:mediumpurple;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependent</pattern>
+<label>Dependent</label>
+<style>color:black; background:lightblue;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.NPADVMOD</pattern>
+<label>NPADVMOD</label>
+<style>color:black; background:lightgreen;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.XSUBJ</pattern>
+<label>XSUBJ</label>
+<style>color:black; background:orange;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.MWE</pattern>
+<label>MWE</label>
+<style>color:black; background:yellow;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.REF</pattern>
+<label>REF</label>
+<style>color:black; background:pink;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.NGram</pattern>
+<label>NGram</label>
+<style>color:black; background:salmon;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Document</pattern>
+<label>Document</label>
+<style>color:black; background:cyan;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence</pattern>
+<label>Sentence</label>
+<style>color:black; background:violet;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Paragraph</pattern>
+<label>Paragraph</label>
+<style>color:black; background:tan;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Heading</pattern>
+<label>Heading</label>
+<style>color:white; background:brown;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Lemma</pattern>
+<label>Lemma</label>
+<style>color:white; background:blue;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Stem</pattern>
+<label>Stem</label>
+<style>color:white; background:green;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Compound</pattern>
+<label>Compound</label>
+<style>color:white; background:red;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token</pattern>
+<label>Token</label>
+<style>color:white; background:mediumpurple;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.StopWord</pattern>
+<label>StopWord</label>
+<style>color:black; background:lightblue;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Split</pattern>
+<label>Split</label>
+<style>color:black; background:lightgreen;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS</pattern>
+<label>POS</label>
+<style>color:black; background:orange;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.ADJ</pattern>
+<label>ADJ</label>
+<style>color:black; background:yellow;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.ADV</pattern>
+<label>ADV</label>
+<style>color:black; background:pink;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.ART</pattern>
+<label>ART</label>
+<style>color:black; background:salmon;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.CARD</pattern>
+<label>CARD</label>
+<style>color:black; background:cyan;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.CONJ</pattern>
+<label>CONJ</label>
+<style>color:black; background:violet;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.N</pattern>
+<label>N</label>
+<style>color:black; background:tan;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.NN</pattern>
+<label>NN</label>
+<style>color:white; background:brown;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.NP</pattern>
+<label>NP</label>
+<style>color:white; background:blue;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.O</pattern>
+<label>O</label>
+<style>color:white; background:green;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.PP</pattern>
+<label>PP</label>
+<style>color:white; background:red;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.PR</pattern>
+<label>PR</label>
+<style>color:white; background:mediumpurple;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.PUNC</pattern>
+<label>PUNC</label>
+<style>color:black; background:lightblue;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.V</pattern>
+<label>V</label>
+<style>color:black; background:lightgreen;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.metadata.type.DocumentMetaData</pattern>
+<label>DocumentMetaData</label>
+<style>color:black; background:orange;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.metadata.type.ProcessorMetaData</pattern>
+<label>ProcessorMetaData</label>
+<style>color:black; background:yellow;</style>
+</rule>
+<rule>
+<pattern>eu.excitement.type.entailment.Decision</pattern>
+<label>Decision</label>
+<style>color:black; background:pink;</style>
+</rule>
+<rule>
+<pattern>eu.excitement.type.entailment.Text</pattern>
+<label>Text</label>
+<style>color:black; background:salmon;</style>
+</rule>
+<rule>
+<pattern>eu.excitement.type.entailment.Hypothesis</pattern>
+<label>Hypothesis</label>
+<style>color:black; background:cyan;</style>
+</rule>
+<rule>
+<pattern>eu.excitement.type.entailment.Pair</pattern>
+<label>Pair</label>
+<style>color:black; background:violet;</style>
+</rule>
+<rule>
+<pattern>eu.excitement.type.entailment.EntailmentMetadata</pattern>
+<label>EntailmentMetadata</label>
+<style>color:black; background:tan;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</pattern>
+<label>NamedEntity</label>
+<style>color:white; background:brown;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Person</pattern>
+<label>Person</label>
+<style>color:white; background:blue;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.ner.type.PerDesc</pattern>
+<label>PerDesc</label>
+<style>color:white; background:green;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Norp</pattern>
+<label>Norp</label>
+<style>color:white; background:red;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Organization</pattern>
+<label>Organization</label>
+<style>color:white; background:mediumpurple;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.ner.type.OrgDesc</pattern>
+<label>OrgDesc</label>
+<style>color:black; background:lightblue;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Gpe</pattern>
+<label>Gpe</label>
+<style>color:black; background:lightgreen;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.ner.type.GpeDesc</pattern>
+<label>GpeDesc</label>
+<style>color:black; background:orange;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Location</pattern>
+<label>Location</label>
+<style>color:black; background:yellow;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Product</pattern>
+<label>Product</label>
+<style>color:black; background:pink;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.ner.type.ProductDesc</pattern>
+<label>ProductDesc</label>
+<style>color:black; background:salmon;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Date</pattern>
+<label>Date</label>
+<style>color:black; background:cyan;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Time</pattern>
+<label>Time</label>
+<style>color:black; background:violet;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Percent</pattern>
+<label>Percent</label>
+<style>color:black; background:tan;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Money</pattern>
+<label>Money</label>
+<style>color:white; background:brown;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Quantity</pattern>
+<label>Quantity</label>
+<style>color:white; background:blue;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Ordinal</pattern>
+<label>Ordinal</label>
+<style>color:white; background:green;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Cardinal</pattern>
+<label>Cardinal</label>
+<style>color:white; background:red;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Event</pattern>
+<label>Event</label>
+<style>color:white; background:mediumpurple;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Plant</pattern>
+<label>Plant</label>
+<style>color:black; background:lightblue;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Animal</pattern>
+<label>Animal</label>
+<style>color:black; background:lightgreen;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Substance</pattern>
+<label>Substance</label>
+<style>color:black; background:orange;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Disease</pattern>
+<label>Disease</label>
+<style>color:black; background:yellow;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.ner.type.WorkOfArt</pattern>
+<label>WorkOfArt</label>
+<style>color:black; background:pink;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Law</pattern>
+<label>Law</label>
+<style>color:black; background:salmon;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Language</pattern>
+<label>Language</label>
+<style>color:black; background:cyan;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.ner.type.ContactInfo</pattern>
+<label>ContactInfo</label>
+<style>color:black; background:violet;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Game</pattern>
+<label>Game</label>
+<style>color:black; background:tan;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Fac</pattern>
+<label>Fac</label>
+<style>color:white; background:brown;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.ner.type.FacDesc</pattern>
+<label>FacDesc</label>
+<style>color:white; background:blue;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Nationality</pattern>
+<label>Nationality</label>
+<style>color:white; background:green;</style>
+</rule>
+<rule>
+<pattern>eu.excitement.type.predicatetruth.PredicateTruthValue</pattern>
+<label>PredicateTruthValue</label>
+<style>color:white; background:red;</style>
+</rule>
+<rule>
+<pattern>eu.excitement.type.predicatetruth.PredicateTruth</pattern>
+<label>PredicateTruth</label>
+<style>color:white; background:mediumpurple;</style>
+</rule>
+<rule>
+<pattern>eu.excitement.type.predicatetruth.ClauseTruthValue</pattern>
+<label>ClauseTruthValue</label>
+<style>color:black; background:lightblue;</style>
+</rule>
+<rule>
+<pattern>eu.excitement.type.predicatetruth.ClauseTruth</pattern>
+<label>ClauseTruth</label>
+<style>color:black; background:lightgreen;</style>
+</rule>
+<rule>
+<pattern>eu.excitement.type.predicatetruth.NegationAndUncertainty</pattern>
+<label>NegationAndUncertainty</label>
+<style>color:black; background:orange;</style>
+</rule>
+<rule>
+<pattern>eu.excitement.type.predicatetruth.NegationAndUncertaintyValue</pattern>
+<label>NegationAndUncertaintyValue</label>
+<style>color:black; background:yellow;</style>
+</rule>
+<rule>
+<pattern>eu.excitement.type.predicatetruth.PredicateSignature</pattern>
+<label>PredicateSignature</label>
+<style>color:black; background:pink;</style>
+</rule>
+<rule>
+<pattern>eu.excitement.type.predicatetruth.PredicateSignatureValue</pattern>
+<label>PredicateSignatureValue</label>
+<style>color:black; background:salmon;</style>
+</rule>
+<rule>
+<pattern>eu.excitement.type.semanticrole.Predicate</pattern>
+<label>Predicate</label>
+<style>color:black; background:cyan;</style>
+</rule>
+<rule>
+<pattern>eu.excitement.type.semanticrole.Argument</pattern>
+<label>Argument</label>
+<style>color:black; background:violet;</style>
+</rule>
+<rule>
+<pattern>eu.excitement.type.temporal.DefaultTimeOfText</pattern>
+<label>DefaultTimeOfText</label>
+<style>color:black; background:tan;</style>
+</rule>
+<rule>
+<pattern>eu.excitement.type.temporal.TemporalExpression</pattern>
+<label>TemporalExpression</label>
+<style>color:white; background:brown;</style>
+</rule>
+<rule>
+<pattern>eu.excitement.type.temporal.Date</pattern>
+<label>Date</label>
+<style>color:white; background:blue;</style>
+</rule>
+<rule>
+<pattern>eu.excitement.type.temporal.Time</pattern>
+<label>Time</label>
+<style>color:white; background:green;</style>
+</rule>
+<rule>
+<pattern>eu.excitement.type.temporal.Duration</pattern>
+<label>Duration</label>
+<style>color:white; background:red;</style>
+</rule>
+<rule>
+<pattern>eu.excitement.type.temporal.Set</pattern>
+<label>Set</label>
+<style>color:white; background:mediumpurple;</style>
+</rule>
+<rule>
+<pattern>eu.excitement.type.alignment.Target</pattern>
+<label>Target</label>
+<style>color:black; background:lightblue;</style>
+</rule>
+<rule>
+<pattern>eu.excitement.type.alignment.Link</pattern>
+<label>Link</label>
+<style>color:black; background:lightgreen;</style>
+</rule>
+<rule>
+<pattern>eu.excitement.type.alignment.Direction</pattern>
+<label>Direction</label>
+<style>color:black; background:orange;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.coref.type.CoreferenceLink</pattern>
+<label>CoreferenceLink</label>
+<style>color:black; background:yellow;</style>
+</rule>
+<rule>
+<pattern>de.tudarmstadt.ukp.dkpro.core.api.coref.type.CoreferenceChain</pattern>
+<label>CoreferenceChain</label>
+<style>color:black; background:pink;</style>
+</rule>
+</styleMap>
+

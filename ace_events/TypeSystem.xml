@@ -2,266 +2,7 @@
 <typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
     <types>
         <typeDescription>
-            <name>uima.tcas.DocumentAnnotation</name>
-            <description/>
-            <supertypeName>uima.tcas.Annotation</supertypeName>
-            <features>
-                <featureDescription>
-                    <name>language</name>
-                    <description/>
-                    <rangeTypeName>uima.cas.String</rangeTypeName>
-                </featureDescription>
-            </features>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.coref.type.CoreferenceChain</name>
-            <description/>
-            <supertypeName>uima.cas.AnnotationBase</supertypeName>
-            <features>
-                <featureDescription>
-                    <name>first</name>
-                    <description/>
-                    <rangeTypeName>de.tudarmstadt.ukp.dkpro.core.api.coref.type.CoreferenceLink</rangeTypeName>
-                </featureDescription>
-            </features>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.coref.type.CoreferenceLink</name>
-            <description/>
-            <supertypeName>uima.tcas.Annotation</supertypeName>
-            <features>
-                <featureDescription>
-                    <name>next</name>
-                    <description/>
-                    <rangeTypeName>de.tudarmstadt.ukp.dkpro.core.api.coref.type.CoreferenceLink</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>referenceType</name>
-                    <description/>
-                    <rangeTypeName>uima.cas.String</rangeTypeName>
-                </featureDescription>
-            </features>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS</name>
-            <description/>
-            <supertypeName>uima.tcas.Annotation</supertypeName>
-            <features>
-                <featureDescription>
-                    <name>PosValue</name>
-                    <description/>
-                    <rangeTypeName>uima.cas.String</rangeTypeName>
-                </featureDescription>
-            </features>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.PP</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.PR</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.PUNC</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.V</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.metadata.type.DocumentMetaData</name>
-            <description/>
-            <supertypeName>uima.tcas.DocumentAnnotation</supertypeName>
-            <features>
-                <featureDescription>
-                    <name>documentTitle</name>
-                    <description/>
-                    <rangeTypeName>uima.cas.String</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>documentId</name>
-                    <description/>
-                    <rangeTypeName>uima.cas.String</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>documentUri</name>
-                    <description/>
-                    <rangeTypeName>uima.cas.String</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>collectionId</name>
-                    <description/>
-                    <rangeTypeName>uima.cas.String</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>documentBaseUri</name>
-                    <description/>
-                    <rangeTypeName>uima.cas.String</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>isLastSegment</name>
-                    <description/>
-                    <rangeTypeName>uima.cas.Boolean</rangeTypeName>
-                </featureDescription>
-            </features>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.metadata.type.ProcessorMetaData</name>
-            <description/>
-            <supertypeName>uima.cas.TOP</supertypeName>
-            <features>
-                <featureDescription>
-                    <name>instanceId</name>
-                    <description/>
-                    <rangeTypeName>uima.cas.String</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>name</name>
-                    <description/>
-                    <rangeTypeName>uima.cas.String</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>version</name>
-                    <description/>
-                    <rangeTypeName>uima.cas.String</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>annotatorImplementationName</name>
-                    <description/>
-                    <rangeTypeName>uima.cas.String</rangeTypeName>
-                </featureDescription>
-            </features>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</name>
-            <description/>
-            <supertypeName>uima.tcas.Annotation</supertypeName>
-            <features>
-                <featureDescription>
-                    <name>value</name>
-                    <description/>
-                    <rangeTypeName>uima.cas.String</rangeTypeName>
-                </featureDescription>
-            </features>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Nationality</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Norp</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Ordinal</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.OrgDesc</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Organization</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.PerDesc</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Percent</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Person</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Plant</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Product</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.ProductDesc</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Quantity</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Substance</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Time</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.WorkOfArt</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Compound</name>
-            <description/>
-            <supertypeName>uima.tcas.Annotation</supertypeName>
-            <features>
-                <featureDescription>
-                    <name>splits</name>
-                    <description/>
-                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
-                    <elementType>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Split</elementType>
-                </featureDescription>
-            </features>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Document</name>
-            <description/>
-            <supertypeName>uima.tcas.Annotation</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Heading</name>
-            <description/>
-            <supertypeName>uima.tcas.Annotation</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Lemma</name>
-            <description/>
-            <supertypeName>uima.tcas.Annotation</supertypeName>
-            <features>
-                <featureDescription>
-                    <name>value</name>
-                    <description/>
-                    <rangeTypeName>uima.cas.String</rangeTypeName>
-                </featureDescription>
-            </features>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.NGram</name>
+            <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.UsageSample</name>
             <description/>
             <supertypeName>uima.tcas.Annotation</supertypeName>
             <features>
@@ -270,38 +11,238 @@
                     <description/>
                     <rangeTypeName>uima.cas.String</rangeTypeName>
                 </featureDescription>
+                <featureDescription>
+                    <name>treeout</name>
+                    <description/>
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                </featureDescription>
             </features>
         </typeDescription>
         <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Paragraph</name>
-            <description/>
-            <supertypeName>uima.tcas.Annotation</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence</name>
-            <description/>
-            <supertypeName>uima.tcas.Annotation</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Split</name>
+            <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateSeed</name>
             <description/>
             <supertypeName>uima.tcas.Annotation</supertypeName>
             <features>
                 <featureDescription>
-                    <name>category</name>
-                    <description/>
-                    <rangeTypeName>uima.cas.String</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>splits</name>
+                    <name>piuses</name>
                     <description/>
                     <rangeTypeName>uima.cas.FSArray</rangeTypeName>
-                    <elementType>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Split</elementType>
+                    <elementType>ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateInUsageSample</elementType>
                 </featureDescription>
             </features>
         </typeDescription>
         <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Stem</name>
+            <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentExample</name>
+            <description/>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+            <features>
+                <featureDescription>
+                    <name>argument</name>
+                    <description/>
+                    <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>aiuses</name>
+                    <description/>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample</elementType>
+                </featureDescription>
+            </features>
+        </typeDescription>
+        <typeDescription>
+            <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.Predicate</name>
+            <description/>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+            <features>
+                <featureDescription>
+                    <name>name</name>
+                    <description/>
+                    <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateName</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>seeds</name>
+                    <description/>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateSeed</elementType>
+                </featureDescription>
+            </features>
+        </typeDescription>
+        <typeDescription>
+            <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument</name>
+            <description/>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+            <features>
+                <featureDescription>
+                    <name>role</name>
+                    <description/>
+                    <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentRole</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>types</name>
+                    <description/>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentType</elementType>
+                </featureDescription>
+                <featureDescription>
+                    <name>examples</name>
+                    <description/>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentExample</elementType>
+                </featureDescription>
+                <featureDescription>
+                    <name>marker</name>
+                    <description/>
+                    <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.Marker</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>aiuses</name>
+                    <description/>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample</elementType>
+                </featureDescription>
+            </features>
+        </typeDescription>
+        <typeDescription>
+            <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentRole</name>
+            <description/>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentType</name>
+            <description/>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateName</name>
+            <description/>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateInUsageSample</name>
+            <description/>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+            <features>
+                <featureDescription>
+                    <name>predicateSeed</name>
+                    <description/>
+                    <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateSeed</rangeTypeName>
+                </featureDescription>
+            </features>
+        </typeDescription>
+        <typeDescription>
+            <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample</name>
+            <description/>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+            <features>
+                <featureDescription>
+                    <name>argumentExample</name>
+                    <description/>
+                    <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentExample</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>pius</name>
+                    <description/>
+                    <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateInUsageSample</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>sample</name>
+                    <description/>
+                    <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.UsageSample</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>treeoutDepNoContext</name>
+                    <description/>
+                    <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepNoContext</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>treeoutDepGenPosNoContext</name>
+                    <description/>
+                    <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepGenPosNoContext</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>treeoutDepSpecPosNoContext</name>
+                    <description/>
+                    <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepSpecPosNoContext</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>treeoutDepFlatNoContext</name>
+                    <description/>
+                    <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatNoContext</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>treeoutDepFlatGenPosNoContext</name>
+                    <description/>
+                    <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatGenPosNoContext</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>treeoutDepFlatSpecPosNoContext</name>
+                    <description/>
+                    <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatSpecPosNoContext</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>treeoutDepWithContext</name>
+                    <description/>
+                    <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepWithContext</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>treeoutDepGenPosWithContext</name>
+                    <description/>
+                    <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepGenPosWithContext</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>treeoutDepSpecPosWithContext</name>
+                    <description/>
+                    <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepSpecPosWithContext</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>treeoutDepPrepNoContext</name>
+                    <description/>
+                    <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepNoContext</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>treeoutDepPrepGenPosNoContext</name>
+                    <description/>
+                    <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepGenPosNoContext</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>treeoutDepPrepSpecPosNoContext</name>
+                    <description/>
+                    <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepSpecPosNoContext</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>treeoutDepFlatPrepNoContext</name>
+                    <description/>
+                    <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatPrepNoContext</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>treeoutDepFlatPrepGenPosNoContext</name>
+                    <description/>
+                    <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatPrepGenPosNoContext</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>treeoutDepFlatPrepSpecPosNoContext</name>
+                    <description/>
+                    <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatPrepSpecPosNoContext</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>treeoutDepPrepWithContext</name>
+                    <description/>
+                    <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepWithContext</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>treeoutDepPrepGenPosWithContext</name>
+                    <description/>
+                    <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepGenPosWithContext</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>treeoutDepPrepSpecPosWithContext</name>
+                    <description/>
+                    <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepSpecPosWithContext</rangeTypeName>
+                </featureDescription>
+            </features>
+        </typeDescription>
+        <typeDescription>
+            <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.LemmaByPos</name>
             <description/>
             <supertypeName>uima.tcas.Annotation</supertypeName>
             <features>
@@ -310,115 +251,193 @@
                     <description/>
                     <rangeTypeName>uima.cas.String</rangeTypeName>
                 </featureDescription>
-            </features>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.StopWord</name>
-            <description/>
-            <supertypeName>uima.tcas.Annotation</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token</name>
-            <description/>
-            <supertypeName>uima.tcas.Annotation</supertypeName>
-            <features>
                 <featureDescription>
-                    <name>parent</name>
-                    <description/>
-                    <rangeTypeName>uima.tcas.Annotation</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>lemma</name>
-                    <description/>
-                    <rangeTypeName>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Lemma</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>stem</name>
-                    <description/>
-                    <rangeTypeName>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Stem</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>pos</name>
-                    <description/>
-                    <rangeTypeName>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS</rangeTypeName>
-                </featureDescription>
-            </features>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.PennTree</name>
-            <description/>
-            <supertypeName>uima.tcas.Annotation</supertypeName>
-            <features>
-                <featureDescription>
-                    <name>PennTree</name>
-                    <description/>
-                    <rangeTypeName>uima.cas.String</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>TransformationNames</name>
+                    <name>posStr</name>
                     <description/>
                     <rangeTypeName>uima.cas.String</rangeTypeName>
                 </featureDescription>
             </features>
         </typeDescription>
         <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.Tag</name>
+            <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.NounLemma</name>
+            <description/>
+            <supertypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.LemmaByPos</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.VerbLemma</name>
+            <description/>
+            <supertypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.LemmaByPos</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.Marker</name>
+            <description/>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout</name>
             <description/>
             <supertypeName>uima.tcas.Annotation</supertypeName>
             <features>
+                <featureDescription>
+                    <name>role</name>
+                    <description/>
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                </featureDescription>
                 <featureDescription>
                     <name>value</name>
                     <description/>
                     <rangeTypeName>uima.cas.String</rangeTypeName>
                 </featureDescription>
+                <featureDescription>
+                    <name>vAll</name>
+                    <description/>
+                    <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.VAll</rangeTypeName>
+                </featureDescription>
             </features>
         </typeDescription>
         <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.chunk.Chunk</name>
+            <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepNoContext</name>
             <description/>
-            <supertypeName>uima.tcas.Annotation</supertypeName>
+            <supertypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepGenPosNoContext</name>
+            <description/>
+            <supertypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepSpecPosNoContext</name>
+            <description/>
+            <supertypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatNoContext</name>
+            <description/>
+            <supertypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatGenPosNoContext</name>
+            <description/>
+            <supertypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatSpecPosNoContext</name>
+            <description/>
+            <supertypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepWithContext</name>
+            <description/>
+            <supertypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepGenPosWithContext</name>
+            <description/>
+            <supertypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepSpecPosWithContext</name>
+            <description/>
+            <supertypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepNoContext</name>
+            <description/>
+            <supertypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepGenPosNoContext</name>
+            <description/>
+            <supertypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepSpecPosNoContext</name>
+            <description/>
+            <supertypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatPrepNoContext</name>
+            <description/>
+            <supertypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatPrepGenPosNoContext</name>
+            <description/>
+            <supertypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatPrepSpecPosNoContext</name>
+            <description/>
+            <supertypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepWithContext</name>
+            <description/>
+            <supertypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepGenPosWithContext</name>
+            <description/>
+            <supertypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepSpecPosWithContext</name>
+            <description/>
+            <supertypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutSampleText</name>
+            <description/>
+            <supertypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutTokenDepGenPosWithContext</name>
+            <description/>
+            <supertypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.TAll</name>
+            <description/>
+            <supertypeName>uima.cas.TOP</supertypeName>
             <features>
                 <featureDescription>
-                    <name>chunkValue</name>
+                    <name>cls</name>
+                    <description/>
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>role</name>
+                    <description/>
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>val</name>
                     <description/>
                     <rangeTypeName>uima.cas.String</rangeTypeName>
                 </featureDescription>
             </features>
         </typeDescription>
         <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.chunk.INTJ</name>
+            <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.VAll</name>
             <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.chunk.Chunk</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.chunk.LST</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.chunk.Chunk</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.chunk.NC</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.chunk.Chunk</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.chunk.O</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.chunk.Chunk</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.chunk.PC</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.chunk.Chunk</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.chunk.PRT</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.chunk.Chunk</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.chunk.VC</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.chunk.Chunk</supertypeName>
+            <supertypeName>uima.cas.TOP</supertypeName>
+            <features>
+                <featureDescription>
+                    <name>cls</name>
+                    <description/>
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>treeout</name>
+                    <description/>
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>val</name>
+                    <description/>
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                </featureDescription>
+            </features>
         </typeDescription>
         <typeDescription>
             <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</name>
@@ -432,7 +451,7 @@
                 </featureDescription>
                 <featureDescription>
                     <name>parent</name>
-                    <description/>
+                    <description>The parent constituent</description>
                     <rangeTypeName>uima.tcas.Annotation</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
@@ -449,12 +468,62 @@
             </features>
         </typeDescription>
         <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.DT</name>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.S</name>
             <description/>
             <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
         </typeDescription>
         <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.EX</name>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.ROOT</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.NP</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.VP</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.PP</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.ADJP</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.SBAR</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.SINV</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.UCP</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.NAC</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.PRN0</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.ADVP</name>
             <description/>
             <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
         </typeDescription>
@@ -464,7 +533,77 @@
             <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
         </typeDescription>
         <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.FW</name>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.QP</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.XS</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.X</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.NX</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.WHPP</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.SBARQ</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.WHNP</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.SQ</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.RRC</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.CONJP</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.INTJ</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.WHADVP</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.WHADJP</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.PRT</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.LST</name>
             <description/>
             <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
         </typeDescription>
@@ -474,7 +613,7 @@
             <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
         </typeDescription>
         <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.INTJ</name>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.DT</name>
             <description/>
             <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
         </typeDescription>
@@ -494,101 +633,6 @@
             <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
         </typeDescription>
         <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.LS</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.LST</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.MD</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.NAC</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.NN</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.NNP</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.NNPS</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.NNS</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.NP</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.NX</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.PDT</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.POS</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.PP</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.PRN0</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.PRP</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.PRPP</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.PRT</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.PUNC</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.QP</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
-        </typeDescription>
-        <typeDescription>
             <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.RB</name>
             <description/>
             <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
@@ -604,57 +648,37 @@
             <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
         </typeDescription>
         <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.ROOT</name>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.NN</name>
             <description/>
             <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
         </typeDescription>
         <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.RP</name>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.NNS</name>
             <description/>
             <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
         </typeDescription>
         <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.RRC</name>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.NNP</name>
             <description/>
             <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
         </typeDescription>
         <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.S</name>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.NNPS</name>
             <description/>
             <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
         </typeDescription>
         <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.SBAR</name>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.CC</name>
             <description/>
             <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
         </typeDescription>
         <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.SBARQ</name>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.EX</name>
             <description/>
             <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
         </typeDescription>
         <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.SINV</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.SQ</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.SYM</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.TO</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.UCP</name>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.FW</name>
             <description/>
             <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
         </typeDescription>
@@ -664,27 +688,17 @@
             <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
         </typeDescription>
         <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.VB</name>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.LS</name>
             <description/>
             <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
         </typeDescription>
         <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.VBD</name>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.RP</name>
             <description/>
             <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
         </typeDescription>
         <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.VBG</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.VBN</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.VBP</name>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.PRP</name>
             <description/>
             <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
         </typeDescription>
@@ -694,32 +708,57 @@
             <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
         </typeDescription>
         <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.VP</name>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.VB</name>
             <description/>
             <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
         </typeDescription>
         <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.WDT</name>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.VBG</name>
             <description/>
             <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
         </typeDescription>
         <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.WHADJP</name>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.VBD</name>
             <description/>
             <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
         </typeDescription>
         <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.WHADVP</name>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.VBP</name>
             <description/>
             <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
         </typeDescription>
         <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.WHNP</name>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.VBN</name>
             <description/>
             <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
         </typeDescription>
         <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.WHPP</name>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.PUNC</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.CD</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.TO</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.MD</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.PRP</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.PRPP</name>
             <description/>
             <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
         </typeDescription>
@@ -729,22 +768,32 @@
             <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
         </typeDescription>
         <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.WPP</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
-        </typeDescription>
-        <typeDescription>
             <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.WRB</name>
             <description/>
             <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
         </typeDescription>
         <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.X</name>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.POS</name>
             <description/>
             <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
         </typeDescription>
         <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.XS</name>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.WDT</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.PDT</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.WPP</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.SYM</name>
             <description/>
             <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
         </typeDescription>
@@ -755,40 +804,288 @@
             <features>
                 <featureDescription>
                     <name>Governor</name>
-                    <description/>
+                    <description>The governor word</description>
                     <rangeTypeName>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
                     <name>Dependent</name>
-                    <description/>
+                    <description>The dependent word</description>
                     <rangeTypeName>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
                     <name>DependencyType</name>
-                    <description/>
+                    <description>The dependency type</description>
                     <rangeTypeName>uima.cas.String</rangeTypeName>
                 </featureDescription>
             </features>
         </typeDescription>
         <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependent</name>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.NSUBJ</name>
             <description/>
-            <supertypeName>uima.tcas.Annotation</supertypeName>
-            <features>
-                <featureDescription>
-                    <name>Governor</name>
-                    <description/>
-                    <rangeTypeName>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>Dependency</name>
-                    <description/>
-                    <rangeTypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</rangeTypeName>
-                </featureDescription>
-            </features>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.AMOD</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.DEP</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.DET</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.POBJ</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.PREP</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.CC</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.CONJ</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.NN</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.NUM</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.CCOMP</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.NUMBER</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.CONJ_YET</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.COP</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.ADVMOD</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.COMPLM</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.AUX0</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.XCOMP</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.POSS</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.DOBJ</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.AUXPASS</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.RCMOD</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.AGENT</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.APPOS</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.TMOD</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.PARTMOD</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.MEASURE</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.ACOMP</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.PREDET</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.MARK</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.ADVCL</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.NEG</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.NSUBJPASS</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.PREPC</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.QUANTMOD</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.CSUBJPASS</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.CSUBJ</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.REL</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.PRT</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.PUNCT</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.PCOMP</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.XCOMP</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
         </typeDescription>
         <typeDescription>
             <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.EXPL</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.INFMOD</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.CSUBJPASS</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.ATTR</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.IOBJ</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.CONJP</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.PRECONJ</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.PURPCL</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.PRED</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.PARATAXIS</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.ABBREV</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.POSSESSIVE</name>
             <description/>
             <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
         </typeDescription>
@@ -810,162 +1107,24 @@
             </features>
         </typeDescription>
         <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.INFMOD</name>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependent</name>
             <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.IOBJ</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.MARK</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.MEASURE</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.MWE</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.NEG</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.NN</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+            <features>
+                <featureDescription>
+                    <name>Governor</name>
+                    <description/>
+                    <rangeTypeName>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>Dependency</name>
+                    <description/>
+                    <rangeTypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</rangeTypeName>
+                </featureDescription>
+            </features>
         </typeDescription>
         <typeDescription>
             <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.NPADVMOD</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.NSUBJ</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.NSUBJPASS</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.NUM</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.NUMBER</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.PARATAXIS</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.PARTMOD</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.PCOMP</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.POBJ</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.POSS</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.POSSESSIVE</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.PRECONJ</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.PRED</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.PREDET</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.PREP</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.PREPC</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.PRT</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.PUNCT</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.PURPCL</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.QUANTMOD</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.RCMOD</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.REF</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.REL</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.TMOD</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.XCOMP</name>
             <description/>
             <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
         </typeDescription>
@@ -975,59 +1134,282 @@
             <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
         </typeDescription>
         <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.mecab.type.JapaneseToken</name>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.MWE</name>
             <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token</supertypeName>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.REF</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.NGram</name>
+            <description/>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
             <features>
                 <featureDescription>
-                    <name>kana</name>
-                    <description/>
-                    <rangeTypeName>uima.cas.String</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>ibo</name>
-                    <description/>
-                    <rangeTypeName>uima.cas.String</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>kei</name>
-                    <description/>
-                    <rangeTypeName>uima.cas.String</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>dan</name>
+                    <name>text</name>
                     <description/>
                     <rangeTypeName>uima.cas.String</rangeTypeName>
                 </featureDescription>
             </features>
         </typeDescription>
         <typeDescription>
-            <name>eu.excitement.type.alignment.AlignedText</name>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Document</name>
+            <description/>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence</name>
+            <description/>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Paragraph</name>
+            <description/>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Heading</name>
+            <description/>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Lemma</name>
             <description/>
             <supertypeName>uima.tcas.Annotation</supertypeName>
             <features>
                 <featureDescription>
-                    <name>alignedTo</name>
+                    <name>value</name>
                     <description/>
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                </featureDescription>
+            </features>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Stem</name>
+            <description/>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+            <features>
+                <featureDescription>
+                    <name>value</name>
+                    <description/>
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                </featureDescription>
+            </features>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Compound</name>
+            <description/>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+            <features>
+                <featureDescription>
+                    <name>splits</name>
+                    <description>A word that can be decomposed into different parts.</description>
                     <rangeTypeName>uima.cas.FSArray</rangeTypeName>
-                    <elementType>eu.excitement.type.alignment.AlignedText</elementType>
+                    <elementType>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Split</elementType>
+                </featureDescription>
+            </features>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token</name>
+            <description/>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+            <features>
+                <featureDescription>
+                    <name>parent</name>
+                    <description>The parent of this token.</description>
+                    <rangeTypeName>uima.tcas.Annotation</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
-                    <name>alignmentType</name>
+                    <name>lemma</name>
                     <description/>
+                    <rangeTypeName>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Lemma</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>stem</name>
+                    <description/>
+                    <rangeTypeName>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Stem</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>pos</name>
+                    <description/>
+                    <rangeTypeName>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS</rangeTypeName>
+                </featureDescription>
+            </features>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.StopWord</name>
+            <description/>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Split</name>
+            <description>A part of a compound word.</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+            <features>
+                <featureDescription>
+                    <name>category</name>
+                    <description>The type of morpheme. (morpheme or linking-morpheme)</description>
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>splits</name>
+                    <description>Sub-splits of the current split.</description>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Split</elementType>
+                </featureDescription>
+            </features>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS</name>
+            <description>The part of speech of a word or a phrase.</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+            <features>
+                <featureDescription>
+                    <name>PosValue</name>
+                    <description>The string representation of POS. Mostly it is the POS
+                        representation of the wrapped POS tagger.</description>
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                </featureDescription>
+            </features>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.ADJ</name>
+            <description>Adjective</description>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.ADV</name>
+            <description>Adverb</description>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.ART</name>
+            <description>Article</description>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.CARD</name>
+            <description>Cardinal number</description>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.CONJ</name>
+            <description>Conjunction</description>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.N</name>
+            <description>Noun</description>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.NN</name>
+            <description>Common noun</description>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.N</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.NP</name>
+            <description>Proper noun</description>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.N</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.O</name>
+            <description>Exclamation</description>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.PP</name>
+            <description>Preposition</description>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.PR</name>
+            <description>Pronoun</description>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.PUNC</name>
+            <description>Punctuation</description>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.V</name>
+            <description>Verb and verb phrase</description>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.metadata.type.DocumentMetaData</name>
+            <description/>
+            <supertypeName>uima.tcas.DocumentAnnotation</supertypeName>
+            <features>
+                <featureDescription>
+                    <name>documentTitle</name>
+                    <description>The human readable title of the document.</description>
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>documentId</name>
+                    <description>The id of the document.</description>
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>documentUri</name>
+                    <description>The URI of the document.</description>
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>collectionId</name>
+                    <description>The ID of the whole document collection.</description>
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>documentBaseUri</name>
+                    <description>Base URI of the document.</description>
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>isLastSegment</name>
+                    <description>CAS de-multipliers need to know whether a CAS is the last multiplied segment.
+Thus CAS multipliers should set this field to true for the last CAS they produce.</description>
+                    <rangeTypeName>uima.cas.Boolean</rangeTypeName>
+                </featureDescription>
+            </features>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.metadata.type.ProcessorMetaData</name>
+            <description>Information about a CAS processor such as a reader, analysis engine, multiplier, or consumer.</description>
+            <supertypeName>uima.cas.TOP</supertypeName>
+            <features>
+                <featureDescription>
+                    <name>instanceId</name>
+                    <description>Unique identifier for this processor instance. If the same processor is applied multiple times to the CAS in different configurations, each application has a unique instance ID. In a clustered environment, each cluster node running a processor in a particular configuration should produce the same instanceId.</description>
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>name</name>
+                    <description>Name of the processor as per the 'name' field in the processor meta data.</description>
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>version</name>
+                    <description>Version of the processor as per the 'version' field in the processor meta data.</description>
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>annotatorImplementationName</name>
+                    <description>Java class implementing the processor.</description>
                     <rangeTypeName>uima.cas.String</rangeTypeName>
                 </featureDescription>
             </features>
         </typeDescription>
         <typeDescription>
             <name>eu.excitement.type.entailment.Decision</name>
-            <description/>
+            <description>String subtype that describe entailment Decision. *Note*: If you extend/change this type, you *MUST* also update "enum TEDecision" in the entailment core.</description>
             <supertypeName>uima.cas.String</supertypeName>
             <allowedValues>
-                <value>
-                    <string>CONTRADICTION</string>
-                    <description/>
-                </value>
                 <value>
                     <string>ENTAILMENT</string>
                     <description/>
@@ -1041,110 +1423,309 @@
                     <description/>
                 </value>
                 <value>
+                    <string>CONTRADICTION</string>
+                    <description/>
+                </value>
+                <value>
                     <string>UNKNOWN</string>
                     <description/>
                 </value>
             </allowedValues>
         </typeDescription>
         <typeDescription>
-            <name>eu.excitement.type.entailment.EntailmentMetadata</name>
-            <description/>
-            <supertypeName>uima.cas.TOP</supertypeName>
-            <features>
-                <featureDescription>
-                    <name>task</name>
-                    <description/>
-                    <rangeTypeName>uima.cas.String</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>channel</name>
-                    <description/>
-                    <rangeTypeName>uima.cas.String</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>origin</name>
-                    <description/>
-                    <rangeTypeName>uima.cas.String</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>TextDocumentID</name>
-                    <description/>
-                    <rangeTypeName>uima.cas.String</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>TextCollectionID</name>
-                    <description/>
-                    <rangeTypeName>uima.cas.String</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>HypothesisDocumentID</name>
-                    <description/>
-                    <rangeTypeName>uima.cas.String</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>HypothesisCollectionID</name>
-                    <description/>
-                    <rangeTypeName>uima.cas.String</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>language</name>
-                    <description/>
-                    <rangeTypeName>uima.cas.String</rangeTypeName>
-                </featureDescription>
-            </features>
+            <name>eu.excitement.type.entailment.Text</name>
+            <description>This type represents a text part of a T-H pair. This type annotates a text item within
+the TextView. It can occur multiple times (for multi-text problems).</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
         </typeDescription>
         <typeDescription>
             <name>eu.excitement.type.entailment.Hypothesis</name>
-            <description/>
+            <description>This type represents a hypothesis part of a T-H pair. This type annotates a hypoth-
+esis item within the HypothesisView. It can occur multiple times (for multi-hypothesis problems)</description>
             <supertypeName>uima.tcas.Annotation</supertypeName>
         </typeDescription>
         <typeDescription>
             <name>eu.excitement.type.entailment.Pair</name>
-            <description/>
+            <description>This type represents a text-hypothesis pair.</description>
             <supertypeName>uima.cas.TOP</supertypeName>
             <features>
                 <featureDescription>
                     <name>pairID</name>
-                    <description/>
+                    <description>ID of this pair. The main purpose of this value is to distinguish
+a certain pair among multiple pairs.</description>
                     <rangeTypeName>uima.cas.String</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
                     <name>text</name>
-                    <description/>
+                    <description>This feature points a Text instance, which rep-
+resents the text part of this pair.</description>
                     <rangeTypeName>eu.excitement.type.entailment.Text</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
                     <name>hypothesis</name>
-                    <description/>
+                    <description>This feature points a Hypothesis instance, which represents the hypothesis part of this pair.</description>
                     <rangeTypeName>eu.excitement.type.entailment.Hypothesis</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
                     <name>goldAnswer</name>
-                    <description/>
+                    <description>This features records the gold standard answer for this pair. If the pair (and CAS) represents a training data, this value will be filled in with the gold standard answer. If it is a null value, the pair represents a entailment problem that is yet
+to be answered.</description>
                     <rangeTypeName>eu.excitement.type.entailment.Decision</rangeTypeName>
                 </featureDescription>
             </features>
         </typeDescription>
         <typeDescription>
-            <name>eu.excitement.type.entailment.Text</name>
-            <description/>
-            <supertypeName>uima.tcas.Annotation</supertypeName>
+            <name>eu.excitement.type.entailment.EntailmentMetadata</name>
+            <description>This type provides metadata for entailment problem.</description>
+            <supertypeName>uima.cas.TOP</supertypeName>
+            <features>
+                <featureDescription>
+                    <name>task</name>
+                    <description>This string holds the task description which can be found in the
+RTE challenge data.</description>
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>channel</name>
+                    <description>his feature can holds a string that shows the channel where
+this problem was originated. For example, "customer e-mail", "online forum", or " customer
+transcription", etc.</description>
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>origin</name>
+                    <description>This metadata field can hold a string that shows the origin of
+this text and hypothesis. A company name, or a product name.</description>
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>TextDocumentID</name>
+                    <description>This field can hold a string that identifies the doc-
+ument of the TextView. This feature must have a value, if TextCollectionID is not null.</description>
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>TextCollectionID</name>
+                    <description>This field can hold a string that identifies the
+collection name where the document of the TextView belongs to.</description>
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>HypothesisDocumentID</name>
+                    <description>This field can hold a string that identifies
+the document of the HypothesisView. This feature must have a value, if HypothesisCollec-
+tionID is not null.</description>
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>HypothesisCollectionID</name>
+                    <description>This field can hold a string that identi-
+fies the collection name where the document of the HypothesisView belongs to.</description>
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>language</name>
+                    <description>Language of this CAS.</description>
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                </featureDescription>
+            </features>
         </typeDescription>
         <typeDescription>
-            <name>eu.excitement.type.predicatetruth.ClauseTruth</name>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</name>
             <description/>
             <supertypeName>uima.tcas.Annotation</supertypeName>
             <features>
                 <featureDescription>
                     <name>value</name>
                     <description/>
-                    <rangeTypeName>eu.excitement.type.predicatetruth.ClauseTruthValue</rangeTypeName>
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                </featureDescription>
+            </features>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Person</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.PerDesc</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Norp</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Organization</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.OrgDesc</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Gpe</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.GpeDesc</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Location</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Product</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.ProductDesc</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Date</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Time</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Percent</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Money</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Quantity</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Ordinal</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Cardinal</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Event</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Plant</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Animal</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Substance</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Disease</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.WorkOfArt</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Law</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Language</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.ContactInfo</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Game</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Fac</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.FacDesc</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Nationality</name>
+            <description/>
+            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>eu.excitement.type.predicatetruth.PredicateTruthValue</name>
+            <description>This type provides labels for PredicateTruth. This type is a string subtype that only permits "PT+", "PT-", and "PT?".</description>
+            <supertypeName>uima.cas.String</supertypeName>
+            <allowedValues>
+                <value>
+                    <string>PT+</string>
+                    <description/>
+                </value>
+                <value>
+                    <string>PT-</string>
+                    <description/>
+                </value>
+                <value>
+                    <string>PT?</string>
+                    <description/>
+                </value>
+            </allowedValues>
+        </typeDescription>
+        <typeDescription>
+            <name>eu.excitement.type.predicatetruth.PredicateTruth</name>
+            <description>This type represents a predicate truth value annotation.</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+            <features>
+                <featureDescription>
+                    <name>value</name>
+                    <description>This represents the value of the annotation.</description>
+                    <rangeTypeName>eu.excitement.type.predicatetruth.PredicateTruthValue</rangeTypeName>
                 </featureDescription>
             </features>
         </typeDescription>
         <typeDescription>
             <name>eu.excitement.type.predicatetruth.ClauseTruthValue</name>
-            <description/>
+            <description>This type provides labels for ClauseTruth. This type is a string subtype that only permits "CT+", "CT-", and "CT?".</description>
             <supertypeName>uima.cas.String</supertypeName>
             <allowedValues>
                 <value>
@@ -1162,20 +1743,33 @@
             </allowedValues>
         </typeDescription>
         <typeDescription>
-            <name>eu.excitement.type.predicatetruth.NegationAndUncertainty</name>
-            <description/>
+            <name>eu.excitement.type.predicatetruth.ClauseTruth</name>
+            <description>This type represents a clause truth value annotation.</description>
             <supertypeName>uima.tcas.Annotation</supertypeName>
             <features>
                 <featureDescription>
                     <name>value</name>
-                    <description/>
+                    <description>This represents the value of the annotation.</description>
+                    <rangeTypeName>eu.excitement.type.predicatetruth.ClauseTruthValue</rangeTypeName>
+                </featureDescription>
+            </features>
+        </typeDescription>
+        <typeDescription>
+            <name>eu.excitement.type.predicatetruth.NegationAndUncertainty</name>
+            <description>This type represents a negation-and-uncertainty annotation.</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+            <features>
+                <featureDescription>
+                    <name>value</name>
+                    <description>This represents the value of the annotation.</description>
                     <rangeTypeName>eu.excitement.type.predicatetruth.NegationAndUncertaintyValue</rangeTypeName>
                 </featureDescription>
             </features>
         </typeDescription>
         <typeDescription>
             <name>eu.excitement.type.predicatetruth.NegationAndUncertaintyValue</name>
-            <description/>
+            <description>This type provides labels for NegationAndUncerntainty. This type is a string
+subtype that only permits "NU+", "NU-", and "NU?".</description>
             <supertypeName>uima.cas.String</supertypeName>
             <allowedValues>
                 <value>
@@ -1194,18 +1788,16 @@
         </typeDescription>
         <typeDescription>
             <name>eu.excitement.type.predicatetruth.PredicateSignature</name>
-            <description/>
+            <description>This type represents an implication signature of a predicate.</description>
             <supertypeName>uima.tcas.Annotation</supertypeName>
         </typeDescription>
         <typeDescription>
             <name>eu.excitement.type.predicatetruth.PredicateSignatureValue</name>
-            <description/>
+            <description>This type provides labels for PredicateSignature. This type is a string subtype
+that only permits one of the following strings: "+ / -", "+ / ?", "? / -", "- \ +", "- / ?", "? / +", "+ /
++", "- / -", "? / ?".</description>
             <supertypeName>uima.cas.String</supertypeName>
             <allowedValues>
-                <value>
-                    <string>+/+</string>
-                    <description/>
-                </value>
                 <value>
                     <string>+/-</string>
                     <description/>
@@ -1215,11 +1807,11 @@
                     <description/>
                 </value>
                 <value>
-                    <string>-/+</string>
+                    <string>?/-</string>
                     <description/>
                 </value>
                 <value>
-                    <string>-/-</string>
+                    <string>-/+</string>
                     <description/>
                 </value>
                 <value>
@@ -1231,7 +1823,11 @@
                     <description/>
                 </value>
                 <value>
-                    <string>?/-</string>
+                    <string>+/+</string>
+                    <description/>
+                </value>
+                <value>
+                    <string>-/-</string>
                     <description/>
                 </value>
                 <value>
@@ -1241,589 +1837,232 @@
             </allowedValues>
         </typeDescription>
         <typeDescription>
-            <name>eu.excitement.type.predicatetruth.PredicateTruth</name>
-            <description/>
-            <supertypeName>uima.tcas.Annotation</supertypeName>
-            <features>
-                <featureDescription>
-                    <name>value</name>
-                    <description/>
-                    <rangeTypeName>eu.excitement.type.predicatetruth.PredicateTruthValue</rangeTypeName>
-                </featureDescription>
-            </features>
-        </typeDescription>
-        <typeDescription>
-            <name>eu.excitement.type.predicatetruth.PredicateTruthValue</name>
-            <description/>
-            <supertypeName>uima.cas.String</supertypeName>
-            <allowedValues>
-                <value>
-                    <string>PT+</string>
-                    <description/>
-                </value>
-                <value>
-                    <string>PT-</string>
-                    <description/>
-                </value>
-                <value>
-                    <string>PT?</string>
-                    <description/>
-                </value>
-            </allowedValues>
-        </typeDescription>
-        <typeDescription>
-            <name>eu.excitement.type.semanticrole.Argument</name>
-            <description/>
-            <supertypeName>uima.tcas.Annotation</supertypeName>
-            <features>
-                <featureDescription>
-                    <name>argumentName</name>
-                    <description/>
-                    <rangeTypeName>uima.cas.String</rangeTypeName>
-                </featureDescription>
-                <featureDescription>
-                    <name>predicates</name>
-                    <description/>
-                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
-                    <elementType>eu.excitement.type.semanticrole.Predicate</elementType>
-                </featureDescription>
-            </features>
-        </typeDescription>
-        <typeDescription>
             <name>eu.excitement.type.semanticrole.Predicate</name>
-            <description/>
+            <description>Predicate is a uima.tcas.Annotation. It represents a predicate. It holds the predicate sense as string and links to its arguments (An array of Argument). It has the following features:
+- predicateName (uima.cas.String): This feature represents the name of this predicate. It actually refers to the sense of the predicate in PropBank or FrameNet.
+ -arguments (uima.cas.FSArray):This feature is an array of EXCITEMENT.semanticrole.Argument. It holds the predicate's arguments.</description>
             <supertypeName>uima.tcas.Annotation</supertypeName>
             <features>
                 <featureDescription>
                     <name>predicateName</name>
-                    <description/>
+                    <description>This feature represents the name of this predicate. It actually refers to the sense of the predicate in PropBank or FrameNet.</description>
                     <rangeTypeName>uima.cas.String</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
                     <name>arguments</name>
-                    <description/>
+                    <description>This feature is an array of semanticrole.Argument. It holds the predicate's arguments.</description>
                     <rangeTypeName>uima.cas.FSArray</rangeTypeName>
                     <elementType>eu.excitement.type.semanticrole.Argument</elementType>
                 </featureDescription>
             </features>
         </typeDescription>
         <typeDescription>
+            <name>eu.excitement.type.semanticrole.Argument</name>
+            <description>It represents an argument (of semantic role labeling). It has two features; the argument's semantic role (type), and a backward reference to the predicate that governs the argument.</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+            <features>
+                <featureDescription>
+                    <name>argumentName</name>
+                    <description>This feature represents the semantic role (type) of this argument. The fact that this feature is a String means that arbitrary role labels can be adopted, such as the PropBank argument set (A0, A1, AM-LOC, etc.), the FrameNet role set (Communication.Communicator, Communication.Message, etc.), or any other.</description>
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>predicates</name>
+                    <description>This feature is an array of semanticrole.Predicate. (Backward) references to the predicates which governs it.</description>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>eu.excitement.type.semanticrole.Predicate</elementType>
+                </featureDescription>
+            </features>
+        </typeDescription>
+        <typeDescription>
             <name>eu.excitement.type.temporal.DefaultTimeOfText</name>
-            <description/>
+            <description>It is anchored to a textual region (a paragraph, or a document), and holds the "default time" that has been determined for this passage and can be useful to interpret relative time expressions ("now", "yesterday") in the text.</description>
             <supertypeName>uima.tcas.Annotation</supertypeName>
             <features>
                 <featureDescription>
                     <name>time</name>
-                    <description/>
+                    <description>This feature holds the default time for the textual unit which is annotated
+by this annotation. The time string is expressed in the normalized ISO 8601 format. More specifically,
+it is a concatenation of the ISO 8601 calendar date and extended time: "YYYY-MM-DD hh:mm:ss".</description>
                     <rangeTypeName>uima.cas.String</rangeTypeName>
                 </featureDescription>
             </features>
         </typeDescription>
         <typeDescription>
             <name>eu.excitement.type.temporal.TemporalExpression</name>
-            <description/>
+            <description>TemporalExpression annotates a temporal expression. It is a uima.tcas.Annotation that annotates a temporal expression within a passage, adding a normalized time representation. It holds two string features: One contains the original temporal expression, and the other contains a normalized time representation, using ISO 8601. This is the top annotation for temporal expressions, with a normalized time representation. It has four subtypes, which reflects TIMEX3 temporal types of Date, Time, Duration and Set</description>
             <supertypeName>uima.tcas.Annotation</supertypeName>
             <features>
                 <featureDescription>
                     <name>text</name>
-                    <description/>
+                    <description>his feature holds the original expression appearing in the text.</description>
                     <rangeTypeName>uima.cas.String</rangeTypeName>
                 </featureDescription>
                 <featureDescription>
                     <name>resolvedTime</name>
+                    <description>This feature holds the resolved time in ISO 8601 format. For
+example, "Yesterday", will be resolved into "2012-11-01", etc. See the type DefaultTimeOfText for details.</description>
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                </featureDescription>
+            </features>
+        </typeDescription>
+        <typeDescription>
+            <name>eu.excitement.type.temporal.Date</name>
+            <description>This type represents a temporal expression of type Date. The expression describes a calendar time like yesterday, November 1943, Tuesday 18th, etc.</description>
+            <supertypeName>eu.excitement.type.temporal.TemporalExpression</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>eu.excitement.type.temporal.Time</name>
+            <description>This type represents a temporal expression of type Time. The expression refers to a time of the day, even if in a very indefinite way: eleven in the morning, late last night, twenty
+after twelve, etc.</description>
+            <supertypeName>eu.excitement.type.temporal.TemporalExpression</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>eu.excitement.type.temporal.Duration</name>
+            <description>This type represents a temporal expression of type Duration. The expression describes a duration with explicit durations: 2 months, 48 hours, all last night, 20 days, etc.</description>
+            <supertypeName>eu.excitement.type.temporal.TemporalExpression</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>eu.excitement.type.temporal.Set</name>
+            <description>This type represents a temporal expression of type Set. For example, every winter,
+each Monday, etc. It indicates a recurrence pattern.</description>
+            <supertypeName>eu.excitement.type.temporal.TemporalExpression</supertypeName>
+        </typeDescription>
+        <typeDescription>
+            <name>eu.excitement.type.alignment.Target</name>
+            <description>This is a CAS annotation type that can point one or more annotations (tokens, parse nodes, NER nodes, or any annotations) 
+It is a list that groups annotations in one View. The target type allows flexible alignment between any data, including structures made by multiple annotations. 
+Note on usage: begin holds the minimum begin value among annotations in targetAnnotations. Likewise, end should point the maximum end among annotations.</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+            <features>
+                <featureDescription>
+                    <name>targetAnnotations</name>
+                    <description>This is a FSArray that can hold one or more annotations. A target should mark one or more annotations</description>
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                    <elementType>uima.tcas.Annotation</elementType>
+                </featureDescription>
+            </features>
+        </typeDescription>
+        <typeDescription>
+            <name>eu.excitement.type.alignment.Link</name>
+            <description>- CAS type that links two Target. 
+- Multi-view type: a Link connects one target in T (TextView), the other target in H (HypothesisView). 
+
+The semantic of a "Link" is: The texts (or structures) pointed by "TSideTarget" and "HSideTarget" have a relation of "type", with the direction of "direction",  on a strength of "strength". 
+
+We make no assumptions regarding what annotations are aligned by Link and Target types. One Target can be linked by an arbitrary number of Link, also a Target can group an arbitrary number of Annotations. Note that uima.tcas.Annotation is the super type of almost all CAS annotation data. Since a Target can group Annotation, it can group any type of annotations in CAS.
+
+Some notes on Link type usage. (Indexing and setting begin - end) 
+- A Link instance should be indexed on the Hypothesis View. So one iteration over the Hypothesis view can get all alignment links.
+- begin and end : both span value should hold the same value to that of HSide Target</description>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+            <features>
+                <featureDescription>
+                    <name>TSideTarget</name>
+                    <description>This feature points one Target in TEXTVIEW side. A mandatory value, and should not be null. The semantic of a "Link" is: The text (or structure) targets have the relation of "type" between them, with the direction of "direction".</description>
+                    <rangeTypeName>eu.excitement.type.alignment.Target</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>HSideTarget</name>
+                    <description>This feature points one Target in HYPOTHESISVIEW side. A mandatory value, and should not be null. The semantic of a "Link" is: The text (or structure) targets have the relation of "type" between them, with the direction of "direction".</description>
+                    <rangeTypeName>eu.excitement.type.alignment.Target</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>strength</name>
+                    <description>This feature keeps one double (numerical) value. Mandatory value, and should not be null. The value indicates the strength of the relation.</description>
+                    <rangeTypeName>uima.cas.Double</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>directionString</name>
+                    <description>This value denotes the "direction" of the alignment.Link. Enum-like value that holds one of "TtoH", "HtoT", or "Symmetric".</description>
+                    <rangeTypeName>eu.excitement.type.alignment.Direction</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>alignerID</name>
+                    <description>This is the first part of 3 ID strings for the alignment.Link instance. The string denotes the idetification of the aligner (or underlying resource). 
+
+It is the convention to use getID() method of alignment.Link to get the concatenated, unique string for the instance. getID() returns such a string by concatenating 3 ID strings: 
+alignerID + alignerVersion + linkInfo</description>
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>alignerVersion</name>
+                    <description>This is the second part of 3 ID strings for the alignment.Link instance. The string denotes the sub-identification of the aligner (or underlying resource) --- which are generally the version (or date).  
+
+It is the convention to use getID() method of alignment.Link to get the concatenated, unique string for the instance. getID() returns such a string by concatenating 3 ID strings: 
+alignerID + alignerVersion + linkInfo</description>
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>linkInfo</name>
+                    <description>This is the thrid part of 3 ID strings for the alignment.Link instance. The string denotes the internal information about the added link; for example "synonym" (in WordNet based aligner), "stronger-than" (in VerbOcean based lexical aligner), or "local-entailment" (some aligner that aligned multiple structures). Thus, the value is defined by the aligner, and enable alginer to denote more than one relations that is identifiable by getID().
+
+It is the convention to use getID() method of alignment.Link to get the concatenated, unique string for the instance. getID() returns such a string by concatenating 3 ID strings: 
+alignerID + alignerVersion + linkInfo</description>
+                    <rangeTypeName>uima.cas.String</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>groupLabel</name>
+                    <description>TBDTBDTBDTBD
+
+TO BE DETERMINED. 
+
+We will adopt "common semantic groups", such as "LOCAL-ENTAILMENT" links, or "LOCAL-CONTRADICTION" links, and so on. This field is for those "labels". Such labels are provided as "Convenience" tools --- to help the consumer modules of alignment.Link can classify various Links without hard-coding aliner Id or link's getIDs. 
+
+Actual values for the labels will be updated. TBDTBDTBDTBD</description>
+                    <rangeTypeName>uima.cas.StringList</rangeTypeName>
+                </featureDescription>
+            </features>
+        </typeDescription>
+        <typeDescription>
+            <name>eu.excitement.type.alignment.Direction</name>
+            <description>A string sub-type for direciton marking. This type is a enum-like value that holds all possible directional marker for alignment.Link. This value is only to be used within an alignment.Link instance. 
+
+Allowed values are: "TtoH", "HtoT", "Symmetric"</description>
+            <supertypeName>uima.cas.String</supertypeName>
+            <allowedValues>
+                <value>
+                    <string>TtoH</string>
+                    <description>The relation is from TSideTarget to HSideTarget.</description>
+                </value>
+                <value>
+                    <string>HtoT</string>
+                    <description>The relation is from HSideTarget to TSideTarget</description>
+                </value>
+                <value>
+                    <string>Bidirection</string>
+                    <description>The relation is a bidirectional (symmetric) one. (Both TSideTarget to HSideTarget and HSideTarget to TSideTarget.)</description>
+                </value>
+            </allowedValues>
+        </typeDescription>
+        <typeDescription>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.coref.type.CoreferenceLink</name>
+            <description/>
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+            <features>
+                <featureDescription>
+                    <name>next</name>
+                    <description/>
+                    <rangeTypeName>de.tudarmstadt.ukp.dkpro.core.api.coref.type.CoreferenceLink</rangeTypeName>
+                </featureDescription>
+                <featureDescription>
+                    <name>referenceType</name>
                     <description/>
                     <rangeTypeName>uima.cas.String</rangeTypeName>
                 </featureDescription>
             </features>
         </typeDescription>
         <typeDescription>
-            <name>eu.excitement.type.temporal.Time</name>
-            <description/>
-            <supertypeName>eu.excitement.type.temporal.TemporalExpression</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.ADJ</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.ADV</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.ART</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.CARD</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.CONJ</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.N</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.NN</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.N</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.NP</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.N</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.O</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.tweet.AT</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.O</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.tweet.DM</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.O</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.tweet.EMO</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.O</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.tweet.HASH</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.O</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.tweet.INT</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.O</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.tweet.NNV</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.N</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.tweet.NPV</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.N</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.tweet.URL</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.O</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Animal</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Cardinal</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.ContactInfo</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Date</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Disease</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Event</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Fac</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.FacDesc</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Game</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Gpe</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.GpeDesc</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Language</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Law</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Location</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.ner.type.Money</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.chunk.ADJC</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.chunk.Chunk</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.chunk.ADVC</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.chunk.Chunk</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.chunk.CONCJ</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.chunk.Chunk</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.ADJP</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.ADVP</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.CC</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.CD</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.CONJP</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.constituent.Constituent</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.ABBREV</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.ACOMP</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.ADVCL</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.ADVMOD</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.AGENT</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.AMOD</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.APPOS</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.ATTR</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.AUX0</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.AUXPASS</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.CC</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.CCOMP</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.COMPLM</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.CONJ</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.CONJP</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.CONJ_YET</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.COP</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.CSUBJ</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.CSUBJPASS</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.DEP</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.DET</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.DOBJ</name>
-            <description/>
-            <supertypeName>de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>eu.excitement.type.temporal.Date</name>
-            <description/>
-            <supertypeName>eu.excitement.type.temporal.TemporalExpression</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>eu.excitement.type.temporal.Duration</name>
-            <description/>
-            <supertypeName>eu.excitement.type.temporal.TemporalExpression</supertypeName>
-        </typeDescription>
-        <typeDescription>
-            <name>eu.excitement.type.temporal.Set</name>
-            <description/>
-            <supertypeName>eu.excitement.type.temporal.TemporalExpression</supertypeName>
-        </typeDescription>
-		<typeDescription>
-		  <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.UsageSample</name>
-		  <description/>
-		  <supertypeName>uima.tcas.Annotation</supertypeName>
-		</typeDescription>
-		<typeDescription>
-		  <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateSeed</name>
-		  <description/>
-		  <supertypeName>uima.tcas.Annotation</supertypeName>
-		  <features>
-			<featureDescription>
-			  <name>piuses</name>
-			  <description/>
-			  <rangeTypeName>uima.cas.FSArray</rangeTypeName>
-			  <elementType>ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateInUsageSample</elementType>
-			</featureDescription>
-		  </features>
-		</typeDescription>
-		<typeDescription>
-		  <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentExample</name>
-		  <description/>
-		  <supertypeName>uima.tcas.Annotation</supertypeName>
-		  <features>
-			<featureDescription>
-			  <name>argument</name>
-			  <description/>
-			  <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument</rangeTypeName>
-			</featureDescription>
-			<featureDescription>
-			  <name>aiuses</name>
-			  <description/>
-			  <rangeTypeName>uima.cas.FSArray</rangeTypeName>
-			  <elementType>ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample</elementType>
-			</featureDescription>
-		  </features>
-		</typeDescription>
-		<typeDescription>
-		  <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.Predicate</name>
-		  <description/>
-		  <supertypeName>uima.tcas.Annotation</supertypeName>
-		  <features>
-			<featureDescription>
-			  <name>name</name>
-			  <description/>
-			  <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateName</rangeTypeName>
-			</featureDescription>
-			<featureDescription>
-			  <name>seeds</name>
-			  <description/>
-			  <rangeTypeName>uima.cas.FSArray</rangeTypeName>
-			  <elementType>ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateSeed</elementType>
-			</featureDescription>
-		  </features>
-		</typeDescription>
-		<typeDescription>
-		  <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument</name>
-		  <description/>
-		  <supertypeName>uima.tcas.Annotation</supertypeName>
-		  <features>
-			<featureDescription>
-			  <name>role</name>
-			  <description/>
-			  <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentRole</rangeTypeName>
-			</featureDescription>
-			<featureDescription>
-			  <name>types</name>
-			  <description/>
-			  <rangeTypeName>uima.cas.FSArray</rangeTypeName>
-			  <elementType>ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentType</elementType>
-			</featureDescription>
-			<featureDescription>
-			  <name>examples</name>
-			  <description/>
-			  <rangeTypeName>uima.cas.FSArray</rangeTypeName>
-			  <elementType>ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentExample</elementType>
-			</featureDescription>
-			<featureDescription>
-			  <name>marker</name>
-			  <description/>
-			  <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.Marker</rangeTypeName>
-			</featureDescription>
-		  </features>
-		</typeDescription>
-		<typeDescription>
-		  <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentRole</name>
-		  <description/>
-		  <supertypeName>uima.tcas.Annotation</supertypeName>
-		</typeDescription>
-		<typeDescription>
-		  <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentType</name>
-		  <description/>
-		  <supertypeName>uima.tcas.Annotation</supertypeName>
-		</typeDescription>
-		<typeDescription>
-		  <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateName</name>
-		  <description/>
-		  <supertypeName>uima.tcas.Annotation</supertypeName>
-		</typeDescription>
-		<typeDescription>
-		  <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateInUsageSample</name>
-		  <description/>
-		  <supertypeName>uima.tcas.Annotation</supertypeName>
-		  <features>
-			<featureDescription>
-			  <name>predicateSeed</name>
-			  <description/>
-			  <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateSeed</rangeTypeName>
-			</featureDescription>
-		  </features>
-		</typeDescription>
-		<typeDescription>
-		  <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample</name>
-		  <description/>
-		  <supertypeName>uima.tcas.Annotation</supertypeName>
-		  <features>
-			<featureDescription>
-			  <name>argumentExample</name>
-			  <description/>
-			  <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentExample</rangeTypeName>
-			</featureDescription>
-			<featureDescription>
-			  <name>pius</name>
-			  <description/>
-			  <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateInUsageSample</rangeTypeName>
-			</featureDescription>
-		  </features>
-		</typeDescription>
-		<typeDescription>
-		  <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.LemmaByPos</name>
-		  <description/>
-		  <supertypeName>uima.tcas.Annotation</supertypeName>
-		  <features>
-			<featureDescription>
-			  <name>value</name>
-			  <description/>
-			  <rangeTypeName>uima.cas.String</rangeTypeName>
-			</featureDescription>
-			<featureDescription>
-			  <name>posStr</name>
-			  <description/>
-			  <rangeTypeName>uima.cas.String</rangeTypeName>
-			</featureDescription>
-		  </features>
-		</typeDescription>
-		<typeDescription>
-		  <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.NounLemma</name>
-		  <description/>
-		  <supertypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.LemmaByPos</supertypeName>
-		</typeDescription>
-		<typeDescription>
-		  <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.VerbLemma</name>
-		  <description/>
-		  <supertypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.LemmaByPos</supertypeName>
-		</typeDescription>
-		<typeDescription>
-		  <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.Marker</name>
-		  <description/>
-		  <supertypeName>uima.tcas.Annotation</supertypeName>
-		</typeDescription>
-	</types>
+            <name>de.tudarmstadt.ukp.dkpro.core.api.coref.type.CoreferenceChain</name>
+            <description/>
+            <supertypeName>uima.cas.AnnotationBase</supertypeName>
+            <features>
+                <featureDescription>
+                    <name>first</name>
+                    <description/>
+                    <rangeTypeName>de.tudarmstadt.ukp.dkpro.core.api.coref.type.CoreferenceLink</rangeTypeName>
+                </featureDescription>
+            </features>
+        </typeDescription>
+    </types>
 </typeSystemDescription>

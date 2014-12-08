@@ -14,8 +14,12 @@ import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.cas.CASRuntimeException;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.resource.ResourceInitializationException;
+import org.xml.sax.SAXException;
+
+import bsh.util.Util;
 
 import edu.cuny.qc.perceptron.core.Perceptron;
+import edu.cuny.qc.util.Utils;
 import eu.excitementproject.eop.common.utilities.file.FileUtils;
 import eu.excitementproject.eop.common.utilities.uima.UimaUtils;
 import eu.excitementproject.eop.common.utilities.uima.UimaUtilsException;
@@ -46,6 +50,14 @@ public class SpecHandler {
 		
 		if (Perceptron.controllerStatic.enhanceSpecs) {
 			throw new SpecException("That's it! We had our fun, we printed out some help for you to enhance the specs - but obviously we cannot get an actual system run from this :)");
+		}
+		
+		try {
+			Utils.dumpSingleFileTypeSystem(SpecHandler.ae);
+		} catch (SAXException e) {
+			throw new SpecException(e);
+		} catch (ResourceInitializationException e) {
+			throw new SpecException(e);
 		}
 		
 		return specs;

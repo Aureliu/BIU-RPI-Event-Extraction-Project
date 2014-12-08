@@ -10,7 +10,7 @@ import org.apache.uima.jcas.cas.TOP_Type;
 
 
 /** 
- * Updated by JCasGen Mon Nov 17 02:12:27 EST 2014
+ * Updated by JCasGen Mon Dec 08 02:19:30 EST 2014
  * XML source: C:/Java/Git/breep/ace_events/src/main/resources/desc/OdieInputTypes.xml
  * @generated */
 public class VerbLemma extends LemmaByPos {

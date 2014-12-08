@@ -168,6 +168,21 @@
           <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepSpecPosNoContext</rangeTypeName>
         </featureDescription>
         <featureDescription>
+          <name>treeoutDepFlatNoContext</name>
+          <description/>
+          <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatNoContext</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>treeoutDepFlatGenPosNoContext</name>
+          <description/>
+          <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatGenPosNoContext</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>treeoutDepFlatSpecPosNoContext</name>
+          <description/>
+          <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatSpecPosNoContext</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
           <name>treeoutDepWithContext</name>
           <description/>
           <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepWithContext</rangeTypeName>
@@ -196,6 +211,21 @@
           <name>treeoutDepPrepSpecPosNoContext</name>
           <description/>
           <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepSpecPosNoContext</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>treeoutDepFlatPrepNoContext</name>
+          <description/>
+          <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatPrepNoContext</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>treeoutDepFlatPrepGenPosNoContext</name>
+          <description/>
+          <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatPrepGenPosNoContext</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>treeoutDepFlatPrepSpecPosNoContext</name>
+          <description/>
+          <rangeTypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatPrepSpecPosNoContext</rangeTypeName>
         </featureDescription>
         <featureDescription>
           <name>treeoutDepPrepWithContext</name>
@@ -284,6 +314,21 @@
       <supertypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout</supertypeName>
     </typeDescription>
     <typeDescription>
+      <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatNoContext</name>
+      <description/>
+      <supertypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout</supertypeName>
+    </typeDescription>
+    <typeDescription>
+      <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatGenPosNoContext</name>
+      <description/>
+      <supertypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout</supertypeName>
+    </typeDescription>
+    <typeDescription>
+      <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatSpecPosNoContext</name>
+      <description/>
+      <supertypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout</supertypeName>
+    </typeDescription>
+    <typeDescription>
       <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepWithContext</name>
       <description/>
       <supertypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout</supertypeName>
@@ -310,6 +355,21 @@
     </typeDescription>
     <typeDescription>
       <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepSpecPosNoContext</name>
+      <description/>
+      <supertypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout</supertypeName>
+    </typeDescription>
+    <typeDescription>
+      <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatPrepNoContext</name>
+      <description/>
+      <supertypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout</supertypeName>
+    </typeDescription>
+    <typeDescription>
+      <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatPrepGenPosNoContext</name>
+      <description/>
+      <supertypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout</supertypeName>
+    </typeDescription>
+    <typeDescription>
+      <name>ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatPrepSpecPosNoContext</name>
       <description/>
       <supertypeName>ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout</supertypeName>
     </typeDescription>

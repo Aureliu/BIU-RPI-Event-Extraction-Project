@@ -2,6 +2,7 @@ package edu.cuny.qc.util;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.util.Arrays;
@@ -20,10 +21,14 @@ import org.apache.commons.collections15.MultiMap;
 import org.apache.commons.collections15.multimap.MultiHashMap;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
+import org.apache.uima.analysis_engine.AnalysisEngine;
 import org.apache.uima.cas.CASException;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.tcas.Annotation;
+import org.apache.uima.resource.ResourceInitializationException;
+import org.apache.uima.resource.metadata.TypeSystemDescription;
 import org.uimafit.util.JCasUtil;
+import org.xml.sax.SAXException;
 
 import ac.biu.nlp.nlp.ace_uima.AceException;
 import ac.biu.nlp.nlp.ace_uima.analyze.SignalAnalyzer;
@@ -263,4 +268,10 @@ public class Utils {
 		 String result = StringUtils.join(strs, " ");
 		 return result;
 	}
+	
+	public static void dumpSingleFileTypeSystem(AnalysisEngine ae) throws ResourceInitializationException, FileNotFoundException, SAXException, IOException {
+		TypeSystemDescription typeSystemDescription = ae.getAnalysisEngineMetaData().getTypeSystem();
+		typeSystemDescription.toXML(new FileOutputStream(new File("./TypeSystem.xml")));
+	}
+
 }

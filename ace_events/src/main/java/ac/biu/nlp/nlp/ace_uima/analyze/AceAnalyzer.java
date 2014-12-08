@@ -78,6 +78,7 @@ import edu.cuny.qc.ace.acetypes.AceArgumentType;
 import edu.cuny.qc.ace.acetypes.AceEntityMention;
 import edu.cuny.qc.scorer.mechanism.WordNetSignalMechanism;
 import edu.cuny.qc.util.PosMap;
+import edu.cuny.qc.util.TreeToLineString;
 import edu.cuny.qc.util.Utils;
 import edu.cuny.qc.util.fragment.Facet;
 import edu.cuny.qc.util.fragment.FragmentAndReference;
@@ -96,7 +97,6 @@ import eu.excitementproject.eop.common.representation.parse.tree.AbstractNodeUti
 import eu.excitementproject.eop.common.representation.parse.tree.TreeAndParentMap;
 import eu.excitementproject.eop.common.representation.parse.tree.TreeAndParentMap.TreeAndParentMapException;
 import eu.excitementproject.eop.common.representation.parse.tree.dependency.basic.BasicNode;
-import eu.excitementproject.eop.common.representation.parse.tree.dependency.view.TreeToLineString;
 import eu.excitementproject.eop.common.representation.partofspeech.CanonicalPosTag;
 import eu.excitementproject.eop.common.representation.partofspeech.PartOfSpeech;
 import eu.excitementproject.eop.common.representation.partofspeech.UnsupportedPosTagStringException;
@@ -356,8 +356,14 @@ public class AceAnalyzer {
 						docs.updateDocs(key, "ArgHead", "DepToken", TreeToLineString.getStringWordRel(argHeadFrag, true, true));						
 						docs.updateDocs(key, "ArgHead", "DepGenPOS", TreeToLineString.getStringRelCanonicalPos(argHeadFrag, true, true));						
 						docs.updateDocs(key, "ArgHead", "DepSpecPOS", TreeToLineString.getStringRelPos(argHeadFrag, true, true));
-						updateLinkingTreeFrags(key, eventAnchor, argHead, argMention, "Link", "Dep", "DepPrep", "DepGenPOS", "DepPrepGenPOS", "DepSpecPOS", "DepPrepSpecPOS",    true, true);
-						updateLinkingTreeFrags(key, eventAnchor, argHead, argMention, "Link", "*Dep", "*DepPrep", "*DepGenPOS", "*DepPrepGenPOS", "*DepSpecPOS", "*DepPrepSpecPOS", false, true);
+						updateLinkingTreeFrags(key, eventAnchor, argHead, argMention, "Link",
+								"Dep", "DepPrep", "DepGenPOS", "DepPrepGenPOS", "DepSpecPOS", "DepPrepSpecPOS",
+								"DepFlat", "DepFlatPrep", "DepFlatGenPOS", "DepFlatPrepGenPOS", "DepFlatSpecPOS", "DepFlatPrepSpecPOS",
+								true, true);
+						updateLinkingTreeFrags(key, eventAnchor, argHead, argMention, "Link",
+								"*Dep", "*DepPrep", "*DepGenPOS", "*DepPrepGenPOS", "*DepSpecPOS", "*DepPrepSpecPOS",
+								"*DepFlat", "*DepFlatPrep", "*DepFlatGenPOS", "*DepFlatPrepGenPOS", "*DepFlatSpecPOS", "*DepFlatPrepSpecPOS",
+								false, true);
 
 						if (argHead!=null) {
 							String specTypeStr = getSpecType(argHead.getMention());
@@ -1070,6 +1076,9 @@ public class AceAnalyzer {
 			String fieldDep, String fieldDepPrep, 
 			String fieldDepGenPos, String fieldDepPrepGenPos,
 			String fieldDepSpecPos, String fieldDepPrepSpecPos, 
+			String fieldDepFlat, String fieldDepFlatPrep, 
+			String fieldDepFlatGenPos, String fieldDepFlatPrepGenPos,
+			String fieldDepFlatSpecPos, String fieldDepFlatPrepSpecPos, 
 			boolean withContext, boolean withMagicNodes) throws Exception {
 		List<BasicNode> roots = null;
 		List<BasicNode> rootsNoConj = null;
@@ -1092,6 +1101,13 @@ public class AceAnalyzer {
 		String treeoutDepPrepGenPos =	abnormal!=null ? abnormal : TreeToLineString.getStringRelPrepCanonicalPos(rootsNoConj, withContext, withMagicNodes);
 		String treeoutDepPrepSpecPos =	abnormal!=null ? abnormal : TreeToLineString.getStringRelPrepPos(rootsNoConj, withContext, withMagicNodes);
 		
+		String treeoutDepFlat =			abnormal!=null ? abnormal : TreeToLineString.getStringRelFlat(roots, withContext, withMagicNodes);
+		String treeoutDepFlatGenPos =	abnormal!=null ? abnormal : TreeToLineString.getStringRelFlatCanonicalPos(roots, withContext, withMagicNodes);
+		String treeoutDepFlatSpecPos =	abnormal!=null ? abnormal : TreeToLineString.getStringRelFlatPos(roots, withContext, withMagicNodes);
+		String treeoutDepFlatPrep =			abnormal!=null ? abnormal : TreeToLineString.getStringRelFlatPrep(rootsNoConj, withContext, withMagicNodes);
+		String treeoutDepFlatPrepGenPos =	abnormal!=null ? abnormal : TreeToLineString.getStringRelFlatPrepCanonicalPos(rootsNoConj, withContext, withMagicNodes);
+		String treeoutDepFlatPrepSpecPos =	abnormal!=null ? abnormal : TreeToLineString.getStringRelFlatPrepPos(rootsNoConj, withContext, withMagicNodes);
+		
 		/// DEBUG
 		if (!withContext &&
 				(treeoutDepPrep.contains("conj") || treeoutDepPrepGenPos.contains("conj") || treeoutDepPrepSpecPos.contains("conj"))) {
@@ -1106,6 +1122,14 @@ public class AceAnalyzer {
 		updateLinkingTreeFragsSingle(key, fragmentEdges, field, fieldDepPrep,        treeoutDepPrep);
 		updateLinkingTreeFragsSingle(key, fragmentEdges, field, fieldDepPrepGenPos,  treeoutDepPrepGenPos);
 		updateLinkingTreeFragsSingle(key, fragmentEdges, field, fieldDepPrepSpecPos, treeoutDepPrepSpecPos);
+
+		updateLinkingTreeFragsSingle(key, fragmentEdges, field, fieldDepFlat,        treeoutDepFlat);
+		updateLinkingTreeFragsSingle(key, fragmentEdges, field, fieldDepFlatGenPos,  treeoutDepFlatGenPos);
+		updateLinkingTreeFragsSingle(key, fragmentEdges, field, fieldDepFlatSpecPos, treeoutDepFlatSpecPos);
+		updateLinkingTreeFragsSingle(key, fragmentEdges, field, fieldDepFlatPrep,        treeoutDepFlatPrep);
+		updateLinkingTreeFragsSingle(key, fragmentEdges, field, fieldDepFlatPrepGenPos,  treeoutDepFlatPrepGenPos);
+		updateLinkingTreeFragsSingle(key, fragmentEdges, field, fieldDepFlatPrepSpecPos, treeoutDepFlatPrepSpecPos);
+
 	}
 
 	protected void updateLinkingTreeFragsSingle(Map<String, String> key, Integer fragmentEdges, String field, String subfield, String value) throws Exception {

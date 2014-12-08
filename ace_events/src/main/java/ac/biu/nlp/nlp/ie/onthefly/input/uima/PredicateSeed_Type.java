@@ -14,7 +14,7 @@ import org.apache.uima.jcas.JCasRegistry;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** 
- * Updated by JCasGen Mon Nov 17 02:12:27 EST 2014
+ * Updated by JCasGen Mon Dec 08 02:19:30 EST 2014
  * @generated */
 public class PredicateSeed_Type extends Annotation_Type {
   /** @generated */

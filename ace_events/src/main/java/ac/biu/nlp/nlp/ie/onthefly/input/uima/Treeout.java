@@ -11,7 +11,7 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Mon Dec 08 02:19:30 EST 2014
+ * Updated by JCasGen Sat Dec 13 00:42:43 EST 2014
  * XML source: C:/Java/Git/breep/ace_events/src/main/resources/desc/OdieInputTypes.xml
  * @generated */
 public class Treeout extends Annotation {
@@ -96,7 +96,7 @@ public class Treeout extends Annotation {
     if (Treeout_Type.featOkTst && ((Treeout_Type)jcasType).casFeat_vAll == null)
       jcasType.jcas.throwFeatMissing("vAll", "ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout");
     jcasType.ll_cas.ll_setRefValue(addr, ((Treeout_Type)jcasType).casFeatCode_vAll, jcasType.ll_cas.ll_getFSRef(v));}    
-                    //*--------------*
+                      //*--------------*
   //* Feature: role
 
   /** getter for role - gets 

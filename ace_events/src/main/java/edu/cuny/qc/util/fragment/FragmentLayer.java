@@ -161,7 +161,9 @@ public class FragmentLayer {
 	 */
 	public FragmentAndReference getRootLinkingTreeFragment(Annotation /*EventMentionAnchor*/ eventAnchor, Annotation /*BasicArgumentMentionHead*/ argHead, boolean removeConj, Object /*EventMentionArgument*/ argMention) throws CASException, AceException, TreeAndParentMapException, TreeFragmentBuilderException, AceAbnormalMessage, FragmentLayerException {
 		if (eventAnchor == null || argHead == null) {
+			/// SilentErrors
 			throw new AceAbnormalMessage("NullParam");
+			///
 		}
 		
 		//logger.trace("%%% 1");
@@ -169,21 +171,20 @@ public class FragmentLayer {
 		MultiMap<Sentence, Token> sentence2tokens_1 = Utils.getCoveringSentences(eventAnchor, tokenIndex);
 		MultiMap<Sentence, Token> sentence2tokens_2 = Utils.getCoveringSentences(argHead, tokenIndex);
 		if (sentence2tokens_1.size() == 0 || sentence2tokens_2.size() == 0) {
-			String err;
-			if (sentence2tokens_1.size() == 0 && sentence2tokens_2.size() != 0) {
-				err = String.format("trigger=%s", UimaUtils.annotationToString(eventAnchor));
-			}
-			else if (sentence2tokens_2.size() == 0 && sentence2tokens_1.size() != 0) {
-				err = String.format("arg=%s", UimaUtils.annotationToString(argHead));
-			}
-			else {
-				err = String.format("trigger=%s and arg=%s", UimaUtils.annotationToString(eventAnchor), UimaUtils.annotationToString(argHead));
-			}
-			throw new AceAbnormalMessage(String.format("ERR:No Covering Sentence for %s", err));
-//			throw new AceAbnormalMessage("ERR:No Covering Sentence"
-//					//, String.format("Got at least one of the two annotations, that is not covered by any sentence: " +
-//					//"(%s sentences, %s sentences)", sentence2tokens_1.size(), sentence2tokens_2.size()), logger
-//					);
+			/// SilentErrors
+//			String err;
+//			if (sentence2tokens_1.size() == 0 && sentence2tokens_2.size() != 0) {
+//				err = String.format("trigger=%s", UimaUtils.annotationToString(eventAnchor));
+//			}
+//			else if (sentence2tokens_2.size() == 0 && sentence2tokens_1.size() != 0) {
+//				err = String.format("arg=%s", UimaUtils.annotationToString(argHead));
+//			}
+//			else {
+//				err = String.format("trigger=%s and arg=%s", UimaUtils.annotationToString(eventAnchor), UimaUtils.annotationToString(argHead));
+//			}
+//			throw new AceAbnormalMessage(String.format("ERR:No Covering Sentence for %s", err));
+			throw new AceAbnormalMessage("NoCoveringSentence");
+			///
 		}
 		if (sentence2tokens_1.size() > 1 || sentence2tokens_2.size() > 1) {
 			throw new AceAbnormalMessage("ERR:Multiple Sentence Annotation", String.format("Got at least one of the two annotations, that does not cover exactly one sentence: " +

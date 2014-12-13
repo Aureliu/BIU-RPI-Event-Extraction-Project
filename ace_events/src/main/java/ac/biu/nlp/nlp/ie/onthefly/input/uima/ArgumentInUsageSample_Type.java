@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** 
- * Updated by JCasGen Mon Dec 08 02:19:30 EST 2014
+ * Updated by JCasGen Sat Dec 13 00:42:43 EST 2014
  * @generated */
 public class ArgumentInUsageSample_Type extends Annotation_Type {
   /** @generated */
@@ -207,60 +207,6 @@ public class ArgumentInUsageSample_Type extends Annotation_Type {
   
  
   /** @generated */
-  final Feature casFeat_treeoutDepWithContext;
-  /** @generated */
-  final int     casFeatCode_treeoutDepWithContext;
-  /** @generated */ 
-  public int getTreeoutDepWithContext(int addr) {
-        if (featOkTst && casFeat_treeoutDepWithContext == null)
-      jcas.throwFeatMissing("treeoutDepWithContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
-    return ll_cas.ll_getRefValue(addr, casFeatCode_treeoutDepWithContext);
-  }
-  /** @generated */    
-  public void setTreeoutDepWithContext(int addr, int v) {
-        if (featOkTst && casFeat_treeoutDepWithContext == null)
-      jcas.throwFeatMissing("treeoutDepWithContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
-    ll_cas.ll_setRefValue(addr, casFeatCode_treeoutDepWithContext, v);}
-    
-  
- 
-  /** @generated */
-  final Feature casFeat_treeoutDepGenPosWithContext;
-  /** @generated */
-  final int     casFeatCode_treeoutDepGenPosWithContext;
-  /** @generated */ 
-  public int getTreeoutDepGenPosWithContext(int addr) {
-        if (featOkTst && casFeat_treeoutDepGenPosWithContext == null)
-      jcas.throwFeatMissing("treeoutDepGenPosWithContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
-    return ll_cas.ll_getRefValue(addr, casFeatCode_treeoutDepGenPosWithContext);
-  }
-  /** @generated */    
-  public void setTreeoutDepGenPosWithContext(int addr, int v) {
-        if (featOkTst && casFeat_treeoutDepGenPosWithContext == null)
-      jcas.throwFeatMissing("treeoutDepGenPosWithContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
-    ll_cas.ll_setRefValue(addr, casFeatCode_treeoutDepGenPosWithContext, v);}
-    
-  
- 
-  /** @generated */
-  final Feature casFeat_treeoutDepSpecPosWithContext;
-  /** @generated */
-  final int     casFeatCode_treeoutDepSpecPosWithContext;
-  /** @generated */ 
-  public int getTreeoutDepSpecPosWithContext(int addr) {
-        if (featOkTst && casFeat_treeoutDepSpecPosWithContext == null)
-      jcas.throwFeatMissing("treeoutDepSpecPosWithContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
-    return ll_cas.ll_getRefValue(addr, casFeatCode_treeoutDepSpecPosWithContext);
-  }
-  /** @generated */    
-  public void setTreeoutDepSpecPosWithContext(int addr, int v) {
-        if (featOkTst && casFeat_treeoutDepSpecPosWithContext == null)
-      jcas.throwFeatMissing("treeoutDepSpecPosWithContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
-    ll_cas.ll_setRefValue(addr, casFeatCode_treeoutDepSpecPosWithContext, v);}
-    
-  
- 
-  /** @generated */
   final Feature casFeat_treeoutDepPrepNoContext;
   /** @generated */
   final int     casFeatCode_treeoutDepPrepNoContext;
@@ -369,56 +315,434 @@ public class ArgumentInUsageSample_Type extends Annotation_Type {
   
  
   /** @generated */
-  final Feature casFeat_treeoutDepPrepWithContext;
+  final Feature casFeat_treeoutDepUp2NoContext;
   /** @generated */
-  final int     casFeatCode_treeoutDepPrepWithContext;
+  final int     casFeatCode_treeoutDepUp2NoContext;
   /** @generated */ 
-  public int getTreeoutDepPrepWithContext(int addr) {
-        if (featOkTst && casFeat_treeoutDepPrepWithContext == null)
-      jcas.throwFeatMissing("treeoutDepPrepWithContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
-    return ll_cas.ll_getRefValue(addr, casFeatCode_treeoutDepPrepWithContext);
+  public int getTreeoutDepUp2NoContext(int addr) {
+        if (featOkTst && casFeat_treeoutDepUp2NoContext == null)
+      jcas.throwFeatMissing("treeoutDepUp2NoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
+    return ll_cas.ll_getRefValue(addr, casFeatCode_treeoutDepUp2NoContext);
   }
   /** @generated */    
-  public void setTreeoutDepPrepWithContext(int addr, int v) {
-        if (featOkTst && casFeat_treeoutDepPrepWithContext == null)
-      jcas.throwFeatMissing("treeoutDepPrepWithContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
-    ll_cas.ll_setRefValue(addr, casFeatCode_treeoutDepPrepWithContext, v);}
+  public void setTreeoutDepUp2NoContext(int addr, int v) {
+        if (featOkTst && casFeat_treeoutDepUp2NoContext == null)
+      jcas.throwFeatMissing("treeoutDepUp2NoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
+    ll_cas.ll_setRefValue(addr, casFeatCode_treeoutDepUp2NoContext, v);}
     
   
  
   /** @generated */
-  final Feature casFeat_treeoutDepPrepGenPosWithContext;
+  final Feature casFeat_treeoutDepUp2GenPosNoContext;
   /** @generated */
-  final int     casFeatCode_treeoutDepPrepGenPosWithContext;
+  final int     casFeatCode_treeoutDepUp2GenPosNoContext;
   /** @generated */ 
-  public int getTreeoutDepPrepGenPosWithContext(int addr) {
-        if (featOkTst && casFeat_treeoutDepPrepGenPosWithContext == null)
-      jcas.throwFeatMissing("treeoutDepPrepGenPosWithContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
-    return ll_cas.ll_getRefValue(addr, casFeatCode_treeoutDepPrepGenPosWithContext);
+  public int getTreeoutDepUp2GenPosNoContext(int addr) {
+        if (featOkTst && casFeat_treeoutDepUp2GenPosNoContext == null)
+      jcas.throwFeatMissing("treeoutDepUp2GenPosNoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
+    return ll_cas.ll_getRefValue(addr, casFeatCode_treeoutDepUp2GenPosNoContext);
   }
   /** @generated */    
-  public void setTreeoutDepPrepGenPosWithContext(int addr, int v) {
-        if (featOkTst && casFeat_treeoutDepPrepGenPosWithContext == null)
-      jcas.throwFeatMissing("treeoutDepPrepGenPosWithContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
-    ll_cas.ll_setRefValue(addr, casFeatCode_treeoutDepPrepGenPosWithContext, v);}
+  public void setTreeoutDepUp2GenPosNoContext(int addr, int v) {
+        if (featOkTst && casFeat_treeoutDepUp2GenPosNoContext == null)
+      jcas.throwFeatMissing("treeoutDepUp2GenPosNoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
+    ll_cas.ll_setRefValue(addr, casFeatCode_treeoutDepUp2GenPosNoContext, v);}
     
   
  
   /** @generated */
-  final Feature casFeat_treeoutDepPrepSpecPosWithContext;
+  final Feature casFeat_treeoutDepUp2SpecPosNoContext;
   /** @generated */
-  final int     casFeatCode_treeoutDepPrepSpecPosWithContext;
+  final int     casFeatCode_treeoutDepUp2SpecPosNoContext;
   /** @generated */ 
-  public int getTreeoutDepPrepSpecPosWithContext(int addr) {
-        if (featOkTst && casFeat_treeoutDepPrepSpecPosWithContext == null)
-      jcas.throwFeatMissing("treeoutDepPrepSpecPosWithContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
-    return ll_cas.ll_getRefValue(addr, casFeatCode_treeoutDepPrepSpecPosWithContext);
+  public int getTreeoutDepUp2SpecPosNoContext(int addr) {
+        if (featOkTst && casFeat_treeoutDepUp2SpecPosNoContext == null)
+      jcas.throwFeatMissing("treeoutDepUp2SpecPosNoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
+    return ll_cas.ll_getRefValue(addr, casFeatCode_treeoutDepUp2SpecPosNoContext);
   }
   /** @generated */    
-  public void setTreeoutDepPrepSpecPosWithContext(int addr, int v) {
-        if (featOkTst && casFeat_treeoutDepPrepSpecPosWithContext == null)
-      jcas.throwFeatMissing("treeoutDepPrepSpecPosWithContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
-    ll_cas.ll_setRefValue(addr, casFeatCode_treeoutDepPrepSpecPosWithContext, v);}
+  public void setTreeoutDepUp2SpecPosNoContext(int addr, int v) {
+        if (featOkTst && casFeat_treeoutDepUp2SpecPosNoContext == null)
+      jcas.throwFeatMissing("treeoutDepUp2SpecPosNoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
+    ll_cas.ll_setRefValue(addr, casFeatCode_treeoutDepUp2SpecPosNoContext, v);}
+    
+  
+ 
+  /** @generated */
+  final Feature casFeat_treeoutDepFlatUp2NoContext;
+  /** @generated */
+  final int     casFeatCode_treeoutDepFlatUp2NoContext;
+  /** @generated */ 
+  public int getTreeoutDepFlatUp2NoContext(int addr) {
+        if (featOkTst && casFeat_treeoutDepFlatUp2NoContext == null)
+      jcas.throwFeatMissing("treeoutDepFlatUp2NoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
+    return ll_cas.ll_getRefValue(addr, casFeatCode_treeoutDepFlatUp2NoContext);
+  }
+  /** @generated */    
+  public void setTreeoutDepFlatUp2NoContext(int addr, int v) {
+        if (featOkTst && casFeat_treeoutDepFlatUp2NoContext == null)
+      jcas.throwFeatMissing("treeoutDepFlatUp2NoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
+    ll_cas.ll_setRefValue(addr, casFeatCode_treeoutDepFlatUp2NoContext, v);}
+    
+  
+ 
+  /** @generated */
+  final Feature casFeat_treeoutDepFlatUp2GenPosNoContext;
+  /** @generated */
+  final int     casFeatCode_treeoutDepFlatUp2GenPosNoContext;
+  /** @generated */ 
+  public int getTreeoutDepFlatUp2GenPosNoContext(int addr) {
+        if (featOkTst && casFeat_treeoutDepFlatUp2GenPosNoContext == null)
+      jcas.throwFeatMissing("treeoutDepFlatUp2GenPosNoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
+    return ll_cas.ll_getRefValue(addr, casFeatCode_treeoutDepFlatUp2GenPosNoContext);
+  }
+  /** @generated */    
+  public void setTreeoutDepFlatUp2GenPosNoContext(int addr, int v) {
+        if (featOkTst && casFeat_treeoutDepFlatUp2GenPosNoContext == null)
+      jcas.throwFeatMissing("treeoutDepFlatUp2GenPosNoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
+    ll_cas.ll_setRefValue(addr, casFeatCode_treeoutDepFlatUp2GenPosNoContext, v);}
+    
+  
+ 
+  /** @generated */
+  final Feature casFeat_treeoutDepFlatUp2SpecPosNoContext;
+  /** @generated */
+  final int     casFeatCode_treeoutDepFlatUp2SpecPosNoContext;
+  /** @generated */ 
+  public int getTreeoutDepFlatUp2SpecPosNoContext(int addr) {
+        if (featOkTst && casFeat_treeoutDepFlatUp2SpecPosNoContext == null)
+      jcas.throwFeatMissing("treeoutDepFlatUp2SpecPosNoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
+    return ll_cas.ll_getRefValue(addr, casFeatCode_treeoutDepFlatUp2SpecPosNoContext);
+  }
+  /** @generated */    
+  public void setTreeoutDepFlatUp2SpecPosNoContext(int addr, int v) {
+        if (featOkTst && casFeat_treeoutDepFlatUp2SpecPosNoContext == null)
+      jcas.throwFeatMissing("treeoutDepFlatUp2SpecPosNoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
+    ll_cas.ll_setRefValue(addr, casFeatCode_treeoutDepFlatUp2SpecPosNoContext, v);}
+    
+  
+ 
+  /** @generated */
+  final Feature casFeat_treeoutDepPrepUp2NoContext;
+  /** @generated */
+  final int     casFeatCode_treeoutDepPrepUp2NoContext;
+  /** @generated */ 
+  public int getTreeoutDepPrepUp2NoContext(int addr) {
+        if (featOkTst && casFeat_treeoutDepPrepUp2NoContext == null)
+      jcas.throwFeatMissing("treeoutDepPrepUp2NoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
+    return ll_cas.ll_getRefValue(addr, casFeatCode_treeoutDepPrepUp2NoContext);
+  }
+  /** @generated */    
+  public void setTreeoutDepPrepUp2NoContext(int addr, int v) {
+        if (featOkTst && casFeat_treeoutDepPrepUp2NoContext == null)
+      jcas.throwFeatMissing("treeoutDepPrepUp2NoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
+    ll_cas.ll_setRefValue(addr, casFeatCode_treeoutDepPrepUp2NoContext, v);}
+    
+  
+ 
+  /** @generated */
+  final Feature casFeat_treeoutDepPrepUp2GenPosNoContext;
+  /** @generated */
+  final int     casFeatCode_treeoutDepPrepUp2GenPosNoContext;
+  /** @generated */ 
+  public int getTreeoutDepPrepUp2GenPosNoContext(int addr) {
+        if (featOkTst && casFeat_treeoutDepPrepUp2GenPosNoContext == null)
+      jcas.throwFeatMissing("treeoutDepPrepUp2GenPosNoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
+    return ll_cas.ll_getRefValue(addr, casFeatCode_treeoutDepPrepUp2GenPosNoContext);
+  }
+  /** @generated */    
+  public void setTreeoutDepPrepUp2GenPosNoContext(int addr, int v) {
+        if (featOkTst && casFeat_treeoutDepPrepUp2GenPosNoContext == null)
+      jcas.throwFeatMissing("treeoutDepPrepUp2GenPosNoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
+    ll_cas.ll_setRefValue(addr, casFeatCode_treeoutDepPrepUp2GenPosNoContext, v);}
+    
+  
+ 
+  /** @generated */
+  final Feature casFeat_treeoutDepPrepUp2SpecPosNoContext;
+  /** @generated */
+  final int     casFeatCode_treeoutDepPrepUp2SpecPosNoContext;
+  /** @generated */ 
+  public int getTreeoutDepPrepUp2SpecPosNoContext(int addr) {
+        if (featOkTst && casFeat_treeoutDepPrepUp2SpecPosNoContext == null)
+      jcas.throwFeatMissing("treeoutDepPrepUp2SpecPosNoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
+    return ll_cas.ll_getRefValue(addr, casFeatCode_treeoutDepPrepUp2SpecPosNoContext);
+  }
+  /** @generated */    
+  public void setTreeoutDepPrepUp2SpecPosNoContext(int addr, int v) {
+        if (featOkTst && casFeat_treeoutDepPrepUp2SpecPosNoContext == null)
+      jcas.throwFeatMissing("treeoutDepPrepUp2SpecPosNoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
+    ll_cas.ll_setRefValue(addr, casFeatCode_treeoutDepPrepUp2SpecPosNoContext, v);}
+    
+  
+ 
+  /** @generated */
+  final Feature casFeat_treeoutDepFlatPrepUp2NoContext;
+  /** @generated */
+  final int     casFeatCode_treeoutDepFlatPrepUp2NoContext;
+  /** @generated */ 
+  public int getTreeoutDepFlatPrepUp2NoContext(int addr) {
+        if (featOkTst && casFeat_treeoutDepFlatPrepUp2NoContext == null)
+      jcas.throwFeatMissing("treeoutDepFlatPrepUp2NoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
+    return ll_cas.ll_getRefValue(addr, casFeatCode_treeoutDepFlatPrepUp2NoContext);
+  }
+  /** @generated */    
+  public void setTreeoutDepFlatPrepUp2NoContext(int addr, int v) {
+        if (featOkTst && casFeat_treeoutDepFlatPrepUp2NoContext == null)
+      jcas.throwFeatMissing("treeoutDepFlatPrepUp2NoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
+    ll_cas.ll_setRefValue(addr, casFeatCode_treeoutDepFlatPrepUp2NoContext, v);}
+    
+  
+ 
+  /** @generated */
+  final Feature casFeat_treeoutDepFlatPrepUp2GenPosNoContext;
+  /** @generated */
+  final int     casFeatCode_treeoutDepFlatPrepUp2GenPosNoContext;
+  /** @generated */ 
+  public int getTreeoutDepFlatPrepUp2GenPosNoContext(int addr) {
+        if (featOkTst && casFeat_treeoutDepFlatPrepUp2GenPosNoContext == null)
+      jcas.throwFeatMissing("treeoutDepFlatPrepUp2GenPosNoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
+    return ll_cas.ll_getRefValue(addr, casFeatCode_treeoutDepFlatPrepUp2GenPosNoContext);
+  }
+  /** @generated */    
+  public void setTreeoutDepFlatPrepUp2GenPosNoContext(int addr, int v) {
+        if (featOkTst && casFeat_treeoutDepFlatPrepUp2GenPosNoContext == null)
+      jcas.throwFeatMissing("treeoutDepFlatPrepUp2GenPosNoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
+    ll_cas.ll_setRefValue(addr, casFeatCode_treeoutDepFlatPrepUp2GenPosNoContext, v);}
+    
+  
+ 
+  /** @generated */
+  final Feature casFeat_treeoutDepFlatPrepUp2SpecPosNoContext;
+  /** @generated */
+  final int     casFeatCode_treeoutDepFlatPrepUp2SpecPosNoContext;
+  /** @generated */ 
+  public int getTreeoutDepFlatPrepUp2SpecPosNoContext(int addr) {
+        if (featOkTst && casFeat_treeoutDepFlatPrepUp2SpecPosNoContext == null)
+      jcas.throwFeatMissing("treeoutDepFlatPrepUp2SpecPosNoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
+    return ll_cas.ll_getRefValue(addr, casFeatCode_treeoutDepFlatPrepUp2SpecPosNoContext);
+  }
+  /** @generated */    
+  public void setTreeoutDepFlatPrepUp2SpecPosNoContext(int addr, int v) {
+        if (featOkTst && casFeat_treeoutDepFlatPrepUp2SpecPosNoContext == null)
+      jcas.throwFeatMissing("treeoutDepFlatPrepUp2SpecPosNoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
+    ll_cas.ll_setRefValue(addr, casFeatCode_treeoutDepFlatPrepUp2SpecPosNoContext, v);}
+    
+  
+ 
+  /** @generated */
+  final Feature casFeat_treeoutDepUp3NoContext;
+  /** @generated */
+  final int     casFeatCode_treeoutDepUp3NoContext;
+  /** @generated */ 
+  public int getTreeoutDepUp3NoContext(int addr) {
+        if (featOkTst && casFeat_treeoutDepUp3NoContext == null)
+      jcas.throwFeatMissing("treeoutDepUp3NoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
+    return ll_cas.ll_getRefValue(addr, casFeatCode_treeoutDepUp3NoContext);
+  }
+  /** @generated */    
+  public void setTreeoutDepUp3NoContext(int addr, int v) {
+        if (featOkTst && casFeat_treeoutDepUp3NoContext == null)
+      jcas.throwFeatMissing("treeoutDepUp3NoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
+    ll_cas.ll_setRefValue(addr, casFeatCode_treeoutDepUp3NoContext, v);}
+    
+  
+ 
+  /** @generated */
+  final Feature casFeat_treeoutDepUp3GenPosNoContext;
+  /** @generated */
+  final int     casFeatCode_treeoutDepUp3GenPosNoContext;
+  /** @generated */ 
+  public int getTreeoutDepUp3GenPosNoContext(int addr) {
+        if (featOkTst && casFeat_treeoutDepUp3GenPosNoContext == null)
+      jcas.throwFeatMissing("treeoutDepUp3GenPosNoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
+    return ll_cas.ll_getRefValue(addr, casFeatCode_treeoutDepUp3GenPosNoContext);
+  }
+  /** @generated */    
+  public void setTreeoutDepUp3GenPosNoContext(int addr, int v) {
+        if (featOkTst && casFeat_treeoutDepUp3GenPosNoContext == null)
+      jcas.throwFeatMissing("treeoutDepUp3GenPosNoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
+    ll_cas.ll_setRefValue(addr, casFeatCode_treeoutDepUp3GenPosNoContext, v);}
+    
+  
+ 
+  /** @generated */
+  final Feature casFeat_treeoutDepUp3SpecPosNoContext;
+  /** @generated */
+  final int     casFeatCode_treeoutDepUp3SpecPosNoContext;
+  /** @generated */ 
+  public int getTreeoutDepUp3SpecPosNoContext(int addr) {
+        if (featOkTst && casFeat_treeoutDepUp3SpecPosNoContext == null)
+      jcas.throwFeatMissing("treeoutDepUp3SpecPosNoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
+    return ll_cas.ll_getRefValue(addr, casFeatCode_treeoutDepUp3SpecPosNoContext);
+  }
+  /** @generated */    
+  public void setTreeoutDepUp3SpecPosNoContext(int addr, int v) {
+        if (featOkTst && casFeat_treeoutDepUp3SpecPosNoContext == null)
+      jcas.throwFeatMissing("treeoutDepUp3SpecPosNoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
+    ll_cas.ll_setRefValue(addr, casFeatCode_treeoutDepUp3SpecPosNoContext, v);}
+    
+  
+ 
+  /** @generated */
+  final Feature casFeat_treeoutDepFlatUp3NoContext;
+  /** @generated */
+  final int     casFeatCode_treeoutDepFlatUp3NoContext;
+  /** @generated */ 
+  public int getTreeoutDepFlatUp3NoContext(int addr) {
+        if (featOkTst && casFeat_treeoutDepFlatUp3NoContext == null)
+      jcas.throwFeatMissing("treeoutDepFlatUp3NoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
+    return ll_cas.ll_getRefValue(addr, casFeatCode_treeoutDepFlatUp3NoContext);
+  }
+  /** @generated */    
+  public void setTreeoutDepFlatUp3NoContext(int addr, int v) {
+        if (featOkTst && casFeat_treeoutDepFlatUp3NoContext == null)
+      jcas.throwFeatMissing("treeoutDepFlatUp3NoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
+    ll_cas.ll_setRefValue(addr, casFeatCode_treeoutDepFlatUp3NoContext, v);}
+    
+  
+ 
+  /** @generated */
+  final Feature casFeat_treeoutDepFlatUp3GenPosNoContext;
+  /** @generated */
+  final int     casFeatCode_treeoutDepFlatUp3GenPosNoContext;
+  /** @generated */ 
+  public int getTreeoutDepFlatUp3GenPosNoContext(int addr) {
+        if (featOkTst && casFeat_treeoutDepFlatUp3GenPosNoContext == null)
+      jcas.throwFeatMissing("treeoutDepFlatUp3GenPosNoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
+    return ll_cas.ll_getRefValue(addr, casFeatCode_treeoutDepFlatUp3GenPosNoContext);
+  }
+  /** @generated */    
+  public void setTreeoutDepFlatUp3GenPosNoContext(int addr, int v) {
+        if (featOkTst && casFeat_treeoutDepFlatUp3GenPosNoContext == null)
+      jcas.throwFeatMissing("treeoutDepFlatUp3GenPosNoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
+    ll_cas.ll_setRefValue(addr, casFeatCode_treeoutDepFlatUp3GenPosNoContext, v);}
+    
+  
+ 
+  /** @generated */
+  final Feature casFeat_treeoutDepFlatUp3SpecPosNoContext;
+  /** @generated */
+  final int     casFeatCode_treeoutDepFlatUp3SpecPosNoContext;
+  /** @generated */ 
+  public int getTreeoutDepFlatUp3SpecPosNoContext(int addr) {
+        if (featOkTst && casFeat_treeoutDepFlatUp3SpecPosNoContext == null)
+      jcas.throwFeatMissing("treeoutDepFlatUp3SpecPosNoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
+    return ll_cas.ll_getRefValue(addr, casFeatCode_treeoutDepFlatUp3SpecPosNoContext);
+  }
+  /** @generated */    
+  public void setTreeoutDepFlatUp3SpecPosNoContext(int addr, int v) {
+        if (featOkTst && casFeat_treeoutDepFlatUp3SpecPosNoContext == null)
+      jcas.throwFeatMissing("treeoutDepFlatUp3SpecPosNoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
+    ll_cas.ll_setRefValue(addr, casFeatCode_treeoutDepFlatUp3SpecPosNoContext, v);}
+    
+  
+ 
+  /** @generated */
+  final Feature casFeat_treeoutDepPrepUp3NoContext;
+  /** @generated */
+  final int     casFeatCode_treeoutDepPrepUp3NoContext;
+  /** @generated */ 
+  public int getTreeoutDepPrepUp3NoContext(int addr) {
+        if (featOkTst && casFeat_treeoutDepPrepUp3NoContext == null)
+      jcas.throwFeatMissing("treeoutDepPrepUp3NoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
+    return ll_cas.ll_getRefValue(addr, casFeatCode_treeoutDepPrepUp3NoContext);
+  }
+  /** @generated */    
+  public void setTreeoutDepPrepUp3NoContext(int addr, int v) {
+        if (featOkTst && casFeat_treeoutDepPrepUp3NoContext == null)
+      jcas.throwFeatMissing("treeoutDepPrepUp3NoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
+    ll_cas.ll_setRefValue(addr, casFeatCode_treeoutDepPrepUp3NoContext, v);}
+    
+  
+ 
+  /** @generated */
+  final Feature casFeat_treeoutDepPrepUp3GenPosNoContext;
+  /** @generated */
+  final int     casFeatCode_treeoutDepPrepUp3GenPosNoContext;
+  /** @generated */ 
+  public int getTreeoutDepPrepUp3GenPosNoContext(int addr) {
+        if (featOkTst && casFeat_treeoutDepPrepUp3GenPosNoContext == null)
+      jcas.throwFeatMissing("treeoutDepPrepUp3GenPosNoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
+    return ll_cas.ll_getRefValue(addr, casFeatCode_treeoutDepPrepUp3GenPosNoContext);
+  }
+  /** @generated */    
+  public void setTreeoutDepPrepUp3GenPosNoContext(int addr, int v) {
+        if (featOkTst && casFeat_treeoutDepPrepUp3GenPosNoContext == null)
+      jcas.throwFeatMissing("treeoutDepPrepUp3GenPosNoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
+    ll_cas.ll_setRefValue(addr, casFeatCode_treeoutDepPrepUp3GenPosNoContext, v);}
+    
+  
+ 
+  /** @generated */
+  final Feature casFeat_treeoutDepPrepUp3SpecPosNoContext;
+  /** @generated */
+  final int     casFeatCode_treeoutDepPrepUp3SpecPosNoContext;
+  /** @generated */ 
+  public int getTreeoutDepPrepUp3SpecPosNoContext(int addr) {
+        if (featOkTst && casFeat_treeoutDepPrepUp3SpecPosNoContext == null)
+      jcas.throwFeatMissing("treeoutDepPrepUp3SpecPosNoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
+    return ll_cas.ll_getRefValue(addr, casFeatCode_treeoutDepPrepUp3SpecPosNoContext);
+  }
+  /** @generated */    
+  public void setTreeoutDepPrepUp3SpecPosNoContext(int addr, int v) {
+        if (featOkTst && casFeat_treeoutDepPrepUp3SpecPosNoContext == null)
+      jcas.throwFeatMissing("treeoutDepPrepUp3SpecPosNoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
+    ll_cas.ll_setRefValue(addr, casFeatCode_treeoutDepPrepUp3SpecPosNoContext, v);}
+    
+  
+ 
+  /** @generated */
+  final Feature casFeat_treeoutDepFlatPrepUp3NoContext;
+  /** @generated */
+  final int     casFeatCode_treeoutDepFlatPrepUp3NoContext;
+  /** @generated */ 
+  public int getTreeoutDepFlatPrepUp3NoContext(int addr) {
+        if (featOkTst && casFeat_treeoutDepFlatPrepUp3NoContext == null)
+      jcas.throwFeatMissing("treeoutDepFlatPrepUp3NoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
+    return ll_cas.ll_getRefValue(addr, casFeatCode_treeoutDepFlatPrepUp3NoContext);
+  }
+  /** @generated */    
+  public void setTreeoutDepFlatPrepUp3NoContext(int addr, int v) {
+        if (featOkTst && casFeat_treeoutDepFlatPrepUp3NoContext == null)
+      jcas.throwFeatMissing("treeoutDepFlatPrepUp3NoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
+    ll_cas.ll_setRefValue(addr, casFeatCode_treeoutDepFlatPrepUp3NoContext, v);}
+    
+  
+ 
+  /** @generated */
+  final Feature casFeat_treeoutDepFlatPrepUp3GenPosNoContext;
+  /** @generated */
+  final int     casFeatCode_treeoutDepFlatPrepUp3GenPosNoContext;
+  /** @generated */ 
+  public int getTreeoutDepFlatPrepUp3GenPosNoContext(int addr) {
+        if (featOkTst && casFeat_treeoutDepFlatPrepUp3GenPosNoContext == null)
+      jcas.throwFeatMissing("treeoutDepFlatPrepUp3GenPosNoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
+    return ll_cas.ll_getRefValue(addr, casFeatCode_treeoutDepFlatPrepUp3GenPosNoContext);
+  }
+  /** @generated */    
+  public void setTreeoutDepFlatPrepUp3GenPosNoContext(int addr, int v) {
+        if (featOkTst && casFeat_treeoutDepFlatPrepUp3GenPosNoContext == null)
+      jcas.throwFeatMissing("treeoutDepFlatPrepUp3GenPosNoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
+    ll_cas.ll_setRefValue(addr, casFeatCode_treeoutDepFlatPrepUp3GenPosNoContext, v);}
+    
+  
+ 
+  /** @generated */
+  final Feature casFeat_treeoutDepFlatPrepUp3SpecPosNoContext;
+  /** @generated */
+  final int     casFeatCode_treeoutDepFlatPrepUp3SpecPosNoContext;
+  /** @generated */ 
+  public int getTreeoutDepFlatPrepUp3SpecPosNoContext(int addr) {
+        if (featOkTst && casFeat_treeoutDepFlatPrepUp3SpecPosNoContext == null)
+      jcas.throwFeatMissing("treeoutDepFlatPrepUp3SpecPosNoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
+    return ll_cas.ll_getRefValue(addr, casFeatCode_treeoutDepFlatPrepUp3SpecPosNoContext);
+  }
+  /** @generated */    
+  public void setTreeoutDepFlatPrepUp3SpecPosNoContext(int addr, int v) {
+        if (featOkTst && casFeat_treeoutDepFlatPrepUp3SpecPosNoContext == null)
+      jcas.throwFeatMissing("treeoutDepFlatPrepUp3SpecPosNoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample");
+    ll_cas.ll_setRefValue(addr, casFeatCode_treeoutDepFlatPrepUp3SpecPosNoContext, v);}
     
   
 
@@ -467,18 +791,6 @@ public class ArgumentInUsageSample_Type extends Annotation_Type {
     casFeatCode_treeoutDepFlatSpecPosNoContext  = (null == casFeat_treeoutDepFlatSpecPosNoContext) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_treeoutDepFlatSpecPosNoContext).getCode();
 
  
-    casFeat_treeoutDepWithContext = jcas.getRequiredFeatureDE(casType, "treeoutDepWithContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepWithContext", featOkTst);
-    casFeatCode_treeoutDepWithContext  = (null == casFeat_treeoutDepWithContext) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_treeoutDepWithContext).getCode();
-
- 
-    casFeat_treeoutDepGenPosWithContext = jcas.getRequiredFeatureDE(casType, "treeoutDepGenPosWithContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepGenPosWithContext", featOkTst);
-    casFeatCode_treeoutDepGenPosWithContext  = (null == casFeat_treeoutDepGenPosWithContext) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_treeoutDepGenPosWithContext).getCode();
-
- 
-    casFeat_treeoutDepSpecPosWithContext = jcas.getRequiredFeatureDE(casType, "treeoutDepSpecPosWithContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepSpecPosWithContext", featOkTst);
-    casFeatCode_treeoutDepSpecPosWithContext  = (null == casFeat_treeoutDepSpecPosWithContext) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_treeoutDepSpecPosWithContext).getCode();
-
- 
     casFeat_treeoutDepPrepNoContext = jcas.getRequiredFeatureDE(casType, "treeoutDepPrepNoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepNoContext", featOkTst);
     casFeatCode_treeoutDepPrepNoContext  = (null == casFeat_treeoutDepPrepNoContext) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_treeoutDepPrepNoContext).getCode();
 
@@ -503,16 +815,100 @@ public class ArgumentInUsageSample_Type extends Annotation_Type {
     casFeatCode_treeoutDepFlatPrepSpecPosNoContext  = (null == casFeat_treeoutDepFlatPrepSpecPosNoContext) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_treeoutDepFlatPrepSpecPosNoContext).getCode();
 
  
-    casFeat_treeoutDepPrepWithContext = jcas.getRequiredFeatureDE(casType, "treeoutDepPrepWithContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepWithContext", featOkTst);
-    casFeatCode_treeoutDepPrepWithContext  = (null == casFeat_treeoutDepPrepWithContext) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_treeoutDepPrepWithContext).getCode();
+    casFeat_treeoutDepUp2NoContext = jcas.getRequiredFeatureDE(casType, "treeoutDepUp2NoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepUp2NoContext", featOkTst);
+    casFeatCode_treeoutDepUp2NoContext  = (null == casFeat_treeoutDepUp2NoContext) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_treeoutDepUp2NoContext).getCode();
 
  
-    casFeat_treeoutDepPrepGenPosWithContext = jcas.getRequiredFeatureDE(casType, "treeoutDepPrepGenPosWithContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepGenPosWithContext", featOkTst);
-    casFeatCode_treeoutDepPrepGenPosWithContext  = (null == casFeat_treeoutDepPrepGenPosWithContext) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_treeoutDepPrepGenPosWithContext).getCode();
+    casFeat_treeoutDepUp2GenPosNoContext = jcas.getRequiredFeatureDE(casType, "treeoutDepUp2GenPosNoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepUp2GenPosNoContext", featOkTst);
+    casFeatCode_treeoutDepUp2GenPosNoContext  = (null == casFeat_treeoutDepUp2GenPosNoContext) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_treeoutDepUp2GenPosNoContext).getCode();
 
  
-    casFeat_treeoutDepPrepSpecPosWithContext = jcas.getRequiredFeatureDE(casType, "treeoutDepPrepSpecPosWithContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepSpecPosWithContext", featOkTst);
-    casFeatCode_treeoutDepPrepSpecPosWithContext  = (null == casFeat_treeoutDepPrepSpecPosWithContext) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_treeoutDepPrepSpecPosWithContext).getCode();
+    casFeat_treeoutDepUp2SpecPosNoContext = jcas.getRequiredFeatureDE(casType, "treeoutDepUp2SpecPosNoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepUp2SpecPosNoContext", featOkTst);
+    casFeatCode_treeoutDepUp2SpecPosNoContext  = (null == casFeat_treeoutDepUp2SpecPosNoContext) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_treeoutDepUp2SpecPosNoContext).getCode();
+
+ 
+    casFeat_treeoutDepFlatUp2NoContext = jcas.getRequiredFeatureDE(casType, "treeoutDepFlatUp2NoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatUp2NoContext", featOkTst);
+    casFeatCode_treeoutDepFlatUp2NoContext  = (null == casFeat_treeoutDepFlatUp2NoContext) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_treeoutDepFlatUp2NoContext).getCode();
+
+ 
+    casFeat_treeoutDepFlatUp2GenPosNoContext = jcas.getRequiredFeatureDE(casType, "treeoutDepFlatUp2GenPosNoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatUp2GenPosNoContext", featOkTst);
+    casFeatCode_treeoutDepFlatUp2GenPosNoContext  = (null == casFeat_treeoutDepFlatUp2GenPosNoContext) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_treeoutDepFlatUp2GenPosNoContext).getCode();
+
+ 
+    casFeat_treeoutDepFlatUp2SpecPosNoContext = jcas.getRequiredFeatureDE(casType, "treeoutDepFlatUp2SpecPosNoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatUp2SpecPosNoContext", featOkTst);
+    casFeatCode_treeoutDepFlatUp2SpecPosNoContext  = (null == casFeat_treeoutDepFlatUp2SpecPosNoContext) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_treeoutDepFlatUp2SpecPosNoContext).getCode();
+
+ 
+    casFeat_treeoutDepPrepUp2NoContext = jcas.getRequiredFeatureDE(casType, "treeoutDepPrepUp2NoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepUp2NoContext", featOkTst);
+    casFeatCode_treeoutDepPrepUp2NoContext  = (null == casFeat_treeoutDepPrepUp2NoContext) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_treeoutDepPrepUp2NoContext).getCode();
+
+ 
+    casFeat_treeoutDepPrepUp2GenPosNoContext = jcas.getRequiredFeatureDE(casType, "treeoutDepPrepUp2GenPosNoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepUp2GenPosNoContext", featOkTst);
+    casFeatCode_treeoutDepPrepUp2GenPosNoContext  = (null == casFeat_treeoutDepPrepUp2GenPosNoContext) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_treeoutDepPrepUp2GenPosNoContext).getCode();
+
+ 
+    casFeat_treeoutDepPrepUp2SpecPosNoContext = jcas.getRequiredFeatureDE(casType, "treeoutDepPrepUp2SpecPosNoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepUp2SpecPosNoContext", featOkTst);
+    casFeatCode_treeoutDepPrepUp2SpecPosNoContext  = (null == casFeat_treeoutDepPrepUp2SpecPosNoContext) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_treeoutDepPrepUp2SpecPosNoContext).getCode();
+
+ 
+    casFeat_treeoutDepFlatPrepUp2NoContext = jcas.getRequiredFeatureDE(casType, "treeoutDepFlatPrepUp2NoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatPrepUp2NoContext", featOkTst);
+    casFeatCode_treeoutDepFlatPrepUp2NoContext  = (null == casFeat_treeoutDepFlatPrepUp2NoContext) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_treeoutDepFlatPrepUp2NoContext).getCode();
+
+ 
+    casFeat_treeoutDepFlatPrepUp2GenPosNoContext = jcas.getRequiredFeatureDE(casType, "treeoutDepFlatPrepUp2GenPosNoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatPrepUp2GenPosNoContext", featOkTst);
+    casFeatCode_treeoutDepFlatPrepUp2GenPosNoContext  = (null == casFeat_treeoutDepFlatPrepUp2GenPosNoContext) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_treeoutDepFlatPrepUp2GenPosNoContext).getCode();
+
+ 
+    casFeat_treeoutDepFlatPrepUp2SpecPosNoContext = jcas.getRequiredFeatureDE(casType, "treeoutDepFlatPrepUp2SpecPosNoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatPrepUp2SpecPosNoContext", featOkTst);
+    casFeatCode_treeoutDepFlatPrepUp2SpecPosNoContext  = (null == casFeat_treeoutDepFlatPrepUp2SpecPosNoContext) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_treeoutDepFlatPrepUp2SpecPosNoContext).getCode();
+
+ 
+    casFeat_treeoutDepUp3NoContext = jcas.getRequiredFeatureDE(casType, "treeoutDepUp3NoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepUp3NoContext", featOkTst);
+    casFeatCode_treeoutDepUp3NoContext  = (null == casFeat_treeoutDepUp3NoContext) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_treeoutDepUp3NoContext).getCode();
+
+ 
+    casFeat_treeoutDepUp3GenPosNoContext = jcas.getRequiredFeatureDE(casType, "treeoutDepUp3GenPosNoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepUp3GenPosNoContext", featOkTst);
+    casFeatCode_treeoutDepUp3GenPosNoContext  = (null == casFeat_treeoutDepUp3GenPosNoContext) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_treeoutDepUp3GenPosNoContext).getCode();
+
+ 
+    casFeat_treeoutDepUp3SpecPosNoContext = jcas.getRequiredFeatureDE(casType, "treeoutDepUp3SpecPosNoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepUp3SpecPosNoContext", featOkTst);
+    casFeatCode_treeoutDepUp3SpecPosNoContext  = (null == casFeat_treeoutDepUp3SpecPosNoContext) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_treeoutDepUp3SpecPosNoContext).getCode();
+
+ 
+    casFeat_treeoutDepFlatUp3NoContext = jcas.getRequiredFeatureDE(casType, "treeoutDepFlatUp3NoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatUp3NoContext", featOkTst);
+    casFeatCode_treeoutDepFlatUp3NoContext  = (null == casFeat_treeoutDepFlatUp3NoContext) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_treeoutDepFlatUp3NoContext).getCode();
+
+ 
+    casFeat_treeoutDepFlatUp3GenPosNoContext = jcas.getRequiredFeatureDE(casType, "treeoutDepFlatUp3GenPosNoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatUp3GenPosNoContext", featOkTst);
+    casFeatCode_treeoutDepFlatUp3GenPosNoContext  = (null == casFeat_treeoutDepFlatUp3GenPosNoContext) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_treeoutDepFlatUp3GenPosNoContext).getCode();
+
+ 
+    casFeat_treeoutDepFlatUp3SpecPosNoContext = jcas.getRequiredFeatureDE(casType, "treeoutDepFlatUp3SpecPosNoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatUp3SpecPosNoContext", featOkTst);
+    casFeatCode_treeoutDepFlatUp3SpecPosNoContext  = (null == casFeat_treeoutDepFlatUp3SpecPosNoContext) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_treeoutDepFlatUp3SpecPosNoContext).getCode();
+
+ 
+    casFeat_treeoutDepPrepUp3NoContext = jcas.getRequiredFeatureDE(casType, "treeoutDepPrepUp3NoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepUp3NoContext", featOkTst);
+    casFeatCode_treeoutDepPrepUp3NoContext  = (null == casFeat_treeoutDepPrepUp3NoContext) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_treeoutDepPrepUp3NoContext).getCode();
+
+ 
+    casFeat_treeoutDepPrepUp3GenPosNoContext = jcas.getRequiredFeatureDE(casType, "treeoutDepPrepUp3GenPosNoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepUp3GenPosNoContext", featOkTst);
+    casFeatCode_treeoutDepPrepUp3GenPosNoContext  = (null == casFeat_treeoutDepPrepUp3GenPosNoContext) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_treeoutDepPrepUp3GenPosNoContext).getCode();
+
+ 
+    casFeat_treeoutDepPrepUp3SpecPosNoContext = jcas.getRequiredFeatureDE(casType, "treeoutDepPrepUp3SpecPosNoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepUp3SpecPosNoContext", featOkTst);
+    casFeatCode_treeoutDepPrepUp3SpecPosNoContext  = (null == casFeat_treeoutDepPrepUp3SpecPosNoContext) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_treeoutDepPrepUp3SpecPosNoContext).getCode();
+
+ 
+    casFeat_treeoutDepFlatPrepUp3NoContext = jcas.getRequiredFeatureDE(casType, "treeoutDepFlatPrepUp3NoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatPrepUp3NoContext", featOkTst);
+    casFeatCode_treeoutDepFlatPrepUp3NoContext  = (null == casFeat_treeoutDepFlatPrepUp3NoContext) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_treeoutDepFlatPrepUp3NoContext).getCode();
+
+ 
+    casFeat_treeoutDepFlatPrepUp3GenPosNoContext = jcas.getRequiredFeatureDE(casType, "treeoutDepFlatPrepUp3GenPosNoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatPrepUp3GenPosNoContext", featOkTst);
+    casFeatCode_treeoutDepFlatPrepUp3GenPosNoContext  = (null == casFeat_treeoutDepFlatPrepUp3GenPosNoContext) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_treeoutDepFlatPrepUp3GenPosNoContext).getCode();
+
+ 
+    casFeat_treeoutDepFlatPrepUp3SpecPosNoContext = jcas.getRequiredFeatureDE(casType, "treeoutDepFlatPrepUp3SpecPosNoContext", "ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatPrepUp3SpecPosNoContext", featOkTst);
+    casFeatCode_treeoutDepFlatPrepUp3SpecPosNoContext  = (null == casFeat_treeoutDepFlatPrepUp3SpecPosNoContext) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_treeoutDepFlatPrepUp3SpecPosNoContext).getCode();
 
   }
 }

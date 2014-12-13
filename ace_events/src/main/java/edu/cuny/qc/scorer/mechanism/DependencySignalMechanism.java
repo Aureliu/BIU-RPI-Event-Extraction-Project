@@ -23,6 +23,7 @@ import ac.biu.nlp.nlp.ace_uima.AceException;
 import ac.biu.nlp.nlp.ie.onthefly.input.SpecAnnotator;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.Treeout;
+
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatGenPosNoContext;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatNoContext;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatPrepGenPosNoContext;
@@ -38,6 +39,33 @@ import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepSpecPosNoContext;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepSpecPosNoContext;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepSpecPosWithContext;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepWithContext;
+
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatUp2GenPosNoContext;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatUp2NoContext;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatPrepUp2GenPosNoContext;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatPrepUp2NoContext;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatPrepUp2SpecPosNoContext;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatUp2SpecPosNoContext;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepUp2GenPosNoContext;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepUp2NoContext;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepUp2GenPosNoContext;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepUp2NoContext;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepUp2SpecPosNoContext;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepUp2SpecPosNoContext;
+
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatUp3GenPosNoContext;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatUp3NoContext;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatPrepUp3GenPosNoContext;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatPrepUp3NoContext;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatPrepUp3SpecPosNoContext;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepFlatUp3SpecPosNoContext;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepUp3GenPosNoContext;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepUp3NoContext;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepUp3GenPosNoContext;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepUp3NoContext;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepPrepUp3SpecPosNoContext;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.TreeoutDepUp3SpecPosNoContext;
+
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.VAll;
 
 import com.google.common.cache.CacheBuilder;
@@ -86,7 +114,11 @@ public class DependencySignalMechanism extends SignalMechanism {
 		
 		try {
 			outFile1= new PrintStream(new File(Utils.OUTPUT_FOLDER, "TextTreeouts1.txt"));
-			outFile1.printf("Id^Doc^Sentence^Fragment^Facet^Trigger^ArgHead^Role^DepNoContext^DepGenPosNoContext^DepSpecPosNoContext^DepPrepNoContext^DepPrepGenPosNoContext^DepPrepSpecPosNoContext^DepFlatNoContext^DepFlatGenPosNoContext^DepFlatSpecPosNoContext^DepFlatPrepNoContext^DepFlatPrepGenPosNoContext^DepFlatPrepSpecPosNoContext\n");			
+			outFile1.printf("Id^Doc^Sentence^Subtype^Role^Trigger^ArgHead^Fragment^Facet^" +
+					"DepNoContext^DepGenPosNoContext^DepSpecPosNoContext^DepPrepNoContext^DepPrepGenPosNoContext^DepPrepSpecPosNoContext^DepFlatNoContext^DepFlatGenPosNoContext^DepFlatSpecPosNoContext^DepFlatPrepNoContext^DepFlatPrepGenPosNoContext^DepFlatPrepSpecPosNoContext" +
+					"DepUp2NoContext^DepUp2GenPosNoContext^DepUp2SpecPosNoContext^DepPrepUp2NoContext^DepPrepUp2GenPosNoContext^DepPrepUp2SpecPosNoContext^DepFlatUp2NoContext^DepFlatUp2GenPosNoContext^DepFlatUp2SpecPosNoContext^DepFlatPrepUp2NoContext^DepFlatPrepUp2GenPosNoContext^DepFlatPrepUp2SpecPosNoContext" +
+					"DepUp3NoContext^DepUp3GenPosNoContext^DepUp3SpecPosNoContext^DepPrepUp3NoContext^DepPrepUp3GenPosNoContext^DepPrepUp3SpecPosNoContext^DepFlatUp3NoContext^DepFlatUp3GenPosNoContext^DepFlatUp3SpecPosNoContext^DepFlatPrepUp3NoContext^DepFlatPrepUp3GenPosNoContext^DepFlatPrepUp3SpecPosNoContext" +
+					"\n");			
 			outFile2 = new PrintStream(new File(Utils.OUTPUT_FOLDER, "TextTreeouts2.txt"));
 			outFile2.printf("Id^Doc^Trigger^ArgHead^Sentence^Role\n");
 			entries1 = new LinkedHashSet<String>();
@@ -416,10 +448,11 @@ public class DependencySignalMechanism extends SignalMechanism {
 							SentenceInstance.currEventType,
 							SentenceInstance.currRole,
 							UimaUtils.annotationToString(textTriggerToken, false, false),
-							UimaUtils.annotationToString(textArgHeadAnno).replace('\n',' '),
-							origSentenceStr,
+							UimaUtils.annotationToString(textArgHeadAnno).replace('\n',' ').replace("\"", "*"),
+							origSentenceStr.replace("\"", "*"),
 							//Utils.treeToSurfaceText(linkFrag.getFragmentRoot()),
 							facetStr,
+							
 							outsMap.get("DepNoContext"),
 							outsMap.get("DepGenPosNoContext"),
 							outsMap.get("DepSpecPosNoContext"),
@@ -431,7 +464,35 @@ public class DependencySignalMechanism extends SignalMechanism {
 							outsMap.get("DepFlatSpecPosNoContext"),
 							outsMap.get("DepFlatPrepNoContext"),
 							outsMap.get("DepFlatPrepGenPosNoContext"),
-							outsMap.get("DepFlatPrepSpecPosNoContext")
+							outsMap.get("DepFlatPrepSpecPosNoContext"),
+							
+							outsMap.get("DepUp2NoContext"),
+							outsMap.get("DepUp2GenPosNoContext"),
+							outsMap.get("DepUp2SpecPosNoContext"),
+							outsMap.get("DepPrepUp2NoContext"),
+							outsMap.get("DepPrepUp2GenPosNoContext"),
+							outsMap.get("DepPrepUp2SpecPosNoContext"),
+							outsMap.get("DepFlatUp2NoContext"),
+							outsMap.get("DepFlatUp2GenPosNoContext"),
+							outsMap.get("DepFlatUp2SpecPosNoContext"),
+							outsMap.get("DepFlatPrepUp2NoContext"),
+							outsMap.get("DepFlatPrepUp2GenPosNoContext"),
+							outsMap.get("DepFlatPrepUp2SpecPosNoContext"),
+							
+							outsMap.get("DepUp3NoContext"),
+							outsMap.get("DepUp3GenPosNoContext"),
+							outsMap.get("DepUp3SpecPosNoContext"),
+							outsMap.get("DepPrepUp3NoContext"),
+							outsMap.get("DepPrepUp3GenPosNoContext"),
+							outsMap.get("DepPrepUp3SpecPosNoContext"),
+							outsMap.get("DepFlatUp3NoContext"),
+							outsMap.get("DepFlatUp3GenPosNoContext"),
+							outsMap.get("DepFlatUp3SpecPosNoContext"),
+							outsMap.get("DepFlatPrepUp3NoContext"),
+							outsMap.get("DepFlatPrepUp3GenPosNoContext"),
+							outsMap.get("DepFlatPrepUp3SpecPosNoContext")
+							
+							
 							);
 					String entry2 = String.format("%s^%s^%s^%s^%s^%s^%s\nDepNoContext:       %s\nDepFlatNoContext:   %s\nDepPrepNoContext:   %s\n%s\n\n",
 							//outFileId,
@@ -441,13 +502,19 @@ public class DependencySignalMechanism extends SignalMechanism {
 							SentenceInstance.currEventType,
 							SentenceInstance.currRole,
 							UimaUtils.annotationToString(textTriggerToken, false, false),
-							UimaUtils.annotationToString(textArgHeadAnno).replace('\n',' '),
-							origSentenceStr,
+							UimaUtils.annotationToString(textArgHeadAnno).replace('\n',' ').replace("\"", "*"),
+							origSentenceStr.replace("\"", "*"),
 							outsMap.get("DepNoContext"),
 							outsMap.get("DepFlatNoContext"),
 							outsMap.get("DepPrepNoContext"),
 							treePrintStr
 							);
+					
+					// DEBUG
+					if (entry2.contains("combat[2521:2527]")) {
+						System.out.printf("");
+					}
+					////
 					
 					if (!entries1.contains(entry1) && !entries2.contains(entry2)) {
 						entries1.add(entry1);
@@ -563,6 +630,228 @@ public class DependencySignalMechanism extends SignalMechanism {
 	
 	
 	
+	public static class SameLinkDepUp2NoContext extends SameLinkOverTreeout {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = -6366228228768519615L;
+		public static final SameLinkDepUp2NoContext inst = new SameLinkDepUp2NoContext();
+		public SameLinkDepUp2NoContext() {super(TreeoutDepUp2NoContext.class, "DepUp2NoContext");}
+	}
+	
+	public static class SameLinkDepUp2GenPosNoContext extends SameLinkOverTreeout {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = -8728370677766648066L;
+		public static final SameLinkDepUp2GenPosNoContext inst = new SameLinkDepUp2GenPosNoContext();
+		public SameLinkDepUp2GenPosNoContext() {super(TreeoutDepUp2GenPosNoContext.class, "DepUp2GenPosNoContext");}
+	}
+	
+	public static class SameLinkDepUp2SpecPosNoContext extends SameLinkOverTreeout {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = -618387100915856992L;
+		public static final SameLinkDepUp2SpecPosNoContext inst = new SameLinkDepUp2SpecPosNoContext();
+		public SameLinkDepUp2SpecPosNoContext() {super(TreeoutDepUp2SpecPosNoContext.class, "DepUp2SpecPosNoContext");}
+	}
+	
+	public static class SameLinkDepPrepUp2NoContext extends SameLinkOverTreeout {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = -9100040154465906112L;
+		public static final SameLinkDepPrepUp2NoContext inst = new SameLinkDepPrepUp2NoContext();
+		public SameLinkDepPrepUp2NoContext() {super(TreeoutDepPrepUp2NoContext.class, "DepPrepUp2NoContext");}
+	}
+	
+	public static class SameLinkDepPrepUp2GenPosNoContext extends SameLinkOverTreeout {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 339711031156326783L;
+		public static final SameLinkDepPrepUp2GenPosNoContext inst = new SameLinkDepPrepUp2GenPosNoContext();
+		public SameLinkDepPrepUp2GenPosNoContext() {super(TreeoutDepPrepUp2GenPosNoContext.class, "DepPrepUp2GenPosNoContext");}
+	}
+	
+	public static class SameLinkDepPrepUp2SpecPosNoContext extends SameLinkOverTreeout {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 3131874517085546789L;
+		public static final SameLinkDepPrepUp2SpecPosNoContext inst = new SameLinkDepPrepUp2SpecPosNoContext();
+		public SameLinkDepPrepUp2SpecPosNoContext() {super(TreeoutDepPrepUp2SpecPosNoContext.class, "DepPrepUp2SpecPosNoContext");}
+	}
+	
+
+	public static class SameLinkDepFlatUp2NoContext extends SameLinkOverTreeout {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 4996151074607789833L;
+		public static final SameLinkDepFlatUp2NoContext inst = new SameLinkDepFlatUp2NoContext();
+		public SameLinkDepFlatUp2NoContext() {super(TreeoutDepFlatUp2NoContext.class, "DepFlatUp2NoContext");}
+	}
+	
+	public static class SameLinkDepFlatUp2GenPosNoContext extends SameLinkOverTreeout {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = -3132345465806861409L;
+		public static final SameLinkDepFlatUp2GenPosNoContext inst = new SameLinkDepFlatUp2GenPosNoContext();
+		public SameLinkDepFlatUp2GenPosNoContext() {super(TreeoutDepFlatUp2GenPosNoContext.class, "DepFlatUp2GenPosNoContext");}
+	}
+	
+	public static class SameLinkDepFlatUp2SpecPosNoContext extends SameLinkOverTreeout {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = -4211169453393160190L;
+		public static final SameLinkDepFlatUp2SpecPosNoContext inst = new SameLinkDepFlatUp2SpecPosNoContext();
+		public SameLinkDepFlatUp2SpecPosNoContext() {super(TreeoutDepFlatUp2SpecPosNoContext.class, "DepFlatUp2SpecPosNoContext");}
+	}
+	
+	public static class SameLinkDepFlatPrepUp2NoContext extends SameLinkOverTreeout {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 607840944313778849L;
+		public static final SameLinkDepFlatPrepUp2NoContext inst = new SameLinkDepFlatPrepUp2NoContext();
+		public SameLinkDepFlatPrepUp2NoContext() {super(TreeoutDepFlatPrepUp2NoContext.class, "DepFlatPrepUp2NoContext");}
+	}
+	
+	public static class SameLinkDepFlatPrepUp2GenPosNoContext extends SameLinkOverTreeout {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 2100046379332039470L;
+		public static final SameLinkDepFlatPrepUp2GenPosNoContext inst = new SameLinkDepFlatPrepUp2GenPosNoContext();
+		public SameLinkDepFlatPrepUp2GenPosNoContext() {super(TreeoutDepFlatPrepUp2GenPosNoContext.class, "DepPrepUp2GenPosNoContext");}
+	}
+	
+	public static class SameLinkDepFlatPrepUp2SpecPosNoContext extends SameLinkOverTreeout {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 2373321145935181628L;
+		public static final SameLinkDepFlatPrepUp2SpecPosNoContext inst = new SameLinkDepFlatPrepUp2SpecPosNoContext();
+		public SameLinkDepFlatPrepUp2SpecPosNoContext() {super(TreeoutDepFlatPrepUp2SpecPosNoContext.class, "DepFlatPrepUp2SpecPosNoContext");}
+	}
+	
+	
+	
+	public static class SameLinkDepUp3NoContext extends SameLinkOverTreeout {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 3811418667558896584L;
+		public static final SameLinkDepUp3NoContext inst = new SameLinkDepUp3NoContext();
+		public SameLinkDepUp3NoContext() {super(TreeoutDepUp3NoContext.class, "DepUp3NoContext");}
+	}
+	
+	public static class SameLinkDepUp3GenPosNoContext extends SameLinkOverTreeout {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 2464391878232878646L;
+		public static final SameLinkDepUp3GenPosNoContext inst = new SameLinkDepUp3GenPosNoContext();
+		public SameLinkDepUp3GenPosNoContext() {super(TreeoutDepUp3GenPosNoContext.class, "DepUp3GenPosNoContext");}
+	}
+	
+	public static class SameLinkDepUp3SpecPosNoContext extends SameLinkOverTreeout {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = -5262950156643874187L;
+		public static final SameLinkDepUp3SpecPosNoContext inst = new SameLinkDepUp3SpecPosNoContext();
+		public SameLinkDepUp3SpecPosNoContext() {super(TreeoutDepUp3SpecPosNoContext.class, "DepUp3SpecPosNoContext");}
+	}
+	
+	public static class SameLinkDepPrepUp3NoContext extends SameLinkOverTreeout {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 6790836187437069179L;
+		public static final SameLinkDepPrepUp3NoContext inst = new SameLinkDepPrepUp3NoContext();
+		public SameLinkDepPrepUp3NoContext() {super(TreeoutDepPrepUp3NoContext.class, "DepPrepUp3NoContext");}
+	}
+	
+	public static class SameLinkDepPrepUp3GenPosNoContext extends SameLinkOverTreeout {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = -6590522238354495919L;
+		public static final SameLinkDepPrepUp3GenPosNoContext inst = new SameLinkDepPrepUp3GenPosNoContext();
+		public SameLinkDepPrepUp3GenPosNoContext() {super(TreeoutDepPrepUp3GenPosNoContext.class, "DepPrepUp3GenPosNoContext");}
+	}
+	
+	public static class SameLinkDepPrepUp3SpecPosNoContext extends SameLinkOverTreeout {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = -1725292597400084300L;
+		public static final SameLinkDepPrepUp3SpecPosNoContext inst = new SameLinkDepPrepUp3SpecPosNoContext();
+		public SameLinkDepPrepUp3SpecPosNoContext() {super(TreeoutDepPrepUp3SpecPosNoContext.class, "DepPrepUp3SpecPosNoContext");}
+	}
+	
+
+	public static class SameLinkDepFlatUp3NoContext extends SameLinkOverTreeout {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 9021100966258029709L;
+		public static final SameLinkDepFlatUp3NoContext inst = new SameLinkDepFlatUp3NoContext();
+		public SameLinkDepFlatUp3NoContext() {super(TreeoutDepFlatUp3NoContext.class, "DepFlatUp3NoContext");}
+	}
+	
+	public static class SameLinkDepFlatUp3GenPosNoContext extends SameLinkOverTreeout {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 1553720860019993260L;
+		public static final SameLinkDepFlatUp3GenPosNoContext inst = new SameLinkDepFlatUp3GenPosNoContext();
+		public SameLinkDepFlatUp3GenPosNoContext() {super(TreeoutDepFlatUp3GenPosNoContext.class, "DepFlatUp3GenPosNoContext");}
+	}
+	
+	public static class SameLinkDepFlatUp3SpecPosNoContext extends SameLinkOverTreeout {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 9089103840370145405L;
+		public static final SameLinkDepFlatUp3SpecPosNoContext inst = new SameLinkDepFlatUp3SpecPosNoContext();
+		public SameLinkDepFlatUp3SpecPosNoContext() {super(TreeoutDepFlatUp3SpecPosNoContext.class, "DepFlatUp3SpecPosNoContext");}
+	}
+	
+	public static class SameLinkDepFlatPrepUp3NoContext extends SameLinkOverTreeout {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = -7602089860597571088L;
+		public static final SameLinkDepFlatPrepUp3NoContext inst = new SameLinkDepFlatPrepUp3NoContext();
+		public SameLinkDepFlatPrepUp3NoContext() {super(TreeoutDepFlatPrepUp3NoContext.class, "DepFlatPrepUp3NoContext");}
+	}
+	
+	public static class SameLinkDepFlatPrepUp3GenPosNoContext extends SameLinkOverTreeout {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 8613559836318918113L;
+		public static final SameLinkDepFlatPrepUp3GenPosNoContext inst = new SameLinkDepFlatPrepUp3GenPosNoContext();
+		public SameLinkDepFlatPrepUp3GenPosNoContext() {super(TreeoutDepFlatPrepUp3GenPosNoContext.class, "DepPrepUp3GenPosNoContext");}
+	}
+	
+	public static class SameLinkDepFlatPrepUp3SpecPosNoContext extends SameLinkOverTreeout {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 3331435998820954246L;
+		public static final SameLinkDepFlatPrepUp3SpecPosNoContext inst = new SameLinkDepFlatPrepUp3SpecPosNoContext();
+		public SameLinkDepFlatPrepUp3SpecPosNoContext() {super(TreeoutDepFlatPrepUp3SpecPosNoContext.class, "DepFlatPrepUp3SpecPosNoContext");}
+	}
+	
+	
+	
 	
 //	public static class SameLinkDepWithContext extends SameLinkOverTreeout {
 //		private static final long serialVersionUID = 1694575499404281966L;
@@ -657,6 +946,8 @@ public class DependencySignalMechanism extends SignalMechanism {
 		}
 	}
 
+	
+	
 	public static class SameLinkDepNoContextMinThird extends SameLinkOverTreeoutMinimumThird {
 		private static final long serialVersionUID = -6357105616985441064L;
 		public static final SameLinkDepNoContextMinThird inst = new SameLinkDepNoContextMinThird();
@@ -746,6 +1037,228 @@ public class DependencySignalMechanism extends SignalMechanism {
 		private static final long serialVersionUID = -2778349714667163724L;
 		public static final SameLinkDepFlatPrepSpecPosNoContextMinThird inst = new SameLinkDepFlatPrepSpecPosNoContextMinThird();
 		public SameLinkDepFlatPrepSpecPosNoContextMinThird() {super(TreeoutDepFlatPrepSpecPosNoContext.class, "DepFlatPrepSpecPosNoContext");}
+	}
+
+
+	
+	public static class SameLinkDepUp2NoContextMinThird extends SameLinkOverTreeoutMinimumThird {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 2792948195409307341L;
+		public static final SameLinkDepUp2NoContextMinThird inst = new SameLinkDepUp2NoContextMinThird();
+		public SameLinkDepUp2NoContextMinThird() {super(TreeoutDepUp2NoContext.class, "DepUp2NoContext");}
+	}
+	
+	public static class SameLinkDepUp2GenPosNoContextMinThird extends SameLinkOverTreeoutMinimumThird {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 5516621923669155468L;
+		public static final SameLinkDepUp2GenPosNoContextMinThird inst = new SameLinkDepUp2GenPosNoContextMinThird();
+		public SameLinkDepUp2GenPosNoContextMinThird() {super(TreeoutDepUp2GenPosNoContext.class, "DepUp2GenPosNoContext");}
+	}
+	
+	public static class SameLinkDepUp2SpecPosNoContextMinThird extends SameLinkOverTreeoutMinimumThird {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 7396186392882195857L;
+		public static final SameLinkDepUp2SpecPosNoContextMinThird inst = new SameLinkDepUp2SpecPosNoContextMinThird();
+		public SameLinkDepUp2SpecPosNoContextMinThird() {super(TreeoutDepUp2SpecPosNoContext.class, "DepUp2SpecPosNoContext");}
+	}
+	
+	public static class SameLinkDepPrepUp2NoContextMinThird extends SameLinkOverTreeoutMinimumThird {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = -1316766446400804168L;
+		public static final SameLinkDepPrepUp2NoContextMinThird inst = new SameLinkDepPrepUp2NoContextMinThird();
+		public SameLinkDepPrepUp2NoContextMinThird() {super(TreeoutDepPrepUp2NoContext.class, "DepPrepUp2NoContext");}
+	}
+	
+	public static class SameLinkDepPrepUp2GenPosNoContextMinThird extends SameLinkOverTreeoutMinimumThird {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = -969464122883583682L;
+		public static final SameLinkDepPrepUp2GenPosNoContextMinThird inst = new SameLinkDepPrepUp2GenPosNoContextMinThird();
+		public SameLinkDepPrepUp2GenPosNoContextMinThird() {super(TreeoutDepPrepUp2GenPosNoContext.class, "DepPrepUp2GenPosNoContext");}
+	}
+	
+	public static class SameLinkDepPrepUp2SpecPosNoContextMinThird extends SameLinkOverTreeoutMinimumThird {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 1737285408631454369L;
+		public static final SameLinkDepPrepUp2SpecPosNoContextMinThird inst = new SameLinkDepPrepUp2SpecPosNoContextMinThird();
+		public SameLinkDepPrepUp2SpecPosNoContextMinThird() {super(TreeoutDepPrepUp2SpecPosNoContext.class, "DepPrepUp2SpecPosNoContext");}
+	}
+
+	
+	public static class SameLinkDepFlatUp2NoContextMinThird extends SameLinkOverTreeoutMinimumThird {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = -6423602148170533528L;
+		public static final SameLinkDepFlatUp2NoContextMinThird inst = new SameLinkDepFlatUp2NoContextMinThird();
+		public SameLinkDepFlatUp2NoContextMinThird() {super(TreeoutDepFlatUp2NoContext.class, "DepFlatUp2NoContext");}
+	}
+	
+	public static class SameLinkDepFlatUp2GenPosNoContextMinThird extends SameLinkOverTreeoutMinimumThird {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = -7399915483762443415L;
+		public static final SameLinkDepFlatUp2GenPosNoContextMinThird inst = new SameLinkDepFlatUp2GenPosNoContextMinThird();
+		public SameLinkDepFlatUp2GenPosNoContextMinThird() {super(TreeoutDepFlatUp2GenPosNoContext.class, "DepFlatUp2GenPosNoContext");}
+	}
+	
+	public static class SameLinkDepFlatUp2SpecPosNoContextMinThird extends SameLinkOverTreeoutMinimumThird {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 7985298291332741289L;
+		public static final SameLinkDepFlatUp2SpecPosNoContextMinThird inst = new SameLinkDepFlatUp2SpecPosNoContextMinThird();
+		public SameLinkDepFlatUp2SpecPosNoContextMinThird() {super(TreeoutDepFlatUp2SpecPosNoContext.class, "DepFlatUp2SpecPosNoContext");}
+	}
+	
+	public static class SameLinkDepFlatPrepUp2NoContextMinThird extends SameLinkOverTreeoutMinimumThird {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 4350976731381153485L;
+		public static final SameLinkDepFlatPrepUp2NoContextMinThird inst = new SameLinkDepFlatPrepUp2NoContextMinThird();
+		public SameLinkDepFlatPrepUp2NoContextMinThird() {super(TreeoutDepFlatPrepUp2NoContext.class, "DepFlatPrepUp2NoContext");}
+	}
+	
+	public static class SameLinkDepFlatPrepUp2GenPosNoContextMinThird extends SameLinkOverTreeoutMinimumThird {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = -4458254320957554179L;
+		public static final SameLinkDepFlatPrepUp2GenPosNoContextMinThird inst = new SameLinkDepFlatPrepUp2GenPosNoContextMinThird();
+		public SameLinkDepFlatPrepUp2GenPosNoContextMinThird() {super(TreeoutDepFlatPrepUp2GenPosNoContext.class, "DepFlatPrepUp2GenPosNoContext");}
+	}
+	
+	public static class SameLinkDepFlatPrepUp2SpecPosNoContextMinThird extends SameLinkOverTreeoutMinimumThird {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = -443451570243392212L;
+		public static final SameLinkDepFlatPrepUp2SpecPosNoContextMinThird inst = new SameLinkDepFlatPrepUp2SpecPosNoContextMinThird();
+		public SameLinkDepFlatPrepUp2SpecPosNoContextMinThird() {super(TreeoutDepFlatPrepUp2SpecPosNoContext.class, "DepFlatPrepUp2SpecPosNoContext");}
+	}
+
+
+	
+	public static class SameLinkDepUp3NoContextMinThird extends SameLinkOverTreeoutMinimumThird {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 915643028686841857L;
+		public static final SameLinkDepUp3NoContextMinThird inst = new SameLinkDepUp3NoContextMinThird();
+		public SameLinkDepUp3NoContextMinThird() {super(TreeoutDepUp3NoContext.class, "DepUp3NoContext");}
+	}
+	
+	public static class SameLinkDepUp3GenPosNoContextMinThird extends SameLinkOverTreeoutMinimumThird {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 5460084214466580266L;
+		public static final SameLinkDepUp3GenPosNoContextMinThird inst = new SameLinkDepUp3GenPosNoContextMinThird();
+		public SameLinkDepUp3GenPosNoContextMinThird() {super(TreeoutDepUp3GenPosNoContext.class, "DepUp3GenPosNoContext");}
+	}
+	
+	public static class SameLinkDepUp3SpecPosNoContextMinThird extends SameLinkOverTreeoutMinimumThird {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 107613049756738157L;
+		public static final SameLinkDepUp3SpecPosNoContextMinThird inst = new SameLinkDepUp3SpecPosNoContextMinThird();
+		public SameLinkDepUp3SpecPosNoContextMinThird() {super(TreeoutDepUp3SpecPosNoContext.class, "DepUp3SpecPosNoContext");}
+	}
+	
+	public static class SameLinkDepPrepUp3NoContextMinThird extends SameLinkOverTreeoutMinimumThird {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = -5971166204283653853L;
+		public static final SameLinkDepPrepUp3NoContextMinThird inst = new SameLinkDepPrepUp3NoContextMinThird();
+		public SameLinkDepPrepUp3NoContextMinThird() {super(TreeoutDepPrepUp3NoContext.class, "DepPrepUp3NoContext");}
+	}
+	
+	public static class SameLinkDepPrepUp3GenPosNoContextMinThird extends SameLinkOverTreeoutMinimumThird {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 9169399515395585578L;
+		public static final SameLinkDepPrepUp3GenPosNoContextMinThird inst = new SameLinkDepPrepUp3GenPosNoContextMinThird();
+		public SameLinkDepPrepUp3GenPosNoContextMinThird() {super(TreeoutDepPrepUp3GenPosNoContext.class, "DepPrepUp3GenPosNoContext");}
+	}
+	
+	public static class SameLinkDepPrepUp3SpecPosNoContextMinThird extends SameLinkOverTreeoutMinimumThird {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 3635715031143454262L;
+		public static final SameLinkDepPrepUp3SpecPosNoContextMinThird inst = new SameLinkDepPrepUp3SpecPosNoContextMinThird();
+		public SameLinkDepPrepUp3SpecPosNoContextMinThird() {super(TreeoutDepPrepUp3SpecPosNoContext.class, "DepPrepUp3SpecPosNoContext");}
+	}
+
+	
+	public static class SameLinkDepFlatUp3NoContextMinThird extends SameLinkOverTreeoutMinimumThird {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 8153408028185185083L;
+		public static final SameLinkDepFlatUp3NoContextMinThird inst = new SameLinkDepFlatUp3NoContextMinThird();
+		public SameLinkDepFlatUp3NoContextMinThird() {super(TreeoutDepFlatUp3NoContext.class, "DepFlatUp3NoContext");}
+	}
+	
+	public static class SameLinkDepFlatUp3GenPosNoContextMinThird extends SameLinkOverTreeoutMinimumThird {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 1157566996803309155L;
+		public static final SameLinkDepFlatUp3GenPosNoContextMinThird inst = new SameLinkDepFlatUp3GenPosNoContextMinThird();
+		public SameLinkDepFlatUp3GenPosNoContextMinThird() {super(TreeoutDepFlatUp3GenPosNoContext.class, "DepFlatUp3GenPosNoContext");}
+	}
+	
+	public static class SameLinkDepFlatUp3SpecPosNoContextMinThird extends SameLinkOverTreeoutMinimumThird {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 5479513762334676979L;
+		public static final SameLinkDepFlatUp3SpecPosNoContextMinThird inst = new SameLinkDepFlatUp3SpecPosNoContextMinThird();
+		public SameLinkDepFlatUp3SpecPosNoContextMinThird() {super(TreeoutDepFlatUp3SpecPosNoContext.class, "DepFlatUp3SpecPosNoContext");}
+	}
+	
+	public static class SameLinkDepFlatPrepUp3NoContextMinThird extends SameLinkOverTreeoutMinimumThird {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 7904708310604711179L;
+		public static final SameLinkDepFlatPrepUp3NoContextMinThird inst = new SameLinkDepFlatPrepUp3NoContextMinThird();
+		public SameLinkDepFlatPrepUp3NoContextMinThird() {super(TreeoutDepFlatPrepUp3NoContext.class, "DepFlatPrepUp3NoContext");}
+	}
+	
+	public static class SameLinkDepFlatPrepUp3GenPosNoContextMinThird extends SameLinkOverTreeoutMinimumThird {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 6755335242958520865L;
+		public static final SameLinkDepFlatPrepUp3GenPosNoContextMinThird inst = new SameLinkDepFlatPrepUp3GenPosNoContextMinThird();
+		public SameLinkDepFlatPrepUp3GenPosNoContextMinThird() {super(TreeoutDepFlatPrepUp3GenPosNoContext.class, "DepFlatPrepUp3GenPosNoContext");}
+	}
+	
+	public static class SameLinkDepFlatPrepUp3SpecPosNoContextMinThird extends SameLinkOverTreeoutMinimumThird {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 3369073084199048450L;
+		public static final SameLinkDepFlatPrepUp3SpecPosNoContextMinThird inst = new SameLinkDepFlatPrepUp3SpecPosNoContextMinThird();
+		public SameLinkDepFlatPrepUp3SpecPosNoContextMinThird() {super(TreeoutDepFlatPrepUp3SpecPosNoContext.class, "DepFlatPrepUp3SpecPosNoContext");}
 	}
 
 
@@ -962,6 +1475,9 @@ public class DependencySignalMechanism extends SignalMechanism {
 		}
 	}
 
+	
+	
+	
 	public static class SameLinkDepNoContextMinFifth extends SameLinkOverTreeoutMinimumFifth {
 		private static final long serialVersionUID = -4304671459420513779L;
 		public static final SameLinkDepNoContextMinFifth inst = new SameLinkDepNoContextMinFifth();
@@ -1051,6 +1567,230 @@ public class DependencySignalMechanism extends SignalMechanism {
 		private static final long serialVersionUID = 5928812320004969968L;
 		public static final SameLinkDepFlatPrepSpecPosNoContextMinFifth inst = new SameLinkDepFlatPrepSpecPosNoContextMinFifth();
 		public SameLinkDepFlatPrepSpecPosNoContextMinFifth() {super(TreeoutDepFlatPrepSpecPosNoContext.class, "DepFlatPrepSpecPosNoContext");}
+	}
+
+	
+	
+	
+	public static class SameLinkDepUp2NoContextMinFifth extends SameLinkOverTreeoutMinimumFifth {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = -1784049437370482980L;
+		public static final SameLinkDepUp2NoContextMinFifth inst = new SameLinkDepUp2NoContextMinFifth();
+		public SameLinkDepUp2NoContextMinFifth() {super(TreeoutDepUp2NoContext.class, "DepUp2NoContext");}
+	}
+	
+	public static class SameLinkDepUp2GenPosNoContextMinFifth extends SameLinkOverTreeoutMinimumFifth {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = -2281961043210510635L;
+		public static final SameLinkDepUp2GenPosNoContextMinFifth inst = new SameLinkDepUp2GenPosNoContextMinFifth();
+		public SameLinkDepUp2GenPosNoContextMinFifth() {super(TreeoutDepUp2GenPosNoContext.class, "DepUp2GenPosNoContext");}
+	}
+	
+	public static class SameLinkDepUp2SpecPosNoContextMinFifth extends SameLinkOverTreeoutMinimumFifth {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = -8313058592573200157L;
+		public static final SameLinkDepUp2SpecPosNoContextMinFifth inst = new SameLinkDepUp2SpecPosNoContextMinFifth();
+		public SameLinkDepUp2SpecPosNoContextMinFifth() {super(TreeoutDepUp2SpecPosNoContext.class, "DepUp2SpecPosNoContext");}
+	}
+	
+	public static class SameLinkDepPrepUp2NoContextMinFifth extends SameLinkOverTreeoutMinimumFifth {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = -5002999157175634479L;
+		public static final SameLinkDepPrepUp2NoContextMinFifth inst = new SameLinkDepPrepUp2NoContextMinFifth();
+		public SameLinkDepPrepUp2NoContextMinFifth() {super(TreeoutDepPrepUp2NoContext.class, "DepPrepUp2NoContext");}
+	}
+	
+	public static class SameLinkDepPrepUp2GenPosNoContextMinFifth extends SameLinkOverTreeoutMinimumFifth {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = -3320187499399578358L;
+		public static final SameLinkDepPrepUp2GenPosNoContextMinFifth inst = new SameLinkDepPrepUp2GenPosNoContextMinFifth();
+		public SameLinkDepPrepUp2GenPosNoContextMinFifth() {super(TreeoutDepPrepUp2GenPosNoContext.class, "DepPrepUp2GenPosNoContext");}
+	}
+	
+	public static class SameLinkDepPrepUp2SpecPosNoContextMinFifth extends SameLinkOverTreeoutMinimumFifth {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = -6779491753744034045L;
+		public static final SameLinkDepPrepUp2SpecPosNoContextMinFifth inst = new SameLinkDepPrepUp2SpecPosNoContextMinFifth();
+		public SameLinkDepPrepUp2SpecPosNoContextMinFifth() {super(TreeoutDepPrepUp2SpecPosNoContext.class, "DepPrepUp2SpecPosNoContext");}
+	}
+
+
+	public static class SameLinkDepFlatUp2NoContextMinFifth extends SameLinkOverTreeoutMinimumFifth {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 3761292120676305000L;
+		public static final SameLinkDepFlatUp2NoContextMinFifth inst = new SameLinkDepFlatUp2NoContextMinFifth();
+		public SameLinkDepFlatUp2NoContextMinFifth() {super(TreeoutDepFlatUp2NoContext.class, "DepFlatUp2NoContext");}
+	}
+	
+	public static class SameLinkDepFlatUp2GenPosNoContextMinFifth extends SameLinkOverTreeoutMinimumFifth {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = -4350278287728137547L;
+		public static final SameLinkDepFlatUp2GenPosNoContextMinFifth inst = new SameLinkDepFlatUp2GenPosNoContextMinFifth();
+		public SameLinkDepFlatUp2GenPosNoContextMinFifth() {super(TreeoutDepFlatUp2GenPosNoContext.class, "DepFlatUp2GenPosNoContext");}
+	}
+	
+	public static class SameLinkDepFlatUp2SpecPosNoContextMinFifth extends SameLinkOverTreeoutMinimumFifth {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 8033732450393410243L;
+		public static final SameLinkDepFlatUp2SpecPosNoContextMinFifth inst = new SameLinkDepFlatUp2SpecPosNoContextMinFifth();
+		public SameLinkDepFlatUp2SpecPosNoContextMinFifth() {super(TreeoutDepFlatUp2SpecPosNoContext.class, "DepFlatUp2SpecPosNoContext");}
+	}
+	
+	public static class SameLinkDepFlatPrepUp2NoContextMinFifth extends SameLinkOverTreeoutMinimumFifth {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = -6039182248562281377L;
+		public static final SameLinkDepFlatPrepUp2NoContextMinFifth inst = new SameLinkDepFlatPrepUp2NoContextMinFifth();
+		public SameLinkDepFlatPrepUp2NoContextMinFifth() {super(TreeoutDepFlatPrepUp2NoContext.class, "DepFlatPreUp2pNoContext");}
+	}
+	
+	public static class SameLinkDepFlatPrepUp2GenPosNoContextMinFifth extends SameLinkOverTreeoutMinimumFifth {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = -768204215014854958L;
+		public static final SameLinkDepFlatPrepUp2GenPosNoContextMinFifth inst = new SameLinkDepFlatPrepUp2GenPosNoContextMinFifth();
+		public SameLinkDepFlatPrepUp2GenPosNoContextMinFifth() {super(TreeoutDepFlatPrepUp2GenPosNoContext.class, "DepFlatPrepUp2GenPosNoContext");}
+	}
+	
+	public static class SameLinkDepFlatPrepUp2SpecPosNoContextMinFifth extends SameLinkOverTreeoutMinimumFifth {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = -7532500799506654634L;
+		public static final SameLinkDepFlatPrepUp2SpecPosNoContextMinFifth inst = new SameLinkDepFlatPrepUp2SpecPosNoContextMinFifth();
+		public SameLinkDepFlatPrepUp2SpecPosNoContextMinFifth() {super(TreeoutDepFlatPrepUp2SpecPosNoContext.class, "DepFlatPrepUp2SpecPosNoContext");}
+	}
+
+	
+	
+	
+	public static class SameLinkDepUp3NoContextMinFifth extends SameLinkOverTreeoutMinimumFifth {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 1274046625784980424L;
+		public static final SameLinkDepUp3NoContextMinFifth inst = new SameLinkDepUp3NoContextMinFifth();
+		public SameLinkDepUp3NoContextMinFifth() {super(TreeoutDepUp3NoContext.class, "DepUp3NoContext");}
+	}
+	
+	public static class SameLinkDepUp3GenPosNoContextMinFifth extends SameLinkOverTreeoutMinimumFifth {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = -697694676620275096L;
+		public static final SameLinkDepUp3GenPosNoContextMinFifth inst = new SameLinkDepUp3GenPosNoContextMinFifth();
+		public SameLinkDepUp3GenPosNoContextMinFifth() {super(TreeoutDepUp3GenPosNoContext.class, "DepUp3GenPosNoContext");}
+	}
+	
+	public static class SameLinkDepUp3SpecPosNoContextMinFifth extends SameLinkOverTreeoutMinimumFifth {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = -5619408949096481013L;
+		public static final SameLinkDepUp3SpecPosNoContextMinFifth inst = new SameLinkDepUp3SpecPosNoContextMinFifth();
+		public SameLinkDepUp3SpecPosNoContextMinFifth() {super(TreeoutDepUp3SpecPosNoContext.class, "DepUp3SpecPosNoContext");}
+	}
+	
+	public static class SameLinkDepPrepUp3NoContextMinFifth extends SameLinkOverTreeoutMinimumFifth {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = -630953486014812536L;
+		public static final SameLinkDepPrepUp3NoContextMinFifth inst = new SameLinkDepPrepUp3NoContextMinFifth();
+		public SameLinkDepPrepUp3NoContextMinFifth() {super(TreeoutDepPrepUp3NoContext.class, "DepPrepUp3NoContext");}
+	}
+	
+	public static class SameLinkDepPrepUp3GenPosNoContextMinFifth extends SameLinkOverTreeoutMinimumFifth {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 7477897868925008899L;
+		public static final SameLinkDepPrepUp3GenPosNoContextMinFifth inst = new SameLinkDepPrepUp3GenPosNoContextMinFifth();
+		public SameLinkDepPrepUp3GenPosNoContextMinFifth() {super(TreeoutDepPrepUp3GenPosNoContext.class, "DepPrepUp3GenPosNoContext");}
+	}
+	
+	public static class SameLinkDepPrepUp3SpecPosNoContextMinFifth extends SameLinkOverTreeoutMinimumFifth {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = -2464826961488213127L;
+		public static final SameLinkDepPrepUp3SpecPosNoContextMinFifth inst = new SameLinkDepPrepUp3SpecPosNoContextMinFifth();
+		public SameLinkDepPrepUp3SpecPosNoContextMinFifth() {super(TreeoutDepPrepUp3SpecPosNoContext.class, "DepPrepUp3SpecPosNoContext");}
+	}
+
+
+	public static class SameLinkDepFlatUp3NoContextMinFifth extends SameLinkOverTreeoutMinimumFifth {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 1310978990785525406L;
+		public static final SameLinkDepFlatUp3NoContextMinFifth inst = new SameLinkDepFlatUp3NoContextMinFifth();
+		public SameLinkDepFlatUp3NoContextMinFifth() {super(TreeoutDepFlatUp3NoContext.class, "DepFlatUp3NoContext");}
+	}
+	
+	public static class SameLinkDepFlatUp3GenPosNoContextMinFifth extends SameLinkOverTreeoutMinimumFifth {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = -2240503492491430303L;
+		public static final SameLinkDepFlatUp3GenPosNoContextMinFifth inst = new SameLinkDepFlatUp3GenPosNoContextMinFifth();
+		public SameLinkDepFlatUp3GenPosNoContextMinFifth() {super(TreeoutDepFlatUp3GenPosNoContext.class, "DepFlatUp3GenPosNoContext");}
+	}
+	
+	public static class SameLinkDepFlatUp3SpecPosNoContextMinFifth extends SameLinkOverTreeoutMinimumFifth {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = -373152337569049852L;
+		public static final SameLinkDepFlatUp3SpecPosNoContextMinFifth inst = new SameLinkDepFlatUp3SpecPosNoContextMinFifth();
+		public SameLinkDepFlatUp3SpecPosNoContextMinFifth() {super(TreeoutDepFlatUp3SpecPosNoContext.class, "DepFlatUp3SpecPosNoContext");}
+	}
+	
+	public static class SameLinkDepFlatPrepUp3NoContextMinFifth extends SameLinkOverTreeoutMinimumFifth {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 2649219893494858609L;
+		public static final SameLinkDepFlatPrepUp3NoContextMinFifth inst = new SameLinkDepFlatPrepUp3NoContextMinFifth();
+		public SameLinkDepFlatPrepUp3NoContextMinFifth() {super(TreeoutDepFlatPrepUp3NoContext.class, "DepFlatPreUp3pNoContext");}
+	}
+	
+	public static class SameLinkDepFlatPrepUp3GenPosNoContextMinFifth extends SameLinkOverTreeoutMinimumFifth {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = -2435628736691225076L;
+		public static final SameLinkDepFlatPrepUp3GenPosNoContextMinFifth inst = new SameLinkDepFlatPrepUp3GenPosNoContextMinFifth();
+		public SameLinkDepFlatPrepUp3GenPosNoContextMinFifth() {super(TreeoutDepFlatPrepUp3GenPosNoContext.class, "DepFlatPrepUp3GenPosNoContext");}
+	}
+	
+	public static class SameLinkDepFlatPrepUp3SpecPosNoContextMinFifth extends SameLinkOverTreeoutMinimumFifth {
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = -7904453488065083968L;
+		public static final SameLinkDepFlatPrepUp3SpecPosNoContextMinFifth inst = new SameLinkDepFlatPrepUp3SpecPosNoContextMinFifth();
+		public SameLinkDepFlatPrepUp3SpecPosNoContextMinFifth() {super(TreeoutDepFlatPrepUp3SpecPosNoContext.class, "DepFlatPrepUp3SpecPosNoContext");}
 	}
 
 	
@@ -1151,15 +1891,13 @@ public class DependencySignalMechanism extends SignalMechanism {
 			}
 				
 			Map<String, String> result = Maps.newHashMap();
+			
 			result.put("DepNoContext",			err!=null?err: TreeToLineString.getStringRel(subroots, false, true));
 			result.put("DepGenPosNoContext",	err!=null?err: TreeToLineString.getStringRelCanonicalPos(subroots, false, true));
 			result.put("DepSpecPosNoContext",	err!=null?err: TreeToLineString.getStringRelPos(subroots, false, true));
 			result.put("DepFlatNoContext",			err!=null?err: TreeToLineString.getStringRelFlat(subroots, false, true));
 			result.put("DepFlatGenPosNoContext",	err!=null?err: TreeToLineString.getStringRelFlatCanonicalPos(subroots, false, true));
 			result.put("DepFlatSpecPosNoContext",	err!=null?err: TreeToLineString.getStringRelFlatPos(subroots, false, true));
-//			result.put("DepWithContext",		err!=null?err: TreeToLineString.getStringRel(subroots, true, true));
-//			result.put("DepGenPosWithContext",	err!=null?err: TreeToLineString.getStringRelCanonicalPos(subroots, true, true));
-//			result.put("DepSpecPosWithContext",	err!=null?err: TreeToLineString.getStringRelPos(subroots, true, true));
 
 			result.put("DepPrepNoContext",			err!=null?err: TreeToLineString.getStringRelPrep(subrootsNoConj, false, true));
 			result.put("DepPrepGenPosNoContext",	err!=null?err: TreeToLineString.getStringRelPrepCanonicalPos(subrootsNoConj, false, true));
@@ -1167,10 +1905,41 @@ public class DependencySignalMechanism extends SignalMechanism {
 			result.put("DepFlatPrepNoContext",			err!=null?err: TreeToLineString.getStringRelFlatPrep(subrootsNoConj, false, true));
 			result.put("DepFlatPrepGenPosNoContext",	err!=null?err: TreeToLineString.getStringRelFlatPrepCanonicalPos(subrootsNoConj, false, true));
 			result.put("DepFlatPrepSpecPosNoContext",	err!=null?err: TreeToLineString.getStringRelFlatPrepPos(subrootsNoConj, false, true));
-//			result.put("DepPrepWithContext",		err!=null?err: TreeToLineString.getStringRelPrep(subrootsNoConj, true, true));
-//			result.put("DepPrepGenPosWithContext",	err!=null?err: TreeToLineString.getStringRelPrepCanonicalPos(subrootsNoConj, true, true));
-//			result.put("DepPrepSpecPosWithContext",	err!=null?err: TreeToLineString.getStringRelPrepPos(subrootsNoConj, true, true));
 
+			
+			
+			result.put("DepUp2NoContext",			err!=null?err: TreeToLineString.getStringRelUp2(subroots, false, true));
+			result.put("DepUp2GenPosNoContext",	err!=null?err: TreeToLineString.getStringRelUp2CanonicalPos(subroots, false, true));
+			result.put("DepUp2SpecPosNoContext",	err!=null?err: TreeToLineString.getStringRelUp2Pos(subroots, false, true));
+			result.put("DepFlatUp2NoContext",			err!=null?err: TreeToLineString.getStringRelFlatUp2(subroots, false, true));
+			result.put("DepFlatUp2GenPosNoContext",	err!=null?err: TreeToLineString.getStringRelFlatUp2CanonicalPos(subroots, false, true));
+			result.put("DepFlatUp2SpecPosNoContext",	err!=null?err: TreeToLineString.getStringRelFlatUp2Pos(subroots, false, true));
+
+			result.put("DepPrepUp2NoContext",			err!=null?err: TreeToLineString.getStringRelPrepUp2(subrootsNoConj, false, true));
+			result.put("DepPrepUp2GenPosNoContext",	err!=null?err: TreeToLineString.getStringRelPrepUp2CanonicalPos(subrootsNoConj, false, true));
+			result.put("DepPrepUp2SpecPosNoContext",	err!=null?err: TreeToLineString.getStringRelPrepUp2Pos(subrootsNoConj, false, true));
+			result.put("DepFlatPrepUp2NoContext",			err!=null?err: TreeToLineString.getStringRelFlatPrepUp2(subrootsNoConj, false, true));
+			result.put("DepFlatPrepUp2GenPosNoContext",	err!=null?err: TreeToLineString.getStringRelFlatPrepUp2CanonicalPos(subrootsNoConj, false, true));
+			result.put("DepFlatPrepUp2SpecPosNoContext",	err!=null?err: TreeToLineString.getStringRelFlatPrepUp2Pos(subrootsNoConj, false, true));
+
+			
+			
+			result.put("DepUp3NoContext",			err!=null?err: TreeToLineString.getStringRelUp3(subroots, false, true));
+			result.put("DepUp3GenPosNoContext",	err!=null?err: TreeToLineString.getStringRelUp3CanonicalPos(subroots, false, true));
+			result.put("DepUp3SpecPosNoContext",	err!=null?err: TreeToLineString.getStringRelUp3Pos(subroots, false, true));
+			result.put("DepFlatUp3NoContext",			err!=null?err: TreeToLineString.getStringRelFlatUp3(subroots, false, true));
+			result.put("DepFlatUp3GenPosNoContext",	err!=null?err: TreeToLineString.getStringRelFlatUp3CanonicalPos(subroots, false, true));
+			result.put("DepFlatUp3SpecPosNoContext",	err!=null?err: TreeToLineString.getStringRelFlatUp3Pos(subroots, false, true));
+
+			result.put("DepPrepUp3NoContext",			err!=null?err: TreeToLineString.getStringRelPrepUp3(subrootsNoConj, false, true));
+			result.put("DepPrepUp3GenPosNoContext",	err!=null?err: TreeToLineString.getStringRelPrepUp3CanonicalPos(subrootsNoConj, false, true));
+			result.put("DepPrepUp3SpecPosNoContext",	err!=null?err: TreeToLineString.getStringRelPrepUp3Pos(subrootsNoConj, false, true));
+			result.put("DepFlatPrepUp3NoContext",			err!=null?err: TreeToLineString.getStringRelFlatPrepUp3(subrootsNoConj, false, true));
+			result.put("DepFlatPrepUp3GenPosNoContext",	err!=null?err: TreeToLineString.getStringRelFlatPrepUp3CanonicalPos(subrootsNoConj, false, true));
+			result.put("DepFlatPrepUp3SpecPosNoContext",	err!=null?err: TreeToLineString.getStringRelFlatPrepUp3Pos(subrootsNoConj, false, true));
+
+			
+			
 			return result;
 		}
 	});

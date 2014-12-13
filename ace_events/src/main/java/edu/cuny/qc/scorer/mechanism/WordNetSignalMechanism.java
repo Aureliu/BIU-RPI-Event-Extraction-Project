@@ -205,17 +205,19 @@ public class WordNetSignalMechanism extends SignalMechanism {
 
 			break;
 
-		case ANALYSIS21:
+		case ANALYSIS211:
 			//Inspired by part of: END of analysis2!
 			/// Group A
-			addManyArgumentFree(SYNONYM_RELATION,   Juxtaposition.ANCESTOR, new Integer[] {1}, ALL_DERIVERS, DERVS_NONE, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN, /*VERB, ADJ, ADV*/}, AGG_ANY);
-			addManyArgumentFree(HYPERNYM_RELATIONS, Juxtaposition.ANCESTOR, LENGTHS_1_2_3_4, ALL_DERIVERS, DERVS_NONE_AND, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN/*, VERB*/}, AGG_ANY);
-			addManyArgumentFree(HYPERNYM1_RELATION, Juxtaposition.ANCESTOR, LENGTHS_1_2_3_4, ALL_DERIVERS, DERVS_NONE_AND, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN/*, VERB*/}, AGG_ANY);
-			addManyArgumentFree(HYPERNYM2_RELATION, Juxtaposition.ANCESTOR, LENGTHS_1_2_3_4, ALL_DERIVERS, DERVS_NONE_AND, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN/*, VERB*/}, AGG_ANY);
+			addManyArgumentFree(SYNONYM_RELATION,   Juxtaposition.ANCESTOR, new Integer[] {1}, ALL_DERIVERS, DERVS_NONE, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null/*, NOUN*/}, AGG_ANY);
+			addManyArgumentFree(HYPERNYM_RELATIONS, Juxtaposition.ANCESTOR, LENGTHS_1_2_3_4, ALL_DERIVERS, DERVS_NONE_AND, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null/*, NOUN*/}, AGG_ANY);
+			addManyArgumentFree(HYPERNYM1_RELATION, Juxtaposition.ANCESTOR, LENGTHS_1_2_3_4, ALL_DERIVERS, DERVS_NONE_AND, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null/*, NOUN*/}, AGG_ANY);
+			addManyArgumentFree(HYPERNYM2_RELATION, Juxtaposition.ANCESTOR, LENGTHS_1_2_3_4, ALL_DERIVERS, DERVS_NONE_AND, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null/*, NOUN*/}, AGG_ANY);
 	
+			break;
+		case ANALYSIS212:
 			/// Group B
-			addManyArgumentFree(ALL_RELATIONS_SMALL,   Juxtaposition.ANCESTOR, LENGTHS_1_2_3_4_TOP, ALL_DERIVERS, DERVS_ALL, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN, VERB/*, ADJ, ADV*/}, ALL_AGGS);
-			addManyArgumentFree(ALL_RELATIONS_BIG,   Juxtaposition.ANCESTOR, LENGTHS_1_2_3_4_TOP, ALL_DERIVERS, DERVS_ALL, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null, NOUN, VERB/*, ADJ, ADV*/}, ALL_AGGS);
+			addManyArgumentFree(ALL_RELATIONS_SMALL,   Juxtaposition.ANCESTOR, ALL_LENGTHS_WITH_TOP, ALL_DERIVERS, DERVS_ALL_NO_SPEC_ONLY, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null/*, NOUN, VERB*/}, AGG_ANY_MIN2);
+			addManyArgumentFree(ALL_RELATIONS_BIG,   Juxtaposition.ANCESTOR, ALL_LENGTHS_WITH_TOP, ALL_DERIVERS, DERVS_ALL_NO_SPEC_ONLY, SENSE_NUMS, SENSE_NUMS, new PartOfSpeech[] {null/*, NOUN, VERB*/}, AGG_ANY_MIN2);
 
 			break;
 		
@@ -916,7 +918,7 @@ public class WordNetSignalMechanism extends SignalMechanism {
 			WordNetRelation.SYNONYM
 	}));
 	private static final Integer[] LENGTHS_1_2_3 = {1, 2, 3};
-	private static final Integer[] LENGTHS_1_2_3_4 = {1, 2, 3, 5};
+	private static final Integer[] LENGTHS_1_2_3_4 = {1, 2, 3, 4};
 	private static final Integer[] LENGTHS_1_2_3_TOP = {-1, 1, 2, 3};
 	private static final Integer[] LENGTHS_1_2_3_4_TOP = {-1, 1, 2, 3, 4};
 	private static final Integer[] ALL_LIMITED_LENGTHS = {1, 2, 3, 4, 5, 6, 7};

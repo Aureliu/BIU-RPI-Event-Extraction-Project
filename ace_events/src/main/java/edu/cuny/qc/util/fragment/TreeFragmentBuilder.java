@@ -109,13 +109,13 @@ public class TreeFragmentBuilder {
 		if (foundRoot != null) {
 			BasicNode newRoot = createSubTree(foundRoot, requiredNodes, targetNodes, magicNodes, removeConj);
 			copyAntecedents();
-			if (!origToNew.keySet().equals(requiredNodes)) {
-				//throw new TreeFragmentBuilderException("Generated tree nodes do not exactly match required nodes");
+			
+			/// SilentErrors
+//			if (!origToNew.keySet().equals(requiredNodes)) {
 //				System.err.println(getClass().getSimpleName() + ": Generated tree nodes do not exactly match required nodes. origToNew.keySet()=" +
-//						origToNew.keySet() + "  requiredNodes=%s" + requiredNodes);
-				System.err.println(getClass().getSimpleName() + ": Generated tree nodes do not exactly match required nodes. origToNew.keySet()=" +
-						origToNew.keySet().size() + "  requiredNodes=" + requiredNodes.size());
-			}
+//						origToNew.keySet().size() + "  requiredNodes=" + requiredNodes.size());
+//			}
+			///
 			return new FragmentAndReference(newRoot, origToNew.getKey(newRoot), facet);
 		}
 		return null;
@@ -168,8 +168,10 @@ public class TreeFragmentBuilder {
 					if (targetNodes.contains(node)) {
 						//throw new TreeFragmentBuilderException("Cannot remove current node on account of conj child, since current node is a target node!");
 						//System.err.printf("%s: Node '%s' is a target node, but was supposed to be removed due to a single required conj child '%s'. It will not be removed, but there is probably some wrong parse, as this shouldn't happen normally.\n",
-						System.err.printf("%s: Node '%s' wont be conj-removed as it is a target node. Probably some parser error here.\n",
-								this.getClass().getSimpleName(), InfoGetFields.getWord(node.getInfo()), InfoGetFields.getWord(conjChild.getInfo()));
+						/// SilentErrors
+//						System.err.printf("%s: Node '%s' wont be conj-removed as it is a target node. Probably some parser error here.\n",
+//								this.getClass().getSimpleName(), InfoGetFields.getWord(node.getInfo()), InfoGetFields.getWord(conjChild.getInfo()));
+						///
 					}
 					else {
 						BasicNode generatedConjChild = createSubTree(conjChild, requiredNodes, targetNodes, magicNodes, removeConj);
@@ -216,8 +218,9 @@ public class TreeFragmentBuilder {
 			return conjChildren.iterator().next();
 		}
 		else {
-			 //throw new TreeFragmentBuilderException("Got " + conjChildren.size() + " conj children for node of '" + node.getInfo().getNodeInfo().getWord() + "' - not supported!");
-			 System.err.printf(getClass().getSimpleName() + ": Got " + conjChildren.size() + " conj children for node of '" + node.getInfo().getNodeInfo().getWord() + "' - not supported!\n");
+			/// SilentErrors
+			//System.err.printf(getClass().getSimpleName() + ": Got " + conjChildren.size() + " conj children for node of '" + node.getInfo().getNodeInfo().getWord() + "' - not supported!\n");
+			///
 			 return null;
 		}
 	}

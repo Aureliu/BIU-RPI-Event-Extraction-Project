@@ -56,6 +56,38 @@ public class TreeToLineString {
 		return getString(trees, withContext, withMagicNodes, new NodeShortString.RelFlatPrep());
 	}
 
+	public static String getStringRelUp2(List<BasicNode> trees, boolean withContext, boolean withMagicNodes) {
+		return getString(trees, withContext, withMagicNodes, new NodeShortString.Rel(), new ManipulateTreeString.LimitAboveArg2());
+	}
+
+	public static String getStringRelUp3(List<BasicNode> trees, boolean withContext, boolean withMagicNodes) {
+		return getString(trees, withContext, withMagicNodes, new NodeShortString.Rel(), new ManipulateTreeString.LimitAboveArg3());
+	}
+
+	public static String getStringRelFlatUp2(List<BasicNode> trees, boolean withContext, boolean withMagicNodes) {
+		return getString(trees, withContext, withMagicNodes, new NodeShortString.RelFlat(), new ManipulateTreeString.LimitAboveArg2());
+	}
+
+	public static String getStringRelFlatUp3(List<BasicNode> trees, boolean withContext, boolean withMagicNodes) {
+		return getString(trees, withContext, withMagicNodes, new NodeShortString.RelFlat(), new ManipulateTreeString.LimitAboveArg3());
+	}
+
+	public static String getStringRelPrepUp2(List<BasicNode> trees, boolean withContext, boolean withMagicNodes) {
+		return getString(trees, withContext, withMagicNodes, new NodeShortString.RelPrep(), new ManipulateTreeString.LimitAboveArg2());
+	}
+
+	public static String getStringRelPrepUp3(List<BasicNode> trees, boolean withContext, boolean withMagicNodes) {
+		return getString(trees, withContext, withMagicNodes, new NodeShortString.RelPrep(), new ManipulateTreeString.LimitAboveArg3());
+	}
+
+	public static String getStringRelFlatPrepUp2(List<BasicNode> trees, boolean withContext, boolean withMagicNodes) {
+		return getString(trees, withContext, withMagicNodes, new NodeShortString.RelFlatPrep(), new ManipulateTreeString.LimitAboveArg2());
+	}
+
+	public static String getStringRelFlatPrepUp3(List<BasicNode> trees, boolean withContext, boolean withMagicNodes) {
+		return getString(trees, withContext, withMagicNodes, new NodeShortString.RelFlatPrep(), new ManipulateTreeString.LimitAboveArg3());
+	}
+
 	public static String getStringRelPos(List<BasicNode> trees, boolean withContext, boolean withMagicNodes) {
 		return getString(trees, withContext, withMagicNodes, new NodeShortString.RelPos());
 	}
@@ -72,6 +104,38 @@ public class TreeToLineString {
 		return getString(trees, withContext, withMagicNodes, new NodeShortString.RelFlatPrepPos());
 	}
 
+	public static String getStringRelUp2Pos(List<BasicNode> trees, boolean withContext, boolean withMagicNodes) {
+		return getString(trees, withContext, withMagicNodes, new NodeShortString.RelPos(), new ManipulateTreeString.LimitAboveArg2());
+	}
+
+	public static String getStringRelUp3Pos(List<BasicNode> trees, boolean withContext, boolean withMagicNodes) {
+		return getString(trees, withContext, withMagicNodes, new NodeShortString.RelPos(), new ManipulateTreeString.LimitAboveArg3());
+	}
+
+	public static String getStringRelFlatUp2Pos(List<BasicNode> trees, boolean withContext, boolean withMagicNodes) {
+		return getString(trees, withContext, withMagicNodes, new NodeShortString.RelFlatPos(), new ManipulateTreeString.LimitAboveArg2());
+	}
+
+	public static String getStringRelFlatUp3Pos(List<BasicNode> trees, boolean withContext, boolean withMagicNodes) {
+		return getString(trees, withContext, withMagicNodes, new NodeShortString.RelFlatPos(), new ManipulateTreeString.LimitAboveArg3());
+	}
+
+	public static String getStringRelPrepUp2Pos(List<BasicNode> trees, boolean withContext, boolean withMagicNodes) {
+		return getString(trees, withContext, withMagicNodes, new NodeShortString.RelPrepPos(), new ManipulateTreeString.LimitAboveArg2());
+	}
+
+	public static String getStringRelPrepUp3Pos(List<BasicNode> trees, boolean withContext, boolean withMagicNodes) {
+		return getString(trees, withContext, withMagicNodes, new NodeShortString.RelPrepPos(), new ManipulateTreeString.LimitAboveArg3());
+	}
+
+	public static String getStringRelFlatPrepUp2Pos(List<BasicNode> trees, boolean withContext, boolean withMagicNodes) {
+		return getString(trees, withContext, withMagicNodes, new NodeShortString.RelFlatPrepPos(), new ManipulateTreeString.LimitAboveArg2());
+	}
+
+	public static String getStringRelFlatPrepUp3Pos(List<BasicNode> trees, boolean withContext, boolean withMagicNodes) {
+		return getString(trees, withContext, withMagicNodes, new NodeShortString.RelFlatPrepPos(), new ManipulateTreeString.LimitAboveArg3());
+	}
+
 	public static String getStringRelCanonicalPos(List<BasicNode> trees, boolean withContext, boolean withMagicNodes) {
 		return getString(trees, withContext, withMagicNodes, new NodeShortString.RelCanonicalPos());
 	}
@@ -86,6 +150,38 @@ public class TreeToLineString {
 
 	public static String getStringRelFlatPrepCanonicalPos(List<BasicNode> trees, boolean withContext, boolean withMagicNodes) {
 		return getString(trees, withContext, withMagicNodes, new NodeShortString.RelFlatPrepCanonicalPos());
+	}
+
+	public static String getStringRelUp2CanonicalPos(List<BasicNode> trees, boolean withContext, boolean withMagicNodes) {
+		return getString(trees, withContext, withMagicNodes, new NodeShortString.RelCanonicalPos(), new ManipulateTreeString.LimitAboveArg2());
+	}
+
+	public static String getStringRelUp3CanonicalPos(List<BasicNode> trees, boolean withContext, boolean withMagicNodes) {
+		return getString(trees, withContext, withMagicNodes, new NodeShortString.RelCanonicalPos(), new ManipulateTreeString.LimitAboveArg3());
+	}
+
+	public static String getStringRelFlatUp2CanonicalPos(List<BasicNode> trees, boolean withContext, boolean withMagicNodes) {
+		return getString(trees, withContext, withMagicNodes, new NodeShortString.RelFlatCanonicalPos(), new ManipulateTreeString.LimitAboveArg2());
+	}
+
+	public static String getStringRelFlatUp3CanonicalPos(List<BasicNode> trees, boolean withContext, boolean withMagicNodes) {
+		return getString(trees, withContext, withMagicNodes, new NodeShortString.RelFlatCanonicalPos(), new ManipulateTreeString.LimitAboveArg3());
+	}
+
+	public static String getStringRelPrepUp2CanonicalPos(List<BasicNode> trees, boolean withContext, boolean withMagicNodes) {
+		return getString(trees, withContext, withMagicNodes, new NodeShortString.RelPrepCanonicalPos(), new ManipulateTreeString.LimitAboveArg2());
+	}
+
+	public static String getStringRelPrepUp3CanonicalPos(List<BasicNode> trees, boolean withContext, boolean withMagicNodes) {
+		return getString(trees, withContext, withMagicNodes, new NodeShortString.RelPrepCanonicalPos(), new ManipulateTreeString.LimitAboveArg3());
+	}
+
+	public static String getStringRelFlatPrepUp2CanonicalPos(List<BasicNode> trees, boolean withContext, boolean withMagicNodes) {
+		return getString(trees, withContext, withMagicNodes, new NodeShortString.RelFlatPrepCanonicalPos(), new ManipulateTreeString.LimitAboveArg2());
+	}
+
+	public static String getStringRelFlatPrepUp3CanonicalPos(List<BasicNode> trees, boolean withContext, boolean withMagicNodes) {
+		return getString(trees, withContext, withMagicNodes, new NodeShortString.RelFlatPrepCanonicalPos(), new ManipulateTreeString.LimitAboveArg3());
 	}
 
 	public static String getStringWordRel(List<BasicNode> trees, boolean withContext, boolean withMagicNodes) {
@@ -107,7 +203,7 @@ public class TreeToLineString {
 		return getString(tree, "(", ")", nodeStr);
 	}
 	
-	public static String getString(List<BasicNode> trees, boolean withContext, boolean withMagicNodes, NodeShortString nodeStr) {
+	public static String getString(List<BasicNode> trees, boolean withContext, boolean withMagicNodes, NodeShortString nodeStr, ManipulateTreeString manipulator) {
 		if (trees.isEmpty()) {
 			return "(empty-tree)";
 		}
@@ -115,34 +211,42 @@ public class TreeToLineString {
 		if (!withContext) {
 			subrootDep = "<SUBROOT>";
 		}
-		return getString(trees, "(", ")", "#", subrootDep, withMagicNodes, nodeStr);
+		return getString(trees, "(", ")", "#", subrootDep, withMagicNodes, nodeStr, manipulator);
+	}
+	
+	public static String getString(List<BasicNode> trees, boolean withContext, boolean withMagicNodes, NodeShortString nodeStr) {
+		return getString(trees, withContext, withMagicNodes, nodeStr, null);
+	}
+	
+	public static String getString(BasicNode root, String pre, String post, String dep, boolean withMagicNodes, NodeShortString str, ManipulateTreeString manipulator) {
+		return getStringSubtree(root, str, manipulator, pre, post, dep, withMagicNodes).toString().trim();
 	}
 	
 	public static String getString(BasicNode root, String pre, String post, String dep, boolean withMagicNodes, NodeShortString str) {
-		return getStringSubtree(root, str, pre, post, dep, withMagicNodes).toString().trim();
+		return getStringSubtree(root, str, null, pre, post, dep, withMagicNodes).toString().trim();
 	}
 	
 	public static String getString(BasicNode root, String pre, String post, NodeShortString str) {
-		return getStringSubtree(root, str, pre, post, null, true).toString().trim();
+		return getStringSubtree(root, str, null, pre, post, null, true).toString().trim();
 	}
 	
 	public static String getString(BasicNode root, String pre, String post, boolean withMagicNodes, NodeShortString str) {
-		return getStringSubtree(root, str, pre, post, null, withMagicNodes).toString().trim();
+		return getStringSubtree(root, str, null, pre, post, null, withMagicNodes).toString().trim();
 	}
 	
-	public static String getString(Collection<BasicNode> trees, String pre, String post, String treeSeparator, String dep, boolean withMagicNodes, NodeShortString str) {
+	public static String getString(Collection<BasicNode> trees, String pre, String post, String treeSeparator, String dep, boolean withMagicNodes, NodeShortString str, ManipulateTreeString manipulator) {
 		List<String> strings = new ArrayList<String>(trees.size());
 		for (BasicNode root : trees) {
-			strings.add(getString(root, pre, post, dep, withMagicNodes, str));
+			strings.add(getString(root, pre, post, dep, withMagicNodes, str, manipulator));
 		}
 		return StringUtil.join(strings, treeSeparator);
 	}
 	
 	public static String getString(Collection<BasicNode> trees, String pre, String post, boolean withMagicNodes, NodeShortString str) {
-		return getString(trees, pre, post, null, "#", withMagicNodes, str);
+		return getString(trees, pre, post, null, "#", withMagicNodes, str, null);
 	}
 	
-	protected static <I extends Info> StringBuffer getStringSubtree(BasicNode subtree, NodeShortString str, String pre, String post, String dep, boolean withMagicNodes) {
+	protected static <I extends Info> StringBuffer getStringSubtree(BasicNode subtree, NodeShortString str, ManipulateTreeString manipulator, String pre, String post, String dep, boolean withMagicNodes) {
 		final String NULL_TREE_STR = "(null)";
 		StringBuffer result = new StringBuffer();
 		
@@ -172,10 +276,14 @@ public class TreeToLineString {
 			if (subtree.getChildren() != null) {
 				for (BasicNode child : subtree.getChildren()) {
 					result.append(pre);
-					result.append(getStringSubtree(child, str, pre, post, null, withMagicNodes));
+					result.append(getStringSubtree(child, str, null, pre, post, null, withMagicNodes));
 					result.append(post);
 				}
 			}
+		}
+		
+		if (manipulator != null) {
+			result = new StringBuffer(manipulator.manipulate(result.toString()));
 		}
 		
 		return result;

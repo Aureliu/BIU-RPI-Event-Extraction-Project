@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** 
- * Updated by JCasGen Mon Dec 08 02:19:30 EST 2014
+ * Updated by JCasGen Sat Dec 13 00:42:43 EST 2014
  * @generated */
 public class Treeout_Type extends Annotation_Type {
   /** @generated */

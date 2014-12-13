@@ -35,4 +35,7 @@ public enum Derivation {
 	public static final Derivation[] DERVS_ALL = {Derivation.NONE, Derivation.TEXT_ORIG_AND_DERV, Derivation.SPEC_ORIG_AND_DERV, Derivation.TEXT_ONLY_DERV, Derivation.SPEC_ONLY_DERV}; 
 	public static final Derivation[] DERVS_TEXT_ORIG_AND_DERV = {Derivation.TEXT_ORIG_AND_DERV}; 
 
+	// This became needed from the tests on December 12, 2014
+	public static final Derivation[] DERVS_ALL_NO_SPEC_ONLY = {Derivation.NONE, Derivation.TEXT_ORIG_AND_DERV, Derivation.SPEC_ORIG_AND_DERV, Derivation.TEXT_ONLY_DERV}; 
+
 }

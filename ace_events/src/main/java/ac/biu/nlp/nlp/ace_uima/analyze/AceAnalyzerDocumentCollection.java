@@ -297,6 +297,7 @@ public class AceAnalyzerDocumentCollection extends StatsDocumentCollection {
 				put(new FieldName("Attack", "Instrument"), StatsFieldType.SUM_INT);
 				put(new FieldName("Attack", "Time"), StatsFieldType.SUM_INT);
 				put(new FieldName("Attack", "Place"), StatsFieldType.SUM_INT);
+				put(new FieldName("Attack", "-where-"), StatsFieldType.LIST_COUNTS);
 				put(new FieldName("Attack", "-filter-"), StatsFieldType.CONST);
 				
 				put(new FieldName("Die", "Agent"), StatsFieldType.SUM_INT);
@@ -304,6 +305,7 @@ public class AceAnalyzerDocumentCollection extends StatsDocumentCollection {
 				put(new FieldName("Die", "Instrument"), StatsFieldType.SUM_INT);
 				put(new FieldName("Die", "Time"), StatsFieldType.SUM_INT);
 				put(new FieldName("Die", "Place"), StatsFieldType.SUM_INT);
+				put(new FieldName("Die", "-where-"), StatsFieldType.LIST_COUNTS);
 				put(new FieldName("Die", "-filter-"), StatsFieldType.CONST);
 				
 				put(new FieldName("Injure", "Agent"), StatsFieldType.SUM_INT);
@@ -311,21 +313,25 @@ public class AceAnalyzerDocumentCollection extends StatsDocumentCollection {
 				put(new FieldName("Injure", "Instrument"), StatsFieldType.SUM_INT);
 				put(new FieldName("Injure", "Time"), StatsFieldType.SUM_INT);
 				put(new FieldName("Injure", "Place"), StatsFieldType.SUM_INT);
+				put(new FieldName("Injure", "-where-"), StatsFieldType.LIST_COUNTS);
 				put(new FieldName("Injure", "-filter-"), StatsFieldType.CONST);
 				
 				put(new FieldName("Be-Born", "Person"), StatsFieldType.SUM_INT);
 				put(new FieldName("Be-Born", "Time"), StatsFieldType.SUM_INT);
 				put(new FieldName("Be-Born", "Place"), StatsFieldType.SUM_INT);
+				put(new FieldName("Be-Born", "-where-"), StatsFieldType.LIST_COUNTS);
 				put(new FieldName("Be-Born", "-filter-"), StatsFieldType.CONST);
 
 				put(new FieldName("Marry", "Person"), StatsFieldType.SUM_INT);
 				put(new FieldName("Marry", "Time"), StatsFieldType.SUM_INT);
 				put(new FieldName("Marry", "Place"), StatsFieldType.SUM_INT);
+				put(new FieldName("Marry", "-where-"), StatsFieldType.LIST_COUNTS);
 				put(new FieldName("Marry", "-filter-"), StatsFieldType.CONST);
 
 				put(new FieldName("Divorce", "Person"), StatsFieldType.SUM_INT);
 				put(new FieldName("Divorce", "Time"), StatsFieldType.SUM_INT);
 				put(new FieldName("Divorce", "Place"), StatsFieldType.SUM_INT);
+				put(new FieldName("Divorce", "-where-"), StatsFieldType.LIST_COUNTS);
 				put(new FieldName("Divorce", "-filter-"), StatsFieldType.CONST);
 
 			}});

@@ -121,6 +121,8 @@ import eu.excitementproject.eop.lap.biu.pasta.identification.PredicateArgumentId
 import eu.excitementproject.eop.lap.biu.pasta.identification.PredicateArgumentStructureBuilder;
 import eu.excitementproject.eop.lap.biu.uima.CasTreeConverter;
 
+import eu.excitementproject.eop.common.representation.parse.tree.dependency.view.TreeStringGenerator;
+
 /**
  * Performs various statistics (using the stats mechanism) on the ACE XMIs, and outputs
  * various reports.
@@ -356,11 +358,11 @@ public class AceAnalyzer {
 						docs.updateDocs(key, "ArgHead", "DepToken", TreeToLineString.getStringWordRel(argHeadFrag, true, true));						
 						docs.updateDocs(key, "ArgHead", "DepGenPOS", TreeToLineString.getStringRelCanonicalPos(argHeadFrag, true, true));						
 						docs.updateDocs(key, "ArgHead", "DepSpecPOS", TreeToLineString.getStringRelPos(argHeadFrag, true, true));
-						updateLinkingTreeFrags(key, eventAnchor, argHead, argMention, "Link",
+						updateLinkingTreeFrags(key, eventAnchor, argHead, argMention, docId, "Link",
 								"Dep", "DepPrep", "DepGenPOS", "DepPrepGenPOS", "DepSpecPOS", "DepPrepSpecPOS",
 								"DepFlat", "DepFlatPrep", "DepFlatGenPOS", "DepFlatPrepGenPOS", "DepFlatSpecPOS", "DepFlatPrepSpecPOS",
 								true, true);
-						updateLinkingTreeFrags(key, eventAnchor, argHead, argMention, "Link",
+						updateLinkingTreeFrags(key, eventAnchor, argHead, argMention, docId, "Link",
 								"*Dep", "*DepPrep", "*DepGenPOS", "*DepPrepGenPOS", "*DepSpecPOS", "*DepPrepSpecPOS",
 								"*DepFlat", "*DepFlatPrep", "*DepFlatGenPOS", "*DepFlatPrepGenPOS", "*DepFlatSpecPOS", "*DepFlatPrepSpecPOS",
 								false, true);
@@ -1072,7 +1074,7 @@ public class AceAnalyzer {
 //	}
 //	
 	protected void updateLinkingTreeFrags(Map<String, String> key, EventMentionAnchor eventAnchor,
-			BasicArgumentMentionHead argHead, EventMentionArgument argMention, String field,
+			BasicArgumentMentionHead argHead, EventMentionArgument argMention, String docId, String field,
 			String fieldDep, String fieldDepPrep, 
 			String fieldDepGenPos, String fieldDepPrepGenPos,
 			String fieldDepSpecPos, String fieldDepPrepSpecPos, 
@@ -1083,9 +1085,10 @@ public class AceAnalyzer {
 		List<BasicNode> roots = null;
 		List<BasicNode> rootsNoConj = null;
 		String abnormal = null;
-		int fragmentEdges = -99;
+		int fragmentEdges = -999999;
+		FragmentAndReference frag = null;
 		try {
-			FragmentAndReference frag = fragmentLayer.getRootLinkingTreeFragment(eventAnchor, argHead, false, argMention);
+			frag = fragmentLayer.getRootLinkingTreeFragment(eventAnchor, argHead, false, argMention);
 			roots = ImmutableList.of(frag.getFragmentRoot());
 			FragmentAndReference fragNoConj = fragmentLayer.getRootLinkingTreeFragment(eventAnchor, argHead, true, argMention);
 			rootsNoConj = ImmutableList.of(fragNoConj.getFragmentRoot());
@@ -1093,6 +1096,13 @@ public class AceAnalyzer {
 		} catch (AceAbnormalMessage e) {
 			abnormal = e.getMessage();
 		}
+		
+		String where = String.format("%s:%s", docId, abnormal!=null ? abnormal : TreeToLineString.getStringWordRel(roots, withContext, withMagicNodes));
+		
+		// DEBUG
+//		if (where.equals("CNN_IP_20030328.1600.07:<SUBROOT>(nsubj->you[ARG])(ccomp->killed(prep->in(pobj->combat[PRD])))")) {
+//			System.out.printf("");
+//		}
 		
 		String treeoutDep =			abnormal!=null ? abnormal : TreeToLineString.getStringRel(roots, withContext, withMagicNodes);
 		String treeoutDepGenPos =	abnormal!=null ? abnormal : TreeToLineString.getStringRelCanonicalPos(roots, withContext, withMagicNodes);
@@ -1116,23 +1126,23 @@ public class AceAnalyzer {
 		}
 		///
 		
-		updateLinkingTreeFragsSingle(key, fragmentEdges, field, fieldDep,        treeoutDep);
-		updateLinkingTreeFragsSingle(key, fragmentEdges, field, fieldDepGenPos,  treeoutDepGenPos);
-		updateLinkingTreeFragsSingle(key, fragmentEdges, field, fieldDepSpecPos, treeoutDepSpecPos);
-		updateLinkingTreeFragsSingle(key, fragmentEdges, field, fieldDepPrep,        treeoutDepPrep);
-		updateLinkingTreeFragsSingle(key, fragmentEdges, field, fieldDepPrepGenPos,  treeoutDepPrepGenPos);
-		updateLinkingTreeFragsSingle(key, fragmentEdges, field, fieldDepPrepSpecPos, treeoutDepPrepSpecPos);
+		updateLinkingTreeFragsSingle(key, fragmentEdges, where, field, fieldDep,        treeoutDep);
+		updateLinkingTreeFragsSingle(key, fragmentEdges, where, field, fieldDepGenPos,  treeoutDepGenPos);
+		updateLinkingTreeFragsSingle(key, fragmentEdges, where, field, fieldDepSpecPos, treeoutDepSpecPos);
+		updateLinkingTreeFragsSingle(key, fragmentEdges, where, field, fieldDepPrep,        treeoutDepPrep);
+		updateLinkingTreeFragsSingle(key, fragmentEdges, where, field, fieldDepPrepGenPos,  treeoutDepPrepGenPos);
+		updateLinkingTreeFragsSingle(key, fragmentEdges, where, field, fieldDepPrepSpecPos, treeoutDepPrepSpecPos);
 
-		updateLinkingTreeFragsSingle(key, fragmentEdges, field, fieldDepFlat,        treeoutDepFlat);
-		updateLinkingTreeFragsSingle(key, fragmentEdges, field, fieldDepFlatGenPos,  treeoutDepFlatGenPos);
-		updateLinkingTreeFragsSingle(key, fragmentEdges, field, fieldDepFlatSpecPos, treeoutDepFlatSpecPos);
-		updateLinkingTreeFragsSingle(key, fragmentEdges, field, fieldDepFlatPrep,        treeoutDepFlatPrep);
-		updateLinkingTreeFragsSingle(key, fragmentEdges, field, fieldDepFlatPrepGenPos,  treeoutDepFlatPrepGenPos);
-		updateLinkingTreeFragsSingle(key, fragmentEdges, field, fieldDepFlatPrepSpecPos, treeoutDepFlatPrepSpecPos);
+		updateLinkingTreeFragsSingle(key, fragmentEdges, where, field, fieldDepFlat,        treeoutDepFlat);
+		updateLinkingTreeFragsSingle(key, fragmentEdges, where, field, fieldDepFlatGenPos,  treeoutDepFlatGenPos);
+		updateLinkingTreeFragsSingle(key, fragmentEdges, where, field, fieldDepFlatSpecPos, treeoutDepFlatSpecPos);
+		updateLinkingTreeFragsSingle(key, fragmentEdges, where, field, fieldDepFlatPrep,        treeoutDepFlatPrep);
+		updateLinkingTreeFragsSingle(key, fragmentEdges, where, field, fieldDepFlatPrepGenPos,  treeoutDepFlatPrepGenPos);
+		updateLinkingTreeFragsSingle(key, fragmentEdges, where, field, fieldDepFlatPrepSpecPos, treeoutDepFlatPrepSpecPos);
 
 	}
 
-	protected void updateLinkingTreeFragsSingle(Map<String, String> key, Integer fragmentEdges, String field, String subfield, String value) throws Exception {
+	protected void updateLinkingTreeFragsSingle(Map<String, String> key, Integer fragmentEdges, String where, String field, String subfield, String value) throws Exception {
 		docs.updateDocs(key, field, subfield, value);
 		
 		key.put("TO-Type", subfield);
@@ -1140,6 +1150,7 @@ public class AceAnalyzer {
 		String eventSubtype = key.get("EventSubType");
 		String role = key.get("Role");
 		docs.updateDocs(key, eventSubtype, role, 1);
+		docs.updateDocs(key, eventSubtype, "-where-", where);
 		docs.updateDocs(key, eventSubtype, "-filter-", "=SUM(C6:G6)>=$H$4");
 		docs.updateDocs(key, "Edges", "", fragmentEdges);
 	}

@@ -6,6 +6,8 @@ import java.util.Arrays;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+import edu.cuny.qc.util.Utils;
+
 import ac.biu.nlp.nlp.ace_uima.stats.FieldName;
 import ac.biu.nlp.nlp.ace_uima.stats.StatsDocument;
 import ac.biu.nlp.nlp.ace_uima.stats.StatsDocumentCollection;
@@ -40,7 +42,9 @@ public class SignalAnalyzerDocumentCollection extends StatsDocumentCollection {
 	}
 	
 	public void dumpAsCsvFiles(File triggerFile/*, File argFile, File globalFile*/) throws IOException { //add a specific parameter for each specific file
+		System.out.printf("%s Starting SignalAnalyzerDocumentCollection.dumpAsCsvFiles()\n", Utils.detailedLog());
 		triggerDoc.dumpAsCsv(triggerFile);
+		System.out.printf("%s Finishing SignalAnalyzerDocumentCollection.dumpAsCsvFiles()\n", Utils.detailedLog());
 //		argDoc.dumpAsCsv(argFile);
 //		globalDoc.dumpAsCsv(globalFile);
 	}

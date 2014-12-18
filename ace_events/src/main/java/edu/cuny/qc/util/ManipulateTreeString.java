@@ -10,7 +10,7 @@ public abstract class ManipulateTreeString {
 	public abstract String manipulate(String treeString);
 	
 	public static abstract class LimitAboveArg extends ManipulateTreeString {
-		private static final Pattern PATTERN_DEPS_ABOVE_ARG = Pattern.compile("([\\w\\-(<>[\\]]*)\\[ARG\\]");
+		private static final Pattern PATTERN_DEPS_ABOVE_ARG = Pattern.compile("([\\w\\-\\(\\<\\>\\[\\]]*)\\[ARG\\]");
 		public static String manipulateLimit(String treeString, int limit) {
 			String[] deps = getDeps(treeString);
 			deps = (String[]) ArrayUtils.subarray(deps, deps.length-limit, deps.length);
@@ -20,11 +20,11 @@ public abstract class ManipulateTreeString {
 		private static String[] getDeps(String treeString) {
 			String[] deps = new String[] {};
 			Matcher matcher = PATTERN_DEPS_ABOVE_ARG.matcher(treeString);
-			if (matcher == null) {
+			if (matcher == null || !matcher.find()) {
 				return deps;
 			}
 			String group = matcher.group(1);
-			deps = group.split("(");
+			deps = group.split("\\(");
 			if (deps[0].equals("<SUBROOT>[PRD]")) {
 				deps[0] = "[PRD]";
 			}

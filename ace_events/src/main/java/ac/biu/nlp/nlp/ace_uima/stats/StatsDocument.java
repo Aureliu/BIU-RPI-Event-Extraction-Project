@@ -15,6 +15,7 @@ import java.util.Set;
 import java.util.SortedMap;
 import java.util.TreeMap;
 
+import edu.cuny.qc.util.Utils;
 import eu.excitementproject.eop.common.utilities.StringUtil;
 import eu.excitementproject.eop.common.utilities.file.FileUtils;
 
@@ -71,6 +72,7 @@ public class StatsDocument {
 	}
 	
 	public void dumpAsCsv(File file) throws IOException {
+		System.out.printf("%s Starting StatsDocument.dumpAsCsv(), rows.size()=%s\n", Utils.detailedLog(), rows.size());
 		StringBuffer title1 = new StringBuffer();
 		StringBuffer title2 = new StringBuffer();
 		StringBuffer subtitle = new StringBuffer("\n"); // Start line with a blank line, for Excel to sort+filter by it, not by first rows
@@ -81,14 +83,21 @@ public class StatsDocument {
 		subtitle.append(StringUtil.join(Collections.nCopies(keyFields.size(), " "), SEPARATOR));
 		
 		boolean first = true;
+		int n=0;
 		for (Entry<List<String>, StatsRow> row : rows.entrySet()) {
 			/// DEBUG
 			//System.out.printf("\nStatsdocument.dumpAsCsv() key=%s: ", row.getKey());
 			///
-			content.append(StringUtil.join(row.getKey(), SEPARATOR));
+			String keyStr = StringUtil.join(row.getKey(), SEPARATOR);
+			content.append(keyStr);
+			
+			if (n<10 || n%500==0) {
+				System.out.printf("%s StatsDocument.dumpAsCsv(), n=%s, key=%s\n", Utils.detailedLog(), n, keyStr);
+			}
 			
 			for (Entry<FieldName,StatsField> field : row.getValue().getFields().entrySet()) {
-				content.append(SEPARATOR + StringUtil.join(field.getValue().getValues(MAX_CHARS), SEPARATOR));
+				String line = SEPARATOR + StringUtil.join(field.getValue().getValues(MAX_CHARS), SEPARATOR);
+				content.append(line);
 				
 				if (first) {
 					List<String> subtitles = field.getValue().getSubtitles();
@@ -97,12 +106,23 @@ public class StatsDocument {
 							subtitles.set(i, " "); //absent subtitles should contain a single space, so that Excel will let the subtitles row be a filter+sort header
 						}
 					}
-					title1.append(SEPARATOR + StringUtil.join(Collections.nCopies(subtitles.size(), field.getKey().getLvl1()), SEPARATOR));
-					title2.append(SEPARATOR + StringUtil.join(Collections.nCopies(subtitles.size(), field.getKey().getLvl2()), SEPARATOR));
-					subtitle.append(SEPARATOR + StringUtil.join(subtitles, SEPARATOR));
+					String title1Str = SEPARATOR + StringUtil.join(Collections.nCopies(subtitles.size(), field.getKey().getLvl1()), SEPARATOR);
+					title1.append(title1Str);
+					String title2Str = SEPARATOR + StringUtil.join(Collections.nCopies(subtitles.size(), field.getKey().getLvl2()), SEPARATOR);
+					title2.append(title2Str);
+					String subtitleStr = SEPARATOR + StringUtil.join(subtitles, SEPARATOR); 
+					subtitle.append(subtitleStr);
+					
+					System.out.printf("%s StatsDocument.dumpAsCsv(), n=%s, first=True - Writing titles!\n   %s\n   %s\n   %s\n", Utils.detailedLog(), n, title1Str, title2Str, subtitleStr);
 				}
+				
+				if (n<10 || n%500==0) {
+					System.out.printf("%s StatsDocument.dumpAsCsv(), n=%s,     line=%s\n", Utils.detailedLog(), n, line);
+				}
+
 			}
 			
+			n++;
 			first = false;
 			content.append("\n");
 		}
@@ -113,6 +133,7 @@ public class StatsDocument {
 		
 		String output = title1.toString() + title2.toString() + subtitle.toString() + content.toString();
 		FileUtils.writeFile(file, output);
+		System.out.printf("%s Finishing StatsDocument.dumpAsCsv()\n", Utils.detailedLog());
 	}
 
 	private class LexicographicKeyComparator implements Comparator<List<String>> {

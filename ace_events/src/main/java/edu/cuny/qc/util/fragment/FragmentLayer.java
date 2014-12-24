@@ -19,6 +19,9 @@ import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.tcas.Annotation;
 import org.uimafit.util.JCasUtil;
 
+import com.google.common.collect.BiMap;
+import com.google.common.collect.HashBiMap;
+
 import ac.biu.nlp.nlp.ace_uima.AceAbnormalMessage;
 import ac.biu.nlp.nlp.ace_uima.AceException;
 import ac.biu.nlp.nlp.ace_uima.uima.EventMentionArgument;
@@ -116,7 +119,7 @@ public class FragmentLayer {
 	public FragmentAndReference getFragmentBySentenceAndTokens(Sentence sentence, Collection<Token> tokens, Map<Token, String> magicTokens, boolean removeConj, Facet facet) throws TreeAndParentMapException, TreeFragmentBuilderException, FragmentLayerException {
 		BasicNode root = sentence2root.get(sentence);
 		Set<BasicNode> targetNodes = new LinkedHashSet<BasicNode>(tokens.size());
-		Map<BasicNode, String> magicNodes = new HashMap<BasicNode, String>();
+		BiMap<BasicNode, String> magicNodes = HashBiMap.create();
 		for (Token token : tokens) {
 			Collection<BasicNode> nodes = token2nodes.get(token);
 			/// DEBUG
@@ -172,18 +175,18 @@ public class FragmentLayer {
 		MultiMap<Sentence, Token> sentence2tokens_2 = Utils.getCoveringSentences(argHead, tokenIndex);
 		if (sentence2tokens_1.size() == 0 || sentence2tokens_2.size() == 0) {
 			/// SilentErrors
-//			String err;
-//			if (sentence2tokens_1.size() == 0 && sentence2tokens_2.size() != 0) {
-//				err = String.format("trigger=%s", UimaUtils.annotationToString(eventAnchor));
-//			}
-//			else if (sentence2tokens_2.size() == 0 && sentence2tokens_1.size() != 0) {
-//				err = String.format("arg=%s", UimaUtils.annotationToString(argHead));
-//			}
-//			else {
-//				err = String.format("trigger=%s and arg=%s", UimaUtils.annotationToString(eventAnchor), UimaUtils.annotationToString(argHead));
-//			}
-//			throw new AceAbnormalMessage(String.format("ERR:No Covering Sentence for %s", err));
-			throw new AceAbnormalMessage("NoCoveringSentence");
+			String err;
+			if (sentence2tokens_1.size() == 0 && sentence2tokens_2.size() != 0) {
+				err = String.format("trigger=%s", UimaUtils.annotationToString(eventAnchor));
+			}
+			else if (sentence2tokens_2.size() == 0 && sentence2tokens_1.size() != 0) {
+				err = String.format("arg=%s", UimaUtils.annotationToString(argHead));
+			}
+			else {
+				err = String.format("trigger=%s and arg=%s", UimaUtils.annotationToString(eventAnchor), UimaUtils.annotationToString(argHead));
+			}
+			throw new AceAbnormalMessage(String.format("ERR:No Covering Sentence for %s", err));
+//			throw new AceAbnormalMessage("NoCoveringSentence");
 			///
 		}
 		if (sentence2tokens_1.size() > 1 || sentence2tokens_2.size() > 1) {

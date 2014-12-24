@@ -163,7 +163,7 @@ public abstract class SignalMechanism {
 		} catch (Throwable e) {
 			// HACK: just put zero in the signal if we get an exception. What SHOULD happen is probably something like not adding the signal (but then I should make sure that down the pipeline they ignore this as well).
 			score = BigDecimal.ZERO;
-			System.err.printf("SignalMechanism: Got some error while calcing score for trigger token=%s, doc=%s, scorer=%s: %s\n", UimaUtils.annotationToString(textTriggerToken), textSentence.doc.docLine, data, e);
+			System.err.printf("SignalMechanism: Got some error while calcing score for trigger token=%s, doc=%s, scorer=%s: %s (cause=%s)\n", UimaUtils.annotationToString(textTriggerToken), textSentence.doc.docLine, data, e, e.getCause());
 			e.printStackTrace(System.err);
 			System.err.printf("#############################################\n");
 		}
@@ -242,8 +242,8 @@ public abstract class SignalMechanism {
 		} catch (Throwable e) {
 			// HACK: just put zero in the signal if we get an exception. What SHOULD happen is probably something like not adding the signal (but then I should make sure that down the pipeline they ignore this as well).
 			score = BigDecimal.ZERO;
-			System.err.printf("SignalMechanism: Got some error while calcing score for arg (dependent), trigger-token=%s, role=%s, mention=%s, doc=%s, scorer=%s: %s\n",
-					UimaUtils.annotationToString(textTriggerToken), argument.getRole().getCoveredText(), mention, textSentence.doc.docLine, data, e);
+			System.err.printf("SignalMechanism: Got some error while calcing score for arg (dependent), trigger-token=%s, role=%s, mention=%s, doc=%s, scorer=%s: %s (cause=%s)\n",
+					UimaUtils.annotationToString(textTriggerToken), argument.getRole().getCoveredText(), mention, textSentence.doc.docLine, data, e, e.getCause());
 			e.printStackTrace(System.err);
 			System.err.printf("#############################################\n");
 		}
@@ -314,8 +314,8 @@ public abstract class SignalMechanism {
 		} catch (Throwable e) {
 			// HACK: just put zero in the signal if we get an exception. What SHOULD happen is probably something like not adding the signal (but then I should make sure that down the pipeline they ignore this as well).
 			score = BigDecimal.ZERO;
-			System.err.printf("SignalMechanism: Got some error while calcing score for arg (free), role=%s, mention=%s, doc=%s, scorer=%s: %s\n",
-					argument.getRole().getCoveredText(), mention, textSentence.doc.docLine, data, e);
+			System.err.printf("SignalMechanism: Got some error while calcing score for arg (free), role=%s, mention=%s, doc=%s, scorer=%s: %s (cause=%s)\n",
+					argument.getRole().getCoveredText(), mention, textSentence.doc.docLine, data, e, e.getCause());
 			e.printStackTrace(System.err);
 			System.err.printf("#############################################\n");
 		}

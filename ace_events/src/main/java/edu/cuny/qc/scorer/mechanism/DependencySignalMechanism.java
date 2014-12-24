@@ -114,7 +114,7 @@ public class DependencySignalMechanism extends SignalMechanism {
 		
 		try {
 			outFile1= new PrintStream(new File(Utils.OUTPUT_FOLDER, "TextTreeouts1.txt"));
-			outFile1.printf("Id^Doc^Sentence^Subtype^Role^Trigger^ArgHead^Fragment^Facet^" +
+			outFile1.printf("Id^Doc^Sentence^Subtype^Role^Trigger^ArgHead^Fragment^Facet^" + "WordDepNoContext^" +
 					"DepNoContext^DepGenPosNoContext^DepSpecPosNoContext^DepPrepNoContext^DepPrepGenPosNoContext^DepPrepSpecPosNoContext^DepFlatNoContext^DepFlatGenPosNoContext^DepFlatSpecPosNoContext^DepFlatPrepNoContext^DepFlatPrepGenPosNoContext^DepFlatPrepSpecPosNoContext" +
 					"DepUp2NoContext^DepUp2GenPosNoContext^DepUp2SpecPosNoContext^DepPrepUp2NoContext^DepPrepUp2GenPosNoContext^DepPrepUp2SpecPosNoContext^DepFlatUp2NoContext^DepFlatUp2GenPosNoContext^DepFlatUp2SpecPosNoContext^DepFlatPrepUp2NoContext^DepFlatPrepUp2GenPosNoContext^DepFlatPrepUp2SpecPosNoContext" +
 					"DepUp3NoContext^DepUp3GenPosNoContext^DepUp3SpecPosNoContext^DepPrepUp3NoContext^DepPrepUp3GenPosNoContext^DepPrepUp3SpecPosNoContext^DepFlatUp3NoContext^DepFlatUp3GenPosNoContext^DepFlatUp3SpecPosNoContext^DepFlatPrepUp3NoContext^DepFlatPrepUp3GenPosNoContext^DepFlatPrepUp3SpecPosNoContext" +
@@ -160,6 +160,25 @@ public class DependencySignalMechanism extends SignalMechanism {
 			addArgumentDependent(new ScorerData("DP_DEP_PREP_U3_SPECPOS_NOCON",	SameLinkDepPrepUp3SpecPosNoContext.inst,	Aggregator.Any.inst		));
 			break;
 
+		case ANALYSIS11up2:
+			oneScorerClass = SameLinkDepUp2NoContext.class;
+			addArgumentDependent(new ScorerData("DP_DEP_U2_NOCON",			SameLinkDepUp2NoContext.inst,			Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_U2_GENPOS_NOCON",	SameLinkDepUp2GenPosNoContext.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_U2_SPECPOS_NOCON",	SameLinkDepUp2SpecPosNoContext.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_PREP_U2_NOCON",			SameLinkDepPrepUp2NoContext.inst,			Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_PREP_U2_GENPOS_NOCON",		SameLinkDepPrepUp2GenPosNoContext.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_PREP_U2_SPECPOS_NOCON",	SameLinkDepPrepUp2SpecPosNoContext.inst,	Aggregator.Any.inst		));
+			break;
+		case ANALYSIS11up3:
+			oneScorerClass = SameLinkDepUp3NoContext.class;
+			addArgumentDependent(new ScorerData("DP_DEP_U3_NOCON",			SameLinkDepUp3NoContext.inst,			Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_U3_GENPOS_NOCON",	SameLinkDepUp3GenPosNoContext.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_U3_SPECPOS_NOCON",	SameLinkDepUp3SpecPosNoContext.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_PREP_U3_NOCON",			SameLinkDepPrepUp3NoContext.inst,			Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_PREP_U3_GENPOS_NOCON",		SameLinkDepPrepUp3GenPosNoContext.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_PREP_U3_SPECPOS_NOCON",	SameLinkDepPrepUp3SpecPosNoContext.inst,	Aggregator.Any.inst		));
+			break;
+
 		case ANALYSIS11f:
 			oneScorerClass = SameLinkDepFlatNoContext.class;
 			addArgumentDependent(new ScorerData("DP_DEP_F_NOCON",			SameLinkDepFlatNoContext.inst,			Aggregator.Any.inst		));
@@ -178,6 +197,25 @@ public class DependencySignalMechanism extends SignalMechanism {
 			addArgumentDependent(new ScorerData("DP_DEP_F_PREP_U2_NOCON",			SameLinkDepFlatPrepUp2NoContext.inst,			Aggregator.Any.inst		));
 			addArgumentDependent(new ScorerData("DP_DEP_F_PREP_U2_GENPOS_NOCON",		SameLinkDepFlatPrepUp2GenPosNoContext.inst,	Aggregator.Any.inst		));
 			addArgumentDependent(new ScorerData("DP_DEP_F_PREP_U2_SPECPOS_NOCON",	SameLinkDepFlatPrepUp2SpecPosNoContext.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_F_U3_NOCON",			SameLinkDepFlatUp3NoContext.inst,			Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_F_U3_GENPOS_NOCON",	SameLinkDepFlatUp3GenPosNoContext.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_F_U3_SPECPOS_NOCON",	SameLinkDepFlatUp3SpecPosNoContext.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_F_PREP_U3_NOCON",			SameLinkDepFlatPrepUp3NoContext.inst,			Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_F_PREP_U3_GENPOS_NOCON",		SameLinkDepFlatPrepUp3GenPosNoContext.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_F_PREP_U3_SPECPOS_NOCON",	SameLinkDepFlatPrepUp3SpecPosNoContext.inst,	Aggregator.Any.inst		));
+			break;
+
+		case ANALYSIS11fup2:
+			oneScorerClass = SameLinkDepFlatUp2NoContext.class;
+			addArgumentDependent(new ScorerData("DP_DEP_F_U2_NOCON",			SameLinkDepFlatUp2NoContext.inst,			Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_F_U2_GENPOS_NOCON",	SameLinkDepFlatUp2GenPosNoContext.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_F_U2_SPECPOS_NOCON",	SameLinkDepFlatUp2SpecPosNoContext.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_F_PREP_U2_NOCON",			SameLinkDepFlatPrepUp2NoContext.inst,			Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_F_PREP_U2_GENPOS_NOCON",		SameLinkDepFlatPrepUp2GenPosNoContext.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_F_PREP_U2_SPECPOS_NOCON",	SameLinkDepFlatPrepUp2SpecPosNoContext.inst,	Aggregator.Any.inst		));
+			break;
+		case ANALYSIS11fup3:
+			oneScorerClass = SameLinkDepFlatUp3NoContext.class;
 			addArgumentDependent(new ScorerData("DP_DEP_F_U3_NOCON",			SameLinkDepFlatUp3NoContext.inst,			Aggregator.Any.inst		));
 			addArgumentDependent(new ScorerData("DP_DEP_F_U3_GENPOS_NOCON",	SameLinkDepFlatUp3GenPosNoContext.inst,	Aggregator.Any.inst		));
 			addArgumentDependent(new ScorerData("DP_DEP_F_U3_SPECPOS_NOCON",	SameLinkDepFlatUp3SpecPosNoContext.inst,	Aggregator.Any.inst		));
@@ -232,6 +270,25 @@ public class DependencySignalMechanism extends SignalMechanism {
 			addArgumentDependent(new ScorerData("DP_DEP_PREP_U3_SPECPOS_NOCON_1/3",	SameLinkDepPrepUp3SpecPosNoContextMinThird.inst,	Aggregator.Any.inst		));
 			break;
 
+		case ANALYSIS13up2:
+			oneScorerClass = SameLinkDepUp2NoContextMinThird.class;
+			addArgumentDependent(new ScorerData("DP_DEP_U2_NOCON_1/3",			SameLinkDepUp2NoContextMinThird.inst,			Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_U2_GENPOS_NOCON_1/3",	SameLinkDepUp2GenPosNoContextMinThird.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_U2_SPECPOS_NOCON_1/3",	SameLinkDepUp2SpecPosNoContextMinThird.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_PREP_U2_NOCON_1/3",			SameLinkDepPrepUp2NoContextMinThird.inst,			Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_PREP_U2_GENPOS_NOCON_1/3",		SameLinkDepPrepUp2GenPosNoContextMinThird.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_PREP_U2_SPECPOS_NOCON_1/3",	SameLinkDepPrepUp2SpecPosNoContextMinThird.inst,	Aggregator.Any.inst		));
+			break;
+		case ANALYSIS13up3:
+			oneScorerClass = SameLinkDepUp3NoContextMinThird.class;
+			addArgumentDependent(new ScorerData("DP_DEP_U3_NOCON_1/3",			SameLinkDepUp3NoContextMinThird.inst,			Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_U3_GENPOS_NOCON_1/3",	SameLinkDepUp3GenPosNoContextMinThird.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_U3_SPECPOS_NOCON_1/3",	SameLinkDepUp3SpecPosNoContextMinThird.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_PREP_U3_NOCON_1/3",			SameLinkDepPrepUp3NoContextMinThird.inst,			Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_PREP_U3_GENPOS_NOCON_1/3",		SameLinkDepPrepUp3GenPosNoContextMinThird.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_PREP_U3_SPECPOS_NOCON_1/3",	SameLinkDepPrepUp3SpecPosNoContextMinThird.inst,	Aggregator.Any.inst		));
+			break;
+
 		case ANALYSIS13f:
 			oneScorerClass = SameLinkDepFlatNoContextMinThird.class;
 			addArgumentDependent(new ScorerData("DP_DEP_F_NOCON_1/3",			SameLinkDepFlatNoContextMinThird.inst,			Aggregator.Any.inst		));
@@ -250,6 +307,25 @@ public class DependencySignalMechanism extends SignalMechanism {
 			addArgumentDependent(new ScorerData("DP_DEP_F_PREP_U2_NOCON_1/3",			SameLinkDepFlatPrepUp2NoContextMinThird.inst,			Aggregator.Any.inst		));
 			addArgumentDependent(new ScorerData("DP_DEP_F_PREP_U2_GENPOS_NOCON_1/3",		SameLinkDepFlatPrepUp2GenPosNoContextMinThird.inst,	Aggregator.Any.inst		));
 			addArgumentDependent(new ScorerData("DP_DEP_F_PREP_U2_SPECPOS_NOCON_1/3",	SameLinkDepFlatPrepUp2SpecPosNoContextMinThird.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_F_U3_NOCON_1/3",			SameLinkDepFlatUp3NoContextMinThird.inst,			Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_F_U3_GENPOS_NOCON_1/3",	SameLinkDepFlatUp3GenPosNoContextMinThird.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_F_U3_SPECPOS_NOCON_1/3",	SameLinkDepFlatUp3SpecPosNoContextMinThird.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_F_PREP_U3_NOCON_1/3",			SameLinkDepFlatPrepUp3NoContextMinThird.inst,			Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_F_PREP_U3_GENPOS_NOCON_1/3",		SameLinkDepFlatPrepUp3GenPosNoContextMinThird.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_F_PREP_U3_SPECPOS_NOCON_1/3",	SameLinkDepFlatPrepUp3SpecPosNoContextMinThird.inst,	Aggregator.Any.inst		));
+			break;
+
+		case ANALYSIS13fup2:
+			oneScorerClass = SameLinkDepFlatUp2NoContextMinThird.class;
+			addArgumentDependent(new ScorerData("DP_DEP_F_U2_NOCON_1/3",			SameLinkDepFlatUp2NoContextMinThird.inst,			Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_F_U2_GENPOS_NOCON_1/3",	SameLinkDepFlatUp2GenPosNoContextMinThird.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_F_U2_SPECPOS_NOCON_1/3",	SameLinkDepFlatUp2SpecPosNoContextMinThird.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_F_PREP_U2_NOCON_1/3",			SameLinkDepFlatPrepUp2NoContextMinThird.inst,			Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_F_PREP_U2_GENPOS_NOCON_1/3",		SameLinkDepFlatPrepUp2GenPosNoContextMinThird.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_F_PREP_U2_SPECPOS_NOCON_1/3",	SameLinkDepFlatPrepUp2SpecPosNoContextMinThird.inst,	Aggregator.Any.inst		));
+			break;
+		case ANALYSIS13fup3:
+			oneScorerClass = SameLinkDepFlatUp3NoContextMinThird.class;
 			addArgumentDependent(new ScorerData("DP_DEP_F_U3_NOCON_1/3",			SameLinkDepFlatUp3NoContextMinThird.inst,			Aggregator.Any.inst		));
 			addArgumentDependent(new ScorerData("DP_DEP_F_U3_GENPOS_NOCON_1/3",	SameLinkDepFlatUp3GenPosNoContextMinThird.inst,	Aggregator.Any.inst		));
 			addArgumentDependent(new ScorerData("DP_DEP_F_U3_SPECPOS_NOCON_1/3",	SameLinkDepFlatUp3SpecPosNoContextMinThird.inst,	Aggregator.Any.inst		));
@@ -302,6 +378,24 @@ public class DependencySignalMechanism extends SignalMechanism {
 			addArgumentDependent(new ScorerData("DP_DEP_PREP_U3_GENPOS_NOCON_1/5",		SameLinkDepPrepUp3GenPosNoContextMinFifth.inst,	Aggregator.Any.inst		));
 			addArgumentDependent(new ScorerData("DP_DEP_PREP_U3_SPECPOS_NOCON_1/5",	SameLinkDepPrepUp3SpecPosNoContextMinFifth.inst,	Aggregator.Any.inst		));
 
+		case ANALYSIS15up2:
+			oneScorerClass = SameLinkDepUp2NoContextMinFifth.class;
+			addArgumentDependent(new ScorerData("DP_DEP_U2_NOCON_1/5",			SameLinkDepUp2NoContextMinFifth.inst,			Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_U2_GENPOS_NOCON_1/5",	SameLinkDepUp2GenPosNoContextMinFifth.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_U2_SPECPOS_NOCON_1/5",	SameLinkDepUp2SpecPosNoContextMinFifth.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_PREP_U2_NOCON_1/5",			SameLinkDepPrepUp2NoContextMinFifth.inst,			Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_PREP_U2_GENPOS_NOCON_1/5",		SameLinkDepPrepUp2GenPosNoContextMinFifth.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_PREP_U2_SPECPOS_NOCON_1/5",	SameLinkDepPrepUp2SpecPosNoContextMinFifth.inst,	Aggregator.Any.inst		));
+			break;
+		case ANALYSIS15up3:
+			oneScorerClass = SameLinkDepUp3NoContextMinFifth.class;
+			addArgumentDependent(new ScorerData("DP_DEP_U3_NOCON_1/5",			SameLinkDepUp3NoContextMinFifth.inst,			Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_U3_GENPOS_NOCON_1/5",	SameLinkDepUp3GenPosNoContextMinFifth.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_U3_SPECPOS_NOCON_1/5",	SameLinkDepUp3SpecPosNoContextMinFifth.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_PREP_U3_NOCON_1/5",			SameLinkDepPrepUp3NoContextMinFifth.inst,			Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_PREP_U3_GENPOS_NOCON_1/5",		SameLinkDepPrepUp3GenPosNoContextMinFifth.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_PREP_U3_SPECPOS_NOCON_1/5",	SameLinkDepPrepUp3SpecPosNoContextMinFifth.inst,	Aggregator.Any.inst		));
+
 		case ANALYSIS15f:
 			oneScorerClass = SameLinkDepFlatNoContextMinFifth.class;
 			addArgumentDependent(new ScorerData("DP_DEP_F_NOCON_1/5",			SameLinkDepFlatNoContextMinFifth.inst,			Aggregator.Any.inst		));
@@ -319,6 +413,24 @@ public class DependencySignalMechanism extends SignalMechanism {
 			addArgumentDependent(new ScorerData("DP_DEP_F_PREP_U2_NOCON_1/5",			SameLinkDepFlatPrepUp2NoContextMinFifth.inst,			Aggregator.Any.inst		));
 			addArgumentDependent(new ScorerData("DP_DEP_F_PREP_U2_GENPOS_NOCON_1/5",		SameLinkDepFlatPrepUp2GenPosNoContextMinFifth.inst,	Aggregator.Any.inst		));
 			addArgumentDependent(new ScorerData("DP_DEP_F_PREP_U2_SPECPOS_NOCON_1/5",	SameLinkDepFlatPrepUp2SpecPosNoContextMinFifth.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_F_U3_NOCON_1/5",			SameLinkDepFlatUp3NoContextMinFifth.inst,			Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_F_U3_GENPOS_NOCON_1/5",	SameLinkDepFlatUp3GenPosNoContextMinFifth.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_F_U3_SPECPOS_NOCON_1/5",	SameLinkDepFlatUp3SpecPosNoContextMinFifth.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_F_PREP_U3_NOCON_1/5",			SameLinkDepFlatPrepUp3NoContextMinFifth.inst,			Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_F_PREP_U3_GENPOS_NOCON_1/5",		SameLinkDepFlatPrepUp3GenPosNoContextMinFifth.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_F_PREP_U3_SPECPOS_NOCON_1/5",	SameLinkDepFlatPrepUp3SpecPosNoContextMinFifth.inst,	Aggregator.Any.inst		));
+
+		case ANALYSIS15fup2:
+			oneScorerClass = SameLinkDepFlatUp2NoContextMinFifth.class;
+			addArgumentDependent(new ScorerData("DP_DEP_F_U2_NOCON_1/5",			SameLinkDepFlatUp2NoContextMinFifth.inst,			Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_F_U2_GENPOS_NOCON_1/5",	SameLinkDepFlatUp2GenPosNoContextMinFifth.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_F_U2_SPECPOS_NOCON_1/5",	SameLinkDepFlatUp2SpecPosNoContextMinFifth.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_F_PREP_U2_NOCON_1/5",			SameLinkDepFlatPrepUp2NoContextMinFifth.inst,			Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_F_PREP_U2_GENPOS_NOCON_1/5",		SameLinkDepFlatPrepUp2GenPosNoContextMinFifth.inst,	Aggregator.Any.inst		));
+			addArgumentDependent(new ScorerData("DP_DEP_F_PREP_U2_SPECPOS_NOCON_1/5",	SameLinkDepFlatPrepUp2SpecPosNoContextMinFifth.inst,	Aggregator.Any.inst		));
+			break;
+		case ANALYSIS15fup3:
+			oneScorerClass = SameLinkDepFlatUp3NoContextMinFifth.class;
 			addArgumentDependent(new ScorerData("DP_DEP_F_U3_NOCON_1/5",			SameLinkDepFlatUp3NoContextMinFifth.inst,			Aggregator.Any.inst		));
 			addArgumentDependent(new ScorerData("DP_DEP_F_U3_GENPOS_NOCON_1/5",	SameLinkDepFlatUp3GenPosNoContextMinFifth.inst,	Aggregator.Any.inst		));
 			addArgumentDependent(new ScorerData("DP_DEP_F_U3_SPECPOS_NOCON_1/5",	SameLinkDepFlatUp3SpecPosNoContextMinFifth.inst,	Aggregator.Any.inst		));
@@ -534,7 +646,7 @@ public class DependencySignalMechanism extends SignalMechanism {
 						// do nothing, errors will silently be printed in output files
 					}
 
-					String entry1 = String.format("%s^%s^%s^%s^%s^%s^%s^%s^%s^%s^%s^%s^%s^%s^%s^%s^%s^%s^%s^%s\n",
+					String entry1 = String.format("%s^%s^%s^%s^%s^%s^%s^%s^%s^%s^%s^%s^%s^%s^%s^%s^%s^%s^%s^%s^%s\n",
 							//outFileId,
 							//StringUtils.abbreviate(query.textTriggerToken.getCAS().getJCas().getDocumentText().replace('\n',' '), 40),
 							SentenceInstance.currDocId,
@@ -547,6 +659,8 @@ public class DependencySignalMechanism extends SignalMechanism {
 							//Utils.treeToSurfaceText(linkFrag.getFragmentRoot()),
 							facetStr,
 							
+							outsMap.get("WordDepNoContext"),
+
 							outsMap.get("DepNoContext"),
 							outsMap.get("DepGenPosNoContext"),
 							outsMap.get("DepSpecPosNoContext"),
@@ -588,7 +702,7 @@ public class DependencySignalMechanism extends SignalMechanism {
 							
 							
 							);
-					String entry2 = String.format("%s^%s^%s^%s^%s^%s^%s\nDepNoContext:       %s\nDepFlatNoContext:   %s\nDepPrepNoContext:   %s\n%s\n\n",
+					String entry2 = String.format("%s^%s^%s^%s^%s^%s^%s\nWordDepNoContext:       %s\nDepNoContext:       %s\nDepFlatNoContext:   %s\nDepPrepNoContext:   %s\n%s\n\n",
 							//outFileId,
 							//StringUtils.abbreviate(query.textTriggerToken.getCAS().getJCas().getDocumentText().replace('\n',' '), 40),
 							SentenceInstance.currDocId,
@@ -598,6 +712,7 @@ public class DependencySignalMechanism extends SignalMechanism {
 							UimaUtils.annotationToString(textTriggerToken, false, false),
 							UimaUtils.annotationToString(textArgHeadAnno).replace('\n',' ').replace("\"", "*"),
 							origSentenceStr.replace("\"", "*"),
+							outsMap.get("WordDepNoContext"),
 							outsMap.get("DepNoContext"),
 							outsMap.get("DepFlatNoContext"),
 							outsMap.get("DepPrepNoContext"),
@@ -605,9 +720,9 @@ public class DependencySignalMechanism extends SignalMechanism {
 							);
 					
 					// DEBUG
-					if (entry2.contains("combat[2521:2527]")) {
-						System.out.printf("");
-					}
+//					if (entry2.contains("combat[2521:2527]")) {
+//						System.out.printf("");
+//					}
 					////
 					
 					if (!entries1.contains(entry1) && !entries2.contains(entry2)) {
@@ -1979,13 +2094,15 @@ public class DependencySignalMechanism extends SignalMechanism {
 				subrootsNoConj = ImmutableList.of(linkFragNoConj.getFragmentRoot());
 			} catch (Exception e) {
 				System.err.printf("DependencySignalMechanism: Got error while calcing link: %s\n", e);
-				e.printStackTrace(System.err);
-				System.err.printf("#############################################\n");
+				//e.printStackTrace(System.err);
+				//System.err.printf("#############################################\n");
 				err = e.getMessage();
 			}
 				
 			Map<String, String> result = Maps.newHashMap();
 			
+			result.put("WordDepNoContext",			err!=null?err: TreeToLineString.getStringWordRelCanonicalPos(subroots, false, true));
+
 			result.put("DepNoContext",			err!=null?err: TreeToLineString.getStringRel(subroots, false, true));
 			result.put("DepGenPosNoContext",	err!=null?err: TreeToLineString.getStringRelCanonicalPos(subroots, false, true));
 			result.put("DepSpecPosNoContext",	err!=null?err: TreeToLineString.getStringRelPos(subroots, false, true));

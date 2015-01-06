@@ -14,8 +14,14 @@ import eu.excitementproject.eop.common.representation.partofspeech.PartOfSpeech;
 public abstract class Compose extends PredicateSeedScorer {
 	private static final long serialVersionUID = -6327210445951007729L;
 	protected PredicateSeedScorer[] scorers;
+	private int hash;
+	private boolean hasHash = false;
 	@Override public int hashCode() {
-	     return new HashCodeBuilder(1231, 1237).append(scorers).toHashCode();
+		if (!hasHash) {
+			hash = new HashCodeBuilder(1231, 1237).append(scorers).toHashCode();
+			hasHash = true;
+		}
+		return hash;
 	}
 	@Override public boolean equals(Object obj) {
 		   if (obj == null) { return false; }

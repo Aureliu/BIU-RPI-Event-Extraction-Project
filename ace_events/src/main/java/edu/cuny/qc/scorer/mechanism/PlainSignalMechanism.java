@@ -42,6 +42,7 @@ public class PlainSignalMechanism extends SignalMechanism {
 			
 		case ANALYSIS3: //fall-through, analyze exactly all normal scorers 
 		case ANALYSIS: //fall-through, analyze exactly all normal scorers 
+		case INTER1:   //fall-through, riding on it for quick analysis!
 		case NORMAL:
 			addTrigger(new ScorerData("PL_SAME_LEMMA",				SameTriggerLemma.inst,				Aggregator.Any.inst		));
 			

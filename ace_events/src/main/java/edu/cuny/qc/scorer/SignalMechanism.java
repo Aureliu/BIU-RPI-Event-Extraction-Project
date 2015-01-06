@@ -103,7 +103,7 @@ public abstract class SignalMechanism {
 				////
 //				PredicateScorer<?> scorer = (PredicateScorer<?>) data.scorer;
 				
-				BigDecimal score = calcTriggerScore(data.elementAggregator, spec, textTriggerToken, textTriggerTokenMap, docAllText, data, textSentence);
+				BigDecimal score = calcTriggerScore(data.getElementAggregator(), spec, textTriggerToken, textTriggerTokenMap, docAllText, data, textSentence);
 //				try {
 //					scorer.prepareCalc(spec, textTriggerToken, textTriggerTokenMap, docAllText, data);
 //					score = data.elementAggregator.aggregate(scorer);
@@ -132,8 +132,8 @@ public abstract class SignalMechanism {
 				}
 				if (signal.history == null) {
 //					signal.initHistory();
-					data.scorer.debug = true;
-					data.scorer.history = ArrayListMultimap.create();
+					data.getScorer().debug = true;
+					data.getScorer().history = ArrayListMultimap.create();
 					
 					////
 					//System.out.printf("%s calcing trigger history signal, data=%s, doc=%s, inst=%s, i=%s\n", Utils.detailedLog(), data, textSentence.doc.docLine, textSentence, i);
@@ -144,8 +144,8 @@ public abstract class SignalMechanism {
 //					debugAggregator.aggregate(scorer);
 					calcTriggerScore(debugAggregator, spec, textTriggerToken, textTriggerTokenMap, docAllText, data, textSentence);
 					
-					data.scorer.debug = false;
-					signal.history = data.scorer.history;
+					data.getScorer().debug = false;
+					signal.history = data.getScorer().history;
 					textSentence.markSignalUpdate();
 				}
 			}
@@ -155,7 +155,7 @@ public abstract class SignalMechanism {
 	private BigDecimal calcTriggerScore(Aggregator aggregator, JCas spec, Token textTriggerToken, Map<Class<?>, Object> textTriggerTokenMap, String docAllText, ScorerData data, SentenceInstance textSentence) {
 		BigDecimal score;
 		try {
-			PredicateScorer<?> scorer = (PredicateScorer<?>) data.scorer;
+			PredicateScorer<?> scorer = (PredicateScorer<?>) data.getScorer();
 			scorer.prepareCalc(spec, textTriggerToken, textTriggerTokenMap, docAllText, data);
 			score = aggregator.aggregate(scorer);
 		} catch (OutOfMemoryError e) {
@@ -180,6 +180,7 @@ public abstract class SignalMechanism {
 		Token textTriggerToken = textSentence.sent.getTokenAnnotation(i);
 		Map<Class<?>, Object> textTriggerTokenMap = ((List<Map<Class<?>, Object>>) textSentence.get(InstanceAnnotations.Token_FEATURE_MAPs)).get(i);
 		String docAllText = textSentence.doc.allText;
+		JCas docJCas = textSentence.doc.jcas;
 
 		for (ScorerData data : scorers.get(SignalType.ARGUMENT_DEPENDENT)) {
 			SignalInstance signal = null;
@@ -189,7 +190,7 @@ public abstract class SignalMechanism {
 				////
 				//System.out.printf("%s calcing dep arg signal, data=%s, doc=%s, inst=%s, i=%s, mention=%s\n", Utils.detailedLog(), data, textSentence.doc.docLine, textSentence, i, mention);
 				//// DEBUG
-				BigDecimal score = calcArgDependentScore(data.elementAggregator, spec, textTriggerToken, textTriggerTokenMap, argument, mention, docAllText, data, textSentence);
+				BigDecimal score = calcArgDependentScore(data.getElementAggregator(), spec, textTriggerToken, textTriggerTokenMap, argument, mention, docJCas, docAllText, data, textSentence);
 //				try {
 //					scorer.prepareCalc(spec, textTriggerToken, textTriggerTokenMap, argument, mention, docAllText, data);
 //					score = data.elementAggregator.aggregate(scorer);
@@ -212,30 +213,30 @@ public abstract class SignalMechanism {
 					signal = existingSignals.get(data);
 				}
 				if (signal.history == null) {
-					data.scorer.debug = true;
-					data.scorer.history = ArrayListMultimap.create();
+					data.getScorer().debug = true;
+					data.getScorer().history = ArrayListMultimap.create();
 					////
 					//System.out.printf("%s calcing dep arg history signal, data=%s, doc=%s, inst=%s, i=%s, mention=%s\n", Utils.detailedLog(), data, textSentence.doc.docLine, textSentence, i, mention);
 					//// DEBUG
 					// need to init again because the inner iterator is already exhausted, need to get a new one
-					calcArgDependentScore(debugAggregator, spec, textTriggerToken, textTriggerTokenMap, argument, mention, docAllText, data, textSentence);
+					calcArgDependentScore(debugAggregator, spec, textTriggerToken, textTriggerTokenMap, argument, mention, docJCas, docAllText, data, textSentence);
 
 //					ArgumentDependentScorer<?> scorer = (ArgumentDependentScorer<?>) data.scorer;
 //					scorer.prepareCalc(spec, textTriggerToken, textTriggerTokenMap, argument, mention, docAllText, data);
 //					debugAggregator.aggregate(scorer);
-					data.scorer.debug = false;
-					signal.history = data.scorer.history;
+					data.getScorer().debug = false;
+					signal.history = data.getScorer().history;
 					textSentence.markSignalUpdate();
 				}
 			}
 		}
 	}
 
-	private BigDecimal calcArgDependentScore(Aggregator aggregator, JCas spec, Token textTriggerToken, Map<Class<?>, Object> textTriggerTokenMap, Argument argument, AceMention mention, String docAllText, ScorerData data, SentenceInstance textSentence) {
+	private BigDecimal calcArgDependentScore(Aggregator aggregator, JCas spec, Token textTriggerToken, Map<Class<?>, Object> textTriggerTokenMap, Argument argument, AceMention mention, JCas docJCas, String docAllText, ScorerData data, SentenceInstance textSentence) {
 		BigDecimal score;
 		try {
-			ArgumentDependentScorer<?> scorer = (ArgumentDependentScorer<?>) data.scorer;
-			scorer.prepareCalc(spec, textTriggerToken, textTriggerTokenMap, argument, mention, docAllText, data);
+			ArgumentDependentScorer<?> scorer = (ArgumentDependentScorer<?>) data.getScorer();
+			scorer.prepareCalc(spec, textTriggerToken, textTriggerTokenMap, argument, mention, docJCas, docAllText, data);
 			score = aggregator.aggregate(scorer);
 		} catch (OutOfMemoryError e) {
 			throw e;
@@ -262,7 +263,7 @@ public abstract class SignalMechanism {
 				////
 				//System.out.printf("%s calcing free arg signal, data=%s, doc=%s, inst=%s, mention=%s\n", Utils.detailedLog(), data, textSentence.doc.docLine, textSentence, mention);
 				//// DEBUG
-				BigDecimal score = calcArgFreeScore(data.elementAggregator, spec, argument, mention, docJCas, docAllText, data, textSentence);
+				BigDecimal score = calcArgFreeScore(data.getElementAggregator(), spec, argument, mention, docJCas, docAllText, data, textSentence);
 //				try {
 //					scorer.prepareCalc(spec, argument, mention, docAllText, docJCas, data);
 //					score = data.elementAggregator.aggregate(scorer);
@@ -285,8 +286,8 @@ public abstract class SignalMechanism {
 					signal = existingSignals.get(data);
 				}
 				if (signal.history == null) {
-					data.scorer.debug = true;
-					data.scorer.history = ArrayListMultimap.create();
+					data.getScorer().debug = true;
+					data.getScorer().history = ArrayListMultimap.create();
 					// need to init again because the inner iterator is already exhausted, need to get a new one
 					////
 					//System.out.printf("%s calcing free arg history signal, data=%s, doc=%s, inst=%s, mention=%s\n", Utils.detailedLog(), data, textSentence.doc.docLine, textSentence, mention);
@@ -295,8 +296,8 @@ public abstract class SignalMechanism {
 //					ArgumentFreeScorer<?> scorer = (ArgumentFreeScorer<?>) data.scorer;
 //					scorer.prepareCalc(spec, argument, mention, docAllText, docJCas, data);
 //					debugAggregator.aggregate(scorer);
-					data.scorer.debug = false;
-					signal.history = data.scorer.history;
+					data.getScorer().debug = false;
+					signal.history = data.getScorer().history;
 					textSentence.markSignalUpdate();
 				}
 			}
@@ -306,7 +307,7 @@ public abstract class SignalMechanism {
 	private BigDecimal calcArgFreeScore(Aggregator aggregator, JCas spec, Argument argument, AceMention mention, JCas docJCas, String docAllText, ScorerData data, SentenceInstance textSentence) {
 		BigDecimal score;
 		try {
-			ArgumentFreeScorer<?> scorer = (ArgumentFreeScorer<?>) data.scorer;
+			ArgumentFreeScorer<?> scorer = (ArgumentFreeScorer<?>) data.getScorer();
 			scorer.prepareCalc(spec, argument, mention, docAllText, docJCas, data);
 			score = aggregator.aggregate(scorer);
 		} catch (OutOfMemoryError e) {

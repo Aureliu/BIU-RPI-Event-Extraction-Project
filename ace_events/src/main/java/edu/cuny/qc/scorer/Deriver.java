@@ -19,14 +19,16 @@ import eu.excitementproject.eop.common.representation.partofspeech.PartOfSpeech;
 
 public abstract class Deriver implements Serializable {
 	private static final long serialVersionUID = 2232471629182535996L;
-
+	private final int hash = getClass().getSimpleName().hashCode();
+	
 	public String getTypeName() {return getClass().getSimpleName(); }
 	
 	public abstract String getSuffix();
 	public abstract Set<BasicRulesQuery> buildDerivations(FullRulesQuery query) throws DeriverException;
 	//public abstract Class<?> getTokenAnnotationMarker();
 	@Override public int hashCode() {
-	     return getClass().getSimpleName().hashCode();
+	     return hash;
+	     //return getClass().getSimpleName().hashCode();
 	}
 	@Override public boolean equals(Object obj) {
 		   if (obj == null) { return false; }

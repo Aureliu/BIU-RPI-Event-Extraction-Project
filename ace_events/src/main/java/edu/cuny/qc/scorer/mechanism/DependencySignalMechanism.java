@@ -612,7 +612,7 @@ public class DependencySignalMechanism extends SignalMechanism {
 			this.textOutsMapKey = textOutsMapKey;
 		}
 		@Override
-		public Boolean calcBoolPredicateSeedScore(Token textTriggerToken, AceMention textArgMention, Annotation textArgHeadAnno, ArgumentInUsageSample specAius, ScorerData scorerData) throws SignalMechanismException {
+		public Boolean calcBoolArgumentInUsageSampleScore(Token textTriggerToken, AceMention textArgMention, Annotation textArgHeadAnno, ArgumentInUsageSample specAius, ScorerData scorerData) throws SignalMechanismException {
 			try {
 				specTreeout = cacheSpecTreeouts.get(new SpecTreeoutQuery(specClass, specAius));
 

@@ -20,9 +20,11 @@ public abstract class Aggregator implements Serializable {
 	public String getTypeName() {return getClass().getSimpleName(); }
 	public abstract String getSuffix();
 	public abstract BigDecimal aggregate(Iterator<BigDecimal> scoreIterator);
+	private final int hash = getClass().getSimpleName().hashCode();
 	
 	@Override public int hashCode() {
-	     return getClass().getSimpleName().hashCode();
+	     //return getClass().getSimpleName().hashCode();
+		return hash;
 	}
 	@Override public boolean equals(Object obj) {
 		   if (obj == null) { return false; }

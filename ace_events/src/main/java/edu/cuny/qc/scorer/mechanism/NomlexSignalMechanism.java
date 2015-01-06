@@ -50,11 +50,11 @@ public class NomlexSignalMechanism extends SignalMechanism {
 		public Set<BasicRulesQuery> buildDerivations(FullRulesQuery query) throws DeriverException {
 			try {
 				Set<BasicRulesQuery> result = Sets.newHashSet();
-				BasicRulesQuery q = query.basicQuery;
-				CanonicalPosTag pos = q.lPos.getCanonicalPosTag();
+				BasicRulesQuery q = query.getBasicQuery();
+				CanonicalPosTag pos = q.getlPos().getCanonicalPosTag();
 				for (NomlexPlusDictionary dict : derivationDicts) {
 					if (pos==dict.tagOfOther) {
-						Collection<String> others = dict.mapToNoun.get(q.lLemma);
+						Collection<String> others = dict.mapToNoun.get(q.getlLemma());
 						for (String other : others) {
 							PartOfSpeech otherPos = PosMap.byCanonical.get(dict.tagOfOther);
 							result.add(new BasicRulesQuery(other, otherPos, null, null)); 

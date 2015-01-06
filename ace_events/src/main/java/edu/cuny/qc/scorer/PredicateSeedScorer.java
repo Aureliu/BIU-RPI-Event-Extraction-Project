@@ -60,7 +60,7 @@ public abstract class PredicateSeedScorer extends PredicateScorer<PredicateSeed>
 		try {
 			
 			//hard-codedly, specificPos only refers to the original text token, not any derivations
-			if (scorerData.specificPos != null && !scorerData.specificPos.equals(textPos)) {
+			if (scorerData.getSpecificPos() != null && !scorerData.getSpecificPos().equals(textPos)) {
 				return false; //TODO: should be: IRRELEVANT
 			}
 			
@@ -75,11 +75,11 @@ public abstract class PredicateSeedScorer extends PredicateScorer<PredicateSeed>
 			boolean result = false;
 			for (BasicRulesQuery textDerv : textDerivations) {
 				for (BasicRulesQuery specDerv : specDerivations) {
-					result = calcBoolPredicateSeedScore(textToken, textTriggerTokenMap, textDerv.lLemma, textDerv.lPos, specDerv.lLemma, specDerv.lPos, scorerData);
+					result = calcBoolPredicateSeedScore(textToken, textTriggerTokenMap, textDerv.getlLemma(), textDerv.getlPos(), specDerv.getlLemma(), specDerv.getlPos(), scorerData);
 					if (result) {
 						if (debug) {
 							// when a BasicRulesQuery represents only one lemma/POS, it's always on the Left side
-							addToHistory(textDerv.lLemma, textDerv.lPos, specDerv.lLemma, specDerv.lPos, spec);
+							addToHistory(textDerv.getlLemma(), textDerv.getlPos(), specDerv.getlLemma(), specDerv.getlPos(), spec);
 						}
 						break;
 					}
@@ -115,21 +115,48 @@ public abstract class PredicateSeedScorer extends PredicateScorer<PredicateSeed>
 	}
 	
 	public static class PredicateSeedQuery {
-		public PredicateSeed predicateSeed;
-		public PartOfSpeech specPos;
+		private PredicateSeed predicateSeed;
+		private PartOfSpeech specPos;
+		private int hash;
+		private boolean hasHash = false;
 		public PredicateSeedQuery(PredicateSeed predicateSeed, PartOfSpeech specPos) {
 			this.predicateSeed = predicateSeed;
 			this.specPos = specPos;
 		}
-		@Override public int hashCode() {
-		     return new HashCodeBuilder(19, 37).append(predicateSeed).append(specPos).toHashCode();
+		@Override
+		public int hashCode() {
+			if (!hasHash) {
+				final int prime = 31;
+				int result = 1;
+				result = prime * result
+						+ ((predicateSeed == null) ? 0 : predicateSeed.hashCode());
+				result = prime * result
+						+ ((specPos == null) ? 0 : specPos.hashCode());
+				hash = result;
+				hasHash = true;
+			}
+			return hash;
 		}
-		@Override public boolean equals(Object obj) {
-		   if (obj == null) { return false; }
-		   if (obj == this) { return true; }
-		   if (obj.getClass() != getClass()) { return false; }
-		   PredicateSeedQuery rhs = (PredicateSeedQuery) obj;
-		   return new EqualsBuilder().append(predicateSeed, rhs.predicateSeed).append(specPos, rhs.specPos).isEquals();
+		@Override
+		public boolean equals(Object obj) {
+			if (this == obj)
+				return true;
+			if (obj == null)
+				return false;
+			if (getClass() != obj.getClass())
+				return false;
+			PredicateSeedQuery other = (PredicateSeedQuery) obj;
+			if (predicateSeed == null) {
+				if (other.predicateSeed != null)
+					return false;
+			} else if (!predicateSeed.equals(other.predicateSeed))
+				return false;
+			if (specPos == null) {
+				if (other.specPos != null)
+					return false;
+			} else if (!specPos.equals(other.specPos))
+				return false;
+			return true;
 		}
 	}
 	
@@ -140,8 +167,8 @@ public abstract class PredicateSeedScorer extends PredicateScorer<PredicateSeed>
 			.maximumSize(10000)
 			.build(new CacheLoader<BasicRulesQuery, Set<BasicRulesQuery>>() {
 				public Set<BasicRulesQuery> load(BasicRulesQuery query) throws DeriverException {
-					Set<BasicRulesQuery> result = scorerData.deriver.getDerivations(
-							query.lLemma, query.lPos, scorerData.derivation.leftOriginal, scorerData.derivation.leftDerivation, scorerData.leftSenseNum);
+					Set<BasicRulesQuery> result = scorerData.getDeriver().getDerivations(
+							query.getlLemma(), query.getlPos(), scorerData.getDerivation().leftOriginal, scorerData.getDerivation().leftDerivation, scorerData.getLeftSenseNum());
 					return result;
 				}
 			});
@@ -157,8 +184,8 @@ public abstract class PredicateSeedScorer extends PredicateScorer<PredicateSeed>
 					}));
 					Set<BasicRulesQuery> result = new HashSet<BasicRulesQuery>(5);
 					for (String specForm : specForms) {
-						result.addAll(scorerData.deriver.getDerivations(
-								specForm, spec.specPos, scorerData.derivation.rightOriginal, scorerData.derivation.rightDerivation, scorerData.rightSenseNum));
+						result.addAll(scorerData.getDeriver().getDerivations(
+								specForm, spec.specPos, scorerData.getDerivation().rightOriginal, scorerData.getDerivation().rightDerivation, scorerData.getRightSenseNum()));
 					}					
 					return result;
 				}

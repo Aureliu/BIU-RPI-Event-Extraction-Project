@@ -61,12 +61,12 @@ public class SignalAnalyzer {
 	private static final String CONTROLLER_PARAMS =
 					"beamSize=4 maxIterNum=20 skipNonEventSent=true avgArguments=true useGlobalFeature=false " +
 					"addNeverSeenFeatures=true crossSent=false crossSentReranking=false order=0 evaluatorType=1 learnBigrams=true logLevel=3 " +
-					"oMethod=G0P- serialization=BZ2 featureProfile=ANALYSIS calcDebugSignalsAnyway=true docsChunk=20";
+					"oMethod=G0P- serialization=BZ2 featureProfile=ANALYSIS calcDebugSignalsAnyway=false docsChunk=20";
 	private static SignalAnalyzerDocumentCollection docs = new SignalAnalyzerDocumentCollection();
 	private static final int SENTENCE_PRINT_FREQ = 200;
 	private static final int SENTENCE_GC_FREQ = 20000;
 	//private static final int debugMinSentence = 1310;
-	private static final boolean DO_VERBOSE_PRINTS = true; //warning! only use this for really fine-grained debugging - this prints a lot!!!
+	private static final boolean DO_VERBOSE_PRINTS = false; //warning! only use this for really fine-grained debugging - this prints a lot!!!
 	
 	// NEW YORK!!!
 	// This was a decision I made 14/11/2014, that reverses a previous decision
@@ -311,14 +311,14 @@ public class SignalAnalyzer {
 							System.err.printf("8/%s/%s ", i, debug?signal.history.size():-1);
 						}
 						
-						key.put("signal", data.basicName);
+						key.put("signal", data.getBasicName());
 						key.put("el-agg", data.getElementAggregatorTypeName());
 						key.put("us-agg", data.getUsageSampleAggregatorTypeName());
 						key.put("deriver", data.getDeriverTypeName());
-						key.put("derivation", ""+data.derivation);
+						key.put("derivation", ""+data.getDerivation());
 						//key.put("spec-ind", ""+data.isSpecIndependent);
-						key.put("left-sense", ""+data.leftSenseNum);
-						key.put("right-sense", ""+data.rightSenseNum);
+						key.put("left-sense", ""+data.getLeftSenseNum());
+						key.put("right-sense", ""+data.getRightSenseNum());
 						
 						if (debug) {
 							for (Entry<String, String> entry : signal.history.entries()) {
@@ -536,7 +536,7 @@ public class SignalAnalyzer {
 							for (ScorerData xd : xm2.keySet()) {
 								SignalInstance xs = xm2.get(xd);
 								
-								if (xd.basicName.contains("PL_SAME_LEMMA")) {
+								if (xd.getBasicName().contains("PL_SAME_LEMMA")) {
 									System.err.printf("*** sent=%s, spec=%s, xk=%s, xr=%s, xd=%s, xs=%s: %s\n", sentNum, triggerLabel, xk, xr, xd, xs, xs.history);
 									if (xs.positive) {
 										System.err.printf("        @@@ Found a positive one! %s: %s argcands=%s\n", xs, xs.history, problem.eventArgCandidates);
@@ -589,14 +589,14 @@ public class SignalAnalyzer {
 	//				}
 					///
 					key.put("role", "-");
-					key.put("signal", data.basicName);
+					key.put("signal", data.getBasicName());
 					key.put("el-agg", data.getElementAggregatorTypeName());
 					key.put("us-agg", data.getUsageSampleAggregatorTypeName());
 					key.put("deriver", data.getDeriverTypeName());
-					key.put("derivation", ""+data.derivation);
+					key.put("derivation", ""+data.getDerivation());
 					//key.put("spec-ind", ""+data.isSpecIndependent);
-					key.put("left-sense", ""+data.leftSenseNum);
-					key.put("right-sense", ""+data.rightSenseNum);
+					key.put("left-sense", ""+data.getLeftSenseNum());
+					key.put("right-sense", ""+data.getRightSenseNum());
 					
 	//				if (sentNum >= DEBUG_MIN_SENTENCE) {
 	//					System.err.printf("12 ");
@@ -610,14 +610,14 @@ public class SignalAnalyzer {
 					for (ScorerData data : assignmentsOfRole.keySet()) {
 						SentenceAssignment assn = assignmentsOfRole.get(data);
 						key.put("role", role);
-						key.put("signal", data.basicName);
+						key.put("signal", data.getBasicName());
 						key.put("el-agg", data.getElementAggregatorTypeName());
 						key.put("us-agg", data.getUsageSampleAggregatorTypeName());
 						key.put("deriver", data.getDeriverTypeName());
-						key.put("derivation", ""+data.derivation);
+						key.put("derivation", ""+data.getDerivation());
 						//key.put("spec-ind", ""+data.isSpecIndependent);
-						key.put("left-sense", ""+data.leftSenseNum);
-						key.put("right-sense", ""+data.rightSenseNum);
+						key.put("left-sense", ""+data.getLeftSenseNum());
+						key.put("right-sense", ""+data.getRightSenseNum());
 						docs.updateDocs(key, "ArgDepPerformance", "", assn);
 					}
 				}
@@ -632,14 +632,14 @@ public class SignalAnalyzer {
 //						}
 						/////
 						key.put("role", role);
-						key.put("signal", data.basicName);
+						key.put("signal", data.getBasicName());
 						key.put("el-agg", data.getElementAggregatorTypeName());
 						key.put("us-agg", data.getUsageSampleAggregatorTypeName());
 						key.put("deriver", data.getDeriverTypeName());
-						key.put("derivation", ""+data.derivation);
+						key.put("derivation", ""+data.getDerivation());
 						//key.put("spec-ind", ""+data.isSpecIndependent);
-						key.put("left-sense", ""+data.leftSenseNum);
-						key.put("right-sense", ""+data.rightSenseNum);
+						key.put("left-sense", ""+data.getLeftSenseNum());
+						key.put("right-sense", ""+data.getRightSenseNum());
 						docs.updateDocs(key, "ArgFreePerformance", "", assn);
 					}
 				}
@@ -802,14 +802,14 @@ public class SignalAnalyzer {
 						//assn.setCurrentEdgeLabel(k, SentenceAssignment.Default_Argument_Label);
 					}
 
-					key.put("signal", data.basicName);
+					key.put("signal", data.getBasicName());
 					key.put("el-agg", data.getElementAggregatorTypeName());
 					key.put("us-agg", data.getUsageSampleAggregatorTypeName());
 					key.put("deriver", data.getDeriverTypeName());
-					key.put("derivation", ""+data.derivation);
+					key.put("derivation", ""+data.getDerivation());
 					//key.put("spec-ind", ""+data.isSpecIndependent);
-					key.put("left-sense", ""+data.leftSenseNum);
-					key.put("right-sense", ""+data.rightSenseNum);
+					key.put("left-sense", ""+data.getLeftSenseNum());
+					key.put("right-sense", ""+data.getRightSenseNum());
 
 					if (debug) {
 						for (Entry<String, String> entry : signal.history.entries()) {

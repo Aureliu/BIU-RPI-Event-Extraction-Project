@@ -16,7 +16,6 @@ import org.uimafit.util.JCasUtil;
 import ac.biu.nlp.nlp.ie.onthefly.input.AnnotationUtils;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentExample;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.NounLemma;
-import ac.biu.nlp.nlp.ie.onthefly.input.uima.VerbLemma;
 
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
@@ -30,7 +29,6 @@ import edu.cuny.qc.ace.acetypes.AceEntity;
 import edu.cuny.qc.ace.acetypes.AceEntityMention;
 import edu.cuny.qc.ace.acetypes.AceTimexMention;
 import edu.cuny.qc.ace.acetypes.AceValueMention;
-import edu.cuny.qc.scorer.PredicateSeedScorer.PredicateSeedQuery;
 import edu.cuny.qc.util.PosMap;
 import edu.cuny.qc.util.Utils;
 import eu.excitementproject.eop.common.representation.partofspeech.CanonicalPosTag;
@@ -54,7 +52,7 @@ public abstract class ArgumentExampleScorer extends ArgumentFreeScorer<ArgumentE
 	}
 
 	@Override
-	public Boolean calcBooleanArgumentScore(ArgumentExample spec) throws SignalMechanismException {
+	public Boolean calcBooleanArgumentFreeScore(ArgumentExample spec) throws SignalMechanismException {
 		try {
 			// As a decision, Values and Timexes are not considered lexically - they will only be treated in the AIUS level
 			if (aceMention instanceof AceTimexMention || aceMention instanceof AceValueMention) {
@@ -77,11 +75,11 @@ public abstract class ArgumentExampleScorer extends ArgumentFreeScorer<ArgumentE
 			for (EntityMentionInfo entityMentionInfo : entityInfos) {
 				for (BasicRulesQuery textDerv : entityMentionInfo.headTokenLemmaDerivations) {
 					for (BasicRulesQuery specDerv : specDerivations) {
-						result = calcBoolArgumentExampleScore(entityMentionInfo.corefMention, entityMentionInfo.headAnno, textDerv.lLemma, textDerv.lPos, specDerv.lLemma, specDerv.lPos, scorerData);
+						result = calcBoolArgumentExampleScore(entityMentionInfo.corefMention, entityMentionInfo.headAnno, textDerv.getlLemma(), textDerv.getlPos(), specDerv.getlLemma(), specDerv.getlPos(), scorerData);
 						if (result) {
 							if (debug) {
 								// when a BasicRulesQuery represents only one lemma/POS, it's always on the Left side
-								addToHistory(entityMentionInfo.headAnno.getCoveredText(), entityMentionInfo.headToken.getCoveredText(), textDerv.lLemma, textDerv.lPos, specDerv.lLemma, specDerv.lPos, spec);
+								addToHistory(entityMentionInfo.headAnno.getCoveredText(), entityMentionInfo.headToken.getCoveredText(), textDerv.getlLemma(), textDerv.getlPos(), specDerv.getlLemma(), specDerv.getlPos(), spec);
 							}
 							break;
 						}
@@ -250,8 +248,8 @@ public abstract class ArgumentExampleScorer extends ArgumentFreeScorer<ArgumentE
 						if (info.headToken != null) {
 							// Get all text-head-token-lemma derivations
 							// This is really the only reason we need a non-static (scorer-dependent) processing of text entity - the derivations! (which are indeed scorer dependent)
-							info.headTokenLemmaDerivations = scorerData.deriver.getDerivations(
-									info.headToken.getLemma().getValue(), info.headTokenPos, scorerData.derivation.leftOriginal, scorerData.derivation.leftDerivation, scorerData.leftSenseNum);
+							info.headTokenLemmaDerivations = scorerData.getDeriver().getDerivations(
+									info.headToken.getLemma().getValue(), info.headTokenPos, scorerData.getDerivation().leftOriginal, scorerData.getDerivation().leftDerivation, scorerData.getLeftSenseNum());
 						}
 					}
 					return result;
@@ -272,8 +270,8 @@ public abstract class ArgumentExampleScorer extends ArgumentFreeScorer<ArgumentE
 					// Arguments in spec are only nouns
 					Set<BasicRulesQuery> result = new HashSet<BasicRulesQuery>(5);
 					for (String specForm : specForms) {
-						result.addAll(scorerData.deriver.getDerivations(
-								specForm, PosMap.byCanonical.get(CanonicalPosTag.N), scorerData.derivation.rightOriginal, scorerData.derivation.rightDerivation, scorerData.rightSenseNum));
+						result.addAll(scorerData.getDeriver().getDerivations(
+								specForm, PosMap.byCanonical.get(CanonicalPosTag.N), scorerData.getDerivation().rightOriginal, scorerData.getDerivation().rightDerivation, scorerData.getRightSenseNum()));
 					}					
 
 					return result;

@@ -24,10 +24,10 @@ public abstract class ArgumentFreeScorer<T extends Annotation> extends SignalMec
 	
 	@Override
 	public Boolean calcScore(T spec) throws SignalMechanismException {
-		return calcBooleanArgumentScore(spec);
+		return calcBooleanArgumentFreeScore(spec);
 	}
 
-	public abstract Boolean calcBooleanArgumentScore(T spec) throws SignalMechanismException;
+	public abstract Boolean calcBooleanArgumentFreeScore(T spec) throws SignalMechanismException;
 	protected abstract void prepareSpecIteration(JCas spec) throws SignalMechanismException;
 	
 	//protected transient ScorerData scorerData;

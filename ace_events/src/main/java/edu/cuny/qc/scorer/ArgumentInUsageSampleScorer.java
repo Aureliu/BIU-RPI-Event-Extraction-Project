@@ -4,18 +4,16 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Set;
 
-import org.apache.uima.cas.CASException;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.tcas.Annotation;
 import org.uimafit.util.JCasUtil;
 
-import com.google.common.base.Predicate;
-import com.google.common.collect.Collections2;
+import ac.biu.nlp.nlp.ie.onthefly.input.AnnotationUtils;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample;
+
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 
-import ac.biu.nlp.nlp.ie.onthefly.input.AnnotationUtils;
-import ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentInUsageSample;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
 import edu.cuny.qc.ace.acetypes.AceMention;
 import edu.cuny.qc.util.Span;
@@ -63,10 +61,10 @@ public abstract class ArgumentInUsageSampleScorer extends ArgumentDependentScore
 	}
 
 	@Override
-	public Boolean calcBooleanArgumentScore(ArgumentInUsageSample spec) throws SignalMechanismException {
+	public Boolean calcBooleanArgumentDependentScore(ArgumentInUsageSample spec) throws SignalMechanismException {
 		Span head = Utils.getHead(aceMention);
 		Annotation headAnno = AnnotationUtils.spanToAnnotation(docJcas, head);
-		boolean result = calcBoolPredicateSeedScore(textTriggerToken, aceMention, headAnno, spec, scorerData);
+		boolean result = calcBoolArgumentInUsageSampleScore(textTriggerToken, aceMention, headAnno, spec, scorerData);
 		if (result && debug) {
 			addToHistory();
 		}
@@ -88,7 +86,7 @@ public abstract class ArgumentInUsageSampleScorer extends ArgumentDependentScore
 //	}
 	
 //	public abstract Boolean calcBoolPredicateSeedScore(BasicNode textFragment, BasicNode specfragment, ScorerData scorerData) throws SignalMechanismException;
-	public abstract Boolean calcBoolPredicateSeedScore(Token textTriggerToken, AceMention textArgMention, Annotation textArgHeadAnno, ArgumentInUsageSample specAius, ScorerData scorerData) throws SignalMechanismException;
+	public abstract Boolean calcBoolArgumentInUsageSampleScore(Token textTriggerToken, AceMention textArgMention, Annotation textArgHeadAnno, ArgumentInUsageSample specAius, ScorerData scorerData) throws SignalMechanismException;
 	
 	private static JCas docJcas = null;
 }

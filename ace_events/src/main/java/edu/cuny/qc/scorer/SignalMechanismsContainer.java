@@ -13,6 +13,7 @@ import edu.cuny.qc.perceptron.types.SentenceInstance;
 import edu.cuny.qc.perceptron.types.SignalType;
 import edu.cuny.qc.scorer.mechanism.BrownClustersSignalMechanism;
 import edu.cuny.qc.scorer.mechanism.DependencySignalMechanism;
+import edu.cuny.qc.scorer.mechanism.IntersectSignalMechanism;
 import edu.cuny.qc.scorer.mechanism.POSSignalMechanism;
 import edu.cuny.qc.scorer.mechanism.PlainSignalMechanism;
 import edu.cuny.qc.scorer.mechanism.WordNetSignalMechanism;
@@ -30,6 +31,7 @@ public class SignalMechanismsContainer {
 		signalMechanisms.add(new BrownClustersSignalMechanism(controller));
 		signalMechanisms.add(new POSSignalMechanism(controller));
 		signalMechanisms.add(new DependencySignalMechanism(controller));
+		signalMechanisms.add(new IntersectSignalMechanism(controller));
 		
 		for (SignalMechanism mechanism : signalMechanisms) {
 			triggerScorers.addAll(mechanism.scorers.get(SignalType.TRIGGER));

@@ -458,6 +458,31 @@ public class DependencySignalMechanism extends SignalMechanism {
 //			addArgumentDependent(new ScorerData("DP_DEP_SPECPOS_CON",	SameLinkDepSpecPosWithContext.inst,	Aggregator.Any.inst		));
 			
 			break;
+			
+		case ???:
+
+			// High F1 (0.345)
+			DP_DEP_F_PREP_NOCON_1/4
+			
+			// High F1 (0.341)
+			DP_DEP_PREP_NOCON_1/5
+			
+			// High F1 (0.34)
+			DP_DEP_PREP_NOCON_1/4
+			
+			// High F1 (0.338)
+			DP_DEP_F_PREP_NOCON_1/5
+
+			
+			//High Recall (0.597)
+			DP_DEP_U2_NOCON
+
+			//High Recall (0.513)
+			DP_DEP_F_U3_NOCON
+
+			//High Precision (0.572)
+			DP_DEP_PREP_GENPOS_NOCON_1/2
+
 		default:
 			//throw new IllegalStateException("Bad FeatureProfile enum value: " + controller.featureProfile);
 			break;

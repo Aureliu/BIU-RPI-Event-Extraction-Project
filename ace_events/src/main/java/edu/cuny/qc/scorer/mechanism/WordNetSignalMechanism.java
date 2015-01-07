@@ -300,6 +300,14 @@ public class WordNetSignalMechanism extends SignalMechanism {
 			////////////////////////
 			
 			
+			// High Recall
+			addArgumentFree(new ScorerData(null, new WordnetArgumentScorer(SYNONYM_RELATION, Juxtaposition.ANCESTOR, 4), NoDerv.inst, Derivation.NONE, -1, -1, null, Any.inst));
+			
+			// High Precision
+			WN__AllRelsBig__ANCESTOR_Len1	WordnetDervRltdDeriver	_withSpecDerv	-1	1	Min2	Any
+			WN__INSTANCE_HYPERNYM__ANCESTOR_Len1	NomlexDeriver		-1	-1	Any	Any
+
+			
 		default:
 			//throw new IllegalStateException("Bad FeatureProfile enum value: " + controller.featureProfile);
 			break;

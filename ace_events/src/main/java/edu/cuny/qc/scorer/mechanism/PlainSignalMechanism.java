@@ -50,6 +50,14 @@ public class PlainSignalMechanism extends SignalMechanism {
 			addArgumentFree(new ScorerData("PL_SAME_LEMMA_HEADTOKEN",	SameArgumentHeadTokenLemma.inst,	Aggregator.Any.inst		));
 			
 			break;
+			
+		case ???:
+			//High F1, Rec, Prec. 2015.01.04..2: F1=0.648 Rec=0.663 Prec=0.634
+			addTrigger(new ScorerData("PL_SAME_LEMMA",				SameTriggerLemma.inst,				Aggregator.Any.inst		));
+
+			// High ???. 2015.01.04..2: F1=0.226 Rec=0.214 Prec=0.241
+			addArgumentFree(new ScorerData("PL_SAME_FULLHEAD",			SameArgumentText.inst,				Aggregator.Any.inst		));
+			
 		default:
 			//throw new IllegalStateException("Bad FeatureProfile enum value: " + controller.featureProfile);
 			break;

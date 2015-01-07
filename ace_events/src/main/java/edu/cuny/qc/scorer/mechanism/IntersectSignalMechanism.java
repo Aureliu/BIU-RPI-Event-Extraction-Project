@@ -21,6 +21,14 @@ import edu.cuny.qc.scorer.mechanism.DependencySignalMechanism.SameLinkDepUp3NoCo
 import edu.cuny.qc.scorer.mechanism.WordNetSignalMechanism.WordnetArgumentScorer;
 import edu.cuny.qc.scorer.mechanism.WordNetSignalMechanism.WordnetDervRltdDeriver;
 
+/**
+ * Epic Fail!
+ * 
+ * (Look at 2015.01.04..2 to see what I'm talking about)
+ * 
+ * @author Ofer Bronstein
+ *
+ */
 public class IntersectSignalMechanism extends SignalMechanism {
 
 	public IntersectSignalMechanism(Controller controller) throws SignalMechanismException {

@@ -16,6 +16,7 @@ import com.google.common.collect.Lists;
 
 import edu.cuny.qc.perceptron.core.ArgOMethod;
 import edu.cuny.qc.perceptron.core.SentenceSortingMethod;
+import edu.cuny.qc.scorer.FeatureProfile;
 
 public class Run {
 	//public Map<String, JCas> trainEvents, devEvents, testEvents;
@@ -27,6 +28,7 @@ public class Run {
 	public int id, idPerTest, trainMentions, devMentions;
 	public SentenceSortingMethod sentenceSortingMethod;
 	public ArgOMethod argOMethod;
+	public FeatureProfile featureProfile;
 	
 	public void calcSuffix() {
 		suffix = String.format("%03d_%02d_Train%02d_Dev%02d", id, idPerTest, trainEvents.size(), devEvents.size());
@@ -34,7 +36,7 @@ public class Run {
 	
 	@Override
 	public int hashCode() {
-	     return new HashCodeBuilder(131, 97).append(trainEvents).append(devEvents).append(testEvent).append(sentenceSortingMethod).append(argOMethod).toHashCode();
+	     return new HashCodeBuilder(131, 97).append(trainEvents).append(devEvents).append(testEvent).append(sentenceSortingMethod).append(argOMethod).append(featureProfile).toHashCode();
 	}
 	@Override
 	public boolean equals(Object obj) {
@@ -46,13 +48,13 @@ public class Run {
 	   Run rhs = (Run) obj;
 	   return new EqualsBuilder().append(trainEvents, rhs.trainEvents).append(devEvents, rhs.devEvents)
 			   .append(testEvent, rhs.testEvent).append(sentenceSortingMethod, rhs.sentenceSortingMethod)
-			   .append(argOMethod, rhs.argOMethod).isEquals();
+			   .append(argOMethod, rhs.argOMethod).append(featureProfile, rhs.featureProfile).isEquals();
 	}
 
 	public String toString() {
 		try {
 			String testEventLabel = SpecAnnotator.getSpecLabel(testEvent);
-			return String.format("%s(%s,%s, test=%s, %s train, %s dev, method=%s argO=%s)", getClass().getSimpleName(), id, idPerTest, testEventLabel, trainEvents.size(), devEvents.size(), sentenceSortingMethod, argOMethod);
+			return String.format("%s(%s,%s, test=%s, %s train, %s dev, method=%s argO=%s profile=%s)", getClass().getSimpleName(), id, idPerTest, testEventLabel, trainEvents.size(), devEvents.size(), sentenceSortingMethod, argOMethod, featureProfile);
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
@@ -87,6 +89,7 @@ public class Run {
 		newRun.devMentions = orig.devMentions;
 		newRun.sentenceSortingMethod = orig.sentenceSortingMethod;
 		newRun.argOMethod = orig.argOMethod;
+		newRun.featureProfile = orig.featureProfile;
 		return newRun;
 	}		
 }

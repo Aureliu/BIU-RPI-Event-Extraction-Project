@@ -46,6 +46,7 @@ import edu.cuny.qc.perceptron.types.Alphabet;
 import edu.cuny.qc.perceptron.types.Document;
 import edu.cuny.qc.perceptron.types.Sentence;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
+import edu.cuny.qc.scorer.FeatureProfile;
 import edu.cuny.qc.scorer.SignalMechanismsContainer;
 import edu.cuny.qc.util.Logs;
 import edu.cuny.qc.util.Utils;
@@ -88,6 +89,7 @@ public class Folds {
 				Run run = new Run();
 				run.sentenceSortingMethod = controller.sentenceSortingMethod;
 				run.argOMethod = controller.argOMethod;
+				run.featureProfile = controller.featureProfile;
 				
 				List<JCas> specsCopy = Lists.newArrayList(types.specs);
 				
@@ -202,22 +204,38 @@ public class Folds {
 		}
 		System.out.printf("\nFinished creating a total of %s runs.\n\n", result.size());
 		
-		if (controller.sentenceSortingMethod==SentenceSortingMethod.ITERATE) {
-			int expectedTotalRuns = result.size() * (SentenceSortingMethod.values().length-1);
+		if (controller.featureProfile==FeatureProfile.FINAL_F1__ITERATE) {
+			List<FeatureProfile> vals = ImmutableList.of(FeatureProfile.FINAL1_F1, FeatureProfile.FINAL1_F1_REC_PREC, FeatureProfile.FINAL1_F1_REC, FeatureProfile.FINAL1_F1_PREC);
+			int expectedTotalRuns = result.size() * vals.size();
 			List<Run> newResult = Lists.newArrayListWithCapacity(expectedTotalRuns);
-			for (SentenceSortingMethod method : SentenceSortingMethod.values()) {
-				if (method != SentenceSortingMethod.ITERATE) {
-					for (Run run : result) {
-						Run newRun = Run.shallowCopy(run);
-						newRun.sentenceSortingMethod = method;
-						newResult.add(newRun);
-					}
+			for (FeatureProfile prof : vals) {
+				for (Run run : result) {
+					Run newRun = Run.shallowCopy(run);
+					newRun.featureProfile = prof;
+					newResult.add(newRun);
 				}
 			}
-			System.out.printf("... and now due to sentenceSortingMethod=%s, we changed it from %s to %s runs (should be %s runs, I hope it is...)\n\n",
-					SentenceSortingMethod.ITERATE, result.size(), newResult.size(), expectedTotalRuns);
+			System.out.printf("... and now due to featureProfile=%s, we changed it from %s to %s runs (should be %s runs, I hope it is...)\n\n",
+					FeatureProfile.FINAL_F1__ITERATE, result.size(), newResult.size(), expectedTotalRuns);
 			result = newResult;
 		}
+		
+//		if (controller.sentenceSortingMethod==SentenceSortingMethod.ITERATE) {
+//			int expectedTotalRuns = result.size() * (SentenceSortingMethod.values().length-1);
+//			List<Run> newResult = Lists.newArrayListWithCapacity(expectedTotalRuns);
+//			for (SentenceSortingMethod method : SentenceSortingMethod.values()) {
+//				if (method != SentenceSortingMethod.ITERATE) {
+//					for (Run run : result) {
+//						Run newRun = Run.shallowCopy(run);
+//						newRun.sentenceSortingMethod = method;
+//						newResult.add(newRun);
+//					}
+//				}
+//			}
+//			System.out.printf("... and now due to sentenceSortingMethod=%s, we changed it from %s to %s runs (should be %s runs, I hope it is...)\n\n",
+//					SentenceSortingMethod.ITERATE, result.size(), newResult.size(), expectedTotalRuns);
+//			result = newResult;
+//		}
 		
 //		if (controller.argOMethod==ArgOMethod.ITERATE) {
 //			int expectedTotalRuns = result.size() * (ArgOMethod.values().length-1);
@@ -383,6 +401,7 @@ public class Folds {
 		for (Run run : runs) {
 			controller.sentenceSortingMethod = run.sentenceSortingMethod;
 			controller.argOMethod = run.argOMethod;
+			controller.featureProfile = run.featureProfile;
 			
 			Alphabet featureAlphabet = new Alphabet();
 			perceptron = new Perceptron(featureAlphabet, controller, outputFolder, signalMechanismsContainer);

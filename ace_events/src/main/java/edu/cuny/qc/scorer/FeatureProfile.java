@@ -40,4 +40,14 @@ public enum FeatureProfile {
 	ANALYSIS3,
 	TOKEN_BASELINE,
 	INTER1,
+	
+	FINAL1_F1,
+	FINAL1_F1_REC,
+	FINAL1_F1_PREC,
+	FINAL1_F1_REC_PREC,
+	
+	FINAL_F1__ITERATE,
+	
+	
+	
 }

@@ -538,6 +538,7 @@ public class Logs {
 					"", //"Id",
 					"", //"IdPerTest",
 					//"", //"SortMethod",
+					"", //"FeatureProfile",
 					"Train-Triggers", //"Iteration",
 					"", //"Gold",
 					"", //"System",
@@ -602,6 +603,7 @@ public class Logs {
 					"Id",
 					"IdPerTest",
 					//"SortMethod",
+					"FeatureProfile",
 					"Iteration",
 					"Gold",
 					"System",
@@ -1024,6 +1026,7 @@ public class Logs {
 					run.id, //"Id",
 					run.idPerTest,//"IdPerTest",
 					//run.sentenceSortingMethod,//"SortMethod",
+					run.featureProfile, //"FeatureProfile"
 					
 					// Train-Triggers
 					scores.train.bestScore.iteration,//"Iteration",

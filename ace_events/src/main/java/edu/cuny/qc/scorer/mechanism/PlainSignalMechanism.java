@@ -51,12 +51,16 @@ public class PlainSignalMechanism extends SignalMechanism {
 			
 			break;
 			
-		case ???:
+		// these are all fall-throughs, we have only one valid plain, and it's only in trigger - no args...
+		case FINAL1_F1:
+		case FINAL1_F1_REC:
+		case FINAL1_F1_PREC:
+		case FINAL1_F1_REC_PREC:
 			//High F1, Rec, Prec. 2015.01.04..2: F1=0.648 Rec=0.663 Prec=0.634
 			addTrigger(new ScorerData("PL_SAME_LEMMA",				SameTriggerLemma.inst,				Aggregator.Any.inst		));
 
 			// High ???. 2015.01.04..2: F1=0.226 Rec=0.214 Prec=0.241
-			addArgumentFree(new ScorerData("PL_SAME_FULLHEAD",			SameArgumentText.inst,				Aggregator.Any.inst		));
+			//addArgumentFree(new ScorerData("PL_SAME_FULLHEAD",			SameArgumentText.inst,				Aggregator.Any.inst		));
 			
 		default:
 			//throw new IllegalStateException("Bad FeatureProfile enum value: " + controller.featureProfile);

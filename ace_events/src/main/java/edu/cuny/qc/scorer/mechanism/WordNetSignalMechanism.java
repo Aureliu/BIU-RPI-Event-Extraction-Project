@@ -125,6 +125,28 @@ public class WordNetSignalMechanism extends SignalMechanism {
 	@Override
 	public void addScorers() {
 
+		ScorerData trigger1 = new ScorerData(null, new WordnetTriggerScorer(SYNONYM_RELATION, Juxtaposition.ANCESTOR, 1), NoDerv.inst, Derivation.NONE, 1, 1, null, Any.inst);
+		ScorerData trigger2 = new ScorerData(null, new WordnetTriggerScorer(ALL_RELATIONS_BIG, Juxtaposition.ANCESTOR, 2), NomlexSignalMechanism.NomlexDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, 1, 1, null, Any.inst);
+
+		// High F1 (0.218)
+		ScorerData highF1_1 = new ScorerData(null, new WordnetArgumentScorer(SYNONYM_RELATION, Juxtaposition.ANCESTOR, 1), NoDerv.inst, Derivation.NONE, -1, -1, null, Any.inst);
+
+		// High F1 (0.216)
+		ScorerData highF1_2 = new ScorerData(null, new WordnetArgumentScorer(SYNONYM_RELATION, Juxtaposition.ANCESTOR, 2), NoDerv.inst, Derivation.NONE, -1, -1, null, Any.inst);
+		
+		// High F1 (0.213)
+		ScorerData highF1_3 = new ScorerData(null, new WordnetArgumentScorer(SYNONYM_RELATION, Juxtaposition.ANCESTOR, 3), NoDerv.inst, Derivation.NONE, -1, -1, null, Any.inst);
+
+		// High Recall (0.3749)
+		ScorerData highRec_1 = new ScorerData(null, new WordnetArgumentScorer(SYNONYM_RELATION, Juxtaposition.ANCESTOR, 4), NoDerv.inst, Derivation.NONE, -1, -1, null, Any.inst);
+						
+		// High Precision (0.333)
+		ScorerData highPrec_1 = new ScorerData(null, new WordnetArgumentScorer(ALL_RELATIONS_BIG, Juxtaposition.ANCESTOR, 1), WordnetDervRltdDeriver.inst, Derivation.SPEC_ORIG_AND_DERV, -1, 1, null, Min2.inst);
+		
+		// High Precision (0.303)
+		ScorerData highPrec_2 = new ScorerData(null, new WordnetArgumentScorer(HYPERNYM2_RELATION, Juxtaposition.ANCESTOR, 1), NoDerv.inst, Derivation.NONE, -1, -1, null, Any.inst);
+
+
 		switch (controller.featureProfile) {
 		case TOKEN_BASELINE: break;
 //		case ANALYSIS:
@@ -288,26 +310,43 @@ public class WordNetSignalMechanism extends SignalMechanism {
 		case ANALYSIS3:
 			break;
 			
-		case FINAL1:
 			
-			
-			// Good F1 /////////////
-			addTrigger(new ScorerData(null, new WordnetTriggerScorer(SYNONYM_RELATION, Juxtaposition.ANCESTOR, 1), NoDerv.inst, Derivation.NONE, 1, 1, null, Any.inst));
-			addTrigger(new ScorerData(null, new WordnetTriggerScorer(ALL_RELATIONS_BIG, Juxtaposition.ANCESTOR, 2), NomlexSignalMechanism.NomlexDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, 1, 1, null, Any.inst));
-			addArgumentFree(new ScorerData(null, new WordnetArgumentScorer(SYNONYM_RELATION, Juxtaposition.ANCESTOR, 1), NoDerv.inst, Derivation.NONE, -1, -1, null, Any.inst));
-			addArgumentFree(new ScorerData(null, new WordnetArgumentScorer(SYNONYM_RELATION, Juxtaposition.ANCESTOR, 2), NoDerv.inst, Derivation.NONE, -1, -1, null, Any.inst));
-			addArgumentFree(new ScorerData(null, new WordnetArgumentScorer(SYNONYM_RELATION, Juxtaposition.ANCESTOR, 3), NoDerv.inst, Derivation.NONE, -1, -1, null, Any.inst));
-			////////////////////////
-			
-			
-			// High Recall
-			addArgumentFree(new ScorerData(null, new WordnetArgumentScorer(SYNONYM_RELATION, Juxtaposition.ANCESTOR, 4), NoDerv.inst, Derivation.NONE, -1, -1, null, Any.inst));
-			
-			// High Precision
-			WN__AllRelsBig__ANCESTOR_Len1	WordnetDervRltdDeriver	_withSpecDerv	-1	1	Min2	Any
-			WN__INSTANCE_HYPERNYM__ANCESTOR_Len1	NomlexDeriver		-1	-1	Any	Any
+		case FINAL1_F1:
+			addTrigger(trigger1);
+			addTrigger(trigger2);
+			addArgumentFree(highF1_1);
+			addArgumentFree(highF1_2);
+			addArgumentFree(highF1_3);
+			break;
+		case FINAL1_F1_REC:
+			addTrigger(trigger1);
+			addTrigger(trigger2);
+			addArgumentFree(highF1_1);
+			addArgumentFree(highF1_2);
+			addArgumentFree(highF1_3);
+			addArgumentFree(highRec_1);
+			break;
+		case FINAL1_F1_PREC:
+			addTrigger(trigger1);
+			addTrigger(trigger2);
+			addArgumentFree(highF1_1);
+			addArgumentFree(highF1_2);
+			addArgumentFree(highF1_3);
+			addArgumentFree(highPrec_1);
+			addArgumentFree(highPrec_2);
+			break;
+		case FINAL1_F1_REC_PREC:
+			addTrigger(trigger1);
+			addTrigger(trigger2);
+			addArgumentFree(highF1_1);
+			addArgumentFree(highF1_2);
+			addArgumentFree(highF1_3);
+			addArgumentFree(highRec_1);
+			addArgumentFree(highPrec_1);
+			addArgumentFree(highPrec_2);
+			break;
 
-			
+
 		default:
 			//throw new IllegalStateException("Bad FeatureProfile enum value: " + controller.featureProfile);
 			break;

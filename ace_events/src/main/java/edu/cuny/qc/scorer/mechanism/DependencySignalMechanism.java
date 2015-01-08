@@ -130,6 +130,29 @@ public class DependencySignalMechanism extends SignalMechanism {
 
 	@Override
 	public void addScorers() throws UnsupportedPosTagStringException {
+		
+		// High F1 (0.345)
+		ScorerData highF1_1 = new ScorerData("DP_DEP_F_PREP_NOCON_1/4",	SameLinkDepFlatPrepNoContextMinQuarter.inst,	Aggregator.Any.inst		);
+		
+		// High F1 (0.341)
+		ScorerData highF1_2 = new ScorerData("DP_DEP_PREP_NOCON_1/5",	SameLinkDepPrepNoContextMinFifth.inst,			Aggregator.Any.inst		);
+		
+		// High F1 (0.34)
+		ScorerData highF1_3 = new ScorerData("DP_DEP_PREP_NOCON_1/4",	SameLinkDepPrepNoContextMinQuarter.inst,			Aggregator.Any.inst		);
+		
+		// High F1 (0.338)
+		ScorerData highF1_4 = new ScorerData("DP_DEP_F_PREP_NOCON_1/5",	SameLinkDepFlatPrepNoContextMinFifth.inst,			Aggregator.Any.inst		); 
+		
+		//High Recall (0.597)
+		ScorerData highRec_1 = new ScorerData("DP_DEP_U2_NOCON",		SameLinkDepUp2NoContext.inst,			Aggregator.Any.inst		);
+
+		//High Recall (0.513)
+		ScorerData highRec_2 = new ScorerData("DP_DEP_F_U3_NOCON",		SameLinkDepFlatUp3NoContext.inst,			Aggregator.Any.inst		);
+
+		//High Precision (0.572)
+		ScorerData highPrec_1 = new ScorerData("DP_DEP_PREP_GENPOS_NOCON_1/2", SameLinkDepPrepGenPosNoContextMinHalf.inst,	Aggregator.Any.inst		);
+		
+		
 		switch(controller.featureProfile) {
 		case TOKEN_BASELINE: break;
 		//case ANALYSIS1: //fall-through 
@@ -459,30 +482,37 @@ public class DependencySignalMechanism extends SignalMechanism {
 			
 			break;
 			
-		case ???:
-
-			// High F1 (0.345)
-			DP_DEP_F_PREP_NOCON_1/4
+		case FINAL1_F1:
+			addArgumentDependent(highF1_1);
+			addArgumentDependent(highF1_2);
+			addArgumentDependent(highF1_3);
+			addArgumentDependent(highF1_4);
+			break;
+		case FINAL1_F1_REC:
+			addArgumentDependent(highF1_1);
+			addArgumentDependent(highF1_2);
+			addArgumentDependent(highF1_3);
+			addArgumentDependent(highF1_4);
+			addArgumentDependent(highRec_1);
+			addArgumentDependent(highRec_2);
+			break;
+		case FINAL1_F1_PREC:
+			addArgumentDependent(highF1_1);
+			addArgumentDependent(highF1_2);
+			addArgumentDependent(highF1_3);
+			addArgumentDependent(highF1_4);
+			addArgumentDependent(highPrec_1);
+			break;
+		case FINAL1_F1_REC_PREC:
+			addArgumentDependent(highF1_1);
+			addArgumentDependent(highF1_2);
+			addArgumentDependent(highF1_3);
+			addArgumentDependent(highF1_4);
+			addArgumentDependent(highRec_1);
+			addArgumentDependent(highRec_2);
+			addArgumentDependent(highPrec_1);
+			break;
 			
-			// High F1 (0.341)
-			DP_DEP_PREP_NOCON_1/5
-			
-			// High F1 (0.34)
-			DP_DEP_PREP_NOCON_1/4
-			
-			// High F1 (0.338)
-			DP_DEP_F_PREP_NOCON_1/5
-
-			
-			//High Recall (0.597)
-			DP_DEP_U2_NOCON
-
-			//High Recall (0.513)
-			DP_DEP_F_U3_NOCON
-
-			//High Precision (0.572)
-			DP_DEP_PREP_GENPOS_NOCON_1/2
-
 		default:
 			//throw new IllegalStateException("Bad FeatureProfile enum value: " + controller.featureProfile);
 			break;

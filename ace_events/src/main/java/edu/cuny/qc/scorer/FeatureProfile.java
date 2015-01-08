@@ -46,7 +46,8 @@ public enum FeatureProfile {
 	FINAL1_F1_PREC,
 	FINAL1_F1_REC_PREC,
 	
-	FINAL_F1__ITERATE,
+	// 8.1.2015: Oops, we can't support ITERATE on FeatureProfile, it's read before the Perceptron.learning() method :)
+	//FINAL_F1__ITERATE,
 	
 	
 	

@@ -494,7 +494,7 @@ public class Document implements java.io.Serializable
 				} catch (IOException e) {
 					// Ignore IOException, and treat it as if the file didn't exist.
 					// it might be corrupted due to a previous bad run - we'll just overwrite it.
-					System.err.printf("Got an IOException (%s) when trying to decompress and deserialize file: '%s'. Continuing as if this file doesn't exist.", e.toString(), preprocessed.getAbsolutePath());
+					System.err.printf("Got an IOException (%s) when trying to decompress and deserialize file: '%s'. Continuing as if this file doesn't exist.\n", e.toString(), preprocessed.getAbsolutePath());
 				}
 			}
 			if (doc==null) {
@@ -1265,11 +1265,11 @@ public class Document implements java.io.Serializable
 			} catch (IOException e) {
 				// Ignore IOException, and treat it as if the file didn't exist.
 				// it might be corrupted due to a previous bad run - we'll just overwrite it.
-				System.err.printf("Got an IOException (%s) when trying to decompress and deserialize file: '%s'. Continuing as if this file doesn't exist.", e.toString(), signalsFile.getAbsolutePath());
+				System.err.printf("Got an IOException (%s) when trying to decompress and deserialize file: '%s'. Continuing as if this file doesn't exist.\n", e.toString(), signalsFile.getAbsolutePath());
 			} catch (SerializationException e) {
 				// Ignore IOException, and treat it as if the file didn't exist.
 				// it might be corrupted due to a previous bad run - we'll just overwrite it.
-				System.err.printf("Got a SerializationException (%s) when trying to decompress and deserialize file: '%s'. Continuing as if this file doesn't exist.", e.toString(), signalsFile.getAbsolutePath());
+				System.err.printf("Got a SerializationException (%s) when trying to decompress and deserialize file: '%s'. Continuing as if this file doesn't exist.\n", e.toString(), signalsFile.getAbsolutePath());
 			}
 			finally {
 				if (in != null) {

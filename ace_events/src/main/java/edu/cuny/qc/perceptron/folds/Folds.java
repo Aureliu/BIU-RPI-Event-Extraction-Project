@@ -204,21 +204,22 @@ public class Folds {
 		}
 		System.out.printf("\nFinished creating a total of %s runs.\n\n", result.size());
 		
-		if (controller.featureProfile==FeatureProfile.FINAL_F1__ITERATE) {
-			List<FeatureProfile> vals = ImmutableList.of(FeatureProfile.FINAL1_F1, FeatureProfile.FINAL1_F1_REC_PREC, FeatureProfile.FINAL1_F1_REC, FeatureProfile.FINAL1_F1_PREC);
-			int expectedTotalRuns = result.size() * vals.size();
-			List<Run> newResult = Lists.newArrayListWithCapacity(expectedTotalRuns);
-			for (FeatureProfile prof : vals) {
-				for (Run run : result) {
-					Run newRun = Run.shallowCopy(run);
-					newRun.featureProfile = prof;
-					newResult.add(newRun);
-				}
-			}
-			System.out.printf("... and now due to featureProfile=%s, we changed it from %s to %s runs (should be %s runs, I hope it is...)\n\n",
-					FeatureProfile.FINAL_F1__ITERATE, result.size(), newResult.size(), expectedTotalRuns);
-			result = newResult;
-		}
+		// Oops, can't support this... :)
+//		if (controller.featureProfile==FeatureProfile.FINAL_F1__ITERATE) {
+//			List<FeatureProfile> vals = ImmutableList.of(FeatureProfile.FINAL1_F1, FeatureProfile.FINAL1_F1_REC_PREC, FeatureProfile.FINAL1_F1_REC, FeatureProfile.FINAL1_F1_PREC);
+//			int expectedTotalRuns = result.size() * vals.size();
+//			List<Run> newResult = Lists.newArrayListWithCapacity(expectedTotalRuns);
+//			for (FeatureProfile prof : vals) {
+//				for (Run run : result) {
+//					Run newRun = Run.shallowCopy(run);
+//					newRun.featureProfile = prof;
+//					newResult.add(newRun);
+//				}
+//			}
+//			System.out.printf("... and now due to featureProfile=%s, we changed it from %s to %s runs (should be %s runs, I hope it is...)\n\n",
+//					FeatureProfile.FINAL_F1__ITERATE, result.size(), newResult.size(), expectedTotalRuns);
+//			result = newResult;
+//		}
 		
 //		if (controller.sentenceSortingMethod==SentenceSortingMethod.ITERATE) {
 //			int expectedTotalRuns = result.size() * (SentenceSortingMethod.values().length-1);

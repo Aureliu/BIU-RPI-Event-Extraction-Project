@@ -72,9 +72,9 @@ public class Run {
 		}
 		Collections.sort(devLabels);
 		String testLabel = SpecAnnotator.getSpecLabel(testEvent);
-		return String.format("%s(%s,%s, test=%s\n\ttrain(%s, %s mentions)=%s\n\tdev(%s, %s mentions)=%s\n\tsentenceSortingMethod=%s\n\targOMethod=%s  )",
+		return String.format("%s(%s,%s, test=%s\n\ttrain(%s, %s mentions)=%s\n\tdev(%s, %s mentions)=%s\n\tsentenceSortingMethod=%s\n\targOMethod=%s\n\tfeatureProfile=%s  )",
 				getClass().getSimpleName(), id, idPerTest, testLabel, trainEvents.size(), trainMentions, StringUtils.join(trainLabels, ", "),
-				devEvents.size(), devMentions, StringUtils.join(devLabels, ", "), sentenceSortingMethod, argOMethod);
+				devEvents.size(), devMentions, StringUtils.join(devLabels, ", "), sentenceSortingMethod, argOMethod, featureProfile);
 	}
 	
 	public static Run shallowCopy(Run orig) {

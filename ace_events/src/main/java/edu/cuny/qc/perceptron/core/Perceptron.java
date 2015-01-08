@@ -254,10 +254,12 @@ public class Perceptron implements java.io.Serializable
 		List<SentenceInstance> devList = Lists.newArrayList(devInsts);
 		Collections.sort(trainingList, controller.sentenceSortingMethod.comparator);
 		Collections.sort(devList, controller.sentenceSortingMethod.comparator);
-		System.out.printf("\n\n%s After sort (%s) - Perceptron.learning: trainingInsts (%s) =\n", Utils.detailedLog(), controller.sentenceSortingMethod, trainingList.size());
-		for (SentenceInstance inst : trainingList) {
-			System.out.printf("- %s\t/ %s\n", inst.sentInstID, /*inst.sentID, inst.specLetter,*/ inst.docID);
-		}
+
+		System.out.printf("\n\n%s After sort (%s) - Perceptron.learning: trainingInsts (%s)\n", Utils.detailedLog(), controller.sentenceSortingMethod, trainingList.size());
+//		System.out.printf("\n\n%s After sort (%s) - Perceptron.learning: trainingInsts (%s) =\n", Utils.detailedLog(), controller.sentenceSortingMethod, trainingList.size());
+//		for (SentenceInstance inst : trainingList) {
+//			System.out.printf("- %s\t/ %s\n", inst.sentInstID, /*inst.sentID, inst.specLetter,*/ inst.docID);
+//		}
 			
 		if (controller.lazyTargetFeatures) {
 			SentenceInstance.makeAllTargetFeatures(trainingList);

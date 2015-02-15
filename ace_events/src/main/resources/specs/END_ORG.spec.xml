@@ -2,6 +2,8 @@
   <predicate>
     <name>End-Org</name>
     <seeds>
+      <seed>folded</seed>
+      <seed>shut down</seed>
     </seeds>
   </predicate>
   <arguments>
@@ -12,6 +14,7 @@
       	<type>ORG</type>
       </types>
       <examples>
+        <example>companies</example>
       </examples>
     </argument>
     <argument>

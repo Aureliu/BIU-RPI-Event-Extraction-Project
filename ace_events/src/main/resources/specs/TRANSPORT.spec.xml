@@ -2,6 +2,17 @@
   <predicate>
     <name>Transport</name>
     <seeds>
+      <seed>transporting</seed>
+      <seed>transport</seed>
+      <seed>moved</seed>
+      <seed>remove</seed>
+      <seed>travel</seed>
+      <seed>traveled</seed>
+      <seed>fled</seed>
+      <seed>moving</seed>
+      <seed>return</seed>
+      <seed>take</seed>
+      <seed>leave</seed>
     </seeds>
   </predicate>
   <arguments>
@@ -25,6 +36,11 @@
       	<type>VEH</type>
       </types>
       <examples>
+        <example>he</example>
+        <example>they</example>
+        <example>weapons</example>
+        <example>Palestinians</example>
+        <example>people</example>
       </examples>
     </argument>
     <argument>
@@ -34,6 +50,7 @@
       	<type>VEH</type>
       </types>
       <examples>
+        <example>ferry</example>
       </examples>
     </argument>
     <argument>
@@ -54,6 +71,10 @@
       	<type>FAC</type>
       </types>
       <examples>
+        <example>country</example>
+        <example>towns</example>
+        <example>villages</example>
+        <example>town</example>
       </examples>
     </argument>
     <argument>
@@ -65,6 +86,10 @@
       	<type>FAC</type>
       </types>
       <examples>
+        <example>Houston</example>
+        <example>towns</example>
+        <example>villages</example>
+        <example>Moscow</example>
       </examples>
     </argument>
     <argument>
@@ -74,6 +99,7 @@
       	<type>TIME</type>
       </types>
       <examples>
+        <example>late September</example>
       </examples>
     </argument>
   </arguments>

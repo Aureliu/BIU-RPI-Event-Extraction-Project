@@ -3,30 +3,31 @@
     <name>Attack</name>
     <seeds>
       <seed>attack</seed>
-      <seed>attacked</seed>
       <seed>attacks</seed>
-      <seed>battle</seed>
-      <seed>blew</seed>
-      <seed>bomb</seed>
-      <seed>bombed</seed>
-      <seed>bombing</seed>
-      <seed>exploded</seed>
-      <seed>explosion</seed>
-      <seed>firing</seed>
-      <seed>shoots</seed>
-      <seed>shot</seed>
-      <seed>stabbings</seed>
-      <seed>threw</seed>
-      <seed>went off</seed>
-
-      <seed>conflict</seed>
+      <seed>attacked</seed>
       <seed>clashes</seed>
+      <seed>conflict</seed>
       <seed>fighting</seed>
       <seed>gunfire</seed>
+      <seed>shot</seed>
+      <!-- seed>shoot</seed-->
+      <seed>bomb</seed>
+      <seed>bombed</seed>
+      <seed>exploded</seed>
+      <seed>battle</seed>
       <seed>coup</seed>
       <seed>war</seed>
       <seed>terrorism</seed>
       <seed>terrorist activities</seed>
+      <seed>blow</seed>
+      <seed>threw</seed>
+      <seed>bombing</seed>
+      <seed>stab</seed>
+      <seed>stabbings</seed>
+      <seed>explosion</seed>
+      <seed>firing</seed>
+      <seed>violence</seed>
+      <seed>went off</seed>
     </seeds>
   </predicate>
   <arguments>
@@ -39,21 +40,22 @@
       	<type>GPE</type>
       </types>
       <examples>
-        <example>Ali Mohammed</example>
-        <example>demonstrators</example>
+        <example>force</example>
         <example>forces</example>
+        <example>Israel</example>
+        <example>terrorist</example>
+        <example>man</example>
+        <example>demonstrator</example>
         <example>gunman</example>
         <example>gunmen</example>
         <example>Hamas</example>
-        <example>Israel</example>
         <example>men</example>
-        <example>militants</example>
-        <example>Osama bin Laden</example>
         <example>Oswald</example>
-        <example>person</example>
-        <example>terrorists</example>
-
-        <example>Bin Laden</example>
+        <example>militants</example>
+        <example>Islamic militants</example>
+        <example>>Ali Mohammed</example>
+        <example>>Osama bin Laden</example>
+        <example>>Bin Laden</example>
       </examples>
     </argument>
     <argument>
@@ -67,24 +69,21 @@
       	<type>WEA</type>
       </types>
       <examples>
-        <example>businessman</example>
-        <example>cafe</example>
-        <example>car</example>
+        <example>Palestinian</example>
         <example>Fallujah</example>
-        <example>headquarters</example>
-        <example>Kennedy</example>
-        <example>Palestinians</example>
-        <example>parking garage</example>
-        <example>Smith</example>
-        <example>soldiers</example>
-        <example>son</example>
-        <example>targets</example>
         <example>warship</example>
+        <example>soldier</example>
+        <example>café</example>
+        <example>businessman</example>
+        <example>car</example>
+        <example>garage</example>
         <example>woman</example>
         <example>worker</example>
-
-        <example>army headquarters</example>
-        <example>garage</example>
+        <example>Kennedy</example>
+        <example>Smith</example>
+        <example>son</example>
+        <example>US targets</example>
+        <example>targets</example>
       </examples>
     </argument>
     <argument>
@@ -95,19 +94,20 @@
       	<type>WEA</type>
       </types>
       <examples>
+        <example>bomb</example>
         <example>bombs</example>
-        <example>bottles</example>
-        <example>car bomb</example>
-        <example>rifles</example>
         <example>rocket</example>
-        <example>stones</example>
-        <example>vehicle</example>
-        <example>weapon</example>
-
-        <example>AK-47 assault rifles</example>
+        <example>rifle</example>
+        <example>gun</example>
+        <example>stone</example>
+        <example>bottle</example>
         <example>assault rifles</example>
-        <example>AK-47 rifles</example>
+        <example>AK-47 assault rifles</example>
         <example>AK-47</example>
+        <example>car</example>
+        <example>car bomb</example>
+        <example>headquarters</example>
+        <example>army headquarters</example>
       </examples>
     </argument>
     <argument>
@@ -117,13 +117,13 @@
       	<type>TIME</type>
       </types>
       <examples>
-        <example>1991</example>
-        <example>1999</example>
-        <example>45-minute</example>
-        <example>Monday</example>
         <example>Sunday night</example>
         <example>Thursday</example>
-        <example>Yesterday</example>
+        <example>Monday</example>
+        <example>45-minute</example>
+        <example>yesterday</example>
+        <example>1991</example>
+        <example>1999</example>
       </examples>
     </argument>
     <argument>
@@ -136,26 +136,25 @@
       </types>
       <examples>
         <example>Baghdad</example>
-        <example>cafe</example>
-        <example>cities</example>
-        <example>entrance</example>
-        <example>Gaza Strip</example>
         <example>Gilo</example>
+        <example>Yemen</example>
+        <example>market</example>
         <example>Jerusalem</example>
+        <example>café</example>
+        <example>garage</example>
+        <example>site</example>
+        <example>building</example>
+        <example>Mercedes</example>
+        <example>car</example>
+        <example>Gaza Strip</example>
+        <example>Serbia</example>
+        <example>southern Serbia</example>
         <example>Kosovo</example>
         <example>Lahore</example>
-        <example>market</example>
-        <example>Mercedes</example>
+        <example>cities</example>
+        <example>Pakistani cities</example>
         <example>Middle-East</example>
-        <example>parking garage</example>
-        <example>Serbia</example>
-        <example>site</example>
-        <example>Yemen</example>
-
-        <example>Pakistan</example>
-        <example>building</example>
-        <!--example>cafe</example--> <!-- duplicate when there are no unicode chars -->
-        <example>garage</example>
+        <example>Middle East</example>
       </examples>
     </argument>
   </arguments>
@@ -166,52 +165,25 @@
     <sample_out src="synth">Forces had a 45-Minute gun battle with Palestinians at the market.</sample>
 
     <sample src="orig">The [PRD explosion] killed 7 and injured 20.</sample> <!-- NOTE that the dead and injured people are not considered targets of the attack! They are noly victims of the Die and Injure events! -->
-    <sample src="orig">The [PRD attack] killed 7 and injured 20.</sample> <!-- see previous comment -->
-    <sample src="orig">[TIM Yesterday]'s [PRD attack] was entirely unexpected.</sample>
-    <sample src="orig">[ATR Hamas] launched an [PRD attack].</sample>
-    <sample src="orig">An officer witnessed the [PRD attack].</sample>
-    <sample src="orig">[ATR Men] in civilian clothes in the crowd began [PRD firing] with AK-47 assault [INT rifles].</sample>
-    <sample src="orig">U.S. [ATR forces] continued to [PRD bomb] [TRG Fallujah].</sample>
-    <sample src="orig" >A Palestinian [TRG worker] was [PRD shot] dead in the [PLC Gaza Strip].</sample>
-    <sample src="orig" >[TRG Kennedy] was [PRD shot] dead by [ATR Oswald].</sample>
+    <sample src="orig">The attack killed 7 and injured 20.</sample> <!-- see previous comment -->
+    <sample src="orig">Yesterday's attack was entirely unexpected.</sample>
+    <sample src="orig">Hamas launched an attack.</sample>
+    <sample src="orig">An officer witnessed the attack.</sample>
+    <sample src="orig">Men in civilian clothes in the crowd began firing with AK-47 assault rifles.</sample>
+    <sample src="orig">U.S. forces continued to bomb Fallujah.</sample>
+    <sample src="orig" >A Palestinian worker was shot dead in the Gaza Strip.</sample>
+    <sample src="orig" >Kennedy was shot dead by Oswald.</sample>
     <sample_out src="orig" >There have been concerns the clashes in southern Serbia could explode into violence similar to the 1999 conflict in Kosovo.</sample> <!-- not used, since it has multiple triggers (multiple seeds) in the same sentence. Instead, it will be split to 3 legitimate sample sentences. -->
-    <sample_out src="orig" >A [INT car bomb] [PRD exploded] [TIM Thursday] in the heart of [PLC Jerusalem], killing at least two people, police said.</sample> <!-- parser error: 'least' has more than one non-deep parent -->
-    <sample src="orig_l" >A [INT car bomb] [PRD exploded] [TIM Thursday] in the heart of [PLC Jerusalem], police said.</sample>
-    <sample src="orig" >The [ATR gunmen] [PRD shot] [TRG Smith] and his [TRG son].</sample>
-    <sample src="orig" >India blamed Islamic [ATR militants] for the [PRD attack].</sample>
-    <sample src="orig" >A [INT car bomb] [PRD went off] outside army [TRG headquarters].</sample>
-    <sample src="orig">[ATR Ali Mohammed], a native of Egypt, has admitted to five charges of conspiring with a Saudi born dissident [ATR Osama bin Laden] to [PRD attack] US [TRG targets] in the [PLC Middle-East].</sample>
-
-    <sample src="orig">Three [TRG Palestinians] were [PRD shot] dead.</sample>
-    <sample src="orig">A [INT car bomb] [PRD exploded] in central [PLC Baghdad].</sample>
-    <sample src="orig_p">Another exchange of [PRD gunfire] in [PLC Gilo] was reported.</sample>
-    <sample src="orig_p">[TIM Sunday night]'s [PRD clashes] were violent.</sample>
-    <sample src="orig_p">Experts warn of a possible [PRD coup].</sample>
-    <sample src="orig_l">[ATR Israel] retaliated with [INT rocket] [PRD attacks].</sample>
-    <sample src="orig_l">[ATR Terrorists] [PRD blew] a hole in a United States [TRG warship] in [PLC Yemen].</sample>
-    <sample_out src="orig">A [INT car bomb] [PRD exploded] [TIM Thursday] in a crowded outdoor [PLC market] in the heart of [PLC Jerusalem], killing at least two people, police said.</sample>  <!-- parser error: 'least' has more than one non-deep parent -->
-    <sample src="orig_l">A [INT car bomb] [PRD exploded] [TIM Thursday] in a crowded outdoor [PLC market] in the heart of [PLC Jerusalem], police said.</sample>
-    <sample src="orig_l">A [TIM 45-minute] gun [PRD battle] broke out.</sample>
-    <sample src="orig">A number of [ATR demonstrators] [PRD threw] [INT stones] and empty [INT bottles] at Israeli [TRG soldiers] positioned near a Jewish holy [PLC site] at the town's [PLC entrance].</sample>
-
-    <sample src="orig">A [ATR gunman] [PRD shoots] a [TRG woman] in her [PLC Mercedes].</sample>
-    <sample src="orig_p">The [PRD bombing] in [PLC Baghdad] was reported.</sample>
-    <sample src="orig_p">The [PRD bombing] in the [TRG cafe] was reported.</sample>
-    <sample src="orig">In [PLC Baghdad], the [TRG cafe] was [PRD bombed].</sample>
-    <sample src="orig">The [ATR terrorists] [PRD attacked] the [TRG cafe].</sample>
-    <sample src="orig_p">The [PLC cafe] [PRD stabbings] was reported.</sample>
-    <sample src="orig_p">The [PRD gunfire] in the [PLC cafe] was reported.</sample>
-    <sample src="orig">The [ATR gunmen] [PRD shot] the [TRG businessman] in the [PLC cafe].</sample>
-    <sample src="orig">The [TRG car] [PRD exploded] in the [PLC parking garage].</sample>
-    <sample src="orig_p">The [TRG parking garage] [PRD explosion] was reported.</sample>
-    <sample_out src="orig_p">The [TRG car] [INT bomb] [PRD exploded].</sample>
-    <sample src="orig">The [TRG cafe] [PRD bombing] killed three people.</sample>
-
-    <sample src="orig_p" >The investigation of the attempted [PRD coup] in [TIM 1991] was finished.</sample>
-    <sample src="orig_l" >There have been concerns regarding the [PRD clashes] in southern [PLC Serbia].</sample>
-    <sample_out src="orig_l" >There have been concerns the events in southern Serbia could [PRD explode] into violence.</sample> <!-- I don't think is an actual instance of an attack - it's just a figure of speech -->
-    <sample_out src="orig_l" >There have been concerns the events in southern Serbia could eventually be similar to the [TIM 1999] [PRD conflict] in [PLC Kosovo].</sample> <!-- parser error ->
-    <sample src="orig_l" >The [PRD explosion] in [PLC Lahore] caused a fire that burned makeshift stalls.</sample>
-    <sample src="orig_l" >[INT Bombs] [PRD went off] in three Pakistani [PLC cities] [TIM Monday].</sample>
+    <sample src="orig" >A car bomb exploded Thursday in the heart of Jerusalem.</sample>
+    <sample src="orig" >The gunmen shot Smith and his son.</sample>
+    <sample src="orig" >India blamed Islamic militants for the attack.</sample>
+    <sample src="orig" >A car bomb went off outside army headquarters.</sample>
+    <sample src="orig">Ali Mohammed, a native of Egypt, has admitted to five charges of conspiring with a Saudi born dissident Osama bin Laden to attack US targets in the Middle-East.</sample>
+    <sample src="orig_p" >The investigation of the attempted coup in 1991 was finished.</sample>
+    <sample src="orig_l" >There have been concerns regarding the clashes in southern Serbia.</sample>
+    <sample src="orig_l" >There have been concerns the events in southern Serbia could explode into violence.</sample>
+    <sample src="orig_l" >There have been concerns the events in southern Serbia could eventually be similar to the 1999 conflict in Kosovo.</sample>
+    <sample src="orig_l" >The explosion in Lahore caused a fire that burned makeshift stalls.</sample>
+    <sample src="orig_l" >Bombs went off in three Pakistani cities Monday.</sample>
   </usage_samples>
 </spec>

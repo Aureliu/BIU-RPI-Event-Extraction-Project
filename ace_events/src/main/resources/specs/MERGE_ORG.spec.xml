@@ -2,6 +2,8 @@
   <predicate>
     <name>Merge-Org</name>
     <seeds>
+      <seed>merged</seed>
+      <seed>merger</seed>
     </seeds>
   </predicate>
   <arguments>
@@ -12,6 +14,7 @@
       	<type>ORG</type>
       </types>
       <examples>
+        <example>companies</example>
       </examples>
     </argument>
     <argument>
@@ -21,6 +24,7 @@
       	<type>TIME</type>
       </types>
       <examples>
+        <example>later this year</example>
       </examples>
     </argument>
     <argument>

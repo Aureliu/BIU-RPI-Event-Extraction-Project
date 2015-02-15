@@ -2,6 +2,14 @@
   <predicate>
     <name>End-Position</name>
     <seeds>
+      <seed>layoffs</seed>
+      <seed>fired</seed>
+      <seed>laid off</seed>
+      <seed>succeeded</seed>
+      <seed>retire</seed>
+      <seed>retired</seed>
+      <seed>laid off</seed>
+      <seed>sack</seed>
     </seeds>
   </predicate>
   <arguments>
@@ -12,6 +20,11 @@
       	<type>PER</type>
       </types>
       <examples>
+        <example>father</example>
+        <example>Gibbons</example>
+        <example>Jane</example>
+        <example>Skuratov</example>
+        <example>John Paul II</example>
       </examples>
     </argument>
     <argument>
@@ -22,6 +35,8 @@
       	<type>GPE</type>
       </types>
       <examples>
+        <example>XYZ Corp</example>
+        <example>parliament</example>
       </examples>
     </argument>
     <argument>
@@ -31,6 +46,7 @@
       	<type>JOB</type>
       </types>
       <examples>
+        <example>congressman</example>
       </examples>
     </argument>
     <argument>

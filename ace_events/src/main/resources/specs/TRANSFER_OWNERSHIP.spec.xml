@@ -2,6 +2,11 @@
   <predicate>
     <name>Transfer-Ownership</name>
     <seeds>
+      <seed>acquire</seed>
+      <seed>acquired</seed>
+      <seed>takeover</seed>
+      <seed>buy</seed>
+      <seed>purchase</seed>
     </seeds>
   </predicate>
   <arguments>
@@ -14,6 +19,12 @@
       	<type>GPE</type>
       </types>
       <examples>
+        <example>China</example>
+        <example>PepsiCo</example>
+        <example>Tropicana Juices</example>
+        <example>AOL</example>
+        <example>airline</example>
+        <example>they</example>
       </examples>
     </argument>
     <argument>
@@ -25,6 +36,7 @@
       	<type>GPE</type>
       </types>
       <examples>
+        <example>Airbus Industries</example>
       </examples>
     </argument>
     <argument>
@@ -48,6 +60,12 @@
       	<type>ORG</type>
       </types>
       <examples>
+        <example>submarines</example>
+        <example>Quaker Oats</example>
+        <example>South Beach Beverage CO</example>
+        <example>Time Warner</example>
+        <example>aircraft</example>
+        <example>company</example>
       </examples>
     </argument>
     <argument>
@@ -66,6 +84,7 @@
       	<type>TIME</type>
       </types>
       <examples>
+        <example>last year</example>
       </examples>
     </argument>
     <argument>

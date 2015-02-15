@@ -2,6 +2,9 @@
   <predicate>
     <name>Demonstrate</name>
     <seeds>
+      <seed>walkout</seed>
+      <seed>rioting</seed>
+      <seed>strike</seed>
     </seeds>
   </predicate>
   <arguments>
@@ -13,6 +16,9 @@
       	<type>ORG</type>
       </types>
       <examples>
+        <example>John Robert Bond</example>
+        <example>crowd</example>
+        <example>union</example>
       </examples>
     </argument>
     <argument>
@@ -22,6 +28,7 @@
       	<type>TIME</type>
       </types>
       <examples>
+        <example>monday</example>
       </examples>
     </argument>
     <argument>
@@ -33,6 +40,7 @@
       	<type>FAC</type>
       </types>
       <examples>
+        <example>Capitol</example>
       </examples>
     </argument>
   </arguments>

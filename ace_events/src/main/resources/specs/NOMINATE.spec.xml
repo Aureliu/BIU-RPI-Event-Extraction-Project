@@ -2,6 +2,8 @@
   <predicate>
     <name>Nominate</name>
     <seeds>
+      <seed>nominated</seed>
+      <seed>nomination</seed>
     </seeds>
   </predicate>
   <arguments>
@@ -12,6 +14,8 @@
       	<type>PER</type>
       </types>
       <examples>
+        <example>John Marshall</example>
+        <example>he</example>
       </examples>
     </argument>
     <argument>
@@ -24,6 +28,7 @@
       	<type>FAC</type>
       </types>
       <examples>
+        <example>Adams</example>
       </examples>
     </argument>
     <argument>
@@ -33,6 +38,7 @@
       	<type>JOB</type>
       </types>
       <examples>
+        <example>chief justice</example>
       </examples>
     </argument>
     <argument>

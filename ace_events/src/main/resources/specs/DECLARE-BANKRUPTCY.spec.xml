@@ -2,6 +2,8 @@
   <predicate>
     <name>Declare-Bankruptcy</name>
     <seeds>
+      <seed>bankruptcy</seed>
+      <seed>bankrupt</seed>
     </seeds>
   </predicate>
   <arguments>
@@ -14,6 +16,8 @@
       	<type>GPE</type>
       </types>
       <examples>
+        <example>firm</example>
+        <example>CR Company</example>
       </examples>
     </argument>
     <argument>
@@ -23,6 +27,7 @@
       	<type>TIME</type>
       </types>
       <examples>
+        <example>April of last year</example>
       </examples>
     </argument>
     <argument>

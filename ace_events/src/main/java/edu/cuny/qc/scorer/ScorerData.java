@@ -212,7 +212,7 @@ public class ScorerData implements Serializable {
 			result = prime * result
 					+ ((basicName == null) ? 0 : basicName.hashCode());
 			result = prime * result
-					+ ((derivation == null) ? 0 : derivation.hashCode());
+					+ ((derivation == null) ? 0 : derivation.name().hashCode());
 			result = prime * result + ((deriver == null) ? 0 : deriver.hashCode());
 			result = prime
 					* result
@@ -246,7 +246,7 @@ public class ScorerData implements Serializable {
 				return false;
 		} else if (!basicName.equals(other.basicName))
 			return false;
-		if (derivation != other.derivation)
+		if (!derivation.name().equals(derivation.name()))
 			return false;
 		if (deriver == null) {
 			if (other.deriver != null)

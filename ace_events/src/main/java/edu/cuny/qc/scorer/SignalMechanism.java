@@ -125,6 +125,10 @@ public abstract class SignalMechanism {
 				existingSignals.put(data, signal);
 				//allTriggerScorers.add(data);
 				textSentence.markSignalUpdate();
+				/// DEBUG
+				//System.out.printf("%s SignalMechanism.scoreTrigger, %s:%s - %s - add the new signal, because it actually didn't exist previously\n",
+				//		Utils.detailedLog(), textSentence.doc.docID, textSentence.sentInstID, data);
+				///
 			}
 			if (debug) {
 				if (signal == null) {
@@ -147,6 +151,10 @@ public abstract class SignalMechanism {
 					data.getScorer().debug = false;
 					signal.history = data.getScorer().history;
 					textSentence.markSignalUpdate();
+					/// DEBUG
+					//System.out.printf("%s SignalMechanism.scoreTrigger, %s:%s - %s - add the new signal, because HISTORY actually didn't exist previously\n",
+					//		Utils.detailedLog(), textSentence.doc.docID, textSentence.sentInstID, data);
+					///
 				}
 			}
 		}
@@ -207,6 +215,10 @@ public abstract class SignalMechanism {
 				existingSignals.put(data, signal);
 				//allTriggerScorers.add(data);
 				textSentence.markSignalUpdate();
+				/// DEBUG
+				//System.out.printf("%s SignalMechanism.scoreDependentArgument, %s:%s - %s - add the new signal, because it actually didn't exist previously\n",
+				//		Utils.detailedLog(), textSentence.doc.docID, textSentence.sentInstID, data);
+				///
 			}
 			if (debug) {
 				if (signal == null) {
@@ -227,6 +239,10 @@ public abstract class SignalMechanism {
 					data.getScorer().debug = false;
 					signal.history = data.getScorer().history;
 					textSentence.markSignalUpdate();
+					/// DEBUG
+					//System.out.printf("%s SignalMechanism.scoreDependentArgument, %s:%s - %s - add the new signal, because HISTORY actually didn't exist previously\n",
+					//		Utils.detailedLog(), textSentence.doc.docID, textSentence.sentInstID, data);
+					///
 				}
 			}
 		}
@@ -280,6 +296,10 @@ public abstract class SignalMechanism {
 				existingSignals.put(data, signal);
 				//allTriggerScorers.add(data);
 				textSentence.markSignalUpdate();
+				/// DEBUG
+				//System.out.printf("%s SignalMechanism.scoreFreeArgument, %s:%s - %s - add the new signal, because it actually didn't exist previously\n",
+				//		Utils.detailedLog(), textSentence.doc.docID, textSentence.sentInstID, data);
+				///
 			}
 			if (debug) {
 				if (signal == null) {
@@ -299,6 +319,10 @@ public abstract class SignalMechanism {
 					data.getScorer().debug = false;
 					signal.history = data.getScorer().history;
 					textSentence.markSignalUpdate();
+					/// DEBUG
+					//System.out.printf("%s SignalMechanism.scoreFreeArgument, %s:%s - %s - add the new signal, because HISTORY actually didn't exist previously\n",
+					//		Utils.detailedLog(), textSentence.doc.docID, textSentence.sentInstID, data);
+					///
 				}
 			}
 		}

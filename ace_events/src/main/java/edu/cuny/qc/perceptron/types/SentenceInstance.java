@@ -552,6 +552,11 @@ public class SentenceInstance {
 				// allTriggerSignals = doc.signals.triggerSignals;
 				// allArgSignals = doc.signals.argSignals;
 				markSignalUpdate();
+				
+				/// DEBUG
+				System.out.printf("%s SentenceInstance.getPersistentSignals, %s:%s - doc.signals was null, so we created a new BundledSignals, and marked the document's signalUpdate\n",
+						Utils.detailedLog(), doc.docID, sentInstID);
+				///
 			}
 			// else {
 			// allTriggerSignals = doc.signals.triggerSignals;

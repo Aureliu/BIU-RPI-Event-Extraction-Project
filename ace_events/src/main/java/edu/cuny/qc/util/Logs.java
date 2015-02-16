@@ -1022,83 +1022,88 @@ public class Logs {
 			int devArgsMentions = SentenceInstance.getNumArgsForTriggers(runDev);
 			int testArgsMentions = SentenceInstance.getNumArgsForTriggers(runTest);
 
-			Utils.print(r, "", "\n", "|", null,
-					run.id, //"Id",
-					run.idPerTest,//"IdPerTest",
-					//run.sentenceSortingMethod,//"SortMethod",
-					run.featureProfile, //"FeatureProfile"
-					
-					// Train-Triggers
-					scores.train.bestScore.iteration,//"Iteration",
-					scores.train.bestScore.count_trigger_gold,//"Gold",
-					scores.train.bestScore.count_trigger_ans,//"System",
-					scores.train.bestScore.count_trigger_correct,//"Correct",
-					scores.train.bestScore.trigger_precision,//"Precision",
-					scores.train.bestScore.trigger_recall,//"Recall",
-					scores.train.bestScore.trigger_F1,//"F1",
-					
-					// Train-Args
-					scores.train.bestScore.count_arg_gold,//"Gold",
-					scores.train.bestScore.count_arg_ans,//"System",
-					scores.train.bestScore.count_arg_correct,//"Correct",
-					scores.train.bestScore.arg_precision,//"Precision",
-					scores.train.bestScore.arg_recall,//"Recall",
-					scores.train.bestScore.arg_F1,//"F1",
-					scores.train.bestScore.harmonic_mean,//"Harmonic",
-					
-					// Dev-Triggers
-					scores.dev.bestScore.iteration,//"Iteration",
-					scores.dev.bestScore.count_trigger_gold,//"Gold",
-					scores.dev.bestScore.count_trigger_ans,//"System",
-					scores.dev.bestScore.count_trigger_correct,//"Correct",
-					scores.dev.bestScore.trigger_precision,//"Precision",
-					scores.dev.bestScore.trigger_recall,//"Recall",
-					scores.dev.bestScore.trigger_F1,//"F1",
-					
-					// Dev-Args
-					scores.dev.bestScore.count_arg_gold,//"Gold",
-					scores.dev.bestScore.count_arg_ans,//"System",
-					scores.dev.bestScore.count_arg_correct,//"Correct",
-					scores.dev.bestScore.arg_precision,//"Precision",
-					scores.dev.bestScore.arg_recall,//"Recall",
-					scores.dev.bestScore.arg_F1,//"F1",
-					scores.dev.bestScore.harmonic_mean,//"Harmonic",
-					
-					// Test-Triggers
-					testStats.num_trigger_gold,//"Gold",
-					testStats.num_trigger_ans,//"System",
-					testStats.num_trigger_correct,//"Correct",
-					testStats.prec_trigger,//"Precision",
-					testStats.recall_trigger,//"Recall",
-					testStats.f1_trigger,//"F1",
-
-					// Test-Args
-					testStats.num_arg_gold,//"Gold",
-					testStats.num_arg_ans,//"System",
-					testStats.num_arg_correct,//"Correct",
-					testStats.prec_arg,//"Precision",
-					testStats.recall_arg,//"Recall",
-					testStats.f1_arg,//"F1",
-
-					labelList(trainTypes),//"List",
-					trainTypes.size(),//"Types",
-					runTrain.size(),//"Sentences",
-					trainEventMentions,//"Mentions",
-					trainArgCandMentions,//"ArgCands"
-					trainArgsMentions,//"Args"
-					labelList(devTypes),//"List",
-					devTypes.size(),//"Types",
-					runDev.size(),//"Sentences",
-					devEventMentions,//"Mentions",
-					devArgCandMentions,//"ArgCands"
-					devArgsMentions,//"Args"
-					SpecAnnotator.getSpecLabel(testType),//"List",
-					//testTypes.size(),//"Types",
-					runTest.size(),//"Sentences",
-					testEventMentions,//"Mentions",
-					testArgCandMentions,//"ArgCands"
-					testArgsMentions//"Args"
-			);					
+//			if (controller.useArguments) {
+				Utils.print(r, "", "\n", "|", null,
+						run.id, //"Id",
+						run.idPerTest,//"IdPerTest",
+						//run.sentenceSortingMethod,//"SortMethod",
+						run.featureProfile, //"FeatureProfile"
+						
+						// Train-Triggers
+						scores.train.bestScore.iteration,//"Iteration",
+						scores.train.bestScore.count_trigger_gold,//"Gold",
+						scores.train.bestScore.count_trigger_ans,//"System",
+						scores.train.bestScore.count_trigger_correct,//"Correct",
+						scores.train.bestScore.trigger_precision,//"Precision",
+						scores.train.bestScore.trigger_recall,//"Recall",
+						scores.train.bestScore.trigger_F1,//"F1",
+						
+						// Train-Args
+						scores.train.bestScore.count_arg_gold,//"Gold",
+						scores.train.bestScore.count_arg_ans,//"System",
+						scores.train.bestScore.count_arg_correct,//"Correct",
+						scores.train.bestScore.arg_precision,//"Precision",
+						scores.train.bestScore.arg_recall,//"Recall",
+						scores.train.bestScore.arg_F1,//"F1",
+						scores.train.bestScore.harmonic_mean,//"Harmonic",
+						
+						// Dev-Triggers
+						scores.dev.bestScore.iteration,//"Iteration",
+						scores.dev.bestScore.count_trigger_gold,//"Gold",
+						scores.dev.bestScore.count_trigger_ans,//"System",
+						scores.dev.bestScore.count_trigger_correct,//"Correct",
+						scores.dev.bestScore.trigger_precision,//"Precision",
+						scores.dev.bestScore.trigger_recall,//"Recall",
+						scores.dev.bestScore.trigger_F1,//"F1",
+						
+						// Dev-Args
+						scores.dev.bestScore.count_arg_gold,//"Gold",
+						scores.dev.bestScore.count_arg_ans,//"System",
+						scores.dev.bestScore.count_arg_correct,//"Correct",
+						scores.dev.bestScore.arg_precision,//"Precision",
+						scores.dev.bestScore.arg_recall,//"Recall",
+						scores.dev.bestScore.arg_F1,//"F1",
+						scores.dev.bestScore.harmonic_mean,//"Harmonic",
+						
+						// Test-Triggers
+						testStats.num_trigger_gold,//"Gold",
+						testStats.num_trigger_ans,//"System",
+						testStats.num_trigger_correct,//"Correct",
+						testStats.prec_trigger,//"Precision",
+						testStats.recall_trigger,//"Recall",
+						testStats.f1_trigger,//"F1",
+	
+						// Test-Args
+						testStats.num_arg_gold,//"Gold",
+						testStats.num_arg_ans,//"System",
+						testStats.num_arg_correct,//"Correct",
+						testStats.prec_arg,//"Precision",
+						testStats.recall_arg,//"Recall",
+						testStats.f1_arg,//"F1",
+	
+						labelList(trainTypes),//"List",
+						trainTypes.size(),//"Types",
+						runTrain.size(),//"Sentences",
+						trainEventMentions,//"Mentions",
+						trainArgCandMentions,//"ArgCands"
+						trainArgsMentions,//"Args"
+						labelList(devTypes),//"List",
+						devTypes.size(),//"Types",
+						runDev.size(),//"Sentences",
+						devEventMentions,//"Mentions",
+						devArgCandMentions,//"ArgCands"
+						devArgsMentions,//"Args"
+						SpecAnnotator.getSpecLabel(testType),//"List",
+						//testTypes.size(),//"Types",
+						runTest.size(),//"Sentences",
+						testEventMentions,//"Mentions",
+						testArgCandMentions,//"ArgCands"
+						testArgsMentions//"Args"
+				);		
+//			}
+//			else {
+//				
+//			}
 		}
 	}
 

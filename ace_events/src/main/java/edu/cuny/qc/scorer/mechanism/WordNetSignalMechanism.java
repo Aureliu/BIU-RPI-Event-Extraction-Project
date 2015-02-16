@@ -316,6 +316,10 @@ public class WordNetSignalMechanism extends SignalMechanism {
 			///// addTrigger(new ScorerData(null, new WordnetTriggerScorer(ALL_RELATIONS_SMALL, Juxtaposition.ANCESTOR, 2), NoDerv.inst, Derivation.NONE, -1, 1, null, Any.inst));
 			///// addTrigger(new ScorerData(null, new WordnetTriggerScorer(ALL_RELATIONS_BIG, Juxtaposition.ANCESTOR, 2), NomlexSignalMechanism.NomlexDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, 1, null, Any.inst));
 			break;
+
+		case ONLY_SYNONYM:
+			addTrigger(new ScorerData(null, new WordnetTriggerScorer(SYNONYM_RELATION, Juxtaposition.ANCESTOR, 1), NoDerv.inst, Derivation.NONE, -1, 1, null, Any.inst));
+			break;
 			
 		case ANALYSIS1: //do nothing
 		case ANALYSIS3:

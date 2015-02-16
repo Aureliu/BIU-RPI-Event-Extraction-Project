@@ -1185,7 +1185,7 @@ public class Document implements java.io.Serializable
 			}
 		}
 		else if (!signalsUpdated) {
-			System.out.printf("Not dumping signals, already had them in full: Document %s\n", docID);
+			System.out.printf("%s Not dumping signals, already had them in full: Document %s\n", Utils.detailedLog(), docID);
 		}
 	}
 	

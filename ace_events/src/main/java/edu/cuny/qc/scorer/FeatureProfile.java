@@ -5,6 +5,8 @@ public enum FeatureProfile {
 	NORMAL,
 	NORMAL2,
 	
+	ONLY_SYNONYM,
+	
 	ANALYSIS,
 	ANALYSIS1,
 	ANALYSIS11,

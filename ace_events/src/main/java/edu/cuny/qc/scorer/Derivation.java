@@ -26,6 +26,20 @@ public enum Derivation {
 		}
 	}
 	
+	/**
+	 * I know it look weird, but apparently in Java, an emum's hash and eqauls are actually the implementations
+	 * in Object, meaning - that they are based on true identity of objects! Not equality!
+	 * I guess it kinda makes sense as enums are singletons, but that's only true when comparing enums in the
+	 * same run. When you load something from disk - it breaks.
+	 * So let's go with a simple solution - implement according to name().
+	 * 
+	 * Whoops - I can't! hashCode() and equals() are "final" in Enum! Aaaaahhhh!!!!!
+	 */
+//	@Override
+//	public int hashCode() {
+//		return name().hashCode();
+//	}
+	
 	public boolean leftOriginal, leftDerivation, rightOriginal, rightDerivation;
 	
 	public static final Derivation[] DERVS_NONE = {Derivation.NONE}; 

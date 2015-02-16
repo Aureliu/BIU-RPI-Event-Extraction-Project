@@ -306,6 +306,17 @@ public class WordNetSignalMechanism extends SignalMechanism {
 			addArgumentFree(new ScorerData(null, new WordnetArgumentScorer(ALL_RELATIONS_BIG, Juxtaposition.ANCESTOR, 2), NomlexSignalMechanism.NomlexDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, 1, null, Any.inst));
 			
 			break;
+		case NORMAL2:
+			addTrigger(new ScorerData(null, new WordnetTriggerScorer(SYNONYM_RELATION, Juxtaposition.ANCESTOR, 1), NoDerv.inst, Derivation.NONE, -1, 1, null, Any.inst));
+			addTrigger(new ScorerData(null, new WordnetTriggerScorer(HYPERNYM_RELATIONS, Juxtaposition.ANCESTOR, 2), WordnetDervRltdDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, 1, null, Any.inst));
+			addTrigger(new ScorerData(null, new WordnetTriggerScorer(ALL_RELATIONS_SMALL, Juxtaposition.ANCESTOR, 2), WordnetDervRltdDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, 1, null, Any.inst));
+			
+			// These two scorers are the only difference between NORMAL2 (written in 15.2.2015) and NORMAL (Finalized in the 2014.07.26..2 run, and committed on 27.7.2014)
+			// They were explicitly chosen to NOT be a part of NORMAL2 (due to the almost-duplicity), and they never were part of NORMAL2, they are here only for documentation
+			///// addTrigger(new ScorerData(null, new WordnetTriggerScorer(ALL_RELATIONS_SMALL, Juxtaposition.ANCESTOR, 2), NoDerv.inst, Derivation.NONE, -1, 1, null, Any.inst));
+			///// addTrigger(new ScorerData(null, new WordnetTriggerScorer(ALL_RELATIONS_BIG, Juxtaposition.ANCESTOR, 2), NomlexSignalMechanism.NomlexDeriver.inst, Derivation.TEXT_ORIG_AND_DERV, -1, 1, null, Any.inst));
+			break;
+			
 		case ANALYSIS1: //do nothing
 		case ANALYSIS3:
 			break;

@@ -595,29 +595,37 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 			// Load basic spec annotation types
 			SpecXmlCasLoader loader = new SpecXmlCasLoader();
 			Map<String, Map<String, Annotation>> markerMap = loader.load(jcas, tokenView, sentenceViewTemp);
-			
-			// Remove markers and add pius\aius
-			// Also maps each PredicateSeed/ArgumentExample to all of its instances in the usage samples
-			// Of course, not every PredicateSeed/ArgumentExample needs an instance in the usage sample, and the ones that do have, can have 1 or many
-			Multimap<Annotation, Annotation> toUsage = organizeUsageSamples(tokenView, sentenceViewTemp, sentenceView, markerMap);
-			
-			// Build once, use many times
-			Collection<UsageSample> usageSamples = JCasUtil.select(sentenceView, UsageSample.class);
+
+			Collection<UsageSample> usageSamples = null;
+			Multimap<Annotation, Annotation> toUsage = null;
 			
 			// For tracing treeouts
 			Map<Class<? extends Treeout>, Map<String, Multiset<String>>> treeoutByRole = Maps.newHashMap();
 			Map<Class<? extends Treeout>, Map<String, Multiset<String>>> treeoutByVal = Maps.newHashMap();
 			Map<Class<? extends Treeout>, Multimap<String, ArgumentInUsageSample>> aiusesByTreeout = Maps.newHashMap();
 			
-			// Make sure usage samples don't have exact duplicates
-			List<String> sampleTextsList = JCasUtil.toText(usageSamples);
-			Set<String> sampleTextsSet = Sets.newHashSet(sampleTextsList);
-			if (sampleTextsList.size() != sampleTextsSet.size()) {
-				throw new SpecXmlException(String.format("Found duplicates in Usage Samples! There are %d samples, but only %s unique ones", sampleTextsList.size(), sampleTextsSet.size()));
+
+			if (Perceptron.controllerStatic.useArguments) {
+
+				// Remove markers and add pius\aius
+				// Also maps each PredicateSeed/ArgumentExample to all of its instances in the usage samples
+				// Of course, not every PredicateSeed/ArgumentExample needs an instance in the usage sample, and the ones that do have, can have 1 or many
+				toUsage = organizeUsageSamples(tokenView, sentenceViewTemp, sentenceView, markerMap);
+				
+				// Build once, use many times
+				usageSamples = JCasUtil.select(sentenceView, UsageSample.class);
+				
+				// Make sure usage samples don't have exact duplicates
+				List<String> sampleTextsList = JCasUtil.toText(usageSamples);
+				Set<String> sampleTextsSet = Sets.newHashSet(sampleTextsList);
+				if (sampleTextsList.size() != sampleTextsSet.size()) {
+					throw new SpecXmlException(String.format("Found duplicates in Usage Samples! There are %d samples, but only %s unique ones", sampleTextsList.size(), sampleTextsSet.size()));
+				}
+				
+				// Make sure argument type adhere to ACE types
+				validateArgumentTypes(tokenView);
+
 			}
-			
-			// Make sure argument type adhere to ACE types
-			validateArgumentTypes(tokenView);
 			
 			// Add linguistic segmentation annotations - Token and Sentence
 			Annotation anno;
@@ -627,9 +635,12 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 				Sentence sentence = new Sentence(tokenView, anno.getBegin(), anno.getEnd());
 				sentence.addToIndexes();
 			}
-			for (UsageSample sample : usageSamples) {
-				Sentence sentence = new Sentence(sentenceView, sample.getBegin(), sample.getEnd());
-				sentence.addToIndexes();
+
+			if (Perceptron.controllerStatic.useArguments) {
+				for (UsageSample sample : usageSamples) {
+					Sentence sentence = new Sentence(sentenceView, sample.getBegin(), sample.getEnd());
+					sentence.addToIndexes();
+				}
 			}
 			
 			tokenAE.process(tokenView);
@@ -652,177 +663,181 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 				lemmasToAnnotations.putAll(getLemmaToAnnotation(tokenView, arg, ArgumentExample.class, "argument"));
 			}
 			
-			FragmentLayer fragmentLayer = new FragmentLayer(sentenceView, Document.converter);
 			
-			for (UsageSample sample : usageSamples) {
-				sample.setText(sample.getCoveredText());
-				BasicNode sampleRoot = fragmentLayer.getRoot(sample);
-				sample.setTreeout(TreeToLineString.getStringWordRelCanonicalPos(sampleRoot));
+			if (Perceptron.controllerStatic.useArguments) {
+
+				FragmentLayer fragmentLayer = new FragmentLayer(sentenceView, Document.converter);
 				
-				// Now set a pius for each aius!
-				// Assuming exactly one pius per sample
-				List<PredicateInUsageSample> piuses = JCasUtil.selectCovered(sentenceView, PredicateInUsageSample.class, sample);
-				if (piuses.size() == 0) {
-					if (Perceptron.controllerStatic.enhanceSpecs) {
-						System.err.printf("Found a sample without predicate, during enhanceSpecs - skipping: %s\n\n", sample.getCoveredText());
-						continue;
+				for (UsageSample sample : usageSamples) {
+					sample.setText(sample.getCoveredText());
+					BasicNode sampleRoot = fragmentLayer.getRoot(sample);
+					sample.setTreeout(TreeToLineString.getStringWordRelCanonicalPos(sampleRoot));
+					
+					// Now set a pius for each aius!
+					// Assuming exactly one pius per sample
+					List<PredicateInUsageSample> piuses = JCasUtil.selectCovered(sentenceView, PredicateInUsageSample.class, sample);
+					if (piuses.size() == 0) {
+						if (Perceptron.controllerStatic.enhanceSpecs) {
+							System.err.printf("Found a sample without predicate, during enhanceSpecs - skipping: %s\n\n", sample.getCoveredText());
+							continue;
+						}
+						else {
+							throw new SpecXmlException(String.format("Usage example does not contain any predicate seed! '%s'", sample.getCoveredText()));
+						}
+					}
+					else if (piuses.size() > 1) {
+						throw new SpecXmlException(String.format("Usage example has more than one predicate seed (%s), in: '%s'",
+								JCasUtil.toText(piuses), sample.getCoveredText()));
 					}
 					else {
-						throw new SpecXmlException(String.format("Usage example does not contain any predicate seed! '%s'", sample.getCoveredText()));
-					}
-				}
-				else if (piuses.size() > 1) {
-					throw new SpecXmlException(String.format("Usage example has more than one predicate seed (%s), in: '%s'",
-							JCasUtil.toText(piuses), sample.getCoveredText()));
-				}
-				else {
-					PredicateInUsageSample pius = piuses.get(0);
-					for (ArgumentInUsageSample aius : JCasUtil.selectCovered(ArgumentInUsageSample.class, sample)) {
-						aius.setPius(pius);
-						aius.setSample(sample);
-						
-						// Build fragment layer stuff (twice, also without conj)
-						FragmentAndReference linkFrag = fragmentLayer.getRootLinkingTreeFragment(pius, aius, false, null);
-						List<BasicNode> subroots = ImmutableList.of(linkFrag.getFragmentRoot());
-						FragmentAndReference linkFragNoConj = fragmentLayer.getRootLinkingTreeFragment(pius, aius, true, null);
-						List<BasicNode> subrootsNoConj = ImmutableList.of(linkFragNoConj.getFragmentRoot());
-
-						String role = aius.getArgumentExample().getArgument().getRole().getCoveredText();
-						
-						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepNoContext.class, aius, role, TreeToLineString.getStringRel(subroots, false, true));
-						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepGenPosNoContext.class, aius, role, TreeToLineString.getStringRelCanonicalPos(subroots, false, true));
-						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepSpecPosNoContext.class, aius, role, TreeToLineString.getStringRelPos(subroots, false, true));
-
-						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepFlatNoContext.class, aius, role, TreeToLineString.getStringRelFlat(subroots, false, true));
-						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepFlatGenPosNoContext.class, aius, role, TreeToLineString.getStringRelFlatCanonicalPos(subroots, false, true));
-						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepFlatSpecPosNoContext.class, aius, role, TreeToLineString.getStringRelFlatPos(subroots, false, true));
-
-						
-						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepPrepNoContext.class, aius, role, TreeToLineString.getStringRelPrep(subroots, false, true));
-						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepPrepGenPosNoContext.class, aius, role, TreeToLineString.getStringRelPrepCanonicalPos(subroots, false, true));
-						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepPrepSpecPosNoContext.class, aius, role, TreeToLineString.getStringRelPrepPos(subroots, false, true));
-
-						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepFlatPrepNoContext.class, aius, role, TreeToLineString.getStringRelFlatPrep(subroots, false, true));
-						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepFlatPrepGenPosNoContext.class, aius, role, TreeToLineString.getStringRelFlatPrepCanonicalPos(subroots, false, true));
-						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepFlatPrepSpecPosNoContext.class, aius, role, TreeToLineString.getStringRelFlatPrepPos(subroots, false, true));
-
-						
-						
-						
-						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepUp2NoContext.class, aius, role, TreeToLineString.getStringRelUp2(subroots, false, true));
-						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepUp2GenPosNoContext.class, aius, role, TreeToLineString.getStringRelUp2CanonicalPos(subroots, false, true));
-						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepUp2SpecPosNoContext.class, aius, role, TreeToLineString.getStringRelUp2Pos(subroots, false, true));
-
-						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepFlatUp2NoContext.class, aius, role, TreeToLineString.getStringRelFlatUp2(subroots, false, true));
-						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepFlatUp2GenPosNoContext.class, aius, role, TreeToLineString.getStringRelFlatUp2CanonicalPos(subroots, false, true));
-						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepFlatUp2SpecPosNoContext.class, aius, role, TreeToLineString.getStringRelFlatUp2Pos(subroots, false, true));
-
-						
-						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepPrepUp2NoContext.class, aius, role, TreeToLineString.getStringRelPrepUp2(subrootsNoConj, false, true));
-						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepPrepUp2GenPosNoContext.class, aius, role, TreeToLineString.getStringRelPrepUp2CanonicalPos(subrootsNoConj, false, true));
-						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepPrepUp2SpecPosNoContext.class, aius, role, TreeToLineString.getStringRelPrepUp2Pos(subrootsNoConj, false, true));
-						
-						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepFlatPrepUp2NoContext.class, aius, role, TreeToLineString.getStringRelFlatPrepUp2(subrootsNoConj, false, true));
-						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepFlatPrepUp2GenPosNoContext.class, aius, role, TreeToLineString.getStringRelFlatPrepUp2CanonicalPos(subrootsNoConj, false, true));
-						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepFlatPrepUp2SpecPosNoContext.class, aius, role, TreeToLineString.getStringRelFlatPrepUp2Pos(subrootsNoConj, false, true));
-
-						
-						
-						
-						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepUp3NoContext.class, aius, role, TreeToLineString.getStringRelUp3(subroots, false, true));
-						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepUp3GenPosNoContext.class, aius, role, TreeToLineString.getStringRelUp3CanonicalPos(subroots, false, true));
-						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepUp3SpecPosNoContext.class, aius, role, TreeToLineString.getStringRelUp3Pos(subroots, false, true));
-
-						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepFlatUp3NoContext.class, aius, role, TreeToLineString.getStringRelFlatUp3(subroots, false, true));
-						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepFlatUp3GenPosNoContext.class, aius, role, TreeToLineString.getStringRelFlatUp3CanonicalPos(subroots, false, true));
-						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepFlatUp3SpecPosNoContext.class, aius, role, TreeToLineString.getStringRelFlatUp3Pos(subroots, false, true));
-
-						
-						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepPrepUp3NoContext.class, aius, role, TreeToLineString.getStringRelPrepUp3(subrootsNoConj, false, true));
-						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepPrepUp3GenPosNoContext.class, aius, role, TreeToLineString.getStringRelPrepUp3CanonicalPos(subrootsNoConj, false, true));
-						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepPrepUp3SpecPosNoContext.class, aius, role, TreeToLineString.getStringRelPrepUp3Pos(subrootsNoConj, false, true));
-						
-						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepFlatPrepUp3NoContext.class, aius, role, TreeToLineString.getStringRelFlatPrepUp3(subrootsNoConj, false, true));
-						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepFlatPrepUp3GenPosNoContext.class, aius, role, TreeToLineString.getStringRelFlatPrepUp3CanonicalPos(subrootsNoConj, false, true));
-						addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepFlatPrepUp3SpecPosNoContext.class, aius, role, TreeToLineString.getStringRelFlatPrepUp3Pos(subrootsNoConj, false, true));
-						
-
-					}
-				}
-				
-				// And now, set sample instances for each PredicateSeed/ArgumentExample (and also for Arguments)
-				for (PredicateSeed seed : JCasUtil.select(tokenView, PredicateSeed.class)) {
-					Collection<Annotation> piusesOfSeed = toUsage.get(seed);
-					seed.setPiuses((FSArray) FSCollectionFactory.createFSArray(tokenView, piusesOfSeed));
-				}
-				for (ArgumentExample example : JCasUtil.select(tokenView, ArgumentExample.class)) {
-					Collection<Annotation> aiusesOfExample = toUsage.get(example);
-					example.setAiuses((FSArray) FSCollectionFactory.createFSArray(tokenView, aiusesOfExample));
-				}
-				for (Argument arg : JCasUtil.select(tokenView, Argument.class)) {
-					Collection<Annotation> aiusesOfArg = toUsage.get(arg);
-					arg.setAiuses((FSArray) FSCollectionFactory.createFSArray(tokenView, aiusesOfArg));
-				}
-				
-			}
-			
-			for (Class<?> cls : treeoutByRole.keySet()) {
-				Map<String, Multiset<String>> byCls = treeoutByRole.get(cls);
-				for (String role : byCls.keySet()) {
-					Multiset<String> byRole = byCls.get(role);
-					List<String> strs = Lists.newArrayList();
-					for (String val : byRole.elementSet()) {
-						int count = byRole.count(val);
-						String s = String.format("%s*%s", count, val);
-						strs.add(s);
-					}
-					String oneStr = StringUtils.join(strs, " | ");
-					
-					TAll tAll = new TAll(sentenceView);
-					tAll.setCls(cls.getSimpleName());
-					tAll.setRole(role);
-					tAll.setVal(oneStr);
-					tAll.addToIndexes();
-				}
-			}
-			for (Class<? extends Treeout> cls : treeoutByVal.keySet()) {
-				Map<String, Multiset<String>> byCls = treeoutByVal.get(cls);
-				for (String treeout : byCls.keySet()) {
-					Multiset<String> byTreeout = byCls.get(treeout);
-					List<String> strs = Lists.newArrayList();
-					for (String role : byTreeout.elementSet()) {
-						int count = byTreeout.count(role);
-						String s = String.format("%s*%s", count, role);
-						strs.add(s);
-					}
-					String oneStr = StringUtils.join(strs, " | ");
-
-					VAll vAll = new VAll(sentenceView);
-					vAll.setCls(cls.getSimpleName());
-					vAll.setTreeout(treeout);
-					vAll.setVal(oneStr);
-					vAll.addToIndexes();
-					
-					Collection<ArgumentInUsageSample> aiuses = aiusesByTreeout.get(cls).get(treeout);
-					for (ArgumentInUsageSample aius : aiuses) {
-						Feature treeoutFeature = getAiusTreeoutFeature(cls, aius);
-						Treeout treeoutAnno = (Treeout) aius.getFeatureValue(treeoutFeature);
-						/// DEBUG
-//						if (treeoutAnno.getValue().contains("<SUBROOT>[PRD](dobj->NN[ARG])") &&
-//								cls == TreeoutDepSpecPosNoContext.class) {
-//							System.out.printf("\n\n\n\n\n\n\n\ngot treeout1\n\n\n\n\n\n\n");
-//						}
-//						if (treeoutAnno.getValue().contains("<SUBROOT>[PRD](dobj->NNS[ARG])") &&
-//								cls == TreeoutDepSpecPosNoContext.class) {
-//							System.out.printf("\n\n\n\n\n\n\n\ngot treeout2\n\n\n\n\n\n\n");
-//						}
-						///
-						VAll existingVAll = treeoutAnno.getVAll();
-						if (existingVAll != null && existingVAll != vAll) {
-							throw new IllegalStateException(String.format("Trying to set vAll of <%s> to treeout %s<%s>, but this treeout already has a vAll of <%s>!",
-									vAll.getVal(), cls.getSimpleName(), treeoutAnno.getValue(), existingVAll.getVal()));
+						PredicateInUsageSample pius = piuses.get(0);
+						for (ArgumentInUsageSample aius : JCasUtil.selectCovered(ArgumentInUsageSample.class, sample)) {
+							aius.setPius(pius);
+							aius.setSample(sample);
+							
+							// Build fragment layer stuff (twice, also without conj)
+							FragmentAndReference linkFrag = fragmentLayer.getRootLinkingTreeFragment(pius, aius, false, null);
+							List<BasicNode> subroots = ImmutableList.of(linkFrag.getFragmentRoot());
+							FragmentAndReference linkFragNoConj = fragmentLayer.getRootLinkingTreeFragment(pius, aius, true, null);
+							List<BasicNode> subrootsNoConj = ImmutableList.of(linkFragNoConj.getFragmentRoot());
+	
+							String role = aius.getArgumentExample().getArgument().getRole().getCoveredText();
+							
+							addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepNoContext.class, aius, role, TreeToLineString.getStringRel(subroots, false, true));
+							addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepGenPosNoContext.class, aius, role, TreeToLineString.getStringRelCanonicalPos(subroots, false, true));
+							addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepSpecPosNoContext.class, aius, role, TreeToLineString.getStringRelPos(subroots, false, true));
+	
+							addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepFlatNoContext.class, aius, role, TreeToLineString.getStringRelFlat(subroots, false, true));
+							addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepFlatGenPosNoContext.class, aius, role, TreeToLineString.getStringRelFlatCanonicalPos(subroots, false, true));
+							addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepFlatSpecPosNoContext.class, aius, role, TreeToLineString.getStringRelFlatPos(subroots, false, true));
+	
+							
+							addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepPrepNoContext.class, aius, role, TreeToLineString.getStringRelPrep(subroots, false, true));
+							addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepPrepGenPosNoContext.class, aius, role, TreeToLineString.getStringRelPrepCanonicalPos(subroots, false, true));
+							addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepPrepSpecPosNoContext.class, aius, role, TreeToLineString.getStringRelPrepPos(subroots, false, true));
+	
+							addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepFlatPrepNoContext.class, aius, role, TreeToLineString.getStringRelFlatPrep(subroots, false, true));
+							addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepFlatPrepGenPosNoContext.class, aius, role, TreeToLineString.getStringRelFlatPrepCanonicalPos(subroots, false, true));
+							addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepFlatPrepSpecPosNoContext.class, aius, role, TreeToLineString.getStringRelFlatPrepPos(subroots, false, true));
+	
+							
+							
+							
+							addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepUp2NoContext.class, aius, role, TreeToLineString.getStringRelUp2(subroots, false, true));
+							addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepUp2GenPosNoContext.class, aius, role, TreeToLineString.getStringRelUp2CanonicalPos(subroots, false, true));
+							addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepUp2SpecPosNoContext.class, aius, role, TreeToLineString.getStringRelUp2Pos(subroots, false, true));
+	
+							addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepFlatUp2NoContext.class, aius, role, TreeToLineString.getStringRelFlatUp2(subroots, false, true));
+							addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepFlatUp2GenPosNoContext.class, aius, role, TreeToLineString.getStringRelFlatUp2CanonicalPos(subroots, false, true));
+							addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepFlatUp2SpecPosNoContext.class, aius, role, TreeToLineString.getStringRelFlatUp2Pos(subroots, false, true));
+	
+							
+							addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepPrepUp2NoContext.class, aius, role, TreeToLineString.getStringRelPrepUp2(subrootsNoConj, false, true));
+							addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepPrepUp2GenPosNoContext.class, aius, role, TreeToLineString.getStringRelPrepUp2CanonicalPos(subrootsNoConj, false, true));
+							addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepPrepUp2SpecPosNoContext.class, aius, role, TreeToLineString.getStringRelPrepUp2Pos(subrootsNoConj, false, true));
+							
+							addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepFlatPrepUp2NoContext.class, aius, role, TreeToLineString.getStringRelFlatPrepUp2(subrootsNoConj, false, true));
+							addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepFlatPrepUp2GenPosNoContext.class, aius, role, TreeToLineString.getStringRelFlatPrepUp2CanonicalPos(subrootsNoConj, false, true));
+							addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepFlatPrepUp2SpecPosNoContext.class, aius, role, TreeToLineString.getStringRelFlatPrepUp2Pos(subrootsNoConj, false, true));
+	
+							
+							
+							
+							addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepUp3NoContext.class, aius, role, TreeToLineString.getStringRelUp3(subroots, false, true));
+							addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepUp3GenPosNoContext.class, aius, role, TreeToLineString.getStringRelUp3CanonicalPos(subroots, false, true));
+							addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepUp3SpecPosNoContext.class, aius, role, TreeToLineString.getStringRelUp3Pos(subroots, false, true));
+	
+							addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepFlatUp3NoContext.class, aius, role, TreeToLineString.getStringRelFlatUp3(subroots, false, true));
+							addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepFlatUp3GenPosNoContext.class, aius, role, TreeToLineString.getStringRelFlatUp3CanonicalPos(subroots, false, true));
+							addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepFlatUp3SpecPosNoContext.class, aius, role, TreeToLineString.getStringRelFlatUp3Pos(subroots, false, true));
+	
+							
+							addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepPrepUp3NoContext.class, aius, role, TreeToLineString.getStringRelPrepUp3(subrootsNoConj, false, true));
+							addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepPrepUp3GenPosNoContext.class, aius, role, TreeToLineString.getStringRelPrepUp3CanonicalPos(subrootsNoConj, false, true));
+							addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepPrepUp3SpecPosNoContext.class, aius, role, TreeToLineString.getStringRelPrepUp3Pos(subrootsNoConj, false, true));
+							
+							addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepFlatPrepUp3NoContext.class, aius, role, TreeToLineString.getStringRelFlatPrepUp3(subrootsNoConj, false, true));
+							addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepFlatPrepUp3GenPosNoContext.class, aius, role, TreeToLineString.getStringRelFlatPrepUp3CanonicalPos(subrootsNoConj, false, true));
+							addTreeout(treeoutByRole, treeoutByVal, aiusesByTreeout, TreeoutDepFlatPrepUp3SpecPosNoContext.class, aius, role, TreeToLineString.getStringRelFlatPrepUp3Pos(subrootsNoConj, false, true));
+							
+	
 						}
-						treeoutAnno.setVAll(vAll);
+					}
+					
+					// And now, set sample instances for each PredicateSeed/ArgumentExample (and also for Arguments)
+					for (PredicateSeed seed : JCasUtil.select(tokenView, PredicateSeed.class)) {
+						Collection<Annotation> piusesOfSeed = toUsage.get(seed);
+						seed.setPiuses((FSArray) FSCollectionFactory.createFSArray(tokenView, piusesOfSeed));
+					}
+					for (ArgumentExample example : JCasUtil.select(tokenView, ArgumentExample.class)) {
+						Collection<Annotation> aiusesOfExample = toUsage.get(example);
+						example.setAiuses((FSArray) FSCollectionFactory.createFSArray(tokenView, aiusesOfExample));
+					}
+					for (Argument arg : JCasUtil.select(tokenView, Argument.class)) {
+						Collection<Annotation> aiusesOfArg = toUsage.get(arg);
+						arg.setAiuses((FSArray) FSCollectionFactory.createFSArray(tokenView, aiusesOfArg));
+					}
+					
+				}
+				
+				for (Class<?> cls : treeoutByRole.keySet()) {
+					Map<String, Multiset<String>> byCls = treeoutByRole.get(cls);
+					for (String role : byCls.keySet()) {
+						Multiset<String> byRole = byCls.get(role);
+						List<String> strs = Lists.newArrayList();
+						for (String val : byRole.elementSet()) {
+							int count = byRole.count(val);
+							String s = String.format("%s*%s", count, val);
+							strs.add(s);
+						}
+						String oneStr = StringUtils.join(strs, " | ");
+						
+						TAll tAll = new TAll(sentenceView);
+						tAll.setCls(cls.getSimpleName());
+						tAll.setRole(role);
+						tAll.setVal(oneStr);
+						tAll.addToIndexes();
+					}
+				}
+				for (Class<? extends Treeout> cls : treeoutByVal.keySet()) {
+					Map<String, Multiset<String>> byCls = treeoutByVal.get(cls);
+					for (String treeout : byCls.keySet()) {
+						Multiset<String> byTreeout = byCls.get(treeout);
+						List<String> strs = Lists.newArrayList();
+						for (String role : byTreeout.elementSet()) {
+							int count = byTreeout.count(role);
+							String s = String.format("%s*%s", count, role);
+							strs.add(s);
+						}
+						String oneStr = StringUtils.join(strs, " | ");
+	
+						VAll vAll = new VAll(sentenceView);
+						vAll.setCls(cls.getSimpleName());
+						vAll.setTreeout(treeout);
+						vAll.setVal(oneStr);
+						vAll.addToIndexes();
+						
+						Collection<ArgumentInUsageSample> aiuses = aiusesByTreeout.get(cls).get(treeout);
+						for (ArgumentInUsageSample aius : aiuses) {
+							Feature treeoutFeature = getAiusTreeoutFeature(cls, aius);
+							Treeout treeoutAnno = (Treeout) aius.getFeatureValue(treeoutFeature);
+							/// DEBUG
+	//						if (treeoutAnno.getValue().contains("<SUBROOT>[PRD](dobj->NN[ARG])") &&
+	//								cls == TreeoutDepSpecPosNoContext.class) {
+	//							System.out.printf("\n\n\n\n\n\n\n\ngot treeout1\n\n\n\n\n\n\n");
+	//						}
+	//						if (treeoutAnno.getValue().contains("<SUBROOT>[PRD](dobj->NNS[ARG])") &&
+	//								cls == TreeoutDepSpecPosNoContext.class) {
+	//							System.out.printf("\n\n\n\n\n\n\n\ngot treeout2\n\n\n\n\n\n\n");
+	//						}
+							///
+							VAll existingVAll = treeoutAnno.getVAll();
+							if (existingVAll != null && existingVAll != vAll) {
+								throw new IllegalStateException(String.format("Trying to set vAll of <%s> to treeout %s<%s>, but this treeout already has a vAll of <%s>!",
+										vAll.getVal(), cls.getSimpleName(), treeoutAnno.getValue(), existingVAll.getVal()));
+							}
+							treeoutAnno.setVAll(vAll);
+						}
 					}
 				}
 			}

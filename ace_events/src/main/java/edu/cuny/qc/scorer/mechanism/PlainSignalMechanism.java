@@ -51,6 +51,10 @@ public class PlainSignalMechanism extends SignalMechanism {
 			
 			break;
 			
+		case NORMAL2:
+			addTrigger(new ScorerData("PL_SAME_LEMMA",				SameTriggerLemma.inst,				Aggregator.Any.inst		));
+			break;
+			
 		// these are all fall-throughs, we have only one valid plain, and it's only in trigger - no args...
 		case FINAL1_F1:
 		case FINAL1_F1_REC:

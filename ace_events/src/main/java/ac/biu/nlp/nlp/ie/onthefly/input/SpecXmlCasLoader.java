@@ -22,6 +22,8 @@ import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Multimap;
 
+import edu.cuny.qc.perceptron.core.Perceptron;
+
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.Argument;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentExample;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.ArgumentRole;
@@ -149,7 +151,7 @@ public class SpecXmlCasLoader {
 		
 		markerMap.put(PREDICATE_MARKER, getTextElementMap(seeds));
 		
-		// Arguments
+		// Arguments		
 		AnnotationFS argumentsSection = getSingleSection(annoFullDocument, "arguments");
 		List<AnnotationFS> arguments = getSectionList(jcas, argumentsSection, "argument");
 		for (AnnotationFS argumentAnno : arguments) {
@@ -180,10 +182,13 @@ public class SpecXmlCasLoader {
 			}
 			markerMap.put(markerText, getTextElementMap(examples));
 		}
-		
-		// Usage Samples
-		addItemsInSingleSection(sentenceView, annoFullDocument, "usage_samples", "sample", UsageSample.class);
 
+		// HACK: this should be earlier, on all arguments stuff
+		if (Perceptron.controllerStatic.useArguments) { 
+			// Usage Samples
+			addItemsInSingleSection(sentenceView, annoFullDocument, "usage_samples", "sample", UsageSample.class);
+		}
+		
 		return markerMap;
 	}
 

@@ -1148,23 +1148,32 @@ public class Document implements java.io.Serializable
 		}
 		
 		if (controller.useSignalFiles && signalsUpdated) {
+			/**
+			 * 16.2.2015: This is very weird, this re-loading business! And I fear that re-loading, or maybe absorbing, costs a lot of time.
+			 * Man, that might have been useful to know... But we'll see.
+			 * If so, maybe we should try another strategy. Maybe we can save the reloading by just saving a copy of what we initially loaded,
+			 * before we removed stuff from it? It's not clear if it would be better, as copying the entire structure might also take time, and
+			 * consume a lot of memory, and I still need to absorb... OK never mind :)
+			 */
 			// DEBUG
-			//System.out.printf("%s starting re-loading signal file for dumping, %s\n", Utils.detailedLog(), docLine);
+			System.out.printf("%s starting re-loading signal file for dumping, %s\n", Utils.detailedLog(), docLine);
 			////
 			BundledSignals stored = loadSignals(controller);
 			// DEBUG
-			//System.out.printf("%s finished re-loading signal file for dumping, %s\n", Utils.detailedLog(), docLine);
+			System.out.printf("%s finished re-loading signal file for dumping, %s\n", Utils.detailedLog(), docLine);
 			////
 			if (stored == null) {
 				stored = new BundledSignals();
 			}
 			stored.absorb(signals);
+			System.out.printf("%s finished absorbing re-loaded signal file, %s\n", Utils.detailedLog(), docLine);
 			
 			File signalsFile = new File(docPath + signalsFileExt + controller.serialization.extension);
 			try {
 				OutputStream out = controller.serialization.getOutputStream(new FileOutputStream(signalsFile));
 				SerializationUtils.serialize(stored, out);
 				out.close();
+				System.out.printf("%s finished dumping signal file, %s\n", Utils.detailedLog(), docLine);
 			}
 			catch (IOException e) {
 				Files.deleteIfExists(signalsFile.toPath());

@@ -53,6 +53,7 @@ import edu.cuny.qc.scorer.ScorerData;
 import edu.cuny.qc.scorer.SignalMechanism;
 import edu.cuny.qc.scorer.SignalMechanismsContainer;
 import edu.cuny.qc.scorer.mechanism.DependencySignalMechanism.SpecTreeoutQuery;
+import edu.cuny.qc.util.BackupSource;
 import edu.cuny.qc.util.Utils;
 import eu.excitementproject.eop.common.utilities.uima.UimaUtils;
 
@@ -91,7 +92,8 @@ public class SignalAnalyzer {
 	public static void analyze(File inputFileList, File specList, File outputFolder, boolean useDumps, String triggerDocName/*, String argDocName, String globalDocName*/, Integer debugMinSentence, Integer docsChunk, String featureProfile) throws Exception {
 		(new PrintStream(new File(outputFolder, "start"))).close();
 		Utils.OUTPUT_FOLDER = outputFolder;
-		
+		BackupSource.backup(outputFolder);
+
 		if (debugMinSentence < 0) {
 			debugMinSentence = Integer.MAX_VALUE;
 		}

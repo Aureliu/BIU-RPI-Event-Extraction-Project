@@ -48,6 +48,7 @@ import edu.cuny.qc.perceptron.types.Sentence;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
 import edu.cuny.qc.scorer.FeatureProfile;
 import edu.cuny.qc.scorer.SignalMechanismsContainer;
+import edu.cuny.qc.util.BackupSource;
 import edu.cuny.qc.util.Logs;
 import edu.cuny.qc.util.Utils;
 import eu.excitementproject.eop.common.utilities.uima.UimaUtilsException;
@@ -74,6 +75,9 @@ public class Folds {
 		if (controller.testType != null) {
 			allTestSpecs = types.getPartialSpecList(ImmutableList.of(controller.testType));
 		}
+		/**
+		 * if we have testOnlyTypes - then we choose the test events only from that list, and not from the entire spec list
+		 */
 		else if (controller.testOnlyTypes != null) {
 			allTestSpecs = types.getPartialSpecList(controller.testOnlyTypes);			
 		}
@@ -97,6 +101,9 @@ public class Folds {
 				specsCopy.remove(run.testEvent);
 				
 				
+				/**
+				 * if we have trainList - then the train events will be EXACTLY THE SAME for ALL RUNS
+				 */
 				if (controller.trainList != null) {
 					run.trainEvents = types.getPartialSpecList(controller.trainList);
 					if (run.trainEvents.contains(run.testEvent)) { //a little hacky - we have to check for this explicitly, as here we don't the train events from specsCopy
@@ -105,6 +112,10 @@ public class Folds {
 				}
 				else {
 					List<JCas> specsToChooseFrom = specsCopy;
+
+					/**
+					 * if we have trainOnlyTypes - then we choose the train events only from that list, and not from the entire spec list
+					 */
 					if (controller.trainOnlyTypes != null) {
 						specsToChooseFrom = types.getPartialSpecList(controller.trainOnlyTypes);
 						specsToChooseFrom.remove(run.testEvent); // just in case testEvent is part of the list (we don't check if it was actually there or not)
@@ -121,6 +132,9 @@ public class Folds {
 
 				
 				List<JCas> devEventsList = null;
+				/**
+				 * if we have devList - then the dev events will be EXACTLY THE SAME for ALL RUNS
+				 */
 				if (controller.devList != null) {
 					devEventsList = types.getPartialSpecList(controller.devList);
 					if (devEventsList.contains(run.testEvent) || !ListUtils.intersection(devEventsList, run.trainEvents).isEmpty()) { //also hacky, see above
@@ -129,6 +143,9 @@ public class Folds {
 				}
 				else {
 					List<JCas> specsToChooseFrom = specsCopy;
+					/**
+					 * if we have devOnlyTypes - then we choose the dev events only from that list, and not from the entire spec list
+					 */
 					if (controller.devOnlyTypes != null) {
 						specsToChooseFrom = types.getPartialSpecList(controller.devOnlyTypes);
 						specsToChooseFrom.remove(run.testEvent); // just in case any of these is part of the list (we don't check if it was actually there or not)
@@ -373,6 +390,7 @@ public class Folds {
 		System.out.printf("Args:\n\toutputFolder=%s\n\tspecsFile=%s (with %s specs)\n\tnumRuns=%s\n\tminTrainEvents=%s\n\tmaxTrainEvents=%s\n\tminDevEvents=%s\n\tmaxDevEvents=%s\n\tminTrainMentions=%s\n\tminDevMentions=%s\n\ttrainDocs=%s\n\tdevDocs=%s\n\ttestDocs=%s\n\n",
 				outputFolder, args[1], allSpecs.size(), numRuns, minTrainEvents, maxTrainEvents, minDevEvents, maxDevEvents, minTrainMentions, minDevMentions, trainDocs, devDocs, testDocs);
 		Utils.OUTPUT_FOLDER = outputFolder;
+		BackupSource.backup(outputFolder);
 		
 		File corpusDir = new File(CORPUS_DIR);
 		Controller controller = new Controller();
@@ -444,7 +462,9 @@ public class Folds {
 
 			if (!runTest.isEmpty()) {
 				String[] errorAnalysisArgs = new String[]{CORPUS_DIR, runDir, testDocs.getAbsolutePath(), runDir+"/NtpOut", SpecAnnotator.getSpecLabel(run.testEvent)};
+				System.out.printf("%s Starting ErrorAnalysis\n", Utils.detailedLog());
 				ErrorAnalysis.main(errorAnalysisArgs);
+				System.out.printf("%s Finished ErrorAnalysis\n", Utils.detailedLog());
 			}
 			
 			System.out.printf("%s ############################################# Finished run %s (%s in test spec)\n", Utils.detailedLog(), run.id, run.idPerTest);

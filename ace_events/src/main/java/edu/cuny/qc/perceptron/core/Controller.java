@@ -76,10 +76,16 @@ public class Controller implements java.io.Serializable
 	
 	public boolean updateOnlyOnViolation = true;
 	
+	/**
+	 * Setting any of these lists will cause a CONSTANT train/dev/test list for ALL RUNS
+	 */
 	public List<String> trainList = null;
 	public List<String> devList = null;
 	public String testType = null;
 	
+	/**
+	 * Setting any of these lists will cause the train/dev/test list to be CHOSEN FROM the list, choosing a new list for each run
+	 */
 	public List<String> trainOnlyTypes = null;
 	public List<String> devOnlyTypes = null;
 	public List<String> testOnlyTypes = null;

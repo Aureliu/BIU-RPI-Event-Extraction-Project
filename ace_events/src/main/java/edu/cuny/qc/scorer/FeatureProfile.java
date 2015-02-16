@@ -3,6 +3,8 @@ package edu.cuny.qc.scorer;
 public enum FeatureProfile {
 	NORMAL_OLD_1,
 	NORMAL,
+	NORMAL2,
+	
 	ANALYSIS,
 	ANALYSIS1,
 	ANALYSIS11,

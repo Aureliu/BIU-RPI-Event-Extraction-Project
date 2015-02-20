@@ -3,13 +3,13 @@ package edu.cuny.qc.perceptron.folds;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintStream;
+import java.math.BigDecimal;
+import java.math.MathContext;
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-
 import org.apache.commons.collections15.ListUtils;
 import org.apache.log4j.Logger;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
@@ -36,17 +36,14 @@ import edu.cuny.qc.ace.acetypes.ErrorAnalysis;
 import edu.cuny.qc.ace.acetypes.Scorer;
 import edu.cuny.qc.ace.acetypes.Scorer.Stats;
 import edu.cuny.qc.perceptron.core.AllTrainingScores;
-import edu.cuny.qc.perceptron.core.ArgOMethod;
 import edu.cuny.qc.perceptron.core.Controller;
 import edu.cuny.qc.perceptron.core.Decoder;
 import edu.cuny.qc.perceptron.core.Perceptron;
 import edu.cuny.qc.perceptron.core.Pipeline;
-import edu.cuny.qc.perceptron.core.SentenceSortingMethod;
 import edu.cuny.qc.perceptron.types.Alphabet;
 import edu.cuny.qc.perceptron.types.Document;
 import edu.cuny.qc.perceptron.types.Sentence;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
-import edu.cuny.qc.scorer.FeatureProfile;
 import edu.cuny.qc.scorer.SignalMechanismsContainer;
 import edu.cuny.qc.util.BackupSource;
 import edu.cuny.qc.util.Logs;
@@ -66,9 +63,21 @@ public class Folds {
 //			"oMethod=G0P- serialization=BZ2 featureProfile=NORMAL usePreprocessedFiles=true useSignalFiles=true useArguments=false " +
 //			"logOnlyTheseSentences=5b";
 	
-	public static List<Run> buildRuns(Controller controller, TypesContainer types, Map<String, Integer> trainMentionsByType, Map<String, Integer> devMentionsByType, int numRuns, int minTrainEvents, int maxTrainEvents, int minDevEvents, int maxDevEvents, int minTrainMentions, int minDevMentions) throws CASException {
+	public static BigDecimal MAGIC_NO_PROPORTION_RESTRICTION = BigDecimal.ZERO;
+	public static BigDecimal MAGIC_NO_AMOUNT_RESTRICTION = BigDecimal.ZERO;
+	
+	public static List<Run> buildRuns(Controller controller, TypesContainer types, Map<String, Integer> trainMentionsByType, Map<String, Integer> devMentionsByType, int numRuns,
+			List<Integer> trainEventNums, List<Integer> devEventNums, int minTrainMentions, int minDevMentions,
+			Collection<SentenceInstance> trainInstances, Collection<SentenceInstance> devInstances, List<BigDecimal> proportionsRestrictions, List<BigDecimal> amountRestrictions) throws CASException, CASRuntimeException, AnalysisEngineProcessException, ResourceInitializationException, UimaUtilsException, IOException, AeException {
 		int totalTries = BUILD_RUN_FAIL_RATIO * numRuns;
 		List<Run> result = Lists.newArrayListWithCapacity(numRuns*types.specs.size());
+		
+		List<SentenceInstance> trainInstanceList = Lists.newArrayList(trainInstances);
+		List<SentenceInstance> devInstanceList = Lists.newArrayList(devInstances);
+		BigDecimal trainInstancesLen = new BigDecimal(trainInstances.size());  
+		BigDecimal devInstancesLen = new BigDecimal(devInstances.size());  
+		BigDecimal allInstancesLen = trainInstancesLen.add(devInstancesLen);
+		
 		//int prevAmountResult = 0;
 		int totalCounter = 0;
 		List<JCas> allTestSpecs;
@@ -120,7 +129,7 @@ public class Folds {
 						specsToChooseFrom = types.getPartialSpecList(controller.trainOnlyTypes);
 						specsToChooseFrom.remove(run.testEvent); // just in case testEvent is part of the list (we don't check if it was actually there or not)
 					}
-					int numTrainEvents = Utils.randInt(minTrainEvents, maxTrainEvents);
+					Integer numTrainEvents = Utils.sample(trainEventNums, 1).iterator().next();
 					// not enough event types left - ignore current run
 					if (numTrainEvents > specsToChooseFrom.size()) {
 						//System.out.printf("%s. numTrainEvents=%s > specsCopy.size()=%s\n", n, numTrainEvents, specsCopy.size());
@@ -151,7 +160,7 @@ public class Folds {
 						specsToChooseFrom.remove(run.testEvent); // just in case any of these is part of the list (we don't check if it was actually there or not)
 						specsToChooseFrom.removeAll(run.trainEvents);
 					}
-					int numDevEvents = Utils.randInt(minDevEvents, maxDevEvents);
+					int numDevEvents = Utils.sample(devEventNums, 1).iterator().next();
 					// not enough event types left - ignore current run
 					if (numDevEvents > specsToChooseFrom.size()) {
 						//System.out.printf("%s. numDevEvents=%s > specsCopy.size()=%s\n", n, numDevEvents, specsCopy.size());
@@ -162,53 +171,158 @@ public class Folds {
 				run.devEvents = Sets.newLinkedHashSet(devEventsList);
 				specsCopy.removeAll(run.devEvents);
 
-				run.trainMentions = 0;
-				for (JCas trainSpec : run.trainEvents) {
-					String label = SpecAnnotator.getSpecLabel(trainSpec);
-//					System.out.printf("trainMentionsByType=%s, label=%s, numTrainMentions=%s\n", trainMentionsByType, label, numTrainMentions);
-//					System.out.printf("trainMentionsByType.get(label)=%s\n", trainMentionsByType.get(label));
-					Integer trainMentionsInType = trainMentionsByType.get(label);
-					if (trainMentionsInType == null) {
-						trainMentionsInType = 0;
-					}
-					run.trainMentions += trainMentionsInType;
-				}
-				if (run.trainMentions < minTrainMentions) {
-					//System.out.printf("%s. numTrainMentions=%s < minTrainMentions=%s\n", n, numTrainMentions, minTrainMentions);
-					continue;
-				}
-				
-				run.devMentions = 0;
-				for (JCas devSpec : run.devEvents) {
-					String label = SpecAnnotator.getSpecLabel(devSpec);
-					Integer devMentionsInType = devMentionsByType.get(label);
-					if (devMentionsInType == null) {
-						devMentionsInType = 0;
-					}
-					run.devMentions += devMentionsInType;
-				}
-				if (run.devMentions < minDevMentions) {
-					//System.out.printf("%s. numDevMentions=%s < minDevMentions=%s\n", n, numDevMentions, minDevMentions);
-					continue;
-				}
-				
-				// If we already have an equivalent run - ignore the current one
-				if (result.contains(run)) {
-					//System.out.printf("%s. run already contained: %s\n", n, run);
-					continue;
-				}
-				
-				totalCounter++;
-				perTestCounter++;
-				run.id = totalCounter;
-				run.idPerTest = perTestCounter;
-				run.calcSuffix();
+				/**
+				 * Check that this run doesn't violate the number-of-mentions restrictions
+				 * I now CHOOSE to apply these restrictions only to the FULL set of sentences, and not to the filtered out
+				 * sets of sentences that are created later according to the amount&proportion restriction mechanisms.
+				 * This is just a choice for now, and could be changed later if I want.
+				 * 
+				 * Haha, a night later, and I want to change it. Viva la evolution.
+				 */
+//				run.trainMentions = 0;
+//				for (JCas trainSpec : run.trainEvents) {
+//					String label = SpecAnnotator.getSpecLabel(trainSpec);
+////					System.out.printf("trainMentionsByType=%s, label=%s, numTrainMentions=%s\n", trainMentionsByType, label, numTrainMentions);
+////					System.out.printf("trainMentionsByType.get(label)=%s\n", trainMentionsByType.get(label));
+//					Integer trainMentionsInType = trainMentionsByType.get(label);
+//					if (trainMentionsInType == null) {
+//						trainMentionsInType = 0;
+//					}
+//					run.trainMentions += trainMentionsInType;
+//				}
+//				if (run.trainMentions < minTrainMentions) {
+//					//System.out.printf("%s. numTrainMentions=%s < minTrainMentions=%s\n", n, numTrainMentions, minTrainMentions);
+//					continue;
+//				}
+//				
+//				run.devMentions = 0;
+//				for (JCas devSpec : run.devEvents) {
+//					String label = SpecAnnotator.getSpecLabel(devSpec);
+//					Integer devMentionsInType = devMentionsByType.get(label);
+//					if (devMentionsInType == null) {
+//						devMentionsInType = 0;
+//					}
+//					run.devMentions += devMentionsInType;
+//				}
+//				if (run.devMentions < minDevMentions) {
+//					//System.out.printf("%s. numDevMentions=%s < minDevMentions=%s\n", n, numDevMentions, minDevMentions);
+//					continue;
+//				}
 
-				result.add(run);
-				runsForType.add(run);
-				
+				for (BigDecimal restrictProportionInput : proportionsRestrictions) {
+					
+					BigDecimal restrictProportion = (restrictProportionInput.equals(MAGIC_NO_PROPORTION_RESTRICTION)) ? devInstancesLen.divide(allInstancesLen, MathContext.DECIMAL128) : restrictProportionInput;
+					
+					for (BigDecimal restrictAmountInput : amountRestrictions) {
+						System.out.printf("****************** testSpec=%s(/%s), n=%s, |runsForType|=%s, numRuns=%s, restrictProportionInput=%s(/%s), restrictAmountInput=%s(/%s)\n",
+								SpecAnnotator.getSpecLabel(testSpec), allTestSpecs.size(), n, runsForType.size(), numRuns, restrictProportionInput, proportionsRestrictions, restrictAmountInput, amountRestrictions);
+												
+						BigDecimal restrictAmount = (restrictAmountInput.equals(MAGIC_NO_AMOUNT_RESTRICTION)) ? allInstancesLen : restrictAmountInput;
+						
+						// Silently skipping amounts that are larger than the total number of sentence instances
+						if (restrictAmount.compareTo(allInstancesLen) > 0) {
+							continue;
+						}
+
+						Run currRun = Run.shallowCopy(run);
+						
+						//chooseFromDev = restrictProportion * restrictAmount
+						int chooseFromDev = Utils.round(restrictProportion.multiply(restrictAmount));
+						
+						//chooseFromTrain = (1 - restrictProportion) * restrictAmount
+						int chooseFromTrain = Utils.round(BigDecimal.ONE.subtract(restrictProportion).multiply(restrictAmount));
+						
+						// Do some verifications and adjustments on "choose" vals
+						if (!restrictAmountInput.equals(MAGIC_NO_AMOUNT_RESTRICTION)) {
+							if (chooseFromTrain>trainInstanceList.size()) {
+								System.out.printf("restrictAmount=%s, restrictProportion=%s, |trainInsts|=%s, |devInsts|=%s, chooseFromTrain=%s: Cannot fulfill all restrictions, since chooseFromTrain>|trainInsts|. Skipping run.\n",
+										restrictAmountInput, restrictProportion, trainInstanceList.size(), devInstanceList.size(), chooseFromTrain);
+								continue;
+							}
+							if (chooseFromDev>devInstanceList.size()) {
+								System.out.printf("restrictAmount=%s, restrictProportion=%s, |trainInsts|=%s, |devInsts|=%s, chooseFromDev=%s: Cannot fulfill all restrictions, since chooseFromDev>|devInsts|. Skipping run.\n",
+										restrictAmountInput, restrictProportion, trainInstanceList.size(), devInstanceList.size(), chooseFromTrain);
+								continue;
+							}
+						}
+						else {
+							if (chooseFromTrain>trainInstanceList.size()) {
+								int newChooseFromDev = Utils.round(trainInstancesLen.multiply(restrictProportion).divide(BigDecimal.ONE.subtract(restrictProportion), MathContext.DECIMAL128));
+								System.out.printf("Shrinking chooseFromTrain from %s to %s (==|trainInsts|) and chooseFromDev from %s to %s, since restrictProportion=%s\n",
+										chooseFromTrain, trainInstanceList.size(), chooseFromDev, newChooseFromDev, restrictProportion);
+								chooseFromTrain = trainInstanceList.size();
+								chooseFromDev = newChooseFromDev;
+							}
+							else if (chooseFromDev>devInstanceList.size()) {
+								int newChooseFromTrain = Utils.round(devInstancesLen.multiply(BigDecimal.ONE.subtract(restrictProportion)).divide(restrictProportion, MathContext.DECIMAL128));
+								System.out.printf("Shrinking chooseFromDev from %s to %s (==|devInsts|) and chooseFromTrain from %s to %s, since restrictProportion=%s\n",
+										chooseFromDev, devInstanceList.size(), chooseFromTrain, newChooseFromTrain, restrictProportion);
+								chooseFromTrain = newChooseFromTrain;
+								chooseFromDev = devInstanceList.size();
+							}
+						}
+						
+						Collection<SentenceInstance> sampledDevInsts = Utils.sample(devInstanceList, chooseFromDev);
+						Collection<SentenceInstance> sampledTrainInsts = Utils.sample(trainInstanceList, chooseFromTrain);
+
+						
+						Multimap<Document, SentenceInstance> runTrain = getInstancesForTypes(controller, sampledTrainInsts, currRun.trainEvents, true);
+						Multimap<Document, SentenceInstance> runDev = getInstancesForTypes(controller, sampledDevInsts, currRun.devEvents, false);
+
+						currRun.devInsts = Sets.newHashSet(runTrain.values());
+						currRun.trainInsts = Sets.newHashSet(runDev.values());
+								
+						/**
+						 * Check the minimum mentions requirements
+						 * Notice that this happens on all runs, also restricted ones
+						 */
+
+						
+						
+						
+						Multimap<String, AceEventMention> trainMentionByType = HashMultimap.create();
+						currRun.trainMentions = SentenceInstance.getNumEventMentions(currRun.trainInsts, trainMentionByType);
+						if (currRun.trainMentions < minTrainMentions) {
+							//System.out.printf("%s. numTrainMentions=%s < minTrainMentions=%s\n", n, numTrainMentions, minTrainMentions);
+							continue;
+						}
+						Multimap<String, AceEventMention> devMentionByType = HashMultimap.create();
+						currRun.devMentions = SentenceInstance.getNumEventMentions(currRun.devInsts, devMentionByType);
+						if (currRun.devMentions < minDevMentions) {
+							//System.out.printf("%s. numDevMentions=%s < minDevMentions=%s\n", n, numDevMentions, minDevMentions);
+							continue;
+						}
+						
+						// If we already have an equivalent run - ignore the current one
+						if (result.contains(currRun)) {
+							//System.out.printf("%s. run already contained: %s\n", n, run);
+							continue;
+						}
+						
+						totalCounter++;
+						perTestCounter++;
+						currRun.id = totalCounter;
+						currRun.idPerTest = perTestCounter;
+						currRun.calcSuffix();
+						currRun.restrictAmount = restrictAmountInput.intValueExact();
+						currRun.restrictProportion = restrictProportionInput;
+
+						result.add(currRun);
+						runsForType.add(currRun);
+						
+						Utils.outputSentenceInstanceList("Train", runTrain, currRun.trainInsts, currRun.trainMentions, trainMentionByType);
+						Utils.outputSentenceInstanceList("Dev", runDev, currRun.devInsts, currRun.devMentions, devMentionByType);
+
+						if (runsForType.size() >= numRuns) {
+							//System.out.printf("%s. Reached the limit %s! Breaking!\n\n", n, numRuns);
+							break;
+						}
+					}
+					if (runsForType.size() >= numRuns) {
+						break;
+					}
+				}
 				if (runsForType.size() >= numRuns) {
-					//System.out.printf("%s. Reached the limit %s! Breaking!\n\n", n, numRuns);
 					break;
 				}
 			}
@@ -312,60 +426,70 @@ public class Folds {
 	 * NOTE: We don't perform any inner-filtering in Documents, but we do filter out some
 	 * of the SentenceInstances (under some super-complicated conditions).
 	 */
-	public static Multimap<Document, SentenceInstance> getInstancesForTypes(Controller controller, Multimap<JCas, SentenceInstance> insts, Collection<JCas> events, boolean learnable) throws CASRuntimeException, AnalysisEngineProcessException, ResourceInitializationException, CASException, UimaUtilsException, IOException, AeException {
+	public static Multimap<Document, SentenceInstance> getInstancesForTypes(Controller controller, Collection<SentenceInstance> insts, Collection<JCas> events, boolean learnable) throws CASRuntimeException, AnalysisEngineProcessException, ResourceInitializationException, CASException, UimaUtilsException, IOException, AeException {
 		Multimap<Document, SentenceInstance> result = HashMultimap.create();
 		Map<Sentence, Sentence> clones = Maps.newHashMap();
 		TypesContainer types = new TypesContainer(Lists.newArrayList(events));
 
-		for (JCas spec : events) {
-			Collection<SentenceInstance> instsOfSpec = insts.get(spec);
-			if (instsOfSpec != null) {
-				for (SentenceInstance inst : instsOfSpec) {
-					if (learnable && controller.skipNonEventSent) {
-						if (controller.filterSentenceInstance) {
-							if (inst.eventMentions!=null && inst.eventMentions.size() > 0) {
-								result.put(inst.doc, inst);
-							}
-						}
-						else {
-							Sentence filteredClone = clones.get(inst.sent);
-							if (filteredClone == null) {
-								filteredClone = Sentence.partiallyDeepCopy(inst.sent);
-								filteredClone.filterBySpecs(types);
-								clones.put(inst.sent, filteredClone);
-							}
-							if (filteredClone.eventMentions!=null && filteredClone.eventMentions.size() > 0) {
-								result.put(inst.doc, inst);
-							}
+		for (SentenceInstance inst : insts) {
+			if (events.contains(inst.associatedSpec)) {
+				if (learnable && controller.skipNonEventSent) {
+					if (controller.filterSentenceInstance) {
+						if (inst.eventMentions!=null && inst.eventMentions.size() > 0) {
+							result.put(inst.doc, inst);
 						}
 					}
 					else {
-						result.put(inst.doc, inst);
+						Sentence filteredClone = clones.get(inst.sent);
+						if (filteredClone == null) {
+							filteredClone = Sentence.partiallyDeepCopy(inst.sent);
+							filteredClone.filterBySpecs(types);
+							clones.put(inst.sent, filteredClone);
+						}
+						if (filteredClone.eventMentions!=null && filteredClone.eventMentions.size() > 0) {
+							result.put(inst.doc, inst);
+						}
 					}
+				}
+				else {
+					result.put(inst.doc, inst);
 				}
 			}
 		}
-		
-		// Calculate final number of mentions - it should be the same as the original!
-		int countEvents = 0;
-		int countInsts = 0;
-		Multimap<String, AceEventMention> mentionByType = HashMultimap.create();
-		for (SentenceInstance inst : result.values()) {
-			for (AceEventMention e : inst.eventMentions) {
-				mentionByType.put(e.getSubType(), e);
-				countEvents++;
-			}
-			countInsts++;
-		}
-		System.out.printf("Built final list of SentenceInstances (learnable=%s): %d Documents, %d SentenceInstances, %d event mentions:\n\t\t", learnable, result.keySet().size(), countInsts, countEvents);
-		for (Entry<String, Collection<AceEventMention>> entry : mentionByType.asMap().entrySet()) {
-			System.out.printf("%s: %d mentions\t", entry.getKey(), entry.getValue().size());
-		}
-		System.out.printf("\n");
 
 		return result;
 	}
 	
+	private static void validateAndConvertRestrictions(
+			List<String> proportionsRestrictionsStrs,
+			List<String> amountRestrictionsStrs,
+			List<BigDecimal> proportionsRestrictions,
+			List<BigDecimal> amountRestrictions) {
+		
+		for (String propStr : proportionsRestrictionsStrs) {
+			BigDecimal prop = new BigDecimal(propStr);
+			
+			// prop can't be smaller than 0, or equal-or-greater than 1
+			if (prop.compareTo(BigDecimal.ZERO) < 0 || prop.compareTo(BigDecimal.ONE) >= 0) {
+				throw new IllegalArgumentException(String.format("Proportion restrictions must be >=0 and <1, got %s", prop));
+			}
+			
+			proportionsRestrictions.add(prop);
+		}
+		
+		for (String amountStr : amountRestrictionsStrs) {
+			BigDecimal amount = new BigDecimal(amountStr);
+			
+			// amount can't be smaller than 0
+			if (amount.compareTo(BigDecimal.ZERO) < 0) {
+				throw new IllegalArgumentException(String.format("Amount restrictions must be >=0, got %s", amount));
+			}
+			
+			amountRestrictions.add(amount);
+		}
+		
+	}
+
 	public static void calcTestScore(Run run, File outputFolder, File ansApfFile, Document doc, Stats stats, PrintStream scoreFile) throws IOException {
 		String sgmPath = CORPUS_DIR + "/" + doc.docLine + ".sgm";
 		AceDocument ansDoc = new AceDocument(sgmPath, ansApfFile.getAbsolutePath());
@@ -378,19 +502,27 @@ public class Folds {
 		File outputFolder = new File(args[0]);
 		List<String> allSpecs = SpecHandler.readSpecListFile(new File(args[1]));
 		Integer numRuns = Integer.parseInt(args[2]);
-		Integer minTrainEvents = Integer.parseInt(args[3]);
-		Integer maxTrainEvents = Integer.parseInt(args[4]);
-		Integer minDevEvents = Integer.parseInt(args[5]);
-		Integer maxDevEvents = Integer.parseInt(args[6]);
-		Integer minTrainMentions = Integer.parseInt(args[7]);
-		Integer minDevMentions = Integer.parseInt(args[8]);
-		File trainDocs = new File(args[9]);
-		File devDocs = new File(args[10]);
-		File testDocs = new File(args[11]);
-		System.out.printf("Args:\n\toutputFolder=%s\n\tspecsFile=%s (with %s specs)\n\tnumRuns=%s\n\tminTrainEvents=%s\n\tmaxTrainEvents=%s\n\tminDevEvents=%s\n\tmaxDevEvents=%s\n\tminTrainMentions=%s\n\tminDevMentions=%s\n\ttrainDocs=%s\n\tdevDocs=%s\n\ttestDocs=%s\n\n",
-				outputFolder, args[1], allSpecs.size(), numRuns, minTrainEvents, maxTrainEvents, minDevEvents, maxDevEvents, minTrainMentions, minDevMentions, trainDocs, devDocs, testDocs);
+		//Integer minTrainEvents = Integer.parseInt(args[3]);
+		//Integer maxTrainEvents = Integer.parseInt(args[4]);
+		List<Integer> trainEventNums = Utils.stringToIntList(args[3], ",");
+		//Integer minDevEvents = Integer.parseInt(args[5]);
+		//Integer maxDevEvents = Integer.parseInt(args[6]);
+		List<Integer> devEventNums = Utils.stringToIntList(args[4], ",");
+		Integer minTrainMentions = Integer.parseInt(args[5]);
+		Integer minDevMentions = Integer.parseInt(args[6]);
+		File trainDocs = new File(args[7]);
+		File devDocs = new File(args[8]);
+		File testDocs = new File(args[9]);
+		List<String> proportionsRestrictionsStrs = Arrays.asList(args[10].split(","));
+		List<String> amountRestrictionsStrs = Arrays.asList(args[11].split(","));
+		System.out.printf("Args:\n\toutputFolder=%s\n\tspecsFile=%s (with %s specs)\n\tnumRuns=%s\n\ttrainEventNums=%s\n\tdevEventNums=%s\n\tminTrainMentions=%s\n\tminDevMentions=%s\n\ttrainDocs=%s\n\tdevDocs=%s\n\ttestDocs=%s\n\tproportionsRestrictions=%s\n\tamountRestrictions=%s\n\n",
+				outputFolder, args[1], allSpecs.size(), numRuns, trainEventNums, devEventNums, minTrainMentions, minDevMentions, trainDocs, devDocs, testDocs, proportionsRestrictionsStrs, amountRestrictionsStrs);
 		Utils.OUTPUT_FOLDER = outputFolder;
 		BackupSource.backup(outputFolder);
+		
+		List<BigDecimal> proportionsRestrictions = Lists.newArrayListWithCapacity(proportionsRestrictionsStrs.size());
+		List<BigDecimal> amountRestrictions = Lists.newArrayListWithCapacity(amountRestrictionsStrs.size());
+		validateAndConvertRestrictions(proportionsRestrictionsStrs, amountRestrictionsStrs, proportionsRestrictions, amountRestrictions);
 		
 		File corpusDir = new File(CORPUS_DIR);
 		Controller controller = new Controller();
@@ -414,7 +546,8 @@ public class Folds {
 		Multimap<JCas, SentenceInstance> testInstances = Pipeline.readInstanceList(controller, signalMechanismsContainer, types, corpusDir, testDocs, new Alphabet(), null, true, false, null);
 		System.out.printf("%s Finished reading test documents: %s sentence instances (total for all %s types)\n", Utils.detailedLog(), testInstances.size(), testInstances.keySet().size());
 
-		List<Run> runs = buildRuns(controller, types, trainMentions, devMentions, numRuns, minTrainEvents, maxTrainEvents, minDevEvents, maxDevEvents, minTrainMentions, minDevMentions);
+		List<Run> runs = buildRuns(controller, types, trainMentions, devMentions, numRuns, trainEventNums, devEventNums, minTrainMentions, minDevMentions,
+				trainInstances.values(), devInstances.values(), proportionsRestrictions, amountRestrictions);
 
 		System.out.printf("%s ############################ Starting %s runs: %s\n", Utils.detailedLog(), runs.size(), runs);
 		for (Run run : runs) {
@@ -424,8 +557,9 @@ public class Folds {
 			
 			Alphabet featureAlphabet = new Alphabet();
 			perceptron = new Perceptron(featureAlphabet, controller, outputFolder, signalMechanismsContainer);
-			Multimap<Document, SentenceInstance> runTrain = getInstancesForTypes(controller, trainInstances, run.trainEvents, true);
-			Multimap<Document, SentenceInstance> runDev = getInstancesForTypes(controller, devInstances, run.devEvents, false);
+//			/xxx these things - maybe should be done on the sentences saved in each run? I think so!
+//			Multimap<Document, SentenceInstance> runTrain = getInstancesForTypes(controller, trainInstances, run.trainEvents, true);
+//			Multimap<Document, SentenceInstance> runDev = getInstancesForTypes(controller, devInstances, run.devEvents, false);
 			
 			String dirPrefix = "DIR_" + run.suffix;// + "__";
 			String runDir = outputFolder + "/" + dirPrefix;
@@ -444,7 +578,7 @@ public class Folds {
 			String scoreFileName = outputFolder.getAbsolutePath() + "/TestScore." + run.suffix + ".txt";
 			PrintStream scoreFile = new PrintStream(scoreFileName);
 			
-			AllTrainingScores scores = perceptron.learning(runTrain.values(), runDev.values(), 0, logs.logSuffix, true, false);
+			AllTrainingScores scores = perceptron.learning(run.trainInsts, run.devInsts, 0, logs.logSuffix, true, false);
 			Perceptron.serializeObject(perceptron, new File(modelFileName));
 			
 			Multimap<Document, SentenceInstance> runTest = getInstancesWithFilteredDocsForType(testInstances, run.testEvent);
@@ -457,10 +591,9 @@ public class Folds {
 			testStats.calc();
 			testStats.printFullOutput(scoreFile);
 
-			logs.logRun(r, run, scores, testStats, run.trainEvents, run.devEvents, run.testEvent,
-					runTrain.values(), runDev.values(), runTest.values());
+			logs.logRun(r, run, scores, testStats, runTest.values());
 
-			if (!runTest.isEmpty()) {
+			if (!runTest.isEmpty() && controller.doErrorAnalysis) {
 				String[] errorAnalysisArgs = new String[]{CORPUS_DIR, runDir, testDocs.getAbsolutePath(), runDir+"/NtpOut", SpecAnnotator.getSpecLabel(run.testEvent)};
 				System.out.printf("%s Starting ErrorAnalysis\n", Utils.detailedLog());
 				ErrorAnalysis.main(errorAnalysisArgs);

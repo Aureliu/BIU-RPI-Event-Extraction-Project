@@ -111,6 +111,7 @@ public class Controller implements java.io.Serializable
 	
 	public Integer docsChunk = null; 
 	
+	public boolean doErrorAnalysis = true;
 	
 	public Controller()
 	{
@@ -294,6 +295,10 @@ public class Controller implements java.io.Serializable
 			{
 				docsChunk = Integer.valueOf(fields[1]);
 			}
+			else if(fields[0].equalsIgnoreCase("doErrorAnalysis"))
+			{
+				doErrorAnalysis = Boolean.parseBoolean(fields[1]);
+			}
 		}
 		
 		
@@ -327,7 +332,7 @@ public class Controller implements java.io.Serializable
 		"\n\tfilterSentenceInstance: " + filterSentenceInstance + " enhanceSpecs: " + enhanceSpecs +
 		" takeExtendedTags: " + takeExtendedTags + " argOMethod: " + argOMethod + " lazyTargetFeatures: " + lazyTargetFeatures +
 		" easyFirstHost: " + easyFirstHost + " easyFirstPort: " + easyFirstPort +
-		"\n\tcalcDebugSignalsAnyway: " + calcDebugSignalsAnyway + " docsChunk: " + docsChunk;
+		"\n\tcalcDebugSignalsAnyway: " + calcDebugSignalsAnyway + " docsChunk: " + docsChunk + " doErrorAnalysis: " + doErrorAnalysis;
 		
 		return ret + "\n";
 	}

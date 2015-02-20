@@ -1,8 +1,11 @@
 package edu.cuny.qc.perceptron.folds;
 
+import java.math.BigDecimal;
 import java.util.Collections;
 import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.ListIterator;
+import java.util.Set;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.builder.EqualsBuilder;
@@ -16,6 +19,7 @@ import com.google.common.collect.Lists;
 
 import edu.cuny.qc.perceptron.core.ArgOMethod;
 import edu.cuny.qc.perceptron.core.SentenceSortingMethod;
+import edu.cuny.qc.perceptron.types.SentenceInstance;
 import edu.cuny.qc.scorer.FeatureProfile;
 
 public class Run {
@@ -29,14 +33,60 @@ public class Run {
 	public SentenceSortingMethod sentenceSortingMethod;
 	public ArgOMethod argOMethod;
 	public FeatureProfile featureProfile;
+	public Set<SentenceInstance> trainInsts;
+	public Set<SentenceInstance> devInsts;
+	public int restrictAmount;
+	public BigDecimal restrictProportion;
 	
 	public void calcSuffix() {
-		suffix = String.format("%03d_%02d_Train%02d_Dev%02d", id, idPerTest, trainEvents.size(), devEvents.size());
+		suffix = String.format("%03d_%02d_Train%02d_%04d__Dev%02d_%04d", id, idPerTest, trainEvents.size(), trainInsts.size(), devEvents.size(), devInsts.size());
+	}
+	
+	/**
+	 * Explicitly calc the hash of a SentenceInstance set, specifically relying on the DocID and SentInstID.
+	 * This should have been just implemented inside SentenceInstance, but it currently doesn't have a hashCode()
+	 * implementation, and I don't want to add one now.
+	 * 
+	 * @param set
+	 * @return
+	 */
+	private int hashSentenceInstanceSet(Set<SentenceInstance> set) {
+		int hash = 0;
+		for (SentenceInstance inst : set) {
+			hash += (inst==null ? 0 : new HashCodeBuilder(191, 251).append(inst.docID).append(inst.sentInstID).toHashCode());
+		}
+		return hash;
+	}
+	
+	private boolean equalsSentenceInstanceSet(Set<SentenceInstance> set1, Set<SentenceInstance> set2) {
+		if (set1.size() != set2.size()) {
+			return false;
+		}
+		for (SentenceInstance o1 : set1) {
+			boolean found = false;
+			for (SentenceInstance o2 : set2) {
+				if (o1==null ? o2==null : o1.docID.equals(o2.docID) && o1.sentInstID.equals(o2.sentInstID)) {
+					found = true;
+					break;
+				}
+			}
+			if (!found) {
+				return false;
+			}
+		}
+		return true;		
 	}
 	
 	@Override
 	public int hashCode() {
-	     return new HashCodeBuilder(131, 97).append(trainEvents).append(devEvents).append(testEvent).append(sentenceSortingMethod).append(argOMethod).append(featureProfile).toHashCode();
+		// Explicitly calc the hash of both lists, as SentenceInstance doesn't have a proper hashCode() method, and we don't want to add one now
+		int trainInstsHash = hashSentenceInstanceSet(trainInsts);
+		int devInstsHash = hashSentenceInstanceSet(devInsts);
+		
+		// We can add the hash of the lists as if the hash is the field itself - since appending an int
+		//does exactly the same as appending an object with the int as the object's hash
+	    return new HashCodeBuilder(131, 97).append(trainEvents).append(devEvents).append(testEvent).append(sentenceSortingMethod)
+	    		.append(argOMethod).append(featureProfile).append(trainInstsHash).append(devInstsHash).toHashCode();
 	}
 	@Override
 	public boolean equals(Object obj) {
@@ -46,6 +96,9 @@ public class Run {
 	     return false;
 	   }
 	   Run rhs = (Run) obj;
+	   if (!equalsSentenceInstanceSet(trainInsts, rhs.trainInsts) || !equalsSentenceInstanceSet(devInsts, rhs.devInsts)) {
+		   return false;
+	   }
 	   return new EqualsBuilder().append(trainEvents, rhs.trainEvents).append(devEvents, rhs.devEvents)
 			   .append(testEvent, rhs.testEvent).append(sentenceSortingMethod, rhs.sentenceSortingMethod)
 			   .append(argOMethod, rhs.argOMethod).append(featureProfile, rhs.featureProfile).isEquals();
@@ -54,7 +107,12 @@ public class Run {
 	public String toString() {
 		try {
 			String testEventLabel = SpecAnnotator.getSpecLabel(testEvent);
-			return String.format("%s(%s,%s, test=%s, %s train, %s dev, method=%s argO=%s profile=%s)", getClass().getSimpleName(), id, idPerTest, testEventLabel, trainEvents.size(), devEvents.size(), sentenceSortingMethod, argOMethod, featureProfile);
+			return String.format("%s(%s,%s, test=%s, %s trainEvs, %s devEvs, %s trainInsts, %s devInsts, " + 
+					//"method=%s argO=%s " + 
+					"profile=%s)",
+					getClass().getSimpleName(), id, idPerTest, testEventLabel, trainEvents.size(), devEvents.size(), trainInsts.size(), devInsts.size(),
+					//sentenceSortingMethod, argOMethod,
+					featureProfile);
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
@@ -72,9 +130,13 @@ public class Run {
 		}
 		Collections.sort(devLabels);
 		String testLabel = SpecAnnotator.getSpecLabel(testEvent);
-		return String.format("%s(%s,%s, test=%s\n\ttrain(%s, %s mentions)=%s\n\tdev(%s, %s mentions)=%s\n\tsentenceSortingMethod=%s\n\targOMethod=%s\n\tfeatureProfile=%s  )",
-				getClass().getSimpleName(), id, idPerTest, testLabel, trainEvents.size(), trainMentions, StringUtils.join(trainLabels, ", "),
-				devEvents.size(), devMentions, StringUtils.join(devLabels, ", "), sentenceSortingMethod, argOMethod, featureProfile);
+		return String.format("%s(%s,%s, test=%s\n\ttrain(%s types, %s insts, %s mentions)=%s\n\tdev(%s, %s insts, %s mentions)=%s\n" +
+				//"\tsentenceSortingMethod=%s\n\targOMethod=%s\n" +
+				"\tfeatureProfile=%s\n\trestrictAmount=%s restrictProportion=%s  )",
+				getClass().getSimpleName(), id, idPerTest, testLabel, trainEvents.size(), trainInsts.size(), trainMentions, StringUtils.join(trainLabels, ", "),
+				devEvents.size(), devInsts.size(), devMentions, StringUtils.join(devLabels, ", "),
+				//sentenceSortingMethod, argOMethod,
+				featureProfile, restrictAmount, restrictProportion);
 	}
 	
 	public static Run shallowCopy(Run orig) {

@@ -212,10 +212,11 @@ public class Perceptron implements java.io.Serializable
 	 */
 	public void evaluateAndUpdateBest(Logs logs, Evaluator evaluator, Collection<SentenceInstance> instances, List<SentenceAssignment> assns,
 			Integer iter, ScoresList currScores, FeatureVector weights, FeatureVector avgWeights, PrintStream p) {
+		System.out.printf("%s Calling evaluator.evaluate().\n", Utils.detailedLog());
 		Evaluator.Score score = evaluator.evaluate(assns, instances, iter);
 		//// DEBUG
-		System.out.printf("** Just returned from evaluator.evaluate(). It got %s instances with %s mentions. Now, the score reports: count_trigger_gold=%s, count_trigger_ans=%s, count_trigger_correct=%s, count_trigger_total=%s\n",
-				instances.size(), SentenceInstance.getNumEventMentions(instances), score.count_trigger_gold, score.count_trigger_ans, score.count_trigger_correct, score.count_trigger_total);
+		System.out.printf("%s ** Just returned from evaluator.evaluate(). It got %s instances with %s mentions. Now, the score reports: count_trigger_gold=%s, count_trigger_ans=%s, count_trigger_correct=%s, count_trigger_total=%s\n",
+				Utils.detailedLog(), instances.size(), SentenceInstance.getNumEventMentions(instances, null), score.count_trigger_gold, score.count_trigger_ans, score.count_trigger_correct, score.count_trigger_total);
 		////
 		currScores.scores.put(iter, score);
 		logs.printScore(p, Integer.toString(iter), instances.size(), score, true);
@@ -277,8 +278,8 @@ public class Perceptron implements java.io.Serializable
 
 			
 		/// DEBUG
-		System.out.printf("*** About to start learning(). %s input  dev instances, in them - %s mentions.\n", devInsts.size(), SentenceInstance.getNumEventMentions(devInsts));
-		System.out.printf("*** About to start learning(). %s copied dev instances, in them - %s mentions.\n", devList.size(), SentenceInstance.getNumEventMentions(devList));
+		System.out.printf("%s *** About to start learning(). %s input  dev instances, in them - %s mentions.\n", Utils.detailedLog(), devInsts.size(), SentenceInstance.getNumEventMentions(devInsts, null));
+		System.out.printf("%s *** About to start learning(). %s copied dev instances, in them - %s mentions.\n", Utils.detailedLog(), devList.size(), SentenceInstance.getNumEventMentions(devList, null));
 		/////
 		
 		Logs logs = new Logs(outFolder, controller, logSuffix);
@@ -298,7 +299,7 @@ public class Perceptron implements java.io.Serializable
 		
 		BeamSearch beamSearcher = createBeamSearcher(this, true);
 		
-		System.out.print("Alphabet size: " + this.featureAlphabet.size() + "\t");
+		System.out.print(Utils.detailedLog() + " Alphabet size: " + this.featureAlphabet.size() + "\t");
 //		System.out.println("Node target alphabet:" + this.nodeTargetAlphabet);
 //		System.out.println("edge target alphabet:" + this.edgeTargetAlphabet);
 		System.out.println("instance num: " + trainingList.size());
@@ -341,6 +342,7 @@ public class Perceptron implements java.io.Serializable
 		for(iter=0; iter<this.controller.maxIterNum; iter++)
 		{
 			long startTime = System.currentTimeMillis();	
+			System.out.printf("%s Starting iteration %s\n", Utils.detailedLog(), iter);
 			int error_num = 0;	
 			/*int*/ i=0;
 			List<SentenceAssignment> assnsTrain = Lists.newArrayListWithCapacity(trainingList.size());
@@ -396,12 +398,12 @@ public class Perceptron implements java.io.Serializable
 				/// TODO END DEBUG
 				
 				/// DEBUG
-				System.out.printf("*** About to dev-decode. %s dev instances, in them - %s mentions.\n", devList.size(), SentenceInstance.getNumEventMentions(devList));
+				System.out.printf("%s *** About to dev-decode. %s dev instances, in them - %s mentions.\n", Utils.detailedLog(), devList.size(), SentenceInstance.getNumEventMentions(devList, null));
 				/////
 				
 				List<SentenceAssignment> devResult = decoding(logs, devList, iter, i, weights, avg_weights, avg_weights_base, wTrain, fDev, uDev);
 				/// DEBUG
-				System.out.printf("*** After dev-decode. %s dev instances, in them - %s mentions.\n", devList.size(), SentenceInstance.getNumEventMentions(devList));
+				System.out.printf("%s *** After dev-decode. %s dev instances, in them - %s mentions.\n", Utils.detailedLog(), devList.size(), SentenceInstance.getNumEventMentions(devList, null));
 				/////
 				evaluateAndUpdateBest(logs, evaluator, devList, devResult, iter, result.dev, this.weights, this.avg_weights, pDev);
 //				if (score != null) {

@@ -5,12 +5,13 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
@@ -46,12 +47,14 @@ import com.google.common.io.Files;
 
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
-import de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency;
 import edu.cuny.qc.ace.acetypes.AceEntityMention;
+import edu.cuny.qc.ace.acetypes.AceEventMention;
 import edu.cuny.qc.ace.acetypes.AceMention;
 import edu.cuny.qc.ace.acetypes.AceTimexMention;
 import edu.cuny.qc.ace.acetypes.AceValueMention;
 import edu.cuny.qc.perceptron.graph.GraphEdge;
+import edu.cuny.qc.perceptron.types.Document;
+import edu.cuny.qc.perceptron.types.SentenceInstance;
 import eu.excitementproject.eop.common.representation.parse.tree.AbstractNodeUtils;
 import eu.excitementproject.eop.common.representation.parse.tree.dependency.basic.BasicNode;
 
@@ -274,4 +277,37 @@ public class Utils {
 		typeSystemDescription.toXML(new FileOutputStream(new File("./TypeSystem.xml")));
 	}
 
+	/**
+	 * Rounds the BigDecimal with a HALF_UP mode (1.4-->1, 1.5-->2, 1.6-->2), and returns it as an int.
+	 * In a very mind-boggling manner, this is not a trivial action for BigDecimal. Go figure.
+	 * 
+	 * @param n
+	 * @return
+	 */
+	public static int round(BigDecimal n) {
+		// Implementation inspired by: http://stackoverflow.com/a/4134135
+		BigDecimal scaled = n.setScale(0,  RoundingMode.HALF_UP);
+		int result = scaled.intValueExact();
+		return result;
+	}
+	
+	public static List<Integer> stringToIntList(String input, String delimeter) {
+		String[] split = input.split(delimeter);
+		List<Integer> result = Lists.newArrayListWithCapacity(split.length);
+		for (String s : split) {
+			int num = Integer.parseInt(s);
+			result.add(num);
+		}
+		return result;
+	}
+	
+	public static void outputSentenceInstanceList(String title, Multimap<Document, SentenceInstance> mapDocInsts, Collection<SentenceInstance> insts, int numMentions, Multimap<String, AceEventMention> mentionByType) {
+		System.out.printf("Built final list of SentenceInstances (%s): %d Documents, %d SentenceInstances, %d event mentions:\n\t\t",
+				title, mapDocInsts.keySet().size(), insts.size(), numMentions);
+		for (Entry<String, Collection<AceEventMention>> entry : mentionByType.asMap().entrySet()) {
+			System.out.printf("%s: %d mentions\t", entry.getKey(), entry.getValue().size());
+		}
+		System.out.printf("\n");
+
+	}
 }

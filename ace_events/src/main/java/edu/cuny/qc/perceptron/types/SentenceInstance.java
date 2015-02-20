@@ -18,6 +18,7 @@ import org.apache.uima.jcas.JCas;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
+import com.google.common.collect.Multimap;
 
 import ac.biu.nlp.nlp.ie.onthefly.input.SpecAnnotator;
 import ac.biu.nlp.nlp.ie.onthefly.input.TypesContainer;
@@ -885,10 +886,24 @@ public class SentenceInstance {
 		doc.signalsUpdated = true;
 	}
 	
-	public static int getNumEventMentions(Collection<SentenceInstance> insts) {
+	/**
+	 * 
+	 * @param insts
+	 * @param mentionByType OUT parameter, optional
+	 * @return
+	 */
+	public static int getNumEventMentions(Collection<SentenceInstance> insts, Multimap<String, AceEventMention> mentionByType) {
 		int count = 0;
 		for (SentenceInstance inst : insts) {
-			count += inst.eventMentions.size();
+			if (mentionByType != null) {
+				for (AceEventMention e : inst.eventMentions) {
+					mentionByType.put(e.getSubType(), e);
+					count++;
+				}
+			}
+			else {
+				count += inst.eventMentions.size();
+			}
 		}
 		return count;
 	}

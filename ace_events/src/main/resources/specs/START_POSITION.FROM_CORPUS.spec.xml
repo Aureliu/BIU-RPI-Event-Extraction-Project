@@ -1,0 +1,70 @@
+<spec>
+  <predicate>
+    <name>Start-Position</name>
+    <seeds>
+      <!-- Top 4 words, top 38 mentions, top 31.93% (38/119)-->
+      <seed>appointed</seed> <!-- Rank: 1846, Occurrences: 131132 -->
+      <seed>appoint</seed> <!-- Rank: 6478, Occurrences: 25253 -->
+      <seed>hire</seed> <!-- Rank: 2800, Occurrences: 81114 -->
+      <seed>hired</seed> <!-- Rank: 7971, Occurrences: 18494 -->
+    </seeds>
+  </predicate>
+  <arguments>
+    <argument>
+      <role>Person</role>
+      <marker>PER</marker>
+      <types>
+      	<type>PER</type>
+      </types>
+      <examples>
+        <example>John D. Idol</example>
+        <example>he</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Entity</role>
+      <marker>ENT</marker>
+      <types>
+      	<type>ORG</type>
+      	<type>GPE</type>
+      </types>
+      <examples>
+      </examples>
+    </argument>
+    <argument>
+      <role>Position</role>
+      <marker>PST</marker>
+      <types>
+      	<type>JOB</type>
+      </types>
+      <examples>
+        <example>Chief Executive</example>
+        <example>President</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Time</role>
+      <marker>TIM</marker>
+      <types>
+      	<type>TIME</type>
+      </types>
+      <examples>
+      </examples>
+    </argument>
+    <argument>
+      <role>Place</role>
+      <marker>PLC</marker>
+      <types>
+      	<type>GPE</type>
+      	<type>LOC</type>
+      	<type>FAC</type>
+      </types>
+      <examples>
+      </examples>
+    </argument>
+  </arguments>
+  <usage_samples>
+    <sample src="orig">John D. Idol will take over as Chief Executive.</sample>
+    <sample src="orig_p">This was a demonstration of how he would behave if he were to become President.</sample>
+ </usage_samples>
+</spec>

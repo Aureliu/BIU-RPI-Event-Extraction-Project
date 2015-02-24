@@ -1,0 +1,56 @@
+<spec>
+  <predicate>
+    <name>Start-Org</name>
+    <seeds>
+      <!-- Top 3 words, top 16 mentions, top 34.04% (16/47)-->
+      <seed>founded</seed> <!-- Rank: 2993, Occurrences: 74299 -->
+      <seed>set up</seed> <!-- Rank: 8284, Occurrences: 17479 (set-up) -->
+      <seed>create</seed> <!-- Rank: 694, Occurrences: 338127 -->
+    </seeds>
+  </predicate>
+  <arguments>
+    <argument>
+      <role>Agent</role>
+      <marker>AGT</marker>
+      <types>
+      	<type>PER</type>
+      	<type>ORG</type>
+      	<type>GPE</type>
+      </types>
+      <examples>
+      </examples>
+    </argument>
+    <argument>
+      <role>Org</role>
+      <marker>ORG</marker>
+      <types>
+      	<type>ORG</type>
+      </types>
+      <examples>
+      </examples>
+    </argument>
+    <argument>
+      <role>Time</role>
+      <marker>TIM</marker>
+      <types>
+      	<type>TIME</type>
+      </types>
+      <examples>
+      </examples>
+    </argument>
+    <argument>
+      <role>Place</role>
+      <marker>PLC</marker>
+      <types>
+      	<type>GPE</type>
+      	<type>LOC</type>
+      	<type>FAC</type>
+      </types>
+      <examples>
+      </examples>
+    </argument>
+  </arguments>
+  <usage_samples>
+    <sample src="orig">?</sample>
+  </usage_samples>
+</spec>

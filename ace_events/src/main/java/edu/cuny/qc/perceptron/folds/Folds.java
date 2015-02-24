@@ -7,6 +7,7 @@ import java.math.BigDecimal;
 import java.math.MathContext;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -96,7 +97,7 @@ public class Folds {
 		
 		for (JCas testSpec : allTestSpecs) {
 			int perTestCounter = 0;
-			System.out.printf("Starting %s tries for spec...\n", totalTries);
+			System.out.printf("Starting %s tries for spec %s...\n", totalTries, SpecAnnotator.getSpecLabel(testSpec));
 			List<Run> runsForType = Lists.newArrayListWithCapacity(numRuns*allTestSpecs.size());
 			for (int n=0; n<totalTries; n++) {
 				Run run = new Run();
@@ -214,13 +215,15 @@ public class Folds {
 					BigDecimal restrictProportion = (restrictProportionInput.equals(MAGIC_NO_PROPORTION_RESTRICTION)) ? devInstancesLen.divide(allInstancesLen, MathContext.DECIMAL128) : restrictProportionInput;
 					
 					for (BigDecimal restrictAmountInput : amountRestrictions) {
-						System.out.printf("****************** testSpec=%s(/%s), n=%s, |runsForType|=%s, numRuns=%s, restrictProportionInput=%s(/%s), restrictAmountInput=%s(/%s)\n",
-								SpecAnnotator.getSpecLabel(testSpec), allTestSpecs.size(), n, runsForType.size(), numRuns, restrictProportionInput, proportionsRestrictions, restrictAmountInput, amountRestrictions);
+						System.out.printf("%s ** test=%s(/%s), n=%s, |runsForType|=%s, numRuns=%s, |trainInsts|=%s, |devInsts|=%s, prop=%s(/%s), amount=%s(/%s) train(%s)=%s dev(%s)=%s\n",
+								Utils.detailedLog(), SpecAnnotator.getSpecLabel(testSpec), allTestSpecs.size(), n, runsForType.size(), numRuns, trainInstances.size(), devInstances.size(), restrictProportionInput, proportionsRestrictions,
+								restrictAmountInput, amountRestrictions, run.trainEvents.size(), Logs.labelList(run.trainEvents), run.devEvents.size(), Logs.labelList(run.devEvents));
 												
 						BigDecimal restrictAmount = (restrictAmountInput.equals(MAGIC_NO_AMOUNT_RESTRICTION)) ? allInstancesLen : restrictAmountInput;
 						
 						// Silently skipping amounts that are larger than the total number of sentence instances
 						if (restrictAmount.compareTo(allInstancesLen) > 0) {
+							System.out.printf("%s Skipping since (restrictAmount=%s)>(allInstancesLen=%s)\n", Utils.detailedLog(), restrictAmount, allInstancesLen);
 							continue;
 						}
 
@@ -232,70 +235,94 @@ public class Folds {
 						//chooseFromTrain = (1 - restrictProportion) * restrictAmount
 						int chooseFromTrain = Utils.round(BigDecimal.ONE.subtract(restrictProportion).multiply(restrictAmount));
 						
+						System.out.printf("%s chooseFromDev=prop(%s)*amount(%s)=%s chooseFromTrain=(1-prop)*amount=%s\n",
+								Utils.detailedLog(), restrictProportion, restrictAmount, chooseFromDev, chooseFromTrain);
+						
 						// Do some verifications and adjustments on "choose" vals
 						if (!restrictAmountInput.equals(MAGIC_NO_AMOUNT_RESTRICTION)) {
 							if (chooseFromTrain>trainInstanceList.size()) {
-								System.out.printf("restrictAmount=%s, restrictProportion=%s, |trainInsts|=%s, |devInsts|=%s, chooseFromTrain=%s: Cannot fulfill all restrictions, since chooseFromTrain>|trainInsts|. Skipping run.\n",
-										restrictAmountInput, restrictProportion, trainInstanceList.size(), devInstanceList.size(), chooseFromTrain);
+								System.out.printf("%s restrictAmount=%s, restrictProportion=%s, |trainInsts|=%s, |devInsts|=%s, chooseFromTrain=%s: Cannot fulfill all restrictions, since chooseFromTrain>|trainInsts|. Skipping run.\n",
+										Utils.detailedLog(), restrictAmountInput, restrictProportion, trainInstanceList.size(), devInstanceList.size(), chooseFromTrain);
 								continue;
 							}
 							if (chooseFromDev>devInstanceList.size()) {
-								System.out.printf("restrictAmount=%s, restrictProportion=%s, |trainInsts|=%s, |devInsts|=%s, chooseFromDev=%s: Cannot fulfill all restrictions, since chooseFromDev>|devInsts|. Skipping run.\n",
-										restrictAmountInput, restrictProportion, trainInstanceList.size(), devInstanceList.size(), chooseFromTrain);
+								System.out.printf("%s restrictAmount=%s, restrictProportion=%s, |trainInsts|=%s, |devInsts|=%s, chooseFromDev=%s: Cannot fulfill all restrictions, since chooseFromDev>|devInsts|. Skipping run.\n",
+										Utils.detailedLog(), restrictAmountInput, restrictProportion, trainInstanceList.size(), devInstanceList.size(), chooseFromTrain);
 								continue;
 							}
 						}
 						else {
 							if (chooseFromTrain>trainInstanceList.size()) {
 								int newChooseFromDev = Utils.round(trainInstancesLen.multiply(restrictProportion).divide(BigDecimal.ONE.subtract(restrictProportion), MathContext.DECIMAL128));
-								System.out.printf("Shrinking chooseFromTrain from %s to %s (==|trainInsts|) and chooseFromDev from %s to %s, since restrictProportion=%s\n",
-										chooseFromTrain, trainInstanceList.size(), chooseFromDev, newChooseFromDev, restrictProportion);
+								System.out.printf("%s Shrinking chooseFromTrain from %s to %s (==|trainInsts|) and chooseFromDev from %s to %s, since restrictProportion=%s\n",
+										Utils.detailedLog(), chooseFromTrain, trainInstanceList.size(), chooseFromDev, newChooseFromDev, restrictProportion);
 								chooseFromTrain = trainInstanceList.size();
 								chooseFromDev = newChooseFromDev;
 							}
 							else if (chooseFromDev>devInstanceList.size()) {
 								int newChooseFromTrain = Utils.round(devInstancesLen.multiply(BigDecimal.ONE.subtract(restrictProportion)).divide(restrictProportion, MathContext.DECIMAL128));
-								System.out.printf("Shrinking chooseFromDev from %s to %s (==|devInsts|) and chooseFromTrain from %s to %s, since restrictProportion=%s\n",
-										chooseFromDev, devInstanceList.size(), chooseFromTrain, newChooseFromTrain, restrictProportion);
+								System.out.printf("%s Shrinking chooseFromDev from %s to %s (==|devInsts|) and chooseFromTrain from %s to %s, since restrictProportion=%s\n",
+										Utils.detailedLog(), chooseFromDev, devInstanceList.size(), chooseFromTrain, newChooseFromTrain, restrictProportion);
 								chooseFromTrain = newChooseFromTrain;
 								chooseFromDev = devInstanceList.size();
 							}
 						}
 						
+						System.out.printf("%s 1   chooseFromTrain=%s chooseFromDev=%s\n", Utils.detailedLog(), chooseFromTrain, chooseFromDev);
 						Collection<SentenceInstance> sampledDevInsts = Utils.sample(devInstanceList, chooseFromDev);
 						Collection<SentenceInstance> sampledTrainInsts = Utils.sample(trainInstanceList, chooseFromTrain);
 
 						
+						System.out.printf("%s 2   |sampledDevInsts|=%s |sampledTrainInsts|=%s\n", Utils.detailedLog(), sampledDevInsts.size(), sampledTrainInsts.size());
 						Multimap<Document, SentenceInstance> runTrain = getInstancesForTypes(controller, sampledTrainInsts, currRun.trainEvents, true);
 						Multimap<Document, SentenceInstance> runDev = getInstancesForTypes(controller, sampledDevInsts, currRun.devEvents, false);
 
-						currRun.devInsts = Sets.newHashSet(runTrain.values());
-						currRun.trainInsts = Sets.newHashSet(runDev.values());
+						System.out.printf("%s 3   |runTrain|=%s |runDev|=%s\n", Utils.detailedLog(), runTrain.values().size(), runDev.values().size());
+						currRun.devInsts = Sets.newHashSet(runDev.values());
+						currRun.trainInsts = Sets.newHashSet(runTrain.values());
 								
 						/**
 						 * Check the minimum mentions requirements
 						 * Notice that this happens on all runs, also restricted ones
 						 */
-
-						
-						
-						
 						Multimap<String, AceEventMention> trainMentionByType = HashMultimap.create();
 						currRun.trainMentions = SentenceInstance.getNumEventMentions(currRun.trainInsts, trainMentionByType);
+						/////
+						System.out.printf("%s trainInsts(%s,mentions=%s): ", Utils.detailedLog(), currRun.trainInsts.size(), currRun.trainMentions);
+						int i=0;
+						Iterator<SentenceInstance> iter = currRun.trainInsts.iterator();
+						while (i<6 && iter.hasNext()) {
+							i++;
+							SentenceInstance inst = iter.next();
+							System.out.printf("Inst(%s spec=%s, mentions=%s)[total mentions for spec are %s], ", inst.sentInstID, SpecAnnotator.getSpecLabel(inst.associatedSpec), inst.eventMentions.size(), trainMentionByType.get(SpecAnnotator.getSpecLabel(inst.associatedSpec)).size());
+						}
+						System.out.printf("...\n");
+						/////
 						if (currRun.trainMentions < minTrainMentions) {
-							//System.out.printf("%s. numTrainMentions=%s < minTrainMentions=%s\n", n, numTrainMentions, minTrainMentions);
+							System.out.printf("%s %s. currRun.trainMentions=%s < minTrainMentions=%s\n", Utils.detailedLog(), n, currRun.trainMentions, minTrainMentions);
 							continue;
 						}
 						Multimap<String, AceEventMention> devMentionByType = HashMultimap.create();
 						currRun.devMentions = SentenceInstance.getNumEventMentions(currRun.devInsts, devMentionByType);
+						/////
+						System.out.printf("%s devInsts(%s,mentions=%s): ", Utils.detailedLog(), currRun.devInsts.size(), currRun.devMentions);
+						i=0;
+						iter = currRun.devInsts.iterator();
+						while (i<6 && iter.hasNext()) {
+							i++;
+							SentenceInstance inst = iter.next();
+							System.out.printf("Inst(%s spec=%s, mentions=%s)[total mentions for spec are %s], ", inst.sentInstID, SpecAnnotator.getSpecLabel(inst.associatedSpec), inst.eventMentions.size(), devMentionByType.get(SpecAnnotator.getSpecLabel(inst.associatedSpec)).size());
+						}
+						System.out.printf("...\n");
+						/////
 						if (currRun.devMentions < minDevMentions) {
-							//System.out.printf("%s. numDevMentions=%s < minDevMentions=%s\n", n, numDevMentions, minDevMentions);
+							System.out.printf("%s %s. currRun.devMentions=%s < minDevMentions=%s\n", Utils.detailedLog(), n, currRun.devMentions, minDevMentions);
 							continue;
 						}
 						
 						// If we already have an equivalent run - ignore the current one
 						if (result.contains(currRun)) {
-							//System.out.printf("%s. run already contained: %s\n", n, run);
+							System.out.printf("%s %s. Out of current %s results, run already contained: %s\n", Utils.detailedLog(), n, result.size(), run);
 							continue;
 						}
 						

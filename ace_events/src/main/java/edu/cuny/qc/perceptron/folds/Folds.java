@@ -179,36 +179,42 @@ public class Folds {
 				 * This is just a choice for now, and could be changed later if I want.
 				 * 
 				 * Haha, a night later, and I want to change it. Viva la evolution.
+				 * 
+				 * One week later - oh wait, but this could be a cool preliminary test, and kill a lot of run time!
 				 */
-//				run.trainMentions = 0;
-//				for (JCas trainSpec : run.trainEvents) {
-//					String label = SpecAnnotator.getSpecLabel(trainSpec);
-////					System.out.printf("trainMentionsByType=%s, label=%s, numTrainMentions=%s\n", trainMentionsByType, label, numTrainMentions);
-////					System.out.printf("trainMentionsByType.get(label)=%s\n", trainMentionsByType.get(label));
-//					Integer trainMentionsInType = trainMentionsByType.get(label);
-//					if (trainMentionsInType == null) {
-//						trainMentionsInType = 0;
-//					}
-//					run.trainMentions += trainMentionsInType;
-//				}
-//				if (run.trainMentions < minTrainMentions) {
-//					//System.out.printf("%s. numTrainMentions=%s < minTrainMentions=%s\n", n, numTrainMentions, minTrainMentions);
-//					continue;
-//				}
-//				
-//				run.devMentions = 0;
-//				for (JCas devSpec : run.devEvents) {
-//					String label = SpecAnnotator.getSpecLabel(devSpec);
-//					Integer devMentionsInType = devMentionsByType.get(label);
-//					if (devMentionsInType == null) {
-//						devMentionsInType = 0;
-//					}
-//					run.devMentions += devMentionsInType;
-//				}
-//				if (run.devMentions < minDevMentions) {
-//					//System.out.printf("%s. numDevMentions=%s < minDevMentions=%s\n", n, numDevMentions, minDevMentions);
-//					continue;
-//				}
+				run.trainMentions = 0;
+				for (JCas trainSpec : run.trainEvents) {
+					String label = SpecAnnotator.getSpecLabel(trainSpec);
+//					System.out.printf("trainMentionsByType=%s, label=%s, numTrainMentions=%s\n", trainMentionsByType, label, numTrainMentions);
+//					System.out.printf("trainMentionsByType.get(label)=%s\n", trainMentionsByType.get(label));
+					Integer trainMentionsInType = trainMentionsByType.get(label);
+					if (trainMentionsInType == null) {
+						trainMentionsInType = 0;
+					}
+					run.trainMentions += trainMentionsInType;
+				}
+				if (run.trainMentions < minTrainMentions) {
+					//System.out.printf("%s. numTrainMentions=%s < minTrainMentions=%s\n", n, numTrainMentions, minTrainMentions);
+					System.out.printf("%s Preliminary check fail: %s. run.trainMentions=%s < minTrainMentions=%s\n", Utils.detailedLog(), n, run.trainMentions, minTrainMentions);
+					continue;
+				}
+				run.trainMentions = 0;
+				
+				run.devMentions = 0;
+				for (JCas devSpec : run.devEvents) {
+					String label = SpecAnnotator.getSpecLabel(devSpec);
+					Integer devMentionsInType = devMentionsByType.get(label);
+					if (devMentionsInType == null) {
+						devMentionsInType = 0;
+					}
+					run.devMentions += devMentionsInType;
+				}
+				if (run.devMentions < minDevMentions) {
+					//System.out.printf("%s. numDevMentions=%s < minDevMentions=%s\n", n, numDevMentions, minDevMentions);
+					System.out.printf("%s Preliminary check fail: %s. run.devMentions=%s < minDevMentions=%s\n", Utils.detailedLog(), n, run.devMentions, minDevMentions);
+					continue;
+				}
+				run.devMentions = 0;
 
 				for (BigDecimal restrictProportionInput : proportionsRestrictions) {
 					
@@ -269,11 +275,11 @@ public class Folds {
 						}
 						
 						System.out.printf("%s 1   chooseFromTrain=%s chooseFromDev=%s\n", Utils.detailedLog(), chooseFromTrain, chooseFromDev);
-						Collection<SentenceInstance> sampledDevInsts = Utils.sample(devInstanceList, chooseFromDev);
-						Collection<SentenceInstance> sampledTrainInsts = Utils.sample(trainInstanceList, chooseFromTrain);
+						Collection<SentenceInstance> sampledDevInsts = Utils.sample2(devInstanceList, chooseFromDev);
+						Collection<SentenceInstance> sampledTrainInsts = Utils.sample2(trainInstanceList, chooseFromTrain);
 
 						
-						System.out.printf("%s 2   |sampledDevInsts|=%s |sampledTrainInsts|=%s\n", Utils.detailedLog(), sampledDevInsts.size(), sampledTrainInsts.size());
+						System.out.printf("%s 2   |sampledTrainInsts|=%s |sampledDevInsts|=%s\n", Utils.detailedLog(), sampledTrainInsts.size(), sampledDevInsts.size());
 						Multimap<Document, SentenceInstance> runTrain = getInstancesForTypes(controller, sampledTrainInsts, currRun.trainEvents, true);
 						Multimap<Document, SentenceInstance> runDev = getInstancesForTypes(controller, sampledDevInsts, currRun.devEvents, false);
 
@@ -299,7 +305,7 @@ public class Folds {
 						System.out.printf("...\n");
 						/////
 						if (currRun.trainMentions < minTrainMentions) {
-							System.out.printf("%s %s. currRun.trainMentions=%s < minTrainMentions=%s\n", Utils.detailedLog(), n, currRun.trainMentions, minTrainMentions);
+							System.out.printf("%s Final check fail: %s. currRun.trainMentions=%s < minTrainMentions=%s\n", Utils.detailedLog(), n, currRun.trainMentions, minTrainMentions);
 							continue;
 						}
 						Multimap<String, AceEventMention> devMentionByType = HashMultimap.create();
@@ -316,13 +322,13 @@ public class Folds {
 						System.out.printf("...\n");
 						/////
 						if (currRun.devMentions < minDevMentions) {
-							System.out.printf("%s %s. currRun.devMentions=%s < minDevMentions=%s\n", Utils.detailedLog(), n, currRun.devMentions, minDevMentions);
+							System.out.printf("%s Final check fail: %s. currRun.devMentions=%s < minDevMentions=%s\n", Utils.detailedLog(), n, currRun.devMentions, minDevMentions);
 							continue;
 						}
 						
 						// If we already have an equivalent run - ignore the current one
 						if (result.contains(currRun)) {
-							System.out.printf("%s %s. Out of current %s results, run already contained: %s\n", Utils.detailedLog(), n, result.size(), run);
+							System.out.printf("%s %s. Out of current %s results, run already contained: %s\n", Utils.detailedLog(), n, result.size(), currRun);
 							continue;
 						}
 						
@@ -565,13 +571,16 @@ public class Folds {
 		System.out.printf("%s Starting to read docs...\n", Utils.detailedLog());
 
 		Map<String, Integer> trainMentions = Maps.newHashMapWithExpectedSize(types.specs.size());
-		Multimap<JCas, SentenceInstance> trainInstances = Pipeline.readInstanceList(controller, signalMechanismsContainer, types, corpusDir, trainDocs, new Alphabet(), trainMentions, true, false, null);
+		Multimap<JCas, SentenceInstance> trainInstances = Pipeline.readInstanceList(controller, signalMechanismsContainer, types, corpusDir, trainDocs, new Alphabet(), trainMentions, true, false, null, "Train");
 		System.out.printf("%s Finished reading training documents: %s sentence instances (total for all %s types)\n", Utils.detailedLog(), trainInstances.size(), trainInstances.keySet().size());
 		Map<String, Integer> devMentions = Maps.newHashMapWithExpectedSize(types.specs.size());
-		Multimap<JCas, SentenceInstance> devInstances = Pipeline.readInstanceList(controller, signalMechanismsContainer, types, corpusDir, devDocs, new Alphabet(), devMentions, false, false, null);
+		Multimap<JCas, SentenceInstance> devInstances = Pipeline.readInstanceList(controller, signalMechanismsContainer, types, corpusDir, devDocs, new Alphabet(), devMentions, false, false, null, "Dev");
 		System.out.printf("%s Finished reading dev documents: %s sentence instances (total for all %s types)\n", Utils.detailedLog(), devInstances.size(), devInstances.keySet().size());
-		Multimap<JCas, SentenceInstance> testInstances = Pipeline.readInstanceList(controller, signalMechanismsContainer, types, corpusDir, testDocs, new Alphabet(), null, true, false, null);
+		Multimap<JCas, SentenceInstance> testInstances = Pipeline.readInstanceList(controller, signalMechanismsContainer, types, corpusDir, testDocs, new Alphabet(), null, true, false, null, "Test");
 		System.out.printf("%s Finished reading test documents: %s sentence instances (total for all %s types)\n", Utils.detailedLog(), testInstances.size(), testInstances.keySet().size());
+
+		System.out.printf("\n%s Finished reading ALL documents:  Train: %s instances, %s types; Dev: %s instances, %s types; Test: %s instances, %s types\n\n",
+				Utils.detailedLog(), trainInstances.size(), trainInstances.keySet().size(), devInstances.size(), devInstances.keySet().size(), testInstances.size(), testInstances.keySet().size());
 
 		List<Run> runs = buildRuns(controller, types, trainMentions, devMentions, numRuns, trainEventNums, devEventNums, minTrainMentions, minDevMentions,
 				trainInstances.values(), devInstances.values(), proportionsRestrictions, amountRestrictions);

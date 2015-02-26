@@ -126,7 +126,7 @@ public class SignalAnalyzer {
 		
 		while (!chunkRecord.isFinished) {
 			
-			Collection<SentenceInstance> goldInstances = Pipeline.readInstanceList(controller, signalMechanismsContainer, types, new File(CORPUS_DIR), inputFileList, new Alphabet(), null, false, debug, chunkRecord).values();
+			Collection<SentenceInstance> goldInstances = Pipeline.readInstanceList(controller, signalMechanismsContainer, types, new File(CORPUS_DIR), inputFileList, new Alphabet(), null, false, debug, chunkRecord, "AllSignalAnalysis").values();
 			//SignalPerformanceField.goldInstances = goldInstances;
 			System.out.printf("[%s] Finished reading documents, starting to process %s sentences\n", new Date(), goldInstances.size());
 			

@@ -87,9 +87,9 @@ public class Pipeline
 			model = new Perceptron(featureAlphabet, controller, outFolder, signalMechanismsContainer);
 			TypesContainer trainTypes = new TypesContainer(trainSpecXmlPaths, false);
 			TypesContainer devTypes = new TypesContainer(devSpecXmlPaths, false);
-			trainInstanceList = readInstanceList(controller, signalMechanismsContainer, trainTypes, srcDir, trainingFileList, featureAlphabet, null, true, false, null).values();
+			trainInstanceList = readInstanceList(controller, signalMechanismsContainer, trainTypes, srcDir, trainingFileList, featureAlphabet, null, true, false, null, "Train").values();
 			System.out.printf("=== Finished Training Documents (%s Sentence Instances) =====================================\n", trainInstanceList.size());
-			devInstanceList = readInstanceList(controller, signalMechanismsContainer, devTypes, srcDir, devFileList, featureAlphabet, null, false, false, null).values();
+			devInstanceList = readInstanceList(controller, signalMechanismsContainer, devTypes, srcDir, devFileList, featureAlphabet, null, false, false, null, "Dev").values();
 			System.out.printf("=== Finished Dev Documents (%s Sentence Instances) =====================================\n", devInstanceList.size());
 		}
 		else
@@ -138,10 +138,10 @@ public class Pipeline
 	public static Multimap<JCas, SentenceInstance> readInstanceList(/*Perceptron perceptron,*/
 			Controller controller, SignalMechanismsContainer signalMechanismsContainer,
 			TypesContainer types, File srcDir, File file_list, Alphabet featureAlphabet, 
-			Map<String, Integer> numMentions, boolean learnable, boolean debug, ChunkRecord chunkRecord) throws Exception
+			Map<String, Integer> numMentions, boolean learnable, boolean debug, ChunkRecord chunkRecord, String title) throws Exception
 	{
-		System.out.printf("\n%s Reading instance list. srcDir=%s, file_list=%s, numMentions=%s, learnable=%s, debug=%s, featureAlphabet=%s, types=%s, signals=%s\n",
-				Utils.detailedLog(), srcDir, file_list, numMentions, learnable, debug, featureAlphabet, types, signalMechanismsContainer);
+		System.out.printf("\n%s Reading %s instance list. srcDir=%s, file_list=%s, numMentions=%s, learnable=%s, debug=%s, featureAlphabet=%s, types=%s, signals=%s\n",
+				Utils.detailedLog(), title, srcDir, file_list, numMentions, learnable, debug, featureAlphabet, types, signalMechanismsContainer);
 		new PosMap();
 		
 		if (chunkRecord != null && chunkRecord.isFinished == true) {
@@ -266,8 +266,8 @@ public class Pipeline
 //		System.out.printf("%s done.\n", detailedLog());
 //		System.out.println("done");
 			
-		System.out.printf("Finished loading %s documents, in them %s sentence instances (total for all types)\n", num, result.size());
-		System.out.printf("Total of %s event mentions, in %s types:\n", allEventMentions.size(), allEventMentions.keySet().size());
+		System.out.printf("Finished loading %s %s documents, in them %s sentence instances (total for all types)\n", num, title, result.size());
+		System.out.printf("Total of %s %s event mentions, in %s types:\n", allEventMentions.size(), title, allEventMentions.keySet().size());
 		for (String eventType : allEventMentions.keySet()) {
 			int mentions = allEventMentions.get(eventType).size();
 			System.out.printf(" - %s: %s mentions\n", eventType, mentions);
@@ -276,19 +276,19 @@ public class Pipeline
 			}
 		}
 
-		final String BIG_FINISH = "... and this is the real big finish of all documents!!!\n";
+		final String BIG_FINISH = "... and this is the real big finish of all %s documents!!!\n\n";
 		if (chunkRecord != null && controller.docsChunk != null) {
 			if (line == null) {
 				chunkRecord.isFinished = true;
 				chunkRecord.firstLineNextChunk = -1;
-				System.out.println(BIG_FINISH);
+				System.out.printf(BIG_FINISH, title);
 			}
 			else {
 				System.out.printf("... But actually we have more chunks of documents to go....\n\n");
 			}
 		}
 		else {
-			System.out.println(BIG_FINISH);
+			System.out.printf(BIG_FINISH, title);
 		}
 
 		return result;

@@ -537,6 +537,7 @@ public class Logs {
 			Utils.print(r, "", "\n", "|", null,
 					"", //"Id",
 					"", //"IdPerTest",
+					"",//"TestType",
 					//"", //"SortMethod",
 					"", //"FeatureProfile",
 					"", //"AmountRestriction",
@@ -606,6 +607,7 @@ public class Logs {
 			Utils.print(r, "", "\n", "|", null,
 					"Id",
 					"IdPerTest",
+					"TestType",
 					//"SortMethod",
 					"FeatureProfile",
 					"AmountRestriction",
@@ -1038,6 +1040,7 @@ public class Logs {
 			Utils.print(r, "", "\n", "|", null,
 					run.id, //"Id",
 					run.idPerTest,//"IdPerTest",
+					SpecAnnotator.getSpecLabel(run.testEvent),//"TestType",
 					//run.sentenceSortingMethod,//"SortMethod",
 					run.featureProfile, //"FeatureProfile"
 					run.restrictAmount, //"AmountRestriction"

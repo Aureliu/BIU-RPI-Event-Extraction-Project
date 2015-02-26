@@ -261,13 +261,23 @@ public class Perceptron implements java.io.Serializable
 //		for (SentenceInstance inst : trainingList) {
 //			System.out.printf("- %s\t/ %s\n", inst.sentInstID, /*inst.sentID, inst.specLetter,*/ inst.docID);
 //		}
+		int i=0;
 		System.out.printf("\n\n%s Perceptron.learning: trainingInsts (%s) =\n\t", Utils.detailedLog(), trainingList.size());
 		for (SentenceInstance inst : trainingList) {
 			System.out.printf("%s:%s,", inst.docID, inst.sentInstID);
+			i++;
+			if (i%50==0) {
+				System.out.printf("\n\t");
+			}
 		}
+		i=0;
 		System.out.printf("\n\n%s Perceptron.learning: devList (%s) =\n\t", Utils.detailedLog(), devList.size());
 		for (SentenceInstance inst : devList) {
 			System.out.printf("%s:%s,", inst.docID, inst.sentInstID);
+			i++;
+			if (i%50==0) {
+				System.out.printf("\n\t");
+			}
 		}
 		System.out.printf("\n\n");
 

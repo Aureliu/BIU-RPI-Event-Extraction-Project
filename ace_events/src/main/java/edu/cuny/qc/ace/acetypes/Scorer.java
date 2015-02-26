@@ -65,22 +65,22 @@ public class Scorer
 		 */
 		public void calc()
 		{
-			prec_trigger = num_trigger_correct / num_trigger_ans;
-			recall_trigger = num_trigger_correct / num_trigger_gold;
-			f1_trigger = 2 * (prec_trigger * recall_trigger) / (prec_trigger + recall_trigger);
+			prec_trigger = num_trigger_ans==0 ? 0 : num_trigger_correct / num_trigger_ans;
+			recall_trigger = num_trigger_gold==0 ? 0 : num_trigger_correct / num_trigger_gold;
+			f1_trigger = prec_trigger+recall_trigger==0 ? 0 : 2 * (prec_trigger * recall_trigger) / (prec_trigger + recall_trigger);
 			
-			prec_arg = num_arg_correct / num_arg_ans;
-			recall_arg = num_arg_correct / num_arg_gold;
-			f1_arg = 2 * (prec_arg * recall_arg) / (prec_arg + recall_arg);
+			prec_arg = num_arg_ans==0 ? 0 : num_arg_correct / num_arg_ans;
+			recall_arg = num_arg_gold==0 ? 0 : num_arg_correct / num_arg_gold;
+			f1_arg = prec_arg+recall_arg==0 ? 0 : 2 * (prec_arg * recall_arg) / (prec_arg + recall_arg);
 			
 			// for identification scoring
-			prec_trigger_idt = num_trigger_idt_correct / num_trigger_ans;
-			recall_trigger_idt = num_trigger_idt_correct / num_trigger_gold;
-			f1_trigger_idt = 2 * (prec_trigger_idt * recall_trigger_idt) / (prec_trigger_idt + recall_trigger_idt);
+			prec_trigger_idt = num_trigger_ans==0 ? 0 : num_trigger_idt_correct / num_trigger_ans;
+			recall_trigger_idt = num_trigger_gold==0 ? 0 : num_trigger_idt_correct / num_trigger_gold;
+			f1_trigger_idt = prec_trigger_idt+recall_trigger_idt==0 ? 0 : 2 * (prec_trigger_idt * recall_trigger_idt) / (prec_trigger_idt + recall_trigger_idt);
 			
-			prec_arg_idt = num_arg_idt_correct / num_arg_ans;
-			recall_arg_idt = num_arg_idt_correct / num_arg_gold;
-			f1_arg_idt = 2 * (prec_arg_idt * recall_arg_idt) / (prec_arg_idt + recall_arg_idt);
+			prec_arg_idt = num_arg_ans==0 ? 0 : num_arg_idt_correct / num_arg_ans;
+			recall_arg_idt = num_arg_gold==0 ? 0 : num_arg_idt_correct / num_arg_gold;
+			f1_arg_idt = prec_arg_idt+recall_arg_idt==0 ? 0 : 2 * (prec_arg_idt * recall_arg_idt) / (prec_arg_idt + recall_arg_idt);
 		}
 		
 		@Override

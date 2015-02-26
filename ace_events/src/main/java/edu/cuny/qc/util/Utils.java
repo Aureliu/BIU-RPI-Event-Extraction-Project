@@ -165,6 +165,20 @@ public class Utils {
 		}
 		return result;
 	}
+
+	public static <T> List<T> sample2(List<T> elements, int amount) {
+		if (amount > elements.size()) {
+			throw new IllegalArgumentException(String.format("Got amount %s which is more than the list's size (%s)", amount, elements.size()));
+		}
+		List<T> copy = Lists.newArrayList(elements);
+		if (amount == elements.size()) {
+			return copy;
+		}
+		Collections.shuffle(copy);
+		List<T> result = copy.subList(0, amount);
+		return result;
+	}
+	
 	public static Logger handleLog() throws IOException {
 		File target = new File("./target/classes/log4j.properties");
 		Files.createParentDirs(target);

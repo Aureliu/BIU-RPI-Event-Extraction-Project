@@ -468,6 +468,7 @@ public class Folds {
 		int mentions = SentenceInstance.getNumEventMentions(result, null);
 		int tempMentions;
 		int iters = 1;
+		final int MAX_ITERS = 2000;
 		
 		System.out.printf("%s Folds.SIBNO(|%s|,target=%s): [%s,%s]", Utils.detailedLog(), insts.size(), targetMentions, result.size(), mentions);
 		// Zig-zagging!!!
@@ -479,6 +480,10 @@ public class Folds {
 				mentions += tempMentions;
 				iters++;
 				System.out.printf("/+%s,%s+/", result.size(), mentions);
+				if (iters >= MAX_ITERS) {
+					System.out.printf("\n\n");
+					throw new RuntimeException("Got " + iters + " iters! That's waaaay too much!");
+				}
 			}
 			while (mentions>targetMentions && result.size()>=50) {
 				toRemove = result.subList(result.size()-50, result.size());
@@ -488,6 +493,10 @@ public class Folds {
 				mentions -= tempMentions;
 				iters++;
 				System.out.printf("/-%s,%s-/", result.size(), mentions);
+				if (iters >= MAX_ITERS) {
+					System.out.printf("\n\n");
+					throw new RuntimeException("Got " + iters + " iters! That's waaaay too much!");
+				}
 			}
 			while (mentions<targetMentions && !toRemoveCopy.isEmpty()) {
 				toAdd = ImmutableList.of(toRemoveCopy.remove(0));
@@ -496,6 +505,10 @@ public class Folds {
 				mentions += tempMentions;
 				iters++;
 				System.out.printf("/+%s,%s+/", result.size(), mentions);
+				if (iters >= MAX_ITERS) {
+					System.out.printf("\n\n");
+					throw new RuntimeException("Got " + iters + " iters! That's waaaay too much!");
+				}
 			}
 		}
 		else if (mentions>targetMentions) {
@@ -507,6 +520,10 @@ public class Folds {
 				mentions -= tempMentions;
 				iters++;
 				System.out.printf("\\-%s,%s-\\", result.size(), mentions);
+				if (iters >= MAX_ITERS) {
+					System.out.printf("\n\n");
+					throw new RuntimeException("Got " + iters + " iters! That's waaaay too much!");
+				}
 			}
 			while (mentions<targetMentions && !toRemoveCopy.isEmpty()) {
 				toAdd = ImmutableList.of(toRemoveCopy.remove(0));
@@ -515,6 +532,10 @@ public class Folds {
 				mentions += tempMentions;
 				iters++;
 				System.out.printf("\\+%s,%s+\\", result.size(), mentions);
+				if (iters >= MAX_ITERS) {
+					System.out.printf("\n\n");
+					throw new RuntimeException("Got " + iters + " iters! That's waaaay too much!");
+				}
 			}			
 		}
 		

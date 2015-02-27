@@ -179,6 +179,13 @@ public class Utils {
 		return result;
 	}
 	
+	public static <T> List<T> sample2AndRemoveSafe(List<T> elements, int amount) {
+		amount = Math.min(amount, elements.size());
+		List<T> result = sample2(elements, amount);
+		elements.removeAll(result);
+		return result;
+	}
+	
 	public static Logger handleLog() throws IOException {
 		File target = new File("./target/classes/log4j.properties");
 		Files.createParentDirs(target);

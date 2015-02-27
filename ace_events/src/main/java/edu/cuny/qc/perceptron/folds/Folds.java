@@ -11,6 +11,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Vector;
+
 import org.apache.commons.collections15.ListUtils;
 import org.apache.log4j.Logger;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
@@ -75,9 +77,15 @@ public class Folds {
 		
 		List<SentenceInstance> trainInstanceList = Lists.newArrayList(trainInstances);
 		List<SentenceInstance> devInstanceList = Lists.newArrayList(devInstances);
-		BigDecimal trainInstancesLen = new BigDecimal(trainInstances.size());  
-		BigDecimal devInstancesLen = new BigDecimal(devInstances.size());  
-		BigDecimal allInstancesLen = trainInstancesLen.add(devInstancesLen);
+		////BigDecimal trainInstancesLen = new BigDecimal(trainInstances.size());  
+		////BigDecimal devInstancesLen = new BigDecimal(devInstances.size());  
+		////BigDecimal allInstancesLen = trainInstancesLen.add(devInstancesLen);
+		int trainMentions = SentenceInstance.getNumEventMentions(trainInstanceList, null);
+		int devMentions = SentenceInstance.getNumEventMentions(devInstanceList, null);
+		int allMentions = trainMentions + devMentions;
+		BigDecimal trainMentionsBD = new BigDecimal(trainMentions);
+		BigDecimal devMentionsBD = new BigDecimal(devMentions);
+		BigDecimal allMentionsBD = new BigDecimal(allMentions);
 		
 		//int prevAmountResult = 0;
 		int totalCounter = 0;
@@ -218,18 +226,19 @@ public class Folds {
 
 				for (BigDecimal restrictProportionInput : proportionsRestrictions) {
 					
-					BigDecimal restrictProportion = (restrictProportionInput.equals(MAGIC_NO_PROPORTION_RESTRICTION)) ? devInstancesLen.divide(allInstancesLen, MathContext.DECIMAL128) : restrictProportionInput;
+					BigDecimal restrictProportion = (restrictProportionInput.equals(MAGIC_NO_PROPORTION_RESTRICTION)) ? devMentionsBD.divide(allMentionsBD, MathContext.DECIMAL128) : restrictProportionInput;
 					
 					for (BigDecimal restrictAmountInput : amountRestrictions) {
-						System.out.printf("%s ** test=%s(/%s), n=%s, |runsForType|=%s, numRuns=%s, |trainInsts|=%s, |devInsts|=%s, prop=%s(/%s), amount=%s(/%s) train(%s)=%s dev(%s)=%s\n",
-								Utils.detailedLog(), SpecAnnotator.getSpecLabel(testSpec), allTestSpecs.size(), n, runsForType.size(), numRuns, trainInstances.size(), devInstances.size(), restrictProportionInput, proportionsRestrictions,
-								restrictAmountInput, amountRestrictions, run.trainEvents.size(), Logs.labelList(run.trainEvents), run.devEvents.size(), Logs.labelList(run.devEvents));
+						System.out.printf("%s ** test=%s(/%s), n=%s, |runsForType|=%s, numRuns=%s, |trainInsts|=%s, |devInsts|=%s, trainMens=%s, devMens=%s, prop=%s(/%s), amount=%s(/%s) train(%s)=%s dev(%s)=%s\n",
+								Utils.detailedLog(), SpecAnnotator.getSpecLabel(testSpec), allTestSpecs.size(), n, runsForType.size(), numRuns, trainInstances.size(), devInstances.size(),
+								trainMentions, devMentions, restrictProportionInput, proportionsRestrictions, restrictAmountInput, amountRestrictions,
+								run.trainEvents.size(), Logs.labelList(run.trainEvents), run.devEvents.size(), Logs.labelList(run.devEvents));
 												
-						BigDecimal restrictAmount = (restrictAmountInput.equals(MAGIC_NO_AMOUNT_RESTRICTION)) ? allInstancesLen : restrictAmountInput;
+						BigDecimal restrictAmount = (restrictAmountInput.equals(MAGIC_NO_AMOUNT_RESTRICTION)) ? allMentionsBD : restrictAmountInput;
 						
-						// Silently skipping amounts that are larger than the total number of sentence instances
-						if (restrictAmount.compareTo(allInstancesLen) > 0) {
-							System.out.printf("%s Skipping since (restrictAmount=%s)>(allInstancesLen=%s)\n", Utils.detailedLog(), restrictAmount, allInstancesLen);
+						// Silently skipping amounts that are larger than the total number of mentions
+						if (restrictAmount.compareTo(allMentionsBD) > 0) {
+							System.out.printf("%s Skipping since (restrictAmount=%s)>(allMentions=%s)\n", Utils.detailedLog(), restrictAmount, allMentionsBD);
 							continue;
 						}
 
@@ -246,37 +255,37 @@ public class Folds {
 						
 						// Do some verifications and adjustments on "choose" vals
 						if (!restrictAmountInput.equals(MAGIC_NO_AMOUNT_RESTRICTION)) {
-							if (chooseFromTrain>trainInstanceList.size()) {
-								System.out.printf("%s restrictAmount=%s, restrictProportion=%s, |trainInsts|=%s, |devInsts|=%s, chooseFromTrain=%s: Cannot fulfill all restrictions, since chooseFromTrain>|trainInsts|. Skipping run.\n",
-										Utils.detailedLog(), restrictAmountInput, restrictProportion, trainInstanceList.size(), devInstanceList.size(), chooseFromTrain);
+							if (chooseFromTrain>trainMentions) {
+								System.out.printf("%s restrictAmount=%s, restrictProportion=%s, trainMentions=%s, chooseFromTrain=%s: Cannot fulfill all restrictions, since chooseFromTrain>trainMentions. Skipping run.\n",
+										Utils.detailedLog(), restrictAmountInput, restrictProportion, trainMentions, chooseFromTrain);
 								continue;
 							}
-							if (chooseFromDev>devInstanceList.size()) {
-								System.out.printf("%s restrictAmount=%s, restrictProportion=%s, |trainInsts|=%s, |devInsts|=%s, chooseFromDev=%s: Cannot fulfill all restrictions, since chooseFromDev>|devInsts|. Skipping run.\n",
-										Utils.detailedLog(), restrictAmountInput, restrictProportion, trainInstanceList.size(), devInstanceList.size(), chooseFromTrain);
+							if (chooseFromDev>devMentions) {
+								System.out.printf("%s restrictAmount=%s, restrictProportion=%s, devMentions=%s, chooseFromDev=%s: Cannot fulfill all restrictions, since chooseFromDev>devMentions. Skipping run.\n",
+										Utils.detailedLog(), restrictAmountInput, restrictProportion, devMentions, chooseFromTrain);
 								continue;
 							}
 						}
 						else {
-							if (chooseFromTrain>trainInstanceList.size()) {
-								int newChooseFromDev = Utils.round(trainInstancesLen.multiply(restrictProportion).divide(BigDecimal.ONE.subtract(restrictProportion), MathContext.DECIMAL128));
-								System.out.printf("%s Shrinking chooseFromTrain from %s to %s (==|trainInsts|) and chooseFromDev from %s to %s, since restrictProportion=%s\n",
-										Utils.detailedLog(), chooseFromTrain, trainInstanceList.size(), chooseFromDev, newChooseFromDev, restrictProportion);
-								chooseFromTrain = trainInstanceList.size();
+							if (chooseFromTrain>trainMentions) {
+								int newChooseFromDev = Utils.round(trainMentionsBD.multiply(restrictProportion).divide(BigDecimal.ONE.subtract(restrictProportion), MathContext.DECIMAL128));
+								System.out.printf("%s Shrinking chooseFromTrain from %s to %s (==trainMentions) and chooseFromDev from %s to %s, since restrictProportion=%s\n",
+										Utils.detailedLog(), chooseFromTrain, trainMentions, chooseFromDev, newChooseFromDev, restrictProportion);
+								chooseFromTrain = trainMentions;
 								chooseFromDev = newChooseFromDev;
 							}
-							else if (chooseFromDev>devInstanceList.size()) {
-								int newChooseFromTrain = Utils.round(devInstancesLen.multiply(BigDecimal.ONE.subtract(restrictProportion)).divide(restrictProportion, MathContext.DECIMAL128));
-								System.out.printf("%s Shrinking chooseFromDev from %s to %s (==|devInsts|) and chooseFromTrain from %s to %s, since restrictProportion=%s\n",
-										Utils.detailedLog(), chooseFromDev, devInstanceList.size(), chooseFromTrain, newChooseFromTrain, restrictProportion);
-								chooseFromTrain = newChooseFromTrain;
+							else if (chooseFromDev>devMentions) {
+								int newChooseFromTrain = Utils.round(devMentionsBD.multiply(BigDecimal.ONE.subtract(restrictProportion)).divide(restrictProportion, MathContext.DECIMAL128));
+								System.out.printf("%s Shrinking chooseFromDev from %s to %s (==devMentions) and chooseFromTrain from %s to %s, since restrictProportion=%s\n",
+										Utils.detailedLog(), chooseFromDev, devMentions, chooseFromTrain, newChooseFromTrain, restrictProportion);
+								chooseFromTrain = devMentions;
 								chooseFromDev = devInstanceList.size();
 							}
 						}
 						
 						System.out.printf("%s 1   chooseFromTrain=%s chooseFromDev=%s\n", Utils.detailedLog(), chooseFromTrain, chooseFromDev);
-						Collection<SentenceInstance> sampledDevInsts = Utils.sample2(devInstanceList, chooseFromDev);
-						Collection<SentenceInstance> sampledTrainInsts = Utils.sample2(trainInstanceList, chooseFromTrain);
+						Collection<SentenceInstance> sampledDevInsts = getSentenceInstancesByNumOfMentions(devInstanceList, chooseFromDev);
+						Collection<SentenceInstance> sampledTrainInsts = getSentenceInstancesByNumOfMentions(trainInstanceList, chooseFromTrain);
 
 						
 						System.out.printf("%s 2   |sampledTrainInsts|=%s |sampledDevInsts|=%s\n", Utils.detailedLog(), sampledTrainInsts.size(), sampledDevInsts.size());
@@ -419,6 +428,87 @@ public class Folds {
 //			result = newResult;
 //		}
 		
+		return result;
+	}
+	
+	/**
+	 * How many *SentenceInstances* do we get in each step, with regards to *numMentions*?
+	 * - 100%
+	 * - if mentions<target: (meaning I am in non-filtered, ==dev)
+	 * 		while mentions<target:
+	 * 			add target*10
+	 * 		between prev and curr amount:
+	 * 			add 50 (fixed)
+	 * 		between prev an curr amount
+	 * 			add 1 fixed.
+	 * - else: (meaning I am in filtered, ==train)
+	 * 		while mentions>target:
+	 * 			remove 5
+	 * 		between prev and curr amount
+	 * 			remove 1
+	 * @param insts
+	 * @param targetMentions
+	 * @return
+	 */
+	public static Collection<SentenceInstance> getSentenceInstancesByNumOfMentions(List<SentenceInstance> insts, int targetMentions) {
+		List<SentenceInstance> pool = Lists.newArrayList(insts);
+		List<SentenceInstance> result = Utils.sample2AndRemoveSafe(pool, targetMentions);
+		List<SentenceInstance> toAdd, toRemove, toRemoveCopy = null;
+		int mentions = SentenceInstance.getNumEventMentions(result, null);
+		int tempMentions;
+		int iters = 1;
+		
+		System.out.printf("%s Folds.SIBNO(|%s|,target=%s): [%s,%s]", Utils.detailedLog(), insts.size(), targetMentions, result.size(), mentions);
+		// Zig-zagging!!!
+		if (mentions<targetMentions) {
+			while (mentions<targetMentions) {
+				toAdd = Utils.sample2AndRemoveSafe(pool, targetMentions*10);
+				tempMentions = SentenceInstance.getNumEventMentions(toAdd, null);
+				result.addAll(toAdd);
+				mentions += tempMentions;
+				iters++;
+				System.out.printf("/+%s,%s+/", result.size(), mentions);
+			}
+			while (mentions>targetMentions && result.size()>=50) {
+				toRemove = result.subList(result.size()-50, result.size());
+				toRemoveCopy = Lists.newArrayList(toRemove);
+				tempMentions = SentenceInstance.getNumEventMentions(toRemove, null);
+				toRemove.clear(); //Yes, apparently this deletes them from the underlying list!
+				mentions -= tempMentions;
+				iters++;
+				System.out.printf("/-%s,%s-/", result.size(), mentions);
+			}
+			while (mentions<targetMentions && !toRemoveCopy.isEmpty()) {
+				toAdd = ImmutableList.of(toRemoveCopy.remove(0));
+				tempMentions = SentenceInstance.getNumEventMentions(toAdd, null);
+				result.addAll(toAdd);
+				mentions += tempMentions;
+				iters++;
+				System.out.printf("/+%s,%s+/", result.size(), mentions);
+			}
+		}
+		else if (mentions>targetMentions) {
+			while (mentions>targetMentions && result.size()>=5) {
+				toRemove = result.subList(result.size()-5, result.size());
+				toRemoveCopy = Lists.newArrayList(toRemove);
+				tempMentions = SentenceInstance.getNumEventMentions(toRemove, null);
+				toRemove.clear(); //Yes, apparently this deletes them from the underlying list!
+				mentions -= tempMentions;
+				iters++;
+				System.out.printf("\\-%s,%s-\\", result.size(), mentions);
+			}
+			while (mentions<targetMentions && !toRemoveCopy.isEmpty()) {
+				toAdd = ImmutableList.of(toRemoveCopy.remove(0));
+				tempMentions = SentenceInstance.getNumEventMentions(toAdd, null);
+				result.addAll(toAdd);
+				mentions += tempMentions;
+				iters++;
+				System.out.printf("\\+%s,%s+\\", result.size(), mentions);
+			}			
+		}
+		
+		System.out.printf("\n%s      From |insts|=%s, target=%s, in %s iterations we got to |resultInsts|=%s, mentions=%s\n",
+				Utils.detailedLog(), insts.size(), targetMentions, iters, result.size(), mentions);
 		return result;
 	}
 	

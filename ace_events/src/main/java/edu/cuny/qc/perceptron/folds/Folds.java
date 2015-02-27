@@ -278,8 +278,8 @@ public class Folds {
 								int newChooseFromTrain = Utils.round(devMentionsBD.multiply(BigDecimal.ONE.subtract(restrictProportion)).divide(restrictProportion, MathContext.DECIMAL128));
 								System.out.printf("%s Shrinking chooseFromDev from %s to %s (==devMentions) and chooseFromTrain from %s to %s, since restrictProportion=%s\n",
 										Utils.detailedLog(), chooseFromDev, devMentions, chooseFromTrain, newChooseFromTrain, restrictProportion);
-								chooseFromTrain = devMentions;
-								chooseFromDev = devInstanceList.size();
+								chooseFromTrain = newChooseFromTrain;
+								chooseFromDev = devMentions;
 							}
 						}
 						

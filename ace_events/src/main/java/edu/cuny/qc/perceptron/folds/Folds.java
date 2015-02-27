@@ -283,9 +283,20 @@ public class Folds {
 							}
 						}
 						
-						System.out.printf("%s 1   chooseFromTrain=%s chooseFromDev=%s\n", Utils.detailedLog(), chooseFromTrain, chooseFromDev);
-						Collection<SentenceInstance> sampledDevInsts = getSentenceInstancesByNumOfMentions(devInstanceList, chooseFromDev);
-						Collection<SentenceInstance> sampledTrainInsts = getSentenceInstancesByNumOfMentions(trainInstanceList, chooseFromTrain);
+						System.out.printf("%s 1   chooseFromTrain=%s (trainMentions=%s) chooseFromDev=%s (devMentions=%s)\n", Utils.detailedLog(), chooseFromTrain, trainMentions, chooseFromDev, devMentions);
+						Collection<SentenceInstance> sampledTrainInsts, sampledDevInsts;
+						if (chooseFromTrain == trainMentions) {
+							sampledTrainInsts = Lists.newArrayList(trainInstanceList);
+						}
+						else {
+							sampledTrainInsts = getSentenceInstancesByNumOfMentions(trainInstanceList, chooseFromTrain);
+						}
+						if (chooseFromDev == devMentions) {
+							sampledDevInsts = Lists.newArrayList(devInstanceList);
+						}
+						else {
+							sampledDevInsts = getSentenceInstancesByNumOfMentions(devInstanceList, chooseFromDev);
+						}
 
 						
 						System.out.printf("%s 2   |sampledTrainInsts|=%s |sampledDevInsts|=%s\n", Utils.detailedLog(), sampledTrainInsts.size(), sampledDevInsts.size());
@@ -507,7 +518,7 @@ public class Folds {
 			}			
 		}
 		
-		System.out.printf("\n%s      From |insts|=%s, target=%s, in %s iterations we got to |resultInsts|=%s, mentions=%s\n",
+		System.out.printf("\n%s         From |insts|=%s, target=%s, in %s iterations we got to |resultInsts|=%s, mentions=%s\n",
 				Utils.detailedLog(), insts.size(), targetMentions, iters, result.size(), mentions);
 		return result;
 	}

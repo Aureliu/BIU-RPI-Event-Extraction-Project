@@ -539,7 +539,7 @@ public class Logs {
 					"", //"IdPerTest",
 					"",//"TestType",
 					//"", //"SortMethod",
-					"", //"FeatureProfile",
+					//"", //"FeatureProfile",
 					"", //"AmountRestriction",
 					"", //"ProportionRestriction",
 					"Train-Triggers", //"Iteration",
@@ -594,6 +594,7 @@ public class Logs {
 					"", //"Mentions",
 //					"", //"ArgCands"
 //					"", //"Args"
+					"", //"T+Dmentions",
 					"", //"%DevSentences",
 					"", //"%DevMentions",
 					"TestEvents", //"List",
@@ -609,7 +610,7 @@ public class Logs {
 					"IdPerTest",
 					"TestType",
 					//"SortMethod",
-					"FeatureProfile",
+					//"FeatureProfile",
 					"AmountRestriction",
 					"ProportionRestriction",
 					"Iteration",
@@ -664,6 +665,7 @@ public class Logs {
 					"Mentions",
 //					"ArgCands",
 //					"Args",
+					"T+Dmentions",
 					"%DevSentences",
 					"%DevMentions",
 					"List",
@@ -1023,6 +1025,7 @@ public class Logs {
 //			int trainEventMentions = SentenceInstance.getNumEventMentions(runTrain);
 //			int devEventMentions = SentenceInstance.getNumEventMentions(runDev);
 			int testEventMentions = SentenceInstance.getNumEventMentions(runTest, null);
+			int trainPlusDevMentions = run.trainMentions + run.devMentions;
 
 			/**
 			 * I don't have the energy to make this method Arg-compatible, so I'm commenting stuff out.
@@ -1042,7 +1045,7 @@ public class Logs {
 					run.idPerTest,//"IdPerTest",
 					SpecAnnotator.getSpecLabel(run.testEvent),//"TestType",
 					//run.sentenceSortingMethod,//"SortMethod",
-					run.featureProfile, //"FeatureProfile"
+					//run.featureProfile, //"FeatureProfile"
 					run.restrictAmount, //"AmountRestriction"
 					run.restrictProportion, //"ProportionRestriction"
 					
@@ -1110,8 +1113,9 @@ public class Logs {
 					run.devMentions,//"Mentions",
 //					devArgCandMentions,//"ArgCands"
 //					devArgsMentions,//"Args"
+					trainPlusDevMentions,
 					((double) run.devInsts.size()) / (run.trainInsts.size() + run.devInsts.size()), //"%DevSentences"
-					((double) run.devMentions) / (run.trainMentions + run.devMentions), //"%DevMentions"
+					((double) run.devMentions) / trainPlusDevMentions, //"%DevMentions"
 					SpecAnnotator.getSpecLabel(run.testEvent),//"List",
 					//testTypes.size(),//"Types",
 					runTest.size(),//"Sentences",

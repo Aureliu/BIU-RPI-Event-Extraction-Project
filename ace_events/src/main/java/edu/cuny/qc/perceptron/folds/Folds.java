@@ -75,18 +75,6 @@ public class Folds {
 		int totalTries = BUILD_RUN_FAIL_RATIO * numRuns;
 		List<Run> result = Lists.newArrayListWithCapacity(numRuns*types.specs.size());
 		
-		List<SentenceInstance> trainInstanceList = Lists.newArrayList(trainInstances);
-		List<SentenceInstance> devInstanceList = Lists.newArrayList(devInstances);
-		////BigDecimal trainInstancesLen = new BigDecimal(trainInstances.size());  
-		////BigDecimal devInstancesLen = new BigDecimal(devInstances.size());  
-		////BigDecimal allInstancesLen = trainInstancesLen.add(devInstancesLen);
-		int trainMentions = SentenceInstance.getNumEventMentions(trainInstanceList, null);
-		int devMentions = SentenceInstance.getNumEventMentions(devInstanceList, null);
-		int allMentions = trainMentions + devMentions;
-		BigDecimal trainMentionsBD = new BigDecimal(trainMentions);
-		BigDecimal devMentionsBD = new BigDecimal(devMentions);
-		BigDecimal allMentionsBD = new BigDecimal(allMentions);
-		
 		//int prevAmountResult = 0;
 		int totalCounter = 0;
 		List<JCas> allTestSpecs;
@@ -223,6 +211,35 @@ public class Folds {
 					continue;
 				}
 				run.devMentions = 0;
+				
+				
+				
+
+
+				
+				
+				
+				
+				System.out.printf("%s A   |trainInstances|=%s |devInstances|=%s\n", Utils.detailedLog(), trainInstances.size(), devInstances.size());
+				Multimap<Document, SentenceInstance> runTrain = getInstancesForTypes(controller, trainInstances, run.trainEvents, true);
+				Multimap<Document, SentenceInstance> runDev = getInstancesForTypes(controller, devInstances, run.devEvents, false);
+
+				List<SentenceInstance> trainInstanceList = Lists.newArrayList(runTrain.values());
+				List<SentenceInstance> devInstanceList = Lists.newArrayList(runDev.values());
+				int trainMentions = SentenceInstance.getNumEventMentions(trainInstanceList, null);
+				int devMentions = SentenceInstance.getNumEventMentions(devInstanceList, null);
+				int allMentions = trainMentions + devMentions;
+				BigDecimal trainMentionsBD = new BigDecimal(trainMentions);
+				BigDecimal devMentionsBD = new BigDecimal(devMentions);
+				BigDecimal allMentionsBD = new BigDecimal(allMentions);
+				
+
+				System.out.printf("%s B   Train=[%s insts, %s mentions] Dev=[%s insts, %s mentions] Train+Dev mentions=%s\n",
+						Utils.detailedLog(), trainInstanceList.size(), trainMentions, devInstanceList.size(), devMentions, allMentions);
+
+				
+				
+				
 
 				for (BigDecimal restrictProportionInput : proportionsRestrictions) {
 					
@@ -230,7 +247,7 @@ public class Folds {
 					
 					for (BigDecimal restrictAmountInput : amountRestrictions) {
 						System.out.printf("%s ** test=%s(/%s), n=%s, |runsForType|=%s, numRuns=%s, |trainInsts|=%s, |devInsts|=%s, trainMens=%s, devMens=%s, prop=%s(/%s), amount=%s(/%s) train(%s)=%s dev(%s)=%s\n",
-								Utils.detailedLog(), SpecAnnotator.getSpecLabel(testSpec), allTestSpecs.size(), n, runsForType.size(), numRuns, trainInstances.size(), devInstances.size(),
+								Utils.detailedLog(), SpecAnnotator.getSpecLabel(testSpec), allTestSpecs.size(), n, runsForType.size(), numRuns, trainInstanceList.size(), devInstanceList.size(),
 								trainMentions, devMentions, restrictProportionInput, proportionsRestrictions, restrictAmountInput, amountRestrictions,
 								run.trainEvents.size(), Logs.labelList(run.trainEvents), run.devEvents.size(), Logs.labelList(run.devEvents));
 												
@@ -289,23 +306,19 @@ public class Folds {
 							sampledTrainInsts = Lists.newArrayList(trainInstanceList);
 						}
 						else {
-							sampledTrainInsts = getSentenceInstancesByNumOfMentions(trainInstanceList, chooseFromTrain);
+							sampledTrainInsts = getSentenceInstancesByNumOfMentions("trainInsts", trainInstanceList, chooseFromTrain);
 						}
 						if (chooseFromDev == devMentions) {
 							sampledDevInsts = Lists.newArrayList(devInstanceList);
 						}
 						else {
-							sampledDevInsts = getSentenceInstancesByNumOfMentions(devInstanceList, chooseFromDev);
+							sampledDevInsts = getSentenceInstancesByNumOfMentions("devInsts", devInstanceList, chooseFromDev);
 						}
 
 						
 						System.out.printf("%s 2   |sampledTrainInsts|=%s |sampledDevInsts|=%s\n", Utils.detailedLog(), sampledTrainInsts.size(), sampledDevInsts.size());
-						Multimap<Document, SentenceInstance> runTrain = getInstancesForTypes(controller, sampledTrainInsts, currRun.trainEvents, true);
-						Multimap<Document, SentenceInstance> runDev = getInstancesForTypes(controller, sampledDevInsts, currRun.devEvents, false);
-
-						System.out.printf("%s 3   |runTrain|=%s |runDev|=%s\n", Utils.detailedLog(), runTrain.values().size(), runDev.values().size());
-						currRun.devInsts = Sets.newHashSet(runDev.values());
-						currRun.trainInsts = Sets.newHashSet(runTrain.values());
+						currRun.devInsts = Sets.newHashSet(sampledDevInsts);
+						currRun.trainInsts = Sets.newHashSet(sampledTrainInsts);
 								
 						/**
 						 * Check the minimum mentions requirements
@@ -363,8 +376,8 @@ public class Folds {
 						result.add(currRun);
 						runsForType.add(currRun);
 						
-						Utils.outputSentenceInstanceList("Train", runTrain, currRun.trainInsts, currRun.trainMentions, trainMentionByType);
-						Utils.outputSentenceInstanceList("Dev", runDev, currRun.devInsts, currRun.devMentions, devMentionByType);
+						Utils.outputSentenceInstanceList("Train(id=" + currRun.id + ")", runTrain.keySet(), currRun.trainInsts, currRun.trainMentions, trainMentionByType);
+						Utils.outputSentenceInstanceList("Dev(id=" + currRun.id + ")", runDev.keySet(), currRun.devInsts, currRun.devMentions, devMentionByType);
 
 						if (runsForType.size() >= numRuns) {
 							//System.out.printf("%s. Reached the limit %s! Breaking!\n\n", n, numRuns);
@@ -461,7 +474,7 @@ public class Folds {
 	 * @param targetMentions
 	 * @return
 	 */
-	public static Collection<SentenceInstance> getSentenceInstancesByNumOfMentions(List<SentenceInstance> insts, int targetMentions) {
+	public static Collection<SentenceInstance> getSentenceInstancesByNumOfMentions(String instsTitle, List<SentenceInstance> insts, int targetMentions) {
 		List<SentenceInstance> pool = Lists.newArrayList(insts);
 		List<SentenceInstance> result = Utils.sample2AndRemoveSafe(pool, targetMentions);
 		List<SentenceInstance> toAdd, toRemove, toRemoveCopy = null;
@@ -470,7 +483,7 @@ public class Folds {
 		int iters = 1;
 		final int MAX_ITERS = 2000;
 		
-		System.out.printf("%s Folds.SIBNO(|%s|,target=%s): [%s,%s]", Utils.detailedLog(), insts.size(), targetMentions, result.size(), mentions);
+		System.out.printf("%s Folds.SIBNO(|%s|=%s,target=%s): [%s,%s]", Utils.detailedLog(), instsTitle, insts.size(), targetMentions, result.size(), mentions);
 		// Zig-zagging!!!
 		if (mentions<targetMentions) {
 			while (mentions<targetMentions) {
@@ -539,8 +552,8 @@ public class Folds {
 			}			
 		}
 		
-		System.out.printf("\n%s         From |insts|=%s, target=%s, in %s iterations we got to |resultInsts|=%s, mentions=%s\n",
-				Utils.detailedLog(), insts.size(), targetMentions, iters, result.size(), mentions);
+		System.out.printf("\n%s         From |%s|=%s, target=%s, in %s iterations we got to |resultInsts|=%s, mentions=%s\n",
+				Utils.detailedLog(), instsTitle, insts.size(), targetMentions, iters, result.size(), mentions);
 		return result;
 	}
 	

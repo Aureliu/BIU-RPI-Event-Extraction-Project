@@ -322,9 +322,9 @@ public class Utils {
 		return result;
 	}
 	
-	public static void outputSentenceInstanceList(String title, Multimap<Document, SentenceInstance> mapDocInsts, Collection<SentenceInstance> insts, int numMentions, Multimap<String, AceEventMention> mentionByType) {
+	public static void outputSentenceInstanceList(String title, Collection<Document> docs, Collection<SentenceInstance> insts, int numMentions, Multimap<String, AceEventMention> mentionByType) {
 		System.out.printf("Built final list of SentenceInstances (%s): %d Documents, %d SentenceInstances, %d event mentions:\n\t\t",
-				title, mapDocInsts.keySet().size(), insts.size(), numMentions);
+				title, docs.size(), insts.size(), numMentions);
 		for (Entry<String, Collection<AceEventMention>> entry : mentionByType.asMap().entrySet()) {
 			System.out.printf("%s: %d mentions\t", entry.getKey(), entry.getValue().size());
 		}

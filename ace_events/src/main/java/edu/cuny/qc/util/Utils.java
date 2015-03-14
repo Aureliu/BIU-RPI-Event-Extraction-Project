@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.AbstractMap;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
@@ -313,11 +314,33 @@ public class Utils {
 	}
 	
 	public static List<Integer> stringToIntList(String input, String delimeter) {
+		if (input.equalsIgnoreCase("null")) {
+			return null;
+		}
 		String[] split = input.split(delimeter);
 		List<Integer> result = Lists.newArrayListWithCapacity(split.length);
 		for (String s : split) {
 			int num = Integer.parseInt(s);
 			result.add(num);
+		}
+		return result;
+	}
+	
+	public static List<Entry<Integer,Integer>> stringToIntPairList(String input, String betweenPairsDelimiter, String inPairDelimiter) {
+		if (input.equalsIgnoreCase("null")) {
+			return null;
+		}
+		String[] split = input.split(betweenPairsDelimiter);
+		List<Entry<Integer,Integer>> result = Lists.newArrayListWithCapacity(split.length);
+		for (String s : split) {
+			String[] s2 = s.split(inPairDelimiter);
+			if (s2.length != 2) {
+				throw new IllegalArgumentException("List must be of tuples-size-2 (pairs), got size " + s2.length + " in: " + s); 
+			}
+			Integer first = Integer.parseInt(s2[0]);
+			Integer second = Integer.parseInt(s2[1]);
+			Entry<Integer,Integer> pair = new AbstractMap.SimpleEntry<Integer,Integer>(first, second);
+			result.add(pair);
 		}
 		return result;
 	}

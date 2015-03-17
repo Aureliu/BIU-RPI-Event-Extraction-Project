@@ -272,13 +272,13 @@ public class Folds {
 							BigDecimal restrictAmount = (restrictAmountInput.equals(MAGIC_NO_AMOUNT_RESTRICTION)) ? allMentionsBD : restrictAmountInput;
 							
 							//chooseFromDev = restrictProportion * restrictAmount
-							int chooseFromDev = Utils.round(restrictProportion.multiply(restrictAmount));
+							int chooseFromDev = Utils.roundUp(restrictProportion.multiply(restrictAmount));
 							
 							//chooseFromTrain = (1 - restrictProportion) * restrictAmount
-							int chooseFromTrain = Utils.round(BigDecimal.ONE.subtract(restrictProportion).multiply(restrictAmount));
+							int chooseFromTrain = Utils.roundDown(BigDecimal.ONE.subtract(restrictProportion).multiply(restrictAmount));
 							
-							System.out.printf("%s chooseFromDev=prop(%s)*amount(%s)=%s chooseFromTrain=(1-prop)*amount=%s\n",
-									Utils.detailedLog(), restrictProportion, restrictAmount, chooseFromDev, chooseFromTrain);
+							System.out.printf("%s chooseFromDev=prop(%s)*amount(%s)=%s chooseFromTrain=(1-prop)*amount=%s chooseFromDev+chooseFromTrain=%s\n",
+									Utils.detailedLog(), restrictProportion, restrictAmount, chooseFromDev, chooseFromTrain, chooseFromDev+chooseFromTrain);
 							
 							// Do some verifications and adjustments on "choose" vals
 							if (!restrictAmountInput.equals(MAGIC_NO_AMOUNT_RESTRICTION)) {
@@ -295,14 +295,14 @@ public class Folds {
 							}
 							else {
 								if (chooseFromTrain>trainMentions) {
-									int newChooseFromDev = Utils.round(trainMentionsBD.multiply(restrictProportion).divide(BigDecimal.ONE.subtract(restrictProportion), MathContext.DECIMAL128));
+									int newChooseFromDev = Utils.roundUp(trainMentionsBD.multiply(restrictProportion).divide(BigDecimal.ONE.subtract(restrictProportion), MathContext.DECIMAL128));
 									System.out.printf("%s Shrinking chooseFromTrain from %s to %s (==trainMentions) and chooseFromDev from %s to %s, since restrictProportion=%s\n",
 											Utils.detailedLog(), chooseFromTrain, trainMentions, chooseFromDev, newChooseFromDev, restrictProportion);
 									chooseFromTrain = trainMentions;
 									chooseFromDev = newChooseFromDev;
 								}
 								else if (chooseFromDev>devMentions) {
-									int newChooseFromTrain = Utils.round(devMentionsBD.multiply(BigDecimal.ONE.subtract(restrictProportion)).divide(restrictProportion, MathContext.DECIMAL128));
+									int newChooseFromTrain = Utils.roundDown(devMentionsBD.multiply(BigDecimal.ONE.subtract(restrictProportion)).divide(restrictProportion, MathContext.DECIMAL128));
 									System.out.printf("%s Shrinking chooseFromDev from %s to %s (==devMentions) and chooseFromTrain from %s to %s, since restrictProportion=%s\n",
 											Utils.detailedLog(), chooseFromDev, devMentions, chooseFromTrain, newChooseFromTrain, restrictProportion);
 									chooseFromTrain = newChooseFromTrain;

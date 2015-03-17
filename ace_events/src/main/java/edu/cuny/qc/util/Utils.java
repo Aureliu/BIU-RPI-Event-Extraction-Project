@@ -306,9 +306,22 @@ public class Utils {
 	 * @param n
 	 * @return
 	 */
-	public static int round(BigDecimal n) {
+	public static int roundUp(BigDecimal n) {
+		return round(n, RoundingMode.HALF_UP);
+	}
+	
+	/**
+	 * Same as {@link #roundUp}, but with HALF_DOWN. 
+	 * @param n
+	 * @return
+	 */
+	public static int roundDown(BigDecimal n) {
+		return round(n, RoundingMode.HALF_DOWN);
+	}
+	
+	private static int round(BigDecimal n, RoundingMode mode) {
 		// Implementation inspired by: http://stackoverflow.com/a/4134135
-		BigDecimal scaled = n.setScale(0,  RoundingMode.HALF_UP);
+		BigDecimal scaled = n.setScale(0,  mode);
 		int result = scaled.intValueExact();
 		return result;
 	}

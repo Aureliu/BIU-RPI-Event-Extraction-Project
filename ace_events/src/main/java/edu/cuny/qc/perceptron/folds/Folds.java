@@ -863,7 +863,7 @@ public class Folds {
 			testStats.calc();
 			testStats.printFullOutput(scoreFile);
 
-			logs.logRun(r, run, scores, testStats, runTest.values());
+			logs.logRun(r, run, scores, testStats, runTest.values(), perceptron);
 
 			if (!runTest.isEmpty() && controller.doErrorAnalysis) {
 				String[] errorAnalysisArgs = new String[] { CORPUS_DIR, runDir,

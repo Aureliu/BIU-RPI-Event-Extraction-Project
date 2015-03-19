@@ -456,7 +456,7 @@ public class Perceptron implements java.io.Serializable
 		{
 			// converge
 			System.out.println(Utils.detailedLog() + " converge in iter " + iter + "\t time:" + totalTime);
-			lastDevIter = String.format("BestDev(iter=%s, converged)", result.dev.bestScore.iteration);
+			lastDevIter =   String.format("BestDev  (iter=%s, converged)", result.dev.bestScore.iteration);
 			lastTrainIter = String.format("BestTrain(iter=%s, converged)", result.train.bestScore.iteration);
 			iter++;
 		}
@@ -464,7 +464,7 @@ public class Perceptron implements java.io.Serializable
 		{
 			// stop without convergency
 			System.out.println(Utils.detailedLog() + " Stop without convergency" + "\t time:" + totalTime);
-			lastDevIter = String.format("BestDev(iter=%s, NO converge)", result.dev.bestScore.iteration);
+			lastDevIter =   String.format("BestDev  (iter=%s, NO converge)", result.dev.bestScore.iteration);
 			lastTrainIter = String.format("BestTrain(iter=%s, NO converge)", result.train.bestScore.iteration);
 		}
 		logs.printScore(pTrain, lastTrainIter, trainingList.size(), result.train.bestScore, true);

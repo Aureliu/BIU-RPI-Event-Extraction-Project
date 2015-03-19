@@ -213,6 +213,11 @@ public class Logs {
 				.replace("NodeLevelGlobalFeature: ","GN:").replace("SentLevelGlobalFeature: ","GS:").replace("TriggerLevelGlobalFeature: ","GT:");
 	}
 	
+	public static String equalsStr(FeatureVector fv1, FeatureVector fv2) {
+		boolean equals = fv1.getMap().equals(fv2.getMap());
+		return equals ? "True" : "False";
+	}
+	
 	public static String triggerLabel(String triggerLabel) {
 		final int MAX_CHARS_ONE_WORD = 5;
 		final int MAX_CHARS_MULTI_WORDS = 3;
@@ -600,9 +605,15 @@ public class Logs {
 					"TestEvents", //"List",
 					//"", //"Types",
 					"", //"Sentences",
-					"" //"Mentions"
+					"", //"Mentions"
 //					"", //"ArgCands"
 //					"" //"Args"
+					"Weights", //"Train"
+					"", //"Dev"
+					"", //"Perceptron"
+					"", //"Train=Dev"
+					"", //"Train=Perceptron"
+					"" //"Dev=Perceptron"
 			);
 			Utils.print(r, "", "\n", "|", null, "");
 			Utils.print(r, "", "\n", "|", null,
@@ -671,9 +682,15 @@ public class Logs {
 					"List",
 					//"Types",
 					"Sentences",
-					"Mentions"
+					"Mentions",
 //					"ArgCands",
 //					"Args"
+					"Train",
+					"Dev",
+					"Perceptron",
+					"Train=Dev",
+					"Train=Perceptron",
+					"Dev=Perceptron"
 			);
 
 			return r;
@@ -1020,7 +1037,7 @@ public class Logs {
 		}
 	}
 	
-	public void logRun(PrintStream r, Run run, AllTrainingScores scores, Stats testStats, Collection<SentenceInstance> runTest) throws CASException {
+	public void logRun(PrintStream r, Run run, AllTrainingScores scores, Stats testStats, Collection<SentenceInstance> runTest, Perceptron perceptron) throws CASException {
 		if (controller.logLevel >= LEVEL_R) {
 //			int trainEventMentions = SentenceInstance.getNumEventMentions(runTrain);
 //			int devEventMentions = SentenceInstance.getNumEventMentions(runDev);
@@ -1119,9 +1136,15 @@ public class Logs {
 					SpecAnnotator.getSpecLabel(run.testEvent),//"List",
 					//testTypes.size(),//"Types",
 					runTest.size(),//"Sentences",
-					testEventMentions//"Mentions",
+					testEventMentions,//"Mentions",
 //					testArgCandMentions,//"ArgCands"
 //					testArgsMentions//"Args"
+					values(scores.train.bestAvgWeights),
+					values(scores.dev.bestAvgWeights),
+					values(perceptron.avg_weights),
+					equalsStr(scores.train.bestAvgWeights, scores.dev.bestAvgWeights),
+					equalsStr(scores.train.bestAvgWeights, perceptron.avg_weights),
+					equalsStr(scores.dev.bestAvgWeights, perceptron.avg_weights)
 			);		
 		}
 	}

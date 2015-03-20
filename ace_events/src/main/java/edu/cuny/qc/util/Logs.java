@@ -214,6 +214,12 @@ public class Logs {
 	}
 	
 	public static String equalsStr(FeatureVector fv1, FeatureVector fv2) {
+		if (fv1 == null && fv2 == null) {
+			return "BothNull";
+		}
+		else if (fv1 == null || fv2 == null) {
+			return "OneNull";
+		}
 		boolean equals = fv1.getMap().equals(fv2.getMap());
 		return equals ? "True" : "False";
 	}

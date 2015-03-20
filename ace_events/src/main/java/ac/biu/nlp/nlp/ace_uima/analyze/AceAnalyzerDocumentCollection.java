@@ -68,7 +68,7 @@ public class AceAnalyzerDocumentCollection extends StatsDocumentCollection {
 	}
 	
 	
-	public final static boolean USE_PASTA = true;
+	public final static boolean USE_PASTA = false;
 	
 	// The documents
 	
@@ -78,6 +78,8 @@ public class AceAnalyzerDocumentCollection extends StatsDocumentCollection {
 					"folder", "category", "docId", "EventSubType"
 			}),
 			new LinkedHashMap<FieldName,StatsFieldType>() {{
+				put(new FieldName("Seeds", ""), StatsFieldType.CONST);
+
 				put(new FieldName("NumSentences", ""), StatsFieldType.COUNT_INT);
 				put(new FieldName("SentenceCovered", ""), StatsFieldType.COUNT_DOUBLE);
 
@@ -104,7 +106,9 @@ public class AceAnalyzerDocumentCollection extends StatsDocumentCollection {
 				put(new FieldName("Roles", ""), StatsFieldType.LIST_COUNTS);
 				
 				put(new FieldName("Anchor", ""), StatsFieldType.LIST_COUNTS);
+				put(new FieldName("Anchor", "UniqueCount"), StatsFieldType.COUNT_UNIQUE);
 				put(new FieldName("Anchor", "Lemmas"), StatsFieldType.LIST_COUNTS);
+				put(new FieldName("Anchor", "LemmasUniqueCount"), StatsFieldType.COUNT_UNIQUE);
 				put(new FieldName("Anchor", "Tokens"), StatsFieldType.COUNT_INT);
 				put(new FieldName("Anchor", "Tokens2"), StatsFieldType.LIST_COUNTS);
 				put(new FieldName("Anchor", "SpecPOS"), StatsFieldType.LIST_COUNTS);

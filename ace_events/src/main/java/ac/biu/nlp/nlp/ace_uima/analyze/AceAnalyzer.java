@@ -25,6 +25,7 @@ import org.apache.commons.collections15.BidiMap;
 import org.apache.commons.collections15.MultiMap;
 import org.apache.commons.collections15.bidimap.DualHashBidiMap;
 import org.apache.commons.collections15.multimap.MultiHashMap;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.text.WordUtils;
 import org.apache.log4j.Appender;
 import org.apache.log4j.FileAppender;
@@ -70,12 +71,17 @@ import ac.biu.nlp.nlp.ace_uima.utils.AnotherBasicNodeUtils;
 import ac.biu.nlp.nlp.ace_uima.utils.FinalHashMap;
 import ac.biu.nlp.nlp.ace_uima.utils.IgnoreNullFinalHashMap;
 import ac.biu.nlp.nlp.ie.onthefly.input.AnnotationUtils;
+import ac.biu.nlp.nlp.ie.onthefly.input.SpecHandler;
+import ac.biu.nlp.nlp.ie.onthefly.input.TypesContainer;
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateSeed;
 import de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS;
 import de.tudarmstadt.ukp.dkpro.core.api.metadata.type.DocumentMetaData;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
 import edu.cuny.qc.ace.acetypes.AceArgumentType;
 import edu.cuny.qc.ace.acetypes.AceEntityMention;
+import edu.cuny.qc.perceptron.core.Controller;
+import edu.cuny.qc.perceptron.core.Perceptron;
 import edu.cuny.qc.scorer.mechanism.WordNetSignalMechanism;
 import edu.cuny.qc.util.PosMap;
 import edu.cuny.qc.util.TreeToLineString;
@@ -132,7 +138,7 @@ import eu.excitementproject.eop.common.representation.parse.tree.dependency.view
  */
 public class AceAnalyzer {
 
-	protected void analyzeOneJcas(JCas jcas) throws Exception {
+	protected void analyzeOneJcas(JCas jcas, TypesContainer container) throws Exception {
 		DocumentMetaData meta = JCasUtil.selectSingle(jcas, DocumentMetaData.class);
 		String folder = meta.getCollectionId();
 		String docId = meta.getDocumentId();
@@ -240,6 +246,14 @@ public class AceAnalyzer {
 		docs.updateDocs(key, "NumSentences", "", JCasUtil.select(jcas, Sentence.class).size());
 		docs.updateDocs(key, "SentenceCovered", "", getSentenceCoveredChars(jcas));
 
+		// Spec sizes!
+		for (Entry<String, JCas> entry : container.namedSpecs.entrySet()) {
+			key.put("EventSubType", entry.getKey());
+			JCas spec = entry.getValue();
+			docs.updateDocs(key, "Seeds", "", JCasUtil.select(spec, PredicateSeed.class).size());
+		}
+		key.put("EventSubType", StatsDocument.ANY);
+
 		for (Event event : JCasUtil.select(jcas, Event.class)) {
 			//TODO debug
 			//long size = ObjectSizeFetcher.getObjectSize(docs);
@@ -277,7 +291,9 @@ public class AceAnalyzer {
 				}
 				else {				
 					docs.updateDocs(key, "Anchor", "", getText(eventAnchor));
+					docs.updateDocs(key, "Anchor", "UniqueCount", getText(eventAnchor));
 					docs.updateDocs(key, "Anchor", "Lemmas", getLemmas(eventAnchor));						
+					docs.updateDocs(key, "Anchor", "LemmasUniqueCount", getLemmas(eventAnchor));						
 					docs.updateDocs(key, "Anchor", "Tokens", getNumTokens(eventAnchor));						
 					docs.updateDocs(key, "Anchor", "Tokens2", getNumTokens(eventAnchor).toString());						
 					docs.updateDocs(key, "Anchor", "SpecPOS", getSpecificPosString(eventAnchor));						
@@ -309,125 +325,128 @@ public class AceAnalyzer {
 					//logger.info("*****@@ Size: " + ObjectSizeFetcher.getObjectSize(docs) + " bytes");
 				}
 				
-				for (EventMentionArgument argMention : JCasUtil.select(mention.getEventMentionArguments(), EventMentionArgument.class)) {
-					key.put("Role", argMention.getRole());
-					key.put("ArgType", argMention.getArgMention().getArg().getType().getShortName());
-
-					/**
-					 * This entire block of code was originally under iterating events.
-					 * But I realized it counted wrong, since the same argument mention could appear
-					 * in several event mentions, so it would be wrongly counted multiple time.
-					 * This is the correct way - iterate through argument mentions directly.
-					 * UPDATE: I moved it back here, since we need "Role", which only exists in the context of an event.
-					 * So yes, the counts here stay wrong (or let's just call them "different" :) )
-					 */
-					BasicArgumentMention arg = argMention.getArgMention();
-					docs.updateDocs(key, "Argument", "SpecType", getSpecType(argMention.getArgMention()));					
-					
-					BasicArgumentMentionExtent argExtent = arg.getExtent();
-					if (Utils.selectCoveredByIndex(jcas, Token.class, argExtent.getBegin(), argExtent.getEnd(), fragmentLayer.tokenIndex).values().isEmpty()) {
-						logger.warn(String.format("Event argument extent '%s'[%s:%s] not covered by Sentence",
-								argExtent.getCoveredText(), argExtent.getBegin(), argExtent.getEnd()));
-					}
-					else {
-						BasicArgumentMentionHead argHead = getHead(arg);
-						
-						docs.updateDocs(key, "ArgExtent", "", getText(argExtent));						
-						docs.updateDocs(key, "ArgExtent", "Tokens", getNumTokens(argExtent));						
-						docs.updateDocs(key, "ArgExtent", "Lemmas", getLemmas(argExtent));						
-						docs.updateDocs(key, "ArgExtent", "Sentences", getNumSentences(argExtent, fragmentLayer.tokenIndex));						
-						docs.updateDocs(key, "ArgExtent", "SpecPOS", getSpecificPosString(argExtent));						
-						docs.updateDocs(key, "ArgExtent", "GenPOS", getGeneralPosString(argExtent));
-						docs.updateDocs(key, "ArgExtent", "TokenSpecPOS", getTokenAndSpecificPosString(argExtent));				
-						docs.updateDocs(key, "ArgExtent", "LemmaSpecPOS", getLemmaAndSpecificPosString(argExtent));				
-						docs.updateDocs(key, "ArgExtent", "TokenGenPOS", getTokenAndGeneralPosString(argExtent));				
-						
-						docs.updateDocs(key, "ArgHead", "", getText(argHead));						
-						docs.updateDocs(key, "ArgHead", "Lemmas", getLemmas(argHead));						
-						docs.updateDocs(key, "ArgHead", "Tokens", getNumTokens(argHead));						
-						docs.updateDocs(key, "ArgHead", "Tokens2", getNumTokens(argHead).toString());						
-						docs.updateDocs(key, "ArgHead", "SpecPOS", getSpecificPosString(argHead));						
-						docs.updateDocs(key, "ArgHead", "GenPOS", getGeneralPosString(argHead));
-						docs.updateDocs(key, "ArgHead", "TokenSpecPOS", getTokenAndSpecificPosString(argHead));				
-						docs.updateDocs(key, "ArgHead", "LemmaSpecPOS", getLemmaAndSpecificPosString(argHead));				
-						docs.updateDocs(key, "ArgHead", "TokenGenPOS", getTokenAndGeneralPosString(argHead));				
-						docs.updateDocs(key, "ArgHead", "SpecType", getSpecTypeTextEntry(argHead));					
+				// This is definitely not the correct usage of this boolean, I just don't have the energies ot do it properly, I just need to get rid of some exception that firing
+				if (USE_ARGS) {
+					for (EventMentionArgument argMention : JCasUtil.select(mention.getEventMentionArguments(), EventMentionArgument.class)) {
+						key.put("Role", argMention.getRole());
+						key.put("ArgType", argMention.getArgMention().getArg().getType().getShortName());
 	
-						List<BasicNode> argHeadFrag = fragmentLayer.getTreeFragments(argHead);
-						docs.updateDocs(key, "ArgHead", "Dep", TreeToLineString.getStringRel(argHeadFrag, true, true));						
-						docs.updateDocs(key, "ArgHead", "DepToken", TreeToLineString.getStringWordRel(argHeadFrag, true, true));						
-						docs.updateDocs(key, "ArgHead", "DepGenPOS", TreeToLineString.getStringRelCanonicalPos(argHeadFrag, true, true));						
-						docs.updateDocs(key, "ArgHead", "DepSpecPOS", TreeToLineString.getStringRelPos(argHeadFrag, true, true));
-						updateLinkingTreeFrags(key, eventAnchor, argHead, argMention, docId, "Link",
-								"Dep", "DepPrep", "DepGenPOS", "DepPrepGenPOS", "DepSpecPOS", "DepPrepSpecPOS",
-								"DepFlat", "DepFlatPrep", "DepFlatGenPOS", "DepFlatPrepGenPOS", "DepFlatSpecPOS", "DepFlatPrepSpecPOS",
-								true, true);
-						updateLinkingTreeFrags(key, eventAnchor, argHead, argMention, docId, "Link",
-								"*Dep", "*DepPrep", "*DepGenPOS", "*DepPrepGenPOS", "*DepSpecPOS", "*DepPrepSpecPOS",
-								"*DepFlat", "*DepFlatPrep", "*DepFlatGenPOS", "*DepFlatPrepGenPOS", "*DepFlatSpecPOS", "*DepFlatPrepSpecPOS",
-								false, true);
-
-						if (argHead!=null) {
-							String specTypeStr = getSpecType(argHead.getMention());
-							if (!specTypeStr.equals("(null)")) {
-								docs.updateDocs(key, "ArgHead", specTypeStr, getText(argHead));					
-							}
-						}
-						addDetails("ArgHead.GenPos_" + getGeneralPosString(argHead), getText(argHead) + ": " + getText(argExtent));
+						/**
+						 * This entire block of code was originally under iterating events.
+						 * But I realized it counted wrong, since the same argument mention could appear
+						 * in several event mentions, so it would be wrongly counted multiple time.
+						 * This is the correct way - iterate through argument mentions directly.
+						 * UPDATE: I moved it back here, since we need "Role", which only exists in the context of an event.
+						 * So yes, the counts here stay wrong (or let's just call them "different" :) )
+						 */
+						BasicArgumentMention arg = argMention.getArgMention();
+						docs.updateDocs(key, "Argument", "SpecType", getSpecType(argMention.getArgMention()));					
 						
-						for (BasicArgumentMention concreteMention : getConcreteArgumentMentions(arg)) {
-							BasicArgumentMentionHead concreteHead = getHead(concreteMention);
-							BasicArgumentMentionExtent concreteExtent = concreteMention.getExtent();
-							docs.updateDocs(key, "ConcreteArgHead", "", getText(concreteHead));						
-							docs.updateDocs(key, "ConcreteArgHead", "Lemmas", getLemmas(concreteHead));						
-							docs.updateDocs(key, "ConcreteArgHead", "Tokens", getNumTokens(concreteHead));						
-							docs.updateDocs(key, "ConcreteArgHead", "Tokens2", getNumTokens(concreteHead).toString());						
-							docs.updateDocs(key, "ConcreteArgHead", "SpecPOS", getSpecificPosString(concreteHead));						
-							docs.updateDocs(key, "ConcreteArgHead", "GenPOS", getGeneralPosString(concreteHead));
-							docs.updateDocs(key, "ConcreteArgHead", "TokenSpecPOS", getTokenAndSpecificPosString(concreteHead));				
-							docs.updateDocs(key, "ConcreteArgHead", "LemmaSpecPOS", getLemmaAndSpecificPosString(concreteHead));				
-							docs.updateDocs(key, "ConcreteArgHead", "TokenGenPOS", getTokenAndGeneralPosString(concreteHead));				
-							docs.updateDocs(key, "ConcreteArgHead", "SpecType", getSpecTypeTextEntry(concreteHead));
-
-							if (concreteHead!=null) {
-								String specTypeStr = getSpecType(concreteHead.getMention());
+						BasicArgumentMentionExtent argExtent = arg.getExtent();
+						if (Utils.selectCoveredByIndex(jcas, Token.class, argExtent.getBegin(), argExtent.getEnd(), fragmentLayer.tokenIndex).values().isEmpty()) {
+							logger.warn(String.format("Event argument extent '%s'[%s:%s] not covered by Sentence",
+									argExtent.getCoveredText(), argExtent.getBegin(), argExtent.getEnd()));
+						}
+						else {
+							BasicArgumentMentionHead argHead = getHead(arg);
+							
+							docs.updateDocs(key, "ArgExtent", "", getText(argExtent));						
+							docs.updateDocs(key, "ArgExtent", "Tokens", getNumTokens(argExtent));						
+							docs.updateDocs(key, "ArgExtent", "Lemmas", getLemmas(argExtent));						
+							docs.updateDocs(key, "ArgExtent", "Sentences", getNumSentences(argExtent, fragmentLayer.tokenIndex));						
+							docs.updateDocs(key, "ArgExtent", "SpecPOS", getSpecificPosString(argExtent));						
+							docs.updateDocs(key, "ArgExtent", "GenPOS", getGeneralPosString(argExtent));
+							docs.updateDocs(key, "ArgExtent", "TokenSpecPOS", getTokenAndSpecificPosString(argExtent));				
+							docs.updateDocs(key, "ArgExtent", "LemmaSpecPOS", getLemmaAndSpecificPosString(argExtent));				
+							docs.updateDocs(key, "ArgExtent", "TokenGenPOS", getTokenAndGeneralPosString(argExtent));				
+							
+							docs.updateDocs(key, "ArgHead", "", getText(argHead));						
+							docs.updateDocs(key, "ArgHead", "Lemmas", getLemmas(argHead));						
+							docs.updateDocs(key, "ArgHead", "Tokens", getNumTokens(argHead));						
+							docs.updateDocs(key, "ArgHead", "Tokens2", getNumTokens(argHead).toString());						
+							docs.updateDocs(key, "ArgHead", "SpecPOS", getSpecificPosString(argHead));						
+							docs.updateDocs(key, "ArgHead", "GenPOS", getGeneralPosString(argHead));
+							docs.updateDocs(key, "ArgHead", "TokenSpecPOS", getTokenAndSpecificPosString(argHead));				
+							docs.updateDocs(key, "ArgHead", "LemmaSpecPOS", getLemmaAndSpecificPosString(argHead));				
+							docs.updateDocs(key, "ArgHead", "TokenGenPOS", getTokenAndGeneralPosString(argHead));				
+							docs.updateDocs(key, "ArgHead", "SpecType", getSpecTypeTextEntry(argHead));					
+		
+							List<BasicNode> argHeadFrag = fragmentLayer.getTreeFragments(argHead);
+							docs.updateDocs(key, "ArgHead", "Dep", TreeToLineString.getStringRel(argHeadFrag, true, true));						
+							docs.updateDocs(key, "ArgHead", "DepToken", TreeToLineString.getStringWordRel(argHeadFrag, true, true));						
+							docs.updateDocs(key, "ArgHead", "DepGenPOS", TreeToLineString.getStringRelCanonicalPos(argHeadFrag, true, true));						
+							docs.updateDocs(key, "ArgHead", "DepSpecPOS", TreeToLineString.getStringRelPos(argHeadFrag, true, true));
+							updateLinkingTreeFrags(key, eventAnchor, argHead, argMention, docId, "Link",
+									"Dep", "DepPrep", "DepGenPOS", "DepPrepGenPOS", "DepSpecPOS", "DepPrepSpecPOS",
+									"DepFlat", "DepFlatPrep", "DepFlatGenPOS", "DepFlatPrepGenPOS", "DepFlatSpecPOS", "DepFlatPrepSpecPOS",
+									true, true);
+							updateLinkingTreeFrags(key, eventAnchor, argHead, argMention, docId, "Link",
+									"*Dep", "*DepPrep", "*DepGenPOS", "*DepPrepGenPOS", "*DepSpecPOS", "*DepPrepSpecPOS",
+									"*DepFlat", "*DepFlatPrep", "*DepFlatGenPOS", "*DepFlatPrepGenPOS", "*DepFlatSpecPOS", "*DepFlatPrepSpecPOS",
+									false, true);
+	
+							if (argHead!=null) {
+								String specTypeStr = getSpecType(argHead.getMention());
 								if (!specTypeStr.equals("(null)")) {
-									docs.updateDocs(key, "ConcreteArgHead", specTypeStr, getText(concreteHead));					
-								}
-								
-								if (concreteMention instanceof EntityMention) {
-									EntityMention concreteEntityMention = (EntityMention) concreteMention;
-									Collection<Token> headTokens = JCasUtil.selectCovered(Token.class, concreteHead);
-									String textCase = getCase(concreteHead); 
-									if (concreteEntityMention.getTYPE().equalsIgnoreCase("NAM")) { //Proper noun
-										docs.updateDocs(key, "PROPER", "", Integer.toString(headTokens.size()));
-										if (headTokens.size() > 1) { // multiple tokens
-											Token headToken = getHeadToken(concreteHead);
-											String headTokenCase = getCase(headToken);
-											addConcreteHeadStats(key, headTokens.size(), "PR,Multi", textCase, concreteHead, headTokenCase, headToken);
-										}
-										else if (headTokens.size() == 1) { // single token
-											Token singleToken = eu.excitementproject.eop.common.utilities.uima.UimaUtils.selectCoveredSingle(jcas, Token.class, concreteHead);
-											String singleTokenCase = getCase(singleToken);
-											addConcreteHeadStats(key, headTokens.size(), "PR,Single", textCase, concreteHead, singleTokenCase, singleToken);
-										}
-									}
-									else { // TYPE=NOM, Common noun
-										docs.updateDocs(key, "COMMON", "", Integer.toString(headTokens.size()));
-										if (headTokens.size() > 1) { // multiple tokens
-											docs.updateDocs(key, "CO,Multi", "", new SimpleEntry<String, String>(textCase, concreteHead.getCoveredText()));
-										}
-										else if (headTokens.size() == 1) { // single token
-											Token singleToken = eu.excitementproject.eop.common.utilities.uima.UimaUtils.selectCoveredSingle(jcas, Token.class, concreteHead);
-											String singleTokenCase = getCase(singleToken);
-											addConcreteHeadStats(key, headTokens.size(), "CO,Single", textCase, concreteHead, singleTokenCase, singleToken);
-										}
-									}
+									docs.updateDocs(key, "ArgHead", specTypeStr, getText(argHead));					
 								}
 							}
-							addDetails("ConcreteArgHead.GenPos_" + getGeneralPosString(concreteHead), getText(concreteHead) + ": " + getText(concreteExtent));
+							addDetails("ArgHead.GenPos_" + getGeneralPosString(argHead), getText(argHead) + ": " + getText(argExtent));
 							
-							
+							for (BasicArgumentMention concreteMention : getConcreteArgumentMentions(arg)) {
+								BasicArgumentMentionHead concreteHead = getHead(concreteMention);
+								BasicArgumentMentionExtent concreteExtent = concreteMention.getExtent();
+								docs.updateDocs(key, "ConcreteArgHead", "", getText(concreteHead));						
+								docs.updateDocs(key, "ConcreteArgHead", "Lemmas", getLemmas(concreteHead));						
+								docs.updateDocs(key, "ConcreteArgHead", "Tokens", getNumTokens(concreteHead));						
+								docs.updateDocs(key, "ConcreteArgHead", "Tokens2", getNumTokens(concreteHead).toString());						
+								docs.updateDocs(key, "ConcreteArgHead", "SpecPOS", getSpecificPosString(concreteHead));						
+								docs.updateDocs(key, "ConcreteArgHead", "GenPOS", getGeneralPosString(concreteHead));
+								docs.updateDocs(key, "ConcreteArgHead", "TokenSpecPOS", getTokenAndSpecificPosString(concreteHead));				
+								docs.updateDocs(key, "ConcreteArgHead", "LemmaSpecPOS", getLemmaAndSpecificPosString(concreteHead));				
+								docs.updateDocs(key, "ConcreteArgHead", "TokenGenPOS", getTokenAndGeneralPosString(concreteHead));				
+								docs.updateDocs(key, "ConcreteArgHead", "SpecType", getSpecTypeTextEntry(concreteHead));
+	
+								if (concreteHead!=null) {
+									String specTypeStr = getSpecType(concreteHead.getMention());
+									if (!specTypeStr.equals("(null)")) {
+										docs.updateDocs(key, "ConcreteArgHead", specTypeStr, getText(concreteHead));					
+									}
+									
+									if (concreteMention instanceof EntityMention) {
+										EntityMention concreteEntityMention = (EntityMention) concreteMention;
+										Collection<Token> headTokens = JCasUtil.selectCovered(Token.class, concreteHead);
+										String textCase = getCase(concreteHead); 
+										if (concreteEntityMention.getTYPE().equalsIgnoreCase("NAM")) { //Proper noun
+											docs.updateDocs(key, "PROPER", "", Integer.toString(headTokens.size()));
+											if (headTokens.size() > 1) { // multiple tokens
+												Token headToken = getHeadToken(concreteHead);
+												String headTokenCase = getCase(headToken);
+												addConcreteHeadStats(key, headTokens.size(), "PR,Multi", textCase, concreteHead, headTokenCase, headToken);
+											}
+											else if (headTokens.size() == 1) { // single token
+												Token singleToken = eu.excitementproject.eop.common.utilities.uima.UimaUtils.selectCoveredSingle(jcas, Token.class, concreteHead);
+												String singleTokenCase = getCase(singleToken);
+												addConcreteHeadStats(key, headTokens.size(), "PR,Single", textCase, concreteHead, singleTokenCase, singleToken);
+											}
+										}
+										else { // TYPE=NOM, Common noun
+											docs.updateDocs(key, "COMMON", "", Integer.toString(headTokens.size()));
+											if (headTokens.size() > 1) { // multiple tokens
+												docs.updateDocs(key, "CO,Multi", "", new SimpleEntry<String, String>(textCase, concreteHead.getCoveredText()));
+											}
+											else if (headTokens.size() == 1) { // single token
+												Token singleToken = eu.excitementproject.eop.common.utilities.uima.UimaUtils.selectCoveredSingle(jcas, Token.class, concreteHead);
+												String singleTokenCase = getCase(singleToken);
+												addConcreteHeadStats(key, headTokens.size(), "CO,Single", textCase, concreteHead, singleTokenCase, singleToken);
+											}
+										}
+									}
+								}
+								addDetails("ConcreteArgHead.GenPos_" + getGeneralPosString(concreteHead), getText(concreteHead) + ": " + getText(concreteExtent));
+								
+								
+							}
 						}
 					}
 				}
@@ -1256,13 +1275,27 @@ public class AceAnalyzer {
 		testFileIds = FileUtils.loadFileToString(AceAnalyzer.class.getResource("/doclists/new_filelist_ACE_test.txt").getPath());
 	}
 	
-	public void analyzeFolder(String xmiFolderPath, String entityStatsOutputPath, String roleStatsOutputFile, String treeoutOutputFile, String detailedOutputFolderPath) throws Exception {
+	public void analyzeFolder(String xmiFolderPath, String entityStatsOutputPath, String roleStatsOutputFile, String treeoutOutputFile, String detailedOutputFolderPath, String specListPath) throws Exception {
 		
 		File detailedFolder = new File(detailedOutputFolderPath);
 		if (!detailedFolder.isDirectory()) {
 			throw new AceException("Directory " + detailedFolder + " does not exist");
 		}
-		
+
+		// Hackity hackity hackity hack!!!!
+		// And also you gotta make sure you already have all your specs processed from before. Just take them from the server or something. Baaaa.
+		// Oh, maybe since now I made sure the processed specs are here, then I don't nee some of these hacks :) Oh well....
+		String workdir = System.getProperty("user.dir");
+		System.setProperty("user.dir", "C:/Java/Git/breep/ace_events");
+		Perceptron.controllerStatic = new Controller();
+		Perceptron.controllerStatic.setValueFromArguments(StringUtils.split("easyFirstHost=127.0.0.1 easyFirstPort=8081 useArguments=false"));
+		TypesContainer types = null;
+		if (!specListPath.equalsIgnoreCase("null")) {
+			List<String> allSpecs = SpecHandler.readSpecListFile(new File(specListPath));
+			types = new TypesContainer(allSpecs, false);
+		}
+		System.setProperty("user.dir", workdir);
+
 		File folder = new File(xmiFolderPath);
 		File[] xmiFiles = folder.listFiles(new FileFilters.ExtFileFilter("xmi"));
 		if (xmiFiles == null) {
@@ -1273,7 +1306,7 @@ public class AceAnalyzer {
 		}
 		for (File xmi : xmiFiles) {
 			JCas jcas = UimaUtils.loadXmi(xmi, "/desc/DummyAE.xml");
-			analyzeOneJcas(jcas);
+			analyzeOneJcas(jcas, types);
 		}
 		
 		writeOutput(entityStatsOutputPath, roleStatsOutputFile, treeoutOutputFile, detailedOutputFolderPath);
@@ -1321,15 +1354,15 @@ public class AceAnalyzer {
 		
 	}
 	public static void main(String args[]) throws Exception {
-		if (args.length != 5) {
-			System.err.println("USAGE: AceAnalyzer <xmi input folder> <entity stats output file> <role stats output file> <treeout output file> <detailed output folder>");
+		if (args.length != 6) {
+			System.err.println("USAGE: AceAnalyzer <xmi input folder> <entity stats output file> <role stats output file> <treeout output file> <detailed output folder> <spec list>");
 			return;
 		}
 		//initLog();
 		File nomlexFile = new File("C:\\Java\\Git\\lab\\nlp-lab\\Trunk\\asher\\predargs\\src\\main\\resources\\nomlex\\nomlex-plus.txt");
 		File classRoleTableFile = new File("C:\\Java\\Git\\lab\\nlp-lab\\Trunk\\asher\\predargs\\src\\main\\resources\\nomlex\\ClassRoleTable.txt");
 		wordnet = new WordnetLexicalResource(WORDNET_DIR, WordNetSignalMechanism.ALL_RELATIONS_SMALL);
-		new AceAnalyzer(nomlexFile, classRoleTableFile).analyzeFolder(args[0], args[1], args[2], args[3], args[4]);
+		new AceAnalyzer(nomlexFile, classRoleTableFile).analyzeFolder(args[0], args[1], args[2], args[3], args[4], args[5]);
 	}
 	
 	protected AceAnalyzerDocumentCollection docs = new AceAnalyzerDocumentCollection();
@@ -1360,6 +1393,7 @@ public class AceAnalyzer {
 	public static File WORDNET_DIR = new File("C:/Java/git/breep/ace_events_large_resources/src/main/resources/data/Wordnet3.0");
 	private static WordnetLexicalResource wordnet;
 	
+	public static boolean USE_ARGS = false;
 
 	protected static Logger logger = Logger.getLogger(AceAnalyzer.class);
 }

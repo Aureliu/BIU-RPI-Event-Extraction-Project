@@ -22,6 +22,7 @@ import ac.biu.nlp.nlp.ace_uima.uima.EventMention;
 import ac.biu.nlp.nlp.ace_uima.uima.EventMentionAnchor;
 import ac.biu.nlp.nlp.ace_uima.uima.EventMentionArgument;
 import ac.biu.nlp.nlp.ace_uima.uima.EventMentionExtent;
+import ac.biu.nlp.nlp.ie.onthefly.input.TypesContainer;
 import de.tudarmstadt.ukp.dkpro.core.api.metadata.type.DocumentMetaData;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
@@ -47,7 +48,7 @@ public class AceFinder extends AceAnalyzer {
 	public AceFinder() {}
 	
 	@Override
-	protected void analyzeOneJcas(JCas jcas) throws StatsException, CASException, CasTreeConverterException, UnsupportedPosTagStringException, AceException, TreeAndParentMapException, TreeFragmentBuilderException, PredicateArgumentIdentificationException, FragmentLayerException {
+	protected void analyzeOneJcas(JCas jcas, TypesContainer container) throws StatsException, CASException, CasTreeConverterException, UnsupportedPosTagStringException, AceException, TreeAndParentMapException, TreeFragmentBuilderException, PredicateArgumentIdentificationException, FragmentLayerException {
 		final int MIN_ARGS = 4;
 		
 		DocumentMetaData meta = JCasUtil.selectSingle(jcas, DocumentMetaData.class);
@@ -112,7 +113,7 @@ public class AceFinder extends AceAnalyzer {
 			return;
 		}
 		initLog();
-		new AceFinder().analyzeFolder(args[0], null, null, null, args[1]);
+		new AceFinder().analyzeFolder(args[0], null, null, null, args[1], null);
 	}
 	private static Logger logger = Logger.getLogger(AceFinder.class);
 }

@@ -1,14 +1,11 @@
 package ac.biu.nlp.nlp.ace_uima.stats;
 
 import java.util.LinkedHashMap;
-import java.util.List;
 import java.util.Map.Entry;
 
-import edu.cuny.qc.perceptron.core.Evaluator.Score;
-
-import ac.biu.nlp.nlp.ace_uima.stats.SignalPerformanceField.TriggerSignalPerformanceField;
 import ac.biu.nlp.nlp.ace_uima.stats.SignalPerformanceField.ArgumentDependentSignalPerformanceField;
 import ac.biu.nlp.nlp.ace_uima.stats.SignalPerformanceField.ArgumentFreeSignalPerformanceField;
+import ac.biu.nlp.nlp.ace_uima.stats.SignalPerformanceField.TriggerSignalPerformanceField;
 
 public class StatsRow {
 
@@ -51,6 +48,7 @@ public class StatsRow {
 		case SUM_INT:						field = new SumIntField(name); break;
 		case CONST:							field = new ConstField(name); break;
 		case COUNT_DOUBLE:					field = new CountDoubleField(name); break;
+		case COUNT_UNIQUE:					field = new CountUniqueField(name); break;
 		case LIST_COUNTS:					field = new ListCountsField(name); break;
 		case LIST_VALUES:					field = new ListValuesField(name); break;
 		case SIGNAL_PERFORMANCE_TRIGGER:	field = new TriggerSignalPerformanceField(name); break;

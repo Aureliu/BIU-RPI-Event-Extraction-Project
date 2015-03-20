@@ -5,6 +5,7 @@ public enum StatsFieldType {
 	ENUM_SUM,
 	COUNT_INT,
 	COUNT_DOUBLE,
+	COUNT_UNIQUE,
 	LIST_COUNTS,
 	LIST_VALUES,
 	SUM_INT,

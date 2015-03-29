@@ -1,13 +1,8 @@
 <spec>
   <predicate>
-    <name>Start-Position</name>
+    <name>Execute</name>
     <seeds>
-      <seed>start office</seed>
-      <seed>hire</seed>
-      <seed>succeed</seed>
-      <seed>take over</seed>
-      <seed>appoint</seed>
-      <seed>become</seed>
+      <seed>executed</seed>
     </seeds>
   </predicate>
   <arguments>
@@ -18,14 +13,14 @@
       	<type>PER</type>
       </types>
       <examples>
-        <example>John D. Idol</example>
-        <example>he</example>
+        <example>Carruth</example>
       </examples>
     </argument>
     <argument>
-      <role>Entity</role>
-      <marker>ENT</marker>
+      <role>Agent</role>
+      <marker>AGT</marker>
       <types>
+      	<type>PER</type>
       	<type>ORG</type>
       	<type>GPE</type>
       </types>
@@ -33,14 +28,13 @@
       </examples>
     </argument>
     <argument>
-      <role>Position</role>
-      <marker>PST</marker>
+      <role>Crime</role>
+      <marker>CRM</marker>
       <types>
-      	<type>JOB</type>
+      	<type>CRIME</type>
       </types>
       <examples>
-        <example>Chief Executive</example>
-        <example>President</example>
+        <example>masterminding the shooting</example>
       </examples>
     </argument>
     <argument>
@@ -65,7 +59,6 @@
     </argument>
   </arguments>
   <usage_samples>
-    <sample src="orig">John D. Idol will take over as Chief Executive.</sample>
-    <sample src="orig_p">This was a demonstration of how he would behave if he were to become President.</sample>
- </usage_samples>
+    <sample src="orig">Carruth, 26, could be executed if convicted of masterminding the shooting.</sample>
+  </usage_samples>
 </spec>

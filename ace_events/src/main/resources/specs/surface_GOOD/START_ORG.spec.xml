@@ -1,14 +1,14 @@
 <spec>
   <predicate>
-    <name>Acquit</name>
+    <name>Start-Org</name>
     <seeds>
-      <seed>acquit</seed>
+      <seed>launched</seed>
     </seeds>
   </predicate>
   <arguments>
     <argument>
-      <role>Defendant</role>
-      <marker>DFN</marker>
+      <role>Agent</role>
+      <marker>AGT</marker>
       <types>
       	<type>PER</type>
       	<type>ORG</type>
@@ -18,21 +18,10 @@
       </examples>
     </argument>
     <argument>
-      <role>Adjudicator</role>
-      <marker>ADJ</marker>
+      <role>Org</role>
+      <marker>ORG</marker>
       <types>
-      	<type>PER</type>
       	<type>ORG</type>
-      	<type>GPE</type>
-      </types>
-      <examples>
-      </examples>
-    </argument>
-    <argument>
-      <role>Crime</role>
-      <marker>CRM</marker>
-      <types>
-      	<type>CRIME</type>
       </types>
       <examples>
       </examples>

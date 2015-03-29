@@ -2,11 +2,13 @@
   <predicate>
     <name>Start-Position</name>
     <seeds>
-      <seed>start office</seed>
+      <seed>hired</seed>
+      <!--seed>joined</seed-->
+      <seed>started office</seed>
       <seed>hire</seed>
-      <seed>succeed</seed>
+      <seed>succeeded</seed>
       <seed>take over</seed>
-      <seed>appoint</seed>
+      <seed>appointed</seed>
       <seed>become</seed>
     </seeds>
   </predicate>

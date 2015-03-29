@@ -2,13 +2,16 @@
   <predicate>
     <name>Transfer-Money</name>
     <seeds>
-      <seed>borrow</seed>
-      <seed>lend</seed>
-      <seed>give</seed>
-      <seed>donation</seed>
-      <seed>donate</seed>
+      <seed>borrowing</seed>
+      <seed>lending</seed>
+      <seed>giving</seed>
+      <seed>donations</seed>
+      <seed>borrowed</seed>
+      <seed>donated</seed>
       <seed>pay</seed>
       <seed>aid</seed>
+      <seed>give</seed>
+      <seed>paying</seed>
     </seeds>
   </predicate>
   <arguments>

@@ -1,40 +1,24 @@
 <spec>
   <predicate>
-    <name>Acquit</name>
+    <name>Demonstrate</name>
     <seeds>
-      <seed>acquit</seed>
+      <seed>walkout</seed>
+      <seed>rioting</seed>
+      <seed>strike</seed>
     </seeds>
   </predicate>
   <arguments>
     <argument>
-      <role>Defendant</role>
-      <marker>DFN</marker>
+      <role>Entity</role>
+      <marker>ENT</marker>
       <types>
       	<type>PER</type>
       	<type>ORG</type>
-      	<type>GPE</type>
       </types>
       <examples>
-      </examples>
-    </argument>
-    <argument>
-      <role>Adjudicator</role>
-      <marker>ADJ</marker>
-      <types>
-      	<type>PER</type>
-      	<type>ORG</type>
-      	<type>GPE</type>
-      </types>
-      <examples>
-      </examples>
-    </argument>
-    <argument>
-      <role>Crime</role>
-      <marker>CRM</marker>
-      <types>
-      	<type>CRIME</type>
-      </types>
-      <examples>
+        <example>John Robert Bond</example>
+        <example>crowd</example>
+        <example>union</example>
       </examples>
     </argument>
     <argument>
@@ -44,6 +28,7 @@
       	<type>TIME</type>
       </types>
       <examples>
+        <example>monday</example>
       </examples>
     </argument>
     <argument>
@@ -55,10 +40,12 @@
       	<type>FAC</type>
       </types>
       <examples>
+        <example>Capitol</example>
       </examples>
     </argument>
   </arguments>
   <usage_samples>
-    <sample src="orig">?</sample>
+    <sample src="orig">The rioting crowd approached the Capitol.</sample>
+    <sample src="orig">The union began its strike on Monday.</sample>
   </usage_samples>
 </spec>

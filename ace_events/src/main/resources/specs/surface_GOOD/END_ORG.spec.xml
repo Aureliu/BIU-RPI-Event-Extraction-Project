@@ -1,40 +1,20 @@
 <spec>
   <predicate>
-    <name>Acquit</name>
+    <name>End-Org</name>
     <seeds>
-      <seed>acquit</seed>
+      <seed>folded</seed>
+      <seed>shut down</seed>
     </seeds>
   </predicate>
   <arguments>
     <argument>
-      <role>Defendant</role>
-      <marker>DFN</marker>
+      <role>Org</role>
+      <marker>ORG</marker>
       <types>
-      	<type>PER</type>
       	<type>ORG</type>
-      	<type>GPE</type>
       </types>
       <examples>
-      </examples>
-    </argument>
-    <argument>
-      <role>Adjudicator</role>
-      <marker>ADJ</marker>
-      <types>
-      	<type>PER</type>
-      	<type>ORG</type>
-      	<type>GPE</type>
-      </types>
-      <examples>
-      </examples>
-    </argument>
-    <argument>
-      <role>Crime</role>
-      <marker>CRM</marker>
-      <types>
-      	<type>CRIME</type>
-      </types>
-      <examples>
+        <example>companies</example>
       </examples>
     </argument>
     <argument>
@@ -59,6 +39,6 @@
     </argument>
   </arguments>
   <usage_samples>
-    <sample src="orig">?</sample>
+    <sample src="orig">Government-controlled creditor banks named 52 financially weak companies that should be shut down or merged for sale.</sample>
   </usage_samples>
 </spec>

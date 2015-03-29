@@ -1,31 +1,16 @@
 <spec>
   <predicate>
-    <name>Start-Position</name>
+    <name>Pardon</name>
     <seeds>
-      <seed>start office</seed>
-      <seed>hire</seed>
-      <seed>succeed</seed>
-      <seed>take over</seed>
-      <seed>appoint</seed>
-      <seed>become</seed>
+      <seed>pardon</seed>
     </seeds>
   </predicate>
   <arguments>
     <argument>
-      <role>Person</role>
-      <marker>PER</marker>
+      <role>Defendant</role>
+      <marker>DFN</marker>
       <types>
       	<type>PER</type>
-      </types>
-      <examples>
-        <example>John D. Idol</example>
-        <example>he</example>
-      </examples>
-    </argument>
-    <argument>
-      <role>Entity</role>
-      <marker>ENT</marker>
-      <types>
       	<type>ORG</type>
       	<type>GPE</type>
       </types>
@@ -33,14 +18,23 @@
       </examples>
     </argument>
     <argument>
-      <role>Position</role>
-      <marker>PST</marker>
+      <role>Adjudicator</role>
+      <marker>ADJ</marker>
       <types>
-      	<type>JOB</type>
+      	<type>PER</type>
+      	<type>ORG</type>
+      	<type>GPE</type>
       </types>
       <examples>
-        <example>Chief Executive</example>
-        <example>President</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Crime</role>
+      <marker>CRM</marker>
+      <types>
+      	<type>CRIME</type>
+      </types>
+      <examples>
       </examples>
     </argument>
     <argument>
@@ -65,7 +59,6 @@
     </argument>
   </arguments>
   <usage_samples>
-    <sample src="orig">John D. Idol will take over as Chief Executive.</sample>
-    <sample src="orig_p">This was a demonstration of how he would behave if he were to become President.</sample>
- </usage_samples>
+    <sample src="orig">?</sample>
+  </usage_samples>
 </spec>

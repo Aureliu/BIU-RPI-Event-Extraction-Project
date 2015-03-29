@@ -1,13 +1,10 @@
 <spec>
   <predicate>
-    <name>Start-Position</name>
+    <name>Elect</name>
     <seeds>
-      <seed>start office</seed>
-      <seed>hire</seed>
-      <seed>succeed</seed>
-      <seed>take over</seed>
-      <seed>appoint</seed>
-      <seed>become</seed>
+      <seed>elect</seed>
+      <seed>elected</seed>
+      <seed>election</seed>
     </seeds>
   </predicate>
   <arguments>
@@ -18,18 +15,20 @@
       	<type>PER</type>
       </types>
       <examples>
-        <example>John D. Idol</example>
-        <example>he</example>
+        <example>Greg Lashutka</example>
+        <example>Sheila Johnson</example>
       </examples>
     </argument>
     <argument>
       <role>Entity</role>
       <marker>ENT</marker>
       <types>
+      	<type>PER</type>
       	<type>ORG</type>
       	<type>GPE</type>
       </types>
       <examples>
+        <example>shareholder</example>
       </examples>
     </argument>
     <argument>
@@ -39,8 +38,10 @@
       	<type>JOB</type>
       </types>
       <examples>
-        <example>Chief Executive</example>
-        <example>President</example>
+        <example>mayor</example>
+        <example>mayor of Columbia</example>
+        <example>Board of Directors</example>
+        <example>a second term on the Board of Directors</example>
       </examples>
     </argument>
     <argument>
@@ -50,6 +51,7 @@
       	<type>TIME</type>
       </types>
       <examples>
+        <example>1993</example>
       </examples>
     </argument>
     <argument>
@@ -61,11 +63,11 @@
       	<type>FAC</type>
       </types>
       <examples>
+        <example>Columbus</example>
       </examples>
     </argument>
   </arguments>
   <usage_samples>
-    <sample src="orig">John D. Idol will take over as Chief Executive.</sample>
-    <sample src="orig_p">This was a demonstration of how he would behave if he were to become President.</sample>
- </usage_samples>
+    <sample src="orig">?</sample>
+  </usage_samples>
 </spec>

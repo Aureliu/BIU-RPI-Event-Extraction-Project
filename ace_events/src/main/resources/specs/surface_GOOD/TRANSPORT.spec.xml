@@ -2,10 +2,13 @@
   <predicate>
     <name>Transport</name>
     <seeds>
+      <seed>transporting</seed>
       <seed>transport</seed>
-      <seed>move</seed>
+      <seed>moved</seed>
+      <seed>remove</seed>
       <seed>travel</seed>
-      <seed>flee</seed>
+      <seed>traveled</seed>
+      <seed>fled</seed>
       <seed>moving</seed>
       <seed>return</seed>
       <seed>take</seed>

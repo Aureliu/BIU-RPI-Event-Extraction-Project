@@ -1,0 +1,111 @@
+<spec>
+  <predicate>
+    <name>Transfer-Ownership</name>
+    <seeds>
+      <seed>acquire</seed>
+      <seed>acquired</seed>
+      <seed>takeover</seed>
+      <seed>buy</seed>
+      <seed>purchase</seed>
+    </seeds>
+  </predicate>
+  <arguments>
+    <argument>
+      <role>Buyer</role>
+      <marker>BUY</marker>
+      <types>
+      	<type>PER</type>
+      	<type>ORG</type>
+      	<type>GPE</type>
+      </types>
+      <examples>
+        <example>China</example>
+        <example>PepsiCo</example>
+        <example>Tropicana Juices</example>
+        <example>AOL</example>
+        <example>airline</example>
+        <example>they</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Seller</role>
+      <marker>SLR</marker>
+      <types>
+      	<type>PER</type>
+      	<type>ORG</type>
+      	<type>GPE</type>
+      </types>
+      <examples>
+        <example>Airbus Industries</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Beneficiary</role>
+      <marker>BNF</marker>
+      <types>
+      	<type>PER</type>
+      	<type>ORG</type>
+      	<type>GPE</type>
+      </types>
+      <examples>
+      </examples>
+    </argument>
+    <argument>
+      <role>Artifact</role>
+      <marker>ATF</marker>
+      <types>
+      	<type>VEH</type>
+      	<type>WEA</type>
+      	<type>FAC</type>
+      	<type>ORG</type>
+      </types>
+      <examples>
+        <example>submarines</example>
+        <example>Quaker Oats</example>
+        <example>South Beach Beverage CO</example>
+        <example>Time Warner</example>
+        <example>aircraft</example>
+        <example>company</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Price</role>
+      <marker>PRC</marker>
+      <types>
+      	<type>MONEY</type>
+      </types>
+      <examples>
+      </examples>
+    </argument>
+    <argument>
+      <role>Time</role>
+      <marker>TIM</marker>
+      <types>
+      	<type>TIME</type>
+      </types>
+      <examples>
+        <example>last year</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Place</role>
+      <marker>PLC</marker>
+      <types>
+      	<type>GPE</type>
+      	<type>LOC</type>
+      	<type>FAC</type>
+      </types>
+      <examples>
+      </examples>
+    </argument>
+  </arguments>
+  <usage_samples>
+    <sample src="orig">This report concerns China's recently acquired submarines.</sample>
+    <sample src="orig">Quaker Oats rejected PepsiCo's takeover offer as too low.</sample>
+    <sample src="orig">Tropicana Juices recently agreed to buy South Beach Beverage CO.</sample>
+    <sample src="orig">AOL agreed to buy Time Warner.</sample>
+    <sample src="orig">They backed out of the purchase at the last minute.</sample>
+    <sample src="orig">The airline is in the midst of a major aircraft purchase from Airbus Industries.</sample>
+    <sample src="orig">They wanted to acquire the company last year.</sample>
+  </usage_samples>
+</spec>

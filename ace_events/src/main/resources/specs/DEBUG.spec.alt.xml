@@ -1,0 +1,35 @@
+<spec>
+  <predicate>
+    <name>Debug</name>
+    <seeds>
+      <seed>debug</seed>
+      <seed>stabbing</seed>
+      <seed>arresting</seed>
+      <seed>deceased</seed>
+      <seed>jailed</seed>
+    </seeds>
+  </predicate>
+  <arguments>
+    <argument>
+      <role>Debugger</role>
+      <marker>DBG</marker>
+      <types>
+      	<type>PER</type>
+      	<type>ORG</type>
+      	<type>GPE</type>
+      </types>
+      <examples>
+        <example>debugger</example>
+      </examples>
+    </argument>
+  </arguments>
+  <usage_samples>
+    <sample src="orig">The [PRD stabbing] failed.</sample>
+    <sample src="orig">The [PRD stabbing] criminal ran away.</sample>
+    <sample src="orig">The [PRD arresting] officer gave his testimony.</sample>
+    <sample src="orig">The [PRD deceased] man was brought to the cemetery.</sample>
+    <sample src="orig">The [PRD deceased] was brought to the cemetery.</sample>
+    <sample src="orig">The [PRD jailed] suspects demanded to speak to a lawyer.</sample>
+    <sample src="orig">The suspects were [PRD jailed].</sample>
+  </usage_samples>
+</spec>

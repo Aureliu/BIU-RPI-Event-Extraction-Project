@@ -2,6 +2,8 @@
   <predicate>
     <name>Phone-Write</name>
     <seeds>
+      <seed>phone</seed>
+      <seed>write</seed>
       <seed>communicate</seed>
     </seeds>
   </predicate>

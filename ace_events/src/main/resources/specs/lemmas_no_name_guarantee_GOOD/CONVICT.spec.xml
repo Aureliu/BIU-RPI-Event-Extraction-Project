@@ -1,0 +1,73 @@
+<spec>
+  <predicate>
+    <name>Convict</name>
+    <seeds>
+      <seed>convicted</seed>
+      <seed>guilty</seed>
+    </seeds>
+  </predicate>
+  <arguments>
+    <argument>
+      <role>Defendant</role>
+      <marker>DFN</marker>
+      <types>
+      	<type>PER</type>
+      	<type>ORG</type>
+      	<type>GPE</type>
+      </types>
+      <examples>
+        <example>people</example>
+        <example>Smith</example>
+        <example>Jones</example>
+        <example>Carruth</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Adjudicator</role>
+      <marker>ADJ</marker>
+      <types>
+      	<type>PER</type>
+      	<type>ORG</type>
+      	<type>GPE</type>
+      </types>
+      <examples>
+      </examples>
+    </argument>
+    <argument>
+      <role>Crime</role>
+      <marker>CRM</marker>
+      <types>
+      	<type>CRIME</type>
+      </types>
+      <examples>
+        <example>selling guns to straw purchasers</example>
+        <example>masterminding the shooting</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Time</role>
+      <marker>TIM</marker>
+      <types>
+      	<type>TIME</type>
+      </types>
+      <examples>
+      </examples>
+    </argument>
+    <argument>
+      <role>Place</role>
+      <marker>PLC</marker>
+      <types>
+      	<type>GPE</type>
+      	<type>LOC</type>
+      	<type>FAC</type>
+      </types>
+      <examples>
+      </examples>
+    </argument>
+  </arguments> 
+  <usage_samples>
+    <sample src="orig">Three people have been convicted in the operation, including Smith and Jones.</sample>
+    <sample src="orig">Smith and Jones were found guilty of selling guns to straw purchasers.</sample>
+    <sample src="orig">Carruth, 26, could be executed if convicted of masterminding the shooting.</sample>
+  </usage_samples>
+</spec>

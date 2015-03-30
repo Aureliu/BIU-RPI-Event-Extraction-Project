@@ -100,6 +100,8 @@ import com.google.common.collect.Multimap;
 import com.google.common.collect.Multiset;
 import com.google.common.collect.Sets;
 
+import de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS;
+import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Lemma;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Sentence;
 import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
 import edu.cuny.qc.ace.acetypes.AceArgumentType;
@@ -649,6 +651,31 @@ public class SpecAnnotator extends JCasAnnotator_ImplBase {
 //				System.out.println(edu.stanford.nlp.tagger.maxent.ExtractorFrames.class.getProtectionDomain().getCodeSource().getLocation().getPath());
 				sentenceAE.process(sentenceView);
 			}
+			
+			/***
+			 * 29.3.2015 Debug - show lemmas for lemmatization
+			 */
+			System.out.printf("\n\nOutputting usage samples with basic linguistic analysis:\n\n");
+			int SPACE_PER_TOKEN = 10; //only declarative, I do it hard-coded :)
+			int i=0;
+			for (Sentence sentence : JCasUtil.select(sentenceView, Sentence.class)) {
+				i++;
+				System.out.printf("%d.\n", i);
+				
+				for (POS pos : JCasUtil.selectCovered(sentenceView, POS.class, sentence)) {
+					System.out.printf("%10s ", pos.getPosValue());
+				}
+				System.out.println();
+				for (Lemma lemma : JCasUtil.selectCovered(sentenceView, Lemma.class, sentence)) {
+					System.out.printf("%10s ", lemma.getValue());
+				}
+				System.out.println();
+				for (Token token : JCasUtil.selectCovered(sentenceView, Token.class, sentence)) {
+					System.out.printf("%10s ", token.getCoveredText());
+				}
+				System.out.println();
+			}
+			/////////////////////////////////////
 			
 			// For each lemma value, remember all of its PredicateSeeds/ArgumentExamples
 			// this way we can verify if any of them appeared more than once - which is legit, but not for UsageSamples

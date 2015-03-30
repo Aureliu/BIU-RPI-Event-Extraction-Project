@@ -19,6 +19,9 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 import java.util.concurrent.ExecutionException;
+import java.util.regex.MatchResult;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.BIU.NLP.corpora.ACE.training_set.jaxb.LdcScope;
 import org.apache.commons.collections15.BidiMap;
@@ -34,6 +37,7 @@ import org.apache.log4j.PropertyConfigurator;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.cas.CASException;
 import org.apache.uima.jcas.JCas;
+import org.apache.uima.jcas.cas.TOP;
 import org.apache.uima.jcas.tcas.Annotation;
 import org.apache.uima.resource.ResourceInitializationException;
 import org.apache.uima.util.InvalidXMLException;
@@ -247,10 +251,20 @@ public class AceAnalyzer {
 		docs.updateDocs(key, "SentenceCovered", "", getSentenceCoveredChars(jcas));
 
 		// Spec sizes!
+		Pattern pattern = Pattern.compile("<seed>");
 		for (Entry<String, JCas> entry : container.namedSpecs.entrySet()) {
 			key.put("EventSubType", entry.getKey());
 			JCas spec = entry.getValue();
-			docs.updateDocs(key, "Seeds", "", JCasUtil.select(spec, PredicateSeed.class).size());
+			//Collection<TOP> seeds = JCasUtil.select(spec, TOP.class);
+			//int size = seeds.size();
+			String text = spec.getDocumentText();
+			Matcher matcher1 = pattern.matcher(text);
+			List<MatchResult> matches = new ArrayList<MatchResult>();
+			while (matcher1.find()) {
+				matches.add(matcher1.toMatchResult());
+			}
+			int size = matches.size();
+			docs.updateDocs(key, "Seeds", "", size);
 		}
 		key.put("EventSubType", StatsDocument.ANY);
 

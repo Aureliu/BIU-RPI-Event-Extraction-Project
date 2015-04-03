@@ -11,6 +11,7 @@ import java.io.PrintStream;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.math.MathContext;
+import java.nio.file.Files;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -24,6 +25,7 @@ import java.util.Set;
 
 import org.apache.commons.lang3.SerializationUtils;
 
+import com.google.common.base.Charsets;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 
@@ -713,5 +715,22 @@ public class Perceptron implements java.io.Serializable
 	public FeatureVector getAvg_weights()
 	{
 		return avg_weights;
+	}
+
+	public static List<Perceptron> loadModels(String modelsFile) throws IOException {
+		if (modelsFile.equalsIgnoreCase("null")) {
+			return null;
+		}
+		File f = new File(modelsFile);
+		List<String> lines = Files.readAllLines(f.toPath(), Charsets.UTF_8);
+		List<Perceptron> result = Lists.newArrayListWithCapacity(lines.size());
+		for (String line : lines) {
+			if (!line.trim().isEmpty()) {
+				Perceptron perceptron = Perceptron.deserializeObject(new File(line));
+				result.add(perceptron);
+			}
+		}
+		System.out.printf("%s Loaded %s pre-existing models from file: %s\n", Utils.detailedLog(), result.size(), f.getAbsolutePath());
+		return result;
 	}
 }

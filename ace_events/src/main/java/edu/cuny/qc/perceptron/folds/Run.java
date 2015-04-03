@@ -18,9 +18,11 @@ import ac.biu.nlp.nlp.ie.onthefly.input.SpecAnnotator;
 import com.google.common.collect.Lists;
 
 import edu.cuny.qc.perceptron.core.ArgOMethod;
+import edu.cuny.qc.perceptron.core.Perceptron;
 import edu.cuny.qc.perceptron.core.SentenceSortingMethod;
 import edu.cuny.qc.perceptron.types.SentenceInstance;
 import edu.cuny.qc.scorer.FeatureProfile;
+import edu.cuny.qc.util.Logs;
 
 public class Run {
 	//public Map<String, JCas> trainEvents, devEvents, testEvents;
@@ -37,9 +39,10 @@ public class Run {
 	public Set<SentenceInstance> devInsts;
 	public int restrictAmount;
 	public BigDecimal restrictProportion;
+	public Perceptron model;
 	
 	public void calcSuffix() {
-		suffix = String.format("%03d_%02d_Train%02d_%04d__Dev%02d_%04d", id, idPerTest, trainEvents.size(), trainInsts.size(), devEvents.size(), devInsts.size());
+		suffix = String.format("%03d_%02d_Train%s_%s__Dev%s_%s", id, idPerTest, Logs.size(trainEvents, "%02d"), Logs.size(trainInsts, "%04d"), Logs.size(devEvents, "%02d"), Logs.size(devInsts, "%04d"));
 	}
 	
 	/**
@@ -110,7 +113,7 @@ public class Run {
 			return String.format("%s(%s,%s, test=%s, %s trainEvs, %s devEvs, %s trainInsts, %s devInsts, " + 
 					//"method=%s argO=%s " + 
 					"profile=%s)",
-					getClass().getSimpleName(), id, idPerTest, testEventLabel, trainEvents.size(), devEvents.size(), trainInsts.size(), devInsts.size(),
+					getClass().getSimpleName(), id, idPerTest, testEventLabel, Logs.size(trainEvents), Logs.size(devEvents), Logs.size(trainInsts), Logs.size(devInsts),
 					//sentenceSortingMethod, argOMethod,
 					featureProfile);
 		} catch (Exception e) {
@@ -133,8 +136,8 @@ public class Run {
 		return String.format("%s(%s,%s, test=%s\n\ttrain(%s types, %s insts, %s mentions)=%s\n\tdev(%s, %s insts, %s mentions)=%s\n" +
 				//"\tsentenceSortingMethod=%s\n\targOMethod=%s\n" +
 				"\tfeatureProfile=%s\n\trestrictAmount=%s restrictProportion=%s  )",
-				getClass().getSimpleName(), id, idPerTest, testLabel, trainEvents.size(), trainInsts.size(), trainMentions, StringUtils.join(trainLabels, ", "),
-				devEvents.size(), devInsts.size(), devMentions, StringUtils.join(devLabels, ", "),
+				getClass().getSimpleName(), id, idPerTest, testLabel, Logs.size(trainEvents), Logs.size(trainInsts), trainMentions, StringUtils.join(trainLabels, ", "),
+				Logs.size(devEvents), Logs.size(devInsts), devMentions, StringUtils.join(devLabels, ", "),
 				//sentenceSortingMethod, argOMethod,
 				featureProfile, restrictAmount, restrictProportion);
 	}
@@ -152,6 +155,7 @@ public class Run {
 		newRun.sentenceSortingMethod = orig.sentenceSortingMethod;
 		newRun.argOMethod = orig.argOMethod;
 		newRun.featureProfile = orig.featureProfile;
+		newRun.model = orig.model;
 		return newRun;
 	}		
 }

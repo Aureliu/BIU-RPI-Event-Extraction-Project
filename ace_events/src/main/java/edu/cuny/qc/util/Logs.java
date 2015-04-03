@@ -149,6 +149,39 @@ public class Logs {
 		}
 	}
 	
+	public static String size(Collection<?> col) {
+		return size(col, "%s");
+	}
+	
+	public static String size(Collection<?> col, String fmt) {
+		if (col == null) {
+			return "X";
+		}
+		else {
+			return String.format(fmt, col.size());
+		}
+	}
+	
+	public static String percentDevSentences(Run run) {
+		if (run.devInsts == null || run.trainInsts == null) {
+			return "X";
+		}
+		else {
+			Double result = ((double) run.devInsts.size()) / (run.trainInsts.size() + run.devInsts.size());
+			return result.toString(); 
+		}
+	}
+	
+	public static String percentDevMentions(Run run, int trainPlusDevMentions) {
+		if (run.devInsts == null || run.trainInsts == null) {
+			return "X";
+		}
+		else {
+			Double result = ((double) run.devMentions) / trainPlusDevMentions;
+			return result.toString(); 
+		}
+	}
+	
 	public static String str(FeatureVector fv, String key) {
 		if (fv == null) {
 			return "X";
@@ -301,6 +334,9 @@ public class Logs {
 	
 
 	public static String labelList(Collection<JCas> types) throws CASException {
+		if (types == null) {
+			return "X";
+		}
 		List<String> labels = Lists.newArrayListWithCapacity(types.size());
 		for (JCas spec : types) {
 			labels.add(SpecAnnotator.getSpecLabel(spec));
@@ -1125,20 +1161,20 @@ public class Logs {
 //					testStats.f1_arg,//"F1",
 
 					labelList(run.trainEvents),//"List",
-					run.trainEvents.size(),//"Types",
-					run.trainInsts.size(),//"Sentences",
+					size(run.trainEvents),//"Types",
+					size(run.trainInsts),//"Sentences",
 					run.trainMentions,//"Mentions",
 //					trainArgCandMentions,//"ArgCands"
 //					trainArgsMentions,//"Args"
 					labelList(run.devEvents),//"List",
-					run.devEvents.size(),//"Types",
-					run.devInsts.size(),//"Sentences",
+					size(run.devEvents),//"Types",
+					size(run.devInsts),//"Sentences",
 					run.devMentions,//"Mentions",
 //					devArgCandMentions,//"ArgCands"
 //					devArgsMentions,//"Args"
 					trainPlusDevMentions,
-					((double) run.devInsts.size()) / (run.trainInsts.size() + run.devInsts.size()), //"%DevSentences"
-					((double) run.devMentions) / trainPlusDevMentions, //"%DevMentions"
+					percentDevSentences(run), //"%DevSentences"
+					percentDevMentions(run, trainPlusDevMentions), //"%DevMentions"
 					SpecAnnotator.getSpecLabel(run.testEvent),//"List",
 					//testTypes.size(),//"Types",
 					runTest.size(),//"Sentences",

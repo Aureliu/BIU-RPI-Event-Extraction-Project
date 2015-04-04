@@ -12,6 +12,60 @@
     </seeds>
   </predicate>
   <arguments>
+    <argument>
+      <role>Attacker</role>
+      <marker>ATR</marker>
+      <types>
+      	<type>PER</type>
+      	<type>ORG</type>
+      	<type>GPE</type>
+      </types>
+      <examples>
+      </examples>
+    </argument>
+    <argument>
+      <role>Target</role>
+      <marker>TRG</marker>
+      <types>
+      	<type>PER</type>
+      	<type>ORG</type>
+      	<type>VEH</type>
+      	<type>FAC</type>
+      	<type>WEA</type>
+      </types>
+      <examples>
+      </examples>
+    </argument>
+    <argument>
+      <role>Instrument</role>
+      <marker>INT</marker>
+      <types>
+      	<type>VEH</type>
+      	<type>WEA</type>
+      </types>
+      <examples>
+      </examples>
+    </argument>
+    <argument>
+      <role>Time</role>
+      <marker>TIM</marker>
+      <types>
+      	<type>TIME</type>
+      </types>
+      <examples>
+      </examples>
+    </argument>
+    <argument>
+      <role>Place</role>
+      <marker>PLC</marker>
+      <types>
+      	<type>GPE</type>
+      	<type>LOC</type>
+      	<type>FAC</type>
+      </types>
+      <examples>
+      </examples>
+    </argument>
   </arguments>
   <usage_samples>
   </usage_samples>

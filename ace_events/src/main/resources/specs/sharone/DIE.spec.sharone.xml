@@ -12,6 +12,117 @@
     </seeds>
   </predicate>
   <arguments>
+    <argument>
+      <role>Agent</role>
+      <marker>AGT</marker>
+      <types>
+      	<type>PER</type>
+      	<type>ORG</type>
+      	<type>GPE</type>
+      </types>
+      <examples>
+        <example>man</example>
+        <example>John Hinckley</example>
+        <example>terrorist groups</example>
+        <example>groups</example>
+        <example>Richard Farnsworth</example>
+        <example>bomber</example>
+        <example>he</example>
+        <example>John</example>
+        <example>John Hinkley</example>
+        <example>Oswald</example>
+        <example>they</example>
+        <example>accomplices</example>
+        <example>Einhorn</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Victim</role>
+      <marker>VCT</marker>
+      <types>
+      	<type>PER</type>
+      </types>
+      <examples>
+        <example>passenger</example>
+        <example>member</example>
+        <example>members</example>
+        <example>crew member</example>
+        <example>Pierre Trudeau</example>
+        <example>Ronald Reagan</example>
+        <example>leader</example>
+        <example>she</example>
+        <example>Obaiyat</example>
+        <example>Pope John Paul II</example>
+        <example>worker</example>
+        <example>Richard Farnsworth</example>
+        <example>person</example>
+        <example>grandparents</example>
+        <example>he</example>
+        <example>7</example>
+        <example>sailors</example>
+        <example>mother</example>
+        <example>30</example>
+        <example>John</example>
+        <example>people</example>
+        <example>Mary</example>
+        <example>hostages</example>
+        <example>Kennedy</example>
+        <example>him</example>
+        <example>Tatum</example>
+        <example>Maddux</example>
+        <example>Bob</example>
+        <example>Joe</example>
+        <example>men</example>
+        <example>Palestinians</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Instrument</role>
+      <marker>INT</marker>
+      <types>
+      	<type>WEA</type>
+      	<type>VEH</type>
+      </types>
+      <examples>
+        <example>automobile</example>
+        <example>helicopter</example>
+        <example>explosive</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Time</role>
+      <marker>TIM</marker>
+      <types>
+      	<type>TIME</type>
+      </types>
+      <examples>
+        <example>1985</example>
+        <example>last week</example>
+        <example>Thursday</example>
+        <example>yesterday</example>
+        <example>Saturday afternoon</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Place</role>
+      <marker>PLC</marker>
+      <types>
+      	<type>GPE</type>
+      	<type>LOC</type>
+      	<type>FAC</type>
+      </types>
+      <examples>
+        <example>Irish Sea</example>
+        <example>Gaza Strip</example>
+        <example>Gush Katif</example>
+        <example>Aden</example>
+        <example>Jerusalem</example>
+        <example>Philadelphia</example>
+        <example>France</example>
+        <example>Paris</example>
+        <example>Reims</example>
+      </examples>
+    </argument>
   </arguments>
   <usage_samples>
   </usage_samples>

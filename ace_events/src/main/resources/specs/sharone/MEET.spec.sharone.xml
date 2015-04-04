@@ -12,6 +12,77 @@
     </seeds>
   </predicate>
   <arguments>
+    <argument>
+      <role>Entity</role>
+      <marker>ENT</marker>
+      <types>
+      	<type>PER</type>
+      	<type>ORG</type>
+      	<type>GPE</type>
+      </types>
+      <examples>
+        <example>Bush</example>
+        <example>Putin</example>
+        <example>China</example>
+        <example>Japan</example>
+        <example>United States</example>
+        <example>Korea</example>
+        <example>representative</example>
+        <example>Tommy</example>
+        <example>prosecutor</example>
+        <example>governor</example>
+        <example>John Coburn</example>
+        <example>Erekat</example>
+        <example>Madeleine Albright</example>
+        <example>Mrs. Albright</example>
+        <example>official</example>
+        <example>minister</example>
+        <example>Israeli</example>
+        <example>Palestinian</example>
+        <example>leaders</example>
+        <example>he</example>
+        <example>Ehud Barak</example>
+        <example>Prime Minister</example>
+        <example>leader</example>
+        <example>Yasser Arafat</example>
+        <example>officials</example>
+        <example>trade officials</example>
+        <example>lawmakers</example>
+        <example>Sudnikovich</example>
+        <example>him</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Time</role>
+      <marker>TIM</marker>
+      <types>
+      	<type>TIME</type>
+      </types>
+      <examples>
+        <example>this week</example>
+        <example>this month</example>
+        <example>Wednesday</example>
+        <example>Friday</example>
+        <example>tomorrow</example>
+        <example>Monday</example>
+        <example>May 17</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Place</role>
+      <marker>PLC</marker>
+      <types>
+      	<type>GPE</type>
+      	<type>LOC</type>
+      	<type>FAC</type>
+      </types>
+      <examples>
+        <example>Washington</example>
+        <example>Egypt</example>
+        <example>Boston</example>
+        <example>London</example>
+      </examples>
+    </argument>
   </arguments>
   <usage_samples>
   </usage_samples>

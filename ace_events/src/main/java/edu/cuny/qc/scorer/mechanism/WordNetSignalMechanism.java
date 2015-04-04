@@ -691,6 +691,7 @@ public class WordNetSignalMechanism extends SignalMechanism {
 				BasicRulesQuery basicQuery = new BasicRulesQuery(textStr, textPos, specStr, specPos);
 				FullRulesQuery fullQuery = new FullRulesQuery(this.relations, realLength, this.juxt, scorerData.getLeftSenseNum(), scorerData.getRightSenseNum(), basicQuery);
 				boolean result = cacheBools.get(fullQuery);
+				//System.out.printf("\t%s <== %s\n", result, basicQuery);
 				return result;
 				
 			} catch (ExecutionException e) {

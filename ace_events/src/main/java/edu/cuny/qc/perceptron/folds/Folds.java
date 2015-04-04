@@ -80,7 +80,8 @@ public class Folds {
 		//System.out.printf("Folds: Not supporting minTrainMentions and minDevMentions anymore!\n"); //If I wanna add support, I need to think where I need to add check, in this new scheme
 	}
 
-	public static List<Run> buildRuns(Controller controller, TypesContainer types, Map<String, Integer> trainMentionsByType, Map<String, Integer> devMentionsByType,
+	public static List<Run> buildRuns(Controller controller, TypesContainer types, List<JCas> allTestSpecs,
+			Map<String, Integer> trainMentionsByType, Map<String, Integer> devMentionsByType,
 			List<Entry<Integer,Integer>> mandatoryTrainDevEventNums, int numRuns,
 			List<Integer> trainEventNums, List<Integer> devEventNums, int minTrainMentions, int minDevMentions,
 			Collection<SentenceInstance> trainInstances, Collection<SentenceInstance> devInstances, List<BigDecimal> proportionsRestrictions, List<BigDecimal> amountRestrictions,
@@ -90,19 +91,6 @@ public class Folds {
 		
 		//int prevAmountResult = 0;
 		int totalCounter = 0;
-		List<JCas> allTestSpecs;
-		if (controller.testType != null) {
-			allTestSpecs = types.getPartialSpecList(ImmutableList.of(controller.testType));
-		}
-		/**
-		 * if we have testOnlyTypes - then we choose the test events only from that list, and not from the entire spec list
-		 */
-		else if (controller.testOnlyTypes != null) {
-			allTestSpecs = types.getPartialSpecList(controller.testOnlyTypes);			
-		}
-		else {
-			allTestSpecs = types.specs;
-		}
 		
 		List<Entry<Integer,Integer>> trainAndDevNumsToChooseFrom = mandatoryTrainDevEventNums;
 		if (trainAndDevNumsToChooseFrom == null) {
@@ -770,13 +758,6 @@ public class Folds {
 			throw new IllegalArgumentException(
 					"Can have either only regular event nums (train and dev), or a mandatory pair-list. But not both!");
 		}
-		//It seems like we shouldn't take the "prop" and "amount" parameters into account here, since they are only used when there's training, and here we skip training
-		//int expectedRuns = numRuns*allSpecs.size()*proportionsRestrictionsStrs.size()*amountRestrictionsStrs.size();
-		int expectedRuns = numRuns*allSpecs.size();
-		if (models!=null && models.size()!=expectedRuns) {
-			throw new IllegalArgumentException(String.format("Loaded %s models, but number of runs should be %s", models.size(), expectedRuns));
-		}
-		BackupSource.backup(outputFolder);
 
 		List<BigDecimal> proportionsRestrictions = Lists
 				.newArrayListWithCapacity(proportionsRestrictionsStrs.size());
@@ -795,6 +776,28 @@ public class Folds {
 		SignalMechanismsContainer signalMechanismsContainer = new SignalMechanismsContainer(
 				controller);
 		//Perceptron perceptron = null;
+
+		List<JCas> allTestSpecs;
+		if (controller.testType != null) {
+			allTestSpecs = types.getPartialSpecList(ImmutableList.of(controller.testType));
+		}
+		/**
+		 * if we have testOnlyTypes - then we choose the test events only from that list, and not from the entire spec list
+		 */
+		else if (controller.testOnlyTypes != null) {
+			allTestSpecs = types.getPartialSpecList(controller.testOnlyTypes);			
+		}
+		else {
+			allTestSpecs = types.specs;
+		}
+
+		//It seems like we shouldn't take the "prop" and "amount" parameters into account here, since they are only used when there's training, and here we skip training
+		//int expectedRuns = numRuns*allTestSpecs.size()*proportionsRestrictionsStrs.size()*amountRestrictionsStrs.size();
+		int expectedRuns = numRuns*allTestSpecs.size();
+		if (models!=null && models.size()!=expectedRuns) {
+			throw new IllegalArgumentException(String.format("Loaded %s models, but number of runs should be %s", models.size(), expectedRuns));
+		}
+		BackupSource.backup(outputFolder);
 
 		Logs logs = new Logs(outputFolder, controller, "");
 		PrintStream r = logs.getR("");
@@ -818,7 +821,7 @@ public class Folds {
 
 		System.out.printf("\n%s Finished reading ALL documents:  Train: %s instances, %s types; Dev: %s instances, %s types; Test: %s instances, %s types\n\n", Utils.detailedLog(), trainInstances.size(), trainInstances.keySet().size(), devInstances.size(), devInstances.keySet().size(), testInstances.size(), testInstances.keySet().size());
 
-		List<Run> runs = buildRuns(controller, types, trainMentions,
+		List<Run> runs = buildRuns(controller, types, allTestSpecs, trainMentions,
 				devMentions, mandatoryTrainDevEventNums, numRuns,
 				trainEventNums, devEventNums, minTrainMentions, minDevMentions,
 				trainInstances.values(), devInstances.values(),

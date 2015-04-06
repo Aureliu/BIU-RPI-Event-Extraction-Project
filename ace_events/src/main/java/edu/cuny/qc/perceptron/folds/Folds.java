@@ -124,7 +124,7 @@ public class Folds {
 
 					result.add(currRun);
 				}
-				System.out.printf("\nFor spec=%s, finished loading %s pre-existing models into runs.\n\n", SpecAnnotator.getSpecLabel(testSpec), perConfCounter);
+				System.out.printf("\nFor spec=%s, finished loading %s pre-existing models into runs.\n\n", SpecAnnotator.getSpecLabel(testSpec), perConfCounter-1);
 			}
 			
 			else {			

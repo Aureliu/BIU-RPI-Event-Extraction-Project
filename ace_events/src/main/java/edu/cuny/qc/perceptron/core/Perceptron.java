@@ -741,7 +741,8 @@ public class Perceptron implements java.io.Serializable
 	 */
 	public static void main(String[] args) {
 		String templateModelPath = "src/main/resources/models/template_model";
-		String outputModelPath = "src/main/resources/models/Model__One_MinusOne";
+		//String outputModelPath = "src/main/resources/models/Model__One_MinusOne";
+		String outputModelPath = "src/main/resources/models/Model__One_MinusOne_P+";
 		
 		Perceptron perceptron = Perceptron.deserializeObject(new File(templateModelPath));
 		
@@ -750,23 +751,23 @@ public class Perceptron implements java.io.Serializable
 		
 		weights.map.put("BigramFeature:	PL_SAME_LEMMA-Text1Sense-Spec1Sense	P+		currentLabel:TRIGGER	", BigDecimal.ONE);
 		weights.map.put("BigramFeature:	PL_SAME_LEMMA-Text1Sense-Spec1Sense	P+		currentLabel:O	",       MINUS_ONE);
-		weights.map.put("BigramFeature:	PL_SAME_LEMMA-Text1Sense-Spec1Sense	P-		currentLabel:TRIGGER	", MINUS_ONE);
-		weights.map.put("BigramFeature:	PL_SAME_LEMMA-Text1Sense-Spec1Sense	P-		currentLabel:O	",       BigDecimal.ONE);
+		//weights.map.put("BigramFeature:	PL_SAME_LEMMA-Text1Sense-Spec1Sense	P-		currentLabel:TRIGGER	", MINUS_ONE);
+		//weights.map.put("BigramFeature:	PL_SAME_LEMMA-Text1Sense-Spec1Sense	P-		currentLabel:O	",       BigDecimal.ONE);
 		
 		weights.map.put("BigramFeature:	WN__SYNONYM__ANCESTOR_Len1-TextAllSense-Spec1Sense	P+		currentLabel:TRIGGER	", BigDecimal.ONE);
 		weights.map.put("BigramFeature:	WN__SYNONYM__ANCESTOR_Len1-TextAllSense-Spec1Sense	P+		currentLabel:O	",       MINUS_ONE);
-		weights.map.put("BigramFeature:	WN__SYNONYM__ANCESTOR_Len1-TextAllSense-Spec1Sense	P-		currentLabel:TRIGGER	", MINUS_ONE);
-		weights.map.put("BigramFeature:	WN__SYNONYM__ANCESTOR_Len1-TextAllSense-Spec1Sense	P-		currentLabel:O	",       BigDecimal.ONE);
+		//weights.map.put("BigramFeature:	WN__SYNONYM__ANCESTOR_Len1-TextAllSense-Spec1Sense	P-		currentLabel:TRIGGER	", MINUS_ONE);
+		//weights.map.put("BigramFeature:	WN__SYNONYM__ANCESTOR_Len1-TextAllSense-Spec1Sense	P-		currentLabel:O	",       BigDecimal.ONE);
 		
 		weights.map.put("BigramFeature:	WN__Hypernyms__ANCESTOR_Len2-TextAllSense-Spec1Sense-WnDrv_withTextDerv	P+		currentLabel:TRIGGER	", BigDecimal.ONE);
 		weights.map.put("BigramFeature:	WN__Hypernyms__ANCESTOR_Len2-TextAllSense-Spec1Sense-WnDrv_withTextDerv	P+		currentLabel:O	",       MINUS_ONE);
-		weights.map.put("BigramFeature:	WN__Hypernyms__ANCESTOR_Len2-TextAllSense-Spec1Sense-WnDrv_withTextDerv	P-		currentLabel:TRIGGER	", MINUS_ONE);
-		weights.map.put("BigramFeature:	WN__Hypernyms__ANCESTOR_Len2-TextAllSense-Spec1Sense-WnDrv_withTextDerv	P-		currentLabel:O	",       BigDecimal.ONE);
+		//weights.map.put("BigramFeature:	WN__Hypernyms__ANCESTOR_Len2-TextAllSense-Spec1Sense-WnDrv_withTextDerv	P-		currentLabel:TRIGGER	", MINUS_ONE);
+		//weights.map.put("BigramFeature:	WN__Hypernyms__ANCESTOR_Len2-TextAllSense-Spec1Sense-WnDrv_withTextDerv	P-		currentLabel:O	",       BigDecimal.ONE);
 		
 		weights.map.put("BigramFeature:	WN__AllRelsSmall__ANCESTOR_Len2-TextAllSense-Spec1Sense-WnDrv_withTextDerv	P+		currentLabel:TRIGGER	", BigDecimal.ONE);
 		weights.map.put("BigramFeature:	WN__AllRelsSmall__ANCESTOR_Len2-TextAllSense-Spec1Sense-WnDrv_withTextDerv	P+		currentLabel:O	",       MINUS_ONE);
-		weights.map.put("BigramFeature:	WN__AllRelsSmall__ANCESTOR_Len2-TextAllSense-Spec1Sense-WnDrv_withTextDerv	P-		currentLabel:TRIGGER	", MINUS_ONE);
-		weights.map.put("BigramFeature:	WN__AllRelsSmall__ANCESTOR_Len2-TextAllSense-Spec1Sense-WnDrv_withTextDerv	P-		currentLabel:O	",       BigDecimal.ONE);
+		//weights.map.put("BigramFeature:	WN__AllRelsSmall__ANCESTOR_Len2-TextAllSense-Spec1Sense-WnDrv_withTextDerv	P-		currentLabel:TRIGGER	", MINUS_ONE);
+		//weights.map.put("BigramFeature:	WN__AllRelsSmall__ANCESTOR_Len2-TextAllSense-Spec1Sense-WnDrv_withTextDerv	P-		currentLabel:O	",       BigDecimal.ONE);
 		
 		perceptron.avg_weights = weights;
 		perceptron.weights = weights;

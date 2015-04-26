@@ -1,0 +1,188 @@
+<spec>
+  <predicate>
+    <name>Attack</name>
+    <seeds>
+      <seed>attack</seed>
+      <seed>shoot</seed>
+      <seed>shooting</seed>
+      <seed>bombing</seed>
+      <seed>explosion</seed>
+      <seed>strike</seed>
+      <seed>hit</seed>
+      <seed>fire</seed>
+      <seed>raid</seed>
+      <seed>assault</seed>
+      <seed>blow up</seed>
+      <seed>hijack</seed>
+      <seed>blast</seed>
+      <seed>ambush</seed>
+      <seed>airstrike</seed>
+      <seed>clash</seed>
+      <seed>massacre</seed>
+      <seed>beat</seed>
+      <seed>gunfire</seed>
+      <seed>inflict</seed>
+      <seed>charge</seed>
+      <seed>shelled</seed>
+      <seed>firefight</seed>
+      <seed>jihad</seed>
+      <seed>war</seed>
+    </seeds>
+  </predicate>
+  <arguments>
+    <argument>
+      <role>Attacker</role>
+      <marker>ATR</marker>
+      <types>
+      	<type>PER</type>
+      	<type>ORG</type>
+      	<type>GPE</type>
+      </types>
+      <examples>
+        <example>force</example>
+        <example>forces</example>
+        <example>Israel</example>
+        <example>terrorist</example>
+        <example>man</example>
+        <example>demonstrator</example>
+        <example>gunman</example>
+        <example>gunmen</example>
+        <example>Hamas</example>
+        <example>men</example>
+        <example>Oswald</example>
+        <example>militants</example>
+        <example>Islamic militants</example>
+        <example>>Ali Mohammed</example>
+        <example>>Osama bin Laden</example>
+        <example>>Bin Laden</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Target</role>
+      <marker>TRG</marker>
+      <types>
+      	<type>PER</type>
+      	<type>ORG</type>
+      	<type>VEH</type>
+      	<type>FAC</type>
+      	<type>WEA</type>
+      </types>
+      <examples>
+        <example>Palestinian</example>
+        <example>Fallujah</example>
+        <example>warship</example>
+        <example>soldier</example>
+        <example>café</example>
+        <example>businessman</example>
+        <example>car</example>
+        <example>garage</example>
+        <example>woman</example>
+        <example>worker</example>
+        <example>Kennedy</example>
+        <example>Smith</example>
+        <example>son</example>
+        <example>US targets</example>
+        <example>targets</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Instrument</role>
+      <marker>INT</marker>
+      <types>
+      	<type>VEH</type>
+      	<type>WEA</type>
+      </types>
+      <examples>
+        <example>bomb</example>
+        <example>bombs</example>
+        <example>rocket</example>
+        <example>rifle</example>
+        <example>gun</example>
+        <example>stone</example>
+        <example>bottle</example>
+        <example>assault rifles</example>
+        <example>AK-47 assault rifles</example>
+        <example>AK-47</example>
+        <example>car</example>
+        <example>car bomb</example>
+        <example>headquarters</example>
+        <example>army headquarters</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Time</role>
+      <marker>TIM</marker>
+      <types>
+      	<type>TIME</type>
+      </types>
+      <examples>
+        <example>Sunday night</example>
+        <example>Thursday</example>
+        <example>Monday</example>
+        <example>45-minute</example>
+        <example>yesterday</example>
+        <example>1991</example>
+        <example>1999</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Place</role>
+      <marker>PLC</marker>
+      <types>
+      	<type>GPE</type>
+      	<type>LOC</type>
+      	<type>FAC</type>
+      </types>
+      <examples>
+        <example>Baghdad</example>
+        <example>Gilo</example>
+        <example>Yemen</example>
+        <example>market</example>
+        <example>Jerusalem</example>
+        <example>café</example>
+        <example>garage</example>
+        <example>site</example>
+        <example>building</example>
+        <example>Mercedes</example>
+        <example>car</example>
+        <example>Gaza Strip</example>
+        <example>Serbia</example>
+        <example>southern Serbia</example>
+        <example>Kosovo</example>
+        <example>Lahore</example>
+        <example>cities</example>
+        <example>Pakistani cities</example>
+        <example>Middle-East</example>
+        <example>Middle East</example>
+      </examples>
+    </argument>
+  </arguments>
+  <usage_samples>
+	<!-- Ignoring "synth" for now-->
+    <sample_out src="synth">Terrorists clashed soldiers in Baghdad on Thursday.</sample>
+    <sample_out src="synth">Men shot at the the warship with rifles in Yemen on Sunday night.</sample>
+    <sample_out src="synth">Forces had a 45-Minute gun battle with Palestinians at the market.</sample>
+
+    <sample src="orig">The [PRD explosion] killed 7 and injured 20.</sample> <!-- NOTE that the dead and injured people are not considered targets of the attack! They are noly victims of the Die and Injure events! -->
+    <sample src="orig">The attack killed 7 and injured 20.</sample> <!-- see previous comment -->
+    <sample src="orig">Yesterday's attack was entirely unexpected.</sample>
+    <sample src="orig">Hamas launched an attack.</sample>
+    <sample src="orig">An officer witnessed the attack.</sample>
+    <sample src="orig">Men in civilian clothes in the crowd began firing with AK-47 assault rifles.</sample>
+    <sample src="orig">U.S. forces continued to bomb Fallujah.</sample>
+    <sample src="orig" >A Palestinian worker was shot dead in the Gaza Strip.</sample>
+    <sample src="orig" >Kennedy was shot dead by Oswald.</sample>
+    <sample_out src="orig" >There have been concerns the clashes in southern Serbia could explode into violence similar to the 1999 conflict in Kosovo.</sample> <!-- not used, since it has multiple triggers (multiple seeds) in the same sentence. Instead, it will be split to 3 legitimate sample sentences. -->
+    <sample src="orig" >A car bomb exploded Thursday in the heart of Jerusalem.</sample>
+    <sample src="orig" >The gunmen shot Smith and his son.</sample>
+    <sample src="orig" >India blamed Islamic militants for the attack.</sample>
+    <sample src="orig" >A car bomb went off outside army headquarters.</sample>
+    <sample src="orig">Ali Mohammed, a native of Egypt, has admitted to five charges of conspiring with a Saudi born dissident Osama bin Laden to attack US targets in the Middle-East.</sample>
+    <sample src="orig_p" >The investigation of the attempted coup in 1991 was finished.</sample>
+    <sample src="orig_l" >There have been concerns regarding the clashes in southern Serbia.</sample>
+    <sample src="orig_l" >There have been concerns the events in southern Serbia could explode into violence.</sample>
+    <sample src="orig_l" >There have been concerns the events in southern Serbia could eventually be similar to the 1999 conflict in Kosovo.</sample>
+    <sample src="orig_l" >The explosion in Lahore caused a fire that burned makeshift stalls.</sample>
+    <sample src="orig_l" >Bombs went off in three Pakistani cities Monday.</sample>
+  </usage_samples>
+</spec>

@@ -1,0 +1,172 @@
+<spec>
+  <predicate>
+    <name>Die</name>
+    <seeds>
+      <seed>die</seed>
+      <seed>dead</seed>
+    </seeds>
+  </predicate>
+  <arguments>
+    <argument>
+      <role>Agent</role>
+      <marker>AGT</marker>
+      <types>
+      	<type>PER</type>
+      	<type>ORG</type>
+      	<type>GPE</type>
+      </types>
+      <examples>
+        <example>man</example>
+        <example>John Hinckley</example>
+        <example>terrorist groups</example>
+        <example>groups</example>
+        <example>Richard Farnsworth</example>
+        <example>bomber</example>
+        <example>he</example>
+        <example>John</example>
+        <example>John Hinkley</example>
+        <example>Oswald</example>
+        <example>they</example>
+        <example>accomplices</example>
+        <example>Einhorn</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Victim</role>
+      <marker>VCT</marker>
+      <types>
+      	<type>PER</type>
+      </types>
+      <examples>
+        <example>passenger</example>
+        <example>member</example>
+        <example>members</example>
+        <example>crew member</example>
+        <example>Pierre Trudeau</example>
+        <example>Ronald Reagan</example>
+        <example>leader</example>
+        <example>she</example>
+        <example>Obaiyat</example>
+        <example>Pope John Paul II</example>
+        <example>worker</example>
+        <example>Richard Farnsworth</example>
+        <example>person</example>
+        <example>grandparents</example>
+        <example>he</example>
+        <example>7</example>
+        <example>sailors</example>
+        <example>mother</example>
+        <example>30</example>
+        <example>John</example>
+        <example>people</example>
+        <example>Mary</example>
+        <example>hostages</example>
+        <example>Kennedy</example>
+        <example>him</example>
+        <example>Tatum</example>
+        <example>Maddux</example>
+        <example>Bob</example>
+        <example>Joe</example>
+        <example>men</example>
+        <example>Palestinians</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Instrument</role>
+      <marker>INT</marker>
+      <types>
+      	<type>WEA</type>
+      	<type>VEH</type>
+      </types>
+      <examples>
+        <example>automobile</example>
+        <example>helicopter</example>
+        <example>explosive</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Time</role>
+      <marker>TIM</marker>
+      <types>
+      	<type>TIME</type>
+      </types>
+      <examples>
+        <example>1985</example>
+        <example>last week</example>
+        <example>Thursday</example>
+        <example>yesterday</example>
+        <example>Saturday afternoon</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Place</role>
+      <marker>PLC</marker>
+      <types>
+      	<type>GPE</type>
+      	<type>LOC</type>
+      	<type>FAC</type>
+      </types>
+      <examples>
+        <example>Irish Sea</example>
+        <example>Gaza Strip</example>
+        <example>Gush Katif</example>
+        <example>Aden</example>
+        <example>Jerusalem</example>
+        <example>Philadelphia</example>
+        <example>France</example>
+        <example>Paris</example>
+        <example>Reims</example>
+      </examples>
+    </argument>
+  </arguments>
+  <usage_samples>
+    <sample src="synth">The leader died last week.</sample>
+    <sample src="synth">Richard Farnsworth committed suicide in Aden.</sample>
+    <sample_out src="synth">A terrorist group killed the hostages with explosives in 1985.</sample>
+    <sample src="synth">We heard of the death of Obaiyat on the radio.</sample>
+    <sample src="orig" >All her grandparents are dead.</sample>
+    <sample src="orig" >The explosion killed 7 and injured 20.</sample>
+    <sample src="orig" >He died yesterday of renal failure.</sample>
+    <sample src="orig" >17 sailors were killed.</sample>
+    <sample src="orig" >He said he had no information about any dead or injured members of the submarine crew.</sample>
+    <sample src="orig" >He carried out the assassination.</sample>
+    <sample src="orig" >John would have been killed if he hadn’t moved.</sample>
+    <sample src="orig" >More than 200 people have died.</sample>
+    <sample src="orig" >John tried to kill Mary.</sample>
+    <sample src="orig" >Terrorist groups have threatened to kill foreign hostages.</sample>
+    <sample src="orig" >John Hinkley attempted to assassinate Ronald Reagan.</sample>
+    <sample src="orig" >A Palestinian worker was shot dead in the Gaza Strip.</sample>
+    <sample src="orig" >Kennedy was shot dead by Oswald.</sample>
+    <sample src="orig" >He prevented the assassination.</sample>
+    <sample src="orig" >A car bomb exploded Thursday in the heart of Jerusalem, killing at least two people, police said.</sample>
+    <sample src="orig" >Should he not pay the money, they would kill him.</sample>
+    <sample src="orig" >The mayor's accomplices had threatened to kill Mr. Tatum if he refused.</sample>
+    <sample src="orig" >Maddux was killed in Philadelphia.</sample>
+    <sample src="orig" >Einhorn is accused of killing Maddux.</sample>
+    <sample src="orig" >Six men were murdered, including Bob (in Paris) and Joe (in Reims).</sample>
+    <sample src="orig_p" >The dying man had a last wish.</sample>
+    <sample src="orig_p" >My deceased mother was a hero.</sample>
+    <sample src="orig_l" >The crash left 30 dead.</sample>
+    <sample src="orig_l" >Six murders occurred in France.</sample>
+    <sample src="orig_l" >Six attacks occurred in France, including the assassination of Bob.</sample>
+    <sample src="orig_l" >Six attacks occurred in France, including the killing of Joe.</sample>
+    <sample src="orig_l" >Two Palestinians were killed as they staged a drive-by ambush on an Israeli jeep in the Gaza Strip near the Israeli settlement of Gush Katif Saturday afternoon.</sample>
+
+    <sample src="orig" ></sample>
+    <sample src="orig" >John Hinckley attempted to assassinate Ronald Reagan.</sample>
+    <sample src="orig" >Terrorist groups have threatened to kill foreign hostages.</sample>
+    <sample src="orig_p" >The slain leader was buried.</sample>
+    <sample src="orig" >She was killed in an automobile accident.</sample>
+    <sample src="orig" >The commander of Israeli troops in the West Bank said there was a simple goal to the helicopter assassination on Thursday of a gun-wielding local Palestinian leader.</sample>
+    <sample src="orig" >The assassination of the once-relatively obscure Fatah leader Obaiyat, whom the army blamed particularly for leading nocturnal shooting on Gilo, a neighborhood in southeastern Jerusalem, was regarded as a grave step by Israeli commentators.</sample>
+    <sample_out src="orig_p" >The late Pope John Paul II was mentioned.</sample>
+    <sample src="orig" >In other violence, a Palestinian worker was shot dead in the Gaza Strip and in the West Bank, another Palestinian, a teenager, was shot by Israeli soldiers during clashes. </sample>
+    <sample src="orig" >Canadian authorities arrested two Vancouver-area men on Friday and charged them in the deaths of 329 passengers and crew members of an Air-India Boeing 747 that blew up over the Irish Sea in 1985, en route from Canada to London.</sample>
+    <sample src="orig" >Authorities in New Mexico say actor Richard Farnsworth has died of a self-inflicted gunshot wound.</sample>
+    <sample src="orig_p" >The fatal accident was reported </sample>
+    <sample src="orig" >All four live in the southern port city of Aden, where the two suspected suicide bombers blew up a small boat filled with explosives alongside the Cole on Oct. 12 as it prepared to refuel.</sample>
+    <sample src="orig" >We watched the state funeral in Montreal today for Canada's former prime minister Pierre Trudeau, who died last week at 80.</sample>
+    <sample src="orig" >Since the beginning of the epidemic, about 22 million people have died of the disease.</sample>
+
+  </usage_samples>
+</spec>

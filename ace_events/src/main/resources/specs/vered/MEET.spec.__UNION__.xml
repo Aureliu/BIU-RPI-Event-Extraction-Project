@@ -1,0 +1,101 @@
+<spec>
+  <predicate>
+    <name>Meet</name>
+    <seeds>
+      <seed>conference</seed>
+      <seed>interact</seed>
+      <seed>visit</seed>
+      <seed>summit</seed>
+      <seed>face-to-face</seed>
+      <seed>meet</seed>
+      <seed>meeting</seed>
+      <seed>talk</seed>
+    </seeds>
+  </predicate>
+  <arguments>
+    <argument>
+      <role>Entity</role>
+      <marker>ENT</marker>
+      <types>
+      	<type>PER</type>
+      	<type>ORG</type>
+      	<type>GPE</type>
+      </types>
+      <examples>
+        <example>Bush</example>
+        <example>Putin</example>
+        <example>China</example>
+        <example>Japan</example>
+        <example>United States</example>
+        <example>Korea</example>
+        <example>representative</example>
+        <example>Tommy</example>
+        <example>prosecutor</example>
+        <example>governor</example>
+        <example>John Coburn</example>
+        <example>Erekat</example>
+        <example>Madeleine Albright</example>
+        <example>Mrs. Albright</example>
+        <example>official</example>
+        <example>minister</example>
+        <example>Israeli</example>
+        <example>Palestinian</example>
+        <example>leaders</example>
+        <example>he</example>
+        <example>Ehud Barak</example>
+        <example>Prime Minister</example>
+        <example>leader</example>
+        <example>Yasser Arafat</example>
+        <example>officials</example>
+        <example>trade officials</example>
+        <example>lawmakers</example>
+        <example>Sudnikovich</example>
+        <example>him</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Time</role>
+      <marker>TIM</marker>
+      <types>
+      	<type>TIME</type>
+      </types>
+      <examples>
+        <example>this week</example>
+        <example>this month</example>
+        <example>Wednesday</example>
+        <example>Friday</example>
+        <example>tomorrow</example>
+        <example>Monday</example>
+        <example>May 17</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Place</role>
+      <marker>PLC</marker>
+      <types>
+      	<type>GPE</type>
+      	<type>LOC</type>
+      	<type>FAC</type>
+      </types>
+      <examples>
+        <example>Washington</example>
+        <example>Egypt</example>
+        <example>Boston</example>
+        <example>London</example>
+      </examples>
+    </argument>
+  </arguments>
+  <usage_samples>
+    <sample src="synth">Officials would meet ministers on Friday in Egypt.</sample>
+    <sample src="synth">Korea, Japan and China held a summit on Monday in Washington.</sample>
+    <sample src="synth">The governor is in talks with the representatives this Month.</sample>
+    <sample src="orig" >Protestors interrupted their meeting.</sample>
+    <sample src="orig" >The talks ended without agreement on Monday.</sample>
+    <sample src="orig" >The leaders held their meeting in Boston.</sample>
+    <sample src="orig" >There are reports that he could meet separately with Israeli Prime Minister Ehud Barak and Palestinian leader Yasser Arafat.</sample>
+    <sample src="orig" >Russian and U.S. trade officials will meet in London on May 17.</sample>
+    <sample src="orig" >He plans to meet with lawmakers from both parties.</sample>
+    <sample src="orig" >It is obvious that it was simply impossible not to meet with Mr. Sudnikovich.</sample>
+    <sample src="orig" >He decided it would probably be a good idea to meet with him.</sample>
+  </usage_samples>
+</spec>

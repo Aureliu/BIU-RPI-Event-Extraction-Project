@@ -1,0 +1,76 @@
+<spec>
+  <predicate>
+    <name>End-Position</name>
+    <seeds>
+      <seed>fire</seed>
+      <seed>lay off</seed>
+      <seed>succeed</seed>
+    </seeds>
+  </predicate>
+  <arguments>
+    <argument>
+      <role>Person</role>
+      <marker>PER</marker>
+      <types>
+      	<type>PER</type>
+      </types>
+      <examples>
+        <example>father</example>
+        <example>Gibbons</example>
+        <example>Jane</example>
+        <example>Skuratov</example>
+        <example>John Paul II</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Entity</role>
+      <marker>ENT</marker>
+      <types>
+      	<type>ORG</type>
+      	<type>GPE</type>
+      </types>
+      <examples>
+        <example>XYZ Corp</example>
+        <example>parliament</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Position</role>
+      <marker>PST</marker>
+      <types>
+      	<type>JOB</type>
+      </types>
+      <examples>
+        <example>congressman</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Time</role>
+      <marker>TIM</marker>
+      <types>
+      	<type>TIME</type>
+      </types>
+      <examples>
+      </examples>
+    </argument>
+    <argument>
+      <role>Place</role>
+      <marker>PLC</marker>
+      <types>
+      	<type>GPE</type>
+      	<type>LOC</type>
+      	<type>FAC</type>
+      </types>
+      <examples>
+      </examples>
+    </argument>
+  </arguments>
+  <usage_samples>
+    <sample src="orig">Her father is retired.</sample>
+    <sample src="orig">A retired congressman Gibbons gave a civics lesson in a portable classroom -- another sign of growth too fast.</sample>
+    <sample src="orig">Jane was laid off by XYZ Corp.</sample>
+    <sample src="orig">Yeltsin ordered Skuratov's suspension, but parliament repeatedly refused to sack him.</sample>
+    <sample_out src="orig_p">Her retired father moved to a home.</sample>
+    <sample src="orig">A Belgian cardinal fueled speculation that John Paul II might retire at the end of this year.</sample>
+  </usage_samples>
+</spec>

@@ -1,0 +1,97 @@
+<spec>
+  <predicate>
+    <name>Transfer-Money</name>
+    <seeds>
+      <seed>receiving</seed>
+      <seed>giving</seed>
+      <seed>money</seed>
+      <seed>lending</seed>
+      <seed>borrowing</seed>
+      <seed>borrow</seed>
+      <seed>donation</seed>
+      <seed>donate</seed>
+    </seeds>
+  </predicate>
+  <arguments>
+    <argument>
+      <role>Giver</role>
+      <marker>GVR</marker>
+      <types>
+      	<type>PER</type>
+      	<type>ORG</type>
+      	<type>GPE</type>
+      </types>
+      <examples>
+        <example>he</example>
+        <example>countries</example>
+        <example>charity</example>
+        <example>United States</example>
+        <example>Arab countries</example>
+        <example>European countries</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Recipient</role>
+      <marker>RCP</marker>
+      <types>
+      	<type>PER</type>
+      	<type>ORG</type>
+      	<type>GPE</type>
+      </types>
+      <examples>
+        <example>Al Qaeda</example>
+        <example>they</example>
+        <example>country</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Beneficiary</role>
+      <marker>BNF</marker>
+      <types>
+      	<type>PER</type>
+      	<type>ORG</type>
+      	<type>GPE</type>
+      </types>
+      <examples>
+      </examples>
+    </argument>
+    <argument>
+      <role>Money</role>
+      <marker>MNY</marker>
+      <types>
+      	<type>NUM</type>
+      </types>
+      <examples>
+      </examples>
+    </argument>
+    <argument>
+      <role>Time</role>
+      <marker>TIM</marker>
+      <types>
+      	<type>TIME</type>
+      </types>
+      <examples>
+      </examples>
+    </argument>
+    <argument>
+      <role>Place</role>
+      <marker>PLC</marker>
+      <types>
+      	<type>GPE</type>
+      	<type>LOC</type>
+      	<type>FAC</type>
+      </types>
+      <examples>
+      </examples>
+    </argument>
+  </arguments>
+  <usage_samples>
+    <sample src="orig">He was forced to pay the ransom.</sample>
+    <sample src="orig">Salat Hassen called on countries that give aid.</sample>
+    <sample src="orig">The charity was suspected of giving money to al Qaeda.</sample>
+    <sample src="orig">Should he not pay the money, they would kill him.</sample>
+    <sample src="orig">He asked the United States to give money to his country.</sample>
+    <sample src="orig">He thought about paying up.</sample>
+    <sample src="orig">Promises of aid made by Arab and European countries.</sample>
+  </usage_samples>
+</spec>

@@ -1,0 +1,109 @@
+<spec>
+  <predicate>
+    <name>Transport</name>
+    <seeds>
+      <seed>remove</seed>
+      <seed>travel</seed>
+      <seed>move</seed>
+      <seed>transport</seed>
+      <seed>movement</seed>
+    </seeds>
+  </predicate>
+  <arguments>
+    <argument>
+      <role>Agent</role>
+      <marker>AGT</marker>
+      <types>
+      	<type>PER</type>
+      	<type>ORG</type>
+      	<type>GPE</type>
+      </types>
+      <examples>
+      </examples>
+    </argument>
+    <argument>
+      <role>Artifact</role>
+      <marker>ATF</marker>
+      <types>
+      	<type>PER</type>
+      	<type>WEA</type>
+      	<type>VEH</type>
+      </types>
+      <examples>
+        <example>he</example>
+        <example>they</example>
+        <example>weapons</example>
+        <example>Palestinians</example>
+        <example>people</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Vehicle</role>
+      <marker>VHL</marker>
+      <types>
+      	<type>VEH</type>
+      </types>
+      <examples>
+        <example>ferry</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Price</role>
+      <marker>PRC</marker>
+      <types>
+      	<type>NUM</type>
+      </types>
+      <examples>
+      </examples>
+    </argument>
+    <argument>
+      <role>Origin</role>
+      <marker>OGN</marker>
+      <types>
+      	<type>GPE</type>
+      	<type>LOC</type>
+      	<type>FAC</type>
+      </types>
+      <examples>
+        <example>country</example>
+        <example>towns</example>
+        <example>villages</example>
+        <example>town</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Destination</role>
+      <marker>DST</marker>
+      <types>
+      	<type>GPE</type>
+      	<type>LOC</type>
+      	<type>FAC</type>
+      </types>
+      <examples>
+        <example>Houston</example>
+        <example>towns</example>
+        <example>villages</example>
+        <example>Moscow</example>
+      </examples>
+    </argument>
+    <argument>
+      <role>Time</role>
+      <marker>TIM</marker>
+      <types>
+      	<type>TIME</type>
+      </types>
+      <examples>
+        <example>late September</example>
+      </examples>
+    </argument>
+  </arguments>
+  <usage_samples>
+    <sample src="orig">He traveled to Houston in late September.</sample>
+    <sample src="orig">Police said they might have fled the country already.</sample>
+    <sample src="orig">The group specialized in transporting illegal weapons.</sample>
+    <sample src="orig">Israel says, it has lifted the internal restrictions that barred Palestinians from moving among West Bank towns and villages.</sample>
+    <sample src="orig">He was ordered to return to Moscow.</sample>
+    <sample src="orig">The United Nations has warned their people not to take the ferry.</sample>
+    <sample src="orig">He said he would leave town.</sample>
+  </usage_samples>
+</spec>

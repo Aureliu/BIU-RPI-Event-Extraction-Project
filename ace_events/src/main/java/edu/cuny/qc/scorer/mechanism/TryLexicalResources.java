@@ -56,6 +56,7 @@ import eu.excitementproject.eop.core.component.lexicalknowledge.wikipedia.WikiLe
 import eu.excitementproject.eop.core.component.lexicalknowledge.wikipedia.WikiRuleInfo;
 import eu.excitementproject.eop.core.component.lexicalknowledge.wordnet.WordnetLexicalResource;
 import eu.excitementproject.eop.core.component.lexicalknowledge.wordnet.WordnetRuleInfo;
+import eu.excitementproject.eop.core.utilities.dictionary.wordnet.Synset;
 import eu.excitementproject.eop.distsim.resource.SimilarityStorageBasedLexicalResource;
 import eu.excitementproject.eop.distsim.util.Configuration;
 import eu.excitementproject.eop.transformations.operations.rules.distsim.DistSimParameters;
@@ -186,6 +187,10 @@ public class TryLexicalResources {
 //
 //	}
 	
+	public static String gloss(Synset synset) {
+		return StringUtils.abbreviate(synset.getGloss(), 15);
+	}
+
 	public static String info(LexicalRule<? extends RuleInfo> rule) {
 		RuleInfo info = rule.getInfo();
 		if (info != null && info instanceof WikiRuleInfo) {
@@ -194,7 +199,18 @@ public class TryLexicalResources {
 		}
 		else if (info != null && info instanceof WordnetRuleInfo) {
 			WordnetRuleInfo wordnetInfo = (WordnetRuleInfo) info;
-			return String.format("/%s", wordnetInfo.getTypedRelation());
+			return String.format("/%s/%s", wordnetInfo.getTypedRelation(), gloss(wordnetInfo.getRightSense()));
+		}
+		else { 
+			return "";
+		}
+	}
+	
+	public static String info2(LexicalRule<? extends RuleInfo> rule) {
+		RuleInfo info = rule.getInfo();
+		if (info != null && info instanceof WordnetRuleInfo) {
+			WordnetRuleInfo wordnetInfo = (WordnetRuleInfo) info;
+			return String.format("/%s", gloss(wordnetInfo.getLeftSense()));
 		}
 		else { 
 			return "";
@@ -242,7 +258,7 @@ public class TryLexicalResources {
 				int i=0;
 				for (LexicalRule<? extends RuleInfo> rule : rules.subList(0, trimmed)) {
 					i++;
-					String ruleOut = String.format("  %s/%s\t--> %s/%s/%s/%.4f%s", rule.getLLemma(), rule.getLPos(), rule.getRLemma(), rule.getRPos(), i, rule.getConfidence(), info(rule));
+					String ruleOut = String.format("  %s/%s%s\t--> %s/%s/%s/%.4f%s", rule.getLLemma(), rule.getLPos(), info2(rule), rule.getRLemma(), rule.getRPos(), i, rule.getConfidence(), info(rule));
 					System.out.printf(ruleOut);
 	//				if (rule.getRLemma().contains("sra")) {
 	//					System.err.printf("delete this debug!!!\n");

@@ -57,6 +57,7 @@ import eu.excitementproject.eop.core.component.lexicalknowledge.wikipedia.WikiRu
 import eu.excitementproject.eop.core.component.lexicalknowledge.wordnet.WordnetLexicalResource;
 import eu.excitementproject.eop.core.component.lexicalknowledge.wordnet.WordnetRuleInfo;
 import eu.excitementproject.eop.core.utilities.dictionary.wordnet.Synset;
+import eu.excitementproject.eop.core.utilities.dictionary.wordnet.WordNetException;
 import eu.excitementproject.eop.distsim.resource.SimilarityStorageBasedLexicalResource;
 import eu.excitementproject.eop.distsim.util.Configuration;
 import eu.excitementproject.eop.transformations.operations.rules.distsim.DistSimParameters;

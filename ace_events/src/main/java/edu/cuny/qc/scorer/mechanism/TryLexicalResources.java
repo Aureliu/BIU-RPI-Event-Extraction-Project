@@ -20,6 +20,7 @@ import java.util.Set;
 import redis.clients.jedis.exceptions.JedisConnectionException;
 import weka.core.Tee;
 
+import ac.biu.nlp.nlp.ie.onthefly.input.uima.LemmaByPos;
 import ac.biu.nlp.nlp.ie.onthefly.input.SpecAnnotator;
 import ac.biu.nlp.nlp.ie.onthefly.input.SpecHandler;
 import ac.biu.nlp.nlp.ie.onthefly.input.TypesContainer;
@@ -48,6 +49,7 @@ import eu.excitementproject.eop.common.representation.partofspeech.PartOfSpeech;
 import eu.excitementproject.eop.common.utilities.configuration.ConfigurationFile;
 import eu.excitementproject.eop.common.utilities.configuration.ConfigurationParams;
 import eu.excitementproject.eop.common.utilities.configuration.ImplCommonConfig;
+import eu.excitementproject.eop.common.utilities.uima.UimaUtils;
 import eu.excitementproject.eop.core.component.lexicalknowledge.geo.GeoLexicalResource;
 import eu.excitementproject.eop.core.component.lexicalknowledge.wikipedia.WikiExtractionType;
 import eu.excitementproject.eop.core.component.lexicalknowledge.wikipedia.WikiLexicalResource;
@@ -318,7 +320,9 @@ public class TryLexicalResources {
 	}
 
 	public static void main(String[] args) throws Exception {
-		System.err.printf("Hello, World!!!\nGot these %s args: %s\nCaveat:  we are not handling derivations. I hope we can live with that.\n\n", args.length, Arrays.asList(args));
+		System.err.printf("Hello, World!!!\nGot these %s args: %s\n", args.length, Arrays.asList(args));
+		System.err.printf("Caveat:  we are not handling derivations. I hope we can live with that.\n");
+		System.err.printf("  Also, we are not using the wordnet resource exactly in the same way it is used in ODIE, so results are somewhat different. No biggie.\n\n");
 		String subtype = args[0];
 		String text = args[1].replace("_", " ");
 
@@ -349,14 +353,25 @@ public class TryLexicalResources {
 			System.err.printf("Invalid subtype: %s\n", subtype);
 			return;
 		}
-		List<String> seeds = JCasUtil.toText(JCasUtil.select(spec.getView(SpecAnnotator.TOKEN_VIEW), PredicateSeed.class));
+
+		JCas view = spec.getView(SpecAnnotator.TOKEN_VIEW);
+		Collection<PredicateSeed> seedAnnos = JCasUtil.select(view, PredicateSeed.class);
+		List<String> seeds = Lists.newArrayList();
+		for (PredicateSeed seedAnno : seedAnnos) {
+			List<LemmaByPos> lemmas = JCasUtil.selectCovered(view, LemmaByPos.class, seedAnno);
+			for (LemmaByPos lemma : lemmas)
+			{
+				seeds.add(lemma.getValue());
+			}
+		}
+		//List<String> seeds = JCasUtil.toText(JCasUtil.select(spec.getView(SpecAnnotator.TOKEN_VIEW), LemmaByPos/*PredicateSeed*/.class));
 
 		String logName = String.format("TryLexicalResource_%1$tH_%1$tM_%1$tS__%2$s.log", new Date(), args[0]);
 		Tee tee = new Tee(System.out);
 		tee.add(new PrintStream(logName));
 		System.setOut(tee);
 
-		System.err.printf("%s\n\n", Arrays.asList(args));
+		System.out.printf("%s\n\n", Arrays.asList(args));
 		checkKnowledgeResources(text, pos, seeds);
 	}
 }

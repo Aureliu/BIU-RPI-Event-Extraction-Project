@@ -801,6 +801,7 @@ public class Folds {
 
 		Logs logs = new Logs(outputFolder, controller, "");
 		PrintStream r = logs.getR("");
+		ErrorAnalysis.e = logs.getE("");
 		// logs.logTitles(null, null, null, null, null, r);
 		System.out.printf("%s Starting to read docs...\n", Utils.detailedLog());
 

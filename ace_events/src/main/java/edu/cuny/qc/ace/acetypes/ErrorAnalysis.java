@@ -23,6 +23,7 @@ import edu.cuny.qc.perceptron.core.Controller;
 import edu.cuny.qc.perceptron.core.Perceptron;
 import edu.cuny.qc.perceptron.types.Document;
 import edu.cuny.qc.perceptron.types.Sentence;
+import edu.cuny.qc.util.Logs;
 import edu.cuny.qc.util.Span;
 
 /**
@@ -35,6 +36,8 @@ public class ErrorAnalysis {
 	static String htmlHead = "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\"><html><head><META http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"></head><body><div>";
 	static String htmlTail = "</div></body></html>";
 	static String htmlBar = "<br><hr><br>";
+
+	public static PrintStream e = null;
 
 	private static final String CONTROLLER_PARAMS = "beamSize=4 maxIterNum=20 skipNonEventSent=true avgArguments=true useGlobalFeature=false "
 			+ "addNeverSeenFeatures=true crossSent=false crossSentReranking=false order=0 evaluatorType=1 learnBigrams=true logLevel=3 "
@@ -57,7 +60,7 @@ public class ErrorAnalysis {
 		return event_mentions;
 	}
 
-	static void doAnalysisForFile(File textFile, File apf_ans, File apf_gold,
+	static void doAnalysisForFile(File ansDir, File textFile, File apf_ans, File apf_gold,
 			Stats stats, String line, List<String> allowedTypes, PrintStream out, PrintStream out2,
 			PrintStream out3, PrintStream out4, PrintStream out5)
 			throws DocumentException, IOException {
@@ -194,6 +197,7 @@ public class ErrorAnalysis {
 						+ "<font color=\"blue\">" + mention_gold.text
 						+ "</font>");
 				stats.num_event_missing++;
+				Logs.logError(e, ansDir, line, mention_gold, "FalseNegative");
 			}
 		}
 
@@ -215,6 +219,7 @@ public class ErrorAnalysis {
 						+ "\t" + "<font color=\"blue\">" + mention_ans.text
 						+ "</font>");
 				stats.num_event_false_positive++;
+				Logs.logError(e, ansDir, line, mention_ans, "FalsePositive");
 			}
 		}
 	}
@@ -305,7 +310,7 @@ public class ErrorAnalysis {
 			}
 
 			try {
-				doAnalysisForFile(text_file, apf_ans, apf_gold, stats, line, allowedTypes,
+				doAnalysisForFile(ansDir, text_file, apf_ans, apf_gold, stats, line, allowedTypes,
 						out, out2, out3, out4, out5);
 			} catch (DocumentException e) {
 				Throwable root = ExceptionUtils.getRootCause(e);

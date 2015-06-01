@@ -33,6 +33,7 @@ import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
 
 import edu.cuny.qc.ace.acetypes.AceMention;
 import edu.cuny.qc.ace.acetypes.Scorer.Stats;
+import edu.cuny.qc.ace.analysis.forEvent.Analysis.EventMention;
 import edu.cuny.qc.perceptron.core.AllTrainingScores;
 import edu.cuny.qc.perceptron.core.Controller;
 import edu.cuny.qc.perceptron.core.Perceptron;
@@ -318,9 +319,13 @@ public class Logs {
 	
 	public static String sentence(String sentence) {
 		final int MAX_CHARS = 100;
+		return sentence(sentence, MAX_CHARS);
+	}
+	
+	public static String sentence(String sentence, int maxChars) {
 		String ret = sentence.replace('\n', ' ');
-		if (ret.length() > MAX_CHARS) {
-			return ret.substring(0, MAX_CHARS-1) + "+";
+		if (ret.length() > maxChars) {
+			return ret.substring(0, maxChars-1) + "+";
 		}
 		else {
 			return ret;
@@ -479,6 +484,25 @@ public class Logs {
 			);
 			
 			return w;
+		}
+		return null;
+	}
+	
+	public PrintStream getE(String mode) throws FileNotFoundException {
+		if (controller.doErrorAnalysis) {
+			String errorAnalysisOutputFilePath = outFolder.getAbsolutePath() + "/" + mode + "ErrorAnalysis-" + LOG_NAME_ID + "." + controller.logLevel + logSuffix + ".tsv";
+			PrintStream e = new PrintStream(errorAnalysisOutputFilePath);
+			
+			Utils.print(e, "", "\n", "|", null,			
+					"Run",
+					"Doc",
+					"ErrorType",
+					"Subtype",
+					"Trigger",
+					"Sentence"
+			);
+			
+			return e;
 		}
 		return null;
 	}
@@ -1189,6 +1213,17 @@ public class Logs {
 					equalsStr(scores.dev.bestAvgWeights, perceptron.avg_weights)
 			);		
 		}
+	}
+
+	public static void logError(PrintStream e, File ansDir, String line, EventMention mention, String errorType) {
+		Utils.print(e, "", "\n", "|", null,
+			ansDir.getName(),
+			line,
+			errorType,
+			mention.type,
+			sentence(mention.trigger,30),
+			sentence(mention.text,1000)
+		);
 	}
 
 }

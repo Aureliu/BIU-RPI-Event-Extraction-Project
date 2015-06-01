@@ -25,6 +25,7 @@ import ac.biu.nlp.nlp.ie.onthefly.input.SpecHandler;
 import ac.biu.nlp.nlp.ie.onthefly.input.TypesContainer;
 import ac.biu.nlp.nlp.ie.onthefly.input.uima.PredicateSeed;
 
+import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.LinkedHashMultimap;
 import com.google.common.collect.Lists;
@@ -339,7 +340,8 @@ public class TryLexicalResources {
 			return;
 		}
 
-		List<String> allSpecs = SpecHandler.readSpecListFile(new File("src/main/resources/specs/speclist-full.txt"));
+		//List<String> allSpecs = SpecHandler.readSpecListFile(new File("src/main/resources/specs/speclist-full.txt"));
+		List<String> allSpecs = ImmutableList.of("src/main/resources/specs/main/" + subtype.toUpperCase().replace("-","_") + ".spec.xml");
 		TypesContainer types = new TypesContainer(allSpecs, false);
 		JCas spec = types.namedSpecs.get(subtype);
 		if (spec == null)
@@ -354,6 +356,7 @@ public class TryLexicalResources {
 		tee.add(new PrintStream(logName));
 		System.setOut(tee);
 
+		System.err.printf("%s\n\n", Arrays.asList(args));
 		checkKnowledgeResources(text, pos, seeds);
 	}
 }

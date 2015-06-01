@@ -187,11 +187,11 @@ public class TryLexicalResources {
 //
 //	}
 	
-	public static String gloss(Synset synset) {
+	public static String gloss(Synset synset) throws WordNetException {
 		return StringUtils.abbreviate(synset.getGloss(), 15);
 	}
 
-	public static String info(LexicalRule<? extends RuleInfo> rule) {
+	public static String info(LexicalRule<? extends RuleInfo> rule) throws WordNetException {
 		RuleInfo info = rule.getInfo();
 		if (info != null && info instanceof WikiRuleInfo) {
 			WikiRuleInfo wikiInfo = (WikiRuleInfo) info;
@@ -206,7 +206,7 @@ public class TryLexicalResources {
 		}
 	}
 	
-	public static String info2(LexicalRule<? extends RuleInfo> rule) {
+	public static String info2(LexicalRule<? extends RuleInfo> rule) throws WordNetException {
 		RuleInfo info = rule.getInfo();
 		if (info != null && info instanceof WordnetRuleInfo) {
 			WordnetRuleInfo wordnetInfo = (WordnetRuleInfo) info;

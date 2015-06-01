@@ -366,7 +366,7 @@ public class TryLexicalResources {
 		}
 		//List<String> seeds = JCasUtil.toText(JCasUtil.select(spec.getView(SpecAnnotator.TOKEN_VIEW), LemmaByPos/*PredicateSeed*/.class));
 
-		String logName = String.format("TryLexicalResource_%1$tH_%1$tM_%1$tS__%2$s.log", new Date(), args[0]);
+		String logName = String.format("TryLexicalResource_%1$tH_%1$tM_%1$tS__%2$s__%3$s__%4$s.log", new Date(), args[0], args[1], args[2]);
 		Tee tee = new Tee(System.out);
 		tee.add(new PrintStream(logName));
 		System.setOut(tee);

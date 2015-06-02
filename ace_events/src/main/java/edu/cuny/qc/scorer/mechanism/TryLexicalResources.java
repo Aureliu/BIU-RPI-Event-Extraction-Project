@@ -189,7 +189,7 @@ public class TryLexicalResources {
 //	}
 	
 	public static String gloss(Synset synset) throws WordNetException {
-		return StringUtils.abbreviate(synset.getGloss(), 15);
+		return StringUtils.abbreviate(synset.getGloss(), 18);
 	}
 
 	public static String info(LexicalRule<? extends RuleInfo> rule) throws WordNetException {
@@ -259,31 +259,32 @@ public class TryLexicalResources {
 				int i=0;
 				for (LexicalRule<? extends RuleInfo> rule : rules.subList(0, trimmed)) {
 					i++;
-					String ruleOut = String.format("  %s/%s%s\t--> %s/%s/%s/%.4f%s", rule.getLLemma(), rule.getLPos(), info2(rule), rule.getRLemma(), rule.getRPos(), i, rule.getConfidence(), info(rule));
-					System.out.printf(ruleOut);
-	//				if (rule.getRLemma().contains("sra")) {
-	//					System.err.printf("delete this debug!!!\n");
-	//				}
+					//String ruleOut = String.format("  %s/%s%s\t--> %s/%s/%s/%.4f%s", rule.getLLemma(), rule.getLPos(), info2(rule), rule.getRLemma(), rule.getRPos(), i, rule.getConfidence(), info(rule));
+					String ruleOut = String.format("%s/%s%s--> %s/%s%s", rule.getLLemma(), rule.getLPos(), info2(rule), rule.getRLemma(), rule.getRPos(), info(rule));
+					//System.out.printf(ruleOut);
 					if (firstHopThreshold(resourceName, specWords, rule, i)) {
 						resourceUseful.put(rule.getRLemma(), ruleOut);
 					}
 					List<? extends LexicalRule<? extends RuleInfo>> rules2 = resource.getRulesForLeft(rule.getRLemma(), rule.getRPos());
 					int trimmed2 = Math.min(CHAINED_RULES, rules2.size());
 					if (trimmed2 > 0) {
-						System.out.printf("\t==> ");
+						//System.out.printf("\t==> ");
+						//System.out.printf(", ");
 						int j=0;
 						for (LexicalRule<? extends RuleInfo> rule2 : rules2.subList(0, trimmed2)) {
 							j++;
-							String rule2Out = String.format("%s/%s/%s/%.4f%s\t", rule2.getRLemma(), rule2.getRPos(), j, rule2.getConfidence(), info(rule));
-							System.out.printf(rule2Out);
+							String rule2Out = String.format("%s/%s%s--> %s/%s%s", rule2.getLLemma(), rule2.getLPos(), info2(rule2), rule2.getRLemma(), rule2.getRPos(), info(rule2));
+							//String rule2Out = String.format("%s/%s/%s/%.4f%s\t", rule2.getRLemma(), rule2.getRPos(), j, rule2.getConfidence(), info(rule2));
+							//System.out.printf(rule2Out);
 							if (secondHopThreshold(resourceName,specWords, rule, i, rule2, j)) {
-								resourceUseful.put(rule2.getRLemma(), String.format("%s\t==> %s", ruleOut, rule2Out));
+								//resourceUseful.put(rule2.getRLemma(), String.format("%s\t==> %s", ruleOut, rule2Out));
+								resourceUseful.put(rule2.getRLemma(), String.format("%s,%s", ruleOut, rule2Out));
 							}
 						}
 					}
-					System.out.printf("\n");
+					//System.out.printf("\n");
 				}
-				System.out.printf("\n");
+				//System.out.printf("\n");
 			}
 		}
 		
@@ -297,11 +298,11 @@ public class TryLexicalResources {
 			}
 			System.out.printf("%s (%s rules):\n", resourceName, count);
 			for (String specWord : multi.keySet()) {
-				System.out.printf("\t%s\n", specWord);
+				System.out.printf(" %s\n", specWord);
 				Collection<String> rulesOut = Lists.newArrayList(multi.get(specWord));
 				rulesOut.remove(EMPTY);
 				for (String ruleOut : rulesOut) {
-					System.out.printf("\t\t%s\n", ruleOut);
+					System.out.printf("  %s\n", ruleOut);
 				}
 			}
 		}
@@ -384,9 +385,10 @@ public class TryLexicalResources {
 		//List<String> seeds = JCasUtil.toText(JCasUtil.select(spec.getView(SpecAnnotator.TOKEN_VIEW), LemmaByPos/*PredicateSeed*/.class));
 
 		String logName = String.format("TryLexicalResource_%1$tH_%1$tM_%1$tS__%2$s__%3$s__%4$s.log", new Date(), args[0], args[1], args[2]);
-		Tee tee = new Tee(System.out);
-		tee.add(new PrintStream(logName));
-		System.setOut(tee);
+		//Tee tee = new Tee(System.out);
+		//tee.add(new PrintStream(logName));
+		//System.setOut(tee);
+		System.setOut(new PrintStream(logName));
 
 		System.out.printf("%s\n\n", Arrays.asList(args));
 		checkKnowledgeResources(text, pos, seeds);

@@ -20,6 +20,8 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 
+import de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Token;
+
 import edu.cuny.qc.ace.acetypes.AceEventMention;
 import edu.cuny.qc.ace.acetypes.AceEventMentionArgument;
 import edu.cuny.qc.ace.acetypes.AceMention;
@@ -895,7 +897,44 @@ public class SentenceAssignment
 //							System.err.printf("\n\n\n\nand again...\n\n\n");
 //						}
 	//					///
-						
+
+						if (this.controller.findSpecificFeatures)
+						{
+							String textToken = problem.sent.getTokenAnnotation(i).getCoveredText();
+							String lineOut = String.format("%s:%s\t%s\t%s\t%s", problem.docID, problem.sentInstID, associatedSpecLabel, textToken, problem.textStart);
+							System.out.printf("~~~%s:\t", lineOut);
+							for (SignalInstance signal : signalsOfLabel.values()) {
+								System.out.printf("%s:%s\t", signal.getName(), signal.positive?"T":"F");
+							}
+							System.out.printf("\n");
+
+							/*
+							boolean onlyAllRels = true;
+							for (SignalInstance signal : signalsOfLabel.values())
+							{
+								if (signal.positive)
+								{
+									if (signal.getName().toUpperCase().contains("SYNONYM"))
+									{
+										System.out.printf("\t~~~ Has Synonym: %s\n", lineOut);
+									}
+									if (!signal.getName().toUpperCase().contains("ALLRELS")) {
+										onlyAllRels = false;
+									}
+								}
+								else {
+									if (signal.getName().toUpperCase().contains("ALLRELS")) {
+										onlyAllRels = false;
+									}
+								}
+							}
+							if (onlyAllRels)
+							{
+								System.out.printf("\t~~~ Only AllRels: %s\n", lineOut);
+							}
+							*/
+						}
+
 						for (SignalInstance signal : signalsOfLabel.values()) {
 							List<SignalInstance> signals = Arrays.asList(new SignalInstance[] {signal});
 							BigDecimal featureValuePositive = signal.positive ? FEATURE_POSITIVE_VAL : FEATURE_NEGATIVE_VAL;

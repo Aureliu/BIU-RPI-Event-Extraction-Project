@@ -113,6 +113,8 @@ public class Controller implements java.io.Serializable
 	
 	public boolean doErrorAnalysis = true;
 	
+	public boolean findSpecificFeatures = false;
+	
 	public Controller()
 	{
 //		System.out.printf("\n[%s] ******** Controller() **********\n", new Date());
@@ -299,6 +301,10 @@ public class Controller implements java.io.Serializable
 			{
 				doErrorAnalysis = Boolean.parseBoolean(fields[1]);
 			}
+			else if(fields[0].equalsIgnoreCase("findSpecificFeatures"))
+			{
+				findSpecificFeatures = Boolean.parseBoolean(fields[1]);
+			}
 		}
 		
 		
@@ -332,7 +338,8 @@ public class Controller implements java.io.Serializable
 		"\n\tfilterSentenceInstance: " + filterSentenceInstance + " enhanceSpecs: " + enhanceSpecs +
 		" takeExtendedTags: " + takeExtendedTags + " argOMethod: " + argOMethod + " lazyTargetFeatures: " + lazyTargetFeatures +
 		" easyFirstHost: " + easyFirstHost + " easyFirstPort: " + easyFirstPort +
-		"\n\tcalcDebugSignalsAnyway: " + calcDebugSignalsAnyway + " docsChunk: " + docsChunk + " doErrorAnalysis: " + doErrorAnalysis;
+		"\n\tcalcDebugSignalsAnyway: " + calcDebugSignalsAnyway + " docsChunk: " + docsChunk +
+		" doErrorAnalysis: " + doErrorAnalysis + " findSpecificFeatures: " + findSpecificFeatures;
 		
 		return ret + "\n";
 	}
